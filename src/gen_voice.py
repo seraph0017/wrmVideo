@@ -7,7 +7,9 @@ pip install requests
 import base64
 import json
 import uuid
+import os
 import requests
+from datetime import datetime
 from config import TTS_CONFIG
 
 api_url = f"https://{TTS_CONFIG['host']}/api/v1/tts"
@@ -26,7 +28,7 @@ request_json = {
     "audio": {
         "voice_type": TTS_CONFIG['voice_type'],
         "encoding": "mp3",
-        "speed_ratio": 1.0,
+        "speed_ratio": 1.2,
         "volume_ratio": 1.0,
         "pitch_ratio": 1.0,
     },
@@ -50,7 +52,22 @@ if __name__ == '__main__':
         print(f"resp body: \n{resp.json()}")
         if "data" in resp.json():
             data = resp.json()["data"]
-            file_to_save = open("test2_submit.mp3", "wb")
-            file_to_save.write(base64.b64decode(data))
+            
+            # 确保data目录存在
+            data_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data')
+            os.makedirs(data_dir, exist_ok=True)
+            
+            # 生成带时间戳的文件名
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            audio_filename = f"tts_audio_{timestamp}.mp3"
+            audio_path = os.path.join(data_dir, audio_filename)
+            
+            # 保存音频文件
+            with open(audio_path, "wb") as file_to_save:
+                file_to_save.write(base64.b64decode(data))
+            
+            print(f"音频文件已保存到: {audio_path}")
+        else:
+            print("未获取到音频数据")
     except Exception as e:
-        e.with_traceback()
+        print(f"处理音频时发生错误: {e}")

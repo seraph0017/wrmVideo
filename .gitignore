@@ -155,11 +155,14 @@ cython_debug/
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be added to the global gitignore or merged into this project gitignore.  For a PyCharm
-#  project, it is recommended to use the following settings:
-#  https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and https://github.com/github/gitignore/blob/main/Python.gitignore
+#  project, it is common to ignore the .idea/ directory.
 .idea/
 
+# Configuration files with sensitive information
+src/config.py
+
+# Text files
+*.txt
 # VS Code
 .vscode/
 
