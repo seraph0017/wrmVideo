@@ -8,29 +8,23 @@ import base64
 import json
 import uuid
 import requests
+from config import TTS_CONFIG
 
-# 填写平台申请的appid, access_token以及cluster
-appid = "2535746880"
-access_token= "dexjYgOYpYRiNAc-QJaDRplD9G5SGZPe"
-cluster = "volcano_tts"
+api_url = f"https://{TTS_CONFIG['host']}/api/v1/tts"
 
-voice_type = "BV701_streaming"
-host = "openspeech.bytedance.com"
-api_url = f"https://{host}/api/v1/tts"
-
-header = {"Authorization": f"Bearer;{access_token}"}
+header = {"Authorization": f"Bearer;{TTS_CONFIG['access_token']}"}
 
 request_json = {
     "app": {
-        "appid": appid,
+        "appid": TTS_CONFIG['appid'],
         "token": "access_token",
-        "cluster": cluster
+        "cluster": TTS_CONFIG['cluster']
     },
     "user": {
         "uid": "388808087185088"
     },
     "audio": {
-        "voice_type": voice_type,
+        "voice_type": TTS_CONFIG['voice_type'],
         "encoding": "mp3",
         "speed_ratio": 1.0,
         "volume_ratio": 1.0,
@@ -39,7 +33,7 @@ request_json = {
     "request": {
         "reqid": str(uuid.uuid4()),
         "text": """
-        晨露还趴在蕨类植物的绒毛上打盹，森林的第一声‘沙沙’就挠醒了我的指尖。那些爬满青苔的树干突然睁开‘眼睛’，绿色符文像被惊醒的萤火虫，在树皮上跳着古老的圆舞曲。（指尖触碰树干的轻响，符文闪烁的音效）  
+        晨露还趴在蕨类植物的绒毛上打盹，森林的第一声'沙沙'就挠醒了我的指尖。那些爬满青苔的树干突然睁开'眼睛'，绿色符文像被惊醒的萤火虫，在树皮上跳着古老的圆舞曲。（指尖触碰树干的轻响，符文闪烁的音效）  
 传说中会吞噬旅人的低语森林，此刻正用潮湿的呼吸，轻轻舔舐着闯入者的衣角。我忽然明白，真正的危险从不是未知，而是你以为自己早已看透了未知。
         """,
         "text_type": "plain",
