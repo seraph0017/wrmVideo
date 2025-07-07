@@ -159,7 +159,7 @@ cython_debug/
 .idea/
 
 # Configuration files with sensitive information
-src/config.py
+config/config.py
 
 # VS Code
 .vscode/
@@ -186,6 +186,3 @@ src/config.py
 
 # Log files
 *.log
-
-# Configuration files with sensitive data
-src/config.py

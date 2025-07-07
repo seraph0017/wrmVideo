@@ -26,6 +26,9 @@
 - **🖼️ 多音频共图**: 多个音频文件可共用一张图片，提高资源利用效率
 - **🎨 字体样式优化**: 字幕居中对齐、透明背景、去除首尾标点符号
 - **⚡ 性能提升**: 优化处理流程，提升生成速度和稳定性
+- **📺 单行字幕显示**: 优化字幕生成逻辑，确保视频中只显示单行字幕，避免多行字幕影响观看体验
+
+- **🧠 智能字幕处理**: 自动截取过长文本并添加省略号，移除换行符，确保字幕简洁易读
 
 ## 📁 项目结构
 
@@ -59,10 +62,8 @@ wrmVideo/
 │   │   └── gen_script.py
 │   └── voice/             # 语音生成模块（新版本）
 │       └── gen_voice.py
-├── templates/              # Jinja2模板目录
-│   ├── pic_generation.j2  # 图片生成模板
-│   ├── script_generation.j2 # 脚本生成模板
-│   └── voice_config.j2    # 语音配置模板
+
+
 ├── test/                   # 测试脚本目录
 │   ├── test_audio.py      # 音频测试
 │   ├── test_chapter.txt
@@ -118,11 +119,11 @@ sudo apt install ffmpeg
 
 ### 1. 创建配置文件
 ```bash
-cp src/config.example.py src/config.py
+cp config/config.example.py config/config.py
 ```
 
 ### 2. 配置API密钥
-编辑 `src/config.py` 文件，填入你的API密钥：
+编辑 `config/config.py` 文件，填入你的API密钥：
 
 ```python
 # TTS语音合成配置
@@ -164,8 +165,8 @@ pip install -r requirements.txt
 
 配置API密钥：
 ```bash
-cp src/config.example.py src/config.py
-# 编辑 src/config.py，填入你的API密钥
+cp config/config.example.py config/config.py
+# 编辑 config/config.py，填入你的API密钥
 ```
 
 ### 2. 配置化系统
@@ -174,9 +175,9 @@ cp src/config.example.py src/config.py
 
 #### 配置文件说明
 - `config/prompt_config.py`: 主配置管理文件
-- `templates/pic_generation.j2`: 图片生成prompt模板
-- `templates/script_generation.j2`: 脚本生成prompt模板
-- `templates/voice_config.j2`: 语音配置模板
+- `src/pic/pic_generation.j2`: 图片生成prompt模板
+- `src/script/script_generation.j2`: 脚本生成prompt模板
+- `src/voice/voice_config.j2`: 语音配置模板
 
 #### 使用新的配置化模块
 ```python
@@ -303,6 +304,7 @@ python utils/demo_styles.py
   - `watercolor`: 水彩画风格 - 柔和色彩，艺术感强，手绘质感
   - `oil_painting`: 油画风格 - 厚重笔触，丰富色彩层次，古典艺术感
 
+
 ### 视频合成
 
 `concat.py` 使用FFmpeg合成视频：
@@ -394,7 +396,6 @@ pip install -r requirements.txt --upgrade
 - 四种预设艺术风格：漫画、写实、水彩、油画
 - 可配置的默认风格设置
 - 智能prompt模板系统
-- 风格一致性保证
 
 #### 字幕样式优化
 - 居中对齐算法
@@ -418,9 +419,9 @@ pip install -r requirements.txt --upgrade
 ### 模块说明
 
 - `generate.py`: 主程序入口，协调各模块工作
-- `src/gen_script.py`: AI解说文案生成，支持长文本分块处理
-- `src/gen_voice.py`: TTS语音合成，支持多种音色
-- `src/gen_pic.py`: AI图像生成，支持高质量图片输出
+- `src/script/gen_script.py`: AI解说文案生成，支持长文本分块处理
+- `src/voice/gen_voice.py`: TTS语音合成，支持多种音色
+- `src/pic/gen_pic.py`: AI图像生成，支持高质量图片输出
 - `src/concat.py`: 视频合成，集成字幕处理
 - `init.py`: 项目清理工具，支持批量清理
 
@@ -503,6 +504,7 @@ VOICE_TYPES = {
 #### 优化功能
 - ✅ **音频质量提升**：优化TTS参数，提高音频清晰度
 - ✅ **视频合成优化**：改进编码参数，提升视频质量
+
 - ✅ **错误处理机制**：完善的异常处理和日志记录
 - ✅ **测试验证系统**：全面的功能测试脚本
 

@@ -13,10 +13,7 @@ import requests
 from volcenginesdkarkruntime import Ark
 import ffmpeg
 
-# 添加src目录到Python路径
-sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
-
-from config import TTS_CONFIG, ARK_CONFIG, IMAGE_CONFIG
+from config.config import TTS_CONFIG, ARK_CONFIG, IMAGE_CONFIG
 
 def clean_text_for_tts(text):
     """
@@ -161,8 +158,9 @@ def generate_image(prompt, output_path, style=None):
         print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
         
         # 构建完整的prompt
-        full_prompt = style_prompt + "以下面一段描述为描述，生成一张故事图片\n\n" + prompt
+        full_prompt = style_prompt + "\n\n以下面一段描述为内容，生成一张故事图片：\n" + prompt
         
+        # 统一使用文生图模式
         imagesResponse = client.images.generate(
             model=IMAGE_CONFIG.get('model', 'doubao-seedream-3-0-t2i-250415'),
             prompt=full_prompt,
@@ -191,38 +189,113 @@ def generate_image(prompt, output_path, style=None):
         print(f"生成图片时发生错误: {e}")
         return False
 
-def wrap_text(text, max_chars_per_line=30):
+def generate_images_batch(prompts_and_paths, style=None):
     """
-    将长文本按指定字符数换行，并去掉首尾标点符号
+    批量生成图片文件（优化的批量处理，减少API调用次数）
+    
+    Args:
+        prompts_and_paths: 包含(prompt, output_path)元组的列表
+        style: 艺术风格，如果为None则使用配置文件中的默认风格
+    
+    Returns:
+        list: 成功生成的图片路径列表
+    """
+    try:
+        if not prompts_and_paths:
+            print("没有图片需要生成")
+            return []
+        
+        print(f"正在批量生成{len(prompts_and_paths)}张图片...")
+        print("注意：由于API限制，将逐个生成图片，但会优化处理流程")
+        
+        # 获取风格设置
+        if style is None:
+            style = IMAGE_CONFIG.get('default_style', 'manga')
+        
+        successful_paths = []
+        
+        # 初始化Ark客户端（只初始化一次）
+        client = Ark(
+            base_url=ARK_CONFIG['base_url'],
+            api_key=ARK_CONFIG['api_key'],
+        )
+        
+        style_prompt = ART_STYLES.get(style, ART_STYLES['manga'])
+        
+        # 逐个生成图片，但使用统一的客户端和风格设置
+        for i, (prompt, output_path) in enumerate(prompts_and_paths, 1):
+            try:
+                print(f"正在生成第{i}/{len(prompts_and_paths)}张图片: {os.path.basename(output_path)}")
+                
+                # 构建完整的prompt
+                full_prompt = style_prompt + "\n\n以下面一段描述为内容，生成一张故事图片：\n" + prompt
+                
+                # 生成图片
+                imagesResponse = client.images.generate(
+                    model=IMAGE_CONFIG.get('model', 'doubao-seedream-3-0-t2i-250415'),
+                    prompt=full_prompt,
+                    watermark=IMAGE_CONFIG.get('watermark', False),
+                    size=IMAGE_CONFIG.get('size', '720x1280'),
+                    response_format="b64_json"
+                )
+                
+                # 处理图片数据并保存
+                if hasattr(imagesResponse.data[0], 'b64_json') and imagesResponse.data[0].b64_json:
+                    # 确保输出目录存在
+                    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+                    
+                    # 解码base64数据并保存
+                    image_data = base64.b64decode(imagesResponse.data[0].b64_json)
+                    with open(output_path, 'wb') as f:
+                        f.write(image_data)
+                    
+                    print(f"✓ 第{i}张图片已保存: {output_path}")
+                    successful_paths.append(output_path)
+                else:
+                    print(f"✗ 第{i}张图片生成失败: 未获取到base64格式的图片数据")
+                    
+            except Exception as e:
+                print(f"✗ 第{i}张图片生成失败: {e}")
+                continue
+        
+        print(f"\n批量生成完成，成功生成{len(successful_paths)}/{len(prompts_and_paths)}张图片")
+        
+        if len(successful_paths) == len(prompts_and_paths):
+            print("✓ 所有图片生成成功")
+        elif len(successful_paths) > 0:
+            print(f"⚠ 部分图片生成成功 ({len(successful_paths)}/{len(prompts_and_paths)})")
+        else:
+            print("✗ 所有图片生成失败")
+        
+        return successful_paths
+        
+    except Exception as e:
+        print(f"批量生成图片时发生错误: {e}")
+        return []
+
+def wrap_text(text, max_chars_per_line=25):
+    """
+    处理字幕文本，确保只显示一行字幕且不超出边框
     
     Args:
         text: 原始文本
-        max_chars_per_line: 每行最大字符数
+        max_chars_per_line: 每行最大字符数（默认25，确保不超出边框）
     
     Returns:
-        str: 换行后的文本
+        str: 处理后的单行文本
     """
     # 去掉首尾的标点符号
     punctuation = '。！？，；：、""''（）()[]{}【】《》<>'
     text = text.strip(punctuation + ' \t\n')
     
-    if len(text) <= max_chars_per_line:
-        return text
+    # 如果文本过长，截取前面部分并添加省略号
+    if len(text) > max_chars_per_line:
+        text = text[:max_chars_per_line-3] + "..."
     
-    lines = []
-    current_line = ""
+    # 确保返回单行文本，移除所有换行符
+    text = text.replace('\n', ' ').replace('\r', ' ')
     
-    for char in text:
-        if len(current_line) >= max_chars_per_line:
-            lines.append(current_line.strip())
-            current_line = char
-        else:
-            current_line += char
-    
-    if current_line:
-        lines.append(current_line.strip())
-    
-    return "\n".join(lines)
+    return text
 
 def create_video_with_subtitle(image_path, audio_path, subtitle_text, output_path):
     """
@@ -258,20 +331,20 @@ def create_video_with_subtitle(image_path, audio_path, subtitle_text, output_pat
             video_width = 720
             video_height = 1280
             
-            # 字幕换行处理，每行最多20个字符
-            wrapped_subtitle = wrap_text(clean_subtitle, max_chars_per_line=20)
+            # 字幕处理，确保单行显示，最多25个字符（避免超出边框）
+            wrapped_subtitle = wrap_text(clean_subtitle, max_chars_per_line=25)
             
-            # 字幕位置：距离底部三分之一处
+            # 字幕位置：距离底部三分之一处，并确保有足够边距
             subtitle_y = int(video_height * 2 / 3)  # 约853像素位置（距离底部三分之一）
             
-            # 添加字幕滤镜（黑色粗体字，透明背景，每行居中）
+            # 添加字幕滤镜（黑色粗体字，透明背景，每行居中，确保不超出边框）
             video_with_subtitle = image_input.video.filter(
                 'drawtext',
                 text=wrapped_subtitle,
                 fontfile='/System/Library/Fonts/PingFang.ttc',  # macOS中文字体
-                fontsize=32,  # 稍微减小字号
+                fontsize=28,  # 减小字号避免超出边框
                 fontcolor='black',
-                x='(w-text_w)/2',  # 水平居中
+                x='max(20, min(w-text_w-20, (w-text_w)/2))',  # 水平居中，但确保左右至少20像素边距
                 y=subtitle_y,      # 距离底部三分之一处
                 # 添加白色描边增强可读性
                 borderw=2,
@@ -363,16 +436,41 @@ def smart_split_text(text, max_length=50):
         
         # 如果达到合适的断句点且长度适中，或者超过最大长度
         if (is_pause_point and len(current_segment) >= 15) or len(current_segment) >= max_length:
-            segments.append(current_segment.strip())
+            # 检查分割后的文本是否有效（不只是标点符号）
+            cleaned_segment = current_segment.strip()
+            if is_valid_text_segment(cleaned_segment):
+                segments.append(cleaned_segment)
             current_segment = ""
         
         i += 1
     
     # 添加剩余文本
     if current_segment.strip():
-        segments.append(current_segment.strip())
+        cleaned_segment = current_segment.strip()
+        if is_valid_text_segment(cleaned_segment):
+            segments.append(cleaned_segment)
     
     return segments
+
+def is_valid_text_segment(text):
+    """
+    检查文本片段是否有效（不只是标点符号或空白）
+    
+    Args:
+        text: 要检查的文本
+    
+    Returns:
+        bool: 是否为有效文本
+    """
+    if not text or not text.strip():
+        return False
+    
+    # 移除所有标点符号和空白字符
+    punctuation = '。！？，；：、""（）()[]{}【】《》<>…'
+    text_without_punctuation = ''.join(char for char in text if char not in punctuation and not char.isspace())
+    
+    # 如果移除标点后还有内容，则认为是有效文本
+    return len(text_without_punctuation) > 0
 
 def parse_chapter_script(script_path):
     """
@@ -448,21 +546,39 @@ def process_chapter(chapter_dir):
         print(f"警告: 章节 {chapter_name} 没有有效的内容段落")
         return []
     
+    # 第一步：批量生成所有图片
+    print(f"\n--- 第一步：批量生成{len(segments)}张图片 ---")
+    prompts_and_paths = []
+    for i, (narrations, prompt) in enumerate(segments, 1):
+        image_name = f"{chapter_name}_segment_{i:02d}"
+        image_path = os.path.join(chapter_dir, f"{image_name}.jpg")
+        prompts_and_paths.append((prompt, image_path))
+        print(f"准备生成图片 {i}: {prompt[:30]}...")
+    
+    # 批量生成所有图片
+    successful_image_paths = generate_images_batch(prompts_and_paths)
+    
+    if len(successful_image_paths) != len(segments):
+        print(f"警告: 只成功生成了{len(successful_image_paths)}/{len(segments)}张图片")
+    
+    # 第二步：为每个段落生成音频和视频
+    print(f"\n--- 第二步：生成音频和视频 ---")
     video_files = []
     
     # 处理每个段落组（多个解说内容共用一张图片）
     for i, (narrations, prompt) in enumerate(segments, 1):
         print(f"\n--- 处理段落组 {i}/{len(segments)} ---")
-        print(f"图片prompt: {prompt[:30]}...")
         
-        # 生成共用的图片
+        # 获取对应的图片路径
         image_name = f"{chapter_name}_segment_{i:02d}"
         image_path = os.path.join(chapter_dir, f"{image_name}.jpg")
         
-        print(f"生成共用图片: {image_name}.jpg")
-        if not generate_image(prompt, image_path):
-            print(f"段落组 {i} 图片生成失败")
+        # 检查图片是否成功生成
+        if image_path not in successful_image_paths:
+            print(f"段落组 {i} 对应的图片生成失败，跳过")
             continue
+        
+        print(f"使用图片: {image_name}.jpg")
         
         # 处理该组内的每个解说内容
         for j, narration in enumerate(narrations, 1):

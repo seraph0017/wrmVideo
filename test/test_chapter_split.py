@@ -3,9 +3,18 @@
 
 import sys
 import os
-sys.path.append('src')
+sys.path.append('../src')
 
-from gen_script import split_chapters, save_chapters_to_folders
+from src.script.gen_script import ScriptGenerator
+
+# 为了兼容性，创建函数别名
+def split_chapters(text):
+    generator = ScriptGenerator()
+    return generator.split_chapters(text)
+
+def save_chapters_to_folders(chapters, base_folder):
+    generator = ScriptGenerator()
+    return generator.save_chapters_to_folders(chapters, base_folder)
 
 def test_chapter_split():
     """

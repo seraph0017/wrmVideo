@@ -8,11 +8,14 @@ Prompt配置管理
 import os
 from jinja2 import Environment, FileSystemLoader
 
-# 模板目录
-TEMPLATE_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'templates')
+# 模板目录 - 现在分散在各个模块目录中
+SRC_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'src')
+PIC_TEMPLATE_DIR = os.path.join(SRC_DIR, 'pic')
+SCRIPT_TEMPLATE_DIR = os.path.join(SRC_DIR, 'script')
+VOICE_TEMPLATE_DIR = os.path.join(SRC_DIR, 'voice')
 
-# 初始化Jinja2环境
-env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
+# 初始化Jinja2环境 - 支持多个模板目录
+env = Environment(loader=FileSystemLoader([PIC_TEMPLATE_DIR, SCRIPT_TEMPLATE_DIR, VOICE_TEMPLATE_DIR]))
 
 class PromptConfig:
     """
@@ -173,17 +176,7 @@ def get_voice_preset_list():
     """
     return list(VOICE_PRESETS.keys())
 
-def validate_style(style):
-    """
-    验证艺术风格是否有效
-    
-    Args:
-        style: 风格名称
-    
-    Returns:
-        bool: 是否有效
-    """
-    return style in ART_STYLES
+
 
 def validate_voice_preset(preset):
     """
