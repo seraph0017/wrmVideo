@@ -36,6 +36,8 @@ def concat_video(image_path, audio_path, output_dir):
             video_path,
             vcodec='libx264',
             acodec='aac',
+            audio_bitrate='192k',  # 设置音频比特率
+            ar=44100,              # 设置音频采样率
             pix_fmt='yuv420p',
             shortest=None
         )

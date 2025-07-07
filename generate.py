@@ -77,6 +77,8 @@ def generate_audio(text, output_path):
                 "speed_ratio": 1.2,
                 "volume_ratio": 1.0,
                 "pitch_ratio": 1.0,
+                "sample_rate": 44100,  # 提升采样率到44.1kHz
+                "bitrate": 192000,     # 提升比特率到192kbps
             },
             "request": {
                 "reqid": str(uuid.uuid4()),
@@ -287,6 +289,8 @@ def create_video_with_subtitle(image_path, audio_path, subtitle_text, output_pat
             output_path,
             vcodec='libx264',
             acodec='aac',
+            audio_bitrate='192k',  # 设置音频比特率
+            ar=44100,              # 设置音频采样率
             pix_fmt='yuv420p',
             shortest=None
         )
@@ -560,64 +564,99 @@ def main():
     主函数
     """
     if len(sys.argv) < 2:
-        print("使用方法: python generate.py <章节目录路径>")
-        print("示例: python generate.py data/001")
+        print("使用方法:")
+        print("  python generate.py <包含章节的目录路径>  # 处理多个章节")
+        print("  python generate.py <单个章节目录路径>    # 处理单个章节")
+        print("示例:")
+        print("  python generate.py data/001           # 处理data/001下的所有章节")
+        print("  python generate.py data/001/chapter01 # 只处理chapter01")
         sys.exit(1)
     
-    base_dir = sys.argv[1]
+    target_path = sys.argv[1]
     
-    if not os.path.exists(base_dir):
-        print(f"错误: 目录 {base_dir} 不存在")
+    if not os.path.exists(target_path):
+        print(f"错误: 目录 {target_path} 不存在")
         sys.exit(1)
     
-    print(f"开始处理目录: {base_dir}")
+    print(f"开始处理目录: {target_path}")
     
-    # 获取所有章节目录
-    chapter_dirs = []
-    for item in os.listdir(base_dir):
-        item_path = os.path.join(base_dir, item)
-        if os.path.isdir(item_path) and item.startswith('chapter'):
-            chapter_dirs.append(item_path)
+    # 检查是单个章节目录还是包含多个章节的父目录
+    target_name = os.path.basename(target_path)
     
-    # 按章节编号排序
-    chapter_dirs.sort(key=lambda x: int(re.search(r'chapter(\d+)', x).group(1)))
-    
-    if not chapter_dirs:
-        print(f"错误: 在 {base_dir} 中没有找到章节目录")
-        sys.exit(1)
-    
-    print(f"找到 {len(chapter_dirs)} 个章节目录")
-    
-    all_chapter_videos = []
-    
-    # 处理每个章节
-    for chapter_dir in chapter_dirs:
-        chapter_name = os.path.basename(chapter_dir)
+    if target_name.startswith('chapter') and target_name[7:].isdigit():
+        # 这是一个单个章节目录
+        print(f"检测到单个章节目录: {target_name}")
         
-        # 处理章节
-        video_files = process_chapter(chapter_dir)
+        # 检查是否有脚本文件
+        script_file = os.path.join(target_path, f"{target_name}_script.txt")
+        if not os.path.exists(script_file):
+            print(f"错误: 脚本文件不存在 {script_file}")
+            sys.exit(1)
+        
+        # 处理单个章节
+        video_files = process_chapter(target_path)
         
         if video_files:
             # 拼接章节内的视频段落
-            chapter_video_path = os.path.join(chapter_dir, f"{chapter_name}_complete.mp4")
+            chapter_video_path = os.path.join(target_path, f"{target_name}_complete.mp4")
             if concat_chapter_videos(video_files, chapter_video_path):
-                all_chapter_videos.append(chapter_video_path)
-                print(f"章节 {chapter_name} 处理完成")
+                print(f"\n=== 章节 {target_name} 处理完成 ===")
+                print(f"章节视频已保存到: {chapter_video_path}")
             else:
-                print(f"章节 {chapter_name} 拼接失败")
+                print(f"\n章节 {target_name} 拼接失败")
         else:
-            print(f"章节 {chapter_name} 没有生成任何视频")
+            print(f"\n章节 {target_name} 没有生成任何视频")
     
-    # 拼接所有章节视频
-    if all_chapter_videos:
-        final_video_path = os.path.join(base_dir, "final_complete_video.mp4")
-        if concat_chapter_videos(all_chapter_videos, final_video_path):
-            print(f"\n=== 所有章节处理完成 ===")
-            print(f"最终视频已保存到: {final_video_path}")
-        else:
-            print("\n最终视频拼接失败")
     else:
-        print("\n没有生成任何章节视频")
+        # 这是包含多个章节的父目录
+        print(f"检测到父目录，将处理其中的所有章节")
+        
+        # 获取所有章节目录
+        chapter_dirs = []
+        for item in os.listdir(target_path):
+            item_path = os.path.join(target_path, item)
+            if os.path.isdir(item_path) and item.startswith('chapter') and item[7:].isdigit():
+                chapter_dirs.append(item_path)
+        
+        # 按章节编号排序
+        chapter_dirs.sort(key=lambda x: int(re.search(r'chapter(\d+)', x).group(1)))
+        
+        if not chapter_dirs:
+            print(f"错误: 在 {target_path} 中没有找到章节目录")
+            sys.exit(1)
+        
+        print(f"找到 {len(chapter_dirs)} 个章节目录")
+        
+        all_chapter_videos = []
+        
+        # 处理每个章节
+        for chapter_dir in chapter_dirs:
+            chapter_name = os.path.basename(chapter_dir)
+            
+            # 处理章节
+            video_files = process_chapter(chapter_dir)
+            
+            if video_files:
+                # 拼接章节内的视频段落
+                chapter_video_path = os.path.join(chapter_dir, f"{chapter_name}_complete.mp4")
+                if concat_chapter_videos(video_files, chapter_video_path):
+                    all_chapter_videos.append(chapter_video_path)
+                    print(f"章节 {chapter_name} 处理完成")
+                else:
+                    print(f"章节 {chapter_name} 拼接失败")
+            else:
+                print(f"章节 {chapter_name} 没有生成任何视频")
+        
+        # 拼接所有章节视频
+        if all_chapter_videos:
+            final_video_path = os.path.join(target_path, "final_complete_video.mp4")
+            if concat_chapter_videos(all_chapter_videos, final_video_path):
+                print(f"\n=== 所有章节处理完成 ===")
+                print(f"最终视频已保存到: {final_video_path}")
+            else:
+                print("\n最终视频拼接失败")
+        else:
+            print("\n没有生成任何章节视频")
     
     print("\n=== 处理完成 ===")
 
