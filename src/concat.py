@@ -1,5 +1,5 @@
 import os
-import subprocess
+import ffmpeg
 from datetime import datetime
 
 def concat_video(image_path, audio_path, output_dir):
@@ -23,34 +23,32 @@ def concat_video(image_path, audio_path, output_dir):
         video_filename = f"video_{timestamp}.mp4"
         video_path = os.path.join(output_dir, video_filename)
         
-        # 使用ffmpeg合成视频
-        # -loop 1: 循环图片
-        # -i: 输入文件
-        # -c:v libx264: 视频编码器
-        # -t: 视频时长（根据音频时长）
-        # -pix_fmt yuv420p: 像素格式
-        # -shortest: 以最短的输入为准
-        cmd = [
-            'ffmpeg',
-            '-loop', '1',
-            '-i', image_path,
-            '-i', audio_path,
-            '-c:v', 'libx264',
-            '-c:a', 'aac',
-            '-pix_fmt', 'yuv420p',
-            '-shortest',
-            '-y',  # 覆盖输出文件
-            video_path
-        ]
-        
+        # 使用ffmpeg-python合成视频
         print(f"正在合成视频: {video_filename}")
-        result = subprocess.run(cmd, capture_output=True, text=True)
         
-        if result.returncode == 0:
+        # 创建输入流
+        image_input = ffmpeg.input(image_path, loop=1)
+        audio_input = ffmpeg.input(audio_path)
+        
+        # 合成视频
+        output = ffmpeg.output(
+            image_input, audio_input,
+            video_path,
+            vcodec='libx264',
+            acodec='aac',
+            pix_fmt='yuv420p',
+            shortest=None
+        )
+        
+        # 运行ffmpeg命令
+        ffmpeg.run(output, overwrite_output=True, quiet=True)
+        
+        # 检查输出文件是否存在
+        if os.path.exists(video_path):
             print(f"视频合成成功: {video_path}")
             return video_path
         else:
-            print(f"视频合成失败: {result.stderr}")
+            print("视频合成失败: 输出文件未生成")
             return None
             
     except Exception as e:
