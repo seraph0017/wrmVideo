@@ -1,29 +1,22 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+图片生成模块（兼容性保持）
+使用新的配置化系统
+"""
+
 import os
+import sys
 import base64
-import requests
 from datetime import datetime
 from volcenginesdkarkruntime import Ark
 from config import ARK_CONFIG
 
-# 艺术风格模板
-ART_STYLES = {
-    'manga': (
-        "漫画风格，动漫插画，精美细腻的画风，鲜艳的色彩，清晰的线条，"
-        "日式动漫风格，高质量插画，细节丰富，光影效果好，"
-    ),
-    'realistic': (
-        "写实风格，真实感强，细节丰富，高清画质，专业摄影，"
-        "自然光线，真实色彩，"
-    ),
-    'watercolor': (
-        "水彩画风格，柔和的色彩，艺术感强，手绘质感，"
-        "淡雅的色调，水彩晕染效果，"
-    ),
-    'oil_painting': (
-        "油画风格，厚重的笔触，丰富的色彩层次，古典艺术感，"
-        "油画质感，艺术大师风格，"
-    )
-}
+# 添加项目根目录到路径
+project_root = os.path.dirname(os.path.dirname(__file__))
+sys.path.insert(0, project_root)
+
+from config.prompt_config import prompt_config, ART_STYLES, validate_style
 
 # 初始化Ark客户端
 client = Ark(
@@ -37,18 +30,24 @@ def generate_image_with_style(description, style='manga', output_path=None):
     
     Args:
         description: 图片描述文本
-        style: 艺术风格 ('manga', 'realistic', 'watercolor', 'oil_painting')
+        style: 艺术风格，可选值见ART_STYLES
         output_path: 输出文件路径，如果为None则自动生成
     
     Returns:
         str: 生成的图片文件路径，失败返回None
     """
     try:
-        # 获取风格模板
-        style_prompt = ART_STYLES.get(style, ART_STYLES['manga'])
+        # 验证风格
+        if not validate_style(style):
+            print(f"错误：不支持的艺术风格 '{style}'")
+            print(f"可用风格：{list(ART_STYLES.keys())}")
+            return None
         
-        # 构建完整的prompt
-        full_prompt = style_prompt + "以下面一段描述为描述，生成一张故事图片\n\n" + description
+        # 使用配置管理器生成prompt
+        full_prompt = prompt_config.get_pic_prompt(
+            description=description,
+            style=style
+        )
         
         print(f"正在生成{style}风格图片...")
         

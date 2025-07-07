@@ -1,11 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+脚本生成模块（兼容性保持）
+使用新的配置化系统
+"""
 
 import os
 import sys
 # 升级方舟 SDK 到最新版本 pip install -U 'volcengine-python-sdk[ark]'
 from volcenginesdkarkruntime import Ark
 from config import ARK_CONFIG
+
+# 添加项目根目录到路径
+project_root = os.path.dirname(os.path.dirname(__file__))
+sys.path.insert(0, project_root)
+
+from config.prompt_config import prompt_config, SCRIPT_CONFIG
 
 def read_novel_file(file_path):
     """
@@ -25,7 +35,7 @@ def read_novel_file(file_path):
         print(f"读取小说文件失败: {e}")
         return None
 
-def split_text(text, max_chars=100000):
+def split_text(text, max_chars=None):
     """
     将长文本分割成较小的片段
     
@@ -36,6 +46,9 @@ def split_text(text, max_chars=100000):
     Returns:
         list: 文本片段列表
     """
+    if max_chars is None:
+        max_chars = SCRIPT_CONFIG['chunk_size']
+        
     if len(text) <= max_chars:
         return [text]
     
@@ -58,7 +71,7 @@ def split_text(text, max_chars=100000):
     
     return chunks
 
-def generate_script_for_chunk(client, chunk_content, chunk_index, total_chunks, start_chapter_num=1):
+def generate_script_for_chunk(client, chunk_content, chunk_index, total_chunks, start_chapter_num=1, **kwargs):
     """
     为单个文本片段生成解说文案
     
@@ -68,70 +81,27 @@ def generate_script_for_chunk(client, chunk_content, chunk_index, total_chunks, 
         chunk_index: 当前片段索引（从1开始）
         total_chunks: 总片段数
         start_chapter_num: 起始章节编号
+        **kwargs: 其他参数
     
     Returns:
         str: 生成的解说文案
     """
     print(f"正在处理第 {chunk_index}/{total_chunks} 个文本片段...")
     
+    # 使用配置管理器生成prompt
+    prompt = prompt_config.get_script_prompt(
+        content=chunk_content,
+        is_chunk=True,
+        chunk_index=chunk_index,
+        total_chunks=total_chunks,
+        start_chapter_num=start_chapter_num,
+        **kwargs
+    )
+    
     response = client.chat.completions.create(
-        model="doubao-seed-1.6-250615",
+        model=SCRIPT_CONFIG['model'],
         messages=[
-            {"role": "user", "content": f"""
-            你的任务是根据给定的小说片段生成详细解说文案，每个文案要能撑起3 - 4分钟的音视频，需要对小说情节进行细致的描述和解读，而非概要，且要包含细节的台词。同时，为每个章节的解说文案分段映射不同的用于生成图片的prompt，以便配合解说文案一起合成视频。
-
-重要要求：
-1. 这是第 {chunk_index} 个片段，共 {total_chunks} 个片段
-2. 章节编号从第{start_chapter_num}章开始，按顺序递增
-3. 严格按照以下XML格式输出，确保格式完全一致：
-
-<小说片段>
-{chunk_content}
-</小说片段>
-### 解说文案内容要求
-- 单个文案要能撑起3 - 4分钟的音视频，故事开头必须有包点，洗成白话，直白易懂。
-- 根据片段内容生成相应数量的章节解说文案。
-- 字幕注意断句，视频结尾不能突兀，要保证内容完整，不要话没说完就结束。
-
-### 开场要求
-开场可以从以下多个方向突出：
-#### 热开场
-- **高潮先行**：把精彩的部分提到前面。
-- **动作引爆**：有一个人物有动作调度的事情。
-- **强烈情绪**：把喜怒哀乐氛围瞬间拉到顶。
-- **疑问开头**：以人为什么死了、人去哪了、人为什么被害了、人为什么被打了等疑问的方式作开头。
-#### 前提开场
-如玄幻小说，可采用"混沌未开，天地乱"这类引用章节或全书引述部分内容作开场。
-#### 冷开场
-
-### 规避内容要求
-- 涉及士兵、军官的服装不能具象化出现，用同色制服代替。
-- 台词内容不要涉及时政（类似发展类字眼）。
-- 坚决不能出现对未成年人造成伤害的内容，例如：囚禁，伤害，辱骂，殴打，遗弃等。
-- 带有明确不良影响的台词规避掉。
-- 玄幻古装类的剧规避掉双修字眼。
-- 现代言情类的规避掉：初夜，第一次，成人用品等字眼以及剧情。
-- 类似"亲吻，脖颈"等台词避免出现，床上拥抱的画面禁止出现。
-
-### 音效和音乐要求
-- 为每个章节的解说文案推荐合适的音效和音乐。
-- 开场要有吸引人的文案，氛围感要拉满。
-- 背景音乐要和解说文案的声音一起结束。
-
-### 输出格式要求（必须严格遵守）
-请严格按照以下XML格式输出，不要添加任何额外的标签或分隔符：
-
-<第X章节>
-<解说内容>解说文案段落1</解说内容>
-<图片prompt>用于生成图片的详细描述</图片prompt>
-
-<解说内容>解说文案段落2</解说内容>
-<图片prompt>用于生成图片的详细描述</图片prompt>
-</第X章节>
-
-
-
-so            """}
+            {"role": "user", "content": prompt}
         ],
         thinking={
              "type": "disabled" # 不使用深度思考能力,
@@ -366,11 +336,11 @@ def generate_script(novel_content, output_file=None):
     )
     
     # 检查文本长度，如果过长则分块处理
-    if len(novel_content) > 100000:  # 约10万字符
+    if len(novel_content) > SCRIPT_CONFIG['max_single_chunk']:  # 使用配置的阈值
         print(f"小说内容较长（{len(novel_content)}字符），将分块处理...")
         
         # 分割文本
-        chunks = split_text(novel_content, max_chars=80000)
+        chunks = split_text(novel_content)
         print(f"已分割为 {len(chunks)} 个片段")
         
         all_scripts = []
@@ -396,54 +366,16 @@ def generate_script(novel_content, output_file=None):
     else:
         print("正在生成解说文案，请耐心等待...")
         
+        # 使用配置管理器生成prompt
+        prompt = prompt_config.get_script_prompt(
+            content=novel_content,
+            is_chunk=False
+        )
+        
         response = client.chat.completions.create(
-            model="doubao-seed-1.6-250615",
+            model=SCRIPT_CONFIG['model'],
             messages=[
-                {"role": "user", "content": f"""
-                你的任务是根据给定的小说生成不超过60个章节的详细解说文案，每个文案要能撑起3 - 4分钟的音视频，需要对小说情节进行细致的描述和解读，而非概要，且要包含细节的台词。同时，为每个章节的解说文案分段映射不同的用于生成图片的prompt，以便配合解说文案一起合成视频。以下是具体要求：
-<小说>
-{novel_content}
-</小说>
-### 解说文案内容要求
-- 单个文案要能撑起3 - 4分钟的音视频，故事开头必须有包点，洗成白话，直白易懂。
-- 共生成不超过60个章节的解说文案。
-- 字幕注意断句，视频结尾不能突兀，要保证内容完整，不要话没说完就结束。
-
-### 开场方式
-#### 悬疑开头
-- **悬疑开头**：以悬疑的方式作开头，如"这个男人为什么要杀死自己的妻子"、"这个女人为什么要背叛自己的丈夫"等。
-- **反转开头**：以反转的方式作开头，如"你以为他是好人，其实他是坏人"、"你以为她是坏人，其实她是好人"等。
-- **对比开头**：以对比的方式作开头，如"他是一个富二代，她是一个穷丫头"、"他是一个学霸，她是一个学渣"等。
-- **疑问开头**：以人为什么死了、人去哪了、人为什么被害了、人为什么被打了等疑问的方式作开头。
-#### 前提开场
-如玄幻小说，可采用"混沌未开，天地乱"这类引用章节或全书引述部分内容作开场。
-#### 冷开场
-
-### 内容规避要求
-- 避免出现敏感词汇和内容。
-- 避免出现政治敏感内容。
-- 避免出现暴力血腥内容的详细描述。
-- 玄幻古装类的剧规避掉双修字眼。
-- 现代言情类的规避掉：初夜，第一次，成人用品等字眼以及剧情。
-- 类似"亲吻，脖颈"等台词避免出现，床上拥抱的画面禁止出现。
-
-### 音效和音乐要求
-- 背景音乐要符合剧情氛围。
-- 音效要和画面同步。
-- 背景音乐要和解说文案的声音一起结束。
-
-### 输出格式要求（必须严格遵守）
-请严格按照以下XML格式输出，不要添加任何额外的标签或分隔符：
-
-<第X章节>
-<解说内容>解说文案段落1</解说内容>
-<图片prompt>用于生成图片的详细描述</图片prompt>
-
-<解说内容>解说文案段落2</解说内容>
-<图片prompt>用于生成图片的详细描述</图片prompt>
-</第X章节>
-
-                """}],
+                {"role": "user", "content": prompt}],
             thinking={
                  "type": "disabled" # 不使用深度思考能力,
                  # "type": "enabled" # 使用深度思考能力
