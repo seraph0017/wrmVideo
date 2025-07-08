@@ -10,7 +10,8 @@ TTS_CONFIG = {
 # Ark配置示例
 ARK_CONFIG = {
     "base_url": "https://ark.cn-beijing.volces.com/api/v3",
-    "api_key": "your_api_key_here"
+    "api_key": "your_api_key_here",
+    "model": "doubao-seed-1.6-250615"  # 脚本生成使用的模型
 }
 
 # 图片生成配置

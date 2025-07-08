@@ -17,13 +17,7 @@ project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 sys.path.insert(0, project_root)
 
 from config.prompt_config import prompt_config, VOICE_PRESETS, validate_voice_preset
-
-# TTS配置
-TTS_CONFIG = {
-    "appid": "6359073393",
-    "cluster": "volcano_tts",
-    "voice_type": "BV700_streaming"
-}
+from config.config import TTS_CONFIG
 
 class VoiceGenerator:
     """

@@ -1,6 +1,7 @@
 # 视频生成项目依赖
 requests==2.31.0
 volcengine-python-sdk[ark]==1.0.98
+volcengine==1.0.98
 ffmpeg-python==0.2.0
 jinja2
 Pillow>=10.0.0

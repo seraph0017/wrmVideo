@@ -17,6 +17,7 @@ project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 sys.path.insert(0, project_root)
 
 from config.prompt_config import prompt_config, SCRIPT_CONFIG
+from config.config import ARK_CONFIG
 
 class ScriptGenerator:
     """
@@ -35,7 +36,7 @@ class ScriptGenerator:
             raise ValueError("请设置ARK_API_KEY环境变量或传入api_key参数")
         
         self.client = Ark(api_key=self.api_key)
-        self.model = "doubao-seed-1.6-250615"
+        self.model = ARK_CONFIG.get('model', 'doubao-seed-1.6-250615')
     
     def read_novel_file(self, file_path: str) -> str:
         """
