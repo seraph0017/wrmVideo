@@ -994,28 +994,79 @@ def generate_images_from_scripts(data_dir):
             chapter_name = os.path.basename(chapter_dir)
             print(f"\n--- 处理章节: {chapter_name} ---")
             
-            # 查找图片prompt文件
-            prompt_file = os.path.join(chapter_dir, "image_prompt.txt")
-            if not os.path.exists(prompt_file):
-                print(f"警告: 图片prompt文件不存在 {prompt_file}")
+            # 查找narration文件
+            narration_file = os.path.join(chapter_dir, "narration.txt")
+            if not os.path.exists(narration_file):
+                print(f"警告: narration文件不存在 {narration_file}")
                 continue
             
-            # 读取prompt
-            with open(prompt_file, 'r', encoding='utf-8') as f:
-                prompt = f.read().strip()
+            # 读取narration内容
+            with open(narration_file, 'r', encoding='utf-8') as f:
+                narration_content = f.read().strip()
             
-            if not prompt:
-                print(f"警告: 图片prompt为空")
+            if not narration_content:
+                print(f"警告: narration内容为空")
                 continue
             
-            # 生成图片
-            image_path = os.path.join(chapter_dir, f"{chapter_name}_image.jpg")
+            # 提取人物信息
+            characters = {}
+            character_pattern = r'<主要人物>\s*([\s\S]*?)(?=<|$)'
+            character_match = re.search(character_pattern, narration_content)
+            if character_match:
+                character_text = character_match.group(1)
+                # 解析每个人物的信息
+                char_blocks = re.split(r'\n(?=\S)', character_text.strip())
+                for block in char_blocks:
+                    if block.strip():
+                        lines = block.strip().split('\n')
+                        if lines:
+                            name = lines[0].strip().rstrip('：:')
+                            details = []
+                            for line in lines[1:]:
+                                line = line.strip()
+                                if line and not line.startswith('-'):
+                                    details.append(line)
+                            if details:
+                                characters[name] = '，'.join(details)
             
-            # 使用新的图片生成函数
-            if generate_image_with_volcengine(prompt, image_path):
-                success_count += 1
-            else:
-                print(f"✗ 章节 {chapter_name} 图片生成失败")
+            # 提取图片prompts
+            prompt_pattern = r'<图片prompt>\s*([\s\S]*?)(?=<|$)'
+            prompts = re.findall(prompt_pattern, narration_content)
+            
+            if not prompts:
+                print(f"警告: 未找到图片prompt")
+                continue
+            
+            print(f"找到 {len(prompts)} 个图片prompt")
+            
+            # 为每个prompt生成图片
+            for i, prompt in enumerate(prompts, 1):
+                prompt = prompt.strip()
+                if not prompt:
+                    continue
+                
+                # 增强prompt：如果包含人名，添加人物细节
+                enhanced_prompt = prompt
+                for char_name in characters:
+                    if char_name in prompt:
+                        char_details = characters[char_name]
+                        enhanced_prompt = enhanced_prompt.replace(char_name, f"{char_name}（{char_details}）")
+                
+                print(f"  生成第 {i}/{len(prompts)} 张图片: {chapter_name}_image_{i:02d}.jpg")
+                print(f"  原始prompt: {prompt[:100]}...")
+                print(f"  增强prompt: {enhanced_prompt[:100]}...")
+                
+                # 生成图片
+                image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}.jpg")
+                
+                # 使用图片生成函数
+                if generate_image_with_volcengine(enhanced_prompt, image_path):
+                    print(f"  ✓ 图片生成成功")
+                    success_count += 1
+                else:
+                    print(f"  ✗ 图片生成失败")
+            
+            print(f"章节 {chapter_name} 处理完成，成功生成 {len([p for p in prompts if p.strip()])} 张图片")
         
         print(f"\n图片生成完成，成功生成 {success_count}/{len(chapter_dirs)} 张图片")
         return success_count > 0
