@@ -1,19 +1,31 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+统一的视频生成系统
+支持脚本生成、图片生成、语音生成和视频拼接
+"""
 
 import os
 import sys
 import re
-import xml.etree.ElementTree as ET
+import argparse
 from datetime import datetime
 import json
 import base64
 import uuid
 import requests
-from volcenginesdkarkruntime import Ark
+import subprocess
 import ffmpeg
+from volcenginesdkarkruntime import Ark
 
-from config.config import TTS_CONFIG, ARK_CONFIG, IMAGE_CONFIG
+# 添加src目录到路径
+src_dir = os.path.join(os.path.dirname(__file__), 'src')
+sys.path.insert(0, src_dir)
+
+from config.config import TTS_CONFIG, ARK_CONFIG, IMAGE_CONFIG, IMAGE_TWO_CONFIG
+from src.script.gen_script import ScriptGenerator
+from src.voice.gen_voice import VoiceGenerator
+from src.image.gen_image import generate_image_with_volcengine
 
 def clean_text_for_tts(text):
     """
@@ -158,7 +170,7 @@ def generate_image(prompt, output_path, style=None):
         print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
         
         # 构建完整的prompt
-        full_prompt = style_prompt + "\n\n以下面一段描述为内容，生成一张故事图片：\n" + prompt
+        full_prompt = style_prompt + "\n\n以下面描述为内容，生成一张故事图片：\n" + prompt
         
         # 统一使用文生图模式
         imagesResponse = client.images.generate(
@@ -228,7 +240,7 @@ def generate_images_batch(prompts_and_paths, style=None):
                 print(f"正在生成第{i}/{len(prompts_and_paths)}张图片: {os.path.basename(output_path)}")
                 
                 # 构建完整的prompt
-                full_prompt = style_prompt + "\n\n以下面一段描述为内容，生成一张故事图片：\n" + prompt
+                full_prompt = style_prompt + "\n\n以下面描述为内容，生成一张故事图片：\n" + prompt
                 
                 # 生成图片
                 imagesResponse = client.images.generate(
@@ -651,128 +663,487 @@ def concat_chapter_videos(video_files, output_path):
         # 确保输出目录存在
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         
-        # 创建输入流列表
-        inputs = []
-        for video_file in video_files:
-            input_stream = ffmpeg.input(video_file)
-            inputs.extend([input_stream['v'], input_stream['a']])
+        # 创建临时文件列表
+        temp_list_file = "temp_video_list.txt"
+        with open(temp_list_file, 'w', encoding='utf-8') as f:
+            for video_file in video_files:
+                # 使用相对路径或绝对路径
+                f.write(f"file '{os.path.abspath(video_file)}'\n")
         
-        # 拼接视频（确保包含音频和视频流）
-        output = ffmpeg.concat(*inputs, v=1, a=1).output(output_path)
+        # 使用ffmpeg拼接视频
+        cmd = [
+            'ffmpeg', '-y',
+            '-f', 'concat',
+            '-safe', '0',
+            '-i', temp_list_file,
+            '-c', 'copy',
+            output_path
+        ]
         
-        # 运行ffmpeg命令
-        ffmpeg.run(output, overwrite_output=True, quiet=True)
+        result = subprocess.run(cmd, capture_output=True, text=True)
         
-        # 检查输出文件是否存在
-        if os.path.exists(output_path):
+        # 清理临时文件
+        if os.path.exists(temp_list_file):
+            os.remove(temp_list_file)
+        
+        if result.returncode == 0:
             print(f"章节视频拼接成功: {output_path}")
             return True
         else:
-            print("章节视频拼接失败: 输出文件未生成")
+            print(f"章节视频拼接失败: {result.stderr}")
             return False
             
     except Exception as e:
         print(f"拼接章节视频时发生错误: {e}")
+        # 清理临时文件
+        if 'temp_list_file' in locals() and os.path.exists(temp_list_file):
+            os.remove(temp_list_file)
+        return False
+
+def generate_script_from_novel(novel_file, output_dir):
+    """
+    从小说文件生成脚本
+    
+    Args:
+        novel_file: 小说文件路径
+        output_dir: 输出目录
+    
+    Returns:
+        bool: 是否成功
+    """
+    try:
+        print(f"=== 开始生成脚本 ===")
+        print(f"输入文件: {novel_file}")
+        print(f"输出目录: {output_dir}")
+        
+        # 检查输入文件
+        if not os.path.exists(novel_file):
+            print(f"错误: 小说文件不存在 {novel_file}")
+            return False
+        
+        # 读取小说内容
+        with open(novel_file, 'r', encoding='utf-8') as f:
+            novel_content = f.read()
+        
+        if not novel_content.strip():
+            print("错误: 小说文件内容为空")
+            return False
+        
+        # 创建脚本生成器
+        generator = ScriptGenerator(api_key=ARK_CONFIG['api_key'])
+        
+        # 生成脚本
+        success = generator.generate_script(novel_content, output_dir)
+        
+        if success:
+            print(f"✓ 脚本生成成功，保存到: {output_dir}")
+            return True
+        else:
+            print("✗ 脚本生成失败")
+            return False
+            
+    except Exception as e:
+        print(f"生成脚本时发生错误: {e}")
+        return False
+
+def generate_images_from_scripts(data_dir):
+    """
+    根据脚本生成图片
+    
+    Args:
+        data_dir: 数据目录路径
+    
+    Returns:
+        bool: 是否成功
+    """
+    try:
+        print(f"=== 开始生成图片 ===")
+        print(f"数据目录: {data_dir}")
+        
+        if not os.path.exists(data_dir):
+            print(f"错误: 数据目录不存在 {data_dir}")
+            return False
+        
+        # 查找所有章节目录
+        chapter_dirs = []
+        for item in os.listdir(data_dir):
+            item_path = os.path.join(data_dir, item)
+            if os.path.isdir(item_path) and item.startswith('chapter_'):
+                chapter_dirs.append(item_path)
+        
+        if not chapter_dirs:
+            print(f"错误: 在 {data_dir} 中没有找到章节目录")
+            return False
+        
+        chapter_dirs.sort()
+        print(f"找到 {len(chapter_dirs)} 个章节目录")
+        
+        success_count = 0
+        
+        # 处理每个章节
+        for chapter_dir in chapter_dirs:
+            chapter_name = os.path.basename(chapter_dir)
+            print(f"\n--- 处理章节: {chapter_name} ---")
+            
+            # 查找图片prompt文件
+            prompt_file = os.path.join(chapter_dir, "image_prompt.txt")
+            if not os.path.exists(prompt_file):
+                print(f"警告: 图片prompt文件不存在 {prompt_file}")
+                continue
+            
+            # 读取prompt
+            with open(prompt_file, 'r', encoding='utf-8') as f:
+                prompt = f.read().strip()
+            
+            if not prompt:
+                print(f"警告: 图片prompt为空")
+                continue
+            
+            # 生成图片
+            image_path = os.path.join(chapter_dir, f"{chapter_name}_image.jpg")
+            
+            # 使用新的图片生成函数
+            if generate_image_with_volcengine(prompt, image_path):
+                success_count += 1
+            else:
+                print(f"✗ 章节 {chapter_name} 图片生成失败")
+        
+        print(f"\n图片生成完成，成功生成 {success_count}/{len(chapter_dirs)} 张图片")
+        return success_count > 0
+        
+    except Exception as e:
+        print(f"生成图片时发生错误: {e}")
+        return False
+
+def generate_voices_from_scripts(data_dir):
+    """
+    根据脚本生成语音
+    
+    Args:
+        data_dir: 数据目录路径
+    
+    Returns:
+        bool: 是否成功
+    """
+    try:
+        print(f"=== 开始生成语音 ===")
+        print(f"数据目录: {data_dir}")
+        
+        if not os.path.exists(data_dir):
+            print(f"错误: 数据目录不存在 {data_dir}")
+            return False
+        
+        # 查找所有章节目录
+        chapter_dirs = []
+        for item in os.listdir(data_dir):
+            item_path = os.path.join(data_dir, item)
+            if os.path.isdir(item_path) and item.startswith('chapter_'):
+                chapter_dirs.append(item_path)
+        
+        if not chapter_dirs:
+            print(f"错误: 在 {data_dir} 中没有找到章节目录")
+            return False
+        
+        chapter_dirs.sort()
+        print(f"找到 {len(chapter_dirs)} 个章节目录")
+        
+        # 创建语音生成器
+        voice_generator = VoiceGenerator()
+        
+        success_count = 0
+        
+        # 处理每个章节
+        for chapter_dir in chapter_dirs:
+            chapter_name = os.path.basename(chapter_dir)
+            print(f"\n--- 处理章节: {chapter_name} ---")
+            
+            # 查找解说文件
+            narration_file = os.path.join(chapter_dir, "narration.txt")
+            if not os.path.exists(narration_file):
+                print(f"警告: 解说文件不存在 {narration_file}")
+                continue
+            
+            # 读取解说内容
+            with open(narration_file, 'r', encoding='utf-8') as f:
+                narration = f.read().strip()
+            
+            if not narration:
+                print(f"警告: 解说内容为空")
+                continue
+            
+            # 清理文本
+            clean_narration = clean_text_for_tts(narration)
+            
+            # 智能断句
+            text_parts = smart_split_text(clean_narration, max_length=50)
+            
+            print(f"解说内容分为 {len(text_parts)} 个部分")
+            
+            # 为每个部分生成语音
+            for i, text_part in enumerate(text_parts, 1):
+                audio_path = os.path.join(chapter_dir, f"{chapter_name}_audio_{i:02d}.mp3")
+                
+                if generate_audio(text_part, audio_path):
+                    print(f"✓ 第 {i} 部分语音生成成功")
+                    success_count += 1
+                else:
+                    print(f"✗ 第 {i} 部分语音生成失败")
+        
+        print(f"\n语音生成完成，成功生成 {success_count} 个语音文件")
+        return success_count > 0
+        
+    except Exception as e:
+        print(f"生成语音时发生错误: {e}")
+        return False
+
+def concat_videos_from_assets(data_dir):
+    """
+    拼接图片、语音和字幕生成视频
+    
+    Args:
+        data_dir: 数据目录路径
+    
+    Returns:
+        bool: 是否成功
+    """
+    try:
+        print(f"=== 开始拼接视频 ===")
+        print(f"数据目录: {data_dir}")
+        
+        if not os.path.exists(data_dir):
+            print(f"错误: 数据目录不存在 {data_dir}")
+            return False
+        
+        # 查找所有章节目录
+        chapter_dirs = []
+        for item in os.listdir(data_dir):
+            item_path = os.path.join(data_dir, item)
+            if os.path.isdir(item_path) and item.startswith('chapter_'):
+                chapter_dirs.append(item_path)
+        
+        if not chapter_dirs:
+            print(f"错误: 在 {data_dir} 中没有找到章节目录")
+            return False
+        
+        chapter_dirs.sort()
+        print(f"找到 {len(chapter_dirs)} 个章节目录")
+        
+        all_videos = []
+        
+        # 处理每个章节
+        for chapter_dir in chapter_dirs:
+            chapter_name = os.path.basename(chapter_dir)
+            print(f"\n--- 处理章节: {chapter_name} ---")
+            
+            # 查找图片文件
+            image_path = os.path.join(chapter_dir, f"{chapter_name}_image.jpg")
+            if not os.path.exists(image_path):
+                print(f"警告: 图片文件不存在 {image_path}")
+                continue
+            
+            # 查找解说文件
+            narration_file = os.path.join(chapter_dir, "narration.txt")
+            if not os.path.exists(narration_file):
+                print(f"警告: 解说文件不存在 {narration_file}")
+                continue
+            
+            # 读取解说内容
+            with open(narration_file, 'r', encoding='utf-8') as f:
+                narration = f.read().strip()
+            
+            # 清理文本
+            clean_narration = clean_text_for_tts(narration)
+            text_parts = smart_split_text(clean_narration, max_length=50)
+            
+            chapter_videos = []
+            
+            # 为每个音频部分创建视频
+            for i, text_part in enumerate(text_parts, 1):
+                audio_path = os.path.join(chapter_dir, f"{chapter_name}_audio_{i:02d}.mp3")
+                
+                if not os.path.exists(audio_path):
+                    print(f"警告: 音频文件不存在 {audio_path}")
+                    continue
+                
+                # 检查文本长度，如果太长则分割
+                if len(text_part) > 25:  # 超过25个字符需要分割
+                    # 分割成两部分
+                    mid_point = len(text_part) // 2
+                    # 寻找合适的分割点（标点符号）
+                    split_chars = ['。', '！', '？', '，', '；', '：']
+                    best_split = mid_point
+                    for j in range(max(0, mid_point-10), min(len(text_part), mid_point+10)):
+                        if text_part[j] in split_chars:
+                            best_split = j + 1
+                            break
+                    
+                    part1 = text_part[:best_split].strip()
+                    part2 = text_part[best_split:].strip()
+                    
+                    if part1 and part2:
+                        # 创建两个视频
+                        video1_path = os.path.join(chapter_dir, f"{chapter_name}_video_{i:02d}_part1.mp4")
+                        video2_path = os.path.join(chapter_dir, f"{chapter_name}_video_{i:02d}_part2.mp4")
+                        
+                        if create_video_with_subtitle(image_path, audio_path, part1, video1_path):
+                            chapter_videos.append(video1_path)
+                            print(f"✓ 视频片段 {i}-1 创建成功")
+                        
+                        # 为第二部分创建静音音频（如果需要）
+                        # 这里简化处理，使用同一个音频文件
+                        if create_video_with_subtitle(image_path, audio_path, part2, video2_path):
+                            chapter_videos.append(video2_path)
+                            print(f"✓ 视频片段 {i}-2 创建成功")
+                    else:
+                        # 如果分割失败，使用原文本
+                        video_path = os.path.join(chapter_dir, f"{chapter_name}_video_{i:02d}.mp4")
+                        if create_video_with_subtitle(image_path, audio_path, text_part, video_path):
+                            chapter_videos.append(video_path)
+                            print(f"✓ 视频片段 {i} 创建成功")
+                else:
+                    # 文本长度合适，直接创建视频
+                    video_path = os.path.join(chapter_dir, f"{chapter_name}_video_{i:02d}.mp4")
+                    if create_video_with_subtitle(image_path, audio_path, text_part, video_path):
+                        chapter_videos.append(video_path)
+                        print(f"✓ 视频片段 {i} 创建成功")
+            
+            # 拼接章节内的所有视频
+            if chapter_videos:
+                chapter_final_path = os.path.join(chapter_dir, f"{chapter_name}_complete.mp4")
+                if concat_chapter_videos(chapter_videos, chapter_final_path):
+                    all_videos.append(chapter_final_path)
+                    print(f"✓ 章节 {chapter_name} 视频拼接成功")
+                else:
+                    print(f"✗ 章节 {chapter_name} 视频拼接失败")
+        
+        # 拼接所有章节视频
+        if all_videos:
+            final_video_path = os.path.join(data_dir, "final_complete_video.mp4")
+            if concat_chapter_videos(all_videos, final_video_path):
+                print(f"\n✓ 最终视频拼接成功: {final_video_path}")
+                return True
+            else:
+                print(f"\n✗ 最终视频拼接失败")
+                return False
+        else:
+            print("\n没有生成任何章节视频")
+            return False
+        
+    except Exception as e:
+        print(f"拼接视频时发生错误: {e}")
+        return False
+
+def clean_directory(data_dir):
+    """
+    清除指定目录下除原始小说文件外的所有文件
+    
+    Args:
+        data_dir: 数据目录路径
+    
+    Returns:
+        bool: 是否成功
+    """
+    try:
+        print(f"=== 开始清理目录 ===")
+        print(f"目标目录: {data_dir}")
+        
+        if not os.path.exists(data_dir):
+            print(f"错误: 目录不存在 {data_dir}")
+            return False
+        
+        # 遍历目录中的所有文件和文件夹
+        for item in os.listdir(data_dir):
+            item_path = os.path.join(data_dir, item)
+            
+            # 保留原始小说文件（.txt文件）
+            if os.path.isfile(item_path) and item.endswith('.txt'):
+                print(f"保留原始小说文件: {item}")
+                continue
+            
+            # 删除其他所有文件和文件夹
+            try:
+                if os.path.isfile(item_path):
+                    os.remove(item_path)
+                    print(f"删除文件: {item}")
+                elif os.path.isdir(item_path):
+                    import shutil
+                    shutil.rmtree(item_path)
+                    print(f"删除目录: {item}")
+            except Exception as e:
+                print(f"删除 {item} 时发生错误: {e}")
+                return False
+        
+        print(f"✓ 目录清理完成")
+        return True
+        
+    except Exception as e:
+        print(f"清理目录时发生错误: {e}")
         return False
 
 def main():
     """
     主函数
     """
-    if len(sys.argv) < 2:
-        print("使用方法:")
-        print("  python generate.py <包含章节的目录路径>  # 处理多个章节")
-        print("  python generate.py <单个章节目录路径>    # 处理单个章节")
-        print("示例:")
-        print("  python generate.py data/001           # 处理data/001下的所有章节")
-        print("  python generate.py data/001/chapter01 # 只处理chapter01")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description='统一的视频生成系统')
+    parser.add_argument('command', choices=['script', 'image', 'voice', 'concat', 'init'], 
+                       help='要执行的命令')
+    parser.add_argument('path', help='文件或目录路径')
+    parser.add_argument('--output', '-o', help='输出目录（仅用于script命令）')
     
-    target_path = sys.argv[1]
+    args = parser.parse_args()
     
-    if not os.path.exists(target_path):
-        print(f"错误: 目录 {target_path} 不存在")
-        sys.exit(1)
+    print(f"执行命令: {args.command}")
+    print(f"目标路径: {args.path}")
     
-    print(f"开始处理目录: {target_path}")
-    
-    # 检查是单个章节目录还是包含多个章节的父目录
-    target_name = os.path.basename(target_path)
-    
-    if target_name.startswith('chapter') and target_name[7:].isdigit():
-        # 这是一个单个章节目录
-        print(f"检测到单个章节目录: {target_name}")
+    if args.command == 'script':
+        # 生成脚本
+        if not args.output:
+            # 从路径推断输出目录
+            base_name = os.path.splitext(os.path.basename(args.path))[0]
+            args.output = os.path.join('data', base_name)
         
-        # 检查是否有脚本文件
-        script_file = os.path.join(target_path, f"{target_name}_script.txt")
-        if not os.path.exists(script_file):
-            print(f"错误: 脚本文件不存在 {script_file}")
-            sys.exit(1)
-        
-        # 处理单个章节
-        video_files = process_chapter(target_path)
-        
-        if video_files:
-            # 拼接章节内的视频段落
-            chapter_video_path = os.path.join(target_path, f"{target_name}_complete.mp4")
-            if concat_chapter_videos(video_files, chapter_video_path):
-                print(f"\n=== 章节 {target_name} 处理完成 ===")
-                print(f"章节视频已保存到: {chapter_video_path}")
-            else:
-                print(f"\n章节 {target_name} 拼接失败")
+        success = generate_script_from_novel(args.path, args.output)
+        if success:
+            print(f"\n✓ 脚本生成完成，输出目录: {args.output}")
         else:
-            print(f"\n章节 {target_name} 没有生成任何视频")
-    
-    else:
-        # 这是包含多个章节的父目录
-        print(f"检测到父目录，将处理其中的所有章节")
-        
-        # 获取所有章节目录
-        chapter_dirs = []
-        for item in os.listdir(target_path):
-            item_path = os.path.join(target_path, item)
-            if os.path.isdir(item_path) and item.startswith('chapter') and item[7:].isdigit():
-                chapter_dirs.append(item_path)
-        
-        # 按章节编号排序
-        chapter_dirs.sort(key=lambda x: int(re.search(r'chapter(\d+)', x).group(1)))
-        
-        if not chapter_dirs:
-            print(f"错误: 在 {target_path} 中没有找到章节目录")
+            print(f"\n✗ 脚本生成失败")
             sys.exit(1)
-        
-        print(f"找到 {len(chapter_dirs)} 个章节目录")
-        
-        all_chapter_videos = []
-        
-        # 处理每个章节
-        for chapter_dir in chapter_dirs:
-            chapter_name = os.path.basename(chapter_dir)
-            
-            # 处理章节
-            video_files = process_chapter(chapter_dir)
-            
-            if video_files:
-                # 拼接章节内的视频段落
-                chapter_video_path = os.path.join(chapter_dir, f"{chapter_name}_complete.mp4")
-                if concat_chapter_videos(video_files, chapter_video_path):
-                    all_chapter_videos.append(chapter_video_path)
-                    print(f"章节 {chapter_name} 处理完成")
-                else:
-                    print(f"章节 {chapter_name} 拼接失败")
-            else:
-                print(f"章节 {chapter_name} 没有生成任何视频")
-        
-        # 拼接所有章节视频
-        if all_chapter_videos:
-            final_video_path = os.path.join(target_path, "final_complete_video.mp4")
-            if concat_chapter_videos(all_chapter_videos, final_video_path):
-                print(f"\n=== 所有章节处理完成 ===")
-                print(f"最终视频已保存到: {final_video_path}")
-            else:
-                print("\n最终视频拼接失败")
+    
+    elif args.command == 'image':
+        # 生成图片
+        success = generate_images_from_scripts(args.path)
+        if success:
+            print(f"\n✓ 图片生成完成")
         else:
-            print("\n没有生成任何章节视频")
+            print(f"\n✗ 图片生成失败")
+            sys.exit(1)
+    
+    elif args.command == 'voice':
+        # 生成语音
+        success = generate_voices_from_scripts(args.path)
+        if success:
+            print(f"\n✓ 语音生成完成")
+        else:
+            print(f"\n✗ 语音生成失败")
+            sys.exit(1)
+    
+    elif args.command == 'concat':
+        # 拼接视频
+        success = concat_videos_from_assets(args.path)
+        if success:
+            print(f"\n✓ 视频拼接完成")
+        else:
+            print(f"\n✗ 视频拼接失败")
+            sys.exit(1)
+    
+    elif args.command == 'init':
+        # 清理目录
+        success = clean_directory(args.path)
+        if success:
+            print(f"\n✓ 目录清理完成")
+        else:
+            print(f"\n✗ 目录清理失败")
+            sys.exit(1)
     
     print("\n=== 处理完成 ===")
 

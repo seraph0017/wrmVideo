@@ -31,9 +31,9 @@ class ScriptGenerator:
         Args:
             api_key: API密钥
         """
-        self.api_key = api_key or os.getenv('ARK_API_KEY')
+        self.api_key = api_key or ARK_CONFIG.get('api_key') or os.getenv('ARK_API_KEY')
         if not self.api_key:
-            raise ValueError("请设置ARK_API_KEY环境变量或传入api_key参数")
+            raise ValueError("请设置ARK_API_KEY环境变量或在config.py中配置api_key参数")
         
         self.client = Ark(api_key=self.api_key)
         self.model = ARK_CONFIG.get('model', 'doubao-seed-1.6-250615')
@@ -147,42 +147,90 @@ class ScriptGenerator:
     
     def split_chapters(self, script_content: str) -> List[Dict]:
         """
-        将脚本内容按章节分割
+        将脚本内容按章节分割，支持每个章节包含多个分镜
         
         Args:
             script_content: 脚本内容
         
         Returns:
-            List[Dict]: 章节列表
+            List[Dict]: 章节列表，每个章节包含多个分镜
         """
         chapters = []
         
-        # 查找所有章节
-        chapter_pattern = r'<chapter\s+id="(\d+)"[^>]*>(.*?)</chapter>'
-        matches = re.findall(chapter_pattern, script_content, re.DOTALL)
+        # 查找所有章节 - 支持两种格式：<第X章节> 和 <chapter>
+        chapter_pattern1 = r'<第(\d+)章节>(.*?)</第\d+章节>'
+        chapter_pattern2 = r'<chapter\s+id="(\d+)"[^>]*>(.*?)</chapter>'
         
-        for chapter_id, chapter_content in matches:
-            # 提取解说内容
-            narration_match = re.search(r'<narration>(.*?)</narration>', 
-                                      chapter_content, re.DOTALL)
-            narration = narration_match.group(1).strip() if narration_match else ""
+        # 先尝试第一种格式
+        matches = re.findall(chapter_pattern1, script_content, re.DOTALL)
+        if not matches:
+            # 如果没有匹配，尝试第二种格式
+            matches = re.findall(chapter_pattern2, script_content, re.DOTALL)
+        
+        if matches:
+            # 有明确的章节标签
+            for chapter_id, chapter_content in matches:
+                # 提取所有解说内容和图片prompt对
+                narration_matches = re.findall(r'<(?:解说内容|narration)>(.*?)</(?:解说内容|narration)>', 
+                                             chapter_content, re.DOTALL)
+                image_matches = re.findall(r'<(?:图片prompt|image_prompt)>(.*?)</(?:图片prompt|image_prompt)>', 
+                                         chapter_content, re.DOTALL)
+                
+                # 确保解说内容和图片prompt数量匹配
+                max_scenes = max(len(narration_matches), len(image_matches))
+                
+                if max_scenes > 0:
+                    # 如果有多个分镜，创建包含所有分镜的章节
+                    scenes = []
+                    for i in range(max_scenes):
+                        narration = narration_matches[i].strip() if i < len(narration_matches) else ""
+                        image_prompt = image_matches[i].strip() if i < len(image_matches) else ""
+                        scenes.append({
+                            'narration': narration,
+                            'image_prompt': image_prompt
+                        })
+                    
+                    chapters.append({
+                        'id': int(chapter_id),
+                        'scenes': scenes,
+                        # 为了向后兼容，保留原有的narration和image_prompt字段（使用第一个分镜）
+                        'narration': scenes[0]['narration'] if scenes else "",
+                        'image_prompt': scenes[0]['image_prompt'] if scenes else ""
+                    })
+                else:
+                    # 如果没有找到分镜，创建空章节
+                    chapters.append({
+                        'id': int(chapter_id),
+                        'scenes': [],
+                        'narration': "",
+                        'image_prompt': ""
+                    })
+        else:
+            # 没有明确的章节标签，尝试直接提取解说内容和图片prompt
+            narration_pattern = r'<(?:解说内容|narration)>(.*?)</(?:解说内容|narration)>'
+            image_pattern = r'<(?:图片prompt|image_prompt)>(.*?)</(?:图片prompt|image_prompt)>'
             
-            # 提取图片prompt
-            image_match = re.search(r'<image_prompt>(.*?)</image_prompt>', 
-                                  chapter_content, re.DOTALL)
-            image_prompt = image_match.group(1).strip() if image_match else ""
+            narration_matches = re.findall(narration_pattern, script_content, re.DOTALL)
+            image_matches = re.findall(image_pattern, script_content, re.DOTALL)
             
-            chapters.append({
-                'id': int(chapter_id),
-                'narration': narration,
-                'image_prompt': image_prompt
-            })
+            # 将每对解说内容和图片prompt组合成一个章节
+            max_chapters = max(len(narration_matches), len(image_matches))
+            for i in range(max_chapters):
+                narration = narration_matches[i].strip() if i < len(narration_matches) else ""
+                image_prompt = image_matches[i].strip() if i < len(image_matches) else ""
+                
+                chapters.append({
+                    'id': i + 1,
+                    'scenes': [{'narration': narration, 'image_prompt': image_prompt}],
+                    'narration': narration,
+                    'image_prompt': image_prompt
+                })
         
         return chapters
     
     def save_chapters_to_folders(self, chapters: List[Dict], base_dir: str) -> bool:
         """
-        将章节保存到文件夹
+        将章节保存到文件夹，支持每个章节包含多个分镜
         
         Args:
             chapters: 章节列表
@@ -198,17 +246,46 @@ class ScriptGenerator:
                 chapter_dir = os.path.join(base_dir, f"chapter_{chapter['id']:03d}")
                 os.makedirs(chapter_dir, exist_ok=True)
                 
-                # 保存解说文本
-                narration_file = os.path.join(chapter_dir, "narration.txt")
-                with open(narration_file, 'w', encoding='utf-8') as f:
-                    f.write(chapter['narration'])
-                
-                # 保存图片prompt
-                prompt_file = os.path.join(chapter_dir, "image_prompt.txt")
-                with open(prompt_file, 'w', encoding='utf-8') as f:
-                    f.write(chapter['image_prompt'])
-                
-                print(f"章节 {chapter['id']} 已保存到 {chapter_dir}")
+                # 检查是否有多个分镜
+                if 'scenes' in chapter and chapter['scenes']:
+                    # 有多个分镜，为每个分镜创建单独的文件
+                    for i, scene in enumerate(chapter['scenes']):
+                        scene_num = i + 1
+                        
+                        # 保存解说文本
+                        narration_file = os.path.join(chapter_dir, f"narration_{scene_num:02d}.txt")
+                        with open(narration_file, 'w', encoding='utf-8') as f:
+                            f.write(scene['narration'])
+                        
+                        # 保存图片prompt
+                        prompt_file = os.path.join(chapter_dir, f"image_prompt_{scene_num:02d}.txt")
+                        with open(prompt_file, 'w', encoding='utf-8') as f:
+                            f.write(scene['image_prompt'])
+                    
+                    # 同时保存合并的文件（向后兼容）
+                    all_narrations = '\n\n'.join([scene['narration'] for scene in chapter['scenes'] if scene['narration']])
+                    all_prompts = '\n\n'.join([scene['image_prompt'] for scene in chapter['scenes'] if scene['image_prompt']])
+                    
+                    narration_file = os.path.join(chapter_dir, "narration.txt")
+                    with open(narration_file, 'w', encoding='utf-8') as f:
+                        f.write(all_narrations)
+                    
+                    prompt_file = os.path.join(chapter_dir, "image_prompt.txt")
+                    with open(prompt_file, 'w', encoding='utf-8') as f:
+                        f.write(all_prompts)
+                    
+                    print(f"章节 {chapter['id']} 已保存到 {chapter_dir}（包含 {len(chapter['scenes'])} 个分镜）")
+                else:
+                    # 向后兼容：只有单个分镜的情况
+                    narration_file = os.path.join(chapter_dir, "narration.txt")
+                    with open(narration_file, 'w', encoding='utf-8') as f:
+                        f.write(chapter.get('narration', ''))
+                    
+                    prompt_file = os.path.join(chapter_dir, "image_prompt.txt")
+                    with open(prompt_file, 'w', encoding='utf-8') as f:
+                        f.write(chapter.get('image_prompt', ''))
+                    
+                    print(f"章节 {chapter['id']} 已保存到 {chapter_dir}（单个分镜）")
             
             return True
             
@@ -293,7 +370,12 @@ class ScriptGenerator:
             
             # 合并脚本
             print("正在合并脚本...")
+            print(f"待合并的脚本数量: {len(scripts)}")
+            for i, script in enumerate(scripts):
+                print(f"脚本 {i+1} 长度: {len(script)} 字符")
+            
             merged_script = self.merge_and_format_scripts(scripts)
+            print(f"合并后脚本长度: {len(merged_script)} 字符")
             
             # 保存合并后的脚本
             os.makedirs(output_dir, exist_ok=True)
@@ -305,14 +387,21 @@ class ScriptGenerator:
             
             # 分割章节并保存
             chapters = self.split_chapters(merged_script)
+            print(f"从合并脚本中解析到 {len(chapters)} 个章节")
+            
             if chapters:
                 print(f"共生成 {len(chapters)} 个章节")
                 success = self.save_chapters_to_folders(chapters, output_dir)
                 if success:
                     print(f"所有章节已保存到：{output_dir}")
                     return True
-            
-            return False
+                else:
+                    print("保存章节失败")
+                    return False
+            else:
+                print("没有解析到任何章节")
+                print(f"合并脚本内容预览: {merged_script[:200]}...")
+                return False
             
         except Exception as e:
             print(f"生成脚本时出错：{e}")
