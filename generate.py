@@ -700,6 +700,215 @@ def concat_chapter_videos(video_files, output_path):
             os.remove(temp_list_file)
         return False
 
+def split_novel_into_chapters(novel_content, target_chapters=50):
+    """
+    将小说内容智能分割成指定数量的章节
+    
+    Args:
+        novel_content: 小说内容
+        target_chapters: 目标章节数量（默认50）
+    
+    Returns:
+        List[str]: 分割后的章节内容列表
+    """
+    # 计算每章大致长度
+    total_length = len(novel_content)
+    avg_chapter_length = total_length // target_chapters
+    
+    chapters = []
+    current_pos = 0
+    
+    for i in range(target_chapters):
+        if i == target_chapters - 1:  # 最后一章包含剩余所有内容
+            chapter_content = novel_content[current_pos:]
+        else:
+            # 寻找合适的分割点（句号、感叹号、问号后）
+            end_pos = current_pos + avg_chapter_length
+            
+            # 在目标位置前后寻找合适的分割点
+            search_range = min(200, avg_chapter_length // 4)  # 搜索范围
+            best_split = end_pos
+            
+            # 向后搜索分割点
+            for j in range(end_pos, min(end_pos + search_range, total_length)):
+                if novel_content[j] in ['。', '！', '？']:
+                    best_split = j + 1
+                    break
+            
+            # 如果向后没找到，向前搜索
+            if best_split == end_pos:
+                for j in range(end_pos, max(current_pos, end_pos - search_range), -1):
+                    if novel_content[j] in ['。', '！', '？']:
+                        best_split = j + 1
+                        break
+            
+            chapter_content = novel_content[current_pos:best_split]
+            current_pos = best_split
+        
+        if chapter_content.strip():  # 只添加非空章节
+            chapters.append(chapter_content.strip())
+    
+    return chapters
+
+def generate_chapter_narration(chapter_content, chapter_num, total_chapters):
+    """
+    为单个章节生成1200字解说文案
+    
+    Args:
+        chapter_content: 章节内容
+        chapter_num: 章节编号
+        total_chapters: 总章节数
+    
+    Returns:
+        str: 生成的解说文案
+    """
+    try:
+        # 导入必要的模块
+        from jinja2 import Environment, FileSystemLoader
+        import os
+        
+        # 创建脚本生成器实例
+        generator = ScriptGenerator(api_key=ARK_CONFIG['api_key'])
+        
+        # 设置模板环境
+        template_dir = os.path.join(os.path.dirname(__file__), 'src', 'script')
+        env = Environment(loader=FileSystemLoader(template_dir))
+        template = env.get_template('chapter_narration_prompt.j2')
+        
+        # 示例人物数据（实际使用时可以从章节内容中提取或预定义）
+        characters = [
+            {
+                'name': '主角',
+                'height_build': '身材高大（约180cm），体型匀称',
+                'hair_color': '乌黑色',
+                'hair_style': '短发寸头',
+                'hair_texture': '直发',
+                'eye_color': '深棕色',
+                'eye_shape': '丹凤眼',
+                'eye_expression': '眼神犀利专注',
+                'face_shape': '方形脸',
+                'chin_shape': '方形下巴',
+                'skin_tone': '健康肤色',
+                'clothing_color': '深蓝色',
+                'clothing_style': '长款羊毛风衣',
+                'clothing_material': '羊毛',
+                'glasses': '黑框眼镜',
+                'jewelry': '银色金属表带手表',
+                'other_accessories': '无',
+                'expression_posture': '给人可靠专业的感觉'
+            }
+        ]
+        
+        # 渲染模板
+        custom_prompt = template.render(
+            chapter_num=chapter_num,
+            total_chapters=total_chapters,
+            chapter_content=chapter_content,
+            characters=characters
+        )
+        
+        print(f"正在为第{chapter_num}章生成解说文案...")
+        
+        # 调用API生成解说
+        completion = generator.client.chat.completions.create(
+            model=generator.model,
+            messages=[
+                {"role": "user", "content": custom_prompt}
+            ],
+            stream=False
+        )
+        
+        narration = completion.choices[0].message.content.strip()
+        print(f"第{chapter_num}章解说文案生成完成，长度：{len(narration)}字")
+        
+        return narration
+        
+    except Exception as e:
+        print(f"生成第{chapter_num}章解说文案时出错：{e}")
+        return ""
+
+def generate_script_from_novel_new(novel_file, output_dir, target_chapters=50):
+    """
+    新的小说脚本生成函数，支持章节分割和1200字解说生成
+    
+    Args:
+        novel_file: 小说文件路径
+        output_dir: 输出目录
+        target_chapters: 目标章节数量（默认50）
+    
+    Returns:
+        bool: 是否成功
+    """
+    try:
+        print(f"=== 开始新的脚本生成流程 ===")
+        print(f"输入文件: {novel_file}")
+        print(f"输出目录: {output_dir}")
+        print(f"目标章节数: {target_chapters}")
+        
+        # 检查输入文件
+        if not os.path.exists(novel_file):
+            print(f"错误: 小说文件不存在 {novel_file}")
+            return False
+        
+        # 读取小说内容
+        with open(novel_file, 'r', encoding='utf-8') as f:
+            novel_content = f.read()
+        
+        if not novel_content.strip():
+            print("错误: 小说文件内容为空")
+            return False
+        
+        print(f"小说总长度: {len(novel_content)}字")
+        
+        # 分割小说为章节
+        print("\n=== 开始分割章节 ===")
+        chapters = split_novel_into_chapters(novel_content, target_chapters)
+        print(f"成功分割为 {len(chapters)} 个章节")
+        
+        # 创建输出目录
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # 为每个章节生成解说文案
+        print("\n=== 开始生成章节解说文案 ===")
+        success_count = 0
+        
+        for i, chapter_content in enumerate(chapters, 1):
+            print(f"\n--- 处理第 {i}/{len(chapters)} 章 ---")
+            print(f"章节内容长度: {len(chapter_content)}字")
+            
+            # 创建章节目录
+            chapter_dir = os.path.join(output_dir, f"chapter_{i:03d}")
+            os.makedirs(chapter_dir, exist_ok=True)
+            
+            # 保存原始章节内容
+            chapter_file = os.path.join(chapter_dir, "original_content.txt")
+            with open(chapter_file, 'w', encoding='utf-8') as f:
+                f.write(chapter_content)
+            
+            # 生成1200字解说文案
+            narration = generate_chapter_narration(chapter_content, i, len(chapters))
+            
+            if narration:
+                # 保存解说文案
+                narration_file = os.path.join(chapter_dir, "narration.txt")
+                with open(narration_file, 'w', encoding='utf-8') as f:
+                    f.write(narration)
+                
+                print(f"✓ 第{i}章解说文案已保存")
+                success_count += 1
+            else:
+                print(f"✗ 第{i}章解说文案生成失败")
+        
+        print(f"\n=== 脚本生成完成 ===")
+        print(f"成功生成 {success_count}/{len(chapters)} 个章节的解说文案")
+        print(f"输出目录: {output_dir}")
+        
+        return success_count > 0
+        
+    except Exception as e:
+        print(f"生成脚本时发生错误: {e}")
+        return False
+
 def generate_script_from_novel(novel_file, output_dir):
     """
     从小说文件生成脚本
@@ -1089,6 +1298,7 @@ def main():
                        help='要执行的命令')
     parser.add_argument('path', help='文件或目录路径')
     parser.add_argument('--output', '-o', help='输出目录（仅用于script命令）')
+    parser.add_argument('--chapters', '-c', type=int, default=50, help='目标章节数量（默认50）')
     
     args = parser.parse_args()
     
@@ -1096,13 +1306,14 @@ def main():
     print(f"目标路径: {args.path}")
     
     if args.command == 'script':
-        # 生成脚本
+        # 使用新的脚本生成逻辑
         if not args.output:
             # 从路径推断输出目录
             base_name = os.path.splitext(os.path.basename(args.path))[0]
             args.output = os.path.join('data', base_name)
         
-        success = generate_script_from_novel(args.path, args.output)
+        # 使用新的章节分割和解说生成函数
+        success = generate_script_from_novel_new(args.path, args.output, args.chapters)
         if success:
             print(f"\n✓ 脚本生成完成，输出目录: {args.output}")
         else:
