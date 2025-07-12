@@ -10,6 +10,7 @@ import sys
 import requests
 import json
 import uuid
+import base64
 from typing import Optional, Dict, Any
 
 # 添加项目根目录到路径
@@ -34,6 +35,42 @@ class VoiceGenerator:
         self.tts_config = tts_config or TTS_CONFIG
         self.api_url = "https://openspeech.bytedance.com/api/v1/tts"
     
+    def _clean_text_for_tts(self, text: str) -> str:
+        """
+        清理文本，移除可能导致TTS问题的字符
+        
+        Args:
+            text: 原始文本
+            
+        Returns:
+            str: 清理后的文本
+        """
+        import re
+        
+        # 先保护人名标记中的 & 符号（如 &芜音&、&谭辞& 等）
+        # 将人名标记临时替换为占位符
+        name_pattern = r'&([^&\s]+)&'
+        name_matches = re.findall(name_pattern, text)
+        
+        # 用占位符替换人名标记
+        cleaned_text = text
+        for i, name in enumerate(name_matches):
+            placeholder = f'__NAME_PLACEHOLDER_{i}__'
+            cleaned_text = cleaned_text.replace(f'&{name}&', placeholder, 1)
+        
+        # 现在可以安全地移除剩余的 & 符号
+        cleaned_text = cleaned_text.replace('&', '')
+        
+        # 恢复人名标记，但移除 & 符号，只保留人名
+        for i, name in enumerate(name_matches):
+            placeholder = f'__NAME_PLACEHOLDER_{i}__'
+            cleaned_text = cleaned_text.replace(placeholder, name)
+        
+        # 可以根据需要添加更多清理规则
+        # cleaned_text = cleaned_text.replace('...', '。')
+        
+        return cleaned_text
+    
     def generate_voice(self, text: str, output_path: str, 
                       preset: str = 'default', **kwargs) -> bool:
         """
@@ -56,6 +93,9 @@ class VoiceGenerator:
             return False
         
         try:
+            # 清理文本
+            cleaned_text = self._clean_text_for_tts(text)
+            
             # 生成请求ID
             request_id = str(uuid.uuid4())
             
@@ -65,7 +105,7 @@ class VoiceGenerator:
             
             # 使用配置管理器生成请求配置
             request_config = prompt_config.get_voice_config(
-                text=text,
+                text=cleaned_text,
                 request_id=request_id,
                 tts_config=self.tts_config,
                 **preset_params
@@ -73,15 +113,19 @@ class VoiceGenerator:
             
             print(f"使用语音预设：{preset}")
             print(f"请求ID：{request_id}")
-            print(f"文本长度：{len(text)} 字符")
+            print(f"原始文本长度：{len(text)} 字符")
+            print(f"清理后文本长度：{len(cleaned_text)} 字符")
+            if text != cleaned_text:
+                print("文本已清理，移除了可能导致问题的字符")
             
             # 发送请求
             headers = {
-                'Authorization': f'Bearer; {self.tts_config["appid"]}',
+                'Authorization': f'Bearer; {self.tts_config["access_token"]}',
                 'Content-Type': 'application/json'
             }
             
             print("正在生成语音...")
+            print(request_config)
             response = requests.post(
                 self.api_url,
                 headers=headers,
@@ -90,13 +134,35 @@ class VoiceGenerator:
             )
             
             if response.status_code == 200:
-                # 保存音频文件
-                os.makedirs(os.path.dirname(output_path), exist_ok=True)
-                with open(output_path, 'wb') as f:
-                    f.write(response.content)
-                
-                print(f"语音文件已生成：{output_path}")
-                return True
+                try:
+                    # 解析JSON响应
+                    resp_json = response.json()
+                    print(f"响应状态: {resp_json}")
+                    
+                    # 检查响应是否包含音频数据
+                    if "data" in resp_json and resp_json.get("code") == 3000:
+                        # 提取base64编码的音频数据
+                        audio_data = resp_json["data"]
+                        
+                        # 解码并保存音频文件
+                        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+                        with open(output_path, 'wb') as f:
+                            f.write(base64.b64decode(audio_data))
+                        
+                        print(f"语音文件已生成：{output_path}")
+                        return True
+                    else:
+                        print(f"API响应错误：{resp_json.get('message', '未知错误')}")
+                        print(f"错误代码：{resp_json.get('code', 'N/A')}")
+                        return False
+                        
+                except json.JSONDecodeError:
+                    print("响应不是有效的JSON格式")
+                    print(f"原始响应：{response.text[:500]}...")
+                    return False
+                except Exception as e:
+                    print(f"处理响应时出错：{e}")
+                    return False
             else:
                 print(f"API请求失败，状态码：{response.status_code}")
                 print(f"响应内容：{response.text}")

@@ -1,20 +1,18 @@
 {
     "app": {
         "appid": "{{ tts_config.appid }}",
-        "token": "access_token",
+        "token": "{{ tts_config.access_token }}",
         "cluster": "{{ tts_config.cluster }}"
     },
     "user": {
         "uid": "{{ user_id | default('388808087185088') }}"
     },
     "audio": {
-        "voice_type": "{{ voice_type | default(tts_config.voice_type) }}",
+        "voice_type": "{{ voice_type | default('BV700_streaming') }}",
         "encoding": "{{ encoding | default('mp3') }}",
         "speed_ratio": {{ speed_ratio | default(1.2) }},
         "volume_ratio": {{ volume_ratio | default(1.0) }},
-        "pitch_ratio": {{ pitch_ratio | default(1.0) }},
-        "sample_rate": {{ sample_rate | default(44100) }},
-        "bitrate": {{ bitrate | default(192000) }}
+        "pitch_ratio": {{ pitch_ratio | default(1.0) }}
     },
     "request": {
         "reqid": "{{ request_id }}",
