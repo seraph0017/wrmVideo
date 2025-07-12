@@ -22,10 +22,10 @@ from volcenginesdkarkruntime import Ark
 src_dir = os.path.join(os.path.dirname(__file__), 'src')
 sys.path.insert(0, src_dir)
 
-from config.config import TTS_CONFIG, ARK_CONFIG, IMAGE_CONFIG, IMAGE_TWO_CONFIG
+from config.config import TTS_CONFIG, ARK_CONFIG, IMAGE_TWO_CONFIG, STORY_STYLE
 from src.script.gen_script import ScriptGenerator
 from src.voice.gen_voice import VoiceGenerator
-from src.image.gen_image import generate_image_with_volcengine
+from image.gen_image import generate_image_with_volcengine
 
 def clean_text_for_tts(text):
     """
@@ -155,15 +155,17 @@ def generate_image(prompt, output_path, style=None):
         bool: 是否成功生成
     """
     try:
-        # 初始化Ark客户端
-        client = Ark(
-            base_url=ARK_CONFIG['base_url'],
-            api_key=ARK_CONFIG['api_key'],
-        )
+        from volcengine.visual.VisualService import VisualService
+        
+        visual_service = VisualService()
+        
+        # 设置访问密钥
+        visual_service.set_ak(IMAGE_TWO_CONFIG['access_key'])
+        visual_service.set_sk(IMAGE_TWO_CONFIG['secret_key'])
         
         # 获取风格设置
         if style is None:
-            style = IMAGE_CONFIG.get('default_style', 'manga')
+            style = IMAGE_TWO_CONFIG.get('default_style', 'manga')
         
         style_prompt = ART_STYLES.get(style, ART_STYLES['manga'])
         
@@ -172,29 +174,47 @@ def generate_image(prompt, output_path, style=None):
         # 构建完整的prompt
         full_prompt = style_prompt + "\n\n以下面描述为内容，生成一张故事图片：\n" + prompt
         
-        # 统一使用文生图模式
-        imagesResponse = client.images.generate(
-            model=IMAGE_CONFIG.get('model', 'doubao-seedream-3-0-t2i-250415'),
-            prompt=full_prompt,
-            watermark=IMAGE_CONFIG.get('watermark', False),
-            size=IMAGE_CONFIG.get('size', '720x1280'),
-            response_format="b64_json"
-        )
+        # 请求参数 - 使用配置文件中的值
+        form = {
+            "req_key": IMAGE_TWO_CONFIG['req_key'],
+            "prompt": full_prompt,
+            "llm_seed": -1,
+            "seed": -1,
+            "scale": IMAGE_TWO_CONFIG['scale'],
+            "ddim_steps": IMAGE_TWO_CONFIG['ddim_steps'],
+            "width": IMAGE_TWO_CONFIG['default_width'],
+            "height": IMAGE_TWO_CONFIG['default_height'],
+            "use_pre_llm": IMAGE_TWO_CONFIG['use_pre_llm'],
+            "use_sr": IMAGE_TWO_CONFIG['use_sr'],
+            "return_url": IMAGE_TWO_CONFIG['return_url'],  # 返回base64格式
+            "logo_info": {
+                "add_logo": False,
+                "position": 0,
+                "language": 0,
+                "opacity": 0.3,
+                "logo_text_content": "这里是明水印内容"
+            }
+        }
         
-        # 处理base64格式的图片数据并保存
-        if hasattr(imagesResponse.data[0], 'b64_json') and imagesResponse.data[0].b64_json:
+        resp = visual_service.cv_process(form)
+        
+        # 检查响应
+        if 'data' in resp and 'binary_data_base64' in resp['data']:
+            # 获取base64图片数据
+            base64_data = resp['data']['binary_data_base64'][0]  # 取第一张图片
+            
             # 确保输出目录存在
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
             
-            # 解码base64数据并保存
-            image_data = base64.b64decode(imagesResponse.data[0].b64_json)
+            # 解码并保存图片
+            image_data = base64.b64decode(base64_data)
             with open(output_path, 'wb') as f:
                 f.write(image_data)
             
             print(f"图片已保存: {output_path}")
             return True
         else:
-            print("未获取到base64格式的图片数据")
+            print(f"图片生成失败: {resp}")
             return False
             
     except Exception as e:
@@ -222,15 +242,15 @@ def generate_images_batch(prompts_and_paths, style=None):
         
         # 获取风格设置
         if style is None:
-            style = IMAGE_CONFIG.get('default_style', 'manga')
+            style = IMAGE_TWO_CONFIG.get('default_style', 'manga')
         
         successful_paths = []
         
-        # 初始化Ark客户端（只初始化一次）
-        client = Ark(
-            base_url=ARK_CONFIG['base_url'],
-            api_key=ARK_CONFIG['api_key'],
-        )
+        # 初始化火山引擎客户端（只初始化一次）
+        from volcengine.visual.VisualService import VisualService
+        client = VisualService()
+        client.set_ak(IMAGE_TWO_CONFIG['access_key'])
+        client.set_sk(IMAGE_TWO_CONFIG['secret_key'])
         
         style_prompt = ART_STYLES.get(style, ART_STYLES['manga'])
         
@@ -242,29 +262,47 @@ def generate_images_batch(prompts_and_paths, style=None):
                 # 构建完整的prompt
                 full_prompt = style_prompt + "\n\n以下面描述为内容，生成一张故事图片：\n" + prompt
                 
-                # 生成图片
-                imagesResponse = client.images.generate(
-                    model=IMAGE_CONFIG.get('model', 'doubao-seedream-3-0-t2i-250415'),
-                    prompt=full_prompt,
-                    watermark=IMAGE_CONFIG.get('watermark', False),
-                    size=IMAGE_CONFIG.get('size', '720x1280'),
-                    response_format="b64_json"
-                )
+                # 请求参数
+                form = {
+                    "req_key": IMAGE_TWO_CONFIG['req_key'],
+                    "prompt": full_prompt,
+                    "llm_seed": -1,
+                    "seed": -1,
+                    "scale": IMAGE_TWO_CONFIG['scale'],
+                    "ddim_steps": IMAGE_TWO_CONFIG['ddim_steps'],
+                    "width": IMAGE_TWO_CONFIG['default_width'],
+                    "height": IMAGE_TWO_CONFIG['default_height'],
+                    "use_pre_llm": IMAGE_TWO_CONFIG['use_pre_llm'],
+                    "use_sr": IMAGE_TWO_CONFIG['use_sr'],
+                    "return_url": IMAGE_TWO_CONFIG['return_url'],
+                    "logo_info": {
+                        "add_logo": False,
+                        "position": 0,
+                        "language": 0,
+                        "opacity": 0.3,
+                        "logo_text_content": "这里是明水印内容"
+                    }
+                }
+                
+                resp = client.cv_process(form)
                 
                 # 处理图片数据并保存
-                if hasattr(imagesResponse.data[0], 'b64_json') and imagesResponse.data[0].b64_json:
+                if 'data' in resp and 'binary_data_base64' in resp['data']:
+                    # 获取base64图片数据
+                    base64_data = resp['data']['binary_data_base64'][0]
+                    
                     # 确保输出目录存在
                     os.makedirs(os.path.dirname(output_path), exist_ok=True)
                     
-                    # 解码base64数据并保存
-                    image_data = base64.b64decode(imagesResponse.data[0].b64_json)
+                    # 解码并保存图片
+                    image_data = base64.b64decode(base64_data)
                     with open(output_path, 'wb') as f:
                         f.write(image_data)
                     
                     print(f"✓ 第{i}张图片已保存: {output_path}")
                     successful_paths.append(output_path)
                 else:
-                    print(f"✗ 第{i}张图片生成失败: 未获取到base64格式的图片数据")
+                    print(f"✗ 第{i}张图片生成失败: {resp}")
                     
             except Exception as e:
                 print(f"✗ 第{i}张图片生成失败: {e}")
@@ -957,7 +995,7 @@ def generate_script_from_novel(novel_file, output_dir):
 
 def generate_images_from_scripts(data_dir):
     """
-    根据脚本生成图片
+    根据脚本生成图片（支持风格配置）
     
     Args:
         data_dir: 数据目录路径
@@ -1008,6 +1046,26 @@ def generate_images_from_scripts(data_dir):
                 print(f"警告: narration内容为空")
                 continue
             
+            # 提取风格信息
+            story_style = "玄幻修真"  # 默认风格
+            style_pattern = r'<风格>\s*([^<]+)\s*</风格>'
+            style_match = re.search(style_pattern, narration_content)
+            if style_match:
+                story_style = style_match.group(1).strip()
+                print(f"检测到故事风格: {story_style}")
+            
+            # 获取风格配置
+            style_config = STORY_STYLE.get(story_style, STORY_STYLE["玄幻修真"])
+            model_prompt = style_config.get("model_prompt", "")
+            core_style = style_config.get("core_style", "")
+            
+            # 如果model_prompt是列表，取第一个
+            if isinstance(model_prompt, list):
+                model_prompt = model_prompt[0]
+            
+            print(f"使用风格配置: {core_style}")
+            print(f"模型提示词: {model_prompt}")
+            
             # 提取人物信息
             characters = {}
             character_pattern = r'<主要人物>\s*([\s\S]*?)(?=<|$)'
@@ -1045,22 +1103,23 @@ def generate_images_from_scripts(data_dir):
                 if not prompt:
                     continue
                 
-                # 增强prompt：如果包含人名，添加人物细节
-                enhanced_prompt = prompt
+                # 增强prompt：添加风格信息
+                enhanced_prompt = f"{model_prompt}，{core_style}，{prompt}"
+                
+                # 如果包含人名，添加人物细节
                 for char_name in characters:
                     if char_name in prompt:
                         char_details = characters[char_name]
                         enhanced_prompt = enhanced_prompt.replace(char_name, f"{char_name}（{char_details}）")
                 
                 print(f"  生成第 {i}/{len(prompts)} 张图片: {chapter_name}_image_{i:02d}.jpg")
-                print(f"  原始prompt: {prompt[:100]}...")
-                print(f"  增强prompt: {enhanced_prompt[:100]}...")
+                print(f"  风格增强prompt: {enhanced_prompt[:150]}...")
                 
                 # 生成图片
                 image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}.jpg")
                 
-                # 使用图片生成函数
-                if generate_image_with_volcengine(enhanced_prompt, image_path):
+                # 使用本地图片生成函数（使用ARK_CONFIG配置）
+                if generate_image(enhanced_prompt, image_path):
                     print(f"  ✓ 图片生成成功")
                     success_count += 1
                 else:
@@ -1068,7 +1127,7 @@ def generate_images_from_scripts(data_dir):
             
             print(f"章节 {chapter_name} 处理完成，成功生成 {len([p for p in prompts if p.strip()])} 张图片")
         
-        print(f"\n图片生成完成，成功生成 {success_count}/{len(chapter_dirs)} 张图片")
+        print(f"\n图片生成完成，成功生成 {success_count} 张图片")
         return success_count > 0
         
     except Exception as e:

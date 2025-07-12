@@ -25,19 +25,19 @@ def generate_image_with_volcengine(prompt, output_path):
         visual_service.set_ak(IMAGE_TWO_CONFIG['access_key'])
         visual_service.set_sk(IMAGE_TWO_CONFIG['secret_key'])
         
-        # 请求参数
+        # 请求参数 - 使用配置文件中的值
         form = {
-            "req_key": "high_aes_general_v21_L",
+            "req_key": IMAGE_TWO_CONFIG['req_key'],
             "prompt": prompt,
             "llm_seed": -1,
             "seed": -1,
-            "scale": 3.5,
-            "ddim_steps": 25,
-            "width": 720,
-            "height": 1280,
-            "use_pre_llm": True,
-            "use_sr": True,
-            "return_url": False,  # 返回base64格式
+            "scale": IMAGE_TWO_CONFIG['scale'],
+            "ddim_steps": IMAGE_TWO_CONFIG['ddim_steps'],
+            "width": IMAGE_TWO_CONFIG['default_width'],
+            "height": IMAGE_TWO_CONFIG['default_height'],
+            "use_pre_llm": IMAGE_TWO_CONFIG['use_pre_llm'],
+            "use_sr": IMAGE_TWO_CONFIG['use_sr'],
+            "return_url": IMAGE_TWO_CONFIG['return_url'],  # 返回base64格式
             "logo_info": {
                 "add_logo": False,
                 "position": 0,
