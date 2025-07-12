@@ -1296,6 +1296,42 @@ def generate_images_from_scripts(data_dir):
         print(f"生成图片时发生错误: {e}")
         return False
 
+def extract_narration_content(narration_file_path):
+    """
+    从narration.txt文件中提取解说内容
+    
+    Args:
+        narration_file_path: narration.txt文件路径
+    
+    Returns:
+        list: 解说内容列表
+    """
+    narration_contents = []
+    
+    try:
+        if not os.path.exists(narration_file_path):
+            print(f"警告: narration.txt文件不存在: {narration_file_path}")
+            return narration_contents
+        
+        with open(narration_file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # 使用正则表达式提取所有<解说内容>标签中的内容
+        narration_matches = re.findall(r'<解说内容>(.*?)</解说内容>', content, re.DOTALL)
+        
+        for narration in narration_matches:
+            # 清理文本，移除多余的空白字符
+            clean_narration = narration.strip()
+            if clean_narration:
+                narration_contents.append(clean_narration)
+        
+        print(f"从 {narration_file_path} 中提取到 {len(narration_contents)} 段解说内容")
+        return narration_contents
+        
+    except Exception as e:
+        print(f"提取解说内容时发生错误: {e}")
+        return narration_contents
+
 def generate_voices_from_scripts(data_dir):
     """
     根据脚本生成语音
@@ -1344,31 +1380,69 @@ def generate_voices_from_scripts(data_dir):
                 print(f"警告: 解说文件不存在 {narration_file}")
                 continue
             
-            # 读取解说内容
-            with open(narration_file, 'r', encoding='utf-8') as f:
-                narration = f.read().strip()
+            # 提取解说内容
+            narration_contents = extract_narration_content(narration_file)
             
-            if not narration:
-                print(f"警告: 解说内容为空")
+            if not narration_contents:
+                print(f"警告: 未找到解说内容")
                 continue
             
-            # 清理文本
-            clean_narration = clean_text_for_tts(narration)
+            print(f"找到 {len(narration_contents)} 段解说内容")
             
-            # 智能断句
-            text_parts = smart_split_text(clean_narration, max_length=50)
-            
-            print(f"解说内容分为 {len(text_parts)} 个部分")
-            
-            # 为每个部分生成语音
-            for i, text_part in enumerate(text_parts, 1):
-                audio_path = os.path.join(chapter_dir, f"{chapter_name}_audio_{i:02d}.mp3")
+            # 为每段解说内容生成语音
+            for i, narration_text in enumerate(narration_contents, 1):
+                # 清理文本用于TTS
+                clean_narration = clean_text_for_tts(narration_text)
                 
-                if generate_audio(text_part, audio_path):
-                    print(f"✓ 第 {i} 部分语音生成成功")
+                if not clean_narration.strip():
+                    print(f"警告: 第 {i} 段解说内容清理后为空")
+                    continue
+                
+                # 生成音频文件路径
+                audio_path = os.path.join(chapter_dir, f"{chapter_name}_narration_{i:02d}.mp3")
+                
+                # 生成时间戳文件路径
+                timestamp_path = os.path.join(chapter_dir, f"{chapter_name}_narration_{i:02d}_timestamps.json")
+                
+                print(f"正在生成第 {i} 段解说语音...")
+                print(f"文本内容: {clean_narration[:50]}{'...' if len(clean_narration) > 50 else ''}")
+                
+                # 使用语音生成器生成语音
+                if voice_generator.generate_voice(clean_narration, audio_path):
+                    print(f"✓ 第 {i} 段语音生成成功: {audio_path}")
+                    
+                    # 生成时间戳信息（模拟，实际需要从TTS API获取）
+                    timestamp_data = {
+                        "text": clean_narration,
+                        "audio_file": audio_path,
+                        "duration": len(clean_narration) * 0.15,  # 估算时长（每字0.15秒）
+                        "character_timestamps": [],
+                        "generated_at": datetime.now().isoformat()
+                    }
+                    
+                    # 为每个字符生成时间戳（模拟）
+                    current_time = 0.0
+                    for char_idx, char in enumerate(clean_narration):
+                        char_duration = 0.15  # 每个字符0.15秒
+                        timestamp_data["character_timestamps"].append({
+                            "character": char,
+                            "start_time": current_time,
+                            "end_time": current_time + char_duration,
+                            "index": char_idx
+                        })
+                        current_time += char_duration
+                    
+                    # 保存时间戳文件
+                    try:
+                        with open(timestamp_path, 'w', encoding='utf-8') as f:
+                            json.dump(timestamp_data, f, ensure_ascii=False, indent=2)
+                        print(f"✓ 时间戳文件保存成功: {timestamp_path}")
+                    except Exception as e:
+                        print(f"✗ 时间戳文件保存失败: {e}")
+                    
                     success_count += 1
                 else:
-                    print(f"✗ 第 {i} 部分语音生成失败")
+                    print(f"✗ 第 {i} 段语音生成失败")
         
         print(f"\n语音生成完成，成功生成 {success_count} 个语音文件")
         return success_count > 0
