@@ -17,6 +17,7 @@ import requests
 import subprocess
 import ffmpeg
 from volcenginesdkarkruntime import Ark
+import xml.etree.ElementTree as ET
 
 # 添加src目录到路径
 src_dir = os.path.join(os.path.dirname(__file__), 'src')
@@ -26,6 +27,154 @@ from config.config import TTS_CONFIG, ARK_CONFIG, IMAGE_TWO_CONFIG, STORY_STYLE
 from src.script.gen_script import ScriptGenerator
 from src.voice.gen_voice import VoiceGenerator
 from image.gen_image import generate_image_with_volcengine
+
+def parse_character_details(narration_file_path):
+    """
+    从narration.txt文件中解析主要人物的详细信息
+    
+    Args:
+        narration_file_path: narration.txt文件路径
+    
+    Returns:
+        dict: 人物名称到详细描述的映射
+    """
+    character_details = {}
+    
+    try:
+        if not os.path.exists(narration_file_path):
+            print(f"警告: narration.txt文件不存在: {narration_file_path}")
+            return character_details
+        
+        with open(narration_file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # 提取主要人物部分
+        main_characters_match = re.search(r'<主要人物>(.*?)</主要人物>', content, re.DOTALL)
+        character_matches = []
+        
+        if main_characters_match:
+            main_characters_content = main_characters_match.group(1)
+            # 解析主要人物
+            main_character_matches = re.findall(r'<人物\d+>(.*?)</人物\d+>', main_characters_content, re.DOTALL)
+            character_matches.extend(main_character_matches)
+        
+        # 提取次要人物部分
+        minor_characters_match = re.search(r'<次要人物>(.*?)</次要人物>', content, re.DOTALL)
+        if minor_characters_match:
+            minor_characters_content = minor_characters_match.group(1)
+            # 解析次要人物
+            minor_character_matches = re.findall(r'<次要人物\d+>(.*?)</次要人物\d+>', minor_characters_content, re.DOTALL)
+            character_matches.extend(minor_character_matches)
+        
+        if not character_matches:
+            print("警告: 未找到任何人物信息")
+            return character_details
+        
+        for character_content in character_matches:
+            # 提取姓名
+            name_match = re.search(r'<姓名>&([^&]+)&</姓名>', character_content)
+            if not name_match:
+                continue
+            
+            character_name = name_match.group(1)
+            
+            # 提取各项详细信息
+            details = []
+            
+            # 身高体型
+            height_match = re.search(r'<身高体型>([^<]+)</身高体型>', character_content)
+            if height_match:
+                details.append(height_match.group(1))
+            
+            # 头发细节
+            hair_color_match = re.search(r'<发色>([^<]+)</发色>', character_content)
+            hair_style_match = re.search(r'<发型>([^<]+)</发型>', character_content)
+            if hair_color_match and hair_style_match:
+                details.append(f"{hair_color_match.group(1)}{hair_style_match.group(1)}")
+            
+            # 眼睛细节
+            eye_color_match = re.search(r'<眼睛颜色>([^<]+)</眼睛颜色>', character_content)
+            eye_type_match = re.search(r'<眼型>([^<]+)</眼型>', character_content)
+            eye_trait_match = re.search(r'<眼神特点>([^<]+)</眼神特点>', character_content)
+            if eye_color_match and eye_type_match:
+                eye_desc = f"{eye_color_match.group(1)}{eye_type_match.group(1)}"
+                if eye_trait_match:
+                    eye_desc += f"眼神{eye_trait_match.group(1)}"
+                details.append(eye_desc)
+            
+            # 脸型轮廓
+            face_match = re.search(r'<脸型>([^<]+)</脸型>', character_content)
+            chin_match = re.search(r'<下巴形状>([^<]+)</下巴形状>', character_content)
+            if face_match and chin_match:
+                details.append(f"{face_match.group(1)}{chin_match.group(1)}")
+            
+            # 肤色
+            skin_match = re.search(r'<肤色>([^<]+)</肤色>', character_content)
+            if skin_match:
+                details.append(f"{skin_match.group(1)}肤色")
+            
+            # 服装细节
+            clothing_color_match = re.search(r'<服装细节>.*?<颜色>([^<]+)</颜色>.*?<款式>([^<]+)</款式>', character_content, re.DOTALL)
+            if clothing_color_match:
+                details.append(f"{clothing_color_match.group(1)}{clothing_color_match.group(2)}")
+            
+            # 配饰细节
+            glasses_match = re.search(r'<眼镜>([^<]+)</眼镜>', character_content)
+            if glasses_match and glasses_match.group(1) != '无':
+                details.append(glasses_match.group(1))
+            
+            jewelry_match = re.search(r'<首饰>([^<]+)</首饰>', character_content)
+            if jewelry_match and jewelry_match.group(1) != '无':
+                details.append(jewelry_match.group(1))
+            
+            # 组合所有描述
+            character_details[character_name] = '，'.join(details)
+            print(f"解析到人物: {character_name} -> {character_details[character_name]}")
+        
+        return character_details
+        
+    except Exception as e:
+        print(f"解析人物详情时发生错误: {e}")
+        return character_details
+
+def enhance_prompt_with_character_details(prompt, chapter_path):
+    """
+    根据人物标记增强prompt描述
+    
+    Args:
+        prompt: 原始prompt
+        chapter_path: 章节目录路径
+    
+    Returns:
+        str: 增强后的prompt
+    """
+    try:
+        # 查找narration.txt文件
+        narration_file = os.path.join(chapter_path, 'narration.txt')
+        
+        # 解析人物详情
+        character_details = parse_character_details(narration_file)
+        
+        if not character_details:
+            return prompt
+        
+        # 查找prompt中的人名标记
+        enhanced_prompt = prompt
+        
+        for character_name, details in character_details.items():
+            # 查找&人名&模式
+            pattern = f'&{character_name}&'
+            if pattern in enhanced_prompt:
+                # 替换为详细描述
+                replacement = f'{character_name}（{details}）'
+                enhanced_prompt = enhanced_prompt.replace(pattern, replacement)
+                print(f"增强描述: {pattern} -> {replacement}")
+        
+        return enhanced_prompt
+        
+    except Exception as e:
+        print(f"增强prompt时发生错误: {e}")
+        return prompt
 
 def clean_text_for_tts(text):
     """
@@ -142,7 +291,7 @@ ART_STYLES = {
     )
 }
 
-def generate_image(prompt, output_path, style=None):
+def generate_image(prompt, output_path, style=None, chapter_path=None):
     """
     生成图片文件
     
@@ -150,6 +299,7 @@ def generate_image(prompt, output_path, style=None):
         prompt: 图片描述
         output_path: 输出文件路径
         style: 艺术风格，如果为None则使用配置文件中的默认风格
+        chapter_path: 章节路径，用于获取人物描述信息
     
     Returns:
         bool: 是否成功生成
@@ -171,9 +321,15 @@ def generate_image(prompt, output_path, style=None):
         
         print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
         
-        # 构建完整的prompt
-        full_prompt = style_prompt + "\n\n以下面描述为内容，生成一张故事图片：\n" + prompt
+        # 如果提供了章节路径，则增强人物描述
+        enhanced_prompt = prompt
+        if chapter_path:
+            enhanced_prompt = enhance_prompt_with_character_details(prompt, chapter_path)
         
+        # 构建完整的prompt
+        full_prompt = "无任何形式的文字, 字母, 数字, 符号, 水印, 签名  （包括标识、符号、背景纹理里的隐藏字）\n\n" + style_prompt + "\n\n以下面描述为内容，生成一张故事图片\n" + enhanced_prompt + "\n\n"
+        
+        print("这里是完整的prompt===>>>{}".format(full_prompt))
         # 请求参数 - 使用配置文件中的值
         form = {
             "req_key": IMAGE_TWO_CONFIG['req_key'],
@@ -221,13 +377,14 @@ def generate_image(prompt, output_path, style=None):
         print(f"生成图片时发生错误: {e}")
         return False
 
-def generate_images_batch(prompts_and_paths, style=None):
+def generate_images_batch(prompts_and_paths, style=None, chapter_path=None):
     """
     批量生成图片文件（优化的批量处理，减少API调用次数）
     
     Args:
         prompts_and_paths: 包含(prompt, output_path)元组的列表
         style: 艺术风格，如果为None则使用配置文件中的默认风格
+        chapter_path: 章节路径，用于获取人物描述信息
     
     Returns:
         list: 成功生成的图片路径列表
@@ -259,8 +416,13 @@ def generate_images_batch(prompts_and_paths, style=None):
             try:
                 print(f"正在生成第{i}/{len(prompts_and_paths)}张图片: {os.path.basename(output_path)}")
                 
+                # 如果提供了章节路径，则增强人物描述
+                enhanced_prompt = prompt
+                if chapter_path:
+                    enhanced_prompt = enhance_prompt_with_character_details(prompt, chapter_path)
+                
                 # 构建完整的prompt
-                full_prompt = style_prompt + "\n\n以下面描述为内容，生成一张故事图片：\n" + prompt
+                full_prompt = style_prompt + "\n\n以下面描述为内容，生成一张故事图片：\n" + enhanced_prompt
                 
                 # 请求参数
                 form = {
@@ -606,7 +768,7 @@ def process_chapter(chapter_dir):
         print(f"准备生成图片 {i}: {prompt[:30]}...")
     
     # 批量生成所有图片
-    successful_image_paths = generate_images_batch(prompts_and_paths)
+    successful_image_paths = generate_images_batch(prompts_and_paths, chapter_path=chapter_dir)
     
     if len(successful_image_paths) != len(segments):
         print(f"警告: 只成功生成了{len(successful_image_paths)}/{len(segments)}张图片")
@@ -1119,7 +1281,7 @@ def generate_images_from_scripts(data_dir):
                 image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}.jpg")
                 
                 # 使用本地图片生成函数（使用ARK_CONFIG配置）
-                if generate_image(enhanced_prompt, image_path):
+                if generate_image(enhanced_prompt, image_path, chapter_path=chapter_dir):
                     print(f"  ✓ 图片生成成功")
                     success_count += 1
                 else:
