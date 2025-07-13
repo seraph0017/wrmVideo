@@ -43,7 +43,7 @@ wrmVideo/
 │   │   ├── chapter01/      # 章节目录
 │   │   │   ├── chapter01_script.txt  # 章节脚本
 │   │   │   ├── *.mp3       # 生成的音频文件
-│   │   │   ├── *.jpg       # 生成的图片文件
+│   │   │   ├── *.jpeg      # 生成的图片文件
 │   │   │   ├── *.mp4       # 生成的视频片段
 │   │   │   └── chapter01_complete.mp4  # 完整章节视频
 │   │   └── final_complete_video.mp4    # 最终合并视频

@@ -27,6 +27,8 @@ from config.config import TTS_CONFIG, ARK_CONFIG, IMAGE_TWO_CONFIG, STORY_STYLE
 from src.script.gen_script import ScriptGenerator
 from src.voice.gen_voice import VoiceGenerator
 from src.image.gen_image import generate_image_with_volcengine
+import time
+import urllib.request
 
 def parse_character_details(narration_file_path):
     """
@@ -198,6 +200,151 @@ def clean_text_for_tts(text):
     
     # 清理多余的空格和换行
     text = re.sub(r'\s+', ' ', text).strip()
+
+def create_video_from_images(first_image_path, second_image_path, duration, output_path):
+    """
+    使用两张图片生成视频
+    
+    Args:
+        first_image_path: 第一张图片路径
+        second_image_path: 第二张图片路径
+        duration: 视频时长
+        output_path: 输出视频路径
+    
+    Returns:
+        bool: 是否成功生成视频
+    """
+    try:
+        print(f"开始生成视频: {first_image_path} -> {second_image_path}")
+        
+        # 上传图片到临时服务器或使用本地路径
+        # 这里需要实现图片上传逻辑，暂时使用占位符URL
+        first_image_url = upload_image_to_server(first_image_path)
+        second_image_url = upload_image_to_server(second_image_path)
+        
+        if not first_image_url or not second_image_url:
+            print("图片上传失败")
+            return False
+        
+        # 创建视频生成任务
+        client = Ark(api_key=ARK_CONFIG["api_key"])
+        
+        resp = client.content_generation.tasks.create(
+            model="doubao-seedance-1-0-lite-i2v-250428",
+            content=[
+                {
+                    "type": "text",
+                    "text": f"慢慢过渡转场 --dur {duration}"
+                },
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": first_image_url
+                    },
+                    "role": "first_frame"
+                },
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": second_image_url
+                    },
+                    "role": "last_frame"
+                }
+            ]
+        )
+        
+        task_id = resp.id
+        print(f"视频生成任务创建成功，任务ID: {task_id}")
+        
+        # 等待任务完成
+        max_wait_time = 300  # 最大等待5分钟
+        wait_interval = 10   # 每10秒检查一次
+        waited_time = 0
+        
+        while waited_time < max_wait_time:
+            time.sleep(wait_interval)
+            waited_time += wait_interval
+            
+            # 查询任务状态
+            status_resp = client.content_generation.tasks.get(task_id=task_id)
+            
+            if status_resp.status == "succeeded":
+                video_url = status_resp.content.video_url
+                print(f"视频生成成功，下载URL: {video_url}")
+                
+                # 下载视频
+                if download_video(video_url, output_path):
+                    print(f"视频下载成功: {output_path}")
+                    return True
+                else:
+                    print("视频下载失败")
+                    return False
+            elif status_resp.status == "failed":
+                print(f"视频生成失败: {status_resp}")
+                return False
+            else:
+                print(f"视频生成中... 状态: {status_resp.status}")
+        
+        print("视频生成超时")
+        return False
+        
+    except Exception as e:
+        print(f"生成视频时发生错误: {e}")
+        return False
+
+def upload_image_to_server(image_path):
+    """
+    上传图片到服务器（占位符实现）
+    
+    Args:
+        image_path: 图片路径
+    
+    Returns:
+        str: 图片URL，失败返回None
+    """
+    # 这里需要实现实际的图片上传逻辑
+    # 暂时返回占位符URL
+    print(f"上传图片: {image_path}")
+    # 实际实现中需要将图片上传到可访问的服务器
+    return "https://example.com/placeholder.jpg"
+
+def download_video(video_url, output_path):
+    """
+    下载视频文件
+    
+    Args:
+        video_url: 视频URL
+        output_path: 输出路径
+    
+    Returns:
+        bool: 是否下载成功
+    """
+    try:
+        print(f"开始下载视频: {video_url}")
+        urllib.request.urlretrieve(video_url, output_path)
+        print(f"视频下载完成: {output_path}")
+        return True
+    except Exception as e:
+        print(f"下载视频时发生错误: {e}")
+        return False
+
+def get_audio_duration(audio_path):
+    """
+    获取音频文件时长
+    
+    Args:
+        audio_path: 音频文件路径
+    
+    Returns:
+        float: 音频时长（秒），失败返回0
+    """
+    try:
+        probe = ffmpeg.probe(audio_path)
+        duration = float(probe['streams'][0]['duration'])
+        return duration
+    except Exception as e:
+        print(f"获取音频时长失败: {e}")
+        return 0
     
     return text
 
@@ -813,7 +960,7 @@ def process_chapter(chapter_dir):
     prompts_and_paths = []
     for i, (narrations, prompt) in enumerate(segments, 1):
         image_name = f"{chapter_name}_segment_{i:02d}"
-        image_path = os.path.join(chapter_dir, f"{image_name}.jpg")
+        image_path = os.path.join(chapter_dir, f"{image_name}.jpeg")
         prompts_and_paths.append((prompt, image_path))
         print(f"准备生成图片 {i}: {prompt[:30]}...")
     
@@ -833,14 +980,14 @@ def process_chapter(chapter_dir):
         
         # 获取对应的图片路径
         image_name = f"{chapter_name}_segment_{i:02d}"
-        image_path = os.path.join(chapter_dir, f"{image_name}.jpg")
+        image_path = os.path.join(chapter_dir, f"{image_name}.jpeg")
         
         # 检查图片是否成功生成
         if image_path not in successful_image_paths:
             print(f"段落组 {i} 对应的图片生成失败，跳过")
             continue
         
-        print(f"使用图片: {image_name}.jpg")
+        print(f"使用图片: {image_name}.jpeg")
         
         # 处理该组内的每个解说内容
         for j, narration in enumerate(narrations, 1):
@@ -1332,11 +1479,11 @@ def generate_images_from_scripts(data_dir):
                         char_details = characters[char_name]
                         enhanced_prompt = enhanced_prompt.replace(char_name, f"{char_name}（{char_details}）")
                 
-                print(f"  生成第 {i}/{len(prompts)} 张图片: {chapter_name}_image_{i:02d}.jpg")
+                print(f"  生成第 {i}/{len(prompts)} 张图片: {chapter_name}_image_{i:02d}.jpeg")
                 print(f"  风格增强prompt: {enhanced_prompt[:150]}...")
                 
                 # 生成图片
-                image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}.jpg")
+                image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}.jpeg")
                 
                 # 使用本地图片生成函数（使用ARK_CONFIG配置）
                 if generate_image(enhanced_prompt, image_path, chapter_path=chapter_dir):
@@ -1824,7 +1971,7 @@ def concat_videos_from_assets(data_dir):
             print(f"\n--- 处理章节: {chapter_name} ---")
             
             # 查找图片文件
-            image_files = [f for f in os.listdir(chapter_dir) if f.endswith('.jpg') and 'image' in f]
+            image_files = [f for f in os.listdir(chapter_dir) if f.endswith('.jpeg') and 'image' in f]
             if not image_files:
                 print(f"警告: 在 {chapter_dir} 中没有找到图片文件")
                 continue

@@ -231,7 +231,7 @@ def process_chapter(chapter_dir: str) -> bool:
         enhanced_prompt = enhance_prompt_with_character_details(prompt, characters)
         
         # 输出文件路径
-        image_filename = f"{chapter_name}_image_{i:02d}.jpg"
+        image_filename = f"{chapter_name}_image_{i:02d}.jpeg"
         image_path = os.path.join(chapter_dir, image_filename)
         
         print(f"\n  生成第 {i}/{len(prompts)} 张图片: {image_filename}")
