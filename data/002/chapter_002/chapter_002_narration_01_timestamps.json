@@ -1,763 +1,637 @@
 {
   "text": "夜晚，河边的桥洞下，&芜音&身着一袭白衣，身形纤瘦地坐在几个纸箱铺开的地方，闭着双眼，双手叠放在丹田之上，似在感受着什么。周围建筑垃圾随处堆着，还有几堆如小山般的沙子，环境显得颇为荒凉。&芜音&轻轻叹了口气，心中想着无方谷的过往，语气略带无奈地自语着。",
   "audio_file": "data/002/chapter_002/chapter_002_narration_01.mp3",
-  "duration": 18.9,
+  "duration": 18.168,
   "character_timestamps": [
     {
       "character": "夜",
       "start_time": 0.0,
-      "end_time": 0.15,
-      "index": 0
+      "end_time": 0.14419047619047617
     },
     {
       "character": "晚",
-      "start_time": 0.15,
-      "end_time": 0.3,
-      "index": 1
+      "start_time": 0.14419047619047617,
+      "end_time": 0.28838095238095235
     },
     {
       "character": "，",
-      "start_time": 0.3,
-      "end_time": 0.44999999999999996,
-      "index": 2
+      "start_time": 0.28838095238095235,
+      "end_time": 0.43257142857142855
     },
     {
       "character": "河",
-      "start_time": 0.44999999999999996,
-      "end_time": 0.6,
-      "index": 3
+      "start_time": 0.43257142857142855,
+      "end_time": 0.5767619047619047
     },
     {
       "character": "边",
-      "start_time": 0.6,
-      "end_time": 0.75,
-      "index": 4
+      "start_time": 0.5767619047619047,
+      "end_time": 0.720952380952381
     },
     {
       "character": "的",
-      "start_time": 0.75,
-      "end_time": 0.9,
-      "index": 5
+      "start_time": 0.720952380952381,
+      "end_time": 0.8651428571428572
     },
     {
       "character": "桥",
-      "start_time": 0.9,
-      "end_time": 1.05,
-      "index": 6
+      "start_time": 0.8651428571428572,
+      "end_time": 1.0093333333333334
     },
     {
       "character": "洞",
-      "start_time": 1.05,
-      "end_time": 1.2,
-      "index": 7
+      "start_time": 1.0093333333333334,
+      "end_time": 1.1535238095238094
     },
     {
       "character": "下",
-      "start_time": 1.2,
-      "end_time": 1.3499999999999999,
-      "index": 8
+      "start_time": 1.1535238095238094,
+      "end_time": 1.2977142857142856
     },
     {
       "character": "，",
-      "start_time": 1.3499999999999999,
-      "end_time": 1.4999999999999998,
-      "index": 9
+      "start_time": 1.2977142857142856,
+      "end_time": 1.4419047619047618
     },
     {
       "character": "&",
-      "start_time": 1.4999999999999998,
-      "end_time": 1.6499999999999997,
-      "index": 10
+      "start_time": 1.4419047619047618,
+      "end_time": 1.5860952380952378
     },
     {
       "character": "芜",
-      "start_time": 1.6499999999999997,
-      "end_time": 1.7999999999999996,
-      "index": 11
+      "start_time": 1.5860952380952378,
+      "end_time": 1.730285714285714
     },
     {
       "character": "音",
-      "start_time": 1.7999999999999996,
-      "end_time": 1.9499999999999995,
-      "index": 12
+      "start_time": 1.730285714285714,
+      "end_time": 1.87447619047619
     },
     {
       "character": "&",
-      "start_time": 1.9499999999999995,
-      "end_time": 2.0999999999999996,
-      "index": 13
+      "start_time": 1.87447619047619,
+      "end_time": 2.0186666666666664
     },
     {
       "character": "身",
-      "start_time": 2.0999999999999996,
-      "end_time": 2.2499999999999996,
-      "index": 14
+      "start_time": 2.0186666666666664,
+      "end_time": 2.1628571428571424
     },
     {
       "character": "着",
-      "start_time": 2.2499999999999996,
-      "end_time": 2.3999999999999995,
-      "index": 15
+      "start_time": 2.1628571428571424,
+      "end_time": 2.3070476190476183
     },
     {
       "character": "一",
-      "start_time": 2.3999999999999995,
-      "end_time": 2.5499999999999994,
-      "index": 16
+      "start_time": 2.3070476190476183,
+      "end_time": 2.4512380952380948
     },
     {
       "character": "袭",
-      "start_time": 2.5499999999999994,
-      "end_time": 2.6999999999999993,
-      "index": 17
+      "start_time": 2.4512380952380948,
+      "end_time": 2.5954285714285708
     },
     {
       "character": "白",
-      "start_time": 2.6999999999999993,
-      "end_time": 2.849999999999999,
-      "index": 18
+      "start_time": 2.5954285714285708,
+      "end_time": 2.7396190476190467
     },
     {
       "character": "衣",
-      "start_time": 2.849999999999999,
-      "end_time": 2.999999999999999,
-      "index": 19
+      "start_time": 2.7396190476190467,
+      "end_time": 2.883809523809523
     },
     {
       "character": "，",
-      "start_time": 2.999999999999999,
-      "end_time": 3.149999999999999,
-      "index": 20
+      "start_time": 2.883809523809523,
+      "end_time": 3.027999999999999
     },
     {
       "character": "身",
-      "start_time": 3.149999999999999,
-      "end_time": 3.299999999999999,
-      "index": 21
+      "start_time": 3.027999999999999,
+      "end_time": 3.172190476190475
     },
     {
       "character": "形",
-      "start_time": 3.299999999999999,
-      "end_time": 3.449999999999999,
-      "index": 22
+      "start_time": 3.172190476190475,
+      "end_time": 3.316380952380951
     },
     {
       "character": "纤",
-      "start_time": 3.449999999999999,
-      "end_time": 3.5999999999999988,
-      "index": 23
+      "start_time": 3.316380952380951,
+      "end_time": 3.4605714285714275
     },
     {
       "character": "瘦",
-      "start_time": 3.5999999999999988,
-      "end_time": 3.7499999999999987,
-      "index": 24
+      "start_time": 3.4605714285714275,
+      "end_time": 3.6047619047619035
     },
     {
       "character": "地",
-      "start_time": 3.7499999999999987,
-      "end_time": 3.8999999999999986,
-      "index": 25
+      "start_time": 3.6047619047619035,
+      "end_time": 3.7489523809523795
     },
     {
       "character": "坐",
-      "start_time": 3.8999999999999986,
-      "end_time": 4.049999999999999,
-      "index": 26
+      "start_time": 3.7489523809523795,
+      "end_time": 3.8931428571428564
     },
     {
       "character": "在",
-      "start_time": 4.049999999999999,
-      "end_time": 4.199999999999999,
-      "index": 27
+      "start_time": 3.8931428571428564,
+      "end_time": 4.037333333333333
     },
     {
       "character": "几",
-      "start_time": 4.199999999999999,
-      "end_time": 4.35,
-      "index": 28
+      "start_time": 4.037333333333333,
+      "end_time": 4.181523809523809
     },
     {
       "character": "个",
-      "start_time": 4.35,
-      "end_time": 4.5,
-      "index": 29
+      "start_time": 4.181523809523809,
+      "end_time": 4.325714285714286
     },
     {
       "character": "纸",
-      "start_time": 4.5,
-      "end_time": 4.65,
-      "index": 30
+      "start_time": 4.325714285714286,
+      "end_time": 4.469904761904762
     },
     {
       "character": "箱",
-      "start_time": 4.65,
-      "end_time": 4.800000000000001,
-      "index": 31
+      "start_time": 4.469904761904762,
+      "end_time": 4.6140952380952385
     },
     {
       "character": "铺",
-      "start_time": 4.800000000000001,
-      "end_time": 4.950000000000001,
-      "index": 32
+      "start_time": 4.6140952380952385,
+      "end_time": 4.758285714285715
     },
     {
       "character": "开",
-      "start_time": 4.950000000000001,
-      "end_time": 5.100000000000001,
-      "index": 33
+      "start_time": 4.758285714285715,
+      "end_time": 4.902476190476192
     },
     {
       "character": "的",
-      "start_time": 5.100000000000001,
-      "end_time": 5.250000000000002,
-      "index": 34
+      "start_time": 4.902476190476192,
+      "end_time": 5.046666666666669
     },
     {
       "character": "地",
-      "start_time": 5.250000000000002,
-      "end_time": 5.400000000000002,
-      "index": 35
+      "start_time": 5.046666666666669,
+      "end_time": 5.190857142857145
     },
     {
       "character": "方",
-      "start_time": 5.400000000000002,
-      "end_time": 5.5500000000000025,
-      "index": 36
+      "start_time": 5.190857142857145,
+      "end_time": 5.3350476190476215
     },
     {
       "character": "，",
-      "start_time": 5.5500000000000025,
-      "end_time": 5.700000000000003,
-      "index": 37
+      "start_time": 5.3350476190476215,
+      "end_time": 5.479238095238098
     },
     {
       "character": "闭",
-      "start_time": 5.700000000000003,
-      "end_time": 5.850000000000003,
-      "index": 38
+      "start_time": 5.479238095238098,
+      "end_time": 5.623428571428574
     },
     {
       "character": "着",
-      "start_time": 5.850000000000003,
-      "end_time": 6.0000000000000036,
-      "index": 39
+      "start_time": 5.623428571428574,
+      "end_time": 5.767619047619051
     },
     {
       "character": "双",
-      "start_time": 6.0000000000000036,
-      "end_time": 6.150000000000004,
-      "index": 40
+      "start_time": 5.767619047619051,
+      "end_time": 5.911809523809527
     },
     {
       "character": "眼",
-      "start_time": 6.150000000000004,
-      "end_time": 6.300000000000004,
-      "index": 41
+      "start_time": 5.911809523809527,
+      "end_time": 6.0560000000000045
     },
     {
       "character": "，",
-      "start_time": 6.300000000000004,
-      "end_time": 6.450000000000005,
-      "index": 42
+      "start_time": 6.0560000000000045,
+      "end_time": 6.200190476190481
     },
     {
       "character": "双",
-      "start_time": 6.450000000000005,
-      "end_time": 6.600000000000005,
-      "index": 43
+      "start_time": 6.200190476190481,
+      "end_time": 6.344380952380957
     },
     {
       "character": "手",
-      "start_time": 6.600000000000005,
-      "end_time": 6.750000000000005,
-      "index": 44
+      "start_time": 6.344380952380957,
+      "end_time": 6.488571428571434
     },
     {
       "character": "叠",
-      "start_time": 6.750000000000005,
-      "end_time": 6.900000000000006,
-      "index": 45
+      "start_time": 6.488571428571434,
+      "end_time": 6.63276190476191
     },
     {
       "character": "放",
-      "start_time": 6.900000000000006,
-      "end_time": 7.050000000000006,
-      "index": 46
+      "start_time": 6.63276190476191,
+      "end_time": 6.776952380952387
     },
     {
       "character": "在",
-      "start_time": 7.050000000000006,
-      "end_time": 7.200000000000006,
-      "index": 47
+      "start_time": 6.776952380952387,
+      "end_time": 6.921142857142863
     },
     {
       "character": "丹",
-      "start_time": 7.200000000000006,
-      "end_time": 7.350000000000007,
-      "index": 48
+      "start_time": 6.921142857142863,
+      "end_time": 7.0653333333333395
     },
     {
       "character": "田",
-      "start_time": 7.350000000000007,
-      "end_time": 7.500000000000007,
-      "index": 49
+      "start_time": 7.0653333333333395,
+      "end_time": 7.209523809523817
     },
     {
       "character": "之",
-      "start_time": 7.500000000000007,
-      "end_time": 7.6500000000000075,
-      "index": 50
+      "start_time": 7.209523809523817,
+      "end_time": 7.353714285714293
     },
     {
       "character": "上",
-      "start_time": 7.6500000000000075,
-      "end_time": 7.800000000000008,
-      "index": 51
+      "start_time": 7.353714285714293,
+      "end_time": 7.49790476190477
     },
     {
       "character": "，",
-      "start_time": 7.800000000000008,
-      "end_time": 7.950000000000008,
-      "index": 52
+      "start_time": 7.49790476190477,
+      "end_time": 7.642095238095246
     },
     {
       "character": "似",
-      "start_time": 7.950000000000008,
-      "end_time": 8.100000000000009,
-      "index": 53
+      "start_time": 7.642095238095246,
+      "end_time": 7.7862857142857225
     },
     {
       "character": "在",
-      "start_time": 8.100000000000009,
-      "end_time": 8.250000000000009,
-      "index": 54
+      "start_time": 7.7862857142857225,
+      "end_time": 7.930476190476199
     },
     {
       "character": "感",
-      "start_time": 8.250000000000009,
-      "end_time": 8.40000000000001,
-      "index": 55
+      "start_time": 7.930476190476199,
+      "end_time": 8.074666666666676
     },
     {
       "character": "受",
-      "start_time": 8.40000000000001,
-      "end_time": 8.55000000000001,
-      "index": 56
+      "start_time": 8.074666666666676,
+      "end_time": 8.218857142857152
     },
     {
       "character": "着",
-      "start_time": 8.55000000000001,
-      "end_time": 8.70000000000001,
-      "index": 57
+      "start_time": 8.218857142857152,
+      "end_time": 8.363047619047629
     },
     {
       "character": "什",
-      "start_time": 8.70000000000001,
-      "end_time": 8.85000000000001,
-      "index": 58
+      "start_time": 8.363047619047629,
+      "end_time": 8.507238095238105
     },
     {
       "character": "么",
-      "start_time": 8.85000000000001,
-      "end_time": 9.00000000000001,
-      "index": 59
+      "start_time": 8.507238095238105,
+      "end_time": 8.651428571428582
     },
     {
       "character": "。",
-      "start_time": 9.00000000000001,
-      "end_time": 9.150000000000011,
-      "index": 60
+      "start_time": 8.651428571428582,
+      "end_time": 8.795619047619057
     },
     {
       "character": "周",
-      "start_time": 9.150000000000011,
-      "end_time": 9.300000000000011,
-      "index": 61
+      "start_time": 8.795619047619057,
+      "end_time": 8.939809523809535
     },
     {
       "character": "围",
-      "start_time": 9.300000000000011,
-      "end_time": 9.450000000000012,
-      "index": 62
+      "start_time": 8.939809523809535,
+      "end_time": 9.084000000000012
     },
     {
       "character": "建",
-      "start_time": 9.450000000000012,
-      "end_time": 9.600000000000012,
-      "index": 63
+      "start_time": 9.084000000000012,
+      "end_time": 9.228190476190488
     },
     {
       "character": "筑",
-      "start_time": 9.600000000000012,
-      "end_time": 9.750000000000012,
-      "index": 64
+      "start_time": 9.228190476190488,
+      "end_time": 9.372380952380965
     },
     {
       "character": "垃",
-      "start_time": 9.750000000000012,
-      "end_time": 9.900000000000013,
-      "index": 65
+      "start_time": 9.372380952380965,
+      "end_time": 9.51657142857144
     },
     {
       "character": "圾",
-      "start_time": 9.900000000000013,
-      "end_time": 10.050000000000013,
-      "index": 66
+      "start_time": 9.51657142857144,
+      "end_time": 9.660761904761918
     },
     {
       "character": "随",
-      "start_time": 10.050000000000013,
-      "end_time": 10.200000000000014,
-      "index": 67
+      "start_time": 9.660761904761918,
+      "end_time": 9.804952380952393
     },
     {
       "character": "处",
-      "start_time": 10.200000000000014,
-      "end_time": 10.350000000000014,
-      "index": 68
+      "start_time": 9.804952380952393,
+      "end_time": 9.94914285714287
     },
     {
       "character": "堆",
-      "start_time": 10.350000000000014,
-      "end_time": 10.500000000000014,
-      "index": 69
+      "start_time": 9.94914285714287,
+      "end_time": 10.093333333333348
     },
     {
       "character": "着",
-      "start_time": 10.500000000000014,
-      "end_time": 10.650000000000015,
-      "index": 70
+      "start_time": 10.093333333333348,
+      "end_time": 10.237523809523823
     },
     {
       "character": "，",
-      "start_time": 10.650000000000015,
-      "end_time": 10.800000000000015,
-      "index": 71
+      "start_time": 10.237523809523823,
+      "end_time": 10.3817142857143
     },
     {
       "character": "还",
-      "start_time": 10.800000000000015,
-      "end_time": 10.950000000000015,
-      "index": 72
+      "start_time": 10.3817142857143,
+      "end_time": 10.525904761904776
     },
     {
       "character": "有",
-      "start_time": 10.950000000000015,
-      "end_time": 11.100000000000016,
-      "index": 73
+      "start_time": 10.525904761904776,
+      "end_time": 10.670095238095254
     },
     {
       "character": "几",
-      "start_time": 11.100000000000016,
-      "end_time": 11.250000000000016,
-      "index": 74
+      "start_time": 10.670095238095254,
+      "end_time": 10.81428571428573
     },
     {
       "character": "堆",
-      "start_time": 11.250000000000016,
-      "end_time": 11.400000000000016,
-      "index": 75
+      "start_time": 10.81428571428573,
+      "end_time": 10.958476190476206
     },
     {
       "character": "如",
-      "start_time": 11.400000000000016,
-      "end_time": 11.550000000000017,
-      "index": 76
+      "start_time": 10.958476190476206,
+      "end_time": 11.102666666666682
     },
     {
       "character": "小",
-      "start_time": 11.550000000000017,
-      "end_time": 11.700000000000017,
-      "index": 77
+      "start_time": 11.102666666666682,
+      "end_time": 11.24685714285716
     },
     {
       "character": "山",
-      "start_time": 11.700000000000017,
-      "end_time": 11.850000000000017,
-      "index": 78
+      "start_time": 11.24685714285716,
+      "end_time": 11.391047619047637
     },
     {
       "character": "般",
-      "start_time": 11.850000000000017,
-      "end_time": 12.000000000000018,
-      "index": 79
+      "start_time": 11.391047619047637,
+      "end_time": 11.535238095238112
     },
     {
       "character": "的",
-      "start_time": 12.000000000000018,
-      "end_time": 12.150000000000018,
-      "index": 80
+      "start_time": 11.535238095238112,
+      "end_time": 11.67942857142859
     },
     {
       "character": "沙",
-      "start_time": 12.150000000000018,
-      "end_time": 12.300000000000018,
-      "index": 81
+      "start_time": 11.67942857142859,
+      "end_time": 11.823619047619065
     },
     {
       "character": "子",
-      "start_time": 12.300000000000018,
-      "end_time": 12.450000000000019,
-      "index": 82
+      "start_time": 11.823619047619065,
+      "end_time": 11.967809523809542
     },
     {
       "character": "，",
-      "start_time": 12.450000000000019,
-      "end_time": 12.60000000000002,
-      "index": 83
+      "start_time": 11.967809523809542,
+      "end_time": 12.112000000000018
     },
     {
       "character": "环",
-      "start_time": 12.60000000000002,
-      "end_time": 12.75000000000002,
-      "index": 84
+      "start_time": 12.112000000000018,
+      "end_time": 12.256190476190495
     },
     {
       "character": "境",
-      "start_time": 12.75000000000002,
-      "end_time": 12.90000000000002,
-      "index": 85
+      "start_time": 12.256190476190495,
+      "end_time": 12.40038095238097
     },
     {
       "character": "显",
-      "start_time": 12.90000000000002,
-      "end_time": 13.05000000000002,
-      "index": 86
+      "start_time": 12.40038095238097,
+      "end_time": 12.544571428571448
     },
     {
       "character": "得",
-      "start_time": 13.05000000000002,
-      "end_time": 13.20000000000002,
-      "index": 87
+      "start_time": 12.544571428571448,
+      "end_time": 12.688761904761925
     },
     {
       "character": "颇",
-      "start_time": 13.20000000000002,
-      "end_time": 13.350000000000021,
-      "index": 88
+      "start_time": 12.688761904761925,
+      "end_time": 12.8329523809524
     },
     {
       "character": "为",
-      "start_time": 13.350000000000021,
-      "end_time": 13.500000000000021,
-      "index": 89
+      "start_time": 12.8329523809524,
+      "end_time": 12.977142857142878
     },
     {
       "character": "荒",
-      "start_time": 13.500000000000021,
-      "end_time": 13.650000000000022,
-      "index": 90
+      "start_time": 12.977142857142878,
+      "end_time": 13.121333333333354
     },
     {
       "character": "凉",
-      "start_time": 13.650000000000022,
-      "end_time": 13.800000000000022,
-      "index": 91
+      "start_time": 13.121333333333354,
+      "end_time": 13.265523809523831
     },
     {
       "character": "。",
-      "start_time": 13.800000000000022,
-      "end_time": 13.950000000000022,
-      "index": 92
+      "start_time": 13.265523809523831,
+      "end_time": 13.409714285714307
     },
     {
       "character": "&",
-      "start_time": 13.950000000000022,
-      "end_time": 14.100000000000023,
-      "index": 93
+      "start_time": 13.409714285714307,
+      "end_time": 13.553904761904784
     },
     {
       "character": "芜",
-      "start_time": 14.100000000000023,
-      "end_time": 14.250000000000023,
-      "index": 94
+      "start_time": 13.553904761904784,
+      "end_time": 13.698095238095261
     },
     {
       "character": "音",
-      "start_time": 14.250000000000023,
-      "end_time": 14.400000000000023,
-      "index": 95
+      "start_time": 13.698095238095261,
+      "end_time": 13.842285714285737
     },
     {
       "character": "&",
-      "start_time": 14.400000000000023,
-      "end_time": 14.550000000000024,
-      "index": 96
+      "start_time": 13.842285714285737,
+      "end_time": 13.986476190476214
     },
     {
       "character": "轻",
-      "start_time": 14.550000000000024,
-      "end_time": 14.700000000000024,
-      "index": 97
+      "start_time": 13.986476190476214,
+      "end_time": 14.13066666666669
     },
     {
       "character": "轻",
-      "start_time": 14.700000000000024,
-      "end_time": 14.850000000000025,
-      "index": 98
+      "start_time": 14.13066666666669,
+      "end_time": 14.274857142857167
     },
     {
       "character": "叹",
-      "start_time": 14.850000000000025,
-      "end_time": 15.000000000000025,
-      "index": 99
+      "start_time": 14.274857142857167,
+      "end_time": 14.419047619047642
     },
     {
       "character": "了",
-      "start_time": 15.000000000000025,
-      "end_time": 15.150000000000025,
-      "index": 100
+      "start_time": 14.419047619047642,
+      "end_time": 14.56323809523812
     },
     {
       "character": "口",
-      "start_time": 15.150000000000025,
-      "end_time": 15.300000000000026,
-      "index": 101
+      "start_time": 14.56323809523812,
+      "end_time": 14.707428571428595
     },
     {
       "character": "气",
-      "start_time": 15.300000000000026,
-      "end_time": 15.450000000000026,
-      "index": 102
+      "start_time": 14.707428571428595,
+      "end_time": 14.851619047619073
     },
     {
       "character": "，",
-      "start_time": 15.450000000000026,
-      "end_time": 15.600000000000026,
-      "index": 103
+      "start_time": 14.851619047619073,
+      "end_time": 14.99580952380955
     },
     {
       "character": "心",
-      "start_time": 15.600000000000026,
-      "end_time": 15.750000000000027,
-      "index": 104
+      "start_time": 14.99580952380955,
+      "end_time": 15.140000000000025
     },
     {
       "character": "中",
-      "start_time": 15.750000000000027,
-      "end_time": 15.900000000000027,
-      "index": 105
+      "start_time": 15.140000000000025,
+      "end_time": 15.284190476190503
     },
     {
       "character": "想",
-      "start_time": 15.900000000000027,
-      "end_time": 16.050000000000026,
-      "index": 106
+      "start_time": 15.284190476190503,
+      "end_time": 15.428380952380977
     },
     {
       "character": "着",
-      "start_time": 16.050000000000026,
-      "end_time": 16.200000000000024,
-      "index": 107
+      "start_time": 15.428380952380977,
+      "end_time": 15.572571428571452
     },
     {
       "character": "无",
-      "start_time": 16.200000000000024,
-      "end_time": 16.350000000000023,
-      "index": 108
+      "start_time": 15.572571428571452,
+      "end_time": 15.716761904761926
     },
     {
       "character": "方",
-      "start_time": 16.350000000000023,
-      "end_time": 16.50000000000002,
-      "index": 109
+      "start_time": 15.716761904761926,
+      "end_time": 15.860952380952401
     },
     {
       "character": "谷",
-      "start_time": 16.50000000000002,
-      "end_time": 16.65000000000002,
-      "index": 110
+      "start_time": 15.860952380952401,
+      "end_time": 16.005142857142875
     },
     {
       "character": "的",
-      "start_time": 16.65000000000002,
-      "end_time": 16.80000000000002,
-      "index": 111
+      "start_time": 16.005142857142875,
+      "end_time": 16.149333333333352
     },
     {
       "character": "过",
-      "start_time": 16.80000000000002,
-      "end_time": 16.950000000000017,
-      "index": 112
+      "start_time": 16.149333333333352,
+      "end_time": 16.293523809523826
     },
     {
       "character": "往",
-      "start_time": 16.950000000000017,
-      "end_time": 17.100000000000016,
-      "index": 113
+      "start_time": 16.293523809523826,
+      "end_time": 16.4377142857143
     },
     {
       "character": "，",
-      "start_time": 17.100000000000016,
-      "end_time": 17.250000000000014,
-      "index": 114
+      "start_time": 16.4377142857143,
+      "end_time": 16.581904761904777
     },
     {
       "character": "语",
-      "start_time": 17.250000000000014,
-      "end_time": 17.400000000000013,
-      "index": 115
+      "start_time": 16.581904761904777,
+      "end_time": 16.72609523809525
     },
     {
       "character": "气",
-      "start_time": 17.400000000000013,
-      "end_time": 17.55000000000001,
-      "index": 116
+      "start_time": 16.72609523809525,
+      "end_time": 16.870285714285725
     },
     {
       "character": "略",
-      "start_time": 17.55000000000001,
-      "end_time": 17.70000000000001,
-      "index": 117
+      "start_time": 16.870285714285725,
+      "end_time": 17.0144761904762
     },
     {
       "character": "带",
-      "start_time": 17.70000000000001,
-      "end_time": 17.85000000000001,
-      "index": 118
+      "start_time": 17.0144761904762,
+      "end_time": 17.158666666666676
     },
     {
       "character": "无",
-      "start_time": 17.85000000000001,
-      "end_time": 18.000000000000007,
-      "index": 119
+      "start_time": 17.158666666666676,
+      "end_time": 17.30285714285715
     },
     {
       "character": "奈",
-      "start_time": 18.000000000000007,
-      "end_time": 18.150000000000006,
-      "index": 120
+      "start_time": 17.30285714285715,
+      "end_time": 17.447047619047623
     },
     {
       "character": "地",
-      "start_time": 18.150000000000006,
-      "end_time": 18.300000000000004,
-      "index": 121
+      "start_time": 17.447047619047623,
+      "end_time": 17.5912380952381
     },
     {
       "character": "自",
-      "start_time": 18.300000000000004,
-      "end_time": 18.450000000000003,
-      "index": 122
+      "start_time": 17.5912380952381,
+      "end_time": 17.735428571428574
     },
     {
       "character": "语",
-      "start_time": 18.450000000000003,
-      "end_time": 18.6,
-      "index": 123
+      "start_time": 17.735428571428574,
+      "end_time": 17.879619047619048
     },
     {
       "character": "着",
-      "start_time": 18.6,
-      "end_time": 18.75,
-      "index": 124
+      "start_time": 17.879619047619048,
+      "end_time": 18.023809523809526
     },
     {
       "character": "。",
-      "start_time": 18.75,
-      "end_time": 18.9,
-      "index": 125
+      "start_time": 18.023809523809526,
+      "end_time": 18.168
     }
   ],
   "generated_at": "2025-07-12T19:54:38.019250"

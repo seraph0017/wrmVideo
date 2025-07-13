@@ -16,6 +16,23 @@ ARK_CONFIG = {
 
 
 
+IMAGE_TO_VIDEO_CONFIG = {
+    "model": "doubao-seedance-1-0-lite-i2v-250428"
+}
+
+# 火山引擎视觉服务配置（用于T2P图片生成）
+IMAGE_TWO_CONFIG = {
+    "access_key": "ak",  # 请替换为您的实际access_key
+    "secret_key": "sk",  # 请替换为您的实际secret_key
+    "req_key": "high_aes_general_v21_L",  # 请求密钥
+    "default_width": 780,     # 默认图片宽度
+    "default_height": 1280,    # 默认图片高度
+    "scale": 3.5,            # 引导尺度
+    "ddim_steps": 25,        # 推理步数
+    "use_pre_llm": True,     # 是否使用预训练LLM优化prompt
+    "use_sr": True,          # 是否使用超分辨率增强
+    "return_url": False       # 返回图片URL
+}
 
 STORY_STYLE = {
   "青春校园": {

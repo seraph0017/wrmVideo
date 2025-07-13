@@ -178,7 +178,7 @@ def enhance_prompt_with_character_details(prompt, chapter_path):
 
 def clean_text_for_tts(text):
     """
-    清理文本用于TTS生成，移除括号内的内容
+    清理文本用于TTS生成，移除括号内的内容和&符号
     
     Args:
         text: 原始文本
@@ -192,6 +192,9 @@ def clean_text_for_tts(text):
     text = re.sub(r'\{[^}]*\}', '', text)  # 移除花括号内容
     text = re.sub(r'（[^）]*）', '', text)  # 移除中文圆括号内容
     text = re.sub(r'【[^】]*】', '', text)  # 移除中文方括号内容
+    
+    # 移除&符号
+    text = text.replace('&', '')
     
     # 清理多余的空格和换行
     text = re.sub(r'\s+', ' ', text).strip()
@@ -485,13 +488,13 @@ def generate_images_batch(prompts_and_paths, style=None, chapter_path=None):
         print(f"批量生成图片时发生错误: {e}")
         return []
 
-def wrap_text(text, max_chars_per_line=25):
+def wrap_text(text, max_chars_per_line=20):
     """
     处理字幕文本，确保只显示一行字幕且不超出边框
     
     Args:
         text: 原始文本
-        max_chars_per_line: 每行最大字符数（默认25，确保不超出边框）
+        max_chars_per_line: 每行最大字符数（默认20，确保不超出边框）
     
     Returns:
         str: 处理后的单行文本
@@ -499,6 +502,14 @@ def wrap_text(text, max_chars_per_line=25):
     # 去掉首尾的标点符号
     punctuation = '。！？，；：、""''（）()[]{}【】《》<>'
     text = text.strip(punctuation + ' \t\n')
+    
+    # 移除引号内的内容，避免字幕过长
+    text = re.sub(r'"[^"]*"', '', text)  # 移除双引号内容
+    text = re.sub(r'"[^"]*"', '', text)  # 移除中文双引号内容
+    text = re.sub(r"'[^']*'", '', text)  # 移除中文单引号内容
+    
+    # 清理多余的空格
+    text = re.sub(r'\s+', ' ', text).strip()
     
     # 如果文本过长，截取前面部分并添加省略号
     if len(text) > max_chars_per_line:
@@ -508,6 +519,38 @@ def wrap_text(text, max_chars_per_line=25):
     text = text.replace('\n', ' ').replace('\r', ' ')
     
     return text
+
+def add_image_effects(video_stream, duration=None):
+    """
+    为图片添加动态特效（简化版本）
+    
+    Args:
+        video_stream: ffmpeg视频流
+        duration: 视频时长（秒），如果为None则使用默认特效
+    
+    Returns:
+        ffmpeg视频流: 添加特效后的视频流
+    """
+    try:
+        # 视频尺寸
+        video_width = 720
+        video_height = 1280
+        
+        # 暂时禁用复杂特效，只使用基本缩放以确保稳定性
+        # print("应用图片特效: 基本缩放")  # 已禁用特效
+        
+        # 简单的缩放到目标尺寸
+        video_with_effects = video_stream.filter(
+            'scale', 
+            f'{video_width}:{video_height}'
+        )
+        
+        return video_with_effects
+        
+    except Exception as e:
+        print(f"添加图片特效时出错: {e}，使用原始视频流")
+        # 如果特效失败，返回原始视频流
+        return video_stream.filter('scale', f'720:1280')
 
 def create_video_with_subtitle(image_path, audio_path, subtitle_text, output_path):
     """
@@ -537,36 +580,43 @@ def create_video_with_subtitle(image_path, audio_path, subtitle_text, output_pat
         image_input = ffmpeg.input(image_path, loop=1)
         audio_input = ffmpeg.input(audio_path)
         
+        # 不使用图片特效，直接使用原始视频流
+        video_with_effects = image_input.video
+        
         # 如果有字幕文本，添加字幕
         if clean_subtitle.strip():
             # 视频尺寸 720x1280，字幕区域设置
             video_width = 720
             video_height = 1280
             
-            # 字幕处理，确保单行显示，最多25个字符（避免超出边框）
-            wrapped_subtitle = wrap_text(clean_subtitle, max_chars_per_line=25)
+            # 字幕处理，确保单行显示，最多20个字符（避免超出边框）
+            wrapped_subtitle = wrap_text(clean_subtitle, max_chars_per_line=20)
             
-            # 字幕位置：距离底部三分之一处，并确保有足够边距
-            subtitle_y = int(video_height * 2 / 3)  # 约853像素位置（距离底部三分之一）
+            # 字幕位置：使用FFmpeg表达式确保显示在底部
+            subtitle_y = "h-text_h-h/3"  # 距离底部1/3视频高度像素
             
-            # 添加字幕滤镜（黑色粗体字，透明背景，每行居中，确保不超出边框）
-            video_with_subtitle = image_input.video.filter(
+            print(f"调试信息 - 视频尺寸: {video_width}x{video_height}")
+            print(f"调试信息 - 字幕文本: '{wrapped_subtitle}'")
+            print(f"调试信息 - 字幕Y位置表达式: {subtitle_y}")
+            
+            # 添加字幕滤镜（黑体字，透明背景，每行居中，确保不超出边框）
+            video_with_subtitle = video_with_effects.filter(
                 'drawtext',
                 text=wrapped_subtitle,
-                fontfile='/System/Library/Fonts/PingFang.ttc',  # macOS中文字体
-                fontsize=28,  # 减小字号避免超出边框
-                fontcolor='black',
-                x='max(20, min(w-text_w-20, (w-text_w)/2))',  # 水平居中，但确保左右至少20像素边距
-                y=subtitle_y,      # 距离底部三分之一处
-                # 添加白色描边增强可读性
-                borderw=2,
+                fontfile='/System/Library/Fonts/Helvetica-Bold.ttc',  # 使用黑体字体
+                fontsize=48,  # 减小字号到48，确保不超出边界
+                fontcolor='yellow',
+                x='max(30, min(w-text_w-30, (w-text_w)/2))',  # 水平居中，但确保左右至少30像素边距
+                y=subtitle_y,      # 使用表达式确保在底部
+                # 添加白色描边增强可读性和清晰度
+                borderw=2,  # 减小描边宽度
                 bordercolor='white',
                 # 移除背景框，使字幕透明
                 # box=0 表示不显示背景框
                 box=0
             )
         else:
-            video_with_subtitle = image_input.video
+            video_with_subtitle = video_with_effects
         
         # 合成视频
         output = ffmpeg.output(
@@ -870,27 +920,35 @@ def concat_chapter_videos(video_files, output_path):
                 # 使用相对路径或绝对路径
                 f.write(f"file '{os.path.abspath(video_file)}'\n")
         
-        # 使用ffmpeg拼接视频
-        cmd = [
-            'ffmpeg', '-y',
-            '-f', 'concat',
-            '-safe', '0',
-            '-i', temp_list_file,
-            '-c', 'copy',
-            output_path
-        ]
+        # 使用ffmpeg-python拼接视频，重新编码音频以确保平滑拼接
+        input_stream = ffmpeg.input(temp_list_file, f='concat', safe=0)
+        output_stream = ffmpeg.output(
+            input_stream,
+            output_path,
+            vcodec='copy',  # 视频流直接复制
+            acodec='aac',   # 音频重新编码为AAC
+            audio_bitrate='192k',  # 音频比特率
+            ar=44100,  # 音频采样率
+            ac=2,      # 双声道
+            af='aresample=async=1'  # 音频重采样，确保同步
+        )
         
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        try:
+            ffmpeg.run(output_stream, overwrite_output=True, quiet=True)
+            result_returncode = 0
+        except ffmpeg.Error as e:
+            print(f"FFmpeg错误: {e.stderr.decode() if e.stderr else str(e)}")
+            result_returncode = 1
         
         # 清理临时文件
         if os.path.exists(temp_list_file):
             os.remove(temp_list_file)
         
-        if result.returncode == 0:
+        if result_returncode == 0:
             print(f"章节视频拼接成功: {output_path}")
             return True
         else:
-            print(f"章节视频拼接失败: {result.stderr}")
+            print(f"章节视频拼接失败")
             return False
             
     except Exception as e:
@@ -1451,9 +1509,284 @@ def generate_voices_from_scripts(data_dir):
         print(f"生成语音时发生错误: {e}")
         return False
 
+def split_text_by_timestamps(text, timestamps, max_chars_per_segment=40):
+    """
+    根据时间戳分割文本，优化分割策略以避免在词语中间分割
+    
+    Args:
+        text: 完整文本
+        timestamps: character_timestamps列表
+        max_chars_per_segment: 每段最大字符数
+    
+    Returns:
+        list: 包含(文本片段, 开始时间, 结束时间)的元组列表
+    """
+    import re
+    
+    segments = []
+    current_text = ""
+    start_time = 0
+    
+    # 定义自然停顿的标点符号（优先级从高到低）
+    major_punctuation = ['。', '！', '？']  # 句子结束符，优先分割
+    minor_punctuation = ['，', '；', '：', '、']  # 次要停顿符
+    
+    # 定义词边界字符（中文常见的词尾字符）
+    word_boundary_chars = ['的', '了', '着', '过', '地', '得', '在', '与', '和', '或', '但', '而', '然', '后', '前', '中', '上', '下', '内', '外']
+    
+    for i, char_info in enumerate(timestamps):
+        char = char_info['character']
+        char_start = char_info['start_time']
+        char_end = char_info['end_time']
+        
+        # 如果是第一个字符，记录开始时间
+        if not current_text:
+            start_time = char_start
+        
+        current_text += char
+        
+        # 检查是否需要分段
+        should_split = False
+        split_priority = 0  # 分割优先级，数字越大优先级越高
+        
+        # 如果是最后一个字符，必须分段
+        if i == len(timestamps) - 1:
+            should_split = True
+            split_priority = 100
+        
+        # 检查各种分割条件
+        elif len(current_text) >= max_chars_per_segment:
+            # 达到最大字符数，需要寻找合适的分割点
+            if char in major_punctuation:
+                # 遇到主要标点符号，立即分割
+                should_split = True
+                split_priority = 90
+            elif char in minor_punctuation:
+                # 遇到次要标点符号，优先分割
+                should_split = True
+                split_priority = 80
+            elif char in word_boundary_chars:
+                # 遇到词边界字符，可以分割
+                should_split = True
+                split_priority = 70
+            elif len(current_text) >= max_chars_per_segment + 5:
+                # 超出太多字符，强制分割
+                should_split = True
+                split_priority = 60
+        
+        # 在合适长度下遇到自然停顿点
+        elif len(current_text) >= 8:  # 最小长度要求
+            if char in major_punctuation:
+                # 遇到主要标点符号，分割
+                should_split = True
+                split_priority = 85
+            elif char in minor_punctuation and len(current_text) >= 12:
+                # 遇到次要标点符号且长度适中，分割
+                should_split = True
+                split_priority = 75
+        
+        # 寻找更好的分割点（向前回溯）
+        if should_split and len(current_text) > 15 and split_priority < 80:
+            # 尝试在最近的标点符号处分割
+            best_split_pos = -1
+            best_priority = 0
+            
+            # 向前回溯最多5个字符寻找更好的分割点
+            for j in range(min(5, len(current_text) - 8)):
+                check_pos = len(current_text) - 1 - j
+                if check_pos < 8:  # 确保最小长度
+                    break
+                    
+                check_char = current_text[check_pos]
+                check_priority = 0
+                
+                if check_char in major_punctuation:
+                    check_priority = 85
+                elif check_char in minor_punctuation:
+                    check_priority = 75
+                elif check_char in word_boundary_chars:
+                    check_priority = 65
+                
+                if check_priority > best_priority:
+                    best_split_pos = check_pos + 1  # 在标点符号后分割
+                    best_priority = check_priority
+            
+            # 如果找到更好的分割点，调整分割位置
+            if best_split_pos > 0 and best_priority > split_priority:
+                # 回退到更好的分割点
+                split_text = current_text[:best_split_pos]
+                remaining_text = current_text[best_split_pos:]
+                
+                # 计算分割点的时间戳
+                split_timestamp_index = i - len(remaining_text)
+                if split_timestamp_index >= 0:
+                    split_end_time = timestamps[split_timestamp_index]['end_time']
+                    
+                    # 添加分割的片段
+                    if split_text.strip():
+                        segments.append((split_text.strip(), start_time, split_end_time))
+                    
+                    # 重置当前文本为剩余部分
+                    current_text = remaining_text
+                    start_time = timestamps[split_timestamp_index + 1]['start_time'] if split_timestamp_index + 1 < len(timestamps) else char_start
+                    should_split = False
+        
+        if should_split and current_text.strip():
+            segments.append((current_text.strip(), start_time, char_end))
+            current_text = ""
+    
+    return segments
+
+def create_video_segment_with_timing(image_path, audio_path, text_segment, start_time, end_time, output_path, is_first_segment=False):
+    """
+    创建带有精确时间控制的视频片段
+    
+    Args:
+        image_path: 图片文件路径
+        audio_path: 音频文件路径
+        text_segment: 字幕文本片段
+        start_time: 开始时间（秒）
+        end_time: 结束时间（秒）
+        output_path: 输出视频路径
+    
+    Returns:
+        bool: 是否成功生成
+    """
+    try:
+        # 确保输出目录存在
+        output_dir = os.path.dirname(output_path)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
+        
+        print(f"正在创建视频片段: {os.path.basename(output_path)}")
+        print(f"时间范围: {start_time:.2f}s - {end_time:.2f}s")
+        print(f"字幕内容: {text_segment}")
+        
+        # 计算片段时长
+        duration = end_time - start_time
+        
+        # 创建输入流，使用超高精度时间参数
+        # 将时间精度提高到微秒级别（6位小数）
+        precise_start_time = f"{start_time:.6f}"
+        precise_duration = f"{duration:.6f}"
+        
+        print(f"精确时间参数 - 开始时间: {precise_start_time}s, 持续时间: {precise_duration}s")
+        
+        # 图片输入：循环播放，持续时间为片段时长
+        image_input = ffmpeg.input(image_path, loop=1, t=precise_duration)
+        
+        # 字幕提前显示时间（秒）- 让字幕稍微早于声音出现
+        subtitle_advance_time = 0.15  # 字幕提前0.15秒显示
+        
+        # 音频输入：先切割指定时间段的音频，然后重新从0开始
+        # 这样可以避免片段开头的静音问题
+        audio_segment = ffmpeg.input(audio_path, 
+                                   ss=precise_start_time, 
+                                   t=precise_duration,
+                                   accurate_seek=None,
+                                   avoid_negative_ts='make_zero')
+        
+        # 将切割后的音频重新设置为从0开始，避免时间偏移导致的静音
+        # 只在第一个片段添加音频延迟以实现字幕提前显示，避免拼接时的间隙
+        if is_first_segment:
+            audio_input = audio_segment.filter('asetpts', 'PTS-STARTPTS').filter('adelay', f'{int(subtitle_advance_time * 1000)}|{int(subtitle_advance_time * 1000)}')
+        else:
+            audio_input = audio_segment.filter('asetpts', 'PTS-STARTPTS')
+        
+        # 不使用图片特效，直接使用原始视频流
+        video_with_effects = image_input.video
+        
+        # 清理字幕文本
+        clean_subtitle = clean_text_for_tts(text_segment)
+        
+        if clean_subtitle.strip():
+            # 视频尺寸设置
+            video_width = 720
+            video_height = 1280
+            
+            # 处理字幕文本，确保不超出边框
+            wrapped_subtitle = wrap_text(clean_subtitle, max_chars_per_line=30)
+            
+            # 字幕位置：使用FFmpeg表达式确保显示在底部
+            subtitle_y = 'h-text_h-h/3'  # 距离底部1/3视频高度像素
+            
+            print(f"调试信息 - 视频尺寸: {video_width}x{video_height}")
+            print(f"调试信息 - 字幕文本: '{wrapped_subtitle}'")
+            print(f"调试信息 - 字幕Y位置表达式: {subtitle_y}")
+            
+            # 计算字幕显示时间范围，只在第一个片段让字幕提前显示
+            if is_first_segment:
+                subtitle_start_time = 0  # 字幕从视频开始就显示
+                subtitle_end_time = duration + subtitle_advance_time  # 字幕显示到音频结束后
+            else:
+                subtitle_start_time = 0  # 字幕从视频开始就显示
+                subtitle_end_time = duration  # 字幕显示到音频结束
+            
+            # 添加字幕滤镜（黑体字，透明背景，每行居中，确保不超出边框）
+            # 通过enable参数控制字幕显示时间，实现提前显示效果
+            video_with_subtitle = video_with_effects.filter(
+                'drawtext',
+                text=wrapped_subtitle,
+                fontfile='/System/Library/Fonts/Helvetica-Bold.ttc',  # 使用黑体字体
+                fontsize=72,  # 增大字号到72以便更清晰可见
+                fontcolor='black',
+                x='max(20, min(w-text_w-20, (w-text_w)/2))',  # 水平居中，确保边距
+                y=subtitle_y,
+                borderw=3,  # 增加描边宽度
+                bordercolor='white',
+                box=0,  # 透明背景
+                enable=f'gte(t,{subtitle_start_time})*lte(t,{subtitle_end_time})'  # 控制字幕显示时间
+            )
+        else:
+            video_with_subtitle = video_with_effects
+        
+        # 合成视频，添加超精确时间控制参数
+        # 只在第一个片段调整视频时长以适应字幕提前显示
+        if is_first_segment:
+            adjusted_duration = duration + subtitle_advance_time
+        else:
+            adjusted_duration = duration
+        
+        output = ffmpeg.output(
+            video_with_subtitle, audio_input,
+            output_path,
+            vcodec='libx264',
+            acodec='aac',
+            audio_bitrate='192k',
+            ar=44100,
+            pix_fmt='yuv420p',
+            t=adjusted_duration,  # 设置输出时长
+            # 添加超精确时间控制参数
+            avoid_negative_ts='make_zero',  # 避免负时间戳
+            fflags='+genpts+igndts',  # 生成精确时间戳并忽略DTS
+            copyts=None,  # 复制时间戳
+            start_at_zero=None,  # 从零开始时间戳
+            **{
+                'c:a': 'aac', 
+                'b:a': '192k',
+                'ac': '2',  # 双声道
+                'frame_duration': '0.02'  # 设置帧持续时间为20ms
+            }
+        )
+        
+        # 运行ffmpeg命令
+        ffmpeg.run(output, overwrite_output=True, quiet=True)
+        
+        # 检查输出文件是否存在
+        if os.path.exists(output_path):
+            print(f"✓ 视频片段创建成功: {output_path}")
+            return True
+        else:
+            print(f"✗ 视频片段创建失败: {output_path}")
+            return False
+            
+    except Exception as e:
+        print(f"创建视频片段时发生错误: {e}")
+        return False
+
 def concat_videos_from_assets(data_dir):
     """
-    拼接图片、语音和字幕生成视频
+    拼接图片、语音和字幕生成视频，支持根据timestamps精确分段
     
     Args:
         data_dir: 数据目录路径
@@ -1491,76 +1824,96 @@ def concat_videos_from_assets(data_dir):
             print(f"\n--- 处理章节: {chapter_name} ---")
             
             # 查找图片文件
-            image_path = os.path.join(chapter_dir, f"{chapter_name}_image.jpg")
-            if not os.path.exists(image_path):
-                print(f"警告: 图片文件不存在 {image_path}")
+            image_files = [f for f in os.listdir(chapter_dir) if f.endswith('.jpg') and 'image' in f]
+            if not image_files:
+                print(f"警告: 在 {chapter_dir} 中没有找到图片文件")
                 continue
             
-            # 查找解说文件
-            narration_file = os.path.join(chapter_dir, "narration.txt")
-            if not os.path.exists(narration_file):
-                print(f"警告: 解说文件不存在 {narration_file}")
+            # 查找音频和时间戳文件
+            audio_files = [f for f in os.listdir(chapter_dir) if f.endswith('.mp3') and 'narration' in f]
+            timestamp_files = [f for f in os.listdir(chapter_dir) if f.endswith('_timestamps.json')]
+            
+            if not audio_files:
+                print(f"警告: 在 {chapter_dir} 中没有找到音频文件")
                 continue
-            
-            # 读取解说内容
-            with open(narration_file, 'r', encoding='utf-8') as f:
-                narration = f.read().strip()
-            
-            # 清理文本
-            clean_narration = clean_text_for_tts(narration)
-            text_parts = smart_split_text(clean_narration, max_length=50)
             
             chapter_videos = []
             
-            # 为每个音频部分创建视频
-            for i, text_part in enumerate(text_parts, 1):
-                audio_path = os.path.join(chapter_dir, f"{chapter_name}_audio_{i:02d}.mp3")
+            # 处理每个音频文件
+            for audio_file in sorted(audio_files):
+                # 找到对应的图片和时间戳文件
+                base_name = audio_file.replace('.mp3', '')
+                image_file = None
+                timestamp_file = None
                 
-                if not os.path.exists(audio_path):
-                    print(f"警告: 音频文件不存在 {audio_path}")
+                # 查找对应的图片文件
+                for img in image_files:
+                    if base_name.replace('_narration', '_image') in img:
+                        image_file = img
+                        break
+                
+                # 查找对应的时间戳文件
+                for ts in timestamp_files:
+                    if base_name in ts:
+                        timestamp_file = ts
+                        break
+                
+                if not image_file:
+                    print(f"警告: 找不到 {audio_file} 对应的图片文件")
                     continue
                 
-                # 检查文本长度，如果太长则分割
-                if len(text_part) > 25:  # 超过25个字符需要分割
-                    # 分割成两部分
-                    mid_point = len(text_part) // 2
-                    # 寻找合适的分割点（标点符号）
-                    split_chars = ['。', '！', '？', '，', '；', '：']
-                    best_split = mid_point
-                    for j in range(max(0, mid_point-10), min(len(text_part), mid_point+10)):
-                        if text_part[j] in split_chars:
-                            best_split = j + 1
-                            break
+                if not timestamp_file:
+                    print(f"警告: 找不到 {audio_file} 对应的时间戳文件")
+                    continue
+                
+                # 构建完整路径
+                audio_path = os.path.join(chapter_dir, audio_file)
+                image_path = os.path.join(chapter_dir, image_file)
+                timestamp_path = os.path.join(chapter_dir, timestamp_file)
+                
+                print(f"处理音频: {audio_file}")
+                print(f"对应图片: {image_file}")
+                print(f"时间戳文件: {timestamp_file}")
+                
+                # 读取时间戳文件
+                try:
+                    with open(timestamp_path, 'r', encoding='utf-8') as f:
+                        timestamp_data = json.load(f)
                     
-                    part1 = text_part[:best_split].strip()
-                    part2 = text_part[best_split:].strip()
+                    text = timestamp_data.get('text', '')
+                    character_timestamps = timestamp_data.get('character_timestamps', [])
                     
-                    if part1 and part2:
-                        # 创建两个视频
-                        video1_path = os.path.join(chapter_dir, f"{chapter_name}_video_{i:02d}_part1.mp4")
-                        video2_path = os.path.join(chapter_dir, f"{chapter_name}_video_{i:02d}_part2.mp4")
+                    if not character_timestamps:
+                        print(f"警告: {timestamp_file} 中没有character_timestamps数据")
+                        continue
+                    
+                    # 根据时间戳分割文本，使用更大的字符数以减少分割频率
+                    text_segments = split_text_by_timestamps(text, character_timestamps, max_chars_per_segment=40)
+                    
+                    print(f"文本分割为 {len(text_segments)} 个片段")
+                    
+                    # 为每个文本片段创建视频
+                    segment_videos = []
+                    for i, (segment_text, start_time, end_time) in enumerate(text_segments):
+                        segment_output = os.path.join(chapter_dir, f"{base_name}_segment_{i+1:02d}.mp4")
                         
-                        if create_video_with_subtitle(image_path, audio_path, part1, video1_path):
-                            chapter_videos.append(video1_path)
-                            print(f"✓ 视频片段 {i}-1 创建成功")
-                        
-                        # 为第二部分创建静音音频（如果需要）
-                        # 这里简化处理，使用同一个音频文件
-                        if create_video_with_subtitle(image_path, audio_path, part2, video2_path):
-                            chapter_videos.append(video2_path)
-                            print(f"✓ 视频片段 {i}-2 创建成功")
-                    else:
-                        # 如果分割失败，使用原文本
-                        video_path = os.path.join(chapter_dir, f"{chapter_name}_video_{i:02d}.mp4")
-                        if create_video_with_subtitle(image_path, audio_path, text_part, video_path):
-                            chapter_videos.append(video_path)
-                            print(f"✓ 视频片段 {i} 创建成功")
-                else:
-                    # 文本长度合适，直接创建视频
-                    video_path = os.path.join(chapter_dir, f"{chapter_name}_video_{i:02d}.mp4")
-                    if create_video_with_subtitle(image_path, audio_path, text_part, video_path):
-                        chapter_videos.append(video_path)
-                        print(f"✓ 视频片段 {i} 创建成功")
+                        # 只在第一个片段添加字幕提前显示效果
+                        is_first_segment = (i == 0)
+                        if create_video_segment_with_timing(image_path, audio_path, segment_text, start_time, end_time, segment_output, is_first_segment):
+                            segment_videos.append(segment_output)
+                    
+                    # 拼接当前音频的所有片段
+                    if segment_videos:
+                        audio_complete_path = os.path.join(chapter_dir, f"{base_name}_complete.mp4")
+                        if concat_chapter_videos(segment_videos, audio_complete_path):
+                            chapter_videos.append(audio_complete_path)
+                            print(f"✓ 音频 {audio_file} 的视频片段拼接成功")
+                        else:
+                            print(f"✗ 音频 {audio_file} 的视频片段拼接失败")
+                    
+                except Exception as e:
+                    print(f"处理时间戳文件 {timestamp_file} 时发生错误: {e}")
+                    continue
             
             # 拼接章节内的所有视频
             if chapter_videos:
