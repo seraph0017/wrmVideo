@@ -117,7 +117,7 @@ ART_STYLES = {
 # 语音配置预设
 VOICE_PRESETS = {
     'default': {
-        'speed_ratio': 1.2,
+        'speed_ratio': 1.0,
         'volume_ratio': 1.0,
         'pitch_ratio': 1.0,
         'sample_rate': 44100,

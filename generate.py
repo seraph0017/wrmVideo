@@ -26,7 +26,7 @@ sys.path.insert(0, src_dir)
 from config.config import TTS_CONFIG, ARK_CONFIG, IMAGE_TWO_CONFIG, STORY_STYLE
 from src.script.gen_script import ScriptGenerator
 from src.voice.gen_voice import VoiceGenerator
-from image.gen_image import generate_image_with_volcengine
+from src.image.gen_image import generate_image_with_volcengine
 
 def parse_character_details(narration_file_path):
     """
@@ -235,7 +235,7 @@ def generate_audio(text, output_path):
             "audio": {
                 "voice_type": TTS_CONFIG['voice_type'],
                 "encoding": "mp3",
-                "speed_ratio": 1.2,
+                "speed_ratio": 1.0,
                 "volume_ratio": 1.0,
                 "pitch_ratio": 1.0,
                 "sample_rate": 44100,  # 提升采样率到44.1kHz
