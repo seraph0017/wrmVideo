@@ -16,4 +16,4 @@ python gen_audio.py data/001 用来根据解说文案生成旁白
 python fix_timestamps_banch.py data/001 用来修复字幕时间戳
 python gen_first_video.py data/001 用来生成第一个narration的视频
 python gen_ass.py data/001 用来生成字幕带时间戳文件
-python gen_video.py data/001 用来根据解说文案，旁白，图片，一起组合成视频 TODO
+python gen_video.py data/001 用来根据解说文案，旁白，图片，一起组合成视频 
