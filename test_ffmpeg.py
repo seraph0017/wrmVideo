@@ -19,7 +19,7 @@ def get_video_info(video_path):
     
     return width, height, fps
 
-def image_to_video(image_path, output_path, duration=3, width=1920, height=1080, fps=30):
+def image_to_video(image_path, output_path, duration=5, width=780, height=1280, fps=30):
     """将图片转换为视频片段"""
     (
         ffmpeg
@@ -102,13 +102,21 @@ def add_audio(video_path, audio_path, output_path, replace=True):
 
 def main():
     # 输入文件路径
-    image_path = "/Users/nathan/Projects/wrmVideo/data/002/chapter_002/chapter_002_image_02.jpeg"
-    original_video = "/Users/nathan/Projects/wrmVideo/data/002/chapter_002/chapter_002_combined_video.mp4"
-    subtitle_path = "/Users/nathan/Projects/wrmVideo/data/002/chapter_002/chapter_002_narration_01.ass"
-    audio_path = "/Users/nathan/Projects/wrmVideo/data/002/chapter_002/chapter_002_narration_01.mp3"
+    image_path_list = [
+     "/Users/xunan/Projects/wrmProject/data/002/chapter_002/chapter_002_image_02.jpeg",
+     "/Users/xunan/Projects/wrmProject/data/002/chapter_002/chapter_002_image_03.jpeg",
+     "/Users/xunan/Projects/wrmProject/data/002/chapter_002/chapter_002_image_04.jpeg",
+     "/Users/xunan/Projects/wrmProject/data/002/chapter_002/chapter_002_image_05.jpeg",
+     "/Users/xunan/Projects/wrmProject/data/002/chapter_002/chapter_002_image_06.jpeg",
+     "/Users/xunan/Projects/wrmProject/data/002/chapter_002/chapter_002_image_07.jpeg",
+     "/Users/xunan/Projects/wrmProject/data/002/chapter_002/chapter_002_image_08.jpeg",
+     "/Users/xunan/Projects/wrmProject/data/002/chapter_002/chapter_002_image_09.jpeg",
+     "/Users/xunan/Projects/wrmProject/data/002/chapter_002/chapter_002_image_10.jpeg"]
+    original_video = "/Users/xunan/Projects/wrmProject/data/002/chapter_002/chapter_002_first_video.mp4"
+    subtitle_path = "/Users/xunan/Projects/wrmProject/data/002/chapter_002/chapter_002_narration_01.ass"
+    audio_path = "/Users/xunan/Projects/wrmProject/data/002/chapter_002/chapter_002_narration_01.mp3"
 
     # 输出文件路径
-    image_video = "test_ffmpeg/image.mp4"
     concatenated_video = "test_ffmpeg/concatenated.mp4"
     video_with_sub = "test_ffmpeg/video_with_sub.mp4"
     final_output = "test_ffmpeg/final_output.mp4"
@@ -117,11 +125,16 @@ def main():
         # 1. 获取原视频参数
         width, height, fps = get_video_info(original_video)
         
-        # 2. 图片转视频
-        image_to_video(image_path, image_video, duration=10, width=width, height=height, fps=fps)
+        # 2. 循环处理图片列表，生成多个视频
+        image_videos = []
+        for i, image_path in enumerate(image_path_list):
+            image_video_path = f"test_ffmpeg/image_{i+1}.mp4"
+            image_to_video(image_path, image_video_path, duration=10, width=width, height=height, fps=fps)
+            image_videos.append(image_video_path)
         
-        # 3. 拼接视频
-        concat_videos([original_video, image_video], concatenated_video)
+        # 3. 拼接所有视频（原视频 + 所有图片生成的视频）
+        all_videos = [original_video] + image_videos
+        concat_videos(all_videos, concatenated_video)
         
         # 4. 添加字幕
         add_subtitle(concatenated_video, subtitle_path, video_with_sub)
@@ -136,7 +149,8 @@ def main():
     finally:
         pass
         # 清理中间文件
-        # for f in [image_video, concatenated_video, video_with_sub]:
+        # cleanup_files = image_videos + [concatenated_video, video_with_sub]
+        # for f in cleanup_files:
         #     if os.path.exists(f):
         #         os.remove(f)
 

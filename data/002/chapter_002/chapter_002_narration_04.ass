@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_002 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}被孩子的哭声惊醒，
+Dialogue: 0,0:00:01.97,0:00:03.76,Default,,0,0,0,,循着{\c&H0000FFFF&\b1}声音{\c&H00FFFFFF&\b0}找到沙堆处，
+Dialogue: 0,0:00:03.76,0:00:06.44,Default,,0,0,0,,看到高胖子与矮瘦子正准备埋{\c&H0000FFFF&\b1}赵禹{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.44,0:00:08.59,Default,,0,0,0,,，她立刻{\c&H0000FFFF&\b1}出手{\c&H00FFFFFF&\b0}，抬手一劈，
+Dialogue: 0,0:00:08.59,0:00:10.20,Default,,0,0,0,,高{\c&H0000FFFF&\b1}胖子{\c&H00FFFFFF&\b0}便晕了过去，
+Dialogue: 0,0:00:10.20,0:00:12.34,Default,,0,0,0,,矮{\c&H0000FFFF&\b1}瘦子{\c&H00FFFFFF&\b0}也被吓得晕了过去。
+Dialogue: 0,0:00:12.34,0:00:15.03,Default,,0,0,0,,接着{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}蹲下将赵禹从坑里拉起来
+Dialogue: 0,0:00:15.03,0:00:17.89,Default,,0,0,0,,，又把高{\c&H0000FFFF&\b1}胖子{\c&H00FFFFFF&\b0}和矮瘦子踢进坑里埋好
+Dialogue: 0,0:00:17.89,0:00:19.32,Default,,0,0,0,,，{\c&H0000FFFF&\b1}动作{\c&H00FFFFFF&\b0}十分利落。

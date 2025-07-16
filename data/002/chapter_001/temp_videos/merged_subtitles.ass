@@ -1,0 +1,91 @@
+[Script Info]
+Title: chapter_001 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:02.94,Default,,0,0,0,,下午四点，四周是正在施工的{\c&H0000FFFF&\b1}工地{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:02.94, 0:00:05.34,Default,,0,0,0,,小炒店内，{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}坐在轮椅上，
+Dialogue: 0, 0:00:05.34, 0:00:08.28,Default,,0,0,0,,严助理坐在对面，不时看向{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}左侧
+Dialogue: 0, 0:00:08.28, 0:00:11.41,Default,,0,0,0,,方。谭辞身材高大，乌黑色短发整齐，
+Dialogue: 0, 0:00:11.41, 0:00:13.06,Default,,0,0,0,,深棕色{\c&H0000FFFF&\b1}丹凤眼{\c&H00FFFFFF&\b0}犀利，
+Dialogue: 0, 0:00:13.06, 0:00:15.27,Default,,0,0,0,,穿着{\c&H0000FFFF&\b1}深蓝色{\c&H00FFFFFF&\b0}长款羊毛风衣，
+Dialogue: 0, 0:00:15.27, 0:00:16.56,Default,,0,0,0,,戴着黑框{\c&H0000FFFF&\b1}眼镜{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:16.56, 0:00:19.14,Default,,0,0,0,,严助理中等身材，{\c&H0000FFFF&\b1}深棕色{\c&H00FFFFFF&\b0}短发，
+Dialogue: 0, 0:00:19.14, 0:00:20.42,Default,,0,0,0,,穿着{\c&H0000FFFF&\b1}黑色{\c&H00FFFFFF&\b0}西装。
+Dialogue: 0, 0:00:20.42, 0:00:22.79,Default,,0,0,0,,严助理顺着{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}的视线看去，
+Dialogue: 0, 0:00:22.79, 0:00:25.52,Default,,0,0,0,,发现路边坐着一位身穿{\c&H0000FFFF&\b1}白色{\c&H00FFFFFF&\b0}法衣的
+Dialogue: 0, 0:00:25.52, 0:00:28.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}女孩{\c&H00FFFFFF&\b0}芜音，她脚边立着写有“神机妙
+Dialogue: 0, 0:00:28.44, 0:00:30.99,Default,,0,0,0,,算，算{\c&H0000FFFF&\b1}姻缘{\c&H00FFFFFF&\b0}，算运气，算财运。
+Dialogue: 0, 0:00:30.99, 0:00:33.00,Default,,0,0,0,,什么都算，但一卦{\c&H0000FFFF&\b1}很贵{\c&H00FFFFFF&\b0}！
+Dialogue: 0, 0:00:33.00, 0:00:33.91,Default,,0,0,0,,”的{\c&H0000FFFF&\b1}纸板{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:33.91, 0:00:36.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}身材纤细，齐肩乌黑色直发，
+Dialogue: 0, 0:00:36.65, 0:00:38.47,Default,,0,0,0,,杏眼温和，{\c&H0000FFFF&\b1}白皙{\c&H00FFFFFF&\b0}肤色，
+Dialogue: 0, 0:00:38.47, 0:00:39.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}白色{\c&H00FFFFFF&\b0}法衣。
+Dialogue: 0, 0:00:39.38, 0:00:41.34,Default,,0,0,0,,一阵风吹来，{\c&H0000FFFF&\b1}纸板{\c&H00FFFFFF&\b0}倒地，
+Dialogue: 0, 0:00:41.34, 0:00:43.12,Default,,0,0,0,,露出背面“{\c&H0000FFFF&\b1}华佗{\c&H00FFFFFF&\b0}再世，
+Dialogue: 0, 0:00:43.12, 0:00:45.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}专治{\c&H00FFFFFF&\b0}疑难杂症，一样很贵！
+Dialogue: 0, 0:00:45.26, 0:00:45.97,Default,,0,0,0,,”的字。
+Dialogue: 0, 0:00:45.97, 0:00:47.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}注意到两人在看她，
+Dialogue: 0, 0:00:47.93, 0:00:50.24,Default,,0,0,0,,抬眸回望，然后低下头{\c&H0000FFFF&\b1}托腮{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:50.24, 0:00:51.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}略显低落。
+Dialogue: 0, 0:00:51.49, 0:00:54.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}的白色法衣在工地环境中显得
+Dialogue: 0, 0:00:54.16, 0:00:55.05,Default,,0,0,0,,格外{\c&H0000FFFF&\b1}清新{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:55.05, 0:00:57.00,Default,,0,0,0,,严助理{\c&H0000FFFF&\b1}忍不住{\c&H00FFFFFF&\b0}笑出了声，
+Dialogue: 0, 0:00:57.00, 0:00:58.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}则保持淡漠。
+Dialogue: 0, 0:00:58.42, 0:01:00.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}捡起纸板起身走向两人，
+Dialogue: 0, 0:01:00.73, 0:01:02.50,Default,,0,0,0,,严助理{\c&H0000FFFF&\b1}见状{\c&H00FFFFFF&\b0}紧张起来，
+Dialogue: 0, 0:01:02.50, 0:01:05.34,Default,,0,0,0,,以为要被打，连忙站起来护住{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:05.34, 0:01:08.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}则是一脸疑惑地问严助理是否
+Dialogue: 0, 0:01:08.00, 0:01:08.71,Default,,0,0,0,,想打她。
+Dialogue: 0, 0:01:08.71, 0:01:10.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}示意严助理坐下，
+Dialogue: 0, 0:01:10.51, 0:01:12.31,Default,,0,0,0,,然后询问{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}有事吗。
+Dialogue: 0, 0:01:12.31, 0:01:15.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}表示算一卦，开张第一卦只需请
+Dialogue: 0, 0:01:15.19, 0:01:16.10,Default,,0,0,0,,吃{\c&H0000FFFF&\b1}一顿饭{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:16.10, 0:01:18.26,Default,,0,0,0,,她还{\c&H0000FFFF&\b1}提到{\c&H00FFFFFF&\b0}自己三天没吃饭，
+Dialogue: 0, 0:01:18.26, 0:01:20.06,Default,,0,0,0,,之前捡{\c&H0000FFFF&\b1}垃圾{\c&H00FFFFFF&\b0}赚了十块，
+Dialogue: 0, 0:01:20.06, 0:01:21.68,Default,,0,0,0,,因遇到{\c&H0000FFFF&\b1}色鬼{\c&H00FFFFFF&\b0}赔了钱。
+Dialogue: 0, 0:01:21.68, 0:01:23.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}身材纤细，白色法衣，
+Dialogue: 0, 0:01:23.84, 0:01:24.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐肩{\c&H00FFFFFF&\b0}直发。
+Dialogue: 0, 0:01:24.74, 0:01:27.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}拒绝算卦，称只信自己。
+Dialogue: 0, 0:01:27.16, 0:01:29.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}询问如何抵饭钱，
+Dialogue: 0, 0:01:29.02, 0:01:31.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}提出问一个问题如实回答相抵
+Dialogue: 0, 0:01:31.81, 0:01:33.66,Default,,0,0,0,,。{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}问是否见过面，
+Dialogue: 0, 0:01:33.66, 0:01:36.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}表示记忆不全无法回答。
+Dialogue: 0, 0:01:36.08, 0:01:38.50,Default,,0,0,0,,然后谭辞让{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}看右手掌心，
+Dialogue: 0, 0:01:38.50, 0:01:41.66,Default,,0,0,0,,芜音照做，{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}露出惊愕疑惑的神情。
+Dialogue: 0, 0:01:41.66, 0:01:44.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}询问怎么了，谭辞整理情绪后，
+Dialogue: 0, 0:01:44.61, 0:01:46.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}开始观谭辞面相，
+Dialogue: 0, 0:01:46.45, 0:01:48.11,Default,,0,0,0,,说他从小{\c&H0000FFFF&\b1}家庭{\c&H00FFFFFF&\b0}富裕，
+Dialogue: 0, 0:01:48.11, 0:01:49.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}亲缘{\c&H00FFFFFF&\b0}浅薄，父母早亡，
+Dialogue: 0, 0:01:49.95, 0:01:52.72,Default,,0,0,0,,有{\c&H0000FFFF&\b1}养女{\c&H00FFFFFF&\b0}，财运好但其他运势不好，
+Dialogue: 0, 0:01:52.72, 0:01:54.74,Default,,0,0,0,,有{\c&H0000FFFF&\b1}四次{\c&H00FFFFFF&\b0}大劫，已过两次，
+Dialogue: 0, 0:01:54.74, 0:01:56.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}第三次{\c&H00FFFFFF&\b0}在今日北方。
+Dialogue: 0, 0:01:56.40, 0:01:58.80,Default,,0,0,0,,严{\c&H0000FFFF&\b1}助理{\c&H00FFFFFF&\b0}嗤笑说网上都能查到。
+Dialogue: 0, 0:01:58.80, 0:02:00.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}饭馆{\c&H00FFFFFF&\b0}老板出来上菜，
+Dialogue: 0, 0:02:00.51, 0:02:03.18,Default,,0,0,0,,听到{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}的话，询问算卦价格，
+Dialogue: 0, 0:02:03.18, 0:02:06.03,Default,,0,0,0,,芜音说一卦一千，老板表示{\c&H0000FFFF&\b1}太贵{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:06.03, 0:02:08.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}说若不听会重伤昏迷近两年。
+Dialogue: 0, 0:02:08.89, 0:02:12.12,Default,,0,0,0,,严助理震惊，{\c&H0000FFFF&\b1}饭店{\c&H00FFFFFF&\b0}老板也不再开玩笑。
+Dialogue: 0, 0:02:12.12, 0:02:13.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}询问芜音名字，
+Dialogue: 0, 0:02:13.73, 0:02:16.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}回答后，严助理好奇询问姓氏，
+Dialogue: 0, 0:02:16.59, 0:02:18.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}表示俗间姓名已不记得。
+Dialogue: 0, 0:02:18.92, 0:02:20.53,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}司机{\c&H00FFFFFF&\b0}开车过来，
+Dialogue: 0, 0:02:20.53, 0:02:23.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}准备上车，芜音追上去提醒今日
+Dialogue: 0, 0:02:23.39, 0:02:26.26,Default,,0,0,0,,去南不去北，归家后不{\c&H0000FFFF&\b1}出门{\c&H00FFFFFF&\b0}可避劫。
+Dialogue: 0, 0:02:26.26, 0:02:29.21,Default,,0,0,0,,汽车发动，严助理看到{\c&H0000FFFF&\b1}红阳{\c&H00FFFFFF&\b0}路出事新
+Dialogue: 0, 0:02:29.21, 0:02:31.98,Default,,0,0,0,,闻，原来{\c&H0000FFFF&\b1}谭辞{\c&H00FFFFFF&\b0}取消行程躲过一劫。
+Dialogue: 0, 0:02:31.98, 0:02:34.74,Default,,0,0,0,,之后谭辞回家从保险箱拿出{\c&H0000FFFF&\b1}程意宁{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:34.74, 0:02:37.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}资料{\c&H00FFFFFF&\b0}，严助理惊讶发现与芜音长得像
+Dialogue: 0, 0:02:37.69, 0:02:40.83,Default,,0,0,0,,。然后晚上九点多，王{\c&H0000FFFF&\b1}大利{\c&H00FFFFFF&\b0}在饭馆关心
+Dialogue: 0, 0:02:40.83, 0:02:43.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}，并给她钱，芜音让王大利报生辰
+Dialogue: 0, 0:02:43.96, 0:02:45.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}八字{\c&H00FFFFFF&\b0}，算出其命中丧女，
+Dialogue: 0, 0:02:45.99, 0:02:48.39,Default,,0,0,0,,让找{\c&H0000FFFF&\b1}女儿{\c&H00FFFFFF&\b0}往东边有水的地方。

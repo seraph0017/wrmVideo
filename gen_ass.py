@@ -234,63 +234,81 @@ def process_chapter(chapter_path: str, max_length: int = 15) -> bool:
     chapter_name = os.path.basename(chapter_path)
     print(f"\n=== 处理章节: {chapter_name} ===")
     
-    # 查找timestamps文件
-    timestamps_file = None
+    # 查找所有timestamps文件
+    timestamps_files = []
     for file in os.listdir(chapter_path):
-        if file.endswith('_timestamps.json') and 'narration_01' in file:
-            timestamps_file = os.path.join(chapter_path, file)
-            break
+        if file.endswith('_timestamps.json') and 'narration' in file:
+            timestamps_files.append(os.path.join(chapter_path, file))
     
-    if not timestamps_file:
+    timestamps_files.sort()  # 按文件名排序
+    
+    if not timestamps_files:
         print(f"❌ 未找到timestamps文件")
         return False
     
-    try:
-        # 读取timestamps数据
-        with open(timestamps_file, 'r', encoding='utf-8') as f:
-            data = json.load(f)
+    print(f"找到 {len(timestamps_files)} 个timestamps文件")
+    
+    success_count = 0
+    for timestamps_file in timestamps_files:
+        # 从文件名提取narration编号
+        filename = os.path.basename(timestamps_file)
+        narration_match = re.search(r'narration_(\d+)', filename)
+        if narration_match:
+            narration_num = narration_match.group(1)
+        else:
+            narration_num = "01"
         
-        original_text = data.get('text', '')
-        character_timestamps = data.get('character_timestamps', [])
+        print(f"\n--- 处理 {filename} ---")
         
-        if not original_text or not character_timestamps:
-            print(f"❌ timestamps文件格式不正确")
-            return False
-        
-        print(f"原始文本: {original_text}")
-        print(f"字符数: {len(original_text)}")
-        
-        # 自然切分文本
-        segments = split_text_naturally(original_text, max_length)
-        print(f"分割为 {len(segments)} 段:")
-        
-        for i, segment in enumerate(segments, 1):
-            char_count = len([c for c in segment if c not in '，。！？；：、'])
-            key_word = identify_key_word(segment)
-            if key_word:
-                print(f"  {i}. {segment} ({char_count}字) [关键词: {key_word}]")
-            else:
-                print(f"  {i}. {segment} ({char_count}字) [无关键词]")
-        
-        # 计算时间戳
-        segment_timestamps = calculate_segment_timestamps(segments, character_timestamps)
-        
-        # 生成ASS内容
-        ass_content = generate_ass_content(segment_timestamps, f"{chapter_name} Subtitle")
-        
-        # 保存ASS文件
-        ass_filename = f"{chapter_name}_narration_01.ass"
-        ass_filepath = os.path.join(chapter_path, ass_filename)
-        
-        with open(ass_filepath, 'w', encoding='utf-8') as f:
-            f.write(ass_content)
-        
-        print(f"✓ ASS文件生成成功: {ass_filename}")
-        return True
-        
-    except Exception as e:
-        print(f"❌ 处理章节失败: {str(e)}")
-        return False
+        try:
+            # 读取timestamps数据
+            with open(timestamps_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            original_text = data.get('text', '')
+            character_timestamps = data.get('character_timestamps', [])
+            
+            if not original_text or not character_timestamps:
+                print(f"❌ timestamps文件格式不正确")
+                continue
+            
+            print(f"原始文本: {original_text}")
+            print(f"字符数: {len(original_text)}")
+            
+            # 自然切分文本
+            segments = split_text_naturally(original_text, max_length)
+            print(f"分割为 {len(segments)} 段:")
+            
+            for i, segment in enumerate(segments, 1):
+                char_count = len([c for c in segment if c not in '，。！？；：、'])
+                key_word = identify_key_word(segment)
+                if key_word:
+                    print(f"  {i}. {segment} ({char_count}字) [关键词: {key_word}]")
+                else:
+                    print(f"  {i}. {segment} ({char_count}字) [无关键词]")
+            
+            # 计算时间戳
+            segment_timestamps = calculate_segment_timestamps(segments, character_timestamps)
+            
+            # 生成ASS内容
+            ass_content = generate_ass_content(segment_timestamps, f"{chapter_name} Narration {narration_num} Subtitle")
+            
+            # 保存ASS文件
+            ass_filename = f"{chapter_name}_narration_{narration_num}.ass"
+            ass_filepath = os.path.join(chapter_path, ass_filename)
+            
+            with open(ass_filepath, 'w', encoding='utf-8') as f:
+                f.write(ass_content)
+            
+            print(f"✓ ASS文件生成成功: {ass_filename}")
+            success_count += 1
+            
+        except Exception as e:
+            print(f"❌ 处理文件失败: {str(e)}")
+            continue
+    
+    print(f"\n章节 {chapter_name} 处理完成: {success_count}/{len(timestamps_files)} 个文件成功")
+    return success_count > 0
 
 def main():
     """主函数"""

@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_002 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵禹{\c&H00FFFFFF&\b0}被救后，看着芜音有些发懵，
+Dialogue: 0,0:00:02.56,0:00:05.47,Default,,0,0,0,,问道：“姐姐，你是{\c&H0000FFFF&\b1}神仙姐姐{\c&H00FFFFFF&\b0}还是鬼姐
+Dialogue: 0,0:00:05.47,0:00:08.37,Default,,0,0,0,,姐呀？”{\c&H0000FFFF&\b1}芜音{\c&H00FFFFFF&\b0}笑着回应：“我不是鬼哦
+Dialogue: 0,0:00:08.37,0:00:11.28,Default,,0,0,0,,。”{\c&H0000FFFF&\b1}赵禹{\c&H00FFFFFF&\b0}胆子很大，还伸手摸了摸芜音
+Dialogue: 0,0:00:11.28,0:00:13.16,Default,,0,0,0,,的手，{\c&H0000FFFF&\b1}说道{\c&H00FFFFFF&\b0}：“是热的！
+Dialogue: 0,0:00:13.16,0:00:14.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}姐姐{\c&H00FFFFFF&\b0}一定是神仙！
+Dialogue: 0,0:00:14.52,0:00:17.09,Default,,0,0,0,,”而后芜音替{\c&H0000FFFF&\b1}赵禹{\c&H00FFFFFF&\b0}拍掉身上的沙子
+Dialogue: 0,0:00:17.09,0:00:18.62,Default,,0,0,0,,，打算送他去{\c&H0000FFFF&\b1}警局{\c&H00FFFFFF&\b0}。
