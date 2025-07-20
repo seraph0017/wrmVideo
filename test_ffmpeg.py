@@ -19,13 +19,13 @@ def get_video_info(video_path):
     
     return width, height, fps
 
-def image_to_video(image_path, output_path, duration=5, width=780, height=1280, fps=30):
+def image_to_video(image_path, output_path, duration=5, width=720, height=1280, fps=30):
     """将图片转换为视频片段"""
     (
         ffmpeg
         .input(image_path, loop=1, t=duration)
         .filter('scale', width, height)
-        .output(output_path, r=fps, vcodec='libx264', pix_fmt='yuv420p')
+        .output(output_path, r=fps, vcodec='libx264', pix_fmt='yuv420p', video_bitrate='2000k')
         .overwrite_output()
         .run()
     )
@@ -81,7 +81,7 @@ def add_audio(video_path, audio_path, output_path, replace=True):
         # 替换原音频
         (
             ffmpeg
-            .output(video.video, audio.audio, output_path, c='copy')
+            .output(video.video, audio.audio, output_path, vcodec='libx264', acodec='aac', video_bitrate='2000k', audio_bitrate='128k')
             .overwrite_output()
             .run()
         )
@@ -90,7 +90,7 @@ def add_audio(video_path, audio_path, output_path, replace=True):
         (
             ffmpeg
             .filter([video.audio, audio.audio], 'amix', inputs=2, duration='shortest')
-            .output(video.video, 'a', output_path)
+            .output(video.video, 'a', output_path, vcodec='libx264', acodec='aac', video_bitrate='2000k', audio_bitrate='128k')
             .overwrite_output()
             .run()
         )

@@ -108,8 +108,8 @@ def get_timestamps_duration(timestamps_path):
         print(f"读取timestamps文件失败: {e}")
         return 0
 
-def image_to_video(image_path, output_path, duration=5, width=780, height=1280, fps=30, fade_duration=0.5, audio_path=None):
-    """将图片转换为视频片段，添加Ken Burns效果和平移效果
+def image_to_video(image_path, output_path, duration=5, width=720, height=1280, fps=30, fade_duration=0.5, audio_path=None):
+    """将图片转换为视频片段，使用ffmpeg实现
     
     Args:
         image_path: 图片文件路径
@@ -118,9 +118,17 @@ def image_to_video(image_path, output_path, duration=5, width=780, height=1280, 
         width: 视频宽度
         height: 视频高度
         fps: 帧率
-        fade_duration: 保留参数以兼容性（现在用于平移距离控制）
+        fade_duration: 保留参数以兼容性
         audio_path: 音频文件路径，如果提供则使用音频时长作为视频时长
     """
+    # 直接使用ffmpeg实现
+    print("使用ffmpeg方式进行视频合成")
+    return image_to_video_ffmpeg(image_path, output_path, duration, width, height, fps, fade_duration, audio_path)
+    
+
+
+def image_to_video_ffmpeg(image_path, output_path, duration=5, width=720, height=1280, fps=30, fade_duration=0.5, audio_path=None):
+    """ffmpeg版本的图片转视频函数（备用）"""
     # 如果提供了音频文件，使用音频时长
     if audio_path and os.path.exists(audio_path):
         audio_duration = get_audio_duration(audio_path)
@@ -130,26 +138,76 @@ def image_to_video(image_path, output_path, duration=5, width=780, height=1280, 
         else:
             print(f"警告: 无法获取音频时长，使用默认时长: {duration}s")
     
-    print(f"开始转换图片到视频: {image_path} -> {output_path}, 时长: {duration}s")
+    print(f"开始转换图片到视频 (ffmpeg): {image_path} -> {output_path}, 时长: {duration}s")
     try:
-        # 计算平移参数 - 增强动态效果
+        # 计算四角滑动动画参数
         total_frames = int(duration * fps)
-        pan_distance = 300  # 增加平移距离（像素）
+        corner_offset = min(width, height) * 0.15  # 移动距离
         
-        (
+        # 创建四角滑动动画的表达式
+        # 简化的四角循环移动：使用正弦和余弦函数的组合
+        # 时间进度：t/{duration} 从0到1，乘以2π实现完整循环
+        
+        # 简化动画效果，使用固定的缩放和居中裁剪
+        # 创建基础视频（图片转视频，带缩放效果）
+        base_video = (
             ffmpeg
             .input(image_path, loop=1, t=duration)
-            .filter('scale', width*3, -1)  # 放大3倍以便有更大的平移空间
-            .filter('zoompan', 
-                   z='min(zoom+0.003,2.0)',  # 增强缩放效果，更明显的缩放变化
-                   x=f'iw/2-(iw/zoom/2)+({pan_distance}*on/{total_frames})',  # 水平平移：从左到右，增加距离
-                   y=f'ih/2-(ih/zoom/2)+({pan_distance/3}*on/{total_frames})',  # 垂直平移：从上到下，适度调整
-                   d=1, fps=fps, s=f"{width}x{height}")
-            .output(output_path, r=fps, vcodec='libx264', pix_fmt='yuv420p', preset='ultrafast')
+            .filter('scale', int(width*1.1), int(height*1.1))  # 适度放大1.1倍
+            .filter('crop', width, height, f'(iw-{width})/2', f'(ih-{height})/2')  # 居中裁剪
+        )
+        
+        # 定义overlay文件路径
+        fuceng_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "banner", "fuceng.mp4")
+        watermark_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "banner", "rmxs.png")
+        
+        # 检查fuceng.mp4是否存在
+        if os.path.exists(fuceng_path):
+            # 添加fuceng.mp4作为中间层
+            fuceng_input = ffmpeg.input(fuceng_path, stream_loop=-1, t=duration, an=None)  # 循环播放，不包含音频
+            
+            # 处理fuceng.mp4：缩放到视频尺寸并极致过滤所有暗色
+            fuceng_processed = (
+                fuceng_input
+                .filter('scale', width, height)  # 缩放到视频尺寸
+                .filter('colorkey', color='0x000000', similarity=0.99, blend=0.0)  # 极致过滤纯黑
+                .filter('colorkey', color='0x010101', similarity=0.95, blend=0.0)  # 过滤接近黑色
+                .filter('colorkey', color='0x020202', similarity=0.9, blend=0.0)   # 过滤深灰色
+                .filter('colorkey', color='0x030303', similarity=0.85, blend=0.0)  # 过滤更深灰色
+                .filter('colorkey', color='0x040404', similarity=0.8, blend=0.0)   # 过滤暗灰色
+                .filter('colorkey', color='0x050505', similarity=0.75, blend=0.0)  # 过滤深色调
+                .filter('colorkey', color='0x0a0a0a', similarity=0.7, blend=0.0)   # 过滤极深色
+            )
+            
+            # 第一步：将处理后的fuceng.mp4作为中间层overlay到基础视频上
+            video_with_fuceng = ffmpeg.filter([base_video, fuceng_processed], 'overlay', 
+                                             x=0, y=0,  # 全屏覆盖
+                                             shortest=1)
+        else:
+            print(f"警告: fuceng.mp4文件不存在: {fuceng_path}")
+            video_with_fuceng = base_video
+        
+        # 检查rmxs.png是否存在并添加为最上层
+        if os.path.exists(watermark_path):
+            watermark_input = ffmpeg.input(watermark_path, loop=1)  # 循环播放角标
+            
+            # 第二步：将rmxs.png作为最上层overlay
+            final_video = ffmpeg.filter([video_with_fuceng, watermark_input], 'overlay', 
+                                       x='W-w',  # 右上角贴边：视频宽度-角标宽度
+                                       y=0,      # 上边距0像素，完全贴边
+                                       shortest=1)  # 确保角标持续到视频结束
+        else:
+            print(f"警告: rmxs.png文件不存在: {watermark_path}")
+            final_video = video_with_fuceng
+        
+        # 输出最终视频
+        (
+            final_video
+            .output(output_path, r=fps, vcodec='libx264', pix_fmt='yuv420p', preset='ultrafast', video_bitrate='2000k')
             .overwrite_output()
             .run(quiet=False)  # 改为非安静模式以显示ffmpeg进度
         )
-        print(f"图片转视频成功（带Ken Burns效果和平移）：{output_path} (时长: {duration}s)")
+        print(f"图片转视频成功（带Ken Burns效果、平移和多层overlay）：{output_path} (时长: {duration}s)")
         return True
     except Exception as e:
         print(f"图片转视频失败: {e}")
@@ -281,7 +339,7 @@ def add_watermark(video_path, watermark_path, output_path):
                        x='W-w',  # 右上角贴边：视频宽度-角标宽度
                        y=0,      # 上边距0像素，完全贴边
                        shortest=1)  # 确保角标持续到视频结束
-                .output(output_path, vcodec='libx264', acodec='copy')
+                .output(output_path, vcodec='libx264', acodec='copy', video_bitrate='2000k')
                 .overwrite_output()
                 .run()
             )
@@ -293,11 +351,17 @@ def add_watermark(video_path, watermark_path, output_path):
             fuceng_input = ffmpeg.input(fuceng_path, stream_loop=-1, t=video_duration, an=None)  # 循环播放，不包含音频
             watermark_input = ffmpeg.input(watermark_path, loop=1)  # 循环播放角标
             
-            # 处理fuceng.mp4：缩放到视频尺寸并过滤黑色背景
+            # 处理fuceng.mp4：缩放到视频尺寸并极致过滤所有暗色
             fuceng_processed = (
                 fuceng_input
                 .filter('scale', video_width, video_height)  # 缩放到视频尺寸
-                .filter('colorkey', color='black', similarity=0.3, blend=0.1)  # 过滤黑色背景
+                .filter('colorkey', color='0x000000', similarity=0.99, blend=0.0)  # 极致过滤纯黑
+                .filter('colorkey', color='0x010101', similarity=0.95, blend=0.0)  # 过滤接近黑色
+                .filter('colorkey', color='0x020202', similarity=0.9, blend=0.0)   # 过滤深灰色
+                .filter('colorkey', color='0x030303', similarity=0.85, blend=0.0)  # 过滤更深灰色
+                .filter('colorkey', color='0x040404', similarity=0.8, blend=0.0)   # 过滤暗灰色
+                .filter('colorkey', color='0x050505', similarity=0.75, blend=0.0)  # 过滤深色调
+                .filter('colorkey', color='0x0a0a0a', similarity=0.7, blend=0.0)   # 过滤极深色
             )
             
             # 第一步：将处理后的fuceng.mp4作为中间层overlay到原视频上
@@ -312,7 +376,7 @@ def add_watermark(video_path, watermark_path, output_path):
                        x='W-w',  # 右上角贴边：视频宽度-角标宽度
                        y=0,      # 上边距0像素，完全贴边
                        shortest=1)  # 确保角标持续到视频结束
-                .output(output_path, vcodec='libx264', acodec='copy')
+                .output(output_path, vcodec='libx264', acodec='copy', video_bitrate='2000k')
                 .overwrite_output()
                 .run()
             )
@@ -350,7 +414,7 @@ def add_audio(video_path, audio_path, output_path, replace=True):
             
             (
                 ffmpeg
-                .output(video, audio, output_path, vcodec='libx264', acodec='aac')
+                .output(video, audio, output_path, vcodec='libx264', acodec='aac', video_bitrate='2000k', audio_bitrate='128k')
                 .overwrite_output()
                 .run()
             )
@@ -465,7 +529,7 @@ def mix_audio_with_bgm(narration_audio_path, video_duration, output_path):
         # 输出混合后的音频
         (
             ffmpeg
-            .output(mixed_audio, output_path, acodec='mp3', audio_bitrate='192k')
+            .output(mixed_audio, output_path, acodec='mp3', audio_bitrate='128k')
             .overwrite_output()
             .run()
         )
@@ -482,18 +546,26 @@ def merge_ass_files(ass_files, output_path, video_segments_info):
     try:
         merged_content = []
         
-        # 计算每个ASS文件的实际时长，用于累积时间偏移
-        ass_durations = []
+        # 计算每个音频文件的实际时长，用于累积时间偏移
+        audio_durations = []
         for ass_file in ass_files:
-            duration = get_ass_duration(ass_file)
-            ass_durations.append(duration)
-            print(f"ASS文件 {ass_file} 时长: {duration:.2f}s")
+            # 获取对应的音频文件时长
+            audio_file = ass_file.replace('.ass', '.mp3')
+            if os.path.exists(audio_file):
+                duration = get_audio_duration(audio_file)
+                audio_durations.append(duration)
+                print(f"音频文件 {audio_file} 时长: {duration:.2f}s")
+            else:
+                # 如果音频文件不存在，使用ASS文件时长作为备选
+                duration = get_ass_duration(ass_file)
+                audio_durations.append(duration)
+                print(f"ASS文件 {ass_file} 时长: {duration:.2f}s (音频文件不存在)")
         
-        # 计算累积时间偏移（基于ASS文件的实际时长）
+        # 计算累积时间偏移（基于音频文件的实际时长）
         time_offsets = [0]  # 第一个文件从0开始
-        for i in range(len(ass_durations)):
+        for i in range(len(audio_durations)):
             if i > 0:  # 从第二个文件开始累加
-                time_offsets.append(time_offsets[-1] + ass_durations[i-1])
+                time_offsets.append(time_offsets[-1] + audio_durations[i-1])
         
         for i, ass_file in enumerate(ass_files):
             with open(ass_file, 'r', encoding='utf-8') as f:
@@ -607,17 +679,21 @@ def process_chapter(chapter_path):
         ass_duration = get_ass_duration(ass_file)
         print(f"Narration {narration_num} ASS时长: {ass_duration:.2f}s")
         
-        # 查找对应的图片文件
+        # 查找对应的2个图片文件
         image_num = str(narration_num_int).zfill(2)  # narration_01对应image_01
-        image_path = os.path.join(chapter_path, f"{chapter_name}_image_{image_num}.jpeg")
+        image_paths = [
+            os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_1.jpeg"),
+            os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_2.jpeg")
+        ]
         
         # 查找对应的音频文件和timestamps文件
         audio_file = ass_file.replace('.ass', '.mp3')
         timestamps_file = ass_file.replace('.ass', '_timestamps.json')
         
-        # 检查图片文件是否存在，如果不存在则跳过
-        if not os.path.exists(image_path):
-            print(f"跳过 Narration {narration_num}: 未找到图片文件 {image_path}")
+        # 检查2个图片文件是否都存在，如果不存在则跳过
+        missing_images = [img for img in image_paths if not os.path.exists(img)]
+        if missing_images:
+            print(f"跳过 Narration {narration_num}: 缺少图片文件 {missing_images}")
             continue
         
         # 检查音频文件是否存在
@@ -625,9 +701,26 @@ def process_chapter(chapter_path):
             print(f"跳过 Narration {narration_num}: 未找到音频文件 {audio_file}")
             continue
         
-        # 跳过narration_01，直接从narration_02开始生成
+        # narration_01特殊处理：使用timestamps时长减去10秒，只生成image_01_2.jpeg的视频
         if narration_num_int == 1:
-            print(f"跳过 Narration {narration_num}: 不生成image_01.mp4")
+            narration_01_duration = get_timestamps_duration(timestamps_file)
+            calculated_duration = max(0, narration_01_duration - 10)  # 减去10秒，确保不为负数
+            print(f"Narration {narration_num}: 特殊计算时长 {narration_01_duration:.2f}s - 10s = {calculated_duration:.2f}s")
+            
+            # 只使用image_01_2.jpeg生成视频
+            image_01_2_path = os.path.join(chapter_path, f"{chapter_name}_image_01_2.jpeg")
+            if not os.path.exists(image_01_2_path):
+                print(f"跳过 Narration {narration_num}: 缺少图片文件 {image_01_2_path}")
+                continue
+            
+            narration_video_path = os.path.join(temp_dir, f"narration_{narration_num}.mp4")
+            if image_to_video(image_01_2_path, narration_video_path, duration=calculated_duration,
+                            width=width, height=height, fps=fps):
+                image_videos.append(narration_video_path)
+                video_segments_info.append(calculated_duration)
+                print(f"Narration {narration_num} 视频生成成功，时长: {calculated_duration:.2f}s")
+            else:
+                print(f"生成Narration {narration_num}视频失败")
             continue
         
         # 计算图片视频时长
@@ -647,15 +740,39 @@ def process_chapter(chapter_path):
             calculated_duration = get_timestamps_duration(timestamps_file)
             print(f"Narration {narration_num}: 使用timestamps时长 {calculated_duration:.2f}s")
         
-        # 生成图片视频，使用计算出的时长
-        image_video_path = os.path.join(temp_dir, f"image_{narration_num}.mp4")
-        if image_to_video(image_path, image_video_path, duration=calculated_duration,
-                        width=width, height=height, fps=fps):
-            image_videos.append(image_video_path)
-            video_segments_info.append(calculated_duration)
-            print(f"Narration {narration_num} 图片视频生成成功，时长: {calculated_duration:.2f}s")
+        # 为每个narration生成2个图片视频，每个时长为总时长的1/2
+        segment_duration = calculated_duration / 2
+        narration_videos = []
+        
+        for j, image_path in enumerate(image_paths, 1):
+            image_video_path = os.path.join(temp_dir, f"image_{narration_num}_{j}.mp4")
+            if image_to_video(image_path, image_video_path, duration=segment_duration,
+                            width=width, height=height, fps=fps):
+                narration_videos.append(image_video_path)
+                print(f"Narration {narration_num} 图片{j}视频生成成功，时长: {segment_duration:.2f}s")
+            else:
+                print(f"生成图片视频失败: {image_path}")
+                break
+        
+        # 只有当2个图片视频都生成成功时，才拼接它们
+        if len(narration_videos) == 2:
+            # 拼接2个图片视频为一个narration视频
+            narration_video_path = os.path.join(temp_dir, f"narration_{narration_num}.mp4")
+            if concat_videos(narration_videos, narration_video_path):
+                image_videos.append(narration_video_path)
+                video_segments_info.append(calculated_duration)
+                print(f"Narration {narration_num} 完整视频生成成功，时长: {calculated_duration:.2f}s")
+                
+                # 清理临时的单个图片视频文件
+                for temp_video in narration_videos:
+                    try:
+                        os.remove(temp_video)
+                    except:
+                        pass
+            else:
+                print(f"拼接narration {narration_num}的图片视频失败")
         else:
-            print(f"生成图片视频失败: {image_path}")
+            print(f"Narration {narration_num} 图片视频生成不完整，跳过")
     
     if not image_videos:
         print("没有成功生成任何图片视频")
@@ -689,11 +806,8 @@ def process_chapter(chapter_path):
     if not add_subtitle(concatenated_video, merged_ass_file, video_with_sub):
         return False
     
-    # 添加角标
-    watermark_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "banner", "rmxs.png")
-    video_with_watermark = os.path.join(temp_dir, "video_with_watermark.mp4")
-    if not add_watermark(video_with_sub, watermark_path, video_with_watermark):
-        return False
+    # 跳过添加角标步骤，因为每个视频片段已经包含了fuceng.mp4和rmxs.png效果
+    video_with_watermark = video_with_sub
     
     # 查找并拼接所有可用的音频文件
     audio_files = []
@@ -752,23 +866,33 @@ def process_chapter(chapter_path):
 
 def main():
     parser = argparse.ArgumentParser(description='视频生成脚本')
-    parser.add_argument('data_dir', help='数据目录路径 (例如: data/002)')
+    parser.add_argument('input_path', help='输入路径（可以是单个章节目录或包含多个章节的数据目录）')
     args = parser.parse_args()
     
-    data_dir = args.data_dir
-    if not os.path.exists(data_dir):
-        print(f"数据目录不存在: {data_dir}")
+    input_path = args.input_path
+    if not os.path.exists(input_path):
+        print(f"路径不存在: {input_path}")
         return
     
-    # 查找所有chapter文件夹
-    chapter_dirs = sorted([d for d in glob.glob(os.path.join(data_dir, "chapter_*")) 
-                          if os.path.isdir(d)])
+    # 检测输入路径类型
+    chapter_dirs = []
+    
+    # 检查是否是单个章节目录
+    if os.path.basename(input_path).startswith('chapter_') and os.path.isfile(os.path.join(input_path, 'narration.txt')):
+        # 单个章节目录
+        chapter_dirs = [input_path]
+        print(f"检测到单个章节目录: {os.path.basename(input_path)}")
+    else:
+        # 数据目录，查找所有chapter文件夹
+        chapter_dirs = sorted([d for d in glob.glob(os.path.join(input_path, "chapter_*")) 
+                              if os.path.isdir(d)])
+        
+        if chapter_dirs:
+            print(f"检测到数据目录，找到 {len(chapter_dirs)} 个章节文件夹")
     
     if not chapter_dirs:
-        print(f"在 {data_dir} 中未找到chapter文件夹")
+        print(f"在 {input_path} 中没有找到有效的章节目录")
         return
-    
-    print(f"找到 {len(chapter_dirs)} 个章节文件夹")
     
     success_count = 0
     for chapter_dir in chapter_dirs:

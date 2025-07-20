@@ -5,3 +5,5 @@ volcengine==1.0.98
 ffmpeg-python==0.2.0
 jinja2
 Pillow>=10.0.0
+moviepy>=1.0.3
+numpy>=1.21.0

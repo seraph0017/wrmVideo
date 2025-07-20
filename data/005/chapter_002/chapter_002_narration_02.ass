@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_002 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.36,Default,,0,0,0,,朝堂上 {\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}沉吟后提出要
+Dialogue: 0,0:00:02.36,0:00:04.71,Default,,0,0,0,,让{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}替程将军为副帅 魏
+Dialogue: 0,0:00:04.71,0:00:07.07,Default,,0,0,0,,征{\c&H0000FFFF&\b1}飞快{\c&H00FFFFFF&\b0}摇头拒绝 称这是最后
+Dialogue: 0,0:00:07.07,0:00:07.43,Default,,0,0,0,,底线。{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌站出 平淡说道
+Dialogue: 0,0:00:09.79,0:00:12.15,Default,,0,0,0,,“{\c&H0000FFFF&\b1}殿下{\c&H00FFFFFF&\b0} 您还是不要让诸位大
+Dialogue: 0,0:00:12.15,0:00:13.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}人们{\c&H00FFFFFF&\b0}为难了 答应了吧。
+Dialogue: 0,0:00:14.14,0:00:15.59,Default,,0,0,0,,”{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}依旧在朝堂
+Dialogue: 0,0:00:15.77,0:00:16.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}表情各异。

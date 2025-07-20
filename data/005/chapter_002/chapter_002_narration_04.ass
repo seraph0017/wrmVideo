@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_002 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}正驻足太极宫前 身后
+Dialogue: 0,0:00:02.37,0:00:04.74,Default,,0,0,0,,有人拍他肩膀 回头见是{\c&H0000FFFF&\b1}李孝{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.74,0:00:04.92,Default,,0,0,0,,恭。{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}身形高大 肩宽背阔
+Dialogue: 0,0:00:07.48,0:00:10.03,Default,,0,0,0,,五官{\c&H0000FFFF&\b1}棱角分明{\c&H00FFFFFF&\b0} 眉如刀削 双目
+Dialogue: 0,0:00:10.03,0:00:11.12,Default,,0,0,0,,深邃 带着耐人寻味的{\c&H0000FFFF&\b1}笑意{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:12.40,0:00:13.31,Default,,0,0,0,,场景在{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫附近 光线明亮 。

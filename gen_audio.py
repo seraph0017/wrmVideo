@@ -64,8 +64,35 @@ def extract_narration_content(narration_file_path):
         with open(narration_file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
+        # 调试：检查是否包含解说内容标签
+        if '<解说内容>' in content:
+            print(f"调试：文件中包含<解说内容>标签")
+        else:
+            print(f"调试：文件中不包含<解说内容>标签")
+        
+        # 调试：查找第一个解说内容标签的位置
+        start_pos = content.find('<解说内容>')
+        if start_pos != -1:
+            end_pos = content.find('</解说内容>', start_pos)
+            if end_pos != -1:
+                first_content = content[start_pos:end_pos+6]
+                print(f"调试：第一个解说内容标签: {first_content}")
+                # 检查标签内容的字符编码
+                inner_content = content[start_pos+5:end_pos]
+                print(f"调试：标签内容长度: {len(inner_content)}")
+                print(f"调试：标签内容前100字符: {repr(inner_content[:100])}")
+            else:
+                print(f"调试：找到开始标签但未找到结束标签")
+        else:
+            print(f"调试：未找到开始标签")
+        
         # 使用正则表达式提取所有<解说内容>标签中的内容
-        narration_matches = re.findall(r'<解说内容>(.*?)</解说内容>', content, re.DOTALL)
+        # 注意：文件中的解说内容标签没有结束标签，内容直接跟在开始标签后面直到下一个标签
+        narration_matches = re.findall(r'<解说内容>([^<]+)', content, re.DOTALL)
+        
+        print(f"调试：正则匹配结果数量: {len(narration_matches)}")
+        if narration_matches:
+            print(f"调试：第一个匹配结果: {narration_matches[0][:100]}")
         
         for narration in narration_matches:
             # 清理文本，移除多余的空白字符
@@ -85,7 +112,7 @@ def generate_voices_from_scripts(data_dir):
     根据脚本生成语音
     
     Args:
-        data_dir: 数据目录路径
+        data_dir: 数据目录路径（可以是包含多个章节的目录，也可以是单个章节目录）
     
     Returns:
         bool: 是否成功
@@ -98,19 +125,25 @@ def generate_voices_from_scripts(data_dir):
             print(f"错误: 数据目录不存在 {data_dir}")
             return False
         
-        # 查找所有章节目录
-        chapter_dirs = []
-        for item in os.listdir(data_dir):
-            item_path = os.path.join(data_dir, item)
-            if os.path.isdir(item_path) and item.startswith('chapter_'):
-                chapter_dirs.append(item_path)
-        
-        if not chapter_dirs:
-            print(f"错误: 在 {data_dir} 中没有找到章节目录")
-            return False
-        
-        chapter_dirs.sort()
-        print(f"找到 {len(chapter_dirs)} 个章节目录")
+        # 检查是否是单个章节目录
+        if os.path.basename(data_dir).startswith('chapter_'):
+            # 单个章节目录
+            chapter_dirs = [data_dir]
+            print(f"检测到单个章节目录: {os.path.basename(data_dir)}")
+        else:
+            # 查找所有章节目录
+            chapter_dirs = []
+            for item in os.listdir(data_dir):
+                item_path = os.path.join(data_dir, item)
+                if os.path.isdir(item_path) and item.startswith('chapter_'):
+                    chapter_dirs.append(item_path)
+            
+            if not chapter_dirs:
+                print(f"错误: 在 {data_dir} 中没有找到章节目录")
+                return False
+            
+            chapter_dirs.sort()
+            print(f"找到 {len(chapter_dirs)} 个章节目录")
         
         # 创建语音生成器
         voice_generator = VoiceGenerator()

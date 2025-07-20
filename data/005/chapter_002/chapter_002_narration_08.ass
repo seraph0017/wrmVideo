@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_002 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听到苏宁玉要随自己
+Dialogue: 0,0:00:02.28,0:00:04.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}赴死{\c&H00FFFFFF&\b0} 解释说自己谋了跟随大
+Dialogue: 0,0:00:04.75,0:00:07.22,Default,,0,0,0,,军出征{\c&H0000FFFF&\b1}薛延陀{\c&H00FFFFFF&\b0}的机会 需要钱
+Dialogue: 0,0:00:07.22,0:00:07.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}收买人心{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:08.17,0:00:10.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏宁{\c&H00FFFFFF&\b0}玉出身世家 明白重要性
+Dialogue: 0,0:00:10.83,0:00:11.78,Default,,0,0,0,,起身去后堂收拾值钱{\c&H0000FFFF&\b1}东西{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:13.11,0:00:14.06,Default,,0,0,0,,场景在{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}大堂 光线持续。

@@ -185,3 +185,24 @@ config/config.py
 
 # Log files
 *.log
+
+# Unignore specific media files
+!src/bgm/wn1.mp3
+!src/bgm/wn2.mp3
+!src/bgm/wn3.mp3
+!src/bgm/wn4.mp3
+!src/bgm/wn5.mp3
+!src/bgm/wn6.mp3
+!src/bgm/wn7.mp3
+!src/bgm/wn8.mp3
+!src/bgm/wn9.mp3
+!src/bgm/wn10.mp3
+!src/bgm/wn11.mp3
+!src/bgm/wn12.mp3
+!src/bgm/wn13.mp3
+!src/bgm/wn14.mp3
+!src/bgm/xy1.mp3
+!src/bgm/xy2.mp3
+!src/bgm/xy3.mp3
+!src/bgm/xy4.mp3
+!src/banner/fuceng.mp4

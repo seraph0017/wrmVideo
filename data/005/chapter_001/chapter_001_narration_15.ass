@@ -1,0 +1,20 @@
+[Script Info]
+Title: chapter_001 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}提出要任命侯君集为
+Dialogue: 0,0:00:02.32,0:00:05.02,Default,,0,0,0,,主帅 众人惊讶 {\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示欲
+Dialogue: 0,0:00:05.02,0:00:07.52,Default,,0,0,0,,为{\c&H0000FFFF&\b1}社稷{\c&H00FFFFFF&\b0}尽力 若不答应自己将
+Dialogue: 0,0:00:07.52,0:00:08.68,Default,,0,0,0,,自刎 殿内{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}紧张又僵持。

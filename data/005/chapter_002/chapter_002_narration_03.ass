@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_002 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}见长孙无忌说话 便不
+Dialogue: 0,0:00:02.42,0:00:05.02,Default,,0,0,0,,再{\c&H0000FFFF&\b1}坚持{\c&H00FFFFFF&\b0} 答应下来 并提出必须
+Dialogue: 0,0:00:05.02,0:00:05.95,Default,,0,0,0,,在两日内{\c&H0000FFFF&\b1}出兵{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:06.32,0:00:08.55,Default,,0,0,0,,众大臣对{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}微微躬身告
+Dialogue: 0,0:00:08.55,0:00:11.15,Default,,0,0,0,,退 {\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}驻足原地 望着气象
+Dialogue: 0,0:00:11.15,0:00:12.08,Default,,0,0,0,,万千的{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫 心神恍惚。
+Dialogue: 0,0:00:13.38,0:00:15.98,Default,,0,0,0,,场景在{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫前 光线柔和 环
+Dialogue: 0,0:00:15.98,0:00:16.54,Default,,0,0,0,,境{\c&H0000FFFF&\b1}宏大{\c&H00FFFFFF&\b0}。

@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_002 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.48,Default,,0,0,0,,朝堂之上 一众文臣正在{\c&H0000FFFF&\b1}权衡{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.48,0:00:02.86,Default,,0,0,0,,利弊。{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}坐在上位 神色复
+Dialogue: 0,0:00:05.14,0:00:05.33,Default,,0,0,0,,杂。{\c&H0000FFFF&\b1}魏征{\c&H00FFFFFF&\b0}站出 诚恳说道 “太子
+Dialogue: 0,0:00:08.00,0:00:10.67,Default,,0,0,0,,殿下 {\c&H0000FFFF&\b1}军情{\c&H00FFFFFF&\b0}紧急 我们不能同意
+Dialogue: 0,0:00:10.67,0:00:12.00,Default,,0,0,0,,您独自率军{\c&H0000FFFF&\b1}出征{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.19,0:00:13.91,Default,,0,0,0,,不如您{\c&H0000FFFF&\b1}批答{\c&H00FFFFFF&\b0}出兵旨意
+Dialogue: 0,0:00:14.10,0:00:15.81,Default,,0,0,0,,让{\c&H0000FFFF&\b1}李世积{\c&H00FFFFFF&\b0}将军为主帅
+Dialogue: 0,0:00:16.00,0:00:18.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}将军为副帅 您不担任
+Dialogue: 0,0:00:18.48,0:00:20.96,Default,,0,0,0,,军中职务 且授予{\c&H0000FFFF&\b1}李积{\c&H00FFFFFF&\b0}节制大
+Dialogue: 0,0:00:20.96,0:00:21.91,Default,,0,0,0,,军{\c&H0000FFFF&\b1}一切权利{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:22.10,0:00:23.05,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}点头表示考虑。
+Dialogue: 0,0:00:24.19,0:00:26.86,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在朝堂 光线明亮 众
+Dialogue: 0,0:00:26.86,0:00:27.43,Default,,0,0,0,,人{\c&H0000FFFF&\b1}严肃{\c&H00FFFFFF&\b0}。

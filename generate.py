@@ -631,7 +631,8 @@ def create_video_with_subtitle(image_path, audio_path, subtitle_text, output_pat
             output_path,
             vcodec='libx264',
             acodec='aac',
-            audio_bitrate='192k',  # 设置音频比特率
+            video_bitrate='2000k', # 设置视频码率
+            audio_bitrate='128k',  # 设置音频比特率
             ar=44100,              # 设置音频采样率
             pix_fmt='yuv420p',
             shortest=None
@@ -934,7 +935,7 @@ def concat_chapter_videos(video_files, output_path):
             output_path,
             vcodec='copy',  # 视频流直接复制
             acodec='aac',   # 音频重新编码为AAC
-            audio_bitrate='192k',  # 音频比特率
+            audio_bitrate='128k',  # 音频比特率
             ar=44100,  # 音频采样率
             ac=2,      # 双声道
             af='aresample=async=1'  # 音频重采样，确保同步
@@ -1756,7 +1757,8 @@ def create_video_segment_with_timing(image_path, audio_path, text_segment, start
             output_path,
             vcodec='libx264',
             acodec='aac',
-            audio_bitrate='192k',
+            video_bitrate='2000k', # 设置视频码率
+            audio_bitrate='128k',
             ar=44100,
             pix_fmt='yuv420p',
             t=adjusted_duration,  # 设置输出时长
@@ -1767,7 +1769,7 @@ def create_video_segment_with_timing(image_path, audio_path, text_segment, start
             start_at_zero=None,  # 从零开始时间戳
             **{
                 'c:a': 'aac', 
-                'b:a': '192k',
+                'b:a': '128k',
                 'ac': '2',  # 双声道
                 'frame_duration': '0.02'  # 设置帧持续时间为20ms
             }

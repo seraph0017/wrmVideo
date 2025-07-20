@@ -53,7 +53,7 @@ def create_video_from_images(first_image_path, second_image_path, duration, outp
             content=[
                 {
                     "type": "text",
-                    "text": f"慢慢过渡转场 --dur {duration}"
+                    "text": f"多一些动态效果，中间转场要明显一些 --dur {duration}"
                 },
                 {
                     "type": "image_url",
@@ -174,6 +174,8 @@ def download_video(video_url, output_path):
 def get_chapter_images(chapter_path):
     """
     获取章节目录中的前两张图片
+    优先查找特定命名格式：chapter_XXX_image_01_1.jpeg 和 chapter_XXX_image_01_2.jpeg
+    如果找不到，则回退到原来的逻辑
     
     Args:
         chapter_path: 章节目录路径
@@ -182,6 +184,22 @@ def get_chapter_images(chapter_path):
         tuple: (第一张图片路径, 第二张图片路径) 或 (None, None)
     """
     try:
+        chapter_name = os.path.basename(chapter_path)
+        
+        # 优先查找特定命名格式的图片
+        first_image_name = f"{chapter_name}_image_01_1.jpeg"
+        second_image_name = f"{chapter_name}_image_01_2.jpeg"
+        
+        first_image_path = os.path.join(chapter_path, first_image_name)
+        second_image_path = os.path.join(chapter_path, second_image_name)
+        
+        if os.path.exists(first_image_path) and os.path.exists(second_image_path):
+            print(f"找到特定命名格式的图片: {first_image_name}, {second_image_name}")
+            return first_image_path, second_image_path
+        
+        # 如果找不到特定命名格式，回退到原来的逻辑
+        print(f"未找到特定命名格式的图片，使用通用查找方式")
+        
         # 获取目录中的所有图片文件
         image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.gif']
         image_files = []
@@ -266,23 +284,68 @@ def main():
     """
     主函数
     """
-    if len(sys.argv) != 2:
-        print("用法: python gen_first_video.py <数据目录>")
-        print("示例: python gen_first_video.py data/002")
+    if len(sys.argv) == 2:
+        # 原有的批量处理模式
+        data_dir = sys.argv[1]
+        print(f"开始处理数据目录: {data_dir}")
+        print("注意: 请确保已正确配置 ARK_CONFIG 中的 api_key")
+        
+        # 检查配置
+        if not ARK_CONFIG.get("api_key") or ARK_CONFIG["api_key"] == "your_api_key_here":
+            print("警告: 请先在 config/config.py 中配置正确的 API 密钥")
+            print("请编辑 config/config.py 文件，设置正确的 ARK_CONFIG['api_key']")
+            sys.exit(1)
+        
+        process_chapters(data_dir)
+    elif len(sys.argv) == 4:
+        # 新的单个视频生成模式
+        first_image_path = sys.argv[1]
+        second_image_path = sys.argv[2]
+        output_path = sys.argv[3]
+        
+        print(f"使用指定图片生成视频:")
+        print(f"第一张图片: {first_image_path}")
+        print(f"第二张图片: {second_image_path}")
+        print(f"输出路径: {output_path}")
+        print("注意: 请确保已正确配置 ARK_CONFIG 中的 api_key")
+        
+        # 检查配置
+        if not ARK_CONFIG.get("api_key") or ARK_CONFIG["api_key"] == "your_api_key_here":
+            print("警告: 请先在 config/config.py 中配置正确的 API 密钥")
+            print("请编辑 config/config.py 文件，设置正确的 ARK_CONFIG['api_key']")
+            sys.exit(1)
+        
+        # 检查图片文件是否存在
+        if not os.path.exists(first_image_path):
+            print(f"错误: 第一张图片不存在: {first_image_path}")
+            sys.exit(1)
+        
+        if not os.path.exists(second_image_path):
+            print(f"错误: 第二张图片不存在: {second_image_path}")
+            sys.exit(1)
+        
+        # 创建输出目录（如果不存在）
+        output_dir = os.path.dirname(output_path)
+        if output_dir and not os.path.exists(output_dir):
+            os.makedirs(output_dir, exist_ok=True)
+        
+        # 生成视频（默认10秒时长）
+        duration = 10
+        success = create_video_from_images(first_image_path, second_image_path, duration, output_path)
+        
+        if success:
+            print(f"✓ 视频生成成功: {output_path}")
+        else:
+            print(f"✗ 视频生成失败")
+            sys.exit(1)
+    else:
+        print("用法:")
+        print("  批量处理模式: python gen_first_video.py <数据目录>")
+        print("  示例: python gen_first_video.py data/002")
+        print("")
+        print("  单个视频生成模式: python gen_first_video.py <第一张图片> <第二张图片> <输出视频路径>")
+        print("  示例: python gen_first_video.py data/003/chapter_001/chapter_001_image_01.jpeg data/003/chapter_001/chapter_001_image_02.jpeg output_video.mp4")
         sys.exit(1)
-    
-    data_dir = sys.argv[1]
-    
-    print(f"开始处理数据目录: {data_dir}")
-    print("注意: 请确保已正确配置 ARK_CONFIG 中的 api_key")
-    
-    # 检查配置
-    if not ARK_CONFIG.get("api_key") or ARK_CONFIG["api_key"] == "your_api_key_here":
-        print("警告: 请先在 config/config.py 中配置正确的 API 密钥")
-        print("请编辑 config/config.py 文件，设置正确的 ARK_CONFIG['api_key']")
-        sys.exit(1)
-    
-    process_chapters(data_dir)
 
 if __name__ == "__main__":
     main()

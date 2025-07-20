@@ -38,10 +38,10 @@ def parse_character_info(narration_file_path):
         style_match = re.search(r'<绘画风格>([^<]+)</绘画风格>', content)
         drawing_style = style_match.group(1) if style_match else None
         
-        # 查找本章特写人物部分
-        character_section_match = re.search(r'<本章特写人物>(.*?)</本章特写人物>', content, re.DOTALL)
+        # 查找本章出镜人物部分
+        character_section_match = re.search(r'<本章出镜人物>(.*?)</本章出镜人物>', content, re.DOTALL)
         if not character_section_match:
-            print("警告: 未找到本章特写人物信息")
+            print("警告: 未找到本章出镜人物信息")
             return characters, drawing_style
         
         character_section = character_section_match.group(1)
@@ -142,6 +142,7 @@ def generate_image(prompt, output_path, style=None, chapter_path=None):
             "use_pre_llm": IMAGE_TWO_CONFIG['use_pre_llm'],
             "use_sr": IMAGE_TWO_CONFIG['use_sr'],
             "return_url": IMAGE_TWO_CONFIG['return_url'],  # 返回base64格式
+            "negetive_prompt": IMAGE_TWO_CONFIG['negative_prompt'],
             "logo_info": {
                 "add_logo": False,
                 "position": 0,
@@ -176,37 +177,47 @@ def generate_image(prompt, output_path, style=None, chapter_path=None):
         print(f"生成图片时发生错误: {e}")
         return False
 
-def generate_character_images(data_dir):
+def generate_character_images(input_path):
     """
-    为指定数据目录下的所有章节生成角色图片
+    为指定路径生成角色图片
+    支持单个章节目录或包含多个章节的数据目录
     
     Args:
-        data_dir: 数据目录路径
+        input_path: 输入路径（可以是单个章节目录或数据目录）
     
     Returns:
         bool: 是否成功生成
     """
     try:
         print(f"=== 开始生成角色图片 ===")
-        print(f"数据目录: {data_dir}")
+        print(f"输入路径: {input_path}")
         
-        if not os.path.exists(data_dir):
-            print(f"错误: 数据目录不存在 {data_dir}")
+        if not os.path.exists(input_path):
+            print(f"错误: 路径不存在 {input_path}")
             return False
         
-        # 查找所有章节目录
+        # 检测输入路径类型
         chapter_dirs = []
-        for item in os.listdir(data_dir):
-            item_path = os.path.join(data_dir, item)
-            if os.path.isdir(item_path) and item.startswith('chapter_'):
-                chapter_dirs.append(item_path)
+        
+        # 检查是否是单个章节目录
+        if os.path.basename(input_path).startswith('chapter_') and os.path.isfile(os.path.join(input_path, 'narration.txt')):
+            # 单个章节目录
+            chapter_dirs = [input_path]
+            print(f"检测到单个章节目录: {os.path.basename(input_path)}")
+        else:
+            # 数据目录，查找所有章节目录
+            for item in os.listdir(input_path):
+                item_path = os.path.join(input_path, item)
+                if os.path.isdir(item_path) and item.startswith('chapter_'):
+                    chapter_dirs.append(item_path)
+            
+            if chapter_dirs:
+                chapter_dirs.sort()
+                print(f"检测到数据目录，找到 {len(chapter_dirs)} 个章节目录")
         
         if not chapter_dirs:
-            print(f"错误: 在 {data_dir} 中没有找到章节目录")
+            print(f"错误: 在 {input_path} 中没有找到有效的章节目录")
             return False
-        
-        chapter_dirs.sort()
-        print(f"找到 {len(chapter_dirs)} 个章节目录")
         
         success_count = 0
         
@@ -277,7 +288,7 @@ def generate_character_images(data_dir):
 
 def main():
     parser = argparse.ArgumentParser(description='角色图片生成脚本')
-    parser.add_argument('path', help='数据目录路径')
+    parser.add_argument('path', help='输入路径（可以是单个章节目录或包含多个章节的数据目录）')
     
     args = parser.parse_args()
     

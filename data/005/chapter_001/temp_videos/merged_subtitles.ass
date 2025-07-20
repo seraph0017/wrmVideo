@@ -1,0 +1,87 @@
+[Script Info]
+Title: chapter_001 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:02.66,Default,,0,0,0,,清晨 {\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫前玉道上 身形修
+Dialogue: 0, 0:00:02.66, 0:00:05.12,Default,,0,0,0,,长 微微跛脚的{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}缓步前
+Dialogue: 0, 0:00:05.12, 0:00:05.30,Default,,0,0,0,,行。{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫巍峨耸立 飞檐斗拱
+Dialogue: 0, 0:00:07.78, 0:00:09.48,Default,,0,0,0,,间龙纹{\c&H0000FFFF&\b1}云纹{\c&H00FFFFFF&\b0}尽显威严
+Dialogue: 0, 0:00:09.67, 0:00:10.81,Default,,0,0,0,,晨光洒下 {\c&H0000FFFF&\b1}宫阙{\c&H00FFFFFF&\b0}似金色巨山。
+Dialogue: 0, 0:00:12.14, 0:00:14.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}停下脚步 长叹一声 感
+Dialogue: 0, 0:00:14.78, 0:00:17.26,Default,,0,0,0,,慨这般{\c&H0000FFFF&\b1}气象{\c&H00FFFFFF&\b0}恐难再睹 脑中回
+Dialogue: 0, 0:00:17.26, 0:00:18.21,Default,,0,0,0,,忆起穿越成{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}后的经历。
+Dialogue: 0, 0:00:19.53, 0:00:21.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回忆起穿越成太子后
+Dialogue: 0, 0:00:21.73, 0:00:23.37,Default,,0,0,0,,的{\c&H0000FFFF&\b1}经历{\c&H00FFFFFF&\b0} 为避免悲剧
+Dialogue: 0, 0:00:23.56, 0:00:25.75,Default,,0,0,0,,小心翼翼却仍遭{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}打压
+Dialogue: 0, 0:00:25.94, 0:00:26.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}僚属{\c&H00FFFFFF&\b0}造反已无法挽回。
+Dialogue: 0, 0:00:27.77, 0:00:30.15,Default,,0,0,0,,此时四周涌出{\c&H0000FFFF&\b1}大量{\c&H00FFFFFF&\b0}甲士 程知
+Dialogue: 0, 0:00:30.15, 0:00:32.53,Default,,0,0,0,,节率兵而至 传达{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}旨意
+Dialogue: 0, 0:00:32.53, 0:00:33.44,Default,,0,0,0,,让{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}进宫。
+Dialogue: 0, 0:00:33.81, 0:00:36.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}传达李世民旨意让李
+Dialogue: 0, 0:00:36.05, 0:00:38.47,Default,,0,0,0,,承乾进宫 {\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}强硬要求程
+Dialogue: 0, 0:00:38.47, 0:00:40.89,Default,,0,0,0,,知节行太子礼 {\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}虽诧异
+Dialogue: 0, 0:00:40.89, 0:00:41.82,Default,,0,0,0,,但最终{\c&H0000FFFF&\b1}躬身{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:42.01, 0:00:44.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}昂首挺胸向宫内走去
+Dialogue: 0, 0:00:44.43, 0:00:46.85,Default,,0,0,0,,经过{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫回廊 回廊朱漆廊
+Dialogue: 0, 0:00:46.85, 0:00:47.78,Default,,0,0,0,,柱{\c&H0000FFFF&\b1}龙纹{\c&H00FFFFFF&\b0}精美。
+Dialogue: 0, 0:00:47.97, 0:00:50.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}进入太极殿回廊 回廊
+Dialogue: 0, 0:00:50.38, 0:00:52.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}朱漆{\c&H00FFFFFF&\b0}廊柱龙纹精美 出回廊后
+Dialogue: 0, 0:00:52.80, 0:00:54.66,Default,,0,0,0,,见{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿 士兵无视他
+Dialogue: 0, 0:00:54.84, 0:00:57.26,Default,,0,0,0,,他怒火中烧 抬剑指{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}要求
+Dialogue: 0, 0:00:57.26, 0:00:58.37,Default,,0,0,0,,开门 {\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}们面面相觑。
+Dialogue: 0, 0:00:59.30, 0:01:01.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}推开太极殿门
+Dialogue: 0, 0:01:01.20, 0:01:03.67,Default,,0,0,0,,进入殿内 见{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}端坐上位
+Dialogue: 0, 0:01:03.86, 0:01:06.33,Default,,0,0,0,,两旁{\c&H0000FFFF&\b1}大臣{\c&H00FFFFFF&\b0}分列 他昂首挺胸走
+Dialogue: 0, 0:01:06.33, 0:01:07.47,Default,,0,0,0,,进殿内 殿内{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}庄重威严。
+Dialogue: 0, 0:01:08.80, 0:01:10.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}让李承乾跪下
+Dialogue: 0, 0:01:10.69, 0:01:12.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}要求陛下称他为太子
+Dialogue: 0, 0:01:13.15, 0:01:15.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}指责他密谋造反 李泰
+Dialogue: 0, 0:01:15.60, 0:01:17.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}党羽{\c&H00FFFFFF&\b0}纷纷站出要求废太子位
+Dialogue: 0, 0:01:18.06, 0:01:19.01,Default,,0,0,0,,殿内{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}紧张。
+Dialogue: 0, 0:01:19.39, 0:01:21.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}放声狂笑 指责李世民
+Dialogue: 0, 0:01:21.84, 0:01:24.48,Default,,0,0,0,,当年行径 质问{\c&H0000FFFF&\b1}史官{\c&H00FFFFFF&\b0}何在 房玄
+Dialogue: 0, 0:01:24.48, 0:01:26.93,Default,,0,0,0,,龄出列 {\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}捧出文德皇后
+Dialogue: 0, 0:01:26.93, 0:01:29.19,Default,,0,0,0,,灵位 宣布大{\c&H0000FFFF&\b1}唐贞观{\c&H00FFFFFF&\b0}十六年
+Dialogue: 0, 0:01:29.38, 0:01:31.07,Default,,0,0,0,,自己将手捧{\c&H0000FFFF&\b1}母后{\c&H00FFFFFF&\b0}灵位
+Dialogue: 0, 0:01:31.26, 0:01:32.20,Default,,0,0,0,,身着冕服自刎于{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿。
+Dialogue: 0, 0:01:33.33, 0:01:36.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}宣布后 众人懵然 他欲
+Dialogue: 0, 0:01:36.02, 0:01:38.71,Default,,0,0,0,,撞柱自尽 {\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}急呼阻拦 众
+Dialogue: 0, 0:01:38.71, 0:01:41.20,Default,,0,0,0,,人反应不及 {\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}被人拽住
+Dialogue: 0, 0:01:41.39, 0:01:42.55,Default,,0,0,0,,周围混乱 {\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}面色赤红。
+Dialogue: 0, 0:01:43.89, 0:01:46.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}夺笏板打李承乾 李承
+Dialogue: 0, 0:01:46.34, 0:01:48.80,Default,,0,0,0,,乾质问是家法还是国法 {\c&H0000FFFF&\b1}李世{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:48.80, 0:01:51.25,Default,,0,0,0,,民盛怒 大臣簇拥{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}离开
+Dialogue: 0, 0:01:51.44, 0:01:53.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}高呼将撞太庙
+Dialogue: 0, 0:01:53.32, 0:01:54.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}面色狰狞。
+Dialogue: 0, 0:01:54.84, 0:01:56.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}气急攻心晕倒
+Dialogue: 0, 0:01:56.93, 0:01:59.65,Default,,0,0,0,,群臣慌乱喊御医 {\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中
+Dialogue: 0, 0:01:59.65, 0:02:02.58,Default,,0,0,0,,畅快 见外戚神色各异 {\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无
+Dialogue: 0, 0:02:02.58, 0:02:03.63,Default,,0,0,0,,忌{\c&H0000FFFF&\b1}面色{\c&H00FFFFFF&\b0}复杂。
+Dialogue: 0, 0:02:03.84, 0:02:06.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}送来八百里加急战报 太
+Dialogue: 0, 0:02:06.34, 0:02:08.83,Default,,0,0,0,,医院来人为{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}诊治 群臣
+Dialogue: 0, 0:02:08.83, 0:02:11.33,Default,,0,0,0,,围问病情 {\c&H0000FFFF&\b1}甄权{\c&H00FFFFFF&\b0}告知需十日半
+Dialogue: 0, 0:02:11.33, 0:02:12.48,Default,,0,0,0,,月{\c&H0000FFFF&\b1}苏醒{\c&H00FFFFFF&\b0} 殿内氛围紧张。
+Dialogue: 0, 0:02:13.44, 0:02:16.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}问战报处理 魏征提议
+Dialogue: 0, 0:02:16.26, 0:02:19.31,Default,,0,0,0,,共览战报 {\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌同意 众人
+Dialogue: 0, 0:02:19.31, 0:02:20.39,Default,,0,0,0,,轮番查阅{\c&H0000FFFF&\b1}战报{\c&H00FFFFFF&\b0} 神情各异。
+Dialogue: 0, 0:02:21.91, 0:02:24.60,Default,,0,0,0,,众人看完战报神色各异 {\c&H0000FFFF&\b1}李承{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:24.60, 0:02:27.29,Default,,0,0,0,,乾不耐烦 {\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}欲言又止
+Dialogue: 0, 0:02:27.29, 0:02:28.33,Default,,0,0,0,,被{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}拉走 殿内氛围僵持 。
+Dialogue: 0, 0:02:30.19, 0:02:32.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}问发兵旨意如何下 李
+Dialogue: 0, 0:02:32.68, 0:02:35.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}承乾{\c&H00FFFFFF&\b0}表示自己来下旨 众臣让
+Dialogue: 0, 0:02:35.17, 0:02:37.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}决断 李承乾提出要做
+Dialogue: 0, 0:02:37.66, 0:02:38.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}副帅{\c&H00FFFFFF&\b0}随军出征 众人惊讶。
+Dialogue: 0, 0:02:39.96, 0:02:42.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}提出要任命侯君集为
+Dialogue: 0, 0:02:42.28, 0:02:44.98,Default,,0,0,0,,主帅 众人惊讶 {\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示欲
+Dialogue: 0, 0:02:44.98, 0:02:47.48,Default,,0,0,0,,为{\c&H0000FFFF&\b1}社稷{\c&H00FFFFFF&\b0}尽力 若不答应自己将
+Dialogue: 0, 0:02:47.48, 0:02:48.64,Default,,0,0,0,,自刎 殿内{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}紧张又僵持。

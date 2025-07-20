@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_001 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}放声狂笑 指责李世民
+Dialogue: 0,0:00:02.45,0:00:05.09,Default,,0,0,0,,当年行径 质问{\c&H0000FFFF&\b1}史官{\c&H00FFFFFF&\b0}何在 房玄
+Dialogue: 0,0:00:05.09,0:00:07.54,Default,,0,0,0,,龄出列 {\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}捧出文德皇后
+Dialogue: 0,0:00:07.54,0:00:09.80,Default,,0,0,0,,灵位 宣布大{\c&H0000FFFF&\b1}唐贞观{\c&H00FFFFFF&\b0}十六年
+Dialogue: 0,0:00:09.99,0:00:11.68,Default,,0,0,0,,自己将手捧{\c&H0000FFFF&\b1}母后{\c&H00FFFFFF&\b0}灵位
+Dialogue: 0,0:00:11.87,0:00:12.81,Default,,0,0,0,,身着冕服自刎于{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿。

@@ -46,21 +46,34 @@ def parse_narration_file(narration_file_path):
         for scene_content in scene_matches:
             scene_info = {}
             
-            # 提取图片prompt
-            prompt_match = re.search(r'<图片prompt>([^<]+)</图片prompt>', scene_content, re.DOTALL)
-            if prompt_match:
-                scene_info['prompt'] = prompt_match.group(1).strip()
+            # 提取解说内容
+            narration_match = re.search(r'<解说内容>([^<]+)</解说内容>', scene_content, re.DOTALL)
+            if narration_match:
+                scene_info['narration'] = narration_match.group(1).strip()
             
-            # 提取图片特写人物
-            characters_section_match = re.search(r'<图片特写人物>(.*?)</图片特写人物>', scene_content, re.DOTALL)
-            if characters_section_match:
-                characters_content = characters_section_match.group(1)
-                character_matches = re.findall(r'<角色>([^<]+)</角色>', characters_content)
-                scene_info['characters'] = character_matches
-            else:
-                scene_info['characters'] = []
+            # 提取3个特写
+            scene_info['closeups'] = []
+            for i in range(1, 4):  # 图片特写1, 图片特写2, 图片特写3
+                closeup_pattern = f'<图片特写{i}>(.*?)</图片特写{i}>'
+                closeup_match = re.search(closeup_pattern, scene_content, re.DOTALL)
+                if closeup_match:
+                    closeup_content = closeup_match.group(1)
+                    closeup_info = {}
+                    
+                    # 提取特写人物角色
+                    character_match = re.search(r'<角色>([^<]+)</角色>', closeup_content)
+                    if character_match:
+                        closeup_info['character'] = character_match.group(1).strip()
+                    
+                    # 提取图片prompt
+                    prompt_match = re.search(r'<图片prompt>([^<]+)</图片prompt>', closeup_content, re.DOTALL)
+                    if prompt_match:
+                        closeup_info['prompt'] = prompt_match.group(1).strip()
+                    
+                    if 'prompt' in closeup_info:
+                        scene_info['closeups'].append(closeup_info)
             
-            if 'prompt' in scene_info:
+            if scene_info['closeups']:  # 只有当有特写时才添加分镜
                 scenes.append(scene_info)
         
         print(f"解析到 {len(scenes)} 个分镜")
@@ -151,7 +164,7 @@ def generate_image_with_character(prompt, output_path, character_images=None, st
         print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
         
         # 构建完整的prompt
-        full_prompt = "无任何形式的文字, 字母, 数字, 符号, 水印, 签名  （包括标识、符号、背景纹理里的隐藏字）\n\n" + style_prompt + "\n\n以下面描述为内容，生成一张故事图片\n" + prompt + "\n\n"
+        full_prompt = "换个姿势 \n\n" + style_prompt + "\n\n以下面描述为内容，生成一张故事图片\n" + prompt + "\n\n"
         
         print("这里是完整的prompt===>>>{}".format(full_prompt))
         
@@ -168,6 +181,9 @@ def generate_image_with_character(prompt, output_path, character_images=None, st
             "use_pre_llm": IMAGE_TWO_CONFIG['use_pre_llm'],
             "use_sr": IMAGE_TWO_CONFIG['use_sr'],
             "return_url": IMAGE_TWO_CONFIG['return_url'],  # 返回base64格式
+            "negetive_prompt": IMAGE_TWO_CONFIG['negative_prompt'],
+            "ref_ip_weight": 0,
+            "ref_id_weight": 0.4,
             "logo_info": {
                 "add_logo": False,
                 "position": 0,
@@ -280,37 +296,45 @@ def generate_images_from_scripts(data_dir):
                     style_prompt = style_config.get('model_prompt', '')
                 print(f"使用风格提示: {style_prompt}")
             
-            # 为每个分镜生成图片
+            # 为每个分镜的每个特写生成图片
             for i, scene in enumerate(scenes, 1):
-                prompt = scene['prompt']
-                characters = scene['characters']
+                closeups = scene['closeups']
                 
-                print(f"\n  生成第 {i}/{len(scenes)} 张图片: {chapter_name}_image_{i:02d}.jpeg")
-                print(f"  分镜角色: {characters}")
+                print(f"\n  处理第 {i}/{len(scenes)} 个分镜，包含 {len(closeups)} 个特写")
                 
-                # 查找当前分镜的角色图片
-                character_images = []
-                for character in characters:
-                    char_img_path = find_character_image(chapter_dir, character)
-                    if char_img_path:
-                        character_images.append(char_img_path)
-                
-                # 构建完整的prompt，加入风格提示
-                if style_prompt:
-                    full_prompt = f"{prompt}，{style_prompt}"
-                else:
-                    full_prompt = prompt
-                
-                # 生成图片
-                image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}.jpeg")
-                
-                if generate_image_with_character(full_prompt, image_path, character_images, drawing_style):
-                    print(f"  ✓ 图片生成成功")
-                    success_count += 1
-                else:
-                    print(f"  ✗ 图片生成失败")
+                # 为每个特写生成图片
+                for j, closeup in enumerate(closeups, 1):
+                    prompt = closeup['prompt']
+                    character = closeup.get('character', '')
+                    
+                    print(f"    生成特写 {j}: {chapter_name}_image_{i:02d}_{j}.jpeg")
+                    print(f"    特写角色: {character}")
+                    
+                    # 查找当前特写的角色图片
+                    character_images = []
+                    if character:
+                        char_img_path = find_character_image(chapter_dir, character)
+                        if char_img_path:
+                            character_images.append(char_img_path)
+                    
+                    # 构建完整的prompt，加入风格提示
+                    if style_prompt:
+                        full_prompt = f"{prompt}，{style_prompt}"
+                    else:
+                        full_prompt = prompt
+                    
+                    # 生成图片
+                    image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}_{j}.jpeg")
+                    
+                    if generate_image_with_character(full_prompt, image_path, character_images, drawing_style):
+                        print(f"    ✓ 特写 {j} 生成成功")
+                        success_count += 1
+                    else:
+                        print(f"    ✗ 特写 {j} 生成失败")
             
-            print(f"章节 {chapter_name} 处理完成，成功生成 {len(scenes)} 张图片")
+            # 计算该章节生成的图片总数
+            chapter_image_count = sum(len(scene['closeups']) for scene in scenes)
+            print(f"章节 {chapter_name} 处理完成，共 {len(scenes)} 个分镜，成功生成 {chapter_image_count} 张图片")
         
         print(f"\n图片生成完成，成功生成 {success_count} 张图片")
         return success_count > 0
