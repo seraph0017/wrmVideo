@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_020 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.96,Default,,0,0,0,,太极殿前，{\c&H0000FFFF&\b1}李元昌{\c&H00FFFFFF&\b0}率残部杀出，
+Dialogue: 0,0:00:02.96,0:00:04.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}疯狂。
+Dialogue: 0,0:00:04.01,0:00:06.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}李元昌{\c&H00FFFFFF&\b0}身着深色战甲，
+Dialogue: 0,0:00:06.13,0:00:08.87,Default,,0,0,0,,表情疯狂，背景是{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿前，
+Dialogue: 0,0:00:08.87,0:00:10.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气{\c&H00FFFFFF&\b0}雨，光影强烈。

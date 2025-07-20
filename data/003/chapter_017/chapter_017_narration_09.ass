@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_017 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.34,Default,,0,0,0,,场景在{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿外，时间傍晚，
+Dialogue: 0,0:00:02.34,0:00:03.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}渐暗。
+Dialogue: 0,0:00:03.24,0:00:05.94,Default,,0,0,0,,马周提出安排京兆府尹和{\c&H0000FFFF&\b1}金吾卫{\c&H00FFFFFF&\b0}大
+Dialogue: 0,0:00:05.94,0:00:08.81,Default,,0,0,0,,将军等建议，{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}表示赞赏并决定
+Dialogue: 0,0:00:08.81,0:00:10.61,Default,,0,0,0,,按此执行，{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}遵诏。
+Dialogue: 0,0:00:10.61,0:00:12.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}称如陛下不测，
+Dialogue: 0,0:00:12.41,0:00:15.29,Default,,0,0,0,,大丧后再行定夺，随后{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}一同前往
+Dialogue: 0,0:00:15.29,0:00:17.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}寝殿查看情况。

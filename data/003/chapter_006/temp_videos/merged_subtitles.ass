@@ -1,0 +1,77 @@
+[Script Info]
+Title: chapter_006 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:02.64,Default,,0,0,0,,在军营内，{\c&H0000FFFF&\b1}李绩正{\c&H00FFFFFF&\b0}手持信件，
+Dialogue: 0, 0:00:02.64, 0:00:03.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}神色{\c&H00FFFFFF&\b0}疑惑。
+Dialogue: 0, 0:00:03.67, 0:00:06.93,Default,,0,0,0,,他身着{\c&H0000FFFF&\b1}深色{\c&H00FFFFFF&\b0}战甲，周围是大营的营帐
+Dialogue: 0, 0:00:06.93, 0:00:09.78,Default,,0,0,0,,，{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}略显严肃，天气为晴天。
+Dialogue: 0, 0:00:09.78, 0:00:12.54,Default,,0,0,0,,大营外，北向辉{\c&H0000FFFF&\b1}单人{\c&H00FFFFFF&\b0}策马而立，
+Dialogue: 0, 0:00:12.54, 0:00:14.71,Default,,0,0,0,,面对五万大军{\c&H0000FFFF&\b1}毫无惧色{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:14.71, 0:00:17.87,Default,,0,0,0,,他身着{\c&H0000FFFF&\b1}朴素{\c&H00FFFFFF&\b0}战衣，背景是开阔的大营
+Dialogue: 0, 0:00:17.87, 0:00:20.64,Default,,0,0,0,,外场地，尘土飞扬，{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:20.64, 0:00:22.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}带领数千人马出营，
+Dialogue: 0, 0:00:22.74, 0:00:24.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}准备{\c&H00FFFFFF&\b0}应对北向辉。
+Dialogue: 0, 0:00:24.26, 0:00:26.74,Default,,0,0,0,,他{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}严肃，周围士兵跟随，
+Dialogue: 0, 0:00:26.74, 0:00:28.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是大营外的场景，
+Dialogue: 0, 0:00:28.64, 0:00:30.55,Default,,0,0,0,,光线明亮，{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:30.55, 0:00:32.28,Default,,0,0,0,,北向辉与{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}对峙，
+Dialogue: 0, 0:00:32.28, 0:00:35.35,Default,,0,0,0,,北向辉大声喝斥，称给一炷香{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}考
+Dialogue: 0, 0:00:35.35, 0:00:37.64,Default,,0,0,0,,虑，否则将砍{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}手指。
+Dialogue: 0, 0:00:37.64, 0:00:40.14,Default,,0,0,0,,他{\c&H0000FFFF&\b1}语气{\c&H00FFFFFF&\b0}强硬，背景是大营外，
+Dialogue: 0, 0:00:40.14, 0:00:42.07,Default,,0,0,0,,尘土飞扬，{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:42.07, 0:00:45.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}心中大怒，悄悄向身后士兵摆手
+Dialogue: 0, 0:00:45.45, 0:00:46.71,Default,,0,0,0,,，示意{\c&H0000FFFF&\b1}放箭{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:46.71, 0:00:49.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是大营外对峙场景，
+Dialogue: 0, 0:00:49.03, 0:00:51.14,Default,,0,0,0,,光线紧张，{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:51.14, 0:00:54.28,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}舞动{\c&H00FFFFFF&\b0}长枪，成功击落箭矢，
+Dialogue: 0, 0:00:54.28, 0:00:56.15,Default,,0,0,0,,而后{\c&H0000FFFF&\b1}策马{\c&H00FFFFFF&\b0}回身离开。
+Dialogue: 0, 0:00:56.15, 0:00:58.89,Default,,0,0,0,,他{\c&H0000FFFF&\b1}动作{\c&H00FFFFFF&\b0}敏捷，背景是大营外，
+Dialogue: 0, 0:00:58.89, 0:01:00.98,Default,,0,0,0,,尘土飞扬，{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:00.98, 0:01:03.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}带人在野外等候，
+Dialogue: 0, 0:01:03.08, 0:01:04.99,Default,,0,0,0,,远处{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}策马而来。
+Dialogue: 0, 0:01:04.99, 0:01:07.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}示意众人不用紧张，
+Dialogue: 0, 0:01:07.28, 0:01:10.32,Default,,0,0,0,,他{\c&H0000FFFF&\b1}神色{\c&H00FFFFFF&\b0}自信，背景是野外等候场景，
+Dialogue: 0, 0:01:10.32, 0:01:12.24,Default,,0,0,0,,光线明亮，{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:12.24, 0:01:15.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}前来会合，李承乾向侯君集介
+Dialogue: 0, 0:01:15.42, 0:01:16.42,Default,,0,0,0,,绍{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:16.42, 0:01:19.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}抱拳道谢，背景是野外会合场
+Dialogue: 0, 0:01:19.60, 0:01:21.98,Default,,0,0,0,,景，光线明亮，{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:21.98, 0:01:24.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}向侯君集说明情况，
+Dialogue: 0, 0:01:24.29, 0:01:27.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}表示担忧，李承乾自信称有计
+Dialogue: 0, 0:01:27.40, 0:01:29.71,Default,,0,0,0,,划。{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是野外交谈场景，
+Dialogue: 0, 0:01:29.71, 0:01:31.65,Default,,0,0,0,,光线明亮，{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:31.65, 0:01:35.13,Default,,0,0,0,,程咬金被捆，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示不放他走，
+Dialogue: 0, 0:01:35.13, 0:01:36.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}挣扎。
+Dialogue: 0, 0:01:36.43, 0:01:39.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是营地场景，光线明亮，
+Dialogue: 0, 0:01:39.25, 0:01:40.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:40.34, 0:01:43.71,Default,,0,0,0,,北向辉返回营地，向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}汇报情况
+Dialogue: 0, 0:01:43.71, 0:01:45.60,Default,,0,0,0,,，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}陷入思考。
+Dialogue: 0, 0:01:45.60, 0:01:48.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是营地场景，光线明亮，
+Dialogue: 0, 0:01:48.34, 0:01:49.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:49.39, 0:01:51.21,Default,,0,0,0,,哨骑来报{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}拔营，
+Dialogue: 0, 0:01:51.21, 0:01:54.26,Default,,0,0,0,,众人面露担忧，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}安抚众人。
+Dialogue: 0, 0:01:54.26, 0:01:56.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是营地场景，光线明亮，
+Dialogue: 0, 0:01:56.92, 0:01:57.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:57.93, 0:01:59.80,Default,,0,0,0,,哨骑返回{\c&H0000FFFF&\b1}汇报情况{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:59.80, 0:02:02.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}下令开拔，众人策马出发。
+Dialogue: 0, 0:02:02.91, 0:02:04.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是营地外场景，
+Dialogue: 0, 0:02:04.78, 0:02:06.86,Default,,0,0,0,,光线明亮，{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:06.86, 0:02:09.96,Default,,0,0,0,,到达物资地，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}让人给马匹安装
+Dialogue: 0, 0:02:09.96, 0:02:12.66,Default,,0,0,0,,马蹄铁，{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}露出钦佩神情。
+Dialogue: 0, 0:02:12.66, 0:02:14.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是物资地场景，
+Dialogue: 0, 0:02:14.41, 0:02:16.34,Default,,0,0,0,,光线明亮，{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:16.34, 0:02:18.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}下令闪击张掖，
+Dialogue: 0, 0:02:18.49, 0:02:20.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}疾驰出发。
+Dialogue: 0, 0:02:20.00, 0:02:22.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是野外出发场景，
+Dialogue: 0, 0:02:22.15, 0:02:24.31,Default,,0,0,0,,光线明亮，{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}。

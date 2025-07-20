@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_029 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.79,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}继续{\c&H00FFFFFF&\b0}大喊挑衅，
+Dialogue: 0,0:00:01.79,0:00:04.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}被气懵，反应慢了几秒，
+Dialogue: 0,0:00:04.29,0:00:06.44,Default,,0,0,0,,握着{\c&H0000FFFF&\b1}缰绳{\c&H00FFFFFF&\b0}的手背青筋暴起。
+Dialogue: 0,0:00:06.44,0:00:08.59,Default,,0,0,0,,此时李世民{\c&H0000FFFF&\b1}拉满五石{\c&H00FFFFFF&\b0}硬弓，
+Dialogue: 0,0:00:08.59,0:00:11.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}弓弦{\c&H00FFFFFF&\b0}紧绷如满月，箭头泛着寒光，
+Dialogue: 0,0:00:11.27,0:00:12.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}准备{\c&H00FFFFFF&\b0}应对。

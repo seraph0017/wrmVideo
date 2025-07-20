@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_050 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.88,Default,,0,0,0,,午夜时分，北{\c&H0000FFFF&\b1}邙山{\c&H00FFFFFF&\b0}乱葬岗一片漆黑，
+Dialogue: 0,0:00:02.88,0:00:04.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}磷火{\c&H00FFFFFF&\b0}忽明忽暗。
+Dialogue: 0,0:00:04.15,0:00:05.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}满脸疯癫之色，
+Dialogue: 0,0:00:05.95,0:00:08.29,Default,,0,0,0,,正手持一块{\c&H0000FFFF&\b1}人骨{\c&H00FFFFFF&\b0}，大声说道：
+Dialogue: 0,0:00:08.29,0:00:09.55,Default,,0,0,0,,“好，{\c&H0000FFFF&\b1}就是{\c&H00FFFFFF&\b0}这！
+Dialogue: 0,0:00:09.55,0:00:11.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}兄弟{\c&H00FFFFFF&\b0}们给朕玩命的挖，
+Dialogue: 0,0:00:11.36,0:00:12.62,Default,,0,0,0,,挖的多朕有赏。
+Dialogue: 0,0:00:12.62,0:00:15.32,Default,,0,0,0,,”他心中盘算{\c&H0000FFFF&\b1}用人{\c&H00FFFFFF&\b0}骨炼化出碱来解
+Dialogue: 0,0:00:15.32,0:00:16.94,Default,,0,0,0,,决{\c&H0000FFFF&\b1}炼钢{\c&H00FFFFFF&\b0}缺碱的问题。

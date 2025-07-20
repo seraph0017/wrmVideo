@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_038 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.88,Default,,0,0,0,,李恪出现，{\c&H0000FFFF&\b1}笑声{\c&H00FFFFFF&\b0}癫狂，
+Dialogue: 0,0:00:01.88,0:00:04.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}吩咐先拿下李佑再拿李恪，
+Dialogue: 0,0:00:04.70,0:00:06.58,Default,,0,0,0,,李佑{\c&H0000FFFF&\b1}重燃{\c&H00FFFFFF&\b0}希望又怂了，
+Dialogue: 0,0:00:06.58,0:00:08.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}冲过去刺李佑，
+Dialogue: 0,0:00:08.65,0:00:10.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}腋下中箭。
+Dialogue: 0,0:00:10.15,0:00:12.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}李佑大营内，李恪男性，
+Dialogue: 0,0:00:12.59,0:00:15.04,Default,,0,0,0,,青年，发型整洁，{\c&H0000FFFF&\b1}发色{\c&H00FFFFFF&\b0}黑色，
+Dialogue: 0,0:00:15.04,0:00:16.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}癫狂，身着战甲；
+Dialogue: 0,0:00:16.92,0:00:18.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}男性，中年，
+Dialogue: 0,0:00:18.80,0:00:20.68,Default,,0,0,0,,发型束起，{\c&H0000FFFF&\b1}发色{\c&H00FFFFFF&\b0}黑色，
+Dialogue: 0,0:00:20.68,0:00:23.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}凶狠，身着带血迹战甲；
+Dialogue: 0,0:00:23.12,0:00:25.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}的装扮和受伤状态明确。

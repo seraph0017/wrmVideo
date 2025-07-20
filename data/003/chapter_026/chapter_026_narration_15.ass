@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_026 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}走到太极殿前，
+Dialogue: 0,0:00:01.90,0:00:04.74,Default,,0,0,0,,看到一对人高的{\c&H0000FFFF&\b1}青铜{\c&H00FFFFFF&\b0}仙鹤眼睛上的
+Dialogue: 0,0:00:04.74,0:00:07.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝石{\c&H00FFFFFF&\b0}全被抠没了，鎏金也被刮去，
+Dialogue: 0,0:00:07.59,0:00:09.29,Default,,0,0,0,,活脱脱像两个{\c&H0000FFFF&\b1}秃鹰{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:09.29,0:00:11.76,Default,,0,0,0,,心中虽怒火中烧但强自{\c&H0000FFFF&\b1}压制{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:11.76,0:00:14.41,Default,,0,0,0,,室外太极殿场景，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}驻足，
+Dialogue: 0,0:00:14.41,0:00:17.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}面容{\c&H00FFFFFF&\b0}愤怒，背景是被破坏的青铜仙鹤
+Dialogue: 0,0:00:17.45,0:00:19.54,Default,,0,0,0,,，{\c&H0000FFFF&\b1}月光{\c&H00FFFFFF&\b0}映照下氛围沉重。

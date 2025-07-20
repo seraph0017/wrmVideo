@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_030 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.63,Default,,0,0,0,,北向辉率领最精锐的亲{\c&H0000FFFF&\b1}卫护{\c&H00FFFFFF&\b0}住李承
+Dialogue: 0,0:00:02.63,0:00:05.44,Default,,0,0,0,,乾，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}指着李世民严厉地说他造
+Dialogue: 0,0:00:05.44,0:00:08.24,Default,,0,0,0,,反谋逆，然后掏出传国{\c&H0000FFFF&\b1}玉玺{\c&H00FFFFFF&\b0}让回鹘大
+Dialogue: 0,0:00:08.24,0:00:11.05,Default,,0,0,0,,军看，这时{\c&H0000FFFF&\b1}回鹘{\c&H00FFFFFF&\b0}大军中一匹马飞奔而
+Dialogue: 0,0:00:11.05,0:00:13.68,Default,,0,0,0,,出，马上是一位面露杀意的{\c&H0000FFFF&\b1}女子{\c&H00FFFFFF&\b0}。

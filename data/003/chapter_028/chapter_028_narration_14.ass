@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_028 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.16,Default,,0,0,0,,灵武城，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}站在城头，
+Dialogue: 0,0:00:02.16,0:00:04.32,Default,,0,0,0,,看着城外整装待发的{\c&H0000FFFF&\b1}军民{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:04.32,0:00:05.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}嘴角{\c&H00FFFFFF&\b0}露出笑意。
+Dialogue: 0,0:00:05.58,0:00:08.10,Default,,0,0,0,,他向北向辉讲解持久战的{\c&H0000FFFF&\b1}道理{\c&H00FFFFFF&\b0}：
+Dialogue: 0,0:00:08.10,0:00:09.72,Default,,0,0,0,,“{\c&H0000FFFF&\b1}一位{\c&H00FFFFFF&\b0}高人曾说过，
+Dialogue: 0,0:00:09.72,0:00:12.42,Default,,0,0,0,,在{\c&H0000FFFF&\b1}敌我{\c&H00FFFFFF&\b0}双方实力相差悬殊的时候，
+Dialogue: 0,0:00:12.42,0:00:14.58,Default,,0,0,0,,一定要做好{\c&H0000FFFF&\b1}持久战{\c&H00FFFFFF&\b0}的准备，
+Dialogue: 0,0:00:14.58,0:00:17.28,Default,,0,0,0,,以尽量{\c&H0000FFFF&\b1}消耗{\c&H00FFFFFF&\b0}敌方有生力量为方针。
+Dialogue: 0,0:00:17.28,0:00:18.54,Default,,0,0,0,,”北向辉{\c&H0000FFFF&\b1}沉思{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:18.54,0:00:21.24,Default,,0,0,0,,城头环境安静，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情自信。

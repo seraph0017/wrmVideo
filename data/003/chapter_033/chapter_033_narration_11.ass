@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_033 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}丰州{\c&H00FFFFFF&\b0}城头，夜风凛然，
+Dialogue: 0,0:00:01.93,0:00:04.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}和北向辉并肩而立，
+Dialogue: 0,0:00:04.25,0:00:05.99,Default,,0,0,0,,城外{\c&H0000FFFF&\b1}火把{\c&H00FFFFFF&\b0}连天彻地。
+Dialogue: 0,0:00:05.99,0:00:08.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}提议率军出城杀敌，
+Dialogue: 0,0:00:08.30,0:00:11.20,Default,,0,0,0,,北向辉表示要坚守{\c&H0000FFFF&\b1}丰州{\c&H00FFFFFF&\b0}等待救援，
+Dialogue: 0,0:00:11.20,0:00:12.74,Default,,0,0,0,,还{\c&H0000FFFF&\b1}提到{\c&H00FFFFFF&\b0}想念月月。

@@ -1,0 +1,118 @@
+[Script Info]
+Title: chapter_038 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:01.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}设定在营帐内，
+Dialogue: 0, 0:00:01.72, 0:00:03.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}紧迫，氛围紧张。
+Dialogue: 0, 0:00:03.62, 0:00:06.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}神色凝重，语气急促地对李承
+Dialogue: 0, 0:00:06.67, 0:00:09.15,Default,,0,0,0,,乾说：“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}，赶紧决断吧，
+Dialogue: 0, 0:00:09.15, 0:00:10.67,Default,,0,0,0,,晚了必{\c&H0000FFFF&\b1}陷入{\c&H00FFFFFF&\b0}被动。
+Dialogue: 0, 0:00:10.67, 0:00:12.58,Default,,0,0,0,,”{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}男性，中年，
+Dialogue: 0, 0:00:12.58, 0:00:14.67,Default,,0,0,0,,束发，{\c&H0000FFFF&\b1}黑发{\c&H00FFFFFF&\b0}，面容坚毅，
+Dialogue: 0, 0:00:14.67, 0:00:16.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}沉稳，身着深色军装，
+Dialogue: 0, 0:00:16.96, 0:00:19.44,Default,,0,0,0,,正急促地向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}传达情况。
+Dialogue: 0, 0:00:19.44, 0:00:21.75,Default,,0,0,0,,营帐内，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神色一凝，
+Dialogue: 0, 0:00:21.75, 0:00:24.25,Default,,0,0,0,,随后传令全军向{\c&H0000FFFF&\b1}西北{\c&H00FFFFFF&\b0}方向撤，
+Dialogue: 0, 0:00:24.25, 0:00:27.13,Default,,0,0,0,,同时看向那三人询问会不会{\c&H0000FFFF&\b1}骑马{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:27.13, 0:00:29.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}为男性，青年，
+Dialogue: 0, 0:00:29.06, 0:00:31.17,Default,,0,0,0,,束发，黑发，{\c&H0000FFFF&\b1}剑眉{\c&H00FFFFFF&\b0}星目，
+Dialogue: 0, 0:00:31.17, 0:00:33.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}凝重，身着黑色战甲。
+Dialogue: 0, 0:00:33.48, 0:00:36.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}营帐{\c&H00FFFFFF&\b0}内，刚才说话的黑脸男子站起身
+Dialogue: 0, 0:00:36.34, 0:00:39.19,Default,,0,0,0,,来，一脸{\c&H0000FFFF&\b1}淡定{\c&H00FFFFFF&\b0}之色，还轻笑一声道：
+Dialogue: 0, 0:00:39.19, 0:00:41.87,Default,,0,0,0,,“呵呵，{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}，我们和你不一样，
+Dialogue: 0, 0:00:41.87, 0:00:44.73,Default,,0,0,0,,我就不信，他{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}敢杀我们这种饱
+Dialogue: 0, 0:00:44.73, 0:00:45.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}学之士{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:45.45, 0:00:47.05,Default,,0,0,0,,”{\c&H0000FFFF&\b1}黑脸{\c&H00FFFFFF&\b0}男子为男性，
+Dialogue: 0, 0:00:47.05, 0:00:49.20,Default,,0,0,0,,中年，束发，{\c&H0000FFFF&\b1}黑发{\c&H00FFFFFF&\b0}，黑脸，
+Dialogue: 0, 0:00:49.20, 0:00:51.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}淡定轻笑，身着深色长袍。
+Dialogue: 0, 0:00:51.70, 0:00:54.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}在什么都不顾的情况下片刻间
+Dialogue: 0, 0:00:54.51, 0:00:56.95,Default,,0,0,0,,集结完毕，{\c&H0000FFFF&\b1}向西南方{\c&H00FFFFFF&\b0}向狂奔。
+Dialogue: 0, 0:00:56.95, 0:00:59.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是野外，时间是行军时，
+Dialogue: 0, 0:00:59.38, 0:01:01.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}微微勒马放慢速度，
+Dialogue: 0, 0:01:01.63, 0:01:03.70,Default,,0,0,0,,转头看向李佑大营{\c&H0000FFFF&\b1}方向{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:03.70, 0:01:04.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}火光冲天{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:04.62, 0:01:07.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}依旧是之前的装扮和状态。
+Dialogue: 0, 0:01:07.43, 0:01:09.06,Default,,0,0,0,,北向辉啐了口{\c&H0000FFFF&\b1}唾沫{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:09.06, 0:01:11.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}声音{\c&H00FFFFFF&\b0}又惊又怒地说：“陛下，
+Dialogue: 0, 0:01:11.40, 0:01:13.21,Default,,0,0,0,,你那{\c&H0000FFFF&\b1}五弟{\c&H00FFFFFF&\b0}也太废物了，
+Dialogue: 0, 0:01:13.21, 0:01:15.92,Default,,0,0,0,,将近十万{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}坚持不到一个时辰就
+Dialogue: 0, 0:01:15.92, 0:01:16.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}完蛋{\c&H00FFFFFF&\b0}了。
+Dialogue: 0, 0:01:16.65, 0:01:18.45,Default,,0,0,0,,”北向辉{\c&H0000FFFF&\b1}男性{\c&H00FFFFFF&\b0}，中年，
+Dialogue: 0, 0:01:18.45, 0:01:20.26,Default,,0,0,0,,发型随意，发色{\c&H0000FFFF&\b1}黑色{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:20.26, 0:01:22.62,Default,,0,0,0,,面部有粗犷之感，{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}惊怒，
+Dialogue: 0, 0:01:22.62, 0:01:23.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}衣着{\c&H00FFFFFF&\b0}较为随意。
+Dialogue: 0, 0:01:23.87, 0:01:25.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}勒马放慢速度，
+Dialogue: 0, 0:01:25.61, 0:01:28.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}声音{\c&H00FFFFFF&\b0}沉稳中带有丝丝不甘心地问：
+Dialogue: 0, 0:01:28.22, 0:01:30.14,Default,,0,0,0,,“那{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}咱们就这么走？
+Dialogue: 0, 0:01:30.14, 0:01:32.75,Default,,0,0,0,,”{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}保持之前的装扮和神态。
+Dialogue: 0, 0:01:32.75, 0:01:34.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示没办法，
+Dialogue: 0, 0:01:34.31, 0:01:37.09,Default,,0,0,0,,语气颇为愤怒，想着{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}收拾完李
+Dialogue: 0, 0:01:37.09, 0:01:38.14,Default,,0,0,0,,佑后的{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:38.14, 0:01:41.44,Default,,0,0,0,,场景还是野外，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的装扮和表情依旧。
+Dialogue: 0, 0:01:41.44, 0:01:44.20,Default,,0,0,0,,北向辉一咬牙，{\c&H0000FFFF&\b1}声音{\c&H00FFFFFF&\b0}凶狠地说：
+Dialogue: 0, 0:01:44.20, 0:01:46.56,Default,,0,0,0,,“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}，不行咱回去拼了！
+Dialogue: 0, 0:01:46.56, 0:01:49.12,Default,,0,0,0,,”北向辉的装扮和{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}依旧。
+Dialogue: 0, 0:01:49.12, 0:01:51.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}横了北向辉一眼，
+Dialogue: 0, 0:01:51.03, 0:01:53.78,Default,,0,0,0,,说拼个P，然后决定先不返回{\c&H0000FFFF&\b1}蔚州{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:53.78, 0:01:56.56,Default,,0,0,0,,而是去汴州，让{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}找机灵的人联
+Dialogue: 0, 0:01:56.56, 0:01:57.76,Default,,0,0,0,,系{\c&H0000FFFF&\b1}河北{\c&H00FFFFFF&\b0}道世家。
+Dialogue: 0, 0:01:57.76, 0:02:00.53,Default,,0,0,0,,场景野外，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的装扮和表情依旧
+Dialogue: 0, 0:02:00.53, 0:02:02.25,Default,,0,0,0,,，{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}准备去安排。
+Dialogue: 0, 0:02:02.25, 0:02:04.53,Default,,0,0,0,,远处{\c&H0000FFFF&\b1}战场{\c&H00FFFFFF&\b0}方向火势有变化，
+Dialogue: 0, 0:02:04.53, 0:02:07.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}勒马停住，传军令大军前往前
+Dialogue: 0, 0:02:07.57, 0:02:08.34,Default,,0,0,0,,面{\c&H0000FFFF&\b1}山坡{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:08.34, 0:02:11.38,Default,,0,0,0,,场景野外山坡处，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的装扮和动
+Dialogue: 0, 0:02:11.38, 0:02:12.14,Default,,0,0,0,,作{\c&H0000FFFF&\b1}明确{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:12.14, 0:02:14.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李佑{\c&H00FFFFFF&\b0}大营中，喊杀声震天，
+Dialogue: 0, 0:02:14.60, 0:02:17.48,Default,,0,0,0,,烟火味刺鼻，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}持弓在后，
+Dialogue: 0, 0:02:17.48, 0:02:19.94,Default,,0,0,0,,秦琼、{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}持槊在前，
+Dialogue: 0, 0:02:19.94, 0:02:22.61,Default,,0,0,0,,三人如{\c&H0000FFFF&\b1}钢针{\c&H00FFFFFF&\b0}般在大营中砍杀，
+Dialogue: 0, 0:02:22.61, 0:02:25.49,Default,,0,0,0,,李佑隐藏在{\c&H0000FFFF&\b1}乱军{\c&H00FFFFFF&\b0}之中缓缓后退。
+Dialogue: 0, 0:02:25.49, 0:02:27.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是李佑大营内，
+Dialogue: 0, 0:02:27.33, 0:02:29.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}火光冲天{\c&H00FFFFFF&\b0}，烟雾弥漫，
+Dialogue: 0, 0:02:29.39, 0:02:32.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}男性，中年，发型简洁，
+Dialogue: 0, 0:02:32.26, 0:02:34.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}发色{\c&H00FFFFFF&\b0}黑色，表情严肃，
+Dialogue: 0, 0:02:34.32, 0:02:37.40,Default,,0,0,0,,身着战甲；秦琼、{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}男性，
+Dialogue: 0, 0:02:37.40, 0:02:40.07,Default,,0,0,0,,中年，发型束起，{\c&H0000FFFF&\b1}发色{\c&H00FFFFFF&\b0}黑色，
+Dialogue: 0, 0:02:40.07, 0:02:42.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}凶狠，身着带血迹的战甲；
+Dialogue: 0, 0:02:42.94, 0:02:45.61,Default,,0,0,0,,李佑{\c&H0000FFFF&\b1}男性{\c&H00FFFFFF&\b0}，青年，发型凌乱，
+Dialogue: 0, 0:02:45.61, 0:02:47.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}发色{\c&H00FFFFFF&\b0}黑色，表情惊恐，
+Dialogue: 0, 0:02:47.66, 0:02:49.10,Default,,0,0,0,,身着{\c&H0000FFFF&\b1}杂乱{\c&H00FFFFFF&\b0}衣物。
+Dialogue: 0, 0:02:49.10, 0:02:52.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}猿臂屈伸，三箭齐发射死正在
+Dialogue: 0, 0:02:52.04, 0:02:54.98,Default,,0,0,0,,逃跑的三个{\c&H0000FFFF&\b1}将领{\c&H00FFFFFF&\b0}，然后喊李佑出来投
+Dialogue: 0, 0:02:54.98, 0:02:57.01,Default,,0,0,0,,降，此时{\c&H0000FFFF&\b1}溃军{\c&H00FFFFFF&\b0}疯狂逃窜。
+Dialogue: 0, 0:02:57.01, 0:02:58.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}还是李佑大营内，
+Dialogue: 0, 0:02:58.85, 0:03:00.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}的装扮和动作，
+Dialogue: 0, 0:03:00.68, 0:03:02.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}溃军{\c&H00FFFFFF&\b0}的状态明确。
+Dialogue: 0, 0:03:02.16, 0:03:04.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}发现远处簇拥着一个人的溃
+Dialogue: 0, 0:03:04.87, 0:03:07.39,Default,,0,0,0,,兵，抬手{\c&H0000FFFF&\b1}指向{\c&H00FFFFFF&\b0}，李佑胆战心惊。
+Dialogue: 0, 0:03:07.39, 0:03:10.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}李佑大营内，李佑的装扮和状态明确。
+Dialogue: 0, 0:03:10.82, 0:03:13.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛万彻{\c&H00FFFFFF&\b0}从乱军之中策马而出，
+Dialogue: 0, 0:03:13.32, 0:03:16.02,Default,,0,0,0,,要挡住秦琼、{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}救李佑，
+Dialogue: 0, 0:03:16.02, 0:03:19.10,Default,,0,0,0,,与{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}对话，后被李世民射箭射死
+Dialogue: 0, 0:03:19.10, 0:03:21.99,Default,,0,0,0,,。场景李佑大营内，{\c&H0000FFFF&\b1}薛万彻{\c&H00FFFFFF&\b0}男性，
+Dialogue: 0, 0:03:21.99, 0:03:24.49,Default,,0,0,0,,中年，发型束起，{\c&H0000FFFF&\b1}发色{\c&H00FFFFFF&\b0}黑色，
+Dialogue: 0, 0:03:24.49, 0:03:26.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}复杂，身着战甲；
+Dialogue: 0, 0:03:26.41, 0:03:28.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}的装扮和动作明确。
+Dialogue: 0, 0:03:28.72, 0:03:30.60,Default,,0,0,0,,李恪出现，{\c&H0000FFFF&\b1}笑声{\c&H00FFFFFF&\b0}癫狂，
+Dialogue: 0, 0:03:30.60, 0:03:33.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}吩咐先拿下李佑再拿李恪，
+Dialogue: 0, 0:03:33.42, 0:03:35.31,Default,,0,0,0,,李佑{\c&H0000FFFF&\b1}重燃{\c&H00FFFFFF&\b0}希望又怂了，
+Dialogue: 0, 0:03:35.31, 0:03:37.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}冲过去刺李佑，
+Dialogue: 0, 0:03:37.37, 0:03:38.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}腋下中箭。
+Dialogue: 0, 0:03:38.87, 0:03:41.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}李佑大营内，李恪男性，
+Dialogue: 0, 0:03:41.31, 0:03:43.76,Default,,0,0,0,,青年，发型整洁，{\c&H0000FFFF&\b1}发色{\c&H00FFFFFF&\b0}黑色，
+Dialogue: 0, 0:03:43.76, 0:03:45.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}癫狂，身着战甲；
+Dialogue: 0, 0:03:45.64, 0:03:47.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}男性，中年，
+Dialogue: 0, 0:03:47.53, 0:03:49.40,Default,,0,0,0,,发型束起，{\c&H0000FFFF&\b1}发色{\c&H00FFFFFF&\b0}黑色，
+Dialogue: 0, 0:03:49.40, 0:03:51.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}凶狠，身着带血迹战甲；
+Dialogue: 0, 0:03:51.84, 0:03:54.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}的装扮和受伤状态明确。

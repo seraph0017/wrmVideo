@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_009 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在军营外敲锣打鼓收编唐军
+Dialogue: 0,0:00:02.77,0:00:05.17,Default,,0,0,0,,，{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}们陆续冲出大营领饭，
+Dialogue: 0,0:00:05.17,0:00:08.13,Default,,0,0,0,,整编军队，两日后{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}都督府帅帐内
+Dialogue: 0,0:00:08.13,0:00:11.09,Default,,0,0,0,,，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与众臣商议应对李靖之策，
+Dialogue: 0,0:00:11.09,0:00:12.75,Default,,0,0,0,,决定放弃{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}北上。
+Dialogue: 0,0:00:12.75,0:00:14.78,Default,,0,0,0,,场景是军营{\c&H0000FFFF&\b1}外和帅{\c&H00FFFFFF&\b0}帐内，
+Dialogue: 0,0:00:14.78,0:00:17.18,Default,,0,0,0,,光线有室外{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}和帐内灯光。

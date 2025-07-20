@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_043 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}向向辉询问城中兵马分布，
+Dialogue: 0,0:00:02.70,0:00:04.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}向辉{\c&H00FFFFFF&\b0}恭敬回禀：“回陛下，
+Dialogue: 0,0:00:04.85,0:00:07.19,Default,,0,0,0,,城中负责城防的左右{\c&H0000FFFF&\b1}金吾卫{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:07.19,0:00:08.81,Default,,0,0,0,,一共有{\c&H0000FFFF&\b1}两千人{\c&H00FFFFFF&\b0}左右。
+Dialogue: 0,0:00:08.81,0:00:11.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}那社尔{\c&H00FFFFFF&\b0}手中则有六千本部骑兵，
+Dialogue: 0,0:00:11.33,0:00:12.94,Default,,0,0,0,,契苾{\c&H0000FFFF&\b1}何力{\c&H00FFFFFF&\b0}则是八千，
+Dialogue: 0,0:00:12.94,0:00:14.74,Default,,0,0,0,,这两支兵马都是{\c&H0000FFFF&\b1}胡人{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:14.74,0:00:17.08,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听后面露吃惊之色。
+Dialogue: 0,0:00:17.08,0:00:19.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是室内，光线如常。

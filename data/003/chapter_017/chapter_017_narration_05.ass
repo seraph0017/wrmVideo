@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_017 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.88,Default,,0,0,0,,场景在大{\c&H0000FFFF&\b1}慈恩寺{\c&H00FFFFFF&\b0}文德皇后祠堂内，
+Dialogue: 0,0:00:02.88,0:00:04.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}延续，光线柔和。
+Dialogue: 0,0:00:04.81,0:00:07.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}跪坐在长孙皇后灵位前，
+Dialogue: 0,0:00:07.50,0:00:09.99,Default,,0,0,0,,月月推门而入{\c&H0000FFFF&\b1}汇报{\c&H00FFFFFF&\b0}城里情况，
+Dialogue: 0,0:00:09.99,0:00:12.88,Default,,0,0,0,,称昨日右卫将军{\c&H0000FFFF&\b1}薛万彻{\c&H00FFFFFF&\b0}调动兵马将
+Dialogue: 0,0:00:12.88,0:00:14.80,Default,,0,0,0,,请愿的{\c&H0000FFFF&\b1}学子{\c&H00FFFFFF&\b0}全部圈押，
+Dialogue: 0,0:00:14.80,0:00:17.30,Default,,0,0,0,,同时{\c&H0000FFFF&\b1}朝廷{\c&H00FFFFFF&\b0}连发三道调兵圣旨。
+Dialogue: 0,0:00:17.30,0:00:20.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}缓缓起身，取下燃烧殆尽的香
+Dialogue: 0,0:00:20.37,0:00:22.30,Default,,0,0,0,,，继续询问相关{\c&H0000FFFF&\b1}事宜{\c&H00FFFFFF&\b0}。

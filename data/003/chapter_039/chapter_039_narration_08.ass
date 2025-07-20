@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_039 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}唐军{\c&H00FFFFFF&\b0}军中找来尚医军士，
+Dialogue: 0,0:00:02.03,0:00:04.42,Default,,0,0,0,,准备为{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}和李承乾治伤。
+Dialogue: 0,0:00:04.42,0:00:07.19,Default,,0,0,0,,军士面对{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的箭伤面露难色，
+Dialogue: 0,0:00:07.19,0:00:09.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}坚决表示“只管拔！
+Dialogue: 0,0:00:09.40,0:00:11.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}天大{\c&H00FFFFFF&\b0}的干系，本将一肩担下！
+Dialogue: 0,0:00:11.79,0:00:14.01,Default,,0,0,0,,”{\c&H0000FFFF&\b1}军医{\c&H00FFFFFF&\b0}重重点头准备拔箭，
+Dialogue: 0,0:00:14.01,0:00:16.22,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}缓缓睁开眼睛，
+Dialogue: 0,0:00:16.22,0:00:17.88,Default,,0,0,0,,虽因失血{\c&H0000FFFF&\b1}视线{\c&H00FFFFFF&\b0}模糊，
+Dialogue: 0,0:00:17.88,0:00:20.09,Default,,0,0,0,,但{\c&H0000FFFF&\b1}明白{\c&H00FFFFFF&\b0}情况，张嘴要说话。

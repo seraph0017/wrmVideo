@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_032 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}策马到城前，
+Dialogue: 0,0:00:01.71,0:00:03.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌等人身着官服，
+Dialogue: 0,0:00:03.80,0:00:06.08,Default,,0,0,0,,发型整齐，在{\c&H0000FFFF&\b1}城门口{\c&H00FFFFFF&\b0}等候。
+Dialogue: 0,0:00:06.08,0:00:08.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}翻身下马，进入军帐议事，
+Dialogue: 0,0:00:08.93,0:00:11.02,Default,,0,0,0,,因近日疲惫，{\c&H0000FFFF&\b1}心情{\c&H00FFFFFF&\b0}暴躁，
+Dialogue: 0,0:00:11.02,0:00:13.87,Default,,0,0,0,,身着{\c&H0000FFFF&\b1}战袍{\c&H00FFFFFF&\b0}，束发，面容略显憔悴，
+Dialogue: 0,0:00:13.87,0:00:16.71,Default,,0,0,0,,声音有些沙哑地询问{\c&H0000FFFF&\b1}赵国{\c&H00FFFFFF&\b0}公关于“
+Dialogue: 0,0:00:16.71,0:00:19.37,Default,,0,0,0,,迎娶{\c&H0000FFFF&\b1}王家{\c&H00FFFFFF&\b0}女，万事皆易”之事。
+Dialogue: 0,0:00:19.37,0:00:22.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是军帐内，时间为议事时，
+Dialogue: 0,0:00:22.03,0:00:24.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}偏暗，突出严肃氛围。

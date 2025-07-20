@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_039 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.70,Default,,0,0,0,,激烈的{\c&H0000FFFF&\b1}战场{\c&H00FFFFFF&\b0}厮杀场景，
+Dialogue: 0,0:00:01.70,0:00:04.07,Default,,0,0,0,,夜色中硝烟弥漫，{\c&H0000FFFF&\b1}血腥味{\c&H00FFFFFF&\b0}刺鼻。
+Dialogue: 0,0:00:04.07,0:00:06.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}与李承乾互相拽着对方体内
+Dialogue: 0,0:00:06.62,0:00:08.66,Default,,0,0,0,,的弩箭，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}满脸愤怒，
+Dialogue: 0,0:00:08.66,0:00:11.21,Default,,0,0,0,,大声{\c&H0000FFFF&\b1}嘶吼{\c&H00FFFFFF&\b0}“逆...逆...子，
+Dialogue: 0,0:00:11.21,0:00:13.75,Default,,0,0,0,,朕{\c&H0000FFFF&\b1}...{\c&H00FFFFFF&\b0}朕一定要杀...杀了你
+Dialogue: 0,0:00:13.75,0:00:16.64,Default,,0,0,0,,”，他{\c&H0000FFFF&\b1}双手{\c&H00FFFFFF&\b0}用力，身体因发力而颤抖。
+Dialogue: 0,0:00:16.64,0:00:18.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则痛苦万分，
+Dialogue: 0,0:00:18.17,0:00:20.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}声音{\c&H00FFFFFF&\b0}虚弱地喊着“父...父皇啊
+Dialogue: 0,0:00:20.71,0:00:23.43,Default,,0,0,0,,，您{\c&H0000FFFF&\b1}...{\c&H00FFFFFF&\b0}您当年不...不也这么
+Dialogue: 0,0:00:23.43,0:00:24.96,Default,,0,0,0,,对大行{\c&H0000FFFF&\b1}高祖{\c&H00FFFFFF&\b0}皇帝的，
+Dialogue: 0,0:00:24.96,0:00:27.50,Default,,0,0,0,,而且他...他{\c&H0000FFFF&\b1}老人家{\c&H00FFFFFF&\b0}不住的挺好
+Dialogue: 0,0:00:27.50,0:00:29.88,Default,,0,0,0,,”，{\c&H0000FFFF&\b1}伤口{\c&H00FFFFFF&\b0}的剧痛让他脸色惨白。

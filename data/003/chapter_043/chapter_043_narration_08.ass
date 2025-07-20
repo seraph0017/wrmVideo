@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_043 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}进入室内，神色不安，
+Dialogue: 0,0:00:02.37,0:00:04.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}皱了皱眉，不悦道：
+Dialogue: 0,0:00:04.57,0:00:06.57,Default,,0,0,0,,“慌慌张张成什么{\c&H0000FFFF&\b1}样子{\c&H00FFFFFF&\b0}！
+Dialogue: 0,0:00:06.57,0:00:08.40,Default,,0,0,0,,”{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}喘了口气后，
+Dialogue: 0,0:00:08.40,0:00:11.51,Default,,0,0,0,,禀报：“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}，今早薛将军派人传来云
+Dialogue: 0,0:00:11.51,0:00:14.25,Default,,0,0,0,,中方向送来的消息...说{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.25,0:00:16.80,Default,,0,0,0,,他亲率一千人马奔袭至{\c&H0000FFFF&\b1}河东{\c&H00FFFFFF&\b0}道，
+Dialogue: 0,0:00:16.80,0:00:18.08,Default,,0,0,0,,尽灭王家{\c&H0000FFFF&\b1}满门{\c&H00FFFFFF&\b0}！
+Dialogue: 0,0:00:18.08,0:00:19.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}罪名{\c&H00FFFFFF&\b0}是勾结逆贼！
+Dialogue: 0,0:00:19.54,0:00:21.55,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}震惊拍案而起，
+Dialogue: 0,0:00:21.55,0:00:23.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}喊道{\c&H00FFFFFF&\b0}：“不可能！
+Dialogue: 0,0:00:23.01,0:00:24.29,Default,,0,0,0,,这绝对不{\c&H0000FFFF&\b1}可能{\c&H00FFFFFF&\b0}！
+Dialogue: 0,0:00:24.29,0:00:26.66,Default,,0,0,0,,”场景是室内，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}激动。

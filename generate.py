@@ -31,6 +31,35 @@ import time
 import urllib.request
 
 
+def read_novel_file_with_encoding(file_path):
+    """
+    读取小说文件，支持多种编码格式
+    
+    Args:
+        file_path: 文件路径
+    
+    Returns:
+        str: 文件内容
+    """
+    # 尝试多种编码格式
+    encodings = ['utf-8', 'gbk', 'gb2312', 'gb18030', 'big5', 'latin1']
+    
+    for encoding in encodings:
+        try:
+            with open(file_path, 'r', encoding=encoding) as f:
+                content = f.read()
+                print(f"成功使用 {encoding} 编码读取文件")
+                return content
+        except UnicodeDecodeError:
+            continue
+        except Exception as e:
+            print(f"使用 {encoding} 编码读取文件时出错：{e}")
+            continue
+    
+    print(f"无法读取文件 {file_path}，尝试了所有编码格式都失败")
+    return ""
+
+
 def clean_text_for_tts(text):
     """
     清理文本用于TTS生成，移除括号内的内容和&符号
@@ -1086,9 +1115,8 @@ def generate_script_from_novel_new(novel_file, output_dir, target_chapters=50):
             print(f"错误: 小说文件不存在 {novel_file}")
             return False
         
-        # 读取小说内容
-        with open(novel_file, 'r', encoding='utf-8') as f:
-            novel_content = f.read()
+        # 读取小说内容，支持多种编码格式
+        novel_content = read_novel_file_with_encoding(novel_file)
         
         if not novel_content.strip():
             print("错误: 小说文件内容为空")
@@ -1166,9 +1194,8 @@ def generate_script_from_novel(novel_file, output_dir):
             print(f"错误: 小说文件不存在 {novel_file}")
             return False
         
-        # 读取小说内容
-        with open(novel_file, 'r', encoding='utf-8') as f:
-            novel_content = f.read()
+        # 读取小说内容，支持多种编码格式
+        novel_content = read_novel_file_with_encoding(novel_file)
         
         if not novel_content.strip():
             print("错误: 小说文件内容为空")

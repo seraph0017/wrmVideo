@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_031 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听到李世民的话后，
+Dialogue: 0,0:00:02.15,0:00:05.03,Default,,0,0,0,,气不打一处来，但为了自己的{\c&H0000FFFF&\b1}目的{\c&H00FFFFFF&\b0}强
+Dialogue: 0,0:00:05.03,0:00:07.54,Default,,0,0,0,,行{\c&H0000FFFF&\b1}咽下{\c&H00FFFFFF&\b0}，尽量让语气平静地说：
+Dialogue: 0,0:00:07.54,0:00:10.41,Default,,0,0,0,,“{\c&H0000FFFF&\b1}父皇{\c&H00FFFFFF&\b0}，你以为儿臣真的想谋逆吗？
+Dialogue: 0,0:00:10.41,0:00:12.92,Default,,0,0,0,,您宠爱{\c&H0000FFFF&\b1}青雀{\c&H00FFFFFF&\b0}，又对我百般打压，
+Dialogue: 0,0:00:12.92,0:00:14.72,Default,,0,0,0,,我{\c&H0000FFFF&\b1}知道{\c&H00FFFFFF&\b0}您觉得我腿瘸，
+Dialogue: 0,0:00:14.72,0:00:17.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}无人{\c&H00FFFFFF&\b0}君之像，但您想没想过，
+Dialogue: 0,0:00:17.05,0:00:19.03,Default,,0,0,0,,这腿是我想让它瘸的吗？
+Dialogue: 0,0:00:19.03,0:00:20.28,Default,,0,0,0,,我有的{\c&H0000FFFF&\b1}选择{\c&H00FFFFFF&\b0}吗？
+Dialogue: 0,0:00:20.28,0:00:22.08,Default,,0,0,0,,”说着眼中挤出{\c&H0000FFFF&\b1}泪水{\c&H00FFFFFF&\b0}。

@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_017 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.44,Default,,0,0,0,,场景是城外雨夜，时间{\c&H0000FFFF&\b1}黎明{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:02.44,0:00:03.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}渐亮。
+Dialogue: 0,0:00:03.38,0:00:06.02,Default,,0,0,0,,黑衣人报{\c&H0000FFFF&\b1}玄武门{\c&H00FFFFFF&\b0}已被李恪攻破，
+Dialogue: 0,0:00:06.02,0:00:08.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}下令以爆炸声为号，
+Dialogue: 0,0:00:08.27,0:00:09.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}准备行动。
+Dialogue: 0,0:00:09.59,0:00:11.66,Default,,0,0,0,,重玄门方向传来{\c&H0000FFFF&\b1}爆炸声{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:11.66,0:00:14.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率众入城，大喊要肃清朝纲。

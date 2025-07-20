@@ -1,0 +1,87 @@
+[Script Info]
+Title: chapter_031 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:01.83,Default,,0,0,0,,大漠之中，{\c&H0000FFFF&\b1}阳光明媚{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:01.83, 0:00:03.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}扶着战马鬃毛，
+Dialogue: 0, 0:00:03.66, 0:00:05.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}眼神{\c&H00FFFFFF&\b0}流露出一丝伤感，
+Dialogue: 0, 0:00:05.49, 0:00:07.50,Default,,0,0,0,,缓缓开口向{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}问道：
+Dialogue: 0, 0:00:07.50, 0:00:09.14,Default,,0,0,0,,“{\c&H0000FFFF&\b1}父皇{\c&H00FFFFFF&\b0}，您想过吗？
+Dialogue: 0, 0:00:09.14, 0:00:11.51,Default,,0,0,0,,咱们{\c&H0000FFFF&\b1}父子{\c&H00FFFFFF&\b0}为何会走到今天？”
+Dialogue: 0, 0:00:11.51, 0:00:14.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}满脸怒色，恶狠狠地说道：
+Dialogue: 0, 0:00:14.25, 0:00:15.89,Default,,0,0,0,,“你{\c&H0000FFFF&\b1}还有{\c&H00FFFFFF&\b0}脸问这话？
+Dialogue: 0, 0:00:15.89, 0:00:17.35,Default,,0,0,0,,自然是因你{\c&H0000FFFF&\b1}谋逆{\c&H00FFFFFF&\b0}！
+Dialogue: 0, 0:00:17.35, 0:00:19.00,Default,,0,0,0,,”{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}依旧是大漠，
+Dialogue: 0, 0:00:19.00, 0:00:19.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}充足。
+Dialogue: 0, 0:00:19.92, 0:00:22.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听到李世民的话后，
+Dialogue: 0, 0:00:22.07, 0:00:24.95,Default,,0,0,0,,气不打一处来，但为了自己的{\c&H0000FFFF&\b1}目的{\c&H00FFFFFF&\b0}强
+Dialogue: 0, 0:00:24.95, 0:00:27.46,Default,,0,0,0,,行{\c&H0000FFFF&\b1}咽下{\c&H00FFFFFF&\b0}，尽量让语气平静地说：
+Dialogue: 0, 0:00:27.46, 0:00:30.33,Default,,0,0,0,,“{\c&H0000FFFF&\b1}父皇{\c&H00FFFFFF&\b0}，你以为儿臣真的想谋逆吗？
+Dialogue: 0, 0:00:30.33, 0:00:32.84,Default,,0,0,0,,您宠爱{\c&H0000FFFF&\b1}青雀{\c&H00FFFFFF&\b0}，又对我百般打压，
+Dialogue: 0, 0:00:32.84, 0:00:34.64,Default,,0,0,0,,我{\c&H0000FFFF&\b1}知道{\c&H00FFFFFF&\b0}您觉得我腿瘸，
+Dialogue: 0, 0:00:34.64, 0:00:36.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}无人{\c&H00FFFFFF&\b0}君之像，但您想没想过，
+Dialogue: 0, 0:00:36.96, 0:00:38.95,Default,,0,0,0,,这腿是我想让它瘸的吗？
+Dialogue: 0, 0:00:38.95, 0:00:40.20,Default,,0,0,0,,我有的{\c&H0000FFFF&\b1}选择{\c&H00FFFFFF&\b0}吗？
+Dialogue: 0, 0:00:40.20, 0:00:42.00,Default,,0,0,0,,”说着眼中挤出{\c&H0000FFFF&\b1}泪水{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:42.00, 0:00:44.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}眼中罕见露出一丝柔软，
+Dialogue: 0, 0:00:44.57, 0:00:46.21,Default,,0,0,0,,但瞬间又{\c&H0000FFFF&\b1}遮掩{\c&H00FFFFFF&\b0}下去，
+Dialogue: 0, 0:00:46.21, 0:00:47.32,Default,,0,0,0,,哼道：“哼！
+Dialogue: 0, 0:00:47.32, 0:00:50.25,Default,,0,0,0,,朕{\c&H0000FFFF&\b1}从没{\c&H00FFFFFF&\b0}想过杀你，而且也没想过废你
+Dialogue: 0, 0:00:50.25, 0:00:52.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}之位，这都是你的借口！”
+Dialogue: 0, 0:00:52.82, 0:00:55.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}继续说道：“父皇啊...您
+Dialogue: 0, 0:00:55.78, 0:00:58.57,Default,,0,0,0,,到底怎么想的，只有您自己{\c&H0000FFFF&\b1}知道{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:58.57, 0:01:01.56,Default,,0,0,0,,但您想没想过，一个被{\c&H0000FFFF&\b1}皇帝{\c&H00FFFFFF&\b0}所不喜的
+Dialogue: 0, 0:01:01.56, 0:01:04.15,Default,,0,0,0,,太子，在{\c&H0000FFFF&\b1}朝中{\c&H00FFFFFF&\b0}生存是何等困难，
+Dialogue: 0, 0:01:04.15, 0:01:05.65,Default,,0,0,0,,何等的{\c&H0000FFFF&\b1}如履薄冰{\c&H00FFFFFF&\b0}？
+Dialogue: 0, 0:01:05.65, 0:01:06.76,Default,,0,0,0,,”{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}哀怨。
+Dialogue: 0, 0:01:06.76, 0:01:09.60,Default,,0,0,0,,在{\c&H0000FFFF&\b1}草原{\c&H00FFFFFF&\b0}军中，义成公主的女儿面色清
+Dialogue: 0, 0:01:09.60, 0:01:11.92,Default,,0,0,0,,冷，{\c&H0000FFFF&\b1}副将{\c&H00FFFFFF&\b0}拱手问道：“可敦，
+Dialogue: 0, 0:01:11.92, 0:01:13.88,Default,,0,0,0,,咱们接下来该如何{\c&H0000FFFF&\b1}行事{\c&H00FFFFFF&\b0}？
+Dialogue: 0, 0:01:13.88, 0:01:16.55,Default,,0,0,0,,”义成{\c&H0000FFFF&\b1}公主{\c&H00FFFFFF&\b0}的女儿眼中露出一抹厌
+Dialogue: 0, 0:01:16.55, 0:01:18.68,Default,,0,0,0,,恶之色，瞬间又{\c&H0000FFFF&\b1}遮掩{\c&H00FFFFFF&\b0}下去。
+Dialogue: 0, 0:01:18.68, 0:01:21.43,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}策马{\c&H00FFFFFF&\b0}而来，满脸兴奋地说：
+Dialogue: 0, 0:01:21.43, 0:01:23.45,Default,,0,0,0,,“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}...俺回来了，
+Dialogue: 0, 0:01:23.45, 0:01:24.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}哈哈{\c&H00FFFFFF&\b0}。”
+Dialogue: 0, 0:01:24.18, 0:01:26.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}吩咐北向辉：“去，
+Dialogue: 0, 0:01:26.64, 0:01:29.48,Default,,0,0,0,,把信鸽拿来，朕要传信给{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:29.48, 0:01:30.71,Default,,0,0,0,,”{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}严肃。
+Dialogue: 0, 0:01:30.71, 0:01:32.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}大军在大漠中行军，
+Dialogue: 0, 0:01:32.90, 0:01:34.90,Default,,0,0,0,,后面{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}大军跟随，
+Dialogue: 0, 0:01:34.90, 0:01:37.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}淡定地说：“无妨，
+Dialogue: 0, 0:01:37.06, 0:01:39.79,Default,,0,0,0,,这是{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}怕咱们有危险派来保护
+Dialogue: 0, 0:01:39.79, 0:01:40.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}咱们{\c&H00FFFFFF&\b0}的。”
+Dialogue: 0, 0:01:40.70, 0:01:44.21,Default,,0,0,0,,天空中出现鸽子，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中紧张，
+Dialogue: 0, 0:01:44.21, 0:01:47.74,Default,,0,0,0,,北向辉策马赶来，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}吩咐通知尉
+Dialogue: 0, 0:01:47.74, 0:01:48.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}迟敬德{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:48.62, 0:01:51.68,Default,,0,0,0,,李承乾策马冲向{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}大军，
+Dialogue: 0, 0:01:51.68, 0:01:53.21,Default,,0,0,0,,大喊：“{\c&H0000FFFF&\b1}御敌{\c&H00FFFFFF&\b0}！
+Dialogue: 0, 0:01:53.21, 0:01:54.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}御敌{\c&H00FFFFFF&\b0}！敌人来袭！
+Dialogue: 0, 0:01:54.95, 0:01:57.35,Default,,0,0,0,,”{\c&H0000FFFF&\b1}动作迅速{\c&H00FFFFFF&\b0}，表情急切。
+Dialogue: 0, 0:01:57.35, 0:02:00.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}返回军中，查看信鸽腿上的信
+Dialogue: 0, 0:02:00.65, 0:02:02.09,Default,,0,0,0,,件，面露{\c&H0000FFFF&\b1}笑意{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:02.09, 0:02:04.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}铁勒{\c&H00FFFFFF&\b0}九姓联军出现，
+Dialogue: 0, 0:02:04.00, 0:02:05.90,Default,,0,0,0,,夷男可汗{\c&H0000FFFF&\b1}肤色{\c&H00FFFFFF&\b0}黝黑，
+Dialogue: 0, 0:02:05.90, 0:02:09.31,Default,,0,0,0,,眼神凶狠，说道：“阿史那·{\c&H0000FFFF&\b1}明瑶{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:02:09.31, 0:02:10.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}何在{\c&H00FFFFFF&\b0}！”
+Dialogue: 0, 0:02:10.15, 0:02:12.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}率军准备作战，
+Dialogue: 0, 0:02:12.06, 0:02:14.37,Default,,0,0,0,,吩咐{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}，表情严肃：
+Dialogue: 0, 0:02:14.37, 0:02:15.15,Default,,0,0,0,,“{\c&H0000FFFF&\b1}一会{\c&H00FFFFFF&\b0}！
+Dialogue: 0, 0:02:15.15, 0:02:17.08,Default,,0,0,0,,你率军前冲，朕{\c&H0000FFFF&\b1}随后{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:02:17.08, 0:02:19.00,Default,,0,0,0,,成一{\c&H0000FFFF&\b1}字长{\c&H00FFFFFF&\b0}蛇杀穿敌阵，
+Dialogue: 0, 0:02:19.00, 0:02:20.54,Default,,0,0,0,,然后再杀{\c&H0000FFFF&\b1}回来{\c&H00FFFFFF&\b0}。”
+Dialogue: 0, 0:02:20.54, 0:02:22.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}大军冲入后面军阵，
+Dialogue: 0, 0:02:22.57, 0:02:24.60,Default,,0,0,0,,面露得意地说：“{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:02:24.60, 0:02:26.62,Default,,0,0,0,,朕就先走了，{\c&H0000FFFF&\b1}义成{\c&H00FFFFFF&\b0}的女儿，
+Dialogue: 0, 0:02:26.62, 0:02:29.33,Default,,0,0,0,,就交给您了，正好你们还沾点{\c&H0000FFFF&\b1}亲戚{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:02:29.33, 0:02:31.35,Default,,0,0,0,,而且那娘们还是人{\c&H0000FFFF&\b1}...{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:02:31.35, 0:02:33.21,Default,,0,0,0,,这两口不正对您{\c&H0000FFFF&\b1}胃口{\c&H00FFFFFF&\b0}！”

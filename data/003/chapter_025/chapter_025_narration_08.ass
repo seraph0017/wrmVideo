@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_025 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}表示若李承乾马上下旨发布
+Dialogue: 0,0:00:02.75,0:00:05.13,Default,,0,0,0,,退位{\c&H0000FFFF&\b1}诏书{\c&H00FFFFFF&\b0}，可考虑他的意见。
+Dialogue: 0,0:00:05.13,0:00:07.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}拒绝，称无法答应。
+Dialogue: 0,0:00:07.33,0:00:09.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}眼中寒光乍现，
+Dialogue: 0,0:00:09.16,0:00:10.62,Default,,0,0,0,,说明天{\c&H0000FFFF&\b1}战场{\c&H00FFFFFF&\b0}上见。
+Dialogue: 0,0:00:10.62,0:00:13.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}愣了一下，大脑飞速运转，
+Dialogue: 0,0:00:13.37,0:00:15.75,Default,,0,0,0,,觉得{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}可能是吓唬自己，
+Dialogue: 0,0:00:15.75,0:00:17.40,Default,,0,0,0,,两人{\c&H0000FFFF&\b1}处于{\c&H00FFFFFF&\b0}马上对峙，
+Dialogue: 0,0:00:17.40,0:00:20.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}面露寒光，李承乾神情疑惑。

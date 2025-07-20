@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_020 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}画面{\c&H00FFFFFF&\b0}展现激烈战场，
+Dialogue: 0,0:00:01.74,0:00:04.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}单人独骑立于城门之下，
+Dialogue: 0,0:00:04.43,0:00:06.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}胯下{\c&H00FFFFFF&\b0}战马人立而起，
+Dialogue: 0,0:00:06.17,0:00:08.10,Default,,0,0,0,,手中铁枪如{\c&H0000FFFF&\b1}蛟龙{\c&H00FFFFFF&\b0}出海，
+Dialogue: 0,0:00:08.10,0:00:09.06,Default,,0,0,0,,势若{\c&H0000FFFF&\b1}奔雷{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:09.06,0:00:12.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}满脸怒火，国字脸因愤怒扭曲
+Dialogue: 0,0:00:12.15,0:00:15.04,Default,,0,0,0,,，{\c&H0000FFFF&\b1}额角{\c&H00FFFFFF&\b0}青筋暴起，身着深色战甲，
+Dialogue: 0,0:00:15.04,0:00:16.97,Default,,0,0,0,,在雨中{\c&H0000FFFF&\b1}显得{\c&H00FFFFFF&\b0}更为沉重，
+Dialogue: 0,0:00:16.97,0:00:19.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是堆积如山的敌军尸体，
+Dialogue: 0,0:00:19.47,0:00:22.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}雨水{\c&H00FFFFFF&\b0}与鲜血交织，营造出紧张激烈的
+Dialogue: 0,0:00:22.56,0:00:23.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}战场{\c&H00FFFFFF&\b0}氛围。

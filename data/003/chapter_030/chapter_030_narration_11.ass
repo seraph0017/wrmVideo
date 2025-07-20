@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_030 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.72,Default,,0,0,0,,北向辉用力{\c&H0000FFFF&\b1}强勒{\c&H00FFFFFF&\b0}缰绳，
+Dialogue: 0,0:00:01.72,0:00:03.61,Default,,0,0,0,,来了个镫里{\c&H0000FFFF&\b1}藏身{\c&H00FFFFFF&\b0}的动作，
+Dialogue: 0,0:00:03.61,0:00:05.50,Default,,0,0,0,,虽然有一箭命中了{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:05.50,0:00:08.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}剧烈挣扎差点让他摔落马下，
+Dialogue: 0,0:00:08.08,0:00:09.80,Default,,0,0,0,,但他本人却{\c&H0000FFFF&\b1}安然无恙{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:09.80,0:00:12.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}看到援兵若是李承乾的，
+Dialogue: 0,0:00:12.21,0:00:13.76,Default,,0,0,0,,心中顿生{\c&H0000FFFF&\b1}绝境{\c&H00FFFFFF&\b0}之感，
+Dialogue: 0,0:00:13.76,0:00:16.51,Default,,0,0,0,,大声呼喊让众将士斩杀逆贼{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}。

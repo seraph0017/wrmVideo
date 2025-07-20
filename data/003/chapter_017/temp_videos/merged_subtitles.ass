@@ -1,0 +1,131 @@
+[Script Info]
+Title: chapter_017 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:03.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}设定在室内，时间为某一时刻，
+Dialogue: 0, 0:00:03.12, 0:00:04.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}柔和。
+Dialogue: 0, 0:00:04.08, 0:00:06.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}面对太穆皇后灵位，
+Dialogue: 0, 0:00:06.42, 0:00:09.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}原本{\c&H00FFFFFF&\b0}神情虔诚，说完相关话语后，
+Dialogue: 0, 0:00:09.34, 0:00:11.09,Default,,0,0,0,,脸上虔诚之色{\c&H0000FFFF&\b1}消失{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:11.09, 0:00:13.24,Default,,0,0,0,,转而露出一丝奇异{\c&H0000FFFF&\b1}笑容{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:13.24, 0:00:15.38,Default,,0,0,0,,似在回忆或{\c&H0000FFFF&\b1}思索{\c&H00FFFFFF&\b0}着什么。
+Dialogue: 0, 0:00:15.38, 0:00:17.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}依旧是室内，时间延续。
+Dialogue: 0, 0:00:17.85, 0:00:20.53,Default,,0,0,0,,门外传来敲门声，随后{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}、
+Dialogue: 0, 0:00:20.53, 0:00:22.63,Default,,0,0,0,,北向辉、月月{\c&H0000FFFF&\b1}推门而入{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:22.63, 0:00:25.49,Default,,0,0,0,,月月向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}汇报刚收到的消息，
+Dialogue: 0, 0:00:25.49, 0:00:28.16,Default,,0,0,0,,即有好几百学子在{\c&H0000FFFF&\b1}国子监{\c&H00FFFFFF&\b0}请愿，
+Dialogue: 0, 0:00:28.16, 0:00:30.82,Default,,0,0,0,,称太子{\c&H0000FFFF&\b1}仁德{\c&H00FFFFFF&\b0}，陛下不应废其位，
+Dialogue: 0, 0:00:30.82, 0:00:33.68,Default,,0,0,0,,还有上百{\c&H0000FFFF&\b1}学子{\c&H00FFFFFF&\b0}在京兆府门口请愿，
+Dialogue: 0, 0:00:33.68, 0:00:35.59,Default,,0,0,0,,说当今{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}得位不正，
+Dialogue: 0, 0:00:35.59, 0:00:36.74,Default,,0,0,0,,应{\c&H0000FFFF&\b1}下罪{\c&H00FFFFFF&\b0}己诏。
+Dialogue: 0, 0:00:36.74, 0:00:39.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}起身，神情严肃地询问情况。
+Dialogue: 0, 0:00:39.78, 0:00:41.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}仍为室内，时间继续。
+Dialogue: 0, 0:00:41.95, 0:00:44.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}接着询问长安兵马调动和城
+Dialogue: 0, 0:00:44.64, 0:00:47.50,Default,,0,0,0,,中{\c&H0000FFFF&\b1}治安{\c&H00FFFFFF&\b0}情况，月月回应早上好多店铺
+Dialogue: 0, 0:00:47.50, 0:00:49.67,Default,,0,0,0,,都没开门，{\c&H0000FFFF&\b1}百姓{\c&H00FFFFFF&\b0}深居简出，
+Dialogue: 0, 0:00:49.67, 0:00:52.53,Default,,0,0,0,,昨夜秦琼、{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}二人率领京兆尹
+Dialogue: 0, 0:00:52.53, 0:00:55.23,Default,,0,0,0,,和{\c&H0000FFFF&\b1}金吾卫{\c&H00FFFFFF&\b0}精锐沿着官路一路北上。
+Dialogue: 0, 0:00:55.23, 0:00:57.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}陷入思考，神情凝重。
+Dialogue: 0, 0:00:57.57, 0:00:59.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是室内书桌旁，
+Dialogue: 0, 0:00:59.17, 0:01:00.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}时间推移{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:00.06, 0:01:02.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}让薛仁贵告知信鸽的情况，
+Dialogue: 0, 0:01:02.73, 0:01:05.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}表示信鸽已交由城外一户人
+Dialogue: 0, 0:01:05.40, 0:01:07.54,Default,,0,0,0,,家保管，绝对不会出{\c&H0000FFFF&\b1}问题{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:07.54, 0:01:09.50,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}走到书桌前，
+Dialogue: 0, 0:01:09.50, 0:01:12.34,Default,,0,0,0,,让北向辉{\c&H0000FFFF&\b1}研墨{\c&H00FFFFFF&\b0}，自己提起笔在纸上写
+Dialogue: 0, 0:01:12.34, 0:01:15.37,Default,,0,0,0,,下详细安排，{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}好奇地围过来查看。
+Dialogue: 0, 0:01:15.37, 0:01:18.25,Default,,0,0,0,,场景在大{\c&H0000FFFF&\b1}慈恩寺{\c&H00FFFFFF&\b0}文德皇后祠堂内，
+Dialogue: 0, 0:01:18.25, 0:01:20.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}延续，光线柔和。
+Dialogue: 0, 0:01:20.18, 0:01:22.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}跪坐在长孙皇后灵位前，
+Dialogue: 0, 0:01:22.87, 0:01:25.36,Default,,0,0,0,,月月推门而入{\c&H0000FFFF&\b1}汇报{\c&H00FFFFFF&\b0}城里情况，
+Dialogue: 0, 0:01:25.36, 0:01:28.25,Default,,0,0,0,,称昨日右卫将军{\c&H0000FFFF&\b1}薛万彻{\c&H00FFFFFF&\b0}调动兵马将
+Dialogue: 0, 0:01:28.25, 0:01:30.17,Default,,0,0,0,,请愿的{\c&H0000FFFF&\b1}学子{\c&H00FFFFFF&\b0}全部圈押，
+Dialogue: 0, 0:01:30.17, 0:01:32.67,Default,,0,0,0,,同时{\c&H0000FFFF&\b1}朝廷{\c&H00FFFFFF&\b0}连发三道调兵圣旨。
+Dialogue: 0, 0:01:32.67, 0:01:35.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}缓缓起身，取下燃烧殆尽的香
+Dialogue: 0, 0:01:35.75, 0:01:37.67,Default,,0,0,0,,，继续询问相关{\c&H0000FFFF&\b1}事宜{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:37.67, 0:01:40.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}还是祠堂内，时间继续。
+Dialogue: 0, 0:01:40.00, 0:01:41.97,Default,,0,0,0,,月月{\c&H0000FFFF&\b1}汇报{\c&H00FFFFFF&\b0}人手召集情况，
+Dialogue: 0, 0:01:41.97, 0:01:44.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}展现出与之前不同的状态，
+Dialogue: 0, 0:01:44.65, 0:01:47.16,Default,,0,0,0,,给人一种“魔老成佛”的{\c&H0000FFFF&\b1}感觉{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:47.16, 0:01:49.31,Default,,0,0,0,,看似超然却有极强{\c&H0000FFFF&\b1}压迫感{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:49.31, 0:01:52.17,Default,,0,0,0,,月月退出后，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}凝视着缓缓上升
+Dialogue: 0, 0:01:52.17, 0:01:54.85,Default,,0,0,0,,的{\c&H0000FFFF&\b1}清香{\c&H00FFFFFF&\b0}，陷入对大唐局势的深思。
+Dialogue: 0, 0:01:54.85, 0:01:57.02,Default,,0,0,0,,场景为祠堂内，{\c&H0000FFFF&\b1}时间推移{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:57.02, 0:01:59.55,Default,,0,0,0,,月月返回告知有人要见{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:59.55, 0:02:01.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}露出感兴趣的神情，
+Dialogue: 0, 0:02:01.71, 0:02:02.80,Default,,0,0,0,,让来人{\c&H0000FFFF&\b1}进来{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:02.80, 0:02:04.42,Default,,0,0,0,,月月{\c&H0000FFFF&\b1}汇报{\c&H00FFFFFF&\b0}探子消息，
+Dialogue: 0, 0:02:04.42, 0:02:07.13,Default,,0,0,0,,称有人想接触{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}了解其态度，
+Dialogue: 0, 0:02:07.13, 0:02:09.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}指示月月让下面人大胆接触
+Dialogue: 0, 0:02:09.84, 0:02:12.01,Default,,0,0,0,,，最好能弄清楚{\c&H0000FFFF&\b1}对方{\c&H00FFFFFF&\b0}身份。
+Dialogue: 0, 0:02:12.01, 0:02:14.44,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿内，时间紧张，
+Dialogue: 0, 0:02:14.44, 0:02:15.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}凝重。
+Dialogue: 0, 0:02:15.38, 0:02:18.00,Default,,0,0,0,,城中乱象频繁，{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿内宗室、
+Dialogue: 0, 0:02:18.00, 0:02:20.99,Default,,0,0,0,,外戚等派系复杂，{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌等讨论局
+Dialogue: 0, 0:02:20.99, 0:02:23.80,Default,,0,0,0,,势，太医传来{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}不行的消息，
+Dialogue: 0, 0:02:23.80, 0:02:25.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}皆大惊失色。
+Dialogue: 0, 0:02:25.29, 0:02:27.73,Default,,0,0,0,,马周站出发言，{\c&H0000FFFF&\b1}崔敦礼{\c&H00FFFFFF&\b0}反驳，
+Dialogue: 0, 0:02:27.73, 0:02:30.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}等宗室支持马周的提议。
+Dialogue: 0, 0:02:30.35, 0:02:32.69,Default,,0,0,0,,场景在{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿外，时间傍晚，
+Dialogue: 0, 0:02:32.69, 0:02:33.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}渐暗。
+Dialogue: 0, 0:02:33.59, 0:02:36.29,Default,,0,0,0,,马周提出安排京兆府尹和{\c&H0000FFFF&\b1}金吾卫{\c&H00FFFFFF&\b0}大
+Dialogue: 0, 0:02:36.29, 0:02:39.16,Default,,0,0,0,,将军等建议，{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}表示赞赏并决定
+Dialogue: 0, 0:02:39.16, 0:02:40.96,Default,,0,0,0,,按此执行，{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}遵诏。
+Dialogue: 0, 0:02:40.96, 0:02:42.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}称如陛下不测，
+Dialogue: 0, 0:02:42.76, 0:02:45.64,Default,,0,0,0,,大丧后再行定夺，随后{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}一同前往
+Dialogue: 0, 0:02:45.64, 0:02:47.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}寝殿查看情况。
+Dialogue: 0, 0:02:47.44, 0:02:50.20,Default,,0,0,0,,场景是大{\c&H0000FFFF&\b1}慈恩寺{\c&H00FFFFFF&\b0}文德皇后祠堂内，
+Dialogue: 0, 0:02:50.20, 0:02:52.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}傍晚，光线柔和。
+Dialogue: 0, 0:02:52.04, 0:02:54.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}等人听闻李世民真不醒，
+Dialogue: 0, 0:02:54.62, 0:02:57.39,Default,,0,0,0,,驾崩在即，月月{\c&H0000FFFF&\b1}汇报{\c&H00FFFFFF&\b0}接触人情况，
+Dialogue: 0, 0:02:57.39, 0:02:59.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}安排月月递出消息，
+Dialogue: 0, 0:02:59.60, 0:03:02.36,Default,,0,0,0,,称如{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}驾崩便从云中起兵直逼
+Dialogue: 0, 0:03:02.36, 0:03:05.31,Default,,0,0,0,,长安并城内响应，还许诺与{\c&H0000FFFF&\b1}士大夫{\c&H00FFFFFF&\b0}共
+Dialogue: 0, 0:03:05.31, 0:03:06.04,Default,,0,0,0,,治{\c&H0000FFFF&\b1}天下{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:03:06.04, 0:03:07.89,Default,,0,0,0,,同时询问{\c&H0000FFFF&\b1}薛万彻{\c&H00FFFFFF&\b0}情况，
+Dialogue: 0, 0:03:07.89, 0:03:09.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}表示不了解。
+Dialogue: 0, 0:03:09.54, 0:03:11.84,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}内，时间凌晨，
+Dialogue: 0, 0:03:11.84, 0:03:12.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}昏暗。
+Dialogue: 0, 0:03:12.80, 0:03:15.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴王{\c&H00FFFFFF&\b0}李格在自家王府大厅中踱步，
+Dialogue: 0, 0:03:15.67, 0:03:17.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}癫狂，一脚踹翻桌案。
+Dialogue: 0, 0:03:17.97, 0:03:20.27,Default,,0,0,0,,称心出现，{\c&H0000FFFF&\b1}李格{\c&H00FFFFFF&\b0}决定行动，
+Dialogue: 0, 0:03:20.27, 0:03:22.76,Default,,0,0,0,,让{\c&H0000FFFF&\b1}称心{\c&H00FFFFFF&\b0}告知其手下做好准备。
+Dialogue: 0, 0:03:22.76, 0:03:25.14,Default,,0,0,0,,场景是汉{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}内，时间继续，
+Dialogue: 0, 0:03:25.14, 0:03:26.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}压抑。
+Dialogue: 0, 0:03:26.05, 0:03:28.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}李元昌{\c&H00FFFFFF&\b0}独坐卧房，摩挲竹简《汉书》
+Dialogue: 0, 0:03:28.98, 0:03:30.99,Default,,0,0,0,,，{\c&H0000FFFF&\b1}自语{\c&H00FFFFFF&\b0}关于皇位的想法。
+Dialogue: 0, 0:03:30.99, 0:03:33.91,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}长安城{\c&H00FFFFFF&\b0}肃杀，薛仁贵等在祠堂急
+Dialogue: 0, 0:03:33.91, 0:03:35.56,Default,,0,0,0,,切询问{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}决断，
+Dialogue: 0, 0:03:35.56, 0:03:38.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}犹豫，询问吴王府动静。
+Dialogue: 0, 0:03:38.12, 0:03:40.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是寺庙内，时间雨夜，
+Dialogue: 0, 0:03:40.37, 0:03:41.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}昏暗。
+Dialogue: 0, 0:03:41.31, 0:03:44.10,Default,,0,0,0,,月月汇报吴{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}被围无特殊动静，
+Dialogue: 0, 0:03:44.10, 0:03:46.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}叹气，指示继续监视，
+Dialogue: 0, 0:03:46.54, 0:03:48.22,Default,,0,0,0,,提及制作{\c&H0000FFFF&\b1}火药{\c&H00FFFFFF&\b0}之事。
+Dialogue: 0, 0:03:48.22, 0:03:50.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}怀疑李世民假死，
+Dialogue: 0, 0:03:50.28, 0:03:51.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}思考。
+Dialogue: 0, 0:03:51.40, 0:03:54.40,Default,,0,0,0,,窗外暴雨倾盆，寺庙内{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看着被
+Dialogue: 0, 0:03:54.40, 0:03:56.82,Default,,0,0,0,,捆的李治和{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}，二人挣扎，
+Dialogue: 0, 0:03:56.82, 0:03:58.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}摘布与他们对话。
+Dialogue: 0, 0:03:58.88, 0:04:01.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是寺庙内，时间深夜，
+Dialogue: 0, 0:04:01.18, 0:04:02.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}紧张。
+Dialogue: 0, 0:04:02.14, 0:04:04.26,Default,,0,0,0,,月月急报{\c&H0000FFFF&\b1}吴王{\c&H00FFFFFF&\b0}李恪不见，
+Dialogue: 0, 0:04:04.26, 0:04:06.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}金吾卫{\c&H00FFFFFF&\b0}正在全城搜捕，
+Dialogue: 0, 0:04:06.18, 0:04:09.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}下令安排，众人准备行动。
+Dialogue: 0, 0:04:09.06, 0:04:11.50,Default,,0,0,0,,场景是城外雨夜，时间{\c&H0000FFFF&\b1}黎明{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:04:11.50, 0:04:12.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}渐亮。
+Dialogue: 0, 0:04:12.44, 0:04:15.09,Default,,0,0,0,,黑衣人报{\c&H0000FFFF&\b1}玄武门{\c&H00FFFFFF&\b0}已被李恪攻破，
+Dialogue: 0, 0:04:15.09, 0:04:17.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}下令以爆炸声为号，
+Dialogue: 0, 0:04:17.33, 0:04:18.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}准备行动。
+Dialogue: 0, 0:04:18.65, 0:04:20.73,Default,,0,0,0,,重玄门方向传来{\c&H0000FFFF&\b1}爆炸声{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:04:20.73, 0:04:23.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率众入城，大喊要肃清朝纲。

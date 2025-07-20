@@ -1,0 +1,89 @@
+[Script Info]
+Title: chapter_044 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:02.43,Default,,0,0,0,,洛阳宫中，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}面带笑意，
+Dialogue: 0, 0:00:02.43, 0:00:03.75,Default,,0,0,0,,正与{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}交谈。
+Dialogue: 0, 0:00:03.75, 0:00:06.58,Default,,0,0,0,,王逸表示愿为{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}游说河北门阀
+Dialogue: 0, 0:00:06.58, 0:00:07.70,Default,,0,0,0,,，{\c&H0000FFFF&\b1}全力支持{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:07.70, 0:00:10.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则承诺会为王家报仇，
+Dialogue: 0, 0:00:10.15, 0:00:13.15,Default,,0,0,0,,并{\c&H0000FFFF&\b1}封王逸{\c&H00FFFFFF&\b0}为特进、任正二品门下省事
+Dialogue: 0, 0:00:13.15, 0:00:15.22,Default,,0,0,0,,。场景是{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}行宫室内，
+Dialogue: 0, 0:00:15.22, 0:00:17.85,Default,,0,0,0,,光线明亮，{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}穿着正式官服，
+Dialogue: 0, 0:00:17.85, 0:00:18.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}诚恳。
+Dialogue: 0, 0:00:18.78, 0:00:21.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在洛阳行宫独坐沉思，
+Dialogue: 0, 0:00:21.23, 0:00:23.85,Default,,0,0,0,,心中思索着人口和{\c&H0000FFFF&\b1}钱财{\c&H00FFFFFF&\b0}的问题，
+Dialogue: 0, 0:00:23.85, 0:00:26.67,Default,,0,0,0,,意识到要兑现人口需要前往{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:26.67, 0:00:29.29,Default,,0,0,0,,但{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}在太原，且还有社尔、
+Dialogue: 0, 0:00:29.29, 0:00:31.36,Default,,0,0,0,,契苾何力等{\c&H0000FFFF&\b1}问题{\c&H00FFFFFF&\b0}待解决。
+Dialogue: 0, 0:00:31.36, 0:00:33.25,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}行宫室内，
+Dialogue: 0, 0:00:33.25, 0:00:34.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情凝重。
+Dialogue: 0, 0:00:34.75, 0:00:36.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}洛阳城{\c&H00FFFFFF&\b0}恢复往日繁华，
+Dialogue: 0, 0:00:36.61, 0:00:39.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}带人在洛阳行宫制作火药，
+Dialogue: 0, 0:00:39.42, 0:00:41.29,Default,,0,0,0,,北向辉和{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}协助。
+Dialogue: 0, 0:00:41.29, 0:00:44.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}手持硝石，好奇地询问火药的
+Dialogue: 0, 0:00:44.28, 0:00:46.73,Default,,0,0,0,,威力。场景是{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}行宫室内，
+Dialogue: 0, 0:00:46.73, 0:00:47.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}充足。
+Dialogue: 0, 0:00:47.65, 0:00:50.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}向裴行俭解释火药的强大威
+Dialogue: 0, 0:00:50.35, 0:00:53.22,Default,,0,0,0,,力，只要足够多，能炸出{\c&H0000FFFF&\b1}城墙{\c&H00FFFFFF&\b0}窟窿。
+Dialogue: 0, 0:00:53.22, 0:00:55.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}听后提出用火药设环形壕沟
+Dialogue: 0, 0:00:55.92, 0:00:58.79,Default,,0,0,0,,伏击敌军的想法，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}对此表示赞
+Dialogue: 0, 0:00:58.79, 0:01:00.95,Default,,0,0,0,,赏。场景是{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}行宫室内，
+Dialogue: 0, 0:01:00.95, 0:01:03.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}和裴行俭互动积极。
+Dialogue: 0, 0:01:03.11, 0:01:05.85,Default,,0,0,0,,北向辉称{\c&H0000FFFF&\b1}草木灰{\c&H00FFFFFF&\b0}快没了要去弄，
+Dialogue: 0, 0:01:05.85, 0:01:09.00,Default,,0,0,0,,此时信鸽到来，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}和裴行俭走向
+Dialogue: 0, 0:01:09.00, 0:01:10.56,Default,,0,0,0,,信{\c&H0000FFFF&\b1}鸽笼{\c&H00FFFFFF&\b0}查看信件。
+Dialogue: 0, 0:01:10.56, 0:01:12.71,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}行宫房间外，
+Dialogue: 0, 0:01:12.71, 0:01:13.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气{\c&H00FFFFFF&\b0}阴沉。
+Dialogue: 0, 0:01:13.70, 0:01:16.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}和裴行俭在洛阳行宫房间内
+Dialogue: 0, 0:01:16.43, 0:01:18.27,Default,,0,0,0,,看信，{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}先是凝重，
+Dialogue: 0, 0:01:18.27, 0:01:21.18,Default,,0,0,0,,后又有些{\c&H0000FFFF&\b1}玩味{\c&H00FFFFFF&\b0}，两人开始讨论局势。
+Dialogue: 0, 0:01:21.18, 0:01:23.20,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}行宫房间内，
+Dialogue: 0, 0:01:23.20, 0:01:24.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}较暗。
+Dialogue: 0, 0:01:24.12, 0:01:26.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}考虑进军方向，
+Dialogue: 0, 0:01:26.03, 0:01:28.32,Default,,0,0,0,,是直下关中还是拿下{\c&H0000FFFF&\b1}河东{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:28.32, 0:01:30.80,Default,,0,0,0,,与{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}在军营内踱步讨论。
+Dialogue: 0, 0:01:30.80, 0:01:33.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是军营内，光线明亮。
+Dialogue: 0, 0:01:33.10, 0:01:35.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}决定让薛将军佯动武牢关，
+Dialogue: 0, 0:01:35.88, 0:01:37.54,Default,,0,0,0,,自己率军前往{\c&H0000FFFF&\b1}河东{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:37.54, 0:01:39.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}表示有渡河的良策。
+Dialogue: 0, 0:01:39.76, 0:01:42.54,Default,,0,0,0,,场景是军营内，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}下达命令，
+Dialogue: 0, 0:01:42.54, 0:01:44.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}表情自信。
+Dialogue: 0, 0:01:44.02, 0:01:47.32,Default,,0,0,0,,清晨，军营内，军医检查{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的伤势
+Dialogue: 0, 0:01:47.32, 0:01:49.66,Default,,0,0,0,,，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}安排北向辉守城，
+Dialogue: 0, 0:01:49.66, 0:01:51.41,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}不情愿。
+Dialogue: 0, 0:01:51.41, 0:01:53.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是军营内，光线明亮。
+Dialogue: 0, 0:01:53.74, 0:01:56.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率军出发，金吾卫整齐列队，
+Dialogue: 0, 0:01:56.98, 0:01:59.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}骑马豪情吟诗，
+Dialogue: 0, 0:01:59.01, 0:02:00.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}在旁赞赏。
+Dialogue: 0, 0:02:00.63, 0:02:03.27,Default,,0,0,0,,场景是行军路上，{\c&H0000FFFF&\b1}阳光明媚{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:03.27, 0:02:06.69,Default,,0,0,0,,行军途中遇大雨，{\c&H0000FFFF&\b1}孟津渡{\c&H00FFFFFF&\b0}前浪涛汹涌
+Dialogue: 0, 0:02:06.69, 0:02:09.90,Default,,0,0,0,,，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}观河，裴行俭担忧渡河。
+Dialogue: 0, 0:02:09.90, 0:02:12.68,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}孟津渡{\c&H00FFFFFF&\b0}前，大雨磅礴。
+Dialogue: 0, 0:02:12.68, 0:02:15.43,Default,,0,0,0,,雨势渐小，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}等准备渡河，
+Dialogue: 0, 0:02:15.43, 0:02:18.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}展示模仿李世民笔迹的信，
+Dialogue: 0, 0:02:18.39, 0:02:19.77,Default,,0,0,0,,率军接近{\c&H0000FFFF&\b1}渡口{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:19.77, 0:02:22.14,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}孟津渡{\c&H00FFFFFF&\b0}前，雨渐停。
+Dialogue: 0, 0:02:22.14, 0:02:24.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}与守军将领刘伯英会面，
+Dialogue: 0, 0:02:24.98, 0:02:27.00,Default,,0,0,0,,忽悠其迎接大军{\c&H0000FFFF&\b1}渡河{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:02:27.00, 0:02:28.83,Default,,0,0,0,,大军在{\c&H0000FFFF&\b1}渡桥{\c&H00FFFFFF&\b0}上渡河，
+Dialogue: 0, 0:02:28.83, 0:02:29.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}浪涛{\c&H00FFFFFF&\b0}汹涌。
+Dialogue: 0, 0:02:29.84, 0:02:31.26,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}渡桥{\c&H00FFFFFF&\b0}上。
+Dialogue: 0, 0:02:31.26, 0:02:33.30,Default,,0,0,0,,大军{\c&H0000FFFF&\b1}渡河{\c&H00FFFFFF&\b0}后进入水寨，
+Dialogue: 0, 0:02:33.30, 0:02:35.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}观察水寨，计划夺寨，
+Dialogue: 0, 0:02:35.95, 0:02:38.80,Default,,0,0,0,,与{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}在房间内密谈烧粮仓。
+Dialogue: 0, 0:02:38.80, 0:02:40.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是水寨内，夜晚。
+Dialogue: 0, 0:02:40.84, 0:02:42.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率军烧粮仓，
+Dialogue: 0, 0:02:42.67, 0:02:44.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}大火{\c&H00FFFFFF&\b0}燃起，后率军撤退，
+Dialogue: 0, 0:02:44.91, 0:02:48.17,Default,,0,0,0,,途中抓到{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}，了解情况后一同前往
+Dialogue: 0, 0:02:48.17, 0:02:51.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}。场景是行军路上，夜晚。

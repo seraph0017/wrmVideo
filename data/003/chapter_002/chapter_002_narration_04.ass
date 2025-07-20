@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_002 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}被人从后面拍肩，
+Dialogue: 0,0:00:02.07,0:00:05.07,Default,,0,0,0,,回头见是{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}，周围众臣纷纷侧目
+Dialogue: 0,0:00:05.07,0:00:07.52,Default,,0,0,0,,。场景是{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫，环境庄重，
+Dialogue: 0,0:00:07.52,0:00:08.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}为白天。
+Dialogue: 0,0:00:08.65,0:00:11.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}身形高大，肩宽背阔，
+Dialogue: 0,0:00:11.09,0:00:13.34,Default,,0,0,0,,面带{\c&H0000FFFF&\b1}笑意{\c&H00FFFFFF&\b0}，身着得体服饰。

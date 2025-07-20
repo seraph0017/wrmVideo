@@ -1,0 +1,121 @@
+[Script Info]
+Title: chapter_030 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:01.91,Default,,0,0,0,,烈日{\c&H0000FFFF&\b1}高悬{\c&H00FFFFFF&\b0}的大漠战场，
+Dialogue: 0, 0:00:01.91, 0:00:04.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}面露冷冽的笑容，
+Dialogue: 0, 0:00:04.00, 0:00:05.71,Default,,0,0,0,,他{\c&H0000FFFF&\b1}臂膀{\c&H00FFFFFF&\b0}大幅度伸展，
+Dialogue: 0, 0:00:05.71, 0:00:08.00,Default,,0,0,0,,身形{\c&H0000FFFF&\b1}矫健{\c&H00FFFFFF&\b0}，弯弓如满月般，
+Dialogue: 0, 0:00:08.00, 0:00:11.05,Default,,0,0,0,,瞬间三箭{\c&H0000FFFF&\b1}齐发{\c&H00FFFFFF&\b0}，箭矢分别朝着北向辉
+Dialogue: 0, 0:00:11.05, 0:00:14.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}胯下{\c&H00FFFFFF&\b0}的战马、胸前以及头颅方向射去
+Dialogue: 0, 0:00:14.09, 0:00:16.01,Default,,0,0,0,,。北向辉虽早有{\c&H0000FFFF&\b1}防备{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:16.01, 0:00:18.10,Default,,0,0,0,,但面对如此迅猛的{\c&H0000FFFF&\b1}箭势{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:18.10, 0:00:20.76,Default,,0,0,0,,心中大惊，手中{\c&H0000FFFF&\b1}铁枪{\c&H00FFFFFF&\b0}迅速横扫，
+Dialogue: 0, 0:00:20.76, 0:00:22.48,Default,,0,0,0,,试图击飞这些{\c&H0000FFFF&\b1}箭矢{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:22.48, 0:00:24.54,Default,,0,0,0,,北向辉迅速地挽紧{\c&H0000FFFF&\b1}缰绳{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:24.54, 0:00:26.41,Default,,0,0,0,,竭尽全力控制住{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:26.41, 0:00:29.40,Default,,0,0,0,,与此同时，他手中的{\c&H0000FFFF&\b1}铁枪{\c&H00FFFFFF&\b0}不停挥舞，
+Dialogue: 0, 0:00:29.40, 0:00:31.83,Default,,0,0,0,,继续抵挡{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}射来的箭矢，
+Dialogue: 0, 0:00:31.83, 0:00:34.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}虎口{\c&H00FFFFFF&\b0}因为用力过大而隐隐发麻，
+Dialogue: 0, 0:00:34.46, 0:00:36.14,Default,,0,0,0,,手上已有半许{\c&H0000FFFF&\b1}血迹{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:36.14, 0:00:38.57,Default,,0,0,0,,这时，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}策马飞奔赶到，
+Dialogue: 0, 0:00:38.57, 0:00:40.45,Default,,0,0,0,,他的{\c&H0000FFFF&\b1}双眼{\c&H00FFFFFF&\b0}几乎要瞪裂，
+Dialogue: 0, 0:00:40.45, 0:00:41.56,Default,,0,0,0,,满脸的{\c&H0000FFFF&\b1}愤怒{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:41.56, 0:00:43.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}猛地拽出身后的长弓，
+Dialogue: 0, 0:00:43.90, 0:00:46.79,Default,,0,0,0,,迅速弯弓搭箭，口中暴吼着冲向{\c&H0000FFFF&\b1}李世{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:46.79, 0:00:48.77,Default,,0,0,0,,民，大声喊道：“{\c&H0000FFFF&\b1}老贼{\c&H00FFFFFF&\b0}！
+Dialogue: 0, 0:00:48.77, 0:00:50.03,Default,,0,0,0,,就你会{\c&H0000FFFF&\b1}射箭{\c&H00FFFFFF&\b0}吗？
+Dialogue: 0, 0:00:50.03, 0:00:51.66,Default,,0,0,0,,看朕{\c&H0000FFFF&\b1}神剑{\c&H00FFFFFF&\b0}取你狗命！
+Dialogue: 0, 0:00:51.66, 0:00:53.46,Default,,0,0,0,,”此时{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}厮杀正酣，
+Dialogue: 0, 0:00:53.46, 0:00:55.98,Default,,0,0,0,,到处都是{\c&H0000FFFF&\b1}震耳欲聋{\c&H00FFFFFF&\b0}的喊杀之声。
+Dialogue: 0, 0:00:55.98, 0:00:58.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}听到李承乾的喊声，
+Dialogue: 0, 0:00:58.16, 0:00:59.97,Default,,0,0,0,,眼中的{\c&H0000FFFF&\b1}杀意{\c&H00FFFFFF&\b0}陡然暴涨，
+Dialogue: 0, 0:00:59.97, 0:01:02.33,Default,,0,0,0,,他果断{\c&H0000FFFF&\b1}放弃{\c&H00FFFFFF&\b0}继续射杀北向辉，
+Dialogue: 0, 0:01:02.33, 0:01:05.23,Default,,0,0,0,,迅速调转马头，将目标对准了{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:05.23, 0:01:08.32,Default,,0,0,0,,。{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中大惊，在这电光火石之间
+Dialogue: 0, 0:01:08.32, 0:01:11.22,Default,,0,0,0,,，他急中生智，大声呼喊：“{\c&H0000FFFF&\b1}父皇{\c&H00FFFFFF&\b0}！
+Dialogue: 0, 0:01:11.22, 0:01:13.94,Default,,0,0,0,,儿是{\c&H0000FFFF&\b1}高明{\c&H00FFFFFF&\b0}啊，是您和母后的儿子，
+Dialogue: 0, 0:01:13.94, 0:01:15.40,Default,,0,0,0,,您{\c&H0000FFFF&\b1}真要{\c&H00FFFFFF&\b0}杀儿嘛！”
+Dialogue: 0, 0:01:15.40, 0:01:17.79,Default,,0,0,0,,趁着{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}momentaril
+Dialogue: 0, 0:01:17.79, 0:01:20.34,Default,,0,0,0,,y一愣神的间隙，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}右脚迅速抽
+Dialogue: 0, 0:01:20.34, 0:01:22.89,Default,,0,0,0,,离{\c&H0000FFFF&\b1}马镫{\c&H00FFFFFF&\b0}，整个人迅猛地翻身躲到马肚
+Dialogue: 0, 0:01:22.89, 0:01:23.53,Default,,0,0,0,,子{\c&H0000FFFF&\b1}后面{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:23.53, 0:01:26.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}紧接着{\c&H00FFFFFF&\b0}，一支箭“嗖”的一声擦着他
+Dialogue: 0, 0:01:26.07, 0:01:28.62,Default,,0,0,0,,的{\c&H0000FFFF&\b1}头皮{\c&H00FFFFFF&\b0}飞过去，这让他吓得三魂七魄
+Dialogue: 0, 0:01:28.62, 0:01:30.53,Default,,0,0,0,,仿佛都要{\c&H0000FFFF&\b1}散掉{\c&H00FFFFFF&\b0}，心有余悸。
+Dialogue: 0, 0:01:30.53, 0:01:32.75,Default,,0,0,0,,北向辉好不容易稳住{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}后，
+Dialogue: 0, 0:01:32.75, 0:01:34.97,Default,,0,0,0,,立刻有好几支{\c&H0000FFFF&\b1}铁槊{\c&H00FFFFFF&\b0}突刺而来，
+Dialogue: 0, 0:01:34.97, 0:01:37.70,Default,,0,0,0,,他迅速侧身一闪，{\c&H0000FFFF&\b1}右手{\c&H00FFFFFF&\b0}像铁钳一样紧
+Dialogue: 0, 0:01:37.70, 0:01:39.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}紧扣{\c&H00FFFFFF&\b0}住槊杆，猛地一拽，
+Dialogue: 0, 0:01:39.58, 0:01:42.14,Default,,0,0,0,,竟然把那亲兵连人带甲一起从{\c&H0000FFFF&\b1}马背{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:42.14, 0:01:44.02,Default,,0,0,0,,上提了{\c&H0000FFFF&\b1}起来{\c&H00FFFFFF&\b0}，夺过槊后，
+Dialogue: 0, 0:01:44.02, 0:01:46.92,Default,,0,0,0,,他纵身一跃，{\c&H0000FFFF&\b1}换乘{\c&H00FFFFFF&\b0}了落马士兵的战马。
+Dialogue: 0, 0:01:46.92, 0:01:49.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}铁了心要弄死李承乾，
+Dialogue: 0, 0:01:49.20, 0:01:51.83,Default,,0,0,0,,在{\c&H0000FFFF&\b1}乱军{\c&H00FFFFFF&\b0}之中策马快速寻找合适的角
+Dialogue: 0, 0:01:51.83, 0:01:54.64,Default,,0,0,0,,度。而{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}此时额头布满了细细的
+Dialogue: 0, 0:01:54.64, 0:01:57.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}汗珠{\c&H00FFFFFF&\b0}，并非是因为趴在马肚子上累的
+Dialogue: 0, 0:01:57.45, 0:01:59.38,Default,,0,0,0,,，主要是{\c&H0000FFFF&\b1}内心{\c&H00FFFFFF&\b0}极度恐惧。
+Dialogue: 0, 0:01:59.38, 0:02:01.66,Default,,0,0,0,,他身旁的{\c&H0000FFFF&\b1}亲兵{\c&H00FFFFFF&\b0}拼命护持着他。
+Dialogue: 0, 0:02:01.66, 0:02:04.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}暂时放弃了射杀李承乾，
+Dialogue: 0, 0:02:04.11, 0:02:06.22,Default,,0,0,0,,调转{\c&H0000FFFF&\b1}马头{\c&H00FFFFFF&\b0}径直冲向北向辉。
+Dialogue: 0, 0:02:06.22, 0:02:08.67,Default,,0,0,0,,北向辉很快注意到了这一{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:02:08.67, 0:02:11.48,Default,,0,0,0,,心中不由一喜，他{\c&H0000FFFF&\b1}明白{\c&H00FFFFFF&\b0}这样一来李承
+Dialogue: 0, 0:02:11.48, 0:02:12.53,Default,,0,0,0,,乾就{\c&H0000FFFF&\b1}安全{\c&H00FFFFFF&\b0}了。
+Dialogue: 0, 0:02:12.53, 0:02:14.11,Default,,0,0,0,,于是他也调转{\c&H0000FFFF&\b1}马头{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:02:14.11, 0:02:16.04,Default,,0,0,0,,大声吼叫着冲向{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:16.04, 0:02:17.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}再次弯弓搭箭，
+Dialogue: 0, 0:02:17.88, 0:02:19.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}弓弦{\c&H00FFFFFF&\b0}拉得如同满月一般，
+Dialogue: 0, 0:02:19.91, 0:02:22.85,Default,,0,0,0,,三箭连续射出，力道和速度比之前更
+Dialogue: 0, 0:02:22.85, 0:02:23.77,Default,,0,0,0,,强了{\c&H0000FFFF&\b1}几分{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:23.77, 0:02:26.53,Default,,0,0,0,,北向辉万万没有想到{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}刚才竟
+Dialogue: 0, 0:02:26.53, 0:02:28.93,Default,,0,0,0,,没使出{\c&H0000FFFF&\b1}全力{\c&H00FFFFFF&\b0}，心中满是吃惊，
+Dialogue: 0, 0:02:28.93, 0:02:31.69,Default,,0,0,0,,不禁{\c&H0000FFFF&\b1}感叹{\c&H00FFFFFF&\b0}自己断然是冲不过去了。
+Dialogue: 0, 0:02:31.69, 0:02:35.00,Default,,0,0,0,,这时，{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}大军的马蹄声渐渐临近。
+Dialogue: 0, 0:02:35.00, 0:02:37.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看到这一情形大喜过望，
+Dialogue: 0, 0:02:37.62, 0:02:40.42,Default,,0,0,0,,他{\c&H0000FFFF&\b1}觉得{\c&H00FFFFFF&\b0}援兵到了，于是振臂高呼，
+Dialogue: 0, 0:02:40.42, 0:02:42.67,Default,,0,0,0,,让{\c&H0000FFFF&\b1}众将士{\c&H00FFFFFF&\b0}随他一同杀上去，
+Dialogue: 0, 0:02:42.67, 0:02:45.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}众将士{\c&H00FFFFFF&\b0}受到鼓舞，更加勇猛，
+Dialogue: 0, 0:02:45.10, 0:02:47.53,Default,,0,0,0,,战场上传来更{\c&H0000FFFF&\b1}高昂{\c&H00FFFFFF&\b0}的杀喊声。
+Dialogue: 0, 0:02:47.53, 0:02:49.25,Default,,0,0,0,,北向辉用力{\c&H0000FFFF&\b1}强勒{\c&H00FFFFFF&\b0}缰绳，
+Dialogue: 0, 0:02:49.25, 0:02:51.15,Default,,0,0,0,,来了个镫里{\c&H0000FFFF&\b1}藏身{\c&H00FFFFFF&\b0}的动作，
+Dialogue: 0, 0:02:51.15, 0:02:53.03,Default,,0,0,0,,虽然有一箭命中了{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:02:53.03, 0:02:55.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}剧烈挣扎差点让他摔落马下，
+Dialogue: 0, 0:02:55.62, 0:02:57.34,Default,,0,0,0,,但他本人却{\c&H0000FFFF&\b1}安然无恙{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:57.34, 0:02:59.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}看到援兵若是李承乾的，
+Dialogue: 0, 0:02:59.75, 0:03:01.29,Default,,0,0,0,,心中顿生{\c&H0000FFFF&\b1}绝境{\c&H00FFFFFF&\b0}之感，
+Dialogue: 0, 0:03:01.29, 0:03:04.04,Default,,0,0,0,,大声呼喊让众将士斩杀逆贼{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:03:04.04, 0:03:06.23,Default,,0,0,0,,双方厮杀进入{\c&H0000FFFF&\b1}白热化{\c&H00FFFFFF&\b0}阶段，
+Dialogue: 0, 0:03:06.23, 0:03:09.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}烈日{\c&H00FFFFFF&\b0}灼烧着大漠，大地蒸腾得如同沸
+Dialogue: 0, 0:03:09.15, 0:03:09.88,Default,,0,0,0,,水{\c&H0000FFFF&\b1}一般{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:03:09.88, 0:03:12.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}的大军马上就要冲进战圈
+Dialogue: 0, 0:03:12.62, 0:03:15.72,Default,,0,0,0,,，此时，前方和侧方的{\c&H0000FFFF&\b1}地平线{\c&H00FFFFFF&\b0}上出现了
+Dialogue: 0, 0:03:15.72, 0:03:17.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}回鹘{\c&H00FFFFFF&\b0}大军的大纛旗。
+Dialogue: 0, 0:03:17.36, 0:03:19.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}看到那大纛旗，
+Dialogue: 0, 0:03:19.14, 0:03:22.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}仰天{\c&H00FFFFFF&\b0}发出狂笑，随后传令让尉迟将军
+Dialogue: 0, 0:03:22.00, 0:03:24.86,Default,,0,0,0,,前来汇合，他单独{\c&H0000FFFF&\b1}策马{\c&H00FFFFFF&\b0}来到军前站立
+Dialogue: 0, 0:03:24.86, 0:03:27.71,Default,,0,0,0,,。{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率领军队疾驰了一段距离后
+Dialogue: 0, 0:03:27.71, 0:03:29.14,Default,,0,0,0,,，下令{\c&H0000FFFF&\b1}原地{\c&H00FFFFFF&\b0}备战。
+Dialogue: 0, 0:03:29.14, 0:03:31.64,Default,,0,0,0,,北向辉冲{\c&H0000FFFF&\b1}回来{\c&H00FFFFFF&\b0}询问下一步行动，
+Dialogue: 0, 0:03:31.64, 0:03:34.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}冷静地表示先看看情况再说。
+Dialogue: 0, 0:03:34.50, 0:03:37.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}朗声喝道让吐迷度出来见他
+Dialogue: 0, 0:03:37.09, 0:03:39.32,Default,,0,0,0,,，{\c&H0000FFFF&\b1}回鹘{\c&H00FFFFFF&\b0}大军听到后勒马停下，
+Dialogue: 0, 0:03:39.32, 0:03:41.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}脸上露出惊疑不定的神色。
+Dialogue: 0, 0:03:41.72, 0:03:43.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}脑中突然灵光一闪，
+Dialogue: 0, 0:03:43.79, 0:03:45.68,Default,,0,0,0,,他摸出怀中的传国{\c&H0000FFFF&\b1}玉玺{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:03:45.68, 0:03:47.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}示意{\c&H00FFFFFF&\b0}北向辉保护自己，
+Dialogue: 0, 0:03:47.40, 0:03:48.95,Default,,0,0,0,,然后{\c&H0000FFFF&\b1}策马{\c&H00FFFFFF&\b0}出了军阵。
+Dialogue: 0, 0:03:48.95, 0:03:51.58,Default,,0,0,0,,北向辉率领最精锐的亲{\c&H0000FFFF&\b1}卫护{\c&H00FFFFFF&\b0}住李承
+Dialogue: 0, 0:03:51.58, 0:03:54.39,Default,,0,0,0,,乾，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}指着李世民严厉地说他造
+Dialogue: 0, 0:03:54.39, 0:03:57.19,Default,,0,0,0,,反谋逆，然后掏出传国{\c&H0000FFFF&\b1}玉玺{\c&H00FFFFFF&\b0}让回鹘大
+Dialogue: 0, 0:03:57.19, 0:04:00.00,Default,,0,0,0,,军看，这时{\c&H0000FFFF&\b1}回鹘{\c&H00FFFFFF&\b0}大军中一匹马飞奔而
+Dialogue: 0, 0:04:00.00, 0:04:02.63,Default,,0,0,0,,出，马上是一位面露杀意的{\c&H0000FFFF&\b1}女子{\c&H00FFFFFF&\b0}。

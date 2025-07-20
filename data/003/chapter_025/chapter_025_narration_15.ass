@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_025 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}拿出纸让李孝恭和李靖画押
+Dialogue: 0,0:00:02.81,0:00:06.00,Default,,0,0,0,,，二人拒绝，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}说派人围了府邸，
+Dialogue: 0,0:00:06.00,0:00:07.50,Default,,0,0,0,,给一天{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}考虑。
+Dialogue: 0,0:00:07.50,0:00:10.50,Default,,0,0,0,,之后城头射来信，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}知道李世民
+Dialogue: 0,0:00:10.50,0:00:11.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}答应{\c&H00FFFFFF&\b0}了。
+Dialogue: 0,0:00:11.25,0:00:14.25,Default,,0,0,0,,河间郡王府中，{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}和李靖讨论后
+Dialogue: 0,0:00:14.25,0:00:16.50,Default,,0,0,0,,决定签字，河间{\c&H0000FFFF&\b1}郡王府{\c&H00FFFFFF&\b0}内，
+Dialogue: 0,0:00:16.50,0:00:20.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}展示纸张，李孝恭和李靖神色决绝。

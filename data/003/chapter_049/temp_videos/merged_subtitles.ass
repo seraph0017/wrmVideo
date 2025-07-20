@@ -1,0 +1,100 @@
+[Script Info]
+Title: chapter_049 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:02.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与杨师道在洛阳城中对峙，
+Dialogue: 0, 0:00:02.85, 0:00:05.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}扶着雪白胡须轻笑，
+Dialogue: 0, 0:00:05.12, 0:00:07.79,Default,,0,0,0,,称赋闲在家迷路才偶遇{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:07.79, 0:00:10.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}眼中露出不善之色，
+Dialogue: 0, 0:00:10.06, 0:00:12.91,Default,,0,0,0,,犀利地质问{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}买下前朝窑厂的
+Dialogue: 0, 0:00:12.91, 0:00:15.00,Default,,0,0,0,,意图。场景为{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}街头，
+Dialogue: 0, 0:00:15.00, 0:00:17.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}略显市井，光线普通。
+Dialogue: 0, 0:00:17.28, 0:00:19.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}面对李承乾的质问，
+Dialogue: 0, 0:00:19.38, 0:00:22.19,Default,,0,0,0,,面带无所谓，眯眼直视{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}几秒后
+Dialogue: 0, 0:00:22.19, 0:00:23.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}称要{\c&H00FFFFFF&\b0}告退。
+Dialogue: 0, 0:00:23.07, 0:00:25.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}被气得觉得杨师道像在窑子
+Dialogue: 0, 0:00:25.69, 0:00:26.92,Default,,0,0,0,,随意{\c&H0000FFFF&\b1}溜达{\c&H00FFFFFF&\b0}就走。
+Dialogue: 0, 0:00:26.92, 0:00:28.50,Default,,0,0,0,,场景仍在{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}街头，
+Dialogue: 0, 0:00:28.50, 0:00:29.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}如常。
+Dialogue: 0, 0:00:29.38, 0:00:32.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}声音变冷，眼中闪过杀意，
+Dialogue: 0, 0:00:32.12, 0:00:34.85,Default,,0,0,0,,质问{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}不留下点什么就要走。
+Dialogue: 0, 0:00:34.85, 0:00:37.23,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}横刀{\c&H00FFFFFF&\b0}一挥，杀气凛然，
+Dialogue: 0, 0:00:37.23, 0:00:39.24,Default,,0,0,0,,命令士兵将{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}围起，
+Dialogue: 0, 0:00:39.24, 0:00:40.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}刀锋{\c&H00FFFFFF&\b0}直劈而下。
+Dialogue: 0, 0:00:40.52, 0:00:42.89,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}街头，光线紧张。
+Dialogue: 0, 0:00:42.89, 0:00:44.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}被士兵围起，
+Dialogue: 0, 0:00:44.54, 0:00:46.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}刀锋{\c&H00FFFFFF&\b0}快贴到身上时傻眼，
+Dialogue: 0, 0:00:46.57, 0:00:48.40,Default,,0,0,0,,满脸{\c&H0000FFFF&\b1}惊慌{\c&H00FFFFFF&\b0}且怒火中烧。
+Dialogue: 0, 0:00:48.40, 0:00:50.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}急忙大喝住手，
+Dialogue: 0, 0:00:50.25, 0:00:52.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}随后{\c&H00FFFFFF&\b0}走到北向辉身旁拍肩，
+Dialogue: 0, 0:00:52.46, 0:00:53.38,Default,,0,0,0,,称其{\c&H0000FFFF&\b1}冲动{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:53.38, 0:00:55.03,Default,,0,0,0,,场景仍在{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}街头，
+Dialogue: 0, 0:00:55.03, 0:00:56.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}有变化。
+Dialogue: 0, 0:00:56.14, 0:00:58.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}笑着对杨师道表示是误会，
+Dialogue: 0, 0:00:58.79, 0:01:01.46,Default,,0,0,0,,语气{\c&H0000FFFF&\b1}压迫感{\c&H00FFFFFF&\b0}十足地说上了台子不下
+Dialogue: 0, 0:01:01.46, 0:01:02.70,Default,,0,0,0,,注容易{\c&H0000FFFF&\b1}得罪人{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:02.70, 0:01:04.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}明白不能善了，
+Dialogue: 0, 0:01:04.48, 0:01:06.96,Default,,0,0,0,,咬牙表示要送修善坊给{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:06.96, 0:01:09.26,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}街头，光线普通。
+Dialogue: 0, 0:01:09.26, 0:01:11.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}见李承乾不说话，
+Dialogue: 0, 0:01:11.29, 0:01:12.95,Default,,0,0,0,,又说要送家中{\c&H0000FFFF&\b1}存粮{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:12.95, 0:01:14.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}不屑。
+Dialogue: 0, 0:01:14.06, 0:01:16.82,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}询问杨家可堪大用的年
+Dialogue: 0, 0:01:16.82, 0:01:19.03,Default,,0,0,0,,轻后辈，{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}假意应允，
+Dialogue: 0, 0:01:19.03, 0:01:20.69,Default,,0,0,0,,北向辉提醒叫{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:20.69, 0:01:22.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}改口称陛下。
+Dialogue: 0, 0:01:22.34, 0:01:24.75,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}街头，光线如常。
+Dialogue: 0, 0:01:24.75, 0:01:27.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}满意一笑，让派个人通知裴将
+Dialogue: 0, 0:01:27.67, 0:01:29.50,Default,,0,0,0,,军安排人跟着{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:29.50, 0:01:31.15,Default,,0,0,0,,然后让{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}离开。
+Dialogue: 0, 0:01:31.15, 0:01:33.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}离开后，李承乾心中大笑。
+Dialogue: 0, 0:01:33.89, 0:01:35.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}转到修善坊内，
+Dialogue: 0, 0:01:35.53, 0:01:37.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}青砖{\c&H00FFFFFF&\b0}斑驳，墙皮剥落，
+Dialogue: 0, 0:01:37.35, 0:01:39.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}杂草丛生{\c&H00FFFFFF&\b0}，仍有昔日繁华气象。
+Dialogue: 0, 0:01:39.92, 0:01:42.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}吩咐北向辉带人把窑口上面
+Dialogue: 0, 0:01:42.75, 0:01:45.01,Default,,0,0,0,,破开三个{\c&H0000FFFF&\b1}手指{\c&H00FFFFFF&\b0}粗细的洞口，
+Dialogue: 0, 0:01:45.01, 0:01:46.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}开始行动。
+Dialogue: 0, 0:01:46.34, 0:01:48.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}为修善坊内，光线普通。
+Dialogue: 0, 0:01:48.79, 0:01:50.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回忆前世经历，
+Dialogue: 0, 0:01:50.64, 0:01:53.42,Default,,0,0,0,,想到要建设修善坊需要{\c&H0000FFFF&\b1}海量{\c&H00FFFFFF&\b0}人手，
+Dialogue: 0, 0:01:53.42, 0:01:55.07,Default,,0,0,0,,打算去买纯粹{\c&H0000FFFF&\b1}奴隶{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:55.07, 0:01:57.47,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}洛阳城{\c&H00FFFFFF&\b0}中，朝阳初升，
+Dialogue: 0, 0:01:57.47, 0:01:58.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}晨雾{\c&H00FFFFFF&\b0}未散。
+Dialogue: 0, 0:01:58.39, 0:02:00.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}乔装打扮，带着裴行俭、
+Dialogue: 0, 0:02:00.94, 0:02:02.75,Default,,0,0,0,,北向辉在{\c&H0000FFFF&\b1}大街{\c&H00FFFFFF&\b0}上溜达，
+Dialogue: 0, 0:02:02.75, 0:02:05.48,Default,,0,0,0,,提到答应送{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}奴婢等还没兑现
+Dialogue: 0, 0:02:05.48, 0:02:08.03,Default,,0,0,0,,。场景为{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}街头，晨雾未散，
+Dialogue: 0, 0:02:08.03, 0:02:09.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}坊市{\c&H00FFFFFF&\b0}渐热闹。
+Dialogue: 0, 0:02:09.12, 0:02:12.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示要去通利坊一带买奴隶
+Dialogue: 0, 0:02:12.04, 0:02:14.56,Default,,0,0,0,,，北向辉吃着{\c&H0000FFFF&\b1}胡饼{\c&H00FFFFFF&\b0}询问方向。
+Dialogue: 0, 0:02:14.56, 0:02:17.09,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}街头，光线普通。
+Dialogue: 0, 0:02:17.09, 0:02:19.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}让刘伯英率五千兵马留守太
+Dialogue: 0, 0:02:19.90, 0:02:22.34,Default,,0,0,0,,原，自己{\c&H0000FFFF&\b1}轻骑{\c&H00FFFFFF&\b0}绕路返回关中，
+Dialogue: 0, 0:02:22.34, 0:02:24.96,Default,,0,0,0,,长安城外李贞等待{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}返回，
+Dialogue: 0, 0:02:24.96, 0:02:26.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}面色{\c&H00FFFFFF&\b0}沉静有心事。
+Dialogue: 0, 0:02:26.44, 0:02:28.87,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}城外，光线普通。
+Dialogue: 0, 0:02:28.87, 0:02:31.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}返回，众人恭迎，
+Dialogue: 0, 0:02:31.00, 0:02:33.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}让房玄龄派人叫李淳风、
+Dialogue: 0, 0:02:33.68, 0:02:36.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}袁天罡{\c&H00FFFFFF&\b0}到宫中问火药研制情况。
+Dialogue: 0, 0:02:36.38, 0:02:38.31,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}大明宫{\c&H00FFFFFF&\b0}宣政殿，
+Dialogue: 0, 0:02:38.31, 0:02:39.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}庄重。
+Dialogue: 0, 0:02:39.26, 0:02:41.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}袁天罡{\c&H00FFFFFF&\b0}、李淳风在宣政殿，
+Dialogue: 0, 0:02:41.62, 0:02:44.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}袁天罡{\c&H00FFFFFF&\b0}称研制出火药但威力与描述
+Dialogue: 0, 0:02:44.56, 0:02:47.12,Default,,0,0,0,,有差，{\c&H0000FFFF&\b1}李淳风{\c&H00FFFFFF&\b0}提议校场一试。
+Dialogue: 0, 0:02:47.12, 0:02:48.89,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}大明宫{\c&H00FFFFFF&\b0}校场，
+Dialogue: 0, 0:02:48.89, 0:02:49.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}普通。
+Dialogue: 0, 0:02:49.87, 0:02:51.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}李淳风{\c&H00FFFFFF&\b0}点燃火药罐，
+Dialogue: 0, 0:02:51.71, 0:02:54.35,Default,,0,0,0,,罐子炸开，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}面露狂喜，
+Dialogue: 0, 0:02:54.35, 0:02:56.19,Default,,0,0,0,,询问火药{\c&H0000FFFF&\b1}制作方法{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:56.19, 0:02:58.03,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}大明宫{\c&H00FFFFFF&\b0}校场，
+Dialogue: 0, 0:02:58.03, 0:02:59.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}普通。

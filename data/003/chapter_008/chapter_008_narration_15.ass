@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_008 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}走出土坑群，
+Dialogue: 0,0:00:01.68,0:00:03.35,Default,,0,0,0,,看到晾晒好的{\c&H0000FFFF&\b1}纸张{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:03.35,0:00:04.84,Default,,0,0,0,,露出满意的{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:04.84,0:00:07.08,Default,,0,0,0,,这时{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}三人疾步走来，
+Dialogue: 0,0:00:07.08,0:00:09.87,Default,,0,0,0,,告知{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}陛下恢复其太子之位的
+Dialogue: 0,0:00:09.87,0:00:12.48,Default,,0,0,0,,消息，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}露出惊讶的神情。

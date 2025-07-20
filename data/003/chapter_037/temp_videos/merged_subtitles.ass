@@ -1,0 +1,68 @@
+[Script Info]
+Title: chapter_037 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:02.00,Default,,0,0,0,,殿内，{\c&H0000FFFF&\b1}唐俭{\c&H00FFFFFF&\b0}后槽牙紧咬，
+Dialogue: 0, 0:00:02.00, 0:00:04.20,Default,,0,0,0,,殿中传出咯吱咯吱的{\c&H0000FFFF&\b1}声响{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:04.20, 0:00:06.96,Default,,0,0,0,,他内心纠结是否答应{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}的要求
+Dialogue: 0, 0:00:06.96, 0:00:09.51,Default,,0,0,0,,，同时目光直勾勾地盯着{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:09.51, 0:00:10.43,Default,,0,0,0,,满脸{\c&H0000FFFF&\b1}怒火{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:10.43, 0:00:12.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}见唐俭松口，
+Dialogue: 0, 0:00:12.24, 0:00:14.25,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}大喜{\c&H00FFFFFF&\b0}，面露笑意，
+Dialogue: 0, 0:00:14.25, 0:00:16.25,Default,,0,0,0,,准备倾听{\c&H0000FFFF&\b1}唐俭{\c&H00FFFFFF&\b0}的要求。
+Dialogue: 0, 0:00:16.25, 0:00:18.42,Default,,0,0,0,,唐俭向{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}提出要求，
+Dialogue: 0, 0:00:18.42, 0:00:21.41,Default,,0,0,0,,希望{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}前往自己子侄的坟前祭拜
+Dialogue: 0, 0:00:21.41, 0:00:22.99,Default,,0,0,0,,，眼中仍有{\c&H0000FFFF&\b1}怒火{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:22.99, 0:00:25.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}果断点头，答应唐俭的要求，
+Dialogue: 0, 0:00:25.89, 0:00:26.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}神色{\c&H00FFFFFF&\b0}坚定。
+Dialogue: 0, 0:00:26.85, 0:00:29.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率军接近蔚州地界，
+Dialogue: 0, 0:00:29.23, 0:00:32.21,Default,,0,0,0,,他一{\c&H0000FFFF&\b1}手握着{\c&H00FFFFFF&\b0}缰绳，一手啃着肉干，
+Dialogue: 0, 0:00:32.21, 0:00:34.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}大脑{\c&H00FFFFFF&\b0}飞速思考当前局势，
+Dialogue: 0, 0:00:34.39, 0:00:36.18,Default,,0,0,0,,周围是{\c&H0000FFFF&\b1}行军{\c&H00FFFFFF&\b0}的场景。
+Dialogue: 0, 0:00:36.18, 0:00:39.50,Default,,0,0,0,,北向辉策马返回，向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}汇报情况
+Dialogue: 0, 0:00:39.50, 0:00:42.59,Default,,0,0,0,,，称{\c&H0000FFFF&\b1}蔚州{\c&H00FFFFFF&\b0}外四五里全是敌军哨骑，
+Dialogue: 0, 0:00:42.59, 0:00:44.87,Default,,0,0,0,,因怕惊动{\c&H0000FFFF&\b1}敌军{\c&H00FFFFFF&\b0}未敢靠近。
+Dialogue: 0, 0:00:44.87, 0:00:47.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}询问距离蔚州的大约距离以
+Dialogue: 0, 0:00:47.55, 0:00:50.06,Default,,0,0,0,,及附近是否有适合{\c&H0000FFFF&\b1}伏兵{\c&H00FFFFFF&\b0}的地方，
+Dialogue: 0, 0:00:50.06, 0:00:52.02,Default,,0,0,0,,北向辉略作{\c&H0000FFFF&\b1}思索{\c&H00FFFFFF&\b0}后回答。
+Dialogue: 0, 0:00:52.02, 0:00:54.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}下令全军原地待命，
+Dialogue: 0, 0:00:54.43, 0:00:57.64,Default,,0,0,0,,安排北向{\c&H0000FFFF&\b1}辉统军{\c&H00FFFFFF&\b0}，无命令不许妄动，
+Dialogue: 0, 0:00:57.64, 0:01:00.85,Default,,0,0,0,,否则军法从事，自己则去查看{\c&H0000FFFF&\b1}地形{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:00.85, 0:01:03.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}找到适合伏兵的山坡后返回
+Dialogue: 0, 0:01:03.84, 0:01:06.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}军营{\c&H00FFFFFF&\b0}，安排北向辉率军前往隐藏，
+Dialogue: 0, 0:01:06.83, 0:01:08.03,Default,,0,0,0,,自己去{\c&H0000FFFF&\b1}诱敌{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:08.03, 0:01:11.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}带领亲兵和一百多精锐向蔚
+Dialogue: 0, 0:01:11.00, 0:01:14.17,Default,,0,0,0,,州方向奔驰，途中遇到{\c&H0000FFFF&\b1}高句丽{\c&H00FFFFFF&\b0}哨骑，
+Dialogue: 0, 0:01:14.17, 0:01:16.55,Default,,0,0,0,,他暴喝诱敌，让{\c&H0000FFFF&\b1}敌军{\c&H00FFFFFF&\b0}追击。
+Dialogue: 0, 0:01:16.55, 0:01:18.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}敌军{\c&H00FFFFFF&\b0}中一单骑冲出，
+Dialogue: 0, 0:01:18.33, 0:01:21.29,Default,,0,0,0,,声言{\c&H0000FFFF&\b1}高句丽{\c&H00FFFFFF&\b0}大莫离支渊盖苏文邀请
+Dialogue: 0, 0:01:21.29, 0:01:24.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}一叙，李承乾脸色骤变。
+Dialogue: 0, 0:01:24.06, 0:01:26.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率军到达伏兵之地，
+Dialogue: 0, 0:01:26.48, 0:01:28.90,Default,,0,0,0,,北向辉及时率军{\c&H0000FFFF&\b1}冲出{\c&H00FFFFFF&\b0}会合，
+Dialogue: 0, 0:01:28.90, 0:01:31.72,Default,,0,0,0,,北向辉询问{\c&H0000FFFF&\b1}敌人{\c&H00FFFFFF&\b0}未追来的原因。
+Dialogue: 0, 0:01:31.72, 0:01:34.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}安排派人向敌军传话，
+Dialogue: 0, 0:01:34.10, 0:01:35.75,Default,,0,0,0,,让其马上{\c&H0000FFFF&\b1}停止{\c&H00FFFFFF&\b0}攻城，
+Dialogue: 0, 0:01:35.75, 0:01:37.95,Default,,0,0,0,,自己会在{\c&H0000FFFF&\b1}城西{\c&H00FFFFFF&\b0}十里处一叙，
+Dialogue: 0, 0:01:37.95, 0:01:40.70,Default,,0,0,0,,同时挑选十个武艺{\c&H0000FFFF&\b1}高超{\c&H00FFFFFF&\b0}的士兵随自
+Dialogue: 0, 0:01:40.70, 0:01:43.63,Default,,0,0,0,,己前往{\c&H0000FFFF&\b1}城西{\c&H00FFFFFF&\b0}十里，安排北向辉率大军
+Dialogue: 0, 0:01:43.63, 0:01:45.65,Default,,0,0,0,,在{\c&H0000FFFF&\b1}会面{\c&H00FFFFFF&\b0}地方五里外待命，
+Dialogue: 0, 0:01:45.65, 0:01:47.30,Default,,0,0,0,,以火药{\c&H0000FFFF&\b1}爆炸声{\c&H00FFFFFF&\b0}为号。
+Dialogue: 0, 0:01:47.30, 0:01:50.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}城西{\c&H00FFFFFF&\b0}十里外，渊盖苏文单骑而来，
+Dialogue: 0, 0:01:50.22, 0:01:52.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}身高{\c&H00FFFFFF&\b0}九尺，面如冠玉，
+Dialogue: 0, 0:01:52.17, 0:01:54.12,Default,,0,0,0,,美髯如戟，{\c&H0000FFFF&\b1}双目{\c&H00FFFFFF&\b0}似电，
+Dialogue: 0, 0:01:54.12, 0:01:57.24,Default,,0,0,0,,头顶金色头盔，身着{\c&H0000FFFF&\b1}明光{\c&H00FFFFFF&\b0}铠和金色锦
+Dialogue: 0, 0:01:57.24, 0:02:00.16,Default,,0,0,0,,袍，气势逼人，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}审视着他。
+Dialogue: 0, 0:02:00.16, 0:02:02.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与渊盖苏文对话，
+Dialogue: 0, 0:02:02.14, 0:02:04.84,Default,,0,0,0,,渊盖苏文提出结盟要求并让{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:04.84, 0:02:07.36,Default,,0,0,0,,写下割让幽州、{\c&H0000FFFF&\b1}河北{\c&H00FFFFFF&\b0}道的字据，
+Dialogue: 0, 0:02:07.36, 0:02:09.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}假意答应并准备写字据。

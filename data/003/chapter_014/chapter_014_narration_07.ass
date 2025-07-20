@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_014 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}听后叹了口气，
+Dialogue: 0,0:00:01.73,0:00:03.63,Default,,0,0,0,,悠悠道：“朕{\c&H0000FFFF&\b1}正值{\c&H00FFFFFF&\b0}壮年，
+Dialogue: 0,0:00:03.63,0:00:05.87,Default,,0,0,0,,这个问题就不{\c&H0000FFFF&\b1}劳孝恭{\c&H00FFFFFF&\b0}操心了。
+Dialogue: 0,0:00:05.87,0:00:07.94,Default,,0,0,0,,”说着起身自顾{\c&H0000FFFF&\b1}向前走{\c&H00FFFFFF&\b0}去：
+Dialogue: 0,0:00:07.94,0:00:10.19,Default,,0,0,0,,“朕明天要去大{\c&H0000FFFF&\b1}慈恩寺{\c&H00FFFFFF&\b0}上香，
+Dialogue: 0,0:00:10.19,0:00:11.74,Default,,0,0,0,,就不跟你多{\c&H0000FFFF&\b1}叙谈{\c&H00FFFFFF&\b0}了。
+Dialogue: 0,0:00:11.74,0:00:14.33,Default,,0,0,0,,对了，你过完中秋再去{\c&H0000FFFF&\b1}河北{\c&H00FFFFFF&\b0}道吧。
+Dialogue: 0,0:00:14.33,0:00:16.41,Default,,0,0,0,,”看着{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}离开的背影，
+Dialogue: 0,0:00:16.41,0:00:18.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}面色露出黯然之色。

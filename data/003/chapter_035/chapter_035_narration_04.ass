@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_035 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}的赤色大纛在万军之中如怒
+Dialogue: 0,0:00:02.85,0:00:05.51,Default,,0,0,0,,龙翻卷，他在{\c&H0000FFFF&\b1}乱军{\c&H00FFFFFF&\b0}之中怒吼道：
+Dialogue: 0,0:00:05.51,0:00:07.99,Default,,0,0,0,,“朕龙纛所向，即{\c&H0000FFFF&\b1}军锋{\c&H00FFFFFF&\b0}所指，
+Dialogue: 0,0:00:07.99,0:00:11.03,Default,,0,0,0,,杀！”，随即{\c&H0000FFFF&\b1}唐军{\c&H00FFFFFF&\b0}爆发出震天怒吼，
+Dialogue: 0,0:00:11.03,0:00:12.36,Default,,0,0,0,,冲杀{\c&H0000FFFF&\b1}速度{\c&H00FFFFFF&\b0}更快。
+Dialogue: 0,0:00:12.36,0:00:14.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是激烈的战场，
+Dialogue: 0,0:00:14.07,0:00:15.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}因战斗变得炽热，
+Dialogue: 0,0:00:15.97,0:00:18.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气{\c&H00FFFFFF&\b0}处于战斗中的高温状态。
+Dialogue: 0,0:00:18.44,0:00:20.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}身着带血战袍，
+Dialogue: 0,0:00:20.35,0:00:22.82,Default,,0,0,0,,束发{\c&H0000FFFF&\b1}黑色{\c&H00FFFFFF&\b0}，面容因怒吼涨红，
+Dialogue: 0,0:00:22.82,0:00:25.86,Default,,0,0,0,,赤色大纛醒目；{\c&H0000FFFF&\b1}唐军{\c&H00FFFFFF&\b0}将士们奋勇冲杀
+Dialogue: 0,0:00:25.86,0:00:27.00,Default,,0,0,0,,，{\c&H0000FFFF&\b1}气势如虹{\c&H00FFFFFF&\b0}。

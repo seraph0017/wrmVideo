@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_018 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.68,Default,,0,0,0,,伴随剧烈破{\c&H0000FFFF&\b1}空之声{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:01.68,0:00:04.47,Default,,0,0,0,,一支{\c&H0000FFFF&\b1}箭矢{\c&H00FFFFFF&\b0}精准无误地射中守将的面
+Dialogue: 0,0:00:04.47,0:00:06.15,Default,,0,0,0,,门，{\c&H0000FFFF&\b1}没入{\c&H00FFFFFF&\b0}两寸左右。
+Dialogue: 0,0:00:06.15,0:00:07.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}目睹这一幕，
+Dialogue: 0,0:00:07.82,0:00:10.43,Default,,0,0,0,,心中不禁感叹此人{\c&H0000FFFF&\b1}箭法{\c&H00FFFFFF&\b0}之可怕，
+Dialogue: 0,0:00:10.43,0:00:12.48,Default,,0,0,0,,即便数百年后的{\c&H0000FFFF&\b1}燧发枪{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:12.48,0:00:15.27,Default,,0,0,0,,或许都难以具备这般准头与{\c&H0000FFFF&\b1}杀伤力{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.27,0:00:17.51,Default,,0,0,0,,。此{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}发生在战场之上，
+Dialogue: 0,0:00:17.51,0:00:19.74,Default,,0,0,0,,周围硝烟弥漫，{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}紧张，
+Dialogue: 0,0:00:19.74,0:00:23.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}昏暗，天气呈现出战斗中的阴沉氛围。

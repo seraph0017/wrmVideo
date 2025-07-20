@@ -1,0 +1,132 @@
+[Script Info]
+Title: chapter_001 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:02.56,Default,,0,0,0,,晨光熹微，{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫前的玉道上，
+Dialogue: 0, 0:00:02.56, 0:00:05.50,Default,,0,0,0,,一位身形修长、五官{\c&H0000FFFF&\b1}俊逸{\c&H00FFFFFF&\b0}却微微跛脚
+Dialogue: 0, 0:00:05.50, 0:00:06.96,Default,,0,0,0,,的{\c&H0000FFFF&\b1}男子{\c&H00FFFFFF&\b0}缓缓前行。
+Dialogue: 0, 0:00:06.96, 0:00:09.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫巍峨耸立，飞檐斗拱间精美的
+Dialogue: 0, 0:00:09.90, 0:00:12.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙纹{\c&H00FFFFFF&\b0}与云纹尽显其无上地位与大唐
+Dialogue: 0, 0:00:12.65, 0:00:13.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}盛世{\c&H00FFFFFF&\b0}气象。
+Dialogue: 0, 0:00:13.57, 0:00:16.32,Default,,0,0,0,,男子停下脚步，凝视眼前的{\c&H0000FFFF&\b1}宫殿{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:16.32, 0:00:18.89,Default,,0,0,0,,面露深沉的{\c&H0000FFFF&\b1}心事{\c&H00FFFFFF&\b0}，口中喃喃道：
+Dialogue: 0, 0:00:18.89, 0:00:22.01,Default,,0,0,0,,“这般{\c&H0000FFFF&\b1}气象{\c&H00FFFFFF&\b0}，我以后怕是看不到了。”
+Dialogue: 0, 0:00:22.01, 0:00:24.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}脑海中如幻灯片般闪过这几
+Dialogue: 0, 0:00:24.66, 0:00:27.48,Default,,0,0,0,,年的{\c&H0000FFFF&\b1}经历{\c&H00FFFFFF&\b0}，他回忆起自己穿越成大唐
+Dialogue: 0, 0:00:27.48, 0:00:30.31,Default,,0,0,0,,太子后，小心翼翼做人却仍遭{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:30.31, 0:00:33.13,Default,,0,0,0,,打压，{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}府僚属瞒着他安排刺客刺
+Dialogue: 0, 0:00:33.13, 0:00:35.42,Default,,0,0,0,,杀{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}并纠集人要造反的事，
+Dialogue: 0, 0:00:35.42, 0:00:37.53,Default,,0,0,0,,心中满是{\c&H0000FFFF&\b1}决绝{\c&H00FFFFFF&\b0}，暗自思忖：
+Dialogue: 0, 0:00:37.53, 0:00:39.84,Default,,0,0,0,,“既然上天注定{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}会死，
+Dialogue: 0, 0:00:39.84, 0:00:41.78,Default,,0,0,0,,那就在前{\c&H0000FFFF&\b1}轰轰烈烈{\c&H00FFFFFF&\b0}一把，
+Dialogue: 0, 0:00:41.78, 0:00:43.37,Default,,0,0,0,,也{\c&H0000FFFF&\b1}不枉{\c&H00FFFFFF&\b0}穿越一场。”
+Dialogue: 0, 0:00:43.37, 0:00:45.36,Default,,0,0,0,,四周突然涌出{\c&H0000FFFF&\b1}大量{\c&H00FFFFFF&\b0}甲士，
+Dialogue: 0, 0:00:45.36, 0:00:46.99,Default,,0,0,0,,将{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}团团围住，
+Dialogue: 0, 0:00:46.99, 0:00:49.35,Default,,0,0,0,,为首的将领{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}身高八尺，
+Dialogue: 0, 0:00:49.35, 0:00:52.06,Default,,0,0,0,,相貌堂堂，身着威风凛凛的{\c&H0000FFFF&\b1}铁甲{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:52.06, 0:00:54.78,Default,,0,0,0,,手中的铁槊散发着令人心悸的{\c&H0000FFFF&\b1}寒光{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:54.78, 0:00:57.50,Default,,0,0,0,,。{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}沉稳发声：“太子殿下！
+Dialogue: 0, 0:00:57.50, 0:00:58.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}请您进宫！
+Dialogue: 0, 0:00:58.77, 0:01:00.40,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}眯起双眼，
+Dialogue: 0, 0:01:00.40, 0:01:03.48,Default,,0,0,0,,直视{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}，高声道：“孤乃大唐太子
+Dialogue: 0, 0:01:03.48, 0:01:04.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}！
+Dialogue: 0, 0:01:04.20, 0:01:06.18,Default,,0,0,0,,你见了{\c&H0000FFFF&\b1}本宫{\c&H00FFFFFF&\b0}安敢不拜！”
+Dialogue: 0, 0:01:06.18, 0:01:08.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}面对李承乾的强硬回应，
+Dialogue: 0, 0:01:08.75, 0:01:10.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}面露{\c&H00FFFFFF&\b0}诧异之色，愣了一瞬，
+Dialogue: 0, 0:01:10.95, 0:01:13.50,Default,,0,0,0,,虽不情愿但因{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}仍是储君，
+Dialogue: 0, 0:01:13.50, 0:01:16.43,Default,,0,0,0,,微微躬身道：“臣乃奉{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}旨意前来
+Dialogue: 0, 0:01:16.43, 0:01:18.62,Default,,0,0,0,,，如{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}亲临，自可不拜。
+Dialogue: 0, 0:01:18.62, 0:01:20.28,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}冷哼一声，
+Dialogue: 0, 0:01:20.28, 0:01:23.20,Default,,0,0,0,,一甩{\c&H0000FFFF&\b1}袍袖{\c&H00FFFFFF&\b0}，昂首挺胸朝着宫内走去。
+Dialogue: 0, 0:01:23.20, 0:01:26.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}穿过回廊，回廊两侧朱漆廊柱
+Dialogue: 0, 0:01:26.16, 0:01:28.94,Default,,0,0,0,,上精美的{\c&H0000FFFF&\b1}龙纹{\c&H00FFFFFF&\b0}诉说着大唐的繁华与
+Dialogue: 0, 0:01:28.94, 0:01:32.09,Default,,0,0,0,,强盛。走出{\c&H0000FFFF&\b1}回廊{\c&H00FFFFFF&\b0}，映入眼帘的是威严的
+Dialogue: 0, 0:01:32.09, 0:01:35.05,Default,,0,0,0,,太极殿，门口守卫的士兵见到{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:35.05, 0:01:37.28,Default,,0,0,0,,到来，竟无一人上前{\c&H0000FFFF&\b1}施礼{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:37.28, 0:01:38.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}甚至{\c&H00FFFFFF&\b0}看都不看他。
+Dialogue: 0, 0:01:38.76, 0:01:41.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}怒从心起，抬剑指着侍卫喝道
+Dialogue: 0, 0:01:41.72, 0:01:43.57,Default,,0,0,0,,：“{\c&H0000FFFF&\b1}把门{\c&H00FFFFFF&\b0}给本宫打开！
+Dialogue: 0, 0:01:43.57, 0:01:45.25,Default,,0,0,0,,”{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}们面面相觑，
+Dialogue: 0, 0:01:45.25, 0:01:46.17,Default,,0,0,0,,不敢{\c&H0000FFFF&\b1}动弹{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:46.17, 0:01:48.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}见侍卫不敢开门，
+Dialogue: 0, 0:01:48.31, 0:01:49.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}怒喝{\c&H00FFFFFF&\b0}：“好！
+Dialogue: 0, 0:01:49.48, 0:01:52.20,Default,,0,0,0,,好！好！你们不开{\c&H0000FFFF&\b1}本宫{\c&H00FFFFFF&\b0}自己开！
+Dialogue: 0, 0:01:52.20, 0:01:55.32,Default,,0,0,0,,”他走向{\c&H0000FFFF&\b1}殿门{\c&H00FFFFFF&\b0}，犹豫间心中闪过对家
+Dialogue: 0, 0:01:55.32, 0:01:57.85,Default,,0,0,0,,人的{\c&H0000FFFF&\b1}不忍{\c&H00FFFFFF&\b0}，但很快坚定下来，
+Dialogue: 0, 0:01:57.85, 0:02:00.57,Default,,0,0,0,,推开{\c&H0000FFFF&\b1}殿门{\c&H00FFFFFF&\b0}，一股凉意扑面而来。
+Dialogue: 0, 0:02:00.57, 0:02:02.90,Default,,0,0,0,,殿内，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}端坐于上方，
+Dialogue: 0, 0:02:02.90, 0:02:05.43,Default,,0,0,0,,面容威严，两旁分列着{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}、
+Dialogue: 0, 0:02:05.43, 0:02:08.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}、长孙无忌等文武大臣。
+Dialogue: 0, 0:02:08.35, 0:02:10.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}冷喝：“承乾！
+Dialogue: 0, 0:02:10.31, 0:02:11.47,Default,,0,0,0,,给朕{\c&H0000FFFF&\b1}跪下{\c&H00FFFFFF&\b0}！”
+Dialogue: 0, 0:02:11.47, 0:02:14.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}的死党御史大夫韦挺站出，
+Dialogue: 0, 0:02:14.03, 0:02:16.59,Default,,0,0,0,,躬身对{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}道：“启禀陛下，
+Dialogue: 0, 0:02:16.59, 0:02:19.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}不仁，应该马上废其太子之位，
+Dialogue: 0, 0:02:19.53, 0:02:20.81,Default,,0,0,0,,然后{\c&H0000FFFF&\b1}流放{\c&H00FFFFFF&\b0}边疆。
+Dialogue: 0, 0:02:20.81, 0:02:23.37,Default,,0,0,0,,”其他{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}支持者也相继站出，
+Dialogue: 0, 0:02:23.37, 0:02:25.37,Default,,0,0,0,,要求废除{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}太子位。
+Dialogue: 0, 0:02:25.37, 0:02:27.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}见状放声狂笑，
+Dialogue: 0, 0:02:27.20, 0:02:30.13,Default,,0,0,0,,直视{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}质问：“皇帝说孤不配为
+Dialogue: 0, 0:02:30.13, 0:02:32.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}，那皇帝当年做太子时就配？
+Dialogue: 0, 0:02:32.87, 0:02:35.62,Default,,0,0,0,,还是{\c&H0000FFFF&\b1}皇帝{\c&H00FFFFFF&\b0}觉得拎着兄弟的头颅逼迫
+Dialogue: 0, 0:02:35.62, 0:02:37.81,Default,,0,0,0,,自己{\c&H0000FFFF&\b1}父亲{\c&H00FFFFFF&\b0}的人才配为太子？
+Dialogue: 0, 0:02:37.81, 0:02:40.19,Default,,0,0,0,,”并看向{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}一党称：“孤，
+Dialogue: 0, 0:02:40.19, 0:02:42.39,Default,,0,0,0,,乃大行{\c&H0000FFFF&\b1}高祖{\c&H00FFFFFF&\b0}皇帝之皇长孙，
+Dialogue: 0, 0:02:42.39, 0:02:44.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}文德{\c&H00FFFFFF&\b0}皇后之嫡长子，
+Dialogue: 0, 0:02:44.03, 0:02:46.78,Default,,0,0,0,,已居{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}十七载的大唐正统太子！
+Dialogue: 0, 0:02:46.78, 0:02:48.79,Default,,0,0,0,,也是你们{\c&H0000FFFF&\b1}配言{\c&H00FFFFFF&\b0}废立的？”
+Dialogue: 0, 0:02:48.79, 0:02:51.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}从袍袖中取出文德皇后之灵
+Dialogue: 0, 0:02:51.68, 0:02:55.14,Default,,0,0,0,,位，捧于胸前，道：“大{\c&H0000FFFF&\b1}唐贞观{\c&H00FFFFFF&\b0}十六年，
+Dialogue: 0, 0:02:55.14, 0:02:58.22,Default,,0,0,0,,皇太子{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}，手捧母后文德皇后之
+Dialogue: 0, 0:02:58.22, 0:03:01.29,Default,,0,0,0,,灵位，身着高祖皇帝亲赐皇太{\c&H0000FFFF&\b1}孙之冕{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:03:01.29, 0:03:03.22,Default,,0,0,0,,服，自刎于{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿中！
+Dialogue: 0, 0:03:03.22, 0:03:04.95,Default,,0,0,0,,”“自此{\c&H0000FFFF&\b1}史书{\c&H00FFFFFF&\b0}可表，
+Dialogue: 0, 0:03:04.95, 0:03:07.06,Default,,0,0,0,,大唐皇帝{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}，囚父，
+Dialogue: 0, 0:03:07.06, 0:03:09.56,Default,,0,0,0,,弑兄，杀弟，灭侄，欺弟媳，
+Dialogue: 0, 0:03:09.56, 0:03:11.87,Default,,0,0,0,,逼嫡长子撞死于{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿上！
+Dialogue: 0, 0:03:11.87, 0:03:14.57,Default,,0,0,0,,乃古今第一六亲不认之{\c&H0000FFFF&\b1}帝王{\c&H00FFFFFF&\b0}。”
+Dialogue: 0, 0:03:14.57, 0:03:17.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}话音刚落，欲一头撞向旁边柱
+Dialogue: 0, 0:03:17.48, 0:03:20.02,Default,,0,0,0,,子自尽，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}见状急呼阻拦，
+Dialogue: 0, 0:03:20.02, 0:03:22.20,Default,,0,0,0,,众{\c&H0000FFFF&\b1}大臣{\c&H00FFFFFF&\b0}一时发懵未及阻止。
+Dialogue: 0, 0:03:22.20, 0:03:25.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}奋力挣扎，李世民气急攻心晕
+Dialogue: 0, 0:03:25.10, 0:03:26.74,Default,,0,0,0,,倒在地，{\c&H0000FFFF&\b1}脸色{\c&H00FFFFFF&\b0}煞白。
+Dialogue: 0, 0:03:26.74, 0:03:28.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}群臣{\c&H00FFFFFF&\b0}见状陷入混乱，
+Dialogue: 0, 0:03:28.45, 0:03:31.48,Default,,0,0,0,,呼喊{\c&H0000FFFF&\b1}御医{\c&H00FFFFFF&\b0}，此时一名士兵疾步跑来，
+Dialogue: 0, 0:03:31.48, 0:03:32.80,Default,,0,0,0,,高呼：“{\c&H0000FFFF&\b1}战报{\c&H00FFFFFF&\b0}！
+Dialogue: 0, 0:03:32.80, 0:03:34.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}战报{\c&H00FFFFFF&\b0}！八百里加急战报！
+Dialogue: 0, 0:03:34.89, 0:03:37.73,Default,,0,0,0,,”太医院人员赶到为{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}诊治。
+Dialogue: 0, 0:03:37.73, 0:03:40.18,Default,,0,0,0,,太医院首领{\c&H0000FFFF&\b1}甄权{\c&H00FFFFFF&\b0}从后殿走出，
+Dialogue: 0, 0:03:40.18, 0:03:42.63,Default,,0,0,0,,向群臣表示{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}并无大碍，
+Dialogue: 0, 0:03:42.63, 0:03:45.65,Default,,0,0,0,,只是怒急{\c&H0000FFFF&\b1}攻心{\c&H00FFFFFF&\b0}，施针后需十天半月苏
+Dialogue: 0, 0:03:45.65, 0:03:48.86,Default,,0,0,0,,醒。群臣讨论军情，{\c&H0000FFFF&\b1}魏征{\c&H00FFFFFF&\b0}站出提议共览
+Dialogue: 0, 0:03:48.86, 0:03:50.93,Default,,0,0,0,,战报，{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌等同意。
+Dialogue: 0, 0:03:50.93, 0:03:53.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌揭开八百里加急战报的火
+Dialogue: 0, 0:03:53.93, 0:03:56.13,Default,,0,0,0,,印，与众{\c&H0000FFFF&\b1}重臣{\c&H00FFFFFF&\b0}轮番查阅，
+Dialogue: 0, 0:03:56.13, 0:03:58.34,Default,,0,0,0,,得知{\c&H0000FFFF&\b1}薛延陀{\c&H00FFFFFF&\b0}犯境的军情，
+Dialogue: 0, 0:03:58.34, 0:03:59.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}表情各异。
+Dialogue: 0, 0:03:59.74, 0:04:01.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}等武将欲言又止，
+Dialogue: 0, 0:04:01.86, 0:04:04.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}催促李承乾批答出兵方略，
+Dialogue: 0, 0:04:04.51, 0:04:06.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}反问房玄龄：“房玄龄，
+Dialogue: 0, 0:04:06.99, 0:04:09.81,Default,,0,0,0,,本宫{\c&H0000FFFF&\b1}问问{\c&H00FFFFFF&\b0}你，你这罪上加罪是什么意
+Dialogue: 0, 0:04:09.81, 0:04:12.64,Default,,0,0,0,,思？难道说你手上有{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}降罪于我的
+Dialogue: 0, 0:04:12.64, 0:04:13.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}旨意{\c&H00FFFFFF&\b0}？”
+Dialogue: 0, 0:04:13.35, 0:04:15.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}称自己有监国行政之权，
+Dialogue: 0, 0:04:15.98, 0:04:18.79,Default,,0,0,0,,宣布要亲自率军出征讨伐{\c&H0000FFFF&\b1}薛延陀{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:04:18.79, 0:04:20.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}群臣{\c&H00FFFFFF&\b0}听闻惊讶万分。
+Dialogue: 0, 0:04:20.48, 0:04:22.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}等武将表示反对，
+Dialogue: 0, 0:04:22.73, 0:04:24.41,Default,,0,0,0,,称其{\c&H0000FFFF&\b1}不宜{\c&H00FFFFFF&\b0}率军出征。
+Dialogue: 0, 0:04:24.41, 0:04:26.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}提出做副帅随军出征，
+Dialogue: 0, 0:04:26.97, 0:04:28.74,Default,,0,0,0,,任命{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}为主帅，
+Dialogue: 0, 0:04:28.74, 0:04:31.50,Default,,0,0,0,,称欲为社稷尽力，{\c&H0000FFFF&\b1}望父皇{\c&H00FFFFFF&\b0}垂青，
+Dialogue: 0, 0:04:31.50, 0:04:33.47,Default,,0,0,0,,若不答应将自刎{\c&H0000FFFF&\b1}太庙{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:04:33.47, 0:04:34.85,Default,,0,0,0,,以此施压{\c&H0000FFFF&\b1}群臣{\c&H00FFFFFF&\b0}。

@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_047 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}咬了咬牙，眼中露出疯狂之色
+Dialogue: 0,0:00:02.85,0:00:04.80,Default,,0,0,0,,，对{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}说：“玛德，
+Dialogue: 0,0:00:04.80,0:00:06.94,Default,,0,0,0,,既然{\c&H0000FFFF&\b1}跑不了{\c&H00FFFFFF&\b0}，那就不跑了！
+Dialogue: 0,0:00:06.94,0:00:09.79,Default,,0,0,0,,和{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}拼了，朕倒要看看我和他谁
+Dialogue: 0,0:00:09.79,0:00:10.68,Default,,0,0,0,,的命更硬！
+Dialogue: 0,0:00:10.68,0:00:13.35,Default,,0,0,0,,”并询问{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}击溃敌军的把握。
+Dialogue: 0,0:00:13.35,0:00:15.84,Default,,0,0,0,,战场中，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}和裴行俭交谈，
+Dialogue: 0,0:00:15.84,0:00:16.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}决心{\c&H00FFFFFF&\b0}一拼。

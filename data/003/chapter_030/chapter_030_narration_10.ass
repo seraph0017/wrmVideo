@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_030 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看到这一情形大喜过望，
+Dialogue: 0,0:00:02.62,0:00:05.42,Default,,0,0,0,,他{\c&H0000FFFF&\b1}觉得{\c&H00FFFFFF&\b0}援兵到了，于是振臂高呼，
+Dialogue: 0,0:00:05.42,0:00:07.67,Default,,0,0,0,,让{\c&H0000FFFF&\b1}众将士{\c&H00FFFFFF&\b0}随他一同杀上去，
+Dialogue: 0,0:00:07.67,0:00:10.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}众将士{\c&H00FFFFFF&\b0}受到鼓舞，更加勇猛，
+Dialogue: 0,0:00:10.10,0:00:12.53,Default,,0,0,0,,战场上传来更{\c&H0000FFFF&\b1}高昂{\c&H00FFFFFF&\b0}的杀喊声。

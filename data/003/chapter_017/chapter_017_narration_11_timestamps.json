@@ -1,0 +1,353 @@
+{
+  "text": "场景是王府内，时间凌晨，光线昏暗。吴王李格在自家王府大厅中踱步，神情癫狂，一脚踹翻桌案。称心出现，李格决定行动，让称心告知其手下做好准备。",
+  "audio_file": "data/003/chapter_017/chapter_017_narration_11.mp3",
+  "duration": 13.224,
+  "character_timestamps": [
+    {
+      "character": "场",
+      "start_time": 0.0,
+      "end_time": 0.19165217391304348
+    },
+    {
+      "character": "景",
+      "start_time": 0.19165217391304348,
+      "end_time": 0.38330434782608697
+    },
+    {
+      "character": "是",
+      "start_time": 0.38330434782608697,
+      "end_time": 0.5749565217391304
+    },
+    {
+      "character": "王",
+      "start_time": 0.5749565217391304,
+      "end_time": 0.7666086956521739
+    },
+    {
+      "character": "府",
+      "start_time": 0.7666086956521739,
+      "end_time": 0.9582608695652175
+    },
+    {
+      "character": "内",
+      "start_time": 0.9582608695652175,
+      "end_time": 1.149913043478261
+    },
+    {
+      "character": "，",
+      "start_time": 1.149913043478261,
+      "end_time": 1.3415652173913044
+    },
+    {
+      "character": "时",
+      "start_time": 1.3415652173913044,
+      "end_time": 1.5332173913043479
+    },
+    {
+      "character": "间",
+      "start_time": 1.5332173913043479,
+      "end_time": 1.7248695652173913
+    },
+    {
+      "character": "凌",
+      "start_time": 1.7248695652173913,
+      "end_time": 1.9165217391304346
+    },
+    {
+      "character": "晨",
+      "start_time": 1.9165217391304346,
+      "end_time": 2.108173913043478
+    },
+    {
+      "character": "，",
+      "start_time": 2.108173913043478,
+      "end_time": 2.2998260869565215
+    },
+    {
+      "character": "光",
+      "start_time": 2.2998260869565215,
+      "end_time": 2.491478260869565
+    },
+    {
+      "character": "线",
+      "start_time": 2.491478260869565,
+      "end_time": 2.6831304347826084
+    },
+    {
+      "character": "昏",
+      "start_time": 2.6831304347826084,
+      "end_time": 2.874782608695652
+    },
+    {
+      "character": "暗",
+      "start_time": 2.874782608695652,
+      "end_time": 3.0664347826086953
+    },
+    {
+      "character": "。",
+      "start_time": 3.0664347826086953,
+      "end_time": 3.2580869565217383
+    },
+    {
+      "character": "吴",
+      "start_time": 3.2580869565217383,
+      "end_time": 3.4497391304347818
+    },
+    {
+      "character": "王",
+      "start_time": 3.4497391304347818,
+      "end_time": 3.641391304347825
+    },
+    {
+      "character": "李",
+      "start_time": 3.641391304347825,
+      "end_time": 3.8330434782608687
+    },
+    {
+      "character": "格",
+      "start_time": 3.8330434782608687,
+      "end_time": 4.024695652173912
+    },
+    {
+      "character": "在",
+      "start_time": 4.024695652173912,
+      "end_time": 4.216347826086955
+    },
+    {
+      "character": "自",
+      "start_time": 4.216347826086955,
+      "end_time": 4.407999999999999
+    },
+    {
+      "character": "家",
+      "start_time": 4.407999999999999,
+      "end_time": 4.599652173913042
+    },
+    {
+      "character": "王",
+      "start_time": 4.599652173913042,
+      "end_time": 4.7913043478260855
+    },
+    {
+      "character": "府",
+      "start_time": 4.7913043478260855,
+      "end_time": 4.982956521739129
+    },
+    {
+      "character": "大",
+      "start_time": 4.982956521739129,
+      "end_time": 5.174608695652172
+    },
+    {
+      "character": "厅",
+      "start_time": 5.174608695652172,
+      "end_time": 5.366260869565217
+    },
+    {
+      "character": "中",
+      "start_time": 5.366260869565217,
+      "end_time": 5.557913043478261
+    },
+    {
+      "character": "踱",
+      "start_time": 5.557913043478261,
+      "end_time": 5.7495652173913046
+    },
+    {
+      "character": "步",
+      "start_time": 5.7495652173913046,
+      "end_time": 5.941217391304349
+    },
+    {
+      "character": "，",
+      "start_time": 5.941217391304349,
+      "end_time": 6.132869565217392
+    },
+    {
+      "character": "神",
+      "start_time": 6.132869565217392,
+      "end_time": 6.324521739130437
+    },
+    {
+      "character": "情",
+      "start_time": 6.324521739130437,
+      "end_time": 6.51617391304348
+    },
+    {
+      "character": "癫",
+      "start_time": 6.51617391304348,
+      "end_time": 6.7078260869565245
+    },
+    {
+      "character": "狂",
+      "start_time": 6.7078260869565245,
+      "end_time": 6.899478260869568
+    },
+    {
+      "character": "，",
+      "start_time": 6.899478260869568,
+      "end_time": 7.091130434782612
+    },
+    {
+      "character": "一",
+      "start_time": 7.091130434782612,
+      "end_time": 7.282782608695657
+    },
+    {
+      "character": "脚",
+      "start_time": 7.282782608695657,
+      "end_time": 7.4744347826087
+    },
+    {
+      "character": "踹",
+      "start_time": 7.4744347826087,
+      "end_time": 7.666086956521744
+    },
+    {
+      "character": "翻",
+      "start_time": 7.666086956521744,
+      "end_time": 7.857739130434788
+    },
+    {
+      "character": "桌",
+      "start_time": 7.857739130434788,
+      "end_time": 8.049391304347832
+    },
+    {
+      "character": "案",
+      "start_time": 8.049391304347832,
+      "end_time": 8.241043478260876
+    },
+    {
+      "character": "。",
+      "start_time": 8.241043478260876,
+      "end_time": 8.43269565217392
+    },
+    {
+      "character": "称",
+      "start_time": 8.43269565217392,
+      "end_time": 8.624347826086964
+    },
+    {
+      "character": "心",
+      "start_time": 8.624347826086964,
+      "end_time": 8.816000000000008
+    },
+    {
+      "character": "出",
+      "start_time": 8.816000000000008,
+      "end_time": 9.007652173913051
+    },
+    {
+      "character": "现",
+      "start_time": 9.007652173913051,
+      "end_time": 9.199304347826095
+    },
+    {
+      "character": "，",
+      "start_time": 9.199304347826095,
+      "end_time": 9.39095652173914
+    },
+    {
+      "character": "李",
+      "start_time": 9.39095652173914,
+      "end_time": 9.582608695652183
+    },
+    {
+      "character": "格",
+      "start_time": 9.582608695652183,
+      "end_time": 9.774260869565227
+    },
+    {
+      "character": "决",
+      "start_time": 9.774260869565227,
+      "end_time": 9.965913043478272
+    },
+    {
+      "character": "定",
+      "start_time": 9.965913043478272,
+      "end_time": 10.157565217391316
+    },
+    {
+      "character": "行",
+      "start_time": 10.157565217391316,
+      "end_time": 10.349217391304359
+    },
+    {
+      "character": "动",
+      "start_time": 10.349217391304359,
+      "end_time": 10.540869565217402
+    },
+    {
+      "character": "，",
+      "start_time": 10.540869565217402,
+      "end_time": 10.732521739130448
+    },
+    {
+      "character": "让",
+      "start_time": 10.732521739130448,
+      "end_time": 10.924173913043491
+    },
+    {
+      "character": "称",
+      "start_time": 10.924173913043491,
+      "end_time": 11.115826086956535
+    },
+    {
+      "character": "心",
+      "start_time": 11.115826086956535,
+      "end_time": 11.30747826086958
+    },
+    {
+      "character": "告",
+      "start_time": 11.30747826086958,
+      "end_time": 11.499130434782623
+    },
+    {
+      "character": "知",
+      "start_time": 11.499130434782623,
+      "end_time": 11.690782608695667
+    },
+    {
+      "character": "其",
+      "start_time": 11.690782608695667,
+      "end_time": 11.88243478260871
+    },
+    {
+      "character": "手",
+      "start_time": 11.88243478260871,
+      "end_time": 12.074086956521755
+    },
+    {
+      "character": "下",
+      "start_time": 12.074086956521755,
+      "end_time": 12.265739130434799
+    },
+    {
+      "character": "做",
+      "start_time": 12.265739130434799,
+      "end_time": 12.457391304347842
+    },
+    {
+      "character": "好",
+      "start_time": 12.457391304347842,
+      "end_time": 12.649043478260886
+    },
+    {
+      "character": "准",
+      "start_time": 12.649043478260886,
+      "end_time": 12.840695652173931
+    },
+    {
+      "character": "备",
+      "start_time": 12.840695652173931,
+      "end_time": 13.032347826086975
+    },
+    {
+      "character": "。",
+      "start_time": 13.032347826086975,
+      "end_time": 13.224
+    }
+  ],
+  "generated_at": "2025-07-19T17:56:36.826196"
+}

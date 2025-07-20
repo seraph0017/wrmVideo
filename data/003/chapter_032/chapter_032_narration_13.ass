@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_032 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着战袍，束发，
+Dialogue: 0,0:00:02.15,0:00:04.10,Default,,0,0,0,,查看{\c&H0000FFFF&\b1}王琰{\c&H00FFFFFF&\b0}带来的箱子，
+Dialogue: 0,0:00:04.10,0:00:07.23,Default,,0,0,0,,箱子堆如{\c&H0000FFFF&\b1}小山{\c&H00FFFFFF&\b0}，空气中传来阵阵香味
+Dialogue: 0,0:00:07.23,0:00:09.19,Default,,0,0,0,,。{\c&H0000FFFF&\b1}王琰{\c&H00FFFFFF&\b0}身着华丽服饰，
+Dialogue: 0,0:00:09.19,0:00:12.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}发髻{\c&H00FFFFFF&\b0}精致，面容有异议地表示箱子里
+Dialogue: 0,0:00:12.31,0:00:15.44,Default,,0,0,0,,有些是自用之物，放在{\c&H0000FFFF&\b1}库房{\c&H00FFFFFF&\b0}不合适。
+Dialogue: 0,0:00:15.44,0:00:17.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着战袍，束发，
+Dialogue: 0,0:00:17.59,0:00:20.72,Default,,0,0,0,,以供养为由回应，让{\c&H0000FFFF&\b1}王琰{\c&H00FFFFFF&\b0}去拜见苏宁
+Dialogue: 0,0:00:20.72,0:00:22.48,Default,,0,0,0,,玉，王琰脸色骤变。
+Dialogue: 0,0:00:22.48,0:00:25.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是室内库房，时间为查看箱子时
+Dialogue: 0,0:00:25.60,0:00:28.54,Default,,0,0,0,,，{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}明亮，突出库房内的物品。

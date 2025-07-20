@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_010 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}进入城中后，
+Dialogue: 0,0:00:01.54,0:00:03.93,Default,,0,0,0,,快速写下一封信，交给{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:03.93,0:00:06.49,Default,,0,0,0,,让他{\c&H0000FFFF&\b1}速派{\c&H00FFFFFF&\b0}人押着大度设到最近的朝
+Dialogue: 0,0:00:06.49,0:00:08.71,Default,,0,0,0,,廷驿站，把这{\c&H0000FFFF&\b1}封信{\c&H00FFFFFF&\b0}交给他们，
+Dialogue: 0,0:00:08.71,0:00:11.45,Default,,0,0,0,,说{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}殿下有八百里加急呈与陛下。

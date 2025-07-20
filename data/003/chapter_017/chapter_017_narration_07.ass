@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_017 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.17,Default,,0,0,0,,场景为祠堂内，{\c&H0000FFFF&\b1}时间推移{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:02.17,0:00:04.70,Default,,0,0,0,,月月返回告知有人要见{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:04.70,0:00:06.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}露出感兴趣的神情，
+Dialogue: 0,0:00:06.86,0:00:07.95,Default,,0,0,0,,让来人{\c&H0000FFFF&\b1}进来{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:07.95,0:00:09.57,Default,,0,0,0,,月月{\c&H0000FFFF&\b1}汇报{\c&H00FFFFFF&\b0}探子消息，
+Dialogue: 0,0:00:09.57,0:00:12.28,Default,,0,0,0,,称有人想接触{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}了解其态度，
+Dialogue: 0,0:00:12.28,0:00:14.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}指示月月让下面人大胆接触
+Dialogue: 0,0:00:14.99,0:00:17.16,Default,,0,0,0,,，最好能弄清楚{\c&H0000FFFF&\b1}对方{\c&H00FFFFFF&\b0}身份。

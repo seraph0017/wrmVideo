@@ -1,0 +1,30 @@
+[Script Info]
+Title: chapter_043 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}冷静下来后，
+Dialogue: 0,0:00:01.63,0:00:04.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}大脑{\c&H00FFFFFF&\b0}飞速运转，说道：“守约，
+Dialogue: 0,0:00:04.16,0:00:06.32,Default,,0,0,0,,这下咱们慢了可{\c&H0000FFFF&\b1}不止{\c&H00FFFFFF&\b0}一步，
+Dialogue: 0,0:00:06.32,0:00:07.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}而是{\c&H00FFFFFF&\b0}无数步啊。
+Dialogue: 0,0:00:07.59,0:00:09.22,Default,,0,0,0,,朕{\c&H0000FFFF&\b1}有点{\c&H00FFFFFF&\b0}后悔和谈了，
+Dialogue: 0,0:00:09.22,0:00:11.38,Default,,0,0,0,,不如在{\c&H0000FFFF&\b1}武牢关{\c&H00FFFFFF&\b0}跟其耗时间。
+Dialogue: 0,0:00:11.38,0:00:14.27,Default,,0,0,0,,”{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}摇头担忧道：“陛下别这么
+Dialogue: 0,0:00:14.27,0:00:16.08,Default,,0,0,0,,想，末将还是{\c&H0000FFFF&\b1}那句话{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:16.08,0:00:18.43,Default,,0,0,0,,就算不{\c&H0000FFFF&\b1}和谈{\c&H00FFFFFF&\b0}咱们也难以战胜，
+Dialogue: 0,0:00:18.43,0:00:21.14,Default,,0,0,0,,况且现在看{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}竟有余力率领军
+Dialogue: 0,0:00:21.14,0:00:24.03,Default,,0,0,0,,奔袭到{\c&H0000FFFF&\b1}河东{\c&H00FFFFFF&\b0}道，就是耗时间也未必就
+Dialogue: 0,0:00:24.03,0:00:24.93,Default,,0,0,0,,能有{\c&H0000FFFF&\b1}优势{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:24.93,0:00:27.28,Default,,0,0,0,,”场景是室内，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}沉思，
+Dialogue: 0,0:00:27.28,0:00:28.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}担忧。

@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_039 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.09,Default,,0,0,0,,战马狂奔中摔倒，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}和李承乾被
+Dialogue: 0,0:00:03.09,0:00:04.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}压住{\c&H00FFFFFF&\b0}晕过去。
+Dialogue: 0,0:00:04.25,0:00:06.00,Default,,0,0,0,,四{\c&H0000FFFF&\b1}人率{\c&H00FFFFFF&\b0}军追至近前，
+Dialogue: 0,0:00:06.00,0:00:08.70,Default,,0,0,0,,北向辉欲飞掷铁枪扎死{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:08.70,0:00:11.60,Default,,0,0,0,,秦琼和{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}反应飞快冲到前面
+Dialogue: 0,0:00:11.60,0:00:14.31,Default,,0,0,0,,挡住。{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}翻身下马冲向二人，
+Dialogue: 0,0:00:14.31,0:00:16.83,Default,,0,0,0,,秦琼和{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}示意留在原地，
+Dialogue: 0,0:00:16.83,0:00:19.15,Default,,0,0,0,,上前快速将{\c&H0000FFFF&\b1}父子{\c&H00FFFFFF&\b0}二人分开，
+Dialogue: 0,0:00:19.15,0:00:21.27,Default,,0,0,0,,发现二人{\c&H0000FFFF&\b1}脸色{\c&H00FFFFFF&\b0}白到吓人，
+Dialogue: 0,0:00:21.27,0:00:23.21,Default,,0,0,0,,气若游丝但{\c&H0000FFFF&\b1}呼吸{\c&H00FFFFFF&\b0}平稳。

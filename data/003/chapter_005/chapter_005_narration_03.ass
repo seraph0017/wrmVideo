@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_005 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.74,Default,,0,0,0,,太医院的首领{\c&H0000FFFF&\b1}甄权{\c&H00FFFFFF&\b0}从寝宫内走了出
+Dialogue: 0,0:00:02.74,0:00:04.75,Default,,0,0,0,,来，{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}立刻围了上去，
+Dialogue: 0,0:00:04.75,0:00:06.76,Default,,0,0,0,,纷纷询问{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}的情况。
+Dialogue: 0,0:00:06.76,0:00:08.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}甄权{\c&H00FFFFFF&\b0}无奈地摆了摆手，
+Dialogue: 0,0:00:08.58,0:00:11.50,Default,,0,0,0,,示意大家安静，然后告知众人{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.50,0:00:13.69,Default,,0,0,0,,已经醒了，正在{\c&H0000FFFF&\b1}传召{\c&H00FFFFFF&\b0}他们。
+Dialogue: 0,0:00:13.69,0:00:16.43,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿内，处于室内环境，
+Dialogue: 0,0:00:16.43,0:00:17.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}较为紧张。

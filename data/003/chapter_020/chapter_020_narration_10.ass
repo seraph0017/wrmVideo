@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_020 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}李元昌{\c&H00FFFFFF&\b0}冷笑着对李恪说话，
+Dialogue: 0,0:00:02.39,0:00:04.78,Default,,0,0,0,,然后离开，李恪愤怒{\c&H0000FFFF&\b1}至极{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:04.78,0:00:06.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}李元昌{\c&H00FFFFFF&\b0}身着深色便服，
+Dialogue: 0,0:00:06.77,0:00:09.75,Default,,0,0,0,,表情{\c&H0000FFFF&\b1}阴冷{\c&H00FFFFFF&\b0}，李恪的表情赤红如血，
+Dialogue: 0,0:00:09.75,0:00:10.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是战场。

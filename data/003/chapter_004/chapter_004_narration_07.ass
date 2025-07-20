@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_004 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}刺客{\c&H00FFFFFF&\b0}负隅顽抗欲自刎，
+Dialogue: 0,0:00:01.84,0:00:03.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}猛然暴喝一声，
+Dialogue: 0,0:00:03.69,0:00:05.53,Default,,0,0,0,,高高跃起，长臂{\c&H0000FFFF&\b1}曲伸{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:05.53,0:00:08.11,Default,,0,0,0,,将手中{\c&H0000FFFF&\b1}长枪{\c&H00FFFFFF&\b0}掷出，破空声尖锐，
+Dialogue: 0,0:00:08.11,0:00:10.33,Default,,0,0,0,,直接贯穿{\c&H0000FFFF&\b1}刺客{\c&H00FFFFFF&\b0}首领的肩膀，
+Dialogue: 0,0:00:10.33,0:00:12.17,Default,,0,0,0,,将其牢牢钉在{\c&H0000FFFF&\b1}地面{\c&H00FFFFFF&\b0}上，
+Dialogue: 0,0:00:12.17,0:00:14.57,Default,,0,0,0,,他{\c&H0000FFFF&\b1}面容{\c&H00FFFFFF&\b0}专注，身着士兵服饰。

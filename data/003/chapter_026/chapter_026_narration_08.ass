@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_026 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}抵达城下，与城上的李承乾展
+Dialogue: 0,0:00:02.92,0:00:05.83,Default,,0,0,0,,开对话，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}声称明日便会下旨昭
+Dialogue: 0,0:00:05.83,0:00:08.39,Default,,0,0,0,,告天下承认{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的帝王之名，
+Dialogue: 0,0:00:08.39,0:00:11.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回应，两人言语间针锋相对，
+Dialogue: 0,0:00:11.30,0:00:12.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}紧张。
+Dialogue: 0,0:00:12.21,0:00:14.95,Default,,0,0,0,,城楼上{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}与李承乾相对而立，
+Dialogue: 0,0:00:14.95,0:00:16.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}气氛{\c&H00FFFFFF&\b0}剑拔弩张。

@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_040 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.01,Default,,0,0,0,,铁枪飞出去，正好扫到押着{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:03.01,0:00:04.71,Default,,0,0,0,,秦琼和{\c&H0000FFFF&\b1}玄甲军{\c&H00FFFFFF&\b0}脸上，
+Dialogue: 0,0:00:04.71,0:00:06.78,Default,,0,0,0,,二人{\c&H0000FFFF&\b1}中秦琼自{\c&H00FFFFFF&\b0}不用多说，
+Dialogue: 0,0:00:06.78,0:00:09.61,Default,,0,0,0,,那{\c&H0000FFFF&\b1}玄甲军{\c&H00FFFFFF&\b0}也跟随李世民征战多年，
+Dialogue: 0,0:00:09.61,0:00:12.25,Default,,0,0,0,,竟都躲不闪，依旧押着{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:12.25,0:00:14.88,Default,,0,0,0,,硬扛飞来{\c&H0000FFFF&\b1}铁枪{\c&H00FFFFFF&\b0}，发出两声闷响，
+Dialogue: 0,0:00:14.88,0:00:17.71,Default,,0,0,0,,二人{\c&H0000FFFF&\b1}鼻子{\c&H00FFFFFF&\b0}被砸破，鲜血直流而下。
+Dialogue: 0,0:00:17.71,0:00:20.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}是战场，士兵受伤场景。

@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_001 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}穿过回廊，回廊两侧朱漆廊柱
+Dialogue: 0,0:00:02.96,0:00:05.74,Default,,0,0,0,,上精美的{\c&H0000FFFF&\b1}龙纹{\c&H00FFFFFF&\b0}诉说着大唐的繁华与
+Dialogue: 0,0:00:05.74,0:00:08.89,Default,,0,0,0,,强盛。走出{\c&H0000FFFF&\b1}回廊{\c&H00FFFFFF&\b0}，映入眼帘的是威严的
+Dialogue: 0,0:00:08.89,0:00:11.85,Default,,0,0,0,,太极殿，门口守卫的士兵见到{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.85,0:00:14.08,Default,,0,0,0,,到来，竟无一人上前{\c&H0000FFFF&\b1}施礼{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:14.08,0:00:15.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}甚至{\c&H00FFFFFF&\b0}看都不看他。
+Dialogue: 0,0:00:15.56,0:00:18.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}怒从心起，抬剑指着侍卫喝道
+Dialogue: 0,0:00:18.52,0:00:20.37,Default,,0,0,0,,：“{\c&H0000FFFF&\b1}把门{\c&H00FFFFFF&\b0}给本宫打开！
+Dialogue: 0,0:00:20.37,0:00:22.04,Default,,0,0,0,,”{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}们面面相觑，
+Dialogue: 0,0:00:22.04,0:00:22.97,Default,,0,0,0,,不敢{\c&H0000FFFF&\b1}动弹{\c&H00FFFFFF&\b0}。

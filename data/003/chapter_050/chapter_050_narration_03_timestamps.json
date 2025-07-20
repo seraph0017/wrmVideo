@@ -1,0 +1,728 @@
+{
+  "text": "李承乾邀请李阿四和张儒童进入屋内奉茶，他起身，面带亲和之色，挽着二人的手将其带到矮凳旁让其就座。接着，李承乾表示自己生平最佩服工匠，还提及农具、战刀等皆出自工匠之手，以此来拉近与工匠的距离。随后，他提出想要铸造东西，承诺若成功必重赏，还会拜二人将作大匠并赐钱帛等，二人听闻后既惊喜又惶恐。",
+  "audio_file": "data/003/chapter_050/chapter_050_narration_03.mp3",
+  "duration": 25.632,
+  "character_timestamps": [
+    {
+      "character": "李",
+      "start_time": 0.0,
+      "end_time": 0.17800000000000002
+    },
+    {
+      "character": "承",
+      "start_time": 0.17800000000000002,
+      "end_time": 0.35600000000000004
+    },
+    {
+      "character": "乾",
+      "start_time": 0.35600000000000004,
+      "end_time": 0.534
+    },
+    {
+      "character": "邀",
+      "start_time": 0.534,
+      "end_time": 0.7120000000000001
+    },
+    {
+      "character": "请",
+      "start_time": 0.7120000000000001,
+      "end_time": 0.8900000000000001
+    },
+    {
+      "character": "李",
+      "start_time": 0.8900000000000001,
+      "end_time": 1.068
+    },
+    {
+      "character": "阿",
+      "start_time": 1.068,
+      "end_time": 1.2460000000000002
+    },
+    {
+      "character": "四",
+      "start_time": 1.2460000000000002,
+      "end_time": 1.4240000000000002
+    },
+    {
+      "character": "和",
+      "start_time": 1.4240000000000002,
+      "end_time": 1.6019999999999999
+    },
+    {
+      "character": "张",
+      "start_time": 1.6019999999999999,
+      "end_time": 1.7799999999999998
+    },
+    {
+      "character": "儒",
+      "start_time": 1.7799999999999998,
+      "end_time": 1.9579999999999997
+    },
+    {
+      "character": "童",
+      "start_time": 1.9579999999999997,
+      "end_time": 2.1359999999999997
+    },
+    {
+      "character": "进",
+      "start_time": 2.1359999999999997,
+      "end_time": 2.3139999999999996
+    },
+    {
+      "character": "入",
+      "start_time": 2.3139999999999996,
+      "end_time": 2.492
+    },
+    {
+      "character": "屋",
+      "start_time": 2.492,
+      "end_time": 2.6699999999999995
+    },
+    {
+      "character": "内",
+      "start_time": 2.6699999999999995,
+      "end_time": 2.8479999999999994
+    },
+    {
+      "character": "奉",
+      "start_time": 2.8479999999999994,
+      "end_time": 3.0259999999999994
+    },
+    {
+      "character": "茶",
+      "start_time": 3.0259999999999994,
+      "end_time": 3.2039999999999993
+    },
+    {
+      "character": "，",
+      "start_time": 3.2039999999999993,
+      "end_time": 3.3819999999999992
+    },
+    {
+      "character": "他",
+      "start_time": 3.3819999999999992,
+      "end_time": 3.559999999999999
+    },
+    {
+      "character": "起",
+      "start_time": 3.559999999999999,
+      "end_time": 3.737999999999999
+    },
+    {
+      "character": "身",
+      "start_time": 3.737999999999999,
+      "end_time": 3.915999999999999
+    },
+    {
+      "character": "，",
+      "start_time": 3.915999999999999,
+      "end_time": 4.0939999999999985
+    },
+    {
+      "character": "面",
+      "start_time": 4.0939999999999985,
+      "end_time": 4.2719999999999985
+    },
+    {
+      "character": "带",
+      "start_time": 4.2719999999999985,
+      "end_time": 4.449999999999998
+    },
+    {
+      "character": "亲",
+      "start_time": 4.449999999999998,
+      "end_time": 4.627999999999998
+    },
+    {
+      "character": "和",
+      "start_time": 4.627999999999998,
+      "end_time": 4.805999999999999
+    },
+    {
+      "character": "之",
+      "start_time": 4.805999999999999,
+      "end_time": 4.984
+    },
+    {
+      "character": "色",
+      "start_time": 4.984,
+      "end_time": 5.162
+    },
+    {
+      "character": "，",
+      "start_time": 5.162,
+      "end_time": 5.340000000000001
+    },
+    {
+      "character": "挽",
+      "start_time": 5.340000000000001,
+      "end_time": 5.518000000000001
+    },
+    {
+      "character": "着",
+      "start_time": 5.518000000000001,
+      "end_time": 5.6960000000000015
+    },
+    {
+      "character": "二",
+      "start_time": 5.6960000000000015,
+      "end_time": 5.874000000000001
+    },
+    {
+      "character": "人",
+      "start_time": 5.874000000000001,
+      "end_time": 6.052000000000002
+    },
+    {
+      "character": "的",
+      "start_time": 6.052000000000002,
+      "end_time": 6.230000000000002
+    },
+    {
+      "character": "手",
+      "start_time": 6.230000000000002,
+      "end_time": 6.408000000000003
+    },
+    {
+      "character": "将",
+      "start_time": 6.408000000000003,
+      "end_time": 6.586000000000004
+    },
+    {
+      "character": "其",
+      "start_time": 6.586000000000004,
+      "end_time": 6.764000000000004
+    },
+    {
+      "character": "带",
+      "start_time": 6.764000000000004,
+      "end_time": 6.942000000000005
+    },
+    {
+      "character": "到",
+      "start_time": 6.942000000000005,
+      "end_time": 7.1200000000000045
+    },
+    {
+      "character": "矮",
+      "start_time": 7.1200000000000045,
+      "end_time": 7.298000000000005
+    },
+    {
+      "character": "凳",
+      "start_time": 7.298000000000005,
+      "end_time": 7.476000000000005
+    },
+    {
+      "character": "旁",
+      "start_time": 7.476000000000005,
+      "end_time": 7.654000000000006
+    },
+    {
+      "character": "让",
+      "start_time": 7.654000000000006,
+      "end_time": 7.832000000000006
+    },
+    {
+      "character": "其",
+      "start_time": 7.832000000000006,
+      "end_time": 8.010000000000007
+    },
+    {
+      "character": "就",
+      "start_time": 8.010000000000007,
+      "end_time": 8.188000000000008
+    },
+    {
+      "character": "座",
+      "start_time": 8.188000000000008,
+      "end_time": 8.366000000000009
+    },
+    {
+      "character": "。",
+      "start_time": 8.366000000000009,
+      "end_time": 8.544000000000008
+    },
+    {
+      "character": "接",
+      "start_time": 8.544000000000008,
+      "end_time": 8.722000000000008
+    },
+    {
+      "character": "着",
+      "start_time": 8.722000000000008,
+      "end_time": 8.90000000000001
+    },
+    {
+      "character": "，",
+      "start_time": 8.90000000000001,
+      "end_time": 9.07800000000001
+    },
+    {
+      "character": "李",
+      "start_time": 9.07800000000001,
+      "end_time": 9.256000000000009
+    },
+    {
+      "character": "承",
+      "start_time": 9.256000000000009,
+      "end_time": 9.43400000000001
+    },
+    {
+      "character": "乾",
+      "start_time": 9.43400000000001,
+      "end_time": 9.61200000000001
+    },
+    {
+      "character": "表",
+      "start_time": 9.61200000000001,
+      "end_time": 9.790000000000012
+    },
+    {
+      "character": "示",
+      "start_time": 9.790000000000012,
+      "end_time": 9.968000000000012
+    },
+    {
+      "character": "自",
+      "start_time": 9.968000000000012,
+      "end_time": 10.146000000000011
+    },
+    {
+      "character": "己",
+      "start_time": 10.146000000000011,
+      "end_time": 10.324000000000012
+    },
+    {
+      "character": "生",
+      "start_time": 10.324000000000012,
+      "end_time": 10.502000000000013
+    },
+    {
+      "character": "平",
+      "start_time": 10.502000000000013,
+      "end_time": 10.680000000000014
+    },
+    {
+      "character": "最",
+      "start_time": 10.680000000000014,
+      "end_time": 10.858000000000015
+    },
+    {
+      "character": "佩",
+      "start_time": 10.858000000000015,
+      "end_time": 11.036000000000014
+    },
+    {
+      "character": "服",
+      "start_time": 11.036000000000014,
+      "end_time": 11.214000000000015
+    },
+    {
+      "character": "工",
+      "start_time": 11.214000000000015,
+      "end_time": 11.392000000000015
+    },
+    {
+      "character": "匠",
+      "start_time": 11.392000000000015,
+      "end_time": 11.570000000000016
+    },
+    {
+      "character": "，",
+      "start_time": 11.570000000000016,
+      "end_time": 11.748000000000015
+    },
+    {
+      "character": "还",
+      "start_time": 11.748000000000015,
+      "end_time": 11.926000000000016
+    },
+    {
+      "character": "提",
+      "start_time": 11.926000000000016,
+      "end_time": 12.104000000000017
+    },
+    {
+      "character": "及",
+      "start_time": 12.104000000000017,
+      "end_time": 12.282000000000018
+    },
+    {
+      "character": "农",
+      "start_time": 12.282000000000018,
+      "end_time": 12.460000000000019
+    },
+    {
+      "character": "具",
+      "start_time": 12.460000000000019,
+      "end_time": 12.638000000000018
+    },
+    {
+      "character": "、",
+      "start_time": 12.638000000000018,
+      "end_time": 12.816000000000018
+    },
+    {
+      "character": "战",
+      "start_time": 12.816000000000018,
+      "end_time": 12.99400000000002
+    },
+    {
+      "character": "刀",
+      "start_time": 12.99400000000002,
+      "end_time": 13.17200000000002
+    },
+    {
+      "character": "等",
+      "start_time": 13.17200000000002,
+      "end_time": 13.35000000000002
+    },
+    {
+      "character": "皆",
+      "start_time": 13.35000000000002,
+      "end_time": 13.52800000000002
+    },
+    {
+      "character": "出",
+      "start_time": 13.52800000000002,
+      "end_time": 13.70600000000002
+    },
+    {
+      "character": "自",
+      "start_time": 13.70600000000002,
+      "end_time": 13.884000000000022
+    },
+    {
+      "character": "工",
+      "start_time": 13.884000000000022,
+      "end_time": 14.062000000000022
+    },
+    {
+      "character": "匠",
+      "start_time": 14.062000000000022,
+      "end_time": 14.240000000000022
+    },
+    {
+      "character": "之",
+      "start_time": 14.240000000000022,
+      "end_time": 14.418000000000022
+    },
+    {
+      "character": "手",
+      "start_time": 14.418000000000022,
+      "end_time": 14.596000000000023
+    },
+    {
+      "character": "，",
+      "start_time": 14.596000000000023,
+      "end_time": 14.774000000000024
+    },
+    {
+      "character": "以",
+      "start_time": 14.774000000000024,
+      "end_time": 14.952000000000023
+    },
+    {
+      "character": "此",
+      "start_time": 14.952000000000023,
+      "end_time": 15.130000000000024
+    },
+    {
+      "character": "来",
+      "start_time": 15.130000000000024,
+      "end_time": 15.308000000000025
+    },
+    {
+      "character": "拉",
+      "start_time": 15.308000000000025,
+      "end_time": 15.486000000000026
+    },
+    {
+      "character": "近",
+      "start_time": 15.486000000000026,
+      "end_time": 15.664000000000026
+    },
+    {
+      "character": "与",
+      "start_time": 15.664000000000026,
+      "end_time": 15.842000000000025
+    },
+    {
+      "character": "工",
+      "start_time": 15.842000000000025,
+      "end_time": 16.020000000000028
+    },
+    {
+      "character": "匠",
+      "start_time": 16.020000000000028,
+      "end_time": 16.198000000000025
+    },
+    {
+      "character": "的",
+      "start_time": 16.198000000000025,
+      "end_time": 16.376000000000026
+    },
+    {
+      "character": "距",
+      "start_time": 16.376000000000026,
+      "end_time": 16.554000000000027
+    },
+    {
+      "character": "离",
+      "start_time": 16.554000000000027,
+      "end_time": 16.732000000000028
+    },
+    {
+      "character": "。",
+      "start_time": 16.732000000000028,
+      "end_time": 16.91000000000003
+    },
+    {
+      "character": "随",
+      "start_time": 16.91000000000003,
+      "end_time": 17.08800000000003
+    },
+    {
+      "character": "后",
+      "start_time": 17.08800000000003,
+      "end_time": 17.26600000000003
+    },
+    {
+      "character": "，",
+      "start_time": 17.26600000000003,
+      "end_time": 17.44400000000003
+    },
+    {
+      "character": "他",
+      "start_time": 17.44400000000003,
+      "end_time": 17.622000000000032
+    },
+    {
+      "character": "提",
+      "start_time": 17.622000000000032,
+      "end_time": 17.80000000000003
+    },
+    {
+      "character": "出",
+      "start_time": 17.80000000000003,
+      "end_time": 17.97800000000003
+    },
+    {
+      "character": "想",
+      "start_time": 17.97800000000003,
+      "end_time": 18.15600000000003
+    },
+    {
+      "character": "要",
+      "start_time": 18.15600000000003,
+      "end_time": 18.33400000000003
+    },
+    {
+      "character": "铸",
+      "start_time": 18.33400000000003,
+      "end_time": 18.512000000000032
+    },
+    {
+      "character": "造",
+      "start_time": 18.512000000000032,
+      "end_time": 18.690000000000033
+    },
+    {
+      "character": "东",
+      "start_time": 18.690000000000033,
+      "end_time": 18.868000000000034
+    },
+    {
+      "character": "西",
+      "start_time": 18.868000000000034,
+      "end_time": 19.04600000000003
+    },
+    {
+      "character": "，",
+      "start_time": 19.04600000000003,
+      "end_time": 19.22400000000003
+    },
+    {
+      "character": "承",
+      "start_time": 19.22400000000003,
+      "end_time": 19.40200000000003
+    },
+    {
+      "character": "诺",
+      "start_time": 19.40200000000003,
+      "end_time": 19.580000000000027
+    },
+    {
+      "character": "若",
+      "start_time": 19.580000000000027,
+      "end_time": 19.758000000000024
+    },
+    {
+      "character": "成",
+      "start_time": 19.758000000000024,
+      "end_time": 19.936000000000025
+    },
+    {
+      "character": "功",
+      "start_time": 19.936000000000025,
+      "end_time": 20.114000000000022
+    },
+    {
+      "character": "必",
+      "start_time": 20.114000000000022,
+      "end_time": 20.29200000000002
+    },
+    {
+      "character": "重",
+      "start_time": 20.29200000000002,
+      "end_time": 20.47000000000002
+    },
+    {
+      "character": "赏",
+      "start_time": 20.47000000000002,
+      "end_time": 20.648000000000017
+    },
+    {
+      "character": "，",
+      "start_time": 20.648000000000017,
+      "end_time": 20.826000000000015
+    },
+    {
+      "character": "还",
+      "start_time": 20.826000000000015,
+      "end_time": 21.004000000000012
+    },
+    {
+      "character": "会",
+      "start_time": 21.004000000000012,
+      "end_time": 21.182000000000013
+    },
+    {
+      "character": "拜",
+      "start_time": 21.182000000000013,
+      "end_time": 21.36000000000001
+    },
+    {
+      "character": "二",
+      "start_time": 21.36000000000001,
+      "end_time": 21.538000000000007
+    },
+    {
+      "character": "人",
+      "start_time": 21.538000000000007,
+      "end_time": 21.716000000000008
+    },
+    {
+      "character": "将",
+      "start_time": 21.716000000000008,
+      "end_time": 21.894000000000005
+    },
+    {
+      "character": "作",
+      "start_time": 21.894000000000005,
+      "end_time": 22.072000000000003
+    },
+    {
+      "character": "大",
+      "start_time": 22.072000000000003,
+      "end_time": 22.25
+    },
+    {
+      "character": "匠",
+      "start_time": 22.25,
+      "end_time": 22.428
+    },
+    {
+      "character": "并",
+      "start_time": 22.428,
+      "end_time": 22.605999999999998
+    },
+    {
+      "character": "赐",
+      "start_time": 22.605999999999998,
+      "end_time": 22.783999999999995
+    },
+    {
+      "character": "钱",
+      "start_time": 22.783999999999995,
+      "end_time": 22.961999999999996
+    },
+    {
+      "character": "帛",
+      "start_time": 22.961999999999996,
+      "end_time": 23.139999999999993
+    },
+    {
+      "character": "等",
+      "start_time": 23.139999999999993,
+      "end_time": 23.31799999999999
+    },
+    {
+      "character": "，",
+      "start_time": 23.31799999999999,
+      "end_time": 23.49599999999999
+    },
+    {
+      "character": "二",
+      "start_time": 23.49599999999999,
+      "end_time": 23.67399999999999
+    },
+    {
+      "character": "人",
+      "start_time": 23.67399999999999,
+      "end_time": 23.851999999999986
+    },
+    {
+      "character": "听",
+      "start_time": 23.851999999999986,
+      "end_time": 24.029999999999983
+    },
+    {
+      "character": "闻",
+      "start_time": 24.029999999999983,
+      "end_time": 24.207999999999984
+    },
+    {
+      "character": "后",
+      "start_time": 24.207999999999984,
+      "end_time": 24.38599999999998
+    },
+    {
+      "character": "既",
+      "start_time": 24.38599999999998,
+      "end_time": 24.56399999999998
+    },
+    {
+      "character": "惊",
+      "start_time": 24.56399999999998,
+      "end_time": 24.74199999999998
+    },
+    {
+      "character": "喜",
+      "start_time": 24.74199999999998,
+      "end_time": 24.919999999999977
+    },
+    {
+      "character": "又",
+      "start_time": 24.919999999999977,
+      "end_time": 25.097999999999974
+    },
+    {
+      "character": "惶",
+      "start_time": 25.097999999999974,
+      "end_time": 25.275999999999975
+    },
+    {
+      "character": "恐",
+      "start_time": 25.275999999999975,
+      "end_time": 25.453999999999972
+    },
+    {
+      "character": "。",
+      "start_time": 25.453999999999972,
+      "end_time": 25.63199999999997
+    }
+  ],
+  "generated_at": "2025-07-19T18:04:15.609620"
+}

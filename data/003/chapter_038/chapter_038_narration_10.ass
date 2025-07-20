@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_038 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.28,Default,,0,0,0,,远处{\c&H0000FFFF&\b1}战场{\c&H00FFFFFF&\b0}方向火势有变化，
+Dialogue: 0,0:00:02.28,0:00:05.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}勒马停住，传军令大军前往前
+Dialogue: 0,0:00:05.32,0:00:06.08,Default,,0,0,0,,面{\c&H0000FFFF&\b1}山坡{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:06.08,0:00:09.13,Default,,0,0,0,,场景野外山坡处，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的装扮和动
+Dialogue: 0,0:00:09.13,0:00:09.89,Default,,0,0,0,,作{\c&H0000FFFF&\b1}明确{\c&H00FFFFFF&\b0}。

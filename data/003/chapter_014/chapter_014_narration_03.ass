@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_014 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}接着说：“可惜花无百日红，
+Dialogue: 0,0:00:02.76,0:00:05.17,Default,,0,0,0,,人{\c&H0000FFFF&\b1}无再{\c&H00FFFFFF&\b0}少年，如今我们都老了。
+Dialogue: 0,0:00:05.17,0:00:07.24,Default,,0,0,0,,”{\c&H0000FFFF&\b1}说完{\c&H00FFFFFF&\b0}眼中追忆之色更浓，
+Dialogue: 0,0:00:07.24,0:00:09.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}嘴角{\c&H00FFFFFF&\b0}不自觉升起一丝笑意。
+Dialogue: 0,0:00:09.31,0:00:11.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}听后，眼中闪过一丝异色，
+Dialogue: 0,0:00:11.90,0:00:13.97,Default,,0,0,0,,很快{\c&H0000FFFF&\b1}遮掩{\c&H00FFFFFF&\b0}下去，笑了笑道：
+Dialogue: 0,0:00:13.97,0:00:16.55,Default,,0,0,0,,“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}，还有什么难以启齿的吗？
+Dialogue: 0,0:00:16.55,0:00:18.45,Default,,0,0,0,,不都是建成帮{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}扛着？
+Dialogue: 0,0:00:18.45,0:00:21.55,Default,,0,0,0,,说来，他可是替{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}挨了先皇不少打。”

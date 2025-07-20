@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_039 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.15,Default,,0,0,0,,北向辉见战马{\c&H0000FFFF&\b1}速度慢{\c&H00FFFFFF&\b0}下来，
+Dialogue: 0,0:00:02.15,0:00:05.02,Default,,0,0,0,,二人眼看被追上，直接弯弓搭箭{\c&H0000FFFF&\b1}射中{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.02,0:00:07.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}马屁股{\c&H00FFFFFF&\b0}，战马人立而起发狂奔跑，
+Dialogue: 0,0:00:07.71,0:00:09.51,Default,,0,0,0,,北向辉大喝道“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:09.51,0:00:11.66,Default,,0,0,0,,俺{\c&H0000FFFF&\b1}挡住{\c&H00FFFFFF&\b0}他们，你一定要赢！
+Dialogue: 0,0:00:11.66,0:00:13.81,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中大骂北向辉，
+Dialogue: 0,0:00:13.81,0:00:16.32,Default,,0,0,0,,同时意识到自己比{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}年轻，
+Dialogue: 0,0:00:16.32,0:00:19.19,Default,,0,0,0,,有耗死他的可能，但脑中一阵{\c&H0000FFFF&\b1}失神{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:19.19,0:00:20.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}手脚{\c&H00FFFFFF&\b0}发麻。

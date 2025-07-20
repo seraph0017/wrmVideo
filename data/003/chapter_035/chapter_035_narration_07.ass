@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_035 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}大吼：“随朕转锋！
+Dialogue: 0,0:00:02.21,0:00:04.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}向东{\c&H00FFFFFF&\b0}！”，军令迅速传至全军，
+Dialogue: 0,0:00:04.78,0:00:07.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}大唐{\c&H00FFFFFF&\b0}军队迅速变阵向后冲杀，
+Dialogue: 0,0:00:07.17,0:00:09.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}率领小队在后面垫后。
+Dialogue: 0,0:00:09.75,0:00:12.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是战场中，光线因变阵变得紧张
+Dialogue: 0,0:00:12.69,0:00:15.08,Default,,0,0,0,,，{\c&H0000FFFF&\b1}天气{\c&H00FFFFFF&\b0}为战斗中的持续状态。
+Dialogue: 0,0:00:15.08,0:00:16.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}身着带血战袍，
+Dialogue: 0,0:00:16.92,0:00:18.76,Default,,0,0,0,,束发{\c&H0000FFFF&\b1}黑色{\c&H00FFFFFF&\b0}，面容坚定，
+Dialogue: 0,0:00:18.76,0:00:21.70,Default,,0,0,0,,下达转锋命令；{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}身披战甲，
+Dialogue: 0,0:00:21.70,0:00:23.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}铁槊{\c&H00FFFFFF&\b0}在前，奋勇垫后。

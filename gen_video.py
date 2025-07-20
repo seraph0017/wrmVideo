@@ -14,6 +14,7 @@ import argparse
 import glob
 from pathlib import Path
 import concurrent.futures
+import random
 
 def get_video_info(video_path):
     """获取视频的分辨率、帧率和时长"""
@@ -246,7 +247,7 @@ def add_subtitle(video_path, subtitle_path, output_path):
         return False
 
 def add_watermark(video_path, watermark_path, output_path):
-    """为视频添加右上角角标"""
+    """为视频添加多层overlay：fuceng.mp4作为中间层，rmxs.png作为最上层"""
     try:
         # 检查角标文件是否存在
         if not os.path.exists(watermark_path):
@@ -264,23 +265,62 @@ def add_watermark(video_path, watermark_path, output_path):
         
         video_width, video_height = video_info[0], video_info[1]
         
-        video_input = ffmpeg.input(video_path)
-        watermark_input = ffmpeg.input(watermark_path, loop=1)  # 循环播放角标
+        # 定义overlay文件路径
+        fuceng_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "banner", "fuceng.mp4")
         
-        (
-            ffmpeg
-            .filter([video_input, watermark_input], 'overlay', 
-                   x='W-w',  # 右上角贴边：视频宽度-角标宽度
-                   y=0,      # 上边距0像素，完全贴边
-                   shortest=1)  # 确保角标持续到视频结束
-            .output(output_path, vcodec='libx264', acodec='copy')
-            .overwrite_output()
-            .run()
-        )
-        print(f"添加角标成功：{output_path}")
+        # 检查fuceng.mp4是否存在
+        if not os.path.exists(fuceng_path):
+            print(f"警告: fuceng.mp4文件不存在: {fuceng_path}")
+            # 如果fuceng.mp4不存在，只添加rmxs.png
+            video_input = ffmpeg.input(video_path)
+            watermark_input = ffmpeg.input(watermark_path, loop=1)
+            
+            (
+                ffmpeg
+                .filter([video_input, watermark_input], 'overlay', 
+                       x='W-w',  # 右上角贴边：视频宽度-角标宽度
+                       y=0,      # 上边距0像素，完全贴边
+                       shortest=1)  # 确保角标持续到视频结束
+                .output(output_path, vcodec='libx264', acodec='copy')
+                .overwrite_output()
+                .run()
+            )
+        else:
+            # 添加多层overlay
+            video_input = ffmpeg.input(video_path)
+            # 获取视频时长用于循环播放fuceng.mp4
+            video_duration = video_info[3] if video_info[3] else 10  # 默认10秒
+            fuceng_input = ffmpeg.input(fuceng_path, stream_loop=-1, t=video_duration, an=None)  # 循环播放，不包含音频
+            watermark_input = ffmpeg.input(watermark_path, loop=1)  # 循环播放角标
+            
+            # 处理fuceng.mp4：缩放到视频尺寸并过滤黑色背景
+            fuceng_processed = (
+                fuceng_input
+                .filter('scale', video_width, video_height)  # 缩放到视频尺寸
+                .filter('colorkey', color='black', similarity=0.3, blend=0.1)  # 过滤黑色背景
+            )
+            
+            # 第一步：将处理后的fuceng.mp4作为中间层overlay到原视频上
+            video_with_fuceng = ffmpeg.filter([video_input, fuceng_processed], 'overlay', 
+                                             x=0, y=0,  # 全屏覆盖
+                                             shortest=1)
+            
+            # 第二步：将rmxs.png作为最上层overlay
+            (
+                ffmpeg
+                .filter([video_with_fuceng, watermark_input], 'overlay', 
+                       x='W-w',  # 右上角贴边：视频宽度-角标宽度
+                       y=0,      # 上边距0像素，完全贴边
+                       shortest=1)  # 确保角标持续到视频结束
+                .output(output_path, vcodec='libx264', acodec='copy')
+                .overwrite_output()
+                .run()
+            )
+        
+        print(f"添加多层overlay成功：{output_path}")
         return True
     except Exception as e:
-        print(f"添加角标失败: {e}")
+        print(f"添加多层overlay失败: {e}")
         return False
 
 def add_audio(video_path, audio_path, output_path, replace=True):
@@ -353,6 +393,88 @@ def concat_audio_files(audio_files, output_path):
         return True
     except Exception as e:
         print(f"音频拼接失败: {e}")
+        return False
+
+def mix_audio_with_bgm(narration_audio_path, video_duration, output_path):
+    """将台词音频与随机选择的BGM混合
+    
+    Args:
+        narration_audio_path: 台词音频文件路径
+        video_duration: 视频总时长
+        output_path: 输出音频路径
+    """
+    try:
+        # 获取BGM目录
+        bgm_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "bgm")
+        
+        # 查找所有wn*.mp3文件
+        bgm_files = glob.glob(os.path.join(bgm_dir, "wn*.mp3"))
+        if not bgm_files:
+            print("警告: 未找到BGM文件，仅使用台词音频")
+            import shutil
+            shutil.copy2(narration_audio_path, output_path)
+            return True
+        
+        # 随机选择一个BGM文件
+        selected_bgm = random.choice(bgm_files)
+        print(f"随机选择BGM: {os.path.basename(selected_bgm)}")
+        
+        # 获取台词音频时长
+        narration_duration = get_audio_duration(narration_audio_path)
+        bgm_duration = get_audio_duration(selected_bgm)
+        
+        print(f"台词音频时长: {narration_duration:.2f}s, BGM时长: {bgm_duration:.2f}s, 视频时长: {video_duration:.2f}s")
+        
+        # 以台词音频时长为准，添加3秒渐变时间
+        fade_duration = 3.0
+        target_duration = narration_duration + fade_duration
+        print(f"目标音频时长: {target_duration:.2f}s (台词 {narration_duration:.2f}s + 渐变 {fade_duration:.2f}s)")
+        
+        # 创建输入流
+        narration_input = ffmpeg.input(narration_audio_path)
+        bgm_input = ffmpeg.input(selected_bgm)
+        
+        # 处理BGM：循环播放以匹配目标时长
+        if bgm_duration < target_duration:
+            # BGM需要循环播放
+            loop_count = int(target_duration / bgm_duration) + 1
+            print(f"BGM需要循环 {loop_count} 次以匹配目标时长")
+            bgm_looped = bgm_input.filter('aloop', loop=loop_count-1, size=int(bgm_duration * 48000 * 2))
+        else:
+            bgm_looped = bgm_input
+        
+        # 截取BGM到目标时长
+        bgm_trimmed = bgm_looped.filter('atrim', duration=target_duration)
+        
+        # 台词音频添加静音以匹配目标时长
+        silence = ffmpeg.input('anullsrc=channel_layout=stereo:sample_rate=48000', f='lavfi', t=fade_duration)
+        narration_extended = ffmpeg.concat(narration_input, silence, v=0, a=1)
+        
+        # 音量调整：台词音量大(1.0)，BGM音量小(0.3)
+        narration_volume = narration_extended.filter('volume', volume=1.0)
+        bgm_volume = bgm_trimmed.filter('volume', volume=0.3)
+        
+        # BGM在台词结束后渐变消失
+        fade_start = narration_duration
+        print(f"BGM将在 {fade_start:.2f}s 开始渐变，持续 {fade_duration:.2f}s")
+        bgm_volume = bgm_volume.filter('afade', type='out', start_time=fade_start, duration=fade_duration)
+        
+        # 混合音频
+        mixed_audio = ffmpeg.filter([narration_volume, bgm_volume], 'amix', inputs=2, duration='longest')
+        
+        # 输出混合后的音频
+        (
+            ffmpeg
+            .output(mixed_audio, output_path, acodec='mp3', audio_bitrate='192k')
+            .overwrite_output()
+            .run()
+        )
+        
+        print(f"音频混合成功：{output_path}")
+        return True
+        
+    except Exception as e:
+        print(f"音频混合失败: {e}")
         return False
 
 def merge_ass_files(ass_files, output_path, video_segments_info):
@@ -584,16 +706,31 @@ def process_chapter(chapter_path):
     final_output = os.path.join(chapter_path, f"{chapter_name}_final_video.mp4")
     
     if audio_files:
-        # 拼接所有音频文件
-        merged_audio_file = os.path.join(temp_dir, "merged_audio.mp3")
-        if concat_audio_files(audio_files, merged_audio_file):
-            # 添加合并后的音频
-            if add_audio(video_with_watermark, merged_audio_file, final_output, replace=True):
-                print(f"✓ 章节视频生成成功: {final_output}")
+        # 先拼接所有台词音频文件
+        merged_narration_audio = os.path.join(temp_dir, "merged_narration.mp3")
+        if concat_audio_files(audio_files, merged_narration_audio):
+            # 获取视频总时长
+            video_info = get_video_info(video_with_watermark)
+            total_video_duration = video_info[3] if video_info[3] else sum(video_segments_info)
+            
+            # 将台词音频与BGM混合
+            mixed_audio_file = os.path.join(temp_dir, "mixed_audio.mp3")
+            if mix_audio_with_bgm(merged_narration_audio, total_video_duration, mixed_audio_file):
+                # 添加混合后的音频
+                if add_audio(video_with_watermark, mixed_audio_file, final_output, replace=True):
+                    print(f"✓ 章节视频生成成功: {final_output}")
+                else:
+                    print(f"添加音频失败，但保存无音频版本: {final_output}")
+                    import shutil
+                    shutil.copy2(video_with_watermark, final_output)
             else:
-                print(f"添加音频失败，但保存无音频版本: {final_output}")
-                import shutil
-                shutil.copy2(video_with_watermark, final_output)
+                print(f"音频混合失败，使用原始台词音频")
+                if add_audio(video_with_watermark, merged_narration_audio, final_output, replace=True):
+                    print(f"✓ 章节视频生成成功(仅台词音频): {final_output}")
+                else:
+                    print(f"添加音频失败，保存无音频版本: {final_output}")
+                    import shutil
+                    shutil.copy2(video_with_watermark, final_output)
         else:
             print(f"音频拼接失败，保存无音频版本: {final_output}")
             import shutil

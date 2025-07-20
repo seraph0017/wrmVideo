@@ -1,0 +1,41 @@
+[Script Info]
+Title: chapter_010 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}大吼别跳了，
+Dialogue: 0,0:00:01.68,0:00:03.55,Default,,0,0,0,,让人把{\c&H0000FFFF&\b1}大度{\c&H00FFFFFF&\b0}设押下去，
+Dialogue: 0,0:00:03.55,0:00:06.35,Default,,0,0,0,,然后看向{\c&H0000FFFF&\b1}众臣{\c&H00FFFFFF&\b0}商议逆子用四人换粮
+Dialogue: 0,0:00:06.35,0:00:09.33,Default,,0,0,0,,草的事，{\c&H0000FFFF&\b1}唐俭{\c&H00FFFFFF&\b0}说朝廷短时间无法再次
+Dialogue: 0,0:00:09.33,0:00:11.57,Default,,0,0,0,,筹集一百万担{\c&H0000FFFF&\b1}粮草{\c&H00FFFFFF&\b0}换一人，
+Dialogue: 0,0:00:11.57,0:00:14.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}高士廉{\c&H00FFFFFF&\b0}报告河北道恐怕有大旱，
+Dialogue: 0,0:00:14.19,0:00:16.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}问太史令袁天罡今年河北道
+Dialogue: 0,0:00:16.99,0:00:19.97,Default,,0,0,0,,是否真的会大旱，{\c&H0000FFFF&\b1}袁天罡{\c&H00FFFFFF&\b0}称观天象，
+Dialogue: 0,0:00:19.97,0:00:21.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}北斗{\c&H00FFFFFF&\b0}南指，太白经天，
+Dialogue: 0,0:00:21.84,0:00:24.27,Default,,0,0,0,,是阳气过盛、{\c&H0000FFFF&\b1}雨露{\c&H00FFFFFF&\b0}不降之征，
+Dialogue: 0,0:00:24.27,0:00:26.51,Default,,0,0,0,,根据近十年{\c&H0000FFFF&\b1}节气{\c&H00FFFFFF&\b0}变化推算，
+Dialogue: 0,0:00:26.51,0:00:29.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}大旱{\c&H00FFFFFF&\b0}的概率极高，无法人力更改，
+Dialogue: 0,0:00:29.31,0:00:30.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}朝廷{\c&H00FFFFFF&\b0}应该早做准备，
+Dialogue: 0,0:00:30.99,0:00:33.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}让唐俭将关中一半的常平仓
+Dialogue: 0,0:00:33.79,0:00:36.40,Default,,0,0,0,,开仓，其中半数调拨至{\c&H0000FFFF&\b1}河北{\c&H00FFFFFF&\b0}道，
+Dialogue: 0,0:00:36.40,0:00:39.20,Default,,0,0,0,,另外一半用来换{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}四人回朝，
+Dialogue: 0,0:00:39.20,0:00:42.00,Default,,0,0,0,,唐俭称{\c&H0000FFFF&\b1}常平仓{\c&H00FFFFFF&\b0}存粮恐怕不够换四人
+Dialogue: 0,0:00:42.00,0:00:44.98,Default,,0,0,0,,，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}说李承乾可以“分期付款”
+Dialogue: 0,0:00:44.98,0:00:46.85,Default,,0,0,0,,，{\c&H0000FFFF&\b1}先能{\c&H00FFFFFF&\b0}赎几个是几个，
+Dialogue: 0,0:00:46.85,0:00:49.46,Default,,0,0,0,,下朝后传旨让{\c&H0000FFFF&\b1}卫国公{\c&H00FFFFFF&\b0}回朝休养，
+Dialogue: 0,0:00:49.46,0:00:51.89,Default,,0,0,0,,由{\c&H0000FFFF&\b1}苏定方{\c&H00FFFFFF&\b0}统帅大军进驻丰州，
+Dialogue: 0,0:00:51.89,0:00:54.13,Default,,0,0,0,,让{\c&H0000FFFF&\b1}唐俭{\c&H00FFFFFF&\b0}即刻从各州府集粮，
+Dialogue: 0,0:00:54.13,0:00:56.74,Default,,0,0,0,,粮草一到就立马拨付给{\c&H0000FFFF&\b1}苏定方{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:56.74,0:00:58.42,Default,,0,0,0,,让他率军夺回{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:58.42,0:00:59.54,Default,,0,0,0,,缉拿{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}。

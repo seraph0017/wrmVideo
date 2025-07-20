@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_032 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着战袍，束发，
+Dialogue: 0,0:00:02.16,0:00:04.53,Default,,0,0,0,,回到大帐，等待{\c&H0000FFFF&\b1}丰州{\c&H00FFFFFF&\b0}战报，
+Dialogue: 0,0:00:04.53,0:00:05.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}略显焦急。
+Dialogue: 0,0:00:05.90,0:00:07.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}杜荷{\c&H00FFFFFF&\b0}身着相关服饰，
+Dialogue: 0,0:00:07.68,0:00:10.04,Default,,0,0,0,,急冲冲进来禀报{\c&H0000FFFF&\b1}丰州{\c&H00FFFFFF&\b0}被围，
+Dialogue: 0,0:00:10.04,0:00:12.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着战袍，束发，
+Dialogue: 0,0:00:12.20,0:00:15.35,Default,,0,0,0,,得知后稍显放心，想起库房的{\c&H0000FFFF&\b1}东西{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:15.35,0:00:17.71,Default,,0,0,0,,前往查看，看到{\c&H0000FFFF&\b1}满箱{\c&H00FFFFFF&\b0}银锭，
+Dialogue: 0,0:00:17.71,0:00:18.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}震惊。
+Dialogue: 0,0:00:18.70,0:00:21.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是室内库房，时间为查看库房时
+Dialogue: 0,0:00:21.84,0:00:24.60,Default,,0,0,0,,，{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}充足，突出银锭的数量。

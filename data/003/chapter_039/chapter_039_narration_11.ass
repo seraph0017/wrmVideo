@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_039 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}走到李世民身边，
+Dialogue: 0,0:00:01.95,0:00:04.79,Default,,0,0,0,,蹲下身体，微微弯腰趴在{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}耳边
+Dialogue: 0,0:00:04.79,0:00:07.63,Default,,0,0,0,,轻声说话，{\c&H0000FFFF&\b1}称母{\c&H00FFFFFF&\b0}后临终前说最爱的不
+Dialogue: 0,0:00:07.63,0:00:10.29,Default,,0,0,0,,是他，这辈子最后悔嫁给{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:10.29,0:00:12.96,Default,,0,0,0,,话音一落，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}眼皮动了一下，
+Dialogue: 0,0:00:12.96,0:00:14.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中一惊。

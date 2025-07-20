@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_033 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.68,Default,,0,0,0,,次日清晨，大帐内{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}有些昏暗，
+Dialogue: 0,0:00:02.68,0:00:05.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}单手不断敲击着桌面，
+Dialogue: 0,0:00:05.00,0:00:07.85,Default,,0,0,0,,心中满是焦躁，因为{\c&H0000FFFF&\b1}丰州{\c&H00FFFFFF&\b0}被围且还没
+Dialogue: 0,0:00:07.85,0:00:09.46,Default,,0,0,0,,有清晰的{\c&H0000FFFF&\b1}消息{\c&H00FFFFFF&\b0}传来。
+Dialogue: 0,0:00:09.46,0:00:12.32,Default,,0,0,0,,不一会儿，长孙无忌和{\c&H0000FFFF&\b1}高士廉{\c&H00FFFFFF&\b0}进入帐
+Dialogue: 0,0:00:12.32,0:00:15.53,Default,,0,0,0,,中，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}急切地询问消息传达的情况。

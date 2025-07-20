@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_035 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}率军冲出来，
+Dialogue: 0,0:00:01.69,0:00:03.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}部队{\c&H00FFFFFF&\b0}虽有一定损失，
+Dialogue: 0,0:00:03.38,0:00:06.38,Default,,0,0,0,,但仍继续行动，{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}追上来询问
+Dialogue: 0,0:00:06.38,0:00:08.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}是否继续冲杀，
+Dialogue: 0,0:00:08.25,0:00:10.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}在战马上不断回头张望，
+Dialogue: 0,0:00:10.88,0:00:13.70,Default,,0,0,0,,随后下令{\c&H0000FFFF&\b1}全军{\c&H00FFFFFF&\b0}放缓行军速度以诱敌
+Dialogue: 0,0:00:13.70,0:00:16.88,Default,,0,0,0,,。{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是战场中，光线因战斗变得混乱
+Dialogue: 0,0:00:16.88,0:00:19.32,Default,,0,0,0,,，{\c&H0000FFFF&\b1}天气{\c&H00FFFFFF&\b0}为战斗中的持续状态。
+Dialogue: 0,0:00:19.32,0:00:21.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}身着带血战袍，
+Dialogue: 0,0:00:21.20,0:00:23.08,Default,,0,0,0,,束发{\c&H0000FFFF&\b1}黑色{\c&H00FFFFFF&\b0}，面容冷静，
+Dialogue: 0,0:00:23.08,0:00:25.70,Default,,0,0,0,,下达命令；{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}身披战甲，
+Dialogue: 0,0:00:25.70,0:00:26.64,Default,,0,0,0,,询问{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}。

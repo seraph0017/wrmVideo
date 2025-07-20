@@ -1,0 +1,123 @@
+[Script Info]
+Title: chapter_002 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:03.10,Default,,0,0,0,,在{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫中，一众文臣正激烈权衡利
+Dialogue: 0, 0:00:03.10, 0:00:06.37,Default,,0,0,0,,弊，魏征站出，神情严肃地向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}提
+Dialogue: 0, 0:00:06.37, 0:00:09.48,Default,,0,0,0,,出{\c&H0000FFFF&\b1}建议{\c&H00FFFFFF&\b0}，众人围绕出兵之事展开商议
+Dialogue: 0, 0:00:09.48, 0:00:11.60,Default,,0,0,0,,。场景为庄重的{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫，
+Dialogue: 0, 0:00:11.60, 0:00:13.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}明亮，时间是白天。
+Dialogue: 0, 0:00:13.73, 0:00:16.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}魏征{\c&H00FFFFFF&\b0}身形高大，肩宽背阔，
+Dialogue: 0, 0:00:16.05, 0:00:18.37,Default,,0,0,0,,五官{\c&H0000FFFF&\b1}棱角分明{\c&H00FFFFFF&\b0}，身着官服，
+Dialogue: 0, 0:00:18.37, 0:00:19.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}神色{\c&H00FFFFFF&\b0}严肃。
+Dialogue: 0, 0:00:19.33, 0:00:21.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听了魏征的建议后，
+Dialogue: 0, 0:00:21.58, 0:00:24.57,Default,,0,0,0,,面露沉吟之色，{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌站出劝李承
+Dialogue: 0, 0:00:24.57, 0:00:27.57,Default,,0,0,0,,乾答应相关{\c&H0000FFFF&\b1}条件{\c&H00FFFFFF&\b0}，随后众人准备离开
+Dialogue: 0, 0:00:27.57, 0:00:28.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫。
+Dialogue: 0, 0:00:28.32, 0:00:30.00,Default,,0,0,0,,场景依旧是{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫，
+Dialogue: 0, 0:00:30.00, 0:00:32.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}庄重，时间延续白天。
+Dialogue: 0, 0:00:32.25, 0:00:34.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身形高瘦，肤色稍黑，
+Dialogue: 0, 0:00:34.67, 0:00:36.73,Default,,0,0,0,,身着{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}服，神色复杂。
+Dialogue: 0, 0:00:36.73, 0:00:38.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}答应众人条件后，
+Dialogue: 0, 0:00:38.77, 0:00:41.55,Default,,0,0,0,,众人退去，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}驻足太极宫前，
+Dialogue: 0, 0:00:41.55, 0:00:43.96,Default,,0,0,0,,抬头望着气象万千的{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫，
+Dialogue: 0, 0:00:43.96, 0:00:45.26,Default,,0,0,0,,心中满是{\c&H0000FFFF&\b1}恍惚{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:45.26, 0:00:47.67,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫前，环境开阔，
+Dialogue: 0, 0:00:47.67, 0:00:49.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}依旧是白天的明亮。
+Dialogue: 0, 0:00:49.71, 0:00:51.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着太子服，
+Dialogue: 0, 0:00:51.38, 0:00:52.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}状态{\c&H00FFFFFF&\b0}迷茫。
+Dialogue: 0, 0:00:52.31, 0:00:54.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}被人从后面拍肩，
+Dialogue: 0, 0:00:54.38, 0:00:57.38,Default,,0,0,0,,回头见是{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}，周围众臣纷纷侧目
+Dialogue: 0, 0:00:57.38, 0:00:59.83,Default,,0,0,0,,。场景是{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫，环境庄重，
+Dialogue: 0, 0:00:59.83, 0:01:00.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}为白天。
+Dialogue: 0, 0:01:00.96, 0:01:03.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}身形高大，肩宽背阔，
+Dialogue: 0, 0:01:03.40, 0:01:05.65,Default,,0,0,0,,面带{\c&H0000FFFF&\b1}笑意{\c&H00FFFFFF&\b0}，身着得体服饰。
+Dialogue: 0, 0:01:05.65, 0:01:08.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}与李承乾交谈后离去，
+Dialogue: 0, 0:01:08.12, 0:01:10.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}面露疑惑之色，
+Dialogue: 0, 0:01:10.03, 0:01:11.92,Default,,0,0,0,,随后转身向{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}走去。
+Dialogue: 0, 0:01:11.92, 0:01:14.19,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫，环境庄重，
+Dialogue: 0, 0:01:14.19, 0:01:15.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}是白天。
+Dialogue: 0, 0:01:15.34, 0:01:17.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着太子服，
+Dialogue: 0, 0:01:17.04, 0:01:18.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}状态{\c&H00FFFFFF&\b0}疑惑。
+Dialogue: 0, 0:01:18.00, 0:01:19.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}到达东宫门口，
+Dialogue: 0, 0:01:19.90, 0:01:22.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}太子妃{\c&H00FFFFFF&\b0}苏宁玉正端坐在大堂，
+Dialogue: 0, 0:01:22.37, 0:01:24.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}言语{\c&H00FFFFFF&\b0}间透着决然之色。
+Dialogue: 0, 0:01:24.26, 0:01:26.35,Default,,0,0,0,,场景为清冷的{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}大堂，
+Dialogue: 0, 0:01:26.35, 0:01:28.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}柔和，时间是白天。
+Dialogue: 0, 0:01:28.46, 0:01:31.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏宁{\c&H00FFFFFF&\b0}玉面容清丽，身着淡紫色宫装，
+Dialogue: 0, 0:01:31.50, 0:01:32.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}神色{\c&H00FFFFFF&\b0}决然。
+Dialogue: 0, 0:01:32.45, 0:01:35.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}进门听到苏宁玉的话语，
+Dialogue: 0, 0:01:35.07, 0:01:37.87,Default,,0,0,0,,向其解释自己谋得出征{\c&H0000FFFF&\b1}薛延陀{\c&H00FFFFFF&\b0}的机
+Dialogue: 0, 0:01:37.87, 0:01:40.85,Default,,0,0,0,,会需要{\c&H0000FFFF&\b1}钱财{\c&H00FFFFFF&\b0}，苏宁玉听闻后露出惊喜
+Dialogue: 0, 0:01:40.85, 0:01:42.90,Default,,0,0,0,,之色并准备去收拾{\c&H0000FFFF&\b1}财物{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:42.90, 0:01:45.34,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}大堂，环境清冷，
+Dialogue: 0, 0:01:45.34, 0:01:47.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}柔和，时间是白天。
+Dialogue: 0, 0:01:47.39, 0:01:49.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着太子服认真解释，
+Dialogue: 0, 0:01:49.82, 0:01:52.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏宁{\c&H00FFFFFF&\b0}玉身着淡紫色宫装惊喜。
+Dialogue: 0, 0:01:52.25, 0:01:55.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}来访东宫，李承乾与侯君集交
+Dialogue: 0, 0:01:55.26, 0:01:57.15,Default,,0,0,0,,谈，{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}身着盔甲，
+Dialogue: 0, 0:01:57.15, 0:01:59.43,Default,,0,0,0,,面露不悦，提出激进{\c&H0000FFFF&\b1}计划{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:59.43, 0:02:01.89,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}大堂，环境清冷，
+Dialogue: 0, 0:02:01.89, 0:02:03.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}柔和，时间是白天。
+Dialogue: 0, 0:02:03.96, 0:02:05.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}身形不算高大，
+Dialogue: 0, 0:02:05.84, 0:02:08.12,Default,,0,0,0,,眉骨{\c&H0000FFFF&\b1}高耸{\c&H00FFFFFF&\b0}，脸庞棱角分明，
+Dialogue: 0, 0:02:08.12, 0:02:10.00,Default,,0,0,0,,身着{\c&H0000FFFF&\b1}盔甲{\c&H00FFFFFF&\b0}，神色不悦。
+Dialogue: 0, 0:02:10.00, 0:02:12.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}向侯君集说明自己的计划，
+Dialogue: 0, 0:02:12.87, 0:02:15.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}听后表示会全力相助，
+Dialogue: 0, 0:02:15.35, 0:02:16.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}面露{\c&H00FFFFFF&\b0}兴奋之色。
+Dialogue: 0, 0:02:16.69, 0:02:19.17,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}大堂，环境清冷，
+Dialogue: 0, 0:02:19.17, 0:02:21.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}柔和，时间是白天。
+Dialogue: 0, 0:02:21.28, 0:02:23.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着太子服沉稳说明，
+Dialogue: 0, 0:02:23.76, 0:02:25.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}身着盔甲兴奋。
+Dialogue: 0, 0:02:25.67, 0:02:27.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏宁{\c&H00FFFFFF&\b0}玉收拾完财物，
+Dialogue: 0, 0:02:27.36, 0:02:30.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看到众多箱子面露惊讶之色
+Dialogue: 0, 0:02:30.18, 0:02:32.43,Default,,0,0,0,,，{\c&H0000FFFF&\b1}苏宁{\c&H00FFFFFF&\b0}玉自信地站在一旁。
+Dialogue: 0, 0:02:32.43, 0:02:34.87,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}大堂，环境清冷，
+Dialogue: 0, 0:02:34.87, 0:02:36.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}柔和，时间是白天。
+Dialogue: 0, 0:02:36.93, 0:02:39.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着太子服惊讶，
+Dialogue: 0, 0:02:39.00, 0:02:41.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏宁{\c&H00FFFFFF&\b0}玉身着淡紫色宫装自信。
+Dialogue: 0, 0:02:41.44, 0:02:43.28,Default,,0,0,0,,听到魏{\c&H0000FFFF&\b1}王李泰{\c&H00FFFFFF&\b0}的声音，
+Dialogue: 0, 0:02:43.28, 0:02:46.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}准备应对，苏宁玉询问是否需
+Dialogue: 0, 0:02:46.22, 0:02:49.17,Default,,0,0,0,,要帮忙，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示自己处理即可。
+Dialogue: 0, 0:02:49.17, 0:02:51.56,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}门口，环境清冷，
+Dialogue: 0, 0:02:51.56, 0:02:53.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}柔和，时间是白天。
+Dialogue: 0, 0:02:53.58, 0:02:55.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着太子服冷笑，
+Dialogue: 0, 0:02:55.61, 0:02:58.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏宁{\c&H00FFFFFF&\b0}玉身着淡紫色宫装关心。
+Dialogue: 0, 0:02:58.00, 0:02:59.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}出门面对李泰，
+Dialogue: 0, 0:02:59.84, 0:03:02.75,Default,,0,0,0,,与{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}发生冲突，一巴掌打在李泰脸
+Dialogue: 0, 0:03:02.75, 0:03:05.12,Default,,0,0,0,,上，{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}面露不可置信之色。
+Dialogue: 0, 0:03:05.12, 0:03:07.50,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}门口，环境清冷，
+Dialogue: 0, 0:03:07.50, 0:03:09.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}柔和，时间是白天。
+Dialogue: 0, 0:03:09.51, 0:03:11.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着太子服愤怒，
+Dialogue: 0, 0:03:11.51, 0:03:13.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}身着华贵服饰不可置信。
+Dialogue: 0, 0:03:13.89, 0:03:16.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}追打李泰，一脚踹在李泰屁股
+Dialogue: 0, 0:03:16.88, 0:03:20.06,Default,,0,0,0,,上，李泰狼狈逃窜，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}面露揶揄之
+Dialogue: 0, 0:03:20.06, 0:03:21.93,Default,,0,0,0,,色。场景为{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}门口，
+Dialogue: 0, 0:03:21.93, 0:03:23.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}清冷，光线柔和，
+Dialogue: 0, 0:03:23.81, 0:03:24.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}是白天。
+Dialogue: 0, 0:03:24.93, 0:03:26.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着太子服揶揄，
+Dialogue: 0, 0:03:26.99, 0:03:29.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}身着华贵服饰愤怒逃窜。
+Dialogue: 0, 0:03:29.42, 0:03:31.86,Default,,0,0,0,,翌日清晨，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}一身华服，
+Dialogue: 0, 0:03:31.86, 0:03:34.11,Default,,0,0,0,,带领下属搬着箱子出{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:03:34.11, 0:03:36.73,Default,,0,0,0,,引起宫中下人{\c&H0000FFFF&\b1}和内廷{\c&H00FFFFFF&\b0}官员侧目。
+Dialogue: 0, 0:03:36.73, 0:03:39.17,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}门口，环境清冷，
+Dialogue: 0, 0:03:39.17, 0:03:41.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}柔和，时间是清晨。
+Dialogue: 0, 0:03:41.24, 0:03:43.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着华服从容，
+Dialogue: 0, 0:03:43.11, 0:03:44.61,Default,,0,0,0,,下属搬{\c&H0000FFFF&\b1}箱子{\c&H00FFFFFF&\b0}忙碌。
+Dialogue: 0, 0:03:44.61, 0:03:47.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}来到东市，吩咐牙人拿最好的
+Dialogue: 0, 0:03:47.63, 0:03:50.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}货物{\c&H00FFFFFF&\b0}，东市热闹，货物丰富，
+Dialogue: 0, 0:03:50.09, 0:03:51.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}牙人{\c&H00FFFFFF&\b0}恭敬准备。
+Dialogue: 0, 0:03:51.41, 0:03:53.49,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}东市{\c&H00FFFFFF&\b0}，环境喧闹，
+Dialogue: 0, 0:03:53.49, 0:03:55.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}充足，时间是白天。
+Dialogue: 0, 0:03:55.57, 0:03:57.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着华服坚定，
+Dialogue: 0, 0:03:57.46, 0:03:59.54,Default,,0,0,0,,牙{\c&H0000FFFF&\b1}人身{\c&H00FFFFFF&\b0}着灰色长衫恭敬。

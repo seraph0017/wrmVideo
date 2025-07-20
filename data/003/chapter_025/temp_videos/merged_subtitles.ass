@@ -1,0 +1,129 @@
+[Script Info]
+Title: chapter_025 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:01.85,Default,,0,0,0,,室内{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}，光线柔和。
+Dialogue: 0, 0:00:01.85, 0:00:04.28,Default,,0,0,0,,北向辉盯着{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看了几秒，
+Dialogue: 0, 0:00:04.28, 0:00:05.58,Default,,0,0,0,,瞬间猜到{\c&H0000FFFF&\b1}原因{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:05.58, 0:00:08.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}微微诧异，心中思索着情报人
+Dialogue: 0, 0:00:08.56, 0:00:11.34,Default,,0,0,0,,员{\c&H0000FFFF&\b1}和统军{\c&H00FFFFFF&\b0}大将走太近易被帝王猜忌
+Dialogue: 0, 0:00:11.34, 0:00:14.33,Default,,0,0,0,,之事。{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着黄色帝王束发服饰
+Dialogue: 0, 0:00:14.33, 0:00:16.19,Default,,0,0,0,,，北向辉是{\c&H0000FFFF&\b1}武将{\c&H00FFFFFF&\b0}装扮，
+Dialogue: 0, 0:00:16.19, 0:00:18.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}初露喜色又掩盖。
+Dialogue: 0, 0:00:18.05, 0:00:20.76,Default,,0,0,0,,室外春明门处，{\c&H0000FFFF&\b1}吊桥{\c&H00FFFFFF&\b0}缓缓降下，
+Dialogue: 0, 0:00:20.76, 0:00:22.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}单人策马而出。
+Dialogue: 0, 0:00:22.71, 0:00:24.46,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}天气{\c&H00FFFFFF&\b0}看似平静，
+Dialogue: 0, 0:00:24.46, 0:00:27.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}强忍腿疼，神情坚毅，
+Dialogue: 0, 0:00:27.00, 0:00:30.51,Default,,0,0,0,,身着{\c&H0000FFFF&\b1}武将{\c&H00FFFFFF&\b0}服饰，背景有缓缓降下的吊桥。
+Dialogue: 0, 0:00:30.51, 0:00:33.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}春明门{\c&H00FFFFFF&\b0}不远处，李世民带数十人站在
+Dialogue: 0, 0:00:33.42, 0:00:35.25,Default,,0,0,0,,距离{\c&H0000FFFF&\b1}护城河{\c&H00FFFFFF&\b0}千米位置，
+Dialogue: 0, 0:00:35.25, 0:00:37.99,Default,,0,0,0,,他看着{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}，眼中有复杂神色，
+Dialogue: 0, 0:00:37.99, 0:00:40.90,Default,,0,0,0,,面露一丝笑意，觉得{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}有胆色，
+Dialogue: 0, 0:00:40.90, 0:00:42.53,Default,,0,0,0,,身着深色{\c&H0000FFFF&\b1}帝王{\c&H00FFFFFF&\b0}服饰，
+Dialogue: 0, 0:00:42.53, 0:00:43.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}有士兵。
+Dialogue: 0, 0:00:43.64, 0:00:45.27,Default,,0,0,0,,两人{\c&H0000FFFF&\b1}骑马{\c&H00FFFFFF&\b0}相对而立，
+Dialogue: 0, 0:00:45.27, 0:00:48.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率先开口，提起好久没这么父
+Dialogue: 0, 0:00:48.17, 0:00:49.98,Default,,0,0,0,,子说话，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}回应，
+Dialogue: 0, 0:00:49.98, 0:00:51.60,Default,,0,0,0,,眼中{\c&H0000FFFF&\b1}露出{\c&H00FFFFFF&\b0}怅然之色，
+Dialogue: 0, 0:00:51.60, 0:00:54.50,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}滋味{\c&H00FFFFFF&\b0}复杂，两人都身着骑马服饰
+Dialogue: 0, 0:00:54.50, 0:00:55.95,Default,,0,0,0,,，处于马上{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:55.95, 0:00:58.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}向李世民说明消息已突破封
+Dialogue: 0, 0:00:58.76, 0:01:01.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}锁传{\c&H00FFFFFF&\b0}檄各地，还提到李恪等背后有世
+Dialogue: 0, 0:01:01.76, 0:01:03.63,Default,,0,0,0,,家支持，{\c&H0000FFFF&\b1}封锁{\c&H00FFFFFF&\b0}拦不住。
+Dialogue: 0, 0:01:03.63, 0:01:06.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}神色恢复，露出杀意，
+Dialogue: 0, 0:01:06.06, 0:01:08.12,Default,,0,0,0,,称心腹大患还是{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:08.12, 0:01:10.93,Default,,0,0,0,,只要他死了，其他人是{\c&H0000FFFF&\b1}土鸡瓦狗{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:10.93, 0:01:12.99,Default,,0,0,0,,两人处于马上{\c&H0000FFFF&\b1}对话{\c&H00FFFFFF&\b0}场景，
+Dialogue: 0, 0:01:12.99, 0:01:15.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情严肃，李世民面露杀意。
+Dialogue: 0, 0:01:15.99, 0:01:17.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}威胁李世民，
+Dialogue: 0, 0:01:17.62, 0:01:19.80,Default,,0,0,0,,称{\c&H0000FFFF&\b1}自己{\c&H00FFFFFF&\b0}的命不是想拿就拿，
+Dialogue: 0, 0:01:19.80, 0:01:21.80,Default,,0,0,0,,到时各地{\c&H0000FFFF&\b1}勤王{\c&H00FFFFFF&\b0}兵马一到，
+Dialogue: 0, 0:01:21.80, 0:01:23.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}就是乱臣贼子。
+Dialogue: 0, 0:01:23.61, 0:01:26.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}收敛杀意，嘴角露出笑意，
+Dialogue: 0, 0:01:26.33, 0:01:27.97,Default,,0,0,0,,称五天之内{\c&H0000FFFF&\b1}可破{\c&H00FFFFFF&\b0}城，
+Dialogue: 0, 0:01:27.97, 0:01:29.60,Default,,0,0,0,,两人{\c&H0000FFFF&\b1}处于{\c&H00FFFFFF&\b0}马上对峙，
+Dialogue: 0, 0:01:29.60, 0:01:32.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情坚定，李世民嘴角带笑。
+Dialogue: 0, 0:01:32.50, 0:01:34.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}祭出杀手锏，
+Dialogue: 0, 0:01:34.17, 0:01:36.59,Default,,0,0,0,,提到{\c&H0000FFFF&\b1}青雀{\c&H00FFFFFF&\b0}和雉奴在自己手里，
+Dialogue: 0, 0:01:36.59, 0:01:38.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}语气弱了几分，
+Dialogue: 0, 0:01:38.45, 0:01:40.86,Default,,0,0,0,,称若{\c&H0000FFFF&\b1}为国捐躯{\c&H00FFFFFF&\b0}也算死得其所。
+Dialogue: 0, 0:01:40.86, 0:01:43.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示只要让自己离开京师返
+Dialogue: 0, 0:01:43.65, 0:01:46.62,Default,,0,0,0,,回大漠，就下旨昭告天下让{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}总
+Dialogue: 0, 0:01:46.62, 0:01:49.60,Default,,0,0,0,,领一切{\c&H0000FFFF&\b1}军政{\c&H00FFFFFF&\b0}要务，两人处于马上交流
+Dialogue: 0, 0:01:49.60, 0:01:52.76,Default,,0,0,0,,，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}严肃提及，李世民面露复杂。
+Dialogue: 0, 0:01:52.76, 0:01:55.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}表示若李承乾马上下旨发布
+Dialogue: 0, 0:01:55.51, 0:01:57.89,Default,,0,0,0,,退位{\c&H0000FFFF&\b1}诏书{\c&H00FFFFFF&\b0}，可考虑他的意见。
+Dialogue: 0, 0:01:57.89, 0:02:00.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}拒绝，称无法答应。
+Dialogue: 0, 0:02:00.09, 0:02:01.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}眼中寒光乍现，
+Dialogue: 0, 0:02:01.92, 0:02:03.38,Default,,0,0,0,,说明天{\c&H0000FFFF&\b1}战场{\c&H00FFFFFF&\b0}上见。
+Dialogue: 0, 0:02:03.38, 0:02:06.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}愣了一下，大脑飞速运转，
+Dialogue: 0, 0:02:06.13, 0:02:08.51,Default,,0,0,0,,觉得{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}可能是吓唬自己，
+Dialogue: 0, 0:02:08.51, 0:02:10.16,Default,,0,0,0,,两人{\c&H0000FFFF&\b1}处于{\c&H00FFFFFF&\b0}马上对峙，
+Dialogue: 0, 0:02:10.16, 0:02:13.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}面露寒光，李承乾神情疑惑。
+Dialogue: 0, 0:02:13.09, 0:02:14.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回应李世民，
+Dialogue: 0, 0:02:14.66, 0:02:17.28,Default,,0,0,0,,称明天会把{\c&H0000FFFF&\b1}青雀{\c&H00FFFFFF&\b0}和雉奴挂在城头上
+Dialogue: 0, 0:02:17.28, 0:02:20.08,Default,,0,0,0,,等他来攻，还说城破{\c&H0000FFFF&\b1}那日{\c&H00FFFFFF&\b0}自己也会挂
+Dialogue: 0, 0:02:20.08, 0:02:22.35,Default,,0,0,0,,在{\c&H0000FFFF&\b1}城头{\c&H00FFFFFF&\b0}上让人记录传檄天下。
+Dialogue: 0, 0:02:22.35, 0:02:25.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}策马离开，顿了一下后勒马停
+Dialogue: 0, 0:02:25.14, 0:02:26.71,Default,,0,0,0,,住转头说{\c&H0000FFFF&\b1}考虑一下{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:02:26.71, 0:02:28.28,Default,,0,0,0,,两个{\c&H0000FFFF&\b1}时辰{\c&H00FFFFFF&\b0}后给答复，
+Dialogue: 0, 0:02:28.28, 0:02:29.86,Default,,0,0,0,,两人{\c&H0000FFFF&\b1}处于{\c&H00FFFFFF&\b0}马上互动，
+Dialogue: 0, 0:02:29.86, 0:02:32.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}语气坚定，李世民勒马转头。
+Dialogue: 0, 0:02:32.65, 0:02:34.70,Default,,0,0,0,,回城的{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}进入城中，
+Dialogue: 0, 0:02:34.70, 0:02:37.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}等人飞快组织士兵升起吊桥
+Dialogue: 0, 0:02:37.49, 0:02:40.48,Default,,0,0,0,,，{\c&H0000FFFF&\b1}下城{\c&H00FFFFFF&\b0}盯着他，希望知道谈判内容。
+Dialogue: 0, 0:02:40.48, 0:02:43.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}微微皱眉，让薛仁贵帮他卸盔
+Dialogue: 0, 0:02:43.46, 0:02:45.88,Default,,0,0,0,,甲和{\c&H0000FFFF&\b1}火药{\c&H00FFFFFF&\b0}，感觉轻松了一些，
+Dialogue: 0, 0:02:45.88, 0:02:48.30,Default,,0,0,0,,城内场景，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着服饰，
+Dialogue: 0, 0:02:48.30, 0:02:49.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}帮其卸装备。
+Dialogue: 0, 0:02:49.98, 0:02:52.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}返回东宫显德殿，
+Dialogue: 0, 0:02:52.04, 0:02:54.28,Default,,0,0,0,,问{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌现在该怎么办，
+Dialogue: 0, 0:02:54.28, 0:02:57.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌提出分批次返回大漠的主
+Dialogue: 0, 0:02:57.08, 0:02:58.95,Default,,0,0,0,,意，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}觉得不错，
+Dialogue: 0, 0:02:58.95, 0:03:01.38,Default,,0,0,0,,又问带走国库{\c&H0000FFFF&\b1}东西{\c&H00FFFFFF&\b0}是否可行，
+Dialogue: 0, 0:03:01.38, 0:03:03.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌表示可行，
+Dialogue: 0, 0:03:03.06, 0:03:05.30,Default,,0,0,0,,还提到没投降的{\c&H0000FFFF&\b1}百官{\c&H00FFFFFF&\b0}问题，
+Dialogue: 0, 0:03:05.30, 0:03:08.29,Default,,0,0,0,,东宫显德殿内，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}和长孙无忌相
+Dialogue: 0, 0:03:08.29, 0:03:09.04,Default,,0,0,0,,对而坐。
+Dialogue: 0, 0:03:09.04, 0:03:11.02,Default,,0,0,0,,门外{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}传来月统的信，
+Dialogue: 0, 0:03:11.02, 0:03:13.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}接过看后，知道侯君集攻陷丰
+Dialogue: 0, 0:03:13.89, 0:03:15.69,Default,,0,0,0,,州等地，{\c&H0000FFFF&\b1}苏定方{\c&H00FFFFFF&\b0}败逃，
+Dialogue: 0, 0:03:15.69, 0:03:18.39,Default,,0,0,0,,他让{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌带着投降的官员和家
+Dialogue: 0, 0:03:18.39, 0:03:20.00,Default,,0,0,0,,眷{\c&H0000FFFF&\b1}作为{\c&H00FFFFFF&\b0}第一批先走，
+Dialogue: 0, 0:03:20.00, 0:03:22.88,Default,,0,0,0,,东宫显德殿内，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看信后神情严
+Dialogue: 0, 0:03:22.88, 0:03:24.50,Default,,0,0,0,,肃，{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌听令。
+Dialogue: 0, 0:03:24.50, 0:03:27.13,Default,,0,0,0,,灞桥帅帐内，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}神色阴沉，
+Dialogue: 0, 0:03:27.13, 0:03:29.76,Default,,0,0,0,,秦琼、{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}二人神色不好，
+Dialogue: 0, 0:03:29.76, 0:03:32.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}传旨让苏定方率军出潼关攻
+Dialogue: 0, 0:03:32.58, 0:03:35.40,Default,,0,0,0,,打齐州，安排{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}驻军张掖，
+Dialogue: 0, 0:03:35.40, 0:03:37.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}监视京师动向，
+Dialogue: 0, 0:03:37.10, 0:03:39.73,Default,,0,0,0,,灞桥帅帐内，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}身着服饰，
+Dialogue: 0, 0:03:39.73, 0:03:42.55,Default,,0,0,0,,神情阴沉，秦琼和{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}在旁。
+Dialogue: 0, 0:03:42.55, 0:03:44.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}长安城{\c&H00FFFFFF&\b0}河间郡王府中，
+Dialogue: 0, 0:03:44.44, 0:03:46.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}端坐在大堂，
+Dialogue: 0, 0:03:46.15, 0:03:48.42,Default,,0,0,0,,听到下人{\c&H0000FFFF&\b1}低语{\c&H00FFFFFF&\b0}后脸色微变，
+Dialogue: 0, 0:03:48.42, 0:03:50.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}来后，两人讨论局势，
+Dialogue: 0, 0:03:50.70, 0:03:53.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}到访，询问李靖是否在府上，
+Dialogue: 0, 0:03:53.73, 0:03:55.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}和李靖演技不错，
+Dialogue: 0, 0:03:55.81, 0:03:57.51,Default,,0,0,0,,河间{\c&H0000FFFF&\b1}郡王府{\c&H00FFFFFF&\b0}大堂内，
+Dialogue: 0, 0:03:57.51, 0:03:59.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}、李靖和李承乾，
+Dialogue: 0, 0:03:59.60, 0:04:02.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}有醉意，李靖神情忧虑，
+Dialogue: 0, 0:04:02.25, 0:04:03.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神色锐利。
+Dialogue: 0, 0:04:03.77, 0:04:06.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}拿出纸让李孝恭和李靖画押
+Dialogue: 0, 0:04:06.58, 0:04:09.77,Default,,0,0,0,,，二人拒绝，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}说派人围了府邸，
+Dialogue: 0, 0:04:09.77, 0:04:11.27,Default,,0,0,0,,给一天{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}考虑。
+Dialogue: 0, 0:04:11.27, 0:04:14.27,Default,,0,0,0,,之后城头射来信，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}知道李世民
+Dialogue: 0, 0:04:14.27, 0:04:15.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}答应{\c&H00FFFFFF&\b0}了。
+Dialogue: 0, 0:04:15.02, 0:04:18.02,Default,,0,0,0,,河间郡王府中，{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}和李靖讨论后
+Dialogue: 0, 0:04:18.02, 0:04:20.27,Default,,0,0,0,,决定签字，河间{\c&H0000FFFF&\b1}郡王府{\c&H00FFFFFF&\b0}内，
+Dialogue: 0, 0:04:20.27, 0:04:23.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}展示纸张，李孝恭和李靖神色决绝。

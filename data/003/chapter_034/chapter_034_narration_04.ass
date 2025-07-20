@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_034 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}的军队靠近城墙，
+Dialogue: 0,0:00:01.96,0:00:03.57,Default,,0,0,0,,所有{\c&H0000FFFF&\b1}骑兵{\c&H00FFFFFF&\b0}翻身下马，
+Dialogue: 0,0:00:03.57,0:00:06.25,Default,,0,0,0,,用吴魁呈龟壳状将{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}围得死死
+Dialogue: 0,0:00:06.25,0:00:08.75,Default,,0,0,0,,的，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}眼中露出厌恶之色，
+Dialogue: 0,0:00:08.75,0:00:10.72,Default,,0,0,0,,他心中想着当初的{\c&H0000FFFF&\b1}英勇{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:10.72,0:00:12.14,Default,,0,0,0,,如今却如此{\c&H0000FFFF&\b1}防备{\c&H00FFFFFF&\b0}。

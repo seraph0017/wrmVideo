@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_039 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.07,Default,,0,0,0,,四人停止厮杀，靠近{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}和李承乾
+Dialogue: 0,0:00:03.07,0:00:05.57,Default,,0,0,0,,，却{\c&H0000FFFF&\b1}发现{\c&H00FFFFFF&\b0}二人被弓捆在一起，
+Dialogue: 0,0:00:05.57,0:00:07.49,Default,,0,0,0,,都拽着{\c&H0000FFFF&\b1}对方{\c&H00FFFFFF&\b0}体内弩箭，
+Dialogue: 0,0:00:07.49,0:00:08.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}无从下手{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:08.45,0:00:10.95,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}虎牢关{\c&H00FFFFFF&\b0}方向传来马蹄声，
+Dialogue: 0,0:00:10.95,0:00:12.68,Default,,0,0,0,,地平线上一片{\c&H0000FFFF&\b1}红光{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:12.68,0:00:15.37,Default,,0,0,0,,秦琼和{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}对视露出喜色，
+Dialogue: 0,0:00:15.37,0:00:17.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}和北向辉则焦急万分。
+Dialogue: 0,0:00:17.87,0:00:20.75,Default,,0,0,0,,北向辉情急之下用{\c&H0000FFFF&\b1}铁枪{\c&H00FFFFFF&\b0}扎向二人胯
+Dialogue: 0,0:00:20.75,0:00:23.63,Default,,0,0,0,,下{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}屁股，战马吃痛失控狂奔，
+Dialogue: 0,0:00:23.63,0:00:25.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}怒喝北向辉，
+Dialogue: 0,0:00:25.36,0:00:28.24,Default,,0,0,0,,北向辉则称“陛下比{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}年轻，
+Dialogue: 0,0:00:28.24,0:00:31.32,Default,,0,0,0,,肯定能坚持住”，然后抽身回到{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:31.32,0:00:34.39,Default,,0,0,0,,旁翻身上马，秦琼和{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}大怒欲
+Dialogue: 0,0:00:34.39,0:00:35.93,Default,,0,0,0,,狂，也{\c&H0000FFFF&\b1}策马{\c&H00FFFFFF&\b0}去追。

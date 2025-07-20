@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_014 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}夜幕降临{\c&H00FFFFFF&\b0}，花园中牡丹花娇艳盛放，
+Dialogue: 0,0:00:03.03,0:00:04.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}站在花圃旁，
+Dialogue: 0,0:00:04.74,0:00:07.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}手指{\c&H00FFFFFF&\b0}向远处，神情略带追忆。
+Dialogue: 0,0:00:07.20,0:00:10.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}在旁，脸上露出一丝意味深长
+Dialogue: 0,0:00:10.24,0:00:11.00,Default,,0,0,0,,的{\c&H0000FFFF&\b1}笑容{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:11.00,0:00:12.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是月色下的花园，
+Dialogue: 0,0:00:12.89,0:00:14.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}花瓣{\c&H00FFFFFF&\b0}在夜风中轻轻摇曳。

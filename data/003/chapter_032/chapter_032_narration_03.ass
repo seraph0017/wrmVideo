@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_032 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.70,Default,,0,0,0,,帐内{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}陷入沉默，
+Dialogue: 0,0:00:01.70,0:00:03.77,Default,,0,0,0,,良久，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着战袍，
+Dialogue: 0,0:00:03.77,0:00:06.22,Default,,0,0,0,,束发，{\c&H0000FFFF&\b1}面容{\c&H00FFFFFF&\b0}坚定，咬牙起身。
+Dialogue: 0,0:00:06.22,0:00:09.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}紧紧盯着他，知道他要下重要决
+Dialogue: 0,0:00:09.23,0:00:12.25,Default,,0,0,0,,定。他决定休整半天后奇袭{\c&H0000FFFF&\b1}灵武{\c&H00FFFFFF&\b0}毁其
+Dialogue: 0,0:00:12.25,0:00:15.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}粮草{\c&H00FFFFFF&\b0}，此时帐外士兵匆匆进来通报云
+Dialogue: 0,0:00:15.27,0:00:18.28,Default,,0,0,0,,中方向有快马到，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}眼中露出疑
+Dialogue: 0,0:00:18.28,0:00:19.03,Default,,0,0,0,,惑{\c&H0000FFFF&\b1}目光{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:19.03,0:00:22.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是军帐内，时间持续战争期间，
+Dialogue: 0,0:00:22.05,0:00:24.31,Default,,0,0,0,,光线有变化，突出{\c&H0000FFFF&\b1}紧张感{\c&H00FFFFFF&\b0}。

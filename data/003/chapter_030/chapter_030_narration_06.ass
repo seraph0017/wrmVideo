@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_030 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.22,Default,,0,0,0,,北向辉好不容易稳住{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}后，
+Dialogue: 0,0:00:02.22,0:00:04.44,Default,,0,0,0,,立刻有好几支{\c&H0000FFFF&\b1}铁槊{\c&H00FFFFFF&\b0}突刺而来，
+Dialogue: 0,0:00:04.44,0:00:07.17,Default,,0,0,0,,他迅速侧身一闪，{\c&H0000FFFF&\b1}右手{\c&H00FFFFFF&\b0}像铁钳一样紧
+Dialogue: 0,0:00:07.17,0:00:09.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}紧扣{\c&H00FFFFFF&\b0}住槊杆，猛地一拽，
+Dialogue: 0,0:00:09.05,0:00:11.61,Default,,0,0,0,,竟然把那亲兵连人带甲一起从{\c&H0000FFFF&\b1}马背{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.61,0:00:13.49,Default,,0,0,0,,上提了{\c&H0000FFFF&\b1}起来{\c&H00FFFFFF&\b0}，夺过槊后，
+Dialogue: 0,0:00:13.49,0:00:16.39,Default,,0,0,0,,他纵身一跃，{\c&H0000FFFF&\b1}换乘{\c&H00FFFFFF&\b0}了落马士兵的战马。

@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_043 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在台上向百姓演讲：
+Dialogue: 0,0:00:02.19,0:00:04.92,Default,,0,0,0,,“诸位{\c&H0000FFFF&\b1}大唐{\c&H00FFFFFF&\b0}子民，朕登上大位后，
+Dialogue: 0,0:00:04.92,0:00:07.83,Default,,0,0,0,,还{\c&H0000FFFF&\b1}没见{\c&H00FFFFFF&\b0}过你们，不知你们可食有粮？
+Dialogue: 0,0:00:07.83,0:00:08.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}睡有{\c&H00FFFFFF&\b0}床？
+Dialogue: 0,0:00:08.56,0:00:11.48,Default,,0,0,0,,”百姓纷纷回应，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}又激昂讲述
+Dialogue: 0,0:00:11.48,0:00:13.84,Default,,0,0,0,,天下由来等，带动{\c&H0000FFFF&\b1}群众{\c&H00FFFFFF&\b0}情绪。
+Dialogue: 0,0:00:13.84,0:00:16.39,Default,,0,0,0,,场景是大街高台，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}演讲，
+Dialogue: 0,0:00:16.39,0:00:17.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}群众{\c&H00FFFFFF&\b0}互动。

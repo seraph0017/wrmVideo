@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_046 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.11,Default,,0,0,0,,渊{\c&H0000FFFF&\b1}盖苏文{\c&H00FFFFFF&\b0}站在幽州城头，
+Dialogue: 0,0:00:02.11,0:00:04.78,Default,,0,0,0,,极目远眺，身上{\c&H0000FFFF&\b1}金刀{\c&H00FFFFFF&\b0}碰撞有声。
+Dialogue: 0,0:00:04.78,0:00:07.66,Default,,0,0,0,,他身旁的杨{\c&H0000FFFF&\b1}万春{\c&H00FFFFFF&\b0}询问是否给城中百
+Dialogue: 0,0:00:07.66,0:00:10.14,Default,,0,0,0,,姓震慑，渊盖{\c&H0000FFFF&\b1}苏文{\c&H00FFFFFF&\b0}抬头看月，
+Dialogue: 0,0:00:10.14,0:00:11.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}锋芒毕露。
+Dialogue: 0,0:00:11.48,0:00:13.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是幽州城头，夜晚，
+Dialogue: 0,0:00:13.59,0:00:15.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}月光{\c&H00FFFFFF&\b0}下氛围雄壮。

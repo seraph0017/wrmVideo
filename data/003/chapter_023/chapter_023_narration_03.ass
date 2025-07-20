@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_023 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}二楼{\c&H00FFFFFF&\b0}房间中，月月款步而出，
+Dialogue: 0,0:00:02.42,0:00:05.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}青丝{\c&H00FFFFFF&\b0}挽髻，挽着袖子露出沾炭灰的小
+Dialogue: 0,0:00:05.40,0:00:07.45,Default,,0,0,0,,臂，{\c&H0000FFFF&\b1}眉宇{\c&H00FFFFFF&\b0}间显沉稳干练，
+Dialogue: 0,0:00:07.45,0:00:09.13,Default,,0,0,0,,疑惑{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}为何到来。
+Dialogue: 0,0:00:09.13,0:00:11.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是平康坊二楼房间，
+Dialogue: 0,0:00:11.18,0:00:12.67,Default,,0,0,0,,白天，{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}室内。

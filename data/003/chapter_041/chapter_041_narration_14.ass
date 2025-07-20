@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_041 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}脸色阴沉，下令撤返回逆贼李
+Dialogue: 0,0:00:02.94,0:00:05.88,Default,,0,0,0,,恪大营，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}和身旁士兵喊出‘老
+Dialogue: 0,0:00:05.88,0:00:08.82,Default,,0,0,0,,二{\c&H0000FFFF&\b1}妙计{\c&H00FFFFFF&\b0}安天下，先丢武牢后失大兴’
+Dialogue: 0,0:00:08.82,0:00:10.66,Default,,0,0,0,,。场景是{\c&H0000FFFF&\b1}虎牢关{\c&H00FFFFFF&\b0}附近，
+Dialogue: 0,0:00:10.66,0:00:12.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}是战场，天气为晴天。

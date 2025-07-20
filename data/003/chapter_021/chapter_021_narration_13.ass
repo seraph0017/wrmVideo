@@ -1,0 +1,20 @@
+[Script Info]
+Title: chapter_021 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.21,Default,,0,0,0,,次日清晨，城头，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与众臣商议，
+Dialogue: 0,0:00:03.21,0:00:06.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌建议立刻出兵剿灭叛贼，
+Dialogue: 0,0:00:06.04,0:00:08.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}以边军被渗透为由决定缓行
+Dialogue: 0,0:00:08.88,0:00:11.71,Default,,0,0,0,,，安排{\c&H0000FFFF&\b1}豆卢宽{\c&H00FFFFFF&\b0}准备火药镇压异动。

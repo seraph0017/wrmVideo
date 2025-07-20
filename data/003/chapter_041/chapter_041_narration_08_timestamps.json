@@ -1,0 +1,378 @@
+{
+  "text": "士兵传来尉迟敬德传信说逆贼部队已被追散，李世民听到后先是勃然大怒，后竟笑出声，还传旨让尉迟敬德别追了。场景是李世民的大营，环境是大营内，天气为晴天。",
+  "audio_file": "data/003/chapter_041/chapter_041_narration_08.mp3",
+  "duration": 13.464,
+  "character_timestamps": [
+    {
+      "character": "士",
+      "start_time": 0.0,
+      "end_time": 0.18194594594594596
+    },
+    {
+      "character": "兵",
+      "start_time": 0.18194594594594596,
+      "end_time": 0.3638918918918919
+    },
+    {
+      "character": "传",
+      "start_time": 0.3638918918918919,
+      "end_time": 0.5458378378378378
+    },
+    {
+      "character": "来",
+      "start_time": 0.5458378378378378,
+      "end_time": 0.7277837837837838
+    },
+    {
+      "character": "尉",
+      "start_time": 0.7277837837837838,
+      "end_time": 0.9097297297297298
+    },
+    {
+      "character": "迟",
+      "start_time": 0.9097297297297298,
+      "end_time": 1.0916756756756758
+    },
+    {
+      "character": "敬",
+      "start_time": 1.0916756756756758,
+      "end_time": 1.2736216216216216
+    },
+    {
+      "character": "德",
+      "start_time": 1.2736216216216216,
+      "end_time": 1.4555675675675677
+    },
+    {
+      "character": "传",
+      "start_time": 1.4555675675675677,
+      "end_time": 1.6375135135135135
+    },
+    {
+      "character": "信",
+      "start_time": 1.6375135135135135,
+      "end_time": 1.8194594594594593
+    },
+    {
+      "character": "说",
+      "start_time": 1.8194594594594593,
+      "end_time": 2.001405405405405
+    },
+    {
+      "character": "逆",
+      "start_time": 2.001405405405405,
+      "end_time": 2.183351351351351
+    },
+    {
+      "character": "贼",
+      "start_time": 2.183351351351351,
+      "end_time": 2.365297297297297
+    },
+    {
+      "character": "部",
+      "start_time": 2.365297297297297,
+      "end_time": 2.547243243243243
+    },
+    {
+      "character": "队",
+      "start_time": 2.547243243243243,
+      "end_time": 2.7291891891891886
+    },
+    {
+      "character": "已",
+      "start_time": 2.7291891891891886,
+      "end_time": 2.9111351351351344
+    },
+    {
+      "character": "被",
+      "start_time": 2.9111351351351344,
+      "end_time": 3.0930810810810803
+    },
+    {
+      "character": "追",
+      "start_time": 3.0930810810810803,
+      "end_time": 3.275027027027026
+    },
+    {
+      "character": "散",
+      "start_time": 3.275027027027026,
+      "end_time": 3.4569729729729723
+    },
+    {
+      "character": "，",
+      "start_time": 3.4569729729729723,
+      "end_time": 3.638918918918918
+    },
+    {
+      "character": "李",
+      "start_time": 3.638918918918918,
+      "end_time": 3.820864864864864
+    },
+    {
+      "character": "世",
+      "start_time": 3.820864864864864,
+      "end_time": 4.00281081081081
+    },
+    {
+      "character": "民",
+      "start_time": 4.00281081081081,
+      "end_time": 4.184756756756755
+    },
+    {
+      "character": "听",
+      "start_time": 4.184756756756755,
+      "end_time": 4.366702702702701
+    },
+    {
+      "character": "到",
+      "start_time": 4.366702702702701,
+      "end_time": 4.548648648648647
+    },
+    {
+      "character": "后",
+      "start_time": 4.548648648648647,
+      "end_time": 4.730594594594593
+    },
+    {
+      "character": "先",
+      "start_time": 4.730594594594593,
+      "end_time": 4.912540540540539
+    },
+    {
+      "character": "是",
+      "start_time": 4.912540540540539,
+      "end_time": 5.094486486486486
+    },
+    {
+      "character": "勃",
+      "start_time": 5.094486486486486,
+      "end_time": 5.276432432432432
+    },
+    {
+      "character": "然",
+      "start_time": 5.276432432432432,
+      "end_time": 5.458378378378379
+    },
+    {
+      "character": "大",
+      "start_time": 5.458378378378379,
+      "end_time": 5.640324324324325
+    },
+    {
+      "character": "怒",
+      "start_time": 5.640324324324325,
+      "end_time": 5.8222702702702716
+    },
+    {
+      "character": "，",
+      "start_time": 5.8222702702702716,
+      "end_time": 6.004216216216218
+    },
+    {
+      "character": "后",
+      "start_time": 6.004216216216218,
+      "end_time": 6.186162162162164
+    },
+    {
+      "character": "竟",
+      "start_time": 6.186162162162164,
+      "end_time": 6.36810810810811
+    },
+    {
+      "character": "笑",
+      "start_time": 6.36810810810811,
+      "end_time": 6.550054054054057
+    },
+    {
+      "character": "出",
+      "start_time": 6.550054054054057,
+      "end_time": 6.732000000000003
+    },
+    {
+      "character": "声",
+      "start_time": 6.732000000000003,
+      "end_time": 6.91394594594595
+    },
+    {
+      "character": "，",
+      "start_time": 6.91394594594595,
+      "end_time": 7.095891891891896
+    },
+    {
+      "character": "还",
+      "start_time": 7.095891891891896,
+      "end_time": 7.2778378378378425
+    },
+    {
+      "character": "传",
+      "start_time": 7.2778378378378425,
+      "end_time": 7.459783783783789
+    },
+    {
+      "character": "旨",
+      "start_time": 7.459783783783789,
+      "end_time": 7.641729729729735
+    },
+    {
+      "character": "让",
+      "start_time": 7.641729729729735,
+      "end_time": 7.823675675675681
+    },
+    {
+      "character": "尉",
+      "start_time": 7.823675675675681,
+      "end_time": 8.005621621621628
+    },
+    {
+      "character": "迟",
+      "start_time": 8.005621621621628,
+      "end_time": 8.187567567567575
+    },
+    {
+      "character": "敬",
+      "start_time": 8.187567567567575,
+      "end_time": 8.369513513513521
+    },
+    {
+      "character": "德",
+      "start_time": 8.369513513513521,
+      "end_time": 8.551459459459467
+    },
+    {
+      "character": "别",
+      "start_time": 8.551459459459467,
+      "end_time": 8.733405405405414
+    },
+    {
+      "character": "追",
+      "start_time": 8.733405405405414,
+      "end_time": 8.91535135135136
+    },
+    {
+      "character": "了",
+      "start_time": 8.91535135135136,
+      "end_time": 9.097297297297306
+    },
+    {
+      "character": "。",
+      "start_time": 9.097297297297306,
+      "end_time": 9.279243243243252
+    },
+    {
+      "character": "场",
+      "start_time": 9.279243243243252,
+      "end_time": 9.461189189189199
+    },
+    {
+      "character": "景",
+      "start_time": 9.461189189189199,
+      "end_time": 9.643135135135145
+    },
+    {
+      "character": "是",
+      "start_time": 9.643135135135145,
+      "end_time": 9.825081081081091
+    },
+    {
+      "character": "李",
+      "start_time": 9.825081081081091,
+      "end_time": 10.007027027027037
+    },
+    {
+      "character": "世",
+      "start_time": 10.007027027027037,
+      "end_time": 10.188972972972985
+    },
+    {
+      "character": "民",
+      "start_time": 10.188972972972985,
+      "end_time": 10.370918918918932
+    },
+    {
+      "character": "的",
+      "start_time": 10.370918918918932,
+      "end_time": 10.552864864864878
+    },
+    {
+      "character": "大",
+      "start_time": 10.552864864864878,
+      "end_time": 10.734810810810824
+    },
+    {
+      "character": "营",
+      "start_time": 10.734810810810824,
+      "end_time": 10.91675675675677
+    },
+    {
+      "character": "，",
+      "start_time": 10.91675675675677,
+      "end_time": 11.098702702702717
+    },
+    {
+      "character": "环",
+      "start_time": 11.098702702702717,
+      "end_time": 11.280648648648663
+    },
+    {
+      "character": "境",
+      "start_time": 11.280648648648663,
+      "end_time": 11.46259459459461
+    },
+    {
+      "character": "是",
+      "start_time": 11.46259459459461,
+      "end_time": 11.644540540540556
+    },
+    {
+      "character": "大",
+      "start_time": 11.644540540540556,
+      "end_time": 11.826486486486502
+    },
+    {
+      "character": "营",
+      "start_time": 11.826486486486502,
+      "end_time": 12.008432432432448
+    },
+    {
+      "character": "内",
+      "start_time": 12.008432432432448,
+      "end_time": 12.190378378378394
+    },
+    {
+      "character": "，",
+      "start_time": 12.190378378378394,
+      "end_time": 12.37232432432434
+    },
+    {
+      "character": "天",
+      "start_time": 12.37232432432434,
+      "end_time": 12.554270270270287
+    },
+    {
+      "character": "气",
+      "start_time": 12.554270270270287,
+      "end_time": 12.736216216216233
+    },
+    {
+      "character": "为",
+      "start_time": 12.736216216216233,
+      "end_time": 12.918162162162181
+    },
+    {
+      "character": "晴",
+      "start_time": 12.918162162162181,
+      "end_time": 13.100108108108127
+    },
+    {
+      "character": "天",
+      "start_time": 13.100108108108127,
+      "end_time": 13.282054054054074
+    },
+    {
+      "character": "。",
+      "start_time": 13.282054054054074,
+      "end_time": 13.464
+    }
+  ],
+  "generated_at": "2025-07-19T18:02:16.689831"
+}

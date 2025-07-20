@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_003 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.41,Default,,0,0,0,,胡商凑近{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}耳边小声说道：
+Dialogue: 0,0:00:02.41,0:00:05.17,Default,,0,0,0,,“殿下，这女人可有突厥{\c&H0000FFFF&\b1}王氏{\c&H00FFFFFF&\b0}血统。
+Dialogue: 0,0:00:05.17,0:00:07.24,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听后表示都要了，
+Dialogue: 0,0:00:07.24,0:00:09.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}车厢{\c&H00FFFFFF&\b0}内的女子一脸愤怒地叽里呱啦
+Dialogue: 0,0:00:09.83,0:00:12.59,Default,,0,0,0,,说着话，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则嘟囔着“说什么鸟
+Dialogue: 0,0:00:12.59,0:00:13.28,Default,,0,0,0,,语呢”。
+Dialogue: 0,0:00:13.28,0:00:14.83,Default,,0,0,0,,场景仍在{\c&H0000FFFF&\b1}西市{\c&H00FFFFFF&\b0}小巷，
+Dialogue: 0,0:00:14.83,0:00:17.24,Default,,0,0,0,,光线依旧昏暗，{\c&H0000FFFF&\b1}胡商{\c&H00FFFFFF&\b0}兴奋介绍，
+Dialogue: 0,0:00:17.24,0:00:18.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}有购买意向，
+Dialogue: 0,0:00:18.79,0:00:19.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}女子{\c&H00FFFFFF&\b0}愤怒。

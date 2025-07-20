@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_025 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}向李世民说明消息已突破封
+Dialogue: 0,0:00:02.81,0:00:05.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}锁传{\c&H00FFFFFF&\b0}檄各地，还提到李恪等背后有世
+Dialogue: 0,0:00:05.81,0:00:07.68,Default,,0,0,0,,家支持，{\c&H0000FFFF&\b1}封锁{\c&H00FFFFFF&\b0}拦不住。
+Dialogue: 0,0:00:07.68,0:00:10.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}神色恢复，露出杀意，
+Dialogue: 0,0:00:10.11,0:00:12.17,Default,,0,0,0,,称心腹大患还是{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:12.17,0:00:14.98,Default,,0,0,0,,只要他死了，其他人是{\c&H0000FFFF&\b1}土鸡瓦狗{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:14.98,0:00:17.04,Default,,0,0,0,,两人处于马上{\c&H0000FFFF&\b1}对话{\c&H00FFFFFF&\b0}场景，
+Dialogue: 0,0:00:17.04,0:00:20.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情严肃，李世民面露杀意。

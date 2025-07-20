@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_034 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.80,Default,,0,0,0,,日落时分，{\c&H0000FFFF&\b1}丰州{\c&H00FFFFFF&\b0}城头，
+Dialogue: 0,0:00:01.80,0:00:04.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}登上城头，紧紧注视地平线，
+Dialogue: 0,0:00:04.67,0:00:07.37,Default,,0,0,0,,心中暗自嘀咕“{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}又要玩什么
+Dialogue: 0,0:00:07.37,0:00:09.70,Default,,0,0,0,,？”他{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}严肃，略带疑惑，
+Dialogue: 0,0:00:09.70,0:00:11.86,Default,,0,0,0,,想着还是拿出{\c&H0000FFFF&\b1}杀手锏{\c&H00FFFFFF&\b0}为好。

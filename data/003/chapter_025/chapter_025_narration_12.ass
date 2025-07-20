@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_025 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.98,Default,,0,0,0,,门外{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}传来月统的信，
+Dialogue: 0,0:00:01.98,0:00:04.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}接过看后，知道侯君集攻陷丰
+Dialogue: 0,0:00:04.85,0:00:06.65,Default,,0,0,0,,州等地，{\c&H0000FFFF&\b1}苏定方{\c&H00FFFFFF&\b0}败逃，
+Dialogue: 0,0:00:06.65,0:00:09.35,Default,,0,0,0,,他让{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌带着投降的官员和家
+Dialogue: 0,0:00:09.35,0:00:10.96,Default,,0,0,0,,眷{\c&H0000FFFF&\b1}作为{\c&H00FFFFFF&\b0}第一批先走，
+Dialogue: 0,0:00:10.96,0:00:13.84,Default,,0,0,0,,东宫显德殿内，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看信后神情严
+Dialogue: 0,0:00:13.84,0:00:15.46,Default,,0,0,0,,肃，{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌听令。

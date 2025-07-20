@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_029 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.77,Default,,0,0,0,,北向辉突然调转{\c&H0000FFFF&\b1}方向{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:01.77,0:00:03.37,Default,,0,0,0,,大喊“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}好机会！
+Dialogue: 0,0:00:03.37,0:00:05.85,Default,,0,0,0,,”，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身旁露出三架床弩，
+Dialogue: 0,0:00:05.85,0:00:07.98,Default,,0,0,0,,三支弩箭呼啸射向{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:07.98,0:00:10.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}勒缰绳，战马人力而起，
+Dialogue: 0,0:00:10.47,0:00:12.24,Default,,0,0,0,,一支{\c&H0000FFFF&\b1}弩箭{\c&H00FFFFFF&\b0}射在战马上。

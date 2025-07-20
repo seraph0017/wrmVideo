@@ -2,177 +2,134 @@
 # -*- coding: utf-8 -*-
 """
 独立的图片生成脚本
-从generate.py中提取的图像生成逻辑
+遍历章节目录，为每个分镜生成图片
 """
 
 import os
 import re
 import argparse
 import base64
-import requests
-from volcenginesdkarkruntime import Ark
 import sys
-from config.config import IMAGE_TWO_CONFIG, ART_STYLES, STORY_STYLE
-
+from config.config import IMAGE_TWO_CONFIG, STORY_STYLE
+from config.prompt_config import ART_STYLES
 from volcengine.visual.VisualService import VisualService
 
-def parse_character_details(narration_file_path):
+def parse_narration_file(narration_file_path):
     """
-    从narration.txt文件中解析主要人物的详细信息
+    解析narration.txt文件，提取分镜信息、图片prompt和绘画风格
     
     Args:
         narration_file_path: narration.txt文件路径
     
     Returns:
-        dict: 人物名称到详细描述的映射
+        tuple: (分镜信息列表, 绘画风格)
     """
-    character_details = {}
+    scenes = []
+    drawing_style = None
     
     try:
         if not os.path.exists(narration_file_path):
             print(f"警告: narration.txt文件不存在: {narration_file_path}")
-            return character_details
+            return scenes, drawing_style
         
         with open(narration_file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # 提取主要人物部分
-        main_characters_match = re.search(r'<主要人物>(.*?)</主要人物>', content, re.DOTALL)
-        character_matches = []
+        # 解析绘画风格
+        style_match = re.search(r'<绘画风格>([^<]+)</绘画风格>', content)
+        drawing_style = style_match.group(1) if style_match else None
         
-        if main_characters_match:
-            main_characters_content = main_characters_match.group(1)
-            # 解析主要人物
-            main_character_matches = re.findall(r'<人物\d+>(.*?)</人物\d+>', main_characters_content, re.DOTALL)
-            character_matches.extend(main_character_matches)
+        # 提取分镜信息
+        scene_pattern = r'<分镜\d+>(.*?)</分镜\d+>'
+        scene_matches = re.findall(scene_pattern, content, re.DOTALL)
         
-        # 提取次要人物部分
-        minor_characters_match = re.search(r'<次要人物>(.*?)</次要人物>', content, re.DOTALL)
-        if minor_characters_match:
-            minor_characters_content = minor_characters_match.group(1)
-            # 解析次要人物
-            minor_character_matches = re.findall(r'<次要人物\d+>(.*?)</次要人物\d+>', minor_characters_content, re.DOTALL)
-            character_matches.extend(minor_character_matches)
+        for scene_content in scene_matches:
+            scene_info = {}
+            
+            # 提取图片prompt
+            prompt_match = re.search(r'<图片prompt>([^<]+)</图片prompt>', scene_content, re.DOTALL)
+            if prompt_match:
+                scene_info['prompt'] = prompt_match.group(1).strip()
+            
+            # 提取图片特写人物
+            characters_section_match = re.search(r'<图片特写人物>(.*?)</图片特写人物>', scene_content, re.DOTALL)
+            if characters_section_match:
+                characters_content = characters_section_match.group(1)
+                character_matches = re.findall(r'<角色>([^<]+)</角色>', characters_content)
+                scene_info['characters'] = character_matches
+            else:
+                scene_info['characters'] = []
+            
+            if 'prompt' in scene_info:
+                scenes.append(scene_info)
         
-        if not character_matches:
-            print("警告: 未找到任何人物信息")
-            return character_details
+        print(f"解析到 {len(scenes)} 个分镜")
+        if drawing_style:
+            print(f"绘画风格: {drawing_style}")
         
-        for character_content in character_matches:
-            # 提取姓名
-            name_match = re.search(r'<姓名>&([^&]+)&</姓名>', character_content)
-            if not name_match:
-                continue
-            
-            character_name = name_match.group(1)
-            
-            # 提取各项详细信息
-            details = []
-            
-            # 身高体型
-            height_match = re.search(r'<身高体型>([^<]+)</身高体型>', character_content)
-            if height_match:
-                details.append(height_match.group(1))
-            
-            # 头发细节
-            hair_color_match = re.search(r'<发色>([^<]+)</发色>', character_content)
-            hair_style_match = re.search(r'<发型>([^<]+)</发型>', character_content)
-            if hair_color_match and hair_style_match:
-                details.append(f"{hair_color_match.group(1)}{hair_style_match.group(1)}")
-            
-            # 眼睛细节
-            eye_color_match = re.search(r'<眼睛颜色>([^<]+)</眼睛颜色>', character_content)
-            eye_type_match = re.search(r'<眼型>([^<]+)</眼型>', character_content)
-            eye_trait_match = re.search(r'<眼神特点>([^<]+)</眼神特点>', character_content)
-            if eye_color_match and eye_type_match:
-                eye_desc = f"{eye_color_match.group(1)}{eye_type_match.group(1)}"
-                if eye_trait_match:
-                    eye_desc += f"眼神{eye_trait_match.group(1)}"
-                details.append(eye_desc)
-            
-            # 脸型轮廓
-            face_match = re.search(r'<脸型>([^<]+)</脸型>', character_content)
-            chin_match = re.search(r'<下巴形状>([^<]+)</下巴形状>', character_content)
-            if face_match and chin_match:
-                details.append(f"{face_match.group(1)}{chin_match.group(1)}")
-            
-            # 肤色
-            skin_match = re.search(r'<肤色>([^<]+)</肤色>', character_content)
-            if skin_match:
-                details.append(f"{skin_match.group(1)}肤色")
-            
-            # 服装细节
-            clothing_color_match = re.search(r'<服装细节>.*?<颜色>([^<]+)</颜色>.*?<款式>([^<]+)</款式>', character_content, re.DOTALL)
-            if clothing_color_match:
-                details.append(f"{clothing_color_match.group(1)}{clothing_color_match.group(2)}")
-            
-            # 配饰细节
-            glasses_match = re.search(r'<眼镜>([^<]+)</眼镜>', character_content)
-            if glasses_match and glasses_match.group(1) != '无':
-                details.append(glasses_match.group(1))
-            
-            jewelry_match = re.search(r'<首饰>([^<]+)</首饰>', character_content)
-            if jewelry_match and jewelry_match.group(1) != '无':
-                details.append(jewelry_match.group(1))
-            
-            # 组合所有描述
-            character_details[character_name] = '，'.join(details)
-            print(f"解析到人物: {character_name} -> {character_details[character_name]}")
-        
-        return character_details
+        return scenes, drawing_style
         
     except Exception as e:
-        print(f"解析人物详情时发生错误: {e}")
-        return character_details
+        print(f"解析narration文件时发生错误: {e}")
+        return scenes, drawing_style
 
-def enhance_prompt_with_character_details(prompt, chapter_path):
+def find_character_image(chapter_path, character_name):
     """
-    根据人物标记增强prompt描述
+    查找角色图片文件
     
     Args:
-        prompt: 原始prompt
         chapter_path: 章节目录路径
+        character_name: 角色名称
     
     Returns:
-        str: 增强后的prompt
+        str: 角色图片文件路径，如果未找到返回None
     """
     try:
-        # 查找narration.txt文件
-        narration_file = os.path.join(chapter_path, 'narration.txt')
+        chapter_name = os.path.basename(chapter_path)
+        # 构造角色图片文件名模式
+        pattern = f"{chapter_name}_character_*_{character_name}.jpeg"
         
-        # 解析人物详情
-        character_details = parse_character_details(narration_file)
+        # 在章节目录中查找匹配的文件
+        for filename in os.listdir(chapter_path):
+            if filename.endswith(f"_{character_name}.jpeg") and "character" in filename:
+                image_path = os.path.join(chapter_path, filename)
+                print(f"找到角色图片: {image_path}")
+                return image_path
         
-        if not character_details:
-            return prompt
-        
-        # 查找prompt中的人名标记
-        enhanced_prompt = prompt
-        
-        for character_name, details in character_details.items():
-            # 查找&人名&模式
-            pattern = f'&{character_name}&'
-            if pattern in enhanced_prompt:
-                # 替换为详细描述
-                replacement = f'{character_name}（{details}）'
-                enhanced_prompt = enhanced_prompt.replace(pattern, replacement)
-                print(f"增强描述: {pattern} -> {replacement}")
-        
-        return enhanced_prompt
+        print(f"未找到角色 {character_name} 的图片文件")
+        return None
         
     except Exception as e:
-        print(f"增强prompt时发生错误: {e}")
-        return prompt
+        print(f"查找角色图片时发生错误: {e}")
+        return None
 
-def generate_image(prompt, output_path, style=None, chapter_path=None):
+def encode_image_to_base64(image_path):
     """
-    生成图片文件
+    将图片文件编码为base64
+    
+    Args:
+        image_path: 图片文件路径
+    
+    Returns:
+        str: base64编码的图片数据
+    """
+    try:
+        with open(image_path, 'rb') as f:
+            image_data = f.read()
+        return base64.b64encode(image_data).decode('utf-8')
+    except Exception as e:
+        print(f"编码图片为base64时发生错误: {e}")
+        return None
+
+def generate_image_with_character(prompt, output_path, character_images=None, style=None):
+    """
+    使用角色图片生成图片
     
     Args:
         prompt: 图片描述
         output_path: 输出文件路径
+        character_images: 角色图片路径列表
         style: 艺术风格，如果为None则使用配置文件中的默认风格
-        chapter_path: 章节路径，用于获取人物描述信息
     
     Returns:
         bool: 是否成功生成
@@ -188,25 +145,22 @@ def generate_image(prompt, output_path, style=None, chapter_path=None):
         if style is None:
             style = IMAGE_TWO_CONFIG.get('default_style', 'manga')
         
-        style_prompt = ART_STYLES.get(style, ART_STYLES['manga'])
+        style_config = ART_STYLES.get(style, ART_STYLES['manga'])
+        style_prompt = style_config.get('description', style_config)
         
         print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
         
-        # 如果提供了章节路径，则增强人物描述
-        enhanced_prompt = prompt
-        if chapter_path:
-            enhanced_prompt = enhance_prompt_with_character_details(prompt, chapter_path)
-        
         # 构建完整的prompt
-        full_prompt = "无任何形式的文字, 字母, 数字, 符号, 水印, 签名  （包括标识、符号、背景纹理里的隐藏字）\n\n" + style_prompt + "\n\n以下面描述为内容，生成一张故事图片\n" + enhanced_prompt + "\n\n"
+        full_prompt = "无任何形式的文字, 字母, 数字, 符号, 水印, 签名  （包括标识、符号、背景纹理里的隐藏字）\n\n" + style_prompt + "\n\n以下面描述为内容，生成一张故事图片\n" + prompt + "\n\n"
         
         print("这里是完整的prompt===>>>{}".format(full_prompt))
-        # 请求参数 - 使用配置文件中的值
+        
+        # 构建请求参数 - 使用配置文件中的值
         form = {
             "req_key": IMAGE_TWO_CONFIG['req_key'],
             "prompt": full_prompt,
             "llm_seed": -1,
-            "seed": -1,
+            "seed": 10,
             "scale": IMAGE_TWO_CONFIG['scale'],
             "ddim_steps": IMAGE_TWO_CONFIG['ddim_steps'],
             "width": IMAGE_TWO_CONFIG['default_width'],
@@ -223,6 +177,20 @@ def generate_image(prompt, output_path, style=None, chapter_path=None):
             }
         }
         
+        # 如果有角色图片，添加到请求中
+        if character_images:
+            binary_data_list = []
+            for img_path in character_images:
+                if img_path and os.path.exists(img_path):
+                    base64_data = encode_image_to_base64(img_path)
+                    if base64_data:
+                        binary_data_list.append(base64_data)
+                        print(f"添加角色图片: {img_path}")
+            
+            if binary_data_list:
+                form["binary_data_base64"] = binary_data_list
+        
+        # 调用API
         resp = visual_service.cv_process(form)
         
         # 检查响应
@@ -249,7 +217,15 @@ def generate_image(prompt, output_path, style=None, chapter_path=None):
         return False
 
 def generate_images_from_scripts(data_dir):
-    # 复制 generate.py 中的完整 generate_images_from_scripts 函数内容
+    """
+    遍历数据目录，为每个章节的分镜生成图片
+    
+    Args:
+        data_dir: 数据目录路径
+    
+    Returns:
+        bool: 是否成功生成图片
+    """
     try:
         print(f"=== 开始生成图片 ===")
         print(f"数据目录: {data_dir}")
@@ -285,93 +261,56 @@ def generate_images_from_scripts(data_dir):
                 print(f"警告: narration文件不存在 {narration_file}")
                 continue
             
-            # 读取narration内容
-            with open(narration_file, 'r', encoding='utf-8') as f:
-                narration_content = f.read().strip()
+            # 解析narration文件
+            scenes, drawing_style = parse_narration_file(narration_file)
             
-            if not narration_content:
-                print(f"警告: narration内容为空")
+            if not scenes:
+                print(f"警告: 未找到分镜信息")
                 continue
             
-            # 提取风格信息
-            story_style = "玄幻修真"  # 默认风格
-            style_pattern = r'<风格>\s*([^<]+)\s*</风格>'
-            style_match = re.search(style_pattern, narration_content)
-            if style_match:
-                story_style = style_match.group(1).strip()
-                print(f"检测到故事风格: {story_style}")
+            print(f"找到 {len(scenes)} 个分镜")
             
-            # 获取风格配置
-            style_config = STORY_STYLE.get(story_style, STORY_STYLE["玄幻修真"])
-            model_prompt = style_config.get("model_prompt", "")
-            core_style = style_config.get("core_style", "")
+            # 获取绘画风格的model_prompt
+            style_prompt = ""
+            if drawing_style and drawing_style in STORY_STYLE:
+                style_config = STORY_STYLE[drawing_style]
+                if isinstance(style_config.get('model_prompt'), list):
+                    style_prompt = style_config['model_prompt'][0]  # 取第一个
+                else:
+                    style_prompt = style_config.get('model_prompt', '')
+                print(f"使用风格提示: {style_prompt}")
             
-            # 如果model_prompt是列表，取第一个
-            if isinstance(model_prompt, list):
-                model_prompt = model_prompt[0]
-            
-            print(f"使用风格配置: {core_style}")
-            print(f"模型提示词: {model_prompt}")
-            
-            # 提取人物信息
-            characters = {}
-            character_pattern = r'<主要人物>\s*([\s\S]*?)(?=<|$)'
-            character_match = re.search(character_pattern, narration_content)
-            if character_match:
-                character_text = character_match.group(1)
-                # 解析每个人物的信息
-                char_blocks = re.split(r'\n(?=\S)', character_text.strip())
-                for block in char_blocks:
-                    if block.strip():
-                        lines = block.strip().split('\n')
-                        if lines:
-                            name = lines[0].strip().rstrip('：:')
-                            details = []
-                            for line in lines[1:]:
-                                line = line.strip()
-                                if line and not line.startswith('-'):
-                                    details.append(line)
-                            if details:
-                                characters[name] = '，'.join(details)
-            
-            # 提取图片prompts
-            prompt_pattern = r'<图片prompt>\s*([\s\S]*?)(?=<|$)'
-            prompts = re.findall(prompt_pattern, narration_content)
-            
-            if not prompts:
-                print(f"警告: 未找到图片prompt")
-                continue
-            
-            print(f"找到 {len(prompts)} 个图片prompt")
-            
-            # 为每个prompt生成图片
-            for i, prompt in enumerate(prompts, 1):
-                prompt = prompt.strip()
-                if not prompt:
-                    continue
+            # 为每个分镜生成图片
+            for i, scene in enumerate(scenes, 1):
+                prompt = scene['prompt']
+                characters = scene['characters']
                 
-                # 增强prompt：添加风格信息
-                enhanced_prompt = f"{model_prompt}，{core_style}，{prompt}"
+                print(f"\n  生成第 {i}/{len(scenes)} 张图片: {chapter_name}_image_{i:02d}.jpeg")
+                print(f"  分镜角色: {characters}")
                 
-                # 如果包含人名，添加人物细节
-                for char_name in characters:
-                    if char_name in prompt:
-                        char_details = characters[char_name]
-                        enhanced_prompt = enhanced_prompt.replace(char_name, f"{char_name}（{char_details}）")
+                # 查找当前分镜的角色图片
+                character_images = []
+                for character in characters:
+                    char_img_path = find_character_image(chapter_dir, character)
+                    if char_img_path:
+                        character_images.append(char_img_path)
                 
-                print(f"  生成第 {i}/{len(prompts)} 张图片: {chapter_name}_image_{i:02d}.jpeg")
-                print(f"  风格增强prompt: {enhanced_prompt[:150]}...")
+                # 构建完整的prompt，加入风格提示
+                if style_prompt:
+                    full_prompt = f"{prompt}，{style_prompt}"
+                else:
+                    full_prompt = prompt
                 
                 # 生成图片
                 image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}.jpeg")
                 
-                if generate_image(enhanced_prompt, image_path, chapter_path=chapter_dir):
+                if generate_image_with_character(full_prompt, image_path, character_images, drawing_style):
                     print(f"  ✓ 图片生成成功")
                     success_count += 1
                 else:
                     print(f"  ✗ 图片生成失败")
             
-            print(f"章节 {chapter_name} 处理完成，成功生成 {len([p for p in prompts if p.strip()])} 张图片")
+            print(f"章节 {chapter_name} 处理完成，成功生成 {len(scenes)} 张图片")
         
         print(f"\n图片生成完成，成功生成 {success_count} 张图片")
         return success_count > 0
@@ -382,13 +321,13 @@ def generate_images_from_scripts(data_dir):
 
 def main():
     parser = argparse.ArgumentParser(description='独立的图片生成脚本')
-    parser.add_argument('path', help='数据目录路径')
+    parser.add_argument('data_dir', help='数据目录路径')
     
     args = parser.parse_args()
     
-    print(f"目标路径: {args.path}")
+    print(f"目标路径: {args.data_dir}")
     
-    success = generate_images_from_scripts(args.path)
+    success = generate_images_from_scripts(args.data_dir)
     if success:
         print(f"\n✓ 图片生成完成")
     else:

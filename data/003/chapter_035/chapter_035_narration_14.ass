@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_035 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率军返回丰州后，
+Dialogue: 0,0:00:02.04,0:00:04.82,Default,,0,0,0,,吩咐{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}和北向辉指挥全军趁夜
+Dialogue: 0,0:00:04.82,0:00:07.79,Default,,0,0,0,,返回{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}，并且要求就地销毁不方便
+Dialogue: 0,0:00:07.79,0:00:10.76,Default,,0,0,0,,携带的{\c&H0000FFFF&\b1}东西{\c&H00FFFFFF&\b0}，随后他写对联遣人送给
+Dialogue: 0,0:00:10.76,0:00:11.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:11.50,0:00:13.17,Default,,0,0,0,,场景是丰州{\c&H0000FFFF&\b1}城门口{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:13.17,0:00:15.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}因夜晚变得昏暗，
+Dialogue: 0,0:00:15.02,0:00:17.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气{\c&H00FFFFFF&\b0}为夜晚的凉爽状态。
+Dialogue: 0,0:00:17.07,0:00:19.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着战甲，神情果断，
+Dialogue: 0,0:00:19.48,0:00:21.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}书写{\c&H00FFFFFF&\b0}对联；亲兵递送笔墨纸。

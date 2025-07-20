@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_012 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.68,Default,,0,0,0,,北向辉抽出随身{\c&H0000FFFF&\b1}佩刀{\c&H00FFFFFF&\b0}要砍拔灼，
+Dialogue: 0,0:00:02.68,0:00:05.75,Default,,0,0,0,,拔灼害怕求饶，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}挥手示意停手
+Dialogue: 0,0:00:05.75,0:00:09.01,Default,,0,0,0,,，让带拔灼去{\c&H0000FFFF&\b1}疗伤{\c&H00FFFFFF&\b0}，同时吩咐对待俘虏
+Dialogue: 0,0:00:09.01,0:00:11.31,Default,,0,0,0,,别饿死，过一阵还有{\c&H0000FFFF&\b1}用处{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:11.31,0:00:13.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是城中，光线普通，
+Dialogue: 0,0:00:13.42,0:00:16.10,Default,,0,0,0,,有相关{\c&H0000FFFF&\b1}人员{\c&H00FFFFFF&\b0}在场，时间为白天。

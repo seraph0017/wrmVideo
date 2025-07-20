@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_024 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}城外五里处，天色阴沉，
+Dialogue: 0,0:00:02.46,0:00:03.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}秋风{\c&H00FFFFFF&\b0}萧瑟。
+Dialogue: 0,0:00:03.41,0:00:05.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身披玄甲，骑在马上，
+Dialogue: 0,0:00:05.88,0:00:08.91,Default,,0,0,0,,眼神坚毅，正带领一千骑兵朝着{\c&H0000FFFF&\b1}灞桥{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.91,0:00:10.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}方向{\c&H00FFFFFF&\b0}极速狂奔。
+Dialogue: 0,0:00:10.24,0:00:13.27,Default,,0,0,0,,他束发，{\c&H0000FFFF&\b1}黑色{\c&H00FFFFFF&\b0}的发丝在风中微微飘动
+Dialogue: 0,0:00:13.27,0:00:16.30,Default,,0,0,0,,，{\c&H0000FFFF&\b1}剑眉{\c&H00FFFFFF&\b0}星目，满脸的坚定写在脸上。
+Dialogue: 0,0:00:16.30,0:00:18.58,Default,,0,0,0,,身后四名{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}分别是二胖、
+Dialogue: 0,0:00:18.58,0:00:20.85,Default,,0,0,0,,二瘦以及两个被{\c&H0000FFFF&\b1}五花大绑{\c&H00FFFFFF&\b0}、
+Dialogue: 0,0:00:20.85,0:00:23.32,Default,,0,0,0,,脸上罩着{\c&H0000FFFF&\b1}黑布{\c&H00FFFFFF&\b0}仅露出嘴的人，
+Dialogue: 0,0:00:23.32,0:00:26.35,Default,,0,0,0,,他们共骑一马，紧跟在{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身后。

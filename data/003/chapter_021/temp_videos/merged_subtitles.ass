@@ -1,0 +1,89 @@
+[Script Info]
+Title: chapter_021 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:02.83,Default,,0,0,0,,清晨，{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫外，甲士列阵如林，
+Dialogue: 0, 0:00:02.83, 0:00:05.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄甲{\c&H00FFFFFF&\b0}在微弱宫灯下泛着肃杀之光。
+Dialogue: 0, 0:00:05.67, 0:00:08.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着十二章龙纹玄衣，
+Dialogue: 0, 0:00:08.11, 0:00:10.00,Default,,0,0,0,,站在{\c&H0000FFFF&\b1}城头{\c&H00FFFFFF&\b0}，神情严肃，
+Dialogue: 0, 0:00:10.00, 0:00:11.51,Default,,0,0,0,,心中思虑着{\c&H0000FFFF&\b1}局势{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:11.51, 0:00:13.98,Default,,0,0,0,,他虽{\c&H0000FFFF&\b1}跛脚{\c&H00FFFFFF&\b0}，但每一步都沉稳，
+Dialogue: 0, 0:00:13.98, 0:00:17.00,Default,,0,0,0,,周围是长孙无忌、{\c&H0000FFFF&\b1}高士廉{\c&H00FFFFFF&\b0}等外戚以及
+Dialogue: 0, 0:00:17.00, 0:00:18.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}、月月等亲信。
+Dialogue: 0, 0:00:18.89, 0:00:21.98,Default,,0,0,0,,东宫君子堂内，{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}等大儒义愤填
+Dialogue: 0, 0:00:21.98, 0:00:24.30,Default,,0,0,0,,膺，{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}起身扫视众人，
+Dialogue: 0, 0:00:24.30, 0:00:27.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}颜师古{\c&H00FFFFFF&\b0}、陆德明等大儒纷纷站起，
+Dialogue: 0, 0:00:27.20, 0:00:29.14,Default,,0,0,0,,准备随{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}去辩经，
+Dialogue: 0, 0:00:29.14, 0:00:32.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在旁，心中暗喜事情有望成功。
+Dialogue: 0, 0:00:32.42, 0:00:34.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫外，雨势渐小，
+Dialogue: 0, 0:00:34.28, 0:00:37.09,Default,,0,0,0,,晨光初现，洒在太极殿{\c&H0000FFFF&\b1}琉璃瓦{\c&H00FFFFFF&\b0}上，
+Dialogue: 0, 0:00:37.09, 0:00:38.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}长安城{\c&H00FFFFFF&\b0}浸在朝阳中，
+Dialogue: 0, 0:00:38.76, 0:00:41.00,Default,,0,0,0,,但空气中仍弥漫着{\c&H0000FFFF&\b1}血腥味{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:41.00, 0:00:43.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}带着孔颖达众人进入东宫，
+Dialogue: 0, 0:00:43.79, 0:00:46.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}脸色{\c&H00FFFFFF&\b0}一板，提到先帝丧期应守灵，
+Dialogue: 0, 0:00:46.60, 0:00:49.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}表示愿以死明志助李承乾。
+Dialogue: 0, 0:00:49.39, 0:00:51.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与孔颖达私下交谈，
+Dialogue: 0, 0:00:51.56, 0:00:54.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}告知孔颖达明日欲举行登基
+Dialogue: 0, 0:00:54.25, 0:00:57.12,Default,,0,0,0,,大典，{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}虽有不悦但考虑局势后
+Dialogue: 0, 0:00:57.12, 0:00:59.28,Default,,0,0,0,,答应商讨年号和改元{\c&H0000FFFF&\b1}诏书{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:59.28, 0:01:00.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中稍安。
+Dialogue: 0, 0:01:00.72, 0:01:03.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}匆忙来报，薛将军传信李佑被击
+Dialogue: 0, 0:01:03.67, 0:01:05.51,Default,,0,0,0,,退但李佑攻陷{\c&H0000FFFF&\b1}大明宫{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:05.51, 0:01:08.28,Default,,0,0,0,,河间郡王和{\c&H0000FFFF&\b1}卫国公{\c&H00FFFFFF&\b0}攻占东市后月统
+Dialogue: 0, 0:01:08.28, 0:01:11.23,Default,,0,0,0,,领攻打{\c&H0000FFFF&\b1}大明宫{\c&H00FFFFFF&\b0}，李承乾立即安排救援
+Dialogue: 0, 0:01:11.23, 0:01:12.89,Default,,0,0,0,,月月并去{\c&H0000FFFF&\b1}城头{\c&H00FFFFFF&\b0}督战。
+Dialogue: 0, 0:01:12.89, 0:01:16.37,Default,,0,0,0,,城头，艳阳高照，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}吩咐收拾战死
+Dialogue: 0, 0:01:16.37, 0:01:18.83,Default,,0,0,0,,士兵尸体，安排{\c&H0000FFFF&\b1}城南{\c&H00FFFFFF&\b0}火葬，
+Dialogue: 0, 0:01:18.83, 0:01:20.67,Default,,0,0,0,,后{\c&H0000FFFF&\b1}听闻{\c&H00FFFFFF&\b0}北向辉醒来，
+Dialogue: 0, 0:01:20.67, 0:01:21.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}精神{\c&H00FFFFFF&\b0}一振。
+Dialogue: 0, 0:01:21.70, 0:01:24.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}疾驰而来，身后是受伤的月月
+Dialogue: 0, 0:01:24.67, 0:01:26.71,Default,,0,0,0,,，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}关切询问情况，
+Dialogue: 0, 0:01:26.71, 0:01:29.50,Default,,0,0,0,,月月{\c&H0000FFFF&\b1}汇报{\c&H00FFFFFF&\b0}李佑和李谙的兵力情况，
+Dialogue: 0, 0:01:29.50, 0:01:31.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}权衡后安排后续事宜。
+Dialogue: 0, 0:01:31.90, 0:01:34.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}寝殿内，北向辉重伤在榻，
+Dialogue: 0, 0:01:34.73, 0:01:37.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}来看望，告知北向辉李恪已被
+Dialogue: 0, 0:01:37.97, 0:01:41.01,Default,,0,0,0,,抓，北向辉感激，{\c&H0000FFFF&\b1}目光{\c&H00FFFFFF&\b0}转向月月，
+Dialogue: 0, 0:01:41.01, 0:01:42.22,Default,,0,0,0,,流露出{\c&H0000FFFF&\b1}心疼{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:42.22, 0:01:44.73,Default,,0,0,0,,月月与北向辉在寝殿内{\c&H0000FFFF&\b1}交谈{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:44.73, 0:01:46.86,Default,,0,0,0,,月月提及自己曾在{\c&H0000FFFF&\b1}青楼{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:46.86, 0:01:48.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}担心{\c&H00FFFFFF&\b0}影响北向辉未来，
+Dialogue: 0, 0:01:48.79, 0:01:50.53,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}表示{\c&H00FFFFFF&\b0}不在乎，
+Dialogue: 0, 0:01:50.53, 0:01:52.26,Default,,0,0,0,,愿与月月{\c&H0000FFFF&\b1}隐居{\c&H00FFFFFF&\b0}塞外，
+Dialogue: 0, 0:01:52.26, 0:01:54.39,Default,,0,0,0,,月月虽感动但{\c&H0000FFFF&\b1}心存{\c&H00FFFFFF&\b0}顾虑。
+Dialogue: 0, 0:01:54.39, 0:01:57.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌来报，大臣们答应参加登基
+Dialogue: 0, 0:01:57.36, 0:01:59.60,Default,,0,0,0,,大典但不承认{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}称帝，
+Dialogue: 0, 0:01:59.60, 0:02:02.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}邪笑，计划用信鸽传消息，
+Dialogue: 0, 0:02:02.38, 0:02:05.36,Default,,0,0,0,,让登基和{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}驾崩消息传遍四方。
+Dialogue: 0, 0:02:05.36, 0:02:07.57,Default,,0,0,0,,寅时三刻，{\c&H0000FFFF&\b1}长安城{\c&H00FFFFFF&\b0}未白，
+Dialogue: 0, 0:02:07.57, 0:02:09.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫外甲士列阵，
+Dialogue: 0, 0:02:09.37, 0:02:11.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着龙纹玄衣，
+Dialogue: 0, 0:02:11.38, 0:02:13.59,Default,,0,0,0,,走出{\c&H0000FFFF&\b1}寝殿{\c&H00FFFFFF&\b0}，沿御道上行，
+Dialogue: 0, 0:02:13.59, 0:02:15.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}文臣武将{\c&H00FFFFFF&\b0}分列两旁。
+Dialogue: 0, 0:02:15.39, 0:02:17.65,Default,,0,0,0,,登基大典上，{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}主持，
+Dialogue: 0, 0:02:17.65, 0:02:19.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}朗声道出登基缘由，
+Dialogue: 0, 0:02:19.90, 0:02:21.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌等齐声道贺，
+Dialogue: 0, 0:02:21.78, 0:02:24.79,Default,,0,0,0,,突然士兵来报，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}再有一日兵至
+Dialogue: 0, 0:02:24.79, 0:02:26.86,Default,,0,0,0,,灞桥，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情凝重。
+Dialogue: 0, 0:02:26.86, 0:02:30.07,Default,,0,0,0,,次日清晨，城头，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与众臣商议，
+Dialogue: 0, 0:02:30.07, 0:02:32.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌建议立刻出兵剿灭叛贼，
+Dialogue: 0, 0:02:32.90, 0:02:35.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}以边军被渗透为由决定缓行
+Dialogue: 0, 0:02:35.74, 0:02:38.57,Default,,0,0,0,,，安排{\c&H0000FFFF&\b1}豆卢宽{\c&H00FFFFFF&\b0}准备火药镇压异动。
+Dialogue: 0, 0:02:38.57, 0:02:41.33,Default,,0,0,0,,哨报来，{\c&H0000FFFF&\b1}京师{\c&H00FFFFFF&\b0}附近出现游骑，
+Dialogue: 0, 0:02:41.33, 0:02:43.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}得知李世民到来，
+Dialogue: 0, 0:02:43.66, 0:02:45.99,Default,,0,0,0,,吩咐薛{\c&H0000FFFF&\b1}将军{\c&H00FFFFFF&\b0}在城头等他，
+Dialogue: 0, 0:02:45.99, 0:02:47.47,Default,,0,0,0,,严密检查{\c&H0000FFFF&\b1}百官{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:47.47, 0:02:50.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}长安城{\c&H00FFFFFF&\b0}灞桥，李世民率军到来，
+Dialogue: 0, 0:02:50.31, 0:02:53.12,Default,,0,0,0,,一身{\c&H0000FFFF&\b1}玄甲{\c&H00FFFFFF&\b0}，背硬弓，箭囊醒目，
+Dialogue: 0, 0:02:53.12, 0:02:55.34,Default,,0,0,0,,阵前喊话，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回应，
+Dialogue: 0, 0:02:55.34, 0:02:57.37,Default,,0,0,0,,准备应对{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}攻城，
+Dialogue: 0, 0:02:57.37, 0:02:58.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}城头{\c&H00FFFFFF&\b0}气氛紧张。

@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_041 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看到李世民来后，
+Dialogue: 0,0:00:01.97,0:00:04.47,Default,,0,0,0,,在{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}搀扶下颤巍巍走到城边，
+Dialogue: 0,0:00:04.47,0:00:06.44,Default,,0,0,0,,嘲讽{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}‘一别多时，
+Dialogue: 0,0:00:06.44,0:00:07.33,Default,,0,0,0,,可{\c&H0000FFFF&\b1}还好{\c&H00FFFFFF&\b0}啊？
+Dialogue: 0,0:00:07.33,0:00:10.19,Default,,0,0,0,,朕劝您还是走吧，{\c&H0000FFFF&\b1}武牢关{\c&H00FFFFFF&\b0}里现在太挤
+Dialogue: 0,0:00:10.19,0:00:12.87,Default,,0,0,0,,了，{\c&H0000FFFF&\b1}就算{\c&H00FFFFFF&\b0}非进来，也没您坐的地！
+Dialogue: 0,0:00:12.87,0:00:14.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}估计{\c&H00FFFFFF&\b0}得趴着’。
+Dialogue: 0,0:00:14.13,0:00:15.73,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}虎牢关{\c&H00FFFFFF&\b0}城头，
+Dialogue: 0,0:00:15.73,0:00:17.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}是城头，天气为晴天。

@@ -1,0 +1,482 @@
+{
+  "text": "李世民让李承乾速开城门投降，李承乾嘲讽李世民之前砍他那刀很疼，还表示休养几天会亲率八百精骑返回长安号召关中府兵集结。场景是虎牢关城头，环境是城头，天气为晴天。",
+  "audio_file": "data/003/chapter_041/chapter_041_narration_13.mp3",
+  "duration": 11.85,
+  "character_timestamps": [
+    {
+      "character": "李",
+      "start_time": 0.0,
+      "end_time": 0.15,
+      "index": 0
+    },
+    {
+      "character": "世",
+      "start_time": 0.15,
+      "end_time": 0.3,
+      "index": 1
+    },
+    {
+      "character": "民",
+      "start_time": 0.3,
+      "end_time": 0.44999999999999996,
+      "index": 2
+    },
+    {
+      "character": "让",
+      "start_time": 0.44999999999999996,
+      "end_time": 0.6,
+      "index": 3
+    },
+    {
+      "character": "李",
+      "start_time": 0.6,
+      "end_time": 0.75,
+      "index": 4
+    },
+    {
+      "character": "承",
+      "start_time": 0.75,
+      "end_time": 0.9,
+      "index": 5
+    },
+    {
+      "character": "乾",
+      "start_time": 0.9,
+      "end_time": 1.05,
+      "index": 6
+    },
+    {
+      "character": "速",
+      "start_time": 1.05,
+      "end_time": 1.2,
+      "index": 7
+    },
+    {
+      "character": "开",
+      "start_time": 1.2,
+      "end_time": 1.3499999999999999,
+      "index": 8
+    },
+    {
+      "character": "城",
+      "start_time": 1.3499999999999999,
+      "end_time": 1.4999999999999998,
+      "index": 9
+    },
+    {
+      "character": "门",
+      "start_time": 1.4999999999999998,
+      "end_time": 1.6499999999999997,
+      "index": 10
+    },
+    {
+      "character": "投",
+      "start_time": 1.6499999999999997,
+      "end_time": 1.7999999999999996,
+      "index": 11
+    },
+    {
+      "character": "降",
+      "start_time": 1.7999999999999996,
+      "end_time": 1.9499999999999995,
+      "index": 12
+    },
+    {
+      "character": "，",
+      "start_time": 1.9499999999999995,
+      "end_time": 2.0999999999999996,
+      "index": 13
+    },
+    {
+      "character": "李",
+      "start_time": 2.0999999999999996,
+      "end_time": 2.2499999999999996,
+      "index": 14
+    },
+    {
+      "character": "承",
+      "start_time": 2.2499999999999996,
+      "end_time": 2.3999999999999995,
+      "index": 15
+    },
+    {
+      "character": "乾",
+      "start_time": 2.3999999999999995,
+      "end_time": 2.5499999999999994,
+      "index": 16
+    },
+    {
+      "character": "嘲",
+      "start_time": 2.5499999999999994,
+      "end_time": 2.6999999999999993,
+      "index": 17
+    },
+    {
+      "character": "讽",
+      "start_time": 2.6999999999999993,
+      "end_time": 2.849999999999999,
+      "index": 18
+    },
+    {
+      "character": "李",
+      "start_time": 2.849999999999999,
+      "end_time": 2.999999999999999,
+      "index": 19
+    },
+    {
+      "character": "世",
+      "start_time": 2.999999999999999,
+      "end_time": 3.149999999999999,
+      "index": 20
+    },
+    {
+      "character": "民",
+      "start_time": 3.149999999999999,
+      "end_time": 3.299999999999999,
+      "index": 21
+    },
+    {
+      "character": "之",
+      "start_time": 3.299999999999999,
+      "end_time": 3.449999999999999,
+      "index": 22
+    },
+    {
+      "character": "前",
+      "start_time": 3.449999999999999,
+      "end_time": 3.5999999999999988,
+      "index": 23
+    },
+    {
+      "character": "砍",
+      "start_time": 3.5999999999999988,
+      "end_time": 3.7499999999999987,
+      "index": 24
+    },
+    {
+      "character": "他",
+      "start_time": 3.7499999999999987,
+      "end_time": 3.8999999999999986,
+      "index": 25
+    },
+    {
+      "character": "那",
+      "start_time": 3.8999999999999986,
+      "end_time": 4.049999999999999,
+      "index": 26
+    },
+    {
+      "character": "刀",
+      "start_time": 4.049999999999999,
+      "end_time": 4.199999999999999,
+      "index": 27
+    },
+    {
+      "character": "很",
+      "start_time": 4.199999999999999,
+      "end_time": 4.35,
+      "index": 28
+    },
+    {
+      "character": "疼",
+      "start_time": 4.35,
+      "end_time": 4.5,
+      "index": 29
+    },
+    {
+      "character": "，",
+      "start_time": 4.5,
+      "end_time": 4.65,
+      "index": 30
+    },
+    {
+      "character": "还",
+      "start_time": 4.65,
+      "end_time": 4.800000000000001,
+      "index": 31
+    },
+    {
+      "character": "表",
+      "start_time": 4.800000000000001,
+      "end_time": 4.950000000000001,
+      "index": 32
+    },
+    {
+      "character": "示",
+      "start_time": 4.950000000000001,
+      "end_time": 5.100000000000001,
+      "index": 33
+    },
+    {
+      "character": "休",
+      "start_time": 5.100000000000001,
+      "end_time": 5.250000000000002,
+      "index": 34
+    },
+    {
+      "character": "养",
+      "start_time": 5.250000000000002,
+      "end_time": 5.400000000000002,
+      "index": 35
+    },
+    {
+      "character": "几",
+      "start_time": 5.400000000000002,
+      "end_time": 5.5500000000000025,
+      "index": 36
+    },
+    {
+      "character": "天",
+      "start_time": 5.5500000000000025,
+      "end_time": 5.700000000000003,
+      "index": 37
+    },
+    {
+      "character": "会",
+      "start_time": 5.700000000000003,
+      "end_time": 5.850000000000003,
+      "index": 38
+    },
+    {
+      "character": "亲",
+      "start_time": 5.850000000000003,
+      "end_time": 6.0000000000000036,
+      "index": 39
+    },
+    {
+      "character": "率",
+      "start_time": 6.0000000000000036,
+      "end_time": 6.150000000000004,
+      "index": 40
+    },
+    {
+      "character": "八",
+      "start_time": 6.150000000000004,
+      "end_time": 6.300000000000004,
+      "index": 41
+    },
+    {
+      "character": "百",
+      "start_time": 6.300000000000004,
+      "end_time": 6.450000000000005,
+      "index": 42
+    },
+    {
+      "character": "精",
+      "start_time": 6.450000000000005,
+      "end_time": 6.600000000000005,
+      "index": 43
+    },
+    {
+      "character": "骑",
+      "start_time": 6.600000000000005,
+      "end_time": 6.750000000000005,
+      "index": 44
+    },
+    {
+      "character": "返",
+      "start_time": 6.750000000000005,
+      "end_time": 6.900000000000006,
+      "index": 45
+    },
+    {
+      "character": "回",
+      "start_time": 6.900000000000006,
+      "end_time": 7.050000000000006,
+      "index": 46
+    },
+    {
+      "character": "长",
+      "start_time": 7.050000000000006,
+      "end_time": 7.200000000000006,
+      "index": 47
+    },
+    {
+      "character": "安",
+      "start_time": 7.200000000000006,
+      "end_time": 7.350000000000007,
+      "index": 48
+    },
+    {
+      "character": "号",
+      "start_time": 7.350000000000007,
+      "end_time": 7.500000000000007,
+      "index": 49
+    },
+    {
+      "character": "召",
+      "start_time": 7.500000000000007,
+      "end_time": 7.6500000000000075,
+      "index": 50
+    },
+    {
+      "character": "关",
+      "start_time": 7.6500000000000075,
+      "end_time": 7.800000000000008,
+      "index": 51
+    },
+    {
+      "character": "中",
+      "start_time": 7.800000000000008,
+      "end_time": 7.950000000000008,
+      "index": 52
+    },
+    {
+      "character": "府",
+      "start_time": 7.950000000000008,
+      "end_time": 8.100000000000009,
+      "index": 53
+    },
+    {
+      "character": "兵",
+      "start_time": 8.100000000000009,
+      "end_time": 8.250000000000009,
+      "index": 54
+    },
+    {
+      "character": "集",
+      "start_time": 8.250000000000009,
+      "end_time": 8.40000000000001,
+      "index": 55
+    },
+    {
+      "character": "结",
+      "start_time": 8.40000000000001,
+      "end_time": 8.55000000000001,
+      "index": 56
+    },
+    {
+      "character": "。",
+      "start_time": 8.55000000000001,
+      "end_time": 8.70000000000001,
+      "index": 57
+    },
+    {
+      "character": "场",
+      "start_time": 8.70000000000001,
+      "end_time": 8.85000000000001,
+      "index": 58
+    },
+    {
+      "character": "景",
+      "start_time": 8.85000000000001,
+      "end_time": 9.00000000000001,
+      "index": 59
+    },
+    {
+      "character": "是",
+      "start_time": 9.00000000000001,
+      "end_time": 9.150000000000011,
+      "index": 60
+    },
+    {
+      "character": "虎",
+      "start_time": 9.150000000000011,
+      "end_time": 9.300000000000011,
+      "index": 61
+    },
+    {
+      "character": "牢",
+      "start_time": 9.300000000000011,
+      "end_time": 9.450000000000012,
+      "index": 62
+    },
+    {
+      "character": "关",
+      "start_time": 9.450000000000012,
+      "end_time": 9.600000000000012,
+      "index": 63
+    },
+    {
+      "character": "城",
+      "start_time": 9.600000000000012,
+      "end_time": 9.750000000000012,
+      "index": 64
+    },
+    {
+      "character": "头",
+      "start_time": 9.750000000000012,
+      "end_time": 9.900000000000013,
+      "index": 65
+    },
+    {
+      "character": "，",
+      "start_time": 9.900000000000013,
+      "end_time": 10.050000000000013,
+      "index": 66
+    },
+    {
+      "character": "环",
+      "start_time": 10.050000000000013,
+      "end_time": 10.200000000000014,
+      "index": 67
+    },
+    {
+      "character": "境",
+      "start_time": 10.200000000000014,
+      "end_time": 10.350000000000014,
+      "index": 68
+    },
+    {
+      "character": "是",
+      "start_time": 10.350000000000014,
+      "end_time": 10.500000000000014,
+      "index": 69
+    },
+    {
+      "character": "城",
+      "start_time": 10.500000000000014,
+      "end_time": 10.650000000000015,
+      "index": 70
+    },
+    {
+      "character": "头",
+      "start_time": 10.650000000000015,
+      "end_time": 10.800000000000015,
+      "index": 71
+    },
+    {
+      "character": "，",
+      "start_time": 10.800000000000015,
+      "end_time": 10.950000000000015,
+      "index": 72
+    },
+    {
+      "character": "天",
+      "start_time": 10.950000000000015,
+      "end_time": 11.100000000000016,
+      "index": 73
+    },
+    {
+      "character": "气",
+      "start_time": 11.100000000000016,
+      "end_time": 11.250000000000016,
+      "index": 74
+    },
+    {
+      "character": "为",
+      "start_time": 11.250000000000016,
+      "end_time": 11.400000000000016,
+      "index": 75
+    },
+    {
+      "character": "晴",
+      "start_time": 11.400000000000016,
+      "end_time": 11.550000000000017,
+      "index": 76
+    },
+    {
+      "character": "天",
+      "start_time": 11.550000000000017,
+      "end_time": 11.700000000000017,
+      "index": 77
+    },
+    {
+      "character": "。",
+      "start_time": 11.700000000000017,
+      "end_time": 11.850000000000017,
+      "index": 78
+    }
+  ],
+  "generated_at": "2025-07-19T18:02:21.934944"
+}

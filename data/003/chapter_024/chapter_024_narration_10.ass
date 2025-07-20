@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_024 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中一横，决定豁出去，
+Dialogue: 0,0:00:02.60,0:00:05.38,Default,,0,0,0,,临出城前他把五百斤{\c&H0000FFFF&\b1}黑火药{\c&H00FFFFFF&\b0}绑在五
+Dialogue: 0,0:00:05.38,0:00:08.34,Default,,0,0,0,,匹战马上，准备与{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}同归于尽。
+Dialogue: 0,0:00:08.34,0:00:11.13,Default,,0,0,0,,他{\c&H0000FFFF&\b1}双目{\c&H00FFFFFF&\b0}微凝，脸上露出疯狂之色。
+Dialogue: 0,0:00:11.13,0:00:13.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着玄甲，神情疯狂。

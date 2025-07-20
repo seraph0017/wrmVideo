@@ -1,0 +1,140 @@
+[Script Info]
+Title: chapter_050 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:02.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}洒满热闹的奴隶市场，
+Dialogue: 0, 0:00:02.12, 0:00:04.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着华丽的皇室服饰，
+Dialogue: 0, 0:00:04.41, 0:00:06.37,Default,,0,0,0,,兴致勃勃地挑选着{\c&H0000FFFF&\b1}奴隶{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:06.37, 0:00:09.18,Default,,0,0,0,,他自信满满，周围不少{\c&H0000FFFF&\b1}胆子{\c&H00FFFFFF&\b0}大的商人
+Dialogue: 0, 0:00:09.18, 0:00:10.60,Default,,0,0,0,,已缓步{\c&H0000FFFF&\b1}围拢过来{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:10.60, 0:00:13.43,Default,,0,0,0,,不到半个时辰，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}便已买下两百
+Dialogue: 0, 0:00:13.43, 0:00:15.91,Default,,0,0,0,,多名{\c&H0000FFFF&\b1}身体{\c&H00FFFFFF&\b0}还算不错的外族奴隶，
+Dialogue: 0, 0:00:15.91, 0:00:18.55,Default,,0,0,0,,脸上洋溢着{\c&H0000FFFF&\b1}疯狂{\c&H00FFFFFF&\b0}消费带来的畅快兴
+Dialogue: 0, 0:00:18.55, 0:00:19.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}奋之色{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:19.26, 0:00:21.44,Default,,0,0,0,,修缮坊内，简陋的{\c&H0000FFFF&\b1}木屋{\c&H00FFFFFF&\b0}中，
+Dialogue: 0, 0:00:21.44, 0:00:23.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}面对一众工匠微微皱眉，
+Dialogue: 0, 0:00:23.98, 0:00:26.71,Default,,0,0,0,,正在思考如何表达想要铸造{\c&H0000FFFF&\b1}东西{\c&H00FFFFFF&\b0}的
+Dialogue: 0, 0:00:26.71, 0:00:29.61,Default,,0,0,0,,想法。他扫视{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}后询问谁手艺最好
+Dialogue: 0, 0:00:29.61, 0:00:31.99,Default,,0,0,0,,，一众{\c&H0000FFFF&\b1}工匠{\c&H00FFFFFF&\b0}互相对视一会后，
+Dialogue: 0, 0:00:31.99, 0:00:33.98,Default,,0,0,0,,站出了{\c&H0000FFFF&\b1}李阿四{\c&H00FFFFFF&\b0}和张儒童，
+Dialogue: 0, 0:00:33.98, 0:00:36.89,Default,,0,0,0,,二人面露苦涩，因为当下{\c&H0000FFFF&\b1}父子{\c&H00FFFFFF&\b0}相争之
+Dialogue: 0, 0:00:36.89, 0:00:40.34,Default,,0,0,0,,事天下皆知，他们担心卷入其中招来{\c&H0000FFFF&\b1}灾祸{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:40.34, 0:00:43.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}邀请李阿四和张儒童进入屋
+Dialogue: 0, 0:00:43.01, 0:00:45.68,Default,,0,0,0,,内奉茶，他起身，{\c&H0000FFFF&\b1}面带亲{\c&H00FFFFFF&\b0}和之色，
+Dialogue: 0, 0:00:45.68, 0:00:48.35,Default,,0,0,0,,挽着二人的手将其带到{\c&H0000FFFF&\b1}矮凳{\c&H00FFFFFF&\b0}旁让其
+Dialogue: 0, 0:00:48.35, 0:00:51.38,Default,,0,0,0,,就座。接着，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示自己生平最佩
+Dialogue: 0, 0:00:51.38, 0:00:54.40,Default,,0,0,0,,服{\c&H0000FFFF&\b1}工匠{\c&H00FFFFFF&\b0}，还提及农具、战刀等皆出自工
+Dialogue: 0, 0:00:54.40, 0:00:57.25,Default,,0,0,0,,匠之手，以此来拉近与{\c&H0000FFFF&\b1}工匠{\c&H00FFFFFF&\b0}的距离。
+Dialogue: 0, 0:00:57.25, 0:00:59.56,Default,,0,0,0,,随后，他提出想要铸造{\c&H0000FFFF&\b1}东西{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:00:59.56, 0:01:01.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}承诺{\c&H00FFFFFF&\b0}若成功必重赏，
+Dialogue: 0, 0:01:01.17, 0:01:03.84,Default,,0,0,0,,还会拜二人将作{\c&H0000FFFF&\b1}大匠{\c&H00FFFFFF&\b0}并赐钱帛等，
+Dialogue: 0, 0:01:03.84, 0:01:05.96,Default,,0,0,0,,二人{\c&H0000FFFF&\b1}听闻{\c&H00FFFFFF&\b0}后既惊喜又惶恐。
+Dialogue: 0, 0:01:05.96, 0:01:08.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}从怀中取出事先画好的大炮
+Dialogue: 0, 0:01:08.73, 0:01:10.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}图纸{\c&H00FFFFFF&\b0}，放在桌上。
+Dialogue: 0, 0:01:10.21, 0:01:12.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}张儒童{\c&H00FFFFFF&\b0}俯身凑近仔细看向图纸，
+Dialogue: 0, 0:01:12.81, 0:01:15.20,Default,,0,0,0,,而后表示二十天能做出{\c&H0000FFFF&\b1}模具{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:15.20, 0:01:18.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听后摇头，认为二十天太慢，
+Dialogue: 0, 0:01:18.17, 0:01:20.93,Default,,0,0,0,,提出五天内做出五十个{\c&H0000FFFF&\b1}模具{\c&H00FFFFFF&\b0}的预期
+Dialogue: 0, 0:01:20.93, 0:01:23.53,Default,,0,0,0,,。{\c&H0000FFFF&\b1}张儒童{\c&H00FFFFFF&\b0}解释铸造之法的难处，
+Dialogue: 0, 0:01:23.53, 0:01:25.73,Default,,0,0,0,,称制造{\c&H0000FFFF&\b1}蜡模{\c&H00FFFFFF&\b0}六七天能完成，
+Dialogue: 0, 0:01:25.73, 0:01:27.95,Default,,0,0,0,,但{\c&H0000FFFF&\b1}外层{\c&H00FFFFFF&\b0}泥模阴干需二十天。
+Dialogue: 0, 0:01:27.95, 0:01:29.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听后，踱步思考，
+Dialogue: 0, 0:01:29.98, 0:01:31.65,Default,,0,0,0,,突然脑中{\c&H0000FFFF&\b1}灵光{\c&H00FFFFFF&\b0}一闪，
+Dialogue: 0, 0:01:31.65, 0:01:34.43,Default,,0,0,0,,想到{\c&H0000FFFF&\b1}小时候{\c&H00FFFFFF&\b0}海边修船的捻船技法，
+Dialogue: 0, 0:01:34.43, 0:01:37.01,Default,,0,0,0,,便提出在{\c&H0000FFFF&\b1}模具{\c&H00FFFFFF&\b0}中使用麻捣工艺，
+Dialogue: 0, 0:01:37.01, 0:01:39.78,Default,,0,0,0,,同时在制作{\c&H0000FFFF&\b1}泥模{\c&H00FFFFFF&\b0}的水中加入酒糟，
+Dialogue: 0, 0:01:39.78, 0:01:42.56,Default,,0,0,0,,分两次铸造并用{\c&H0000FFFF&\b1}炭火{\c&H00FFFFFF&\b0}加速烘干的方
+Dialogue: 0, 0:01:42.56, 0:01:44.78,Default,,0,0,0,,法，{\c&H0000FFFF&\b1}张儒童{\c&H00FFFFFF&\b0}听后表示认可。
+Dialogue: 0, 0:01:44.78, 0:01:47.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神色严肃，向二人表示会让裴
+Dialogue: 0, 0:01:47.67, 0:01:49.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}将军{\c&H00FFFFFF&\b0}派兵全力配合他们，
+Dialogue: 0, 0:01:49.65, 0:01:51.09,Default,,0,0,0,,让二人{\c&H0000FFFF&\b1}放心{\c&H00FFFFFF&\b0}去做。
+Dialogue: 0, 0:01:51.09, 0:01:53.98,Default,,0,0,0,,二人领命后，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}又提醒他们核心
+Dialogue: 0, 0:01:53.98, 0:01:55.96,Default,,0,0,0,,的{\c&H0000FFFF&\b1}东西{\c&H00FFFFFF&\b0}一定要亲自上阵，
+Dialogue: 0, 0:01:55.96, 0:01:57.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}绝不能{\c&H00FFFFFF&\b0}假手于人。
+Dialogue: 0, 0:01:57.40, 0:02:00.29,Default,,0,0,0,,随后二人离开，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}独自留在屋内
+Dialogue: 0, 0:02:00.29, 0:02:03.35,Default,,0,0,0,,，喃喃自语，为{\c&H0000FFFF&\b1}炼钢{\c&H00FFFFFF&\b0}缺碱的事情发愁。
+Dialogue: 0, 0:02:03.35, 0:02:06.23,Default,,0,0,0,,午夜时分，北{\c&H0000FFFF&\b1}邙山{\c&H00FFFFFF&\b0}乱葬岗一片漆黑，
+Dialogue: 0, 0:02:06.23, 0:02:07.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}磷火{\c&H00FFFFFF&\b0}忽明忽暗。
+Dialogue: 0, 0:02:07.51, 0:02:09.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}满脸疯癫之色，
+Dialogue: 0, 0:02:09.31, 0:02:11.65,Default,,0,0,0,,正手持一块{\c&H0000FFFF&\b1}人骨{\c&H00FFFFFF&\b0}，大声说道：
+Dialogue: 0, 0:02:11.65, 0:02:12.90,Default,,0,0,0,,“好，{\c&H0000FFFF&\b1}就是{\c&H00FFFFFF&\b0}这！
+Dialogue: 0, 0:02:12.90, 0:02:14.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}兄弟{\c&H00FFFFFF&\b0}们给朕玩命的挖，
+Dialogue: 0, 0:02:14.71, 0:02:15.97,Default,,0,0,0,,挖的多朕有赏。
+Dialogue: 0, 0:02:15.97, 0:02:18.68,Default,,0,0,0,,”他心中盘算{\c&H0000FFFF&\b1}用人{\c&H00FFFFFF&\b0}骨炼化出碱来解
+Dialogue: 0, 0:02:18.68, 0:02:20.30,Default,,0,0,0,,决{\c&H0000FFFF&\b1}炼钢{\c&H00FFFFFF&\b0}缺碱的问题。
+Dialogue: 0, 0:02:20.30, 0:02:22.68,Default,,0,0,0,,清晨，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}带人返回洛阳，
+Dialogue: 0, 0:02:22.68, 0:02:24.71,Default,,0,0,0,,一行人拉着十大{\c&H0000FFFF&\b1}车人{\c&H00FFFFFF&\b0}骨，
+Dialogue: 0, 0:02:24.71, 0:02:26.37,Default,,0,0,0,,他们都进行了{\c&H0000FFFF&\b1}化妆{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:26.37, 0:02:29.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}面色极差，不时看向李承乾，
+Dialogue: 0, 0:02:29.32, 0:02:31.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}似有话想说{\c&H00FFFFFF&\b0}却又难以启齿。
+Dialogue: 0, 0:02:31.53, 0:02:34.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}将裴行俭的状态尽收眼底，
+Dialogue: 0, 0:02:34.29, 0:02:37.05,Default,,0,0,0,,他向{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}解释道这些东西对他们
+Dialogue: 0, 0:02:37.05, 0:02:39.81,Default,,0,0,0,,至关重要，但此时并未详细{\c&H0000FFFF&\b1}展开{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:39.81, 0:02:41.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}修缮{\c&H00FFFFFF&\b0}坊内一片忙碌，
+Dialogue: 0, 0:02:41.46, 0:02:43.11,Default,,0,0,0,,烧蜡{\c&H0000FFFF&\b1}造模{\c&H00FFFFFF&\b0}热气升腾，
+Dialogue: 0, 0:02:43.11, 0:02:44.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}白烟{\c&H00FFFFFF&\b0}缭绕。
+Dialogue: 0, 0:02:44.03, 0:02:46.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}满意地点了点头，
+Dialogue: 0, 0:02:46.05, 0:02:48.80,Default,,0,0,0,,觉得{\c&H0000FFFF&\b1}张童儒{\c&H00FFFFFF&\b0}和李阿四办事效率不错
+Dialogue: 0, 0:02:48.80, 0:02:51.37,Default,,0,0,0,,。他缓步走到后面一个{\c&H0000FFFF&\b1}小院{\c&H00FFFFFF&\b0}中，
+Dialogue: 0, 0:02:51.37, 0:02:54.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}看到{\c&H00FFFFFF&\b0}里面整整齐齐放着三十多个鸽
+Dialogue: 0, 0:02:54.12, 0:02:56.87,Default,,0,0,0,,笼，发现有四个{\c&H0000FFFF&\b1}信鸽{\c&H00FFFFFF&\b0}腿上缠着信，
+Dialogue: 0, 0:02:56.87, 0:02:58.88,Default,,0,0,0,,便走上前取下{\c&H0000FFFF&\b1}信件{\c&H00FFFFFF&\b0}查看，
+Dialogue: 0, 0:02:58.88, 0:03:01.83,Default,,0,0,0,,得知李恪、李佑等一众反王全跑{\c&H0000FFFF&\b1}齐州{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:03:01.83, 0:03:04.77,Default,,0,0,0,,去了，还有月月被抓到{\c&H0000FFFF&\b1}岭南{\c&H00FFFFFF&\b0}的消息，
+Dialogue: 0, 0:03:04.77, 0:03:06.23,Default,,0,0,0,,他{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}颇为烦躁。
+Dialogue: 0, 0:03:06.23, 0:03:08.54,Default,,0,0,0,,当天夜里，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}独卧锦榻，
+Dialogue: 0, 0:03:08.54, 0:03:09.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}辗转难眠{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:03:09.43, 0:03:12.09,Default,,0,0,0,,窗外叶落，被{\c&H0000FFFF&\b1}秋风{\c&H00FFFFFF&\b0}吹得沙沙作响。
+Dialogue: 0, 0:03:12.09, 0:03:14.57,Default,,0,0,0,,他躺了好一会，{\c&H0000FFFF&\b1}索性{\c&H00FFFFFF&\b0}披衣坐起，
+Dialogue: 0, 0:03:14.57, 0:03:16.17,Default,,0,0,0,,推开{\c&H0000FFFF&\b1}窗户{\c&H00FFFFFF&\b0}看向外面。
+Dialogue: 0, 0:03:16.17, 0:03:18.12,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}传来{\c&H00FFFFFF&\b0}急促的敲门声，
+Dialogue: 0, 0:03:18.12, 0:03:20.79,Default,,0,0,0,,来人告知{\c&H0000FFFF&\b1}裴将军{\c&H00FFFFFF&\b0}让人送个东西来，
+Dialogue: 0, 0:03:20.79, 0:03:22.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}一扫怅然之色，
+Dialogue: 0, 0:03:22.56, 0:03:24.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}嘴角{\c&H00FFFFFF&\b0}露出一抹笑意。
+Dialogue: 0, 0:03:24.16, 0:03:26.33,Default,,0,0,0,,来人带来一名{\c&H0000FFFF&\b1}南诏{\c&H00FFFFFF&\b0}女奴，
+Dialogue: 0, 0:03:26.33, 0:03:28.11,Default,,0,0,0,,她身着{\c&H0000FFFF&\b1}淡黄色{\c&H00FFFFFF&\b0}薄纱，
+Dialogue: 0, 0:03:28.11, 0:03:30.47,Default,,0,0,0,,翩翩起舞，{\c&H0000FFFF&\b1}身姿{\c&H00FFFFFF&\b0}魅惑动人。
+Dialogue: 0, 0:03:30.47, 0:03:33.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}被其吸引，氛围暧昧，
+Dialogue: 0, 0:03:33.04, 0:03:34.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}一夜{\c&H00FFFFFF&\b0}无话。
+Dialogue: 0, 0:03:34.02, 0:03:36.83,Default,,0,0,0,,翌日清晨，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}早早就起来了，
+Dialogue: 0, 0:03:36.83, 0:03:39.63,Default,,0,0,0,,北向辉来找他，询问月月的{\c&H0000FFFF&\b1}消息{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:03:39.63, 0:03:42.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}严肃地告诫北向辉要遵守军
+Dialogue: 0, 0:03:42.44, 0:03:44.68,Default,,0,0,0,,令，北向辉{\c&H0000FFFF&\b1}面露{\c&H00FFFFFF&\b0}愧疚之色，
+Dialogue: 0, 0:03:44.68, 0:03:46.74,Default,,0,0,0,,表示马上回{\c&H0000FFFF&\b1}虎牢关{\c&H00FFFFFF&\b0}统兵。
+Dialogue: 0, 0:03:46.74, 0:03:49.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}点头，称如有月月的消息会第
+Dialogue: 0, 0:03:49.73, 0:03:52.91,Default,,0,0,0,,一时间通知他，并叮嘱他守住{\c&H0000FFFF&\b1}成皋{\c&H00FFFFFF&\b0}道。
+Dialogue: 0, 0:03:52.91, 0:03:55.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}大明宫{\c&H00FFFFFF&\b0}紫宸殿内，李世民半倚卧榻，
+Dialogue: 0, 0:03:55.73, 0:03:57.85,Default,,0,0,0,,手持一卷{\c&H0000FFFF&\b1}军报{\c&H00FFFFFF&\b0}，面色憔悴，
+Dialogue: 0, 0:03:57.85, 0:03:59.08,Default,,0,0,0,,口中{\c&H0000FFFF&\b1}喃喃自语{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:03:59.08, 0:04:01.02,Default,,0,0,0,,老{\c&H0000FFFF&\b1}内侍{\c&H00FFFFFF&\b0}捧着药盏来送药，
+Dialogue: 0, 0:04:01.02, 0:04:03.66,Default,,0,0,0,,此时传来内侍尖细的声音说{\c&H0000FFFF&\b1}越王{\c&H00FFFFFF&\b0}李
+Dialogue: 0, 0:04:03.66, 0:04:06.48,Default,,0,0,0,,贞在殿外求见，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}表情瞬间一变
+Dialogue: 0, 0:04:06.48, 0:04:07.72,Default,,0,0,0,,，让{\c&H0000FFFF&\b1}李贞{\c&H00FFFFFF&\b0}进来。
+Dialogue: 0, 0:04:07.72, 0:04:09.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}与李贞交谈，
+Dialogue: 0, 0:04:09.37, 0:04:11.56,Default,,0,0,0,,询问{\c&H0000FFFF&\b1}李贞{\c&H00FFFFFF&\b0}参与朝政的心得，
+Dialogue: 0, 0:04:11.56, 0:04:12.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李贞{\c&H00FFFFFF&\b0}应答。
+Dialogue: 0, 0:04:12.48, 0:04:15.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}表示让李贞监国处理朝政，
+Dialogue: 0, 0:04:15.23, 0:04:18.52,Default,,0,0,0,,李贞面露喜色，随后向{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}告辞离开。
+Dialogue: 0, 0:04:18.52, 0:04:20.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}让人传武媚来，
+Dialogue: 0, 0:04:20.37, 0:04:23.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}武媚{\c&H00FFFFFF&\b0}觐见，身着素纱单衣配浅绯色半
+Dialogue: 0, 0:04:23.33, 0:04:24.99,Default,,0,0,0,,臂，{\c&H0000FFFF&\b1}青丝{\c&H00FFFFFF&\b0}挽成低髻。
+Dialogue: 0, 0:04:24.99, 0:04:27.95,Default,,0,0,0,,她与{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}交谈，李世民提及马厩之
+Dialogue: 0, 0:04:27.95, 0:04:29.25,Default,,0,0,0,,事，{\c&H0000FFFF&\b1}武媚{\c&H00FFFFFF&\b0}进言。
+Dialogue: 0, 0:04:29.25, 0:04:31.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在洛阳城头苦等薛仁贵，
+Dialogue: 0, 0:04:31.67, 0:04:34.27,Default,,0,0,0,,听到士兵来报{\c&H0000FFFF&\b1}武牢关{\c&H00FFFFFF&\b0}方向来了大批
+Dialogue: 0, 0:04:34.27, 0:04:35.65,Default,,0,0,0,,人马是{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}援军。
+Dialogue: 0, 0:04:35.65, 0:04:37.38,Default,,0,0,0,,随后收到{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}的信，
+Dialogue: 0, 0:04:37.38, 0:04:40.15,Default,,0,0,0,,得知烟煤有进展，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}激动地表示
+Dialogue: 0, 0:04:40.15, 0:04:42.58,Default,,0,0,0,,：“沃日尼大爷的，{\c&H0000FFFF&\b1}老李{\c&H00FFFFFF&\b0}来吧！
+Dialogue: 0, 0:04:42.58, 0:04:44.31,Default,,0,0,0,,倒要{\c&H0000FFFF&\b1}看看{\c&H00FFFFFF&\b0}是你的箭快，
+Dialogue: 0, 0:04:44.31, 0:04:45.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}还是{\c&H00FFFFFF&\b0}我的炮快！”

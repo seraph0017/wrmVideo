@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_030 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}听到李承乾的喊声，
+Dialogue: 0,0:00:02.18,0:00:03.99,Default,,0,0,0,,眼中的{\c&H0000FFFF&\b1}杀意{\c&H00FFFFFF&\b0}陡然暴涨，
+Dialogue: 0,0:00:03.99,0:00:06.35,Default,,0,0,0,,他果断{\c&H0000FFFF&\b1}放弃{\c&H00FFFFFF&\b0}继续射杀北向辉，
+Dialogue: 0,0:00:06.35,0:00:09.25,Default,,0,0,0,,迅速调转马头，将目标对准了{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.25,0:00:12.34,Default,,0,0,0,,。{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中大惊，在这电光火石之间
+Dialogue: 0,0:00:12.34,0:00:15.24,Default,,0,0,0,,，他急中生智，大声呼喊：“{\c&H0000FFFF&\b1}父皇{\c&H00FFFFFF&\b0}！
+Dialogue: 0,0:00:15.24,0:00:17.96,Default,,0,0,0,,儿是{\c&H0000FFFF&\b1}高明{\c&H00FFFFFF&\b0}啊，是您和母后的儿子，
+Dialogue: 0,0:00:17.96,0:00:19.42,Default,,0,0,0,,您{\c&H0000FFFF&\b1}真要{\c&H00FFFFFF&\b0}杀儿嘛！”

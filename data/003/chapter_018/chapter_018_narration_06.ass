@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_018 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌一脸喜色，
+Dialogue: 0,0:00:01.56,0:00:04.17,Default,,0,0,0,,觉得应该是薛{\c&H0000FFFF&\b1}将军{\c&H00FFFFFF&\b0}已经将叛贼拿下
+Dialogue: 0,0:00:04.17,0:00:06.95,Default,,0,0,0,,，于是便要带领{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}一同前去看看这
+Dialogue: 0,0:00:06.95,0:00:08.51,Default,,0,0,0,,些乱臣贼子的{\c&H0000FFFF&\b1}下场{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:08.51,0:00:10.60,Default,,0,0,0,,然而却{\c&H0000FFFF&\b1}发现{\c&H00FFFFFF&\b0}没有人跟随他，
+Dialogue: 0,0:00:10.60,0:00:12.51,Default,,0,0,0,,此场景是在{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿灵堂，
+Dialogue: 0,0:00:12.51,0:00:14.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}依旧混乱，光线昏暗。

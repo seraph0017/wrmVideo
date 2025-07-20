@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_030 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}猛地拽出身后的长弓，
+Dialogue: 0,0:00:02.34,0:00:05.23,Default,,0,0,0,,迅速弯弓搭箭，口中暴吼着冲向{\c&H0000FFFF&\b1}李世{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.23,0:00:07.21,Default,,0,0,0,,民，大声喊道：“{\c&H0000FFFF&\b1}老贼{\c&H00FFFFFF&\b0}！
+Dialogue: 0,0:00:07.21,0:00:08.47,Default,,0,0,0,,就你会{\c&H0000FFFF&\b1}射箭{\c&H00FFFFFF&\b0}吗？
+Dialogue: 0,0:00:08.47,0:00:10.10,Default,,0,0,0,,看朕{\c&H0000FFFF&\b1}神剑{\c&H00FFFFFF&\b0}取你狗命！
+Dialogue: 0,0:00:10.10,0:00:11.90,Default,,0,0,0,,”此时{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}厮杀正酣，
+Dialogue: 0,0:00:11.90,0:00:14.42,Default,,0,0,0,,到处都是{\c&H0000FFFF&\b1}震耳欲聋{\c&H00FFFFFF&\b0}的喊杀之声。

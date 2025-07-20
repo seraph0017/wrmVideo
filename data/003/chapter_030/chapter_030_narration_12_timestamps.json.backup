@@ -1,0 +1,446 @@
+{
+  "text": "双方厮杀进入白热化阶段，烈日灼烧着大漠，大地蒸腾得如同沸水一般。尉迟敬德的大军马上就要冲进战圈，此时，前方和侧方的地平线上出现了回鹘大军的大纛旗。",
+  "audio_file": "data/003/chapter_030/chapter_030_narration_12.mp3",
+  "duration": 10.95,
+  "character_timestamps": [
+    {
+      "character": "双",
+      "start_time": 0.0,
+      "end_time": 0.15,
+      "index": 0
+    },
+    {
+      "character": "方",
+      "start_time": 0.15,
+      "end_time": 0.3,
+      "index": 1
+    },
+    {
+      "character": "厮",
+      "start_time": 0.3,
+      "end_time": 0.44999999999999996,
+      "index": 2
+    },
+    {
+      "character": "杀",
+      "start_time": 0.44999999999999996,
+      "end_time": 0.6,
+      "index": 3
+    },
+    {
+      "character": "进",
+      "start_time": 0.6,
+      "end_time": 0.75,
+      "index": 4
+    },
+    {
+      "character": "入",
+      "start_time": 0.75,
+      "end_time": 0.9,
+      "index": 5
+    },
+    {
+      "character": "白",
+      "start_time": 0.9,
+      "end_time": 1.05,
+      "index": 6
+    },
+    {
+      "character": "热",
+      "start_time": 1.05,
+      "end_time": 1.2,
+      "index": 7
+    },
+    {
+      "character": "化",
+      "start_time": 1.2,
+      "end_time": 1.3499999999999999,
+      "index": 8
+    },
+    {
+      "character": "阶",
+      "start_time": 1.3499999999999999,
+      "end_time": 1.4999999999999998,
+      "index": 9
+    },
+    {
+      "character": "段",
+      "start_time": 1.4999999999999998,
+      "end_time": 1.6499999999999997,
+      "index": 10
+    },
+    {
+      "character": "，",
+      "start_time": 1.6499999999999997,
+      "end_time": 1.7999999999999996,
+      "index": 11
+    },
+    {
+      "character": "烈",
+      "start_time": 1.7999999999999996,
+      "end_time": 1.9499999999999995,
+      "index": 12
+    },
+    {
+      "character": "日",
+      "start_time": 1.9499999999999995,
+      "end_time": 2.0999999999999996,
+      "index": 13
+    },
+    {
+      "character": "灼",
+      "start_time": 2.0999999999999996,
+      "end_time": 2.2499999999999996,
+      "index": 14
+    },
+    {
+      "character": "烧",
+      "start_time": 2.2499999999999996,
+      "end_time": 2.3999999999999995,
+      "index": 15
+    },
+    {
+      "character": "着",
+      "start_time": 2.3999999999999995,
+      "end_time": 2.5499999999999994,
+      "index": 16
+    },
+    {
+      "character": "大",
+      "start_time": 2.5499999999999994,
+      "end_time": 2.6999999999999993,
+      "index": 17
+    },
+    {
+      "character": "漠",
+      "start_time": 2.6999999999999993,
+      "end_time": 2.849999999999999,
+      "index": 18
+    },
+    {
+      "character": "，",
+      "start_time": 2.849999999999999,
+      "end_time": 2.999999999999999,
+      "index": 19
+    },
+    {
+      "character": "大",
+      "start_time": 2.999999999999999,
+      "end_time": 3.149999999999999,
+      "index": 20
+    },
+    {
+      "character": "地",
+      "start_time": 3.149999999999999,
+      "end_time": 3.299999999999999,
+      "index": 21
+    },
+    {
+      "character": "蒸",
+      "start_time": 3.299999999999999,
+      "end_time": 3.449999999999999,
+      "index": 22
+    },
+    {
+      "character": "腾",
+      "start_time": 3.449999999999999,
+      "end_time": 3.5999999999999988,
+      "index": 23
+    },
+    {
+      "character": "得",
+      "start_time": 3.5999999999999988,
+      "end_time": 3.7499999999999987,
+      "index": 24
+    },
+    {
+      "character": "如",
+      "start_time": 3.7499999999999987,
+      "end_time": 3.8999999999999986,
+      "index": 25
+    },
+    {
+      "character": "同",
+      "start_time": 3.8999999999999986,
+      "end_time": 4.049999999999999,
+      "index": 26
+    },
+    {
+      "character": "沸",
+      "start_time": 4.049999999999999,
+      "end_time": 4.199999999999999,
+      "index": 27
+    },
+    {
+      "character": "水",
+      "start_time": 4.199999999999999,
+      "end_time": 4.35,
+      "index": 28
+    },
+    {
+      "character": "一",
+      "start_time": 4.35,
+      "end_time": 4.5,
+      "index": 29
+    },
+    {
+      "character": "般",
+      "start_time": 4.5,
+      "end_time": 4.65,
+      "index": 30
+    },
+    {
+      "character": "。",
+      "start_time": 4.65,
+      "end_time": 4.800000000000001,
+      "index": 31
+    },
+    {
+      "character": "尉",
+      "start_time": 4.800000000000001,
+      "end_time": 4.950000000000001,
+      "index": 32
+    },
+    {
+      "character": "迟",
+      "start_time": 4.950000000000001,
+      "end_time": 5.100000000000001,
+      "index": 33
+    },
+    {
+      "character": "敬",
+      "start_time": 5.100000000000001,
+      "end_time": 5.250000000000002,
+      "index": 34
+    },
+    {
+      "character": "德",
+      "start_time": 5.250000000000002,
+      "end_time": 5.400000000000002,
+      "index": 35
+    },
+    {
+      "character": "的",
+      "start_time": 5.400000000000002,
+      "end_time": 5.5500000000000025,
+      "index": 36
+    },
+    {
+      "character": "大",
+      "start_time": 5.5500000000000025,
+      "end_time": 5.700000000000003,
+      "index": 37
+    },
+    {
+      "character": "军",
+      "start_time": 5.700000000000003,
+      "end_time": 5.850000000000003,
+      "index": 38
+    },
+    {
+      "character": "马",
+      "start_time": 5.850000000000003,
+      "end_time": 6.0000000000000036,
+      "index": 39
+    },
+    {
+      "character": "上",
+      "start_time": 6.0000000000000036,
+      "end_time": 6.150000000000004,
+      "index": 40
+    },
+    {
+      "character": "就",
+      "start_time": 6.150000000000004,
+      "end_time": 6.300000000000004,
+      "index": 41
+    },
+    {
+      "character": "要",
+      "start_time": 6.300000000000004,
+      "end_time": 6.450000000000005,
+      "index": 42
+    },
+    {
+      "character": "冲",
+      "start_time": 6.450000000000005,
+      "end_time": 6.600000000000005,
+      "index": 43
+    },
+    {
+      "character": "进",
+      "start_time": 6.600000000000005,
+      "end_time": 6.750000000000005,
+      "index": 44
+    },
+    {
+      "character": "战",
+      "start_time": 6.750000000000005,
+      "end_time": 6.900000000000006,
+      "index": 45
+    },
+    {
+      "character": "圈",
+      "start_time": 6.900000000000006,
+      "end_time": 7.050000000000006,
+      "index": 46
+    },
+    {
+      "character": "，",
+      "start_time": 7.050000000000006,
+      "end_time": 7.200000000000006,
+      "index": 47
+    },
+    {
+      "character": "此",
+      "start_time": 7.200000000000006,
+      "end_time": 7.350000000000007,
+      "index": 48
+    },
+    {
+      "character": "时",
+      "start_time": 7.350000000000007,
+      "end_time": 7.500000000000007,
+      "index": 49
+    },
+    {
+      "character": "，",
+      "start_time": 7.500000000000007,
+      "end_time": 7.6500000000000075,
+      "index": 50
+    },
+    {
+      "character": "前",
+      "start_time": 7.6500000000000075,
+      "end_time": 7.800000000000008,
+      "index": 51
+    },
+    {
+      "character": "方",
+      "start_time": 7.800000000000008,
+      "end_time": 7.950000000000008,
+      "index": 52
+    },
+    {
+      "character": "和",
+      "start_time": 7.950000000000008,
+      "end_time": 8.100000000000009,
+      "index": 53
+    },
+    {
+      "character": "侧",
+      "start_time": 8.100000000000009,
+      "end_time": 8.250000000000009,
+      "index": 54
+    },
+    {
+      "character": "方",
+      "start_time": 8.250000000000009,
+      "end_time": 8.40000000000001,
+      "index": 55
+    },
+    {
+      "character": "的",
+      "start_time": 8.40000000000001,
+      "end_time": 8.55000000000001,
+      "index": 56
+    },
+    {
+      "character": "地",
+      "start_time": 8.55000000000001,
+      "end_time": 8.70000000000001,
+      "index": 57
+    },
+    {
+      "character": "平",
+      "start_time": 8.70000000000001,
+      "end_time": 8.85000000000001,
+      "index": 58
+    },
+    {
+      "character": "线",
+      "start_time": 8.85000000000001,
+      "end_time": 9.00000000000001,
+      "index": 59
+    },
+    {
+      "character": "上",
+      "start_time": 9.00000000000001,
+      "end_time": 9.150000000000011,
+      "index": 60
+    },
+    {
+      "character": "出",
+      "start_time": 9.150000000000011,
+      "end_time": 9.300000000000011,
+      "index": 61
+    },
+    {
+      "character": "现",
+      "start_time": 9.300000000000011,
+      "end_time": 9.450000000000012,
+      "index": 62
+    },
+    {
+      "character": "了",
+      "start_time": 9.450000000000012,
+      "end_time": 9.600000000000012,
+      "index": 63
+    },
+    {
+      "character": "回",
+      "start_time": 9.600000000000012,
+      "end_time": 9.750000000000012,
+      "index": 64
+    },
+    {
+      "character": "鹘",
+      "start_time": 9.750000000000012,
+      "end_time": 9.900000000000013,
+      "index": 65
+    },
+    {
+      "character": "大",
+      "start_time": 9.900000000000013,
+      "end_time": 10.050000000000013,
+      "index": 66
+    },
+    {
+      "character": "军",
+      "start_time": 10.050000000000013,
+      "end_time": 10.200000000000014,
+      "index": 67
+    },
+    {
+      "character": "的",
+      "start_time": 10.200000000000014,
+      "end_time": 10.350000000000014,
+      "index": 68
+    },
+    {
+      "character": "大",
+      "start_time": 10.350000000000014,
+      "end_time": 10.500000000000014,
+      "index": 69
+    },
+    {
+      "character": "纛",
+      "start_time": 10.500000000000014,
+      "end_time": 10.650000000000015,
+      "index": 70
+    },
+    {
+      "character": "旗",
+      "start_time": 10.650000000000015,
+      "end_time": 10.800000000000015,
+      "index": 71
+    },
+    {
+      "character": "。",
+      "start_time": 10.800000000000015,
+      "end_time": 10.950000000000015,
+      "index": 72
+    }
+  ],
+  "generated_at": "2025-07-19T17:59:23.081490"
+}

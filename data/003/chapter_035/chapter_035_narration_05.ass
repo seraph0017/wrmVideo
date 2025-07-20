@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_035 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.73,Default,,0,0,0,,北向辉语气焦急地向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}询问：
+Dialogue: 0,0:00:02.73,0:00:04.54,Default,,0,0,0,,“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}，咱们也冲吧？
+Dialogue: 0,0:00:04.54,0:00:07.45,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则摇头，开始分析西突厥部
+Dialogue: 0,0:00:07.45,0:00:08.36,Default,,0,0,0,,队的{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:08.36,0:00:10.36,Default,,0,0,0,,场景为战场外围{\c&H0000FFFF&\b1}观察点{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:10.36,0:00:13.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}稍显平静，天气是战斗间隙的微
+Dialogue: 0,0:00:13.27,0:00:13.99,Default,,0,0,0,,凉{\c&H0000FFFF&\b1}状态{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:13.99,0:00:16.36,Default,,0,0,0,,北向辉身着{\c&H0000FFFF&\b1}战甲{\c&H00FFFFFF&\b0}，急切询问；
+Dialogue: 0,0:00:16.36,0:00:18.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着战甲，神情冷静，
+Dialogue: 0,0:00:18.72,0:00:19.99,Default,,0,0,0,,正在分析{\c&H0000FFFF&\b1}局势{\c&H00FFFFFF&\b0}。

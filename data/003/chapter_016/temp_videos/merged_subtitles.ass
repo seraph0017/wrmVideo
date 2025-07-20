@@ -1,0 +1,63 @@
+[Script Info]
+Title: chapter_016 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:02.83,Default,,0,0,0,,大庭广众之下，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}与李承乾激烈
+Dialogue: 0, 0:00:02.83, 0:00:05.67,Default,,0,0,0,,对峙，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}怒喝要押李承乾去太庙
+Dialogue: 0, 0:00:05.67, 0:00:07.62,Default,,0,0,0,,谢罪，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}破口大骂，
+Dialogue: 0, 0:00:07.62, 0:00:10.28,Default,,0,0,0,,周围{\c&H0000FFFF&\b1}金吾卫{\c&H00FFFFFF&\b0}将李承乾围得如铁桶，
+Dialogue: 0, 0:00:10.28, 0:00:11.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}气氛{\c&H00FFFFFF&\b0}紧张到极点。
+Dialogue: 0, 0:00:11.71, 0:00:14.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}孤身一人，周围金吾卫环绕，
+Dialogue: 0, 0:00:14.95, 0:00:16.96,Default,,0,0,0,,秦琼、{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}紧盯，
+Dialogue: 0, 0:00:16.96, 0:00:19.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}抽出短刀欲自尽，
+Dialogue: 0, 0:00:19.19, 0:00:22.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}慌了，担心血溅长街影响名声。
+Dialogue: 0, 0:00:22.63, 0:00:24.40,Default,,0,0,0,,百姓为{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}发声，
+Dialogue: 0, 0:00:24.40, 0:00:26.38,Default,,0,0,0,,指责{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}逼死太子，
+Dialogue: 0, 0:00:26.38, 0:00:29.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}神色阴沉，有哀求之意，
+Dialogue: 0, 0:00:29.14, 0:00:31.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}继续指责李世民虚伪。
+Dialogue: 0, 0:00:31.70, 0:00:33.58,Default,,0,0,0,,远处{\c&H0000FFFF&\b1}传来{\c&H00FFFFFF&\b0}剧烈爆炸，
+Dialogue: 0, 0:00:33.58, 0:00:36.30,Default,,0,0,0,,大地颤动，{\c&H0000FFFF&\b1}金吾卫{\c&H00FFFFFF&\b0}手足无措，
+Dialogue: 0, 0:00:36.30, 0:00:39.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}和北向辉身披玄甲冲杀而来
+Dialogue: 0, 0:00:39.44, 0:00:40.70,Default,,0,0,0,,，杀出{\c&H0000FFFF&\b1}缺口{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:40.70, 0:00:43.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}和北向辉冲至李承乾身前，
+Dialogue: 0, 0:00:43.74, 0:00:46.99,Default,,0,0,0,,欲拉他上马，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}指挥挟持李世民
+Dialogue: 0, 0:00:46.99, 0:00:49.63,Default,,0,0,0,,，二人跃上高台冲向{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:00:49.63, 0:00:51.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}周围武将阻挡，
+Dialogue: 0, 0:00:51.75, 0:00:54.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}掷长矛向薛仁贵，
+Dialogue: 0, 0:00:54.30, 0:00:57.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}大喊提醒，薛仁贵击飞长矛。
+Dialogue: 0, 0:00:57.69, 0:01:00.78,Default,,0,0,0,,北向辉被{\c&H0000FFFF&\b1}李道宗{\c&H00FFFFFF&\b0}等人用礼器挡住，
+Dialogue: 0, 0:01:00.78, 0:01:03.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}金吾卫{\c&H00FFFFFF&\b0}围上来，李承乾大喜，
+Dialogue: 0, 0:01:03.45, 0:01:06.33,Default,,0,0,0,,因薛、北二人抓了李治和李泰。
+Dialogue: 0, 0:01:06.33, 0:01:08.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}怒喝拿下李承乾，
+Dialogue: 0, 0:01:08.57, 0:01:10.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回怼玄武门之事，
+Dialogue: 0, 0:01:10.81, 0:01:13.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}看到李治李泰被抓，
+Dialogue: 0, 0:01:13.26, 0:01:14.27,Default,,0,0,0,,又怒又急。
+Dialogue: 0, 0:01:14.27, 0:01:17.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}威胁再靠前就砍李治李泰，
+Dialogue: 0, 0:01:17.29, 0:01:19.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}无奈让金吾卫开路，
+Dialogue: 0, 0:01:19.71, 0:01:22.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}三人成品字形退出人群。
+Dialogue: 0, 0:01:22.53, 0:01:24.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}告知战马准备好，
+Dialogue: 0, 0:01:24.72, 0:01:26.92,Default,,0,0,0,,北向辉说{\c&H0000FFFF&\b1}禄东赞{\c&H00FFFFFF&\b0}被炸死，
+Dialogue: 0, 0:01:26.92, 0:01:29.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}拽李治上马疾驰而去。
+Dialogue: 0, 0:01:29.51, 0:01:32.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}气急下令宵禁缉拿李承乾，
+Dialogue: 0, 0:01:32.51, 0:01:34.91,Default,,0,0,0,,切记不伤{\c&H0000FFFF&\b1}晋魏{\c&H00FFFFFF&\b0}二王和太子。
+Dialogue: 0, 0:01:34.91, 0:01:38.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}三人汇合，李承乾让薛、
+Dialogue: 0, 0:01:38.05, 0:01:40.51,Default,,0,0,0,,北将{\c&H0000FFFF&\b1}李治{\c&H00FFFFFF&\b0}李泰交给别人，
+Dialogue: 0, 0:01:40.51, 0:01:41.63,Default,,0,0,0,,冲向{\c&H0000FFFF&\b1}城门{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:41.63, 0:01:44.36,Default,,0,0,0,,前面出现手持{\c&H0000FFFF&\b1}绊马索{\c&H00FFFFFF&\b0}的人马，
+Dialogue: 0, 0:01:44.36, 0:01:46.67,Default,,0,0,0,,薛、北欲牺牲保李承乾，
+Dialogue: 0, 0:01:46.67, 0:01:48.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}暴怒要拼了。
+Dialogue: 0, 0:01:48.57, 0:01:51.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}大喊奉遗诏诛杀伪帝李世民
+Dialogue: 0, 0:01:51.55, 0:01:55.53,Default,,0,0,0,,，{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}被气势感染，调转马头冲向大唐天团。
+Dialogue: 0, 0:01:55.53, 0:01:58.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}无奈让李承乾离开，
+Dialogue: 0, 0:01:58.11, 0:02:00.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}招呼众人撤，
+Dialogue: 0, 0:02:00.05, 0:02:03.71,Default,,0,0,0,,冲向{\c&H0000FFFF&\b1}城门{\c&H00FFFFFF&\b0}，途中炸毁少府监和军器监。

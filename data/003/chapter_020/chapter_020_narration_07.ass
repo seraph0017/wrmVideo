@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_020 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}与李恪近前，
+Dialogue: 0,0:00:01.65,0:00:04.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}荡开兵刃，一挑将李恪的马槊
+Dialogue: 0,0:00:04.59,0:00:06.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}打飞{\c&H00FFFFFF&\b0}，准备刺向李恪。
+Dialogue: 0,0:00:06.43,0:00:08.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}的表情充满杀意，
+Dialogue: 0,0:00:08.45,0:00:11.57,Default,,0,0,0,,身着湿透的{\c&H0000FFFF&\b1}战甲{\c&H00FFFFFF&\b0}，背景是混乱的战场。

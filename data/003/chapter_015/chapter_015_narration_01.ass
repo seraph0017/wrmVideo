@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_015 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}夜幕降临{\c&H00FFFFFF&\b0}，平康坊内氛围凝重。
+Dialogue: 0,0:00:02.63,0:00:04.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色长袍，
+Dialogue: 0,0:00:04.51,0:00:07.70,Default,,0,0,0,,束发，{\c&H0000FFFF&\b1}背着手{\c&H00FFFFFF&\b0}踱步，心中满是对近期危
+Dialogue: 0,0:00:07.70,0:00:09.21,Default,,0,0,0,,机与巧合的{\c&H0000FFFF&\b1}思索{\c&H00FFFFFF&\b0}。
+Dialogue: 0,0:00:09.21,0:00:12.02,Default,,0,0,0,,周围{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}面露劫后余生的疲惫之色
+Dialogue: 0,0:00:12.02,0:00:13.15,Default,,0,0,0,,，默默{\c&H0000FFFF&\b1}跟随{\c&H00FFFFFF&\b0}。

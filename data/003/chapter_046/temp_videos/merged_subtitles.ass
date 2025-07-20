@@ -1,0 +1,99 @@
+[Script Info]
+Title: chapter_046 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.00, 0:00:01.85,Default,,0,0,0,,夜晚，{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}都督府内，
+Dialogue: 0, 0:00:01.85, 0:00:02.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}灯火{\c&H00FFFFFF&\b0}摇曳。
+Dialogue: 0, 0:00:02.79, 0:00:04.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}正站在地图前，
+Dialogue: 0, 0:00:04.65, 0:00:07.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}神色{\c&H00FFFFFF&\b0}自信地抬手在地图上指画，
+Dialogue: 0, 0:00:07.25, 0:00:09.49,Default,,0,0,0,,向{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}讲述着军事谋划。
+Dialogue: 0, 0:00:09.49, 0:00:12.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}眉头紧锁，神情严肃地倾听。
+Dialogue: 0, 0:00:12.47, 0:00:14.88,Default,,0,0,0,,场景中，{\c&H0000FFFF&\b1}都督府{\c&H00FFFFFF&\b0}内光线昏暗，
+Dialogue: 0, 0:00:14.88, 0:00:17.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}屋顶{\c&H00FFFFFF&\b0}雕花的影子在墙上晃动，
+Dialogue: 0, 0:00:17.30, 0:00:18.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}气氛{\c&H00FFFFFF&\b0}紧张又凝重。
+Dialogue: 0, 0:00:18.78, 0:00:20.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}独坐都督府中，
+Dialogue: 0, 0:00:20.57, 0:00:22.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}灯火{\c&H00FFFFFF&\b0}将他的脸映得忽明忽暗。
+Dialogue: 0, 0:00:22.89, 0:00:25.55,Default,,0,0,0,,他提笔在桌案上写下“渊盖{\c&H0000FFFF&\b1}苏文{\c&H00FFFFFF&\b0}”
+Dialogue: 0, 0:00:25.55, 0:00:28.04,Default,,0,0,0,,四个{\c&H0000FFFF&\b1}大字{\c&H00FFFFFF&\b0}，双目爆发骇人煞气，
+Dialogue: 0, 0:00:28.04, 0:00:30.72,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}将纸{\c&H00FFFFFF&\b0}点燃，火星在眼前飞舞，
+Dialogue: 0, 0:00:30.72, 0:00:31.78,Default,,0,0,0,,他{\c&H0000FFFF&\b1}神色{\c&H00FFFFFF&\b0}愤恨。
+Dialogue: 0, 0:00:31.78, 0:00:34.64,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}都督府{\c&H00FFFFFF&\b0}内，风带动屋檐角铜铃
+Dialogue: 0, 0:00:34.64, 0:00:36.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}作响{\c&H00FFFFFF&\b0}，氛围压抑。
+Dialogue: 0, 0:00:36.07, 0:00:38.17,Default,,0,0,0,,渊{\c&H0000FFFF&\b1}盖苏文{\c&H00FFFFFF&\b0}站在幽州城头，
+Dialogue: 0, 0:00:38.17, 0:00:40.85,Default,,0,0,0,,极目远眺，身上{\c&H0000FFFF&\b1}金刀{\c&H00FFFFFF&\b0}碰撞有声。
+Dialogue: 0, 0:00:40.85, 0:00:43.73,Default,,0,0,0,,他身旁的杨{\c&H0000FFFF&\b1}万春{\c&H00FFFFFF&\b0}询问是否给城中百
+Dialogue: 0, 0:00:43.73, 0:00:46.21,Default,,0,0,0,,姓震慑，渊盖{\c&H0000FFFF&\b1}苏文{\c&H00FFFFFF&\b0}抬头看月，
+Dialogue: 0, 0:00:46.21, 0:00:47.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}锋芒毕露。
+Dialogue: 0, 0:00:47.54, 0:00:49.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是幽州城头，夜晚，
+Dialogue: 0, 0:00:49.65, 0:00:51.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}月光{\c&H00FFFFFF&\b0}下氛围雄壮。
+Dialogue: 0, 0:00:51.18, 0:00:54.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}骑马缓行，一边喝着百姓送的
+Dialogue: 0, 0:00:54.21, 0:00:56.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}粟米{\c&H00FFFFFF&\b0}酒，一边吃着肉干，
+Dialogue: 0, 0:00:56.28, 0:00:58.17,Default,,0,0,0,,询问{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}位置和情报。
+Dialogue: 0, 0:00:58.17, 0:01:00.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}骑马相随，状态已缓过来。
+Dialogue: 0, 0:01:00.82, 0:01:02.89,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}河东{\c&H00FFFFFF&\b0}平原，秋季，
+Dialogue: 0, 0:01:02.89, 0:01:03.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气{\c&H00FFFFFF&\b0}微凉。
+Dialogue: 0, 0:01:03.83, 0:01:06.62,Default,,0,0,0,,太原都督府中，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}来回踱步，
+Dialogue: 0, 0:01:06.62, 0:01:09.40,Default,,0,0,0,,听到{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}来报敌军主力距此不足百
+Dialogue: 0, 0:01:09.40, 0:01:11.45,Default,,0,0,0,,里的{\c&H0000FFFF&\b1}消息{\c&H00FFFFFF&\b0}，他神色不变，
+Dialogue: 0, 0:01:11.45, 0:01:13.12,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}怒喝{\c&H00FFFFFF&\b0}不让撤兵，
+Dialogue: 0, 0:01:13.12, 0:01:14.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}亲兵{\c&H00FFFFFF&\b0}架他要撤。
+Dialogue: 0, 0:01:14.42, 0:01:17.39,Default,,0,0,0,,场景是都督府内，{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}情绪激动。
+Dialogue: 0, 0:01:17.39, 0:01:20.34,Default,,0,0,0,,介休军营中，阿史那社尔急得来回踱
+Dialogue: 0, 0:01:20.34, 0:01:23.29,Default,,0,0,0,,步，听到士兵说难民传来{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}城相关
+Dialogue: 0, 0:01:23.29, 0:01:25.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}消息{\c&H00FFFFFF&\b0}后，决定率军驰援，
+Dialogue: 0, 0:01:25.31, 0:01:27.34,Default,,0,0,0,,旁边{\c&H0000FFFF&\b1}书生{\c&H00FFFFFF&\b0}劝阻被他呵斥。
+Dialogue: 0, 0:01:27.34, 0:01:29.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是介休军营内，
+Dialogue: 0, 0:01:29.00, 0:01:29.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}焦虑。
+Dialogue: 0, 0:01:29.92, 0:01:31.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}率军向西奔驰，
+Dialogue: 0, 0:01:31.78, 0:01:33.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}游骑{\c&H00FFFFFF&\b0}来报敌军口号，
+Dialogue: 0, 0:01:33.46, 0:01:35.70,Default,,0,0,0,,他怒不可遏，后{\c&H0000FFFF&\b1}冷静{\c&H00FFFFFF&\b0}分析，
+Dialogue: 0, 0:01:35.70, 0:01:37.37,Default,,0,0,0,,意识到{\c&H0000FFFF&\b1}那社尔{\c&H00FFFFFF&\b0}问题，
+Dialogue: 0, 0:01:37.37, 0:01:38.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}急令{\c&H00FFFFFF&\b0}派人去介休。
+Dialogue: 0, 0:01:38.86, 0:01:40.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是野外，骑兵疾驰。
+Dialogue: 0, 0:01:40.91, 0:01:43.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在树林中，无聊时安慰王逸，
+Dialogue: 0, 0:01:43.90, 0:01:45.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}提及王家情况，
+Dialogue: 0, 0:01:45.58, 0:01:47.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示要建功立业。
+Dialogue: 0, 0:01:47.63, 0:01:50.43,Default,,0,0,0,,此时士兵来报{\c&H0000FFFF&\b1}裴将军{\c&H00FFFFFF&\b0}率军过太原。
+Dialogue: 0, 0:01:50.43, 0:01:52.67,Default,,0,0,0,,场景是树林内，氛围{\c&H0000FFFF&\b1}安静{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:01:52.67, 0:01:54.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}带着五百人马行军，
+Dialogue: 0, 0:01:54.90, 0:01:57.31,Default,,0,0,0,,周围有呐喊声“生擒{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}，
+Dialogue: 0, 0:01:57.31, 0:02:00.28,Default,,0,0,0,,送进{\c&H0000FFFF&\b1}大明宫{\c&H00FFFFFF&\b0}”，他看时间后下令撤离
+Dialogue: 0, 0:02:00.28, 0:02:02.32,Default,,0,0,0,,。{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是野外，行军中。
+Dialogue: 0, 0:02:02.32, 0:02:04.28,Default,,0,0,0,,夜晚{\c&H0000FFFF&\b1}平原{\c&H00FFFFFF&\b0}，月明星稀，
+Dialogue: 0, 0:02:04.28, 0:02:06.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}悠然低吟诗句，
+Dialogue: 0, 0:02:06.23, 0:02:08.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}和王逸询问下文，
+Dialogue: 0, 0:02:08.38, 0:02:10.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示回头再写。
+Dialogue: 0, 0:02:10.34, 0:02:12.69,Default,,0,0,0,,场景是野外夜晚，{\c&H0000FFFF&\b1}平原{\c&H00FFFFFF&\b0}上。
+Dialogue: 0, 0:02:12.69, 0:02:15.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}和契苾何力在追击途中疲
+Dialogue: 0, 0:02:15.50, 0:02:17.56,Default,,0,0,0,,惫不堪，讨论{\c&H0000FFFF&\b1}敌军{\c&H00FFFFFF&\b0}位置，
+Dialogue: 0, 0:02:17.56, 0:02:20.00,Default,,0,0,0,,前方出现{\c&H0000FFFF&\b1}沙尘{\c&H00FFFFFF&\b0}，以为是敌军，
+Dialogue: 0, 0:02:20.00, 0:02:22.06,Default,,0,0,0,,结果是{\c&H0000FFFF&\b1}那社尔{\c&H00FFFFFF&\b0}战败来报。
+Dialogue: 0, 0:02:22.06, 0:02:23.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是野外追击途中。
+Dialogue: 0, 0:02:23.92, 0:02:26.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}勒马而立，眺望远方烟尘，
+Dialogue: 0, 0:02:26.74, 0:02:29.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}策马上前询问为何不继续厮
+Dialogue: 0, 0:02:29.56, 0:02:32.56,Default,,0,0,0,,杀，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}阐述战争与政治的关系。
+Dialogue: 0, 0:02:32.56, 0:02:35.01,Default,,0,0,0,,场景是野外，{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}思考状。
+Dialogue: 0, 0:02:35.01, 0:02:36.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}在太原城头，
+Dialogue: 0, 0:02:36.85, 0:02:38.89,Default,,0,0,0,,收到{\c&H0000FFFF&\b1}战报{\c&H00FFFFFF&\b0}，神色变化，
+Dialogue: 0, 0:02:38.89, 0:02:41.74,Default,,0,0,0,,考虑用兵，下令通知{\c&H0000FFFF&\b1}刘伯英{\c&H00FFFFFF&\b0}等。
+Dialogue: 0, 0:02:41.74, 0:02:44.39,Default,,0,0,0,,场景是太原城头，{\c&H0000FFFF&\b1}夕阳西下{\c&H00FFFFFF&\b0}。
+Dialogue: 0, 0:02:44.39, 0:02:46.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}和裴行俭分兵，
+Dialogue: 0, 0:02:46.29, 0:02:48.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率军急行军往晋城，
+Dialogue: 0, 0:02:48.57, 0:02:51.42,Default,,0,0,0,,王逸来报{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}亲率兵马去晋城，
+Dialogue: 0, 0:02:51.42, 0:02:53.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}决定加快行军。
+Dialogue: 0, 0:02:53.32, 0:02:55.21,Default,,0,0,0,,场景是野外{\c&H0000FFFF&\b1}急行军{\c&H00FFFFFF&\b0}中。
+Dialogue: 0, 0:02:55.21, 0:02:57.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}在肴涵古道入口，
+Dialogue: 0, 0:02:57.29, 0:02:59.56,Default,,0,0,0,,探子来报{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}大军距此近，
+Dialogue: 0, 0:02:59.56, 0:03:01.46,Default,,0,0,0,,他下令改变{\c&H0000FFFF&\b1}行军{\c&H00FFFFFF&\b0}路线，
+Dialogue: 0, 0:03:01.46, 0:03:03.16,Default,,0,0,0,,准备取道{\c&H0000FFFF&\b1}山间{\c&H00FFFFFF&\b0}小路。
+Dialogue: 0, 0:03:03.16, 0:03:05.43,Default,,0,0,0,,场景是野外肴涵古道{\c&H0000FFFF&\b1}入口{\c&H00FFFFFF&\b0}。

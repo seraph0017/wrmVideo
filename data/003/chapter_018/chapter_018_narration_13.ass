@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_018 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.74,Default,,0,0,0,,李恪对{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌的呵斥不予理会，
+Dialogue: 0,0:00:02.74,0:00:04.39,Default,,0,0,0,,猛地一甩{\c&H0000FFFF&\b1}蟒纹{\c&H00FFFFFF&\b0}袍袖，
+Dialogue: 0,0:00:04.39,0:00:06.03,Default,,0,0,0,,转身大步踏出{\c&H0000FFFF&\b1}殿门{\c&H00FFFFFF&\b0}，
+Dialogue: 0,0:00:06.03,0:00:08.60,Default,,0,0,0,,厉声喝令{\c&H0000FFFF&\b1}众将士{\c&H00FFFFFF&\b0}随他诛此奸佞，
+Dialogue: 0,0:00:08.60,0:00:10.24,Default,,0,0,0,,此{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在宫门口，
+Dialogue: 0,0:00:10.24,0:00:12.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}混乱，光线昏暗，
+Dialogue: 0,0:00:12.07,0:00:12.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气{\c&H00FFFFFF&\b0}阴沉。
