@@ -306,6 +306,7 @@ class ScriptGenerator:
                 messages=[
                     {"role": "user", "content": prompt}
                 ],
+                max_tokens=32*1024,
                 stream=False
             )
             
@@ -633,6 +634,7 @@ class ScriptGenerator:
                 messages=[
                     {"role": "user", "content": custom_prompt}
                 ],
+                max_tokens=32*1024,
                 stream=False
             )
             

@@ -1,418 +1,338 @@
 {
-  "text": "李承乾正驻足太极宫前，身后有人拍他肩膀，回头见是李孝恭。李孝恭身形高大，肩宽背阔，五官棱角分明，眉如刀削，双目深邃，带着耐人寻味的笑意。场景在太极宫附近，光线明亮。",
+  "text": "李承乾在太极宫中，正驻足原地，心神恍惚时，感到肩膀被人从后面拍了一下，回头看到李孝恭，李孝恭身形高大，气场稳重，两人进行了简短对话。",
   "audio_file": "data/005/chapter_002/chapter_002_narration_04.mp3",
-  "duration": 14.952,
+  "duration": 12.125,
   "character_timestamps": [
     {
       "character": "李",
-      "start_time": 0.0,
-      "end_time": 0.18234146341463417
+      "start_time": 0.02,
+      "end_time": 0.13
     },
     {
       "character": "承",
-      "start_time": 0.18234146341463417,
-      "end_time": 0.36468292682926834
+      "start_time": 0.13,
+      "end_time": 0.315
     },
     {
       "character": "乾",
-      "start_time": 0.36468292682926834,
-      "end_time": 0.5470243902439025
-    },
-    {
-      "character": "正",
-      "start_time": 0.5470243902439025,
-      "end_time": 0.7293658536585367
-    },
-    {
-      "character": "驻",
-      "start_time": 0.7293658536585367,
-      "end_time": 0.9117073170731709
-    },
-    {
-      "character": "足",
-      "start_time": 0.9117073170731709,
-      "end_time": 1.0940487804878052
-    },
-    {
-      "character": "太",
-      "start_time": 1.0940487804878052,
-      "end_time": 1.2763902439024393
-    },
-    {
-      "character": "极",
-      "start_time": 1.2763902439024393,
-      "end_time": 1.4587317073170734
-    },
-    {
-      "character": "宫",
-      "start_time": 1.4587317073170734,
-      "end_time": 1.6410731707317074
-    },
-    {
-      "character": "前",
-      "start_time": 1.6410731707317074,
-      "end_time": 1.8234146341463415
-    },
-    {
-      "character": "，",
-      "start_time": 1.8234146341463415,
-      "end_time": 2.0057560975609756
-    },
-    {
-      "character": "身",
-      "start_time": 2.0057560975609756,
-      "end_time": 2.1880975609756095
-    },
-    {
-      "character": "后",
-      "start_time": 2.1880975609756095,
-      "end_time": 2.370439024390244
-    },
-    {
-      "character": "有",
-      "start_time": 2.370439024390244,
-      "end_time": 2.552780487804878
-    },
-    {
-      "character": "人",
-      "start_time": 2.552780487804878,
-      "end_time": 2.735121951219512
-    },
-    {
-      "character": "拍",
-      "start_time": 2.735121951219512,
-      "end_time": 2.9174634146341463
-    },
-    {
-      "character": "他",
-      "start_time": 2.9174634146341463,
-      "end_time": 3.09980487804878
-    },
-    {
-      "character": "肩",
-      "start_time": 3.09980487804878,
-      "end_time": 3.2821463414634144
-    },
-    {
-      "character": "膀",
-      "start_time": 3.2821463414634144,
-      "end_time": 3.4644878048780483
-    },
-    {
-      "character": "，",
-      "start_time": 3.4644878048780483,
-      "end_time": 3.6468292682926826
-    },
-    {
-      "character": "回",
-      "start_time": 3.6468292682926826,
-      "end_time": 3.8291707317073165
-    },
-    {
-      "character": "头",
-      "start_time": 3.8291707317073165,
-      "end_time": 4.01151219512195
-    },
-    {
-      "character": "见",
-      "start_time": 4.01151219512195,
-      "end_time": 4.193853658536584
-    },
-    {
-      "character": "是",
-      "start_time": 4.193853658536584,
-      "end_time": 4.376195121951219
-    },
-    {
-      "character": "李",
-      "start_time": 4.376195121951219,
-      "end_time": 4.558536585365853
-    },
-    {
-      "character": "孝",
-      "start_time": 4.558536585365853,
-      "end_time": 4.740878048780487
-    },
-    {
-      "character": "恭",
-      "start_time": 4.740878048780487,
-      "end_time": 4.923219512195121
-    },
-    {
-      "character": "。",
-      "start_time": 4.923219512195121,
-      "end_time": 5.105560975609756
-    },
-    {
-      "character": "李",
-      "start_time": 5.105560975609756,
-      "end_time": 5.287902439024391
-    },
-    {
-      "character": "孝",
-      "start_time": 5.287902439024391,
-      "end_time": 5.470243902439025
-    },
-    {
-      "character": "恭",
-      "start_time": 5.470243902439025,
-      "end_time": 5.65258536585366
-    },
-    {
-      "character": "身",
-      "start_time": 5.65258536585366,
-      "end_time": 5.834926829268294
-    },
-    {
-      "character": "形",
-      "start_time": 5.834926829268294,
-      "end_time": 6.017268292682929
-    },
-    {
-      "character": "高",
-      "start_time": 6.017268292682929,
-      "end_time": 6.199609756097564
-    },
-    {
-      "character": "大",
-      "start_time": 6.199609756097564,
-      "end_time": 6.381951219512199
-    },
-    {
-      "character": "，",
-      "start_time": 6.381951219512199,
-      "end_time": 6.564292682926833
-    },
-    {
-      "character": "肩",
-      "start_time": 6.564292682926833,
-      "end_time": 6.746634146341467
-    },
-    {
-      "character": "宽",
-      "start_time": 6.746634146341467,
-      "end_time": 6.928975609756102
-    },
-    {
-      "character": "背",
-      "start_time": 6.928975609756102,
-      "end_time": 7.111317073170737
-    },
-    {
-      "character": "阔",
-      "start_time": 7.111317073170737,
-      "end_time": 7.293658536585371
-    },
-    {
-      "character": "，",
-      "start_time": 7.293658536585371,
-      "end_time": 7.476000000000006
-    },
-    {
-      "character": "五",
-      "start_time": 7.476000000000006,
-      "end_time": 7.658341463414641
-    },
-    {
-      "character": "官",
-      "start_time": 7.658341463414641,
-      "end_time": 7.840682926829275
-    },
-    {
-      "character": "棱",
-      "start_time": 7.840682926829275,
-      "end_time": 8.02302439024391
-    },
-    {
-      "character": "角",
-      "start_time": 8.02302439024391,
-      "end_time": 8.205365853658545
-    },
-    {
-      "character": "分",
-      "start_time": 8.205365853658545,
-      "end_time": 8.387707317073179
-    },
-    {
-      "character": "明",
-      "start_time": 8.387707317073179,
-      "end_time": 8.570048780487813
-    },
-    {
-      "character": "，",
-      "start_time": 8.570048780487813,
-      "end_time": 8.752390243902449
-    },
-    {
-      "character": "眉",
-      "start_time": 8.752390243902449,
-      "end_time": 8.934731707317082
-    },
-    {
-      "character": "如",
-      "start_time": 8.934731707317082,
-      "end_time": 9.117073170731718
-    },
-    {
-      "character": "刀",
-      "start_time": 9.117073170731718,
-      "end_time": 9.299414634146352
-    },
-    {
-      "character": "削",
-      "start_time": 9.299414634146352,
-      "end_time": 9.481756097560986
-    },
-    {
-      "character": "，",
-      "start_time": 9.481756097560986,
-      "end_time": 9.664097560975621
-    },
-    {
-      "character": "双",
-      "start_time": 9.664097560975621,
-      "end_time": 9.846439024390255
-    },
-    {
-      "character": "目",
-      "start_time": 9.846439024390255,
-      "end_time": 10.028780487804891
-    },
-    {
-      "character": "深",
-      "start_time": 10.028780487804891,
-      "end_time": 10.211121951219525
-    },
-    {
-      "character": "邃",
-      "start_time": 10.211121951219525,
-      "end_time": 10.39346341463416
-    },
-    {
-      "character": "，",
-      "start_time": 10.39346341463416,
-      "end_time": 10.575804878048794
-    },
-    {
-      "character": "带",
-      "start_time": 10.575804878048794,
-      "end_time": 10.758146341463428
-    },
-    {
-      "character": "着",
-      "start_time": 10.758146341463428,
-      "end_time": 10.940487804878064
-    },
-    {
-      "character": "耐",
-      "start_time": 10.940487804878064,
-      "end_time": 11.122829268292698
-    },
-    {
-      "character": "人",
-      "start_time": 11.122829268292698,
-      "end_time": 11.305170731707333
-    },
-    {
-      "character": "寻",
-      "start_time": 11.305170731707333,
-      "end_time": 11.487512195121967
-    },
-    {
-      "character": "味",
-      "start_time": 11.487512195121967,
-      "end_time": 11.669853658536601
-    },
-    {
-      "character": "的",
-      "start_time": 11.669853658536601,
-      "end_time": 11.852195121951237
-    },
-    {
-      "character": "笑",
-      "start_time": 11.852195121951237,
-      "end_time": 12.03453658536587
-    },
-    {
-      "character": "意",
-      "start_time": 12.03453658536587,
-      "end_time": 12.216878048780506
-    },
-    {
-      "character": "。",
-      "start_time": 12.216878048780506,
-      "end_time": 12.39921951219514
-    },
-    {
-      "character": "场",
-      "start_time": 12.39921951219514,
-      "end_time": 12.581560975609776
-    },
-    {
-      "character": "景",
-      "start_time": 12.581560975609776,
-      "end_time": 12.76390243902441
+      "start_time": 0.315,
+      "end_time": 0.545
     },
     {
       "character": "在",
-      "start_time": 12.76390243902441,
-      "end_time": 12.946243902439043
+      "start_time": 0.545,
+      "end_time": 0.645
     },
     {
       "character": "太",
-      "start_time": 12.946243902439043,
-      "end_time": 13.128585365853679
+      "start_time": 0.645,
+      "end_time": 0.82
     },
     {
       "character": "极",
-      "start_time": 13.128585365853679,
-      "end_time": 13.310926829268313
+      "start_time": 0.82,
+      "end_time": 0.95
     },
     {
       "character": "宫",
-      "start_time": 13.310926829268313,
-      "end_time": 13.493268292682949
+      "start_time": 0.95,
+      "end_time": 1.145
     },
     {
-      "character": "附",
-      "start_time": 13.493268292682949,
-      "end_time": 13.675609756097582
-    },
-    {
-      "character": "近",
-      "start_time": 13.675609756097582,
-      "end_time": 13.857951219512216
+      "character": "中",
+      "start_time": 1.145,
+      "end_time": 1.415
     },
     {
       "character": "，",
-      "start_time": 13.857951219512216,
-      "end_time": 14.040292682926852
+      "start_time": 1.415,
+      "end_time": 1.765
     },
     {
-      "character": "光",
-      "start_time": 14.040292682926852,
-      "end_time": 14.222634146341486
+      "character": "正",
+      "start_time": 1.765,
+      "end_time": 1.94
     },
     {
-      "character": "线",
-      "start_time": 14.222634146341486,
-      "end_time": 14.404975609756121
+      "character": "驻",
+      "start_time": 1.94,
+      "end_time": 2.08
     },
     {
-      "character": "明",
-      "start_time": 14.404975609756121,
-      "end_time": 14.587317073170755
+      "character": "足",
+      "start_time": 2.08,
+      "end_time": 2.23
     },
     {
-      "character": "亮",
-      "start_time": 14.587317073170755,
-      "end_time": 14.769658536585391
+      "character": "原",
+      "start_time": 2.23,
+      "end_time": 2.455
+    },
+    {
+      "character": "地",
+      "start_time": 2.455,
+      "end_time": 2.685
+    },
+    {
+      "character": "，",
+      "start_time": 2.685,
+      "end_time": 2.975
+    },
+    {
+      "character": "心",
+      "start_time": 2.975,
+      "end_time": 3.16
+    },
+    {
+      "character": "神",
+      "start_time": 3.16,
+      "end_time": 3.35
+    },
+    {
+      "character": "恍",
+      "start_time": 3.35,
+      "end_time": 3.53
+    },
+    {
+      "character": "惚",
+      "start_time": 3.53,
+      "end_time": 3.71
+    },
+    {
+      "character": "时",
+      "start_time": 3.71,
+      "end_time": 4.025
+    },
+    {
+      "character": "，",
+      "start_time": 4.025,
+      "end_time": 4.47
+    },
+    {
+      "character": "感",
+      "start_time": 4.47,
+      "end_time": 4.6
+    },
+    {
+      "character": "到",
+      "start_time": 4.6,
+      "end_time": 4.72
+    },
+    {
+      "character": "肩",
+      "start_time": 4.72,
+      "end_time": 4.935
+    },
+    {
+      "character": "膀",
+      "start_time": 4.935,
+      "end_time": 5.14
+    },
+    {
+      "character": "被",
+      "start_time": 5.14,
+      "end_time": 5.31
+    },
+    {
+      "character": "人",
+      "start_time": 5.31,
+      "end_time": 5.445
+    },
+    {
+      "character": "从",
+      "start_time": 5.445,
+      "end_time": 5.615
+    },
+    {
+      "character": "后",
+      "start_time": 5.615,
+      "end_time": 5.765
+    },
+    {
+      "character": "面",
+      "start_time": 5.765,
+      "end_time": 5.955
+    },
+    {
+      "character": "拍",
+      "start_time": 5.955,
+      "end_time": 6.155
+    },
+    {
+      "character": "了",
+      "start_time": 6.155,
+      "end_time": 6.22
+    },
+    {
+      "character": "一",
+      "start_time": 6.22,
+      "end_time": 6.33
+    },
+    {
+      "character": "下",
+      "start_time": 6.33,
+      "end_time": 6.57
+    },
+    {
+      "character": "，",
+      "start_time": 6.57,
+      "end_time": 6.815
+    },
+    {
+      "character": "回",
+      "start_time": 6.815,
+      "end_time": 6.985
+    },
+    {
+      "character": "头",
+      "start_time": 6.985,
+      "end_time": 7.125
+    },
+    {
+      "character": "看",
+      "start_time": 7.125,
+      "end_time": 7.325
+    },
+    {
+      "character": "到",
+      "start_time": 7.325,
+      "end_time": 7.445
+    },
+    {
+      "character": "李",
+      "start_time": 7.445,
+      "end_time": 7.535
+    },
+    {
+      "character": "孝",
+      "start_time": 7.535,
+      "end_time": 7.72
+    },
+    {
+      "character": "恭",
+      "start_time": 7.72,
+      "end_time": 7.95
+    },
+    {
+      "character": "，",
+      "start_time": 7.95,
+      "end_time": 8.245
+    },
+    {
+      "character": "李",
+      "start_time": 8.245,
+      "end_time": 8.325
+    },
+    {
+      "character": "孝",
+      "start_time": 8.325,
+      "end_time": 8.5
+    },
+    {
+      "character": "恭",
+      "start_time": 8.5,
+      "end_time": 8.645
+    },
+    {
+      "character": "身",
+      "start_time": 8.645,
+      "end_time": 8.79
+    },
+    {
+      "character": "形",
+      "start_time": 8.79,
+      "end_time": 8.945
+    },
+    {
+      "character": "高",
+      "start_time": 8.945,
+      "end_time": 9.1
+    },
+    {
+      "character": "大",
+      "start_time": 9.1,
+      "end_time": 9.31
+    },
+    {
+      "character": "，",
+      "start_time": 9.31,
+      "end_time": 9.63
+    },
+    {
+      "character": "气",
+      "start_time": 9.63,
+      "end_time": 9.75
+    },
+    {
+      "character": "场",
+      "start_time": 9.75,
+      "end_time": 9.945
+    },
+    {
+      "character": "稳",
+      "start_time": 9.945,
+      "end_time": 10.105
+    },
+    {
+      "character": "重",
+      "start_time": 10.105,
+      "end_time": 10.34
+    },
+    {
+      "character": "，",
+      "start_time": 10.34,
+      "end_time": 10.625
+    },
+    {
+      "character": "两",
+      "start_time": 10.625,
+      "end_time": 10.765
+    },
+    {
+      "character": "人",
+      "start_time": 10.765,
+      "end_time": 10.895
+    },
+    {
+      "character": "进",
+      "start_time": 10.895,
+      "end_time": 11.045
+    },
+    {
+      "character": "行",
+      "start_time": 11.045,
+      "end_time": 11.205
+    },
+    {
+      "character": "了",
+      "start_time": 11.205,
+      "end_time": 11.3
+    },
+    {
+      "character": "简",
+      "start_time": 11.3,
+      "end_time": 11.475
+    },
+    {
+      "character": "短",
+      "start_time": 11.475,
+      "end_time": 11.62
+    },
+    {
+      "character": "对",
+      "start_time": 11.62,
+      "end_time": 11.75
+    },
+    {
+      "character": "话",
+      "start_time": 11.75,
+      "end_time": 11.96
     },
     {
       "character": "。",
-      "start_time": 14.769658536585391,
-      "end_time": 14.952
+      "start_time": 11.96,
+      "end_time": 12.12
     }
   ],
-  "generated_at": "2025-07-20T20:39:13.320001"
+  "generated_at": "2025-07-25T13:40:17.942236"
 }

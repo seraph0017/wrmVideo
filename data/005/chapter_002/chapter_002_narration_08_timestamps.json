@@ -1,418 +1,183 @@
 {
-  "text": "李承乾听到苏宁玉要随自己赴死，解释说自己谋了跟随大军出征薛延陀的机会，需要钱收买人心。苏宁玉出身世家，明白重要性，起身去后堂收拾值钱东西。场景在东宫大堂，光线持续。",
+  "text": "李承乾向侯君集交代具体任务，侯君集兴奋地应下，李承乾对侯君集表示满意。",
   "audio_file": "data/005/chapter_002/chapter_002_narration_08.mp3",
-  "duration": 15.576,
+  "duration": 7.095,
   "character_timestamps": [
     {
       "character": "李",
-      "start_time": 0.0,
-      "end_time": 0.18995121951219515
+      "start_time": 0.02,
+      "end_time": 0.13
     },
     {
       "character": "承",
-      "start_time": 0.18995121951219515,
-      "end_time": 0.3799024390243903
+      "start_time": 0.13,
+      "end_time": 0.31
     },
     {
       "character": "乾",
-      "start_time": 0.3799024390243903,
-      "end_time": 0.5698536585365854
+      "start_time": 0.31,
+      "end_time": 0.635
     },
     {
-      "character": "听",
-      "start_time": 0.5698536585365854,
-      "end_time": 0.7598048780487806
+      "character": "向",
+      "start_time": 0.635,
+      "end_time": 0.865
     },
     {
-      "character": "到",
-      "start_time": 0.7598048780487806,
-      "end_time": 0.9497560975609758
+      "character": "侯",
+      "start_time": 0.865,
+      "end_time": 1.055
     },
     {
-      "character": "苏",
-      "start_time": 0.9497560975609758,
-      "end_time": 1.139707317073171
+      "character": "君",
+      "start_time": 1.055,
+      "end_time": 1.235
     },
     {
-      "character": "宁",
-      "start_time": 1.139707317073171,
-      "end_time": 1.3296585365853661
+      "character": "集",
+      "start_time": 1.235,
+      "end_time": 1.425
     },
     {
-      "character": "玉",
-      "start_time": 1.3296585365853661,
-      "end_time": 1.5196097560975612
+      "character": "交",
+      "start_time": 1.425,
+      "end_time": 1.605
     },
     {
-      "character": "要",
-      "start_time": 1.5196097560975612,
-      "end_time": 1.7095609756097563
+      "character": "代",
+      "start_time": 1.605,
+      "end_time": 1.77
     },
     {
-      "character": "随",
-      "start_time": 1.7095609756097563,
-      "end_time": 1.8995121951219514
+      "character": "具",
+      "start_time": 1.77,
+      "end_time": 1.92
     },
     {
-      "character": "自",
-      "start_time": 1.8995121951219514,
-      "end_time": 2.0894634146341464
+      "character": "体",
+      "start_time": 1.92,
+      "end_time": 2.075
     },
     {
-      "character": "己",
-      "start_time": 2.0894634146341464,
-      "end_time": 2.2794146341463413
+      "character": "任",
+      "start_time": 2.075,
+      "end_time": 2.22
     },
     {
-      "character": "赴",
-      "start_time": 2.2794146341463413,
-      "end_time": 2.4693658536585366
-    },
-    {
-      "character": "死",
-      "start_time": 2.4693658536585366,
-      "end_time": 2.659317073170732
+      "character": "务",
+      "start_time": 2.22,
+      "end_time": 2.49
     },
     {
       "character": "，",
-      "start_time": 2.659317073170732,
-      "end_time": 2.8492682926829267
+      "start_time": 2.49,
+      "end_time": 2.965
     },
     {
-      "character": "解",
-      "start_time": 2.8492682926829267,
-      "end_time": 3.039219512195122
+      "character": "侯",
+      "start_time": 2.965,
+      "end_time": 3.175
     },
     {
-      "character": "释",
-      "start_time": 3.039219512195122,
-      "end_time": 3.229170731707317
+      "character": "君",
+      "start_time": 3.175,
+      "end_time": 3.35
     },
     {
-      "character": "说",
-      "start_time": 3.229170731707317,
-      "end_time": 3.419121951219512
+      "character": "集",
+      "start_time": 3.35,
+      "end_time": 3.5
     },
     {
-      "character": "自",
-      "start_time": 3.419121951219512,
-      "end_time": 3.609073170731707
+      "character": "兴",
+      "start_time": 3.5,
+      "end_time": 3.705
     },
     {
-      "character": "己",
-      "start_time": 3.609073170731707,
-      "end_time": 3.799024390243902
+      "character": "奋",
+      "start_time": 3.705,
+      "end_time": 3.83
     },
     {
-      "character": "谋",
-      "start_time": 3.799024390243902,
-      "end_time": 3.988975609756097
+      "character": "地",
+      "start_time": 3.83,
+      "end_time": 3.91
     },
     {
-      "character": "了",
-      "start_time": 3.988975609756097,
-      "end_time": 4.178926829268292
+      "character": "应",
+      "start_time": 3.91,
+      "end_time": 4.09
     },
     {
-      "character": "跟",
-      "start_time": 4.178926829268292,
-      "end_time": 4.368878048780487
-    },
-    {
-      "character": "随",
-      "start_time": 4.368878048780487,
-      "end_time": 4.5588292682926825
-    },
-    {
-      "character": "大",
-      "start_time": 4.5588292682926825,
-      "end_time": 4.748780487804877
-    },
-    {
-      "character": "军",
-      "start_time": 4.748780487804877,
-      "end_time": 4.938731707317072
-    },
-    {
-      "character": "出",
-      "start_time": 4.938731707317072,
-      "end_time": 5.128682926829268
-    },
-    {
-      "character": "征",
-      "start_time": 5.128682926829268,
-      "end_time": 5.318634146341464
-    },
-    {
-      "character": "薛",
-      "start_time": 5.318634146341464,
-      "end_time": 5.508585365853659
-    },
-    {
-      "character": "延",
-      "start_time": 5.508585365853659,
-      "end_time": 5.698536585365854
-    },
-    {
-      "character": "陀",
-      "start_time": 5.698536585365854,
-      "end_time": 5.88848780487805
-    },
-    {
-      "character": "的",
-      "start_time": 5.88848780487805,
-      "end_time": 6.078439024390246
-    },
-    {
-      "character": "机",
-      "start_time": 6.078439024390246,
-      "end_time": 6.2683902439024415
-    },
-    {
-      "character": "会",
-      "start_time": 6.2683902439024415,
-      "end_time": 6.458341463414637
+      "character": "下",
+      "start_time": 4.09,
+      "end_time": 4.335
     },
     {
       "character": "，",
-      "start_time": 6.458341463414637,
-      "end_time": 6.648292682926833
+      "start_time": 4.335,
+      "end_time": 4.85
     },
     {
-      "character": "需",
-      "start_time": 6.648292682926833,
-      "end_time": 6.838243902439029
+      "character": "李",
+      "start_time": 4.85,
+      "end_time": 4.96
     },
     {
-      "character": "要",
-      "start_time": 6.838243902439029,
-      "end_time": 7.0281951219512235
+      "character": "承",
+      "start_time": 4.96,
+      "end_time": 5.15
     },
     {
-      "character": "钱",
-      "start_time": 7.0281951219512235,
-      "end_time": 7.218146341463419
+      "character": "乾",
+      "start_time": 5.15,
+      "end_time": 5.47
     },
     {
-      "character": "收",
-      "start_time": 7.218146341463419,
-      "end_time": 7.408097560975615
+      "character": "对",
+      "start_time": 5.47,
+      "end_time": 5.68
     },
     {
-      "character": "买",
-      "start_time": 7.408097560975615,
-      "end_time": 7.598048780487811
+      "character": "侯",
+      "start_time": 5.68,
+      "end_time": 5.87
     },
     {
-      "character": "人",
-      "start_time": 7.598048780487811,
-      "end_time": 7.7880000000000065
+      "character": "君",
+      "start_time": 5.87,
+      "end_time": 6.045
     },
     {
-      "character": "心",
-      "start_time": 7.7880000000000065,
-      "end_time": 7.977951219512202
+      "character": "集",
+      "start_time": 6.045,
+      "end_time": 6.2
+    },
+    {
+      "character": "表",
+      "start_time": 6.2,
+      "end_time": 6.37
+    },
+    {
+      "character": "示",
+      "start_time": 6.37,
+      "end_time": 6.515
+    },
+    {
+      "character": "满",
+      "start_time": 6.515,
+      "end_time": 6.69
+    },
+    {
+      "character": "意",
+      "start_time": 6.69,
+      "end_time": 6.925
     },
     {
       "character": "。",
-      "start_time": 7.977951219512202,
-      "end_time": 8.167902439024397
-    },
-    {
-      "character": "苏",
-      "start_time": 8.167902439024397,
-      "end_time": 8.357853658536593
-    },
-    {
-      "character": "宁",
-      "start_time": 8.357853658536593,
-      "end_time": 8.547804878048789
-    },
-    {
-      "character": "玉",
-      "start_time": 8.547804878048789,
-      "end_time": 8.737756097560984
-    },
-    {
-      "character": "出",
-      "start_time": 8.737756097560984,
-      "end_time": 8.92770731707318
-    },
-    {
-      "character": "身",
-      "start_time": 8.92770731707318,
-      "end_time": 9.117658536585376
-    },
-    {
-      "character": "世",
-      "start_time": 9.117658536585376,
-      "end_time": 9.307609756097571
-    },
-    {
-      "character": "家",
-      "start_time": 9.307609756097571,
-      "end_time": 9.497560975609767
-    },
-    {
-      "character": "，",
-      "start_time": 9.497560975609767,
-      "end_time": 9.687512195121963
-    },
-    {
-      "character": "明",
-      "start_time": 9.687512195121963,
-      "end_time": 9.877463414634159
-    },
-    {
-      "character": "白",
-      "start_time": 9.877463414634159,
-      "end_time": 10.067414634146354
-    },
-    {
-      "character": "重",
-      "start_time": 10.067414634146354,
-      "end_time": 10.25736585365855
-    },
-    {
-      "character": "要",
-      "start_time": 10.25736585365855,
-      "end_time": 10.447317073170744
-    },
-    {
-      "character": "性",
-      "start_time": 10.447317073170744,
-      "end_time": 10.63726829268294
-    },
-    {
-      "character": "，",
-      "start_time": 10.63726829268294,
-      "end_time": 10.827219512195136
-    },
-    {
-      "character": "起",
-      "start_time": 10.827219512195136,
-      "end_time": 11.017170731707331
-    },
-    {
-      "character": "身",
-      "start_time": 11.017170731707331,
-      "end_time": 11.207121951219527
-    },
-    {
-      "character": "去",
-      "start_time": 11.207121951219527,
-      "end_time": 11.397073170731723
-    },
-    {
-      "character": "后",
-      "start_time": 11.397073170731723,
-      "end_time": 11.587024390243919
-    },
-    {
-      "character": "堂",
-      "start_time": 11.587024390243919,
-      "end_time": 11.776975609756114
-    },
-    {
-      "character": "收",
-      "start_time": 11.776975609756114,
-      "end_time": 11.96692682926831
-    },
-    {
-      "character": "拾",
-      "start_time": 11.96692682926831,
-      "end_time": 12.156878048780506
-    },
-    {
-      "character": "值",
-      "start_time": 12.156878048780506,
-      "end_time": 12.346829268292701
-    },
-    {
-      "character": "钱",
-      "start_time": 12.346829268292701,
-      "end_time": 12.536780487804897
-    },
-    {
-      "character": "东",
-      "start_time": 12.536780487804897,
-      "end_time": 12.726731707317093
-    },
-    {
-      "character": "西",
-      "start_time": 12.726731707317093,
-      "end_time": 12.916682926829289
-    },
-    {
-      "character": "。",
-      "start_time": 12.916682926829289,
-      "end_time": 13.106634146341483
-    },
-    {
-      "character": "场",
-      "start_time": 13.106634146341483,
-      "end_time": 13.296585365853678
-    },
-    {
-      "character": "景",
-      "start_time": 13.296585365853678,
-      "end_time": 13.486536585365874
-    },
-    {
-      "character": "在",
-      "start_time": 13.486536585365874,
-      "end_time": 13.67648780487807
-    },
-    {
-      "character": "东",
-      "start_time": 13.67648780487807,
-      "end_time": 13.866439024390266
-    },
-    {
-      "character": "宫",
-      "start_time": 13.866439024390266,
-      "end_time": 14.056390243902461
-    },
-    {
-      "character": "大",
-      "start_time": 14.056390243902461,
-      "end_time": 14.246341463414657
-    },
-    {
-      "character": "堂",
-      "start_time": 14.246341463414657,
-      "end_time": 14.436292682926853
-    },
-    {
-      "character": "，",
-      "start_time": 14.436292682926853,
-      "end_time": 14.626243902439048
-    },
-    {
-      "character": "光",
-      "start_time": 14.626243902439048,
-      "end_time": 14.816195121951244
-    },
-    {
-      "character": "线",
-      "start_time": 14.816195121951244,
-      "end_time": 15.00614634146344
-    },
-    {
-      "character": "持",
-      "start_time": 15.00614634146344,
-      "end_time": 15.196097560975636
-    },
-    {
-      "character": "续",
-      "start_time": 15.196097560975636,
-      "end_time": 15.386048780487831
-    },
-    {
-      "character": "。",
-      "start_time": 15.386048780487831,
-      "end_time": 15.576
+      "start_time": 6.925,
+      "end_time": 7.09
     }
   ],
-  "generated_at": "2025-07-20T20:39:17.514428"
+  "generated_at": "2025-07-25T13:40:21.101944"
 }

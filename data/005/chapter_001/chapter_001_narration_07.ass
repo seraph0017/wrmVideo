@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:02.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}放声狂笑 指责李世民
-Dialogue: 0,0:00:02.45,0:00:05.09,Default,,0,0,0,,当年行径 质问{\c&H0000FFFF&\b1}史官{\c&H00FFFFFF&\b0}何在 房玄
-Dialogue: 0,0:00:05.09,0:00:07.54,Default,,0,0,0,,龄出列 {\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}捧出文德皇后
-Dialogue: 0,0:00:07.54,0:00:09.80,Default,,0,0,0,,灵位 宣布大{\c&H0000FFFF&\b1}唐贞观{\c&H00FFFFFF&\b0}十六年
-Dialogue: 0,0:00:09.99,0:00:11.68,Default,,0,0,0,,自己将手捧{\c&H0000FFFF&\b1}母后{\c&H00FFFFFF&\b0}灵位
-Dialogue: 0,0:00:11.87,0:00:12.81,Default,,0,0,0,,身着冕服自刎于{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿。
+Dialogue: 0,0:00:00.01,0:00:01.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}继续激怒李世民
+Dialogue: 0,0:00:02.27,0:00:03.44,Default,,0,0,0,,称要撞死在{\c&H0000FFFF&\b1}太庙{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.07,0:00:05.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}气急攻心晕倒
+Dialogue: 0,0:00:05.85,0:00:07.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}群臣{\c&H00FFFFFF&\b0}慌乱喊御医

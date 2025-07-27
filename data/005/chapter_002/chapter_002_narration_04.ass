@@ -14,9 +14,11 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:02.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}正驻足太极宫前 身后
-Dialogue: 0,0:00:02.37,0:00:04.74,Default,,0,0,0,,有人拍他肩膀 回头见是{\c&H0000FFFF&\b1}李孝{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:04.74,0:00:04.92,Default,,0,0,0,,恭。{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}身形高大 肩宽背阔
-Dialogue: 0,0:00:07.48,0:00:10.03,Default,,0,0,0,,五官{\c&H0000FFFF&\b1}棱角分明{\c&H00FFFFFF&\b0} 眉如刀削 双目
-Dialogue: 0,0:00:10.03,0:00:11.12,Default,,0,0,0,,深邃 带着耐人寻味的{\c&H0000FFFF&\b1}笑意{\c&H00FFFFFF&\b0}。
-Dialogue: 0,0:00:12.40,0:00:13.31,Default,,0,0,0,,场景在{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫附近 光线明亮 。
+Dialogue: 0,0:00:00.02,0:00:01.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在太极宫中
+Dialogue: 0,0:00:01.76,0:00:02.69,Default,,0,0,0,,正驻足{\c&H0000FFFF&\b1}原地{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.98,0:00:04.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}心神恍惚{\c&H00FFFFFF&\b0}时
+Dialogue: 0,0:00:04.47,0:00:06.22,Default,,0,0,0,,感到{\c&H0000FFFF&\b1}肩膀{\c&H00FFFFFF&\b0}被人从后面拍了
+Dialogue: 0,0:00:06.22,0:00:06.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}一下{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.82,0:00:07.95,Default,,0,0,0,,回头看到{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.24,0:00:10.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}身形高大气场稳重
+Dialogue: 0,0:00:10.62,0:00:11.96,Default,,0,0,0,,两人进行了简短{\c&H0000FFFF&\b1}对话{\c&H00FFFFFF&\b0}

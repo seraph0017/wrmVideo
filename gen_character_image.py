@@ -63,6 +63,10 @@ def parse_character_info(narration_file_path):
             fields = ['性别', '年龄', '发型', '发色', '面部细节', '面部表情', '衣着款式', '衣着颜色', '其他特点']
             details = []
             
+            # 单独保存性别信息
+            gender_match = re.search(r'<性别>([^<]+)</性别>', character_content)
+            character_info['gender'] = gender_match.group(1) if gender_match else '未知'
+            
             for field in fields:
                 field_match = re.search(f'<{field}>([^<]+)</{field}>', character_content)
                 if field_match:
@@ -126,7 +130,7 @@ def generate_image(prompt, output_path, style=None, chapter_path=None):
         print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
         
         # 构建完整的prompt
-        full_prompt = "无任何形式的文字, 字母, 数字, 符号, 水印, 签名  （包括标识、符号、背景纹理里的隐藏字）\n\n" + style_prompt + "\n\n以下面描述为内容，生成一张故事图片\n" + prompt + "\n\n"
+        full_prompt = "以以下内容为描述生成图片\n风格：宫崎骏画风，人物着装：圆领袍\n\n" + style_prompt + "\n\n" + prompt + "\n\n"
         
         print("这里是完整的prompt===>>>{}".format(full_prompt))
         # 请求参数 - 使用配置文件中的值
@@ -142,7 +146,7 @@ def generate_image(prompt, output_path, style=None, chapter_path=None):
             "use_pre_llm": IMAGE_TWO_CONFIG['use_pre_llm'],
             "use_sr": IMAGE_TWO_CONFIG['use_sr'],
             "return_url": IMAGE_TWO_CONFIG['return_url'],  # 返回base64格式
-            "negetive_prompt": IMAGE_TWO_CONFIG['negative_prompt'],
+            "negative_prompt": IMAGE_TWO_CONFIG['negative_prompt'],
             "logo_info": {
                 "add_logo": False,
                 "position": 0,
@@ -257,12 +261,19 @@ def generate_character_images(input_path):
             for i, character in enumerate(characters, 1):
                 character_name = character['name']
                 character_desc = character['description']
+                character_gender = character.get('gender', '未知')
+                
+                # 根据性别决定视角
+                if character_gender == '女':
+                    view_angle = "背部视角，看不到领口和正面"
+                else:
+                    view_angle = "正面视角，清晰面部特征"
                 
                 # 构建角色图片的prompt，加入风格提示
                 if style_prompt:
-                    character_prompt = f"单人肖像，{character_desc}，高质量角色设定图，正面视角，清晰面部特征，{style_prompt}"
+                    character_prompt = f"单人肖像，{character_desc}，高质量角色设定图，{view_angle}，{style_prompt}"
                 else:
-                    character_prompt = f"单人肖像，{character_desc}，高质量角色设定图，正面视角，清晰面部特征，动漫风格"
+                    character_prompt = f"单人肖像，{character_desc}，高质量角色设定图，{view_angle}，动漫风格"
                 
                 print(f"  生成第 {i}/{len(characters)} 个角色图片: {character_name}")
                 print(f"  角色描述: {character_desc}")

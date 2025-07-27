@@ -14,6 +14,30 @@ from config.config import IMAGE_TWO_CONFIG, STORY_STYLE
 from config.prompt_config import ART_STYLES
 from volcengine.visual.VisualService import VisualService
 
+def parse_character_gender(content, character_name):
+    """
+    从narration.txt内容中解析指定角色的性别
+    
+    Args:
+        content: narration.txt文件内容
+        character_name: 角色名称
+    
+    Returns:
+        str: 角色性别（'男'/'女'/'未知'）
+    """
+    # 查找角色信息块
+    character_pattern = rf'<角色>\s*{re.escape(character_name)}\s*</角色>(.*?)(?=<角色>|$)'
+    character_match = re.search(character_pattern, content, re.DOTALL)
+    
+    if character_match:
+        character_content = character_match.group(1)
+        # 提取性别信息
+        gender_match = re.search(r'<性别>([^<]+)</性别>', character_content)
+        if gender_match:
+            return gender_match.group(1).strip()
+    
+    return '未知'
+
 def parse_narration_file(narration_file_path):
     """
     解析narration.txt文件，提取分镜信息、图片prompt和绘画风格
@@ -51,9 +75,10 @@ def parse_narration_file(narration_file_path):
             if narration_match:
                 scene_info['narration'] = narration_match.group(1).strip()
             
-            # 提取3个特写
+            # 提取所有特写
             scene_info['closeups'] = []
-            for i in range(1, 4):  # 图片特写1, 图片特写2, 图片特写3
+            # 动态检测特写数量，最多支持10个特写
+            for i in range(1, 11):  # 图片特写1到图片特写10
                 closeup_pattern = f'<图片特写{i}>(.*?)</图片特写{i}>'
                 closeup_match = re.search(closeup_pattern, scene_content, re.DOTALL)
                 if closeup_match:
@@ -164,7 +189,7 @@ def generate_image_with_character(prompt, output_path, character_images=None, st
         print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
         
         # 构建完整的prompt
-        full_prompt = "换个姿势 \n\n" + style_prompt + "\n\n以下面描述为内容，生成一张故事图片\n" + prompt + "\n\n"
+        full_prompt = "以以下内容为描述生成图片\n风格：宫崎骏画风，换个姿势,人物着装：圆领袍 \n\n" + style_prompt + "\n\n" + prompt + "\n\n"
         
         print("这里是完整的prompt===>>>{}".format(full_prompt))
         
@@ -181,7 +206,7 @@ def generate_image_with_character(prompt, output_path, character_images=None, st
             "use_pre_llm": IMAGE_TWO_CONFIG['use_pre_llm'],
             "use_sr": IMAGE_TWO_CONFIG['use_sr'],
             "return_url": IMAGE_TWO_CONFIG['return_url'],  # 返回base64格式
-            "negetive_prompt": IMAGE_TWO_CONFIG['negative_prompt'],
+            "negative_prompt": IMAGE_TWO_CONFIG['negative_prompt'],
             "ref_ip_weight": 0,
             "ref_id_weight": 0.4,
             "logo_info": {
@@ -317,11 +342,27 @@ def generate_images_from_scripts(data_dir):
                         if char_img_path:
                             character_images.append(char_img_path)
                     
-                    # 构建完整的prompt，加入风格提示
+                    # 根据角色性别调整视角
+                    view_angle_prompt = ""
+                    if character:
+                        # 重新读取narration文件内容来解析性别
+                        with open(narration_file, 'r', encoding='utf-8') as f:
+                            narration_content = f.read()
+                        
+                        character_gender = parse_character_gender(narration_content, character)
+                        print(f"    角色性别: {character_gender}")
+                        
+                        # 根据性别决定视角
+                        if character_gender == '女':
+                            view_angle_prompt = "，背部视角，看不到领口和正面"
+                        else:
+                            view_angle_prompt = "，正面视角，清晰面部特征"
+                    
+                    # 构建完整的prompt，加入风格提示和视角要求
                     if style_prompt:
-                        full_prompt = f"{prompt}，{style_prompt}"
+                        full_prompt = f"{prompt}{view_angle_prompt}，{style_prompt}"
                     else:
-                        full_prompt = prompt
+                        full_prompt = f"{prompt}{view_angle_prompt}"
                     
                     # 生成图片
                     image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}_{j}.jpeg")

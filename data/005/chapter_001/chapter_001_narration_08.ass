@@ -14,7 +14,7 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:02.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}宣布后 众人懵然 他欲
-Dialogue: 0,0:00:02.69,0:00:05.38,Default,,0,0,0,,撞柱自尽 {\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}急呼阻拦 众
-Dialogue: 0,0:00:05.38,0:00:07.87,Default,,0,0,0,,人反应不及 {\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}被人拽住
-Dialogue: 0,0:00:08.06,0:00:09.22,Default,,0,0,0,,周围混乱 {\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}面色赤红。
+Dialogue: 0,0:00:00.01,0:00:02.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}群臣{\c&H00FFFFFF&\b0}慌乱太医院众人赶到
+Dialogue: 0,0:00:03.04,0:00:04.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌等重臣接过八
+Dialogue: 0,0:00:04.88,0:00:05.85,Default,,0,0,0,,百里加急{\c&H0000FFFF&\b1}战报{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.28,0:00:07.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}面面相觑

@@ -179,6 +179,9 @@ config/config.py
 *.jpeg
 *.jpg
 
+# Sound effects directory
+sound/
+
 # Temporary files
 *.tmp
 *.temp
@@ -206,3 +209,4 @@ config/config.py
 !src/bgm/xy3.mp3
 !src/bgm/xy4.mp3
 !src/banner/fuceng.mp4
+!src/banner/fuceng1.mov

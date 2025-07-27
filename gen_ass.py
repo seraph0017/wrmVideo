@@ -68,128 +68,340 @@ def is_person_name(text: str, position: int) -> bool:
     if position < 0 or position >= len(text):
         return False
     
-    # 常见的人名模式
-    name_patterns = [
-        r'[\u4e00-\u9fff]{2,4}',  # 2-4个汉字的姓名
-        r'[A-Z][a-z]+',           # 英文名
+    # 常见的中文姓氏
+    common_surnames = [
+        '李', '王', '张', '刘', '陈', '杨', '赵', '黄', '周', '吴',
+        '徐', '孙', '胡', '朱', '高', '林', '何', '郭', '马', '罗',
+        '梁', '宋', '郑', '谢', '韩', '唐', '冯', '于', '董', '萧',
+        '程', '曹', '袁', '邓', '许', '傅', '沈', '曾', '彭', '吕',
+        '苏', '卢', '蒋', '蔡', '贾', '丁', '魏', '薛', '叶', '阎',
+        '余', '潘', '杜', '戴', '夏', '钟', '汪', '田', '任', '姜',
+        '范', '方', '石', '姚', '谭', '廖', '邹', '熊', '金', '陆'
     ]
     
-    # 检查当前位置前后的文本是否符合人名模式
-    for pattern in name_patterns:
-        matches = list(re.finditer(pattern, text))
-        for match in matches:
-            if match.start() <= position <= match.end():
-                return True
+    # 检查当前位置前后是否有完整的姓名
+    # 向前查找最多3个字符，向后查找最多3个字符
+    start_search = max(0, position - 3)
+    end_search = min(len(text), position + 4)
+    
+    # 在搜索范围内查找姓氏
+    for i in range(start_search, min(end_search, len(text))):
+        char = text[i]
+        if char in common_surnames:
+            # 找到姓氏，检查后面是否跟着1-3个汉字作为名字
+            surname_pos = i
+            name_start = surname_pos + 1
+            name_end = name_start
+            
+            # 查找名字部分（1-3个汉字）
+            for j in range(name_start, min(name_start + 3, len(text))):
+                if '\u4e00' <= text[j] <= '\u9fff' and text[j] not in '，。！？；：、""''（）【】《》':
+                    name_end = j + 1
+                else:
+                    break
+            
+            # 检查是否形成了有效的姓名（姓氏+1-3个字的名字）
+            if name_end > name_start and (name_end - name_start) <= 3:
+                # 检查姓名后面是否紧跟着动词或其他非姓名字符，以避免误判
+                if name_end < len(text):
+                    next_char = text[name_end]
+                    # 如果紧跟着常见的动词或介词，说明这是一个完整的姓名
+                    if next_char in '走向在和与跟说道来去了的':
+                        # 当前位置在这个姓名范围内
+                        if surname_pos <= position < name_end:
+                            return True
+                else:
+                    # 如果姓名在文本末尾，也认为是有效的
+                    if surname_pos <= position < name_end:
+                        return True
+    
+    # 检查英文名模式
+    english_name_pattern = r'[A-Z][a-z]+'
+    matches = list(re.finditer(english_name_pattern, text))
+    for match in matches:
+        if match.start() <= position < match.end():
+            return True
     
     return False
 
+def is_word_boundary(text: str, position: int) -> bool:
+    """检查指定位置是否为词汇边界（避免在词汇中间断句）"""
+    if position <= 0 or position >= len(text):
+        return True
+    
+    # 使用jieba分词检查是否在词汇中间
+    words = list(jieba.cut(text, cut_all=False))
+    current_pos = 0
+    
+    for word in words:
+        word_start = current_pos
+        word_end = current_pos + len(word)
+        
+        # 如果断句位置在词汇中间，返回False
+        if word_start < position < word_end:
+            return False
+        
+        current_pos = word_end
+        if current_pos >= position:
+            break
+    
+    return True
+
+def is_short_word_boundary(text: str, position: int) -> bool:
+    """检查指定位置是否会导致产生过短的词汇片段（避免一两个字的断句）"""
+    if position <= 0 or position >= len(text):
+        return True
+    
+    # 检查断句前后是否会产生过短的片段
+    # 检查断句前的片段长度（从前一个标点或开头到当前位置）
+    prev_punctuation_pos = -1
+    for i in range(position - 1, -1, -1):
+        if text[i] in '，。！？；：、':
+            prev_punctuation_pos = i
+            break
+    
+    # 计算前段的有效字符数（不包括标点）
+    prev_segment = text[prev_punctuation_pos + 1:position]
+    prev_char_count = len([c for c in prev_segment if c not in '，。！？；：、""''（）【】《》'])
+    
+    # 检查断句后的片段长度（从当前位置到下一个标点或结尾）
+    next_punctuation_pos = len(text)
+    for i in range(position, len(text)):
+        if text[i] in '，。！？；：、':
+            next_punctuation_pos = i
+            break
+    
+    # 计算后段的有效字符数（不包括标点）
+    next_segment = text[position:next_punctuation_pos]
+    next_char_count = len([c for c in next_segment if c not in '，。！？；：、""''（）【】《》'])
+    
+    # 如果前段或后段的有效字符数少于3个，则不适合在此处断句
+    if prev_char_count < 3 or next_char_count < 3:
+        return False
+    
+    return True
+
+def is_phrase_boundary(text: str, position: int) -> bool:
+    """检查指定位置是否为短语边界，避免分割常见短语"""
+    if position <= 0 or position >= len(text):
+        return True
+    
+    # 定义常见的不应分割的短语模式
+    protected_phrases = [
+        r'光线\w+',  # 光线相关短语
+        r'\w+金色',  # 以金色结尾的短语
+        r'\w+环境',  # 以环境结尾的短语
+        r'\w+喧嚣',  # 以喧嚣结尾的短语
+        r'东市\w*',  # 东市相关
+        r'西市\w*',  # 西市相关
+        r'李\w+',   # 李姓人名
+        r'\w+乾',   # 以乾结尾的人名
+        r'\w+泰',   # 以泰结尾的人名
+        r'东宫\w*', # 东宫相关
+        r'\w+一面', # 避免在"一面"前断句
+        r'一面\w+', # 避免在"一面"后断句
+        r'\w+两个字', # 避免在"两个字"前断句
+        r'两个字\w+', # 避免在"两个字"后断句
+    ]
+    
+    # 检查当前位置前后的文本是否匹配保护短语
+    for pattern in protected_phrases:
+        # 在当前位置前后查找匹配的短语
+        start_search = max(0, position - 10)
+        end_search = min(len(text), position + 10)
+        search_text = text[start_search:end_search]
+        
+        matches = re.finditer(pattern, search_text)
+        for match in matches:
+            phrase_start = start_search + match.start()
+            phrase_end = start_search + match.end()
+            
+            # 如果断句位置在短语中间，返回False
+            if phrase_start < position < phrase_end:
+                return False
+    
+    return True
+
 def split_text_naturally(text: str, max_length: int = 20) -> List[str]:
-    """自然切分文本，去掉标点符号用空格代替，在空格处积极分行，避免从人名处断句"""
+    """按标点符号优先分割文本，标点符号之间的内容尽量独立成行"""
     if not text:
         return []
     
     # 移除多余空格
     text = re.sub(r'\s+', '', text)
     
-    # 将标点符号替换为空格，但保留句号、感叹号、问号作为强制断句点
-    processed_text = ""
-    for char in text:
-        if char in '，；：、':
-            processed_text += ' '  # 用空格替换标点符号
-        else:
-            processed_text += char
+    segments = []
     
+    # 首先按强制断句标点分割
+    strong_breaks = '。！？'
+    sentences = []
+    current_sentence = ""
+    
+    for char in text:
+        current_sentence += char
+        if char in strong_breaks:
+            sentences.append(current_sentence.strip())
+            current_sentence = ""
+    
+    # 添加剩余部分
+    if current_sentence.strip():
+        sentences.append(current_sentence.strip())
+    
+    # 对每个句子进行进一步分割
+    for sentence in sentences:
+        if not sentence:
+            continue
+            
+        # 按逗号、分号等标点分割，但对顿号特殊处理
+        soft_punctuation = '，；：'
+        parts = []
+        current_part = ""
+        
+        for char in sentence:
+            current_part += char
+            if char in soft_punctuation:
+                parts.append(current_part.strip())
+                current_part = ""
+            elif char == '、':
+                # 顿号特殊处理：检查前后是否为人名
+                temp_part = current_part.strip()
+                if temp_part:
+                    # 检查是否为人名列表（如：刘备、关羽、张飞）
+                    char_count = len([c for c in temp_part if c not in '，；：、。！？'])
+                    if char_count <= 4:  # 可能是人名，暂不分割
+                        continue
+                    else:
+                        parts.append(temp_part)
+                        current_part = ""
+        
+        # 添加剩余部分
+        if current_part.strip():
+            parts.append(current_part.strip())
+        
+        # 合并过短的片段
+        merged_parts = []
+        i = 0
+        while i < len(parts):
+            current_part = parts[i]
+            char_count = len([c for c in current_part if c not in '，；：、。！？'])
+            
+            # 如果当前片段过短且不是最后一个，尝试与下一个合并
+            if char_count <= 4 and i + 1 < len(parts):
+                next_part = parts[i + 1]
+                next_char_count = len([c for c in next_part if c not in '，；：、。！？'])
+                combined_count = char_count + next_char_count
+                
+                # 如果合并后不会过长，则合并
+                if combined_count <= max_length:
+                    merged_parts.append(current_part + next_part)
+                    i += 2  # 跳过下一个片段
+                    continue
+            
+            # 如果当前片段过短且不是第一个，尝试与前一个合并
+            if char_count <= 4 and merged_parts:
+                last_part = merged_parts[-1]
+                last_char_count = len([c for c in last_part if c not in '，；：、。！？'])
+                combined_count = char_count + last_char_count
+                
+                # 如果合并后不会过长，则合并
+                if combined_count <= max_length:
+                    merged_parts[-1] = last_part + current_part
+                    i += 1
+                    continue
+            
+            merged_parts.append(current_part)
+            i += 1
+        
+        # 检查每个部分的长度，如果过长则进一步分割
+        for part in merged_parts:
+            if not part:
+                continue
+                
+            # 计算实际字符数（不包括标点）
+            char_count = len([c for c in part if c not in '，；：、。！？'])
+            
+            if char_count <= max_length:
+                # 长度合适，直接添加
+                segments.append(part)
+            else:
+                # 长度过长，需要进一步分割
+                sub_segments = split_long_part(part, max_length)
+                segments.extend(sub_segments)
+    
+    # 清理每个段落的标点符号
+    cleaned_segments = []
+    for segment in segments:
+        if segment.strip():
+            cleaned_segment = clean_subtitle_text(segment.strip())
+            if cleaned_segment.strip():  # 只保留非空的段落
+                cleaned_segments.append(cleaned_segment)
+    
+    return cleaned_segments
+
+def split_long_part(text: str, max_length: int) -> List[str]:
+    """分割过长的文本片段"""
     segments = []
     current_segment = ""
     current_char_count = 0
     
-    # 定义强制断句标点
-    strong_breaks = '。！？'
-    # 设置较短的分行阈值，避免句子过长
-    soft_break_threshold = max_length * 0.3  # 约3-4字时开始考虑在空格处分行
-    
     i = 0
-    while i < len(processed_text):
-        char = processed_text[i]
+    while i < len(text):
+        char = text[i]
         current_segment += char
         
-        # 计算实际字符数（不包括空格和标点）
-        if char not in ' 。！？':
+        # 计算实际字符数（不包括标点）
+        if char not in '，；：、。！？':
             current_char_count += 1
         
-        # 检查是否到达强制断句点
-        should_split = False
-        
-        # 强制断句点（句号、感叹号、问号）
-        if char in strong_breaks:
-            should_split = True
-        
-        # 在空格处进行软分行（当达到软阈值时）
-        elif char == ' ' and current_char_count >= soft_break_threshold:
-            # 检查这个位置是否在人名中间
-            original_pos = i - len(current_segment) + 1
-            if not is_person_name(text, original_pos):
-                # 在空格处分行
+        # 检查是否需要分割
+        if current_char_count >= max_length:
+            # 寻找合适的分割点
+            best_split_pos = find_best_split_position(current_segment, text, i)
+            
+            if best_split_pos > 0:
+                # 在找到的位置分割
+                segments.append(current_segment[:best_split_pos].strip())
+                current_segment = current_segment[best_split_pos:].strip()
+                current_char_count = len([c for c in current_segment if c not in '，；：、。！？'])
+            else:
+                # 没找到合适的分割点，强制分割
                 segments.append(current_segment.strip())
                 current_segment = ""
                 current_char_count = 0
-                i += 1
-                continue
-        
-        # 硬性长度限制检查
-        elif current_char_count >= max_length:
-            # 寻找最近的空格位置进行断句，但避免从人名处断句
-            best_split_pos = -1
-            
-            # 从当前位置向前查找合适的断句点
-            for j in range(len(current_segment) - 1, max(0, len(current_segment) - 8), -1):
-                if current_segment[j] == ' ':
-                    # 检查这个位置是否在人名中间
-                    original_pos = i - (len(current_segment) - 1 - j)
-                    if not is_person_name(text, original_pos):
-                        best_split_pos = j
-                        break
-            
-            if best_split_pos > 0:
-                # 在找到的空格处断句
-                segments.append(current_segment[:best_split_pos].strip())
-                current_segment = current_segment[best_split_pos:].strip()
-                current_char_count = len([c for c in current_segment if c not in ' 。！？'])
-            else:
-                # 没找到合适的断句点，强制断句
-                should_split = True
-        
-        # 执行断句
-        if should_split and current_char_count >= 3:  # 避免过短的段落
-            segments.append(current_segment.strip())
-            current_segment = ""
-            current_char_count = 0
         
         i += 1
     
     # 添加剩余部分
     if current_segment.strip():
-        # 如果最后一段太短，尝试与前一段合并
-        final_char_count = len([c for c in current_segment if c not in ' 。！？'])
-        if segments and final_char_count <= 2:
-            segments[-1] += ' ' + current_segment.strip()
-        else:
-            segments.append(current_segment.strip())
+        segments.append(current_segment.strip())
     
     return segments
+
+def find_best_split_position(current_segment: str, full_text: str, current_pos: int) -> int:
+    """寻找最佳分割位置"""
+    # 从后往前查找合适的分割点
+    for j in range(len(current_segment) - 1, max(0, len(current_segment) - 8), -1):
+        # 计算在原文中的位置
+        original_pos = current_pos - (len(current_segment) - 1 - j)
+        
+        # 检查是否为合适的分割位置
+        if (not is_person_name(full_text, original_pos) and
+            is_word_boundary(full_text, original_pos) and
+            is_phrase_boundary(full_text, original_pos) and
+            is_short_word_boundary(full_text, original_pos)):
+            return j + 1
+    
+    return -1
 
 def calculate_segment_timestamps(segments: List[str], character_timestamps: List[Dict], original_text: str) -> List[Dict]:
     """为每个文本段计算时间戳"""
     segment_timestamps = []
     
-    # 创建一个去除标点符号的原文，用于匹配
-    clean_original = ''.join(char for char in original_text if char not in '，。！？；：、"')
-    
-    # 当前在clean_original中的位置
-    current_pos = 0
+    # 当前在原文中的位置
+    current_original_pos = 0
     
     for segment in segments:
-        if current_pos >= len(character_timestamps):
+        if current_original_pos >= len(character_timestamps):
             break
             
         # 清理段落文本（移除空格和引号）
@@ -198,64 +410,89 @@ def calculate_segment_timestamps(segments: List[str], character_timestamps: List
         if not clean_segment:  # 跳过空段落
             continue
         
-        # 在clean_original中查找这个段落
-        segment_start_in_clean = clean_original.find(clean_segment, current_pos)
+        # 在原文中从当前位置开始查找这个段落
+        segment_start_pos = -1
+        segment_end_pos = -1
         
-        if segment_start_in_clean == -1:
-            # 如果找不到完整匹配，尝试查找段落的前几个字符
-            for i in range(min(len(clean_segment), 5), 0, -1):
-                partial_segment = clean_segment[:i]
-                segment_start_in_clean = clean_original.find(partial_segment, current_pos)
-                if segment_start_in_clean != -1:
-                    clean_segment = partial_segment
+        # 逐字符匹配，跳过标点符号
+        segment_char_index = 0
+        for i in range(current_original_pos, len(original_text)):
+            char = original_text[i]
+            
+            # 跳过标点符号
+            if char in '，。！？；：、"':
+                continue
+                
+            # 匹配段落字符
+            if segment_char_index < len(clean_segment) and char == clean_segment[segment_char_index]:
+                if segment_char_index == 0:
+                    segment_start_pos = i  # 记录段落开始位置
+                segment_char_index += 1
+                
+                # 如果匹配完整个段落
+                if segment_char_index == len(clean_segment):
+                    segment_end_pos = i
                     break
+            elif segment_char_index > 0:
+                # 如果已经开始匹配但失败了，说明这不是正确的匹配位置
+                # 重置并从下一个位置重新开始
+                segment_char_index = 0
+                segment_start_pos = -1
+                # 重新检查当前字符是否是段落的开始
+                if char == clean_segment[0]:
+                    segment_start_pos = i
+                    segment_char_index = 1
         
-        if segment_start_in_clean == -1:
-            # 仍然找不到，跳过这个段落
+        if segment_start_pos == -1 or segment_char_index < len(clean_segment):
+            # 找不到匹配，跳过这个段落
+            print(f"警告: 无法找到段落 '{clean_segment}' 的匹配位置")
             continue
         
-        # 计算在原文中的实际位置
-        # 需要考虑标点符号的存在
-        original_start_pos = 0
-        clean_char_count = 0
-        
-        # 找到对应的原文位置
-        for i, char in enumerate(original_text):
-            if char not in '，。！？；：、"':
-                if clean_char_count == segment_start_in_clean:
-                    original_start_pos = i
-                    break
-                clean_char_count += 1
-        
-        # 计算结束位置
-        segment_length = len(clean_segment)
-        original_end_pos = original_start_pos
-        found_chars = 0
-        
-        for i in range(original_start_pos, len(original_text)):
-            if original_text[i] not in '，。！？；：、"':
-                found_chars += 1
-                if found_chars == segment_length:
-                    original_end_pos = i
-                    break
-        
         # 获取时间戳
-        if (original_start_pos < len(character_timestamps) and 
-            original_end_pos < len(character_timestamps)):
+        # 确保结束位置不超过时间戳数组的范围
+        actual_end_pos = min(segment_end_pos, len(character_timestamps) - 1)
+        
+        if (segment_start_pos < len(character_timestamps) and 
+            actual_end_pos < len(character_timestamps)):
             
-            start_time = character_timestamps[original_start_pos]['start_time']
-            end_time = character_timestamps[original_end_pos]['end_time']
+            start_time = character_timestamps[segment_start_pos]['start_time']
+            end_time = character_timestamps[actual_end_pos]['end_time']
             
             segment_timestamps.append({
-                'text': segment.strip(),
+                'text': clean_segment,  # 使用已经清理过的文本
                 'start_time': start_time,
                 'end_time': end_time
             })
         
-        # 更新当前位置
-        current_pos = segment_start_in_clean + segment_length
+        # 更新当前位置到段落结束后
+        current_original_pos = segment_end_pos + 1
     
     return segment_timestamps
+
+def clean_subtitle_text(text: str) -> str:
+    """清理字幕文本，移除所有标点符号和多余空格，但保留ASS格式标签"""
+    # 移除所有空格
+    text = re.sub(r'\s+', '', text)
+    
+    # 保护ASS标签，先提取所有ASS标签
+    ass_tags = []
+    tag_pattern = r'\{[^}]*\}'
+    
+    # 找到所有ASS标签并用占位符替换
+    def replace_tag(match):
+        ass_tags.append(match.group(0))
+        return f'__ASS_TAG_{len(ass_tags)-1}__'
+    
+    text_with_placeholders = re.sub(tag_pattern, replace_tag, text)
+    
+    # 移除所有标点符号
+    cleaned_text = re.sub(r'[，。；：、！？""''（）【】《》〈〉「」『』〔〕［］｛｝｜～·…—–,.;:!?"\'()\[\]{}|~`@#$%^&*+=<>/\\-]', '', text_with_placeholders)
+    
+    # 恢复ASS标签
+    for i, tag in enumerate(ass_tags):
+        cleaned_text = cleaned_text.replace(f'__ASS_TAG_{i}__', tag)
+    
+    return cleaned_text
 
 def generate_ass_content(segment_timestamps: List[Dict], title: str = "Generated Subtitle") -> str:
     """生成ASS格式内容"""
@@ -293,6 +530,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         else:
             highlighted_text = text
         
+        # 文本已经在分割阶段被清理过了，这里直接使用
         event_line = f"Dialogue: 0,{start_time},{end_time},Default,,0,0,0,,{highlighted_text}"
         events.append(event_line)
     

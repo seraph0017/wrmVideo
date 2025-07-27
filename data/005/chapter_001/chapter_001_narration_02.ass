@@ -14,10 +14,11 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:02.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回忆起穿越成太子后
-Dialogue: 0,0:00:02.20,0:00:03.84,Default,,0,0,0,,的{\c&H0000FFFF&\b1}经历{\c&H00FFFFFF&\b0} 为避免悲剧
-Dialogue: 0,0:00:04.03,0:00:06.22,Default,,0,0,0,,小心翼翼却仍遭{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}打压
-Dialogue: 0,0:00:06.41,0:00:07.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}僚属{\c&H00FFFFFF&\b0}造反已无法挽回。
-Dialogue: 0,0:00:08.24,0:00:10.62,Default,,0,0,0,,此时四周涌出{\c&H0000FFFF&\b1}大量{\c&H00FFFFFF&\b0}甲士 程知
-Dialogue: 0,0:00:10.62,0:00:13.00,Default,,0,0,0,,节率兵而至 传达{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}旨意
-Dialogue: 0,0:00:13.00,0:00:13.91,Default,,0,0,0,,让{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}进宫。
+Dialogue: 0,0:00:00.02,0:00:01.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫回廊中
+Dialogue: 0,0:00:01.48,0:00:02.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}继续前行
+Dialogue: 0,0:00:03.18,0:00:04.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}回廊{\c&H00FFFFFF&\b0}两侧朱漆廊柱雕刻精
+Dialogue: 0,0:00:04.98,0:00:05.51,Default,,0,0,0,,美{\c&H0000FFFF&\b1}龙纹{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.93,0:00:07.92,Default,,0,0,0,,走出回廊眼前是{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿
+Dialogue: 0,0:00:08.20,0:00:10.03,Default,,0,0,0,,门口守卫士兵无视{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.29,0:00:11.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}怒火上涌
+Dialogue: 0,0:00:11.66,0:00:13.38,Default,,0,0,0,,抬剑指向{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}要求开门

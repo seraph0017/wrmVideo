@@ -14,11 +14,18 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:02.66,Default,,0,0,0,,清晨 {\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫前玉道上 身形修
-Dialogue: 0,0:00:02.66,0:00:05.12,Default,,0,0,0,,长 微微跛脚的{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}缓步前
-Dialogue: 0,0:00:05.12,0:00:05.31,Default,,0,0,0,,行。{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫巍峨耸立 飞檐斗拱
-Dialogue: 0,0:00:07.78,0:00:09.48,Default,,0,0,0,,间龙纹{\c&H0000FFFF&\b1}云纹{\c&H00FFFFFF&\b0}尽显威严
-Dialogue: 0,0:00:09.67,0:00:10.81,Default,,0,0,0,,晨光洒下 {\c&H0000FFFF&\b1}宫阙{\c&H00FFFFFF&\b0}似金色巨山。
-Dialogue: 0,0:00:12.14,0:00:14.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}停下脚步 长叹一声 感
-Dialogue: 0,0:00:14.79,0:00:17.26,Default,,0,0,0,,慨这般{\c&H0000FFFF&\b1}气象{\c&H00FFFFFF&\b0}恐难再睹 脑中回
-Dialogue: 0,0:00:17.26,0:00:18.21,Default,,0,0,0,,忆起穿越成{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}后的经历。
+Dialogue: 0,0:00:00.01,0:00:01.14,Default,,0,0,0,,大{\c&H0000FFFF&\b1}唐贞观{\c&H00FFFFFF&\b0}年间
+Dialogue: 0,0:00:01.50,0:00:02.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫前玉道上
+Dialogue: 0,0:00:03.11,0:00:04.07,Default,,0,0,0,,一{\c&H0000FFFF&\b1}身形{\c&H00FFFFFF&\b0}修长
+Dialogue: 0,0:00:04.59,0:00:06.29,Default,,0,0,0,,五官{\c&H0000FFFF&\b1}俊逸{\c&H00FFFFFF&\b0}且微微跛脚的男
+Dialogue: 0,0:00:06.29,0:00:07.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}子正{\c&H00FFFFFF&\b0}缓步前行
+Dialogue: 0,0:00:07.78,0:00:08.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫巍峨矗立
+Dialogue: 0,0:00:09.27,0:00:11.07,Default,,0,0,0,,飞檐斗拱间龙纹{\c&H0000FFFF&\b1}云纹{\c&H00FFFFFF&\b0}精美
+Dialogue: 0,0:00:11.29,0:00:12.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}散发{\c&H00FFFFFF&\b0}着威严肃穆
+Dialogue: 0,0:00:12.69,0:00:14.45,Default,,0,0,0,,晨光中{\c&H0000FFFF&\b1}宫阙{\c&H00FFFFFF&\b0}如金色巨山
+Dialogue: 0,0:00:14.74,0:00:16.75,Default,,0,0,0,,宫门前{\c&H0000FFFF&\b1}巨柱{\c&H00FFFFFF&\b0}盘龙栩栩如生
+Dialogue: 0,0:00:17.07,0:00:18.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}男子{\c&H00FFFFFF&\b0}停下脚步
+Dialogue: 0,0:00:18.41,0:00:19.86,Default,,0,0,0,,叹道“这般{\c&H0000FFFF&\b1}气象{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.95,0:00:21.78,Default,,0,0,0,,我以后怕是{\c&H0000FFFF&\b1}看不到{\c&H00FFFFFF&\b0}了”
+Dialogue: 0,0:00:22.00,0:00:23.70,Default,,0,0,0,,脑中闪过穿越后{\c&H0000FFFF&\b1}经历{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:23.86,0:00:24.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}内心{\c&H00FFFFFF&\b0}感慨

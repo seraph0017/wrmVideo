@@ -16,6 +16,126 @@ from pathlib import Path
 import concurrent.futures
 import random
 
+# 导入音效处理模块
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src'))
+from sound_effects_processor import SoundEffectsProcessor
+
+# 视频输出标准配置
+VIDEO_STANDARDS = {
+    'width': 720,
+    'height': 1280,
+    'fps': 30,
+    'max_size_mb': 50,
+    'audio_bitrate': '128k',
+    'video_codec': 'libx264',
+    'audio_codec': 'aac',
+    'format': 'mp4',
+    'min_duration_warning': 180  # 3分钟，仅提醒不强制
+}
+
+def get_file_size_mb(file_path):
+    """获取文件大小（MB）"""
+    try:
+        size_bytes = os.path.getsize(file_path)
+        size_mb = size_bytes / (1024 * 1024)
+        return size_mb
+    except Exception as e:
+        print(f"获取文件大小失败: {e}")
+        return 0
+
+def check_video_standards(video_path):
+    """检查视频是否符合输出标准"""
+    try:
+        # 检查文件大小
+        file_size_mb = get_file_size_mb(video_path)
+        print(f"视频文件大小: {file_size_mb:.2f}MB")
+        
+        # 获取视频信息
+        width, height, fps, duration = get_video_info(video_path)
+        if width is None:
+            return False
+            
+        print(f"视频参数: {width}x{height}px, {fps}fps, {duration:.2f}s")
+        
+        # 检查时长（仅提醒）
+        if duration < VIDEO_STANDARDS['min_duration_warning']:
+            print(f"⚠️  提醒: 视频时长 {duration:.2f}s 小于建议的 {VIDEO_STANDARDS['min_duration_warning']}s (3分钟)")
+        
+        # 严格检查文件大小
+        if file_size_mb > VIDEO_STANDARDS['max_size_mb']:
+            print(f"❌ 错误: 视频文件大小 {file_size_mb:.2f}MB 超过限制 {VIDEO_STANDARDS['max_size_mb']}MB")
+            return False
+        
+        # 检查分辨率
+        if width != VIDEO_STANDARDS['width'] or height != VIDEO_STANDARDS['height']:
+            print(f"⚠️  警告: 视频分辨率 {width}x{height} 不符合标准 {VIDEO_STANDARDS['width']}x{VIDEO_STANDARDS['height']}")
+        
+        # 检查帧率
+        if abs(fps - VIDEO_STANDARDS['fps']) > 1:
+            print(f"⚠️  警告: 视频帧率 {fps} 不符合标准 {VIDEO_STANDARDS['fps']}")
+        
+        print(f"✓ 视频文件大小符合标准: {file_size_mb:.2f}MB <= {VIDEO_STANDARDS['max_size_mb']}MB")
+        return True
+        
+    except Exception as e:
+        print(f"检查视频标准失败: {e}")
+        return False
+
+def optimize_video_for_size(input_path, output_path, target_size_mb=50):
+    """优化视频以满足文件大小要求"""
+    try:
+        # 获取原始视频信息
+        width, height, fps, duration = get_video_info(input_path)
+        if width is None:
+            return False
+            
+        # 计算目标比特率（考虑音频比特率）
+        audio_bitrate_kbps = 128  # 128kbps
+        target_size_bits = target_size_mb * 8 * 1024 * 1024  # 转换为bits
+        audio_bits = audio_bitrate_kbps * 1000 * duration  # 音频总bits
+        video_bits = target_size_bits - audio_bits  # 视频可用bits
+        target_video_bitrate_kbps = int(video_bits / (duration * 1000))  # 目标视频比特率
+        
+        # 确保比特率不会太低
+        min_video_bitrate = 500  # 最低500kbps
+        target_video_bitrate_kbps = max(target_video_bitrate_kbps, min_video_bitrate)
+        
+        print(f"优化视频: 目标大小 {target_size_mb}MB, 计算得出视频比特率 {target_video_bitrate_kbps}kbps")
+        
+        # 重新编码视频
+        (
+            ffmpeg
+            .input(input_path)
+            .output(
+                output_path,
+                vcodec=VIDEO_STANDARDS['video_codec'],
+                acodec=VIDEO_STANDARDS['audio_codec'],
+                video_bitrate=f"{target_video_bitrate_kbps}k",
+                audio_bitrate=VIDEO_STANDARDS['audio_bitrate'],
+                r=VIDEO_STANDARDS['fps'],
+                s=f"{VIDEO_STANDARDS['width']}x{VIDEO_STANDARDS['height']}",
+                preset='medium',  # 使用medium预设平衡质量和文件大小
+                crf=23  # 添加CRF参数进一步控制质量
+            )
+            .overwrite_output()
+            .run()
+        )
+        
+        # 检查优化后的文件大小
+        optimized_size_mb = get_file_size_mb(output_path)
+        print(f"优化后文件大小: {optimized_size_mb:.2f}MB")
+        
+        if optimized_size_mb <= target_size_mb:
+            print(f"✓ 视频优化成功: {optimized_size_mb:.2f}MB <= {target_size_mb}MB")
+            return True
+        else:
+            print(f"⚠️  视频优化后仍超过目标大小: {optimized_size_mb:.2f}MB > {target_size_mb}MB")
+            return False
+            
+    except Exception as e:
+        print(f"视频优化失败: {e}")
+        return False
+
 def get_video_info(video_path):
     """获取视频的分辨率、帧率和时长"""
     try:
@@ -108,19 +228,27 @@ def get_timestamps_duration(timestamps_path):
         print(f"读取timestamps文件失败: {e}")
         return 0
 
-def image_to_video(image_path, output_path, duration=5, width=720, height=1280, fps=30, fade_duration=0.5, audio_path=None):
+def image_to_video(image_path, output_path, duration=5, width=None, height=None, fps=None, fade_duration=0.5, audio_path=None):
     """将图片转换为视频片段，使用ffmpeg实现
     
     Args:
         image_path: 图片文件路径
         output_path: 输出视频路径
         duration: 视频时长（秒），如果提供了audio_path则会被覆盖
-        width: 视频宽度
-        height: 视频高度
-        fps: 帧率
+        width: 视频宽度，None时使用标准配置
+        height: 视频高度，None时使用标准配置
+        fps: 帧率，None时使用标准配置
         fade_duration: 保留参数以兼容性
         audio_path: 音频文件路径，如果提供则使用音频时长作为视频时长
     """
+    # 使用标准配置作为默认值
+    if width is None:
+        width = VIDEO_STANDARDS['width']
+    if height is None:
+        height = VIDEO_STANDARDS['height']
+    if fps is None:
+        fps = VIDEO_STANDARDS['fps']
+    
     # 直接使用ffmpeg实现
     print("使用ffmpeg方式进行视频合成")
     return image_to_video_ffmpeg(image_path, output_path, duration, width, height, fps, fade_duration, audio_path)
@@ -157,14 +285,18 @@ def image_to_video_ffmpeg(image_path, output_path, duration=5, width=720, height
             .filter('crop', width, height, f'(iw-{width})/2', f'(ih-{height})/2')  # 居中裁剪
         )
         
-        # 定义overlay文件路径
-        fuceng_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "banner", "fuceng.mp4")
+        # 定义overlay文件路径 - 随机选择一个fuceng文件
+        banner_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "banner")
+        fuceng_files = ["fuceng1.mov"]  # 只包含实际存在的文件
+        selected_fuceng = random.choice(fuceng_files)
+        fuceng_path = os.path.join(banner_dir, selected_fuceng)
+        print(f"随机选择的中间层文件: {selected_fuceng}")
         watermark_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "banner", "rmxs.png")
         
         # 检查fuceng.mp4是否存在
         if os.path.exists(fuceng_path):
             # 添加fuceng.mp4作为中间层
-            fuceng_input = ffmpeg.input(fuceng_path, stream_loop=-1, t=duration, an=None)  # 循环播放，不包含音频
+            fuceng_input = ffmpeg.input(fuceng_path, an=None)  # 播放一次，不包含音频
             
             # 处理fuceng.mp4：缩放到视频尺寸并极致过滤所有暗色
             fuceng_processed = (
@@ -181,29 +313,37 @@ def image_to_video_ffmpeg(image_path, output_path, duration=5, width=720, height
             
             # 第一步：将处理后的fuceng.mp4作为中间层overlay到基础视频上
             video_with_fuceng = ffmpeg.filter([base_video, fuceng_processed], 'overlay', 
-                                             x=0, y=0,  # 全屏覆盖
-                                             shortest=1)
+                                             x=0, y=0)  # 全屏覆盖
         else:
             print(f"警告: fuceng.mp4文件不存在: {fuceng_path}")
             video_with_fuceng = base_video
         
         # 检查rmxs.png是否存在并添加为最上层
         if os.path.exists(watermark_path):
-            watermark_input = ffmpeg.input(watermark_path, loop=1)  # 循环播放角标
+            watermark_input = ffmpeg.input(watermark_path, loop=1, t=duration)  # 循环播放角标，持续整个视频时长
             
             # 第二步：将rmxs.png作为最上层overlay
             final_video = ffmpeg.filter([video_with_fuceng, watermark_input], 'overlay', 
                                        x='W-w',  # 右上角贴边：视频宽度-角标宽度
-                                       y=0,      # 上边距0像素，完全贴边
-                                       shortest=1)  # 确保角标持续到视频结束
+                                       y=0)      # 上边距0像素，完全贴边
         else:
             print(f"警告: rmxs.png文件不存在: {watermark_path}")
             final_video = video_with_fuceng
         
-        # 输出最终视频
+        # 输出最终视频，使用标准配置
         (
             final_video
-            .output(output_path, r=fps, vcodec='libx264', pix_fmt='yuv420p', preset='ultrafast', video_bitrate='2000k')
+            .output(
+                output_path, 
+                r=VIDEO_STANDARDS['fps'], 
+                vcodec=VIDEO_STANDARDS['video_codec'], 
+                acodec=VIDEO_STANDARDS['audio_codec'],
+                pix_fmt='yuv420p', 
+                preset='medium',  # 使用medium预设平衡质量和文件大小
+                video_bitrate='1500k',  # 适中的视频比特率
+                audio_bitrate=VIDEO_STANDARDS['audio_bitrate'],
+                s=f"{VIDEO_STANDARDS['width']}x{VIDEO_STANDARDS['height']}"
+            )
             .overwrite_output()
             .run(quiet=False)  # 改为非安静模式以显示ffmpeg进度
         )
@@ -265,10 +405,11 @@ def concat_videos(video_list, output_path):
             filelist_path = f.name
         
         try:
-            # 使用ffmpeg命令行工具拼接
+            # 使用ffmpeg命令行工具拼接，强制重新生成时间戳从0开始
             subprocess.run([
-                'ffmpeg', '-f', 'concat', '-safe', '0', '-i', filelist_path,
-                '-c', 'copy', output_path, '-y'
+                'ffmpeg', '-fflags', '+genpts', '-f', 'concat', '-safe', '0', '-i', filelist_path,
+                '-c:v', 'libx264', '-c:a', 'aac', '-preset', 'fast',
+                '-avoid_negative_ts', 'make_zero', '-start_at_zero', output_path, '-y'
             ], check=True)
             print(f"视频拼接成功：{output_path}")
         finally:
@@ -285,6 +426,68 @@ def concat_videos(video_list, output_path):
         return True
     except Exception as e:
         print(f"视频拼接失败: {e}")
+        return False
+
+def clean_ass_punctuation(ass_file_path):
+    """清理ASS文件中的所有标点符号（包括引号）"""
+    try:
+        with open(ass_file_path, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+        
+        cleaned_lines = []
+        for line in lines:
+            if line.strip().startswith('Dialogue:'):
+                # 解析Dialogue行
+                parts = line.split(',', 9)  # 最多分割9次，保留最后的文本部分
+                if len(parts) >= 10:
+                    # 获取文本部分（最后一个元素）
+                    text_part = parts[9]
+                    
+                    # 定义要移除的标点符号（包括中英文标点）
+                    punctuation_chars = '，。！？；：""“”''（）【】《》、,."!?;:()[]<>/\\|`~@#$%^&*-_=+{}'
+                    
+                    # 清理文本，但保留ASS格式标签
+                    cleaned_text = ''
+                    i = 0
+                    while i < len(text_part):
+                        if text_part[i] == '{':
+                            # 找到ASS标签的结束位置
+                            end_pos = text_part.find('}', i)
+                            if end_pos != -1:
+                                # 保留整个标签
+                                cleaned_text += text_part[i:end_pos+1]
+                                i = end_pos + 1
+                            else:
+                                # 如果没有找到结束标签，保留当前字符
+                                if text_part[i] not in punctuation_chars:
+                                    cleaned_text += text_part[i]
+                                i += 1
+                        elif text_part[i] not in punctuation_chars:
+                            # 保留非标点符号字符
+                            cleaned_text += text_part[i]
+                            i += 1
+                        else:
+                            # 跳过标点符号
+                            i += 1
+                    
+                    # 重新组装Dialogue行
+                    parts[9] = cleaned_text
+                    cleaned_line = ','.join(parts)
+                    cleaned_lines.append(cleaned_line)
+                else:
+                    cleaned_lines.append(line)
+            else:
+                # 非Dialogue行保持不变
+                cleaned_lines.append(line)
+        
+        # 写回文件
+        with open(ass_file_path, 'w', encoding='utf-8') as f:
+            f.writelines(cleaned_lines)
+        
+        print(f"已清理ASS文件中的标点符号: {ass_file_path}")
+        return True
+    except Exception as e:
+        print(f"清理ASS文件标点符号失败: {e}")
         return False
 
 def add_subtitle(video_path, subtitle_path, output_path):
@@ -305,7 +508,7 @@ def add_subtitle(video_path, subtitle_path, output_path):
         return False
 
 def add_watermark(video_path, watermark_path, output_path):
-    """为视频添加多层overlay：fuceng.mp4作为中间层，rmxs.png作为最上层"""
+    """为视频添加多层overlay：随机选择的fuceng文件作为中间层，rmxs.png作为最上层"""
     try:
         # 检查角标文件是否存在
         if not os.path.exists(watermark_path):
@@ -323,13 +526,17 @@ def add_watermark(video_path, watermark_path, output_path):
         
         video_width, video_height = video_info[0], video_info[1]
         
-        # 定义overlay文件路径
-        fuceng_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "banner", "fuceng.mp4")
+        # 定义overlay文件路径 - 随机选择一个fuceng文件
+        banner_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "banner")
+        fuceng_files = ["fuceng1.mov"]  # 只包含实际存在的文件
+        selected_fuceng = random.choice(fuceng_files)
+        fuceng_path = os.path.join(banner_dir, selected_fuceng)
+        print(f"随机选择的中间层文件: {selected_fuceng}")
         
-        # 检查fuceng.mp4是否存在
+        # 检查选中的fuceng文件是否存在
         if not os.path.exists(fuceng_path):
-            print(f"警告: fuceng.mp4文件不存在: {fuceng_path}")
-            # 如果fuceng.mp4不存在，只添加rmxs.png
+            print(f"警告: 选中的fuceng文件不存在: {fuceng_path}")
+            # 如果选中的fuceng文件不存在，只添加rmxs.png
             video_input = ffmpeg.input(video_path)
             watermark_input = ffmpeg.input(watermark_path, loop=1)
             
@@ -339,17 +546,23 @@ def add_watermark(video_path, watermark_path, output_path):
                        x='W-w',  # 右上角贴边：视频宽度-角标宽度
                        y=0,      # 上边距0像素，完全贴边
                        shortest=1)  # 确保角标持续到视频结束
-                .output(output_path, vcodec='libx264', acodec='copy', video_bitrate='2000k')
+                .output(
+                    output_path, 
+                    vcodec=VIDEO_STANDARDS['video_codec'], 
+                    acodec='copy', 
+                    video_bitrate='1500k',
+                    r=VIDEO_STANDARDS['fps']
+                )
                 .overwrite_output()
                 .run()
             )
         else:
             # 添加多层overlay
             video_input = ffmpeg.input(video_path)
-            # 获取视频时长用于循环播放fuceng.mp4
+            # 获取视频时长用于播放fuceng文件
             video_duration = video_info[3] if video_info[3] else 10  # 默认10秒
-            fuceng_input = ffmpeg.input(fuceng_path, stream_loop=-1, t=video_duration, an=None)  # 循环播放，不包含音频
-            watermark_input = ffmpeg.input(watermark_path, loop=1)  # 循环播放角标
+            fuceng_input = ffmpeg.input(fuceng_path, an=None)  # 播放一次，不包含音频
+            watermark_input = ffmpeg.input(watermark_path, loop=1, t=video_duration)  # 循环播放角标，持续整个视频时长
             
             # 处理fuceng.mp4：缩放到视频尺寸并极致过滤所有暗色
             fuceng_processed = (
@@ -366,17 +579,21 @@ def add_watermark(video_path, watermark_path, output_path):
             
             # 第一步：将处理后的fuceng.mp4作为中间层overlay到原视频上
             video_with_fuceng = ffmpeg.filter([video_input, fuceng_processed], 'overlay', 
-                                             x=0, y=0,  # 全屏覆盖
-                                             shortest=1)
+                                             x=0, y=0)  # 全屏覆盖
             
             # 第二步：将rmxs.png作为最上层overlay
             (
                 ffmpeg
                 .filter([video_with_fuceng, watermark_input], 'overlay', 
                        x='W-w',  # 右上角贴边：视频宽度-角标宽度
-                       y=0,      # 上边距0像素，完全贴边
-                       shortest=1)  # 确保角标持续到视频结束
-                .output(output_path, vcodec='libx264', acodec='copy', video_bitrate='2000k')
+                       y=0)      # 上边距0像素，完全贴边
+                .output(
+                    output_path, 
+                    vcodec=VIDEO_STANDARDS['video_codec'], 
+                    acodec='copy', 
+                    video_bitrate='1500k',
+                    r=VIDEO_STANDARDS['fps']
+                )
                 .overwrite_output()
                 .run()
             )
@@ -414,7 +631,14 @@ def add_audio(video_path, audio_path, output_path, replace=True):
             
             (
                 ffmpeg
-                .output(video, audio, output_path, vcodec='libx264', acodec='aac', video_bitrate='2000k', audio_bitrate='128k')
+                .output(
+                    video, audio, output_path, 
+                    vcodec=VIDEO_STANDARDS['video_codec'], 
+                    acodec=VIDEO_STANDARDS['audio_codec'], 
+                    video_bitrate='1500k', 
+                    audio_bitrate=VIDEO_STANDARDS['audio_bitrate'],
+                    r=VIDEO_STANDARDS['fps']
+                )
                 .overwrite_output()
                 .run()
             )
@@ -459,17 +683,38 @@ def concat_audio_files(audio_files, output_path):
         print(f"音频拼接失败: {e}")
         return False
 
-def mix_audio_with_bgm(narration_audio_path, video_duration, output_path):
-    """将台词音频与随机选择的BGM混合
+def get_sound_effects_dir():
+    """获取音效目录，优先使用 src/sound_effects，找不到时使用 sound"""
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # 优先使用 src/sound_effects 目录
+    primary_dir = os.path.join(base_dir, "src", "sound_effects")
+    if os.path.exists(primary_dir):
+        print(f"使用优先音效目录: {primary_dir}")
+        return primary_dir
+    
+    # 备用目录 sound
+    fallback_dir = os.path.join(base_dir, "sound")
+    if os.path.exists(fallback_dir):
+        print(f"使用备用音效目录: {fallback_dir}")
+        return fallback_dir
+    
+    print("警告: 未找到任何音效目录")
+    return None
+
+def mix_audio_with_bgm_and_effects(narration_audio_path, video_duration, output_path, merged_ass_file=None):
+    """将台词音频与随机选择的BGM和音效混合
     
     Args:
         narration_audio_path: 台词音频文件路径
         video_duration: 视频总时长
         output_path: 输出音频路径
+        merged_ass_file: 合并后的ASS字幕文件路径（用于音效匹配）
     """
     try:
         # 获取BGM目录
         bgm_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "bgm")
+        sound_effects_dir = get_sound_effects_dir()
         
         # 查找所有wn*.mp3文件
         bgm_files = glob.glob(os.path.join(bgm_dir, "wn*.mp3"))
@@ -494,37 +739,77 @@ def mix_audio_with_bgm(narration_audio_path, video_duration, output_path):
         target_duration = narration_duration + fade_duration
         print(f"目标音频时长: {target_duration:.2f}s (台词 {narration_duration:.2f}s + 渐变 {fade_duration:.2f}s)")
         
-        # 创建输入流
-        narration_input = ffmpeg.input(narration_audio_path)
-        bgm_input = ffmpeg.input(selected_bgm)
+        # 准备音频输入列表
+        audio_inputs = []
         
-        # 处理BGM：循环播放以匹配目标时长
+        # 1. 处理台词音频
+        narration_input = ffmpeg.input(narration_audio_path)
+        silence = ffmpeg.input('anullsrc=channel_layout=stereo:sample_rate=48000', f='lavfi', t=fade_duration)
+        narration_extended = ffmpeg.concat(narration_input, silence, v=0, a=1)
+        narration_volume = narration_extended.filter('volume', volume=1.0)
+        audio_inputs.append(narration_volume)
+        
+        # 2. 处理BGM
+        bgm_input = ffmpeg.input(selected_bgm)
         if bgm_duration < target_duration:
-            # BGM需要循环播放
             loop_count = int(target_duration / bgm_duration) + 1
             print(f"BGM需要循环 {loop_count} 次以匹配目标时长")
             bgm_looped = bgm_input.filter('aloop', loop=loop_count-1, size=int(bgm_duration * 48000 * 2))
         else:
             bgm_looped = bgm_input
         
-        # 截取BGM到目标时长
         bgm_trimmed = bgm_looped.filter('atrim', duration=target_duration)
-        
-        # 台词音频添加静音以匹配目标时长
-        silence = ffmpeg.input('anullsrc=channel_layout=stereo:sample_rate=48000', f='lavfi', t=fade_duration)
-        narration_extended = ffmpeg.concat(narration_input, silence, v=0, a=1)
-        
-        # 音量调整：台词音量大(1.0)，BGM音量小(0.3)
-        narration_volume = narration_extended.filter('volume', volume=1.0)
-        bgm_volume = bgm_trimmed.filter('volume', volume=0.3)
+        bgm_volume = bgm_trimmed.filter('volume', volume=0.1)
         
         # BGM在台词结束后渐变消失
         fade_start = narration_duration
         print(f"BGM将在 {fade_start:.2f}s 开始渐变，持续 {fade_duration:.2f}s")
         bgm_volume = bgm_volume.filter('afade', type='out', start_time=fade_start, duration=fade_duration)
+        audio_inputs.append(bgm_volume)
         
-        # 混合音频
-        mixed_audio = ffmpeg.filter([narration_volume, bgm_volume], 'amix', inputs=2, duration='longest')
+        # 3. 处理音效（如果提供了ASS文件）
+        if merged_ass_file and os.path.exists(merged_ass_file) and sound_effects_dir and os.path.exists(sound_effects_dir):
+            print("开始处理音效...")
+            sound_processor = SoundEffectsProcessor(sound_effects_dir)
+            
+            # 解析字幕并匹配音效
+            dialogues = sound_processor.parse_ass_file(merged_ass_file)
+            if dialogues:
+                sound_events = sound_processor.match_sound_effects(dialogues)
+                
+                if sound_events:
+                    print(f"找到 {len(sound_events)} 个音效事件")
+                    
+                    # 为每个音效事件创建音频输入
+                    for event in sound_events:
+                        try:
+                            sound_input = ffmpeg.input(event['sound_file'])
+                            sound_volume = sound_input.filter('volume', volume=event['volume'])
+                            
+                            # 添加延迟到指定时间
+                            if event['start_time'] > 0:
+                                sound_delayed = sound_volume.filter('adelay', delays=f"{int(event['start_time'] * 1000)}")
+                            else:
+                                sound_delayed = sound_volume
+                            
+                            audio_inputs.append(sound_delayed)
+                            print(f"添加音效: {os.path.basename(event['sound_file'])} 在 {event['start_time']:.2f}s")
+                        except Exception as e:
+                            print(f"处理音效失败: {event['sound_file']}, 错误: {e}")
+                else:
+                    print("未匹配到任何音效")
+            else:
+                print("未解析到有效对话")
+        else:
+            print("跳过音效处理（未提供ASS文件或音效目录不存在）")
+        
+        # 注释：移除固定音效，现在使用智能匹配系统
+        
+        # 混合所有音频
+        if len(audio_inputs) > 1:
+            mixed_audio = ffmpeg.filter(audio_inputs, 'amix', inputs=len(audio_inputs), duration='longest')
+        else:
+            mixed_audio = audio_inputs[0]
         
         # 输出混合后的音频
         (
@@ -534,12 +819,22 @@ def mix_audio_with_bgm(narration_audio_path, video_duration, output_path):
             .run()
         )
         
-        print(f"音频混合成功：{output_path}")
+        print(f"音频混合成功（包含 {len(audio_inputs)} 个音轨）：{output_path}")
         return True
         
     except Exception as e:
         print(f"音频混合失败: {e}")
         return False
+
+def mix_audio_with_bgm(narration_audio_path, video_duration, output_path):
+    """将台词音频与随机选择的BGM混合（兼容性函数）
+    
+    Args:
+        narration_audio_path: 台词音频文件路径
+        video_duration: 视频总时长
+        output_path: 输出音频路径
+    """
+    return mix_audio_with_bgm_and_effects(narration_audio_path, video_duration, output_path)
 
 def merge_ass_files(ass_files, output_path, video_segments_info):
     """合并多个ASS文件，调整时间戳"""
@@ -594,6 +889,25 @@ def merge_ass_files(ass_files, output_path, video_segments_info):
                             parts[1] = f" {format_ass_time(start_seconds)}"
                             parts[2] = f" {format_ass_time(end_seconds)}"
                             
+                            # 清理字幕文本中的标点符号
+                            if len(parts) >= 10:
+                                subtitle_text = parts[9]
+                                # 移除所有标点符号，但保留ASS标签
+                                import re
+                                # 先提取ASS标签
+                                ass_tags = []
+                                tag_pattern = r'\{[^}]*\}'
+                                def replace_tag(match):
+                                    ass_tags.append(match.group(0))
+                                    return f'__ASS_TAG_{len(ass_tags)-1}__'
+                                text_with_placeholders = re.sub(tag_pattern, replace_tag, subtitle_text)
+                                # 移除标点符号
+                                cleaned_text = re.sub(r'[，。；：、！？""''（）【】《》〈〉「」『』〔〕［］｛｝｜～·…—–,.;:!?"''()\[\]{}|~`@#$%^&*+=<>/\\-]', '', text_with_placeholders)
+                                # 恢复ASS标签
+                                for i, tag in enumerate(ass_tags):
+                                    cleaned_text = cleaned_text.replace(f'__ASS_TAG_{i}__', tag)
+                                parts[9] = cleaned_text
+                            
                             merged_content.append(','.join(parts) + '\n')
                     elif line.strip():  # 只添加非空行
                         merged_content.append(line + '\n')
@@ -614,6 +928,25 @@ def merge_ass_files(ass_files, output_path, video_segments_info):
                             # 转换回ASS时间格式
                             parts[1] = f" {format_ass_time(start_seconds)}"
                             parts[2] = f" {format_ass_time(end_seconds)}"
+                            
+                            # 清理字幕文本中的标点符号
+                            if len(parts) >= 10:
+                                subtitle_text = parts[9]
+                                # 移除所有标点符号，但保留ASS标签
+                                import re
+                                # 先提取ASS标签
+                                ass_tags = []
+                                tag_pattern = r'\{[^}]*\}'
+                                def replace_tag(match):
+                                    ass_tags.append(match.group(0))
+                                    return f'__ASS_TAG_{len(ass_tags)-1}__'
+                                text_with_placeholders = re.sub(tag_pattern, replace_tag, subtitle_text)
+                                # 移除标点符号
+                                cleaned_text = re.sub(r'[，。；：、！？""''（）【】《》〈〉「」『』〔〕［］｛｝｜～·…—–,.;:!?"\'\'(\)\[\]{}|~`@#$%^&*+=<>/\\-]', '', text_with_placeholders)
+                                # 恢复ASS标签
+                                for i, tag in enumerate(ass_tags):
+                                    cleaned_text = cleaned_text.replace(f'__ASS_TAG_{i}__', tag)
+                                parts[9] = cleaned_text
                             
                             merged_content.append(','.join(parts) + '\n')
         
@@ -679,18 +1012,28 @@ def process_chapter(chapter_path):
         ass_duration = get_ass_duration(ass_file)
         print(f"Narration {narration_num} ASS时长: {ass_duration:.2f}s")
         
-        # 查找对应的2个图片文件
+        # 查找对应的图片文件
         image_num = str(narration_num_int).zfill(2)  # narration_01对应image_01
-        image_paths = [
-            os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_1.jpeg"),
-            os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_2.jpeg")
-        ]
+        if narration_num_int == 1:
+            # narration_01特殊处理：只使用3和4的jpeg
+            image_paths = [
+                os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_3.jpeg"),
+                os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_4.jpeg")
+            ]
+        else:
+            # 其他narration：使用1、2、3、4四张jpeg
+            image_paths = [
+                os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_1.jpeg"),
+                os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_2.jpeg"),
+                os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_3.jpeg"),
+                os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_4.jpeg")
+            ]
         
         # 查找对应的音频文件和timestamps文件
         audio_file = ass_file.replace('.ass', '.mp3')
         timestamps_file = ass_file.replace('.ass', '_timestamps.json')
         
-        # 检查2个图片文件是否都存在，如果不存在则跳过
+        # 检查图片文件是否都存在，如果不存在则跳过
         missing_images = [img for img in image_paths if not os.path.exists(img)]
         if missing_images:
             print(f"跳过 Narration {narration_num}: 缺少图片文件 {missing_images}")
@@ -707,14 +1050,14 @@ def process_chapter(chapter_path):
             calculated_duration = max(0, narration_01_duration - 10)  # 减去10秒，确保不为负数
             print(f"Narration {narration_num}: 特殊计算时长 {narration_01_duration:.2f}s - 10s = {calculated_duration:.2f}s")
             
-            # 只使用image_01_2.jpeg生成视频
-            image_01_2_path = os.path.join(chapter_path, f"{chapter_name}_image_01_2.jpeg")
-            if not os.path.exists(image_01_2_path):
-                print(f"跳过 Narration {narration_num}: 缺少图片文件 {image_01_2_path}")
+            # 只使用image_01_4.jpeg生成视频
+            image_01_4_path = os.path.join(chapter_path, f"{chapter_name}_image_01_4.jpeg")
+            if not os.path.exists(image_01_4_path):
+                print(f"跳过 Narration {narration_num}: 缺少图片文件 {image_01_4_path}")
                 continue
             
             narration_video_path = os.path.join(temp_dir, f"narration_{narration_num}.mp4")
-            if image_to_video(image_01_2_path, narration_video_path, duration=calculated_duration,
+            if image_to_video(image_01_4_path, narration_video_path, duration=calculated_duration,
                             width=width, height=height, fps=fps):
                 image_videos.append(narration_video_path)
                 video_segments_info.append(calculated_duration)
@@ -740,8 +1083,8 @@ def process_chapter(chapter_path):
             calculated_duration = get_timestamps_duration(timestamps_file)
             print(f"Narration {narration_num}: 使用timestamps时长 {calculated_duration:.2f}s")
         
-        # 为每个narration生成2个图片视频，每个时长为总时长的1/2
-        segment_duration = calculated_duration / 2
+        # 为每个narration生成图片视频，每个时长为总时长除以图片数量
+        segment_duration = calculated_duration / len(image_paths)
         narration_videos = []
         
         for j, image_path in enumerate(image_paths, 1):
@@ -754,9 +1097,9 @@ def process_chapter(chapter_path):
                 print(f"生成图片视频失败: {image_path}")
                 break
         
-        # 只有当2个图片视频都生成成功时，才拼接它们
-        if len(narration_videos) == 2:
-            # 拼接2个图片视频为一个narration视频
+        # 只有当所有图片视频都生成成功时，才拼接它们
+        if len(narration_videos) == len(image_paths):
+            # 拼接所有图片视频为一个narration视频
             narration_video_path = os.path.join(temp_dir, f"narration_{narration_num}.mp4")
             if concat_videos(narration_videos, narration_video_path):
                 image_videos.append(narration_video_path)
@@ -801,6 +1144,10 @@ def process_chapter(chapter_path):
         print("字幕合并失败，使用第一个ASS文件")
         merged_ass_file = ass_files[0]
     
+    # 清理ASS文件中的标点符号
+    if not clean_ass_punctuation(merged_ass_file):
+        print("警告：清理ASS文件标点符号失败，继续处理")
+    
     # 添加合并后的字幕
     video_with_sub = os.path.join(temp_dir, "video_with_sub.mp4")
     if not add_subtitle(concatenated_video, merged_ass_file, video_with_sub):
@@ -827,9 +1174,9 @@ def process_chapter(chapter_path):
             video_info = get_video_info(video_with_watermark)
             total_video_duration = video_info[3] if video_info[3] else sum(video_segments_info)
             
-            # 将台词音频与BGM混合
+            # 将台词音频与BGM和音效混合
             mixed_audio_file = os.path.join(temp_dir, "mixed_audio.mp3")
-            if mix_audio_with_bgm(merged_narration_audio, total_video_duration, mixed_audio_file):
+            if mix_audio_with_bgm_and_effects(merged_narration_audio, total_video_duration, mixed_audio_file, merged_ass_file):
                 # 添加混合后的音频
                 if add_audio(video_with_watermark, mixed_audio_file, final_output, replace=True):
                     print(f"✓ 章节视频生成成功: {final_output}")
@@ -854,11 +1201,39 @@ def process_chapter(chapter_path):
         import shutil
         shutil.copy2(video_with_watermark, final_output)
     
+    # 检查视频是否符合输出标准
+    print("\n=== 检查视频输出标准 ===")
+    if os.path.exists(final_output):
+        if not check_video_standards(final_output):
+            # 如果文件大小超标，尝试优化
+            file_size_mb = get_file_size_mb(final_output)
+            if file_size_mb > VIDEO_STANDARDS['max_size_mb']:
+                print(f"\n文件大小超标，开始优化...")
+                optimized_output = final_output.replace('.mp4', '_optimized.mp4')
+                
+                if optimize_video_for_size(final_output, optimized_output, VIDEO_STANDARDS['max_size_mb']):
+                    # 优化成功，替换原文件
+                    import shutil
+                    shutil.move(optimized_output, final_output)
+                    print(f"✓ 视频优化完成，已替换原文件: {final_output}")
+                    
+                    # 再次检查优化后的文件
+                    check_video_standards(final_output)
+                else:
+                    print(f"❌ 视频优化失败，保留原文件: {final_output}")
+                    # 清理失败的优化文件
+                    if os.path.exists(optimized_output):
+                        os.remove(optimized_output)
+        else:
+            print(f"✓ 视频符合所有输出标准")
+    else:
+        print(f"❌ 最终视频文件不存在: {final_output}")
+    
     # 清理临时文件
     try:
         # import shutil
         # shutil.rmtree(temp_dir)
-        print(f"清理临时文件: {temp_dir}")
+        print(f"\n清理临时文件: {temp_dir}")
     except Exception as e:
         print(f"清理临时文件失败: {e}")
     
@@ -905,6 +1280,50 @@ def main():
             print(f"处理章节时发生错误: {os.path.basename(chapter_dir)}, 错误: {e}")
     
     print(f"\n处理完成! 成功: {success_count}/{len(chapter_dirs)}")
+    
+    # 最终检查所有生成的视频文件
+    if success_count > 0:
+        print("\n=== 最终视频标准检查汇总 ===")
+        print(f"视频输出标准: {VIDEO_STANDARDS['width']}x{VIDEO_STANDARDS['height']}px, {VIDEO_STANDARDS['fps']}fps, H.264编码, 音频{VIDEO_STANDARDS['audio_bitrate']}, 最大{VIDEO_STANDARDS['max_size_mb']}MB")
+        
+        total_videos = 0
+        compliant_videos = 0
+        oversized_videos = []
+        
+        for chapter_dir in chapter_dirs:
+            chapter_name = os.path.basename(chapter_dir)
+            final_video = os.path.join(chapter_dir, f"{chapter_name}_final_video.mp4")
+            
+            if os.path.exists(final_video):
+                total_videos += 1
+                file_size_mb = get_file_size_mb(final_video)
+                width, height, fps, duration = get_video_info(final_video)
+                
+                print(f"\n{chapter_name}: {file_size_mb:.2f}MB, {width}x{height}px, {fps}fps, {duration:.2f}s")
+                
+                if file_size_mb <= VIDEO_STANDARDS['max_size_mb']:
+                    compliant_videos += 1
+                    print(f"  ✓ 符合大小标准")
+                else:
+                    oversized_videos.append((chapter_name, file_size_mb))
+                    print(f"  ❌ 超过大小限制 ({file_size_mb:.2f}MB > {VIDEO_STANDARDS['max_size_mb']}MB)")
+                
+                if duration < VIDEO_STANDARDS['min_duration_warning']:
+                    print(f"  ⚠️  时长提醒: {duration:.2f}s < {VIDEO_STANDARDS['min_duration_warning']}s")
+        
+        print(f"\n=== 汇总结果 ===")
+        print(f"总视频数: {total_videos}")
+        print(f"符合大小标准: {compliant_videos}/{total_videos} ({compliant_videos/total_videos*100:.1f}%)")
+        
+        if oversized_videos:
+            print(f"\n❌ 超大小限制的视频:")
+            for name, size in oversized_videos:
+                print(f"  - {name}: {size:.2f}MB")
+            print(f"\n建议: 对超大小限制的视频运行优化功能")
+        else:
+            print(f"\n✓ 所有视频都符合大小标准!")
+        
+        print(f"\n注意: 时长小于3分钟的视频仅为提醒，不影响标准符合性。")
 
 if __name__ == "__main__":
     main()

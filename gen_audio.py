@@ -188,30 +188,55 @@ def generate_voices_from_scripts(data_dir):
                 print(f"正在生成第 {i} 段解说语音...")
                 print(f"文本内容: {clean_narration[:50]}{'...' if len(clean_narration) > 50 else ''}")
                 
-                # 使用语音生成器生成语音
-                if voice_generator.generate_voice(clean_narration, audio_path):
+                # 使用语音生成器生成语音并获取时间戳
+                result = voice_generator.generate_voice_with_timestamps(clean_narration, audio_path)
+                if result and result.get('success', False):
                     print(f"✓ 第 {i} 段语音生成成功: {audio_path}")
                     
-                    # 生成时间戳信息（模拟，实际需要从TTS API获取）
+                    # 从API响应中提取时间戳信息
+                    api_response = result.get('api_response', {})
+                    
+                    # 构建时间戳数据结构
                     timestamp_data = {
                         "text": clean_narration,
                         "audio_file": audio_path,
-                        "duration": len(clean_narration) * 0.15,  # 估算时长（每字0.15秒）
+                        "duration": float(api_response.get('addition', {}).get('duration', 0)) / 1000.0,  # 转换为秒
                         "character_timestamps": [],
                         "generated_at": datetime.now().isoformat()
                     }
                     
-                    # 为每个字符生成时间戳（模拟）
-                    current_time = 0.0
-                    for char_idx, char in enumerate(clean_narration):
-                        char_duration = 0.15  # 每个字符0.15秒
-                        timestamp_data["character_timestamps"].append({
-                            "character": char,
-                            "start_time": current_time,
-                            "end_time": current_time + char_duration,
-                            "index": char_idx
-                        })
-                        current_time += char_duration
+                    # 从API响应中解析字符级时间戳
+                    try:
+                        addition = api_response.get('addition', {})
+                        frontend_str = addition.get('frontend', '{}')
+                        if isinstance(frontend_str, str):
+                            frontend_data = json.loads(frontend_str)
+                        else:
+                            frontend_data = frontend_str
+                        
+                        words = frontend_data.get('words', [])
+                        
+                        for word_info in words:
+                            timestamp_data["character_timestamps"].append({
+                                "character": word_info.get('word', ''),
+                                "start_time": float(word_info.get('start_time', 0)),
+                                "end_time": float(word_info.get('end_time', 0))
+                            })
+                        
+                        print(f"✓ 从API响应中解析到 {len(words)} 个字符的时间戳")
+                        
+                    except (json.JSONDecodeError, KeyError, ValueError) as e:
+                        print(f"⚠ 解析时间戳失败，使用估算值: {e}")
+                        # 如果解析失败，回退到估算方式
+                        current_time = 0.0
+                        char_duration = timestamp_data["duration"] / len(clean_narration) if clean_narration else 0.15
+                        for char_idx, char in enumerate(clean_narration):
+                            timestamp_data["character_timestamps"].append({
+                                "character": char,
+                                "start_time": current_time,
+                                "end_time": current_time + char_duration
+                            })
+                            current_time += char_duration
                     
                     # 保存时间戳文件
                     try:
