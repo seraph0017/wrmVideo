@@ -1,0 +1,30 @@
+[Script Info]
+Title: chapter_039 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.48,Default,,0,0,0,,北向辉为{\c&H0000FFFF&\b1}阻挡{\c&H00FFFFFF&\b0}追兵
+Dialogue: 0,0:00:01.88,0:00:03.46,Default,,0,0,0,,弯弓搭箭射向{\c&H0000FFFF&\b1}马屁股{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.03,0:00:04.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}发狂奔跑
+Dialogue: 0,0:00:05.42,0:00:07.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中大骂却也受此启
+Dialogue: 0,0:00:07.26,0:00:07.51,Default,,0,0,0,,发
+Dialogue: 0,0:00:07.79,0:00:09.01,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}速度减慢
+Dialogue: 0,0:00:09.31,0:00:10.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}父子{\c&H00FFFFFF&\b0}二人刚要交流
+Dialogue: 0,0:00:10.90,0:00:11.93,Default,,0,0,0,,却又被{\c&H0000FFFF&\b1}颠簸{\c&H00FFFFFF&\b0}打断
+Dialogue: 0,0:00:12.26,0:00:13.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是户外战场
+Dialogue: 0,0:00:13.74,0:00:14.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}继续狂奔
+Dialogue: 0,0:00:14.94,0:00:16.27,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}弯弓{\c&H00FFFFFF&\b0}搭箭
+Dialogue: 0,0:00:16.45,0:00:18.62,Default,,0,0,0,,铠甲高领{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中暗骂
+Dialogue: 0,0:00:18.95,0:00:20.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}高领{\c&H00FFFFFF&\b0}长袍战马继续狂奔
+Dialogue: 0,0:00:21.28,0:00:23.80,Default,,0,0,0,,颠簸依旧{\c&H0000FFFF&\b1}交流{\c&H00FFFFFF&\b0}被打断的状态

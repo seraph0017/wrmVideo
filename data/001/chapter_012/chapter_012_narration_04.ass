@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_012 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}匆忙进入帐中告知李
+Dialogue: 0,0:00:02.17,0:00:04.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}承乾侯{\c&H00FFFFFF&\b0}将军和师弟率兵回来
+Dialogue: 0,0:00:04.79,0:00:06.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}笑骂后前往迎接
+Dialogue: 0,0:00:06.96,0:00:07.93,Default,,0,0,0,,登上{\c&H0000FFFF&\b1}城头{\c&H00FFFFFF&\b0}远望
+Dialogue: 0,0:00:08.20,0:00:10.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}和北向辉率领着部
+Dialogue: 0,0:00:10.00,0:00:11.85,Default,,0,0,0,,队和{\c&H0000FFFF&\b1}俘虏{\c&H00FFFFFF&\b0}浩浩荡荡行进
+Dialogue: 0,0:00:12.15,0:00:13.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着高领服装
+Dialogue: 0,0:00:14.04,0:00:14.88,Default,,0,0,0,,在{\c&H0000FFFF&\b1}城头{\c&H00FFFFFF&\b0}远望
+Dialogue: 0,0:00:15.09,0:00:16.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}略带笑意
+Dialogue: 0,0:00:16.49,0:00:17.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}身着战甲
+Dialogue: 0,0:00:18.25,0:00:20.29,Default,,0,0,0,,率领{\c&H0000FFFF&\b1}部队{\c&H00FFFFFF&\b0}归来神情坚毅
+Dialogue: 0,0:00:20.54,0:00:21.41,Default,,0,0,0,,城外{\c&H0000FFFF&\b1}道路{\c&H00FFFFFF&\b0}上
+Dialogue: 0,0:00:21.71,0:00:23.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}俘虏{\c&H00FFFFFF&\b0}队伍浩浩荡荡行进
+Dialogue: 0,0:00:23.90,0:00:26.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}进城{\c&H00FFFFFF&\b0}后北向辉对待拔灼
+Dialogue: 0,0:00:26.50,0:00:27.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在旁观察
+Dialogue: 0,0:00:28.16,0:00:29.18,Default,,0,0,0,,拔灼{\c&H0000FFFF&\b1}蓬头垢面{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:29.55,0:00:30.58,Default,,0,0,0,,被{\c&H0000FFFF&\b1}北向{\c&H00FFFFFF&\b0}辉踹打
+Dialogue: 0,0:00:31.07,0:00:32.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情平静
+Dialogue: 0,0:00:32.63,0:00:33.92,Default,,0,0,0,,考虑如何{\c&H0000FFFF&\b1}利用{\c&H00FFFFFF&\b0}拔灼

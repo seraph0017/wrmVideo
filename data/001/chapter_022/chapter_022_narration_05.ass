@@ -1,0 +1,36 @@
+[Script Info]
+Title: chapter_022 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}命令攻城
+Dialogue: 0,0:00:01.74,0:00:03.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}迟疑说硬攻伤亡大
+Dialogue: 0,0:00:04.33,0:00:05.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}分析兵力
+Dialogue: 0,0:00:05.82,0:00:07.20,Default,,0,0,0,,想诱{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}出城一战
+Dialogue: 0,0:00:07.62,0:00:08.73,Default,,0,0,0,,与{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}耳语
+Dialogue: 0,0:00:08.96,0:00:10.95,Default,,0,0,0,,然后亲自为{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}包扎伤口
+Dialogue: 0,0:00:11.21,0:00:12.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}牵马{\c&H00FFFFFF&\b0}返回阵中
+Dialogue: 0,0:00:12.58,0:00:14.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}见此军心大振
+Dialogue: 0,0:00:14.36,0:00:15.85,Default,,0,0,0,,高呼“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}威武”
+Dialogue: 0,0:00:15.99,0:00:16.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是战场
+Dialogue: 0,0:00:17.11,0:00:18.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}指挥
+Dialogue: 0,0:00:18.27,0:00:19.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}们激动
+Dialogue: 0,0:00:19.48,0:00:20.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}第一个是李
+Dialogue: 0,0:00:20.60,0:00:22.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}命令攻城的特写
+Dialogue: 0,0:00:22.38,0:00:24.26,Default,,0,0,0,,第二个是{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}迟疑的
+Dialogue: 0,0:00:24.26,0:00:24.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:25.02,0:00:26.88,Default,,0,0,0,,第三个是李世民与{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:26.88,0:00:27.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}耳语{\c&H00FFFFFF&\b0}的特写
+Dialogue: 0,0:00:28.13,0:00:30.16,Default,,0,0,0,,第四个是{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}牵马为秦琼
+Dialogue: 0,0:00:30.16,0:00:30.88,Default,,0,0,0,,包扎的{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}

@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_005 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.30,Default,,0,0,0,,程咬金与{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.60,0:00:02.40,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}激战{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.87,0:00:04.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}被击中后心栽落马下
+Dialogue: 0,0:00:05.41,0:00:06.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}见此
+Dialogue: 0,0:00:06.70,0:00:08.05,Default,,0,0,0,,嘶吼让抓住{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.29,0:00:10.20,Default,,0,0,0,,北向辉将{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}拽起横在
+Dialogue: 0,0:00:10.20,0:00:10.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}马上{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.90,0:00:11.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}断后
+Dialogue: 0,0:00:11.96,0:00:13.62,Default,,0,0,0,,众人向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}方向疾驰
+Dialogue: 0,0:00:13.86,0:00:14.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}追兵{\c&H00FFFFFF&\b0}赶到
+Dialogue: 0,0:00:14.70,0:00:16.53,Default,,0,0,0,,环境是{\c&H0000FFFF&\b1}旷野{\c&H00FFFFFF&\b0}月光依旧
+Dialogue: 0,0:00:16.82,0:00:18.36,Default,,0,0,0,,战斗结束后{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}紧张

@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_010 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.32,Default,,0,0,0,,这时一身披{\c&H0000FFFF&\b1}战甲{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.68,0:00:03.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}书生{\c&H00FFFFFF&\b0}模样的人策马而至
+Dialogue: 0,0:00:03.70,0:00:04.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}诧异道
+Dialogue: 0,0:00:05.13,0:00:07.43,Default,,0,0,0,,“{\c&H0000FFFF&\b1}王司马{\c&H00FFFFFF&\b0}您不在后面督军
+Dialogue: 0,0:00:07.62,0:00:08.71,Default,,0,0,0,,是有事找{\c&H0000FFFF&\b1}本帅{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.92,0:00:10.64,Default,,0,0,0,,”行军{\c&H0000FFFF&\b1}司马{\c&H00FFFFFF&\b0}厉声道
+Dialogue: 0,0:00:10.86,0:00:11.93,Default,,0,0,0,,“启禀{\c&H0000FFFF&\b1}卫国公{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.09,0:00:13.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}刚刚下旨
+Dialogue: 0,0:00:13.52,0:00:14.90,Default,,0,0,0,,让{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}原地驻扎
+Dialogue: 0,0:00:15.12,0:00:16.63,Default,,0,0,0,,三日后{\c&H0000FFFF&\b1}再行{\c&H00FFFFFF&\b0}进军
+Dialogue: 0,0:00:16.80,0:00:19.18,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}冷声道“拿下
+Dialogue: 0,0:00:19.30,0:00:21.49,Default,,0,0,0,,”{\c&H0000FFFF&\b1}亲兵{\c&H00FFFFFF&\b0}一拥而上将行军司
+Dialogue: 0,0:00:21.49,0:00:22.25,Default,,0,0,0,,马拽{\c&H0000FFFF&\b1}下马{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:22.45,0:00:23.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}五花大绑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:23.37,0:00:24.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是军营中
+Dialogue: 0,0:00:24.93,0:00:26.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}气氛{\c&H00FFFFFF&\b0}紧张光线稍暗
+Dialogue: 0,0:00:27.00,0:00:29.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}身着高领战甲神情坚定
+Dialogue: 0,0:00:30.05,0:00:32.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏定方{\c&H00FFFFFF&\b0}身着高领战甲
+Dialogue: 0,0:00:32.24,0:00:34.77,Default,,0,0,0,,惊疑不定{\c&H0000FFFF&\b1}亲兵{\c&H00FFFFFF&\b0}身着同色制服

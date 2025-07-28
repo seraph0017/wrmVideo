@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_025 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在郡王府中拿出纸张
+Dialogue: 0,0:00:02.11,0:00:03.96,Default,,0,0,0,,让{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}和李靖画押站队
+Dialogue: 0,0:00:04.43,0:00:05.13,Default,,0,0,0,,二人{\c&H0000FFFF&\b1}拒绝{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.64,0:00:07.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示已派人围住府邸
+Dialogue: 0,0:00:07.93,0:00:09.26,Default,,0,0,0,,给二人一天{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}考虑
+Dialogue: 0,0:00:09.47,0:00:10.57,Default,,0,0,0,,之后{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}送来李
+Dialogue: 0,0:00:10.57,0:00:11.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}答应谈判的信
+Dialogue: 0,0:00:12.06,0:00:13.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}和李靖在后院商议
+Dialogue: 0,0:00:14.20,0:00:15.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}提出签字的办法
+Dialogue: 0,0:00:15.88,0:00:17.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}虽有顾虑但也觉得可
+Dialogue: 0,0:00:17.69,0:00:17.98,Default,,0,0,0,,行

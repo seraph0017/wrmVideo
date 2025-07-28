@@ -1,0 +1,33 @@
+[Script Info]
+Title: chapter_023 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.45,Default,,0,0,0,,兵楼中{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看着城下惨状
+Dialogue: 0,0:00:02.85,0:00:05.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}寻至兵楼外询问情况
+Dialogue: 0,0:00:05.62,0:00:07.03,Default,,0,0,0,,称{\c&H0000FFFF&\b1}敌军{\c&H00FFFFFF&\b0}已快被杀退
+Dialogue: 0,0:00:07.58,0:00:08.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}露出{\c&H00FFFFFF&\b0}跃跃欲试之色
+Dialogue: 0,0:00:09.15,0:00:11.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}决定选出一百勇士趁
+Dialogue: 0,0:00:11.13,0:00:12.69,Default,,0,0,0,,乱袭击{\c&H0000FFFF&\b1}贼军{\c&H00FFFFFF&\b0}粮草大营
+Dialogue: 0,0:00:13.00,0:00:13.96,Default,,0,0,0,,让{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}安排
+Dialogue: 0,0:00:14.29,0:00:16.58,Default,,0,0,0,,战事渐止天空露出{\c&H0000FFFF&\b1}鱼肚白{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.91,0:00:17.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}太阳{\c&H00FFFFFF&\b0}升起后
+Dialogue: 0,0:00:18.18,0:00:19.18,Default,,0,0,0,,远处升起{\c&H0000FFFF&\b1}烟火{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.55,0:00:21.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}猜测是己方人马袭击
+Dialogue: 0,0:00:21.52,0:00:22.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}粮草{\c&H00FFFFFF&\b0}大营成功
+Dialogue: 0,0:00:22.89,0:00:24.46,Default,,0,0,0,,随后一百多{\c&H0000FFFF&\b1}人马{\c&H00FFFFFF&\b0}返回
+Dialogue: 0,0:00:24.89,0:00:26.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}夸赞众人
+Dialogue: 0,0:00:26.58,0:00:27.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}询问{\c&H00FFFFFF&\b0}具体情况
+Dialogue: 0,0:00:28.02,0:00:29.84,Default,,0,0,0,,得知{\c&H0000FFFF&\b1}粮草{\c&H00FFFFFF&\b0}大营只有几千兵
+Dialogue: 0,0:00:29.84,0:00:31.48,Default,,0,0,0,,勇把守且无统军{\c&H0000FFFF&\b1}将领{\c&H00FFFFFF&\b0}

@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_021 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫外喊杀声渐起
+Dialogue: 0,0:00:02.29,0:00:03.94,Default,,0,0,0,,床弩破空{\c&H0000FFFF&\b1}火药{\c&H00FFFFFF&\b0}爆炸
+Dialogue: 0,0:00:04.34,0:00:05.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}空气{\c&H00FFFFFF&\b0}腥臭味重
+Dialogue: 0,0:00:05.73,0:00:07.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}等儒生面色无惧
+Dialogue: 0,0:00:07.79,0:00:08.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}雄赳赳{\c&H00FFFFFF&\b0}气昂昂
+Dialogue: 0,0:00:09.19,0:00:10.32,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}雨势{\c&H00FFFFFF&\b0}渐小
+Dialogue: 0,0:00:10.50,0:00:12.21,Default,,0,0,0,,东方{\c&H0000FFFF&\b1}天际{\c&H00FFFFFF&\b0}透出金色晨光
+Dialogue: 0,0:00:12.50,0:00:14.12,Default,,0,0,0,,洒在太极殿{\c&H0000FFFF&\b1}琉璃瓦{\c&H00FFFFFF&\b0}上流
+Dialogue: 0,0:00:14.12,0:00:14.63,Default,,0,0,0,,光{\c&H0000FFFF&\b1}溢彩{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.90,0:00:16.43,Default,,0,0,0,,但空气中{\c&H0000FFFF&\b1}血腥味{\c&H00FFFFFF&\b0}浓重
+Dialogue: 0,0:00:16.74,0:00:18.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}被阳光一照
+Dialogue: 0,0:00:18.50,0:00:20.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}身体{\c&H00FFFFFF&\b0}疲惫却很快恢复
+Dialogue: 0,0:00:20.55,0:00:22.30,Default,,0,0,0,,带着{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}众人进入东宫
+Dialogue: 0,0:00:22.64,0:00:24.29,Default,,0,0,0,,此{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}外环境硝烟弥漫
+Dialogue: 0,0:00:24.73,0:00:26.09,Default,,0,0,0,,内{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}光线渐变亮

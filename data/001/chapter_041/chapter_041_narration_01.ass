@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_041 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.06,Default,,0,0,0,,画面展现{\c&H0000FFFF&\b1}虎牢关{\c&H00FFFFFF&\b0}城头场景
+Dialogue: 0,0:00:02.64,0:00:03.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}洒在城墙上
+Dialogue: 0,0:00:04.41,0:00:05.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}气氛{\c&H00FFFFFF&\b0}紧张又激昂
+Dialogue: 0,0:00:06.03,0:00:07.89,Default,,0,0,0,,四名亲兵小心翼翼抬着{\c&H0000FFFF&\b1}李承{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.89,0:00:08.93,Default,,0,0,0,,乾登上{\c&H0000FFFF&\b1}城头{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.26,0:00:10.76,Default,,0,0,0,,周围从{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}带出来的老部
+Dialogue: 0,0:00:10.76,0:00:11.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}下们{\c&H00FFFFFF&\b0}眼眶通红
+Dialogue: 0,0:00:12.20,0:00:13.91,Default,,0,0,0,,死死盯着担架上的{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.28,0:00:16.06,Default,,0,0,0,,其中一名士兵{\c&H0000FFFF&\b1}单膝{\c&H00FFFFFF&\b0}跪地
+Dialogue: 0,0:00:18.46,0:00:19.07,Default,,0,0,0,,敌{\c&H0000FFFF&\b1}不利{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.52,0:00:23.23,Default,,0,0,0,,其他{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}也渐渐效仿
+Dialogue: 0,0:00:23.40,0:00:25.48,Default,,0,0,0,,口中呼喊着自责与{\c&H0000FFFF&\b1}效忠{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:25.48,0:00:25.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}话语{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:26.00,0:00:27.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中满是自信
+Dialogue: 0,0:00:28.16,0:00:29.59,Default,,0,0,0,,他{\c&H0000FFFF&\b1}坚信{\c&H00FFFFFF&\b0}‘哀兵必胜’
+Dialogue: 0,0:00:29.76,0:00:31.37,Default,,0,0,0,,此时看到{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}们的忠诚

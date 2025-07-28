@@ -1,0 +1,46 @@
+[Script Info]
+Title: chapter_018 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄武门{\c&H00FFFFFF&\b0}前
+Dialogue: 0,0:00:01.21,0:00:03.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}策马杀透重围至北
+Dialogue: 0,0:00:03.13,0:00:03.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}向辉{\c&H00FFFFFF&\b0}身侧
+Dialogue: 0,0:00:04.52,0:00:06.67,Default,,0,0,0,,见其瘫卧{\c&H0000FFFF&\b1}血泊{\c&H00FFFFFF&\b0}气息奄奄
+Dialogue: 0,0:00:07.14,0:00:08.61,Default,,0,0,0,,大怒却{\c&H0000FFFF&\b1}无法{\c&H00FFFFFF&\b0}仔细查看
+Dialogue: 0,0:00:08.97,0:00:10.44,Default,,0,0,0,,拽其{\c&H0000FFFF&\b1}上马{\c&H00FFFFFF&\b0}后调转马头
+Dialogue: 0,0:00:10.72,0:00:12.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率部冲进玄武门
+Dialogue: 0,0:00:12.81,0:00:14.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}宫门{\c&H00FFFFFF&\b0}处敌军难施展
+Dialogue: 0,0:00:14.36,0:00:16.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}兄弟结成圆阵护持
+Dialogue: 0,0:00:16.53,0:00:18.48,Default,,0,0,0,,月月冲回阵中{\c&H0000FFFF&\b1}血污{\c&H00FFFFFF&\b0}满面
+Dialogue: 0,0:00:18.92,0:00:20.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}见状心中大恨李恪
+Dialogue: 0,0:00:21.20,0:00:22.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}杀敌速度渐慢
+Dialogue: 0,0:00:23.14,0:00:24.16,Default,,0,0,0,,李恪{\c&H0000FFFF&\b1}疯狂{\c&H00FFFFFF&\b0}指挥
+Dialogue: 0,0:00:24.56,0:00:26.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄武门{\c&H00FFFFFF&\b0}外传来马蹄声
+Dialogue: 0,0:00:26.51,0:00:27.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}知情况复杂
+Dialogue: 0,0:00:28.31,0:00:29.08,Default,,0,0,0,,令用{\c&H0000FFFF&\b1}火药{\c&H00FFFFFF&\b0}炸
+Dialogue: 0,0:00:29.46,0:00:31.33,Default,,0,0,0,,虽威力减但敌军{\c&H0000FFFF&\b1}阵脚大乱{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:31.71,0:00:33.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}带北向辉杀出重围至
+Dialogue: 0,0:00:33.96,0:00:34.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}重明{\c&H00FFFFFF&\b0}门
+Dialogue: 0,0:00:34.89,0:00:36.23,Default,,0,0,0,,见后面{\c&H0000FFFF&\b1}合军{\c&H00FFFFFF&\b0}一处的李
+Dialogue: 0,0:00:36.23,0:00:37.26,Default,,0,0,0,,恪{\c&H0000FFFF&\b1}人马{\c&H00FFFFFF&\b0}及禁军
+Dialogue: 0,0:00:37.59,0:00:39.30,Default,,0,0,0,,同时宫门外{\c&H0000FFFF&\b1}厮杀{\c&H00FFFFFF&\b0}声起
+Dialogue: 0,0:00:39.69,0:00:41.30,Default,,0,0,0,,场景是在{\c&H0000FFFF&\b1}玄武门{\c&H00FFFFFF&\b0}附近
+Dialogue: 0,0:00:41.62,0:00:42.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}是激烈的战场
+Dialogue: 0,0:00:43.31,0:00:45.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}为白天光线复杂
+Dialogue: 0,0:00:45.73,0:00:47.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}身着高领战甲
+Dialogue: 0,0:00:47.77,0:00:48.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}愤怒
+Dialogue: 0,0:00:48.80,0:00:50.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着高领战甲
+Dialogue: 0,0:00:50.85,0:00:51.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}凝重
+Dialogue: 0,0:00:51.98,0:00:54.50,Default,,0,0,0,,月月身着{\c&H0000FFFF&\b1}高领{\c&H00FFFFFF&\b0}战甲血污满面

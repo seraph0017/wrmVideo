@@ -1,0 +1,36 @@
+[Script Info]
+Title: chapter_015 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表明女子是自己人
+Dialogue: 0,0:00:02.29,0:00:04.12,Default,,0,0,0,,是姑姑{\c&H0000FFFF&\b1}平阳{\c&H00FFFFFF&\b0}昭公主组建的娘
+Dialogue: 0,0:00:04.12,0:00:04.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}子军{\c&H00FFFFFF&\b0}成员
+Dialogue: 0,0:00:05.42,0:00:07.01,Default,,0,0,0,,月月质疑他是造反{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.39,0:00:08.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}不是{\c&H00FFFFFF&\b0}自己人
+Dialogue: 0,0:00:08.46,0:00:10.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}阐述李世民囚父杀兄
+Dialogue: 0,0:00:10.54,0:00:11.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}灭弟不仁{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.54,0:00:13.35,Default,,0,0,0,,自己作为{\c&H0000FFFF&\b1}皇太孙{\c&H00FFFFFF&\b0}拨乱反正
+Dialogue: 0,0:00:13.98,0:00:16.00,Default,,0,0,0,,月月{\c&H0000FFFF&\b1}追问{\c&H00FFFFFF&\b0}若成功是否还位给
+Dialogue: 0,0:00:16.00,0:00:17.14,Default,,0,0,0,,建成{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}后人
+Dialogue: 0,0:00:17.55,0:00:19.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示若找到后人会拱
+Dialogue: 0,0:00:19.74,0:00:20.29,Default,,0,0,0,,手{\c&H0000FFFF&\b1}相让{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.71,0:00:22.92,Default,,0,0,0,,月月{\c&H0000FFFF&\b1}嘲讽{\c&H00FFFFFF&\b0}他虚伪像他父皇
+Dialogue: 0,0:00:23.30,0:00:24.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}女子{\c&H00FFFFFF&\b0}为月月辩解
+Dialogue: 0,0:00:24.82,0:00:26.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}询问众人是继续卖笑
+Dialogue: 0,0:00:26.92,0:00:28.19,Default,,0,0,0,,还是跟他{\c&H0000FFFF&\b1}拨乱反正{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:28.54,0:00:30.39,Default,,0,0,0,,还提及{\c&H0000FFFF&\b1}姑姑{\c&H00FFFFFF&\b0}在世不会让他被
+Dialogue: 0,0:00:30.39,0:00:31.24,Default,,0,0,0,,逼远遁{\c&H0000FFFF&\b1}大漠{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:31.65,0:00:32.51,Default,,0,0,0,,月月仍{\c&H0000FFFF&\b1}质疑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:32.73,0:00:33.81,Default,,0,0,0,,众{\c&H0000FFFF&\b1}女子{\c&H00FFFFFF&\b0}也有犹豫

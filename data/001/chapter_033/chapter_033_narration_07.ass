@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_033 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.58,Default,,0,0,0,,大帐内
+Dialogue: 0,0:00:00.89,0:00:02.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}高士廉{\c&H00FFFFFF&\b0}沉稳表示三家肯定会
+Dialogue: 0,0:00:02.81,0:00:03.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}答应{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.52,0:00:04.68,Default,,0,0,0,,不必做其他{\c&H0000FFFF&\b1}想法{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.18,0:00:06.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}虽有怀疑
+Dialogue: 0,0:00:06.79,0:00:07.79,Default,,0,0,0,,但脸上无{\c&H0000FFFF&\b1}变化{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.05,0:00:09.91,Default,,0,0,0,,而后长孙无忌和{\c&H0000FFFF&\b1}高士廉{\c&H00FFFFFF&\b0}告
+Dialogue: 0,0:00:09.91,0:00:10.43,Default,,0,0,0,,辞{\c&H0000FFFF&\b1}离开{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.61,0:00:11.60,Default,,0,0,0,,帐内{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}依旧
+Dialogue: 0,0:00:11.83,0:00:13.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}对话{\c&H00FFFFFF&\b0}后氛围稍缓
+Dialogue: 0,0:00:13.39,0:00:14.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神色平静
+Dialogue: 0,0:00:15.03,0:00:16.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}高士廉{\c&H00FFFFFF&\b0}语气沉稳
+Dialogue: 0,0:00:16.50,0:00:19.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌拱手告辞神态从容

@@ -1,0 +1,34 @@
+[Script Info]
+Title: chapter_024 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}距离李世民约五百步
+Dialogue: 0,0:00:02.50,0:00:04.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}双目{\c&H00FFFFFF&\b0}微凝闪出疯狂之色
+Dialogue: 0,0:00:05.11,0:00:06.59,Default,,0,0,0,,周围{\c&H0000FFFF&\b1}玄甲军{\c&H00FFFFFF&\b0}围杀而来
+Dialogue: 0,0:00:06.96,0:00:08.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}一夹马肚
+Dialogue: 0,0:00:08.49,0:00:09.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}策马{\c&H00FFFFFF&\b0}回身大吼
+Dialogue: 0,0:00:09.63,0:00:10.65,Default,,0,0,0,,“{\c&H0000FFFF&\b1}剪掉{\c&H00FFFFFF&\b0}三寸
+Dialogue: 0,0:00:10.82,0:00:11.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}点火{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.52,0:00:13.12,Default,,0,0,0,,”安排的{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}看管背着火
+Dialogue: 0,0:00:13.12,0:00:13.86,Default,,0,0,0,,药的{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.02,0:00:16.02,Default,,0,0,0,,听到指令点火并刺{\c&H0000FFFF&\b1}马屁股{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.16,0:00:18.54,Default,,0,0,0,,战马向{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}所在位置狂奔
+Dialogue: 0,0:00:18.88,0:00:20.81,Default,,0,0,0,,秦琼和{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}反应快拉李
+Dialogue: 0,0:00:20.81,0:00:22.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}战马后撤
+Dialogue: 0,0:00:22.20,0:00:24.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}弯弓搭箭三箭齐发
+Dialogue: 0,0:00:24.41,0:00:26.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}镫里藏身躲过
+Dialogue: 0,0:00:26.46,0:00:27.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}又射三箭
+Dialogue: 0,0:00:28.01,0:00:29.28,Default,,0,0,0,,周围{\c&H0000FFFF&\b1}亲兵{\c&H00FFFFFF&\b0}护主
+Dialogue: 0,0:00:29.42,0:00:30.87,Default,,0,0,0,,箭失炸开让{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}惊乱

@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_024 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.79,Default,,0,0,0,,五百斤{\c&H0000FFFF&\b1}黑火药{\c&H00FFFFFF&\b0}轰然爆裂
+Dialogue: 0,0:00:02.24,0:00:04.10,Default,,0,0,0,,震耳欲聋{\c&H0000FFFF&\b1}冲击波{\c&H00FFFFFF&\b0}横扫
+Dialogue: 0,0:00:04.54,0:00:06.56,Default,,0,0,0,,掀翻{\c&H0000FFFF&\b1}地面{\c&H00FFFFFF&\b0}碎石等四溅
+Dialogue: 0,0:00:07.07,0:00:08.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}烈焰{\c&H00FFFFFF&\b0}冲天浓烟翻滚
+Dialogue: 0,0:00:09.17,0:00:10.89,Default,,0,0,0,,护在前面的{\c&H0000FFFF&\b1}玄甲军{\c&H00FFFFFF&\b0}被掀飞
+Dialogue: 0,0:00:11.14,0:00:11.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}血肉模糊{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.19,0:00:14.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}被亲卫拼死护住仍受
+Dialogue: 0,0:00:14.21,0:00:14.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}余波{\c&H00FFFFFF&\b0}冲击
+Dialogue: 0,0:00:15.22,0:00:17.40,Default,,0,0,0,,秦琼和{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}口鼻溢血
+Dialogue: 0,0:00:17.76,0:00:18.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}栽倒
+Dialogue: 0,0:00:18.68,0:00:20.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}见状疯狂狂笑
+Dialogue: 0,0:00:20.77,0:00:21.88,Default,,0,0,0,,喊着炸死{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:22.20,0:00:24.45,Default,,0,0,0,,让士兵冲诛杀伪帝{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.80,0:00:26.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}一马当前冲出去
+Dialogue: 0,0:00:27.02,0:00:28.18,Default,,0,0,0,,四周{\c&H0000FFFF&\b1}玄甲军{\c&H00FFFFFF&\b0}见李
+Dialogue: 0,0:00:28.18,0:00:29.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}受伤杀向他们
+Dialogue: 0,0:00:30.07,0:00:31.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}让扔剩下火药
+Dialogue: 0,0:00:31.92,0:00:32.78,Default,,0,0,0,,让{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}受惊
+Dialogue: 0,0:00:33.15,0:00:35.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}所处位置被烟幕笼罩

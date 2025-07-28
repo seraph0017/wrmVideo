@@ -1,0 +1,38 @@
+[Script Info]
+Title: chapter_012 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}前往造纸厂
+Dialogue: 0,0:00:01.67,0:00:03.53,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}造纸厂{\c&H00FFFFFF&\b0}已用营帐围起
+Dialogue: 0,0:00:03.97,0:00:05.71,Default,,0,0,0,,进入{\c&H0000FFFF&\b1}工坊{\c&H00FFFFFF&\b0}水气弥漫
+Dialogue: 0,0:00:06.18,0:00:07.96,Default,,0,0,0,,蒸煮{\c&H0000FFFF&\b1}树木{\c&H00FFFFFF&\b0}的味道充斥鼻腔
+Dialogue: 0,0:00:08.26,0:00:09.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}兵们{\c&H00FFFFFF&\b0}忙碌穿梭
+Dialogue: 0,0:00:09.62,0:00:10.59,Default,,0,0,0,,有的搅拌{\c&H0000FFFF&\b1}浆料{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.90,0:00:11.85,Default,,0,0,0,,有的搬运{\c&H0000FFFF&\b1}树皮{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.13,0:00:13.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}深入工坊
+Dialogue: 0,0:00:13.62,0:00:15.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}来到{\c&H00FFFFFF&\b0}宽敞的露天晾晒区
+Dialogue: 0,0:00:15.46,0:00:16.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}照在湿纸上
+Dialogue: 0,0:00:16.88,0:00:18.12,Default,,0,0,0,,弥漫着淡淡的{\c&H0000FFFF&\b1}纸香{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.50,0:00:20.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着高领服装
+Dialogue: 0,0:00:20.52,0:00:21.54,Default,,0,0,0,,面带得意{\c&H0000FFFF&\b1}笑容{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.97,0:00:23.89,Default,,0,0,0,,心中想着{\c&H0000FFFF&\b1}金钱{\c&H00FFFFFF&\b0}与未来计划
+Dialogue: 0,0:00:24.18,0:00:26.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}杜正伦{\c&H00FFFFFF&\b0}身着高领沾墨衣物
+Dialogue: 0,0:00:26.48,0:00:27.73,Default,,0,0,0,,从{\c&H0000FFFF&\b1}工坊{\c&H00FFFFFF&\b0}深处走出
+Dialogue: 0,0:00:28.20,0:00:30.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}额角{\c&H00FFFFFF&\b0}有汗珠神情兴奋
+Dialogue: 0,0:00:30.45,0:00:31.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}工坊{\c&H00FFFFFF&\b0}内兵们忙碌的场
+Dialogue: 0,0:00:31.77,0:00:33.67,Default,,0,0,0,,景在{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}透过营帐的环境下
+Dialogue: 0,0:00:33.67,0:00:34.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}展现{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:34.66,0:00:36.58,Default,,0,0,0,,晾晒的湿纸在{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}照射下
+Dialogue: 0,0:00:36.81,0:00:37.86,Default,,0,0,0,,画面清新{\c&H0000FFFF&\b1}宁静{\c&H00FFFFFF&\b0}

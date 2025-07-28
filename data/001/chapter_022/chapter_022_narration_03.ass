@@ -1,0 +1,36 @@
+[Script Info]
+Title: chapter_022 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.30,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}反应快
+Dialogue: 0,0:00:01.85,0:00:03.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}策马{\c&H00FFFFFF&\b0}上前拉起李
+Dialogue: 0,0:00:03.06,0:00:04.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}受伤的战马
+Dialogue: 0,0:00:04.62,0:00:06.34,Default,,0,0,0,,大喝“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}快走
+Dialogue: 0,0:00:06.42,0:00:08.47,Default,,0,0,0,,”一众亲兵护卫{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.65,0:00:10.37,Default,,0,0,0,,随后数十架床弩{\c&H0000FFFF&\b1}齐射{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.59,0:00:12.54,Default,,0,0,0,,第二波{\c&H0000FFFF&\b1}火药{\c&H00FFFFFF&\b0}弩箭如暴雨般
+Dialogue: 0,0:00:12.54,0:00:12.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}倾泻{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.04,0:00:14.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}舞铁槊筑屏障
+Dialogue: 0,0:00:14.55,0:00:16.19,Default,,0,0,0,,却被{\c&H0000FFFF&\b1}铁片{\c&H00FFFFFF&\b0}扎中肩头
+Dialogue: 0,0:00:16.32,0:00:17.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}鲜血{\c&H00FFFFFF&\b0}染红衣服
+Dialogue: 0,0:00:17.65,0:00:19.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}亲兵{\c&H00FFFFFF&\b0}拉他回阵
+Dialogue: 0,0:00:19.26,0:00:20.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是战场
+Dialogue: 0,0:00:20.50,0:00:22.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}们紧张忙碌硝烟弥漫
+Dialogue: 0,0:00:22.95,0:00:24.59,Default,,0,0,0,,特写第一个是{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}策马救
+Dialogue: 0,0:00:24.59,0:00:25.45,Default,,0,0,0,,人的{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:25.71,0:00:27.08,Default,,0,0,0,,第二个是{\c&H0000FFFF&\b1}亲兵{\c&H00FFFFFF&\b0}护卫李
+Dialogue: 0,0:00:27.08,0:00:28.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}的特写
+Dialogue: 0,0:00:28.47,0:00:30.47,Default,,0,0,0,,第三个是床弩齐射的{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:30.68,0:00:32.30,Default,,0,0,0,,第四个是{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}受伤的特写

@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_024 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.81,Default,,0,0,0,,烟尘中{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}剧烈咳嗽
+Dialogue: 0,0:00:02.30,0:00:04.45,Default,,0,0,0,,眼前模糊勉强抬起{\c&H0000FFFF&\b1}手臂{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.88,0:00:05.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}铁甲{\c&H00FFFFFF&\b0}有焦痕
+Dialogue: 0,0:00:06.14,0:00:07.01,Default,,0,0,0,,掌心有{\c&H0000FFFF&\b1}血口{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.33,0:00:08.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}单膝跪地又起身
+Dialogue: 0,0:00:09.30,0:00:11.26,Default,,0,0,0,,半边{\c&H0000FFFF&\b1}铁甲{\c&H00FFFFFF&\b0}凹陷嘴角有血
+Dialogue: 0,0:00:11.58,0:00:13.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}头顶铁盔被掀飞
+Dialogue: 0,0:00:13.61,0:00:14.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}额角{\c&H00FFFFFF&\b0}有伤口
+Dialogue: 0,0:00:14.60,0:00:16.02,Default,,0,0,0,,仍攥着铁槊{\c&H0000FFFF&\b1}警惕{\c&H00FFFFFF&\b0}环顾
+Dialogue: 0,0:00:16.44,0:00:18.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}挣扎要起身找李承乾
+Dialogue: 0,0:00:18.43,0:00:18.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}拼命{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.20,0:00:20.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}劝他别出声
+Dialogue: 0,0:00:20.85,0:00:22.36,Default,,0,0,0,,等{\c&H0000FFFF&\b1}烟尘{\c&H00FFFFFF&\b0}散去绞灭逆贼
+Dialogue: 0,0:00:22.77,0:00:24.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}屏气凝神抽出硬弓
+Dialogue: 0,0:00:25.48,0:00:27.68,Default,,0,0,0,,强忍{\c&H0000FFFF&\b1}疼痛{\c&H00FFFFFF&\b0}弯弓搭箭警惕周围

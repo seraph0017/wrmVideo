@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_034 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}称放了魏
+Dialogue: 0,0:00:01.58,0:00:03.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}晋二王{\c&H00FFFFFF&\b0}可考虑给李承乾别的
+Dialogue: 0,0:00:04.34,0:00:05.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}嘲笑
+Dialogue: 0,0:00:05.70,0:00:07.58,Default,,0,0,0,,称{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}别以为他是收破烂
+Dialogue: 0,0:00:07.58,0:00:07.74,Default,,0,0,0,,的
+Dialogue: 0,0:00:08.09,0:00:09.37,Default,,0,0,0,,表示只要{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}一走
+Dialogue: 0,0:00:09.57,0:00:11.10,Default,,0,0,0,,他马上率军夺回{\c&H0000FFFF&\b1}灵武{\c&H00FFFFFF&\b0}等
+Dialogue: 0,0:00:11.34,0:00:12.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}智商恢复
+Dialogue: 0,0:00:12.76,0:00:15.16,Default,,0,0,0,,想破局{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}催促史官记录
+Dialogue: 0,0:00:15.53,0:00:16.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}然后{\c&H00FFFFFF&\b0}让把魏
+Dialogue: 0,0:00:16.77,0:00:18.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}晋二王{\c&H00FFFFFF&\b0}扔下城去
+Dialogue: 0,0:00:18.52,0:00:19.35,Default,,0,0,0,,威胁{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.72,0:00:20.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}急忙阻止
+Dialogue: 0,0:00:21.23,0:00:22.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}狮子大开口
+Dialogue: 0,0:00:22.88,0:00:24.76,Default,,0,0,0,,让{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}孤身回长安并留下
+Dialogue: 0,0:00:24.76,0:00:25.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}兵马{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:25.57,0:00:26.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}拒绝
+Dialogue: 0,0:00:27.02,0:00:29.16,Default,,0,0,0,,称如{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}杀弟弟就玉石俱
+Dialogue: 0,0:00:29.16,0:00:29.43,Default,,0,0,0,,焚

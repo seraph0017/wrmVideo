@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_008 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.75,Default,,0,0,0,,有{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}禀报城外有人奉李
+Dialogue: 0,0:00:01.75,0:00:02.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}世绩{\c&H00FFFFFF&\b0}帅令调粮
+Dialogue: 0,0:00:03.31,0:00:04.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}让人领进
+Dialogue: 0,0:00:05.05,0:00:06.67,Default,,0,0,0,,发现是{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}派来的士兵
+Dialogue: 0,0:00:07.09,0:00:08.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}面露焦急
+Dialogue: 0,0:00:08.42,0:00:09.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}笑眯眯回应
+Dialogue: 0,0:00:09.97,0:00:11.24,Default,,0,0,0,,让{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}回去告知李
+Dialogue: 0,0:00:11.24,0:00:12.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}世绩{\c&H00FFFFFF&\b0}自己不富裕
+Dialogue: 0,0:00:12.63,0:00:14.34,Default,,0,0,0,,若不行可来{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}都督府吃
+Dialogue: 0,0:00:14.34,0:00:14.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}管饱{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.07,0:00:16.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世绩{\c&H00FFFFFF&\b0}这边因粮草不济愁眉
+Dialogue: 0,0:00:16.94,0:00:17.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}不展{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.74,0:00:19.36,Default,,0,0,0,,多次上书{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}调粮
+Dialogue: 0,0:00:19.59,0:00:21.18,Default,,0,0,0,,收到回复让从{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}都
+Dialogue: 0,0:00:21.18,0:00:21.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}督府{\c&H00FFFFFF&\b0}调粮
+Dialogue: 0,0:00:22.25,0:00:23.74,Default,,0,0,0,,但{\c&H0000FFFF&\b1}粮草{\c&H00FFFFFF&\b0}不够支撑多久

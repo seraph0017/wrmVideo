@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_027 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}离开侯君集后
+Dialogue: 0,0:00:01.95,0:00:02.90,Default,,0,0,0,,前往关押{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.21,0:00:04.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}等四人的帐篷
+Dialogue: 0,0:00:04.86,0:00:06.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}帐篷{\c&H00FFFFFF&\b0}内四人正在打牌取乐
+Dialogue: 0,0:00:07.32,0:00:09.24,Default,,0,0,0,,见到{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着帝王服饰
+Dialogue: 0,0:00:09.53,0:00:10.31,Default,,0,0,0,,皆{\c&H0000FFFF&\b1}震惊{\c&H00FFFFFF&\b0}不已
+Dialogue: 0,0:00:10.65,0:00:12.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}向他们宣布自己已继
+Dialogue: 0,0:00:12.40,0:00:12.97,Default,,0,0,0,,承{\c&H0000FFFF&\b1}大统{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.19,0:00:15.24,Default,,0,0,0,,并拿出传国{\c&H0000FFFF&\b1}玉玺{\c&H00FFFFFF&\b0}以证明此事
+Dialogue: 0,0:00:15.60,0:00:17.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}庄重而严肃

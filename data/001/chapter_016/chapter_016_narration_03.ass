@@ -1,0 +1,39 @@
+[Script Info]
+Title: chapter_016 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}围观{\c&H00FFFFFF&\b0}百姓中有寒
+Dialogue: 0,0:00:01.19,0:00:03.48,Default,,0,0,0,,门读书人高声为{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}说话
+Dialogue: 0,0:00:04.04,0:00:04.78,Default,,0,0,0,,“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.93,0:00:06.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}殿下可是让我们这些寒
+Dialogue: 0,0:00:06.60,0:00:07.89,Default,,0,0,0,,门{\c&H0000FFFF&\b1}子弟{\c&H00FFFFFF&\b0}都能用得起纸读
+Dialogue: 0,0:00:07.89,0:00:08.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}得起{\c&H00FFFFFF&\b0}书
+Dialogue: 0,0:00:08.77,0:00:10.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}为何要逼死他啊
+Dialogue: 0,0:00:10.46,0:00:11.26,Default,,0,0,0,,”“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.44,0:00:13.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}殿下的‘天地四言’
+Dialogue: 0,0:00:13.63,0:00:14.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}立言{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.24,0:00:14.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}立心{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.61,0:00:17.01,Default,,0,0,0,,以后一定会成为一代{\c&H0000FFFF&\b1}明君{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:17.14,0:00:19.36,Default,,0,0,0,,”“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}求您不要逼太子啊
+Dialogue: 0,0:00:19.48,0:00:21.59,Default,,0,0,0,,我替天下穷苦{\c&H0000FFFF&\b1}读书人{\c&H00FFFFFF&\b0}谢
+Dialogue: 0,0:00:21.59,0:00:22.02,Default,,0,0,0,,谢您了
+Dialogue: 0,0:00:22.18,0:00:24.41,Default,,0,0,0,,”这些话让{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}神色阴沉
+Dialogue: 0,0:00:24.55,0:00:26.68,Default,,0,0,0,,他哀求{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}放下刀
+Dialogue: 0,0:00:26.80,0:00:27.59,Default,,0,0,0,,称会给{\c&H0000FFFF&\b1}公正{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:27.88,0:00:29.37,Default,,0,0,0,,但{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}不屑冷笑
+Dialogue: 0,0:00:29.67,0:00:30.97,Default,,0,0,0,,指责{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}虚伪
+Dialogue: 0,0:00:31.12,0:00:31.89,Default,,0,0,0,,还怒对{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:32.04,0:00:34.16,Default,,0,0,0,,场景依旧是{\c&H0000FFFF&\b1}长安街{\c&H00FFFFFF&\b0}头
+Dialogue: 0,0:00:34.34,0:00:34.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}人群{\c&H00FFFFFF&\b0}嘈杂光线刺眼

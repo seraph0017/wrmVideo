@@ -1,0 +1,39 @@
+[Script Info]
+Title: chapter_047 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}在战场上奋勇厮杀
+Dialogue: 0,0:00:02.40,0:00:03.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}铁槊{\c&H00FFFFFF&\b0}如蛟龙出海
+Dialogue: 0,0:00:04.02,0:00:05.97,Default,,0,0,0,,槊锋所过之处{\c&H0000FFFF&\b1}敌军{\c&H00FFFFFF&\b0}纷纷避让
+Dialogue: 0,0:00:06.40,0:00:08.21,Default,,0,0,0,,然而{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}的玄甲军老兵变
+Dialogue: 0,0:00:08.21,0:00:08.83,Default,,0,0,0,,换{\c&H0000FFFF&\b1}阵型{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.11,0:00:10.66,Default,,0,0,0,,以车轮战法消耗{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:10.66,0:00:11.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}体力{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.30,0:00:12.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}见状
+Dialogue: 0,0:00:12.32,0:00:13.46,Default,,0,0,0,,抬手怒喝{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.71,0:00:14.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}指责{\c&H00FFFFFF&\b0}其助纣为虐
+Dialogue: 0,0:00:15.02,0:00:16.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}脸上露出愧疚之色
+Dialogue: 0,0:00:17.32,0:00:18.32,Default,,0,0,0,,但转瞬{\c&H0000FFFF&\b1}坚定{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.61,0:00:19.45,Default,,0,0,0,,反驳{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.75,0:00:21.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是激烈的战场
+Dialogue: 0,0:00:21.30,0:00:22.86,Default,,0,0,0,,白天{\c&H0000FFFF&\b1}战况{\c&H00FFFFFF&\b0}胶着
+Dialogue: 0,0:00:23.31,0:00:25.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}身着高领服饰
+Dialogue: 0,0:00:25.48,0:00:26.27,Default,,0,0,0,,挥舞{\c&H0000FFFF&\b1}铁槊{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:26.69,0:00:28.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄甲军{\c&H00FFFFFF&\b0}士兵身着高领服饰
+Dialogue: 0,0:00:29.15,0:00:29.94,Default,,0,0,0,,变换{\c&H0000FFFF&\b1}阵型{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:30.30,0:00:32.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}身着深色高领服饰
+Dialogue: 0,0:00:32.55,0:00:33.34,Default,,0,0,0,,怒喝{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:33.70,0:00:35.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}身着高领服饰
+Dialogue: 0,0:00:35.64,0:00:37.60,Default,,0,0,0,,反驳{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}神情坚定

@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_038 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.38,Default,,0,0,0,,在大营内{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}神色凝重
+Dialogue: 0,0:00:02.67,0:00:04.21,Default,,0,0,0,,语气急促地对{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}说道
+Dialogue: 0,0:00:04.80,0:00:06.91,Default,,0,0,0,,“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}赶紧决断吧
+Dialogue: 0,0:00:07.04,0:00:08.34,Default,,0,0,0,,晚了必{\c&H0000FFFF&\b1}陷入{\c&H00FFFFFF&\b0}被动
+Dialogue: 0,0:00:08.43,0:00:10.84,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神色一凝面露忧虑
+Dialogue: 0,0:00:11.11,0:00:12.88,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}黑脸{\c&H00FFFFFF&\b0}男子站起身来
+Dialogue: 0,0:00:13.05,0:00:14.86,Default,,0,0,0,,一脸{\c&H0000FFFF&\b1}淡定{\c&H00FFFFFF&\b0}还轻笑一声
+Dialogue: 0,0:00:14.94,0:00:16.59,Default,,0,0,0,,称不信{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}敢杀他们这些
+Dialogue: 0,0:00:16.59,0:00:17.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}饱学之士{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.56,0:00:19.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}下意识掏耳朵
+Dialogue: 0,0:00:19.52,0:00:20.34,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}暗骂{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.47,0:00:21.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是大营内
+Dialogue: 0,0:00:21.73,0:00:23.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}略显紧张氛围凝重
+Dialogue: 0,0:00:24.13,0:00:26.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是大营的营帐等设施
+Dialogue: 0,0:00:26.31,0:00:28.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气{\c&H00FFFFFF&\b0}可能是正常光线偏暗

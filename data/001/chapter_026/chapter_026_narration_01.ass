@@ -1,0 +1,34 @@
+[Script Info]
+Title: chapter_026 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}夜色{\c&H00FFFFFF&\b0}深沉
+Dialogue: 0,0:00:01.09,0:00:03.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}马周等人如同窃
+Dialogue: 0,0:00:03.15,0:00:03.61,Default,,0,0,0,,贼{\c&H0000FFFF&\b1}一般{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.17,0:00:05.78,Default,,0,0,0,,悄然从囚禁他们的{\c&H0000FFFF&\b1}宫殿{\c&H00FFFFFF&\b0}中
+Dialogue: 0,0:00:05.78,0:00:06.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}溜出{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.70,0:00:07.68,Default,,0,0,0,,他们{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}紧张
+Dialogue: 0,0:00:08.06,0:00:09.72,Default,,0,0,0,,心中满是对{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的不满
+Dialogue: 0,0:00:09.98,0:00:11.46,Default,,0,0,0,,懊悔不该轻信他的{\c&H0000FFFF&\b1}鬼话{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.72,0:00:13.30,Default,,0,0,0,,此时场景是在{\c&H0000FFFF&\b1}宫殿{\c&H00FFFFFF&\b0}外的夜
+Dialogue: 0,0:00:13.30,0:00:13.72,Default,,0,0,0,,色中
+Dialogue: 0,0:00:14.03,0:00:14.72,Default,,0,0,0,,周围{\c&H0000FFFF&\b1}寂静{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.13,0:00:16.77,Default,,0,0,0,,只有他们轻手轻脚的{\c&H0000FFFF&\b1}身影{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.05,0:00:18.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}眉头紧锁
+Dialogue: 0,0:00:18.71,0:00:20.90,Default,,0,0,0,,步伐急促{\c&H0000FFFF&\b1}马周{\c&H00FFFFFF&\b0}则不时张望
+Dialogue: 0,0:00:21.24,0:00:22.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}生怕{\c&H00FFFFFF&\b0}被发现
+Dialogue: 0,0:00:22.45,0:00:25.19,Default,,0,0,0,,而远处{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}正站在城墙上
+Dialogue: 0,0:00:25.61,0:00:26.86,Default,,0,0,0,,望着他们离去的{\c&H0000FFFF&\b1}方向{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:27.34,0:00:29.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}眼神{\c&H00FFFFFF&\b0}中带着一丝复杂的情绪

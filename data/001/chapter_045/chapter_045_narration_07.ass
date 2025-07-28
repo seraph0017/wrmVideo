@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_045 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}都督府中烛光摇曳
+Dialogue: 0,0:00:02.50,0:00:04.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在沙盘上摆弄
+Dialogue: 0,0:00:04.54,0:00:06.74,Default,,0,0,0,,穷尽记忆还原四{\c&H0000FFFF&\b1}渡赤水{\c&H00FFFFFF&\b0}战事
+Dialogue: 0,0:00:07.04,0:00:08.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}看着沙盘
+Dialogue: 0,0:00:08.67,0:00:09.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}认为{\c&H00FFFFFF&\b0}是必死之局
+Dialogue: 0,0:00:10.23,0:00:12.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}不断讲解用兵方略
+Dialogue: 0,0:00:12.31,0:00:13.35,Default,,0,0,0,,提到{\c&H0000FFFF&\b1}声东击西{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.64,0:00:14.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}调虎离山{\c&H00FFFFFF&\b0}等
+Dialogue: 0,0:00:14.79,0:00:16.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}虽认可但担心风险
+Dialogue: 0,0:00:17.11,0:00:19.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}坚定表示大丈夫行事
+Dialogue: 0,0:00:19.25,0:00:20.03,Default,,0,0,0,,不惧{\c&H0000FFFF&\b1}风波恶{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.42,0:00:21.80,Default,,0,0,0,,让{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}配合推演

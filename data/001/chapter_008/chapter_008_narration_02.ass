@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_008 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}继续监工
+Dialogue: 0,0:00:01.70,0:00:03.52,Default,,0,0,0,,看着已挖好的{\c&H0000FFFF&\b1}大坑{\c&H00FFFFFF&\b0}颇为满意
+Dialogue: 0,0:00:03.92,0:00:05.79,Default,,0,0,0,,随后又吩咐{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}去城外挖
+Dialogue: 0,0:00:05.79,0:00:06.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}细土{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.56,0:00:07.50,Default,,0,0,0,,用于加固{\c&H0000FFFF&\b1}坑壁{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.81,0:00:09.87,Default,,0,0,0,,领头的士兵听到后{\c&H0000FFFF&\b1}干劲十足{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.19,0:00:11.27,Default,,0,0,0,,传达给其他{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.53,0:00:12.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}纷纷忙碌起来
+Dialogue: 0,0:00:12.89,0:00:14.28,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}依旧是草原
+Dialogue: 0,0:00:14.59,0:00:16.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}李承乾在一旁指导
+Dialogue: 0,0:00:17.08,0:00:18.32,Default,,0,0,0,,士兵们{\c&H0000FFFF&\b1}积极行动{\c&H00FFFFFF&\b0}

@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_012 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.30,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}殴打{\c&H00FFFFFF&\b0}拔灼
+Dialogue: 0,0:00:01.58,0:00:03.31,Default,,0,0,0,,拔灼{\c&H0000FFFF&\b1}服软{\c&H00FFFFFF&\b0}后被带去疗伤
+Dialogue: 0,0:00:03.87,0:00:05.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}俘虏{\c&H00FFFFFF&\b0}被安排关押
+Dialogue: 0,0:00:05.51,0:00:07.30,Default,,0,0,0,,哨骑来报有{\c&H0000FFFF&\b1}千人{\c&H00FFFFFF&\b0}人马靠近
+Dialogue: 0,0:00:07.67,0:00:09.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}猜测可能是夷男可汗
+Dialogue: 0,0:00:09.51,0:00:10.03,Default,,0,0,0,,来{\c&H0000FFFF&\b1}救子{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.34,0:00:11.95,Default,,0,0,0,,安排{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}率军查看
+Dialogue: 0,0:00:12.25,0:00:14.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}等收拢兵士回城
+Dialogue: 0,0:00:14.33,0:00:15.66,Default,,0,0,0,,北向辉身着{\c&H0000FFFF&\b1}战甲{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.96,0:00:16.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}抬手{\c&H00FFFFFF&\b0}殴打拔灼
+Dialogue: 0,0:00:17.18,0:00:19.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}凶狠拔灼蓬头垢面
+Dialogue: 0,0:00:19.57,0:00:20.59,Default,,0,0,0,,被殴打后{\c&H0000FFFF&\b1}服软{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.82,0:00:23.21,Default,,0,0,0,,表情痛苦哨骑向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}汇报
+Dialogue: 0,0:00:23.58,0:00:25.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}紧张环境为帅帐内
+Dialogue: 0,0:00:26.04,0:00:27.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}身着战甲
+Dialogue: 0,0:00:27.56,0:00:29.52,Default,,0,0,0,,迅速调兵{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}为帅帐外

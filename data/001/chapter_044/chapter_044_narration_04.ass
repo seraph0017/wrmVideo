@@ -1,0 +1,37 @@
+[Script Info]
+Title: chapter_044 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}收到信鸽传来的消息
+Dialogue: 0,0:00:02.46,0:00:03.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}先是凝重
+Dialogue: 0,0:00:03.99,0:00:05.49,Default,,0,0,0,,而后又浮现出一丝{\c&H0000FFFF&\b1}玩味{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.90,0:00:07.04,Default,,0,0,0,,信中内容是{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.38,0:00:09.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}李道宗{\c&H00FFFFFF&\b0}合力力挫吐蕃大军
+Dialogue: 0,0:00:09.41,0:00:11.21,Default,,0,0,0,,但{\c&H0000FFFF&\b1}唐检{\c&H00FFFFFF&\b0}答应的粮草未第一时
+Dialogue: 0,0:00:11.21,0:00:11.74,Default,,0,0,0,,间{\c&H0000FFFF&\b1}到位{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.04,0:00:13.32,Default,,0,0,0,,二人被困在{\c&H0000FFFF&\b1}张掖{\c&H00FFFFFF&\b0}城
+Dialogue: 0,0:00:13.79,0:00:15.62,Default,,0,0,0,,幽州已被{\c&H0000FFFF&\b1}高句丽{\c&H00FFFFFF&\b0}大军攻破
+Dialogue: 0,0:00:16.12,0:00:18.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏定方{\c&H00FFFFFF&\b0}大军最少再有三日才
+Dialogue: 0,0:00:18.26,0:00:18.82,Default,,0,0,0,,能{\c&H0000FFFF&\b1}到达{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.18,0:00:20.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}王家被灭
+Dialogue: 0,0:00:20.55,0:00:22.34,Default,,0,0,0,,然而{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}并未亲自前往
+Dialogue: 0,0:00:22.69,0:00:24.18,Default,,0,0,0,,依旧留在{\c&H0000FFFF&\b1}武牢关{\c&H00FFFFFF&\b0}大营
+Dialogue: 0,0:00:24.64,0:00:26.14,Default,,0,0,0,,场景是行宫的{\c&H0000FFFF&\b1}房间内{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:26.36,0:00:28.19,Default,,0,0,0,,环境{\c&H0000FFFF&\b1}安静{\c&H00FFFFFF&\b0}光线较暗
+Dialogue: 0,0:00:28.66,0:00:30.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:30.84,0:00:32.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}复杂地看着信件
+Dialogue: 0,0:00:32.59,0:00:34.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}在旁衣着高领
+Dialogue: 0,0:00:34.76,0:00:37.03,Default,,0,0,0,,神情严肃地关注着{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:37.03,0:00:37.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}反应{\c&H00FFFFFF&\b0}

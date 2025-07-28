@@ -1,0 +1,37 @@
+[Script Info]
+Title: chapter_038 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.12,Default,,0,0,0,,北向辉一{\c&H0000FFFF&\b1}咬牙{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.52,0:00:03.35,Default,,0,0,0,,凶狠地说“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.53,0:00:05.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}不行{\c&H00FFFFFF&\b0}咱回去拼了
+Dialogue: 0,0:00:05.39,0:00:07.14,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}横了他一眼
+Dialogue: 0,0:00:07.63,0:00:08.75,Default,,0,0,0,,称“拼个P
+Dialogue: 0,0:00:08.94,0:00:10.90,Default,,0,0,0,,能{\c&H0000FFFF&\b1}拼过{\c&H00FFFFFF&\b0}咱还天天费这劲
+Dialogue: 0,0:00:11.15,0:00:13.56,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中快速思考路线
+Dialogue: 0,0:00:13.72,0:00:16.28,Default,,0,0,0,,考虑退回{\c&H0000FFFF&\b1}蔚州{\c&H00FFFFFF&\b0}或和河北门
+Dialogue: 0,0:00:16.28,0:00:16.64,Default,,0,0,0,,阀{\c&H0000FFFF&\b1}接触{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.74,0:00:18.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}觉得{\c&H00FFFFFF&\b0}李佑八成完蛋了
+Dialogue: 0,0:00:18.75,0:00:19.84,Default,,0,0,0,,但{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}崩溃
+Dialogue: 0,0:00:19.96,0:00:21.80,Default,,0,0,0,,得凭手里人马{\c&H0000FFFF&\b1}周旋{\c&H00FFFFFF&\b0}太冒险
+Dialogue: 0,0:00:21.89,0:00:23.23,Default,,0,0,0,,决定先不返回{\c&H0000FFFF&\b1}蔚州{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:23.43,0:00:24.41,Default,,0,0,0,,而是去{\c&H0000FFFF&\b1}汴州{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.54,0:00:26.40,Default,,0,0,0,,让{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}找机灵人联系河
+Dialogue: 0,0:00:26.40,0:00:27.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}北道{\c&H00FFFFFF&\b0}世家
+Dialogue: 0,0:00:27.30,0:00:28.71,Default,,0,0,0,,说{\c&H0000FFFF&\b1}有意{\c&H00FFFFFF&\b0}共同抗敌
+Dialogue: 0,0:00:28.86,0:00:29.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是野外
+Dialogue: 0,0:00:30.18,0:00:32.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}夜色{\c&H00FFFFFF&\b0}初临气氛紧张
+Dialogue: 0,0:00:32.17,0:00:34.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是野外的道路和逐渐降
+Dialogue: 0,0:00:34.01,0:00:34.17,Default,,0,0,0,,临的{\c&H0000FFFF&\b1}夜色{\c&H00FFFFFF&\b0}

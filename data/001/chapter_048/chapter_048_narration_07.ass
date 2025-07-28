@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_048 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}洛阳城{\c&H00FFFFFF&\b0}闹市依旧热闹
+Dialogue: 0,0:00:02.12,0:00:04.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回程途中担心洛阳情
+Dialogue: 0,0:00:04.17,0:00:04.38,Default,,0,0,0,,况
+Dialogue: 0,0:00:04.76,0:00:06.39,Default,,0,0,0,,见{\c&H0000FFFF&\b1}城门{\c&H00FFFFFF&\b0}无异常松了口气
+Dialogue: 0,0:00:06.74,0:00:08.45,Default,,0,0,0,,北向辉在路上{\c&H0000FFFF&\b1}询问{\c&H00FFFFFF&\b0}月月的
+Dialogue: 0,0:00:08.45,0:00:08.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}去向{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.20,0:00:11.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}分析月月大概率是出
+Dialogue: 0,0:00:11.14,0:00:11.55,Default,,0,0,0,,了{\c&H0000FFFF&\b1}意外{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.96,0:00:13.50,Default,,0,0,0,,且可能与她想去{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}有关
+Dialogue: 0,0:00:13.91,0:00:15.50,Default,,0,0,0,,认为她可能被{\c&H0000FFFF&\b1}信任{\c&H00FFFFFF&\b0}的人所害
+Dialogue: 0,0:00:15.84,0:00:16.82,Default,,0,0,0,,且在{\c&H0000FFFF&\b1}岭南{\c&H00FFFFFF&\b0}之地
+Dialogue: 0,0:00:17.21,0:00:19.11,Default,,0,0,0,,北向辉请求{\c&H0000FFFF&\b1}战事{\c&H00FFFFFF&\b0}结束后探
+Dialogue: 0,0:00:19.11,0:00:19.93,Default,,0,0,0,,查月月{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.26,0:00:21.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}答应
+Dialogue: 0,0:00:21.46,0:00:22.98,Default,,0,0,0,,解说{\c&H0000FFFF&\b1}内容{\c&H00FFFFFF&\b0}约200字

@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_020 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.47,Default,,0,0,0,,长{\c&H0000FFFF&\b1}安东市{\c&H00FFFFFF&\b0}满地狼藉
+Dialogue: 0,0:00:01.95,0:00:03.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}和李靖率军冲杀
+Dialogue: 0,0:00:04.18,0:00:05.89,Default,,0,0,0,,月月手握{\c&H0000FFFF&\b1}横刀{\c&H00FFFFFF&\b0}紧随其后
+Dialogue: 0,0:00:06.21,0:00:08.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}认为守在东市附近粮
+Dialogue: 0,0:00:08.31,0:00:09.76,Default,,0,0,0,,草存储之地{\c&H0000FFFF&\b1}利于{\c&H00FFFFFF&\b0}不败
+Dialogue: 0,0:00:10.07,0:00:10.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}也赞成
+Dialogue: 0,0:00:11.24,0:00:12.60,Default,,0,0,0,,月月提出进攻{\c&H0000FFFF&\b1}大明宫{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.88,0:00:14.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}同意分她六百人马
+Dialogue: 0,0:00:14.94,0:00:16.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}李道宗{\c&H00FFFFFF&\b0}本不想掺和
+Dialogue: 0,0:00:16.50,0:00:18.40,Default,,0,0,0,,在{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}施压下同意跟随
+Dialogue: 0,0:00:18.79,0:00:19.72,Default,,0,0,0,,月月{\c&H0000FFFF&\b1}心思{\c&H00FFFFFF&\b0}细腻
+Dialogue: 0,0:00:20.05,0:00:21.42,Default,,0,0,0,,觉得{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}举动奇怪

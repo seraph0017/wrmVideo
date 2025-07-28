@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_041 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.01,Default,,0,0,0,,小半个{\c&H0000FFFF&\b1}时辰{\c&H00FFFFFF&\b0}后
+Dialogue: 0,0:00:01.35,0:00:03.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}率军至虎牢关下
+Dialogue: 0,0:00:03.63,0:00:05.37,Default,,0,0,0,,仍不死{\c&H0000FFFF&\b1}心想{\c&H00FFFFFF&\b0}看看是否真被李
+Dialogue: 0,0:00:05.37,0:00:06.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}承乾{\c&H00FFFFFF&\b0}占了
+Dialogue: 0,0:00:06.57,0:00:08.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}从软座上起身
+Dialogue: 0,0:00:08.54,0:00:10.29,Default,,0,0,0,,在{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}搀扶下颤颤巍巍走
+Dialogue: 0,0:00:10.29,0:00:10.84,Default,,0,0,0,,到{\c&H0000FFFF&\b1}城边{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.08,0:00:11.94,Default,,0,0,0,,对{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}说
+Dialogue: 0,0:00:12.28,0:00:14.28,Default,,0,0,0,,“一别多时可{\c&H0000FFFF&\b1}还好{\c&H00FFFFFF&\b0}啊
+Dialogue: 0,0:00:14.41,0:00:15.79,Default,,0,0,0,,朕劝您{\c&H0000FFFF&\b1}还是{\c&H00FFFFFF&\b0}走吧
+Dialogue: 0,0:00:15.86,0:00:17.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}武牢关{\c&H00FFFFFF&\b0}里现在太挤了
+Dialogue: 0,0:00:17.73,0:00:18.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}就算{\c&H00FFFFFF&\b0}非进来
+Dialogue: 0,0:00:18.85,0:00:19.98,Default,,0,0,0,,也没您坐的地
+Dialogue: 0,0:00:20.11,0:00:21.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}估计{\c&H00FFFFFF&\b0}得趴着
+Dialogue: 0,0:00:21.11,0:00:23.24,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}听到后幻想破灭
+Dialogue: 0,0:00:23.39,0:00:25.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}气血{\c&H00FFFFFF&\b0}上涌伤口隐隐作痛

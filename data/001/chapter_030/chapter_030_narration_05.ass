@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_030 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}回鹘{\c&H00FFFFFF&\b0}大军的大纛旗出现
+Dialogue: 0,0:00:02.05,0:00:04.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}知回鹘与李世民关系
+Dialogue: 0,0:00:04.47,0:00:05.20,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}担忧{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.66,0:00:07.75,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}军队在舍身冲杀
+Dialogue: 0,0:00:07.75,0:00:08.73,Default,,0,0,0,,下{\c&H0000FFFF&\b1}杀出重围{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.25,0:00:10.47,Default,,0,0,0,,但无{\c&H0000FFFF&\b1}援军{\c&H00FFFFFF&\b0}仍难敌
+Dialogue: 0,0:00:10.76,0:00:12.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}看到大纛旗
+Dialogue: 0,0:00:12.39,0:00:13.48,Default,,0,0,0,,眼中{\c&H0000FFFF&\b1}精光{\c&H00FFFFFF&\b0}暴涨
+Dialogue: 0,0:00:13.79,0:00:16.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}仰天{\c&H00FFFFFF&\b0}狂笑传令尉迟将军汇合
+Dialogue: 0,0:00:16.95,0:00:18.38,Default,,0,0,0,,单独{\c&H0000FFFF&\b1}策马{\c&H00FFFFFF&\b0}立于军前
+Dialogue: 0,0:00:18.79,0:00:20.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率军疾驰后下令原地
+Dialogue: 0,0:00:20.86,0:00:21.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}备战{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.53,0:00:22.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}北向{\c&H00FFFFFF&\b0}辉冲回
+Dialogue: 0,0:00:22.93,0:00:25.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}战甲{\c&H00FFFFFF&\b0}满是鲜血双目血红
+Dialogue: 0,0:00:25.73,0:00:27.23,Default,,0,0,0,,问为何不直接{\c&H0000FFFF&\b1}冲出去{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:27.64,0:00:29.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}冷静表示冲出去概率
+Dialogue: 0,0:00:29.62,0:00:29.99,Default,,0,0,0,,不大
+Dialogue: 0,0:00:30.34,0:00:31.86,Default,,0,0,0,,且觉{\c&H0000FFFF&\b1}回鹘{\c&H00FFFFFF&\b0}来此有蹊跷
+Dialogue: 0,0:00:32.41,0:00:33.20,Default,,0,0,0,,要{\c&H0000FFFF&\b1}看看{\c&H00FFFFFF&\b0}再说

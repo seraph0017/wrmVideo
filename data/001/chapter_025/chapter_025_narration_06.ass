@@ -1,0 +1,30 @@
+[Script Info]
+Title: chapter_025 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.89,Default,,0,0,0,,春明门外{\c&H0000FFFF&\b1}暮色{\c&H00FFFFFF&\b0}如血
+Dialogue: 0,0:00:02.29,0:00:04.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}按照计划分批次运送
+Dialogue: 0,0:00:04.27,0:00:04.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}物资{\c&H00FFFFFF&\b0}出城
+Dialogue: 0,0:00:05.45,0:00:07.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌等外戚重臣和家
+Dialogue: 0,0:00:07.38,0:00:08.26,Default,,0,0,0,,眷{\c&H0000FFFF&\b1}隐藏{\c&H00FFFFFF&\b0}其中
+Dialogue: 0,0:00:08.58,0:00:09.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}站在城头
+Dialogue: 0,0:00:10.03,0:00:11.10,Default,,0,0,0,,心中思考{\c&H0000FFFF&\b1}局势{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.38,0:00:13.02,Default,,0,0,0,,觉得{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}不会轻易放过
+Dialogue: 0,0:00:13.29,0:00:14.87,Default,,0,0,0,,同时准备应对后续{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.16,0:00:16.77,Default,,0,0,0,,此时远处有{\c&H0000FFFF&\b1}大队{\c&H00FFFFFF&\b0}骑兵冲
+Dialogue: 0,0:00:16.77,0:00:17.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}杀而来{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.64,0:00:19.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}安排薛仁贵和北向辉
+Dialogue: 0,0:00:19.66,0:00:20.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}应对{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.36,0:00:21.60,Default,,0,0,0,,让他们尽量不要{\c&H0000FFFF&\b1}交战{\c&H00FFFFFF&\b0}

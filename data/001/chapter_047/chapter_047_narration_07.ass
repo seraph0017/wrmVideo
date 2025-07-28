@@ -1,0 +1,39 @@
+[Script Info]
+Title: chapter_047 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}听到激将勃然大怒
+Dialogue: 0,0:00:02.54,0:00:04.17,Default,,0,0,0,,但因身上{\c&H0000FFFF&\b1}伤口{\c&H00FFFFFF&\b0}和未披甲
+Dialogue: 0,0:00:04.72,0:00:05.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}强压怒火{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.80,0:00:07.70,Default,,0,0,0,,此时两军逐渐{\c&H0000FFFF&\b1}错开{\c&H00FFFFFF&\b0}位置
+Dialogue: 0,0:00:07.98,0:00:09.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}急于找到裴行俭
+Dialogue: 0,0:00:09.84,0:00:11.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}看到{\c&H00FFFFFF&\b0}远处喊杀声
+Dialogue: 0,0:00:11.39,0:00:12.66,Default,,0,0,0,,带着{\c&H0000FFFF&\b1}亲兵{\c&H00FFFFFF&\b0}冲过去
+Dialogue: 0,0:00:12.93,0:00:13.96,Default,,0,0,0,,与{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}会合
+Dialogue: 0,0:00:14.14,0:00:15.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}脸上露出感动之色
+Dialogue: 0,0:00:16.32,0:00:18.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则催促尽快汇合杀出
+Dialogue: 0,0:00:18.43,0:00:18.69,Default,,0,0,0,,去
+Dialogue: 0,0:00:19.01,0:00:19.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是战场
+Dialogue: 0,0:00:20.14,0:00:21.59,Default,,0,0,0,,白天两军{\c&H0000FFFF&\b1}错开{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.84,0:00:23.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}身着深色高领服饰
+Dialogue: 0,0:00:24.22,0:00:26.23,Default,,0,0,0,,怒容满面{\c&H0000FFFF&\b1}构图{\c&H00FFFFFF&\b0}体现愤怒
+Dialogue: 0,0:00:26.61,0:00:28.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:28.89,0:00:29.94,Default,,0,0,0,,带领{\c&H0000FFFF&\b1}亲兵{\c&H00FFFFFF&\b0}冲锋
+Dialogue: 0,0:00:30.21,0:00:31.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}构图{\c&H00FFFFFF&\b0}展现行动
+Dialogue: 0,0:00:31.55,0:00:33.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}身着高领服饰
+Dialogue: 0,0:00:33.45,0:00:35.56,Default,,0,0,0,,感动{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}构图体现会合
+Dialogue: 0,0:00:35.98,0:00:38.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:38.27,0:00:39.09,Default,,0,0,0,,催促{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:39.41,0:00:40.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}构图{\c&H00FFFFFF&\b0}展现指挥

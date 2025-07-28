@@ -1,0 +1,36 @@
+[Script Info]
+Title: chapter_036 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}情绪愈发激动
+Dialogue: 0,0:00:02.32,0:00:04.43,Default,,0,0,0,,突然抽出袖中{\c&H0000FFFF&\b1}短刀{\c&H00FFFFFF&\b0}横在脖颈
+Dialogue: 0,0:00:04.92,0:00:06.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}见状大惊失色
+Dialogue: 0,0:00:07.12,0:00:08.61,Default,,0,0,0,,身旁{\c&H0000FFFF&\b1}亲兵{\c&H00FFFFFF&\b0}反应迅速
+Dialogue: 0,0:00:08.94,0:00:09.96,Default,,0,0,0,,急忙上前{\c&H0000FFFF&\b1}阻拦{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.19,0:00:11.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}言语间满是对李
+Dialogue: 0,0:00:11.93,0:00:12.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}的指责
+Dialogue: 0,0:00:13.14,0:00:14.29,Default,,0,0,0,,称{\c&H0000FFFF&\b1}大唐{\c&H00FFFFFF&\b0}皇帝让李
+Dialogue: 0,0:00:14.29,0:00:16.10,Default,,0,0,0,,家{\c&H0000FFFF&\b1}女子{\c&H00FFFFFF&\b0}外嫁受辱却不让人
+Dialogue: 0,0:00:16.10,0:00:16.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}死去{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.85,0:00:18.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}话语{\c&H00FFFFFF&\b0}中充满愤怒与委屈
+Dialogue: 0,0:00:19.12,0:00:20.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}在亲兵阻拦后
+Dialogue: 0,0:00:20.93,0:00:22.77,Default,,0,0,0,,急切询问{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}太子的具
+Dialogue: 0,0:00:22.77,0:00:23.41,Default,,0,0,0,,体{\c&H0000FFFF&\b1}要求{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:23.66,0:00:25.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}则回应请李
+Dialogue: 0,0:00:25.18,0:00:27.08,Default,,0,0,0,,世民命令{\c&H0000FFFF&\b1}苏定方{\c&H00FFFFFF&\b0}出兵解蔚
+Dialogue: 0,0:00:27.08,0:00:27.67,Default,,0,0,0,,州{\c&H0000FFFF&\b1}之围{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:28.00,0:00:29.73,Default,,0,0,0,,且以{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}皇后临终遗言相
+Dialogue: 0,0:00:29.73,0:00:30.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}要挟{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:30.64,0:00:31.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}言语{\c&H00FFFFFF&\b0}间透着坚决

@@ -1,0 +1,30 @@
+[Script Info]
+Title: chapter_032 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.49,Default,,0,0,0,,帐内{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}沉默许久
+Dialogue: 0,0:00:01.92,0:00:03.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}咬牙起身
+Dialogue: 0,0:00:03.54,0:00:05.22,Default,,0,0,0,,决定休整后奇袭{\c&H0000FFFF&\b1}灵武{\c&H00FFFFFF&\b0}毁其
+Dialogue: 0,0:00:05.22,0:00:05.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}粮草{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.12,0:00:07.96,Default,,0,0,0,,此时帐外{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}进来通报云
+Dialogue: 0,0:00:07.96,0:00:09.02,Default,,0,0,0,,中{\c&H0000FFFF&\b1}方向{\c&H00FFFFFF&\b0}有快马到
+Dialogue: 0,0:00:09.43,0:00:10.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}眼中露出疑惑
+Dialogue: 0,0:00:11.15,0:00:13.04,Default,,0,0,0,,帐内{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}因众人的情绪而略
+Dialogue: 0,0:00:13.04,0:00:13.60,Default,,0,0,0,,显{\c&H0000FFFF&\b1}凝重{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.96,0:00:15.77,Default,,0,0,0,,众人目光紧紧盯着{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.16,0:00:18.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领宽袖长
+Dialogue: 0,0:00:18.15,0:00:18.45,Default,,0,0,0,,袍
+Dialogue: 0,0:00:18.69,0:00:19.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}步伐{\c&H00FFFFFF&\b0}坚定
+Dialogue: 0,0:00:19.77,0:00:22.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}穿着简朴军装神色匆忙

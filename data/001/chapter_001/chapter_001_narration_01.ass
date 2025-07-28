@@ -1,0 +1,44 @@
+[Script Info]
+Title: chapter_001 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.67,Default,,0,0,0,,晨光轻洒在{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫前的玉
+Dialogue: 0,0:00:01.67,0:00:02.15,Default,,0,0,0,,道上
+Dialogue: 0,0:00:02.60,0:00:04.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}正缓缓前行
+Dialogue: 0,0:00:04.68,0:00:05.62,Default,,0,0,0,,他{\c&H0000FFFF&\b1}身形{\c&H00FFFFFF&\b0}修长
+Dialogue: 0,0:00:06.05,0:00:07.77,Default,,0,0,0,,虽微微{\c&H0000FFFF&\b1}跛脚{\c&H00FFFFFF&\b0}却难掩贵气
+Dialogue: 0,0:00:08.09,0:00:09.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫巍峨耸立
+Dialogue: 0,0:00:09.51,0:00:11.35,Default,,0,0,0,,飞檐斗拱间龙纹{\c&H0000FFFF&\b1}云纹{\c&H00FFFFFF&\b0}精致
+Dialogue: 0,0:00:11.66,0:00:12.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}尽显{\c&H00FFFFFF&\b0}威严肃穆
+Dialogue: 0,0:00:12.93,0:00:14.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}宫门{\c&H00FFFFFF&\b0}前广场青石如镜
+Dialogue: 0,0:00:14.86,0:00:15.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}禁军{\c&H00FFFFFF&\b0}肃立
+Dialogue: 0,0:00:15.78,0:00:17.86,Default,,0,0,0,,铠甲在{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}下闪着冷冽光芒
+Dialogue: 0,0:00:18.22,0:00:19.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}停下脚步
+Dialogue: 0,0:00:19.85,0:00:20.80,Default,,0,0,0,,望着{\c&H0000FFFF&\b1}宫殿{\c&H00FFFFFF&\b0}长叹
+Dialogue: 0,0:00:21.27,0:00:23.11,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}感慨{\c&H00FFFFFF&\b0}日后恐难再睹这
+Dialogue: 0,0:00:23.11,0:00:23.70,Default,,0,0,0,,般{\c&H0000FFFF&\b1}盛景{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.02,0:00:25.84,Default,,0,0,0,,回忆起穿越成{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}后的经
+Dialogue: 0,0:00:25.84,0:00:26.07,Default,,0,0,0,,历
+Dialogue: 0,0:00:26.42,0:00:27.66,Default,,0,0,0,,他小心翼翼{\c&H0000FFFF&\b1}做人{\c&H00FFFFFF&\b0}却
+Dialogue: 0,0:00:27.66,0:00:29.45,Default,,0,0,0,,仍遭{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}对魏王李泰的宠
+Dialogue: 0,0:00:29.45,0:00:29.66,Default,,0,0,0,,溺
+Dialogue: 0,0:00:30.11,0:00:31.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}府僚属造反
+Dialogue: 0,0:00:31.47,0:00:33.72,Default,,0,0,0,,他{\c&H0000FFFF&\b1}深知{\c&H00FFFFFF&\b0}造反难成却决意轰
+Dialogue: 0,0:00:33.72,0:00:34.58,Default,,0,0,0,,轰{\c&H0000FFFF&\b1}烈烈{\c&H00FFFFFF&\b0}一搏
+Dialogue: 0,0:00:35.02,0:00:36.91,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}率甲士围来
+Dialogue: 0,0:00:37.16,0:00:38.38,Default,,0,0,0,,传达{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}旨意
+Dialogue: 0,0:00:38.88,0:00:40.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}强硬要求程知节行礼
+Dialogue: 0,0:00:41.22,0:00:42.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}诧异后勉强躬身
+Dialogue: 0,0:00:43.37,0:00:45.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}昂首挺胸向宫内走去

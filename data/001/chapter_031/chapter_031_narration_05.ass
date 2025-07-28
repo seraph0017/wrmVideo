@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_031 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}提及铁勒九性大部分
+Dialogue: 0,0:00:01.98,0:00:03.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}被义{\c&H00FFFFFF&\b0}成公主后人掌握
+Dialogue: 0,0:00:04.04,0:00:05.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}建议{\c&H00FFFFFF&\b0}趁机歼灭
+Dialogue: 0,0:00:05.33,0:00:06.70,Default,,0,0,0,,还表示率军为{\c&H0000FFFF&\b1}先锋{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.03,0:00:08.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}虽想先灭李承乾
+Dialogue: 0,0:00:08.96,0:00:11.01,Default,,0,0,0,,但考虑到{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}决定趁机剿灭
+Dialogue: 0,0:00:11.23,0:00:13.05,Default,,0,0,0,,回去路上{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}理性回归
+Dialogue: 0,0:00:13.41,0:00:15.21,Default,,0,0,0,,思考{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表现的真实目的
+Dialogue: 0,0:00:15.54,0:00:16.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是大漠归途
+Dialogue: 0,0:00:17.24,0:00:18.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}可能稍弱
+Dialogue: 0,0:00:18.72,0:00:20.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情有谋划
+Dialogue: 0,0:00:20.32,0:00:21.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}神情思考
+Dialogue: 0,0:00:21.90,0:00:23.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:24.27,0:00:25.02,Default,,0,0,0,,似在{\c&H0000FFFF&\b1}谋划{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:25.38,0:00:27.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}穿着玄色高领战甲
+Dialogue: 0,0:00:27.54,0:00:28.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}思考

@@ -1,0 +1,36 @@
+[Script Info]
+Title: chapter_007 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.56,Default,,0,0,0,,李承乾提到{\c&H0000FFFF&\b1}孙子兵法{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.97,0:00:04.21,Default,,0,0,0,,询问{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}朝廷传快马到云
+Dialogue: 0,0:00:04.21,0:00:05.30,Default,,0,0,0,,中{\c&H0000FFFF&\b1}都督府{\c&H00FFFFFF&\b0}的时间
+Dialogue: 0,0:00:05.67,0:00:07.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}回答大约三天到四天
+Dialogue: 0,0:00:08.32,0:00:10.43,Default,,0,0,0,,又说从{\c&H0000FFFF&\b1}张掖{\c&H00FFFFFF&\b0}到云中都督府距
+Dialogue: 0,0:00:10.43,0:00:10.98,Default,,0,0,0,,离{\c&H0000FFFF&\b1}更远{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.30,0:00:12.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}差不多{\c&H00FFFFFF&\b0}也是三天到四天
+Dialogue: 0,0:00:13.16,0:00:15.14,Default,,0,0,0,,还担心沿途{\c&H0000FFFF&\b1}关卡{\c&H00FFFFFF&\b0}收到消息后
+Dialogue: 0,0:00:15.14,0:00:15.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}朝廷{\c&H00FFFFFF&\b0}围剿
+Dialogue: 0,0:00:16.18,0:00:17.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示要赌一把
+Dialogue: 0,0:00:17.93,0:00:19.25,Default,,0,0,0,,打算去{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}都督府
+Dialogue: 0,0:00:19.62,0:00:21.40,Default,,0,0,0,,因为那里的{\c&H0000FFFF&\b1}局势{\c&H00FFFFFF&\b0}等情况合适
+Dialogue: 0,0:00:21.78,0:00:23.19,Default,,0,0,0,,场景是在{\c&H0000FFFF&\b1}张掖{\c&H00FFFFFF&\b0}营地
+Dialogue: 0,0:00:23.58,0:00:24.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}围坐讨论
+Dialogue: 0,0:00:25.00,0:00:26.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}玄色高领长袍
+Dialogue: 0,0:00:27.00,0:00:28.89,Default,,0,0,0,,束发手持{\c&H0000FFFF&\b1}书卷{\c&H00FFFFFF&\b0}讲解
+Dialogue: 0,0:00:29.20,0:00:30.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}高领服饰
+Dialogue: 0,0:00:30.95,0:00:32.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}束发{\c&H00FFFFFF&\b0}认真倾听
+Dialogue: 0,0:00:32.80,0:00:34.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}高领玄袍
+Dialogue: 0,0:00:34.58,0:00:36.10,Default,,0,0,0,,坚定{\c&H0000FFFF&\b1}神色{\c&H00FFFFFF&\b0}阐述打算

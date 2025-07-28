@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_041 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}骑在战马上
+Dialogue: 0,0:00:01.78,0:00:03.19,Default,,0,0,0,,因刚受重伤{\c&H0000FFFF&\b1}速度{\c&H00FFFFFF&\b0}不快
+Dialogue: 0,0:00:03.83,0:00:05.51,Default,,0,0,0,,听到士兵汇报{\c&H0000FFFF&\b1}武牢{\c&H00FFFFFF&\b0}关中兵
+Dialogue: 0,0:00:05.51,0:00:06.96,Default,,0,0,0,,勇叛变不开{\c&H0000FFFF&\b1}城门{\c&H00FFFFFF&\b0}时
+Dialogue: 0,0:00:07.29,0:00:08.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}下意识{\c&H00FFFFFF&\b0}回应‘好’
+Dialogue: 0,0:00:08.95,0:00:10.39,Default,,0,0,0,,过几秒才{\c&H0000FFFF&\b1}神色{\c&H00FFFFFF&\b0}大变
+Dialogue: 0,0:00:10.59,0:00:11.89,Default,,0,0,0,,怒吼‘日{\c&H0000FFFF&\b1}防夜{\c&H00FFFFFF&\b0}防
+Dialogue: 0,0:00:12.06,0:00:13.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}家贼难防{\c&H00FFFFFF&\b0}’
+Dialogue: 0,0:00:13.18,0:00:15.05,Default,,0,0,0,,此时后面一{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}飞马而至
+Dialogue: 0,0:00:15.21,0:00:17.55,Default,,0,0,0,,传来{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}传信说逆贼部
+Dialogue: 0,0:00:17.55,0:00:18.64,Default,,0,0,0,,队已被{\c&H0000FFFF&\b1}追散{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.84,0:00:20.68,Default,,0,0,0,,正分散{\c&H0000FFFF&\b1}行军{\c&H00FFFFFF&\b0}寻找废太子
+Dialogue: 0,0:00:20.84,0:00:22.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}听到后神色勃然大怒
+Dialogue: 0,0:00:22.96,0:00:23.81,Default,,0,0,0,,又笑{\c&H0000FFFF&\b1}出声{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.00,0:00:26.11,Default,,0,0,0,,然后下令让{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}别追了
+Dialogue: 0,0:00:26.34,0:00:27.11,Default,,0,0,0,,怕大{\c&H0000FFFF&\b1}兴城{\c&H00FFFFFF&\b0}被追没了

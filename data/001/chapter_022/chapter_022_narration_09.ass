@@ -1,0 +1,37 @@
+[Script Info]
+Title: chapter_022 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}对长孙无忌表示要解
+Dialogue: 0,0:00:01.87,0:00:02.46,Default,,0,0,0,,释{\c&H0000FFFF&\b1}此事{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.92,0:00:04.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}听到大臣话后露出得
+Dialogue: 0,0:00:04.88,0:00:05.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}意之色{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.93,0:00:07.66,Default,,0,0,0,,称要废除{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}太子之位
+Dialogue: 0,0:00:07.96,0:00:09.16,Default,,0,0,0,,让大臣{\c&H0000FFFF&\b1}划清界限{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.43,0:00:11.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则装傻充愣回应
+Dialogue: 0,0:00:11.55,0:00:13.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}声如雷霆让开城门
+Dialogue: 0,0:00:13.78,0:00:15.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回击称奉遗诏绞杀李
+Dialogue: 0,0:00:15.74,0:00:16.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.46,0:00:18.13,Default,,0,0,0,,并提出封其为{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.53,0:00:20.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}带人过来要带大
+Dialogue: 0,0:00:20.15,0:00:20.77,Default,,0,0,0,,臣{\c&H0000FFFF&\b1}下城{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.14,0:00:22.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}大臣{\c&H00FFFFFF&\b0}们色厉内荏
+Dialogue: 0,0:00:22.60,0:00:23.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是城头
+Dialogue: 0,0:00:23.93,0:00:24.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}君臣{\c&H00FFFFFF&\b0}交锋激烈
+Dialogue: 0,0:00:25.40,0:00:27.36,Default,,0,0,0,,特写第一个是{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}对长孙
+Dialogue: 0,0:00:27.36,0:00:28.31,Default,,0,0,0,,无忌的{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:28.77,0:00:30.70,Default,,0,0,0,,第二个是{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}得意的特写
+Dialogue: 0,0:00:31.05,0:00:33.02,Default,,0,0,0,,第三个是{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}怒吼的特写
+Dialogue: 0,0:00:33.44,0:00:35.60,Default,,0,0,0,,第四个是{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回击的特写

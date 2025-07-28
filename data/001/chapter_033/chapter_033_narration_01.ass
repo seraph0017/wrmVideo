@@ -1,0 +1,34 @@
+[Script Info]
+Title: chapter_033 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:00.75,Default,,0,0,0,,在{\c&H0000FFFF&\b1}房间内{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.23,0:00:03.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏宁{\c&H00FFFFFF&\b0}玉身着一袭青色薄纱高
+Dialogue: 0,0:00:03.24,0:00:03.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}领裙{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.20,0:00:05.80,Default,,0,0,0,,正看着{\c&H0000FFFF&\b1}水气{\c&H00FFFFFF&\b0}蒸腾的铜壶
+Dialogue: 0,0:00:06.17,0:00:07.29,Default,,0,0,0,,待水彻底{\c&H0000FFFF&\b1}沸腾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.67,0:00:08.57,Default,,0,0,0,,她提起{\c&H0000FFFF&\b1}铜壶{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.79,0:00:10.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}滚水{\c&H00FFFFFF&\b0}倾泻在茶盏中
+Dialogue: 0,0:00:10.44,0:00:11.48,Default,,0,0,0,,激起袅袅{\c&H0000FFFF&\b1}白雾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.72,0:00:13.54,Default,,0,0,0,,她身上的{\c&H0000FFFF&\b1}薄纱{\c&H00FFFFFF&\b0}随着动作摇曳
+Dialogue: 0,0:00:13.79,0:00:15.29,Default,,0,0,0,,尽显{\c&H0000FFFF&\b1}端庄{\c&H00FFFFFF&\b0}优雅又带妩媚
+Dialogue: 0,0:00:15.75,0:00:16.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}靠在榻上
+Dialogue: 0,0:00:17.30,0:00:17.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}看着{\c&H00FFFFFF&\b0}这一幕
+Dialogue: 0,0:00:18.30,0:00:20.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}脸色{\c&H00FFFFFF&\b0}略苦眼中透着疲惫
+Dialogue: 0,0:00:20.82,0:00:22.16,Default,,0,0,0,,此时的{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是室内
+Dialogue: 0,0:00:22.43,0:00:24.31,Default,,0,0,0,,光线柔和氛围{\c&H0000FFFF&\b1}静谧{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.70,0:00:25.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}靠在榻上
+Dialogue: 0,0:00:26.26,0:00:28.48,Default,,0,0,0,,神态慵懒{\c&H0000FFFF&\b1}苏宁{\c&H00FFFFFF&\b0}玉手持铜壶
+Dialogue: 0,0:00:28.73,0:00:29.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}动作{\c&H00FFFFFF&\b0}优雅

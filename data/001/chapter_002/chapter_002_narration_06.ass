@@ -1,0 +1,38 @@
+[Script Info]
+Title: chapter_002 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.65,Default,,0,0,0,,这时门外{\c&H0000FFFF&\b1}传来{\c&H00FFFFFF&\b0}嘈杂声
+Dialogue: 0,0:00:02.06,0:00:03.25,Default,,0,0,0,,是魏{\c&H0000FFFF&\b1}王李泰{\c&H00FFFFFF&\b0}的声音
+Dialogue: 0,0:00:03.71,0:00:05.72,Default,,0,0,0,,他叫嚷着{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}派人刺杀他
+Dialogue: 0,0:00:06.16,0:00:07.49,Default,,0,0,0,,要{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}出来给说法
+Dialogue: 0,0:00:07.87,0:00:09.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听到后嘴角扬起一抹
+Dialogue: 0,0:00:09.69,0:00:10.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.42,0:00:11.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}决定{\c&H00FFFFFF&\b0}应对
+Dialogue: 0,0:00:11.38,0:00:12.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏宁{\c&H00FFFFFF&\b0}玉询问要不要帮忙
+Dialogue: 0,0:00:13.16,0:00:14.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}让她去后堂歇息
+Dialogue: 0,0:00:15.13,0:00:16.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}自己{\c&H00FFFFFF&\b0}向门外走去
+Dialogue: 0,0:00:16.55,0:00:18.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}长的和李世民颇有几
+Dialogue: 0,0:00:18.30,0:00:18.94,Default,,0,0,0,,分{\c&H0000FFFF&\b1}相似{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.30,0:00:22.00,Default,,0,0,0,,五官{\c&H0000FFFF&\b1}英朗{\c&H00FFFFFF&\b0}身形高瘦肤色稍黑
+Dialogue: 0,0:00:22.31,0:00:23.57,Default,,0,0,0,,而{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}身材圆润
+Dialogue: 0,0:00:24.07,0:00:25.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}脸庞{\c&H00FFFFFF&\b0}宽大双颊饱满
+Dialogue: 0,0:00:26.16,0:00:28.39,Default,,0,0,0,,鼻梁不高皮肤{\c&H0000FFFF&\b1}白皙{\c&H00FFFFFF&\b0}细腻
+Dialogue: 0,0:00:28.83,0:00:30.61,Default,,0,0,0,,李泰见到{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}后指责他
+Dialogue: 0,0:00:31.00,0:00:32.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}冷笑一声
+Dialogue: 0,0:00:32.52,0:00:34.37,Default,,0,0,0,,然后一巴掌打在{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}脸上
+Dialogue: 0,0:00:34.77,0:00:35.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}被打了个趔趄
+Dialogue: 0,0:00:36.26,0:00:38.03,Default,,0,0,0,,场景是在{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}门口及附近
+Dialogue: 0,0:00:38.40,0:00:39.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}明亮环境嘈杂

@@ -1,0 +1,30 @@
+[Script Info]
+Title: chapter_050 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.37,Default,,0,0,0,,夜里{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}独卧锦榻难眠
+Dialogue: 0,0:00:02.67,0:00:03.85,Default,,0,0,0,,门外{\c&H0000FFFF&\b1}传来{\c&H00FFFFFF&\b0}敲门声
+Dialogue: 0,0:00:04.42,0:00:06.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}派人送来南诏女奴
+Dialogue: 0,0:00:06.67,0:00:08.29,Default,,0,0,0,,女奴身着{\c&H0000FFFF&\b1}淡黄色{\c&H00FFFFFF&\b0}薄纱
+Dialogue: 0,0:00:08.66,0:00:09.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}身姿{\c&H00FFFFFF&\b0}魅惑
+Dialogue: 0,0:00:09.57,0:00:10.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}让她跳舞
+Dialogue: 0,0:00:11.04,0:00:11.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}女奴{\c&H00FFFFFF&\b0}开始旋转
+Dialogue: 0,0:00:12.14,0:00:13.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}薄纱{\c&H00FFFFFF&\b0}飞扬尽显魅惑
+Dialogue: 0,0:00:13.87,0:00:16.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}被其吸引氛围暧昧
+Dialogue: 0,0:00:16.45,0:00:18.42,Default,,0,0,0,,次日清晨{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}早起
+Dialogue: 0,0:00:18.68,0:00:20.50,Default,,0,0,0,,北向辉来找他{\c&H0000FFFF&\b1}询问{\c&H00FFFFFF&\b0}月月的
+Dialogue: 0,0:00:20.50,0:00:20.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}消息{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.42,0:00:23.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}严肃叮嘱他遵守军令
+Dialogue: 0,0:00:23.82,0:00:25.24,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}愧疚{\c&H00FFFFFF&\b0}后离去

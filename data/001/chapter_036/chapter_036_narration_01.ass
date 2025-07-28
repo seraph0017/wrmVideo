@@ -1,0 +1,38 @@
+[Script Info]
+Title: chapter_036 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}画面{\c&H00FFFFFF&\b0}开启
+Dialogue: 0,0:00:01.23,0:00:03.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}在一处户外场所焦急
+Dialogue: 0,0:00:03.21,0:00:03.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}等待{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.96,0:00:05.55,Default,,0,0,0,,他身着{\c&H0000FFFF&\b1}黄色{\c&H00FFFFFF&\b0}高领龙袍
+Dialogue: 0,0:00:05.95,0:00:06.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}面庞{\c&H00FFFFFF&\b0}威严
+Dialogue: 0,0:00:07.08,0:00:08.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}略带{\c&H00FFFFFF&\b0}心疼与愧疚之色
+Dialogue: 0,0:00:08.90,0:00:10.80,Default,,0,0,0,,不久{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}的马车抵达
+Dialogue: 0,0:00:11.15,0:00:12.26,Default,,0,0,0,,她掀开{\c&H0000FFFF&\b1}车帘{\c&H00FFFFFF&\b0}下车
+Dialogue: 0,0:00:12.62,0:00:14.32,Default,,0,0,0,,身着淡{\c&H0000FFFF&\b1}粉色{\c&H00FFFFFF&\b0}高领古装
+Dialogue: 0,0:00:14.63,0:00:15.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}长发{\c&H00FFFFFF&\b0}束起
+Dialogue: 0,0:00:15.82,0:00:17.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}面容{\c&H00FFFFFF&\b0}娇俏却眼神带恨
+Dialogue: 0,0:00:17.62,0:00:19.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}向李世民行礼后
+Dialogue: 0,0:00:19.82,0:00:21.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}言语{\c&H00FFFFFF&\b0}间满是对自己和亲命
+Dialogue: 0,0:00:21.63,0:00:22.70,Default,,0,0,0,,运的{\c&H0000FFFF&\b1}委屈{\c&H00FFFFFF&\b0}与愤怒
+Dialogue: 0,0:00:23.10,0:00:24.32,Default,,0,0,0,,自嘲着自己的{\c&H0000FFFF&\b1}处境{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.79,0:00:26.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}面露心疼与愧疚
+Dialogue: 0,0:00:26.91,0:00:28.32,Default,,0,0,0,,试图安抚{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:28.72,0:00:30.17,Default,,0,0,0,,但{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}情绪激动
+Dialogue: 0,0:00:30.55,0:00:32.53,Default,,0,0,0,,提及希望{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}将自己葬在
+Dialogue: 0,0:00:32.53,0:00:33.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}父亲{\c&H00FFFFFF&\b0}旁边的请求
+Dialogue: 0,0:00:34.13,0:00:36.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}言语{\c&H00FFFFFF&\b0}中满是对命运的无奈与
+Dialogue: 0,0:00:36.09,0:00:36.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}哀怨{\c&H00FFFFFF&\b0}

@@ -1,0 +1,48 @@
+[Script Info]
+Title: chapter_003 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的货物随行数量众多
+Dialogue: 0,0:00:02.90,0:00:04.32,Default,,0,0,0,,用了上百架{\c&H0000FFFF&\b1}马车{\c&H00FFFFFF&\b0}拖着
+Dialogue: 0,0:00:04.89,0:00:06.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}围着李承乾的货物转
+Dialogue: 0,0:00:06.56,0:00:06.83,Default,,0,0,0,,圈
+Dialogue: 0,0:00:07.19,0:00:08.48,Default,,0,0,0,,一会儿{\c&H0000FFFF&\b1}看看{\c&H00FFFFFF&\b0}这儿
+Dialogue: 0,0:00:08.56,0:00:09.68,Default,,0,0,0,,一会儿{\c&H0000FFFF&\b1}望望{\c&H00FFFFFF&\b0}那儿
+Dialogue: 0,0:00:09.85,0:00:11.48,Default,,0,0,0,,然后{\c&H0000FFFF&\b1}说道{\c&H00FFFFFF&\b0}“殿下
+Dialogue: 0,0:00:11.69,0:00:12.43,Default,,0,0,0,,你这{\c&H0000FFFF&\b1}随从{\c&H00FFFFFF&\b0}和行
+Dialogue: 0,0:00:12.43,0:00:13.65,Default,,0,0,0,,李也带的太多了把
+Dialogue: 0,0:00:13.84,0:00:15.77,Default,,0,0,0,,到了{\c&H0000FFFF&\b1}前线{\c&H00FFFFFF&\b0}没人顾的上他们啊
+Dialogue: 0,0:00:15.96,0:00:17.68,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回应
+Dialogue: 0,0:00:17.86,0:00:19.84,Default,,0,0,0,,“呵呵程{\c&H0000FFFF&\b1}将军{\c&H00FFFFFF&\b0}可能忘了
+Dialogue: 0,0:00:20.16,0:00:20.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}朝廷{\c&H00FFFFFF&\b0}有规制
+Dialogue: 0,0:00:21.05,0:00:22.98,Default,,0,0,0,,这些{\c&H0000FFFF&\b1}箱子{\c&H00FFFFFF&\b0}里都是孤平时用的
+Dialogue: 0,0:00:22.98,0:00:23.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}仪仗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:23.75,0:00:24.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}服饰{\c&H00FFFFFF&\b0}等物
+Dialogue: 0,0:00:24.54,0:00:26.53,Default,,0,0,0,,”{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}撇了撇嘴
+Dialogue: 0,0:00:26.66,0:00:28.09,Default,,0,0,0,,明显{\c&H0000FFFF&\b1}不太{\c&H00FFFFFF&\b0}信
+Dialogue: 0,0:00:30.64,0:00:31.66,Default,,0,0,0,,这臣{\c&H0000FFFF&\b1}怎么{\c&H00FFFFFF&\b0}敢
+Dialogue: 0,0:00:31.81,0:00:32.70,Default,,0,0,0,,只是臣{\c&H0000FFFF&\b1}发现{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:32.83,0:00:35.30,Default,,0,0,0,,你这随从之中好像有{\c&H0000FFFF&\b1}女眷{\c&H00FFFFFF&\b0}啊
+Dialogue: 0,0:00:35.46,0:00:36.74,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}否认
+Dialogue: 0,0:00:36.92,0:00:37.84,Default,,0,0,0,,“哪有{\c&H0000FFFF&\b1}女眷{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:38.01,0:00:39.05,Default,,0,0,0,,程{\c&H0000FFFF&\b1}将军{\c&H00FFFFFF&\b0}看错了把
+Dialogue: 0,0:00:39.34,0:00:41.77,Default,,0,0,0,,”{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}嘴角露出一抹怪笑
+Dialogue: 0,0:00:41.84,0:00:43.14,Default,,0,0,0,,“{\c&H0000FFFF&\b1}嘿嘿{\c&H00FFFFFF&\b0}哦
+Dialogue: 0,0:00:43.29,0:00:44.72,Default,,0,0,0,,是本{\c&H0000FFFF&\b1}将军{\c&H00FFFFFF&\b0}看错了吗
+Dialogue: 0,0:00:44.84,0:00:45.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}无妨{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:45.27,0:00:47.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}晚点{\c&H00FFFFFF&\b0}大军驻扎时查验一番不
+Dialogue: 0,0:00:47.52,0:00:48.09,Default,,0,0,0,,就好了
+Dialogue: 0,0:00:48.31,0:00:50.13,Default,,0,0,0,,”这让{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}很是烦躁
+Dialogue: 0,0:00:50.31,0:00:50.95,Default,,0,0,0,,看着{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}那张大黑脸

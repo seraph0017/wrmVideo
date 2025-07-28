@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_017 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}让月月告诉下面人大
+Dialogue: 0,0:00:01.92,0:00:03.15,Default,,0,0,0,,胆{\c&H0000FFFF&\b1}接触{\c&H00FFFFFF&\b0}想接触的人
+Dialogue: 0,0:00:03.65,0:00:04.88,Default,,0,0,0,,弄清楚{\c&H0000FFFF&\b1}对方{\c&H00FFFFFF&\b0}身份
+Dialogue: 0,0:00:05.25,0:00:07.17,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}长安城{\c&H00FFFFFF&\b0}中乱象频繁
+Dialogue: 0,0:00:07.50,0:00:08.99,Default,,0,0,0,,各处请愿{\c&H0000FFFF&\b1}学子{\c&H00FFFFFF&\b0}混杂牛
+Dialogue: 0,0:00:08.99,0:00:10.22,Default,,0,0,0,,鬼蛇神煽动{\c&H0000FFFF&\b1}百姓{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.48,0:00:11.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}朝廷{\c&H00FFFFFF&\b0}调兵弹压
+Dialogue: 0,0:00:11.96,0:00:13.12,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}长安城{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.40,0:00:15.93,Default,,0,0,0,,室外{\c&H0000FFFF&\b1}天色{\c&H00FFFFFF&\b0}阴沉氛围紧张
+Dialogue: 0,0:00:16.23,0:00:18.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在祠堂内神情专注
+Dialogue: 0,0:00:18.93,0:00:19.97,Default,,0,0,0,,月月去传达{\c&H0000FFFF&\b1}命令{\c&H00FFFFFF&\b0}

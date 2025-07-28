@@ -1,0 +1,33 @@
+[Script Info]
+Title: chapter_011 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}片刻{\c&H00FFFFFF&\b0}之后
+Dialogue: 0,0:00:01.05,0:00:02.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}经过一番权衡
+Dialogue: 0,0:00:02.98,0:00:05.09,Default,,0,0,0,,果断下令让{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}担任主帅
+Dialogue: 0,0:00:05.62,0:00:08.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}北向辉为左右副帅
+Dialogue: 0,0:00:08.36,0:00:09.99,Default,,0,0,0,,即刻率领一万{\c&H0000FFFF&\b1}兵马{\c&H00FFFFFF&\b0}前去追
+Dialogue: 0,0:00:09.99,0:00:10.75,Default,,0,0,0,,击{\c&H0000FFFF&\b1}薛延陀{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.03,0:00:12.62,Default,,0,0,0,,他严肃地叮嘱{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}将已安
+Dialogue: 0,0:00:12.62,0:00:14.26,Default,,0,0,0,,装{\c&H0000FFFF&\b1}马蹄铁{\c&H00FFFFFF&\b0}的战马全部带走
+Dialogue: 0,0:00:14.51,0:00:15.94,Default,,0,0,0,,每人再额外带上一匹{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.20,0:00:18.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}着重强调{\c&H00FFFFFF&\b0}主要任务是追
+Dialogue: 0,0:00:18.00,0:00:18.57,Default,,0,0,0,,回{\c&H0000FFFF&\b1}牛羊{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.85,0:00:19.52,Default,,0,0,0,,切勿{\c&H0000FFFF&\b1}恋战{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.88,0:00:20.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}恭敬领命
+Dialogue: 0,0:00:21.20,0:00:22.22,Default,,0,0,0,,准备{\c&H0000FFFF&\b1}整军{\c&H00FFFFFF&\b0}出发
+Dialogue: 0,0:00:22.57,0:00:24.73,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}军营{\c&H00FFFFFF&\b0}外气氛紧张
+Dialogue: 0,0:00:25.07,0:00:26.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}蓄势待发
+Dialogue: 0,0:00:26.45,0:00:28.17,Default,,0,0,0,,仿佛一场{\c&H0000FFFF&\b1}大战{\c&H00FFFFFF&\b0}即将开启

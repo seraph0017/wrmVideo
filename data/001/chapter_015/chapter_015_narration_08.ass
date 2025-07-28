@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_015 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.38,Default,,0,0,0,,中秋之夜{\c&H0000FFFF&\b1}长安城{\c&H00FFFFFF&\b0}银辉笼罩
+Dialogue: 0,0:00:02.89,0:00:03.73,Default,,0,0,0,,圆月如{\c&H0000FFFF&\b1}玉盘{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.08,0:00:06.29,Default,,0,0,0,,街巷{\c&H0000FFFF&\b1}灯火通明{\c&H00FFFFFF&\b0}人声鼎沸
+Dialogue: 0,0:00:06.54,0:00:07.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}大明宫{\c&H00FFFFFF&\b0}麟德殿内
+Dialogue: 0,0:00:07.91,0:00:09.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}设中秋宴
+Dialogue: 0,0:00:09.34,0:00:10.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}宫阙{\c&H00FFFFFF&\b0}辉煌殿廷灿烂
+Dialogue: 0,0:00:11.22,0:00:12.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}香霭{\c&H00FFFFFF&\b0}氤氲瑞气盘旋
+Dialogue: 0,0:00:13.17,0:00:14.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}文官{\c&H00FFFFFF&\b0}英秀武将抖擞
+Dialogue: 0,0:00:15.04,0:00:16.25,Default,,0,0,0,,众人给{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}祝寿
+Dialogue: 0,0:00:16.55,0:00:17.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}心情大好
+Dialogue: 0,0:00:17.82,0:00:19.66,Default,,0,0,0,,各国使臣陆续进殿{\c&H0000FFFF&\b1}贺寿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.94,0:00:22.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}让长孙无忌酌情回礼
+Dialogue: 0,0:00:22.30,0:00:24.25,Default,,0,0,0,,这时礼官告知太子{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:24.25,0:00:25.26,Default,,0,0,0,,中秋{\c&H0000FFFF&\b1}礼品{\c&H00FFFFFF&\b0}到了
+Dialogue: 0,0:00:25.62,0:00:26.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}表示呈上来

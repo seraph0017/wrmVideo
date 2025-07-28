@@ -1,0 +1,106 @@
+[Script Info]
+Title: chapter_006 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.01, 0:00:00.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}营帐内
+Dialogue: 0, 0:00:01.30, 0:00:02.46,Default,,0,0,0,,士兵向{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}报告
+Dialogue: 0, 0:00:02.96, 0:00:05.04,Default,,0,0,0,,称程副帅亲兵告知{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}被
+Dialogue: 0, 0:00:05.04, 0:00:05.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}劫之事{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:05.96, 0:00:06.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}沉吟
+Dialogue: 0, 0:00:07.00, 0:00:08.56,Default,,0,0,0,,决定将情况上奏{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:08.82, 0:00:09.93,Default,,0,0,0,,率军{\c&H0000FFFF&\b1}继续{\c&H00FFFFFF&\b0}前行
+Dialogue: 0, 0:00:10.18, 0:00:12.07,Default,,0,0,0,,此时一名士兵飞马送来{\c&H0000FFFF&\b1}李承{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:12.07, 0:00:12.56,Default,,0,0,0,,乾的信
+Dialogue: 0, 0:00:12.83, 0:00:14.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}看完后神色奇怪
+Dialogue: 0, 0:00:14.61, 0:00:16.76,Default,,0,0,0,,大营外北向辉{\c&H0000FFFF&\b1}策马{\c&H00FFFFFF&\b0}叫阵
+Dialogue: 0, 0:00:17.05, 0:00:18.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}带数千人马出营
+Dialogue: 0, 0:00:19.07, 0:00:20.94,Default,,0,0,0,,解说{\c&H0000FFFF&\b1}内容{\c&H00FFFFFF&\b0}需突出局势紧张
+Dialogue: 0, 0:00:21.25, 0:00:23.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}的决断及北向辉的嚣张
+Dialogue: 0, 0:00:23.73, 0:00:24.57,Default,,0,0,0,,约{\c&H0000FFFF&\b1}200{\c&H00FFFFFF&\b0}字
+Dialogue: 0, 0:00:24.66, 0:00:26.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}带人在原地等候
+Dialogue: 0, 0:00:26.64, 0:00:27.84,Default,,0,0,0,,远处传来{\c&H0000FFFF&\b1}马蹄声{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:28.31, 0:00:29.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}前来会合
+Dialogue: 0, 0:00:30.11, 0:00:32.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}向侯君集说明李世民
+Dialogue: 0, 0:00:32.07, 0:00:33.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏醒{\c&H00FFFFFF&\b0}缉拿他的情况
+Dialogue: 0, 0:00:33.59, 0:00:35.44,Default,,0,0,0,,提及自己靠{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}等人脱困
+Dialogue: 0, 0:00:35.71, 0:00:37.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}询问行事之法
+Dialogue: 0, 0:00:37.45, 0:00:39.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示要闪击张掖
+Dialogue: 0, 0:00:39.54, 0:00:41.12,Default,,0,0,0,,还提到{\c&H0000FFFF&\b1}李世绩{\c&H00FFFFFF&\b0}会送战马
+Dialogue: 0, 0:00:41.59, 0:00:42.78,Default,,0,0,0,,展示被捆的{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:43.15, 0:00:44.69,Default,,0,0,0,,程咬金对{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}说话
+Dialogue: 0, 0:00:45.02, 0:00:45.87,Default,,0,0,0,,约{\c&H0000FFFF&\b1}200{\c&H00FFFFFF&\b0}字
+Dialogue: 0, 0:00:45.96, 0:00:48.06,Default,,0,0,0,,北向辉返回向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}报告情
+Dialogue: 0, 0:00:48.06, 0:00:48.28,Default,,0,0,0,,况
+Dialogue: 0, 0:00:48.74, 0:00:49.88,Default,,0,0,0,,称{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}放箭射他
+Dialogue: 0, 0:00:50.59, 0:00:51.96,Default,,0,0,0,,建议剁{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}手指头
+Dialogue: 0, 0:00:52.37, 0:00:54.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}提醒北向辉注意礼数
+Dialogue: 0, 0:00:54.67, 0:00:56.59,Default,,0,0,0,,哨骑来报{\c&H0000FFFF&\b1}李世绩{\c&H00FFFFFF&\b0}率大军拔营
+Dialogue: 0, 0:00:56.84, 0:00:57.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}神色不好看
+Dialogue: 0, 0:00:58.24, 0:00:59.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}安抚众人
+Dialogue: 0, 0:00:59.74, 0:01:01.32,Default,,0,0,0,,称{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}不会弃程咬金不顾
+Dialogue: 0, 0:01:01.63, 0:01:02.28,Default,,0,0,0,,必{\c&H0000FFFF&\b1}妥协{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:02.62, 0:01:03.46,Default,,0,0,0,,约{\c&H0000FFFF&\b1}200{\c&H00FFFFFF&\b0}字
+Dialogue: 0, 0:01:03.56, 0:01:05.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}安排薛仁贵护送物资
+Dialogue: 0, 0:01:06.06, 0:01:07.81,Default,,0,0,0,,自己找到装有{\c&H0000FFFF&\b1}马蹄铁{\c&H00FFFFFF&\b0}的箱子
+Dialogue: 0, 0:01:08.21, 0:01:09.22,Default,,0,0,0,,吩咐{\c&H0000FFFF&\b1}工匠{\c&H00FFFFFF&\b0}安装
+Dialogue: 0, 0:01:09.54, 0:01:11.00,Default,,0,0,0,,向{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}展示马蹄铁
+Dialogue: 0, 0:01:11.42, 0:01:12.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}称有{\c&H00FFFFFF&\b0}相配作战之法
+Dialogue: 0, 0:01:13.02, 0:01:14.26,Default,,0,0,0,,众人准备闪击{\c&H0000FFFF&\b1}张掖{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:14.55, 0:01:16.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}一声令下千骑奔驰
+Dialogue: 0, 0:01:17.07, 0:01:17.90,Default,,0,0,0,,约{\c&H0000FFFF&\b1}200{\c&H00FFFFFF&\b0}字
+Dialogue: 0, 0:01:17.98, 0:01:19.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率队闪击张掖
+Dialogue: 0, 0:01:19.97, 0:01:21.31,Default,,0,0,0,,途中遇到{\c&H0000FFFF&\b1}关卡{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:21.91, 0:01:24.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}以皇太子身份忽悠过
+Dialogue: 0, 0:01:24.01, 0:01:24.26,Default,,0,0,0,,关
+Dialogue: 0, 0:01:24.71, 0:01:25.76,Default,,0,0,0,,接近{\c&H0000FFFF&\b1}张掖{\c&H00FFFFFF&\b0}城时
+Dialogue: 0, 0:01:26.11, 0:01:27.06,Default,,0,0,0,,遇到巡逻{\c&H0000FFFF&\b1}守军{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:27.43, 0:01:28.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}出示太子印信
+Dialogue: 0, 0:01:29.19, 0:01:30.58,Default,,0,0,0,,守军将领{\c&H0000FFFF&\b1}李武{\c&H00FFFFFF&\b0}出现
+Dialogue: 0, 0:01:30.85, 0:01:32.01,Default,,0,0,0,,众人进入{\c&H0000FFFF&\b1}张掖{\c&H00FFFFFF&\b0}城
+Dialogue: 0, 0:01:32.37, 0:01:33.24,Default,,0,0,0,,约{\c&H0000FFFF&\b1}200{\c&H00FFFFFF&\b0}字
+Dialogue: 0, 0:01:33.35, 0:01:34.27,Default,,0,0,0,,进入{\c&H0000FFFF&\b1}张掖{\c&H00FFFFFF&\b0}城
+Dialogue: 0, 0:01:34.63, 0:01:35.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}假传圣旨
+Dialogue: 0, 0:01:36.18, 0:01:37.11,Default,,0,0,0,,称协助{\c&H0000FFFF&\b1}城防{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:37.49, 0:01:38.92,Default,,0,0,0,,安排{\c&H0000FFFF&\b1}设宴款待{\c&H00FFFFFF&\b0}军官
+Dialogue: 0, 0:01:39.30, 0:01:41.00,Default,,0,0,0,,宴席上{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}灌酒
+Dialogue: 0, 0:01:41.25, 0:01:42.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}军官{\c&H00FFFFFF&\b0}们酒意渐浓
+Dialogue: 0, 0:01:42.68, 0:01:44.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}等人趁机行动
+Dialogue: 0, 0:01:44.56, 0:01:45.42,Default,,0,0,0,,约{\c&H0000FFFF&\b1}200{\c&H00FFFFFF&\b0}字
+Dialogue: 0, 0:01:45.52, 0:01:47.43,Default,,0,0,0,,军官们被{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}等人制服
+Dialogue: 0, 0:01:47.89, 0:01:49.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}李武{\c&H00FFFFFF&\b0}欲反抗被堵住嘴
+Dialogue: 0, 0:01:50.09, 0:01:52.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}安排侯君集改编部队
+Dialogue: 0, 0:01:52.55, 0:01:53.88,Default,,0,0,0,,北向辉看守{\c&H0000FFFF&\b1}军官{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:54.21, 0:01:56.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在营外抵挡找事的人
+Dialogue: 0, 0:01:56.36, 0:01:57.17,Default,,0,0,0,,约{\c&H0000FFFF&\b1}200{\c&H00FFFFFF&\b0}字
+Dialogue: 0, 0:01:57.28, 0:01:59.17,Default,,0,0,0,,太极殿中{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}脸色难看
+Dialogue: 0, 0:01:59.55, 0:02:01.46,Default,,0,0,0,,商议后决定废除{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}太子
+Dialogue: 0, 0:02:01.46, 0:02:01.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}之位{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:02.16, 0:02:02.88,Default,,0,0,0,,派军{\c&H0000FFFF&\b1}缉拿{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:03.29, 0:02:04.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}前往太庙
+Dialogue: 0, 0:02:04.65, 0:02:05.71,Default,,0,0,0,,在{\c&H0000FFFF&\b1}高祖{\c&H00FFFFFF&\b0}牌位前
+Dialogue: 0, 0:02:06.05, 0:02:07.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}内心{\c&H00FFFFFF&\b0}矛盾感慨自己的作为
+Dialogue: 0, 0:02:08.26, 0:02:09.47,Default,,0,0,0,,最终{\c&H0000FFFF&\b1}表示{\c&H00FFFFFF&\b0}不后悔
+Dialogue: 0, 0:02:09.77, 0:02:10.58,Default,,0,0,0,,约{\c&H0000FFFF&\b1}200{\c&H00FFFFFF&\b0}字
+Dialogue: 0, 0:02:10.70, 0:02:11.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}张掖{\c&H00FFFFFF&\b0}城大营外
+Dialogue: 0, 0:02:12.06, 0:02:13.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}劳累虚脱
+Dialogue: 0, 0:02:13.55, 0:02:15.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}汇报部队改编情况
+Dialogue: 0, 0:02:15.71, 0:02:17.98,Default,,0,0,0,,称收归六千{\c&H0000FFFF&\b1}骑兵{\c&H00FFFFFF&\b0}二千步卒
+Dialogue: 0, 0:02:18.34, 0:02:20.37,Default,,0,0,0,,士兵来报有{\c&H0000FFFF&\b1}朝廷{\c&H00FFFFFF&\b0}信使持圣旨
+Dialogue: 0, 0:02:20.61, 0:02:21.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}准备去看
+Dialogue: 0, 0:02:21.99, 0:02:22.80,Default,,0,0,0,,约{\c&H0000FFFF&\b1}200{\c&H00FFFFFF&\b0}字
+Dialogue: 0, 0:02:22.90, 0:02:24.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}前往城门
+Dialogue: 0, 0:02:24.53, 0:02:25.66,Default,,0,0,0,,见到{\c&H0000FFFF&\b1}朝廷{\c&H00FFFFFF&\b0}信使
+Dialogue: 0, 0:02:25.92, 0:02:26.92,Default,,0,0,0,,夺过{\c&H0000FFFF&\b1}圣旨{\c&H00FFFFFF&\b0}查看
+Dialogue: 0, 0:02:27.67, 0:02:29.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}内容{\c&H00FFFFFF&\b0}是废其太子位
+Dialogue: 0, 0:02:29.55, 0:02:30.44,Default,,0,0,0,,令{\c&H0000FFFF&\b1}李武{\c&H00FFFFFF&\b0}缉拿
+Dialogue: 0, 0:02:30.75, 0:02:31.62,Default,,0,0,0,,约{\c&H0000FFFF&\b1}200{\c&H00FFFFFF&\b0}字

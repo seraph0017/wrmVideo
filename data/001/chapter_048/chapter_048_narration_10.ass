@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_048 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨师道{\c&H00FFFFFF&\b0}仍在与李承乾僵持
+Dialogue: 0,0:00:02.50,0:00:04.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}洛阳城{\c&H00FFFFFF&\b0}的局势愈发复杂
+Dialogue: 0,0:00:04.79,0:00:06.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}深知要实现制造火炮
+Dialogue: 0,0:00:06.69,0:00:07.20,Default,,0,0,0,,的{\c&H0000FFFF&\b1}计划{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.51,0:00:09.12,Default,,0,0,0,,需要稳定的{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}和合适的
+Dialogue: 0,0:00:09.12,0:00:09.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}地点{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.72,0:00:11.49,Default,,0,0,0,,他{\c&H0000FFFF&\b1}继续{\c&H00FFFFFF&\b0}思考如何应对当前的
+Dialogue: 0,0:00:11.49,0:00:11.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}局面{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.14,0:00:13.61,Default,,0,0,0,,同时关注着各方的{\c&H0000FFFF&\b1}动向{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.97,0:00:15.48,Default,,0,0,0,,解说{\c&H0000FFFF&\b1}内容{\c&H00FFFFFF&\b0}约200字

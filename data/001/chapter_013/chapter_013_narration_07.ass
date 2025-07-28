@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_013 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在平康坊
+Dialogue: 0,0:00:01.56,0:00:03.38,Default,,0,0,0,,看着人丁稀少的青楼{\c&H0000FFFF&\b1}一条街{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.81,0:00:04.81,Default,,0,0,0,,笑道这里{\c&H0000FFFF&\b1}清雅{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.21,0:00:06.43,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}表示{\c&H00FFFFFF&\b0}疑惑
+Dialogue: 0,0:00:06.72,0:00:08.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}解释人多怕被认识
+Dialogue: 0,0:00:08.94,0:00:10.32,Default,,0,0,0,,然后北向辉去{\c&H0000FFFF&\b1}敲门{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.60,0:00:11.72,Default,,0,0,0,,楼中传来{\c&H0000FFFF&\b1}骂声{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.97,0:00:14.01,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}大门{\c&H00FFFFFF&\b0}打开月月出现
+Dialogue: 0,0:00:14.30,0:00:16.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}上前称早上不能来青
+Dialogue: 0,0:00:16.12,0:00:16.49,Default,,0,0,0,,楼吗
+Dialogue: 0,0:00:16.84,0:00:18.59,Default,,0,0,0,,月月调整{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}表示欢迎
+Dialogue: 0,0:00:18.91,0:00:20.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在平康坊外及楼内
+Dialogue: 0,0:00:21.03,0:00:22.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}轻松又带点别样色彩

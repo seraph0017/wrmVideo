@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_040 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}画面{\c&H00FFFFFF&\b0}展现激烈战场
+Dialogue: 0,0:00:01.73,0:00:02.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}骑在马上
+Dialogue: 0,0:00:03.26,0:00:04.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}嘴角{\c&H00FFFFFF&\b0}露出一抹冷冽笑意
+Dialogue: 0,0:00:05.13,0:00:06.11,Default,,0,0,0,,抽出{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}配刀
+Dialogue: 0,0:00:06.43,0:00:07.93,Default,,0,0,0,,直接压在{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}脖子上
+Dialogue: 0,0:00:08.17,0:00:09.54,Default,,0,0,0,,双眼冷冽盯着{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.82,0:00:11.68,Default,,0,0,0,,示意大军若动{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}必死
+Dialogue: 0,0:00:12.01,0:00:13.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}在后方犹豫
+Dialogue: 0,0:00:13.64,0:00:14.54,Default,,0,0,0,,伸手横{\c&H0000FFFF&\b1}持枪{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.84,0:00:15.73,Default,,0,0,0,,拦住{\c&H0000FFFF&\b1}众将士{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.99,0:00:18.02,Default,,0,0,0,,心中大吼问{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}能否放了
+Dialogue: 0,0:00:18.02,0:00:18.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.69,0:00:19.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是战场
+Dialogue: 0,0:00:19.75,0:00:21.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}紧张光线强烈
+Dialogue: 0,0:00:21.80,0:00:23.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}战场硝烟弥漫

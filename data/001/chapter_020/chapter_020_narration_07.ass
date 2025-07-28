@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_020 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.95,Default,,0,0,0,,李佑手提横刀踱过{\c&H0000FFFF&\b1}大明宫{\c&H00FFFFFF&\b0}未
+Dialogue: 0,0:00:01.95,0:00:02.69,Default,,0,0,0,,完工{\c&H0000FFFF&\b1}殿堂{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.16,0:00:05.38,Default,,0,0,0,,用刀身叩击{\c&H0000FFFF&\b1}梁柱{\c&H00FFFFFF&\b0}和雕花殿门
+Dialogue: 0,0:00:05.71,0:00:06.70,Default,,0,0,0,,满脸{\c&H0000FFFF&\b1}疯狂{\c&H00FFFFFF&\b0}之色
+Dialogue: 0,0:00:07.21,0:00:09.16,Default,,0,0,0,,深陷{\c&H0000FFFF&\b1}眼窝{\c&H00FFFFFF&\b0}中爆发出极强贪欲
+Dialogue: 0,0:00:09.40,0:00:10.55,Default,,0,0,0,,他询问城中{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.81,0:00:12.40,Default,,0,0,0,,卢姓老者告知{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.71,0:00:14.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}等人占据东城
+Dialogue: 0,0:00:14.47,0:00:16.45,Default,,0,0,0,,李佑决定拨{\c&H0000FFFF&\b1}卢姓{\c&H00FFFFFF&\b0}老者五百精
+Dialogue: 0,0:00:16.45,0:00:17.56,Default,,0,0,0,,兵留守{\c&H0000FFFF&\b1}大明宫{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.86,0:00:18.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}控制{\c&H00FFFFFF&\b0}各处要道
+Dialogue: 0,0:00:19.20,0:00:20.89,Default,,0,0,0,,自己亲率剩余人马与{\c&H0000FFFF&\b1}薛将{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.89,0:00:23.07,Default,,0,0,0,,军会合从{\c&H0000FFFF&\b1}玄武门{\c&H00FFFFFF&\b0}杀进皇宫

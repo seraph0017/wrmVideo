@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_021 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:00.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}寝殿内
+Dialogue: 0,0:00:01.29,0:00:03.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与孔颖达商议登基大
+Dialogue: 0,0:00:03.25,0:00:03.83,Default,,0,0,0,,典之事
+Dialogue: 0,0:00:04.33,0:00:06.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}想明日举行登基大典
+Dialogue: 0,0:00:06.66,0:00:08.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}因礼制规定先帝丧期
+Dialogue: 0,0:00:08.61,0:00:10.28,Default,,0,0,0,,内27日内不举吉{\c&H0000FFFF&\b1}礼面{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.28,0:00:10.71,Default,,0,0,0,,露{\c&H0000FFFF&\b1}不悦{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.90,0:00:12.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}解释形势微妙
+Dialogue: 0,0:00:12.75,0:00:14.56,Default,,0,0,0,,不尽快登基怕有人有{\c&H0000FFFF&\b1}异心{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.85,0:00:15.78,Default,,0,0,0,,恳求{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.09,0:00:17.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}心中叹气后答应
+Dialogue: 0,0:00:18.01,0:00:19.71,Default,,0,0,0,,会跟{\c&H0000FFFF&\b1}学士{\c&H00FFFFFF&\b0}商讨年号和改
+Dialogue: 0,0:00:19.71,0:00:20.16,Default,,0,0,0,,元{\c&H0000FFFF&\b1}诏书{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.48,0:00:22.18,Default,,0,0,0,,此场景内寝殿布置{\c&H0000FFFF&\b1}温馨{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:22.46,0:00:23.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}柔和

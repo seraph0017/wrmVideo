@@ -1,0 +1,37 @@
+[Script Info]
+Title: chapter_043 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听了裴行俭的汇报后
+Dialogue: 0,0:00:02.19,0:00:03.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}大脑{\c&H00FFFFFF&\b0}飞速运转
+Dialogue: 0,0:00:03.79,0:00:05.74,Default,,0,0,0,,他认为是有{\c&H0000FFFF&\b1}河北{\c&H00FFFFFF&\b0}门阀投向李
+Dialogue: 0,0:00:05.74,0:00:06.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.63,0:00:07.36,Default,,0,0,0,,支援了{\c&H0000FFFF&\b1}粮草{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.66,0:00:08.30,Default,,0,0,0,,他{\c&H0000FFFF&\b1}感慨{\c&H00FFFFFF&\b0}道
+Dialogue: 0,0:00:08.81,0:00:10.56,Default,,0,0,0,,“这下咱们慢了可{\c&H0000FFFF&\b1}不止{\c&H00FFFFFF&\b0}一步
+Dialogue: 0,0:00:10.64,0:00:12.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}而是{\c&H00FFFFFF&\b0}无数步啊
+Dialogue: 0,0:00:12.29,0:00:13.81,Default,,0,0,0,,朕{\c&H0000FFFF&\b1}有点{\c&H00FFFFFF&\b0}后悔和谈了
+Dialogue: 0,0:00:13.88,0:00:15.77,Default,,0,0,0,,不如在{\c&H0000FFFF&\b1}武牢关{\c&H00FFFFFF&\b0}跟其耗时间
+Dialogue: 0,0:00:15.91,0:00:17.33,Default,,0,0,0,,”{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}摇头道
+Dialogue: 0,0:00:17.50,0:00:18.77,Default,,0,0,0,,“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}别这么想
+Dialogue: 0,0:00:18.91,0:00:20.20,Default,,0,0,0,,末将还是{\c&H0000FFFF&\b1}那句话{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.29,0:00:22.30,Default,,0,0,0,,就算不{\c&H0000FFFF&\b1}和谈{\c&H00FFFFFF&\b0}咱们也难以战胜
+Dialogue: 0,0:00:22.50,0:00:24.45,Default,,0,0,0,,况且现在看{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}竟有余
+Dialogue: 0,0:00:24.45,0:00:26.45,Default,,0,0,0,,力率领军奔袭到{\c&H0000FFFF&\b1}河东{\c&H00FFFFFF&\b0}道
+Dialogue: 0,0:00:26.62,0:00:28.77,Default,,0,0,0,,就是{\c&H0000FFFF&\b1}耗时间{\c&H00FFFFFF&\b0}也未必就能有
+Dialogue: 0,0:00:28.77,0:00:29.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}优势{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:29.21,0:00:31.11,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中满是无力感
+Dialogue: 0,0:00:31.30,0:00:32.78,Default,,0,0,0,,觉得当前{\c&H0000FFFF&\b1}局势{\c&H00FFFFFF&\b0}艰难
+Dialogue: 0,0:00:32.94,0:00:34.50,Default,,0,0,0,,仿佛{\c&H0000FFFF&\b1}天策{\c&H00FFFFFF&\b0}之威副本难以攻克

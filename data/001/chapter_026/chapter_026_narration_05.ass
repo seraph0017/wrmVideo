@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_026 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}打开信件
+Dialogue: 0,0:00:01.64,0:00:03.62,Default,,0,0,0,,见{\c&H0000FFFF&\b1}里面{\c&H00FFFFFF&\b0}写着“单独一叙”
+Dialogue: 0,0:00:03.81,0:00:05.03,Default,,0,0,0,,他心中{\c&H0000FFFF&\b1}犹豫{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.17,0:00:06.85,Default,,0,0,0,,担心{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}出其不意
+Dialogue: 0,0:00:06.98,0:00:09.03,Default,,0,0,0,,吩咐{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}传话天家无私事
+Dialogue: 0,0:00:09.26,0:00:10.46,Default,,0,0,0,,随后他登上{\c&H0000FFFF&\b1}城楼{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.58,0:00:12.03,Default,,0,0,0,,见{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}策马而来
+Dialogue: 0,0:00:12.20,0:00:13.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在城楼之上
+Dialogue: 0,0:00:13.70,0:00:14.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}站在那里
+Dialogue: 0,0:00:15.06,0:00:16.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}在远处策马靠近
+Dialogue: 0,0:00:17.10,0:00:18.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情谨慎
+Dialogue: 0,0:00:18.60,0:00:19.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}则显得威严

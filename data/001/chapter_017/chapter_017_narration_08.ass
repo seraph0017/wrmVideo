@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_017 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿内
+Dialogue: 0,0:00:01.07,0:00:03.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌等群臣讨论局势
+Dialogue: 0,0:00:03.60,0:00:04.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}等宗室站出
+Dialogue: 0,0:00:05.32,0:00:06.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}马周{\c&H00FFFFFF&\b0}提出安排
+Dialogue: 0,0:00:06.58,0:00:08.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}赞同并决定按马周所
+Dialogue: 0,0:00:08.49,0:00:09.10,Default,,0,0,0,,说{\c&H0000FFFF&\b1}行事{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.31,0:00:10.44,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿内
+Dialogue: 0,0:00:10.71,0:00:13.04,Default,,0,0,0,,室内{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}庄重氛围严肃
+Dialogue: 0,0:00:13.27,0:00:14.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌站立
+Dialogue: 0,0:00:14.58,0:00:16.33,Default,,0,0,0,,面色沉静{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}站立
+Dialogue: 0,0:00:16.60,0:00:18.14,Default,,0,0,0,,神情肃穆{\c&H0000FFFF&\b1}马周{\c&H00FFFFFF&\b0}站立
+Dialogue: 0,0:00:18.38,0:00:20.30,Default,,0,0,0,,神情坚定{\c&H0000FFFF&\b1}崔敦礼{\c&H00FFFFFF&\b0}站立
+Dialogue: 0,0:00:20.66,0:00:21.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}面露{\c&H00FFFFFF&\b0}不甘

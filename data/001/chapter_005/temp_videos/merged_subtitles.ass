@@ -1,0 +1,123 @@
+[Script Info]
+Title: chapter_005 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.01, 0:00:01.58,Default,,0,0,0,,午时{\c&H0000FFFF&\b1}阳光明媚{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:02.00, 0:00:03.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在拉着辎重的马车上
+Dialogue: 0, 0:00:03.64, 0:00:04.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}休息{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:04.54, 0:00:06.29,Default,,0,0,0,,车上铺着软乎乎的干{\c&H0000FFFF&\b1}草料{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:06.58, 0:00:07.86,Default,,0,0,0,,还散发着草木{\c&H0000FFFF&\b1}清香{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:08.22, 0:00:09.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}因连日行军疲惫
+Dialogue: 0, 0:00:10.19, 0:00:11.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}借着{\c&H00FFFFFF&\b0}暖阳缓缓睡去
+Dialogue: 0, 0:00:11.77, 0:00:12.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}画面{\c&H00FFFFFF&\b0}中
+Dialogue: 0, 0:00:12.58, 0:00:14.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着高领素色长袍
+Dialogue: 0, 0:00:14.90, 0:00:17.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}闭目{\c&H00FFFFFF&\b0}躺在马车上神情放松
+Dialogue: 0, 0:00:17.55, 0:00:19.51,Default,,0,0,0,,一旁的{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}身着高领深
+Dialogue: 0, 0:00:19.51, 0:00:20.05,Default,,0,0,0,,色{\c&H0000FFFF&\b1}军装{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:20.37, 0:00:22.23,Default,,0,0,0,,神情专注地看护着{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:22.44, 0:00:23.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}是马车内
+Dialogue: 0, 0:00:23.87, 0:00:26.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}透过缝隙洒落光线柔和
+Dialogue: 0, 0:00:26.79, 0:00:28.61,Default,,0,0,0,,午夜时分{\c&H0000FFFF&\b1}皓月当空{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:28.94, 0:00:30.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫中气氛诡谲
+Dialogue: 0, 0:00:30.83, 0:00:31.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿外
+Dialogue: 0, 0:00:31.95, 0:00:33.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}等一众将领林立
+Dialogue: 0, 0:00:33.90, 0:00:35.72,Default,,0,0,0,,他们均为{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}铁杆亲信
+Dialogue: 0, 0:00:35.98, 0:00:37.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}岁数{\c&H00FFFFFF&\b0}较大最大约四十左右
+Dialogue: 0, 0:00:38.19, 0:00:40.14,Default,,0,0,0,,个个面露{\c&H0000FFFF&\b1}凶光{\c&H00FFFFFF&\b0}筋肉扎实
+Dialogue: 0, 0:00:40.38, 0:00:41.61,Default,,0,0,0,,背景是{\c&H0000FFFF&\b1}长安城{\c&H00FFFFFF&\b0}街巷
+Dialogue: 0, 0:00:42.06, 0:00:44.05,Default,,0,0,0,,清冷{\c&H0000FFFF&\b1}月光{\c&H00FFFFFF&\b0}洒落细雨朦胧
+Dialogue: 0, 0:00:44.34, 0:00:46.71,Default,,0,0,0,,营造出{\c&H0000FFFF&\b1}静谧{\c&H00FFFFFF&\b0}又紧张的氛围
+Dialogue: 0, 0:00:46.96, 0:00:47.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿内
+Dialogue: 0, 0:00:47.99, 0:00:49.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}半倚在床榻上
+Dialogue: 0, 0:00:49.79, 0:00:51.36,Default,,0,0,0,,手中端着{\c&H0000FFFF&\b1}药液{\c&H00FFFFFF&\b0}缓缓喝着
+Dialogue: 0, 0:00:51.81, 0:00:52.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}显得{\c&H00FFFFFF&\b0}十分虚弱
+Dialogue: 0, 0:00:53.17, 0:00:55.05,Default,,0,0,0,,太医院首领{\c&H0000FFFF&\b1}甄权{\c&H00FFFFFF&\b0}自寝宫内
+Dialogue: 0, 0:00:55.05, 0:00:55.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}走出{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:55.75, 0:00:57.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}围上去询问陛下情况
+Dialogue: 0, 0:00:57.79, 0:00:59.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}见众将到来
+Dialogue: 0, 0:00:59.39, 0:01:00.61,Default,,0,0,0,,脸上露出一抹{\c&H0000FFFF&\b1}笑意{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:00.87, 0:01:01.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}声音{\c&H00FFFFFF&\b0}沙哑地说
+Dialogue: 0, 0:01:02.08, 0:01:02.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}你们{\c&H00FFFFFF&\b0}来了
+Dialogue: 0, 0:01:03.01, 0:01:04.35,Default,,0,0,0,,环境是{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿内
+Dialogue: 0, 0:01:04.51, 0:01:06.67,Default,,0,0,0,,光线柔和床榻{\c&H0000FFFF&\b1}陈设{\c&H00FFFFFF&\b0}古朴
+Dialogue: 0, 0:01:06.78, 0:01:08.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}询问昏迷天数和发兵
+Dialogue: 0, 0:01:08.78, 0:01:09.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:09.66, 0:01:11.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}支支吾吾
+Dialogue: 0, 0:01:11.51, 0:01:13.14,Default,,0,0,0,,后告知是{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}批答发兵
+Dialogue: 0, 0:01:13.47, 0:01:15.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}眼中闪过意外之色
+Dialogue: 0, 0:01:15.47, 0:01:17.45,Default,,0,0,0,,随即嘲弄令召{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}前来
+Dialogue: 0, 0:01:17.74, 0:01:19.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}称暂时叫不来
+Dialogue: 0, 0:01:19.66, 0:01:20.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}脸色大变
+Dialogue: 0, 0:01:20.89, 0:01:22.14,Default,,0,0,0,,环境仍是{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿内
+Dialogue: 0, 0:01:22.36, 0:01:23.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}依旧气氛凝重
+Dialogue: 0, 0:01:24.25, 0:01:25.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在马车上睡着
+Dialogue: 0, 0:01:26.19, 0:01:27.05,Default,,0,0,0,,被{\c&H0000FFFF&\b1}寒意{\c&H00FFFFFF&\b0}惊醒
+Dialogue: 0, 0:01:27.40, 0:01:29.40,Default,,0,0,0,,已至子时大军{\c&H0000FFFF&\b1}安营扎寨{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:29.77, 0:01:31.47,Default,,0,0,0,,远处一人{\c&H0000FFFF&\b1}单骑{\c&H00FFFFFF&\b0}疾驰而来
+Dialogue: 0, 0:01:31.74, 0:01:33.68,Default,,0,0,0,,传旨令程咬金押解{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回
+Dialogue: 0, 0:01:33.68, 0:01:33.94,Default,,0,0,0,,京
+Dialogue: 0, 0:01:34.20, 0:01:35.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}后背冷汗狂流
+Dialogue: 0, 0:01:36.08, 0:01:37.77,Default,,0,0,0,,震惊{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}醒得如此之快
+Dialogue: 0, 0:01:37.95, 0:01:39.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}是野外营地
+Dialogue: 0, 0:01:39.40, 0:01:41.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}夜色{\c&H00FFFFFF&\b0}深沉月光朦胧
+Dialogue: 0, 0:01:41.41, 0:01:43.40,Default,,0,0,0,,程咬金告知{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}要回京
+Dialogue: 0, 0:01:43.88, 0:01:45.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}强忍不甘跳下马车
+Dialogue: 0, 0:01:46.07, 0:01:47.83,Default,,0,0,0,,程咬金牵来战马让{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}骑
+Dialogue: 0, 0:01:47.83, 0:01:48.03,Default,,0,0,0,,马
+Dialogue: 0, 0:01:48.43, 0:01:49.21,Default,,0,0,0,,称想多{\c&H0000FFFF&\b1}骑马{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:49.62, 0:01:51.61,Default,,0,0,0,,月光下{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}策马狂奔
+Dialogue: 0, 0:01:51.85, 0:01:53.56,Default,,0,0,0,,后{\c&H0000FFFF&\b1}体力{\c&H00FFFFFF&\b0}不济勒马停下
+Dialogue: 0, 0:01:53.73, 0:01:54.55,Default,,0,0,0,,环境是{\c&H0000FFFF&\b1}旷野{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:54.87, 0:01:56.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}月光{\c&H00FFFFFF&\b0}如银寂静无声
+Dialogue: 0, 0:01:56.78, 0:01:58.68,Default,,0,0,0,,大营中{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}得知太子被救走
+Dialogue: 0, 0:01:59.01, 0:01:59.94,Default,,0,0,0,,正{\c&H0000FFFF&\b1}松口气{\c&H00FFFFFF&\b0}时
+Dialogue: 0, 0:02:00.24, 0:02:01.87,Default,,0,0,0,,传来大批{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}偷马逃营的
+Dialogue: 0, 0:02:01.87, 0:02:02.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}消息{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:02.76, 0:02:04.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}勃然大怒下令追击
+Dialogue: 0, 0:02:05.02, 0:02:06.45,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在车厢内
+Dialogue: 0, 0:02:06.74, 0:02:07.75,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}五味杂陈{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:07.95, 0:02:08.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}是大营内
+Dialogue: 0, 0:02:09.25, 0:02:10.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}夜色{\c&H00FFFFFF&\b0}深沉氛围紧张
+Dialogue: 0, 0:02:11.15, 0:02:13.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}等人来营救李承乾
+Dialogue: 0, 0:02:13.42, 0:02:14.30,Default,,0,0,0,,与{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}交战
+Dialogue: 0, 0:02:14.70, 0:02:16.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}一枪扫落程咬金铁槊
+Dialogue: 0, 0:02:17.20, 0:02:18.58,Default,,0,0,0,,冲向车厢救{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:18.94, 0:02:20.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}跳出车厢
+Dialogue: 0, 0:02:20.43, 0:02:21.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}拽他上马
+Dialogue: 0, 0:02:21.98, 0:02:22.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}动怒
+Dialogue: 0, 0:02:22.99, 0:02:24.19,Default,,0,0,0,,挺槊冲向{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:24.42, 0:02:25.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}双方{\c&H00FFFFFF&\b0}激烈交战
+Dialogue: 0, 0:02:25.74, 0:02:26.58,Default,,0,0,0,,环境是{\c&H0000FFFF&\b1}旷野{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:27.00, 0:02:28.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}月光{\c&H00FFFFFF&\b0}依旧战斗激烈
+Dialogue: 0, 0:02:28.84, 0:02:30.12,Default,,0,0,0,,程咬金与{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:30.42, 0:02:31.22,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}激战{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:31.69, 0:02:33.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}被击中后心栽落马下
+Dialogue: 0, 0:02:34.23, 0:02:35.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}见此
+Dialogue: 0, 0:02:35.52, 0:02:36.87,Default,,0,0,0,,嘶吼让抓住{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:37.11, 0:02:39.02,Default,,0,0,0,,北向辉将{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}拽起横在
+Dialogue: 0, 0:02:39.02, 0:02:39.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}马上{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:39.72, 0:02:40.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}断后
+Dialogue: 0, 0:02:40.78, 0:02:42.44,Default,,0,0,0,,众人向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}方向疾驰
+Dialogue: 0, 0:02:42.68, 0:02:43.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}追兵{\c&H00FFFFFF&\b0}赶到
+Dialogue: 0, 0:02:43.52, 0:02:45.35,Default,,0,0,0,,环境是{\c&H0000FFFF&\b1}旷野{\c&H00FFFFFF&\b0}月光依旧
+Dialogue: 0, 0:02:45.64, 0:02:47.18,Default,,0,0,0,,战斗结束后{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}紧张
+Dialogue: 0, 0:02:47.43, 0:02:49.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}等人停下歇息
+Dialogue: 0, 0:02:49.34, 0:02:50.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}商议{\c&H00FFFFFF&\b0}未来
+Dialogue: 0, 0:02:50.42, 0:02:51.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}激励众人追随
+Dialogue: 0, 0:02:52.47, 0:02:53.47,Default,,0,0,0,,称要诛杀{\c&H0000FFFF&\b1}奸臣{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:53.76, 0:02:55.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}振臂高呼追随
+Dialogue: 0, 0:02:55.39, 0:02:56.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}被捆
+Dialogue: 0, 0:02:56.86, 0:02:58.62,Default,,0,0,0,,听到{\c&H0000FFFF&\b1}计划{\c&H00FFFFFF&\b0}后指出战马问题
+Dialogue: 0, 0:02:58.90, 0:03:00.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}称行李中有马具
+Dialogue: 0, 0:03:00.80, 0:03:01.64,Default,,0,0,0,,环境是{\c&H0000FFFF&\b1}旷野{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:03:01.97, 0:03:03.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}夜色{\c&H00FFFFFF&\b0}已深众人围坐

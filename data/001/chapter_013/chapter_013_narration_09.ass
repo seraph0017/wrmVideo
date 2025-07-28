@@ -1,0 +1,33 @@
+[Script Info]
+Title: chapter_013 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}简单洗漱后走出房间
+Dialogue: 0,0:00:02.64,0:00:03.62,Default,,0,0,0,,外面{\c&H0000FFFF&\b1}热闹非凡{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.08,0:00:06.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}宾客{\c&H00FFFFFF&\b0}络绎不绝倌人穿梭
+Dialogue: 0,0:00:06.77,0:00:08.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}等人在喝茶
+Dialogue: 0,0:00:08.54,0:00:10.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}不高兴他们清苦
+Dialogue: 0,0:00:10.49,0:00:11.70,Default,,0,0,0,,让叫最好看的{\c&H0000FFFF&\b1}姑娘{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.96,0:00:12.95,Default,,0,0,0,,好酒好菜{\c&H0000FFFF&\b1}上桌{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.19,0:00:14.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}北向{\c&H00FFFFFF&\b0}辉看上月月
+Dialogue: 0,0:00:14.91,0:00:16.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}让薛仁贵换位置
+Dialogue: 0,0:00:17.02,0:00:17.86,Default,,0,0,0,,与月月{\c&H0000FFFF&\b1}交谈{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.18,0:00:19.59,Default,,0,0,0,,北向辉吹自己{\c&H0000FFFF&\b1}力气{\c&H00FFFFFF&\b0}大
+Dialogue: 0,0:00:20.08,0:00:21.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}差点{\c&H00FFFFFF&\b0}出丑月月信了他
+Dialogue: 0,0:00:22.33,0:00:23.67,Default,,0,0,0,,这时{\c&H0000FFFF&\b1}程处默{\c&H00FFFFFF&\b0}出现
+Dialogue: 0,0:00:24.05,0:00:24.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}怒指{\c&H00FFFFFF&\b0}北向辉
+Dialogue: 0,0:00:25.32,0:00:26.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与之理论
+Dialogue: 0,0:00:26.91,0:00:28.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在青楼内外
+Dialogue: 0,0:00:28.39,0:00:29.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}紧张起来

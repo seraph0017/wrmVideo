@@ -1,0 +1,38 @@
+[Script Info]
+Title: chapter_030 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.25,Default,,0,0,0,,在激烈的{\c&H0000FFFF&\b1}战场{\c&H00FFFFFF&\b0}之上
+Dialogue: 0,0:00:01.65,0:00:02.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}冷笑一声
+Dialogue: 0,0:00:03.43,0:00:04.92,Default,,0,0,0,,他一生{\c&H0000FFFF&\b1}遭遇{\c&H00FFFFFF&\b0}无数强敌
+Dialogue: 0,0:00:05.56,0:00:06.84,Default,,0,0,0,,此刻{\c&H0000FFFF&\b1}面对{\c&H00FFFFFF&\b0}北向辉
+Dialogue: 0,0:00:07.20,0:00:09.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}臂膀{\c&H00FFFFFF&\b0}伸展弯弓如满月
+Dialogue: 0,0:00:09.49,0:00:10.21,Default,,0,0,0,,三箭{\c&H0000FFFF&\b1}齐发{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.53,0:00:12.31,Default,,0,0,0,,分别冲着北向辉{\c&H0000FFFF&\b1}胯下{\c&H00FFFFFF&\b0}战马
+Dialogue: 0,0:00:12.65,0:00:14.16,Default,,0,0,0,,胸前{\c&H0000FFFF&\b1}头颅{\c&H00FFFFFF&\b0}而去
+Dialogue: 0,0:00:14.38,0:00:16.01,Default,,0,0,0,,北向辉手中{\c&H0000FFFF&\b1}铁枪{\c&H00FFFFFF&\b0}横扫
+Dialogue: 0,0:00:16.36,0:00:17.91,Default,,0,0,0,,瞬间击飞六道{\c&H0000FFFF&\b1}箭矢{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.11,0:00:20.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}虎口{\c&H00FFFFFF&\b0}发麻手上满是血迹
+Dialogue: 0,0:00:20.65,0:00:21.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}策马赶到
+Dialogue: 0,0:00:22.30,0:00:23.69,Default,,0,0,0,,见此{\c&H0000FFFF&\b1}情形{\c&H00FFFFFF&\b0}目眦欲裂
+Dialogue: 0,0:00:23.96,0:00:25.79,Default,,0,0,0,,拽{\c&H0000FFFF&\b1}出长{\c&H00FFFFFF&\b0}弓弯弓搭箭
+Dialogue: 0,0:00:26.03,0:00:28.01,Default,,0,0,0,,暴吼道“{\c&H0000FFFF&\b1}老贼{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:28.13,0:00:29.46,Default,,0,0,0,,就你会{\c&H0000FFFF&\b1}射箭{\c&H00FFFFFF&\b0}吗
+Dialogue: 0,0:00:29.62,0:00:31.27,Default,,0,0,0,,看朕{\c&H0000FFFF&\b1}神剑{\c&H00FFFFFF&\b0}取你狗命
+Dialogue: 0,0:00:31.40,0:00:33.02,Default,,0,0,0,,”{\c&H0000FFFF&\b1}战场{\c&H00FFFFFF&\b0}中大军厮杀
+Dialogue: 0,0:00:33.15,0:00:35.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}弓矢{\c&H00FFFFFF&\b0}交错喊杀声震天
+Dialogue: 0,0:00:35.49,0:00:37.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}注意力在北向辉身上
+Dialogue: 0,0:00:37.93,0:00:39.63,Default,,0,0,0,,未注意到{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}到来
+Dialogue: 0,0:00:39.77,0:00:41.17,Default,,0,0,0,,听到{\c&H0000FFFF&\b1}声音{\c&H00FFFFFF&\b0}后杀意暴涨

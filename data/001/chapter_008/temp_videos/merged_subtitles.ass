@@ -1,0 +1,141 @@
+[Script Info]
+Title: chapter_008 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.01, 0:00:02.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在草原上指挥士兵挖
+Dialogue: 0, 0:00:02.10, 0:00:02.39,Default,,0,0,0,,坑
+Dialogue: 0, 0:00:02.87, 0:00:03.92,Default,,0,0,0,,他站在{\c&H0000FFFF&\b1}大坑{\c&H00FFFFFF&\b0}旁
+Dialogue: 0, 0:00:04.42, 0:00:06.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}专注地吩咐士兵们挖
+Dialogue: 0, 0:00:06.24, 0:00:07.76,Default,,0,0,0,,出十个横竖三丈的{\c&H0000FFFF&\b1}大坑{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:08.11, 0:00:09.59,Default,,0,0,0,,每个{\c&H0000FFFF&\b1}相距{\c&H00FFFFFF&\b0}不得超过半丈
+Dialogue: 0, 0:00:09.98, 0:00:11.47,Default,,0,0,0,,中间还要挖出一个{\c&H0000FFFF&\b1}竖坑{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:11.84, 0:00:13.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}们面面相觑
+Dialogue: 0, 0:00:13.33, 0:00:14.96,Default,,0,0,0,,虽有{\c&H0000FFFF&\b1}疑惑{\c&H00FFFFFF&\b0}但仍开始按照命
+Dialogue: 0, 0:00:14.96, 0:00:15.50,Default,,0,0,0,,令{\c&H0000FFFF&\b1}行动{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:15.81, 0:00:17.08,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}是草原上
+Dialogue: 0, 0:00:17.48, 0:00:20.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳光明媚{\c&H00FFFFFF&\b0}大坑开始逐步挖掘
+Dialogue: 0, 0:00:20.50, 0:00:21.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身姿挺拔
+Dialogue: 0, 0:00:22.14, 0:00:23.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}专注{\c&H00FFFFFF&\b0}于监工工作
+Dialogue: 0, 0:00:23.60, 0:00:24.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}继续监工
+Dialogue: 0, 0:00:25.29, 0:00:27.11,Default,,0,0,0,,看着已挖好的{\c&H0000FFFF&\b1}大坑{\c&H00FFFFFF&\b0}颇为满意
+Dialogue: 0, 0:00:27.51, 0:00:29.38,Default,,0,0,0,,随后又吩咐{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}去城外挖
+Dialogue: 0, 0:00:29.38, 0:00:29.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}细土{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:30.15, 0:00:31.09,Default,,0,0,0,,用于加固{\c&H0000FFFF&\b1}坑壁{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:31.40, 0:00:33.46,Default,,0,0,0,,领头的士兵听到后{\c&H0000FFFF&\b1}干劲十足{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:33.78, 0:00:34.86,Default,,0,0,0,,传达给其他{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:35.12, 0:00:36.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}纷纷忙碌起来
+Dialogue: 0, 0:00:36.48, 0:00:37.87,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}依旧是草原
+Dialogue: 0, 0:00:38.18, 0:00:40.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}李承乾在一旁指导
+Dialogue: 0, 0:00:40.67, 0:00:41.91,Default,,0,0,0,,士兵们{\c&H0000FFFF&\b1}积极行动{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:42.17, 0:00:42.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}三日{\c&H00FFFFFF&\b0}后
+Dialogue: 0, 0:00:43.14, 0:00:44.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世绩{\c&H00FFFFFF&\b0}大军赶到诺真水河附
+Dialogue: 0, 0:00:44.95, 0:00:45.18,Default,,0,0,0,,近
+Dialogue: 0, 0:00:45.69, 0:00:47.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}端坐帅帐内
+Dialogue: 0, 0:00:47.49, 0:00:49.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}薛仁贵
+Dialogue: 0, 0:00:49.37, 0:00:50.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}北向{\c&H00FFFFFF&\b0}辉三人在旁
+Dialogue: 0, 0:00:50.99, 0:00:52.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}汇报唐军距诺真水
+Dialogue: 0, 0:00:52.84, 0:00:53.75,Default,,0,0,0,,河{\c&H0000FFFF&\b1}不足{\c&H00FFFFFF&\b0}二十里
+Dialogue: 0, 0:00:54.04, 0:00:55.10,Default,,0,0,0,,明日{\c&H0000FFFF&\b1}可能{\c&H00FFFFFF&\b0}交战
+Dialogue: 0, 0:00:55.46, 0:00:57.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}和北向辉汇报李
+Dialogue: 0, 0:00:57.15, 0:00:58.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}世绩{\c&H00FFFFFF&\b0}大军粮草不济
+Dialogue: 0, 0:00:58.75, 0:00:59.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}灶火{\c&H00FFFFFF&\b0}减少
+Dialogue: 0, 0:00:59.70, 0:01:01.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}询问薛延陀兵力及统
+Dialogue: 0, 0:01:01.68, 0:01:02.23,Default,,0,0,0,,军{\c&H0000FFFF&\b1}将领{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:02.52, 0:01:04.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}表示薛延陀有十二万
+Dialogue: 0, 0:01:04.83, 0:01:06.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}统军{\c&H00FFFFFF&\b0}是大度设
+Dialogue: 0, 0:01:06.39, 0:01:07.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}自信能应对
+Dialogue: 0, 0:01:08.04, 0:01:09.78,Default,,0,0,0,,有{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}禀报城外有人奉李
+Dialogue: 0, 0:01:09.78, 0:01:10.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}世绩{\c&H00FFFFFF&\b0}帅令调粮
+Dialogue: 0, 0:01:11.34, 0:01:12.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}让人领进
+Dialogue: 0, 0:01:13.08, 0:01:14.70,Default,,0,0,0,,发现是{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}派来的士兵
+Dialogue: 0, 0:01:15.12, 0:01:16.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}面露焦急
+Dialogue: 0, 0:01:16.45, 0:01:17.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}笑眯眯回应
+Dialogue: 0, 0:01:18.00, 0:01:19.27,Default,,0,0,0,,让{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}回去告知李
+Dialogue: 0, 0:01:19.27, 0:01:20.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}世绩{\c&H00FFFFFF&\b0}自己不富裕
+Dialogue: 0, 0:01:20.66, 0:01:22.37,Default,,0,0,0,,若不行可来{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}都督府吃
+Dialogue: 0, 0:01:22.37, 0:01:22.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}管饱{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:23.10, 0:01:24.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世绩{\c&H00FFFFFF&\b0}这边因粮草不济愁眉
+Dialogue: 0, 0:01:24.97, 0:01:25.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}不展{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:25.77, 0:01:27.39,Default,,0,0,0,,多次上书{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}调粮
+Dialogue: 0, 0:01:27.62, 0:01:29.21,Default,,0,0,0,,收到回复让从{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}都
+Dialogue: 0, 0:01:29.21, 0:01:29.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}督府{\c&H00FFFFFF&\b0}调粮
+Dialogue: 0, 0:01:30.28, 0:01:31.77,Default,,0,0,0,,但{\c&H0000FFFF&\b1}粮草{\c&H00FFFFFF&\b0}不够支撑多久
+Dialogue: 0, 0:01:32.05, 0:01:34.30,Default,,0,0,0,,太极殿内{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}面色阴沉
+Dialogue: 0, 0:01:34.73, 0:01:36.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}唐俭{\c&H00FFFFFF&\b0}汇报粮草最快半月才
+Dialogue: 0, 0:01:36.49, 0:01:37.00,Default,,0,0,0,,能{\c&H0000FFFF&\b1}运到{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:37.51, 0:01:39.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}要求七天内运到
+Dialogue: 0, 0:01:39.42, 0:01:40.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}唐俭{\c&H00FFFFFF&\b0}表示不可能
+Dialogue: 0, 0:01:40.91, 0:01:43.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌提出让朝廷给李承
+Dialogue: 0, 0:01:43.15, 0:01:43.77,Default,,0,0,0,,乾{\c&H0000FFFF&\b1}修书{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:44.05, 0:01:45.80,Default,,0,0,0,,让其出兵袭扰{\c&H0000FFFF&\b1}大度{\c&H00FFFFFF&\b0}设并支
+Dialogue: 0, 0:01:45.80, 0:01:46.30,Default,,0,0,0,,援{\c&H0000FFFF&\b1}粮草{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:46.64, 0:01:48.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}愤怒表示不会求李承
+Dialogue: 0, 0:01:48.41, 0:01:48.73,Default,,0,0,0,,乾
+Dialogue: 0, 0:01:49.12, 0:01:51.05,Default,,0,0,0,,要传旨让{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}进攻云中擒拿
+Dialogue: 0, 0:01:51.05, 0:01:51.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:51.94, 0:01:52.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}众臣{\c&H00FFFFFF&\b0}劝阻
+Dialogue: 0, 0:01:52.97, 0:01:55.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}平复心情后收回旨意
+Dialogue: 0, 0:01:55.49, 0:01:56.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}众臣{\c&H00FFFFFF&\b0}叩首
+Dialogue: 0, 0:01:56.63, 0:01:58.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌提出让中书省拟旨
+Dialogue: 0, 0:01:58.67, 0:02:00.00,Default,,0,0,0,,让{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}出兵援救
+Dialogue: 0, 0:02:00.43, 0:02:01.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}不情不愿
+Dialogue: 0, 0:02:01.86, 0:02:03.97,Default,,0,0,0,,后魏征提出以恢复{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}太
+Dialogue: 0, 0:02:03.97, 0:02:05.15,Default,,0,0,0,,子之{\c&H0000FFFF&\b1}位换{\c&H00FFFFFF&\b0}其出兵
+Dialogue: 0, 0:02:05.48, 0:02:06.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}沉默后同意
+Dialogue: 0, 0:02:07.42, 0:02:09.41,Default,,0,0,0,,两日后恢复{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}太子之位
+Dialogue: 0, 0:02:09.41, 0:02:10.73,Default,,0,0,0,,的{\c&H0000FFFF&\b1}圣旨{\c&H00FFFFFF&\b0}传遍天下
+Dialogue: 0, 0:02:11.01, 0:02:13.01,Default,,0,0,0,,远在云中都督府的{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}忙
+Dialogue: 0, 0:02:13.01, 0:02:13.56,Default,,0,0,0,,于{\c&H0000FFFF&\b1}造纸{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:14.09, 0:02:16.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}双手{\c&H00FFFFFF&\b0}被纸浆浸泡腐烂脱皮
+Dialogue: 0, 0:02:16.44, 0:02:18.24,Default,,0,0,0,,熬{\c&H0000FFFF&\b1}纸浆{\c&H00FFFFFF&\b0}的土坑内蒸汽升腾
+Dialogue: 0, 0:02:18.61, 0:02:19.75,Default,,0,0,0,,他看着{\c&H0000FFFF&\b1}双手{\c&H00FFFFFF&\b0}呲牙
+Dialogue: 0, 0:02:20.03, 0:02:21.90,Default,,0,0,0,,走出{\c&H0000FFFF&\b1}土坑{\c&H00FFFFFF&\b0}群看到晾晒成纸的
+Dialogue: 0, 0:02:21.90, 0:02:22.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}地方{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:22.50, 0:02:23.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}纸张{\c&H00FFFFFF&\b0}整齐铺在木板上
+Dialogue: 0, 0:02:24.26, 0:02:25.21,Default,,0,0,0,,在{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}下泛光
+Dialogue: 0, 0:02:25.52, 0:02:27.15,Default,,0,0,0,,他{\c&H0000FFFF&\b1}满意{\c&H00FFFFFF&\b0}地揭下一张纸查看
+Dialogue: 0, 0:02:27.41, 0:02:29.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}三人疾步走到李承乾
+Dialogue: 0, 0:02:29.29, 0:02:29.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}面前{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:30.19, 0:02:31.83,Default,,0,0,0,,告知恢复其{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}之位的圣
+Dialogue: 0, 0:02:31.83, 0:02:32.31,Default,,0,0,0,,旨已到
+Dialogue: 0, 0:02:32.67, 0:02:33.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}惊讶
+Dialogue: 0, 0:02:33.76, 0:02:34.60,Default,,0,0,0,,后{\c&H0000FFFF&\b1}信使{\c&H00FFFFFF&\b0}到来
+Dialogue: 0, 0:02:34.82, 0:02:35.89,Default,,0,0,0,,他夺过{\c&H0000FFFF&\b1}圣旨{\c&H00FFFFFF&\b0}查看
+Dialogue: 0, 0:02:36.15, 0:02:38.02,Default,,0,0,0,,得知要出兵救援{\c&H0000FFFF&\b1}李世绩{\c&H00FFFFFF&\b0}大军
+Dialogue: 0, 0:02:38.28, 0:02:39.83,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}大喜{\c&H00FFFFFF&\b0}答应出兵
+Dialogue: 0, 0:02:40.08, 0:02:42.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}向侯君集三人分析局
+Dialogue: 0, 0:02:42.04, 0:02:42.34,Default,,0,0,0,,势
+Dialogue: 0, 0:02:42.82, 0:02:44.52,Default,,0,0,0,,认为应出兵击溃{\c&H0000FFFF&\b1}薛延陀{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:45.07, 0:02:46.83,Default,,0,0,0,,再围困{\c&H0000FFFF&\b1}李世绩{\c&H00FFFFFF&\b0}大军以扩充兵
+Dialogue: 0, 0:02:46.83, 0:02:47.04,Default,,0,0,0,,力
+Dialogue: 0, 0:02:47.29, 0:02:48.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}不解
+Dialogue: 0, 0:02:48.52, 0:02:50.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}解释后让其整军明日
+Dialogue: 0, 0:02:50.55, 0:02:50.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}出发{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:51.30, 0:02:53.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}告知找到商人
+Dialogue: 0, 0:02:53.31, 0:02:54.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}让领商人来帅帐
+Dialogue: 0, 0:02:55.06, 0:02:56.91,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}带来杜正伦等人
+Dialogue: 0, 0:02:56.91, 0:02:57.43,Default,,0,0,0,,的{\c&H0000FFFF&\b1}家眷{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:57.77, 0:02:58.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}安排安置
+Dialogue: 0, 0:02:59.19, 0:02:59.79,Default,,0,0,0,,帅帐内
+Dialogue: 0, 0:03:00.22, 0:03:02.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与商人陈五更商谈卖
+Dialogue: 0, 0:03:02.13, 0:03:02.72,Default,,0,0,0,,纸{\c&H0000FFFF&\b1}事宜{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:03:03.30, 0:03:05.04,Default,,0,0,0,,陈五更查看{\c&H0000FFFF&\b1}纸张{\c&H00FFFFFF&\b0}后表示质
+Dialogue: 0, 0:03:05.04, 0:03:05.45,Default,,0,0,0,,地{\c&H0000FFFF&\b1}一般{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:03:05.85, 0:03:07.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}提出卖一文钱一张
+Dialogue: 0, 0:03:08.14, 0:03:08.95,Default,,0,0,0,,陈五更{\c&H0000FFFF&\b1}心动{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:03:09.11, 0:03:10.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示有大量纸张
+Dialogue: 0, 0:03:11.16, 0:03:12.23,Default,,0,0,0,,陈五更{\c&H0000FFFF&\b1}愿意{\c&H00FFFFFF&\b0}承接
+Dialogue: 0, 0:03:12.57, 0:03:14.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}提出在纸上写内容
+Dialogue: 0, 0:03:14.87, 0:03:15.70,Default,,0,0,0,,陈{\c&H0000FFFF&\b1}五更{\c&H00FFFFFF&\b0}同意
+Dialogue: 0, 0:03:15.97, 0:03:17.88,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}杜正伦{\c&H00FFFFFF&\b0}等人进入帅帐
+Dialogue: 0, 0:03:18.30, 0:03:20.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}安排他们抄写内容

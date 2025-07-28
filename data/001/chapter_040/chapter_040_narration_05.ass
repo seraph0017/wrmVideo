@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_040 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,北向辉看到{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}刀要落下
+Dialogue: 0,0:00:02.60,0:00:04.37,Default,,0,0,0,,一咬牙横扫逼开{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.93,0:00:06.42,Default,,0,0,0,,反握{\c&H0000FFFF&\b1}铁枪{\c&H00FFFFFF&\b0}狠命掷出
+Dialogue: 0,0:00:06.78,0:00:08.36,Default,,0,0,0,,铁枪直奔{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}面门
+Dialogue: 0,0:00:08.63,0:00:09.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}举刀抵挡
+Dialogue: 0,0:00:09.95,0:00:11.70,Default,,0,0,0,,铁枪扫到押{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的秦琼和
+Dialogue: 0,0:00:11.70,0:00:12.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄甲军{\c&H00FFFFFF&\b0}脸上
+Dialogue: 0,0:00:12.85,0:00:14.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在战场环境激烈

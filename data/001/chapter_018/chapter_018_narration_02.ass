@@ -1,0 +1,36 @@
+[Script Info]
+Title: chapter_018 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}迅速下达命令
+Dialogue: 0,0:00:02.02,0:00:03.81,Default,,0,0,0,,“{\c&H0000FFFF&\b1}仁贵{\c&H00FFFFFF&\b0}月统领
+Dialogue: 0,0:00:03.92,0:00:06.08,Default,,0,0,0,,你二人马上率领{\c&H0000FFFF&\b1}守军{\c&H00FFFFFF&\b0}兄弟们
+Dialogue: 0,0:00:06.16,0:00:07.50,Default,,0,0,0,,一起进攻{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫
+Dialogue: 0,0:00:07.67,0:00:09.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}向辉{\c&H00FFFFFF&\b0}你带着所辖人马
+Dialogue: 0,0:00:09.81,0:00:11.23,Default,,0,0,0,,随孤一起去往{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.39,0:00:12.67,Default,,0,0,0,,”三人{\c&H0000FFFF&\b1}齐声{\c&H00FFFFFF&\b0}应诺
+Dialogue: 0,0:00:12.79,0:00:14.61,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在战场附近
+Dialogue: 0,0:00:14.77,0:00:16.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}较为开阔
+Dialogue: 0,0:00:16.24,0:00:18.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}仍为白天光线充足
+Dialogue: 0,0:00:18.64,0:00:20.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}骑在马上
+Dialogue: 0,0:00:20.36,0:00:22.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}坚定身着高领战甲
+Dialogue: 0,0:00:22.95,0:00:24.54,Default,,0,0,0,,展现出{\c&H0000FFFF&\b1}指挥官{\c&H00FFFFFF&\b0}的风范
+Dialogue: 0,0:00:24.75,0:00:26.30,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}策马{\c&H00FFFFFF&\b0}而来
+Dialogue: 0,0:00:26.41,0:00:28.30,Default,,0,0,0,,询问{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}为何不一起前往
+Dialogue: 0,0:00:28.30,0:00:29.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫
+Dialogue: 0,0:00:29.19,0:00:30.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中自有打算
+Dialogue: 0,0:00:31.14,0:00:32.30,Default,,0,0,0,,他想着{\c&H0000FFFF&\b1}原主{\c&H00FFFFFF&\b0}在东
+Dialogue: 0,0:00:32.30,0:00:33.50,Default,,0,0,0,,宫藏有不少{\c&H0000FFFF&\b1}甲胄{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:33.78,0:00:35.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}兵器{\c&H00FFFFFF&\b0}想去碰碰运气

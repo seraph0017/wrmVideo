@@ -1,0 +1,33 @@
+[Script Info]
+Title: chapter_034 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.04,Default,,0,0,0,,一个多{\c&H0000FFFF&\b1}时辰{\c&H00FFFFFF&\b0}后
+Dialogue: 0,0:00:01.37,0:00:02.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}丰州{\c&H00FFFFFF&\b0}城东南五里
+Dialogue: 0,0:00:02.90,0:00:03.90,Default,,0,0,0,,三方人马{\c&H0000FFFF&\b1}列阵{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.41,0:00:06.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}李承乾各带一千人马
+Dialogue: 0,0:00:07.17,0:00:08.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}乙毗{\c&H00FFFFFF&\b0}咄陆带近五千人
+Dialogue: 0,0:00:08.94,0:00:10.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}策马而出
+Dialogue: 0,0:00:10.29,0:00:12.75,Default,,0,0,0,,英武不凡{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}也策马而出
+Dialogue: 0,0:00:12.96,0:00:14.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}乙毗{\c&H00FFFFFF&\b0}咄陆让人扛来木桩
+Dialogue: 0,0:00:14.85,0:00:15.89,Default,,0,0,0,,绑着{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.11,0:00:18.02,Default,,0,0,0,,羞辱大唐{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}暴怒
+Dialogue: 0,0:00:18.32,0:00:19.21,Default,,0,0,0,,斥责{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.62,0:00:20.91,Default,,0,0,0,,北向辉欲{\c&H0000FFFF&\b1}冲出去{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.27,0:00:22.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}也被激怒
+Dialogue: 0,0:00:22.86,0:00:24.62,Default,,0,0,0,,下令{\c&H0000FFFF&\b1}唐军{\c&H00FFFFFF&\b0}追杀乙毗咄陆
+Dialogue: 0,0:00:24.99,0:00:26.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}乙毗{\c&H00FFFFFF&\b0}咄陆率军撤退
+Dialogue: 0,0:00:26.72,0:00:28.32,Default,,0,0,0,,李承乾去救{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:28.76,0:00:30.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}也赶来帮忙

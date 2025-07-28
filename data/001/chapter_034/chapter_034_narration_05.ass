@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_034 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}提出三月内不攻丰州
+Dialogue: 0,0:00:02.60,0:00:04.41,Default,,0,0,0,,换取{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}前往河北平叛
+Dialogue: 0,0:00:04.96,0:00:06.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}指出李世民怕他平叛
+Dialogue: 0,0:00:06.86,0:00:07.76,Default,,0,0,0,,后{\c&H0000FFFF&\b1}顺势{\c&H00FFFFFF&\b0}发展
+Dialogue: 0,0:00:08.14,0:00:10.06,Default,,0,0,0,,此时被蒙眼的李治和{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}挣
+Dialogue: 0,0:00:10.06,0:00:10.63,Default,,0,0,0,,扎{\c&H0000FFFF&\b1}求救{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.89,0:00:12.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}让拿下他们嘴里的东
+Dialogue: 0,0:00:12.48,0:00:12.72,Default,,0,0,0,,西
+Dialogue: 0,0:00:12.97,0:00:14.24,Default,,0,0,0,,二人{\c&H0000FFFF&\b1}疯狂{\c&H00FFFFFF&\b0}大喊求救
+Dialogue: 0,0:00:14.69,0:00:15.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}眼眶泛红
+Dialogue: 0,0:00:16.19,0:00:17.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}声音{\c&H00FFFFFF&\b0}颤抖表示会救他们
+Dialogue: 0,0:00:18.16,0:00:19.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}嗤之以鼻
+Dialogue: 0,0:00:19.66,0:00:20.84,Default,,0,0,0,,让{\c&H0000FFFF&\b1}停止{\c&H00FFFFFF&\b0}二人乱嚎

@@ -1,0 +1,33 @@
+[Script Info]
+Title: chapter_009 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.54,Default,,0,0,0,,朝会上诸位{\c&H0000FFFF&\b1}大臣{\c&H00FFFFFF&\b0}沉默不语
+Dialogue: 0,0:00:02.93,0:00:04.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}中书省{\c&H00FFFFFF&\b0}几位更是欲言又止
+Dialogue: 0,0:00:05.29,0:00:06.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}见状好奇询问
+Dialogue: 0,0:00:07.35,0:00:08.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌出列禀报
+Dialogue: 0,0:00:09.33,0:00:10.57,Default,,0,0,0,,称{\c&H0000FFFF&\b1}前线{\c&H00FFFFFF&\b0}传来消息
+Dialogue: 0,0:00:10.82,0:00:12.65,Default,,0,0,0,,太子{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}带人劫了运抵李
+Dialogue: 0,0:00:12.65,0:00:13.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}世绩{\c&H00FFFFFF&\b0}大军的粮草
+Dialogue: 0,0:00:14.06,0:00:15.24,Default,,0,0,0,,且联系不上{\c&H0000FFFF&\b1}李世绩{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.50,0:00:17.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}听闻后勃然大怒
+Dialogue: 0,0:00:17.45,0:00:18.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}质疑{\c&H00FFFFFF&\b0}此事不可能
+Dialogue: 0,0:00:18.88,0:00:20.96,Default,,0,0,0,,可{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌详述太子派人伪
+Dialogue: 0,0:00:20.96,0:00:22.82,Default,,0,0,0,,装成{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}部下骗得粮草的情
+Dialogue: 0,0:00:22.82,0:00:23.05,Default,,0,0,0,,况
+Dialogue: 0,0:00:23.34,0:00:25.07,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是朝堂之上
+Dialogue: 0,0:00:25.30,0:00:27.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}庄重光线明亮
+Dialogue: 0,0:00:27.14,0:00:28.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}大臣{\c&H00FFFFFF&\b0}们神情凝重
+Dialogue: 0,0:00:28.61,0:00:29.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}情绪激动

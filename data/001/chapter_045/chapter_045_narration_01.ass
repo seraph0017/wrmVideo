@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_045 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.47,Default,,0,0,0,,在{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}城外的军营中
+Dialogue: 0,0:00:01.89,0:00:03.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与裴行俭正在商议攻
+Dialogue: 0,0:00:03.71,0:00:04.31,Default,,0,0,0,,城之事
+Dialogue: 0,0:00:04.75,0:00:05.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}一脸自信
+Dialogue: 0,0:00:06.30,0:00:08.43,Default,,0,0,0,,对{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}说道“守约
+Dialogue: 0,0:00:08.56,0:00:10.58,Default,,0,0,0,,朕出发前已经用{\c&H0000FFFF&\b1}信鸽{\c&H00FFFFFF&\b0}通知云
+Dialogue: 0,0:00:10.58,0:00:11.38,Default,,0,0,0,,中{\c&H0000FFFF&\b1}方向{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.49,0:00:13.28,Default,,0,0,0,,让他们想{\c&H0000FFFF&\b1}办法{\c&H00FFFFFF&\b0}让探子和太
+Dialogue: 0,0:00:13.28,0:00:15.07,Default,,0,0,0,,原城中的人{\c&H0000FFFF&\b1}取得联系{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.21,0:00:17.82,Default,,0,0,0,,”{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}点头回应神色坚定
+Dialogue: 0,0:00:17.98,0:00:20.04,Default,,0,0,0,,自信满满地表示有{\c&H0000FFFF&\b1}火药{\c&H00FFFFFF&\b0}在手
+Dialogue: 0,0:00:20.14,0:00:21.48,Default,,0,0,0,,定能拿下{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}城
+Dialogue: 0,0:00:21.68,0:00:23.32,Default,,0,0,0,,一旁的{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}忍着全身酸
+Dialogue: 0,0:00:23.32,0:00:24.23,Default,,0,0,0,,痛{\c&H0000FFFF&\b1}起身{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.41,0:00:26.54,Default,,0,0,0,,从怀中掏出一个厚厚{\c&H0000FFFF&\b1}布卷{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:26.66,0:00:27.80,Default,,0,0,0,,呈给{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:27.98,0:00:30.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}中军营内氛围紧张
+Dialogue: 0,0:00:30.45,0:00:31.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}神情专注
+Dialogue: 0,0:00:31.98,0:00:33.38,Default,,0,0,0,,讨论着攻城的{\c&H0000FFFF&\b1}关键{\c&H00FFFFFF&\b0}策略

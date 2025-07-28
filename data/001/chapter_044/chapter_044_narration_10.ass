@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_044 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.60,Default,,0,0,0,,大军{\c&H0000FFFF&\b1}渡河{\c&H00FFFFFF&\b0}后到达水寨
+Dialogue: 0,0:00:01.97,0:00:03.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}观察水寨
+Dialogue: 0,0:00:03.60,0:00:05.09,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}计划{\c&H00FFFFFF&\b0}拿下水寨
+Dialogue: 0,0:00:05.54,0:00:06.63,Default,,0,0,0,,他与{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}沟通
+Dialogue: 0,0:00:06.95,0:00:08.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}同意烧粮仓以获取水
+Dialogue: 0,0:00:08.95,0:00:09.55,Default,,0,0,0,,寨{\c&H0000FFFF&\b1}优势{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.74,0:00:10.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是水寨内
+Dialogue: 0,0:00:10.94,0:00:12.64,Default,,0,0,0,,环境{\c&H0000FFFF&\b1}安静{\c&H00FFFFFF&\b0}光线柔和
+Dialogue: 0,0:00:12.92,0:00:14.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:15.20,0:00:16.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}专注地谋划着
+Dialogue: 0,0:00:16.75,0:00:18.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}穿着高领服饰
+Dialogue: 0,0:00:18.64,0:00:20.52,Default,,0,0,0,,神情坚定地回应{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的计
+Dialogue: 0,0:00:20.52,0:00:20.75,Default,,0,0,0,,划

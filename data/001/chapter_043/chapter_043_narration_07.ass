@@ -1,0 +1,46 @@
+[Script Info]
+Title: chapter_043 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在高台上向百姓讲话
+Dialogue: 0,0:00:02.41,0:00:03.29,Default,,0,0,0,,他{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}激昂
+Dialogue: 0,0:00:03.81,0:00:05.33,Default,,0,0,0,,“诸位{\c&H0000FFFF&\b1}大唐{\c&H00FFFFFF&\b0}子民
+Dialogue: 0,0:00:05.48,0:00:06.60,Default,,0,0,0,,朕登上{\c&H0000FFFF&\b1}大位{\c&H00FFFFFF&\b0}后
+Dialogue: 0,0:00:06.71,0:00:07.71,Default,,0,0,0,,还{\c&H0000FFFF&\b1}没见{\c&H00FFFFFF&\b0}过你们
+Dialogue: 0,0:00:07.88,0:00:09.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}不知{\c&H00FFFFFF&\b0}你们可食有粮
+Dialogue: 0,0:00:09.24,0:00:09.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}睡有{\c&H00FFFFFF&\b0}床
+Dialogue: 0,0:00:10.12,0:00:11.02,Default,,0,0,0,,”{\c&H0000FFFF&\b1}话音刚落{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.21,0:00:12.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}百姓{\c&H00FFFFFF&\b0}开始交头接耳
+Dialogue: 0,0:00:12.82,0:00:13.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}脸色一变
+Dialogue: 0,0:00:14.14,0:00:16.37,Default,,0,0,0,,略显悲伤{\c&H0000FFFF&\b1}语气{\c&H00FFFFFF&\b0}深沉道
+Dialogue: 0,0:00:16.46,0:00:17.51,Default,,0,0,0,,“{\c&H0000FFFF&\b1}这个{\c&H00FFFFFF&\b0}天下
+Dialogue: 0,0:00:17.67,0:00:19.55,Default,,0,0,0,,是天下{\c&H0000FFFF&\b1}百姓{\c&H00FFFFFF&\b0}跟朕的皇祖父一
+Dialogue: 0,0:00:19.55,0:00:20.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}起打{\c&H00FFFFFF&\b0}下来的
+Dialogue: 0,0:00:20.49,0:00:21.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}我们{\c&H00FFFFFF&\b0}流了多少血
+Dialogue: 0,0:00:21.91,0:00:22.97,Default,,0,0,0,,死了{\c&H0000FFFF&\b1}多少{\c&H00FFFFFF&\b0}人
+Dialogue: 0,0:00:23.06,0:00:24.80,Default,,0,0,0,,才换了如今的{\c&H0000FFFF&\b1}盛世{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.89,0:00:25.96,Default,,0,0,0,,朕{\c&H0000FFFF&\b1}对不起{\c&H00FFFFFF&\b0}你们
+Dialogue: 0,0:00:26.04,0:00:27.59,Default,,0,0,0,,也对不起{\c&H0000FFFF&\b1}列祖列宗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:27.79,0:00:29.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}逆贼{\c&H00FFFFFF&\b0}趁着父皇驾崩
+Dialogue: 0,0:00:29.36,0:00:31.38,Default,,0,0,0,,趁势而起{\c&H0000FFFF&\b1}祸乱{\c&H00FFFFFF&\b0}天下
+Dialogue: 0,0:00:31.66,0:00:33.83,Default,,0,0,0,,”说着他{\c&H0000FFFF&\b1}语气{\c&H00FFFFFF&\b0}陡然坚定
+Dialogue: 0,0:00:33.95,0:00:35.44,Default,,0,0,0,,一脸{\c&H0000FFFF&\b1}大无畏{\c&H00FFFFFF&\b0}之色
+Dialogue: 0,0:00:35.70,0:00:36.66,Default,,0,0,0,,“但朕{\c&H0000FFFF&\b1}无惧{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:36.85,0:00:38.59,Default,,0,0,0,,朕就算{\c&H0000FFFF&\b1}流干{\c&H00FFFFFF&\b0}最后一滴血
+Dialogue: 0,0:00:38.69,0:00:40.22,Default,,0,0,0,,用完最后一丝{\c&H0000FFFF&\b1}力气{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:40.34,0:00:42.24,Default,,0,0,0,,也要将{\c&H0000FFFF&\b1}盛世{\c&H00FFFFFF&\b0}山河还给天
+Dialogue: 0,0:00:42.24,0:00:42.95,Default,,0,0,0,,下{\c&H0000FFFF&\b1}百姓{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:43.14,0:00:45.52,Default,,0,0,0,,”此时一些托开始带动{\c&H0000FFFF&\b1}气氛{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:45.74,0:00:45.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}百姓{\c&H00FFFFFF&\b0}群情激奋

@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_022 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}回到阵中大怒
+Dialogue: 0,0:00:01.88,0:00:03.14,Default,,0,0,0,,想到{\c&H0000FFFF&\b1}炼丹术{\c&H00FFFFFF&\b0}士的话
+Dialogue: 0,0:00:03.42,0:00:04.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}气愤{\c&H00FFFFFF&\b0}要杀术士
+Dialogue: 0,0:00:05.12,0:00:07.33,Default,,0,0,0,,城头{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}惋惜没弄死李世
+Dialogue: 0,0:00:07.33,0:00:07.60,Default,,0,0,0,,民
+Dialogue: 0,0:00:07.86,0:00:08.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}吩咐{\c&H00FFFFFF&\b0}组织防守
+Dialogue: 0,0:00:09.13,0:00:11.20,Default,,0,0,0,,还戏谑对城下喊“{\c&H0000FFFF&\b1}贼子{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.32,0:00:12.55,Default,,0,0,0,,朕这{\c&H0000FFFF&\b1}箭法{\c&H00FFFFFF&\b0}如何啊
+Dialogue: 0,0:00:12.67,0:00:13.72,Default,,0,0,0,,来{\c&H0000FFFF&\b1}继续{\c&H00FFFFFF&\b0}比箭啊
+Dialogue: 0,0:00:13.93,0:00:15.25,Default,,0,0,0,,”{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是战场后方
+Dialogue: 0,0:00:15.40,0:00:16.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}愤怒
+Dialogue: 0,0:00:16.52,0:00:17.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}城头指挥
+Dialogue: 0,0:00:18.05,0:00:19.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}第一个是李
+Dialogue: 0,0:00:19.16,0:00:20.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}大怒的特写
+Dialogue: 0,0:00:20.59,0:00:22.63,Default,,0,0,0,,第二个是{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}惋惜的特写
+Dialogue: 0,0:00:22.89,0:00:24.97,Default,,0,0,0,,第三个是{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}对城下喊话
+Dialogue: 0,0:00:24.97,0:00:25.72,Default,,0,0,0,,的{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:25.93,0:00:27.52,Default,,0,0,0,,第四个是城下{\c&H0000FFFF&\b1}敌军{\c&H00FFFFFF&\b0}的反
+Dialogue: 0,0:00:27.52,0:00:27.96,Default,,0,0,0,,应{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}

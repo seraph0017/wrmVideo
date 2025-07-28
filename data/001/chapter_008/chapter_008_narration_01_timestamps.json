@@ -1,0 +1,643 @@
+{
+  "text": "李承乾在草原上指挥士兵挖坑，他站在大坑旁，神情专注地吩咐士兵们挖出十个横竖三丈的大坑，每个相距不得超过半丈，中间还要挖出一个竖坑。士兵们面面相觑，虽有疑惑但仍开始按照命令行动。此时环境是草原上，阳光明媚，大坑开始逐步挖掘，李承乾身姿挺拔，专注于监工工作。",
+  "audio_file": "data/001/chapter_008/chapter_008_narration_01.mp3",
+  "duration": 23.515,
+  "character_timestamps": [
+    {
+      "character": "李",
+      "start_time": 0.015,
+      "end_time": 0.115
+    },
+    {
+      "character": "承",
+      "start_time": 0.115,
+      "end_time": 0.29
+    },
+    {
+      "character": "乾",
+      "start_time": 0.29,
+      "end_time": 0.645
+    },
+    {
+      "character": "在",
+      "start_time": 0.645,
+      "end_time": 0.755
+    },
+    {
+      "character": "草",
+      "start_time": 0.755,
+      "end_time": 0.94
+    },
+    {
+      "character": "原",
+      "start_time": 0.94,
+      "end_time": 1.085
+    },
+    {
+      "character": "上",
+      "start_time": 1.085,
+      "end_time": 1.35
+    },
+    {
+      "character": "指",
+      "start_time": 1.35,
+      "end_time": 1.515
+    },
+    {
+      "character": "挥",
+      "start_time": 1.515,
+      "end_time": 1.665
+    },
+    {
+      "character": "士",
+      "start_time": 1.665,
+      "end_time": 1.82
+    },
+    {
+      "character": "兵",
+      "start_time": 1.82,
+      "end_time": 1.975
+    },
+    {
+      "character": "挖",
+      "start_time": 1.975,
+      "end_time": 2.11
+    },
+    {
+      "character": "坑",
+      "start_time": 2.11,
+      "end_time": 2.4
+    },
+    {
+      "character": "，",
+      "start_time": 2.4,
+      "end_time": 2.885
+    },
+    {
+      "character": "他",
+      "start_time": 2.885,
+      "end_time": 3.005
+    },
+    {
+      "character": "站",
+      "start_time": 3.005,
+      "end_time": 3.185
+    },
+    {
+      "character": "在",
+      "start_time": 3.185,
+      "end_time": 3.295
+    },
+    {
+      "character": "大",
+      "start_time": 3.295,
+      "end_time": 3.445
+    },
+    {
+      "character": "坑",
+      "start_time": 3.445,
+      "end_time": 3.61
+    },
+    {
+      "character": "旁",
+      "start_time": 3.61,
+      "end_time": 3.915
+    },
+    {
+      "character": "，",
+      "start_time": 3.915,
+      "end_time": 4.43
+    },
+    {
+      "character": "神",
+      "start_time": 4.43,
+      "end_time": 4.645
+    },
+    {
+      "character": "情",
+      "start_time": 4.645,
+      "end_time": 4.825
+    },
+    {
+      "character": "专",
+      "start_time": 4.825,
+      "end_time": 5.015
+    },
+    {
+      "character": "注",
+      "start_time": 5.015,
+      "end_time": 5.12
+    },
+    {
+      "character": "地",
+      "start_time": 5.12,
+      "end_time": 5.205
+    },
+    {
+      "character": "吩",
+      "start_time": 5.205,
+      "end_time": 5.415
+    },
+    {
+      "character": "咐",
+      "start_time": 5.415,
+      "end_time": 5.575
+    },
+    {
+      "character": "士",
+      "start_time": 5.575,
+      "end_time": 5.745
+    },
+    {
+      "character": "兵",
+      "start_time": 5.745,
+      "end_time": 5.87
+    },
+    {
+      "character": "们",
+      "start_time": 5.87,
+      "end_time": 6.115
+    },
+    {
+      "character": "挖",
+      "start_time": 6.115,
+      "end_time": 6.24
+    },
+    {
+      "character": "出",
+      "start_time": 6.24,
+      "end_time": 6.39
+    },
+    {
+      "character": "十",
+      "start_time": 6.39,
+      "end_time": 6.555
+    },
+    {
+      "character": "个",
+      "start_time": 6.555,
+      "end_time": 6.65
+    },
+    {
+      "character": "横",
+      "start_time": 6.65,
+      "end_time": 6.82
+    },
+    {
+      "character": "竖",
+      "start_time": 6.82,
+      "end_time": 6.97
+    },
+    {
+      "character": "三",
+      "start_time": 6.97,
+      "end_time": 7.155
+    },
+    {
+      "character": "丈",
+      "start_time": 7.155,
+      "end_time": 7.29
+    },
+    {
+      "character": "的",
+      "start_time": 7.29,
+      "end_time": 7.34
+    },
+    {
+      "character": "大",
+      "start_time": 7.34,
+      "end_time": 7.505
+    },
+    {
+      "character": "坑",
+      "start_time": 7.505,
+      "end_time": 7.77
+    },
+    {
+      "character": "，",
+      "start_time": 7.77,
+      "end_time": 8.115
+    },
+    {
+      "character": "每",
+      "start_time": 8.115,
+      "end_time": 8.245
+    },
+    {
+      "character": "个",
+      "start_time": 8.245,
+      "end_time": 8.345
+    },
+    {
+      "character": "相",
+      "start_time": 8.345,
+      "end_time": 8.54
+    },
+    {
+      "character": "距",
+      "start_time": 8.54,
+      "end_time": 8.665
+    },
+    {
+      "character": "不",
+      "start_time": 8.665,
+      "end_time": 8.785
+    },
+    {
+      "character": "得",
+      "start_time": 8.785,
+      "end_time": 8.9
+    },
+    {
+      "character": "超",
+      "start_time": 8.9,
+      "end_time": 9.085
+    },
+    {
+      "character": "过",
+      "start_time": 9.085,
+      "end_time": 9.2
+    },
+    {
+      "character": "半",
+      "start_time": 9.2,
+      "end_time": 9.4
+    },
+    {
+      "character": "丈",
+      "start_time": 9.4,
+      "end_time": 9.6
+    },
+    {
+      "character": "，",
+      "start_time": 9.6,
+      "end_time": 9.98
+    },
+    {
+      "character": "中",
+      "start_time": 9.98,
+      "end_time": 10.145
+    },
+    {
+      "character": "间",
+      "start_time": 10.145,
+      "end_time": 10.34
+    },
+    {
+      "character": "还",
+      "start_time": 10.34,
+      "end_time": 10.48
+    },
+    {
+      "character": "要",
+      "start_time": 10.48,
+      "end_time": 10.605
+    },
+    {
+      "character": "挖",
+      "start_time": 10.605,
+      "end_time": 10.72
+    },
+    {
+      "character": "出",
+      "start_time": 10.72,
+      "end_time": 10.87
+    },
+    {
+      "character": "一",
+      "start_time": 10.87,
+      "end_time": 10.95
+    },
+    {
+      "character": "个",
+      "start_time": 10.95,
+      "end_time": 11.06
+    },
+    {
+      "character": "竖",
+      "start_time": 11.06,
+      "end_time": 11.22
+    },
+    {
+      "character": "坑",
+      "start_time": 11.22,
+      "end_time": 11.475
+    },
+    {
+      "character": "，",
+      "start_time": 11.475,
+      "end_time": 11.845
+    },
+    {
+      "character": "士",
+      "start_time": 11.845,
+      "end_time": 12.025
+    },
+    {
+      "character": "兵",
+      "start_time": 12.025,
+      "end_time": 12.155
+    },
+    {
+      "character": "们",
+      "start_time": 12.155,
+      "end_time": 12.365
+    },
+    {
+      "character": "面",
+      "start_time": 12.365,
+      "end_time": 12.515
+    },
+    {
+      "character": "面",
+      "start_time": 12.515,
+      "end_time": 12.645
+    },
+    {
+      "character": "相",
+      "start_time": 12.645,
+      "end_time": 12.86
+    },
+    {
+      "character": "觑",
+      "start_time": 12.86,
+      "end_time": 13.12
+    },
+    {
+      "character": "，",
+      "start_time": 13.12,
+      "end_time": 13.34
+    },
+    {
+      "character": "虽",
+      "start_time": 13.34,
+      "end_time": 13.49
+    },
+    {
+      "character": "有",
+      "start_time": 13.49,
+      "end_time": 13.595
+    },
+    {
+      "character": "疑",
+      "start_time": 13.595,
+      "end_time": 13.725
+    },
+    {
+      "character": "惑",
+      "start_time": 13.725,
+      "end_time": 13.955
+    },
+    {
+      "character": "但",
+      "start_time": 13.955,
+      "end_time": 14.09
+    },
+    {
+      "character": "仍",
+      "start_time": 14.09,
+      "end_time": 14.215
+    },
+    {
+      "character": "开",
+      "start_time": 14.215,
+      "end_time": 14.405
+    },
+    {
+      "character": "始",
+      "start_time": 14.405,
+      "end_time": 14.585
+    },
+    {
+      "character": "按",
+      "start_time": 14.585,
+      "end_time": 14.695
+    },
+    {
+      "character": "照",
+      "start_time": 14.695,
+      "end_time": 14.815
+    },
+    {
+      "character": "命",
+      "start_time": 14.815,
+      "end_time": 14.96
+    },
+    {
+      "character": "令",
+      "start_time": 14.96,
+      "end_time": 15.09
+    },
+    {
+      "character": "行",
+      "start_time": 15.09,
+      "end_time": 15.295
+    },
+    {
+      "character": "动",
+      "start_time": 15.295,
+      "end_time": 15.505
+    },
+    {
+      "character": "，",
+      "start_time": 15.505,
+      "end_time": 15.815
+    },
+    {
+      "character": "此",
+      "start_time": 15.815,
+      "end_time": 15.955
+    },
+    {
+      "character": "时",
+      "start_time": 15.955,
+      "end_time": 16.1
+    },
+    {
+      "character": "环",
+      "start_time": 16.1,
+      "end_time": 16.3
+    },
+    {
+      "character": "境",
+      "start_time": 16.3,
+      "end_time": 16.43
+    },
+    {
+      "character": "是",
+      "start_time": 16.43,
+      "end_time": 16.52
+    },
+    {
+      "character": "草",
+      "start_time": 16.52,
+      "end_time": 16.695
+    },
+    {
+      "character": "原",
+      "start_time": 16.695,
+      "end_time": 16.84
+    },
+    {
+      "character": "上",
+      "start_time": 16.84,
+      "end_time": 17.09
+    },
+    {
+      "character": "，",
+      "start_time": 17.09,
+      "end_time": 17.485
+    },
+    {
+      "character": "阳",
+      "start_time": 17.485,
+      "end_time": 17.645
+    },
+    {
+      "character": "光",
+      "start_time": 17.645,
+      "end_time": 17.77
+    },
+    {
+      "character": "明",
+      "start_time": 17.77,
+      "end_time": 17.925
+    },
+    {
+      "character": "媚",
+      "start_time": 17.925,
+      "end_time": 18.15
+    },
+    {
+      "character": "，",
+      "start_time": 18.15,
+      "end_time": 18.605
+    },
+    {
+      "character": "大",
+      "start_time": 18.605,
+      "end_time": 18.765
+    },
+    {
+      "character": "坑",
+      "start_time": 18.765,
+      "end_time": 19.06
+    },
+    {
+      "character": "开",
+      "start_time": 19.06,
+      "end_time": 19.25
+    },
+    {
+      "character": "始",
+      "start_time": 19.25,
+      "end_time": 19.385
+    },
+    {
+      "character": "逐",
+      "start_time": 19.385,
+      "end_time": 19.535
+    },
+    {
+      "character": "步",
+      "start_time": 19.535,
+      "end_time": 19.67
+    },
+    {
+      "character": "挖",
+      "start_time": 19.67,
+      "end_time": 19.81
+    },
+    {
+      "character": "掘",
+      "start_time": 19.81,
+      "end_time": 20.1
+    },
+    {
+      "character": "，",
+      "start_time": 20.1,
+      "end_time": 20.5
+    },
+    {
+      "character": "李",
+      "start_time": 20.5,
+      "end_time": 20.585
+    },
+    {
+      "character": "承",
+      "start_time": 20.585,
+      "end_time": 20.765
+    },
+    {
+      "character": "乾",
+      "start_time": 20.765,
+      "end_time": 21.07
+    },
+    {
+      "character": "身",
+      "start_time": 21.07,
+      "end_time": 21.25
+    },
+    {
+      "character": "姿",
+      "start_time": 21.25,
+      "end_time": 21.345
+    },
+    {
+      "character": "挺",
+      "start_time": 21.345,
+      "end_time": 21.52
+    },
+    {
+      "character": "拔",
+      "start_time": 21.52,
+      "end_time": 21.805
+    },
+    {
+      "character": "，",
+      "start_time": 21.805,
+      "end_time": 22.14
+    },
+    {
+      "character": "专",
+      "start_time": 22.14,
+      "end_time": 22.31
+    },
+    {
+      "character": "注",
+      "start_time": 22.31,
+      "end_time": 22.455
+    },
+    {
+      "character": "于",
+      "start_time": 22.455,
+      "end_time": 22.595
+    },
+    {
+      "character": "监",
+      "start_time": 22.595,
+      "end_time": 22.8
+    },
+    {
+      "character": "工",
+      "start_time": 22.8,
+      "end_time": 22.945
+    },
+    {
+      "character": "工",
+      "start_time": 22.945,
+      "end_time": 23.12
+    },
+    {
+      "character": "作",
+      "start_time": 23.12,
+      "end_time": 23.345
+    },
+    {
+      "character": "。",
+      "start_time": 23.345,
+      "end_time": 23.51
+    }
+  ],
+  "generated_at": "2025-07-27T21:45:53.479184"
+}

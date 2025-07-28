@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_025 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}和北向辉率军出城与
+Dialogue: 0,0:00:02.21,0:00:03.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}等人相遇
+Dialogue: 0,0:00:03.75,0:00:05.00,Default,,0,0,0,,北向辉威胁{\c&H0000FFFF&\b1}对方{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.39,0:00:07.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌等人将假的魏
+Dialogue: 0,0:00:07.37,0:00:08.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}晋二王{\c&H00FFFFFF&\b0}赶到军前
+Dialogue: 0,0:00:08.90,0:00:10.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}将三人蒙上头套拉回
+Dialogue: 0,0:00:10.91,0:00:11.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}军阵{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.55,0:00:13.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}见状准备攻城
+Dialogue: 0,0:00:13.43,0:00:14.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则打开城门
+Dialogue: 0,0:00:15.24,0:00:16.84,Default,,0,0,0,,留下{\c&H0000FFFF&\b1}瓮城{\c&H00FFFFFF&\b0}并隐藏炸药
+Dialogue: 0,0:00:17.14,0:00:18.24,Default,,0,0,0,,准备应对{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}

@@ -1,0 +1,40 @@
+[Script Info]
+Title: chapter_016 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}孤身一人
+Dialogue: 0,0:00:01.69,0:00:03.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}面对{\c&H00FFFFFF&\b0}围堵毫不畏惧
+Dialogue: 0,0:00:03.87,0:00:04.66,Default,,0,0,0,,他{\c&H0000FFFF&\b1}破口大骂{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.27,0:00:06.39,Default,,0,0,0,,“我去你的吧
+Dialogue: 0,0:00:06.60,0:00:08.78,Default,,0,0,0,,上一次{\c&H0000FFFF&\b1}嫡长子{\c&H00FFFFFF&\b0}顺利继承皇位
+Dialogue: 0,0:00:08.90,0:00:10.88,Default,,0,0,0,,都不{\c&H0000FFFF&\b1}知道{\c&H00FFFFFF&\b0}是几百年前的事了
+Dialogue: 0,0:00:10.96,0:00:12.10,Default,,0,0,0,,你忽悠{\c&H0000FFFF&\b1}傻子{\c&H00FFFFFF&\b0}呢
+Dialogue: 0,0:00:12.24,0:00:13.88,Default,,0,0,0,,”此时{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}心情稍好
+Dialogue: 0,0:00:14.05,0:00:15.01,Default,,0,0,0,,还{\c&H0000FFFF&\b1}假意{\c&H00FFFFFF&\b0}说道
+Dialogue: 0,0:00:15.19,0:00:16.31,Default,,0,0,0,,“{\c&H0000FFFF&\b1}高明{\c&H00FFFFFF&\b0}吾儿
+Dialogue: 0,0:00:16.41,0:00:17.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}不管{\c&H00FFFFFF&\b0}你怎么说
+Dialogue: 0,0:00:17.75,0:00:19.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}父皇{\c&H00FFFFFF&\b0}可是想你想得紧啊
+Dialogue: 0,0:00:20.11,0:00:21.41,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}见状
+Dialogue: 0,0:00:21.55,0:00:22.77,Default,,0,0,0,,抽出随身{\c&H0000FFFF&\b1}短刀{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:23.05,0:00:25.00,Default,,0,0,0,,横在{\c&H0000FFFF&\b1}脖颈{\c&H00FFFFFF&\b0}眼神决绝
+Dialogue: 0,0:00:25.12,0:00:26.54,Default,,0,0,0,,称自己不惧{\c&H0000FFFF&\b1}生死{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:26.68,0:00:28.79,Default,,0,0,0,,还直言{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}怕留虎毒食子
+Dialogue: 0,0:00:28.79,0:00:29.25,Default,,0,0,0,,的{\c&H0000FFFF&\b1}骂名{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:29.41,0:00:30.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}不会{\c&H00FFFFFF&\b0}真杀他
+Dialogue: 0,0:00:30.45,0:00:31.53,Default,,0,0,0,,还指出{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:31.65,0:00:33.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}李治{\c&H00FFFFFF&\b0}不会放过他
+Dialogue: 0,0:00:33.15,0:00:34.88,Default,,0,0,0,,场景仍在{\c&H0000FFFF&\b1}长安街{\c&H00FFFFFF&\b0}头
+Dialogue: 0,0:00:35.05,0:00:36.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}人群{\c&H00FFFFFF&\b0}依旧围观
+Dialogue: 0,0:00:36.52,0:00:37.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}气氛{\c&H00FFFFFF&\b0}紧张到极点

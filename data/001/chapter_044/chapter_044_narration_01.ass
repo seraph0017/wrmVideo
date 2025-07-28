@@ -1,0 +1,34 @@
+[Script Info]
+Title: chapter_044 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在宫中与王逸交谈
+Dialogue: 0,0:00:02.47,0:00:04.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}提及王家在河东道有五
+Dialogue: 0,0:00:04.46,0:00:05.16,Default,,0,0,0,,六万{\c&H0000FFFF&\b1}佃户{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.60,0:00:07.50,Default,,0,0,0,,愿奉上契约以换取{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}为
+Dialogue: 0,0:00:07.50,0:00:08.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}王家{\c&H00FFFFFF&\b0}报仇
+Dialogue: 0,0:00:08.62,0:00:09.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}面露笑意
+Dialogue: 0,0:00:10.18,0:00:12.16,Default,,0,0,0,,心中却{\c&H0000FFFF&\b1}思量{\c&H00FFFFFF&\b0}仅靠残血的王
+Dialogue: 0,0:00:12.16,0:00:13.02,Default,,0,0,0,,家{\c&H0000FFFF&\b1}远远不够{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.31,0:00:15.37,Default,,0,0,0,,还需其他{\c&H0000FFFF&\b1}河北{\c&H00FFFFFF&\b0}门阀全力支持
+Dialogue: 0,0:00:15.65,0:00:17.45,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在庄重的宫中
+Dialogue: 0,0:00:17.84,0:00:18.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}明亮
+Dialogue: 0,0:00:18.95,0:00:20.93,Default,,0,0,0,,背景{\c&H0000FFFF&\b1}陈设{\c&H00FFFFFF&\b0}尽显皇家威严
+Dialogue: 0,0:00:21.32,0:00:23.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:23.61,0:00:25.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}剑眉{\c&H00FFFFFF&\b0}星目面容坚毅
+Dialogue: 0,0:00:25.91,0:00:27.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}嘴角{\c&H00FFFFFF&\b0}露出一抹自信的笑意
+Dialogue: 0,0:00:27.92,0:00:29.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}穿着浅色高领长袍
+Dialogue: 0,0:00:29.83,0:00:31.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}面容{\c&H00FFFFFF&\b0}清秀神情恭敬
+Dialogue: 0,0:00:32.30,0:00:33.73,Default,,0,0,0,,专注地与{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}对话

@@ -1,0 +1,46 @@
+[Script Info]
+Title: chapter_002 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}朝堂{\c&H00FFFFFF&\b0}之上气氛凝重
+Dialogue: 0,0:00:02.19,0:00:04.56,Default,,0,0,0,,一众文臣正在快速{\c&H0000FFFF&\b1}权衡利弊{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.20,0:00:07.07,Default,,0,0,0,,他们清楚不能下旨让{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.07,0:00:08.08,Default,,0,0,0,,独自率军{\c&H0000FFFF&\b1}出征{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.45,0:00:10.10,Default,,0,0,0,,但又担忧{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}半月不醒
+Dialogue: 0,0:00:10.35,0:00:11.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}北境{\c&H00FFFFFF&\b0}边疆有失
+Dialogue: 0,0:00:11.74,0:00:14.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}高句丽{\c&H00FFFFFF&\b0}吐蕃趁势来攻会让李
+Dialogue: 0,0:00:14.02,0:00:15.09,Default,,0,0,0,,世民{\c&H0000FFFF&\b1}追究责任{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.54,0:00:16.91,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}魏征{\c&H00FFFFFF&\b0}站了出来
+Dialogue: 0,0:00:17.30,0:00:18.64,Default,,0,0,0,,诚恳地对{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}说道
+Dialogue: 0,0:00:19.11,0:00:21.29,Default,,0,0,0,,“{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}殿下军情紧急
+Dialogue: 0,0:00:21.35,0:00:23.32,Default,,0,0,0,,我们{\c&H0000FFFF&\b1}肯定{\c&H00FFFFFF&\b0}不能同意您独自率
+Dialogue: 0,0:00:23.32,0:00:24.38,Default,,0,0,0,,军{\c&H0000FFFF&\b1}出征{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.52,0:00:26.23,Default,,0,0,0,,不过只要殿下您能{\c&H0000FFFF&\b1}批答{\c&H00FFFFFF&\b0}出
+Dialogue: 0,0:00:26.23,0:00:26.98,Default,,0,0,0,,兵{\c&H0000FFFF&\b1}旨意{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:27.06,0:00:29.25,Default,,0,0,0,,我们就同意您跟随{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}出征
+Dialogue: 0,0:00:29.40,0:00:31.50,Default,,0,0,0,,但要以{\c&H0000FFFF&\b1}李世积{\c&H00FFFFFF&\b0}将军为主帅
+Dialogue: 0,0:00:31.69,0:00:33.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}将军为副帅
+Dialogue: 0,0:00:33.45,0:00:35.42,Default,,0,0,0,,您不能在军中担任任何{\c&H0000FFFF&\b1}职务{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:35.56,0:00:37.38,Default,,0,0,0,,且要授予{\c&H0000FFFF&\b1}李积{\c&H00FFFFFF&\b0}节制大军一切
+Dialogue: 0,0:00:37.38,0:00:38.19,Default,,0,0,0,,的{\c&H0000FFFF&\b1}权利{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:38.29,0:00:40.53,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听后微微点头
+Dialogue: 0,0:00:40.69,0:00:41.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}陷入{\c&H00FFFFFF&\b0}沉吟思考
+Dialogue: 0,0:00:41.94,0:00:43.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌也站出来
+Dialogue: 0,0:00:43.59,0:00:45.38,Default,,0,0,0,,声音平淡地劝说{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:45.64,0:00:47.91,Default,,0,0,0,,而后{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}假装不愿再坚持
+Dialogue: 0,0:00:48.19,0:00:49.55,Default,,0,0,0,,最后还是{\c&H0000FFFF&\b1}答应下来{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:49.72,0:00:51.67,Default,,0,0,0,,并{\c&H0000FFFF&\b1}提出{\c&H00FFFFFF&\b0}两日内出兵的要求
+Dialogue: 0,0:00:51.85,0:00:53.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在朝堂
+Dialogue: 0,0:00:53.21,0:00:55.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}明亮氛围紧张严肃

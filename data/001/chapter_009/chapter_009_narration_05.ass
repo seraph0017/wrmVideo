@@ -1,0 +1,34 @@
+[Script Info]
+Title: chapter_009 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}国子监{\c&H00FFFFFF&\b0}祭酒孔颖达出列
+Dialogue: 0,0:00:02.03,0:00:02.98,Default,,0,0,0,,称有{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}诗词
+Dialogue: 0,0:00:03.52,0:00:05.22,Default,,0,0,0,,直言太子诗比{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}的好
+Dialogue: 0,0:00:05.62,0:00:06.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}听后黑脸
+Dialogue: 0,0:00:07.23,0:00:08.13,Default,,0,0,0,,接过{\c&H0000FFFF&\b1}诗词{\c&H00FFFFFF&\b0}查看
+Dialogue: 0,0:00:08.49,0:00:09.98,Default,,0,0,0,,读到“{\c&H0000FFFF&\b1}醉里{\c&H00FFFFFF&\b0}挑灯看剑
+Dialogue: 0,0:00:10.11,0:00:12.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}梦回{\c&H00FFFFFF&\b0}吹角连营”时引发强
+Dialogue: 0,0:00:12.35,0:00:13.01,Default,,0,0,0,,烈{\c&H0000FFFF&\b1}共鸣{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.11,0:00:14.59,Default,,0,0,0,,回忆起{\c&H0000FFFF&\b1}军营{\c&H00FFFFFF&\b0}岁月
+Dialogue: 0,0:00:14.72,0:00:15.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}读完{\c&H00FFFFFF&\b0}后激动
+Dialogue: 0,0:00:16.06,0:00:17.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}提及虎牢关一战
+Dialogue: 0,0:00:18.13,0:00:19.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}附和
+Dialogue: 0,0:00:19.30,0:00:20.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}继续让李
+Dialogue: 0,0:00:20.38,0:00:21.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}品鉴下一首诗
+Dialogue: 0,0:00:22.02,0:00:24.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}虽不悦但继续查看
+Dialogue: 0,0:00:24.25,0:00:25.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}仍在朝堂
+Dialogue: 0,0:00:25.66,0:00:28.02,Default,,0,0,0,,光线明亮{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}神情坚定
+Dialogue: 0,0:00:28.18,0:00:29.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}表情多变

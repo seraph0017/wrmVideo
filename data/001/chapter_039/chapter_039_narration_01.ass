@@ -1,0 +1,47 @@
+[Script Info]
+Title: chapter_039 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.50,Default,,0,0,0,,在激烈的{\c&H0000FFFF&\b1}战场{\c&H00FFFFFF&\b0}环境中
+Dialogue: 0,0:00:01.87,0:00:03.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}与李承乾父子二人相
+Dialogue: 0,0:00:03.86,0:00:05.34,Default,,0,0,0,,互拽着{\c&H0000FFFF&\b1}对方{\c&H00FFFFFF&\b0}体内的弩箭
+Dialogue: 0,0:00:05.79,0:00:06.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}局势{\c&H00FFFFFF&\b0}紧张到极点
+Dialogue: 0,0:00:07.20,0:00:08.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}满脸愤怒
+Dialogue: 0,0:00:08.55,0:00:10.49,Default,,0,0,0,,口中不断咆哮着“{\c&H0000FFFF&\b1}逆子{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.71,0:00:11.96,Default,,0,0,0,,朕{\c&H0000FFFF&\b1}一定{\c&H00FFFFFF&\b0}要杀了你”
+Dialogue: 0,0:00:12.07,0:00:13.95,Default,,0,0,0,,而{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}也痛苦万分
+Dialogue: 0,0:00:14.07,0:00:16.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}声音{\c&H00FFFFFF&\b0}虚弱却仍在挣扎
+Dialogue: 0,0:00:16.18,0:00:17.42,Default,,0,0,0,,周围{\c&H0000FFFF&\b1}厮杀{\c&H00FFFFFF&\b0}惨烈
+Dialogue: 0,0:00:17.59,0:00:19.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}北向辉
+Dialogue: 0,0:00:19.62,0:00:21.70,Default,,0,0,0,,秦琼{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}四将围绕二
+Dialogue: 0,0:00:21.70,0:00:23.09,Default,,0,0,0,,人{\c&H0000FFFF&\b1}展开{\c&H00FFFFFF&\b0}激烈战斗
+Dialogue: 0,0:00:23.20,0:00:24.94,Default,,0,0,0,,却又时刻关注着{\c&H0000FFFF&\b1}父子俩{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:24.94,0:00:25.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:25.59,0:00:27.65,Default,,0,0,0,,此时的{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在户外的战场
+Dialogue: 0,0:00:27.79,0:00:30.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}天色{\c&H00FFFFFF&\b0}昏暗硝烟弥漫
+Dialogue: 0,0:00:30.20,0:00:31.89,Default,,0,0,0,,战斗正处于{\c&H0000FFFF&\b1}白热化{\c&H00FFFFFF&\b0}阶段
+Dialogue: 0,0:00:32.05,0:00:33.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}满脸怒容
+Dialogue: 0,0:00:34.13,0:00:35.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}头发{\c&H00FFFFFF&\b0}有些凌乱
+Dialogue: 0,0:00:35.35,0:00:37.00,Default,,0,0,0,,穿着{\c&H0000FFFF&\b1}深色{\c&H00FFFFFF&\b0}高领长袍
+Dialogue: 0,0:00:37.17,0:00:38.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}身体{\c&H00FFFFFF&\b0}用力挣扎
+Dialogue: 0,0:00:38.51,0:00:39.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}脸色惨白
+Dialogue: 0,0:00:40.03,0:00:42.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}眼神{\c&H00FFFFFF&\b0}狠厉穿着深色高领长袍
+Dialogue: 0,0:00:42.88,0:00:44.12,Default,,0,0,0,,痛苦地拽着{\c&H0000FFFF&\b1}弩箭{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:44.34,0:00:45.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}神情严肃
+Dialogue: 0,0:00:45.72,0:00:47.68,Default,,0,0,0,,身着{\c&H0000FFFF&\b1}铠甲{\c&H00FFFFFF&\b0}高领设计
+Dialogue: 0,0:00:47.78,0:00:49.19,Default,,0,0,0,,专注地观察着{\c&H0000FFFF&\b1}局势{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:49.34,0:00:50.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}面容黝黑
+Dialogue: 0,0:00:51.11,0:00:52.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}铠甲{\c&H00FFFFFF&\b0}在身高领凸显
+Dialogue: 0,0:00:53.13,0:00:53.94,Default,,0,0,0,,警惕{\c&H0000FFFF&\b1}地守护{\c&H00FFFFFF&\b0}着

@@ -1,0 +1,43 @@
+[Script Info]
+Title: chapter_016 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}撤出战圈向城门方
+Dialogue: 0,0:00:01.66,0:00:02.33,Default,,0,0,0,,向{\c&H0000FFFF&\b1}疾驰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.73,0:00:04.00,Default,,0,0,0,,马上冲出{\c&H0000FFFF&\b1}城门{\c&H00FFFFFF&\b0}时
+Dialogue: 0,0:00:04.46,0:00:05.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}问李治
+Dialogue: 0,0:00:05.83,0:00:06.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}怎么办
+Dialogue: 0,0:00:06.96,0:00:08.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示不放
+Dialogue: 0,0:00:08.38,0:00:09.98,Default,,0,0,0,,说要留着当{\c&H0000FFFF&\b1}人质{\c&H00FFFFFF&\b0}换地盘
+Dialogue: 0,0:00:10.30,0:00:12.02,Default,,0,0,0,,然后让把{\c&H0000FFFF&\b1}火药{\c&H00FFFFFF&\b0}投在主管兵
+Dialogue: 0,0:00:12.02,0:00:13.45,Default,,0,0,0,,器制作的{\c&H0000FFFF&\b1}少府{\c&H00FFFFFF&\b0}监和军
+Dialogue: 0,0:00:13.45,0:00:14.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}器监{\c&H00FFFFFF&\b0}处
+Dialogue: 0,0:00:14.40,0:00:15.82,Default,,0,0,0,,几个人点燃{\c&H0000FFFF&\b1}火药{\c&H00FFFFFF&\b0}扔过去
+Dialogue: 0,0:00:16.14,0:00:17.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}爆炸声{\c&H00FFFFFF&\b0}中平房火光冲天
+Dialogue: 0,0:00:18.29,0:00:19.23,Default,,0,0,0,,到{\c&H0000FFFF&\b1}城门口{\c&H00FFFFFF&\b0}时
+Dialogue: 0,0:00:19.61,0:00:21.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}唬住守城士兵
+Dialogue: 0,0:00:21.50,0:00:22.52,Default,,0,0,0,,一行人{\c&H0000FFFF&\b1}冲出{\c&H00FFFFFF&\b0}城
+Dialogue: 0,0:00:23.01,0:00:24.38,Default,,0,0,0,,沿着{\c&H0000FFFF&\b1}官道{\c&H00FFFFFF&\b0}向北狂奔
+Dialogue: 0,0:00:24.77,0:00:26.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}忍着痛问是否放他
+Dialogue: 0,0:00:26.87,0:00:28.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}冷笑道老实待着
+Dialogue: 0,0:00:28.84,0:00:30.73,Default,,0,0,0,,还问{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}从秦汉到如今有没
+Dialogue: 0,0:00:30.73,0:00:31.77,Default,,0,0,0,,有{\c&H0000FFFF&\b1}皇子{\c&H00FFFFFF&\b0}是太监
+Dialogue: 0,0:00:32.16,0:00:32.93,Default,,0,0,0,,让{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}惊恐
+Dialogue: 0,0:00:33.33,0:00:34.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}问往哪走
+Dialogue: 0,0:00:34.95,0:00:36.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}说去泾河边跟月月他
+Dialogue: 0,0:00:36.92,0:00:37.53,Default,,0,0,0,,们{\c&H0000FFFF&\b1}汇合{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:37.86,0:00:38.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是出城后
+Dialogue: 0,0:00:39.26,0:00:40.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}月光{\c&H00FFFFFF&\b0}下的官道
+Dialogue: 0,0:00:40.52,0:00:42.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}较暗气氛紧张

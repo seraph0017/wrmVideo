@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_007 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}决定派李靖前往张掖
+Dialogue: 0,0:00:02.04,0:00:02.98,Default,,0,0,0,,缉拿{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.35,0:00:05.45,Default,,0,0,0,,询问{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}李承乾家眷和东
+Dialogue: 0,0:00:05.45,0:00:06.35,Default,,0,0,0,,宫{\c&H0000FFFF&\b1}僚属{\c&H00FFFFFF&\b0}的情况
+Dialogue: 0,0:00:06.63,0:00:08.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}说都不见踪影
+Dialogue: 0,0:00:08.49,0:00:09.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}大怒
+Dialogue: 0,0:00:09.46,0:00:10.79,Default,,0,0,0,,罢免{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}官职
+Dialogue: 0,0:00:11.08,0:00:12.62,Default,,0,0,0,,让{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}领京兆尹之位
+Dialogue: 0,0:00:12.85,0:00:15.11,Default,,0,0,0,,场景是在{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿内君臣商议
+Dialogue: 0,0:00:15.40,0:00:16.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}龙袍高领
+Dialogue: 0,0:00:16.98,0:00:18.82,Default,,0,0,0,,下令派{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}表情冷峻
+Dialogue: 0,0:00:19.13,0:00:20.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}束发高领官服
+Dialogue: 0,0:00:21.00,0:00:22.71,Default,,0,0,0,,跪地{\c&H0000FFFF&\b1}惶恐{\c&H00FFFFFF&\b0}听候发落
+Dialogue: 0,0:00:23.16,0:00:24.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}束发高领服饰
+Dialogue: 0,0:00:24.95,0:00:26.80,Default,,0,0,0,,出列{\c&H0000FFFF&\b1}领旨{\c&H00FFFFFF&\b0}神情庄重

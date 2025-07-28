@@ -1,0 +1,120 @@
+[Script Info]
+Title: chapter_040 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.02, 0:00:01.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}画面{\c&H00FFFFFF&\b0}展现激烈战场
+Dialogue: 0, 0:00:01.73, 0:00:02.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}骑在马上
+Dialogue: 0, 0:00:03.25, 0:00:04.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}嘴角{\c&H00FFFFFF&\b0}露出一抹冷冽笑意
+Dialogue: 0, 0:00:05.12, 0:00:06.11,Default,,0,0,0,,抽出{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}配刀
+Dialogue: 0, 0:00:06.42, 0:00:07.92,Default,,0,0,0,,直接压在{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}脖子上
+Dialogue: 0, 0:00:08.16, 0:00:09.53,Default,,0,0,0,,双眼冷冽盯着{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:09.82, 0:00:11.67,Default,,0,0,0,,示意大军若动{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}必死
+Dialogue: 0, 0:00:12.00, 0:00:13.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}在后方犹豫
+Dialogue: 0, 0:00:13.64, 0:00:14.53,Default,,0,0,0,,伸手横{\c&H0000FFFF&\b1}持枪{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:14.83, 0:00:15.73,Default,,0,0,0,,拦住{\c&H0000FFFF&\b1}众将士{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:15.99, 0:00:18.01,Default,,0,0,0,,心中大吼问{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}能否放了
+Dialogue: 0, 0:00:18.01, 0:00:18.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:18.69, 0:00:19.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是战场
+Dialogue: 0, 0:00:19.75, 0:00:21.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}紧张光线强烈
+Dialogue: 0, 0:00:21.80, 0:00:23.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}战场硝烟弥漫
+Dialogue: 0, 0:00:24.14, 0:00:26.28,Default,,0,0,0,,远处传来{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}如同闷雷般
+Dialogue: 0, 0:00:26.28, 0:00:26.76,Default,,0,0,0,,的{\c&H0000FFFF&\b1}吼声{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:27.28, 0:00:29.50,Default,,0,0,0,,声贯{\c&H0000FFFF&\b1}云霄{\c&H00FFFFFF&\b0}他双眼通红
+Dialogue: 0, 0:00:29.82, 0:00:30.53,Default,,0,0,0,,满是{\c&H0000FFFF&\b1}煞气{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:30.82, 0:00:32.48,Default,,0,0,0,,高呼{\c&H0000FFFF&\b1}全军{\c&H00FFFFFF&\b0}以本将为先
+Dialogue: 0, 0:00:32.64, 0:00:34.34,Default,,0,0,0,,不避{\c&H0000FFFF&\b1}刀兵{\c&H00FFFFFF&\b0}生死不论
+Dialogue: 0, 0:00:34.60, 0:00:35.81,Default,,0,0,0,,直取{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}首级
+Dialogue: 0, 0:00:36.03, 0:00:37.57,Default,,0,0,0,,随后一马当先{\c&H0000FFFF&\b1}冲出去{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:37.78, 0:00:39.09,Default,,0,0,0,,身后{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}怒吼跟着
+Dialogue: 0, 0:00:39.40, 0:00:40.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}冷笑
+Dialogue: 0, 0:00:40.65, 0:00:42.00,Default,,0,0,0,,认为{\c&H0000FFFF&\b1}对方{\c&H00FFFFFF&\b0}不敢杀人
+Dialogue: 0, 0:00:42.35, 0:00:43.75,Default,,0,0,0,,深知{\c&H0000FFFF&\b1}皇位{\c&H00FFFFFF&\b0}争夺残酷
+Dialogue: 0, 0:00:44.07, 0:00:45.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}仍在战场
+Dialogue: 0, 0:00:45.32, 0:00:46.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}持续紧张
+Dialogue: 0, 0:00:46.78, 0:00:47.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}依旧强烈
+Dialogue: 0, 0:00:48.21, 0:00:49.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}低头看向李承乾
+Dialogue: 0, 0:00:50.48, 0:00:52.00,Default,,0,0,0,,称其{\c&H0000FFFF&\b1}部将{\c&H00FFFFFF&\b0}要弃暗投明
+Dialogue: 0, 0:00:52.48, 0:00:54.40,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}急得恨不能肚子
+Dialogue: 0, 0:00:54.40, 0:00:54.96,Default,,0,0,0,,能{\c&H0000FFFF&\b1}说话{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:55.24, 0:00:57.28,Default,,0,0,0,,深知{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}率军冲杀可能有
+Dialogue: 0, 0:00:57.28, 0:00:57.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}一线生机{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:58.21, 0:00:59.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在战场
+Dialogue: 0, 0:00:59.25, 0:01:00.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}依旧紧张
+Dialogue: 0, 0:01:00.69, 0:01:02.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}手起刀落要斩李承乾
+Dialogue: 0, 0:01:03.26, 0:01:04.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}爆发出力量扬头
+Dialogue: 0, 0:01:05.55, 0:01:07.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}称杀{\c&H00FFFFFF&\b0}了朕这辈子别想找到李
+Dialogue: 0, 0:01:07.29, 0:01:08.14,Default,,0,0,0,,泰和{\c&H0000FFFF&\b1}李治{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:08.51, 0:01:10.40,Default,,0,0,0,,这话让{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}有一瞬间犹豫
+Dialogue: 0, 0:01:10.63, 0:01:12.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在战场环境紧张
+Dialogue: 0, 0:01:12.66, 0:01:14.68,Default,,0,0,0,,北向辉看到{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}刀要落下
+Dialogue: 0, 0:01:15.24, 0:01:17.01,Default,,0,0,0,,一咬牙横扫逼开{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:17.57, 0:01:19.06,Default,,0,0,0,,反握{\c&H0000FFFF&\b1}铁枪{\c&H00FFFFFF&\b0}狠命掷出
+Dialogue: 0, 0:01:19.42, 0:01:21.00,Default,,0,0,0,,铁枪直奔{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}面门
+Dialogue: 0, 0:01:21.27, 0:01:22.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}举刀抵挡
+Dialogue: 0, 0:01:22.59, 0:01:24.34,Default,,0,0,0,,铁枪扫到押{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的秦琼和
+Dialogue: 0, 0:01:24.34, 0:01:25.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄甲军{\c&H00FFFFFF&\b0}脸上
+Dialogue: 0, 0:01:25.49, 0:01:27.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在战场环境激烈
+Dialogue: 0, 0:01:27.42, 0:01:29.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}弯弓搭箭连射三箭
+Dialogue: 0, 0:01:29.90, 0:01:31.99,Default,,0,0,0,,绑火药的箭被{\c&H0000FFFF&\b1}玄甲军{\c&H00FFFFFF&\b0}挡住但
+Dialogue: 0, 0:01:31.99, 0:01:32.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}凌空{\c&H00FFFFFF&\b0}爆炸
+Dialogue: 0, 0:01:33.29, 0:01:35.27,Default,,0,0,0,,波及{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}致其伤口迸开大
+Dialogue: 0, 0:01:35.27, 0:01:35.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}出血{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:36.00, 0:01:37.99,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}将李承乾送的玉
+Dialogue: 0, 0:01:37.99, 0:01:39.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}佩挂{\c&H00FFFFFF&\b0}箭上射出
+Dialogue: 0, 0:01:39.46, 0:01:40.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}刀势一弱
+Dialogue: 0, 0:01:40.96, 0:01:42.77,Default,,0,0,0,,没砍中{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}脖颈而砍在左
+Dialogue: 0, 0:01:42.77, 0:01:43.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}肩胛骨{\c&H00FFFFFF&\b0}上
+Dialogue: 0, 0:01:43.76, 0:01:44.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}昏过去
+Dialogue: 0, 0:01:45.11, 0:01:46.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在战场环境激烈
+Dialogue: 0, 0:01:47.15, 0:01:48.96,Default,,0,0,0,,北向辉掷出{\c&H0000FFFF&\b1}铁枪{\c&H00FFFFFF&\b0}后硬挨尉
+Dialogue: 0, 0:01:48.96, 0:01:49.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}迟敬德{\c&H00FFFFFF&\b0}一槊
+Dialogue: 0, 0:01:50.38, 0:01:51.43,Default,,0,0,0,,冲向后{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:51.84, 0:01:52.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}抽刀{\c&H00FFFFFF&\b0}疯狂砍杀
+Dialogue: 0, 0:01:53.23, 0:01:55.22,Default,,0,0,0,,不躲不闪身上{\c&H0000FFFF&\b1}铠甲{\c&H00FFFFFF&\b0}被破
+Dialogue: 0, 0:01:55.49, 0:01:57.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}嘴角{\c&H00FFFFFF&\b0}溢血但冲杀之势不减
+Dialogue: 0, 0:01:57.82, 0:01:59.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}带领大军杀来
+Dialogue: 0, 0:01:59.67, 0:02:00.40,Default,,0,0,0,,状若{\c&H0000FFFF&\b1}疯魔{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:00.59, 0:02:02.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在战场环境激烈
+Dialogue: 0, 0:02:02.55, 0:02:03.97,Default,,0,0,0,,秦琼见{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}状况
+Dialogue: 0, 0:02:04.25, 0:02:06.33,Default,,0,0,0,,劝其先撤{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}下令撤
+Dialogue: 0, 0:02:06.95, 0:02:08.55,Default,,0,0,0,,秦琼扛{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}扔马上
+Dialogue: 0, 0:02:08.93, 0:02:10.30,Default,,0,0,0,,自己{\c&H0000FFFF&\b1}上马{\c&H00FFFFFF&\b0}跟随疾驰
+Dialogue: 0, 0:02:10.69, 0:02:12.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}想搭箭却被玄
+Dialogue: 0, 0:02:12.11, 0:02:12.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}甲军{\c&H00FFFFFF&\b0}打断
+Dialogue: 0, 0:02:13.13, 0:02:14.68,Default,,0,0,0,,眼睁睁看{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}被带走
+Dialogue: 0, 0:02:14.97, 0:02:16.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}伤势严重
+Dialogue: 0, 0:02:16.35, 0:02:17.98,Default,,0,0,0,,恢复{\c&H0000FFFF&\b1}意识{\c&H00FFFFFF&\b0}后未表现出醒
+Dialogue: 0, 0:02:18.31, 0:02:20.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在战场环境紧张
+Dialogue: 0, 0:02:20.28, 0:02:22.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}虎牢关{\c&H00FFFFFF&\b0}方向传来密集马蹄声
+Dialogue: 0, 0:02:22.72, 0:02:24.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}李恪{\c&H00FFFFFF&\b0}捡命后遇李佑
+Dialogue: 0, 0:02:24.62, 0:02:25.90,Default,,0,0,0,,李佑交出{\c&H0000FFFF&\b1}指挥权{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:26.39, 0:02:28.37,Default,,0,0,0,,李恪收拢溃兵追杀{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}和
+Dialogue: 0, 0:02:28.37, 0:02:28.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:29.34, 0:02:30.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}让秦琼杀逆子
+Dialogue: 0, 0:02:31.28, 0:02:33.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听到后从马上滑下晕
+Dialogue: 0, 0:02:33.31, 0:02:33.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}过去{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:33.99, 0:02:35.09,Default,,0,0,0,,听到北向辉{\c&H0000FFFF&\b1}吼声{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:35.49, 0:02:37.38,Default,,0,0,0,,场景在战场及{\c&H0000FFFF&\b1}虎牢关{\c&H00FFFFFF&\b0}附近
+Dialogue: 0, 0:02:37.65, 0:02:38.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}紧张
+Dialogue: 0, 0:02:38.61, 0:02:40.53,Default,,0,0,0,,良久后{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}昏昏沉沉
+Dialogue: 0, 0:02:40.84, 0:02:41.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}喉咙{\c&H00FFFFFF&\b0}痒疼
+Dialogue: 0, 0:02:41.94, 0:02:43.96,Default,,0,0,0,,北向辉说救完他后{\c&H0000FFFF&\b1}师兄{\c&H00FFFFFF&\b0}护
+Dialogue: 0, 0:02:43.96, 0:02:44.55,Default,,0,0,0,,送{\c&H0000FFFF&\b1}杀出{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:44.91, 0:02:46.26,Default,,0,0,0,,按时间{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}快到
+Dialogue: 0, 0:02:46.64, 0:02:48.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心神一松又晕过去
+Dialogue: 0, 0:02:48.73, 0:02:50.32,Default,,0,0,0,,后缓缓睁眼看到{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:50.60, 0:02:52.77,Default,,0,0,0,,询问情况{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}告知情况
+Dialogue: 0, 0:02:53.05, 0:02:54.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}思考局势
+Dialogue: 0, 0:02:54.62, 0:02:56.11,Default,,0,0,0,,想到奇袭{\c&H0000FFFF&\b1}虎牢关{\c&H00FFFFFF&\b0}的主意
+Dialogue: 0, 0:02:56.43, 0:02:57.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在马上及附近
+Dialogue: 0, 0:02:58.04, 0:02:59.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}逐渐缓和

@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_038 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}猿臂屈伸
+Dialogue: 0,0:00:01.80,0:00:03.89,Default,,0,0,0,,三箭齐{\c&H0000FFFF&\b1}发射{\c&H00FFFFFF&\b0}死正在逃跑的三
+Dialogue: 0,0:00:03.89,0:00:04.39,Default,,0,0,0,,个{\c&H0000FFFF&\b1}将领{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.87,0:00:06.68,Default,,0,0,0,,然后{\c&H0000FFFF&\b1}喝令{\c&H00FFFFFF&\b0}李佑出来投降
+Dialogue: 0,0:00:07.03,0:00:08.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}声音{\c&H00FFFFFF&\b0}低沉且充满杀意
+Dialogue: 0,0:00:08.91,0:00:09.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}溃军{\c&H00FFFFFF&\b0}疯狂逃窜
+Dialogue: 0,0:00:10.12,0:00:12.32,Default,,0,0,0,,踩踏不断{\c&H0000FFFF&\b1}步兵{\c&H00FFFFFF&\b0}被骑兵踩死
+Dialogue: 0,0:00:12.69,0:00:13.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}哀嚎{\c&H00FFFFFF&\b0}声起
+Dialogue: 0,0:00:13.69,0:00:14.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}目力惊人
+Dialogue: 0,0:00:15.03,0:00:17.03,Default,,0,0,0,,发现远处簇拥着人的{\c&H0000FFFF&\b1}溃兵{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.29,0:00:18.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}嘴角{\c&H00FFFFFF&\b0}露出笑意并指向
+Dialogue: 0,0:00:19.22,0:00:21.08,Default,,0,0,0,,李佑听到这话吓得{\c&H0000FFFF&\b1}身体{\c&H00FFFFFF&\b0}颤抖
+Dialogue: 0,0:00:21.38,0:00:22.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是李佑大营内
+Dialogue: 0,0:00:22.91,0:00:24.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}火势{\c&H00FFFFFF&\b0}更猛环境混乱不堪
+Dialogue: 0,0:00:25.16,0:00:26.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是李佑大营的激烈战斗

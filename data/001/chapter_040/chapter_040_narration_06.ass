@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_040 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}弯弓搭箭连射三箭
+Dialogue: 0,0:00:02.50,0:00:04.59,Default,,0,0,0,,绑火药的箭被{\c&H0000FFFF&\b1}玄甲军{\c&H00FFFFFF&\b0}挡住但
+Dialogue: 0,0:00:04.59,0:00:05.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}凌空{\c&H00FFFFFF&\b0}爆炸
+Dialogue: 0,0:00:05.89,0:00:07.87,Default,,0,0,0,,波及{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}致其伤口迸开大
+Dialogue: 0,0:00:07.87,0:00:08.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}出血{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.60,0:00:10.59,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}将李承乾送的玉
+Dialogue: 0,0:00:10.59,0:00:11.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}佩挂{\c&H00FFFFFF&\b0}箭上射出
+Dialogue: 0,0:00:12.06,0:00:13.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}刀势一弱
+Dialogue: 0,0:00:13.56,0:00:15.37,Default,,0,0,0,,没砍中{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}脖颈而砍在左
+Dialogue: 0,0:00:15.37,0:00:16.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}肩胛骨{\c&H00FFFFFF&\b0}上
+Dialogue: 0,0:00:16.36,0:00:17.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}昏过去
+Dialogue: 0,0:00:17.71,0:00:19.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在战场环境激烈

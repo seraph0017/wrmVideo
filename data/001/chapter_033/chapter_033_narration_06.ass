@@ -1,0 +1,37 @@
+[Script Info]
+Title: chapter_033 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.58,Default,,0,0,0,,大帐内
+Dialogue: 0,0:00:00.95,0:00:02.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}接着问王家是否能答
+Dialogue: 0,0:00:02.87,0:00:03.02,Default,,0,0,0,,应
+Dialogue: 0,0:00:03.49,0:00:04.92,Default,,0,0,0,,如不{\c&H0000FFFF&\b1}答应{\c&H00FFFFFF&\b0}该如何应对
+Dialogue: 0,0:00:05.33,0:00:07.27,Default,,0,0,0,,长孙无忌和{\c&H0000FFFF&\b1}高士廉{\c&H00FFFFFF&\b0}对视思索
+Dialogue: 0,0:00:07.60,0:00:09.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}起身拉着二人到旁边
+Dialogue: 0,0:00:09.58,0:00:09.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}座位{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.24,0:00:12.30,Default,,0,0,0,,说像儿和厥儿到{\c&H0000FFFF&\b1}读书{\c&H00FFFFFF&\b0}年纪
+Dialogue: 0,0:00:12.57,0:00:13.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}老师{\c&H00FFFFFF&\b0}没着落
+Dialogue: 0,0:00:13.59,0:00:14.38,Default,,0,0,0,,想{\c&H0000FFFF&\b1}麻烦{\c&H00FFFFFF&\b0}二人
+Dialogue: 0,0:00:14.77,0:00:17.07,Default,,0,0,0,,后提出让{\c&H0000FFFF&\b1}高士廉{\c&H00FFFFFF&\b0}做像儿和厥
+Dialogue: 0,0:00:17.07,0:00:18.03,Default,,0,0,0,,儿的{\c&H0000FFFF&\b1}开蒙{\c&H00FFFFFF&\b0}之师
+Dialogue: 0,0:00:18.30,0:00:20.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌则表示再有皇子劳
+Dialogue: 0,0:00:20.43,0:00:20.82,Default,,0,0,0,,烦他
+Dialogue: 0,0:00:21.14,0:00:22.65,Default,,0,0,0,,二人对视后拱手{\c&H0000FFFF&\b1}领旨{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:23.08,0:00:24.05,Default,,0,0,0,,帐内{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}明亮
+Dialogue: 0,0:00:24.30,0:00:25.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}对话{\c&H00FFFFFF&\b0}氛围严肃
+Dialogue: 0,0:00:25.68,0:00:28.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}动作拉人神情诚恳
+Dialogue: 0,0:00:28.37,0:00:30.30,Default,,0,0,0,,长孙无忌和{\c&H0000FFFF&\b1}高士廉{\c&H00FFFFFF&\b0}思索后
+Dialogue: 0,0:00:30.30,0:00:30.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}领旨{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:31.00,0:00:31.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}表情{\c&H00FFFFFF&\b0}有心动

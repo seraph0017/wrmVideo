@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_007 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}传旨{\c&H00FFFFFF&\b0}之人走后
+Dialogue: 0,0:00:01.33,0:00:03.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}认为张掖不能待下去
+Dialogue: 0,0:00:03.69,0:00:04.89,Default,,0,0,0,,转头看向{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.31,0:00:06.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}询问{\c&H00FFFFFF&\b0}他的想法
+Dialogue: 0,0:00:06.57,0:00:08.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}表示当年率军剿灭高
+Dialogue: 0,0:00:08.54,0:00:08.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}昌国{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.26,0:00:10.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}那儿{\c&H00FFFFFF&\b0}有故旧
+Dialogue: 0,0:00:10.32,0:00:11.64,Default,,0,0,0,,不如率军前往{\c&H0000FFFF&\b1}高昌{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.79,0:00:13.29,Default,,0,0,0,,待时而动打回{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.41,0:00:15.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}觉得去高昌不行
+Dialogue: 0,0:00:15.37,0:00:17.48,Default,,0,0,0,,讨论{\c&H0000FFFF&\b1}朝廷{\c&H00FFFFFF&\b0}传快马从长安到云
+Dialogue: 0,0:00:17.48,0:00:19.21,Default,,0,0,0,,中{\c&H0000FFFF&\b1}都督府{\c&H00FFFFFF&\b0}的时间等问题
+Dialogue: 0,0:00:19.43,0:00:21.04,Default,,0,0,0,,场景是在{\c&H0000FFFF&\b1}张掖{\c&H00FFFFFF&\b0}的营地内
+Dialogue: 0,0:00:21.23,0:00:22.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}稍显杂乱
+Dialogue: 0,0:00:22.56,0:00:24.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}和侯君集相对而坐
+Dialogue: 0,0:00:24.95,0:00:26.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}玄色高领长袍
+Dialogue: 0,0:00:27.00,0:00:28.71,Default,,0,0,0,,束发{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}严肃
+Dialogue: 0,0:00:28.87,0:00:30.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}高领服饰
+Dialogue: 0,0:00:30.59,0:00:31.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}束发{\c&H00FFFFFF&\b0}面露忧虑

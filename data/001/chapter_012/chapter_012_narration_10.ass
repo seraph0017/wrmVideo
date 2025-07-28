@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_012 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.02,Default,,0,0,0,,帅帐内众人争论{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}冒险
+Dialogue: 0,0:00:02.02,0:00:02.51,Default,,0,0,0,,去{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.12,0:00:04.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}决心前往
+Dialogue: 0,0:00:04.82,0:00:07.00,Default,,0,0,0,,安排{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}留守众人遵命
+Dialogue: 0,0:00:07.33,0:00:08.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}长安城{\c&H00FFFFFF&\b0}金光门
+Dialogue: 0,0:00:08.62,0:00:10.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}等人乔装进城
+Dialogue: 0,0:00:10.54,0:00:11.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}寻找{\c&H00FFFFFF&\b0}落脚处
+Dialogue: 0,0:00:11.74,0:00:13.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着高领乔装服饰
+Dialogue: 0,0:00:13.89,0:00:15.74,Default,,0,0,0,,在帅帐内{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}坚定
+Dialogue: 0,0:00:15.99,0:00:16.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}为帅帐内
+Dialogue: 0,0:00:17.32,0:00:19.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}身着高领服饰
+Dialogue: 0,0:00:19.37,0:00:20.82,Default,,0,0,0,,劝阻{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}去长安
+Dialogue: 0,0:00:21.16,0:00:23.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}担忧环境为帅帐内
+Dialogue: 0,0:00:23.43,0:00:25.88,Default,,0,0,0,,古风{\c&H0000FFFF&\b1}长安城{\c&H00FFFFFF&\b0}金光门人群涌动
+Dialogue: 0,0:00:26.32,0:00:28.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}等人乔装进城
+Dialogue: 0,0:00:28.25,0:00:29.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}为城门处
+Dialogue: 0,0:00:29.86,0:00:31.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}等人乔装进城
+Dialogue: 0,0:00:31.85,0:00:32.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}谨慎
+Dialogue: 0,0:00:32.95,0:00:34.39,Default,,0,0,0,,环境为{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}城内街道

@@ -1,0 +1,37 @@
+[Script Info]
+Title: chapter_047 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}随后从马背上取下宝
+Dialogue: 0,0:00:02.04,0:00:02.29,Default,,0,0,0,,弓
+Dialogue: 0,0:00:02.63,0:00:03.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}满面{\c&H00FFFFFF&\b0}肃杀之气
+Dialogue: 0,0:00:04.11,0:00:06.92,Default,,0,0,0,,大声下令“{\c&H0000FFFF&\b1}众将士{\c&H00FFFFFF&\b0}随朕杀
+Dialogue: 0,0:00:07.16,0:00:07.46,Default,,0,0,0,,冲
+Dialogue: 0,0:00:07.59,0:00:09.32,Default,,0,0,0,,”他一马当先冲了{\c&H0000FFFF&\b1}出去{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.46,0:00:11.17,Default,,0,0,0,,士兵们{\c&H0000FFFF&\b1}齐声{\c&H00FFFFFF&\b0}嘶吼响应
+Dialogue: 0,0:00:11.34,0:00:14.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}战场{\c&H00FFFFFF&\b0}之上战马奔腾杀气冲天
+Dialogue: 0,0:00:14.29,0:00:16.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}则被亲卫铁骑团团护
+Dialogue: 0,0:00:16.24,0:00:16.91,Default,,0,0,0,,在{\c&H0000FFFF&\b1}中央{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.09,0:00:18.49,Default,,0,0,0,,脸上挂着浓烈{\c&H0000FFFF&\b1}笑意{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.79,0:00:20.79,Default,,0,0,0,,心中暗自赞叹{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的军事
+Dialogue: 0,0:00:20.79,0:00:21.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}布局{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.48,0:00:22.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是激烈的战场
+Dialogue: 0,0:00:23.04,0:00:25.77,Default,,0,0,0,,白天{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}照射军旗飘扬
+Dialogue: 0,0:00:25.96,0:00:28.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:28.27,0:00:30.12,Default,,0,0,0,,手持{\c&H0000FFFF&\b1}宝弓冲{\c&H00FFFFFF&\b0}在前方
+Dialogue: 0,0:00:30.27,0:00:32.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}们身着高领服饰
+Dialogue: 0,0:00:32.26,0:00:32.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐声{\c&H00FFFFFF&\b0}嘶吼
+Dialogue: 0,0:00:33.12,0:00:35.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}身着深色高领服饰
+Dialogue: 0,0:00:35.36,0:00:36.98,Default,,0,0,0,,被{\c&H0000FFFF&\b1}亲卫{\c&H00FFFFFF&\b0}环绕面带笑意

@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_005 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在马车上睡着
+Dialogue: 0,0:00:01.95,0:00:02.81,Default,,0,0,0,,被{\c&H0000FFFF&\b1}寒意{\c&H00FFFFFF&\b0}惊醒
+Dialogue: 0,0:00:03.16,0:00:05.16,Default,,0,0,0,,已至子时大军{\c&H0000FFFF&\b1}安营扎寨{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.53,0:00:07.23,Default,,0,0,0,,远处一人{\c&H0000FFFF&\b1}单骑{\c&H00FFFFFF&\b0}疾驰而来
+Dialogue: 0,0:00:07.50,0:00:09.44,Default,,0,0,0,,传旨令程咬金押解{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回
+Dialogue: 0,0:00:09.44,0:00:09.70,Default,,0,0,0,,京
+Dialogue: 0,0:00:09.96,0:00:11.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}后背冷汗狂流
+Dialogue: 0,0:00:11.84,0:00:13.53,Default,,0,0,0,,震惊{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}醒得如此之快
+Dialogue: 0,0:00:13.71,0:00:14.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}是野外营地
+Dialogue: 0,0:00:15.16,0:00:16.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}夜色{\c&H00FFFFFF&\b0}深沉月光朦胧

@@ -1,0 +1,40 @@
+[Script Info]
+Title: chapter_018 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.52,Default,,0,0,0,,伴随剧烈的破{\c&H0000FFFF&\b1}空之声{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.97,0:00:03.88,Default,,0,0,0,,一支{\c&H0000FFFF&\b1}箭矢{\c&H00FFFFFF&\b0}精准无误地射中守
+Dialogue: 0,0:00:03.88,0:00:04.53,Default,,0,0,0,,将的{\c&H0000FFFF&\b1}面门{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.95,0:00:06.20,Default,,0,0,0,,深深{\c&H0000FFFF&\b1}没入{\c&H00FFFFFF&\b0}两寸许
+Dialogue: 0,0:00:06.54,0:00:07.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}目睹这一幕
+Dialogue: 0,0:00:07.97,0:00:08.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}内心{\c&H00FFFFFF&\b0}不禁感叹
+Dialogue: 0,0:00:09.23,0:00:10.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}对方{\c&H00FFFFFF&\b0}的箭法实在可怕
+Dialogue: 0,0:00:11.01,0:00:12.66,Default,,0,0,0,,即便数百年后的{\c&H0000FFFF&\b1}燧发枪{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.91,0:00:14.79,Default,,0,0,0,,恐怕都难以有这般{\c&H0000FFFF&\b1}准头{\c&H00FFFFFF&\b0}与杀
+Dialogue: 0,0:00:14.79,0:00:15.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}伤力{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.47,0:00:17.05,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在激烈的战
+Dialogue: 0,0:00:17.05,0:00:17.62,Default,,0,0,0,,场{\c&H0000FFFF&\b1}之上{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.89,0:00:18.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}硝烟弥漫
+Dialogue: 0,0:00:19.47,0:00:21.34,Default,,0,0,0,,战斗正酣{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}为白天
+Dialogue: 0,0:00:21.61,0:00:23.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}较为明亮但因战斗显得
+Dialogue: 0,0:00:23.48,0:00:23.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}紧张{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.32,0:00:25.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着高领战甲
+Dialogue: 0,0:00:26.36,0:00:27.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}面色{\c&H00FFFFFF&\b0}凝重
+Dialogue: 0,0:00:27.45,0:00:29.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}眼神{\c&H00FFFFFF&\b0}专注地看向战场方向
+Dialogue: 0,0:00:33.44,0:00:34.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}精准{\c&H00FFFFFF&\b0}感到震撼
+Dialogue: 0,0:00:34.81,0:00:36.45,Default,,0,0,0,,守将已中箭身死
+Dialogue: 0,0:00:36.59,0:00:39.12,Default,,0,0,0,,面部狰狞身着古代{\c&H0000FFFF&\b1}高领{\c&H00FFFFFF&\b0}服饰
+Dialogue: 0,0:00:39.31,0:00:40.78,Default,,0,0,0,,周围{\c&H0000FFFF&\b1}战场{\c&H00FFFFFF&\b0}血迹斑斑
+Dialogue: 0,0:00:40.98,0:00:41.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}尽显{\c&H00FFFFFF&\b0}战斗的惨烈

@@ -1,0 +1,30 @@
+[Script Info]
+Title: chapter_013 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:00.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}程处默{\c&H00FFFFFF&\b0}怒喝
+Dialogue: 0,0:00:01.34,0:00:02.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与之对峙
+Dialogue: 0,0:00:02.93,0:00:04.16,Default,,0,0,0,,称{\c&H0000FFFF&\b1}欢场{\c&H00FFFFFF&\b0}公平竞价
+Dialogue: 0,0:00:04.68,0:00:05.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}程处{\c&H00FFFFFF&\b0}默要讨教
+Dialogue: 0,0:00:06.11,0:00:07.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}谎称姓吴
+Dialogue: 0,0:00:07.77,0:00:09.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}故作喝醉离开青楼
+Dialogue: 0,0:00:09.63,0:00:11.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}乔装打扮后与薛仁贵
+Dialogue: 0,0:00:11.54,0:00:13.10,Default,,0,0,0,,等人前往鸿胪寺{\c&H0000FFFF&\b1}方向{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.33,0:00:15.42,Default,,0,0,0,,途中看到李泰与{\c&H0000FFFF&\b1}禄东赞{\c&H00FFFFFF&\b0}交谈
+Dialogue: 0,0:00:15.75,0:00:17.24,Default,,0,0,0,,让众人记住{\c&H0000FFFF&\b1}禄东赞{\c&H00FFFFFF&\b0}模样
+Dialogue: 0,0:00:17.52,0:00:18.68,Default,,0,0,0,,然后{\c&H0000FFFF&\b1}返回{\c&H00FFFFFF&\b0}平康坊
+Dialogue: 0,0:00:19.00,0:00:20.80,Default,,0,0,0,,安排众人打听{\c&H0000FFFF&\b1}孙思邈{\c&H00FFFFFF&\b0}的下落
+Dialogue: 0,0:00:21.05,0:00:22.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在青楼外及街道上
+Dialogue: 0,0:00:23.11,0:00:24.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}紧张且有行动感

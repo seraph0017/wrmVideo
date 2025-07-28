@@ -1,0 +1,50 @@
+[Script Info]
+Title: chapter_003 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}登上高台微眯双眼
+Dialogue: 0,0:00:02.63,0:00:04.22,Default,,0,0,0,,陡然将{\c&H0000FFFF&\b1}腰间{\c&H00FFFFFF&\b0}横刀抽出
+Dialogue: 0,0:00:04.70,0:00:06.73,Default,,0,0,0,,用出{\c&H0000FFFF&\b1}生平{\c&H00FFFFFF&\b0}最大的声音嘶吼道
+Dialogue: 0,0:00:07.31,0:00:08.10,Default,,0,0,0,,“{\c&H0000FFFF&\b1}将士{\c&H00FFFFFF&\b0}们
+Dialogue: 0,0:00:08.26,0:00:09.83,Default,,0,0,0,,此番{\c&H0000FFFF&\b1}出征{\c&H00FFFFFF&\b0}可怕否
+Dialogue: 0,0:00:10.00,0:00:12.07,Default,,0,0,0,,”{\c&H0000FFFF&\b1}将士{\c&H00FFFFFF&\b0}们全部握紧手中武器
+Dialogue: 0,0:00:12.19,0:00:13.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}振臂高呼{\c&H00FFFFFF&\b0}“不怕
+Dialogue: 0,0:00:14.04,0:00:14.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}不怕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.73,0:00:15.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}不怕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.24,0:00:17.12,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}接着说道
+Dialogue: 0,0:00:17.27,0:00:19.50,Default,,0,0,0,,“好如今{\c&H0000FFFF&\b1}薛延陀{\c&H00FFFFFF&\b0}悍然犯境
+Dialogue: 0,0:00:19.86,0:00:21.55,Default,,0,0,0,,欺我{\c&H0000FFFF&\b1}百姓{\c&H00FFFFFF&\b0}辱我老幼
+Dialogue: 0,0:00:21.98,0:00:23.77,Default,,0,0,0,,孤不{\c&H0000FFFF&\b1}明白{\c&H00FFFFFF&\b0}他们何敢如此
+Dialogue: 0,0:00:24.21,0:00:24.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}他们{\c&H00FFFFFF&\b0}有刀
+Dialogue: 0,0:00:24.95,0:00:27.07,Default,,0,0,0,,难道我{\c&H0000FFFF&\b1}大唐{\c&H00FFFFFF&\b0}儿郎没有刀吗
+Dialogue: 0,0:00:27.23,0:00:29.96,Default,,0,0,0,,”{\c&H0000FFFF&\b1}众将士{\c&H00FFFFFF&\b0}爆发出更为振奋的
+Dialogue: 0,0:00:29.96,0:00:30.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}吼声{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:30.73,0:00:31.54,Default,,0,0,0,,“有刀
+Dialogue: 0,0:00:31.63,0:00:32.06,Default,,0,0,0,,有刀
+Dialogue: 0,0:00:32.19,0:00:32.49,Default,,0,0,0,,有刀
+Dialogue: 0,0:00:32.78,0:00:35.15,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}继续宣称
+Dialogue: 0,0:00:35.27,0:00:36.47,Default,,0,0,0,,“此番{\c&H0000FFFF&\b1}征战{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:36.53,0:00:37.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}孤必{\c&H00FFFFFF&\b0}率先冲阵
+Dialogue: 0,0:00:38.02,0:00:39.56,Default,,0,0,0,,你们之中{\c&H0000FFFF&\b1}任何人{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:39.70,0:00:42.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}发现{\c&H00FFFFFF&\b0}孤临阵退却皆可斩孤
+Dialogue: 0,0:00:42.55,0:00:44.13,Default,,0,0,0,,”言罢他{\c&H0000FFFF&\b1}长刀一横{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:44.24,0:00:46.73,Default,,0,0,0,,直接砍下一缕{\c&H0000FFFF&\b1}发丝{\c&H00FFFFFF&\b0}以此为誓
+Dialogue: 0,0:00:46.89,0:00:48.91,Default,,0,0,0,,这一举动直接将{\c&H0000FFFF&\b1}士气{\c&H00FFFFFF&\b0}拉至前
+Dialogue: 0,0:00:48.91,0:00:50.27,Default,,0,0,0,,所未有的{\c&H0000FFFF&\b1}高度{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:50.38,0:00:51.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}将士{\c&H00FFFFFF&\b0}们高呼
+Dialogue: 0,0:00:51.51,0:00:53.63,Default,,0,0,0,,“我等誓与殿下{\c&H0000FFFF&\b1}同生共死{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:53.76,0:00:56.20,Default,,0,0,0,,”随后{\c&H0000FFFF&\b1}雷鸣般{\c&H00FFFFFF&\b0}的战鼓声再
+Dialogue: 0,0:00:56.20,0:00:56.72,Default,,0,0,0,,次{\c&H0000FFFF&\b1}响起{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:56.96,0:00:58.52,Default,,0,0,0,,大军如{\c&H0000FFFF&\b1}山呼海啸{\c&H00FFFFFF&\b0}般向前行军

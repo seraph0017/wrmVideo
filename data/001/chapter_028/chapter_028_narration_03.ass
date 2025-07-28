@@ -1,0 +1,39 @@
+[Script Info]
+Title: chapter_028 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:00.90,Default,,0,0,0,,为奇袭{\c&H0000FFFF&\b1}灵武{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.25,0:00:03.00,Default,,0,0,0,,骑兵部队昼夜不停{\c&H0000FFFF&\b1}急行军{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.50,0:00:05.36,Default,,0,0,0,,三天三夜后到达{\c&H0000FFFF&\b1}灵武{\c&H00FFFFFF&\b0}附近
+Dialogue: 0,0:00:05.75,0:00:07.16,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}们疲惫不堪
+Dialogue: 0,0:00:07.51,0:00:09.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}本人也快直不起腰
+Dialogue: 0,0:00:09.45,0:00:10.68,Default,,0,0,0,,身上{\c&H0000FFFF&\b1}铠甲{\c&H00FFFFFF&\b0}都脱了
+Dialogue: 0,0:00:11.01,0:00:13.03,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}策马{\c&H00FFFFFF&\b0}过来询问是否换
+Dialogue: 0,0:00:13.03,0:00:13.61,Default,,0,0,0,,上{\c&H0000FFFF&\b1}战甲{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.09,0:00:15.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}强行直起腰背
+Dialogue: 0,0:00:16.02,0:00:17.80,Default,,0,0,0,,虽有{\c&H0000FFFF&\b1}酸疼{\c&H00FFFFFF&\b0}但还是决定换上
+Dialogue: 0,0:00:18.15,0:00:20.33,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}下令北向辉拿出
+Dialogue: 0,0:00:20.33,0:00:21.10,Default,,0,0,0,,准备的{\c&H0000FFFF&\b1}东西{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.46,0:00:23.25,Default,,0,0,0,,在距离{\c&H0000FFFF&\b1}张掖{\c&H00FFFFFF&\b0}五百步位置开
+Dialogue: 0,0:00:23.25,0:00:23.92,Default,,0,0,0,,始{\c&H0000FFFF&\b1}挖地道{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.30,0:00:26.25,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}拱手{\c&H00FFFFFF&\b0}应下并招呼士
+Dialogue: 0,0:00:26.25,0:00:27.02,Default,,0,0,0,,兵去{\c&H0000FFFF&\b1}执行{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:27.40,0:00:29.44,Default,,0,0,0,,此时灵州统军将军{\c&H0000FFFF&\b1}张士贵{\c&H00FFFFFF&\b0}一
+Dialogue: 0,0:00:29.44,0:00:31.22,Default,,0,0,0,,袭{\c&H0000FFFF&\b1}素色{\c&H00FFFFFF&\b0}缺胯袍按剑而立
+Dialogue: 0,0:00:31.45,0:00:33.33,Default,,0,0,0,,身形魁梧{\c&H0000FFFF&\b1}满面红光{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:33.77,0:00:35.59,Default,,0,0,0,,挽起的{\c&H0000FFFF&\b1}袖管{\c&H00FFFFFF&\b0}下筋肉虬结
+Dialogue: 0,0:00:36.09,0:00:37.06,Default,,0,0,0,,手{\c&H0000FFFF&\b1}背上{\c&H00FFFFFF&\b0}有箭疤
+Dialogue: 0,0:00:37.44,0:00:39.34,Default,,0,0,0,,他{\c&H0000FFFF&\b1}目视{\c&H00FFFFFF&\b0}远方微微叹气
+Dialogue: 0,0:00:39.62,0:00:41.41,Default,,0,0,0,,心中想着近期的种种{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}

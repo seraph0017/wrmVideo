@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_002 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}来到东市
+Dialogue: 0,0:00:01.69,0:00:02.54,Default,,0,0,0,,踏入{\c&H0000FFFF&\b1}东市{\c&H00FFFFFF&\b0}后
+Dialogue: 0,0:00:02.84,0:00:04.65,Default,,0,0,0,,扑面而来的喧嚣声{\c&H0000FFFF&\b1}裹挟{\c&H00FFFFFF&\b0}着香
+Dialogue: 0,0:00:04.65,0:00:05.41,Default,,0,0,0,,料与{\c&H0000FFFF&\b1}酒气{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.78,0:00:07.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}晨光{\c&H00FFFFFF&\b0}斜照在商铺房顶的琉
+Dialogue: 0,0:00:07.40,0:00:07.93,Default,,0,0,0,,璃瓦上
+Dialogue: 0,0:00:08.29,0:00:09.87,Default,,0,0,0,,将整条{\c&H0000FFFF&\b1}街市{\c&H00FFFFFF&\b0}镀成金色
+Dialogue: 0,0:00:10.16,0:00:11.72,Default,,0,0,0,,他{\c&H0000FFFF&\b1}吩咐{\c&H00FFFFFF&\b0}手下兵分两路
+Dialogue: 0,0:00:12.07,0:00:13.16,Default,,0,0,0,,一路随他去{\c&H0000FFFF&\b1}东市{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.46,0:00:14.56,Default,,0,0,0,,一路去{\c&H0000FFFF&\b1}西市{\c&H00FFFFFF&\b0}待命
+Dialogue: 0,0:00:14.86,0:00:16.61,Default,,0,0,0,,然后他让牙人叫来{\c&H0000FFFF&\b1}最好{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:16.61,0:00:17.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}货物{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.27,0:00:19.51,Default,,0,0,0,,不一会各色{\c&H0000FFFF&\b1}货物{\c&H00FFFFFF&\b0}摆满街口
+Dialogue: 0,0:00:19.73,0:00:20.57,Default,,0,0,0,,有上等{\c&H0000FFFF&\b1}绸缎{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.93,0:00:22.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}西域{\c&H00FFFFFF&\b0}宝石各色瓷器等
+Dialogue: 0,0:00:23.35,0:00:24.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看着这些货物
+Dialogue: 0,0:00:25.25,0:00:26.00,Default,,0,0,0,,暗暗{\c&H0000FFFF&\b1}咋舌{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:26.34,0:00:27.44,Default,,0,0,0,,场景是在{\c&H0000FFFF&\b1}东市{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:27.73,0:00:29.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}明亮环境热闹繁华

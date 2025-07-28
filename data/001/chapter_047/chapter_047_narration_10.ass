@@ -1,0 +1,40 @@
+[Script Info]
+Title: chapter_047 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.46,Default,,0,0,0,,一日后{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}站在晋城城头
+Dialogue: 0,0:00:02.76,0:00:03.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}秋风{\c&H00FFFFFF&\b0}卷过
+Dialogue: 0,0:00:04.12,0:00:05.79,Default,,0,0,0,,城下{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}看着李承乾
+Dialogue: 0,0:00:06.07,0:00:06.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}得意{\c&H00FFFFFF&\b0}大笑
+Dialogue: 0,0:00:07.11,0:00:08.73,Default,,0,0,0,,嘲讽{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}谋逆之事
+Dialogue: 0,0:00:09.04,0:00:10.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则假意示弱
+Dialogue: 0,0:00:10.65,0:00:12.33,Default,,0,0,0,,称希望{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}放过家人
+Dialogue: 0,0:00:12.58,0:00:14.53,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}发现城中烟煤
+Dialogue: 0,0:00:14.92,0:00:15.85,Default,,0,0,0,,意识到{\c&H0000FFFF&\b1}重要性{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.36,0:00:17.86,Default,,0,0,0,,心中盘算{\c&H0000FFFF&\b1}突围{\c&H00FFFFFF&\b0}之计
+Dialogue: 0,0:00:18.07,0:00:19.49,Default,,0,0,0,,同时收到{\c&H0000FFFF&\b1}信鸽{\c&H00FFFFFF&\b0}回信
+Dialogue: 0,0:00:19.88,0:00:20.97,Default,,0,0,0,,得知{\c&H0000FFFF&\b1}援军{\c&H00FFFFFF&\b0}消息
+Dialogue: 0,0:00:21.29,0:00:23.11,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}晋城{\c&H00FFFFFF&\b0}城头及军营
+Dialogue: 0,0:00:23.34,0:00:24.89,Default,,0,0,0,,白天{\c&H0000FFFF&\b1}秋风{\c&H00FFFFFF&\b0}萧瑟
+Dialogue: 0,0:00:25.39,0:00:27.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:27.66,0:00:28.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}秋风{\c&H00FFFFFF&\b0}中站立
+Dialogue: 0,0:00:28.83,0:00:29.88,Default,,0,0,0,,构图展现{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:30.23,0:00:32.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}身着深色高领服饰
+Dialogue: 0,0:00:32.37,0:00:34.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}大笑{\c&H00FFFFFF&\b0}嘲讽构图体现得意
+Dialogue: 0,0:00:34.91,0:00:36.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:37.15,0:00:39.30,Default,,0,0,0,,观察{\c&H0000FFFF&\b1}烟煤{\c&H00FFFFFF&\b0}构图体现发现
+Dialogue: 0,0:00:39.68,0:00:41.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:41.97,0:00:42.94,Default,,0,0,0,,看{\c&H0000FFFF&\b1}信鸽{\c&H00FFFFFF&\b0}回信
+Dialogue: 0,0:00:43.34,0:00:44.80,Default,,0,0,0,,构图展现{\c&H0000FFFF&\b1}信息{\c&H00FFFFFF&\b0}获取

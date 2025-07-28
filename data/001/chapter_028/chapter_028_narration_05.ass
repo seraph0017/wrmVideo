@@ -1,0 +1,42 @@
+[Script Info]
+Title: chapter_028 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}灵武{\c&H00FFFFFF&\b0}城墙被炸出大洞
+Dialogue: 0,0:00:01.89,0:00:03.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}可以轻松通过
+Dialogue: 0,0:00:03.57,0:00:04.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}振臂大喝
+Dialogue: 0,0:00:05.43,0:00:07.53,Default,,0,0,0,,“朕乃大唐皇帝{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.71,0:00:08.65,Default,,0,0,0,,携{\c&H0000FFFF&\b1}天威{\c&H00FFFFFF&\b0}而来
+Dialogue: 0,0:00:08.85,0:00:09.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}投降{\c&H00FFFFFF&\b0}不杀
+Dialogue: 0,0:00:09.99,0:00:11.48,Default,,0,0,0,,”身后{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}跟着大吼
+Dialogue: 0,0:00:11.67,0:00:13.77,Default,,0,0,0,,不少{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}心神混乱后放下武
+Dialogue: 0,0:00:13.77,0:00:14.51,Default,,0,0,0,,器{\c&H0000FFFF&\b1}投降{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.69,0:00:16.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}急忙命令北向辉冲上
+Dialogue: 0,0:00:17.08,0:00:18.34,Default,,0,0,0,,城头活捉{\c&H0000FFFF&\b1}张士贵{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.54,0:00:20.29,Default,,0,0,0,,北向辉大笑{\c&H0000FFFF&\b1}策马{\c&H00FFFFFF&\b0}冲入混
+Dialogue: 0,0:00:20.29,0:00:21.05,Default,,0,0,0,,乱{\c&H0000FFFF&\b1}人群{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.24,0:00:22.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}手长{\c&H00FFFFFF&\b0}铁枪左右横扫
+Dialogue: 0,0:00:22.96,0:00:24.21,Default,,0,0,0,,很快冲到{\c&H0000FFFF&\b1}城头{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.36,0:00:26.21,Default,,0,0,0,,看见{\c&H0000FFFF&\b1}张士贵{\c&H00FFFFFF&\b0}手持横刀振
+Dialogue: 0,0:00:26.21,0:00:27.00,Default,,0,0,0,,臂{\c&H0000FFFF&\b1}狂吼{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:27.14,0:00:28.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}张士贵{\c&H00FFFFFF&\b0}下令御敌
+Dialogue: 0,0:00:28.84,0:00:29.97,Default,,0,0,0,,组成百人{\c&H0000FFFF&\b1}队伍{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:30.11,0:00:31.18,Default,,0,0,0,,随后二人{\c&H0000FFFF&\b1}碰面{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:31.32,0:00:33.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}张士贵{\c&H00FFFFFF&\b0}用铁枪扫北向辉马腿
+Dialogue: 0,0:00:33.73,0:00:35.90,Default,,0,0,0,,北向辉则双脚离开{\c&H0000FFFF&\b1}马镫{\c&H00FFFFFF&\b0}踹向
+Dialogue: 0,0:00:35.90,0:00:37.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}张士贵{\c&H00FFFFFF&\b0}面门
+Dialogue: 0,0:00:37.18,0:00:39.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}张士贵{\c&H00FFFFFF&\b0}松开长枪击向北向辉
+Dialogue: 0,0:00:39.34,0:00:39.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}双脚{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:39.94,0:00:40.74,Default,,0,0,0,,二人一番{\c&H0000FFFF&\b1}激战{\c&H00FFFFFF&\b0}

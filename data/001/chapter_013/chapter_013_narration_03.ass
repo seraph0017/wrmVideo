@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_013 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}听后更加愤怒
+Dialogue: 0,0:00:02.00,0:00:03.85,Default,,0,0,0,,他认为{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}以前只知吃喝
+Dialogue: 0,0:00:03.85,0:00:04.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}玩乐{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.83,0:00:06.64,Default,,0,0,0,,跑到{\c&H0000FFFF&\b1}大漠{\c&H00FFFFFF&\b0}后竟如此让人意外
+Dialogue: 0,0:00:08.99,0:00:10.36,Default,,0,0,0,,首诗让他更是{\c&H0000FFFF&\b1}恼火{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.76,0:00:13.90,Default,,0,0,0,,一首是{\c&H0000FFFF&\b1}打油诗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.02,0:00:16.45,Default,,0,0,0,,他觉得{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}这么做居心叵
+Dialogue: 0,0:00:16.45,0:00:16.61,Default,,0,0,0,,测
+Dialogue: 0,0:00:16.77,0:00:18.76,Default,,0,0,0,,于是他当即下令{\c&H0000FFFF&\b1}颜师古{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.12,0:00:21.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}孔颖达{\c&H00FFFFFF&\b0}虞世南三人一天之
+Dialogue: 0,0:00:23.10,0:00:23.55,Default,,0,0,0,,新{\c&H0000FFFF&\b1}注释{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:23.74,0:00:26.19,Default,,0,0,0,,让{\c&H0000FFFF&\b1}唐俭{\c&H00FFFFFF&\b0}带领户部全力配合
+Dialogue: 0,0:00:26.39,0:00:27.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}价钱{\c&H00FFFFFF&\b0}定在五十文
+Dialogue: 0,0:00:27.84,0:00:29.14,Default,,0,0,0,,场景在{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿内
+Dialogue: 0,0:00:29.38,0:00:29.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}愈发紧张

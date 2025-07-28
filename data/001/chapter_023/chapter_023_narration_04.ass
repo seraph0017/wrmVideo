@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_023 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.88,Default,,0,0,0,,城楼之上霜月{\c&H0000FFFF&\b1}高悬{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.25,0:00:04.19,Default,,0,0,0,,清冷{\c&H0000FFFF&\b1}银辉{\c&H00FFFFFF&\b0}漫在城墙青砖上
+Dialogue: 0,0:00:04.82,0:00:06.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}上城视察城防
+Dialogue: 0,0:00:06.86,0:00:08.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}见他纷纷参见
+Dialogue: 0,0:00:08.67,0:00:10.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}挥手让众人无需多礼
+Dialogue: 0,0:00:10.76,0:00:12.72,Default,,0,0,0,,称他日击退贼军会{\c&H0000FFFF&\b1}论功行赏{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.04,0:00:14.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}陪同走上城头
+Dialogue: 0,0:00:15.00,0:00:16.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}缓缓注视城防
+Dialogue: 0,0:00:16.86,0:00:18.77,Default,,0,0,0,,心中估算手中{\c&H0000FFFF&\b1}筹码{\c&H00FFFFFF&\b0}能否坚
+Dialogue: 0,0:00:18.77,0:00:20.09,Default,,0,0,0,,持到{\c&H0000FFFF&\b1}勤王{\c&H00FFFFFF&\b0}兵马到来
+Dialogue: 0,0:00:20.43,0:00:22.70,Default,,0,0,0,,这时远处传来{\c&H0000FFFF&\b1}雷鸣般{\c&H00FFFFFF&\b0}战鼓声
+Dialogue: 0,0:00:23.13,0:00:24.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心神猛跳
+Dialogue: 0,0:00:24.70,0:00:26.43,Default,,0,0,0,,猜测{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}是否要攻城

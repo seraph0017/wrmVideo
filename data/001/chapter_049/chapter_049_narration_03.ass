@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_049 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.44,Default,,0,0,0,,翌日清晨{\c&H0000FFFF&\b1}洛阳城{\c&H00FFFFFF&\b0}朝阳初升
+Dialogue: 0,0:00:02.81,0:00:04.88,Default,,0,0,0,,金红色光芒洒在青砖{\c&H0000FFFF&\b1}黛瓦{\c&H00FFFFFF&\b0}上
+Dialogue: 0,0:00:05.32,0:00:06.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}乔装打扮
+Dialogue: 0,0:00:06.79,0:00:09.03,Default,,0,0,0,,与{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}北向辉在大街上
+Dialogue: 0,0:00:09.03,0:00:09.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}溜达{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.61,0:00:10.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}商议{\c&H00FFFFFF&\b0}购买奴隶之事
+Dialogue: 0,0:00:11.19,0:00:12.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}意图购买异族且不识
+Dialogue: 0,0:00:12.95,0:00:14.71,Default,,0,0,0,,字的{\c&H0000FFFF&\b1}奴隶{\c&H00FFFFFF&\b0}用于修善坊工作
+Dialogue: 0,0:00:15.00,0:00:16.77,Default,,0,0,0,,解说{\c&H0000FFFF&\b1}内容{\c&H00FFFFFF&\b0}需描绘清晨的洛
+Dialogue: 0,0:00:16.77,0:00:18.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳城{\c&H00FFFFFF&\b0}景象及三人的对话
+Dialogue: 0,0:00:18.86,0:00:19.70,Default,,0,0,0,,约{\c&H0000FFFF&\b1}200{\c&H00FFFFFF&\b0}字

@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_045 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.94,Default,,0,0,0,,六日后{\c&H0000FFFF&\b1}太行山{\c&H00FFFFFF&\b0}脉南麓
+Dialogue: 0,0:00:02.27,0:00:02.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}暮色苍茫{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.36,0:00:05.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}残阳{\c&H00FFFFFF&\b0}如血山峦染成赤褐
+Dialogue: 0,0:00:05.87,0:00:07.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}勒马驻足
+Dialogue: 0,0:00:07.37,0:00:08.61,Default,,0,0,0,,从怀中掏出{\c&H0000FFFF&\b1}地图{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.84,0:00:10.23,Default,,0,0,0,,抬眼远眺远处的{\c&H0000FFFF&\b1}村庄{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.44,0:00:12.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}紧紧护在李承乾左右
+Dialogue: 0,0:00:12.78,0:00:13.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}询问{\c&H00FFFFFF&\b0}他为何发笑
+Dialogue: 0,0:00:14.12,0:00:15.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}微微颔首
+Dialogue: 0,0:00:15.43,0:00:16.55,Default,,0,0,0,,表示快到{\c&H0000FFFF&\b1}河东{\c&H00FFFFFF&\b0}了
+Dialogue: 0,0:00:16.86,0:00:18.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}感叹山路难走
+Dialogue: 0,0:00:18.86,0:00:20.60,Default,,0,0,0,,但{\c&H0000FFFF&\b1}庆幸{\c&H00FFFFFF&\b0}有惊无险过来了
+Dialogue: 0,0:00:20.93,0:00:22.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则表示接下来要靠裴
+Dialogue: 0,0:00:22.83,0:00:23.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}行俭{\c&H00FFFFFF&\b0}表演
+Dialogue: 0,0:00:23.86,0:00:25.32,Default,,0,0,0,,如不能快速拿下{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:25.60,0:00:26.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}局势{\c&H00FFFFFF&\b0}会不利

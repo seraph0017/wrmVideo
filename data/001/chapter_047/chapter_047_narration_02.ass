@@ -1,0 +1,36 @@
+[Script Info]
+Title: chapter_047 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.44,Default,,0,0,0,,远处忽然{\c&H0000FFFF&\b1}火光{\c&H00FFFFFF&\b0}闪动
+Dialogue: 0,0:00:01.86,0:00:02.75,Default,,0,0,0,,喊杀声{\c&H0000FFFF&\b1}传来{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.15,0:00:04.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}瞬间反应过来
+Dialogue: 0,0:00:05.04,0:00:05.83,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}大喜{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.26,0:00:08.04,Default,,0,0,0,,意识到与{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}会合的时
+Dialogue: 0,0:00:08.04,0:00:08.47,Default,,0,0,0,,机已到
+Dialogue: 0,0:00:08.71,0:00:09.49,Default,,0,0,0,,他看向{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.70,0:00:11.83,Default,,0,0,0,,沉{\c&H0000FFFF&\b1}声道{\c&H00FFFFFF&\b0}“朕知道你急
+Dialogue: 0,0:00:11.94,0:00:12.93,Default,,0,0,0,,但你先{\c&H0000FFFF&\b1}别急{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.05,0:00:14.73,Default,,0,0,0,,朕有一件事{\c&H0000FFFF&\b1}交给{\c&H00FFFFFF&\b0}你去做
+Dialogue: 0,0:00:14.87,0:00:16.95,Default,,0,0,0,,此事{\c&H0000FFFF&\b1}关乎{\c&H00FFFFFF&\b0}我等能否成功离开
+Dialogue: 0,0:00:17.13,0:00:19.28,Default,,0,0,0,,”随即吩咐{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}率军前往孟
+Dialogue: 0,0:00:19.28,0:00:19.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}津渡{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.05,0:00:21.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}转为野外
+Dialogue: 0,0:00:21.36,0:00:23.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}夜色{\c&H00FFFFFF&\b0}已深远处战火纷飞
+Dialogue: 0,0:00:23.64,0:00:24.62,Default,,0,0,0,,喊杀声{\c&H0000FFFF&\b1}阵阵{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.80,0:00:26.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:27.05,0:00:28.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}大喜
+Dialogue: 0,0:00:28.27,0:00:30.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:30.32,0:00:30.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}面露{\c&H00FFFFFF&\b0}不甘

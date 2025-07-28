@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_001 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}继续强调
+Dialogue: 0,0:00:01.75,0:00:03.50,Default,,0,0,0,,自己会以严谨的{\c&H0000FFFF&\b1}态度{\c&H00FFFFFF&\b0}对待出
+Dialogue: 0,0:00:03.50,0:00:04.09,Default,,0,0,0,,征之事
+Dialogue: 0,0:00:04.63,0:00:05.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}听从指挥{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.77,0:00:07.46,Default,,0,0,0,,只是希望能有参与的{\c&H0000FFFF&\b1}机会{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.83,0:00:09.54,Default,,0,0,0,,他{\c&H0000FFFF&\b1}表示{\c&H00FFFFFF&\b0}若不能达成所愿
+Dialogue: 0,0:00:09.79,0:00:11.21,Default,,0,0,0,,自己的{\c&H0000FFFF&\b1}决心{\c&H00FFFFFF&\b0}不会改变
+Dialogue: 0,0:00:11.51,0:00:12.86,Default,,0,0,0,,可能依然会走向{\c&H0000FFFF&\b1}绝境{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.19,0:00:14.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}群臣{\c&H00FFFFFF&\b0}在这种压力下
+Dialogue: 0,0:00:14.66,0:00:16.63,Default,,0,0,0,,开始重新审视对{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的态
+Dialogue: 0,0:00:16.63,0:00:16.84,Default,,0,0,0,,度
+Dialogue: 0,0:00:17.46,0:00:19.18,Default,,0,0,0,,思考如何在不违背{\c&H0000FFFF&\b1}原则{\c&H00FFFFFF&\b0}的情
+Dialogue: 0,0:00:19.18,0:00:21.18,Default,,0,0,0,,况下解决当前的出兵{\c&H0000FFFF&\b1}难题{\c&H00FFFFFF&\b0}

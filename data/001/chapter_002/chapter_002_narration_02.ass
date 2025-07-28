@@ -1,0 +1,40 @@
+[Script Info]
+Title: chapter_002 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.96,Default,,0,0,0,,众大臣商议完后{\c&H0000FFFF&\b1}鱼贯{\c&H00FFFFFF&\b0}离开
+Dialogue: 0,0:00:02.36,0:00:03.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}驻足原地
+Dialogue: 0,0:00:03.92,0:00:05.72,Default,,0,0,0,,抬头望着气象万千的{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫
+Dialogue: 0,0:00:06.12,0:00:07.21,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}思绪万千{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.57,0:00:09.38,Default,,0,0,0,,这时他感到{\c&H0000FFFF&\b1}肩膀{\c&H00FFFFFF&\b0}被人从后
+Dialogue: 0,0:00:09.38,0:00:10.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}面拍{\c&H00FFFFFF&\b0}了一下
+Dialogue: 0,0:00:10.46,0:00:11.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}回头{\c&H00FFFFFF&\b0}看到身后站着五
+Dialogue: 0,0:00:11.89,0:00:12.90,Default,,0,0,0,,十多岁的{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.26,0:00:14.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}身形高大
+Dialogue: 0,0:00:14.86,0:00:16.98,Default,,0,0,0,,肩宽背阔五官{\c&H0000FFFF&\b1}棱角分明{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.32,0:00:19.79,Default,,0,0,0,,眉如刀削{\c&H0000FFFF&\b1}双目{\c&H00FFFFFF&\b0}深邃如寒潭
+Dialogue: 0,0:00:20.13,0:00:21.98,Default,,0,0,0,,整个人散发着如同{\c&H0000FFFF&\b1}山岳{\c&H00FFFFFF&\b0}般稳
+Dialogue: 0,0:00:21.98,0:00:22.59,Default,,0,0,0,,重的{\c&H0000FFFF&\b1}气场{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:22.95,0:00:23.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}嘴角{\c&H00FFFFFF&\b0}微微上扬
+Dialogue: 0,0:00:24.41,0:00:25.82,Default,,0,0,0,,带着耐人寻味的{\c&H0000FFFF&\b1}笑意{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:26.20,0:00:27.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}疑惑地询问李孝恭有
+Dialogue: 0,0:00:27.95,0:00:28.34,Default,,0,0,0,,事吗
+Dialogue: 0,0:00:28.98,0:00:29.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}笑着说
+Dialogue: 0,0:00:30.36,0:00:31.96,Default,,0,0,0,,“{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}刚才那般模样
+Dialogue: 0,0:00:32.07,0:00:34.08,Default,,0,0,0,,可真像你{\c&H0000FFFF&\b1}父亲{\c&H00FFFFFF&\b0}年轻那会
+Dialogue: 0,0:00:34.24,0:00:35.77,Default,,0,0,0,,”{\c&H0000FFFF&\b1}说完{\c&H00FFFFFF&\b0}便转身离去
+Dialogue: 0,0:00:35.95,0:00:37.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}露出疑惑的神情
+Dialogue: 0,0:00:38.02,0:00:39.55,Default,,0,0,0,,场景是在{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫前
+Dialogue: 0,0:00:39.69,0:00:41.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}明亮环境宏伟

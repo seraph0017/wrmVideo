@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_013 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.21,Default,,0,0,0,,在一处室内{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.70,0:00:02.71,Default,,0,0,0,,一位{\c&H0000FFFF&\b1}须发皆白{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.04,0:00:04.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}气质{\c&H00FFFFFF&\b0}儒雅的老人正满脸不
+Dialogue: 0,0:00:04.96,0:00:06.08,Default,,0,0,0,,悦地对着{\c&H0000FFFF&\b1}崔俊{\c&H00FFFFFF&\b0}说话
+Dialogue: 0,0:00:06.50,0:00:07.28,Default,,0,0,0,,“{\c&H0000FFFF&\b1}崔俊{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.36,0:00:08.73,Default,,0,0,0,,你就是这么跟那个{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}殿
+Dialogue: 0,0:00:08.73,0:00:09.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}下谈{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:09.57,0:00:11.26,Default,,0,0,0,,你{\c&H0000FFFF&\b1}知不知道{\c&H00FFFFFF&\b0}这书主要就在河
+Dialogue: 0,0:00:11.26,0:00:12.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}北道{\c&H00FFFFFF&\b0}销
+Dialogue: 0,0:00:12.20,0:00:14.03,Default,,0,0,0,,”{\c&H0000FFFF&\b1}崔俊{\c&H00FFFFFF&\b0}脸色更为惨白
+Dialogue: 0,0:00:14.11,0:00:15.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}显得{\c&H00FFFFFF&\b0}十分紧张担忧
+Dialogue: 0,0:00:15.73,0:00:16.92,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿中
+Dialogue: 0,0:00:17.09,0:00:18.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}手里拿着弘文馆学士
+Dialogue: 0,0:00:20.89,0:00:21.82,Default,,0,0,0,,指着{\c&H0000FFFF&\b1}唐俭{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:22.00,0:00:23.59,Default,,0,0,0,,面色{\c&H0000FFFF&\b1}铁青{\c&H00FFFFFF&\b0}地询问情况
+Dialogue: 0,0:00:23.71,0:00:24.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}唐俭{\c&H00FFFFFF&\b0}愁眉不展
+Dialogue: 0,0:00:25.05,0:00:26.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}不知{\c&H00FFFFFF&\b0}如何作答
+Dialogue: 0,0:00:26.71,0:00:28.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}中室内光线略显严肃
+Dialogue: 0,0:00:28.93,0:00:29.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}紧张

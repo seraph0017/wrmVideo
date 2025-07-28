@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_013 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}进入青楼
+Dialogue: 0,0:00:01.42,0:00:03.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}让准备十间上房
+Dialogue: 0,0:00:03.43,0:00:05.08,Default,,0,0,0,,北向辉询问月月{\c&H0000FFFF&\b1}姓名{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.58,0:00:06.49,Default,,0,0,0,,月月{\c&H0000FFFF&\b1}介绍{\c&H00FFFFFF&\b0}自己
+Dialogue: 0,0:00:06.75,0:00:07.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}大厅{\c&H00FFFFFF&\b0}装潢雅致
+Dialogue: 0,0:00:08.10,0:00:10.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}四壁{\c&H00FFFFFF&\b0}素色挂水墨山水画
+Dialogue: 0,0:00:10.41,0:00:12.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}明柱{\c&H00FFFFFF&\b0}挂青丝幔帐檀香袅袅
+Dialogue: 0,0:00:12.80,0:00:13.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}疲惫
+Dialogue: 0,0:00:13.86,0:00:14.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}决定{\c&H00FFFFFF&\b0}先歇息
+Dialogue: 0,0:00:14.90,0:00:16.34,Default,,0,0,0,,进入{\c&H0000FFFF&\b1}房间{\c&H00FFFFFF&\b0}后四处打量
+Dialogue: 0,0:00:16.61,0:00:18.23,Default,,0,0,0,,躺下后开始谋算{\c&H0000FFFF&\b1}查孙{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.23,0:00:18.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}思邈{\c&H00FFFFFF&\b0}的事
+Dialogue: 0,0:00:19.29,0:00:21.29,Default,,0,0,0,,随后入睡但梦到不好的{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.54,0:00:22.45,Default,,0,0,0,,被{\c&H0000FFFF&\b1}冷汗{\c&H00FFFFFF&\b0}惊醒
+Dialogue: 0,0:00:22.83,0:00:24.59,Default,,0,0,0,,场景在青楼{\c&H0000FFFF&\b1}内及{\c&H00FFFFFF&\b0}房间内
+Dialogue: 0,0:00:24.96,0:00:25.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}有变化

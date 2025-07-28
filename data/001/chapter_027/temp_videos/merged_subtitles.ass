@@ -1,0 +1,143 @@
+[Script Info]
+Title: chapter_027 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.01, 0:00:00.77,Default,,0,0,0,,在帅帐内
+Dialogue: 0, 0:00:01.18, 0:00:03.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}正与大臣们商议军事
+Dialogue: 0, 0:00:03.06, 0:00:03.52,Default,,0,0,0,,要事
+Dialogue: 0, 0:00:03.95, 0:00:05.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}身着黄色圆领袍
+Dialogue: 0, 0:00:06.36, 0:00:08.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}面容{\c&H00FFFFFF&\b0}威严神情严肃
+Dialogue: 0, 0:00:08.65, 0:00:10.38,Default,,0,0,0,,专注于{\c&H0000FFFF&\b1}点将{\c&H00FFFFFF&\b0}和用兵方略的
+Dialogue: 0, 0:00:10.38, 0:00:10.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}安排{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:10.98, 0:00:12.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}身穿甲胄
+Dialogue: 0, 0:00:12.59, 0:00:14.55,Default,,0,0,0,,立于一旁起初{\c&H0000FFFF&\b1}面露{\c&H00FFFFFF&\b0}诧异
+Dialogue: 0, 0:00:14.83, 0:00:15.76,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}转为{\c&H00FFFFFF&\b0}恭敬
+Dialogue: 0, 0:00:16.23, 0:00:17.66,Default,,0,0,0,,认真聆听{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}的指示
+Dialogue: 0, 0:00:17.91, 0:00:19.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}端坐于御座之上
+Dialogue: 0, 0:00:20.05, 0:00:20.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}眼神{\c&H00FFFFFF&\b0}锐利
+Dialogue: 0, 0:00:21.01, 0:00:22.39,Default,,0,0,0,,仔细{\c&H0000FFFF&\b1}考量{\c&H00FFFFFF&\b0}着各项部署
+Dialogue: 0, 0:00:22.73, 0:00:24.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}北向{\c&H00FFFFFF&\b0}辉站在一旁
+Dialogue: 0, 0:00:24.44, 0:00:25.39,Default,,0,0,0,,心中虽有{\c&H0000FFFF&\b1}不满{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:25.73, 0:00:27.37,Default,,0,0,0,,但也只能{\c&H0000FFFF&\b1}安静{\c&H00FFFFFF&\b0}听从安排
+Dialogue: 0, 0:00:27.66, 0:00:29.05,Default,,0,0,0,,整个{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}氛围严肃
+Dialogue: 0, 0:00:29.33, 0:00:30.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}都聚焦于当前的军
+Dialogue: 0, 0:00:30.76, 0:00:31.32,Default,,0,0,0,,政{\c&H0000FFFF&\b1}议题{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:31.57, 0:00:32.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}议事{\c&H00FFFFFF&\b0}持续进行
+Dialogue: 0, 0:00:33.11, 0:00:35.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}进一步明确对侯君集
+Dialogue: 0, 0:00:35.01, 0:00:36.14,Default,,0,0,0,,和北向辉的{\c&H0000FFFF&\b1}安排{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:36.56, 0:00:38.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}着重强调{\c&H00FFFFFF&\b0}战前的赏罚规则
+Dialogue: 0, 0:00:38.81, 0:00:40.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}神情严肃
+Dialogue: 0, 0:00:40.62, 0:00:42.40,Default,,0,0,0,,心中暗自盘算着自己的{\c&H0000FFFF&\b1}策略{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:42.60, 0:00:43.97,Default,,0,0,0,,北向辉虽不{\c&H0000FFFF&\b1}情愿{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:44.25, 0:00:45.76,Default,,0,0,0,,但也{\c&H0000FFFF&\b1}只能{\c&H00FFFFFF&\b0}接受既定安排
+Dialogue: 0, 0:00:46.08, 0:00:48.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌等大臣在一旁静
+Dialogue: 0, 0:00:48.03, 0:00:48.60,Default,,0,0,0,,静{\c&H0000FFFF&\b1}聆听{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:49.17, 0:00:51.21,Default,,0,0,0,,整个帅帐内{\c&H0000FFFF&\b1}气氛{\c&H00FFFFFF&\b0}紧张而有序
+Dialogue: 0, 0:00:51.50, 0:00:53.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}都在为即将到来的战
+Dialogue: 0, 0:00:53.01, 0:00:54.12,Default,,0,0,0,,事做着{\c&H0000FFFF&\b1}充分准备{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:54.39, 0:00:55.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}时光{\c&H00FFFFFF&\b0}流转至中午
+Dialogue: 0, 0:00:56.05, 0:00:57.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}结束了军政议题的商议
+Dialogue: 0, 0:00:58.23, 0:00:59.83,Default,,0,0,0,,准备用膳后再继续{\c&H0000FFFF&\b1}议政{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:00.19, 0:01:01.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}起身
+Dialogue: 0, 0:01:01.50, 0:01:02.99,Default,,0,0,0,,因久坐小{\c&H0000FFFF&\b1}圆凳{\c&H00FFFFFF&\b0}而感到些
+Dialogue: 0, 0:01:02.99, 0:01:03.46,Default,,0,0,0,,许{\c&H0000FFFF&\b1}疲惫{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:03.72, 0:01:04.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}面露{\c&H00FFFFFF&\b0}不适之色
+Dialogue: 0, 0:01:05.02, 0:01:07.07,Default,,0,0,0,,而{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}等大臣虽身着甲胄
+Dialogue: 0, 0:01:07.37, 0:01:09.67,Default,,0,0,0,,却依然精神抖擞{\c&H0000FFFF&\b1}身姿{\c&H00FFFFFF&\b0}挺拔
+Dialogue: 0, 0:01:10.00, 0:01:11.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}依次退出帅帐
+Dialogue: 0, 0:01:11.56, 0:01:13.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}单独留下侯君集
+Dialogue: 0, 0:01:13.82, 0:01:15.19,Default,,0,0,0,,准备进行{\c&H0000FFFF&\b1}私下{\c&H00FFFFFF&\b0}交谈
+Dialogue: 0, 0:01:15.47, 0:01:17.04,Default,,0,0,0,,以进一步探讨相关{\c&H0000FFFF&\b1}事宜{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:17.32, 0:01:19.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与侯君集在私下交谈
+Dialogue: 0, 0:01:19.78, 0:01:21.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}话题{\c&H00FFFFFF&\b0}涉及之前放走的突
+Dialogue: 0, 0:01:21.39, 0:01:21.97,Default,,0,0,0,,厥{\c&H0000FFFF&\b1}女子{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:22.41, 0:01:24.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}询问侯君集与该女子
+Dialogue: 0, 0:01:24.25, 0:01:24.76,Default,,0,0,0,,的{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:25.05, 0:01:26.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}面露异色
+Dialogue: 0, 0:01:26.46, 0:01:27.67,Default,,0,0,0,,回忆起相关{\c&H0000FFFF&\b1}情景{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:27.99, 0:01:29.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则在思索如何利用该
+Dialogue: 0, 0:01:29.96, 0:01:31.46,Default,,0,0,0,,女子来拉拢{\c&H0000FFFF&\b1}漠南{\c&H00FFFFFF&\b0}势力
+Dialogue: 0, 0:01:31.78, 0:01:33.10,Default,,0,0,0,,心中有着自己的{\c&H0000FFFF&\b1}谋划{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:33.34, 0:01:34.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}专注而深邃
+Dialogue: 0, 0:01:34.96, 0:01:37.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}提醒侯君集在征战大
+Dialogue: 0, 0:01:37.19, 0:01:38.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}漠时{\c&H00FFFFFF&\b0}要小心行事
+Dialogue: 0, 0:01:39.03, 0:01:40.61,Default,,0,0,0,,并且要{\c&H0000FFFF&\b1}利用{\c&H00FFFFFF&\b0}突厥女子的情
+Dialogue: 0, 0:01:40.61, 0:01:41.55,Default,,0,0,0,,况{\c&H0000FFFF&\b1}相机而动{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:42.00, 0:01:43.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}表面上应承下来
+Dialogue: 0, 0:01:43.82, 0:01:45.17,Default,,0,0,0,,但心中有自己的{\c&H0000FFFF&\b1}想法{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:45.50, 0:01:47.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}对此有所察觉
+Dialogue: 0, 0:01:47.35, 0:01:49.40,Default,,0,0,0,,再次叮嘱{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}要万事小心
+Dialogue: 0, 0:01:49.76, 0:01:50.73,Default,,0,0,0,,不可冲动{\c&H0000FFFF&\b1}用兵{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:50.91, 0:01:52.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}严肃而认真
+Dialogue: 0, 0:01:52.52, 0:01:54.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}离开侯君集后
+Dialogue: 0, 0:01:54.46, 0:01:55.41,Default,,0,0,0,,前往关押{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:55.72, 0:01:57.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}程咬金{\c&H00FFFFFF&\b0}等四人的帐篷
+Dialogue: 0, 0:01:57.37, 0:01:59.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}帐篷{\c&H00FFFFFF&\b0}内四人正在打牌取乐
+Dialogue: 0, 0:01:59.83, 0:02:01.75,Default,,0,0,0,,见到{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着帝王服饰
+Dialogue: 0, 0:02:02.04, 0:02:02.82,Default,,0,0,0,,皆{\c&H0000FFFF&\b1}震惊{\c&H00FFFFFF&\b0}不已
+Dialogue: 0, 0:02:03.16, 0:02:04.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}向他们宣布自己已继
+Dialogue: 0, 0:02:04.91, 0:02:05.48,Default,,0,0,0,,承{\c&H0000FFFF&\b1}大统{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:05.70, 0:02:07.75,Default,,0,0,0,,并拿出传国{\c&H0000FFFF&\b1}玉玺{\c&H00FFFFFF&\b0}以证明此事
+Dialogue: 0, 0:02:08.11, 0:02:09.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}庄重而严肃
+Dialogue: 0, 0:02:09.80, 0:02:11.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}向四人详细说明目前
+Dialogue: 0, 0:02:11.70, 0:02:12.25,Default,,0,0,0,,的{\c&H0000FFFF&\b1}形势{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:12.58, 0:02:14.04,Default,,0,0,0,,告知他们{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}已崩
+Dialogue: 0, 0:02:14.59, 0:02:15.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}天下大乱{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:15.65, 0:02:16.58,Default,,0,0,0,,四人{\c&H0000FFFF&\b1}反应{\c&H00FFFFFF&\b0}各异
+Dialogue: 0, 0:02:16.98, 0:02:18.65,Default,,0,0,0,,程咬金愤怒指责{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:18.94, 0:02:20.93,Default,,0,0,0,,李绩则劝{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}放他们回去
+Dialogue: 0, 0:02:21.19, 0:02:23.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}表示尊重他们的选择
+Dialogue: 0, 0:02:23.37, 0:02:24.31,Default,,0,0,0,,随后离开{\c&H0000FFFF&\b1}帐篷{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:24.60, 0:02:25.86,Default,,0,0,0,,在{\c&H0000FFFF&\b1}帐篷{\c&H00FFFFFF&\b0}外遇到月月
+Dialogue: 0, 0:02:26.29, 0:02:28.39,Default,,0,0,0,,月月告知他{\c&H0000FFFF&\b1}苏定方{\c&H00FFFFFF&\b0}出兵潼关
+Dialogue: 0, 0:02:28.72, 0:02:30.69,Default,,0,0,0,,三{\c&H0000FFFF&\b1}战三捷{\c&H00FFFFFF&\b0}大败齐王的消息
+Dialogue: 0, 0:02:31.13, 0:02:32.15,Default,,0,0,0,,月月{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}焦急
+Dialogue: 0, 0:02:32.59, 0:02:34.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则面露思考之色
+Dialogue: 0, 0:02:34.64, 0:02:35.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回到帅帐
+Dialogue: 0, 0:02:36.39, 0:02:37.46,Default,,0,0,0,,召见{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌
+Dialogue: 0, 0:02:37.81, 0:02:39.48,Default,,0,0,0,,商议应对{\c&H0000FFFF&\b1}苏定方{\c&H00FFFFFF&\b0}胜利后的
+Dialogue: 0, 0:02:39.48, 0:02:39.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}局势{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:40.29, 0:02:41.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌分析形势
+Dialogue: 0, 0:02:42.18, 0:02:43.97,Default,,0,0,0,,认为{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}一路有望成功
+Dialogue: 0, 0:02:44.22, 0:02:45.98,Default,,0,0,0,,同时指出{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}可能的应
+Dialogue: 0, 0:02:45.98, 0:02:46.51,Default,,0,0,0,,对{\c&H0000FFFF&\b1}策略{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:46.80, 0:02:48.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听后有所领悟
+Dialogue: 0, 0:02:48.74, 0:02:50.51,Default,,0,0,0,,陷入思考{\c&H0000FFFF&\b1}眼神{\c&H00FFFFFF&\b0}闪烁
+Dialogue: 0, 0:02:50.90, 0:02:52.31,Default,,0,0,0,,似乎在{\c&H0000FFFF&\b1}谋划{\c&H00FFFFFF&\b0}破局之法
+Dialogue: 0, 0:02:52.62, 0:02:54.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌则神情沉稳
+Dialogue: 0, 0:02:54.64, 0:02:55.65,Default,,0,0,0,,继续阐述{\c&H0000FFFF&\b1}观点{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:55.91, 0:02:57.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}带长孙无忌来到关押
+Dialogue: 0, 0:02:57.93, 0:02:58.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:58.77, 0:03:00.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}李治{\c&H00FFFFFF&\b0}李恪的帐篷
+Dialogue: 0, 0:03:00.64, 0:03:02.25,Default,,0,0,0,,向{\c&H0000FFFF&\b1}丁勇{\c&H00FFFFFF&\b0}交代相关情况
+Dialogue: 0, 0:03:02.71, 0:03:04.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}进入{\c&H00FFFFFF&\b0}帐中看到三人被捆绑
+Dialogue: 0, 0:03:05.07, 0:03:06.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}李治{\c&H00FFFFFF&\b0}惊慌求舅父解救
+Dialogue: 0, 0:03:06.77, 0:03:09.10,Default,,0,0,0,,神情可怜李恪则怒斥{\c&H0000FFFF&\b1}李治{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:03:09.35, 0:03:10.90,Default,,0,0,0,,表达对当前{\c&H0000FFFF&\b1}局势{\c&H00FFFFFF&\b0}的不满
+Dialogue: 0, 0:03:11.17, 0:03:12.80,Default,,0,0,0,,北向辉{\c&H0000FFFF&\b1}奉命{\c&H00FFFFFF&\b0}斩杀李恪
+Dialogue: 0, 0:03:13.13, 0:03:14.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌见状内心震动
+Dialogue: 0, 0:03:15.30, 0:03:16.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则表明自己的立场
+Dialogue: 0, 0:03:17.23, 0:03:18.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}坚定
+Dialogue: 0, 0:03:18.25, 0:03:20.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}带长孙无忌离开帐篷
+Dialogue: 0, 0:03:20.87, 0:03:23.02,Default,,0,0,0,,途中提醒{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌举荐人才
+Dialogue: 0, 0:03:23.37, 0:03:24.01,Default,,0,0,0,,不要{\c&H0000FFFF&\b1}避亲{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:03:24.42, 0:03:26.03,Default,,0,0,0,,并提到扩充{\c&H0000FFFF&\b1}后宫{\c&H00FFFFFF&\b0}之事
+Dialogue: 0, 0:03:26.30, 0:03:27.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌表示明白
+Dialogue: 0, 0:03:27.95, 0:03:30.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}则继续规划后续事宜
+Dialogue: 0, 0:03:30.34, 0:03:32.21,Default,,0,0,0,,整个{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}展现出权谋争斗的
+Dialogue: 0, 0:03:32.21, 0:03:32.96,Default,,0,0,0,,紧张{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:03:33.33, 0:03:34.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情严肃
+Dialogue: 0, 0:03:34.84, 0:03:36.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌则恭敬聆听
+Dialogue: 0, 0:03:36.81, 0:03:37.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}自然
+Dialogue: 0, 0:03:37.86, 0:03:39.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}画面{\c&H00FFFFFF&\b0}构图展现出场景的严
+Dialogue: 0, 0:03:39.54, 0:03:40.31,Default,,0,0,0,,肃与{\c&H0000FFFF&\b1}紧张{\c&H00FFFFFF&\b0}

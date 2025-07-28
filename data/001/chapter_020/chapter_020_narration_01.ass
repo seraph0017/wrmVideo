@@ -1,0 +1,38 @@
+[Script Info]
+Title: chapter_020 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}城头{\c&H00FFFFFF&\b0}之上
+Dialogue: 0,0:00:01.15,0:00:03.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神色凝重地观望着下
+Dialogue: 0,0:00:03.05,0:00:04.01,Default,,0,0,0,,方激烈的{\c&H0000FFFF&\b1}战况{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.42,0:00:06.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}单人独骑立于城
+Dialogue: 0,0:00:06.17,0:00:06.67,Default,,0,0,0,,门{\c&H0000FFFF&\b1}之下{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.04,0:00:08.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}胯下{\c&H00FFFFFF&\b0}战马人立而起
+Dialogue: 0,0:00:08.68,0:00:10.31,Default,,0,0,0,,手中铁枪如{\c&H0000FFFF&\b1}蛟龙{\c&H00FFFFFF&\b0}出海
+Dialogue: 0,0:00:10.61,0:00:11.35,Default,,0,0,0,,势若{\c&H0000FFFF&\b1}奔雷{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.64,0:00:12.97,Default,,0,0,0,,每一下都带着{\c&H0000FFFF&\b1}万钧之力{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.21,0:00:14.73,Default,,0,0,0,,马前已{\c&H0000FFFF&\b1}堆积{\c&H00FFFFFF&\b0}起数十具敌
+Dialogue: 0,0:00:14.73,0:00:15.30,Default,,0,0,0,,军{\c&H0000FFFF&\b1}尸体{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.58,0:00:17.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}马蹄铁{\c&H00FFFFFF&\b0}上沾满黏稠的鲜血
+Dialogue: 0,0:00:17.75,0:00:18.60,Default,,0,0,0,,伴随{\c&H0000FFFF&\b1}雨水{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.93,0:00:20.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}仿佛站在血海里
+Dialogue: 0,0:00:20.73,0:00:22.57,Default,,0,0,0,,李恪此时正与亲兵{\c&H0000FFFF&\b1}商量对策{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:22.92,0:00:23.71,Default,,0,0,0,,他翻身{\c&H0000FFFF&\b1}上马{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.07,0:00:25.62,Default,,0,0,0,,手持{\c&H0000FFFF&\b1}铁槊{\c&H00FFFFFF&\b0}振臂高呼
+Dialogue: 0,0:00:26.02,0:00:27.72,Default,,0,0,0,,要带众人冲上去杀{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:28.14,0:00:29.09,Default,,0,0,0,,眼中满是{\c&H0000FFFF&\b1}狠厉{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:29.52,0:00:31.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}目光如炬怒视李恪
+Dialogue: 0,0:00:32.16,0:00:34.20,Default,,0,0,0,,口中怒吼要让李恪{\c&H0000FFFF&\b1}血债{\c&H00FFFFFF&\b0}血偿
+Dialogue: 0,0:00:34.59,0:00:36.81,Default,,0,0,0,,手中{\c&H0000FFFF&\b1}铁枪{\c&H00FFFFFF&\b0}枪尖血珠簌簌而落

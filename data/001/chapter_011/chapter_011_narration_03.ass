@@ -1,0 +1,34 @@
+[Script Info]
+Title: chapter_011 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.99,Default,,0,0,0,,半个{\c&H0000FFFF&\b1}时辰{\c&H00FFFFFF&\b0}过后
+Dialogue: 0,0:00:01.35,0:00:03.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}军营{\c&H00FFFFFF&\b0}中战鼓隆隆响起
+Dialogue: 0,0:00:03.63,0:00:05.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}站在城外临时搭建的
+Dialogue: 0,0:00:05.55,0:00:06.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}帅台{\c&H00FFFFFF&\b0}之上
+Dialogue: 0,0:00:06.59,0:00:07.92,Default,,0,0,0,,俯瞰着一万精锐{\c&H0000FFFF&\b1}兵马{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.35,0:00:10.06,Default,,0,0,0,,这万人个个手持{\c&H0000FFFF&\b1}长矛{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.36,0:00:12.03,Default,,0,0,0,,腰挎{\c&H0000FFFF&\b1}横刀{\c&H00FFFFFF&\b0}身背硬弓
+Dialogue: 0,0:00:12.35,0:00:13.23,Default,,0,0,0,,身着{\c&H0000FFFF&\b1}明光{\c&H00FFFFFF&\b0}铠
+Dialogue: 0,0:00:13.46,0:00:15.64,Default,,0,0,0,,铠甲在{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}下闪烁着寒光
+Dialogue: 0,0:00:15.98,0:00:17.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}抽出佩剑
+Dialogue: 0,0:00:17.45,0:00:18.62,Default,,0,0,0,,剑指{\c&H0000FFFF&\b1}西北{\c&H00FFFFFF&\b0}方向
+Dialogue: 0,0:00:18.98,0:00:20.77,Default,,0,0,0,,向{\c&H0000FFFF&\b1}将士{\c&H00FFFFFF&\b0}们宣告此次出征的
+Dialogue: 0,0:00:20.77,0:00:21.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}目的{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.41,0:00:22.77,Default,,0,0,0,,激励{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}夺回粮草
+Dialogue: 0,0:00:23.18,0:00:24.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}们群情激昂
+Dialogue: 0,0:00:24.77,0:00:26.88,Default,,0,0,0,,高呼不夺回粮草便至死{\c&H0000FFFF&\b1}方休{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:27.18,0:00:29.05,Default,,0,0,0,,此时草原上{\c&H0000FFFF&\b1}战云密布{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:29.28,0:00:30.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}即将踏上征程

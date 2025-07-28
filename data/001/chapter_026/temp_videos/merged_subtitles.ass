@@ -1,0 +1,130 @@
+[Script Info]
+Title: chapter_026 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.02, 0:00:00.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}夜色{\c&H00FFFFFF&\b0}深沉
+Dialogue: 0, 0:00:01.09, 0:00:03.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}马周等人如同窃
+Dialogue: 0, 0:00:03.14, 0:00:03.60,Default,,0,0,0,,贼{\c&H0000FFFF&\b1}一般{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:04.16, 0:00:05.78,Default,,0,0,0,,悄然从囚禁他们的{\c&H0000FFFF&\b1}宫殿{\c&H00FFFFFF&\b0}中
+Dialogue: 0, 0:00:05.78, 0:00:06.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}溜出{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:06.70, 0:00:07.67,Default,,0,0,0,,他们{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}紧张
+Dialogue: 0, 0:00:08.06, 0:00:09.72,Default,,0,0,0,,心中满是对{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的不满
+Dialogue: 0, 0:00:09.98, 0:00:11.46,Default,,0,0,0,,懊悔不该轻信他的{\c&H0000FFFF&\b1}鬼话{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:11.72, 0:00:13.30,Default,,0,0,0,,此时场景是在{\c&H0000FFFF&\b1}宫殿{\c&H00FFFFFF&\b0}外的夜
+Dialogue: 0, 0:00:13.30, 0:00:13.72,Default,,0,0,0,,色中
+Dialogue: 0, 0:00:14.02, 0:00:14.72,Default,,0,0,0,,周围{\c&H0000FFFF&\b1}寂静{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:15.13, 0:00:16.76,Default,,0,0,0,,只有他们轻手轻脚的{\c&H0000FFFF&\b1}身影{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:17.05, 0:00:18.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}眉头紧锁
+Dialogue: 0, 0:00:18.71, 0:00:20.89,Default,,0,0,0,,步伐急促{\c&H0000FFFF&\b1}马周{\c&H00FFFFFF&\b0}则不时张望
+Dialogue: 0, 0:00:21.23, 0:00:22.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}生怕{\c&H00FFFFFF&\b0}被发现
+Dialogue: 0, 0:00:22.44, 0:00:25.19,Default,,0,0,0,,而远处{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}正站在城墙上
+Dialogue: 0, 0:00:25.60, 0:00:26.85,Default,,0,0,0,,望着他们离去的{\c&H0000FFFF&\b1}方向{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:27.33, 0:00:29.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}眼神{\c&H00FFFFFF&\b0}中带着一丝复杂的情绪
+Dialogue: 0, 0:00:29.57, 0:00:30.81,Default,,0,0,0,,众人溜到{\c&H0000FFFF&\b1}城墙根{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:31.31, 0:00:32.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}发现{\c&H00FFFFFF&\b0}守卫极其松懈
+Dialogue: 0, 0:00:33.04, 0:00:34.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}城门{\c&H00FFFFFF&\b0}都没关严实
+Dialogue: 0, 0:00:34.73, 0:00:36.56,Default,,0,0,0,,他们心中猜测这是{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}特
+Dialogue: 0, 0:00:36.56, 0:00:37.06,Default,,0,0,0,,意{\c&H0000FFFF&\b1}安排{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:37.31, 0:00:38.97,Default,,0,0,0,,此时场景是在{\c&H0000FFFF&\b1}城墙根{\c&H00FFFFFF&\b0}下
+Dialogue: 0, 0:00:39.27, 0:00:41.37,Default,,0,0,0,,周围寂静只有他们{\c&H0000FFFF&\b1}低声{\c&H00FFFFFF&\b0}讨论
+Dialogue: 0, 0:00:41.67, 0:00:42.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}眉头紧皱
+Dialogue: 0, 0:00:43.34, 0:00:44.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}思索{\c&H00FFFFFF&\b0}着下一步
+Dialogue: 0, 0:00:44.53, 0:00:45.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}马周{\c&H00FFFFFF&\b0}则在一旁附和
+Dialogue: 0, 0:00:46.15, 0:00:47.56,Default,,0,0,0,,而{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在城头上
+Dialogue: 0, 0:00:47.86, 0:00:48.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}看着{\c&H00FFFFFF&\b0}他们的举动
+Dialogue: 0, 0:00:49.31, 0:00:50.83,Default,,0,0,0,,心中盘算着自己的{\c&H0000FFFF&\b1}计划{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:51.11, 0:00:53.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}城头{\c&H00FFFFFF&\b0}上响起北向辉的声音
+Dialogue: 0, 0:00:53.55, 0:00:54.57,Default,,0,0,0,,无数{\c&H0000FFFF&\b1}火把{\c&H00FFFFFF&\b0}举起
+Dialogue: 0, 0:00:55.12, 0:00:57.31,Default,,0,0,0,,亮如{\c&H0000FFFF&\b1}白昼{\c&H00FFFFFF&\b0}他宣读陛下有旨
+Dialogue: 0, 0:00:57.80, 0:00:59.32,Default,,0,0,0,,若众人不走则{\c&H0000FFFF&\b1}万箭齐{\c&H00FFFFFF&\b0}发
+Dialogue: 0, 0:00:59.63, 0:01:01.09,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在城头上
+Dialogue: 0, 0:01:01.27, 0:01:01.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}火把{\c&H00FFFFFF&\b0}通明
+Dialogue: 0, 0:01:02.24, 0:01:03.39,Default,,0,0,0,,众{\c&H0000FFFF&\b1}大臣{\c&H00FFFFFF&\b0}心中忐忑
+Dialogue: 0, 0:01:03.71, 0:01:05.38,Default,,0,0,0,,他们虽签了拥立{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的信
+Dialogue: 0, 0:01:05.74, 0:01:07.09,Default,,0,0,0,,但心中有自己的{\c&H0000FFFF&\b1}想法{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:07.40, 0:01:08.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在城头上
+Dialogue: 0, 0:01:08.96, 0:01:09.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}看着{\c&H00FFFFFF&\b0}这一幕
+Dialogue: 0, 0:01:10.07, 0:01:11.59,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}思考{\c&H00FFFFFF&\b0}着应对之策
+Dialogue: 0, 0:01:11.87, 0:01:14.35,Default,,0,0,0,,一众大臣默然不语{\c&H0000FFFF&\b1}鱼贯{\c&H00FFFFFF&\b0}出城
+Dialogue: 0, 0:01:14.61, 0:01:15.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}第二日{\c&H00FFFFFF&\b0}清晨
+Dialogue: 0, 0:01:15.86, 0:01:16.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}刚起来
+Dialogue: 0, 0:01:17.24, 0:01:18.93,Default,,0,0,0,,门口{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}来报城头射来一
+Dialogue: 0, 0:01:18.93, 0:01:19.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}支箭{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:19.60, 0:01:20.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}接过信件
+Dialogue: 0, 0:01:21.03, 0:01:22.92,Default,,0,0,0,,心中猜想{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}又要做什么
+Dialogue: 0, 0:01:23.15, 0:01:24.73,Default,,0,0,0,,场景是在{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的居所
+Dialogue: 0, 0:01:25.03, 0:01:25.75,Default,,0,0,0,,清晨{\c&H0000FFFF&\b1}时分{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:26.00, 0:01:27.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着寝衣
+Dialogue: 0, 0:01:27.44, 0:01:29.17,Default,,0,0,0,,手持{\c&H0000FFFF&\b1}信件{\c&H00FFFFFF&\b0}神情疑惑
+Dialogue: 0, 0:01:29.43, 0:01:30.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}打开信件
+Dialogue: 0, 0:01:31.06, 0:01:33.04,Default,,0,0,0,,见{\c&H0000FFFF&\b1}里面{\c&H00FFFFFF&\b0}写着单独一叙
+Dialogue: 0, 0:01:33.23, 0:01:34.45,Default,,0,0,0,,他心中{\c&H0000FFFF&\b1}犹豫{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:34.59, 0:01:36.27,Default,,0,0,0,,担心{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}出其不意
+Dialogue: 0, 0:01:36.40, 0:01:38.45,Default,,0,0,0,,吩咐{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}传话天家无私事
+Dialogue: 0, 0:01:38.68, 0:01:39.88,Default,,0,0,0,,随后他登上{\c&H0000FFFF&\b1}城楼{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:40.00, 0:01:41.45,Default,,0,0,0,,见{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}策马而来
+Dialogue: 0, 0:01:41.62, 0:01:42.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在城楼之上
+Dialogue: 0, 0:01:43.12, 0:01:44.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}站在那里
+Dialogue: 0, 0:01:44.48, 0:01:46.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}在远处策马靠近
+Dialogue: 0, 0:01:46.52, 0:01:47.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情谨慎
+Dialogue: 0, 0:01:48.02, 0:01:49.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}则显得威严
+Dialogue: 0, 0:01:49.42, 0:01:51.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在城头上朗声道太上
+Dialogue: 0, 0:01:51.45, 0:01:52.41,Default,,0,0,0,,皇{\c&H0000FFFF&\b1}何事{\c&H00FFFFFF&\b0}找他
+Dialogue: 0, 0:01:52.79, 0:01:53.59,Default,,0,0,0,,但说{\c&H0000FFFF&\b1}无妨{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:53.96, 0:01:55.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}则称逆子不敢下城见
+Dialogue: 0, 0:01:55.84, 0:01:56.08,Default,,0,0,0,,他
+Dialogue: 0, 0:01:56.41, 0:01:57.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}胆色{\c&H00FFFFFF&\b0}丢人
+Dialogue: 0, 0:01:57.38, 0:01:59.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}回应君子不立危墙之
+Dialogue: 0, 0:01:59.26, 0:01:59.49,Default,,0,0,0,,下
+Dialogue: 0, 0:01:59.76, 0:02:01.61,Default,,0,0,0,,自己登基后{\c&H0000FFFF&\b1}性命{\c&H00FFFFFF&\b0}系于臣民
+Dialogue: 0, 0:02:01.86, 0:02:04.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在城头上两人对峙
+Dialogue: 0, 0:02:04.36, 0:02:05.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情坚定
+Dialogue: 0, 0:02:05.89, 0:02:07.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}则神色威严
+Dialogue: 0, 0:02:07.69, 0:02:09.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}称明日会下旨昭告天
+Dialogue: 0, 0:02:09.59, 0:02:11.34,Default,,0,0,0,,下承认{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}帝王之名
+Dialogue: 0, 0:02:11.81, 0:02:13.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}听到后虽惊讶
+Dialogue: 0, 0:02:13.80, 0:02:15.54,Default,,0,0,0,,但明白是{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}等人出的
+Dialogue: 0, 0:02:15.54, 0:02:15.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}主意{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:16.20, 0:02:17.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在城头上
+Dialogue: 0, 0:02:17.68, 0:02:18.61,Default,,0,0,0,,两人继续{\c&H0000FFFF&\b1}对话{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:18.89, 0:02:20.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情复杂
+Dialogue: 0, 0:02:20.50, 0:02:22.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}则带着一丝冷笑
+Dialogue: 0, 0:02:22.36, 0:02:24.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}提醒李世民在关中小
+Dialogue: 0, 0:02:24.50, 0:02:25.71,Default,,0,0,0,,心五姓七望{\c&H0000FFFF&\b1}势力{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:26.11, 0:02:27.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}脸色一沉
+Dialogue: 0, 0:02:27.80, 0:02:29.67,Default,,0,0,0,,怒称随时欢迎{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}再来
+Dialogue: 0, 0:02:29.87, 0:02:31.46,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}转身下城
+Dialogue: 0, 0:02:31.72, 0:02:32.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在城头上
+Dialogue: 0, 0:02:33.20, 0:02:34.20,Default,,0,0,0,,两人{\c&H0000FFFF&\b1}对话{\c&H00FFFFFF&\b0}结束
+Dialogue: 0, 0:02:34.46, 0:02:35.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情淡然
+Dialogue: 0, 0:02:35.90, 0:02:37.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}则怒目而视
+Dialogue: 0, 0:02:37.53, 0:02:38.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}第二日{\c&H00FFFFFF&\b0}清晨
+Dialogue: 0, 0:02:38.79, 0:02:40.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}隐藏在马车中驶出春
+Dialogue: 0, 0:02:40.84, 0:02:41.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}明门{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:41.63, 0:02:43.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}北向辉等人同行
+Dialogue: 0, 0:02:44.29, 0:02:46.17,Default,,0,0,0,,他们担心被{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}率军追杀
+Dialogue: 0, 0:02:46.49, 0:02:48.32,Default,,0,0,0,,决定离开{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}观察范围后急
+Dialogue: 0, 0:02:48.32, 0:02:49.33,Default,,0,0,0,,行军返回{\c&H0000FFFF&\b1}漠北{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:49.62, 0:02:50.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是在春明门外
+Dialogue: 0, 0:02:51.16, 0:02:52.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}马车{\c&H00FFFFFF&\b0}队伍出发
+Dialogue: 0, 0:02:52.42, 0:02:53.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情不安
+Dialogue: 0, 0:02:53.97, 0:02:55.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}等人也紧张
+Dialogue: 0, 0:02:55.70, 0:02:57.71,Default,,0,0,0,,灞桥大营内{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}和秦琼
+Dialogue: 0, 0:02:58.00, 0:03:00.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}等人商议应对局势
+Dialogue: 0, 0:03:00.37, 0:03:02.26,Default,,0,0,0,,帐外{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}来报京师守备松懈
+Dialogue: 0, 0:03:02.67, 0:03:04.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}等人意识到李承乾已
+Dialogue: 0, 0:03:04.51, 0:03:04.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}离开{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:03:05.12, 0:03:06.56,Default,,0,0,0,,场景是在{\c&H0000FFFF&\b1}灞桥{\c&H00FFFFFF&\b0}大营内
+Dialogue: 0, 0:03:06.78, 0:03:07.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}商议
+Dialogue: 0, 0:03:07.67, 0:03:08.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}神情凝重
+Dialogue: 0, 0:03:09.14, 0:03:10.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}等人专注倾听

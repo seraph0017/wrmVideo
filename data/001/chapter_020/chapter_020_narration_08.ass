@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_020 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄武门{\c&H00FFFFFF&\b0}前大战渐落帷幕
+Dialogue: 0,0:00:02.06,0:00:03.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛万彻{\c&H00FFFFFF&\b0}所部禁军精锐师
+Dialogue: 0,0:00:03.67,0:00:04.20,Default,,0,0,0,,出{\c&H0000FFFF&\b1}无名{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.72,0:00:05.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}军心{\c&H00FFFFFF&\b0}动摇
+Dialogue: 0,0:00:05.85,0:00:07.76,Default,,0,0,0,,被李愔{\c&H0000FFFF&\b1}所部{\c&H00FFFFFF&\b0}铁骑撕开缺口溃
+Dialogue: 0,0:00:07.76,0:00:07.96,Default,,0,0,0,,败
+Dialogue: 0,0:00:08.30,0:00:10.28,Default,,0,0,0,,城头的{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}估计薛万彻所
+Dialogue: 0,0:00:10.28,0:00:11.75,Default,,0,0,0,,部再有半个{\c&H0000FFFF&\b1}时辰{\c&H00FFFFFF&\b0}会彻
+Dialogue: 0,0:00:11.75,0:00:12.26,Default,,0,0,0,,底{\c&H0000FFFF&\b1}溃败{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.54,0:00:14.13,Default,,0,0,0,,而{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}那头也快完事
+Dialogue: 0,0:00:14.44,0:00:15.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿前广场上
+Dialogue: 0,0:00:15.95,0:00:17.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}勒住缰绳
+Dialogue: 0,0:00:17.82,0:00:18.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}铁枪{\c&H00FFFFFF&\b0}斜指地面
+Dialogue: 0,0:00:19.32,0:00:20.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}目光{\c&H00FFFFFF&\b0}冷冽看着李恪
+Dialogue: 0,0:00:20.88,0:00:22.87,Default,,0,0,0,,李恪身边{\c&H0000FFFF&\b1}亲兵{\c&H00FFFFFF&\b0}护卫军心涣散
+Dialogue: 0,0:00:23.55,0:00:24.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛仁贵{\c&H00FFFFFF&\b0}强压杀意
+Dialogue: 0,0:00:25.12,0:00:27.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}询问{\c&H00FFFFFF&\b0}李恪是想死还是跟他走
+Dialogue: 0,0:00:27.77,0:00:28.68,Default,,0,0,0,,李恪{\c&H0000FFFF&\b1}目光{\c&H00FFFFFF&\b0}微转
+Dialogue: 0,0:00:29.09,0:00:30.43,Default,,0,0,0,,不甘但知{\c&H0000FFFF&\b1}无法{\c&H00FFFFFF&\b0}冲出

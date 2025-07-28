@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_040 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}手起刀落要斩李承乾
+Dialogue: 0,0:00:02.59,0:00:04.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}爆发出力量扬头
+Dialogue: 0,0:00:04.88,0:00:06.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}称杀{\c&H00FFFFFF&\b0}了朕这辈子别想找到李
+Dialogue: 0,0:00:06.62,0:00:07.47,Default,,0,0,0,,泰和{\c&H0000FFFF&\b1}李治{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.84,0:00:09.73,Default,,0,0,0,,这话让{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}有一瞬间犹豫
+Dialogue: 0,0:00:09.96,0:00:11.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在战场环境紧张

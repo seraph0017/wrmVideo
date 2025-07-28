@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_005 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.92,Default,,0,0,0,,大营中{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}得知太子被救走
+Dialogue: 0,0:00:02.25,0:00:03.18,Default,,0,0,0,,正{\c&H0000FFFF&\b1}松口气{\c&H00FFFFFF&\b0}时
+Dialogue: 0,0:00:03.48,0:00:05.11,Default,,0,0,0,,传来大批{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}偷马逃营的
+Dialogue: 0,0:00:05.11,0:00:05.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}消息{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.00,0:00:08.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}勃然大怒下令追击
+Dialogue: 0,0:00:08.26,0:00:09.69,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在车厢内
+Dialogue: 0,0:00:09.98,0:00:10.99,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}五味杂陈{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.19,0:00:12.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}是大营内
+Dialogue: 0,0:00:12.50,0:00:14.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}夜色{\c&H00FFFFFF&\b0}深沉氛围紧张

@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_016 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}大庭广众{\c&H00FFFFFF&\b0}之下
+Dialogue: 0,0:00:01.48,0:00:03.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与李世民激烈对峙
+Dialogue: 0,0:00:03.65,0:00:04.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}满脸愤怒
+Dialogue: 0,0:00:05.29,0:00:06.49,Default,,0,0,0,,大声斥骂{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.92,0:00:07.93,Default,,0,0,0,,“滚你{\c&H0000FFFF&\b1}大爷{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:08.04,0:00:09.10,Default,,0,0,0,,孤{\c&H0000FFFF&\b1}天生{\c&H00FFFFFF&\b0}胆大
+Dialogue: 0,0:00:09.20,0:00:11.14,Default,,0,0,0,,要你个不忠不孝的玩意{\c&H0000FFFF&\b1}多嘴{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.24,0:00:12.60,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}脸色微变
+Dialogue: 0,0:00:12.84,0:00:14.13,Default,,0,0,0,,怒喝“{\c&H0000FFFF&\b1}逆子{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.26,0:00:15.78,Default,,0,0,0,,朕本对你{\c&H0000FFFF&\b1}寄予厚望{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.86,0:00:17.25,Default,,0,0,0,,希望你能{\c&H0000FFFF&\b1}承继{\c&H00FFFFFF&\b0}大统
+Dialogue: 0,0:00:17.41,0:00:19.80,Default,,0,0,0,,但你竟大逆不道屡次{\c&H0000FFFF&\b1}犯上{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.99,0:00:21.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}今天{\c&H00FFFFFF&\b0}朕就要亲自押着你去太
+Dialogue: 0,0:00:21.79,0:00:23.30,Default,,0,0,0,,庙给{\c&H0000FFFF&\b1}列祖列宗{\c&H00FFFFFF&\b0}谢罪
+Dialogue: 0,0:00:23.52,0:00:24.68,Default,,0,0,0,,”周围{\c&H0000FFFF&\b1}秦琼{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.92,0:00:26.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}带着金吾卫将李承
+Dialogue: 0,0:00:26.90,0:00:28.39,Default,,0,0,0,,乾围得如{\c&H0000FFFF&\b1}铁桶{\c&H00FFFFFF&\b0}一般
+Dialogue: 0,0:00:28.52,0:00:30.18,Default,,0,0,0,,场景是在{\c&H0000FFFF&\b1}长安街{\c&H00FFFFFF&\b0}头
+Dialogue: 0,0:00:30.41,0:00:32.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}强烈人群围观气氛紧张

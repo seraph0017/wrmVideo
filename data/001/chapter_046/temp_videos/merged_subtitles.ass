@@ -1,0 +1,89 @@
+[Script Info]
+Title: chapter_046 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.02, 0:00:02.85,Default,,0,0,0,,夜晚{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}都督府内灯火昏黄
+Dialogue: 0, 0:00:03.18, 0:00:04.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}眉头微蹙
+Dialogue: 0, 0:00:05.07, 0:00:06.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}专注地在地图上指画
+Dialogue: 0, 0:00:07.13, 0:00:09.13,Default,,0,0,0,,向{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}阐述着军事部署
+Dialogue: 0, 0:00:09.50, 0:00:10.88,Default,,0,0,0,,我们不与{\c&H0000FFFF&\b1}敌军{\c&H00FFFFFF&\b0}交战
+Dialogue: 0, 0:00:11.01, 0:00:12.77,Default,,0,0,0,,转去西线摆出往{\c&H0000FFFF&\b1}雁门关{\c&H00FFFFFF&\b0}的
+Dialogue: 0, 0:00:12.77, 0:00:13.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}架势{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:13.43, 0:00:15.88,Default,,0,0,0,,契苾何力{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}继续追击
+Dialogue: 0, 0:00:15.96, 0:00:17.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}我军{\c&H00FFFFFF&\b0}绕回东线
+Dialogue: 0, 0:00:17.26, 0:00:18.67,Default,,0,0,0,,待{\c&H0000FFFF&\b1}时机成熟{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:18.89, 0:00:20.14,Default,,0,0,0,,朕率{\c&H0000FFFF&\b1}主力{\c&H00FFFFFF&\b0}隐藏
+Dialogue: 0, 0:00:20.23, 0:00:22.48,Default,,0,0,0,,你率五百人马佯装进攻{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:22.60, 0:00:24.14,Default,,0,0,0,,引阿史{\c&H0000FFFF&\b1}那社尔{\c&H00FFFFFF&\b0}出兵
+Dialogue: 0, 0:00:24.25, 0:00:26.16,Default,,0,0,0,,而后朕再率{\c&H0000FFFF&\b1}主力{\c&H00FFFFFF&\b0}往介休
+Dialogue: 0, 0:00:26.32, 0:00:27.82,Default,,0,0,0,,迫使{\c&H0000FFFF&\b1}刘伯英{\c&H00FFFFFF&\b0}行动
+Dialogue: 0, 0:00:27.98, 0:00:30.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}神情敬重认真倾听
+Dialogue: 0, 0:00:30.83, 0:00:33.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}目光坚定语气沉稳
+Dialogue: 0, 0:00:33.28, 0:00:35.22,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}独坐在都督府
+Dialogue: 0, 0:00:35.36, 0:00:37.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}灯火{\c&H00FFFFFF&\b0}将他的脸映得忽明忽暗
+Dialogue: 0, 0:00:37.47, 0:00:39.54,Default,,0,0,0,,他提笔写下渊盖{\c&H0000FFFF&\b1}苏文{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:39.54, 0:00:39.89,Default,,0,0,0,,四字
+Dialogue: 0, 0:00:40.10, 0:00:41.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}双目{\c&H00FFFFFF&\b0}爆发骇人煞气
+Dialogue: 0, 0:00:41.17, 0:00:41.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}幽州{\c&H00FFFFFF&\b0}城头
+Dialogue: 0, 0:00:42.39, 0:00:44.32,Default,,0,0,0,,渊盖苏{\c&H0000FFFF&\b1}文身{\c&H00FFFFFF&\b0}着金饰服饰
+Dialogue: 0, 0:00:44.86, 0:00:46.57,Default,,0,0,0,,站在{\c&H0000FFFF&\b1}城头{\c&H00FFFFFF&\b0}极目远眺
+Dialogue: 0, 0:00:46.96, 0:00:48.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}锋芒毕露
+Dialogue: 0, 0:00:48.44, 0:00:50.36,Default,,0,0,0,,身旁的杨{\c&H0000FFFF&\b1}万春{\c&H00FFFFFF&\b0}满脸络腮胡
+Dialogue: 0, 0:00:50.57, 0:00:52.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}身形{\c&H00FFFFFF&\b0}魁梧恭敬地询问
+Dialogue: 0, 0:00:52.77, 0:00:54.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}尊敬{\c&H00FFFFFF&\b0}的大莫支离
+Dialogue: 0, 0:00:54.30, 0:00:55.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}幽州{\c&H00FFFFFF&\b0}已拿下
+Dialogue: 0, 0:00:55.33, 0:00:57.53,Default,,0,0,0,,是否对城中{\c&H0000FFFF&\b1}百姓{\c&H00FFFFFF&\b0}给予震慑
+Dialogue: 0, 0:00:57.67, 0:00:59.44,Default,,0,0,0,,渊盖{\c&H0000FFFF&\b1}苏文{\c&H00FFFFFF&\b0}抬头看月
+Dialogue: 0, 0:00:59.64, 0:01:02.20,Default,,0,0,0,,转头看向杨{\c&H0000FFFF&\b1}万春{\c&H00FFFFFF&\b0}语气笃定
+Dialogue: 0, 0:01:02.36, 0:01:04.34,Default,,0,0,0,,此城乃吾{\c&H0000FFFF&\b1}问鼎中原{\c&H00FFFFFF&\b0}的跳板
+Dialogue: 0, 0:01:04.50, 0:01:05.92,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}秋风{\c&H00FFFFFF&\b0}微凉
+Dialogue: 0, 0:01:06.04, 0:01:07.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}城头{\c&H00FFFFFF&\b0}铜铃轻响
+Dialogue: 0, 0:01:07.42, 0:01:08.84,Default,,0,0,0,,而在{\c&H0000FFFF&\b1}河东{\c&H00FFFFFF&\b0}平原
+Dialogue: 0, 0:01:08.97, 0:01:10.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}骑马缓行
+Dialogue: 0, 0:01:10.65, 0:01:12.72,Default,,0,0,0,,一边喝着百姓送来的{\c&H0000FFFF&\b1}粟米{\c&H00FFFFFF&\b0}酒
+Dialogue: 0, 0:01:12.84, 0:01:13.93,Default,,0,0,0,,一边吃着{\c&H0000FFFF&\b1}肉干{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:14.07, 0:01:16.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}骑马前来汇报
+Dialogue: 0, 0:01:16.13, 0:01:18.34,Default,,0,0,0,,陛下已过{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}东五十多里
+Dialogue: 0, 0:01:18.50, 0:01:20.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}裴将军{\c&H00FFFFFF&\b0}应该快到太原附近了
+Dialogue: 0, 0:01:20.87, 0:01:22.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}抬头看天
+Dialogue: 0, 0:01:22.74, 0:01:24.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率军在夜色中疾驰
+Dialogue: 0, 0:01:25.14, 0:01:26.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}马蹄声{\c&H00FFFFFF&\b0}如雷
+Dialogue: 0, 0:01:26.36, 0:01:27.46,Default,,0,0,0,,卷起漫天{\c&H0000FFFF&\b1}尘土{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:27.97, 0:01:28.87,Default,,0,0,0,,他紧握{\c&H0000FFFF&\b1}缰绳{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:29.21, 0:01:30.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}目光如炬{\c&H00FFFFFF&\b0}地盯着前方
+Dialogue: 0, 0:01:30.79, 0:01:33.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}右后方发现敌情
+Dialogue: 0, 0:01:33.09, 0:01:34.63,Default,,0,0,0,,一名斥候{\c&H0000FFFF&\b1}飞马{\c&H00FFFFFF&\b0}来报
+Dialogue: 0, 0:01:34.82, 0:01:36.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}猛地勒住战马
+Dialogue: 0, 0:01:36.48, 0:01:37.93,Default,,0,0,0,,抬手示意{\c&H0000FFFF&\b1}全军{\c&H00FFFFFF&\b0}停下
+Dialogue: 0, 0:01:38.09, 0:01:39.95,Default,,0,0,0,,右后方{\c&H0000FFFF&\b1}地平线{\c&H00FFFFFF&\b0}上隐约有火
+Dialogue: 0, 0:01:39.95, 0:01:40.56,Default,,0,0,0,,光{\c&H0000FFFF&\b1}闪动{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:40.86, 0:01:42.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}玛德{\c&H00FFFFFF&\b0}不是这么蠢吧
+Dialogue: 0, 0:01:42.99, 0:01:44.92,Default,,0,0,0,,几乎{\c&H0000FFFF&\b1}下意识{\c&H00FFFFFF&\b0}脱口而出
+Dialogue: 0, 0:01:45.05, 0:01:47.04,Default,,0,0,0,,这方向有可能是{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:47.22, 0:01:49.33,Default,,0,0,0,,但如是他不{\c&H0000FFFF&\b1}可能{\c&H00FFFFFF&\b0}大张旗鼓点
+Dialogue: 0, 0:01:49.33, 0:01:49.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}火把{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:49.72, 0:01:51.27,Default,,0,0,0,,如此只有一个{\c&H0000FFFF&\b1}可能{\c&H00FFFFFF&\b0}是跟李
+Dialogue: 0, 0:01:51.27, 0:01:52.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}碰上了
+Dialogue: 0, 0:01:52.22, 0:01:54.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}王逸{\c&H00FFFFFF&\b0}也认识到来人是谁
+Dialogue: 0, 0:01:54.22, 0:01:55.27,Default,,0,0,0,,眼中{\c&H0000FFFF&\b1}喷火{\c&H00FFFFFF&\b0}一般
+Dialogue: 0, 0:01:55.44, 0:01:57.42,Default,,0,0,0,,恨不能直接和{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}拼了
+Dialogue: 0, 0:01:57.57, 0:01:59.24,Default,,0,0,0,,但{\c&H0000FFFF&\b1}明白{\c&H00FFFFFF&\b0}自己一方处境
+Dialogue: 0, 0:01:59.42, 0:02:01.16,Default,,0,0,0,,咬着后{\c&H0000FFFF&\b1}槽牙{\c&H00FFFFFF&\b0}说道
+Dialogue: 0, 0:02:01.31, 0:02:03.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}给臣五百人马
+Dialogue: 0, 0:02:03.64, 0:02:05.32,Default,,0,0,0,,臣去给那个{\c&H0000FFFF&\b1}奸贼{\c&H00FFFFFF&\b0}拼了
+Dialogue: 0, 0:02:05.46, 0:02:07.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}分兵{\c&H00FFFFFF&\b0}去挡拖延时间
+Dialogue: 0, 0:02:07.21, 0:02:08.88,Default,,0,0,0,,给大部队换来{\c&H0000FFFF&\b1}渡河{\c&H00FFFFFF&\b0}时间
+Dialogue: 0, 0:02:09.08, 0:02:10.72,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}残血
+Dialogue: 0, 0:02:10.87, 0:02:13.03,Default,,0,0,0,,如被拖住三四个{\c&H0000FFFF&\b1}时辰{\c&H00FFFFFF&\b0}就危
+Dialogue: 0, 0:02:13.03, 0:02:13.35,Default,,0,0,0,,险了
+Dialogue: 0, 0:02:13.55, 0:02:15.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中盘算着如何应对

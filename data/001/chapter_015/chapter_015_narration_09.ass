@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_015 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.86,Default,,0,0,0,,鸿胪寺{\c&H0000FFFF&\b1}官员{\c&H00FFFFFF&\b0}带着四名草原男
+Dialogue: 0,0:00:01.86,0:00:02.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}子进殿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.91,0:00:04.85,Default,,0,0,0,,拿出礼单朗声道太子{\c&H0000FFFF&\b1}敬献{\c&H00FFFFFF&\b0}薛
+Dialogue: 0,0:00:04.85,0:00:06.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}延陀{\c&H00FFFFFF&\b0}部大叶护三名
+Dialogue: 0,0:00:06.41,0:00:08.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}梅录{\c&H00FFFFFF&\b0}一名众人松口气
+Dialogue: 0,0:00:08.50,0:00:10.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}询问太子是否派人来
+Dialogue: 0,0:00:10.70,0:00:12.55,Default,,0,0,0,,来人回应太子说{\c&H0000FFFF&\b1}大明宫{\c&H00FFFFFF&\b0}未
+Dialogue: 0,0:00:12.55,0:00:12.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}修好{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.27,0:00:14.53,Default,,0,0,0,,还不配让{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}住
+Dialogue: 0,0:00:14.77,0:00:16.30,Default,,0,0,0,,等过些日子再{\c&H0000FFFF&\b1}回来{\c&H00FFFFFF&\b0}看
+Dialogue: 0,0:00:16.84,0:00:18.46,Default,,0,0,0,,这话让{\c&H0000FFFF&\b1}大臣{\c&H00FFFFFF&\b0}勃然变色
+Dialogue: 0,0:00:18.80,0:00:20.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}则豪气回应等着那一
+Dialogue: 0,0:00:20.76,0:00:21.05,Default,,0,0,0,,天

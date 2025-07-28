@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_036 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.00,Default,,0,0,0,,李世民听到{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}提及解
+Dialogue: 0,0:00:02.00,0:00:02.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}蔚州{\c&H00FFFFFF&\b0}之围后
+Dialogue: 0,0:00:03.15,0:00:04.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}面露{\c&H00FFFFFF&\b0}诧异之色
+Dialogue: 0,0:00:04.72,0:00:06.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}沉吟{\c&H00FFFFFF&\b0}片刻后表示会修书一
+Dialogue: 0,0:00:06.36,0:00:07.35,Default,,0,0,0,,封询问{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.60,0:00:09.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}听闻后回应多谢李
+Dialogue: 0,0:00:09.45,0:00:09.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}世民{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.27,0:00:11.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}言语{\c&H00FFFFFF&\b0}间仍带嘲讽
+Dialogue: 0,0:00:11.95,0:00:14.11,Default,,0,0,0,,称{\c&H0000FFFF&\b1}若需{\c&H00FFFFFF&\b0}李家女子和亲可告知
+Dialogue: 0,0:00:14.11,0:00:14.38,Default,,0,0,0,,她
+Dialogue: 0,0:00:14.77,0:00:16.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}无奈地叹了口气
+Dialogue: 0,0:00:16.54,0:00:18.30,Default,,0,0,0,,摆手示意{\c&H0000FFFF&\b1}弘化公主{\c&H00FFFFFF&\b0}离开
+Dialogue: 0,0:00:18.61,0:00:20.70,Default,,0,0,0,,画面一转来到{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}处
+Dialogue: 0,0:00:21.05,0:00:22.95,Default,,0,0,0,,他刚听完{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}和北向辉的
+Dialogue: 0,0:00:22.95,0:00:23.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}汇报{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:23.73,0:00:25.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}脸色{\c&H00FFFFFF&\b0}透着失望但较为平静

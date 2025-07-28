@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_050 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}拿出大炮图纸
+Dialogue: 0,0:00:02.09,0:00:03.77,Default,,0,0,0,,二人趴在桌上{\c&H0000FFFF&\b1}凝神{\c&H00FFFFFF&\b0}观看
+Dialogue: 0,0:00:04.45,0:00:05.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}张儒童{\c&H00FFFFFF&\b0}表示铸造大钟
+Dialogue: 0,0:00:06.30,0:00:07.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}佛像{\c&H00FFFFFF&\b0}等没问题
+Dialogue: 0,0:00:07.79,0:00:09.29,Default,,0,0,0,,但制造{\c&H0000FFFF&\b1}模具{\c&H00FFFFFF&\b0}需要时间
+Dialogue: 0,0:00:09.59,0:00:11.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}认为时间不够
+Dialogue: 0,0:00:11.27,0:00:12.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}提出{\c&H00FFFFFF&\b0}自己的想法
+Dialogue: 0,0:00:12.64,0:00:14.53,Default,,0,0,0,,想在{\c&H0000FFFF&\b1}模具{\c&H00FFFFFF&\b0}中使用麻捣工艺并
+Dialogue: 0,0:00:14.53,0:00:15.19,Default,,0,0,0,,加入{\c&H0000FFFF&\b1}酒糟{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.49,0:00:17.43,Default,,0,0,0,,分两次铸造用{\c&H0000FFFF&\b1}炭火{\c&H00FFFFFF&\b0}加速烘干
+Dialogue: 0,0:00:17.81,0:00:19.84,Default,,0,0,0,,二人听后{\c&H0000FFFF&\b1}表示{\c&H00FFFFFF&\b0}会尽力尝试
+Dialogue: 0,0:00:20.21,0:00:22.61,Default,,0,0,0,,修缮坊内{\c&H0000FFFF&\b1}热气{\c&H00FFFFFF&\b0}升腾众人忙碌

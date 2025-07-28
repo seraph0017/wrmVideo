@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_010 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率军赶了一夜的路
+Dialogue: 0,0:00:02.00,0:00:02.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}部队{\c&H00FFFFFF&\b0}甚是疲惫
+Dialogue: 0,0:00:03.24,0:00:05.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}传令{\c&H00FFFFFF&\b0}全军原地扎营休整
+Dialogue: 0,0:00:05.43,0:00:06.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}杜正伦{\c&H00FFFFFF&\b0}策马过来道
+Dialogue: 0,0:00:07.30,0:00:08.24,Default,,0,0,0,,“{\c&H0000FFFF&\b1}启禀{\c&H00FFFFFF&\b0}殿下
+Dialogue: 0,0:00:08.41,0:00:09.31,Default,,0,0,0,,刚传来{\c&H0000FFFF&\b1}消息{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.51,0:00:11.14,Default,,0,0,0,,说{\c&H0000FFFF&\b1}李靖{\c&H00FFFFFF&\b0}大军到达云中后
+Dialogue: 0,0:00:11.33,0:00:12.17,Default,,0,0,0,,并未{\c&H0000FFFF&\b1}停留{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.25,0:00:13.96,Default,,0,0,0,,而是立刻率军{\c&H0000FFFF&\b1}返回{\c&H00FFFFFF&\b0}了
+Dialogue: 0,0:00:14.04,0:00:15.47,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}道
+Dialogue: 0,0:00:15.82,0:00:17.27,Default,,0,0,0,,“好{\c&H0000FFFF&\b1}继续{\c&H00FFFFFF&\b0}派人查探
+Dialogue: 0,0:00:17.39,0:00:18.75,Default,,0,0,0,,有{\c&H0000FFFF&\b1}消息{\c&H00FFFFFF&\b0}马上来报
+Dialogue: 0,0:00:18.86,0:00:20.70,Default,,0,0,0,,”{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是大漠中营地
+Dialogue: 0,0:00:20.88,0:00:22.43,Default,,0,0,0,,夜晚{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}较暗
+Dialogue: 0,0:00:22.62,0:00:24.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着高领战甲
+Dialogue: 0,0:00:24.54,0:00:25.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}疲惫
+Dialogue: 0,0:00:25.64,0:00:27.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}杜正伦{\c&H00FFFFFF&\b0}身着高领儒服
+Dialogue: 0,0:00:27.54,0:00:29.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}汇报情况{\c&H00FFFFFF&\b0}大漠营地夜晚
+Dialogue: 0,0:00:29.73,0:00:30.89,Default,,0,0,0,,光线较暗构图{\c&H0000FFFF&\b1}静谧{\c&H00FFFFFF&\b0}

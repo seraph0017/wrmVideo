@@ -1,0 +1,34 @@
+[Script Info]
+Title: chapter_031 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}继续向李世民倾诉
+Dialogue: 0,0:00:02.37,0:00:04.09,Default,,0,0,0,,称自己身为{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}如履薄冰
+Dialogue: 0,0:00:04.62,0:00:06.14,Default,,0,0,0,,怕{\c&H0000FFFF&\b1}青雀{\c&H00FFFFFF&\b0}继位后杀自己
+Dialogue: 0,0:00:06.50,0:00:08.26,Default,,0,0,0,,还提及想治腿以及{\c&H0000FFFF&\b1}思念{\c&H00FFFFFF&\b0}母后
+Dialogue: 0,0:00:08.49,0:00:10.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}听后眼中罕见露出柔
+Dialogue: 0,0:00:10.44,0:00:10.64,Default,,0,0,0,,软
+Dialogue: 0,0:00:10.96,0:00:11.96,Default,,0,0,0,,但瞬间{\c&H0000FFFF&\b1}遮掩{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.21,0:00:14.27,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}又提到失去地位
+Dialogue: 0,0:00:14.27,0:00:16.21,Default,,0,0,0,,的太子和{\c&H0000FFFF&\b1}嫡长子{\c&H00FFFFFF&\b0}难以存活
+Dialogue: 0,0:00:16.48,0:00:17.75,Default,,0,0,0,,让{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}心中动容
+Dialogue: 0,0:00:18.14,0:00:19.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}依旧是大漠
+Dialogue: 0,0:00:19.61,0:00:20.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}依旧强烈
+Dialogue: 0,0:00:21.25,0:00:22.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}神情更显哀伤
+Dialogue: 0,0:00:23.27,0:00:25.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}则有短暂的情绪波动
+Dialogue: 0,0:00:25.54,0:00:27.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身着深色高领长袍
+Dialogue: 0,0:00:27.70,0:00:28.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}眼神{\c&H00FFFFFF&\b0}满是哀伤
+Dialogue: 0,0:00:29.00,0:00:30.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}穿着玄色高领战甲
+Dialogue: 0,0:00:31.11,0:00:33.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}有一丝柔软后恢复冷冽

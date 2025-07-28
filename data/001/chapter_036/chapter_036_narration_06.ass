@@ -1,0 +1,30 @@
+[Script Info]
+Title: chapter_036 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看完五姓七望的妆奁
+Dialogue: 0,0:00:01.86,0:00:02.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}礼单{\c&H00FFFFFF&\b0}后
+Dialogue: 0,0:00:02.90,0:00:04.03,Default,,0,0,0,,心中满是{\c&H0000FFFF&\b1}吃惊{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.36,0:00:06.50,Default,,0,0,0,,此时帐外传来{\c&H0000FFFF&\b1}太上皇{\c&H00FFFFFF&\b0}的来信
+Dialogue: 0,0:00:07.05,0:00:07.96,Default,,0,0,0,,内容是放{\c&H0000FFFF&\b1}李绩{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.22,0:00:10.71,Default,,0,0,0,,程咬金{\c&H0000FFFF&\b1}苏定方{\c&H00FFFFFF&\b0}三日后启程前
+Dialogue: 0,0:00:10.71,0:00:11.23,Default,,0,0,0,,往{\c&H0000FFFF&\b1}蔚州{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.54,0:00:12.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}看完来信后
+Dialogue: 0,0:00:12.94,0:00:14.45,Default,,0,0,0,,帐外又传来{\c&H0000FFFF&\b1}信鸽{\c&H00FFFFFF&\b0}消息
+Dialogue: 0,0:00:14.81,0:00:16.84,Default,,0,0,0,,称{\c&H0000FFFF&\b1}齐王{\c&H00FFFFFF&\b0}李佑率六万兵马打败
+Dialogue: 0,0:00:16.84,0:00:17.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏定方{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.72,0:00:19.07,Default,,0,0,0,,现已兵至{\c&H0000FFFF&\b1}武牢关{\c&H00FFFFFF&\b0}下
+Dialogue: 0,0:00:19.41,0:00:21.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}对此感到十分意外
+Dialogue: 0,0:00:21.41,0:00:22.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}陷入短暂的沉默

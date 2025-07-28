@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_050 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}向工匠们表明要铸造
+Dialogue: 0,0:00:01.86,0:00:02.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}东西{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.83,0:00:03.98,Default,,0,0,0,,若{\c&H0000FFFF&\b1}成功{\c&H00FFFFFF&\b0}会有重赏
+Dialogue: 0,0:00:04.32,0:00:06.10,Default,,0,0,0,,并提及要拜{\c&H0000FFFF&\b1}手艺{\c&H00FFFFFF&\b0}最好的人
+Dialogue: 0,0:00:06.10,0:00:08.46,Default,,0,0,0,,为“将作{\c&H0000FFFF&\b1}大匠{\c&H00FFFFFF&\b0}”挂三品衔
+Dialogue: 0,0:00:08.60,0:00:10.49,Default,,0,0,0,,还赐钱帛和让{\c&H0000FFFF&\b1}子侄{\c&H00FFFFFF&\b0}求学的
+Dialogue: 0,0:00:10.49,0:00:10.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}机会{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.10,0:00:13.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}李阿四{\c&H00FFFFFF&\b0}和张儒童听后十分惊
+Dialogue: 0,0:00:13.21,0:00:13.37,Default,,0,0,0,,讶
+Dialogue: 0,0:00:13.52,0:00:14.66,Default,,0,0,0,,起初{\c&H0000FFFF&\b1}不敢当{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.79,0:00:16.32,Default,,0,0,0,,但在{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的坚持下
+Dialogue: 0,0:00:16.44,0:00:17.86,Default,,0,0,0,,二人逐渐被{\c&H0000FFFF&\b1}打动{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.02,0:00:20.07,Default,,0,0,0,,屋内{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}从紧张逐渐变得有
+Dialogue: 0,0:00:20.07,0:00:20.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}希望{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.71,0:00:22.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的话语充满诚意

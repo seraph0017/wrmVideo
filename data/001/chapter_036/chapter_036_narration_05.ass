@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_036 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}几日{\c&H00FFFFFF&\b0}后
+Dialogue: 0,0:00:00.91,0:00:02.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}率领大军返回云中
+Dialogue: 0,0:00:03.25,0:00:04.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}云中{\c&H00FFFFFF&\b0}依旧繁华
+Dialogue: 0,0:00:04.84,0:00:06.52,Default,,0,0,0,,两处{\c&H0000FFFF&\b1}城墙{\c&H00FFFFFF&\b0}在紧锣密鼓地修
+Dialogue: 0,0:00:06.52,0:00:06.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}建中{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.29,0:00:09.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}焦急地进入大帐议事
+Dialogue: 0,0:00:09.54,0:00:11.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌等人分列两旁
+Dialogue: 0,0:00:11.51,0:00:12.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}神色{\c&H00FFFFFF&\b0}并不慌张
+Dialogue: 0,0:00:12.96,0:00:14.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}杜荷{\c&H00FFFFFF&\b0}站出来带来蔚州的最
+Dialogue: 0,0:00:14.43,0:00:14.98,Default,,0,0,0,,新{\c&H0000FFFF&\b1}战报{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.50,0:00:17.59,Default,,0,0,0,,称城中{\c&H0000FFFF&\b1}树皮{\c&H00FFFFFF&\b0}皆已啃食殆尽
+Dialogue: 0,0:00:18.02,0:00:19.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}将士{\c&H00FFFFFF&\b0}折损已逾三成
+Dialogue: 0,0:00:19.62,0:00:21.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}高士廉{\c&H00FFFFFF&\b0}汇报五姓七望已遣家
+Dialogue: 0,0:00:21.55,0:00:22.89,Default,,0,0,0,,臣呈上{\c&H0000FFFF&\b1}妆奁{\c&H00FFFFFF&\b0}礼单
+Dialogue: 0,0:00:23.43,0:00:24.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}物品{\c&H00FFFFFF&\b0}十分丰厚
+Dialogue: 0,0:00:24.80,0:00:26.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看完礼单后陷入思考

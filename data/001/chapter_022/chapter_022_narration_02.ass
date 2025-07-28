@@ -1,0 +1,42 @@
+[Script Info]
+Title: chapter_022 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.14,Default,,0,0,0,,紧接着{\c&H0000FFFF&\b1}弩箭{\c&H00FFFFFF&\b0}上的火药爆炸
+Dialogue: 0,0:00:02.68,0:00:03.94,Default,,0,0,0,,一股极强{\c&H0000FFFF&\b1}热浪袭来{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.39,0:00:06.43,Default,,0,0,0,,无数铁片在{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}下反射森
+Dialogue: 0,0:00:06.43,0:00:07.89,Default,,0,0,0,,寒{\c&H0000FFFF&\b1}光芒{\c&H00FFFFFF&\b0}向周围激射
+Dialogue: 0,0:00:08.26,0:00:09.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}双目圆瞪
+Dialogue: 0,0:00:09.81,0:00:11.18,Default,,0,0,0,,想起{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}那夜的爆炸
+Dialogue: 0,0:00:11.60,0:00:13.12,Default,,0,0,0,,急忙勒{\c&H0000FFFF&\b1}缰绳{\c&H00FFFFFF&\b0}调转战马
+Dialogue: 0,0:00:13.53,0:00:14.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}抽出{\c&H00FFFFFF&\b0}脚躲在马身后
+Dialogue: 0,0:00:15.33,0:00:15.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}栽倒
+Dialogue: 0,0:00:16.25,0:00:17.89,Default,,0,0,0,,直面{\c&H0000FFFF&\b1}爆炸{\c&H00FFFFFF&\b0}一侧血肉模糊
+Dialogue: 0,0:00:18.27,0:00:20.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在城头急得踮脚跳起
+Dialogue: 0,0:00:20.26,0:00:20.70,Default,,0,0,0,,来大吼
+Dialogue: 0,0:00:20.89,0:00:21.57,Default,,0,0,0,,“快
+Dialogue: 0,0:00:21.67,0:00:22.61,Default,,0,0,0,,快在射
+Dialogue: 0,0:00:22.76,0:00:23.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}弄死{\c&H00FFFFFF&\b0}他
+Dialogue: 0,0:00:23.70,0:00:25.39,Default,,0,0,0,,”{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是城外战场
+Dialogue: 0,0:00:25.55,0:00:27.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}强烈硝烟弥漫
+Dialogue: 0,0:00:27.64,0:00:29.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}第一个是火药爆炸的
+Dialogue: 0,0:00:29.38,0:00:29.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}瞬间{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:29.98,0:00:31.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}铁片{\c&H00FFFFFF&\b0}激射的特写
+Dialogue: 0,0:00:31.42,0:00:33.34,Default,,0,0,0,,第二个是{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}勒马转身的
+Dialogue: 0,0:00:33.34,0:00:33.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:34.02,0:00:35.58,Default,,0,0,0,,第三个是{\c&H0000FFFF&\b1}战马{\c&H00FFFFFF&\b0}栽倒血
+Dialogue: 0,0:00:35.58,0:00:36.72,Default,,0,0,0,,肉模糊的{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:36.95,0:00:39.03,Default,,0,0,0,,第四个是{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}踮脚怒吼的
+Dialogue: 0,0:00:39.03,0:00:39.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}特写{\c&H00FFFFFF&\b0}

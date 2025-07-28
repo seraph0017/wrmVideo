@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_013 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}在商议对策
+Dialogue: 0,0:00:01.49,0:00:03.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}提出派人联系太子要
+Dialogue: 0,0:00:03.32,0:00:04.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}造纸术{\c&H00FFFFFF&\b0}并监视动向
+Dialogue: 0,0:00:05.37,0:00:06.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}魏征{\c&H00FFFFFF&\b0}也附议
+Dialogue: 0,0:00:06.47,0:00:07.78,Default,,0,0,0,,但{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}不太满意
+Dialogue: 0,0:00:08.17,0:00:10.10,Default,,0,0,0,,这时门口{\c&H0000FFFF&\b1}卫兵{\c&H00FFFFFF&\b0}通报河间郡
+Dialogue: 0,0:00:10.10,0:00:11.95,Default,,0,0,0,,王{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}和谯国公柴哲威求
+Dialogue: 0,0:00:11.95,0:00:12.20,Default,,0,0,0,,见
+Dialogue: 0,0:00:12.48,0:00:14.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}眉头舒展露出笑意
+Dialogue: 0,0:00:15.01,0:00:16.14,Default,,0,0,0,,场景在{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿内
+Dialogue: 0,0:00:16.45,0:00:18.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}稍有变化但仍紧张

@@ -1,0 +1,38 @@
+[Script Info]
+Title: chapter_043 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}坐在客栈内目光深邃
+Dialogue: 0,0:00:02.92,0:00:04.92,Default,,0,0,0,,心中思索着如何在{\c&H0000FFFF&\b1}洛阳{\c&H00FFFFFF&\b0}立足
+Dialogue: 0,0:00:05.46,0:00:06.86,Default,,0,0,0,,他深知要拥有自保{\c&H0000FFFF&\b1}力量{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.20,0:00:08.81,Default,,0,0,0,,需借助{\c&H0000FFFF&\b1}寒门{\c&H00FFFFFF&\b0}学子与文坛影
+Dialogue: 0,0:00:08.81,0:00:09.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}响力{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.39,0:00:10.84,Default,,0,0,0,,此时他取出{\c&H0000FFFF&\b1}笔墨{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.10,0:00:12.99,Default,,0,0,0,,神情专注地开始撰写{\c&H0000FFFF&\b1}演讲稿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.27,0:00:14.24,Default,,0,0,0,,口中{\c&H0000FFFF&\b1}喃喃自语{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.86,0:00:16.44,Default,,0,0,0,,“{\c&H0000FFFF&\b1}废人{\c&H00FFFFFF&\b0}宗室要死的
+Dialogue: 0,0:00:16.61,0:00:17.86,Default,,0,0,0,,但死的{\c&H0000FFFF&\b1}意义{\c&H00FFFFFF&\b0}不同
+Dialogue: 0,0:00:17.98,0:00:19.73,Default,,0,0,0,,有人为{\c&H0000FFFF&\b1}个人{\c&H00FFFFFF&\b0}贪欲而死
+Dialogue: 0,0:00:19.82,0:00:22.21,Default,,0,0,0,,必将{\c&H0000FFFF&\b1}遗臭万年{\c&H00FFFFFF&\b0}但有的人
+Dialogue: 0,0:00:22.32,0:00:24.29,Default,,0,0,0,,为千千万万{\c&H0000FFFF&\b1}百姓{\c&H00FFFFFF&\b0}和他们的子
+Dialogue: 0,0:00:24.29,0:00:25.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}孙能{\c&H00FFFFFF&\b0}吃饱饭而死
+Dialogue: 0,0:00:25.89,0:00:27.82,Default,,0,0,0,,那死的就重与{\c&H0000FFFF&\b1}泰山{\c&H00FFFFFF&\b0}”
+Dialogue: 0,0:00:28.02,0:00:29.31,Default,,0,0,0,,窗外{\c&H0000FFFF&\b1}暮色{\c&H00FFFFFF&\b0}渐浓
+Dialogue: 0,0:00:29.54,0:00:30.77,Default,,0,0,0,,屋内{\c&H0000FFFF&\b1}烛光{\c&H00FFFFFF&\b0}摇曳
+Dialogue: 0,0:00:30.95,0:00:33.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的身影在光影中显得
+Dialogue: 0,0:00:33.45,0:00:34.29,Default,,0,0,0,,格外{\c&H0000FFFF&\b1}坚定{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:34.50,0:00:36.55,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}裴行俭{\c&H00FFFFFF&\b0}返回客栈
+Dialogue: 0,0:00:36.70,0:00:37.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}面色{\c&H00FFFFFF&\b0}略显无奈
+Dialogue: 0,0:00:37.91,0:00:39.56,Default,,0,0,0,,向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}汇报相关情况
