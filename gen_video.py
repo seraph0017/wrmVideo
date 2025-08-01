@@ -248,23 +248,25 @@ def adjust_video_duration(input_video, target_duration, output_video):
             has_audio = video_info[4] if len(video_info) > 4 else False
             
             if has_audio:
-                # 有音频流，同时延长视频和音频
+                # 有音频流，同时延长视频和音频，使用copy编码保留字幕
                 cmd = [
                     'ffmpeg', '-y',
                     '-i', input_video,
                     '-filter_complex', f'[0:v]tpad=stop_mode=clone:stop_duration={extend_duration}[v];[0:a]apad=pad_dur={extend_duration}[a]',
                     '-map', '[v]', '-map', '[a]',
                     '-c:v', 'libx264', '-c:a', 'aac',
+                    '-pix_fmt', 'yuv420p',  # 确保像素格式兼容性
                     output_video
                 ]
             else:
-                # 没有音频流，只延长视频
+                # 没有音频流，只延长视频，使用copy编码保留字幕
                 cmd = [
                     'ffmpeg', '-y',
                     '-i', input_video,
                     '-filter_complex', f'[0:v]tpad=stop_mode=clone:stop_duration={extend_duration}[v]',
                     '-map', '[v]',
                     '-c:v', 'libx264',
+                    '-pix_fmt', 'yuv420p',  # 确保像素格式兼容性
                     output_video
                 ]
         else:
@@ -348,13 +350,27 @@ def image_to_video_ffmpeg(image_path, output_path, duration=5, width=720, height
         # 简化的四角循环移动：使用正弦和余弦函数的组合
         # 时间进度：t/{duration} 从0到1，乘以2π实现完整循环
         
-        # 简化动画效果，使用固定的缩放和居中裁剪
-        # 创建基础视频（图片转视频，带缩放效果）
+        # 添加上下左右滑动动画效果
+        # 创建基础视频（图片转视频，带缩放和滑动效果）
+        scale_factor = 1.2  # 放大倍数，为滑动留出空间
+        scaled_width = int(width * scale_factor)
+        scaled_height = int(height * scale_factor)
+        
+        # 计算滑动范围
+        max_x_offset = scaled_width - width
+        max_y_offset = scaled_height - height
+        
+        # 创建滑动动画表达式
+        # 使用正弦波实现平滑的上下左右滑动
+        # t是时间变量，duration是总时长
+        x_expr = f"{max_x_offset/2} + {max_x_offset/4} * sin(2*PI*t/{duration}) + {max_x_offset/4} * cos(PI*t/{duration})"
+        y_expr = f"{max_y_offset/2} + {max_y_offset/4} * cos(2*PI*t/{duration}) + {max_y_offset/4} * sin(PI*t/{duration})"
+        
         base_video = (
             ffmpeg
             .input(image_path, loop=1, t=duration)
-            .filter('scale', int(width*1.1), int(height*1.1))  # 适度放大1.1倍
-            .filter('crop', width, height, f'(iw-{width})/2', f'(ih-{height})/2')  # 居中裁剪
+            .filter('scale', scaled_width, scaled_height)  # 放大图片为滑动留出空间
+            .filter('crop', width, height, x_expr, y_expr)  # 使用动态表达式实现滑动裁剪
         )
         
         # 定义overlay文件路径 - 随机选择一个fuceng文件
@@ -453,13 +469,14 @@ def append_finish_video(main_video_path, output_path):
             filelist_path = f.name
         
         try:
-            # 使用ffmpeg拼接视频，确保音视频流时长一致
+            # 使用ffmpeg拼接视频，强制音频流时长匹配视频流
             subprocess.run([
                 'ffmpeg', '-f', 'concat', '-safe', '0', '-i', filelist_path,
                 '-c:v', 'libx264', '-c:a', 'aac', '-preset', 'fast',
                 '-g', '30', '-keyint_min', '30', '-r', '30',
                 '-avoid_negative_ts', 'make_zero',
                 '-fflags', '+genpts',
+                '-shortest',  # 强制以最短流为准
                 output_path, '-y'
             ], check=True)
             print(f"finish.mp4拼接成功：{output_path}")
@@ -751,16 +768,17 @@ def add_audio(video_path, audio_path, output_path, replace=True):
         
         if replace:
             # 替换原音频，以音频时长为准
-            if abs(video_duration - audio_duration) > 0.1:  # 时长差异超过0.1秒
+            if abs(video_duration - audio_duration) > 1.0:  # 时长差异超过1秒才处理
                 if video_duration > audio_duration:
                     # 视频比音频长，截取视频来匹配音频时长
                     print(f"视频比音频长 {video_duration - audio_duration:.2f}s，将截取视频")
                     video = video.filter('trim', duration=audio_duration)
                 elif audio_duration > video_duration:
-                    # 音频比视频长，延长视频来匹配音频时长（循环最后一帧）
-                    print(f"音频比视频长 {audio_duration - video_duration:.2f}s，将延长视频")
-                    # 使用tpad滤镜在视频末尾添加静止帧
-                    video = video.filter('tpad', stop_mode='clone', stop_duration=audio_duration - video_duration)
+                    # 音频比视频长，截取音频来匹配视频时长
+                    print(f"音频比视频长 {audio_duration - video_duration:.2f}s，将截取音频")
+                    audio = audio.filter('atrim', duration=video_duration)
+            else:
+                print(f"音视频时长差异较小({abs(video_duration - audio_duration):.2f}s)，保持原有时长")
             
             (
                 ffmpeg
@@ -1071,6 +1089,51 @@ def mix_audio_with_bgm(narration_audio_path, video_duration, output_path):
         output_path: 输出音频路径
     """
     return mix_audio_with_bgm_and_effects(narration_audio_path, video_duration, output_path)
+
+def add_forced_sound_effects(video_path, output_path):
+    """为视频添加强制音效（在1-5秒和6-10秒添加铃声）
+    
+    Args:
+        video_path: 输入视频路径
+        output_path: 输出视频路径
+    """
+    try:
+        # 检查铃声文件是否存在
+        bell_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "sound_effects", "misc", "bell_ring.wav")
+        
+        if not os.path.exists(bell_path):
+            print(f"警告: 铃声文件不存在: {bell_path}")
+            print("跳过强制音效添加")
+            # 如果铃声文件不存在，直接复制原文件
+            import shutil
+            shutil.copy2(video_path, output_path)
+            return False
+        
+        print(f"为视频添加强制音效: {video_path}")
+        
+        # 使用ffmpeg添加铃声音效
+        subprocess.run([
+            'ffmpeg', '-y',
+            '-i', video_path,
+            '-i', bell_path,
+            '-filter_complex',
+            '[1:a]adelay=1000|1000[bell1];[1:a]adelay=6000|6000[bell2];[0:a][bell1][bell2]amix=inputs=3:duration=first:dropout_transition=0[audio_out]',
+            '-map', '0:v',
+            '-map', '[audio_out]',
+            '-c:v', 'copy',
+            '-c:a', 'aac',
+            output_path
+        ], check=True)
+        
+        print(f"强制音效添加成功: {output_path}")
+        return True
+        
+    except Exception as e:
+        print(f"添加强制音效失败: {e}")
+        # 如果失败，直接复制原文件
+        import shutil
+        shutil.copy2(video_path, output_path)
+        return False
 
 def merge_ass_files(ass_files, output_path, video_segments_info):
     """合并多个ASS文件，调整时间戳"""
@@ -1407,9 +1470,19 @@ def process_chapter(chapter_path):
     if not clean_ass_punctuation(merged_ass_file):
         print("警告：清理ASS文件标点符号失败，继续处理")
     
-    # 添加合并后的字幕
+    # 先获取字幕文件时长，提前调整视频时长
+    subtitle_duration = get_ass_duration(merged_ass_file)
+    print(f"字幕时长: {subtitle_duration:.2f}s")
+    
+    # 先调整视频时长以匹配字幕时长
+    video_adjusted_early = os.path.join(temp_dir, "video_adjusted_early.mp4")
+    if not adjust_video_duration(concatenated_video, subtitle_duration, video_adjusted_early):
+        print("调整视频时长失败，使用原始视频")
+        video_adjusted_early = concatenated_video
+    
+    # 添加合并后的字幕到已调整时长的视频
     video_with_sub = os.path.join(temp_dir, "video_with_sub.mp4")
-    if not add_subtitle(concatenated_video, merged_ass_file, video_with_sub):
+    if not add_subtitle(video_adjusted_early, merged_ass_file, video_with_sub):
         return False
     
     # 添加水印（确保所有视频都有角标）
@@ -1435,33 +1508,20 @@ def process_chapter(chapter_path):
         # 先拼接所有台词音频文件
         merged_narration_audio = os.path.join(temp_dir, "merged_narration.mp3")
         if concat_audio_files(audio_files, merged_narration_audio):
-            # 获取字幕文件时长作为基准
-            subtitle_duration = get_ass_duration(merged_ass_file)
+            # 视频时长已经在添加字幕前调整好了，直接使用字幕时长
             target_video_duration = subtitle_duration  # 字幕时长，不添加额外时间
             print(f"目标视频时长: {target_video_duration:.2f}s (字幕 {subtitle_duration:.2f}s)")
             
             # 将台词音频与BGM和音效混合
             mixed_audio_file = os.path.join(temp_dir, "mixed_audio.mp3")
             if mix_audio_with_bgm_and_effects(merged_narration_audio, target_video_duration, mixed_audio_file, merged_ass_file):
-                # 调整视频时长以匹配音频时长
-                temp_video_adjusted = os.path.join(temp_dir, "video_adjusted.mp4")
-                if adjust_video_duration(video_with_watermark, target_video_duration, temp_video_adjusted):
-                    # 添加混合后的音频
-                    if add_audio(temp_video_adjusted, mixed_audio_file, temp_main_video, replace=True):
-                        print(f"✓ 主视频生成成功: {temp_main_video}")
-                    else:
-                        print(f"添加音频失败，但保存无音频版本: {temp_main_video}")
-                        import shutil
-                        shutil.copy2(temp_video_adjusted, temp_main_video)
+                # 直接添加混合后的音频，无需再次调整视频时长
+                if add_audio(video_with_watermark, mixed_audio_file, temp_main_video, replace=True):
+                    print(f"✓ 主视频生成成功: {temp_main_video}")
                 else:
-                    print("调整视频时长失败，使用原始视频时长")
-                    # 添加混合后的音频
-                    if add_audio(video_with_watermark, mixed_audio_file, temp_main_video, replace=True):
-                        print(f"✓ 主视频生成成功: {temp_main_video}")
-                    else:
-                        print(f"添加音频失败，但保存无音频版本: {temp_main_video}")
-                        import shutil
-                        shutil.copy2(video_with_watermark, temp_main_video)
+                    print(f"添加音频失败，但保存无音频版本: {temp_main_video}")
+                    import shutil
+                    shutil.copy2(video_with_watermark, temp_main_video)
             else:
                 print(f"音频混合失败，使用原始台词音频")
                 if add_audio(video_with_watermark, merged_narration_audio, temp_main_video, replace=True):
@@ -1478,6 +1538,17 @@ def process_chapter(chapter_path):
         print(f"未找到任何音频文件，保存无音频版本: {temp_main_video}")
         import shutil
         shutil.copy2(video_with_watermark, temp_main_video)
+    
+    # 添加强制音效（在1-5秒和6-10秒添加铃声）
+    print("\n=== 添加强制音效 ===")
+    if os.path.exists(temp_main_video):
+        temp_main_video_with_effects = os.path.join(temp_dir, "main_video_with_effects.mp4")
+        if add_forced_sound_effects(temp_main_video, temp_main_video_with_effects):
+            print(f"✓ 强制音效添加成功: {temp_main_video_with_effects}")
+            # 使用添加了音效的视频作为后续处理的输入
+            temp_main_video = temp_main_video_with_effects
+        else:
+            print(f"⚠️  强制音效添加失败，使用原视频")
     
     # 在主视频末尾拼接finish.mp4片尾视频
     print("\n=== 拼接finish.mp4片尾视频 ===")

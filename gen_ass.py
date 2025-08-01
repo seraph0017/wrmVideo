@@ -80,9 +80,9 @@ def is_person_name(text: str, position: int) -> bool:
     ]
     
     # 检查当前位置前后是否有完整的姓名
-    # 向前查找最多3个字符，向后查找最多3个字符
-    start_search = max(0, position - 3)
-    end_search = min(len(text), position + 4)
+    # 向前查找最多4个字符，向后查找最多4个字符
+    start_search = max(0, position - 4)
+    end_search = min(len(text), position + 5)
     
     # 在搜索范围内查找姓氏
     for i in range(start_search, min(end_search, len(text))):
@@ -102,18 +102,9 @@ def is_person_name(text: str, position: int) -> bool:
             
             # 检查是否形成了有效的姓名（姓氏+1-3个字的名字）
             if name_end > name_start and (name_end - name_start) <= 3:
-                # 检查姓名后面是否紧跟着动词或其他非姓名字符，以避免误判
-                if name_end < len(text):
-                    next_char = text[name_end]
-                    # 如果紧跟着常见的动词或介词，说明这是一个完整的姓名
-                    if next_char in '走向在和与跟说道来去了的':
-                        # 当前位置在这个姓名范围内
-                        if surname_pos <= position < name_end:
-                            return True
-                else:
-                    # 如果姓名在文本末尾，也认为是有效的
-                    if surname_pos <= position < name_end:
-                        return True
+                # 当前位置在这个姓名范围内就保护
+                if surname_pos <= position < name_end:
+                    return True
     
     # 检查英文名模式
     english_name_pattern = r'[A-Z][a-z]+'
@@ -175,8 +166,9 @@ def is_short_word_boundary(text: str, position: int) -> bool:
     next_segment = text[position:next_punctuation_pos]
     next_char_count = len([c for c in next_segment if c not in '，。！？；：、""''（）【】《》'])
     
-    # 如果前段或后段的有效字符数少于3个，则不适合在此处断句
-    if prev_char_count < 3 or next_char_count < 3:
+    # 如果前段或后段的有效字符数少于6个，则不适合在此处断句
+    # 进一步提高要求以避免产生一两个字的断句行
+    if prev_char_count < 6 or next_char_count < 6:
         return False
     
     return True
@@ -188,27 +180,73 @@ def is_phrase_boundary(text: str, position: int) -> bool:
     
     # 定义常见的不应分割的短语模式
     protected_phrases = [
-        r'光线\w+',  # 光线相关短语
-        r'\w+金色',  # 以金色结尾的短语
-        r'\w+环境',  # 以环境结尾的短语
-        r'\w+喧嚣',  # 以喧嚣结尾的短语
-        r'东市\w*',  # 东市相关
-        r'西市\w*',  # 西市相关
-        r'李\w+',   # 李姓人名
-        r'\w+乾',   # 以乾结尾的人名
-        r'\w+泰',   # 以泰结尾的人名
-        r'东宫\w*', # 东宫相关
-        r'\w+一面', # 避免在"一面"前断句
-        r'一面\w+', # 避免在"一面"后断句
-        r'\w+两个字', # 避免在"两个字"前断句
-        r'两个字\w+', # 避免在"两个字"后断句
+        # 数量词相关
+        r'一\w*面',     # 一面、一方面等
+        r'一\w*两\w*个\w*字',  # 一两个字等
+        r'一\w*些',     # 一些
+        r'一\w*点',     # 一点
+        r'一\w*下',     # 一下
+        r'一\w*起',     # 一起
+        r'一\w*直',     # 一直
+        r'一\w*边',     # 一边
+        r'一\w*旁',     # 一旁
+        r'一\w*侧',     # 一侧
+        r'两\w*个\w*字', # 两个字
+        r'三\w*个\w*字', # 三个字
+        r'几\w*个\w*字', # 几个字
+        
+        # 方位词相关
+        r'东\w*市',     # 东市
+        r'西\w*市',     # 西市
+        r'南\w*市',     # 南市
+        r'北\w*市',     # 北市
+        r'东\w*宫',     # 东宫
+        r'西\w*宫',     # 西宫
+        
+        # 颜色相关
+        r'\w*金色',     # 金色相关
+        r'\w*银色',     # 银色相关
+        r'\w*红色',     # 红色相关
+        r'\w*蓝色',     # 蓝色相关
+        
+        # 环境相关
+        r'\w*环境',     # 环境相关
+        r'\w*喧嚣',     # 喧嚣相关
+        r'\w*嘈杂',     # 嘈杂相关
+        r'光线\w*',     # 光线相关
+        
+        # 人名相关（补充保护）
+        r'李\w{1,3}',   # 李姓人名
+        r'王\w{1,3}',   # 王姓人名
+        r'张\w{1,3}',   # 张姓人名
+        r'刘\w{1,3}',   # 刘姓人名
+        r'陈\w{1,3}',   # 陈姓人名
+        r'\w*乾',       # 以乾结尾的人名
+        r'\w*泰',       # 以泰结尾的人名
+        r'\w*帝',       # 以帝结尾的称谓
+        r'\w*王',       # 以王结尾的称谓
+        r'\w*公',       # 以公结尾的称谓
+        
+        # 时间相关
+        r'\w*时候',     # 时候相关
+        r'\w*时间',     # 时间相关
+        r'\w*瞬间',     # 瞬间相关
+        r'\w*刹那',     # 刹那相关
+        
+        # 动作相关
+        r'\w*之后',     # 之后
+        r'\w*之前',     # 之前
+        r'\w*之中',     # 之中
+        r'\w*之间',     # 之间
+        r'\w*而已',     # 而已
+        r'\w*罢了',     # 罢了
     ]
     
     # 检查当前位置前后的文本是否匹配保护短语
     for pattern in protected_phrases:
         # 在当前位置前后查找匹配的短语
-        start_search = max(0, position - 10)
-        end_search = min(len(text), position + 10)
+        start_search = max(0, position - 15)
+        end_search = min(len(text), position + 15)
         search_text = text[start_search:end_search]
         
         matches = re.finditer(pattern, search_text)
@@ -268,7 +306,7 @@ def split_text_naturally(text: str, max_length: int = 20) -> List[str]:
                 if temp_part:
                     # 检查是否为人名列表（如：刘备、关羽、张飞）
                     char_count = len([c for c in temp_part if c not in '，；：、。！？'])
-                    if char_count <= 4:  # 可能是人名，暂不分割
+                    if char_count <= 7:  # 可能是人名，暂不分割
                         continue
                     else:
                         parts.append(temp_part)
@@ -286,7 +324,7 @@ def split_text_naturally(text: str, max_length: int = 20) -> List[str]:
             char_count = len([c for c in current_part if c not in '，；：、。！？'])
             
             # 如果当前片段过短且不是最后一个，尝试与下一个合并
-            if char_count <= 4 and i + 1 < len(parts):
+            if char_count <= 7 and i + 1 < len(parts):
                 next_part = parts[i + 1]
                 next_char_count = len([c for c in next_part if c not in '，；：、。！？'])
                 combined_count = char_count + next_char_count
@@ -298,7 +336,7 @@ def split_text_naturally(text: str, max_length: int = 20) -> List[str]:
                     continue
             
             # 如果当前片段过短且不是第一个，尝试与前一个合并
-            if char_count <= 4 and merged_parts:
+            if char_count <= 7 and merged_parts:
                 last_part = merged_parts[-1]
                 last_char_count = len([c for c in last_part if c not in '，；：、。！？'])
                 combined_count = char_count + last_char_count
@@ -336,7 +374,41 @@ def split_text_naturally(text: str, max_length: int = 20) -> List[str]:
             if cleaned_segment.strip():  # 只保留非空的段落
                 cleaned_segments.append(cleaned_segment)
     
-    return cleaned_segments
+    # 最终合并过短的片段
+    final_segments = []
+    i = 0
+    while i < len(cleaned_segments):
+        current_segment = cleaned_segments[i]
+        char_count = len([c for c in current_segment if c not in '，；：、。！？'])
+        
+        # 如果当前片段过短且不是最后一个，尝试与下一个合并
+        if char_count < 6 and i + 1 < len(cleaned_segments):
+            next_segment = cleaned_segments[i + 1]
+            next_char_count = len([c for c in next_segment if c not in '，；：、。！？'])
+            combined_count = char_count + next_char_count
+            
+            # 放宽合并条件，允许稍微超过max_length
+            if combined_count <= max_length + 3:
+                final_segments.append(current_segment + next_segment)
+                i += 2  # 跳过下一个片段
+                continue
+        
+        # 如果当前片段过短且不是第一个，尝试与前一个合并
+        if char_count < 6 and final_segments:
+            last_segment = final_segments[-1]
+            last_char_count = len([c for c in last_segment if c not in '，；：、。！？'])
+            combined_count = char_count + last_char_count
+            
+            # 放宽合并条件，允许稍微超过max_length
+            if combined_count <= max_length + 3:
+                final_segments[-1] = last_segment + current_segment
+                i += 1
+                continue
+        
+        final_segments.append(current_segment)
+        i += 1
+    
+    return final_segments
 
 def split_long_part(text: str, max_length: int) -> List[str]:
     """分割过长的文本片段"""
@@ -486,7 +558,7 @@ def clean_subtitle_text(text: str) -> str:
     text_with_placeholders = re.sub(tag_pattern, replace_tag, text)
     
     # 移除所有标点符号
-    cleaned_text = re.sub(r'[，。；：、！？""''（）【】《》〈〉「」『』〔〕［］｛｝｜～·…—–,.;:!?"\'()\[\]{}|~`@#$%^&*+=<>/\\-]', '', text_with_placeholders)
+    cleaned_text = re.sub(r'[，。；：、！？""''（）【】《》〈〉「」『』〔〕\[\]｛｝｜～·…—–,.;:!?"\'()\[\]{}|~`@#$%^&*+=<>/\\-]', '', text_with_placeholders)
     
     # 恢复ASS标签
     for i, tag in enumerate(ass_tags):
