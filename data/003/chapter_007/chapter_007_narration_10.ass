@@ -1,0 +1,52 @@
+[Script Info]
+Title: chapter_007 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}黄昏时分{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.24,0:00:03.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落乘坐马车去城南芳园
+Dialogue: 0,0:00:03.85,0:00:05.91,Default,,0,0,0,,刚下马车就撞见{\c&H0000FFFF&\b1}闻家四{\c&H00FFFFFF&\b0}兄妹
+Dialogue: 0,0:00:06.39,0:00:07.76,Default,,0,0,0,,闻{\c&H0000FFFF&\b1}如雷{\c&H00FFFFFF&\b0}惊喜又不屑
+Dialogue: 0,0:00:08.12,0:00:09.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}温柔相邀
+Dialogue: 0,0:00:09.60,0:00:11.46,Default,,0,0,0,,闻如风闻{\c&H0000FFFF&\b1}如云{\c&H00FFFFFF&\b0}也附和
+Dialogue: 0,0:00:11.79,0:00:13.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落解释来买鱼灯给谢
+Dialogue: 0,0:00:13.59,0:00:13.95,Default,,0,0,0,,拾安
+Dialogue: 0,0:00:14.25,0:00:14.87,Default,,0,0,0,,却被{\c&H0000FFFF&\b1}误会{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.15,0:00:16.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}一同踏进芳园
+Dialogue: 0,0:00:16.91,0:00:18.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻如风{\c&H00FFFFFF&\b0}给闻月引买鱼灯
+Dialogue: 0,0:00:18.98,0:00:20.25,Default,,0,0,0,,看到{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落选鱼灯
+Dialogue: 0,0:00:20.66,0:00:21.66,Default,,0,0,0,,责怪她{\c&H0000FFFF&\b1}浪费{\c&H00FFFFFF&\b0}钱
+Dialogue: 0,0:00:21.88,0:00:23.36,Default,,0,0,0,,称往年{\c&H0000FFFF&\b1}共用{\c&H00FFFFFF&\b0}一盏即可
+Dialogue: 0,0:00:23.67,0:00:24.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落诧异
+Dialogue: 0,0:00:24.84,0:00:26.60,Default,,0,0,0,,提及往年{\c&H0000FFFF&\b1}鱼灯{\c&H00FFFFFF&\b0}被锁橱子
+Dialogue: 0,0:00:27.07,0:00:28.07,Default,,0,0,0,,未被{\c&H0000FFFF&\b1}允许{\c&H00FFFFFF&\b0}赏玩
+Dialogue: 0,0:00:28.46,0:00:29.37,Default,,0,0,0,,闻{\c&H0000FFFF&\b1}如云{\c&H00FFFFFF&\b0}呵斥她
+Dialogue: 0,0:00:29.89,0:00:31.75,Default,,0,0,0,,闻如风生气称{\c&H0000FFFF&\b1}镇北{\c&H00FFFFFF&\b0}王府养
+Dialogue: 0,0:00:31.75,0:00:32.11,Default,,0,0,0,,歪她
+Dialogue: 0,0:00:32.66,0:00:33.77,Default,,0,0,0,,要她还回鱼灯
+Dialogue: 0,0:00:34.20,0:00:35.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}保管{\c&H00FFFFFF&\b0}她的月钱
+Dialogue: 0,0:00:35.63,0:00:36.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落据理力争
+Dialogue: 0,0:00:37.22,0:00:39.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}称有{\c&H00FFFFFF&\b0}月钱不用他们保管
+Dialogue: 0,0:00:39.56,0:00:40.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落在芳园门外
+Dialogue: 0,0:00:41.28,0:00:42.47,Default,,0,0,0,,面对{\c&H0000FFFF&\b1}闻家四{\c&H00FFFFFF&\b0}兄妹
+Dialogue: 0,0:00:42.95,0:00:44.31,Default,,0,0,0,,闻如雷在{\c&H0000FFFF&\b1}芳园{\c&H00FFFFFF&\b0}门外
+Dialogue: 0,0:00:44.69,0:00:45.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}惊喜{\c&H00FFFFFF&\b0}又不屑
+Dialogue: 0,0:00:46.08,0:00:47.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}在芳园门外
+Dialogue: 0,0:00:47.72,0:00:49.79,Default,,0,0,0,,温柔相邀{\c&H0000FFFF&\b1}闻如风{\c&H00FFFFFF&\b0}在芳园
+Dialogue: 0,0:00:50.22,0:00:51.06,Default,,0,0,0,,责怪{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落
+Dialogue: 0,0:00:51.41,0:00:52.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是芳园门外
+Dialogue: 0,0:00:52.88,0:00:54.33,Default,,0,0,0,,黄昏{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:54.57,0:00:56.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}画面{\c&H00FFFFFF&\b0}构图是中景展现众
+Dialogue: 0,0:00:56.40,0:00:56.91,Default,,0,0,0,,人{\c&H0000FFFF&\b1}互动{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:57.27,0:00:58.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}光影{\c&H00FFFFFF&\b0}突出热闹氛围

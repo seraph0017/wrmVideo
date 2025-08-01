@@ -12,6 +12,9 @@ import re
 import json
 import argparse
 import tempfile
+import zipfile
+import shutil
+from pathlib import Path
 from typing import List, Dict, Optional, Tuple
 from volcenginesdkarkruntime import Ark
 from jinja2 import Environment, FileSystemLoader
@@ -48,7 +51,7 @@ class ScriptGenerator:
     
     def read_novel_file(self, file_path: str) -> str:
         """
-        读取小说文件，支持多种编码格式和RAR压缩文件
+        读取小说文件，支持多种编码格式、RAR压缩文件和ZIP压缩文件
         
         Args:
             file_path: 文件路径
@@ -59,6 +62,10 @@ class ScriptGenerator:
         # 检查是否为RAR文件
         if file_path.lower().endswith('.rar'):
             return self._read_rar_file(file_path)
+        
+        # 检查是否为ZIP文件
+        if file_path.lower().endswith('.zip'):
+            return self._read_zip_file(file_path)
         
         # 尝试多种编码格式
         encodings = ['utf-8', 'gbk', 'gb2312', 'gb18030', 'big5', 'latin1']
@@ -76,6 +83,143 @@ class ScriptGenerator:
                 continue
         
         print(f"无法读取文件 {file_path}，尝试了所有编码格式都失败")
+        return ""
+    
+    def _detect_zip_encoding(self, filename_bytes):
+        """
+        检测ZIP文件名的正确编码
+        """
+        encodings = ['gbk', 'gb2312', 'utf-8', 'big5']
+        
+        for encoding in encodings:
+            try:
+                decoded = filename_bytes.decode(encoding)
+                # 检查是否包含中文字符
+                if any('\u4e00' <= char <= '\u9fff' for char in decoded):
+                    return decoded, encoding
+            except (UnicodeDecodeError, UnicodeError):
+                continue
+        
+        # 如果都失败了，尝试cp437->gbk的转换（常见的Windows->Unix问题）
+        try:
+            decoded = filename_bytes.decode('gbk')
+            return decoded, 'cp437->gbk'
+        except (UnicodeDecodeError, UnicodeError):
+            pass
+        
+        # 最后尝试忽略错误
+        return filename_bytes.decode('utf-8', errors='ignore'), 'utf-8-ignore'
+    
+    def _read_zip_file(self, zip_path: str) -> str:
+        """
+        读取ZIP文件中的小说内容，自动修复中文编码问题
+        
+        Args:
+            zip_path: ZIP文件路径
+        
+        Returns:
+            str: 小说内容
+        """
+        print(f"🔧 正在处理ZIP文件: {zip_path}")
+        
+        try:
+            with zipfile.ZipFile(zip_path, 'r') as zip_file:
+                # 查找文本文件
+                text_files = []
+                
+                for file_info in zip_file.filelist:
+                    original_filename = file_info.filename
+                    
+                    # 跳过macOS的隐藏文件和目录
+                    if '__MACOSX' in original_filename or file_info.is_dir():
+                        continue
+                    
+                    # 修复文件名编码
+                    try:
+                        filename_bytes = original_filename.encode('cp437')
+                        correct_filename, detected_encoding = self._detect_zip_encoding(filename_bytes)
+                    except (UnicodeDecodeError, UnicodeEncodeError):
+                        correct_filename = original_filename
+                        detected_encoding = 'original'
+                    
+                    # 检查是否为文本文件
+                    if correct_filename.lower().endswith(('.txt', '.md', '.text')):
+                        text_files.append((file_info, correct_filename, detected_encoding))
+                        print(f"📄 找到文本文件: {correct_filename} (编码: {detected_encoding})")
+                
+                if not text_files:
+                    print("❌ ZIP文件中未找到文本文件")
+                    return ""
+                
+                # 按章节号排序文件
+                def extract_chapter_number(filename_tuple):
+                    """从文件名中提取章节号进行排序"""
+                    file_info, correct_filename, detected_encoding = filename_tuple
+                    # 提取文件名中的数字
+                    numbers = re.findall(r'\d+', os.path.basename(correct_filename))
+                    return int(numbers[0]) if numbers else 0
+                
+                text_files.sort(key=extract_chapter_number)
+                print(f"📋 按章节号排序后的文件顺序:")
+                for i, (file_info, correct_filename, detected_encoding) in enumerate(text_files, 1):
+                    print(f"  {i}. {correct_filename}")
+                
+                # 读取所有文本文件内容
+                all_content = []
+                
+                for file_info, correct_filename, detected_encoding in text_files:
+                    try:
+                        with zip_file.open(file_info) as f:
+                            file_content = f.read()
+                        
+                        # 尝试多种编码解码文件内容
+                        content = self._decode_file_content(file_content, correct_filename)
+                        
+                        if content:
+                            all_content.append(f"\n=== {correct_filename} ===\n{content}")
+                            print(f"✅ 成功读取: {correct_filename} ({len(content)} 字符)")
+                        
+                    except Exception as e:
+                        print(f"⚠️ 读取文件失败: {correct_filename}, 错误: {e}")
+                        continue
+                
+                if all_content:
+                    result = "\n\n".join(all_content)
+                    print(f"📚 ZIP文件处理完成，总共 {len(result)} 字符")
+                    return result
+                else:
+                    print("❌ 无法读取ZIP文件中的任何内容")
+                    return ""
+                    
+        except Exception as e:
+            print(f"❌ 处理ZIP文件时发生错误: {e}")
+            return ""
+    
+    def _decode_file_content(self, file_content: bytes, filename: str) -> str:
+        """
+        解码文件内容，尝试多种编码格式
+        
+        Args:
+            file_content: 文件字节内容
+            filename: 文件名（用于日志）
+        
+        Returns:
+            str: 解码后的文本内容
+        """
+        encodings = ['utf-8', 'gbk', 'gb2312', 'gb18030', 'big5', 'latin1']
+        
+        for encoding in encodings:
+            try:
+                content = file_content.decode(encoding)
+                print(f"  📝 使用 {encoding} 编码成功解码文件内容")
+                return content
+            except UnicodeDecodeError:
+                continue
+            except Exception as e:
+                print(f"  ⚠️ 使用 {encoding} 编码解码时出错: {e}")
+                continue
+        
+        print(f"  ❌ 无法解码文件内容: {filename}")
         return ""
     
     def _read_rar_file(self, rar_path: str) -> str:

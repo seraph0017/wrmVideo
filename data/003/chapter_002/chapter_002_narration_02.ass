@@ -1,0 +1,40 @@
+[Script Info]
+Title: chapter_002 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:00.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}次日{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.91,0:00:02.92,Default,,0,0,0,,闻星落与谢拾安来到{\c&H0000FFFF&\b1}锦里街{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.92,0:00:04.12,Default,,0,0,0,,最有名的{\c&H0000FFFF&\b1}珠宝{\c&H00FFFFFF&\b0}铺子
+Dialogue: 0,0:00:04.58,0:00:06.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}拿起一支纯银发钗
+Dialogue: 0,0:00:06.71,0:00:08.00,Default,,0,0,0,,往{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落头上比划
+Dialogue: 0,0:00:08.37,0:00:10.01,Default,,0,0,0,,夸赞她戴此钗{\c&H0000FFFF&\b1}好看{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.31,0:00:10.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}此时{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.01,0:00:12.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}与闻如雷款款走来
+Dialogue: 0,0:00:13.04,0:00:14.40,Default,,0,0,0,,闻如雷一把夺过{\c&H0000FFFF&\b1}银钗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.77,0:00:16.37,Default,,0,0,0,,指责{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落抢姐姐东西
+Dialogue: 0,0:00:16.67,0:00:17.56,Default,,0,0,0,,谢拾安{\c&H0000FFFF&\b1}见状{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.91,0:00:20.23,Default,,0,0,0,,气笑了将闻{\c&H0000FFFF&\b1}星落{\c&H00FFFFFF&\b0}薅到身后
+Dialogue: 0,0:00:20.52,0:00:21.21,Default,,0,0,0,,抢回{\c&H0000FFFF&\b1}银钗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.43,0:00:22.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是珠宝铺子内
+Dialogue: 0,0:00:23.06,0:00:25.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}明亮时间为白天
+Dialogue: 0,0:00:25.37,0:00:26.38,Default,,0,0,0,,店内{\c&H0000FFFF&\b1}布置{\c&H00FFFFFF&\b0}精致
+Dialogue: 0,0:00:26.75,0:00:27.76,Default,,0,0,0,,充满{\c&H0000FFFF&\b1}珠宝{\c&H00FFFFFF&\b0}氛围
+Dialogue: 0,0:00:28.13,0:00:30.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}身着浅色系圆领服饰
+Dialogue: 0,0:00:30.71,0:00:31.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}柳眉{\c&H00FFFFFF&\b0}轻蹙
+Dialogue: 0,0:00:31.96,0:00:33.74,Default,,0,0,0,,闻如雷身着{\c&H0000FFFF&\b1}深色{\c&H00FFFFFF&\b0}圆领衣
+Dialogue: 0,0:00:34.16,0:00:34.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}面色{\c&H00FFFFFF&\b0}不满
+Dialogue: 0,0:00:35.06,0:00:37.09,Default,,0,0,0,,谢拾安身着鹅黄{\c&H0000FFFF&\b1}圆领{\c&H00FFFFFF&\b0}锦袍
+Dialogue: 0,0:00:37.34,0:00:39.41,Default,,0,0,0,,怒目而视{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落手持银钗
+Dialogue: 0,0:00:39.63,0:00:40.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}诧异

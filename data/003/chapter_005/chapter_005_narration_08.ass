@@ -1,0 +1,36 @@
+[Script Info]
+Title: chapter_005 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.05,Default,,0,0,0,,谢观澜称交好的是{\c&H0000FFFF&\b1}世家子弟{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.54,0:00:04.33,Default,,0,0,0,,其母可能不同意{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落进门
+Dialogue: 0,0:00:04.94,0:00:06.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}建议{\c&H00FFFFFF&\b0}从寒门子弟找
+Dialogue: 0,0:00:06.67,0:00:07.83,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}厉声呵斥
+Dialogue: 0,0:00:08.19,0:00:09.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}质问{\c&H00FFFFFF&\b0}谢观澜是否觉得闻
+Dialogue: 0,0:00:09.73,0:00:10.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}星落{\c&H00FFFFFF&\b0}配不上
+Dialogue: 0,0:00:10.84,0:00:12.54,Default,,0,0,0,,还问谢观澜觉得{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落漂不
+Dialogue: 0,0:00:12.54,0:00:12.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}漂亮{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.32,0:00:14.49,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}敷衍作答
+Dialogue: 0,0:00:14.88,0:00:16.52,Default,,0,0,0,,此时场景在{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}内室
+Dialogue: 0,0:00:16.68,0:00:17.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}充足
+Dialogue: 0,0:00:17.84,0:00:18.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落起身
+Dialogue: 0,0:00:19.11,0:00:20.94,Default,,0,0,0,,不知如何平息老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}怒火
+Dialogue: 0,0:00:21.36,0:00:23.39,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}着圆领墨紫色狐裘
+Dialogue: 0,0:00:23.59,0:00:24.45,Default,,0,0,0,,回应老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.77,0:00:26.47,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}着圆领传统服饰
+Dialogue: 0,0:00:26.86,0:00:27.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}生气{\c&H00FFFFFF&\b0}质问
+Dialogue: 0,0:00:27.99,0:00:29.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落着杏粉色圆领对
+Dialogue: 0,0:00:29.61,0:00:30.25,Default,,0,0,0,,襟袄裙
+Dialogue: 0,0:00:30.57,0:00:31.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}起身{\c&H00FFFFFF&\b0}不知所措

@@ -1,0 +1,34 @@
+[Script Info]
+Title: chapter_008 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.73,Default,,0,0,0,,接着闻如风{\c&H0000FFFF&\b1}叹息{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.06,0:00:03.57,Default,,0,0,0,,居高临下地注视{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落
+Dialogue: 0,0:00:04.13,0:00:06.10,Default,,0,0,0,,让她回去写万字{\c&H0000FFFF&\b1}检讨书{\c&H00FFFFFF&\b0}并交
+Dialogue: 0,0:00:06.10,0:00:06.58,Default,,0,0,0,,月钱
+Dialogue: 0,0:00:07.11,0:00:07.80,Default,,0,0,0,,说为她好
+Dialogue: 0,0:00:08.21,0:00:09.25,Default,,0,0,0,,他们离开{\c&H0000FFFF&\b1}佛殿{\c&H00FFFFFF&\b0}后
+Dialogue: 0,0:00:09.66,0:00:11.62,Default,,0,0,0,,闻{\c&H0000FFFF&\b1}如云{\c&H00FFFFFF&\b0}悄悄从外面锁上殿门
+Dialogue: 0,0:00:11.97,0:00:13.25,Default,,0,0,0,,说要让{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落反省
+Dialogue: 0,0:00:13.44,0:00:14.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}佛殿{\c&H00FFFFFF&\b0}里
+Dialogue: 0,0:00:14.28,0:00:16.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落眼眶通红但没掉眼泪
+Dialogue: 0,0:00:16.98,0:00:19.07,Default,,0,0,0,,她捡起{\c&H0000FFFF&\b1}长明灯{\c&H00FFFFFF&\b0}重新点燃供奉
+Dialogue: 0,0:00:19.39,0:00:21.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}整理{\c&H00FFFFFF&\b0}仪容又变回从容温婉的
+Dialogue: 0,0:00:21.17,0:00:21.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}样子{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.97,0:00:23.43,Default,,0,0,0,,这时{\c&H0000FFFF&\b1}角落{\c&H00FFFFFF&\b0}传来轻笑
+Dialogue: 0,0:00:23.94,0:00:25.29,Default,,0,0,0,,谢厌臣{\c&H0000FFFF&\b1}坐在{\c&H00FFFFFF&\b0}案台后
+Dialogue: 0,0:00:25.50,0:00:26.81,Default,,0,0,0,,戴半张{\c&H0000FFFF&\b1}恶鬼{\c&H00FFFFFF&\b0}面具
+Dialogue: 0,0:00:27.14,0:00:28.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}头顶{\c&H00FFFFFF&\b0}莲花宫灯照亮眉心朱
+Dialogue: 0,0:00:28.88,0:00:29.29,Default,,0,0,0,,砂痣

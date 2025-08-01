@@ -1,0 +1,41 @@
+[Script Info]
+Title: chapter_003 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}雅间{\c&H00FFFFFF&\b0}内寂静被打破
+Dialogue: 0,0:00:02.38,0:00:04.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落抱着砚屏出现在门外
+Dialogue: 0,0:00:04.97,0:00:06.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}雅间{\c&H00FFFFFF&\b0}瞬间安静下来
+Dialogue: 0,0:00:06.78,0:00:07.71,Default,,0,0,0,,闻如风{\c&H0000FFFF&\b1}看着{\c&H00FFFFFF&\b0}她
+Dialogue: 0,0:00:08.26,0:00:09.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}内心{\c&H00FFFFFF&\b0}平静下来
+Dialogue: 0,0:00:09.52,0:00:10.59,Default,,0,0,0,,闻如雷率先{\c&H0000FFFF&\b1}开口{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.94,0:00:12.95,Default,,0,0,0,,“{\c&H0000FFFF&\b1}大哥{\c&H00FFFFFF&\b0}你不是说没叫她吗
+Dialogue: 0,0:00:13.06,0:00:14.38,Default,,0,0,0,,她{\c&H0000FFFF&\b1}怎么{\c&H00FFFFFF&\b0}自己跑来了
+Dialogue: 0,0:00:14.49,0:00:16.13,Default,,0,0,0,,”闻{\c&H0000FFFF&\b1}如云{\c&H00FFFFFF&\b0}则微笑嘲讽
+Dialogue: 0,0:00:16.30,0:00:17.89,Default,,0,0,0,,“我还以为她攀{\c&H0000FFFF&\b1}上镇{\c&H00FFFFFF&\b0}北王
+Dialogue: 0,0:00:17.89,0:00:18.84,Default,,0,0,0,,府的{\c&H0000FFFF&\b1}高枝儿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.00,0:00:20.50,Default,,0,0,0,,真能{\c&H0000FFFF&\b1}舍下{\c&H00FFFFFF&\b0}咱们
+Dialogue: 0,0:00:20.83,0:00:21.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}瞧瞧{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.17,0:00:23.54,Default,,0,0,0,,这不又{\c&H0000FFFF&\b1}巴巴儿{\c&H00FFFFFF&\b0}地跑过来献
+Dialogue: 0,0:00:23.54,0:00:23.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}殷勤{\c&H00FFFFFF&\b0}了
+Dialogue: 0,0:00:24.10,0:00:26.38,Default,,0,0,0,,想来是被{\c&H0000FFFF&\b1}谢四{\c&H00FFFFFF&\b0}公子厌弃了吧
+Dialogue: 0,0:00:26.55,0:00:27.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}可惜{\c&H00FFFFFF&\b0}啊可惜
+Dialogue: 0,0:00:27.73,0:00:29.93,Default,,0,0,0,,别人不要的{\c&H0000FFFF&\b1}东西{\c&H00FFFFFF&\b0}我也不要
+Dialogue: 0,0:00:30.05,0:00:31.52,Default,,0,0,0,,”{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是雅间内
+Dialogue: 0,0:00:31.66,0:00:33.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}表情各异
+Dialogue: 0,0:00:33.36,0:00:35.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}人物{\c&H00FFFFFF&\b0}中闻星落抱着砚屏
+Dialogue: 0,0:00:35.55,0:00:37.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}面露{\c&H00FFFFFF&\b0}无奈闻如雷面露不满
+Dialogue: 0,0:00:37.66,0:00:39.09,Default,,0,0,0,,闻{\c&H0000FFFF&\b1}如云{\c&H00FFFFFF&\b0}邪魅嘲讽
+Dialogue: 0,0:00:39.28,0:00:41.05,Default,,0,0,0,,发生事件是{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落出现
+Dialogue: 0,0:00:41.19,0:00:41.56,Default,,0,0,0,,引发{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}议论

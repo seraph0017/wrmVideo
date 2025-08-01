@@ -1,0 +1,49 @@
+[Script Info]
+Title: chapter_007 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落等人乘坐马车返回镇
+Dialogue: 0,0:00:02.15,0:00:02.71,Default,,0,0,0,,北{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.06,0:00:04.74,Default,,0,0,0,,府{\c&H0000FFFF&\b1}医为{\c&H00FFFFFF&\b0}谢拾安包扎敷药
+Dialogue: 0,0:00:05.32,0:00:05.99,Default,,0,0,0,,称无{\c&H0000FFFF&\b1}大碍{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.55,0:00:08.66,Default,,0,0,0,,谢拾安靠在{\c&H0000FFFF&\b1}床榻{\c&H00FFFFFF&\b0}上嗦着鸡腿
+Dialogue: 0,0:00:09.06,0:00:10.55,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}叮嘱婢女照顾他
+Dialogue: 0,0:00:10.85,0:00:12.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落因愧疚事事亲力亲为
+Dialogue: 0,0:00:13.24,0:00:14.98,Default,,0,0,0,,夜半{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落离开寝屋
+Dialogue: 0,0:00:15.35,0:00:16.09,Default,,0,0,0,,走到{\c&H0000FFFF&\b1}院子{\c&H00FFFFFF&\b0}里
+Dialogue: 0,0:00:16.34,0:00:18.04,Default,,0,0,0,,见{\c&H0000FFFF&\b1}梨花{\c&H00FFFFFF&\b0}树下站着谢观澜
+Dialogue: 0,0:00:18.48,0:00:20.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}月色{\c&H00FFFFFF&\b0}如水梨花飘落
+Dialogue: 0,0:00:20.70,0:00:22.14,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}绯色锦袍
+Dialogue: 0,0:00:22.39,0:00:23.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}金相玉质{\c&H00FFFFFF&\b0}却眼神冰冷
+Dialogue: 0,0:00:24.20,0:00:25.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落主动认错
+Dialogue: 0,0:00:25.82,0:00:27.89,Default,,0,0,0,,称{\c&H0000FFFF&\b1}不该{\c&H00FFFFFF&\b0}撺掇谢拾安参加比试
+Dialogue: 0,0:00:28.43,0:00:30.32,Default,,0,0,0,,谢观澜指责她利用{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}对
+Dialogue: 0,0:00:30.32,0:00:30.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}付闻{\c&H00FFFFFF&\b0}如雷
+Dialogue: 0,0:00:31.29,0:00:33.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落解释不知塔楼会塌
+Dialogue: 0,0:00:33.62,0:00:34.86,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}冷言讽刺
+Dialogue: 0,0:00:35.30,0:00:37.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落联想到前世谢观澜拥
+Dialogue: 0,0:00:37.35,0:00:38.17,Default,,0,0,0,,兵{\c&H0000FFFF&\b1}自立{\c&H00FFFFFF&\b0}之事
+Dialogue: 0,0:00:38.41,0:00:40.16,Default,,0,0,0,,怀疑有人对付{\c&H0000FFFF&\b1}镇北{\c&H00FFFFFF&\b0}王府
+Dialogue: 0,0:00:40.43,0:00:41.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落在王府院子里
+Dialogue: 0,0:00:42.23,0:00:43.13,Default,,0,0,0,,面对谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:43.58,0:00:44.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}在床榻上
+Dialogue: 0,0:00:45.10,0:00:47.52,Default,,0,0,0,,嗦{\c&H0000FFFF&\b1}鸡腿{\c&H00FFFFFF&\b0}谢观澜在梨花树下
+Dialogue: 0,0:00:47.84,0:00:49.84,Default,,0,0,0,,眼神冰冷老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}在屋内
+Dialogue: 0,0:00:50.22,0:00:50.88,Default,,0,0,0,,叮嘱{\c&H0000FFFF&\b1}婢女{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:51.14,0:00:52.44,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}院子
+Dialogue: 0,0:00:52.84,0:00:55.21,Default,,0,0,0,,夜半{\c&H0000FFFF&\b1}月色{\c&H00FFFFFF&\b0}如水梨花飘落
+Dialogue: 0,0:00:55.59,0:00:57.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}画面{\c&H00FFFFFF&\b0}构图是中景展现人
+Dialogue: 0,0:00:57.22,0:00:57.78,Default,,0,0,0,,物{\c&H0000FFFF&\b1}互动{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:58.10,0:00:59.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}光影{\c&H00FFFFFF&\b0}突出冷峻氛围

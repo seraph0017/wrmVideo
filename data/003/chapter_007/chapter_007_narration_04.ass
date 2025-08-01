@@ -1,0 +1,39 @@
+[Script Info]
+Title: chapter_007 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}塔楼{\c&H00FFFFFF&\b0}坍塌瞬间尘埃弥漫
+Dialogue: 0,0:00:02.67,0:00:04.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落冲进尘埃中寻找谢
+Dialogue: 0,0:00:04.51,0:00:04.88,Default,,0,0,0,,拾安
+Dialogue: 0,0:00:05.56,0:00:07.06,Default,,0,0,0,,呼喊着“四{\c&H0000FFFF&\b1}哥哥{\c&H00FFFFFF&\b0}”
+Dialogue: 0,0:00:07.15,0:00:09.29,Default,,0,0,0,,终于{\c&H0000FFFF&\b1}听到{\c&H00FFFFFF&\b0}谢拾安虚弱的回应
+Dialogue: 0,0:00:09.48,0:00:10.94,Default,,0,0,0,,她{\c&H0000FFFF&\b1}寻声{\c&H00FFFFFF&\b0}找到谢拾安
+Dialogue: 0,0:00:11.07,0:00:12.38,Default,,0,0,0,,见他靠在{\c&H0000FFFF&\b1}桅杆{\c&H00FFFFFF&\b0}旁
+Dialogue: 0,0:00:12.56,0:00:14.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}小腿{\c&H00FFFFFF&\b0}被尖利竹竿扎中
+Dialogue: 0,0:00:14.33,0:00:15.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}鲜血{\c&H00FFFFFF&\b0}染红锦袍
+Dialogue: 0,0:00:15.90,0:00:17.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}却扬着旗幡得意
+Dialogue: 0,0:00:17.96,0:00:19.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落心疼落泪
+Dialogue: 0,0:00:19.46,0:00:20.48,Default,,0,0,0,,紧紧{\c&H0000FFFF&\b1}抱住{\c&H00FFFFFF&\b0}他
+Dialogue: 0,0:00:20.62,0:00:22.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}自责{\c&H00FFFFFF&\b0}自己若不撺掇他参加比
+Dialogue: 0,0:00:22.68,0:00:23.88,Default,,0,0,0,,试就{\c&H0000FFFF&\b1}不会{\c&H00FFFFFF&\b0}出事
+Dialogue: 0,0:00:24.08,0:00:26.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落在尘埃中寻找谢拾安
+Dialogue: 0,0:00:26.48,0:00:29.24,Default,,0,0,0,,满脸担忧谢拾安靠在{\c&H0000FFFF&\b1}桅杆{\c&H00FFFFFF&\b0}旁
+Dialogue: 0,0:00:29.52,0:00:30.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}受伤{\c&H00FFFFFF&\b0}但仍得意
+Dialogue: 0,0:00:30.79,0:00:33.18,Default,,0,0,0,,其他{\c&H0000FFFF&\b1}人物{\c&H00FFFFFF&\b0}在尘埃中面露惊骇
+Dialogue: 0,0:00:33.33,0:00:34.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是校场内
+Dialogue: 0,0:00:34.62,0:00:36.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}尘埃{\c&H00FFFFFF&\b0}弥漫天气阴沉
+Dialogue: 0,0:00:36.92,0:00:38.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}画面{\c&H00FFFFFF&\b0}构图是近景展现闻
+Dialogue: 0,0:00:38.67,0:00:40.28,Default,,0,0,0,,星落与{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}的互动
+Dialogue: 0,0:00:40.40,0:00:41.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}光影{\c&H00FFFFFF&\b0}突出悲伤氛围

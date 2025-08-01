@@ -1,0 +1,30 @@
+[Script Info]
+Title: chapter_002 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落打算绣制砚屏贺寿
+Dialogue: 0,0:00:02.31,0:00:04.29,Default,,0,0,0,,与谢拾安前往{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}书斋选字
+Dialogue: 0,0:00:04.79,0:00:06.30,Default,,0,0,0,,在{\c&H0000FFFF&\b1}书斋{\c&H00FFFFFF&\b0}中撞见谢观澜
+Dialogue: 0,0:00:06.72,0:00:08.55,Default,,0,0,0,,谢观澜调侃{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落字不好看
+Dialogue: 0,0:00:08.72,0:00:09.89,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}书斋
+Dialogue: 0,0:00:10.13,0:00:12.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}明亮时间为白天
+Dialogue: 0,0:00:12.28,0:00:14.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}书斋{\c&H00FFFFFF&\b0}内布置雅致挂满字画
+Dialogue: 0,0:00:14.60,0:00:16.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落身着杏粉色圆领齐
+Dialogue: 0,0:00:16.57,0:00:17.20,Default,,0,0,0,,胸襦裙
+Dialogue: 0,0:00:17.48,0:00:18.05,Default,,0,0,0,,看{\c&H0000FFFF&\b1}字画{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.35,0:00:20.30,Default,,0,0,0,,谢拾安身着鹅黄{\c&H0000FFFF&\b1}圆领{\c&H00FFFFFF&\b0}锦袍
+Dialogue: 0,0:00:20.59,0:00:21.25,Default,,0,0,0,,介绍{\c&H0000FFFF&\b1}字画{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.65,0:00:23.61,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}身着深色圆领袍
+Dialogue: 0,0:00:24.05,0:00:24.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}微笑{\c&H00FFFFFF&\b0}调侃

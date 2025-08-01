@@ -1,0 +1,42 @@
+[Script Info]
+Title: chapter_007 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.49,Default,,0,0,0,,午后的{\c&H0000FFFF&\b1}校场{\c&H00FFFFFF&\b0}热闹非凡
+Dialogue: 0,0:00:01.89,0:00:03.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}演武{\c&H00FFFFFF&\b0}比试即将开始
+Dialogue: 0,0:00:03.48,0:00:05.24,Default,,0,0,0,,蜀郡的少年们五{\c&H0000FFFF&\b1}人为{\c&H00FFFFFF&\b0}一队
+Dialogue: 0,0:00:05.68,0:00:07.05,Default,,0,0,0,,佩戴不同{\c&H0000FFFF&\b1}颜色{\c&H00FFFFFF&\b0}的抹额
+Dialogue: 0,0:00:07.41,0:00:09.15,Default,,0,0,0,,校场尽头的{\c&H0000FFFF&\b1}塔楼{\c&H00FFFFFF&\b0}巍峨高大
+Dialogue: 0,0:00:09.46,0:00:10.41,Default,,0,0,0,,系满{\c&H0000FFFF&\b1}彩色{\c&H00FFFFFF&\b0}飘带
+Dialogue: 0,0:00:10.64,0:00:12.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}塔尖{\c&H00FFFFFF&\b0}插着“帅”字旗幡
+Dialogue: 0,0:00:12.64,0:00:14.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落站在校场外
+Dialogue: 0,0:00:14.29,0:00:15.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}目光{\c&H00FFFFFF&\b0}留意着官员座位
+Dialogue: 0,0:00:15.89,0:00:17.93,Default,,0,0,0,,前世{\c&H0000FFFF&\b1}相中闻{\c&H00FFFFFF&\b0}如雷的老将军坐
+Dialogue: 0,0:00:17.93,0:00:19.08,Default,,0,0,0,,在谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}身后
+Dialogue: 0,0:00:19.68,0:00:21.41,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}一骑绝尘
+Dialogue: 0,0:00:21.59,0:00:23.10,Default,,0,0,0,,鹅黄{\c&H0000FFFF&\b1}抹额{\c&H00FFFFFF&\b0}系带翻飞
+Dialogue: 0,0:00:23.28,0:00:25.48,Default,,0,0,0,,少年鲜衣怒马{\c&H0000FFFF&\b1}尽显{\c&H00FFFFFF&\b0}嚣张
+Dialogue: 0,0:00:25.68,0:00:27.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落站在校场外
+Dialogue: 0,0:00:27.36,0:00:29.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}眼神{\c&H00FFFFFF&\b0}复杂关注着场内情况
+Dialogue: 0,0:00:30.05,0:00:31.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}骑在马上
+Dialogue: 0,0:00:31.61,0:00:33.76,Default,,0,0,0,,意气风发{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}在一旁
+Dialogue: 0,0:00:33.90,0:00:34.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}面露{\c&H00FFFFFF&\b0}不安
+Dialogue: 0,0:00:34.76,0:00:36.72,Default,,0,0,0,,闻{\c&H0000FFFF&\b1}如云{\c&H00FFFFFF&\b0}则在观察着局势
+Dialogue: 0,0:00:36.87,0:00:37.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是校场
+Dialogue: 0,0:00:37.96,0:00:39.96,Default,,0,0,0,,午后晴天{\c&H0000FFFF&\b1}阳光明媚{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:40.12,0:00:41.83,Default,,0,0,0,,校场热闹{\c&H0000FFFF&\b1}塔楼{\c&H00FFFFFF&\b0}显眼
+Dialogue: 0,0:00:41.98,0:00:44.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}画面{\c&H00FFFFFF&\b0}构图是全景展现校场和
+Dialogue: 0,0:00:44.28,0:00:44.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}塔楼{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:44.78,0:00:45.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}光影{\c&H00FFFFFF&\b0}明亮

@@ -1,89 +1,67 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-测试音效匹配系统
-"""
 
-import os
 import sys
+import os
+sys.path.append('src')
 
-# 添加src目录到路径
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src'))
 from sound_effects_processor import SoundEffectsProcessor
 
-def get_sound_effects_dir():
-    """获取音效目录，优先使用 src/sound_effects，找不到时使用 sound"""
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    # 优先使用 src/sound_effects 目录
-    primary_dir = os.path.join(base_dir, "src", "sound_effects")
-    if os.path.exists(primary_dir):
-        print(f"使用优先音效目录: {primary_dir}")
-        return primary_dir
-    
-    # 备用目录 sound
-    fallback_dir = os.path.join(base_dir, "sound")
-    if os.path.exists(fallback_dir):
-        print(f"使用备用音效目录: {fallback_dir}")
-        return fallback_dir
-    
-    print("警告: 未找到任何音效目录")
-    return None
+# 测试音效处理
+processor = SoundEffectsProcessor('src/sound_effects')
 
-def test_sound_effects_matching():
-    """测试音效匹配功能"""
-    
-    # 初始化音效处理器
-    sound_dir = get_sound_effects_dir()
-    if not sound_dir:
-        print("错误: 无法找到音效目录")
-        return
-    
-    processor = SoundEffectsProcessor(sound_dir)
-    
-    print(f"音效目录: {sound_dir}")
-    print(f"加载的音效文件数量: {len(processor.sound_effects_map)}")
-    
-    # 显示前10个音效文件
-    print("\n前10个音效文件:")
-    for i, (key, path) in enumerate(list(processor.sound_effects_map.items())[:10]):
-        print(f"  {i+1}. {key} -> {os.path.basename(path)}")
-    
-    # 测试对话匹配
-    test_dialogues = [
-        {
-            'start_seconds': 1.0,
-            'end_seconds': 3.0,
-            'text': '突然听到一声狗叫'
-        },
-        {
-            'start_seconds': 5.0,
-            'end_seconds': 7.0,
-            'text': '汽车发动机的声音响起'
-        },
-        {
-            'start_seconds': 10.0,
-            'end_seconds': 12.0,
-            'text': '门被打开了'
-        },
-        {
-            'start_seconds': 15.0,
-            'end_seconds': 17.0,
-            'text': '雷声轰鸣'
-        },
-        {
-            'start_seconds': 20.0,
-            'end_seconds': 22.0,
-            'text': '鸟儿在歌唱'
-        }
-    ]
-    
-    print("\n测试对话匹配:")
-    sound_events = processor.match_sound_effects(test_dialogues)
-    
-    print(f"\n匹配结果: 找到 {len(sound_events)} 个音效事件")
-    for event in sound_events:
-        print(f"  时间: {event['start_time']:.1f}s, 关键词: {event['keyword']}, 文件: {os.path.basename(event['sound_file'])}")
+# 解析ASS文件
+ass_file = 'data/003/chapter_002/temp_videos/merged_subtitles.ass'
+if not os.path.exists(ass_file):
+    print(f"ASS文件不存在: {ass_file}")
+    sys.exit(1)
 
-if __name__ == "__main__":
-    test_sound_effects_matching()
+dialogues = processor.parse_ass_file(ass_file)
+print(f"解析到 {len(dialogues)} 条对话")
+
+# 显示前3条对话
+print("\n前3条对话:")
+for i, dialogue in enumerate(dialogues[:3]):
+    print(f"对话 {i+1}: {dialogue['start_time']}s-{dialogue['end_time']}s")
+    print(f"  内容: {dialogue['text'][:50]}...")
+    print(f"  数据类型: start_time={type(dialogue['start_time'])}, end_time={type(dialogue['end_time'])}")
+    print(f"  完整数据: {dialogue}")
+    print()
+
+# 匹配音效
+print("\n开始匹配音效...")
+sound_events = processor.match_sound_effects(dialogues)
+print(f"匹配到 {len(sound_events)} 个音效事件")
+
+# 显示所有音效事件
+print("\n所有音效事件:")
+for i, event in enumerate(sound_events):
+    print(f"音效 {i+1}: {event['keyword']} 在 {event['start_time']:.2f}s, 音量 {event['volume']:.2f}")
+    print(f"  文件: {os.path.basename(event['sound_file'])}")
+
+# 过滤重叠音效
+print("\n开始过滤重叠音效...")
+filtered_events = processor.filter_overlapping_effects(sound_events)
+print(f"过滤后剩余 {len(filtered_events)} 个音效事件")
+
+# 显示过滤后的音效事件
+print("\n过滤后的音效事件:")
+for i, event in enumerate(filtered_events):
+    print(f"过滤后音效 {i+1}: {event['keyword']} 在 {event['start_time']:.2f}s-{event['end_time']:.2f}s, 音量 {event['volume']:.2f}")
+    print(f"  文件: {os.path.basename(event['sound_file'])}")
+
+print(f"\n音效过滤统计:")
+print(f"原始音效数量: {len(sound_events)}")
+print(f"过滤后数量: {len(filtered_events)}")
+print(f"过滤掉数量: {len(sound_events) - len(filtered_events)}")
+
+# 统计重复音效文件
+file_count = {}
+for event in sound_events:
+    filename = os.path.basename(event['sound_file'])
+    file_count[filename] = file_count.get(filename, 0) + 1
+
+print("\n重复使用的音效文件:")
+for filename, count in file_count.items():
+    if count > 1:
+        print(f"  {filename}: {count} 次")

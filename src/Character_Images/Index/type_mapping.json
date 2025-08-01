@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "description": "小说类型→图片标签映射（如'都市文'→'现代+青年+职场'）",
+  "novel_type_mappings": {
+    "都市文": {
+      "style": "Modern",
+      "preferred_age_groups": ["23-30_YoungAdult", "31-45_MiddleAged"],
+      "scene_tags": ["office", "city", "apartment", "cafe"],
+      "character_tags": ["business_casual", "modern_fashion"]
+    },
+    "校园文": {
+      "style": "Modern",
+      "preferred_age_groups": ["15-22_Youth", "14-22_Youth"],
+      "scene_tags": ["school", "classroom", "campus", "library"],
+      "character_tags": ["school_uniform", "casual_wear", "student"]
+    },
+    "古言文": {
+      "style": "Ancient",
+      "preferred_age_groups": ["23-30_YoungAdult", "25-40_FantasyAdult"],
+      "scene_tags": ["palace", "garden", "ancient_room", "courtyard"],
+      "character_tags": ["hanfu", "ancient_robe", "traditional"]
+    },
+    "玄幻文": {
+      "style": "Fantasy",
+      "preferred_age_groups": ["25-40_FantasyAdult", "23-30_YoungAdult"],
+      "scene_tags": ["mystical", "mountain", "temple", "magical_realm"],
+      "character_tags": ["cultivator_robe", "fantasy_armor", "mystical"]
+    },
+    "科幻文": {
+      "style": "SciFi",
+      "preferred_age_groups": ["23-30_YoungAdult", "31-45_MiddleAged"],
+      "scene_tags": ["spaceship", "laboratory", "futuristic_city", "space_station"],
+      "character_tags": ["space_suit", "tech_wear", "futuristic"]
+    },
+    "历史文": {
+      "style": "Ancient",
+      "preferred_age_groups": ["31-45_MiddleAged", "25-40_FantasyAdult"],
+      "scene_tags": ["historical_building", "ancient_street", "palace_hall"],
+      "character_tags": ["period_costume", "historical_attire"]
+    }
+  },
+  "fallback_mapping": {
+    "style": "Modern",
+    "age_group": "23-30_YoungAdult",
+    "scene_tags": ["neutral_background"],
+    "character_tags": ["casual"]
+  }
+}

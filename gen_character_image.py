@@ -130,7 +130,7 @@ def generate_image(prompt, output_path, style=None, chapter_path=None):
         print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
         
         # 构建完整的prompt
-        full_prompt = "以下内容为描述生成图片\n风格：宫崎骏画风，人物着装：圆领袍\n\n" + style_prompt + "\n\n" + prompt + "\n\n"
+        full_prompt = "以下内容为描述生成图片\n宫崎骏动漫风格，数字插画,高饱和度,卡通,简约画风,完整色块,整洁的画面,宫崎骏艺术风格,高饱和的色彩和柔和的阴影,童话色彩风格。 人物着装：圆领袍\n\n" + style_prompt + "\n\n" + prompt + "\n\n"
         
         print("这里是完整的prompt===>>>{}".format(full_prompt))
         # 请求参数 - 使用配置文件中的值

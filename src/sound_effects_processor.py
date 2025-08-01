@@ -213,20 +213,80 @@ class SoundEffectsProcessor:
             
             # 如果找到匹配的音效文件，添加到事件列表
             if matched_file:
+                # 为重复使用的音效添加音量随机变化，避免完全相同的处理
+                base_volume = 0.3
+                volume_variation = random.uniform(-0.1, 0.1)  # ±0.1的音量变化
+                final_volume = max(0.1, min(0.5, base_volume + volume_variation))
+                
                 sound_events.append({
                     'start_time': dialogue['start_seconds'],
                     'end_time': dialogue['end_seconds'],
                     'sound_file': matched_file,
-                    'volume': 0.3,  # 默认音量
+                    'volume': final_volume,
                     'keyword': matched_keyword,
                     'text': text
                 })
-                print(f"匹配音效: {matched_keyword} -> {os.path.basename(matched_file)} (时间: {dialogue['start_seconds']:.2f}s)")
+                print(f"匹配音效: {matched_keyword} -> {os.path.basename(matched_file)} (时间: {dialogue['start_seconds']:.2f}s, 音量: {final_volume:.2f})")
         
         # 确保前十秒内每五秒至少有一个音效
         sound_events = self._ensure_early_sound_effects(sound_events, dialogues)
         
         return sound_events
+    
+    def filter_overlapping_effects(self, sound_events):
+        """
+        过滤重叠的音效事件，避免在音效持续时间内重复添加相同音效
+        
+        Args:
+            sound_events: 原始音效事件列表
+            
+        Returns:
+            list: 过滤后的音效事件列表
+        """
+        if not sound_events:
+            return sound_events
+        
+        # 为每个音效事件添加默认持续时间
+        for event in sound_events:
+            if 'duration' not in event:
+                # 根据音效类型设置默认持续时间
+                if '雷' in event.get('keyword', ''):
+                    event['duration'] = 3.0  # 雷声持续3秒
+                elif '风' in event.get('keyword', ''):
+                    event['duration'] = 4.0  # 风声持续4秒
+                elif '马' in event.get('keyword', ''):
+                    event['duration'] = 2.5  # 马蹄声持续2.5秒
+                elif '场景音效' in event.get('keyword', ''):
+                    event['duration'] = 5.0  # 场景音效持续5秒
+                else:
+                    event['duration'] = 2.0  # 默认持续2秒
+            
+            event['end_time'] = event['start_time'] + event['duration']
+        
+        # 按开始时间排序
+        sound_events.sort(key=lambda x: x['start_time'])
+        
+        # 按音效文件分组，避免同一音效文件的重叠
+        filtered_events = []
+        file_last_end_time = {}  # 记录每个音效文件的最后结束时间
+        
+        for event in sound_events:
+            sound_file = event['sound_file']
+            start_time = event['start_time']
+            
+            # 检查是否与同一音效文件的前一个事件重叠
+            if sound_file in file_last_end_time:
+                last_end_time = file_last_end_time[sound_file]
+                if start_time < last_end_time:
+                    # 重叠，跳过这个事件
+                    print(f"跳过重叠音效: {os.path.basename(sound_file)} 在 {start_time:.2f}s (与 {last_end_time:.2f}s 结束的音效重叠)")
+                    continue
+            
+            # 添加到过滤后的列表
+            filtered_events.append(event)
+            file_last_end_time[sound_file] = event['end_time']
+        
+        return filtered_events
     
     def _ensure_early_sound_effects(self, sound_events, dialogues):
         """
@@ -321,7 +381,20 @@ class SoundEffectsProcessor:
                     if candidate_files:
                         return random.choice(candidate_files)
         
-        # 如果没有匹配到特定场景，使用通用的环境音效
+        # 如果没有匹配到特定场景，优先使用脚步声作为默认音效
+        footstep_sounds = []
+        footstep_keywords = ['脚步', 'footstep', '走', 'walk', 'step']
+        
+        for keyword in footstep_keywords:
+            for file_key, file_path in self.sound_effects_map.items():
+                if keyword.lower() in file_key.lower():
+                    footstep_sounds.append(file_path)
+        
+        if footstep_sounds:
+            print(f"使用默认脚步声音效: {os.path.basename(random.choice(footstep_sounds))}")
+            return random.choice(footstep_sounds)
+        
+        # 如果没有脚步声，使用通用的环境音效
         generic_sounds = []
         generic_keywords = ['环境', 'ambient', '背景', 'background', '风', 'wind', '自然', 'nature']
         
@@ -355,6 +428,9 @@ class SoundEffectsProcessor:
             print("没有音效事件，跳过音效轨道创建")
             return False
             
+        # 初始化临时文件列表
+        temp_effect_files = []
+        
         try:
             # 创建静音基础轨道
             base_audio = ffmpeg.input('anullsrc=channel_layout=stereo:sample_rate=48000', 
@@ -363,19 +439,44 @@ class SoundEffectsProcessor:
             # 准备所有音效输入
             audio_inputs = [base_audio]
             
-            for event in sound_events:
-                sound_input = ffmpeg.input(event['sound_file'])
-                
-                # 调整音量
-                sound_volume = sound_input.filter('volume', volume=event['volume'])
-                
-                # 添加延迟到指定时间
-                if event['start_time'] > 0:
-                    sound_delayed = sound_volume.filter('adelay', delays=f"{int(event['start_time'] * 1000)}")
-                else:
-                    sound_delayed = sound_volume
-                
-                audio_inputs.append(sound_delayed)
+            # 使用分步处理避免FFmpeg过滤器图冲突
+            # 为每个音效创建独立的临时文件，然后再混合
+            temp_dir = os.path.dirname(output_path)
+            
+            for i, event in enumerate(sound_events):
+                try:
+                    sound_file = event['sound_file']
+                    temp_effect_file = os.path.join(temp_dir, f"temp_effect_{i}.mp3")
+                    
+                    # 为每个音效创建独立的处理流程
+                    sound_input = ffmpeg.input(sound_file)
+                    
+                    # 调整音量并添加延迟
+                    if event['start_time'] > 0:
+                        # 先添加延迟，再调整音量
+                        sound_delayed = sound_input.filter('adelay', delays=f"{int(event['start_time'] * 1000)}")
+                        sound_volume = sound_delayed.filter('volume', volume=event['volume'])
+                    else:
+                        sound_volume = sound_input.filter('volume', volume=event['volume'])
+                    
+                    # 输出到临时文件
+                    (
+                        ffmpeg
+                        .output(sound_volume, temp_effect_file, acodec='mp3', audio_bitrate='128k', t=total_duration)
+                        .overwrite_output()
+                        .run(quiet=True)
+                    )
+                    
+                    temp_effect_files.append(temp_effect_file)
+                    print(f"处理音效 {i+1}/{len(sound_events)}: {os.path.basename(sound_file)}")
+                    
+                except Exception as e:
+                    print(f"处理音效失败: {event['sound_file']}, 错误: {e}")
+            
+            # 将所有临时音效文件添加到混合列表
+            for temp_file in temp_effect_files:
+                if os.path.exists(temp_file):
+                    audio_inputs.append(ffmpeg.input(temp_file))
             
             # 混合所有音频
             if len(audio_inputs) > 1:
@@ -394,10 +495,28 @@ class SoundEffectsProcessor:
             )
             
             print(f"音效轨道创建成功: {output_path}")
+            
+            # 清理临时文件
+            for temp_file in temp_effect_files:
+                try:
+                    if os.path.exists(temp_file):
+                        os.remove(temp_file)
+                except:
+                    pass
+            
             return True
             
         except Exception as e:
             print(f"创建音效轨道失败: {e}")
+            
+            # 清理临时文件
+            try:
+                for temp_file in temp_effect_files:
+                    if os.path.exists(temp_file):
+                        os.remove(temp_file)
+            except:
+                pass
+            
             return False
     
     def process_chapter_sound_effects(self, ass_file_path, total_duration, output_path):

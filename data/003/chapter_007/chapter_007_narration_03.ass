@@ -1,0 +1,46 @@
+[Script Info]
+Title: chapter_007 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}塔楼{\c&H00FFFFFF&\b0}内谢拾安与闻如雷打斗
+Dialogue: 0,0:00:03.02,0:00:04.84,Default,,0,0,0,,周围少年{\c&H0000FFFF&\b1}试图{\c&H00FFFFFF&\b0}拉拽谢拾安
+Dialogue: 0,0:00:05.47,0:00:07.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落在校场外紧盯着场内
+Dialogue: 0,0:00:07.90,0:00:09.00,Default,,0,0,0,,心中满是{\c&H0000FFFF&\b1}担心{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.41,0:00:11.62,Default,,0,0,0,,此时谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}起身冲向场内
+Dialogue: 0,0:00:12.03,0:00:12.93,Default,,0,0,0,,杜{\c&H0000FFFF&\b1}太守{\c&H00FFFFFF&\b0}惊呼
+Dialogue: 0,0:00:13.21,0:00:13.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}官员{\c&H00FFFFFF&\b0}们不解
+Dialogue: 0,0:00:14.25,0:00:16.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落突然意识到塔楼的主
+Dialogue: 0,0:00:16.03,0:00:17.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}桅杆{\c&H00FFFFFF&\b0}出了问题
+Dialogue: 0,0:00:17.38,0:00:18.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}塔楼{\c&H00FFFFFF&\b0}摇摇欲坠
+Dialogue: 0,0:00:18.80,0:00:19.70,Default,,0,0,0,,她{\c&H0000FFFF&\b1}心急如焚{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.09,0:00:21.07,Default,,0,0,0,,猛地跳进{\c&H0000FFFF&\b1}围栏{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.37,0:00:23.12,Default,,0,0,0,,大声{\c&H0000FFFF&\b1}呼喊{\c&H00FFFFFF&\b0}谢拾安快下来
+Dialogue: 0,0:00:23.41,0:00:25.14,Default,,0,0,0,,爬得慢的{\c&H0000FFFF&\b1}少年{\c&H00FFFFFF&\b0}们趁机跳下
+Dialogue: 0,0:00:25.55,0:00:26.90,Default,,0,0,0,,而{\c&H0000FFFF&\b1}谢拾{\c&H00FFFFFF&\b0}安爬得过高
+Dialogue: 0,0:00:27.30,0:00:29.36,Default,,0,0,0,,在第十层时踹开闻如雷{\c&H0000FFFF&\b1}向塔{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:29.36,0:00:29.96,Default,,0,0,0,,尖而去
+Dialogue: 0,0:00:30.34,0:00:31.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}随着{\c&H00FFFFFF&\b0}“咔嚓”一声
+Dialogue: 0,0:00:31.84,0:00:33.93,Default,,0,0,0,,主桅杆断裂{\c&H0000FFFF&\b1}塔楼{\c&H00FFFFFF&\b0}坍塌
+Dialogue: 0,0:00:34.11,0:00:35.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}在塔楼内与闻如
+Dialogue: 0,0:00:35.70,0:00:36.59,Default,,0,0,0,,雷{\c&H0000FFFF&\b1}打斗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:36.77,0:00:39.09,Default,,0,0,0,,身处危险{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落在校场外
+Dialogue: 0,0:00:39.24,0:00:42.10,Default,,0,0,0,,焦急呼喊谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}冲向场内
+Dialogue: 0,0:00:42.23,0:00:43.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}动作迅速{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:43.32,0:00:45.72,Default,,0,0,0,,其他少年在{\c&H0000FFFF&\b1}塔楼{\c&H00FFFFFF&\b0}上惊慌逃窜
+Dialogue: 0,0:00:45.88,0:00:47.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是校场内和校场外
+Dialogue: 0,0:00:47.86,0:00:49.86,Default,,0,0,0,,紧张危急{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:50.03,0:00:52.25,Default,,0,0,0,,画面构图是全景展现{\c&H0000FFFF&\b1}塔楼{\c&H00FFFFFF&\b0}坍
+Dialogue: 0,0:00:52.25,0:00:53.17,Default,,0,0,0,,塌的{\c&H0000FFFF&\b1}瞬间{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:53.30,0:00:54.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}光影{\c&H00FFFFFF&\b0}突出危险氛围

@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_006 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.15,Default,,0,0,0,,谢观澜站出表明{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落的字
+Dialogue: 0,0:00:02.15,0:00:03.19,Default,,0,0,0,,乃他亲自{\c&H0000FFFF&\b1}教授{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.67,0:00:05.37,Default,,0,0,0,,此便{\c&H0000FFFF&\b1}解释{\c&H00FFFFFF&\b0}了闻星落字佳之
+Dialogue: 0,0:00:05.37,0:00:05.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}缘由{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.33,0:00:07.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}令闻{\c&H00FFFFFF&\b0}如风等颇为惊讶
+Dialogue: 0,0:00:08.07,0:00:10.13,Default,,0,0,0,,忆起往昔{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落求闻如风练
+Dialogue: 0,0:00:10.13,0:00:11.16,Default,,0,0,0,,字遭拒之{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.53,0:00:13.21,Default,,0,0,0,,如今谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}亲自教导她
+Dialogue: 0,0:00:13.54,0:00:15.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}等心生嫉妒不甘
+Dialogue: 0,0:00:15.45,0:00:17.04,Default,,0,0,0,,随后{\c&H0000FFFF&\b1}闻如风{\c&H00FFFFFF&\b0}等欲离去
+Dialogue: 0,0:00:17.41,0:00:19.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾{\c&H00FFFFFF&\b0}安拦住要求他们道歉
+Dialogue: 0,0:00:19.85,0:00:20.86,Default,,0,0,0,,闻{\c&H0000FFFF&\b1}如云{\c&H00FFFFFF&\b0}予以讥讽
+Dialogue: 0,0:00:21.18,0:00:22.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落表示敢接受道歉
+Dialogue: 0,0:00:23.48,0:00:25.66,Default,,0,0,0,,闻如风{\c&H0000FFFF&\b1}打圆场{\c&H00FFFFFF&\b0}称是误会并数
+Dialogue: 0,0:00:25.66,0:00:26.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}落闻{\c&H00FFFFFF&\b0}星落
+Dialogue: 0,0:00:26.95,0:00:28.51,Default,,0,0,0,,之后{\c&H0000FFFF&\b1}携闻家{\c&H00FFFFFF&\b0}兄妹离开
+Dialogue: 0,0:00:28.94,0:00:30.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落请谢拾安去查看摊
+Dialogue: 0,0:00:30.77,0:00:31.28,Default,,0,0,0,,子{\c&H0000FFFF&\b1}情况{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:31.62,0:00:33.51,Default,,0,0,0,,转而{\c&H0000FFFF&\b1}面向{\c&H00FFFFFF&\b0}谢观澜欲言又止

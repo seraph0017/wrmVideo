@@ -1,0 +1,33 @@
+[Script Info]
+Title: chapter_009 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}卫姒{\c&H00FFFFFF&\b0}坚决阻止闻星落上族谱
+Dialogue: 0,0:00:02.59,0:00:04.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢靖{\c&H00FFFFFF&\b0}在一旁赔笑求情
+Dialogue: 0,0:00:04.86,0:00:05.92,Default,,0,0,0,,追着卫姒{\c&H0000FFFF&\b1}离开{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.26,0:00:07.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落松了口气
+Dialogue: 0,0:00:07.79,0:00:09.54,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}则继续翻看族谱
+Dialogue: 0,0:00:09.79,0:00:11.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落和谢拾安讨论起卫姒
+Dialogue: 0,0:00:11.87,0:00:13.12,Default,,0,0,0,,不想入{\c&H0000FFFF&\b1}族谱{\c&H00FFFFFF&\b0}的原因
+Dialogue: 0,0:00:13.38,0:00:14.78,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}祠堂内
+Dialogue: 0,0:00:15.21,0:00:17.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}围绕族谱氛围严肃
+Dialogue: 0,0:00:17.58,0:00:18.81,Default,,0,0,0,,谢拾安{\c&H0000FFFF&\b1}圆领{\c&H00FFFFFF&\b0}服饰
+Dialogue: 0,0:00:19.16,0:00:20.16,Default,,0,0,0,,与{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落交谈
+Dialogue: 0,0:00:20.39,0:00:23.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}神情{\c&H00FFFFFF&\b0}随意谢观澜圆领绯袍
+Dialogue: 0,0:00:23.25,0:00:25.15,Default,,0,0,0,,翻看{\c&H0000FFFF&\b1}族谱{\c&H00FFFFFF&\b0}神情专注
+Dialogue: 0,0:00:25.48,0:00:26.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落圆领服饰
+Dialogue: 0,0:00:27.28,0:00:28.41,Default,,0,0,0,,思考{\c&H0000FFFF&\b1}卫姒{\c&H00FFFFFF&\b0}的事情
+Dialogue: 0,0:00:28.77,0:00:30.93,Default,,0,0,0,,面色凝重{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}祠堂内场景
+Dialogue: 0,0:00:31.25,0:00:31.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}灯光{\c&H00FFFFFF&\b0}严肃

@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_008 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,随后在另一个{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}中
+Dialogue: 0,0:00:02.36,0:00:03.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落举着鱼灯
+Dialogue: 0,0:00:03.91,0:00:04.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}安静{\c&H00FFFFFF&\b0}而沉默
+Dialogue: 0,0:00:05.04,0:00:06.64,Default,,0,0,0,,她并不稀罕{\c&H0000FFFF&\b1}闻家{\c&H00FFFFFF&\b0}兄弟的长
+Dialogue: 0,0:00:06.64,0:00:07.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}寿面{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.53,0:00:09.32,Default,,0,0,0,,因为早上已经在{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}吃过了
+Dialogue: 0,0:00:09.64,0:00:10.81,Default,,0,0,0,,应{\c&H0000FFFF&\b1}闻家{\c&H00FFFFFF&\b0}兄弟要求
+Dialogue: 0,0:00:11.27,0:00:12.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}摊主{\c&H00FFFFFF&\b0}又端上来一碗面
+Dialogue: 0,0:00:12.95,0:00:14.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}再次体贴地想和闻
+Dialogue: 0,0:00:14.45,0:00:15.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}星落{\c&H00FFFFFF&\b0}换面
+Dialogue: 0,0:00:15.62,0:00:17.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻如风{\c&H00FFFFFF&\b0}等人着急阻拦
+Dialogue: 0,0:00:17.61,0:00:19.61,Default,,0,0,0,,闻{\c&H0000FFFF&\b1}如云{\c&H00FFFFFF&\b0}用折扇挡在面碗前
+Dialogue: 0,0:00:19.91,0:00:21.02,Default,,0,0,0,,说吹吹就不烫了
+Dialogue: 0,0:00:21.37,0:00:23.44,Default,,0,0,0,,不用{\c&H0000FFFF&\b1}换闻{\c&H00FFFFFF&\b0}如雷也跟着附和
+Dialogue: 0,0:00:23.80,0:00:26.01,Default,,0,0,0,,闻如风则{\c&H0000FFFF&\b1}落座{\c&H00FFFFFF&\b0}表示今夜是兄
+Dialogue: 0,0:00:26.01,0:00:26.93,Default,,0,0,0,,妹团聚的{\c&H0000FFFF&\b1}日子{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:27.42,0:00:29.09,Default,,0,0,0,,要往后岁岁年年都{\c&H0000FFFF&\b1}团聚{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:29.42,0:00:30.88,Default,,0,0,0,,待两位{\c&H0000FFFF&\b1}妹妹{\c&H00FFFFFF&\b0}一视同仁
+Dialogue: 0,0:00:31.23,0:00:32.48,Default,,0,0,0,,希望她们敬重{\c&H0000FFFF&\b1}兄长{\c&H00FFFFFF&\b0}

@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_001 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.00,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}六十大寿如期而至
+Dialogue: 0,0:00:02.38,0:00:05.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}内外张灯结彩热闹非凡
+Dialogue: 0,0:00:05.51,0:00:07.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落献上精心筹备之礼
+Dialogue: 0,0:00:07.68,0:00:08.55,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}甚喜
+Dialogue: 0,0:00:08.81,0:00:10.20,Default,,0,0,0,,对{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落赞赏有加
+Dialogue: 0,0:00:10.45,0:00:11.71,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}于旁观察
+Dialogue: 0,0:00:12.01,0:00:14.05,Default,,0,0,0,,虽未多言{\c&H0000FFFF&\b1}眼神{\c&H00FFFFFF&\b0}似有变化
+Dialogue: 0,0:00:14.29,0:00:16.46,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}内外光线喜庆

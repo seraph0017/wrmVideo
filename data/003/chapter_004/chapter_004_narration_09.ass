@@ -1,0 +1,34 @@
+[Script Info]
+Title: chapter_004 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:00.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}冬至{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.96,0:00:02.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落晨起后见母亲卫姒
+Dialogue: 0,0:00:03.38,0:00:04.64,Default,,0,0,0,,寝屋里燃着{\c&H0000FFFF&\b1}地龙{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.02,0:00:06.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}珠帘{\c&H00FFFFFF&\b0}翠幕龙涎香袅袅
+Dialogue: 0,0:00:07.37,0:00:09.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}母亲{\c&H00FFFFFF&\b0}倚坐榻上注视积雪
+Dialogue: 0,0:00:09.71,0:00:11.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}月白{\c&H00FFFFFF&\b0}妆花缎织金袄裙勾
+Dialogue: 0,0:00:11.33,0:00:11.88,Default,,0,0,0,,勒{\c&H0000FFFF&\b1}身姿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.16,0:00:13.13,Default,,0,0,0,,侧脸清冷{\c&H0000FFFF&\b1}美貌{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.43,0:00:14.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落请安
+Dialogue: 0,0:00:14.48,0:00:15.82,Default,,0,0,0,,讲述{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}饺子好吃
+Dialogue: 0,0:00:16.09,0:00:17.39,Default,,0,0,0,,送昭君套给{\c&H0000FFFF&\b1}母亲{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.71,0:00:19.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}母亲{\c&H00FFFFFF&\b0}无反应她退出去
+Dialogue: 0,0:00:19.84,0:00:20.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是寝屋
+Dialogue: 0,0:00:21.06,0:00:22.12,Default,,0,0,0,,环境{\c&H0000FFFF&\b1}温馨{\c&H00FFFFFF&\b0}雅致
+Dialogue: 0,0:00:22.38,0:00:23.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落屈膝请安
+Dialogue: 0,0:00:23.82,0:00:25.91,Default,,0,0,0,,表情乖巧{\c&H0000FFFF&\b1}卫姒{\c&H00FFFFFF&\b0}倚坐榻上
+Dialogue: 0,0:00:26.20,0:00:28.42,Default,,0,0,0,,表情冷淡室内装饰{\c&H0000FFFF&\b1}华丽{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:28.73,0:00:29.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}光影{\c&H00FFFFFF&\b0}柔和

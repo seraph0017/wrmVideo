@@ -1,0 +1,38 @@
+[Script Info]
+Title: chapter_006 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.78,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}听着闻星落的话语
+Dialogue: 0,0:00:02.25,0:00:04.00,Default,,0,0,0,,似笑非笑地询问{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落从
+Dialogue: 0,0:00:04.00,0:00:05.29,Default,,0,0,0,,前{\c&H0000FFFF&\b1}误会{\c&H00FFFFFF&\b0}他是何种人
+Dialogue: 0,0:00:05.74,0:00:06.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落赶忙补救
+Dialogue: 0,0:00:07.16,0:00:08.88,Default,,0,0,0,,大力夸赞谢观澜{\c&H0000FFFF&\b1}英俊潇洒{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.22,0:00:10.21,Default,,0,0,0,,政绩军功{\c&H0000FFFF&\b1}赫赫{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.61,0:00:11.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}书法{\c&H00FFFFFF&\b0}造诣高
+Dialogue: 0,0:00:11.79,0:00:13.57,Default,,0,0,0,,称今日{\c&H0000FFFF&\b1}方知{\c&H00FFFFFF&\b0}谢观澜是好人
+Dialogue: 0,0:00:13.91,0:00:15.54,Default,,0,0,0,,还欲建立与谢观澜的{\c&H0000FFFF&\b1}关联{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.86,0:00:17.68,Default,,0,0,0,,让谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}觉得她是他亲手培
+Dialogue: 0,0:00:17.68,0:00:18.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}养之人{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.59,0:00:20.18,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}拨弄着龙须糖
+Dialogue: 0,0:00:20.57,0:00:21.70,Default,,0,0,0,,称{\c&H0000FFFF&\b1}小时候{\c&H00FFFFFF&\b0}爱吃
+Dialogue: 0,0:00:22.15,0:00:23.39,Default,,0,0,0,,如今却不再{\c&H0000FFFF&\b1}喜爱{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:23.79,0:00:26.02,Default,,0,0,0,,随后将一只锦盒推向{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落
+Dialogue: 0,0:00:26.38,0:00:27.99,Default,,0,0,0,,告知她教她{\c&H0000FFFF&\b1}写字{\c&H00FFFFFF&\b0}乃因祖
+Dialogue: 0,0:00:27.99,0:00:28.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}母所{\c&H00FFFFFF&\b0}托
+Dialogue: 0,0:00:28.93,0:00:30.30,Default,,0,0,0,,且不会再至{\c&H0000FFFF&\b1}西厢房{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:30.59,0:00:32.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落背对着他打开锦盒
+Dialogue: 0,0:00:32.97,0:00:34.62,Default,,0,0,0,,见里面是{\c&H0000FFFF&\b1}桃花{\c&H00FFFFFF&\b0}冻石雕刻的
+Dialogue: 0,0:00:34.62,0:00:35.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}印章{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:35.32,0:00:36.73,Default,,0,0,0,,底部刻有“{\c&H0000FFFF&\b1}星落{\c&H00FFFFFF&\b0}”二字

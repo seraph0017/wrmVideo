@@ -15,6 +15,7 @@ import glob
 from pathlib import Path
 import concurrent.futures
 import random
+import subprocess
 
 # 导入音效处理模块
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src'))
@@ -243,15 +244,29 @@ def adjust_video_duration(input_video, target_duration, output_video):
             extend_duration = target_duration - current_duration
             print(f"延长视频 {extend_duration:.2f}s")
             
-            # 获取最后一帧并延长
-            cmd = [
-                'ffmpeg', '-y',
-                '-i', input_video,
-                '-filter_complex', f'[0:v]tpad=stop_mode=clone:stop_duration={extend_duration}[v];[0:a]apad=pad_dur={extend_duration}[a]',
-                '-map', '[v]', '-map', '[a]',
-                '-c:v', 'libx264', '-c:a', 'aac',
-                output_video
-            ]
+            # 检查视频是否有音频流
+            has_audio = video_info[4] if len(video_info) > 4 else False
+            
+            if has_audio:
+                # 有音频流，同时延长视频和音频
+                cmd = [
+                    'ffmpeg', '-y',
+                    '-i', input_video,
+                    '-filter_complex', f'[0:v]tpad=stop_mode=clone:stop_duration={extend_duration}[v];[0:a]apad=pad_dur={extend_duration}[a]',
+                    '-map', '[v]', '-map', '[a]',
+                    '-c:v', 'libx264', '-c:a', 'aac',
+                    output_video
+                ]
+            else:
+                # 没有音频流，只延长视频
+                cmd = [
+                    'ffmpeg', '-y',
+                    '-i', input_video,
+                    '-filter_complex', f'[0:v]tpad=stop_mode=clone:stop_duration={extend_duration}[v]',
+                    '-map', '[v]',
+                    '-c:v', 'libx264',
+                    output_video
+                ]
         else:
             # 需要裁剪视频
             print(f"裁剪视频到 {target_duration:.2f}s")
@@ -400,7 +415,7 @@ def image_to_video_ffmpeg(image_path, output_path, duration=5, width=720, height
                 video_bitrate='1500k',  # 适中的视频比特率
                 audio_bitrate=VIDEO_STANDARDS['audio_bitrate'],
                 s=f"{VIDEO_STANDARDS['width']}x{VIDEO_STANDARDS['height']}",
-                **{'g': 15, 'keyint_min': 15}  # 设置更密集的关键帧间隔，每0.5秒一个关键帧
+                **{'g': 30, 'keyint_min': 30}  # 设置标准关键帧间隔，每1秒一个关键帧，与拼接设置保持一致
             )
             .overwrite_output()
             .run(quiet=False)  # 改为非安静模式以显示ffmpeg进度
@@ -409,6 +424,55 @@ def image_to_video_ffmpeg(image_path, output_path, duration=5, width=720, height
         return True
     except Exception as e:
         print(f"图片转视频失败: {e}")
+        return False
+
+def append_finish_video(main_video_path, output_path):
+    """在主视频末尾拼接finish.mp4片尾视频"""
+    try:
+        # finish.mp4的路径
+        finish_video_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "banner", "finish.mp4")
+        
+        if not os.path.exists(finish_video_path):
+            print(f"警告: finish.mp4文件不存在: {finish_video_path}")
+            # 如果finish.mp4不存在，直接复制原视频
+            import shutil
+            shutil.copy2(main_video_path, output_path)
+            return True
+        
+        print(f"拼接finish.mp4到视频末尾: {finish_video_path}")
+        
+        # 创建临时文件列表
+        import tempfile
+        import subprocess
+        
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False) as f:
+            # 主视频
+            f.write(f"file '{os.path.abspath(main_video_path)}'\n")
+            # finish.mp4片尾
+            f.write(f"file '{os.path.abspath(finish_video_path)}'\n")
+            filelist_path = f.name
+        
+        try:
+            # 使用ffmpeg拼接视频，确保音视频流时长一致
+            subprocess.run([
+                'ffmpeg', '-f', 'concat', '-safe', '0', '-i', filelist_path,
+                '-c:v', 'libx264', '-c:a', 'aac', '-preset', 'fast',
+                '-g', '30', '-keyint_min', '30', '-r', '30',
+                '-avoid_negative_ts', 'make_zero',
+                '-fflags', '+genpts',
+                output_path, '-y'
+            ], check=True)
+            print(f"finish.mp4拼接成功：{output_path}")
+            return True
+        finally:
+            # 清理临时文件
+            os.unlink(filelist_path)
+            
+    except Exception as e:
+        print(f"拼接finish.mp4失败: {e}")
+        # 失败时复制原视频
+        import shutil
+        shutil.copy2(main_video_path, output_path)
         return False
 
 def concat_videos(video_list, output_path):
@@ -476,8 +540,7 @@ def concat_videos(video_list, output_path):
             subprocess.run([
                 'ffmpeg', '-f', 'concat', '-safe', '0', '-i', filelist_path,
                 '-c:v', 'libx264', '-c:a', 'aac', '-preset', 'fast',  # 重新编码确保时间戳连续
-                '-g', '15', '-keyint_min', '15', '-r', '30',  # 减小关键帧间隔，每0.5秒一个关键帧
-                '-force_key_frames', 'expr:gte(t,n_forced*0.5)',  # 强制每0.5秒插入关键帧
+                '-g', '30', '-keyint_min', '30', '-r', '30',  # 标准关键帧间隔，每1秒一个关键帧
                 output_path, '-y'
             ], check=True)
             print(f"视频拼接成功：{output_path}")
@@ -694,12 +757,10 @@ def add_audio(video_path, audio_path, output_path, replace=True):
                     print(f"视频比音频长 {video_duration - audio_duration:.2f}s，将截取视频")
                     video = video.filter('trim', duration=audio_duration)
                 elif audio_duration > video_duration:
-                    # 音频比视频长，延长视频来匹配音频时长（通过循环最后一帧）
+                    # 音频比视频长，延长视频来匹配音频时长（循环最后一帧）
                     print(f"音频比视频长 {audio_duration - video_duration:.2f}s，将延长视频")
-                    # 获取视频的最后一帧并延长
-                    last_frame = video.filter('trim', start=video_duration-0.1, duration=0.1)
-                    extended_part = last_frame.filter('loop', loop=-1, size=1, start=0).filter('trim', duration=audio_duration-video_duration)
-                    video = ffmpeg.concat(video, extended_part, v=1, a=0)
+                    # 使用tpad滤镜在视频末尾添加静止帧
+                    video = video.filter('tpad', stop_mode='clone', stop_duration=audio_duration - video_duration)
             
             (
                 ffmpeg
@@ -815,10 +876,10 @@ def mix_audio_with_bgm_and_effects(narration_audio_path, video_duration, output_
         
         print(f"台词音频时长: {narration_duration:.2f}s, BGM时长: {bgm_duration:.2f}s")
         
-        # 目标时长 = 字幕时长 + 2秒渐弱时间
-        fade_duration = 2.0
-        target_duration = subtitle_duration + fade_duration
-        print(f"目标音频时长: {target_duration:.2f}s (字幕 {subtitle_duration:.2f}s + 渐弱 {fade_duration:.2f}s)")
+        # 目标时长 = 字幕时长，不添加额外时间
+        fade_duration = 0.0
+        target_duration = subtitle_duration
+        print(f"目标音频时长: {target_duration:.2f}s (字幕 {subtitle_duration:.2f}s)")
         
         # 准备音频输入列表
         audio_inputs = []
@@ -830,18 +891,13 @@ def mix_audio_with_bgm_and_effects(narration_audio_path, video_duration, output_
         if narration_duration < subtitle_duration:
             silence_duration = subtitle_duration - narration_duration
             silence = ffmpeg.input('anullsrc=channel_layout=stereo:sample_rate=48000', f='lavfi', t=silence_duration)
-            narration_extended = ffmpeg.concat(narration_input, silence, v=0, a=1)
+            narration_final = ffmpeg.concat(narration_input, silence, v=0, a=1)
         else:
             # 如果台词音频比字幕时长长，裁剪到字幕时长
-            narration_extended = narration_input.filter('atrim', duration=subtitle_duration)
+            narration_final = narration_input.filter('atrim', duration=subtitle_duration)
         
-        # 再添加2秒静音用于渐弱
-        fade_silence = ffmpeg.input('anullsrc=channel_layout=stereo:sample_rate=48000', f='lavfi', t=fade_duration)
-        narration_final = ffmpeg.concat(narration_extended, fade_silence, v=0, a=1)
-        
-        # 在字幕结束后开始渐弱
+        # 不添加额外的静音和渐弱效果
         narration_volume = narration_final.filter('volume', volume=1.0)
-        narration_volume = narration_volume.filter('afade', type='out', start_time=subtitle_duration, duration=fade_duration)
         audio_inputs.append(narration_volume)
         
         # 2. 处理BGM
@@ -859,10 +915,7 @@ def mix_audio_with_bgm_and_effects(narration_audio_path, video_duration, output_
         
         bgm_volume = bgm_trimmed.filter('volume', volume=0.3)
         
-        # BGM在字幕结束后渐变消失
-        fade_start = subtitle_duration
-        print(f"BGM将在 {fade_start:.2f}s 开始渐变，持续 {fade_duration:.2f}s")
-        bgm_volume = bgm_volume.filter('afade', type='out', start_time=fade_start, duration=fade_duration)
+        # 不添加BGM渐弱效果
         audio_inputs.append(bgm_volume)
         
         # 3. 处理音效（如果提供了ASS文件）
@@ -878,8 +931,12 @@ def mix_audio_with_bgm_and_effects(narration_audio_path, video_duration, output_
                 if sound_events:
                     print(f"找到 {len(sound_events)} 个音效事件")
                     
+                    # 过滤重叠的音效，避免在音效持续时间内重复添加
+                    filtered_events = sound_processor.filter_overlapping_effects(sound_events)
+                    print(f"过滤重叠后剩余 {len(filtered_events)} 个音效事件")
+                    
                     # 为每个音效事件创建音频输入
-                    for event in sound_events:
+                    for event in filtered_events:
                         try:
                             sound_input = ffmpeg.input(event['sound_file'])
                             sound_volume = sound_input.filter('volume', volume=event['volume'])
@@ -891,7 +948,7 @@ def mix_audio_with_bgm_and_effects(narration_audio_path, video_duration, output_
                                 sound_delayed = sound_volume
                             
                             audio_inputs.append(sound_delayed)
-                            print(f"添加音效: {os.path.basename(event['sound_file'])} 在 {event['start_time']:.2f}s")
+                            print(f"添加音效: {os.path.basename(event['sound_file'])} 在 {event['start_time']:.2f}s (持续{event.get('duration', 2.0):.1f}s)")
                         except Exception as e:
                             print(f"处理音效失败: {event['sound_file']}, 错误: {e}")
                 else:
@@ -903,25 +960,102 @@ def mix_audio_with_bgm_and_effects(narration_audio_path, video_duration, output_
         
         # 注释：移除固定音效，现在使用智能匹配系统
         
-        # 混合所有音频
-        if len(audio_inputs) > 1:
-            # 使用first，以第一个输入（台词音频）的时长为准
-            mixed_audio = ffmpeg.filter(audio_inputs, 'amix', inputs=len(audio_inputs), duration='first')
-        else:
-            mixed_audio = audio_inputs[0]
+        # 使用分步混合的方式避免ffmpeg过滤器图冲突
+        temp_dir = os.path.dirname(output_path)
         
-        # 确保最终音频时长不超过目标时长
-        final_audio = mixed_audio.filter('atrim', duration=target_duration)
+        # 第一步：准备BGM音频
+        temp_bgm_path = os.path.join(temp_dir, "temp_bgm.mp3")
         
-        # 输出混合后的音频
+        # 输出BGM到临时文件
         (
             ffmpeg
-            .output(final_audio, output_path, acodec='mp3', audio_bitrate='128k')
+            .output(bgm_volume, temp_bgm_path, acodec='mp3', audio_bitrate='128k')
             .overwrite_output()
-            .run()
+            .run(quiet=True)
         )
         
-        print(f"音频混合成功（包含 {len(audio_inputs)} 个音轨）：{output_path}")
+        # 第二步：混合台词音频和BGM
+        temp_mixed_path = os.path.join(temp_dir, "temp_mixed.mp3")
+        narration_input = ffmpeg.input(narration_audio_path)
+        bgm_prepared = ffmpeg.input(temp_bgm_path)
+        
+        # 裁剪台词音频到目标时长
+        narration_trimmed = narration_input.filter('atrim', duration=target_duration)
+        
+        # 混合台词和BGM
+        mixed_base = ffmpeg.filter([narration_trimmed, bgm_prepared], 'amix', inputs=2, duration='first')
+        
+        (
+            ffmpeg
+            .output(mixed_base, temp_mixed_path, acodec='mp3', audio_bitrate='128k')
+            .overwrite_output()
+            .run(quiet=True)
+        )
+        
+        # 第三步：添加音效（如果有的话）
+        if merged_ass_file and os.path.exists(merged_ass_file) and sound_effects_dir and os.path.exists(sound_effects_dir):
+            print("开始处理音效...")
+            sound_processor = SoundEffectsProcessor(sound_effects_dir)
+            
+            # 解析字幕并匹配音效
+            dialogues = sound_processor.parse_ass_file(merged_ass_file)
+            if dialogues:
+                sound_events = sound_processor.match_sound_effects(dialogues)
+                
+                if sound_events:
+                    print(f"找到 {len(sound_events)} 个音效事件")
+                    
+                    # 创建音效轨道
+                    temp_effects_path = os.path.join(temp_dir, "temp_effects.mp3")
+                    if hasattr(sound_processor, 'create_effects_track'):
+                        success = sound_processor.create_effects_track(sound_events, target_duration, temp_effects_path)
+                    else:
+                        success = sound_processor.create_sound_effects_audio(sound_events, target_duration, temp_effects_path)
+                    
+                    if success and os.path.exists(temp_effects_path):
+                        # 混合基础音频和音效
+                        base_input = ffmpeg.input(temp_mixed_path)
+                        effects_input = ffmpeg.input(temp_effects_path)
+                        
+                        final_mixed = ffmpeg.filter([base_input, effects_input], 'amix', inputs=2, duration='first')
+                        
+                        (
+                            ffmpeg
+                            .output(final_mixed, output_path, acodec='mp3', audio_bitrate='128k')
+                            .overwrite_output()
+                            .run(quiet=True)
+                        )
+                        
+                        # 清理临时文件
+                        try:
+                            os.remove(temp_effects_path)
+                        except:
+                            pass
+                    else:
+                        # 音效处理失败，使用基础混合
+                        import shutil
+                        shutil.copy2(temp_mixed_path, output_path)
+                else:
+                    # 没有音效，使用基础混合
+                    import shutil
+                    shutil.copy2(temp_mixed_path, output_path)
+            else:
+                # 没有有效对话，使用基础混合
+                import shutil
+                shutil.copy2(temp_mixed_path, output_path)
+        else:
+            # 没有音效处理，使用基础混合
+            import shutil
+            shutil.copy2(temp_mixed_path, output_path)
+        
+        # 清理临时文件
+        try:
+            os.remove(temp_bgm_path)
+            os.remove(temp_mixed_path)
+        except:
+            pass
+        
+        print(f"音频混合成功：{output_path}")
         return True
         
     except Exception as e:
@@ -1004,7 +1138,7 @@ def merge_ass_files(ass_files, output_path, video_segments_info):
                                     return f'__ASS_TAG_{len(ass_tags)-1}__'
                                 text_with_placeholders = re.sub(tag_pattern, replace_tag, subtitle_text)
                                 # 移除标点符号
-                                cleaned_text = re.sub(r'[，。；：、！？""''（）【】《》〈〉「」『』〔〕［］｛｝｜～·…—–,.;:!?"''()\[\]{}|~`@#$%^&*+=<>/\\-]', '', text_with_placeholders)
+                                cleaned_text = re.sub(r'[，。；：、！？""''（）【】《》〈〉「」『』〔〕［］｛｝｜～·…—–,.;:!?"''()\\[\\]{}|~`@#$%^&*+=<>/\\-]', '', text_with_placeholders)
                                 # 恢复ASS标签
                                 for i, tag in enumerate(ass_tags):
                                     cleaned_text = cleaned_text.replace(f'__ASS_TAG_{i}__', tag)
@@ -1044,7 +1178,7 @@ def merge_ass_files(ass_files, output_path, video_segments_info):
                                     return f'__ASS_TAG_{len(ass_tags)-1}__'
                                 text_with_placeholders = re.sub(tag_pattern, replace_tag, subtitle_text)
                                 # 移除标点符号
-                                cleaned_text = re.sub(r'[，。；：、！？""''（）【】《》〈〉「」『』〔〕［］｛｝｜～·…—–,.;:!?"\'\'(\)\[\]{}|~`@#$%^&*+=<>/\\-]', '', text_with_placeholders)
+                                cleaned_text = re.sub(r'[，。；：、！？""''（）【】《》〈〉「」『』〔〕［］｛｝｜～·…—–,.;:!?"''()\\[\\]{}|~`@#$%^&*+=<>/\\-]', '', text_with_placeholders)
                                 # 恢复ASS标签
                                 for i, tag in enumerate(ass_tags):
                                     cleaned_text = cleaned_text.replace(f'__ASS_TAG_{i}__', tag)
@@ -1151,7 +1285,7 @@ def process_chapter(chapter_path):
             narration_01_duration = get_timestamps_duration(timestamps_file)
             
             # 获取指定的first_video文件时长
-            specified_first_video_path = "/Users/xunan/Projects/wrmProject/data/001/chapter_001/chapter_001_first_video.mp4"
+            specified_first_video_path = "data/001/chapter_001/chapter_001_first_video.mp4"
             if os.path.exists(specified_first_video_path):
                 _, _, _, specified_first_video_duration = get_video_info(specified_first_video_path)
                 calculated_duration = max(0, narration_01_duration - specified_first_video_duration)  # 减去指定first_video时长，确保无缝衔接
@@ -1161,46 +1295,52 @@ def process_chapter(chapter_path):
                 calculated_duration = max(0, narration_01_duration - first_video_duration)
                 print(f"Narration {narration_num}: 特殊计算时长 {narration_01_duration:.2f}s - {first_video_duration:.2f}s (当前章节) = {calculated_duration:.2f}s")
             
-            # 只使用image_01_4.jpeg生成视频
+            # 使用image_01_3.jpeg和image_01_4.jpeg生成视频
+            image_01_3_path = os.path.join(chapter_path, f"{chapter_name}_image_01_3.jpeg")
             image_01_4_path = os.path.join(chapter_path, f"{chapter_name}_image_01_4.jpeg")
-            if not os.path.exists(image_01_4_path):
-                print(f"跳过 Narration {narration_num}: 缺少图片文件 {image_01_4_path}")
+            
+            # 检查两张图片是否都存在
+            if not os.path.exists(image_01_3_path) or not os.path.exists(image_01_4_path):
+                print(f"跳过 Narration {narration_num}: 缺少图片文件 {image_01_3_path} 或 {image_01_4_path}")
                 continue
             
-            narration_video_path = os.path.join(temp_dir, f"narration_{narration_num}.mp4")
-            if image_to_video(image_01_4_path, narration_video_path, duration=calculated_duration,
-                            width=width, height=height, fps=fps):
-                image_videos.append(narration_video_path)
-                video_segments_info.append(calculated_duration)
-                print(f"Narration {narration_num} 视频生成成功，时长: {calculated_duration:.2f}s")
+            # 为每张图片生成视频，时长平均分配
+            segment_duration = calculated_duration / 2
+            narration_videos = []
+            
+            for i, image_path in enumerate([image_01_3_path, image_01_4_path], 1):
+                image_video_path = os.path.join(temp_dir, f"narration_01_{i}.mp4")
+                if image_to_video(image_path, image_video_path, duration=segment_duration,
+                                width=width, height=height, fps=fps):
+                    narration_videos.append(image_video_path)
+                    print(f"Narration {narration_num} 图片{i}视频生成成功，时长: {segment_duration:.2f}s")
+                else:
+                    print(f"生成图片视频失败: {image_path}")
+                    break
+            
+            # 只有当两个图片视频都生成成功时，才拼接它们
+            if len(narration_videos) == 2:
+                narration_video_path = os.path.join(temp_dir, f"narration_{narration_num}.mp4")
+                if concat_videos(narration_videos, narration_video_path):
+                    image_videos.append(narration_video_path)
+                    video_segments_info.append(calculated_duration)
+                    print(f"Narration {narration_num} 完整视频生成成功，时长: {calculated_duration:.2f}s")
+                    
+                    # 清理临时的单个图片视频文件
+                    for temp_video in narration_videos:
+                        try:
+                            os.remove(temp_video)
+                        except:
+                            pass
+                else:
+                    print(f"拼接narration {narration_num}的图片视频失败")
             else:
-                print(f"生成Narration {narration_num}视频失败")
+                print(f"Narration {narration_num} 图片视频生成不完整，跳过")
             continue
         
-        # 计算图片视频时长
-        if narration_num_int == 2:
-            # image_02.mp4使用特殊逻辑：narration_01时长 - 指定first_video时长 + narration_02时长
-            narration_01_timestamps = os.path.join(chapter_path, f"{chapter_name}_narration_01_timestamps.json")
-            narration_01_duration = 0
-            if os.path.exists(narration_01_timestamps):
-                narration_01_duration = get_timestamps_duration(narration_01_timestamps)
-            
-            narration_02_duration = get_timestamps_duration(timestamps_file)
-            
-            # 获取指定的first_video文件时长
-            specified_first_video_path = "/Users/xunan/Projects/wrmProject/data/001/chapter_001/chapter_001_first_video.mp4"
-            if os.path.exists(specified_first_video_path):
-                _, _, _, specified_first_video_duration = get_video_info(specified_first_video_path)
-                calculated_duration = narration_01_duration - specified_first_video_duration + narration_02_duration
-                print(f"Image_02特殊计算: {narration_01_duration:.2f}s - {specified_first_video_duration:.2f}s (指定文件) + {narration_02_duration:.2f}s = {calculated_duration:.2f}s")
-            else:
-                # 如果指定文件不存在，回退到使用当前章节的first_video时长
-                calculated_duration = narration_01_duration - first_video_duration + narration_02_duration
-                print(f"Image_02特殊计算: {narration_01_duration:.2f}s - {first_video_duration:.2f}s (当前章节) + {narration_02_duration:.2f}s = {calculated_duration:.2f}s")
-        else:
-            # 其他image视频使用对应的timestamps时长
-            calculated_duration = get_timestamps_duration(timestamps_file)
-            print(f"Narration {narration_num}: 使用timestamps时长 {calculated_duration:.2f}s")
+        # 计算图片视频时长 - 所有narration都使用自己的timestamps时长
+        calculated_duration = get_timestamps_duration(timestamps_file)
+        print(f"Narration {narration_num}: 使用timestamps时长 {calculated_duration:.2f}s")
         
         # 为每个narration生成图片视频，每个时长为总时长除以图片数量
         segment_duration = calculated_duration / len(image_paths)
@@ -1272,8 +1412,12 @@ def process_chapter(chapter_path):
     if not add_subtitle(concatenated_video, merged_ass_file, video_with_sub):
         return False
     
-    # 跳过添加角标步骤，因为每个视频片段已经包含了fuceng.mp4和rmxs.png效果
-    video_with_watermark = video_with_sub
+    # 添加水印（确保所有视频都有角标）
+    video_with_watermark = os.path.join(temp_dir, "video_with_watermark.mp4")
+    watermark_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "banner", "rmxs.png")
+    if not add_watermark(video_with_sub, watermark_path, video_with_watermark):
+        print("警告：添加水印失败，使用无水印版本")
+        video_with_watermark = video_with_sub
     
     # 查找并拼接所有可用的音频文件
     audio_files = []
@@ -1283,6 +1427,8 @@ def process_chapter(chapter_path):
             audio_files.append(audio_file)
             print(f"找到音频文件: {audio_file}")
     
+    # 生成临时的主视频文件（不包含finish.mp4）
+    temp_main_video = os.path.join(temp_dir, "main_video_without_finish.mp4")
     final_output = os.path.join(chapter_path, f"{chapter_name}_final_video.mp4")
     
     if audio_files:
@@ -1291,8 +1437,8 @@ def process_chapter(chapter_path):
         if concat_audio_files(audio_files, merged_narration_audio):
             # 获取字幕文件时长作为基准
             subtitle_duration = get_ass_duration(merged_ass_file)
-            target_video_duration = subtitle_duration + 2.0  # 字幕时长 + 2秒渐弱
-            print(f"目标视频时长: {target_video_duration:.2f}s (字幕 {subtitle_duration:.2f}s + 2秒渐弱)")
+            target_video_duration = subtitle_duration  # 字幕时长，不添加额外时间
+            print(f"目标视频时长: {target_video_duration:.2f}s (字幕 {subtitle_duration:.2f}s)")
             
             # 将台词音频与BGM和音效混合
             mixed_audio_file = os.path.join(temp_dir, "mixed_audio.mp3")
@@ -1301,37 +1447,47 @@ def process_chapter(chapter_path):
                 temp_video_adjusted = os.path.join(temp_dir, "video_adjusted.mp4")
                 if adjust_video_duration(video_with_watermark, target_video_duration, temp_video_adjusted):
                     # 添加混合后的音频
-                    if add_audio(temp_video_adjusted, mixed_audio_file, final_output, replace=True):
-                        print(f"✓ 章节视频生成成功: {final_output}")
+                    if add_audio(temp_video_adjusted, mixed_audio_file, temp_main_video, replace=True):
+                        print(f"✓ 主视频生成成功: {temp_main_video}")
                     else:
-                        print(f"添加音频失败，但保存无音频版本: {final_output}")
+                        print(f"添加音频失败，但保存无音频版本: {temp_main_video}")
                         import shutil
-                        shutil.copy2(temp_video_adjusted, final_output)
+                        shutil.copy2(temp_video_adjusted, temp_main_video)
                 else:
                     print("调整视频时长失败，使用原始视频时长")
                     # 添加混合后的音频
-                    if add_audio(video_with_watermark, mixed_audio_file, final_output, replace=True):
-                        print(f"✓ 章节视频生成成功: {final_output}")
+                    if add_audio(video_with_watermark, mixed_audio_file, temp_main_video, replace=True):
+                        print(f"✓ 主视频生成成功: {temp_main_video}")
                     else:
-                        print(f"添加音频失败，但保存无音频版本: {final_output}")
+                        print(f"添加音频失败，但保存无音频版本: {temp_main_video}")
                         import shutil
-                        shutil.copy2(video_with_watermark, final_output)
+                        shutil.copy2(video_with_watermark, temp_main_video)
             else:
                 print(f"音频混合失败，使用原始台词音频")
-                if add_audio(video_with_watermark, merged_narration_audio, final_output, replace=True):
-                    print(f"✓ 章节视频生成成功(仅台词音频): {final_output}")
+                if add_audio(video_with_watermark, merged_narration_audio, temp_main_video, replace=True):
+                    print(f"✓ 主视频生成成功(仅台词音频): {temp_main_video}")
                 else:
-                    print(f"添加音频失败，保存无音频版本: {final_output}")
+                    print(f"添加音频失败，保存无音频版本: {temp_main_video}")
                     import shutil
-                    shutil.copy2(video_with_watermark, final_output)
+                    shutil.copy2(video_with_watermark, temp_main_video)
         else:
-            print(f"音频拼接失败，保存无音频版本: {final_output}")
+            print(f"音频拼接失败，保存无音频版本: {temp_main_video}")
             import shutil
-            shutil.copy2(video_with_watermark, final_output)
+            shutil.copy2(video_with_watermark, temp_main_video)
     else:
-        print(f"未找到任何音频文件，保存无音频版本: {final_output}")
+        print(f"未找到任何音频文件，保存无音频版本: {temp_main_video}")
         import shutil
-        shutil.copy2(video_with_watermark, final_output)
+        shutil.copy2(video_with_watermark, temp_main_video)
+    
+    # 在主视频末尾拼接finish.mp4片尾视频
+    print("\n=== 拼接finish.mp4片尾视频 ===")
+    if os.path.exists(temp_main_video):
+        if append_finish_video(temp_main_video, final_output):
+            print(f"✓ 最终视频生成成功（包含finish.mp4片尾）: {final_output}")
+        else:
+            print(f"⚠️  finish.mp4拼接失败，使用主视频: {final_output}")
+    else:
+        print(f"❌ 主视频文件不存在，无法拼接finish.mp4: {temp_main_video}")
     
     # 检查视频是否符合输出标准
     print("\n=== 检查视频输出标准 ===")

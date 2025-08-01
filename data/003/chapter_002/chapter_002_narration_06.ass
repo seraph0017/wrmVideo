@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_002 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.22,Default,,0,0,0,,次日{\c&H0000FFFF&\b1}书院{\c&H00FFFFFF&\b0}门口
+Dialogue: 0,0:00:01.61,0:00:03.49,Default,,0,0,0,,闻如风和闻月{\c&H0000FFFF&\b1}引因{\c&H00FFFFFF&\b0}被书院仆
+Dialogue: 0,0:00:03.49,0:00:05.02,Default,,0,0,0,,从{\c&H0000FFFF&\b1}拦在{\c&H00FFFFFF&\b0}门外而喧哗
+Dialogue: 0,0:00:05.45,0:00:07.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落解释是自己骗他们来
+Dialogue: 0,0:00:07.09,0:00:07.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}书院{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.82,0:00:09.02,Default,,0,0,0,,引发{\c&H0000FFFF&\b1}学生{\c&H00FFFFFF&\b0}围观议论
+Dialogue: 0,0:00:09.24,0:00:10.37,Default,,0,0,0,,闻如风羞怒{\c&H0000FFFF&\b1}离开{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.65,0:00:11.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是书院门口
+Dialogue: 0,0:00:12.13,0:00:14.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}充足时间为白天
+Dialogue: 0,0:00:14.24,0:00:16.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}热闹学生众多
+Dialogue: 0,0:00:16.37,0:00:18.30,Default,,0,0,0,,闻如风身着{\c&H0000FFFF&\b1}圆领{\c&H00FFFFFF&\b0}书生服
+Dialogue: 0,0:00:18.68,0:00:19.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}面色{\c&H00FFFFFF&\b0}羞红
+Dialogue: 0,0:00:19.80,0:00:21.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}身着圆领服饰
+Dialogue: 0,0:00:21.59,0:00:23.82,Default,,0,0,0,,生气{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落身着书院服
+Dialogue: 0,0:00:24.25,0:00:26.14,Default,,0,0,0,,平静{\c&H0000FFFF&\b1}学生{\c&H00FFFFFF&\b0}们围观议论
+Dialogue: 0,0:00:26.54,0:00:27.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}衣着{\c&H00FFFFFF&\b0}各异

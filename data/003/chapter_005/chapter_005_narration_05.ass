@@ -1,0 +1,35 @@
+[Script Info]
+Title: chapter_005 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻家{\c&H00FFFFFF&\b0}众人看到如今的闻星落
+Dialogue: 0,0:00:02.25,0:00:03.09,Default,,0,0,0,,皆僵在{\c&H0000FFFF&\b1}当场{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.46,0:00:05.45,Default,,0,0,0,,以前的{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落瘦弱面黄憔悴
+Dialogue: 0,0:00:06.15,0:00:07.57,Default,,0,0,0,,如今的她梳{\c&H0000FFFF&\b1}元宝{\c&H00FFFFFF&\b0}髻
+Dialogue: 0,0:00:07.87,0:00:09.01,Default,,0,0,0,,髻边银{\c&H0000FFFF&\b1}蝴蝶{\c&H00FFFFFF&\b0}发钗
+Dialogue: 0,0:00:09.31,0:00:11.12,Default,,0,0,0,,鹅黄{\c&H0000FFFF&\b1}丝绦{\c&H00FFFFFF&\b0}身量如嫩柳
+Dialogue: 0,0:00:11.39,0:00:13.40,Default,,0,0,0,,杏{\c&H0000FFFF&\b1}粉色{\c&H00FFFFFF&\b0}对襟袄裙衬得娇嫩柔
+Dialogue: 0,0:00:13.40,0:00:14.41,Default,,0,0,0,,软肤{\c&H0000FFFF&\b1}白若雪{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.76,0:00:16.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}眉黛{\c&H00FFFFFF&\b0}青颦莲脸生春
+Dialogue: 0,0:00:16.58,0:00:18.89,Default,,0,0,0,,颊边绯红圆杏眼{\c&H0000FFFF&\b1}乌润{\c&H00FFFFFF&\b0}清澈
+Dialogue: 0,0:00:19.61,0:00:21.57,Default,,0,0,0,,闻{\c&H0000FFFF&\b1}如云{\c&H00FFFFFF&\b0}看着闻星落送的绫布
+Dialogue: 0,0:00:21.95,0:00:23.81,Default,,0,0,0,,面露渴望{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落询问
+Dialogue: 0,0:00:24.29,0:00:25.42,Default,,0,0,0,,闻{\c&H0000FFFF&\b1}如云{\c&H00FFFFFF&\b0}假意嫌弃
+Dialogue: 0,0:00:25.85,0:00:27.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落要将绫布搬回马车
+Dialogue: 0,0:00:28.27,0:00:29.12,Default,,0,0,0,,闻{\c&H0000FFFF&\b1}如云{\c&H00FFFFFF&\b0}不舍
+Dialogue: 0,0:00:29.59,0:00:31.96,Default,,0,0,0,,闻{\c&H0000FFFF&\b1}如云{\c&H00FFFFFF&\b0}着圆领服饰面露渴望
+Dialogue: 0,0:00:32.31,0:00:33.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落着圆领杏粉色对
+Dialogue: 0,0:00:33.88,0:00:34.50,Default,,0,0,0,,襟袄裙
+Dialogue: 0,0:00:34.76,0:00:35.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}从容{\c&H00FFFFFF&\b0}询问

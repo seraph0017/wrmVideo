@@ -1,0 +1,42 @@
+[Script Info]
+Title: chapter_005 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.52,Default,,0,0,0,,正月间{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}每日有宾客拜年
+Dialogue: 0,0:00:02.94,0:00:04.58,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}带闻星落交际夫
+Dialogue: 0,0:00:04.58,0:00:05.11,Default,,0,0,0,,人{\c&H0000FFFF&\b1}小姐{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.62,0:00:06.40,Default,,0,0,0,,用过{\c&H0000FFFF&\b1}午膳{\c&H00FFFFFF&\b0}后
+Dialogue: 0,0:00:06.75,0:00:08.04,Default,,0,0,0,,后{\c&H0000FFFF&\b1}园子{\c&H00FFFFFF&\b0}搭台唱戏
+Dialogue: 0,0:00:08.35,0:00:09.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落服侍老太妃更衣
+Dialogue: 0,0:00:10.08,0:00:11.87,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}教导闻星落从内宅妇
+Dialogue: 0,0:00:11.87,0:00:13.55,Default,,0,0,0,,人可窥探{\c&H0000FFFF&\b1}官场{\c&H00FFFFFF&\b0}上的亲疏远
+Dialogue: 0,0:00:13.55,0:00:14.64,Default,,0,0,0,,近和各家{\c&H0000FFFF&\b1}动向{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.90,0:00:15.90,Default,,0,0,0,,不能小瞧{\c&H0000FFFF&\b1}交际{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.14,0:00:17.77,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在后园子附近
+Dialogue: 0,0:00:18.36,0:00:20.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气{\c&H00FFFFFF&\b0}应是适宜光线充足
+Dialogue: 0,0:00:21.07,0:00:22.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落继续保持之前的装扮
+Dialogue: 0,0:00:23.20,0:00:23.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}乖巧{\c&H00FFFFFF&\b0}聆听
+Dialogue: 0,0:00:24.30,0:00:25.71,Default,,0,0,0,,接着垂{\c&H0000FFFF&\b1}花厅{\c&H00FFFFFF&\b0}里
+Dialogue: 0,0:00:26.00,0:00:27.83,Default,,0,0,0,,赵母携{\c&H0000FFFF&\b1}赵小姐{\c&H00FFFFFF&\b0}登门拜年送
+Dialogue: 0,0:00:27.83,0:00:28.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}重礼{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:28.48,0:00:30.14,Default,,0,0,0,,求老太妃为{\c&H0000FFFF&\b1}赵都护{\c&H00FFFFFF&\b0}说情
+Dialogue: 0,0:00:30.43,0:00:31.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落接待
+Dialogue: 0,0:00:31.46,0:00:32.50,Default,,0,0,0,,告知{\c&H0000FFFF&\b1}祖母{\c&H00FFFFFF&\b0}午睡
+Dialogue: 0,0:00:32.84,0:00:34.11,Default,,0,0,0,,让她们带{\c&H0000FFFF&\b1}礼物{\c&H00FFFFFF&\b0}回去
+Dialogue: 0,0:00:34.35,0:00:35.75,Default,,0,0,0,,并赐给{\c&H0000FFFF&\b1}赵小姐{\c&H00FFFFFF&\b0}玉环
+Dialogue: 0,0:00:36.12,0:00:38.23,Default,,0,0,0,,寓意还家{\c&H0000FFFF&\b1}赵小姐{\c&H00FFFFFF&\b0}脸红难过
+Dialogue: 0,0:00:38.62,0:00:39.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}母女俩{\c&H00FFFFFF&\b0}告退
+Dialogue: 0,0:00:39.63,0:00:40.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵母{\c&H00FFFFFF&\b0}着圆领服饰
+Dialogue: 0,0:00:41.15,0:00:42.95,Default,,0,0,0,,堆笑{\c&H0000FFFF&\b1}赵小姐{\c&H00FFFFFF&\b0}怯生生

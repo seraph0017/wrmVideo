@@ -1,0 +1,27 @@
+{
+  "category": "Male/23-30_YoungAdult/Modern/Sunny",
+  "description": "阳光气质（如开朗职场新人、暖男）",
+  "style": "Modern",
+  "age_group": "23-30_YoungAdult",
+  "gender": "Male",
+  "temperament": "Sunny",
+  "tags": ["sunny", "cheerful", "warm", "optimistic", "friendly"],
+  "suitable_novel_types": ["都市文", "校园文", "职场文"],
+  "character_traits": {
+    "personality": "开朗、阳光、积极向上",
+    "appearance": "清爽干净、笑容温暖",
+    "clothing_style": "休闲商务、时尚简约"
+  },
+  "usage_scenarios": [
+    "男主角初登场",
+    "温馨日常场景",
+    "职场励志情节",
+    "校园青春片段"
+  ],
+  "image_requirements": {
+    "expression": "自然微笑、眼神明亮",
+    "pose": "自信放松的姿态",
+    "background": "现代都市、办公室、校园等",
+    "lighting": "明亮自然光"
+  }
+}

@@ -175,13 +175,17 @@ def merge_videos_with_ffmpeg(video1_path, video2_path, output_path):
                 concatenated_v = ffmpeg.concat(video1_v, video2_with_transition, v=1, a=0)
                 concatenated_a = ffmpeg.concat(video1_a, video2_a, v=0, a=1)
                 
-                # 合并视频和音频流
-                concatenated = ffmpeg.output(concatenated_v, concatenated_a, output_path, vcodec='libx264', acodec='aac')
+                # 合并视频和音频流，添加关键帧设置确保与后续视频拼接兼容
+                concatenated = ffmpeg.output(concatenated_v, concatenated_a, output_path, 
+                                           vcodec='libx264', acodec='aac', r=30,
+                                           **{'g': 30, 'keyint_min': 30})  # 设置关键帧间隔和帧率，每1秒一个关键帧
             else:
                 # 只处理视频流
                 video1_v = video1_input.video
                 concatenated_v = ffmpeg.concat(video1_v, video2_with_transition, v=1, a=0)
-                concatenated = ffmpeg.output(concatenated_v, output_path, vcodec='libx264')
+                concatenated = ffmpeg.output(concatenated_v, output_path, 
+                                           vcodec='libx264', r=30,
+                                           **{'g': 30, 'keyint_min': 30})  # 设置关键帧间隔和帧率，每1秒一个关键帧
         else:
             print(f"警告: fuceng1.mov文件不存在: {fuceng_path}，使用普通拼接")
             # 如果转场文件不存在，使用普通拼接
@@ -199,7 +203,8 @@ def merge_videos_with_ffmpeg(video1_path, video2_path, output_path):
             # 如果是普通的拼接流
             (
                 concatenated
-                .output(output_path, vcodec='libx264', acodec='aac')
+                .output(output_path, vcodec='libx264', acodec='aac', r=30,
+                       **{'g': 30, 'keyint_min': 30})  # 设置关键帧间隔和帧率，每1秒一个关键帧
                 .overwrite_output()
                 .run(quiet=False, capture_stdout=True, capture_stderr=True)
             )
@@ -220,13 +225,17 @@ def merge_videos_with_ffmpeg(video1_path, video2_path, output_path):
                 f.write(f"file '{os.path.abspath(video1_path)}'\n")
                 f.write(f"file '{os.path.abspath(video2_path)}'\n")
             
-            # 使用ffmpeg合并视频
+            # 使用ffmpeg合并视频，添加关键帧设置确保与后续视频拼接兼容
             cmd = [
                 'ffmpeg',
                 '-f', 'concat',
                 '-safe', '0',
                 '-i', temp_list_file,
-                '-c', 'copy',
+                '-c:v', 'libx264',  # 重新编码视频以设置关键帧
+                '-c:a', 'aac',      # 重新编码音频
+                '-r', '30',         # 帧率
+                '-g', '30',         # 关键帧间隔
+                '-keyint_min', '30', # 最小关键帧间隔
                 '-y',  # 覆盖输出文件
                 output_path
             ]

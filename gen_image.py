@@ -189,7 +189,7 @@ def generate_image_with_character(prompt, output_path, character_images=None, st
         print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
         
         # 构建完整的prompt
-        full_prompt = "以以下内容为描述生成图片\n风格：宫崎骏画风，换个姿势,人物着装：圆领袍 \n\n" + style_prompt + "\n\n" + prompt + "\n\n"
+        full_prompt = "以以下内容为描述生成图片\n宫崎骏动漫风格，数字插画,高饱和度,卡通,简约画风,完整色块,整洁的画面,宫崎骏艺术风格,高饱和的色彩和柔和的阴影,童话色彩,人物着装：圆领袍 \n\n" + style_prompt + "\n\n" + prompt + "\n\n"
         
         print("这里是完整的prompt===>>>{}".format(full_prompt))
         
@@ -255,6 +255,113 @@ def generate_image_with_character(prompt, output_path, character_images=None, st
             
     except Exception as e:
         print(f"生成图片时发生错误: {e}")
+        return False
+
+def generate_images_for_chapter(chapter_dir):
+    """
+    为单个章节生成图片
+    
+    Args:
+        chapter_dir: 章节目录路径
+    
+    Returns:
+        bool: 是否成功生成图片
+    """
+    try:
+        chapter_name = os.path.basename(chapter_dir)
+        print(f"=== 开始为章节 {chapter_name} 生成图片 ===")
+        print(f"章节目录: {chapter_dir}")
+        
+        if not os.path.exists(chapter_dir):
+            print(f"错误: 章节目录不存在 {chapter_dir}")
+            return False
+        
+        # 查找narration文件
+        narration_file = os.path.join(chapter_dir, "narration.txt")
+        if not os.path.exists(narration_file):
+            print(f"错误: narration文件不存在 {narration_file}")
+            return False
+        
+        # 解析narration文件
+        scenes, drawing_style = parse_narration_file(narration_file)
+        
+        if not scenes:
+            print(f"错误: 未找到分镜信息")
+            return False
+        
+        print(f"找到 {len(scenes)} 个分镜")
+        
+        # 获取绘画风格的model_prompt
+        style_prompt = ""
+        if drawing_style and drawing_style in STORY_STYLE:
+            style_config = STORY_STYLE[drawing_style]
+            if isinstance(style_config.get('model_prompt'), list):
+                style_prompt = style_config['model_prompt'][0]  # 取第一个
+            else:
+                style_prompt = style_config.get('model_prompt', '')
+            print(f"使用风格提示: {style_prompt}")
+        
+        success_count = 0
+        
+        # 为每个分镜的每个特写生成图片
+        for i, scene in enumerate(scenes, 1):
+            closeups = scene['closeups']
+            
+            print(f"\n  处理第 {i}/{len(scenes)} 个分镜，包含 {len(closeups)} 个特写")
+            
+            # 为每个特写生成图片
+            for j, closeup in enumerate(closeups, 1):
+                prompt = closeup['prompt']
+                character = closeup.get('character', '')
+                
+                print(f"    生成特写 {j}: {chapter_name}_image_{i:02d}_{j}.jpeg")
+                print(f"    特写角色: {character}")
+                
+                # 查找当前特写的角色图片
+                character_images = []
+                if character:
+                    char_img_path = find_character_image(chapter_dir, character)
+                    if char_img_path:
+                        character_images.append(char_img_path)
+                
+                # 根据角色性别调整视角
+                view_angle_prompt = ""
+                if character:
+                    # 重新读取narration文件内容来解析性别
+                    with open(narration_file, 'r', encoding='utf-8') as f:
+                        narration_content = f.read()
+                    
+                    character_gender = parse_character_gender(narration_content, character)
+                    print(f"    角色性别: {character_gender}")
+                    
+                    # 根据性别决定视角
+                    if character_gender == '女':
+                        view_angle_prompt = "，背部视角，看不到领口和正面"
+                    else:
+                        view_angle_prompt = "，正面视角，清晰面部特征"
+                
+                # 构建完整的prompt，加入风格提示和视角要求
+                if style_prompt:
+                    full_prompt = f"{prompt}{view_angle_prompt}，{style_prompt}"
+                else:
+                    full_prompt = f"{prompt}{view_angle_prompt}"
+                
+                # 生成图片
+                image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}_{j}.jpeg")
+                
+                if generate_image_with_character(full_prompt, image_path, character_images, drawing_style):
+                    print(f"    ✓ 特写 {j} 生成成功")
+                    success_count += 1
+                else:
+                    print(f"    ✗ 特写 {j} 生成失败")
+        
+        # 计算该章节生成的图片总数
+        total_images = sum(len(scene['closeups']) for scene in scenes)
+        print(f"\n章节 {chapter_name} 处理完成，共 {len(scenes)} 个分镜，成功生成 {success_count}/{total_images} 张图片")
+        return success_count > 0
+        
+    except Exception as e:
+        print(f"生成章节图片时发生错误: {e}")
         return False
 
 def generate_images_from_scripts(data_dir):
@@ -386,13 +493,25 @@ def generate_images_from_scripts(data_dir):
 
 def main():
     parser = argparse.ArgumentParser(description='独立的图片生成脚本')
-    parser.add_argument('data_dir', help='数据目录路径')
+    parser.add_argument('input_path', help='输入路径（可以是单个章节目录或包含多个章节的数据目录）')
     
     args = parser.parse_args()
     
-    print(f"目标路径: {args.data_dir}")
+    print(f"目标路径: {args.input_path}")
     
-    success = generate_images_from_scripts(args.data_dir)
+    # 检查输入路径是单个章节还是数据目录
+    if os.path.isdir(args.input_path):
+        # 检查是否是单个章节目录
+        if os.path.basename(args.input_path).startswith('chapter_') and os.path.exists(os.path.join(args.input_path, 'narration.txt')):
+            print("检测到单个章节目录")
+            success = generate_images_for_chapter(args.input_path)
+        else:
+            print("检测到数据目录，将处理所有章节")
+            success = generate_images_from_scripts(args.input_path)
+    else:
+        print(f"错误: 路径不存在 {args.input_path}")
+        sys.exit(1)
+    
     if success:
         print(f"\n✓ 图片生成完成")
     else:

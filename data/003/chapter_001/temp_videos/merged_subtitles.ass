@@ -1,0 +1,127 @@
+[Script Info]
+Title: chapter_001 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0, 0:00:00.02, 0:00:02.56,Default,,0,0,0,,桃杏绽放{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}洒在翠绿之处
+Dialogue: 0, 0:00:03.00, 0:00:04.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落伫立在镇北王府前
+Dialogue: 0, 0:00:05.33, 0:00:06.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}回忆起{\c&H00FFFFFF&\b0}前世的种种
+Dialogue: 0, 0:00:07.00, 0:00:07.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}此时{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:07.83, 0:00:09.50,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}在万松院内与谢观
+Dialogue: 0, 0:00:09.50, 0:00:10.08,Default,,0,0,0,,澜{\c&H0000FFFF&\b1}交谈{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:10.34, 0:00:11.81,Default,,0,0,0,,探讨如何娇养{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落
+Dialogue: 0, 0:00:12.05, 0:00:13.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落被侍女引入内室
+Dialogue: 0, 0:00:13.84, 0:00:14.86,Default,,0,0,0,,向老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}行礼
+Dialogue: 0, 0:00:15.23, 0:00:16.94,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}取出一对金镯子赠
+Dialogue: 0, 0:00:16.94, 0:00:17.33,Default,,0,0,0,,予她
+Dialogue: 0, 0:00:17.69, 0:00:18.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落乖巧道谢
+Dialogue: 0, 0:00:19.35, 0:00:20.28,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}在旁
+Dialogue: 0, 0:00:20.58, 0:00:21.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}姿态{\c&H00FFFFFF&\b0}矜贵疏离
+Dialogue: 0, 0:00:21.87, 0:00:23.37,Default,,0,0,0,,场景处于{\c&H0000FFFF&\b1}镇北{\c&H00FFFFFF&\b0}王府内
+Dialogue: 0, 0:00:23.91, 0:00:25.83,Default,,0,0,0,,春日{\c&H0000FFFF&\b1}氛围{\c&H00FFFFFF&\b0}浓厚光线明亮
+Dialogue: 0, 0:00:26.10, 0:00:26.67,Default,,0,0,0,,两{\c&H0000FFFF&\b1}日后{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:27.06, 0:00:28.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落乘坐马车前往白
+Dialogue: 0, 0:00:28.73, 0:00:29.27,Default,,0,0,0,,鹤{\c&H0000FFFF&\b1}书院{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:29.79, 0:00:31.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾{\c&H00FFFFFF&\b0}安同车相伴
+Dialogue: 0, 0:00:31.44, 0:00:33.83,Default,,0,0,0,,途中望见谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}骑马相送
+Dialogue: 0, 0:00:34.22, 0:00:36.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}对闻星落言语间带
+Dialogue: 0, 0:00:36.05, 0:00:37.20,Default,,0,0,0,,有些许{\c&H0000FFFF&\b1}阴阳怪气{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:37.51, 0:00:39.35,Default,,0,0,0,,谢观澜注意到{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落手腕上
+Dialogue: 0, 0:00:39.35, 0:00:40.02,Default,,0,0,0,,的{\c&H0000FFFF&\b1}金手镯{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:40.38, 0:00:42.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}出言{\c&H00FFFFFF&\b0}赞扬却隐含嘲讽之意
+Dialogue: 0, 0:00:42.53, 0:00:44.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落随即摘下金手镯
+Dialogue: 0, 0:00:44.48, 0:00:46.52,Default,,0,0,0,,场景为马车{\c&H0000FFFF&\b1}中及{\c&H00FFFFFF&\b0}途中街道
+Dialogue: 0, 0:00:46.95, 0:00:48.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}光线充足
+Dialogue: 0, 0:00:48.87, 0:00:49.64,Default,,0,0,0,,回到{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:49.97, 0:00:51.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落与谢拾安被镇北王
+Dialogue: 0, 0:00:51.82, 0:00:52.65,Default,,0,0,0,,唤至{\c&H0000FFFF&\b1}书房{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:00:53.07, 0:00:55.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}因考试成绩不佳遭打
+Dialogue: 0, 0:00:55.82, 0:00:56.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落在旁静观
+Dialogue: 0, 0:00:57.24, 0:00:58.81,Default,,0,0,0,,随后在万{\c&H0000FFFF&\b1}松院{\c&H00FFFFFF&\b0}用晚膳
+Dialogue: 0, 0:00:59.09, 0:01:00.78,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}关心闻星落不戴金
+Dialogue: 0, 0:01:00.78, 0:01:01.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}手镯{\c&H00FFFFFF&\b0}之事
+Dialogue: 0, 0:01:01.80, 0:01:03.43,Default,,0,0,0,,又赠予她金手镯与{\c&H0000FFFF&\b1}金步摇{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:03.70, 0:01:04.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾{\c&H00FFFFFF&\b0}安不服
+Dialogue: 0, 0:01:05.04, 0:01:06.11,Default,,0,0,0,,被老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}教训
+Dialogue: 0, 0:01:06.68, 0:01:07.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}夜晚{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:07.32, 0:01:09.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落在回廊偶遇谢观澜
+Dialogue: 0, 0:01:09.61, 0:01:11.13,Default,,0,0,0,,表达想归还{\c&H0000FFFF&\b1}赏赐{\c&H00FFFFFF&\b0}之意
+Dialogue: 0, 0:01:11.65, 0:01:13.65,Default,,0,0,0,,谢观澜却将锦盒丢入{\c&H0000FFFF&\b1}池塘{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:14.05, 0:01:15.53,Default,,0,0,0,,场景涵盖{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}书房
+Dialogue: 0, 0:01:15.84, 0:01:16.90,Default,,0,0,0,,万{\c&H0000FFFF&\b1}松院{\c&H00FFFFFF&\b0}及回廊
+Dialogue: 0, 0:01:17.17, 0:01:18.77,Default,,0,0,0,,光线从{\c&H0000FFFF&\b1}白昼{\c&H00FFFFFF&\b0}转至夜晚
+Dialogue: 0, 0:01:19.02, 0:01:20.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落返回寝屋
+Dialogue: 0, 0:01:20.71, 0:01:22.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻家{\c&H00FFFFFF&\b0}三位兄长登门拜访
+Dialogue: 0, 0:01:22.86, 0:01:24.82,Default,,0,0,0,,要求她让出{\c&H0000FFFF&\b1}白鹤{\c&H00FFFFFF&\b0}书院读书机
+Dialogue: 0, 0:01:24.82, 0:01:25.64,Default,,0,0,0,,会予{\c&H0000FFFF&\b1}姐姐{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:26.04, 0:01:27.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落巧妙应对
+Dialogue: 0, 0:01:27.48, 0:01:29.32,Default,,0,0,0,,称{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}娘娘拟安排哥哥们入
+Dialogue: 0, 0:01:29.32, 0:01:29.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}书院{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:30.09, 0:01:31.66,Default,,0,0,0,,令三位{\c&H0000FFFF&\b1}兄长{\c&H00FFFFFF&\b0}陷入纠结
+Dialogue: 0, 0:01:31.98, 0:01:34.20,Default,,0,0,0,,而后谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}抱臂倚于骏马旁
+Dialogue: 0, 0:01:34.48, 0:01:35.81,Default,,0,0,0,,嘲讽{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落的算计
+Dialogue: 0, 0:01:36.09, 0:01:37.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落巧妙回应
+Dialogue: 0, 0:01:37.60, 0:01:39.48,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}后门及周边
+Dialogue: 0, 0:01:39.76, 0:01:40.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}昏暗
+Dialogue: 0, 0:01:40.67, 0:01:42.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落获悉谢拾安当日出府
+Dialogue: 0, 0:01:43.13, 0:01:44.69,Default,,0,0,0,,担忧其遇前世{\c&H0000FFFF&\b1}事故{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:45.14, 0:01:46.18,Default,,0,0,0,,遂赶赴{\c&H0000FFFF&\b1}金味斋{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:01:46.57, 0:01:48.68,Default,,0,0,0,,于{\c&H0000FFFF&\b1}金味斋{\c&H00FFFFFF&\b0}提醒掌柜检修横梁
+Dialogue: 0, 0:01:48.93, 0:01:50.17,Default,,0,0,0,,避免{\c&H0000FFFF&\b1}酒楼{\c&H00FFFFFF&\b0}坍塌之灾
+Dialogue: 0, 0:01:50.46, 0:01:52.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}对闻星落态度转变
+Dialogue: 0, 0:01:52.61, 0:01:53.68,Default,,0,0,0,,认其{\c&H0000FFFF&\b1}心肠{\c&H00FFFFFF&\b0}善良
+Dialogue: 0, 0:01:53.87, 0:01:54.78,Default,,0,0,0,,返回{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}后
+Dialogue: 0, 0:01:55.10, 0:01:56.90,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}对闻星落表达感激
+Dialogue: 0, 0:01:57.15, 0:01:59.17,Default,,0,0,0,,谢观澜询问{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落发觉横
+Dialogue: 0, 0:01:59.17, 0:02:00.06,Default,,0,0,0,,梁{\c&H0000FFFF&\b1}歪斜{\c&H00FFFFFF&\b0}之因
+Dialogue: 0, 0:02:00.53, 0:02:02.42,Default,,0,0,0,,场景包括{\c&H0000FFFF&\b1}金味斋{\c&H00FFFFFF&\b0}与王府
+Dialogue: 0, 0:02:02.75, 0:02:04.54,Default,,0,0,0,,光线从{\c&H0000FFFF&\b1}白昼{\c&H00FFFFFF&\b0}转至黄昏
+Dialogue: 0, 0:02:04.79, 0:02:06.69,Default,,0,0,0,,谢观澜询问{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落察觉金
+Dialogue: 0, 0:02:06.69, 0:02:07.98,Default,,0,0,0,,味斋{\c&H0000FFFF&\b1}横梁{\c&H00FFFFFF&\b0}歪斜之由
+Dialogue: 0, 0:02:08.45, 0:02:09.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落不卑不亢回应
+Dialogue: 0, 0:02:10.49, 0:02:12.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}端着枣泥糕入内
+Dialogue: 0, 0:02:12.44, 0:02:13.82,Default,,0,0,0,,邀请{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落称其四哥
+Dialogue: 0, 0:02:14.12, 0:02:15.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落脆爽应之
+Dialogue: 0, 0:02:15.56, 0:02:16.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾{\c&H00FFFFFF&\b0}安欣喜回应
+Dialogue: 0, 0:02:17.25, 0:02:18.73,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}则离开展院
+Dialogue: 0, 0:02:19.00, 0:02:21.54,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}万松院光线昏黄
+Dialogue: 0, 0:02:21.81, 0:02:23.89,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}告知闻星落下月是其
+Dialogue: 0, 0:02:23.89, 0:02:24.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}六十大寿{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:25.02, 0:02:26.89,Default,,0,0,0,,询问{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落打算赠送之礼
+Dialogue: 0, 0:02:27.21, 0:02:28.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落思索
+Dialogue: 0, 0:02:28.33, 0:02:30.62,Default,,0,0,0,,回忆前世老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}对己之态度
+Dialogue: 0, 0:02:30.94, 0:02:32.78,Default,,0,0,0,,今欲献合适{\c&H0000FFFF&\b1}礼物{\c&H00FFFFFF&\b0}表心意
+Dialogue: 0, 0:02:33.02, 0:02:35.52,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}万松院光线柔和
+Dialogue: 0, 0:02:35.78, 0:02:37.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落着手筹备老太妃六
+Dialogue: 0, 0:02:37.65, 0:02:38.48,Default,,0,0,0,,十{\c&H0000FFFF&\b1}大寿{\c&H00FFFFFF&\b0}之礼
+Dialogue: 0, 0:02:38.88, 0:02:40.25,Default,,0,0,0,,四处寻觅合适{\c&H0000FFFF&\b1}材料{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:40.63, 0:02:41.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}思索{\c&H00FFFFFF&\b0}如何表心意
+Dialogue: 0, 0:02:42.22, 0:02:43.72,Default,,0,0,0,,走访{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}周边市集
+Dialogue: 0, 0:02:43.94, 0:02:44.90,Default,,0,0,0,,观察各类{\c&H0000FFFF&\b1}物品{\c&H00FFFFFF&\b0}
+Dialogue: 0, 0:02:45.19, 0:02:47.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}试图{\c&H00FFFFFF&\b0}寻得独特且表敬意之礼
+Dialogue: 0, 0:02:47.35, 0:02:49.00,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}周边市集
+Dialogue: 0, 0:02:49.19, 0:02:49.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}明亮
+Dialogue: 0, 0:02:50.08, 0:02:51.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落精心挑选礼物
+Dialogue: 0, 0:02:52.02, 0:02:53.96,Default,,0,0,0,,拟于老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}六十大寿时献上
+Dialogue: 0, 0:02:54.27, 0:02:56.46,Default,,0,0,0,,返{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}后将礼物妥善安置
+Dialogue: 0, 0:02:56.73, 0:02:57.94,Default,,0,0,0,,心盼得老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}喜爱
+Dialogue: 0, 0:02:58.35, 0:03:00.26,Default,,0,0,0,,此时谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}于旁注视
+Dialogue: 0, 0:03:00.50, 0:03:01.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}眼神{\c&H00FFFFFF&\b0}复杂
+Dialogue: 0, 0:03:01.55, 0:03:03.76,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}内室光线柔和
+Dialogue: 0, 0:03:04.01, 0:03:06.00,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}六十大寿如期而至
+Dialogue: 0, 0:03:06.38, 0:03:09.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}内外张灯结彩热闹非凡
+Dialogue: 0, 0:03:09.51, 0:03:11.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落献上精心筹备之礼
+Dialogue: 0, 0:03:11.68, 0:03:12.55,Default,,0,0,0,,老{\c&H0000FFFF&\b1}太妃{\c&H00FFFFFF&\b0}甚喜
+Dialogue: 0, 0:03:12.81, 0:03:14.20,Default,,0,0,0,,对{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落赞赏有加
+Dialogue: 0, 0:03:14.45, 0:03:15.71,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}于旁观察
+Dialogue: 0, 0:03:16.01, 0:03:18.05,Default,,0,0,0,,虽未多言{\c&H0000FFFF&\b1}眼神{\c&H00FFFFFF&\b0}似有变化
+Dialogue: 0, 0:03:18.29, 0:03:20.46,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}内外光线喜庆

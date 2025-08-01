@@ -1,0 +1,47 @@
+[Script Info]
+Title: chapter_007 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:00.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}梨花{\c&H00FFFFFF&\b0}树下
+Dialogue: 0,0:00:01.26,0:00:03.10,Default,,0,0,0,,谢观澜对{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落杀意尽显
+Dialogue: 0,0:00:03.50,0:00:04.51,Default,,0,0,0,,手搭腰间{\c&H0000FFFF&\b1}佩剑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.89,0:00:07.04,Default,,0,0,0,,此时{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}被争执声吵醒
+Dialogue: 0,0:00:07.53,0:00:08.43,Default,,0,0,0,,拄着{\c&H0000FFFF&\b1}拐杖{\c&H00FFFFFF&\b0}出现
+Dialogue: 0,0:00:08.82,0:00:10.80,Default,,0,0,0,,称参加{\c&H0000FFFF&\b1}演武{\c&H00FFFFFF&\b0}比试是自己意愿
+Dialogue: 0,0:00:11.06,0:00:12.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}后果{\c&H00FFFFFF&\b0}自己承担
+Dialogue: 0,0:00:12.30,0:00:13.21,Default,,0,0,0,,与{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落无关
+Dialogue: 0,0:00:13.57,0:00:14.81,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}冷漠回应
+Dialogue: 0,0:00:15.01,0:00:15.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}佩剑{\c&H00FFFFFF&\b0}又出鞘
+Dialogue: 0,0:00:16.27,0:00:18.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾{\c&H00FFFFFF&\b0}安认真表示不想一直被
+Dialogue: 0,0:00:18.18,0:00:18.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}大哥{\c&H00FFFFFF&\b0}保护
+Dialogue: 0,0:00:19.23,0:00:20.27,Default,,0,0,0,,想保护{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落
+Dialogue: 0,0:00:20.62,0:00:21.93,Default,,0,0,0,,像{\c&H0000FFFF&\b1}大哥{\c&H00FFFFFF&\b0}保护他那般
+Dialogue: 0,0:00:22.24,0:00:23.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落眼眶通红
+Dialogue: 0,0:00:23.82,0:00:25.81,Default,,0,0,0,,伏在谢拾安{\c&H0000FFFF&\b1}胸膛{\c&H00FFFFFF&\b0}哽咽道歉
+Dialogue: 0,0:00:26.32,0:00:27.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾{\c&H00FFFFFF&\b0}安安慰她
+Dialogue: 0,0:00:27.70,0:00:29.08,Default,,0,0,0,,让谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}别招惹她
+Dialogue: 0,0:00:29.43,0:00:30.27,Default,,0,0,0,,说她好难哄
+Dialogue: 0,0:00:30.62,0:00:31.88,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}冷眼离去
+Dialogue: 0,0:00:32.30,0:00:33.71,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}在梨花树下
+Dialogue: 0,0:00:34.01,0:00:35.69,Default,,0,0,0,,手握{\c&H0000FFFF&\b1}佩剑{\c&H00FFFFFF&\b0}眼神冰冷
+Dialogue: 0,0:00:35.90,0:00:37.06,Default,,0,0,0,,谢拾安拄着{\c&H0000FFFF&\b1}拐杖{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:37.41,0:00:38.59,Default,,0,0,0,,走到{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落身边
+Dialogue: 0,0:00:38.94,0:00:40.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落伏在谢拾安胸膛
+Dialogue: 0,0:00:40.91,0:00:43.09,Default,,0,0,0,,哽咽谢拾安安慰{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落
+Dialogue: 0,0:00:43.39,0:00:44.80,Default,,0,0,0,,场景是{\c&H0000FFFF&\b1}王府{\c&H00FFFFFF&\b0}院子
+Dialogue: 0,0:00:45.13,0:00:46.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}梨花{\c&H00FFFFFF&\b0}飘落月色如旧
+Dialogue: 0,0:00:47.30,0:00:49.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}画面{\c&H00FFFFFF&\b0}构图是中景展现三
+Dialogue: 0,0:00:49.12,0:00:49.59,Default,,0,0,0,,人{\c&H0000FFFF&\b1}互动{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:49.97,0:00:51.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}光影{\c&H00FFFFFF&\b0}突出紧张氛围

@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_002 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.12,Default,,0,0,0,,闻星落求谢观澜写{\c&H0000FFFF&\b1}贺寿词{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.52,0:00:03.34,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}答应
+Dialogue: 0,0:00:03.65,0:00:05.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落临摹绣制考试进步
+Dialogue: 0,0:00:06.18,0:00:07.81,Default,,0,0,0,,闻如{\c&H0000FFFF&\b1}风闻{\c&H00FFFFFF&\b0}月引讨论成绩
+Dialogue: 0,0:00:08.10,0:00:08.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落反驳
+Dialogue: 0,0:00:09.28,0:00:10.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是学堂内和绣房
+Dialogue: 0,0:00:11.08,0:00:12.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}充足时间为白天
+Dialogue: 0,0:00:13.23,0:00:14.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}学堂{\c&H00FFFFFF&\b0}内布置整洁
+Dialogue: 0,0:00:14.80,0:00:15.74,Default,,0,0,0,,绣房内{\c&H0000FFFF&\b1}安静{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.98,0:00:17.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落身着圆领
+Dialogue: 0,0:00:17.41,0:00:20.02,Default,,0,0,0,,临摹谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}身着深色圆领袍
+Dialogue: 0,0:00:20.34,0:00:22.64,Default,,0,0,0,,写词闻如风身着{\c&H0000FFFF&\b1}圆领{\c&H00FFFFFF&\b0}衣
+Dialogue: 0,0:00:22.84,0:00:25.47,Default,,0,0,0,,生气{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落身着圆领自信
