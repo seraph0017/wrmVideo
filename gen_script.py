@@ -738,36 +738,11 @@ class ScriptGenerator:
             env = Environment(loader=FileSystemLoader(template_dir))
             template = env.get_template('chapter_narration_prompt.j2')
             
-            # 示例人物数据（实际使用时可以从章节内容中提取或预定义）
-            characters = [
-                {
-                    'name': '主角',
-                    'height_build': '身材高大（约180cm），体型匀称',
-                    'hair_color': '乌黑色',
-                    'hair_style': '短发寸头',
-                    'hair_texture': '直发',
-                    'eye_color': '深棕色',
-                    'eye_shape': '丹凤眼',
-                    'eye_expression': '眼神犀利专注',
-                    'face_shape': '方形脸',
-                    'chin_shape': '方形下巴',
-                    'skin_tone': '健康肤色',
-                    'clothing_color': '深蓝色',
-                    'clothing_style': '长款羊毛风衣',
-                    'clothing_material': '羊毛',
-                    'glasses': '黑框眼镜',
-                    'jewelry': '银色金属表带手表',
-                    'other_accessories': '无',
-                    'expression_posture': '给人可靠专业的感觉'
-                }
-            ]
-            
             # 渲染模板
             custom_prompt = template.render(
                 chapter_num=chapter_num,
                 total_chapters=total_chapters,
-                chapter_content=chapter_content,
-                characters=characters
+                chapter_content=chapter_content
             )
             
             print(f"正在为第{chapter_num}章生成解说文案...")

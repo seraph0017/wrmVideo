@@ -1,6 +1,13 @@
-# 视频生成系统
+# 🎬 AI视频生成系统
 
 一个基于AI的自动化视频生成系统，能够将小说文本转换为带有解说、图片和字幕的视频内容。系统集成了豆包大模型、火山引擎TTS和图像生成服务，实现从文本到视频的全自动化流程。
+
+## ✨ 最新更新
+
+- 🔄 **同步/异步双模式**: 支持同步和异步两种图片生成模式
+- 📁 **目录结构优化**: Character_Images目录移至根目录，便于管理
+- 🎨 **角色图片系统**: 完整的五层角色图片目录结构（性别/年龄/风格/文化/气质）
+- ⚡ **性能优化**: 改进的图片生成和视频合成流程
 
 ## 🚀 功能特性
 
@@ -36,6 +43,7 @@
 wrmVideo/
 ├── .gitignore
 ├── README.md               # 项目说明（包含完整功能介绍和优化总结）
+├── main.md                 # 主要使用说明
 ├── config/                 # 配置目录
 │   └── prompt_config.py   # Prompt配置管理
 ├── data/                   # 数据存储目录
@@ -48,20 +56,22 @@ wrmVideo/
 │   │   │   └── chapter01_complete.mp4  # 完整章节视频
 │   │   └── final_complete_video.mp4    # 最终合并视频
 │   └── test1/              # 测试数据目录
-├── generate.py             # 主程序入口
-├── requirements.txt        # 项目依赖
+├── test/                   # 测试文件目录
+│   ├── test_*.py           # 各种测试脚本
+│   └── debug_*.py          # 调试脚本
+├── Character_Images/       # 角色图片库（已移至根目录）
 ├── src/                    # 源代码目录
-│   ├── concat.py          # 视频合成模块
-│   ├── config.example.py  # 配置文件示例
-│   ├── gen_pic.py         # AI图像生成模块（兼容版本）
-│   ├── gen_script.py      # AI解说文案生成模块（兼容版本）
-│   ├── gen_voice.py       # TTS语音合成模块（兼容版本）
-│   ├── pic/               # 图片生成模块（新版本）
-│   │   └── gen_pic.py
-│   ├── script/            # 脚本生成模块（新版本）
-│   │   └── gen_script.py
-│   └── voice/             # 语音生成模块（新版本）
-│       └── gen_voice.py
+│   ├── core/               # 核心模块
+│   ├── bgm/                # 背景音乐
+│   └── sound_effects/      # 音效库
+└── utils/                  # 工具模块
+├── generate.py             # 主程序入口
+├── gen_image.py            # 同步图片生成脚本
+├── gen_image_async.py      # 异步图片生成脚本
+├── gen_script.py           # 解说文案生成脚本
+├── gen_audio.py            # 音频生成脚本
+├── gen_video.py            # 视频生成脚本
+├── requirements.txt        # 项目依赖
 
 
 ├── test/                   # 测试脚本目录
@@ -154,17 +164,15 @@ IMAGE_CONFIG = {
 - **火山引擎TTS**: 访问[火山引擎控制台](https://console.volcengine.com/)获取
 - **豆包API**: 访问[豆包开放平台](https://www.volcengine.com/product/doubao)获取
 
-## 🚀 使用方法
+## 🚀 快速开始
 
 ### 1. 环境配置
 
-首先安装依赖：
 ```bash
+# 安装依赖
 pip install -r requirements.txt
-```
 
-配置API密钥：
-```bash
+# 配置API密钥
 cp config/config.example.py config/config.py
 # 编辑 config/config.py，填入你的API密钥
 ```
@@ -198,120 +206,99 @@ script_gen = ScriptGenerator()
 script_gen.generate_script("小说内容", "output_dir")
 ```
 
-### 3. 快速开始
+### 2. 基本使用
 
-#### 准备小说文本
-将小说文本保存为 `.txt` 文件，放置在项目目录中。
-
-#### 运行主程序
+#### 完整流程（推荐）
 ```bash
-python generate.py
-```
-
-程序将自动执行以下流程：
-1. 📖 读取并分析小说文本
-2. ✂️ 智能分割成章节
-3. 🤖 生成AI解说文案
-4. 🎨 生成配套图片
-5. 🎵 合成语音
-6. 📺 添加字幕
-7. 🎬 合成最终视频
-
-### 单独模块使用
-
-#### 生成解说文案
-```bash
-cd src
-python gen_script.py
-```
-
-#### 生成语音
-```bash
-cd src
-python gen_voice.py
-```
-
-#### 生成图片（支持多种艺术风格）
-```bash
-cd src
-python gen_pic.py
-```
-
-可选的艺术风格：
-- `manga`: 漫画风格（默认）
-- `realistic`: 写实风格
-- `watercolor`: 水彩画风格
-- `oil_painting`: 油画风格
-
-#### 合成视频
-```bash
-cd src
-python concat.py
-```
-
-### 批量处理
-
-```bash
-# 处理整个项目（所有章节）
+# 处理整个小说项目
 python generate.py data/001
 
 # 处理单个章节
-python generate.py data/001/chapter01
+python generate.py data/001/chapter_001
 ```
 
-#### 清理项目目录
+#### 分步骤处理
 ```bash
-python utils/init.py data/001
+# 1. 生成解说文案
+python gen_script.py data/001
+
+# 2. 生成图片（同步模式）
+python gen_image.py data/001
+
+# 3. 生成图片（异步模式，适合批量处理）
+python gen_image_async.py data/001
+
+# 4. 生成音频
+python gen_audio.py data/001
+
+# 5. 合成视频
+python gen_video.py data/001
 ```
 
-#### 艺术风格演示
+### 3. 图片生成模式选择
+
+#### 同步模式（推荐用于调试）
 ```bash
-# 演示所有艺术风格效果
-python utils/demo_styles.py
+# 实时生成，立即返回结果
+python gen_image.py data/001/chapter_001
 ```
 
-## 📋 API说明
+#### 异步模式（推荐用于批量处理）
+```bash
+# 提交任务到队列，适合大批量处理
+python gen_image_async.py data/001
 
-### 解说文案生成
+# 检查异步任务状态
+python check_async_tasks.py
+```
 
-`gen_script.py` 使用豆包模型生成详细解说文案：
+### 4. 角色图片系统
 
-- **智能分块**: 自动处理长文本
+系统支持基于角色属性的智能图片选择：
+
+```
+Character_Images/
+├── Male/Female              # 性别
+│   ├── 15-22_Youth          # 年龄段
+│   │   ├── Ancient/Fantasy  # 风格
+│   │   │   ├── Chinese/Western  # 文化
+│   │   │   │   ├── Common/Royal # 气质
+│   │   │   │   │   └── *.jpg    # 角色图片
+```
+
+#### 批量生成角色图片
+```bash
+# 生成所有角色类型的图片
+python batch_generate_character_images.py
+
+# 异步批量生成
+python batch_generate_character_images_async.py
+```
+
+## 📋 核心功能说明
+
+### 🤖 解说文案生成
+- **智能分块**: 自动处理长文本，支持大型小说
 - **多种开场**: 热开场、前提开场、冷开场
-- **内容规避**: 自动规避敏感内容
-- **格式化输出**: XML格式，便于后续处理
+- **内容规避**: 自动规避敏感内容，确保合规
+- **格式化输出**: 结构化XML格式，便于后续处理
 
-### TTS语音合成
+### 🎨 AI图像生成
+- **双模式支持**: 同步模式（实时）+ 异步模式（批量）
+- **角色图片系统**: 基于属性的智能角色图片选择
+- **高质量输出**: 720x1280竖屏格式，适合短视频
+- **风格多样**: 支持古风、现代、奇幻、科幻等多种风格
 
-`gen_voice.py` 使用火山引擎TTS服务：
+### 🎵 语音合成
+- **高质量TTS**: 火山引擎TTS服务，自然流畅
+- **时间戳支持**: 精确的字符级时间戳信息
+- **多种音色**: 支持不同性别和年龄的音色
+- **参数可调**: 语速、音量、音调等参数可自定义
 
-- `voice_type`: 音色类型（BV701_streaming等）
-- `speed_ratio`: 语速比例（默认1.2）
-- `volume_ratio`: 音量比例（默认1.0）
-- `pitch_ratio`: 音调比例（默认1.0）
-
-### AI图像生成
-
-`gen_pic.py` 使用豆包AI模型生成图像：
-
-- `model`: doubao-seedream-3-0-t2i-250415
-- `prompt`: 图像描述文本
-- `size`: 720x1280（竖屏格式）
-- `watermark`: 无水印
-- `style`: 艺术风格参数
-  - `manga`: 漫画风格 - 动漫插画，精美细腻的画风，鲜艳色彩
-  - `realistic`: 写实风格 - 真实感强，细节丰富，专业摄影质感
-  - `watercolor`: 水彩画风格 - 柔和色彩，艺术感强，手绘质感
-  - `oil_painting`: 油画风格 - 厚重笔触，丰富色彩层次，古典艺术感
-
-
-### 视频合成
-
-`concat.py` 使用FFmpeg合成视频：
-
-- **智能字幕**: 自动居中对齐、透明背景
-- **智能断句**: 根据标点符号优化显示
-- **高质量输出**: H.264编码，AAC音频
+### 🎬 视频合成
+- **智能字幕**: 自动居中对齐、透明背景、智能断句
+- **高质量编码**: H.264视频编码，AAC音频编码
+- **自动同步**: 音频、图片、字幕完美同步
 
 ## ⚠️ 注意事项
 
@@ -334,78 +321,64 @@ python utils/demo_styles.py
 
 ### 常见问题
 
-#### 1. 导入错误
+#### 1. 环境问题
 ```bash
-# 解决方案：重新安装依赖
+# 重新安装依赖
 pip install -r requirements.txt --upgrade
+
+# 检查FFmpeg安装
+ffmpeg -version
 ```
 
-#### 2. API调用失败
-- 检查网络连接
-- 验证API密钥配置
-- 确认API配额是否充足
+#### 2. API相关
+- **API调用失败**: 检查网络连接和API密钥配置
+- **配额不足**: 确认API配额是否充足
+- **权限错误**: 验证API密钥权限设置
 
-#### 3. 视频生成失败
-- 检查FFmpeg是否正确安装
-- 确认输出目录权限
-- 查看错误日志定位问题
+#### 3. 文件处理
+- **路径错误**: 确保输入文件路径正确
+- **权限问题**: 检查输出目录写入权限
+- **编码问题**: 确认文本文件为UTF-8编码
 
-#### 4. 字幕显示异常
-- 检查字体文件是否存在
-- 确认文本编码为UTF-8
-- 验证字幕时间轴设置
+#### 4. 异步任务
+```bash
+# 检查异步任务状态
+python check_async_tasks.py
 
-#### 5. 音频质量问题
-- 如果发现音频质量较低（采样率24kHz），可使用音频质量修复工具
-- 运行 `python utils/fix_audio_quality.py <目录路径>` 自动检测和修复
-- 新生成的音频将使用44.1kHz采样率和192kbps比特率
-
-#### 6. 系统测试
-- 使用 `python test/test_generate_modes.py` 验证系统功能
-- 该脚本会测试单个章节和多章节处理模式
-- 自动检查音频质量和显示使用示例
+# 查看任务详情
+ls async_tasks/
+```
 
 ### 错误代码
+- `401`: API密钥错误或过期
+- `403`: 权限不足或配额用尽
+- `500`: 服务器内部错误
+- `FileNotFoundError`: 文件路径错误
 
-- `401 Unauthorized`: API密钥错误或过期
-- `403 Forbidden`: 权限不足或配额用尽
-- `500 Internal Server Error`: 服务器内部错误，请稍后重试
-- `FileNotFoundError`: 文件路径错误或文件不存在
-
-## 🛠️ 技术实现
+## 🛠️ 技术架构
 
 ### 核心技术栈
 - **AI模型**: 豆包大模型（文案生成、图像生成）
 - **语音合成**: 火山引擎TTS
 - **视频处理**: FFmpeg
-- **字幕处理**: 自研字幕引擎
+- **异步处理**: 任务队列系统
 
-### 优化特性
+### 关键特性
 
-#### 智能断句算法
-- 基于标点符号的断句逻辑
-- 语义完整性保护
-- 字幕长度自适应调整
+#### 🎯 智能处理
+- **智能断句**: 基于标点符号和语义的断句算法
+- **角色识别**: 自动识别角色属性并匹配图片
+- **内容规避**: 自动检测和规避敏感内容
 
-#### 多音频共图优化
-- 图片资源复用机制
-- 减少API调用次数
-- 提升生成效率
+#### ⚡ 性能优化
+- **异步处理**: 支持大批量任务的异步处理
+- **资源复用**: 图片资源智能复用机制
+- **缓存机制**: 减少重复API调用
 
-#### 多种艺术风格系统
-- 四种预设艺术风格：漫画、写实、水彩、油画
-- 可配置的默认风格设置
-- 智能prompt模板系统
-
-#### 字幕样式优化
-- 居中对齐算法
-- 透明背景处理
-- 首尾标点符号清理
-
-### 性能指标
-- **处理速度**: 相比优化前提升约30%
-- **资源利用**: 图片生成调用减少50%
-- **字幕质量**: 显示效果显著改善
+#### 🎨 视觉效果
+- **高质量输出**: 720x1280竖屏格式
+- **智能字幕**: 居中对齐、透明背景
+- **多种风格**: 古风、现代、奇幻、科幻等
 
 ## 👨‍💻 开发说明
 
@@ -416,120 +389,66 @@ pip install -r requirements.txt --upgrade
 文本输入 → 智能分割 → AI文案生成 → 图片生成 → 语音合成 → 字幕处理 → 视频合成
 ```
 
-### 模块说明
+### 主要模块
 
 - `generate.py`: 主程序入口，协调各模块工作
-- `src/script/gen_script.py`: AI解说文案生成，支持长文本分块处理
-- `src/voice/gen_voice.py`: TTS语音合成，支持多种音色
-- `src/pic/gen_pic.py`: AI图像生成，支持高质量图片输出
-- `src/concat.py`: 视频合成，集成字幕处理
-- `init.py`: 项目清理工具，支持批量清理
+- `gen_script.py`: AI解说文案生成
+- `gen_image.py` / `gen_image_async.py`: 图片生成（同步/异步）
+- `gen_audio.py`: TTS语音合成
+- `gen_video.py`: 视频合成
 
 ### 扩展开发
 
-#### 添加新功能模块
-1. 在 `src/` 目录下创建新模块
-2. 在 `config.py` 中添加相应配置
-3. 更新 `requirements.txt` 添加新依赖
-4. 在 `generate.py` 中集成新功能
-
-#### 自定义字幕样式
+#### 自定义配置
 ```python
-# 在concat.py中修改字幕参数
-subtitle_style = {
-    'fontsize': 24,
-    'fontcolor': 'white',
-    'box': 1,
-    'boxcolor': 'black@0.5'
-}
-```
-
-#### 自定义艺术风格
-```python
-# 在generate.py中的ART_STYLES字典中添加新风格
-ART_STYLES = {
-    'your_style': (
-        "你的风格描述，详细的艺术风格prompt，"
-        "包含色彩、质感、技法等描述，"
-    ),
-    # ... 其他风格
-}
-```
-
-然后在配置文件中设置默认风格：
-```python
+# 在config/config.py中修改配置
 IMAGE_CONFIG = {
-    "default_style": "your_style",  # 使用你的自定义风格
+    "default_style": "your_style",
+    "size": "720x1280",
     # ... 其他配置
 }
 ```
 
-#### 添加新的音色
-```python
-# 在config.py中添加音色配置
-VOICE_TYPES = {
-    'female': 'BV701_streaming',
-    'male': 'BV700_streaming',
-    'child': 'BV702_streaming'
-}
+#### 测试
+```bash
+# 运行测试
+python test/test_integration.py
+python test/test_character_images.py
 ```
 
-### 测试框架
+## 📋 项目特色
 
-项目包含完整的测试套件：
-- `test/test_audio.py`: 音频生成测试
-- `test/test_subtitle.py`: 字幕功能测试
-- `test/test_split.py`: 文本分割测试
-- `test/test_optimized_features.py`: 优化功能测试
-- `test/test_config_system.py`: 配置系统测试
+### ✨ 核心功能
+- 🤖 **AI解说文案生成**: 基于豆包大模型的智能文案创作
+- 🎨 **双模式图片生成**: 同步模式（实时）+ 异步模式（批量）
+- 🎵 **高质量语音合成**: 火山引擎TTS，支持时间戳
+- 🎬 **智能视频合成**: 音频、图片、字幕完美同步
+- 👥 **角色图片系统**: 五层属性分类，智能角色匹配
 
-## 📋 项目总结
-
-### 已完成功能
-
-#### 核心功能
-- ✅ **AI解说文案生成**：基于豆包大模型的智能文案创作
-- ✅ **TTS语音合成**：高质量语音生成，支持多种音色
-- ✅ **AI图像生成**：多风格图片生成，支持漫画、写实等风格
-- ✅ **视频自动合成**：音频、图片、字幕的智能合成
-- ✅ **多章节处理**：支持长篇小说的分章节处理
-
-#### 配置化系统重构 🆕
-- ✅ **Jinja2模板系统**：基于模板的prompt管理
-- ✅ **配置集中管理**：统一的配置文件和参数管理
-- ✅ **模块化架构**：独立的图片、语音、脚本生成模块
-- ✅ **向后兼容性**：保持原有API的兼容性
-- ✅ **配置验证系统**：完整的配置测试和验证
-
-#### 优化功能
-- ✅ **音频质量提升**：优化TTS参数，提高音频清晰度
-- ✅ **视频合成优化**：改进编码参数，提升视频质量
-
-- ✅ **错误处理机制**：完善的异常处理和日志记录
-- ✅ **测试验证系统**：全面的功能测试脚本
-
-#### 工具和辅助功能
-- ✅ **音频质量修复工具**：`utils/fix_audio_quality.py`
-- ✅ **生成模式测试**：`test/test_generate_modes.py`
-- ✅ **配置系统测试**：`test/test_config_system.py`
-- ✅ **项目初始化工具**：`utils/init.py`
-- ✅ **样式演示脚本**：`utils/demo_styles.py`
+### 🚀 技术亮点
+- ⚡ **异步处理**: 支持大批量任务的异步处理
+- 🎯 **智能断句**: 基于语义的字幕优化
+- 📁 **模块化设计**: 清晰的代码结构和职责分离
+- 🛡️ **内容安全**: 自动规避敏感内容
+- 🔧 **配置灵活**: 丰富的自定义配置选项
 
 ## 📝 更新日志
 
-### v2.0.0 (最新)
-- ✨ 新增智能断句功能
-- 🎨 优化字幕样式（居中对齐、透明背景）
-- ⚡ 实现多音频共图优化
-- 🛡️ 增强内容规避机制
-- 📈 性能提升30%
+### v3.0.0 (最新)
+- 🔄 **双模式图片生成**: 新增同步/异步两种模式
+- 📁 **目录结构优化**: Character_Images移至根目录
+- 👥 **角色图片系统**: 完整的五层属性分类系统
+- ⚡ **性能优化**: 异步处理和资源复用
+- 🎯 **智能字幕**: 改进的断句和显示算法
+
+### v2.0.0
+- ✨ 智能断句功能
+- 🎨 字幕样式优化
+- 🛡️ 内容规避机制
 
 ### v1.0.0
 - 🎉 初始版本发布
-- 🤖 基础AI文案生成
-- 🎵 TTS语音合成
-- 🎨 AI图像生成
-- 🎬 视频合成功能
+- 🤖 基础AI功能
 
 ## 🤝 贡献指南
 
@@ -544,12 +463,6 @@ VOICE_TYPES = {
 ## 📄 许可证
 
 本项目采用 MIT 许可证。详情请参阅 [LICENSE](LICENSE) 文件。
-
-## 📞 联系方式
-
-如有问题或建议，请通过以下方式联系：
-- 提交 [Issue](https://github.com/your-repo/issues)
-- 发送邮件至：your-email@example.com
 
 ---
 

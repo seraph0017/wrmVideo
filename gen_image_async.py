@@ -1,7 +1,7 @@
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-独立的图片生成脚本（同步版本）
+独立的图片生成脚本
 遍历章节目录，为每个分镜生成图片
 """
 
@@ -203,38 +203,29 @@ def encode_image_to_base64(image_path):
         print(f"编码图片为base64时发生错误: {e}")
         return None
 
-def download_image(image_data_base64, output_path):
+def save_task_info(task_id, task_info, tasks_dir):
     """
-    将base64编码的图片数据保存到文件
+    保存任务信息到txt文件
     
     Args:
-        image_data_base64: base64编码的图片数据
-        output_path: 输出文件路径
+        task_id: 任务ID
+        task_info: 任务信息
+        tasks_dir: 任务文件保存目录
+    """
+    task_file = os.path.join(tasks_dir, f"{task_id}.txt")
     
-    Returns:
-        bool: 是否成功保存
-    """
-    try:
-        # 确保输出目录存在
-        os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        
-        # 解码base64数据
-        image_data = base64.b64decode(image_data_base64)
-        
-        # 保存到文件
-        with open(output_path, 'wb') as f:
-            f.write(image_data)
-        
-        print(f"图片已保存: {output_path}")
-        return True
-        
-    except Exception as e:
-        print(f"保存图片时发生错误: {e}")
-        return False
+    # 确保目录存在
+    os.makedirs(tasks_dir, exist_ok=True)
+    
+    # 保存任务信息
+    with open(task_file, 'w', encoding='utf-8') as f:
+        json.dump(task_info, f, ensure_ascii=False, indent=2)
+    
+    print(f"任务信息已保存: {task_file}")
 
-def generate_image_with_character(prompt, output_path, character_images=None, style=None):
+def generate_image_with_character_async(prompt, output_path, character_images=None, style=None):
     """
-    使用角色图片同步生成图片
+    使用角色图片异步生成图片
     
     Args:
         prompt: 图片描述
@@ -243,7 +234,7 @@ def generate_image_with_character(prompt, output_path, character_images=None, st
         style: 艺术风格，如果为None则使用配置文件中的默认风格
     
     Returns:
-        bool: 是否成功生成图片
+        bool: 是否成功提交任务
     """
     try:
         visual_service = VisualService()
@@ -316,34 +307,58 @@ def generate_image_with_character(prompt, output_path, character_images=None, st
         else:
             print("没有角色图片参数")
         
-        # 调用同步API
-        resp = visual_service.cv_process(form)
+        # 调用异步API提交任务
+        print("这里是响应前===============")
+        resp = visual_service.cv_sync2async_submit_task(form)
+        # resp = visual_service.cv_submit_task(form)
+        print("这里是响应参数===============")
         print(resp)
+        print("这里是响应参数===============")
         
         # 检查响应
-        if 'data' in resp and 'image_urls' in resp['data']:
-            image_urls = resp['data']['image_urls']
-            if image_urls:
-                # 获取第一张图片的base64数据
-                image_data_base64 = image_urls[0]
-                
-                # 保存图片
-                if download_image(image_data_base64, output_path):
-                    print(f"✓ 图片生成成功: {output_path}")
-                    return True
-                else:
-                    print(f"✗ 图片保存失败: {output_path}")
-                    return False
-            else:
-                print(f"✗ 响应中没有图片数据")
-                return False
+        if 'data' in resp and 'task_id' in resp['data']:
+            task_id = resp['data']['task_id']
+            print(f"任务提交成功，Task ID: {task_id}")
+            
+            # 保存任务信息到async_tasks目录
+            task_info = {
+                'task_id': task_id,
+                'output_path': output_path,
+                'filename': os.path.basename(output_path),
+                'prompt': prompt,
+                'full_prompt': full_prompt,
+                'character_images': character_images or [],
+                'style': style,
+                'submit_time': time.time(),
+                'status': 'submitted'
+            }
+            
+            # 使用统一的保存函数
+            async_tasks_dir = 'async_tasks'
+            save_task_info(task_id, task_info, async_tasks_dir)
+            return True
         else:
-            print(f"✗ 图片生成失败: {resp}")
+            print(f"任务提交失败: {resp}")
             return False
             
     except Exception as e:
         print(f"生成图片时发生错误: {e}")
         return False
+
+def generate_image_with_character(prompt, output_path, character_images=None, style=None):
+    """
+    兼容性函数：调用异步版本
+    
+    Args:
+        prompt: 图片描述
+        output_path: 输出文件路径
+        character_images: 角色图片路径列表
+        style: 艺术风格，如果为None则使用配置文件中的默认风格
+    
+    Returns:
+        bool: 是否成功提交任务
+    """
+    return generate_image_with_character_async(prompt, output_path, character_images, style)
 
 def generate_images_for_chapter(chapter_dir):
     """
@@ -437,14 +452,14 @@ def generate_images_for_chapter(chapter_dir):
                 else:
                     full_prompt = f"{prompt}{view_angle_prompt}"
                 
-                # 生成图片
+                # 提交异步任务
                 image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}_{j}.jpeg")
                 
-                if generate_image_with_character(full_prompt, image_path, character_images, drawing_style):
-                    print(f"    ✓ 特写 {j} 生成成功")
+                if generate_image_with_character_async(full_prompt, image_path, character_images, drawing_style):
+                    print(f"    ✓ 特写 {j} 任务提交成功")
                     success_count += 1
                 else:
-                    print(f"    ✗ 特写 {j} 生成失败")
+                    print(f"    ✗ 特写 {j} 任务提交失败")
         
         # 计算该章节生成的图片总数
         total_images = sum(len(scene['closeups']) for scene in scenes)
@@ -528,33 +543,30 @@ def generate_images_from_scripts(data_dir):
                 # 为每个特写生成图片
                 for j, closeup in enumerate(closeups, 1):
                     prompt = closeup['prompt']
-                    gender = closeup.get('gender', '')
-                    age_group = closeup.get('age_group', '')
-                    character_style = closeup.get('character_style', '')
+                    character = closeup.get('character', '')
                     
                     print(f"    生成特写 {j}: {chapter_name}_image_{i:02d}_{j}.jpeg")
-                    print(f"    特写人物: {gender}/{age_group}/{character_style}")
+                    print(f"    特写角色: {character}")
                     
-                    # 查找当前特写的角色图片（基于Character_Images目录结构）
+                    # 查找当前特写的角色图片
                     character_images = []
-                    if gender and age_group and character_style:
-                        print(f"    查找角色图片: {gender}/{age_group}/{character_style}")
-                        char_img_path = find_character_image_by_attributes(gender, age_group, character_style)
+                    if character:
+                        char_img_path = find_character_image(chapter_dir, character)
                         if char_img_path:
                             character_images.append(char_img_path)
-                            print(f"    找到角色图片: {char_img_path}")
-                        else:
-                            print(f"    未找到角色图片")
-                    else:
-                        print(f"    角色信息不完整，跳过角色图片查找")
                     
                     # 根据角色性别调整视角
                     view_angle_prompt = ""
-                    if gender:
-                        print(f"    角色性别: {gender}")
+                    if character:
+                        # 重新读取narration文件内容来解析性别
+                        with open(narration_file, 'r', encoding='utf-8') as f:
+                            narration_content = f.read()
+                        
+                        character_gender = parse_character_gender(narration_content, character)
+                        print(f"    角色性别: {character_gender}")
                         
                         # 根据性别决定视角
-                        if gender.lower() in ['female', '女']:
+                        if character_gender == '女':
                             view_angle_prompt = "，背部视角，看不到领口和正面"
                         else:
                             view_angle_prompt = "，正面视角，清晰面部特征"
@@ -565,14 +577,14 @@ def generate_images_from_scripts(data_dir):
                     else:
                         full_prompt = f"{prompt}{view_angle_prompt}"
                     
-                    # 生成图片
+                    # 提交异步任务
                     image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}_{j}.jpeg")
                     
-                    if generate_image_with_character(full_prompt, image_path, character_images, drawing_style):
-                        print(f"    ✓ 特写 {j} 生成成功")
+                    if generate_image_with_character_async(full_prompt, image_path, character_images, drawing_style):
+                        print(f"    ✓ 特写 {j} 任务提交成功")
                         success_count += 1
                     else:
-                        print(f"    ✗ 特写 {j} 生成失败")
+                        print(f"    ✗ 特写 {j} 任务提交失败")
             
             # 计算该章节生成的图片总数
             chapter_image_count = sum(len(scene['closeups']) for scene in scenes)
@@ -586,7 +598,7 @@ def generate_images_from_scripts(data_dir):
         return False
 
 def main():
-    parser = argparse.ArgumentParser(description='独立的图片生成脚本（同步版本）')
+    parser = argparse.ArgumentParser(description='独立的图片生成脚本')
     parser.add_argument('input_path', help='输入路径（可以是单个章节目录或包含多个章节的数据目录）')
     
     args = parser.parse_args()
