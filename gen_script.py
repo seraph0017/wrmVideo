@@ -16,6 +16,9 @@ import zipfile
 import shutil
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple
+import gevent
+from gevent import monkey
+monkey.patch_all()
 from volcenginesdkarkruntime import Ark
 from jinja2 import Environment, FileSystemLoader
 try:
@@ -24,7 +27,7 @@ except ImportError:
     rarfile = None
 
 # 添加项目根目录到路径
-project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+project_root = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, project_root)
 
 from config.prompt_config import prompt_config, SCRIPT_CONFIG
@@ -417,6 +420,25 @@ class ScriptGenerator:
             chunks.append(chunk)
         
         return chunks
+    
+    def generate_script_for_chunks_async(self, chunks: List[str], **kwargs) -> List[str]:
+        """
+        异步为所有文本块生成脚本
+
+        Args:
+            chunks: 文本块列表
+            **kwargs: 其他参数
+
+        Returns:
+            List[str]: 生成的脚本列表
+        """
+        jobs = [gevent.spawn(self.generate_script_for_chunk, chunk, i, len(chunks), **kwargs) 
+                for i, chunk in enumerate(chunks)]
+        
+        gevent.joinall(jobs)
+        
+        results = [job.value if job.successful() else "" for job in jobs]
+        return results
     
     def generate_script_for_chunk(self, content: str, chunk_index: int = 0, 
                                 total_chunks: int = 1, **kwargs) -> str:
@@ -876,13 +898,10 @@ class ScriptGenerator:
                 chunks = self.split_text(novel_content)
                 print(f"分割为 {len(chunks)} 个块")
                 
-                scripts = []
-                for i, chunk in enumerate(chunks):
-                    script = self.generate_script_for_chunk(
-                        chunk, i, len(chunks), **kwargs
-                    )
-                    if script:
-                        scripts.append(script)
+                # 异步生成脚本
+                scripts = self.generate_script_for_chunks_async(chunks, **kwargs)
+                # 过滤掉空结果
+                scripts = [s for s in scripts if s and s.strip()]
             
             if not scripts:
                 print("没有生成任何脚本内容")
