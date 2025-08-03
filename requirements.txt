@@ -1,9 +1,27 @@
 # 视频生成项目依赖
+
+# 核心依赖
 requests==2.31.0
 volcengine-python-sdk[ark]==1.0.98
 volcengine==1.0.98
 ffmpeg-python==0.2.0
-jinja2
+jinja2>=3.0.0
 Pillow>=10.0.0
 moviepy>=1.0.3
 numpy>=1.21.0
+
+# 文本处理
+jieba>=0.42.1
+
+# 配置文件处理
+PyYAML>=6.0
+
+# 开发和测试
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+
+# 异步处理
+aiofiles>=23.0.0
+
+# 路径处理
+pathlib2>=2.3.7; python_version<'3.4'
