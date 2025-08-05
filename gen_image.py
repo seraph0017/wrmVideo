@@ -40,6 +40,98 @@ def parse_character_gender(content, character_name):
     
     return '未知'
 
+def parse_character_definitions(content):
+    """
+    解析narration.txt文件中的角色定义
+    
+    Args:
+        content: narration.txt文件内容
+    
+    Returns:
+        dict: 角色编号到角色信息的映射
+    """
+    character_map = {}
+    
+    # 解析主角定义
+    protagonist_pattern = r'<主角(\d+)>(.*?)</主角\d+>'
+    protagonist_matches = re.findall(protagonist_pattern, content, re.DOTALL)
+    
+    for num, char_content in protagonist_matches:
+        char_info = {}
+        
+        # 提取角色属性
+        name_match = re.search(r'<姓名>([^<]+)</姓名>', char_content)
+        gender_match = re.search(r'<性别>([^<]+)</性别>', char_content)
+        age_match = re.search(r'<年龄段>([^<]+)</年龄段>', char_content)
+        style_match = re.search(r'<风格>([^<]+)</风格>', char_content)
+        culture_match = re.search(r'<文化>([^<]+)</文化>', char_content)
+        temperament_match = re.search(r'<气质>([^<]+)</气质>', char_content)
+        number_match = re.search(r'<角色编号>([^<]+)</角色编号>', char_content)
+        
+        if name_match:
+            char_info['name'] = name_match.group(1).strip()
+        if gender_match:
+            char_info['gender'] = gender_match.group(1).strip()
+        if age_match:
+            char_info['age_group'] = age_match.group(1).strip()
+        if style_match:
+            char_info['character_style'] = style_match.group(1).strip()
+        if culture_match:
+            char_info['culture'] = culture_match.group(1).strip()
+        if temperament_match:
+            char_info['temperament'] = temperament_match.group(1).strip()
+        if number_match:
+            char_info['number'] = number_match.group(1).strip()
+        
+        # 使用多种可能的键来映射角色
+        keys = [f'主角{num}', f'主角{int(num):02d}']
+        if number_match:
+            keys.append(number_match.group(1).strip())
+        
+        for key in keys:
+            character_map[key] = char_info
+    
+    # 解析配角定义
+    supporting_pattern = r'<配角(\d+)>(.*?)</配角\d+>'
+    supporting_matches = re.findall(supporting_pattern, content, re.DOTALL)
+    
+    for num, char_content in supporting_matches:
+        char_info = {}
+        
+        # 提取角色属性
+        name_match = re.search(r'<姓名>([^<]+)</姓名>', char_content)
+        gender_match = re.search(r'<性别>([^<]+)</性别>', char_content)
+        age_match = re.search(r'<年龄段>([^<]+)</年龄段>', char_content)
+        style_match = re.search(r'<风格>([^<]+)</风格>', char_content)
+        culture_match = re.search(r'<文化>([^<]+)</文化>', char_content)
+        temperament_match = re.search(r'<气质>([^<]+)</气质>', char_content)
+        number_match = re.search(r'<角色编号>([^<]+)</角色编号>', char_content)
+        
+        if name_match:
+            char_info['name'] = name_match.group(1).strip()
+        if gender_match:
+            char_info['gender'] = gender_match.group(1).strip()
+        if age_match:
+            char_info['age_group'] = age_match.group(1).strip()
+        if style_match:
+            char_info['character_style'] = style_match.group(1).strip()
+        if culture_match:
+            char_info['culture'] = culture_match.group(1).strip()
+        if temperament_match:
+            char_info['temperament'] = temperament_match.group(1).strip()
+        if number_match:
+            char_info['number'] = number_match.group(1).strip()
+        
+        # 使用多种可能的键来映射角色
+        keys = [f'配角{num}', f'配角{int(num):02d}']
+        if number_match:
+            keys.append(number_match.group(1).strip())
+        
+        for key in keys:
+            character_map[key] = char_info
+    
+    return character_map
+
 def parse_narration_file(narration_file_path):
     """
     解析narration.txt文件，提取分镜信息、图片prompt和绘画风格
@@ -48,18 +140,23 @@ def parse_narration_file(narration_file_path):
         narration_file_path: narration.txt文件路径
     
     Returns:
-        tuple: (分镜信息列表, 绘画风格)
+        tuple: (分镜信息列表, 绘画风格, 角色映射)
     """
     scenes = []
     drawing_style = None
+    character_map = {}
     
     try:
         if not os.path.exists(narration_file_path):
             print(f"警告: narration.txt文件不存在: {narration_file_path}")
-            return scenes, drawing_style
+            return scenes, drawing_style, character_map
         
         with open(narration_file_path, 'r', encoding='utf-8') as f:
             content = f.read()
+        
+        # 解析角色定义
+        character_map = parse_character_definitions(content)
+        print(f"解析到 {len(character_map)} 个角色映射")
         
         # 解析绘画风格
         style_match = re.search(r'<绘画风格>([^<]+)</绘画风格>', content)
@@ -87,15 +184,47 @@ def parse_narration_file(narration_file_path):
                     closeup_content = closeup_match.group(1)
                     closeup_info = {}
                     
-                    # 提取特写人物信息
-                    gender_match = re.search(r'<性别>([^<]+)</性别>', closeup_content)
-                    age_match = re.search(r'<年龄段>([^<]+)</年龄段>', closeup_content)
-                    style_match = re.search(r'<风格>([^<]+)</风格>', closeup_content)
+                    # 首先尝试提取特写人物和角色编号
+                    character_match = re.search(r'<特写人物>([^<]+)</特写人物>', closeup_content)
+                    character_id_match = re.search(r'<角色编号>([^<]+)</角色编号>', closeup_content)
                     
-                    if gender_match and age_match and style_match:
-                        closeup_info['gender'] = gender_match.group(1).strip().replace('根据章节内容选择：', '')
-                        closeup_info['age_group'] = age_match.group(1).strip().replace('根据章节内容选择：', '')
-                        closeup_info['character_style'] = style_match.group(1).strip().replace('根据章节内容选择：', '')
+                    if character_match and character_id_match:
+                        character_name = character_match.group(1).strip()
+                        character_id = character_id_match.group(1).strip()
+                        
+                        # 从角色映射中获取角色信息
+                        if character_id in character_map:
+                            char_info = character_map[character_id]
+                            closeup_info['gender'] = char_info.get('gender', '')
+                            closeup_info['age_group'] = char_info.get('age_group', '')
+                            closeup_info['character_style'] = char_info.get('character_style', '')
+                            closeup_info['culture'] = char_info.get('culture', 'Chinese')
+                            closeup_info['temperament'] = char_info.get('temperament', 'Common')
+                            closeup_info['character_name'] = char_info.get('name', character_name)
+                            closeup_info['character_id'] = character_id
+                            closeup_info['number'] = char_info.get('number', '')
+                        else:
+                            print(f"警告: 未找到角色编号 {character_id} 的定义")
+                            # 使用默认值
+                            closeup_info['gender'] = ''
+                            closeup_info['age_group'] = ''
+                            closeup_info['character_style'] = ''
+                            closeup_info['culture'] = 'Chinese'
+                            closeup_info['temperament'] = 'Common'
+                            closeup_info['character_name'] = character_name
+                            closeup_info['character_id'] = character_id
+                    else:
+                        # 回退到原有的解析方式（兼容旧格式）
+                        gender_match = re.search(r'<性别>([^<]+)</性别>', closeup_content)
+                        age_match = re.search(r'<年龄段>([^<]+)</年龄段>', closeup_content)
+                        style_match = re.search(r'<风格>([^<]+)</风格>', closeup_content)
+                        
+                        if gender_match and age_match and style_match:
+                            closeup_info['gender'] = gender_match.group(1).strip().replace('根据章节内容选择：', '')
+                            closeup_info['age_group'] = age_match.group(1).strip().replace('根据章节内容选择：', '')
+                            closeup_info['character_style'] = style_match.group(1).strip().replace('根据章节内容选择：', '')
+                            closeup_info['culture'] = 'Chinese'
+                            closeup_info['temperament'] = 'Common'
                     
                     # 提取图片prompt
                     prompt_match = re.search(r'<图片prompt>([^<]+)</图片prompt>', closeup_content, re.DOTALL)
@@ -112,11 +241,11 @@ def parse_narration_file(narration_file_path):
         if drawing_style:
             print(f"绘画风格: {drawing_style}")
         
-        return scenes, drawing_style
+        return scenes, drawing_style, character_map
         
     except Exception as e:
         print(f"解析narration文件时发生错误: {e}")
-        return scenes, drawing_style
+        return scenes, drawing_style, character_map
 
 def find_character_image(chapter_path, character_name):
     """
@@ -371,7 +500,7 @@ def generate_images_for_chapter(chapter_dir):
             return False
         
         # 解析narration文件
-        scenes, drawing_style = parse_narration_file(narration_file)
+        scenes, drawing_style, character_map = parse_narration_file(narration_file)
         
         if not scenes:
             print(f"错误: 未找到分镜信息")
@@ -403,15 +532,22 @@ def generate_images_for_chapter(chapter_dir):
                 gender = closeup.get('gender', '')
                 age_group = closeup.get('age_group', '')
                 character_style = closeup.get('character_style', '')
+                culture = closeup.get('culture', 'Chinese')
+                temperament = closeup.get('temperament', 'Common')
+                character_name = closeup.get('character_name', '')
+                character_id = closeup.get('character_id', '')
                 
                 print(f"    生成特写 {j}: {chapter_name}_image_{i:02d}_{j}.jpeg")
-                print(f"    特写人物: {gender}/{age_group}/{character_style}")
+                if character_name and character_id:
+                    print(f"    特写人物: {character_name} ({character_id}) - {gender}/{age_group}/{character_style}/{culture}/{temperament}")
+                else:
+                    print(f"    特写人物: {gender}/{age_group}/{character_style}/{culture}/{temperament}")
                 
                 # 查找当前特写的角色图片（基于Character_Images目录结构）
                 character_images = []
                 if gender and age_group and character_style:
-                    print(f"    查找角色图片: {gender}/{age_group}/{character_style}")
-                    char_img_path = find_character_image_by_attributes(gender, age_group, character_style)
+                    print(f"    查找角色图片: {gender}/{age_group}/{character_style}/{culture}/{temperament}")
+                    char_img_path = find_character_image_by_attributes(gender, age_group, character_style, culture, temperament)
                     if char_img_path:
                         character_images.append(char_img_path)
                         print(f"    找到角色图片: {char_img_path}")
@@ -501,7 +637,7 @@ def generate_images_from_scripts(data_dir):
                 continue
             
             # 解析narration文件
-            scenes, drawing_style = parse_narration_file(narration_file)
+            scenes, drawing_style, character_map = parse_narration_file(narration_file)
             
             if not scenes:
                 print(f"警告: 未找到分镜信息")
@@ -531,15 +667,22 @@ def generate_images_from_scripts(data_dir):
                     gender = closeup.get('gender', '')
                     age_group = closeup.get('age_group', '')
                     character_style = closeup.get('character_style', '')
+                    culture = closeup.get('culture', 'Chinese')
+                    temperament = closeup.get('temperament', 'Common')
+                    character_name = closeup.get('character_name', '')
+                    character_id = closeup.get('character_id', '')
                     
                     print(f"    生成特写 {j}: {chapter_name}_image_{i:02d}_{j}.jpeg")
-                    print(f"    特写人物: {gender}/{age_group}/{character_style}")
+                    if character_name and character_id:
+                        print(f"    特写人物: {character_name} ({character_id}) - {gender}/{age_group}/{character_style}/{culture}/{temperament}")
+                    else:
+                        print(f"    特写人物: {gender}/{age_group}/{character_style}/{culture}/{temperament}")
                     
                     # 查找当前特写的角色图片（基于Character_Images目录结构）
                     character_images = []
                     if gender and age_group and character_style:
-                        print(f"    查找角色图片: {gender}/{age_group}/{character_style}")
-                        char_img_path = find_character_image_by_attributes(gender, age_group, character_style)
+                        print(f"    查找角色图片: {gender}/{age_group}/{character_style}/{culture}/{temperament}")
+                        char_img_path = find_character_image_by_attributes(gender, age_group, character_style, culture, temperament)
                         if char_img_path:
                             character_images.append(char_img_path)
                             print(f"    找到角色图片: {char_img_path}")

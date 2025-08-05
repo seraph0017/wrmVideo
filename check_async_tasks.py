@@ -10,8 +10,10 @@ import json
 import time
 import base64
 import argparse
-from config.config import IMAGE_TWO_CONFIG
+import urllib.request
+from config.config import IMAGE_TWO_CONFIG, ARK_CONFIG
 from volcengine.visual.VisualService import VisualService
+from volcenginesdkarkruntime import Ark
 
 def load_task_info(task_file):
     """
@@ -44,9 +46,9 @@ def save_task_info(task_info, task_file):
     except Exception as e:
         print(f"保存任务文件失败 {task_file}: {e}")
 
-def query_task_status(task_id, max_retries=2, retry_delay=1):
+def query_image_task_status(task_id, max_retries=2, retry_delay=1):
     """
-    查询任务状态（带重试机制）
+    查询图片任务状态（带重试机制）
     
     Args:
         task_id: 任务ID
@@ -76,9 +78,47 @@ def query_task_status(task_id, max_retries=2, retry_delay=1):
         except Exception as e:
             error_msg = str(e)
             if attempt == 0:
-                print(f"查询任务状态失败 {task_id}: {error_msg}")
+                print(f"查询图片任务状态失败 {task_id}: {error_msg}")
             else:
-                print(f"重试查询任务状态 (第{attempt}次) {task_id}: {error_msg}")
+                print(f"重试查询图片任务状态 (第{attempt}次) {task_id}: {error_msg}")
+            
+            # 如果是访问被拒绝错误且还有重试机会，则重试
+            if attempt < max_retries and ("Access Denied" in error_msg or "Internal Error" in error_msg):
+                print(f"等待 {retry_delay} 秒后重试查询...")
+                time.sleep(retry_delay)
+                retry_delay *= 2  # 指数退避
+                continue
+            else:
+                return None
+    
+    return None
+
+def query_video_task_status(task_id, max_retries=2, retry_delay=1):
+    """
+    查询视频任务状态（带重试机制）
+    
+    Args:
+        task_id: 任务ID
+        max_retries: 最大重试次数
+        retry_delay: 重试间隔（秒）
+    
+    Returns:
+        dict: 任务状态信息，失败返回None
+    """
+    for attempt in range(max_retries + 1):
+        try:
+            client = Ark(api_key=ARK_CONFIG["api_key"])
+            
+            # 查询任务状态
+            resp = client.content_generation.tasks.get(task_id=task_id)
+            return resp
+            
+        except Exception as e:
+            error_msg = str(e)
+            if attempt == 0:
+                print(f"查询视频任务状态失败 {task_id}: {error_msg}")
+            else:
+                print(f"重试查询视频任务状态 (第{attempt}次) {task_id}: {error_msg}")
             
             # 如果是访问被拒绝错误且还有重试机会，则重试
             if attempt < max_retries and ("Access Denied" in error_msg or "Internal Error" in error_msg):
@@ -118,9 +158,61 @@ def download_image(image_data_base64, output_path):
         print(f"保存图片失败 {output_path}: {e}")
         return False
 
-def process_completed_task(task_info, task_file, resp_data):
+def download_video(video_url, output_path):
     """
-    处理已完成的任务
+    下载视频文件
+    
+    Args:
+        video_url: 视频URL
+        output_path: 输出文件路径
+    
+    Returns:
+        bool: 是否成功下载
+    """
+    try:
+        # 确保输出目录存在
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        
+        print(f"开始下载视频: {video_url}")
+        urllib.request.urlretrieve(video_url, output_path)
+        print(f"视频已保存: {output_path}")
+        return True
+        
+    except Exception as e:
+        print(f"下载视频失败 {output_path}: {e}")
+        return False
+
+def move_task_to_done(task_file, done_tasks_dir='done_tasks'):
+    """
+    将任务文件移动到done_tasks目录
+    
+    Args:
+        task_file: 任务文件路径
+        done_tasks_dir: 完成任务目录
+    
+    Returns:
+        bool: 是否成功移动
+    """
+    try:
+        # 确保done_tasks目录存在
+        os.makedirs(done_tasks_dir, exist_ok=True)
+        
+        # 获取文件名
+        filename = os.path.basename(task_file)
+        done_task_path = os.path.join(done_tasks_dir, filename)
+        
+        # 移动文件
+        os.rename(task_file, done_task_path)
+        print(f"✓ 任务文件已移动到done_tasks: {filename}")
+        return True
+        
+    except Exception as e:
+        print(f"移动任务文件失败: {e}")
+        return False
+
+def process_completed_image_task(task_info, task_file, resp_data):
+    """
+    处理已完成的图片任务
     
     Args:
         task_info: 任务信息
@@ -142,8 +234,14 @@ def process_completed_task(task_info, task_file, resp_data):
                 task_info['completed_time'] = time.time()
                 save_task_info(task_info, task_file)
                 
-                print(f"✓ 任务完成: {task_info['filename']}")
-                return True
+                print(f"✓ 图片任务完成: {task_info['filename']}")
+                
+                # 将任务文件移动到done_tasks目录
+                if move_task_to_done(task_file):
+                    return True
+                else:
+                    print(f"警告: 图片下载成功但任务文件移动失败: {task_info['filename']}")
+                    return True  # 图片已下载，认为任务成功
             else:
                 print(f"✗ 图片下载失败: {task_info['filename']}")
                 return False
@@ -152,7 +250,50 @@ def process_completed_task(task_info, task_file, resp_data):
             return False
             
     except Exception as e:
-        print(f"处理完成任务失败: {e}")
+        print(f"处理完成图片任务失败: {e}")
+        return False
+
+def process_completed_video_task(task_info, task_file, resp):
+    """
+    处理已完成的视频任务
+    
+    Args:
+        task_info: 任务信息
+        task_file: 任务文件路径
+        resp: 响应对象
+    
+    Returns:
+        bool: 是否成功处理
+    """
+    try:
+        if hasattr(resp, 'content') and hasattr(resp.content, 'video_url'):
+            # 下载视频
+            video_url = resp.content.video_url
+            output_path = task_info['output_path']
+            
+            if download_video(video_url, output_path):
+                # 更新任务状态
+                task_info['status'] = 'completed'
+                task_info['completed_time'] = time.time()
+                save_task_info(task_info, task_file)
+                
+                print(f"✓ 视频任务完成: {task_info['filename']}")
+                
+                # 将任务文件移动到done_tasks目录
+                if move_task_to_done(task_file):
+                    return True
+                else:
+                    print(f"警告: 视频下载成功但任务文件移动失败: {task_info['filename']}")
+                    return True  # 视频已下载，认为任务成功
+            else:
+                print(f"✗ 视频下载失败: {task_info['filename']}")
+                return False
+        else:
+            print(f"✗ 响应中没有视频数据: {task_info['filename']}")
+            return False
+            
+    except Exception as e:
+        print(f"处理完成视频任务失败: {e}")
         return False
 
 def process_failed_task(task_info, task_file, error_msg):
@@ -205,7 +346,7 @@ def check_all_tasks(tasks_dir):
     
     if not task_files:
         print(f"在目录 {tasks_dir} 中没有找到任务文件")
-        return {'total': 0, 'pending': 0, 'completed': 0, 'failed': 0}
+        return {'total': 0, 'pending': 0, 'completed': 0, 'failed': 0, 'processing': 0}
     
     stats = {
         'total': len(task_files),
@@ -235,30 +376,31 @@ def check_all_tasks(tasks_dir):
             print(f"  状态: {current_status} (跳过查询)")
             continue
         
-        # 查询任务状态
-        resp = query_task_status(task_id)
-        if not resp:
-            print(f"  查询失败")
-            continue
+        # 根据任务类型查询状态
+        task_type = task_info.get('task_type', 'image')  # 默认为图片任务
         
-        # 解析响应
-        if 'data' in resp:
-            data = resp['data']
-            status = data.get('status', 'unknown')
+        if task_type == 'video':
+            # 视频任务
+            resp = query_video_task_status(task_id)
+            if not resp:
+                print(f"  查询失败")
+                continue
             
+            # 解析视频任务响应
+            status = resp.status
             print(f"  API状态: {status}")
             
-            if status == 'done':
-                # 任务完成，下载图片
-                if process_completed_task(task_info, task_file, data):
+            if status == 'succeeded':
+                # 任务完成，下载视频
+                if process_completed_video_task(task_info, task_file, resp):
                     stats['completed'] += 1
                 else:
                     stats['failed'] += 1
                     
             elif status == 'failed':
                 # 任务失败
-                error_msg = data.get('reason', '未知错误')
-                process_failed_task(task_info, task_file, error_msg)
+                error_msg = getattr(resp, 'error', '未知错误')
+                process_failed_task(task_info, task_file, str(error_msg))
                 stats['failed'] += 1
                 
             elif status in ['pending', 'running']:
@@ -273,8 +415,46 @@ def check_all_tasks(tasks_dir):
                 print(f"  未知状态: {status}")
                 stats['pending'] += 1
         else:
-            print(f"  响应格式错误: {resp}")
-            stats['pending'] += 1
+            # 图片任务
+            resp = query_image_task_status(task_id)
+            if not resp:
+                print(f"  查询失败")
+                continue
+            
+            # 解析图片任务响应
+            if 'data' in resp:
+                data = resp['data']
+                status = data.get('status', 'unknown')
+                
+                print(f"  API状态: {status}")
+                
+                if status == 'done':
+                    # 任务完成，下载图片
+                    if process_completed_image_task(task_info, task_file, data):
+                        stats['completed'] += 1
+                    else:
+                        stats['failed'] += 1
+                        
+                elif status == 'failed':
+                    # 任务失败
+                    error_msg = data.get('reason', '未知错误')
+                    process_failed_task(task_info, task_file, error_msg)
+                    stats['failed'] += 1
+                    
+                elif status in ['pending', 'running']:
+                    # 任务进行中
+                    task_info['status'] = 'processing'
+                    save_task_info(task_info, task_file)
+                    stats['processing'] += 1
+                    print(f"  状态: 处理中...")
+                    
+                else:
+                    # 其他状态
+                    print(f"  未知状态: {status}")
+                    stats['pending'] += 1
+            else:
+                print(f"  响应格式错误: {resp}")
+                stats['pending'] += 1
         
         # 避免请求过于频繁
         time.sleep(0.5)

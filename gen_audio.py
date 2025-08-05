@@ -3,7 +3,7 @@
 """
 独立的语音生成脚本（异步版本）
 从脚本文件生成语音和时间戳文件
-使用gevent实现异步处理
+使用ThreadPoolExecutor实现多线程处理
 """
 
 import os
@@ -12,12 +12,10 @@ import re
 import json
 import argparse
 from datetime import datetime
-import gevent
-from gevent import monkey
-from gevent.pool import Pool
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 
-# 打补丁以支持异步
-monkey.patch_all()
+# 多线程处理
 
 # 添加src目录到路径
 src_dir = os.path.join(os.path.dirname(__file__), 'src')
@@ -228,17 +226,17 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
 
 def generate_voices_from_scripts(data_dir, max_workers=5):
     """
-    根据脚本生成语音（异步版本）
+    根据脚本生成语音（多线程版本）
     
     Args:
         data_dir: 数据目录路径（可以是包含多个章节的目录，也可以是单个章节目录）
-        max_workers: 最大并发协程数
+        max_workers: 最大并发线程数
     
     Returns:
         bool: 是否成功
     """
     try:
-        print(f"=== 开始异步生成语音 ===")
+        print(f"=== 开始多线程生成语音 ===")
         print(f"数据目录: {data_dir}")
         print(f"最大并发数: {max_workers}")
         
@@ -269,9 +267,6 @@ def generate_voices_from_scripts(data_dir, max_workers=5):
         # 创建语音生成器
         voice_generator = VoiceGenerator()
         
-        # 创建协程池
-        pool = Pool(max_workers)
-        
         # 收集所有需要处理的任务
         tasks = []
         
@@ -293,48 +288,63 @@ def generate_voices_from_scripts(data_dir, max_workers=5):
                 print(f"警告: 未找到解说内容")
                 continue
             
-            print(f"找到 {len(narration_contents)} 段解说内容，准备异步处理")
+            print(f"找到 {len(narration_contents)} 段解说内容，准备多线程处理")
             
-            # 为每段解说内容创建异步任务
+            # 为每段解说内容创建任务参数
             for i, narration_text in enumerate(narration_contents, 1):
-                task = pool.spawn(
-                    generate_single_narration_voice,
-                    voice_generator,
-                    chapter_dir,
-                    chapter_name,
-                    narration_text,
-                    i
-                )
-                tasks.append(task)
+                task_params = {
+                    'voice_generator': voice_generator,
+                    'chapter_dir': chapter_dir,
+                    'chapter_name': chapter_name,
+                    'narration_text': narration_text,
+                    'index': i
+                }
+                tasks.append(task_params)
         
         if not tasks:
             print("没有找到需要处理的任务")
             return False
         
-        print(f"\n开始执行 {len(tasks)} 个异步任务...")
-        
-        # 等待所有任务完成
-        gevent.joinall(tasks)
+        print(f"\n开始执行 {len(tasks)} 个多线程任务...")
+        print(f"使用 {max_workers} 个线程并发处理")
         
         # 统计结果
         success_count = 0
         failed_count = 0
         
-        for task in tasks:
-            try:
-                result = task.value
-                if result and result.get('success', False):
-                    success_count += 1
-                    print(f"✓ 任务 {result.get('index', '?')} 完成")
-                else:
+        # 使用ThreadPoolExecutor执行任务
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # 提交所有任务
+            future_to_params = {
+                executor.submit(
+                    generate_single_narration_voice,
+                    task_params['voice_generator'],
+                    task_params['chapter_dir'],
+                    task_params['chapter_name'],
+                    task_params['narration_text'],
+                    task_params['index']
+                ): task_params
+                for task_params in tasks
+            }
+            
+            # 收集结果
+            for future in as_completed(future_to_params):
+                task_params = future_to_params[future]
+                try:
+                    result = future.result()
+                    if result and result.get('success', False):
+                        success_count += 1
+                        print(f"线程 {threading.current_thread().name}: ✓ 任务 {result.get('index', '?')} 完成")
+                    else:
+                        failed_count += 1
+                        error_msg = result.get('error', '未知错误') if result else '任务返回空结果'
+                        print(f"线程 {threading.current_thread().name}: ✗ 任务 {result.get('index', '?') if result else '?'} 失败: {error_msg}")
+                except Exception as e:
                     failed_count += 1
-                    error_msg = result.get('error', '未知错误') if result else '任务返回空结果'
-                    print(f"✗ 任务 {result.get('index', '?') if result else '?'} 失败: {error_msg}")
-            except Exception as e:
-                failed_count += 1
-                print(f"✗ 任务执行异常: {e}")
+                    index = task_params.get('index', '?')
+                    print(f"线程 {threading.current_thread().name}: ✗ 任务 {index} 执行异常: {e}")
         
-        print(f"\n异步语音生成完成")
+        print(f"\n多线程语音生成完成")
         print(f"成功: {success_count} 个")
         print(f"失败: {failed_count} 个")
         print(f"总计: {len(tasks)} 个")
@@ -342,34 +352,34 @@ def generate_voices_from_scripts(data_dir, max_workers=5):
         return success_count > 0
         
     except Exception as e:
-        print(f"异步生成语音时发生错误: {e}")
+        print(f"多线程生成语音时发生错误: {e}")
         return False
 
 def main():
     """
     主函数
     """
-    parser = argparse.ArgumentParser(description='独立的语音生成脚本（异步版本）')
+    parser = argparse.ArgumentParser(description='独立的语音生成脚本（多线程版本）')
     parser.add_argument('data_dir', help='数据目录路径')
     parser.add_argument('--max-workers', type=int, default=5, 
-                       help='最大并发协程数 (默认: 5)')
+                       help='最大并发线程数 (默认: 5)')
     parser.add_argument('--verbose', '-v', action='store_true',
                        help='显示详细输出')
     
     args = parser.parse_args()
     
-    print(f"开始异步处理数据目录: {args.data_dir}")
-    print(f"并发协程数: {args.max_workers}")
+    print(f"开始多线程处理数据目录: {args.data_dir}")
+    print(f"并发线程数: {args.max_workers}")
     
     # 生成语音
     success = generate_voices_from_scripts(args.data_dir, args.max_workers)
     if success:
-        print(f"\n✓ 异步语音生成完成")
+        print(f"\n✓ 多线程语音生成完成")
     else:
-        print(f"\n✗ 异步语音生成失败")
+        print(f"\n✗ 多线程语音生成失败")
         sys.exit(1)
     
-    print("\n=== 异步处理完成 ===")
+    print("\n=== 多线程处理完成 ===")
 
 if __name__ == '__main__':
     main()

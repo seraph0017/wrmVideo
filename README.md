@@ -4,6 +4,11 @@
 
 ## ✨ 最新更新
 
+- 🛡️ **图片生成保障**: 精确任务统计和智能重试机制，确保所有图片都能成功生成
+- 🔄 **智能重试系统**: 自动检测失败任务并重试，支持单独重试失败任务
+- 📊 **任务状态管理**: 完成的任务自动移动到done_tasks目录，保持任务目录整洁
+- 🔧 **完整工作流**: 从任务提交到图片下载的完整自动化流程
+- 📈 **实时监控**: 提供任务状态监控和自动下载功能
 - 🔄 **同步/异步双模式**: 支持同步和异步两种图片生成模式
 - 📁 **目录结构优化**: Character_Images目录移至根目录，便于管理
 - 🎨 **角色图片系统**: 完整的五层角色图片目录结构（性别/年龄/风格/文化/气质）
@@ -65,13 +70,35 @@ wrmVideo/
 │   ├── bgm/                # 背景音乐
 │   └── sound_effects/      # 音效库
 └── utils/                  # 工具模块
+├── async_tasks/            # 异步任务目录（进行中的任务）
+├── done_tasks/             # 已完成任务目录（自动移动）
 ├── generate.py             # 主程序入口
 ├── gen_image.py            # 同步图片生成脚本
-├── gen_image_async.py      # 异步图片生成脚本
+├── gen_image_async.py      # 异步图片生成脚本（支持统计、重试和失败任务处理）
+├── check_and_retry_images.py  # 图片任务检查和重试脚本
+├── check_async_tasks.py    # 异步任务状态查询和下载脚本
+├── generate_all_images.py  # 完整图片生成流程脚本
 ├── gen_script.py           # 解说文案生成脚本
 ├── gen_audio.py            # 音频生成脚本
 ├── gen_video.py            # 视频生成脚本
 ├── requirements.txt        # 项目依赖
+
+### 核心脚本说明
+
+#### 图片生成相关
+
+- **`gen_image.py`**: 同步图片生成，适合小批量处理
+- **`gen_image_async.py`**: 异步图片生成脚本，新增功能：
+  - 自动统计所有narration文件中的图片特写数量
+  - 逐一发起请求并存储响应到async_tasks目录
+  - 自动检查并重试失败任务，确保所有任务都返回task_id
+  - 支持`--retry-failed`参数单独重试失败任务
+- **`check_async_tasks.py`**: 异步任务状态查询和下载脚本：
+  - 检查任务状态并下载完成的图片
+  - 自动将下载成功的任务文件移动到done_tasks目录
+  - 支持单次检查和持续监控模式
+- **`check_and_retry_images.py`**: 图片生成检查和重试脚本（旧版本）
+- **`generate_all_images.py`**: 完整的图片生成流程，集成任务提交、监控和重试
 
 
 ├── test/                   # 测试脚本目录
@@ -222,16 +249,30 @@ python generate.py data/001/chapter_001
 # 1. 生成解说文案
 python gen_script.py data/001
 
-# 2. 生成图片（同步模式）
-python gen_image.py data/001
-
-# 3. 生成图片（异步模式，适合批量处理）
+# 2. 生成图片（推荐使用异步模式）
+# 推荐方式 - 异步生成（带统计和重试）
 python gen_image_async.py data/001
 
-# 4. 生成音频
+# 单独重试失败任务
+python gen_image_async.py data/001 --retry-failed
+
+# 任务监控和下载
+python check_async_tasks.py --check-once
+
+# 持续监控直到所有任务完成
+python check_async_tasks.py --monitor
+
+# 其他选项：
+# 同步生成（简单直接）
+python gen_image.py data/001
+
+# 完整流程脚本
+python generate_all_images.py data/001
+
+# 3. 生成音频
 python gen_audio.py data/001
 
-# 5. 合成视频
+# 4. 合成视频
 python gen_video.py data/001
 ```
 
@@ -285,6 +326,11 @@ python batch_generate_character_images_async.py
 
 ### 🎨 AI图像生成
 - **双模式支持**: 同步模式（实时）+ 异步模式（批量）
+- **图片生成保障**: 智能重试机制确保每张图片都生成成功
+  - 自动检测失败任务并重试
+  - 支持最大重试次数配置
+  - 实时任务状态监控
+  - 完整的进度报告和错误日志
 - **角色图片系统**: 基于属性的智能角色图片选择
 - **高质量输出**: 720x1280竖屏格式，适合短视频
 - **风格多样**: 支持古风、现代、奇幻、科幻等多种风格

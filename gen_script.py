@@ -16,9 +16,8 @@ import zipfile
 import shutil
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple
-import gevent
-from gevent import monkey
-monkey.patch_all()
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 from volcenginesdkarkruntime import Ark
 from jinja2 import Environment, FileSystemLoader
 try:
@@ -50,7 +49,8 @@ class ScriptGenerator:
             raise ValueError("请设置ARK_API_KEY环境变量或在config.py中配置api_key参数")
         
         self.client = Ark(api_key=self.api_key)
-        self.model = ARK_CONFIG.get('model', 'doubao-seed-1.6-250615')
+        self.model = ARK_CONFIG.get('model', 'doubao-seed-1-6-flash-250615')
+        print(f"使用模型: {self.model}")
     
     def read_novel_file(self, file_path: str) -> str:
         """
@@ -421,23 +421,38 @@ class ScriptGenerator:
         
         return chunks
     
-    def generate_script_for_chunks_async(self, chunks: List[str], **kwargs) -> List[str]:
+    def generate_script_for_chunks_async(self, chunks: List[str], max_workers: int = 5, **kwargs) -> List[str]:
         """
-        异步为所有文本块生成脚本
+        使用多线程为所有文本块生成脚本
 
         Args:
             chunks: 文本块列表
+            max_workers: 最大线程数
             **kwargs: 其他参数
 
         Returns:
             List[str]: 生成的脚本列表
         """
-        jobs = [gevent.spawn(self.generate_script_for_chunk, chunk, i, len(chunks), **kwargs) 
-                for i, chunk in enumerate(chunks)]
+        results = [""] * len(chunks)  # 预分配结果列表
         
-        gevent.joinall(jobs)
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # 提交所有任务
+            future_to_index = {
+                executor.submit(self.generate_script_for_chunk, chunk, i, len(chunks), **kwargs): i
+                for i, chunk in enumerate(chunks)
+            }
+            
+            # 收集结果
+            for future in as_completed(future_to_index):
+                index = future_to_index[future]
+                try:
+                    result = future.result()
+                    results[index] = result if result else ""
+                    print(f"线程 {threading.current_thread().name}: 第 {index + 1}/{len(chunks)} 个脚本片段完成")
+                except Exception as e:
+                    print(f"线程 {threading.current_thread().name}: 第 {index + 1} 个脚本片段生成失败: {e}")
+                    results[index] = ""
         
-        results = [job.value if job.successful() else "" for job in jobs]
         return results
     
     def generate_script_for_chunk(self, content: str, chunk_index: int = 0, 
@@ -465,6 +480,8 @@ class ScriptGenerator:
             )
             
             print(f"正在生成第 {chunk_index + 1}/{total_chunks} 个脚本片段...")
+            print(f"输入内容长度: {len(content)} 字符")
+            print(f"Prompt长度: {len(prompt)} 字符")
             
             # 调用API
             completion = self.client.chat.completions.create(
@@ -478,11 +495,19 @@ class ScriptGenerator:
             
             response = completion.choices[0].message.content
             print(f"第 {chunk_index + 1} 个片段生成完成")
+            print(f"API响应长度: {len(response) if response else 0} 字符")
+            
+            if not response or len(response.strip()) == 0:
+                print(f"⚠️ 警告：第 {chunk_index + 1} 个片段的API响应为空！")
+                print(f"API响应详情: {repr(response)}")
+                return ""
             
             return response
             
         except Exception as e:
             print(f"生成脚本时出错：{e}")
+            import traceback
+            print(f"详细错误信息：{traceback.format_exc()}")
             return ""
     
     def fix_xml_tags(self, content: str) -> str:
@@ -758,6 +783,7 @@ class ScriptGenerator:
             # 设置模板环境
             template_dir = os.path.join(os.path.dirname(__file__))
             env = Environment(loader=FileSystemLoader(template_dir))
+            # template = env.get_template('chapter_narration_prompt_simple.j2')
             template = env.get_template('chapter_narration_prompt.j2')
             
             # 渲染模板
@@ -788,7 +814,7 @@ class ScriptGenerator:
             print(f"生成第{chapter_num}章解说文案时出错：{e}")
             return ""
     
-    def generate_script_from_novel_new(self, novel_file: str, output_dir: str, target_chapters: int = 50) -> bool:
+    def generate_script_from_novel_new(self, novel_file: str, output_dir: str, target_chapters: int = 50, max_workers: int = 5) -> bool:
         """
         新的小说脚本生成函数，支持章节分割和1200字解说生成
         
@@ -796,6 +822,7 @@ class ScriptGenerator:
             novel_file: 小说文件路径
             output_dir: 输出目录
             target_chapters: 目标章节数量（默认50）
+            max_workers: 最大并发线程数（默认5）
         
         Returns:
             bool: 是否成功
@@ -870,7 +897,7 @@ class ScriptGenerator:
             return False
 
     def generate_script(self, novel_content: str, output_dir: str = "output", 
-                       **kwargs) -> bool:
+                       max_workers: int = 5, **kwargs) -> bool:
         """
         生成完整脚本
         
@@ -898,8 +925,9 @@ class ScriptGenerator:
                 chunks = self.split_text(novel_content)
                 print(f"分割为 {len(chunks)} 个块")
                 
-                # 异步生成脚本
-                scripts = self.generate_script_for_chunks_async(chunks, **kwargs)
+                # 多线程生成脚本
+                print(f"使用 {max_workers} 个线程并发处理")
+                scripts = self.generate_script_for_chunks_async(chunks, max_workers=max_workers, **kwargs)
                 # 过滤掉空结果
                 scripts = [s for s in scripts if s and s.strip()]
             
@@ -954,6 +982,7 @@ def main():
     parser.add_argument('novel_file', help='小说文件路径')
     parser.add_argument('--output', '-o', default=None, help='输出目录（默认为小说文件所在目录）')
     parser.add_argument('--chapters', '-c', type=int, default=50, help='目标章节数量（默认50）')
+    parser.add_argument('--max-workers', '-w', type=int, default=5, help='最大并发线程数（默认5）')
     
     args = parser.parse_args()
     
@@ -973,6 +1002,7 @@ def main():
     print(f"输入文件: {args.novel_file}")
     print(f"输出目录: {output_dir}")
     print(f"目标章节数: {args.chapters}")
+    print(f"最大并发线程数: {args.max_workers}")
     
     # 创建脚本生成器
     generator = ScriptGenerator()
@@ -981,7 +1011,8 @@ def main():
     success = generator.generate_script_from_novel_new(
         args.novel_file, 
         output_dir, 
-        args.chapters
+        args.chapters,
+        max_workers=args.max_workers
     )
     
     if success:
