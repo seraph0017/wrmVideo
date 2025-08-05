@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-独立的语音生成脚本
+独立的语音生成脚本（异步版本）
 从脚本文件生成语音和时间戳文件
+使用gevent实现异步处理
 """
 
 import os
@@ -11,6 +12,12 @@ import re
 import json
 import argparse
 from datetime import datetime
+import gevent
+from gevent import monkey
+from gevent.pool import Pool
+
+# 打补丁以支持异步
+monkey.patch_all()
 
 # 添加src目录到路径
 src_dir = os.path.join(os.path.dirname(__file__), 'src')
@@ -107,19 +114,133 @@ def extract_narration_content(narration_file_path):
         print(f"提取解说内容时发生错误: {e}")
         return narration_contents
 
-def generate_voices_from_scripts(data_dir):
+def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, narration_text, index):
     """
-    根据脚本生成语音
+    异步生成单个解说内容的语音
+    
+    Args:
+        voice_generator: 语音生成器实例
+        chapter_dir: 章节目录
+        chapter_name: 章节名称
+        narration_text: 解说文本
+        index: 解说索引
+    
+    Returns:
+        dict: 生成结果
+    """
+    try:
+        # 清理文本用于TTS
+        clean_narration = clean_text_for_tts(narration_text)
+        
+        if not clean_narration.strip():
+            return {
+                'success': False,
+                'index': index,
+                'error': '解说内容清理后为空'
+            }
+        
+        # 生成音频文件路径
+        audio_path = os.path.join(chapter_dir, f"{chapter_name}_narration_{index:02d}.mp3")
+        
+        # 生成时间戳文件路径
+        timestamp_path = os.path.join(chapter_dir, f"{chapter_name}_narration_{index:02d}_timestamps.json")
+        
+        print(f"[协程 {index}] 正在生成第 {index} 段解说语音...")
+        print(f"[协程 {index}] 文本内容: {clean_narration[:50]}{'...' if len(clean_narration) > 50 else ''}")
+        
+        # 使用语音生成器生成语音并获取时间戳
+        result = voice_generator.generate_voice_with_timestamps(clean_narration, audio_path)
+        if result and result.get('success', False):
+            print(f"[协程 {index}] ✓ 第 {index} 段语音生成成功: {audio_path}")
+            
+            # 从API响应中提取时间戳信息
+            api_response = result.get('api_response', {})
+            
+            # 构建时间戳数据结构
+            timestamp_data = {
+                "text": clean_narration,
+                "audio_file": audio_path,
+                "duration": float(api_response.get('addition', {}).get('duration', 0)) / 1000.0,  # 转换为秒
+                "character_timestamps": [],
+                "generated_at": datetime.now().isoformat()
+            }
+            
+            # 从API响应中解析字符级时间戳
+            try:
+                addition = api_response.get('addition', {})
+                frontend_str = addition.get('frontend', '{}')
+                if isinstance(frontend_str, str):
+                    frontend_data = json.loads(frontend_str)
+                else:
+                    frontend_data = frontend_str
+                
+                words = frontend_data.get('words', [])
+                
+                for word_info in words:
+                    timestamp_data["character_timestamps"].append({
+                        "character": word_info.get('word', ''),
+                        "start_time": float(word_info.get('start_time', 0)),
+                        "end_time": float(word_info.get('end_time', 0))
+                    })
+                
+                print(f"[协程 {index}] ✓ 从API响应中解析到 {len(words)} 个字符的时间戳")
+                
+            except (json.JSONDecodeError, KeyError, ValueError) as e:
+                print(f"[协程 {index}] ⚠ 解析时间戳失败，使用估算值: {e}")
+                # 如果解析失败，回退到估算方式
+                current_time = 0.0
+                char_duration = timestamp_data["duration"] / len(clean_narration) if clean_narration else 0.15
+                for char_idx, char in enumerate(clean_narration):
+                    timestamp_data["character_timestamps"].append({
+                        "character": char,
+                        "start_time": current_time,
+                        "end_time": current_time + char_duration
+                    })
+                    current_time += char_duration
+            
+            # 保存时间戳文件
+            try:
+                with open(timestamp_path, 'w', encoding='utf-8') as f:
+                    json.dump(timestamp_data, f, ensure_ascii=False, indent=2)
+                print(f"[协程 {index}] ✓ 时间戳文件保存成功: {timestamp_path}")
+            except Exception as e:
+                print(f"[协程 {index}] ✗ 时间戳文件保存失败: {e}")
+            
+            return {
+                'success': True,
+                'index': index,
+                'audio_path': audio_path,
+                'timestamp_path': timestamp_path
+            }
+        else:
+            return {
+                'success': False,
+                'index': index,
+                'error': '语音生成失败'
+            }
+            
+    except Exception as e:
+        return {
+            'success': False,
+            'index': index,
+            'error': str(e)
+        }
+
+def generate_voices_from_scripts(data_dir, max_workers=5):
+    """
+    根据脚本生成语音（异步版本）
     
     Args:
         data_dir: 数据目录路径（可以是包含多个章节的目录，也可以是单个章节目录）
+        max_workers: 最大并发协程数
     
     Returns:
         bool: 是否成功
     """
     try:
-        print(f"=== 开始生成语音 ===")
+        print(f"=== 开始异步生成语音 ===")
         print(f"数据目录: {data_dir}")
+        print(f"最大并发数: {max_workers}")
         
         if not os.path.exists(data_dir):
             print(f"错误: 数据目录不存在 {data_dir}")
@@ -148,12 +269,16 @@ def generate_voices_from_scripts(data_dir):
         # 创建语音生成器
         voice_generator = VoiceGenerator()
         
-        success_count = 0
+        # 创建协程池
+        pool = Pool(max_workers)
+        
+        # 收集所有需要处理的任务
+        tasks = []
         
         # 处理每个章节
         for chapter_dir in chapter_dirs:
             chapter_name = os.path.basename(chapter_dir)
-            print(f"\n--- 处理章节: {chapter_name} ---")
+            print(f"\n--- 准备处理章节: {chapter_name} ---")
             
             # 查找解说文件
             narration_file = os.path.join(chapter_dir, "narration.txt")
@@ -168,115 +293,83 @@ def generate_voices_from_scripts(data_dir):
                 print(f"警告: 未找到解说内容")
                 continue
             
-            print(f"找到 {len(narration_contents)} 段解说内容")
+            print(f"找到 {len(narration_contents)} 段解说内容，准备异步处理")
             
-            # 为每段解说内容生成语音
+            # 为每段解说内容创建异步任务
             for i, narration_text in enumerate(narration_contents, 1):
-                # 清理文本用于TTS
-                clean_narration = clean_text_for_tts(narration_text)
-                
-                if not clean_narration.strip():
-                    print(f"警告: 第 {i} 段解说内容清理后为空")
-                    continue
-                
-                # 生成音频文件路径
-                audio_path = os.path.join(chapter_dir, f"{chapter_name}_narration_{i:02d}.mp3")
-                
-                # 生成时间戳文件路径
-                timestamp_path = os.path.join(chapter_dir, f"{chapter_name}_narration_{i:02d}_timestamps.json")
-                
-                print(f"正在生成第 {i} 段解说语音...")
-                print(f"文本内容: {clean_narration[:50]}{'...' if len(clean_narration) > 50 else ''}")
-                
-                # 使用语音生成器生成语音并获取时间戳
-                result = voice_generator.generate_voice_with_timestamps(clean_narration, audio_path)
-                if result and result.get('success', False):
-                    print(f"✓ 第 {i} 段语音生成成功: {audio_path}")
-                    
-                    # 从API响应中提取时间戳信息
-                    api_response = result.get('api_response', {})
-                    
-                    # 构建时间戳数据结构
-                    timestamp_data = {
-                        "text": clean_narration,
-                        "audio_file": audio_path,
-                        "duration": float(api_response.get('addition', {}).get('duration', 0)) / 1000.0,  # 转换为秒
-                        "character_timestamps": [],
-                        "generated_at": datetime.now().isoformat()
-                    }
-                    
-                    # 从API响应中解析字符级时间戳
-                    try:
-                        addition = api_response.get('addition', {})
-                        frontend_str = addition.get('frontend', '{}')
-                        if isinstance(frontend_str, str):
-                            frontend_data = json.loads(frontend_str)
-                        else:
-                            frontend_data = frontend_str
-                        
-                        words = frontend_data.get('words', [])
-                        
-                        for word_info in words:
-                            timestamp_data["character_timestamps"].append({
-                                "character": word_info.get('word', ''),
-                                "start_time": float(word_info.get('start_time', 0)),
-                                "end_time": float(word_info.get('end_time', 0))
-                            })
-                        
-                        print(f"✓ 从API响应中解析到 {len(words)} 个字符的时间戳")
-                        
-                    except (json.JSONDecodeError, KeyError, ValueError) as e:
-                        print(f"⚠ 解析时间戳失败，使用估算值: {e}")
-                        # 如果解析失败，回退到估算方式
-                        current_time = 0.0
-                        char_duration = timestamp_data["duration"] / len(clean_narration) if clean_narration else 0.15
-                        for char_idx, char in enumerate(clean_narration):
-                            timestamp_data["character_timestamps"].append({
-                                "character": char,
-                                "start_time": current_time,
-                                "end_time": current_time + char_duration
-                            })
-                            current_time += char_duration
-                    
-                    # 保存时间戳文件
-                    try:
-                        with open(timestamp_path, 'w', encoding='utf-8') as f:
-                            json.dump(timestamp_data, f, ensure_ascii=False, indent=2)
-                        print(f"✓ 时间戳文件保存成功: {timestamp_path}")
-                    except Exception as e:
-                        print(f"✗ 时间戳文件保存失败: {e}")
-                    
-                    success_count += 1
-                else:
-                    print(f"✗ 第 {i} 段语音生成失败")
+                task = pool.spawn(
+                    generate_single_narration_voice,
+                    voice_generator,
+                    chapter_dir,
+                    chapter_name,
+                    narration_text,
+                    i
+                )
+                tasks.append(task)
         
-        print(f"\n语音生成完成，成功生成 {success_count} 个语音文件")
+        if not tasks:
+            print("没有找到需要处理的任务")
+            return False
+        
+        print(f"\n开始执行 {len(tasks)} 个异步任务...")
+        
+        # 等待所有任务完成
+        gevent.joinall(tasks)
+        
+        # 统计结果
+        success_count = 0
+        failed_count = 0
+        
+        for task in tasks:
+            try:
+                result = task.value
+                if result and result.get('success', False):
+                    success_count += 1
+                    print(f"✓ 任务 {result.get('index', '?')} 完成")
+                else:
+                    failed_count += 1
+                    error_msg = result.get('error', '未知错误') if result else '任务返回空结果'
+                    print(f"✗ 任务 {result.get('index', '?') if result else '?'} 失败: {error_msg}")
+            except Exception as e:
+                failed_count += 1
+                print(f"✗ 任务执行异常: {e}")
+        
+        print(f"\n异步语音生成完成")
+        print(f"成功: {success_count} 个")
+        print(f"失败: {failed_count} 个")
+        print(f"总计: {len(tasks)} 个")
+        
         return success_count > 0
         
     except Exception as e:
-        print(f"生成语音时发生错误: {e}")
+        print(f"异步生成语音时发生错误: {e}")
         return False
 
 def main():
     """
     主函数
     """
-    parser = argparse.ArgumentParser(description='独立的语音生成脚本')
+    parser = argparse.ArgumentParser(description='独立的语音生成脚本（异步版本）')
     parser.add_argument('data_dir', help='数据目录路径')
+    parser.add_argument('--max-workers', type=int, default=5, 
+                       help='最大并发协程数 (默认: 5)')
+    parser.add_argument('--verbose', '-v', action='store_true',
+                       help='显示详细输出')
     
     args = parser.parse_args()
     
-    print(f"开始处理数据目录: {args.data_dir}")
+    print(f"开始异步处理数据目录: {args.data_dir}")
+    print(f"并发协程数: {args.max_workers}")
     
     # 生成语音
-    success = generate_voices_from_scripts(args.data_dir)
+    success = generate_voices_from_scripts(args.data_dir, args.max_workers)
     if success:
-        print(f"\n✓ 语音生成完成")
+        print(f"\n✓ 异步语音生成完成")
     else:
-        print(f"\n✗ 语音生成失败")
+        print(f"\n✗ 异步语音生成失败")
         sys.exit(1)
     
-    print("\n=== 处理完成 ===")
+    print("\n=== 异步处理完成 ===")
 
 if __name__ == '__main__':
     main()

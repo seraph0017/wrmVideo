@@ -22,6 +22,7 @@ pytest-asyncio>=0.21.0
 
 # 异步处理
 aiofiles>=23.0.0
+gevent>=23.0.0
 
 # 路径处理
 pathlib2>=2.3.7; python_version<'3.4'
