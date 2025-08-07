@@ -1,0 +1,38 @@
+[Script Info]
+Title: chapter_003 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.01,Default,,0,0,0,,胡姬突然对着{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}叽里呱
+Dialogue: 0,0:00:02.01,0:00:03.42,Default,,0,0,0,,啦说了一堆愤怒的{\c&H0000FFFF&\b1}话语{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.96,0:00:05.44,Default,,0,0,0,,但{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}完全听不懂
+Dialogue: 0,0:00:05.88,0:00:07.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}不耐烦{\c&H00FFFFFF&\b0}地嘟囔了句“说
+Dialogue: 0,0:00:07.31,0:00:09.82,Default,,0,0,0,,什么{\c&H0000FFFF&\b1}鸟语{\c&H00FFFFFF&\b0}呢”随后便转身离开
+Dialogue: 0,0:00:09.98,0:00:12.48,Default,,0,0,0,,走出{\c&H0000FFFF&\b1}小巷{\c&H00FFFFFF&\b0}早已等候在外的牙人们立
+Dialogue: 0,0:00:12.48,0:00:13.79,Default,,0,0,0,,即{\c&H0000FFFF&\b1}簇拥{\c&H00FFFFFF&\b0}上来参见
+Dialogue: 0,0:00:14.13,0:00:15.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}急于了解货物情况
+Dialogue: 0,0:00:16.14,0:00:18.70,Default,,0,0,0,,直接询问却{\c&H0000FFFF&\b1}无人{\c&H00FFFFFF&\b0}回应
+Dialogue: 0,0:00:19.03,0:00:21.70,Default,,0,0,0,,这时{\c&H0000FFFF&\b1}东市{\c&H00FFFFFF&\b0}牙人陈五更从后面走出
+Dialogue: 0,0:00:21.88,0:00:23.10,Default,,0,0,0,,对{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的亲自到
+Dialogue: 0,0:00:23.10,0:00:25.73,Default,,0,0,0,,来{\c&H0000FFFF&\b1}表示{\c&H00FFFFFF&\b0}惊讶并主动上前搭话
+Dialogue: 0,0:00:25.99,0:00:27.29,Default,,0,0,0,,显露出其在牙{\c&H0000FFFF&\b1}人圈{\c&H00FFFFFF&\b0}中
+Dialogue: 0,0:00:27.29,0:00:29.91,Default,,0,0,0,,的不俗地位{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}对陈五更的出
+Dialogue: 0,0:00:29.91,0:00:32.42,Default,,0,0,0,,现有些意外随即询问其{\c&H0000FFFF&\b1}姓名{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:32.59,0:00:33.62,Default,,0,0,0,,并将采买{\c&H0000FFFF&\b1}货物{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:33.62,0:00:35.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}任务{\c&H00FFFFFF&\b0}交给了他
+Dialogue: 0,0:00:35.16,0:00:36.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}要求{\c&H00FFFFFF&\b0}一日内办妥
+Dialogue: 0,0:00:36.85,0:00:38.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}从巷内转到巷
+Dialogue: 0,0:00:38.29,0:00:40.98,Default,,0,0,0,,外的{\c&H0000FFFF&\b1}大街{\c&H00FFFFFF&\b0}上时间仍是白天
+Dialogue: 0,0:00:41.20,0:00:43.09,Default,,0,0,0,,牙{\c&H0000FFFF&\b1}人们{\c&H00FFFFFF&\b0}穿着统一的服饰
+Dialogue: 0,0:00:43.26,0:00:46.41,Default,,0,0,0,,神情恭敬周围有行人往来{\c&H0000FFFF&\b1}车水马龙{\c&H00FFFFFF&\b0}

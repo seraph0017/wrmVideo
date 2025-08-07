@@ -118,6 +118,12 @@ class VoiceGenerator:
             if text != cleaned_text:
                 print("文本已清理，移除了可能导致问题的字符")
             
+            print(f"\n=== 调试信息 ===")
+            print(f"API URL: {self.api_url}")
+            print(f"请求配置类型: {type(request_config)}")
+            print(f"请求配置长度: {len(str(request_config))}")
+            print(f"=== 调试信息结束 ===\n")
+            
             # 发送请求
             headers = {
                 'Authorization': f'Bearer; {self.tts_config["access_token"]}',
@@ -137,7 +143,7 @@ class VoiceGenerator:
                 try:
                     # 解析JSON响应
                     resp_json = response.json()
-                    print(f"响应状态: {resp_json}")
+                    # print(f"响应状态: {resp_json}")  # 注释掉详细响应日志
                     
                     # 检查响应是否包含音频数据
                     if "data" in resp_json and resp_json.get("code") == 3000:
@@ -244,12 +250,68 @@ class VoiceGenerator:
                 timeout=30
             )
             
+            print(f"API响应状态码: {response.status_code}")
+            print(f"响应头: {dict(response.headers)}")
+            
             if response.status_code == 200:
                 try:
                     # 解析JSON响应
-                    resp_json = response.json()
+                    try:
+                        resp_json = response.json()
+                    except json.JSONDecodeError as e:
+                        print(f"\n=== JSON解析失败，开始修复 ===")
+                        print(f"JSON解析失败，尝试修复: {e}")
+                        print(f"错误位置: line {e.lineno}, column {e.colno}, char {e.pos}")
+                        
+                        # 显示完整的API响应内容
+                        response_text = response.text
+                        print(f"\n=== 完整API响应内容 ===")
+                        print(response_text)
+                        print(f"=== 响应内容结束 ===\n")
+                        
+                        if e.pos < len(response_text):
+                            start = max(0, e.pos - 50)
+                            end = min(len(response_text), e.pos + 50)
+                            print(f"错误位置附近: ...{response_text[start:end]}...")
+                        
+                        # 尝试多种修复策略
+                        fixed_text = response_text
+                        
+                        # 策略1: 修复缺少逗号的问题
+                        fixed_text = fixed_text.replace('}{', '},{')
+                        
+                        # 策略2: 修复数字后缺少逗号的问题
+                        import re
+                        fixed_text = re.sub(r'(\d+\.\d+)\}\{', r'\1},{', fixed_text)
+                        fixed_text = re.sub(r'(\d+)\}\{', r'\1},{', fixed_text)
+                        
+                        # 策略3: 修复字符串后缺少逗号的问题
+                        fixed_text = re.sub(r'("})(\{")', r'\1,\2', fixed_text)
+                        
+                        # 策略4: 修复特定模式
+                        fixed_text = re.sub(r'\}(\{"phone")', r'},\1', fixed_text)
+                        fixed_text = re.sub(r'\}(\{"word")', r'},\1', fixed_text)
+                        
+                        # 策略5: 修复行尾缺少逗号的问题
+                        lines = fixed_text.split('\n')
+                        for i in range(len(lines) - 1):
+                            if lines[i].strip().endswith('}') and lines[i+1].strip().startswith('{'):
+                                lines[i] = lines[i].rstrip() + ','
+                        fixed_text = '\n'.join(lines)
+                        
+                        try:
+                            resp_json = json.loads(fixed_text)
+                            print("JSON修复成功")
+                        except json.JSONDecodeError as e2:
+                            print(f"JSON修复失败: {e2}")
+                            print(f"修复后的内容（前500字符）: {fixed_text[:500]}...")
+                            # 重新抛出原始异常，让外层处理
+                            result['error_message'] = f"JSON解析失败: {e}"
+                            print(f"最终JSON解析失败: {e}")
+                            return result
+                    
                     result['api_response'] = resp_json
-                    print(f"响应状态: {resp_json}")
+                    # print(f"响应状态: {resp_json}")  # 注释掉详细响应日志
                     
                     # 检查响应是否包含音频数据
                     if "data" in resp_json and resp_json.get("code") == 3000:
@@ -271,11 +333,6 @@ class VoiceGenerator:
                         print(f"错误代码：{resp_json.get('code', 'N/A')}")
                         return result
                         
-                except json.JSONDecodeError:
-                    result['error_message'] = "响应不是有效的JSON格式"
-                    print(result['error_message'])
-                    print(f"原始响应：{response.text[:500]}...")
-                    return result
                 except Exception as e:
                     result['error_message'] = f"处理响应时出错：{e}"
                     print(result['error_message'])
@@ -286,6 +343,10 @@ class VoiceGenerator:
                 print(f"响应内容：{response.text}")
                 return result
                 
+        except requests.RequestException as e:
+            result['error_message'] = f"网络请求错误：{e}"
+            print(result['error_message'])
+            return result
         except Exception as e:
             result['error_message'] = f"生成语音时出错：{e}"
             print(result['error_message'])

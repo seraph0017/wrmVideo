@@ -143,6 +143,17 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
         # 生成时间戳文件路径
         timestamp_path = os.path.join(chapter_dir, f"{chapter_name}_narration_{index:02d}_timestamps.json")
         
+        # 检查文件是否已存在
+        if os.path.exists(audio_path) and os.path.exists(timestamp_path):
+            print(f"[协程 {index}] ✓ 第 {index} 段语音文件已存在，跳过生成: {audio_path}")
+            return {
+                'success': True,
+                'index': index,
+                'audio_path': audio_path,
+                'timestamp_path': timestamp_path,
+                'skipped': True
+            }
+        
         print(f"[协程 {index}] 正在生成第 {index} 段解说语音...")
         print(f"[协程 {index}] 文本内容: {clean_narration[:50]}{'...' if len(clean_narration) > 50 else ''}")
         
@@ -168,7 +179,56 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
                 addition = api_response.get('addition', {})
                 frontend_str = addition.get('frontend', '{}')
                 if isinstance(frontend_str, str):
-                    frontend_data = json.loads(frontend_str)
+                    # 尝试修复常见的JSON格式问题
+                    try:
+                        frontend_data = json.loads(frontend_str)
+                    except json.JSONDecodeError as e:
+                        print(f"[协程 {index}] ⚠ JSON格式错误，尝试修复: {e}")
+                        print(f"[协程 {index}] 错误位置: line {e.lineno}, column {e.colno}, char {e.pos}")
+                        
+                        # 显示完整的frontend字符串
+                        print(f"[协程 {index}] === 完整frontend内容 ===")
+                        print(frontend_str)
+                        print(f"[协程 {index}] === frontend内容结束 ===\n")
+                        
+                        # 显示错误位置附近的内容
+                        if e.pos < len(frontend_str):
+                            start = max(0, e.pos - 50)
+                            end = min(len(frontend_str), e.pos + 50)
+                            print(f"[协程 {index}] 错误位置附近: ...{frontend_str[start:end]}...")
+                        
+                        # 尝试多种修复策略
+                        fixed_str = frontend_str
+                        
+                        # 策略1: 修复缺少逗号的问题
+                        fixed_str = fixed_str.replace('}{', '},{')
+                        
+                        # 策略2: 修复数字后缺少逗号的问题
+                        import re
+                        fixed_str = re.sub(r'(\d+\.\d+)\}\{', r'\1},{', fixed_str)
+                        fixed_str = re.sub(r'(\d+)\}\{', r'\1},{', fixed_str)
+                        
+                        # 策略3: 修复字符串后缺少逗号的问题
+                        fixed_str = re.sub(r'("})(\{")', r'\1,\2', fixed_str)
+                        
+                        # 策略4: 修复特定模式
+                        fixed_str = re.sub(r'\}(\{"phone")', r'},\1', fixed_str)
+                        fixed_str = re.sub(r'\}(\{"word")', r'},\1', fixed_str)
+                        
+                        # 策略5: 修复行尾缺少逗号的问题
+                        lines = fixed_str.split('\n')
+                        for i in range(len(lines) - 1):
+                            if lines[i].strip().endswith('}') and lines[i+1].strip().startswith('{'):
+                                lines[i] = lines[i].rstrip() + ','
+                        fixed_str = '\n'.join(lines)
+                        
+                        try:
+                            frontend_data = json.loads(fixed_str)
+                            print(f"[协程 {index}] ✓ JSON修复成功")
+                        except json.JSONDecodeError as e2:
+                            print(f"[协程 {index}] ✗ JSON修复失败: {e2}")
+                            print(f"[协程 {index}] 修复后的内容（前500字符）: {fixed_str[:500]}...")
+                            frontend_data = {'words': []}
                 else:
                     frontend_data = frontend_str
                 
@@ -185,6 +245,8 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
                 
             except (json.JSONDecodeError, KeyError, ValueError) as e:
                 print(f"[协程 {index}] ⚠ 解析时间戳失败，使用估算值: {e}")
+                print(f"[协程 {index}] 原始frontend数据: {frontend_str[:500] if isinstance(frontend_str, str) else str(frontend_str)[:500]}...")
+                print(f"[协程 {index}] 完整API响应: {json.dumps(api_response, ensure_ascii=False, indent=2)[:1000]}...")
                 # 如果解析失败，回退到估算方式
                 current_time = 0.0
                 char_duration = timestamp_data["duration"] / len(clean_narration) if clean_narration else 0.15
@@ -211,10 +273,12 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
                 'timestamp_path': timestamp_path
             }
         else:
+            error_msg = result.get('error_message', '未知错误')
+            print(f"[协程 {index}] ✗ 语音生成失败: {error_msg}")
             return {
                 'success': False,
                 'index': index,
-                'error': '语音生成失败'
+                'error': f'语音生成失败: {error_msg}'
             }
             
     except Exception as e:
@@ -311,6 +375,7 @@ def generate_voices_from_scripts(data_dir, max_workers=5):
         # 统计结果
         success_count = 0
         failed_count = 0
+        skipped_count = 0
         
         # 使用ThreadPoolExecutor执行任务
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
@@ -333,8 +398,12 @@ def generate_voices_from_scripts(data_dir, max_workers=5):
                 try:
                     result = future.result()
                     if result and result.get('success', False):
-                        success_count += 1
-                        print(f"线程 {threading.current_thread().name}: ✓ 任务 {result.get('index', '?')} 完成")
+                        if result.get('skipped', False):
+                            skipped_count += 1
+                            print(f"线程 {threading.current_thread().name}: ⏭ 任务 {result.get('index', '?')} 跳过")
+                        else:
+                            success_count += 1
+                            print(f"线程 {threading.current_thread().name}: ✓ 任务 {result.get('index', '?')} 完成")
                     else:
                         failed_count += 1
                         error_msg = result.get('error', '未知错误') if result else '任务返回空结果'
@@ -345,7 +414,8 @@ def generate_voices_from_scripts(data_dir, max_workers=5):
                     print(f"线程 {threading.current_thread().name}: ✗ 任务 {index} 执行异常: {e}")
         
         print(f"\n多线程语音生成完成")
-        print(f"成功: {success_count} 个")
+        print(f"新生成: {success_count} 个")
+        print(f"跳过: {skipped_count} 个")
         print(f"失败: {failed_count} 个")
         print(f"总计: {len(tasks)} 个")
         

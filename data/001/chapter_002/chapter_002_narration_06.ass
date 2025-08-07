@@ -1,0 +1,33 @@
+[Script Info]
+Title: chapter_002 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}东市挥金如土
+Dialogue: 0,0:00:02.15,0:00:03.92,Default,,0,0,0,,数十丈长的{\c&H0000FFFF&\b1}木架{\c&H00FFFFFF&\b0}上挂满越
+Dialogue: 0,0:00:03.92,0:00:05.05,Default,,0,0,0,,州缭绫与{\c&H0000FFFF&\b1}蜀锦{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.56,0:00:07.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}西域{\c&H00FFFFFF&\b0}商人开箱露出鸽
+Dialogue: 0,0:00:07.09,0:00:09.51,Default,,0,0,0,,血宝石毛毯龙眼大的{\c&H0000FFFF&\b1}夜明珠{\c&H00FFFFFF&\b0}在晨
+Dialogue: 0,0:00:09.51,0:00:10.46,Default,,0,0,0,,光下{\c&H0000FFFF&\b1}流转{\c&H00FFFFFF&\b0}异彩
+Dialogue: 0,0:00:10.82,0:00:12.65,Default,,0,0,0,,这位被视为将死{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:12.65,0:00:14.30,Default,,0,0,0,,举动震惊了整个{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.45,0:00:16.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}达官显贵{\c&H00FFFFFF&\b0}们看着他将东市珍
+Dialogue: 0,0:00:16.50,0:00:19.51,Default,,0,0,0,,宝席卷一空纷纷以为他已{\c&H0000FFFF&\b1}放弃{\c&H00FFFFFF&\b0}挣扎
+Dialogue: 0,0:00:19.62,0:00:21.39,Default,,0,0,0,,唯有{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}自己知道
+Dialogue: 0,0:00:21.54,0:00:23.41,Default,,0,0,0,,这些{\c&H0000FFFF&\b1}价值连城{\c&H00FFFFFF&\b0}的货物将成
+Dialogue: 0,0:00:23.41,0:00:25.55,Default,,0,0,0,,为他运送{\c&H0000FFFF&\b1}金银{\c&H00FFFFFF&\b0}的绝佳掩护
+Dialogue: 0,0:00:25.69,0:00:27.64,Default,,0,0,0,,当杜总管{\c&H0000FFFF&\b1}平静{\c&H00FFFFFF&\b0}地吩咐全
+Dialogue: 0,0:00:27.64,0:00:29.23,Default,,0,0,0,,部送到{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}时
+Dialogue: 0,0:00:29.39,0:00:31.32,Default,,0,0,0,,牙{\c&H0000FFFF&\b1}人们{\c&H00FFFFFF&\b0}眼中闪烁的贪婪
+Dialogue: 0,0:00:31.45,0:00:32.75,Default,,0,0,0,,恰好落入{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}深邃的眼眸

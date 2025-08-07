@@ -1,0 +1,41 @@
+[Script Info]
+Title: chapter_001 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.34,Default,,0,0,0,,“都给朕{\c&H0000FFFF&\b1}让开{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.43,0:00:03.40,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}冲破人群
+Dialogue: 0,0:00:03.56,0:00:05.99,Default,,0,0,0,,赤红着双眼扑到{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}面前
+Dialogue: 0,0:00:06.11,0:00:07.99,Default,,0,0,0,,夺过身旁{\c&H0000FFFF&\b1}大臣{\c&H00FFFFFF&\b0}的笏板就朝他
+Dialogue: 0,0:00:07.99,0:00:09.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}劈头盖脸{\c&H00FFFFFF&\b0}打去
+Dialogue: 0,0:00:09.36,0:00:11.82,Default,,0,0,0,,“啪”的一声笏板{\c&H0000FFFF&\b1}应声{\c&H00FFFFFF&\b0}粉碎
+Dialogue: 0,0:00:12.00,0:00:13.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}头顶传来钻心剧痛
+Dialogue: 0,0:00:13.98,0:00:15.30,Default,,0,0,0,,却梗着脖子{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.42,0:00:17.52,Default,,0,0,0,,“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}这是家法还是国法
+Dialogue: 0,0:00:17.88,0:00:20.27,Default,,0,0,0,,若是{\c&H0000FFFF&\b1}家法{\c&H00FFFFFF&\b0}母亲可不会用笏板打我
+Dialogue: 0,0:00:20.64,0:00:22.36,Default,,0,0,0,,”“你{\c&H0000FFFF&\b1}还有{\c&H00FFFFFF&\b0}脸提你母后
+Dialogue: 0,0:00:22.52,0:00:24.30,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}气得浑身发抖
+Dialogue: 0,0:00:24.61,0:00:25.87,Default,,0,0,0,,“你不是她的{\c&H0000FFFF&\b1}儿子{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:26.02,0:00:27.52,Default,,0,0,0,,”“我{\c&H0000FFFF&\b1}怎么{\c&H00FFFFFF&\b0}不是
+Dialogue: 0,0:00:27.59,0:00:29.30,Default,,0,0,0,,我这{\c&H0000FFFF&\b1}忤逆{\c&H00FFFFFF&\b0}不就随你
+Dialogue: 0,0:00:29.38,0:00:31.23,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}字字诛心
+Dialogue: 0,0:00:31.55,0:00:33.33,Default,,0,0,0,,“{\c&H0000FFFF&\b1}只是{\c&H00FFFFFF&\b0}我不如你狠
+Dialogue: 0,0:00:36.85,0:00:39.46,Default,,0,0,0,,你都占全了”这话如{\c&H0000FFFF&\b1}尖刀{\c&H00FFFFFF&\b0}刺
+Dialogue: 0,0:00:39.46,0:00:40.35,Default,,0,0,0,,入{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}心窝
+Dialogue: 0,0:00:40.59,0:00:41.91,Default,,0,0,0,,他{\c&H0000FFFF&\b1}嘴唇{\c&H00FFFFFF&\b0}哆嗦着
+Dialogue: 0,0:00:42.05,0:00:43.45,Default,,0,0,0,,突然喷出一口{\c&H0000FFFF&\b1}鲜血{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:43.59,0:00:45.95,Default,,0,0,0,,双眼一翻{\c&H0000FFFF&\b1}直挺挺{\c&H00FFFFFF&\b0}向后倒去
+Dialogue: 0,0:00:46.09,0:00:47.23,Default,,0,0,0,,“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}晕倒了
+Dialogue: 0,0:00:47.38,0:00:49.72,Default,,0,0,0,,快传御医”{\c&H0000FFFF&\b1}满殿{\c&H00FFFFFF&\b0}顿时陷入混乱
+Dialogue: 0,0:00:50.01,0:00:50.17,Default,,0,0,0,,大臣们七手八脚扶住{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}

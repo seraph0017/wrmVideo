@@ -1,0 +1,38 @@
+[Script Info]
+Title: chapter_003 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}在西市小巷中
+Dialogue: 0,0:00:01.96,0:00:03.69,Default,,0,0,0,,被一位拥有{\c&H0000FFFF&\b1}突厥{\c&H00FFFFFF&\b0}王室血统的
+Dialogue: 0,0:00:03.69,0:00:04.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}胡姬{\c&H00FFFFFF&\b0}深深吸引
+Dialogue: 0,0:00:05.42,0:00:06.96,Default,,0,0,0,,这位{\c&H0000FFFF&\b1}女子{\c&H00FFFFFF&\b0}不仅容貌绝美
+Dialogue: 0,0:00:07.25,0:00:09.06,Default,,0,0,0,,鼻梁{\c&H0000FFFF&\b1}高挺{\c&H00FFFFFF&\b0}肤色白皙
+Dialogue: 0,0:00:09.38,0:00:10.95,Default,,0,0,0,,眼中更闪烁着与{\c&H0000FFFF&\b1}外貌{\c&H00FFFFFF&\b0}反
+Dialogue: 0,0:00:10.95,0:00:11.94,Default,,0,0,0,,差{\c&H0000FFFF&\b1}强烈{\c&H00FFFFFF&\b0}的野性
+Dialogue: 0,0:00:12.28,0:00:13.85,Default,,0,0,0,,宛如一匹待{\c&H0000FFFF&\b1}驯服{\c&H00FFFFFF&\b0}的烈马
+Dialogue: 0,0:00:14.10,0:00:16.89,Default,,0,0,0,,胡商见状连忙向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}介绍这女
+Dialogue: 0,0:00:16.89,0:00:17.80,Default,,0,0,0,,子的独特{\c&H0000FFFF&\b1}身份{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.32,0:00:20.17,Default,,0,0,0,,称其是花{\c&H0000FFFF&\b1}高价{\c&H00FFFFFF&\b0}收来的珍品
+Dialogue: 0,0:00:20.53,0:00:22.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}如今早已不是过去那
+Dialogue: 0,0:00:22.27,0:00:23.52,Default,,0,0,0,,个胆小怕事的{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.12,0:00:26.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}听闻{\c&H00FFFFFF&\b0}其血统后非但不惧
+Dialogue: 0,0:00:26.60,0:00:28.13,Default,,0,0,0,,反而更加{\c&H0000FFFF&\b1}坚定{\c&H00FFFFFF&\b0}了买
+Dialogue: 0,0:00:28.13,0:00:31.07,Default,,0,0,0,,下她的决心甚至{\c&H0000FFFF&\b1}豪气{\c&H00FFFFFF&\b0}地表示孤
+Dialogue: 0,0:00:31.21,0:00:33.60,Default,,0,0,0,,都要了场景设定在{\c&H0000FFFF&\b1}西市{\c&H00FFFFFF&\b0}的一
+Dialogue: 0,0:00:33.60,0:00:34.77,Default,,0,0,0,,条僻静{\c&H0000FFFF&\b1}巷子{\c&H00FFFFFF&\b0}里
+Dialogue: 0,0:00:34.95,0:00:37.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}时间{\c&H00FFFFFF&\b0}是白天光线充足
+Dialogue: 0,0:00:37.37,0:00:39.35,Default,,0,0,0,,周围有停放的{\c&H0000FFFF&\b1}马车{\c&H00FFFFFF&\b0}和一些西
+Dialogue: 0,0:00:39.35,0:00:40.52,Default,,0,0,0,,域{\c&H0000FFFF&\b1}风格{\c&H00FFFFFF&\b0}的货物
+Dialogue: 0,0:00:40.70,0:00:42.27,Default,,0,0,0,,营造出浓厚的{\c&H0000FFFF&\b1}商业{\c&H00FFFFFF&\b0}氛围

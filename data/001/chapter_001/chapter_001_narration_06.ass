@@ -1,0 +1,38 @@
+[Script Info]
+Title: chapter_001 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.67,Default,,0,0,0,,“大{\c&H0000FFFF&\b1}唐贞观{\c&H00FFFFFF&\b0}十六年
+Dialogue: 0,0:00:01.83,0:00:03.31,Default,,0,0,0,,皇太子{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.50,0:00:05.87,Default,,0,0,0,,手捧母后{\c&H0000FFFF&\b1}文德{\c&H00FFFFFF&\b0}皇后之灵位
+Dialogue: 0,0:00:06.07,0:00:08.32,Default,,0,0,0,,身着{\c&H0000FFFF&\b1}高祖{\c&H00FFFFFF&\b0}亲赐皇太孙冕服
+Dialogue: 0,0:00:08.45,0:00:09.72,Default,,0,0,0,,自刎于{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿中
+Dialogue: 0,0:00:09.82,0:00:11.21,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}声音朗朗
+Dialogue: 0,0:00:11.32,0:00:12.98,Default,,0,0,0,,每一字都如{\c&H0000FFFF&\b1}重锤{\c&H00FFFFFF&\b0}砸
+Dialogue: 0,0:00:12.98,0:00:15.69,Default,,0,0,0,,在{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}心上“自此史书可表
+Dialogue: 0,0:00:15.85,0:00:18.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}囚父弑兄杀弟
+Dialogue: 0,0:00:18.77,0:00:21.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}灭侄{\c&H00FFFFFF&\b0}烝弟媳今日再加一项
+Dialogue: 0,0:00:21.89,0:00:25.42,Default,,0,0,0,,逼死{\c&H0000FFFF&\b1}嫡长子{\c&H00FFFFFF&\b0}”话音未落他卯足力气
+Dialogue: 0,0:00:25.59,0:00:27.57,Default,,0,0,0,,一头向旁边{\c&H0000FFFF&\b1}金柱{\c&H00FFFFFF&\b0}撞去
+Dialogue: 0,0:00:31.52,0:00:33.06,Default,,0,0,0,,嘶吼着从{\c&H0000FFFF&\b1}龙座{\c&H00FFFFFF&\b0}上跳下
+Dialogue: 0,0:00:33.30,0:00:35.28,Default,,0,0,0,,连{\c&H0000FFFF&\b1}帝王{\c&H00FFFFFF&\b0}仪态都顾不上了
+Dialogue: 0,0:00:35.38,0:00:36.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}大臣{\c&H00FFFFFF&\b0}们还在发懵
+Dialogue: 0,0:00:38.80,0:00:41.03,Default,,0,0,0,,高八尺的{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}如猛虎扑
+Dialogue: 0,0:00:41.03,0:00:43.51,Default,,0,0,0,,食一把扯住{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}后脖领
+Dialogue: 0,0:00:43.70,0:00:45.21,Default,,0,0,0,,将他{\c&H0000FFFF&\b1}硬生生{\c&H00FFFFFF&\b0}拽回
+Dialogue: 0,0:00:45.38,0:00:46.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}奋力挣扎
+Dialogue: 0,0:00:46.55,0:00:49.27,Default,,0,0,0,,却被围上来的{\c&H0000FFFF&\b1}大臣{\c&H00FFFFFF&\b0}死死按住
+Dialogue: 0,0:00:49.38,0:00:50.97,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}大喊{\c&H00FFFFFF&\b0}“完了
+Dialogue: 0,0:00:51.15,0:00:51.31,Default,,0,0,0,,死{\c&H0000FFFF&\b1}不成{\c&H00FFFFFF&\b0}怕是要遭大罪了”

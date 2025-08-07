@@ -1,0 +1,40 @@
+[Script Info]
+Title: chapter_001 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.00,Default,,0,0,0,,“{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}不仁当废
+Dialogue: 0,0:00:02.09,0:00:03.29,Default,,0,0,0,,”御史大夫{\c&H0000FFFF&\b1}韦挺{\c&H00FFFFFF&\b0}第
+Dialogue: 0,0:00:03.29,0:00:06.29,Default,,0,0,0,,一个跳出来{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}党羽纷纷附和
+Dialogue: 0,0:00:06.45,0:00:08.73,Default,,0,0,0,,“不忠{\c&H0000FFFF&\b1}不孝{\c&H00FFFFFF&\b0}应流放边疆
+Dialogue: 0,0:00:08.93,0:00:10.66,Default,,0,0,0,,”“跪下求{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}宽恕
+Dialogue: 0,0:00:10.82,0:00:11.99,Default,,0,0,0,,或可{\c&H0000FFFF&\b1}从轻发落{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.11,0:00:14.09,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}突然放声狂笑
+Dialogue: 0,0:00:14.21,0:00:15.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}笑声{\c&H00FFFFFF&\b0}在大殿中回荡
+Dialogue: 0,0:00:15.66,0:00:18.21,Default,,0,0,0,,带着无尽{\c&H0000FFFF&\b1}嘲讽{\c&H00FFFFFF&\b0}“哈哈哈哈哈
+Dialogue: 0,0:00:18.30,0:00:20.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}皇帝{\c&H00FFFFFF&\b0}说孤不配为太子
+Dialogue: 0,0:00:20.30,0:00:22.11,Default,,0,0,0,,那你当年做{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}时就配
+Dialogue: 0,0:00:22.27,0:00:24.38,Default,,0,0,0,,拎着{\c&H0000FFFF&\b1}兄弟{\c&H00FFFFFF&\b0}头颅逼父退位
+Dialogue: 0,0:00:24.65,0:00:25.84,Default,,0,0,0,,也{\c&H0000FFFF&\b1}配谈{\c&H00FFFFFF&\b0}‘仁’
+Dialogue: 0,0:00:26.00,0:00:28.77,Default,,0,0,0,,”这话如惊雷{\c&H0000FFFF&\b1}炸响{\c&H00FFFFFF&\b0}满殿死寂
+Dialogue: 0,0:00:29.16,0:00:30.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}脸色瞬间铁青
+Dialogue: 0,0:00:30.93,0:00:33.38,Default,,0,0,0,,手指颤抖着指向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:35.52,0:00:38.30,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}却看向史官方向
+Dialogue: 0,0:00:38.62,0:00:40.49,Default,,0,0,0,,声如洪钟“{\c&H0000FFFF&\b1}史官{\c&H00FFFFFF&\b0}何在
+Dialogue: 0,0:00:40.84,0:00:42.94,Default,,0,0,0,,孤之言当{\c&H0000FFFF&\b1}记录{\c&H00FFFFFF&\b0}流传后世
+Dialogue: 0,0:00:43.15,0:00:44.82,Default,,0,0,0,,”{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}无奈出列
+Dialogue: 0,0:00:44.97,0:00:46.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}从袍袖中捧出一物
+Dialogue: 0,0:00:47.26,0:00:48.91,Default,,0,0,0,,赫然是{\c&H0000FFFF&\b1}文德{\c&H00FFFFFF&\b0}皇后的灵位
+Dialogue: 0,0:00:49.09,0:00:50.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}群臣{\c&H00FFFFFF&\b0}眼中闪过不屑
+Dialogue: 0,0:00:50.84,0:00:52.32,Default,,0,0,0,,以为他又要搬{\c&H0000FFFF&\b1}母亲{\c&H00FFFFFF&\b0}求情

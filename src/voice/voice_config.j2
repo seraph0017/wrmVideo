@@ -16,7 +16,7 @@
     },
     "request": {
         "reqid": "{{ request_id }}",
-        "text": "{{ text }}",
+        "text": {{ text | tojson }},
         "text_type": "{{ text_type | default('plain') }}",
         "operation": "{{ operation | default('query') }}",
         "with_frontend": {{ with_frontend | default(1) }},

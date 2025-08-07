@@ -1,0 +1,37 @@
+[Script Info]
+Title: chapter_003 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.21,Default,,0,0,0,,城门送行的{\c&H0000FFFF&\b1}文武{\c&H00FFFFFF&\b0}大臣神色复杂
+Dialogue: 0,0:00:02.71,0:00:04.46,Default,,0,0,0,,他们万没想到向来{\c&H0000FFFF&\b1}性格{\c&H00FFFFFF&\b0}软弱
+Dialogue: 0,0:00:04.46,0:00:06.20,Default,,0,0,0,,的{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}能有如此表现
+Dialogue: 0,0:00:06.73,0:00:07.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}尉迟敬德{\c&H00FFFFFF&\b0}感叹其
+Dialogue: 0,0:00:07.80,0:00:09.31,Default,,0,0,0,,有{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}年轻时的风范
+Dialogue: 0,0:00:09.67,0:00:10.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}众人{\c&H00FFFFFF&\b0}皆思绪万千
+Dialogue: 0,0:00:11.21,0:00:12.31,Default,,0,0,0,,特别是一众{\c&H0000FFFF&\b1}武将{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.66,0:00:14.45,Default,,0,0,0,,从与年轻时{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}有七八分
+Dialogue: 0,0:00:14.45,0:00:15.73,Default,,0,0,0,,相似的{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}身上
+Dialogue: 0,0:00:16.18,0:00:17.48,Default,,0,0,0,,仿佛{\c&H0000FFFF&\b1}看到{\c&H00FFFFFF&\b0}了当年叱
+Dialogue: 0,0:00:17.48,0:00:18.87,Default,,0,0,0,,咤{\c&H0000FFFF&\b1}风云{\c&H00FFFFFF&\b0}的天策上将
+Dialogue: 0,0:00:19.43,0:00:21.45,Default,,0,0,0,,郧国公{\c&H0000FFFF&\b1}张亮{\c&H00FFFFFF&\b0}更是感慨诸多皇
+Dialogue: 0,0:00:21.45,0:00:23.18,Default,,0,0,0,,子中{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}最有陛下风范
+Dialogue: 0,0:00:23.55,0:00:25.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌也罕见地接话
+Dialogue: 0,0:00:25.77,0:00:27.77,Default,,0,0,0,,称其为{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}和文德皇后长子
+Dialogue: 0,0:00:28.17,0:00:30.70,Default,,0,0,0,,像{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}属正常引得众人侧目
+Dialogue: 0,0:00:31.01,0:00:32.63,Default,,0,0,0,,场景在{\c&H0000FFFF&\b1}明德门{\c&H00FFFFFF&\b0}城楼上
+Dialogue: 0,0:00:33.10,0:00:35.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}大臣{\c&H00FFFFFF&\b0}们身着朝服表情各异
+Dialogue: 0,0:00:35.85,0:00:38.14,Default,,0,0,0,,有赞叹有惊讶有{\c&H0000FFFF&\b1}深思{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:38.71,0:00:40.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}是出征的大军
+Dialogue: 0,0:00:40.55,0:00:41.64,Default,,0,0,0,,形成{\c&H0000FFFF&\b1}鲜明对比{\c&H00FFFFFF&\b0}

@@ -83,8 +83,22 @@ class PromptConfig:
             tts_config=tts_config,
             **kwargs
         )
+        
+        print(f"\n=== 语音配置模板渲染结果 ===")
+        print(f"配置字符串长度: {len(config_str)}")
+        print(f"配置字符串前500字符: {config_str[:500]}...")
+        print(f"=== 模板渲染结果结束 ===\n")
+        
         import json
-        return json.loads(config_str)
+        try:
+            return json.loads(config_str)
+        except json.JSONDecodeError as e:
+            print(f"\n=== 语音配置JSON解析失败 ===")
+            print(f"JSON解析错误: {e}")
+            print(f"错误位置: line {e.lineno}, column {e.colno}, char {e.pos}")
+            print(f"完整配置字符串:\n{config_str}")
+            print(f"=== JSON解析失败信息结束 ===\n")
+            raise
 
 # 艺术风格配置
 ART_STYLES = {

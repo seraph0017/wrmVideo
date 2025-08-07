@@ -107,6 +107,8 @@ def optimize_video_for_size(input_path, output_path, target_size_mb=50):
         (
             ffmpeg
             .input(input_path)
+            .filter('scale', VIDEO_STANDARDS['width'], VIDEO_STANDARDS['height'], force_original_aspect_ratio='increase')
+            .filter('crop', VIDEO_STANDARDS['width'], VIDEO_STANDARDS['height'])
             .output(
                 output_path,
                 vcodec=VIDEO_STANDARDS['video_codec'],
@@ -114,7 +116,6 @@ def optimize_video_for_size(input_path, output_path, target_size_mb=50):
                 video_bitrate=f"{target_video_bitrate_kbps}k",
                 audio_bitrate=VIDEO_STANDARDS['audio_bitrate'],
                 r=VIDEO_STANDARDS['fps'],
-                s=f"{VIDEO_STANDARDS['width']}x{VIDEO_STANDARDS['height']}",
                 preset='medium',  # 使用medium预设平衡质量和文件大小
                 crf=23  # 添加CRF参数进一步控制质量
             )
@@ -329,6 +330,27 @@ def image_to_video(image_path, output_path, duration=5, width=None, height=None,
     
 
 
+def create_simple_image_video(image_path, output_path, duration=5, width=720, height=1280, fps=30):
+    """创建简单的图片视频，不添加fuceng叠加，专用于narration_01的图片部分"""
+    print(f"开始转换图片到简单视频: {image_path} -> {output_path}, 时长: {duration}s")
+    try:
+        # 使用简单的Ken Burns效果，强制填满整个画面，避免黑边
+        cmd = [
+            'ffmpeg', '-y',
+            '-loop', '1', '-i', image_path,
+            '-t', str(duration),
+            '-vf', f'scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height},zoompan=z=\'min(zoom+0.0015,1.5)\':\'x=iw/2-(iw/zoom/2)\':\'y=ih/2-(ih/zoom/2)\':\'d=1\':\'s={width}x{height}\':\'fps={fps}\'',
+            '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'medium',
+            '-r', str(fps),
+            output_path
+        ]
+        subprocess.run(cmd, check=True, capture_output=True)
+        print(f"简单图片视频生成成功：{output_path} (时长: {duration}s)")
+        return True
+    except Exception as e:
+        print(f"简单图片转视频失败: {e}")
+        return False
+
 def image_to_video_ffmpeg(image_path, output_path, duration=5, width=720, height=1280, fps=30, fade_duration=0.5, audio_path=None):
     """ffmpeg版本的图片转视频函数（备用）"""
     # 如果提供了音频文件，使用音频时长
@@ -342,35 +364,13 @@ def image_to_video_ffmpeg(image_path, output_path, duration=5, width=720, height
     
     print(f"开始转换图片到视频 (ffmpeg): {image_path} -> {output_path}, 时长: {duration}s")
     try:
-        # 计算四角滑动动画参数
-        total_frames = int(duration * fps)
-        corner_offset = min(width, height) * 0.15  # 移动距离
-        
-        # 创建四角滑动动画的表达式
-        # 简化的四角循环移动：使用正弦和余弦函数的组合
-        # 时间进度：t/{duration} 从0到1，乘以2π实现完整循环
-        
-        # 添加上下左右滑动动画效果
-        # 创建基础视频（图片转视频，带缩放和滑动效果）
-        scale_factor = 1.2  # 放大倍数，为滑动留出空间
-        scaled_width = int(width * scale_factor)
-        scaled_height = int(height * scale_factor)
-        
-        # 计算滑动范围
-        max_x_offset = scaled_width - width
-        max_y_offset = scaled_height - height
-        
-        # 创建滑动动画表达式
-        # 使用正弦波实现平滑的上下左右滑动
-        # t是时间变量，duration是总时长
-        x_expr = f"{max_x_offset/2} + {max_x_offset/4} * sin(2*PI*t/{duration}) + {max_x_offset/4} * cos(PI*t/{duration})"
-        y_expr = f"{max_y_offset/2} + {max_y_offset/4} * cos(2*PI*t/{duration}) + {max_y_offset/4} * sin(PI*t/{duration})"
-        
+        # 使用简化的Ken Burns效果，强制填满整个画面，避免黑边
         base_video = (
             ffmpeg
             .input(image_path, loop=1, t=duration)
-            .filter('scale', scaled_width, scaled_height)  # 放大图片为滑动留出空间
-            .filter('crop', width, height, x_expr, y_expr)  # 使用动态表达式实现滑动裁剪
+            .filter('scale', width, height, force_original_aspect_ratio='increase')
+            .filter('crop', width, height)
+            .filter('zoompan', z='min(zoom+0.0015,1.5)', x='iw/2-(iw/zoom/2)', y='ih/2-(ih/zoom/2)', d=1, s=f'{width}x{height}', fps=fps)
         )
         
         # 定义overlay文件路径 - 随机选择一个fuceng文件
@@ -430,7 +430,6 @@ def image_to_video_ffmpeg(image_path, output_path, duration=5, width=720, height
                 preset='medium',  # 使用medium预设平衡质量和文件大小
                 video_bitrate='1500k',  # 适中的视频比特率
                 audio_bitrate=VIDEO_STANDARDS['audio_bitrate'],
-                s=f"{VIDEO_STANDARDS['width']}x{VIDEO_STANDARDS['height']}",
                 **{'g': 30, 'keyint_min': 30}  # 设置标准关键帧间隔，每1秒一个关键帧，与拼接设置保持一致
             )
             .overwrite_output()
@@ -553,9 +552,10 @@ def concat_videos(video_list, output_path):
             filelist_path = f.name
         
         try:
-            # 使用ffmpeg命令行工具拼接，重新编码确保时间戳连续性
+            # 使用ffmpeg命令行工具拼接，重新编码确保时间戳连续性，使用正确的缩放和裁剪
             subprocess.run([
                 'ffmpeg', '-f', 'concat', '-safe', '0', '-i', filelist_path,
+                '-vf', f'scale={VIDEO_STANDARDS["width"]}:{VIDEO_STANDARDS["height"]}:force_original_aspect_ratio=increase,crop={VIDEO_STANDARDS["width"]}:{VIDEO_STANDARDS["height"]}',
                 '-c:v', 'libx264', '-c:a', 'aac', '-preset', 'fast',  # 重新编码确保时间戳连续
                 '-g', '30', '-keyint_min', '30', '-r', '30',  # 标准关键帧间隔，每1秒一个关键帧
                 output_path, '-y'
@@ -1314,91 +1314,186 @@ def process_chapter(chapter_path):
         # 查找对应的图片文件
         image_num = str(narration_num_int).zfill(2)  # narration_01对应image_01
         if narration_num_int == 1:
-            # narration_01特殊处理：只使用3和4的jpeg
+            # narration_01特殊处理：使用当前章节的两个video文件和一个image文件
+            video_paths = [
+                os.path.join(chapter_path, f"{chapter_name}_video_1.mp4"),
+                os.path.join(chapter_path, f"{chapter_name}_video_2.mp4")
+            ]
             image_paths = [
-                os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_3.jpeg"),
-                os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_4.jpeg")
+                os.path.join(chapter_path, f"{chapter_name}_image_01_3.jpeg")
             ]
         else:
-            # 其他narration：使用1、2、3、4四张jpeg
+            # 其他narration：使用1、2、3三张jpeg
             image_paths = [
                 os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_1.jpeg"),
                 os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_2.jpeg"),
-                os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_3.jpeg"),
-                os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_4.jpeg")
+                os.path.join(chapter_path, f"{chapter_name}_image_{image_num}_3.jpeg")
             ]
         
         # 查找对应的音频文件和timestamps文件
         audio_file = ass_file.replace('.ass', '.mp3')
         timestamps_file = ass_file.replace('.ass', '_timestamps.json')
         
-        # 检查图片文件是否都存在，如果不存在则跳过
-        missing_images = [img for img in image_paths if not os.path.exists(img)]
-        if missing_images:
-            print(f"跳过 Narration {narration_num}: 缺少图片文件 {missing_images}")
-            continue
+        # 检查文件是否都存在，如果不存在则跳过
+        if narration_num_int == 1:
+            # 检查video和image文件
+            missing_videos = [vid for vid in video_paths if not os.path.exists(vid)]
+            missing_images = [img for img in image_paths if not os.path.exists(img)]
+            if missing_videos or missing_images:
+                print(f"跳过 Narration {narration_num}: 缺少视频文件 {missing_videos} 或图片文件 {missing_images}")
+                continue
+        else:
+            # 检查图片文件
+            missing_images = [img for img in image_paths if not os.path.exists(img)]
+            if missing_images:
+                print(f"跳过 Narration {narration_num}: 缺少图片文件 {missing_images}")
+                continue
         
         # 检查音频文件是否存在
         if not os.path.exists(audio_file):
             print(f"跳过 Narration {narration_num}: 未找到音频文件 {audio_file}")
             continue
         
-        # narration_01特殊处理：使用timestamps时长减去指定first_video文件的实际时长，确保无缝衔接
+        # narration_01特殊处理：按照指定时间点切换视频
         if narration_num_int == 1:
-            narration_01_duration = get_timestamps_duration(timestamps_file)
+            calculated_duration = get_timestamps_duration(timestamps_file)
+            print(f"Narration {narration_num}: 使用timestamps时长 {calculated_duration:.2f}s")
             
-            # 获取指定的first_video文件时长
-            specified_first_video_path = "data/001/chapter_001/chapter_001_first_video.mp4"
-            if os.path.exists(specified_first_video_path):
-                _, _, _, specified_first_video_duration = get_video_info(specified_first_video_path)
-                calculated_duration = max(0, narration_01_duration - specified_first_video_duration)  # 减去指定first_video时长，确保无缝衔接
-                print(f"Narration {narration_num}: 特殊计算时长 {narration_01_duration:.2f}s - {specified_first_video_duration:.2f}s (指定文件) = {calculated_duration:.2f}s")
-            else:
-                # 如果指定文件不存在，回退到使用当前章节的first_video时长
-                calculated_duration = max(0, narration_01_duration - first_video_duration)
-                print(f"Narration {narration_num}: 特殊计算时长 {narration_01_duration:.2f}s - {first_video_duration:.2f}s (当前章节) = {calculated_duration:.2f}s")
-            
-            # 使用image_01_3.jpeg和image_01_4.jpeg生成视频
-            image_01_3_path = os.path.join(chapter_path, f"{chapter_name}_image_01_3.jpeg")
-            image_01_4_path = os.path.join(chapter_path, f"{chapter_name}_image_01_4.jpeg")
-            
-            # 检查两张图片是否都存在
-            if not os.path.exists(image_01_3_path) or not os.path.exists(image_01_4_path):
-                print(f"跳过 Narration {narration_num}: 缺少图片文件 {image_01_3_path} 或 {image_01_4_path}")
-                continue
-            
-            # 为每张图片生成视频，时长平均分配
-            segment_duration = calculated_duration / 2
-            narration_videos = []
-            
-            for i, image_path in enumerate([image_01_3_path, image_01_4_path], 1):
-                image_video_path = os.path.join(temp_dir, f"narration_01_{i}.mp4")
-                if image_to_video(image_path, image_video_path, duration=segment_duration,
-                                width=width, height=height, fps=fps):
-                    narration_videos.append(image_video_path)
-                    print(f"Narration {narration_num} 图片{i}视频生成成功，时长: {segment_duration:.2f}s")
+            # 获取两个指定video文件的时长
+            video_durations = []
+            for video_path in video_paths:
+                _, _, _, video_duration = get_video_info(video_path)
+                if video_duration is not None:
+                    video_durations.append(video_duration)
                 else:
-                    print(f"生成图片视频失败: {image_path}")
+                    print(f"无法获取视频信息: {video_path}")
                     break
             
-            # 只有当两个图片视频都生成成功时，才拼接它们
-            if len(narration_videos) == 2:
+            if len(video_durations) != 2:
+                print(f"跳过 Narration {narration_num}: 无法获取所有视频文件信息")
+                continue
+            
+            # 按照用户要求的时间点安排视频片段：
+            # 0-5秒：video_1
+            # 5-10秒：video_2 + fuceng1.mov叠加在上面
+            # 10秒后：切换到image_01_3.jpeg
+            
+            narration_videos = []
+            import shutil
+            
+            # 1. 处理前5秒的video_1
+            video1_duration = min(5.0, video_durations[0])
+            if video1_duration > 0:
+                video1_trimmed = os.path.join(temp_dir, "narration_01_video_1_trimmed.mp4")
+                # 裁剪video_1到5秒
+                cmd = [
+                    'ffmpeg', '-y', '-i', video_paths[0],
+                    '-t', str(video1_duration),
+                    '-c', 'copy',
+                    video1_trimmed
+                ]
+                try:
+                    subprocess.run(cmd, check=True, capture_output=True)
+                    narration_videos.append(video1_trimmed)
+                    print(f"Narration {narration_num} video_1前5秒处理成功")
+                except subprocess.CalledProcessError as e:
+                    print(f"裁剪video_1失败: {e}")
+            
+            # 2. 处理5-10秒：video_2 + fuceng1.mov叠加
+            video2_duration = min(5.0, video_durations[1])  # 5-10秒，最多5秒
+            if video2_duration > 0:
+                video2_with_overlay = os.path.join(temp_dir, "narration_01_video_2_with_fuceng.mp4")
+                fuceng_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'banner', 'fuceng1.mov')
+                
+                if os.path.exists(fuceng_path):
+                    # 获取fuceng1.mov的时长
+                    _, _, _, fuceng_duration = get_video_info(fuceng_path)
+                    if fuceng_duration is not None:
+                        # 裁剪video_2到指定时长，并叠加fuceng1.mov
+                        cmd = [
+                            'ffmpeg', '-y',
+                            '-i', video_paths[1],  # 主视频
+                            '-i', fuceng_path,     # 叠加视频
+                            '-filter_complex', 
+                            f'[0:v]scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height}[bg];'
+                            f'[1:v]scale={width//3}:{height//3}:force_original_aspect_ratio=decrease[overlay];'
+                            f'[bg][overlay]overlay=10:10:enable=\'between(t,0,{min(video2_duration, fuceng_duration)})\'[v]',
+                            '-map', '[v]',
+                            '-map', '0:a?',  # 保留主视频的音频
+                            '-t', str(video2_duration),
+                            '-c:v', 'libx264', '-c:a', 'aac',
+                            video2_with_overlay
+                        ]
+                        try:
+                            subprocess.run(cmd, check=True, capture_output=True)
+                            narration_videos.append(video2_with_overlay)
+                            print(f"Narration {narration_num} video_2+fuceng1.mov叠加成功，时长: {video2_duration:.2f}s")
+                        except subprocess.CalledProcessError as e:
+                            print(f"video_2+fuceng1.mov叠加失败: {e}")
+                            # 如果叠加失败，使用原video_2
+                            video2_trimmed = os.path.join(temp_dir, "narration_01_video_2_trimmed.mp4")
+                            cmd = [
+                                'ffmpeg', '-y', '-i', video_paths[1],
+                                '-t', str(video2_duration),
+                                '-c', 'copy',
+                                video2_trimmed
+                            ]
+                            try:
+                                subprocess.run(cmd, check=True, capture_output=True)
+                                narration_videos.append(video2_trimmed)
+                                print(f"Narration {narration_num} video_2处理成功（无叠加），时长: {video2_duration:.2f}s")
+                            except subprocess.CalledProcessError as e2:
+                                print(f"裁剪video_2也失败: {e2}")
+                    else:
+                        print(f"无法获取fuceng1.mov时长信息")
+                else:
+                    print(f"未找到fuceng1.mov文件: {fuceng_path}")
+                    # 如果没有fuceng1.mov，直接使用video_2
+                    video2_trimmed = os.path.join(temp_dir, "narration_01_video_2_trimmed.mp4")
+                    cmd = [
+                        'ffmpeg', '-y', '-i', video_paths[1],
+                        '-t', str(video2_duration),
+                        '-c', 'copy',
+                        video2_trimmed
+                    ]
+                    try:
+                        subprocess.run(cmd, check=True, capture_output=True)
+                        narration_videos.append(video2_trimmed)
+                        print(f"Narration {narration_num} video_2处理成功，时长: {video2_duration:.2f}s")
+                    except subprocess.CalledProcessError as e:
+                        print(f"裁剪video_2失败: {e}")
+            
+            # 3. 10秒后使用image_01_3.jpeg填充剩余时间
+            current_duration = video1_duration + video2_duration
+            remaining_duration = max(0, calculated_duration - current_duration)
+            if remaining_duration > 0:
+                image_video_path = os.path.join(temp_dir, f"narration_01_image.mp4")
+                # 使用简单的图片转视频函数，不添加fuceng叠加
+                if create_simple_image_video(image_paths[0], image_video_path, duration=remaining_duration,
+                                            width=width, height=height, fps=fps):
+                    narration_videos.append(image_video_path)
+                    print(f"Narration {narration_num} 图片视频生成成功，时长: {remaining_duration:.2f}s，帧率: {fps}fps")
+                else:
+                    print(f"生成图片视频失败: {image_paths[0]}")
+            
+            # 4. 拼接所有视频片段
+            if len(narration_videos) >= 1:
                 narration_video_path = os.path.join(temp_dir, f"narration_{narration_num}.mp4")
                 if concat_videos(narration_videos, narration_video_path):
                     image_videos.append(narration_video_path)
                     video_segments_info.append(calculated_duration)
                     print(f"Narration {narration_num} 完整视频生成成功，时长: {calculated_duration:.2f}s")
                     
-                    # 清理临时的单个图片视频文件
+                    # 清理临时视频文件
                     for temp_video in narration_videos:
                         try:
                             os.remove(temp_video)
                         except:
                             pass
                 else:
-                    print(f"拼接narration {narration_num}的图片视频失败")
+                    print(f"拼接narration {narration_num}的视频失败")
             else:
-                print(f"Narration {narration_num} 图片视频生成不完整，跳过")
+                print(f"Narration {narration_num} 没有可用的视频片段")
             continue
         
         # 计算图片视频时长 - 所有narration都使用自己的timestamps时长

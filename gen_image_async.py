@@ -12,6 +12,8 @@ import base64
 import sys
 import json
 import time
+import shutil
+import random
 from config.config import IMAGE_TWO_CONFIG, STORY_STYLE
 from config.prompt_config import ART_STYLES
 from volcengine.visual.VisualService import VisualService
@@ -283,6 +285,115 @@ def find_character_image_by_attributes(gender, age_group, character_style, cultu
     print(f"    警告: 未找到角色目录 {gender}/{age_group}/{character_style}/{culture}/{temperament}")
     return None
 
+def get_random_character_image():
+    """
+    从Character_Images目录中随机选择一张角色图片
+    
+    Returns:
+        str: 随机角色图片文件路径，如果未找到返回None
+    """
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    character_images_dir = os.path.join(script_dir, 'Character_Images')
+    
+    if not os.path.exists(character_images_dir):
+        print(f"警告: Character_Images目录不存在: {character_images_dir}")
+        return None
+    
+    # 收集所有图片文件
+    all_images = []
+    for root, dirs, files in os.walk(character_images_dir):
+        for file in files:
+            if file.lower().endswith(('.jpg', '.jpeg', '.png', '.webp')):
+                all_images.append(os.path.join(root, file))
+    
+    if all_images:
+        selected_image = random.choice(all_images)
+        print(f"    随机选择角色图片: {os.path.relpath(selected_image, character_images_dir)}")
+        return selected_image
+    else:
+        print("    警告: Character_Images目录中未找到任何图片文件")
+        return None
+
+def ensure_30_images_per_chapter(chapter_dir):
+    """
+    确保每个章节有固定的30张图片，不足的从Character_Images目录复制补足
+    
+    Args:
+        chapter_dir: 章节目录路径
+    
+    Returns:
+        bool: 是否成功确保30张图片
+    """
+    try:
+        chapter_name = os.path.basename(chapter_dir)
+        print(f"\n=== 检查章节 {chapter_name} 的图片数量 ===")
+        
+        # 统计现有图片数量
+        existing_images = []
+        for file in os.listdir(chapter_dir):
+            if file.startswith(f"{chapter_name}_image_") and file.endswith('.jpeg'):
+                existing_images.append(file)
+        
+        existing_count = len(existing_images)
+        print(f"现有图片数量: {existing_count}")
+        
+        if existing_count >= 30:
+            print(f"✓ 图片数量已满足要求 (>= 30张)")
+            return True
+        
+        # 需要补足的图片数量
+        needed_count = 30 - existing_count
+        print(f"需要补足 {needed_count} 张图片")
+        
+        # 从Character_Images目录复制图片来补足
+        success_count = 0
+        for i in range(needed_count):
+            # 计算新图片的编号
+            new_image_index = existing_count + i + 1
+            
+            # 生成新图片文件名 (格式: chapter_xxx_image_xx_x.jpeg)
+            # 假设每个分镜最多10个特写，按顺序分配
+            scene_num = ((new_image_index - 1) // 10) + 1
+            closeup_num = ((new_image_index - 1) % 10) + 1
+            new_filename = f"{chapter_name}_image_{scene_num:02d}_{closeup_num}.jpeg"
+            new_filepath = os.path.join(chapter_dir, new_filename)
+            
+            # 如果文件已存在，跳过
+            if os.path.exists(new_filepath):
+                print(f"    跳过已存在的文件: {new_filename}")
+                success_count += 1
+                continue
+            
+            # 随机选择一张角色图片
+            source_image = get_random_character_image()
+            if source_image:
+                try:
+                    # 复制图片并重命名
+                    shutil.copy2(source_image, new_filepath)
+                    print(f"    ✓ 复制图片: {os.path.basename(source_image)} -> {new_filename}")
+                    success_count += 1
+                except Exception as e:
+                    print(f"    ✗ 复制图片失败: {e}")
+            else:
+                print(f"    ✗ 无法找到源图片进行复制")
+        
+        print(f"补足完成: 成功 {success_count}/{needed_count} 张")
+        
+        # 再次统计最终图片数量
+        final_images = []
+        for file in os.listdir(chapter_dir):
+            if file.startswith(f"{chapter_name}_image_") and file.endswith('.jpeg'):
+                final_images.append(file)
+        
+        final_count = len(final_images)
+        print(f"最终图片数量: {final_count}")
+        
+        return final_count >= 30
+        
+    except Exception as e:
+        print(f"确保30张图片时发生错误: {e}")
+        return False
+
 def encode_image_to_base64(image_path):
     """
     将图片文件编码为base64
@@ -489,7 +600,8 @@ def generate_image_with_character(prompt, output_path, character_images=None, st
 
 def generate_images_for_chapter(chapter_dir):
     """
-    为单个章节生成图片
+    为单个章节生成图片 - 按照10个分镜每个分镜3张图片的规则生成30张图片
+    先尝试API生成，失败后从Character_Images目录复制
     
     Args:
         chapter_dir: 章节目录路径
@@ -501,6 +613,7 @@ def generate_images_for_chapter(chapter_dir):
         chapter_name = os.path.basename(chapter_dir)
         print(f"=== 开始为章节 {chapter_name} 生成图片 ===")
         print(f"章节目录: {chapter_dir}")
+        print(f"生成规则: 10个分镜，每个分镜3张图片，共30张")
         
         if not os.path.exists(chapter_dir):
             print(f"错误: 章节目录不存在 {chapter_dir}")
@@ -519,7 +632,7 @@ def generate_images_for_chapter(chapter_dir):
             print(f"错误: 未找到分镜信息")
             return False
         
-        print(f"找到 {len(scenes)} 个分镜")
+        print(f"从narration文件解析到 {len(scenes)} 个分镜")
         
         # 获取绘画风格的model_prompt
         style_prompt = ""
@@ -533,68 +646,101 @@ def generate_images_for_chapter(chapter_dir):
         
         success_count = 0
         
-        # 为每个分镜的每个特写生成图片
-        for i, scene in enumerate(scenes, 1):
-            closeups = scene['closeups']
+        # 按照10个分镜每个分镜3张图片的规则生成30张图片
+        for scene_num in range(1, 11):  # 10个分镜
+            print(f"\n  处理第 {scene_num}/10 个分镜")
             
-            print(f"\n  处理第 {i}/{len(scenes)} 个分镜，包含 {len(closeups)} 个特写")
-            
-            # 为每个特写生成图片
-            for j, closeup in enumerate(closeups, 1):
-                prompt = closeup['prompt']
-                character = closeup.get('character', '')
-                gender = closeup.get('gender', '')
-                age_group = closeup.get('age_group', '')
-                character_style = closeup.get('character_style', '')
-                culture = closeup.get('culture', 'Chinese')
-                temperament = closeup.get('temperament', 'Common')
+            # 每个分镜生成3张图片
+            for image_num in range(1, 4):  # 每个分镜3张图片
+                image_filename = f"{chapter_name}_image_{scene_num:02d}_{image_num}.jpeg"
+                image_path = os.path.join(chapter_dir, image_filename)
                 
-                print(f"    生成特写 {j}: {chapter_name}_image_{i:02d}_{j}.jpeg")
-                print(f"    特写人物: {character} ({gender}/{age_group}/{character_style})")
+                print(f"    生成图片 {image_num}/3: {image_filename}")
                 
-                # 查找当前特写的角色图片（基于Character_Images目录结构）
-                character_images = []
-                if gender and age_group and character_style:
-                    print(f"    查找角色图片: {gender}/{age_group}/{character_style}/{culture}/{temperament}")
-                    char_img_path = find_character_image_by_attributes(gender, age_group, character_style, culture, temperament)
-                    if char_img_path:
-                        character_images.append(char_img_path)
-                        print(f"    找到角色图片: {char_img_path}")
-                    else:
-                        print(f"    未找到角色图片")
-                else:
-                    print(f"    角色信息不完整，跳过角色图片查找")
-                
-                # 根据角色性别调整视角
-                view_angle_prompt = ""
-                if gender:
-                    print(f"    角色性别: {gender}")
-                    
-                    # 根据性别决定视角
-                    if gender.lower() in ['female', '女']:
-                        view_angle_prompt = "，背部视角，看不到领口和正面"
-                    else:
-                        view_angle_prompt = "，正面视角，清晰面部特征"
-                
-                # 构建完整的prompt，加入风格提示和视角要求
-                if style_prompt:
-                    full_prompt = f"{prompt}{view_angle_prompt}，{style_prompt}"
-                else:
-                    full_prompt = f"{prompt}{view_angle_prompt}"
-                
-                # 提交异步任务
-                image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}_{j}.jpeg")
-                
-                if generate_image_with_character_async(full_prompt, image_path, character_images, drawing_style):
-                    print(f"    ✓ 特写 {j} 任务提交成功")
+                # 如果图片已存在，跳过
+                if os.path.exists(image_path):
+                    print(f"    ✓ 图片已存在，跳过: {image_filename}")
                     success_count += 1
+                    continue
+                
+                # 尝试从解析的分镜中获取对应的prompt
+                prompt = ""
+                character_images = []
+                
+                if scene_num <= len(scenes):
+                    # 使用对应分镜的信息
+                    scene = scenes[scene_num - 1]
+                    closeups = scene['closeups']
+                    
+                    if closeups:
+                        # 循环使用分镜中的特写信息
+                        closeup_index = (image_num - 1) % len(closeups)
+                        closeup = closeups[closeup_index]
+                        
+                        prompt = closeup['prompt']
+                        character = closeup.get('character', '')
+                        gender = closeup.get('gender', '')
+                        age_group = closeup.get('age_group', '')
+                        character_style = closeup.get('character_style', '')
+                        culture = closeup.get('culture', 'Chinese')
+                        temperament = closeup.get('temperament', 'Common')
+                        
+                        print(f"    使用分镜信息: {character} ({gender}/{age_group}/{character_style})")
+                        
+                        # 查找角色图片
+                        if gender and age_group and character_style:
+                            char_img_path = find_character_image_by_attributes(gender, age_group, character_style, culture, temperament)
+                            if char_img_path:
+                                character_images.append(char_img_path)
+                                print(f"    找到角色图片: {char_img_path}")
+                        
+                        # 根据角色性别调整视角
+                        view_angle_prompt = ""
+                        if gender:
+                            if gender.lower() in ['female', '女']:
+                                view_angle_prompt = "，背部视角，看不到领口和正面"
+                            else:
+                                view_angle_prompt = "，正面视角，清晰面部特征"
+                        
+                        # 构建完整的prompt
+                        if style_prompt:
+                            full_prompt = f"{prompt}{view_angle_prompt}，{style_prompt}"
+                        else:
+                            full_prompt = f"{prompt}{view_angle_prompt}"
                 else:
-                    print(f"    ✗ 特写 {j} 任务提交失败")
+                    # 如果分镜数量不足，使用通用prompt
+                    full_prompt = f"古代中国场景，{style_prompt}" if style_prompt else "古代中国场景"
+                    print(f"    使用通用prompt（分镜不足）")
+                
+                # 先尝试API生成
+                api_success = False
+                if full_prompt:
+                    print(f"    尝试API生成...")
+                    api_success = generate_image_with_character_async(full_prompt, image_path, character_images, drawing_style)
+                    
+                    if api_success:
+                        print(f"    ✓ API生成任务提交成功")
+                        success_count += 1
+                    else:
+                        print(f"    ✗ API生成失败")
+                
+                # 如果API生成失败，从Character_Images复制图片
+                if not api_success:
+                    print(f"    尝试从Character_Images复制图片...")
+                    source_image = get_random_character_image()
+                    if source_image:
+                        try:
+                            shutil.copy2(source_image, image_path)
+                            print(f"    ✓ 复制成功: {os.path.basename(source_image)} -> {image_filename}")
+                            success_count += 1
+                        except Exception as e:
+                            print(f"    ✗ 复制失败: {e}")
+                    else:
+                        print(f"    ✗ 无法找到源图片进行复制")
         
-        # 计算该章节生成的图片总数
-        total_images = sum(len(scene['closeups']) for scene in scenes)
-        print(f"\n章节 {chapter_name} 处理完成，共 {len(scenes)} 个分镜，成功生成 {success_count}/{total_images} 张图片")
-        return success_count > 0
+        print(f"\n章节 {chapter_name} 处理完成，成功生成/复制 {success_count}/30 张图片")
+        
+        return success_count >= 30
         
     except Exception as e:
         print(f"生成章节图片时发生错误: {e}")
@@ -602,7 +748,7 @@ def generate_images_for_chapter(chapter_dir):
 
 def generate_images_from_scripts(data_dir):
     """
-    遍历数据目录，为每个章节的分镜生成图片
+    遍历数据目录，为每个章节生成图片 - 按照10个分镜每个分镜3张图片的规则
     
     Args:
         data_dir: 数据目录路径
@@ -611,8 +757,9 @@ def generate_images_from_scripts(data_dir):
         bool: 是否成功生成图片
     """
     try:
-        print(f"=== 开始生成图片 ===")
+        print(f"=== 开始批量生成图片 ===")
         print(f"数据目录: {data_dir}")
+        print(f"生成规则: 每个章节10个分镜，每个分镜3张图片，共30张")
         
         if not os.path.exists(data_dir):
             print(f"错误: 数据目录不存在 {data_dir}")
@@ -632,105 +779,25 @@ def generate_images_from_scripts(data_dir):
         chapter_dirs.sort()
         print(f"找到 {len(chapter_dirs)} 个章节目录")
         
-        success_count = 0
+        success_chapters = 0
         
         # 处理每个章节
         for chapter_dir in chapter_dirs:
             chapter_name = os.path.basename(chapter_dir)
             print(f"\n--- 处理章节: {chapter_name} ---")
             
-            # 查找narration文件
-            narration_file = os.path.join(chapter_dir, "narration.txt")
-            if not os.path.exists(narration_file):
-                print(f"警告: narration文件不存在 {narration_file}")
-                continue
-            
-            # 解析narration文件
-            scenes, drawing_style, character_map = parse_narration_file(narration_file)
-            
-            if not scenes:
-                print(f"警告: 未找到分镜信息")
-                continue
-            
-            print(f"找到 {len(scenes)} 个分镜")
-            
-            # 获取绘画风格的model_prompt
-            style_prompt = ""
-            if drawing_style and drawing_style in STORY_STYLE:
-                style_config = STORY_STYLE[drawing_style]
-                if isinstance(style_config.get('model_prompt'), list):
-                    style_prompt = style_config['model_prompt'][0]  # 取第一个
-                else:
-                    style_prompt = style_config.get('model_prompt', '')
-                print(f"使用风格提示: {style_prompt}")
-            
-            # 为每个分镜的每个特写生成图片
-            for i, scene in enumerate(scenes, 1):
-                closeups = scene['closeups']
-                
-                print(f"\n  处理第 {i}/{len(scenes)} 个分镜，包含 {len(closeups)} 个特写")
-                
-                # 为每个特写生成图片
-                for j, closeup in enumerate(closeups, 1):
-                    prompt = closeup['prompt']
-                    character = closeup.get('character', '')
-                    gender = closeup.get('gender', '')
-                    age_group = closeup.get('age_group', '')
-                    character_style = closeup.get('character_style', '')
-                    culture = closeup.get('culture', 'Chinese')
-                    temperament = closeup.get('temperament', 'Common')
-                    
-                    print(f"    生成特写 {j}: {chapter_name}_image_{i:02d}_{j}.jpeg")
-                    print(f"    特写人物: {character} ({gender}/{age_group}/{character_style})")
-                    
-                    # 查找当前特写的角色图片（基于Character_Images目录结构）
-                    character_images = []
-                    if gender and age_group and character_style:
-                        print(f"    查找角色图片: {gender}/{age_group}/{character_style}/{culture}/{temperament}")
-                        char_img_path = find_character_image_by_attributes(gender, age_group, character_style, culture, temperament)
-                        if char_img_path:
-                            character_images.append(char_img_path)
-                            print(f"    找到角色图片: {char_img_path}")
-                        else:
-                            print(f"    未找到角色图片")
-                    else:
-                        print(f"    角色信息不完整，跳过角色图片查找")
-                    
-                    # 根据角色性别调整视角
-                    view_angle_prompt = ""
-                    if gender:
-                        print(f"    角色性别: {gender}")
-                        
-                        # 根据性别决定视角
-                        if gender.lower() in ['female', '女']:
-                            view_angle_prompt = "，背部视角，看不到领口和正面"
-                        else:
-                            view_angle_prompt = "，正面视角，清晰面部特征"
-                    
-                    # 构建完整的prompt，加入风格提示和视角要求
-                    if style_prompt:
-                        full_prompt = f"{prompt}{view_angle_prompt}，{style_prompt}"
-                    else:
-                        full_prompt = f"{prompt}{view_angle_prompt}"
-                    
-                    # 提交异步任务
-                    image_path = os.path.join(chapter_dir, f"{chapter_name}_image_{i:02d}_{j}.jpeg")
-                    
-                    if generate_image_with_character_async(full_prompt, image_path, character_images, drawing_style):
-                        print(f"    ✓ 特写 {j} 任务提交成功")
-                        success_count += 1
-                    else:
-                        print(f"    ✗ 特写 {j} 任务提交失败")
-            
-            # 计算该章节生成的图片总数
-            chapter_image_count = sum(len(scene['closeups']) for scene in scenes)
-            print(f"章节 {chapter_name} 处理完成，共 {len(scenes)} 个分镜，成功生成 {chapter_image_count} 张图片")
+            # 调用单章节生成函数
+            if generate_images_for_chapter(chapter_dir):
+                print(f"✓ 章节 {chapter_name} 处理成功")
+                success_chapters += 1
+            else:
+                print(f"✗ 章节 {chapter_name} 处理失败")
         
-        print(f"\n图片生成完成，成功生成 {success_count} 张图片")
-        return success_count > 0
+        print(f"\n批量图片生成完成，成功处理 {success_chapters}/{len(chapter_dirs)} 个章节")
+        return success_chapters > 0
         
     except Exception as e:
-        print(f"生成图片时发生错误: {e}")
+        print(f"批量生成图片时发生错误: {e}")
         return False
 
 def count_total_closeups(data_dir):

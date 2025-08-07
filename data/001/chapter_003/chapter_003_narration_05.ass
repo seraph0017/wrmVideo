@@ -1,0 +1,36 @@
+[Script Info]
+Title: chapter_003 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.27,Default,,0,0,0,,战前誓师{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}登高台
+Dialogue: 0,0:00:02.60,0:00:03.60,Default,,0,0,0,,抽出{\c&H0000FFFF&\b1}腰间{\c&H00FFFFFF&\b0}横刀
+Dialogue: 0,0:00:04.08,0:00:05.59,Default,,0,0,0,,用{\c&H0000FFFF&\b1}生平{\c&H00FFFFFF&\b0}最大声音嘶吼
+Dialogue: 0,0:00:06.08,0:00:08.66,Default,,0,0,0,,“{\c&H0000FFFF&\b1}将士{\c&H00FFFFFF&\b0}们此番出征可怕否
+Dialogue: 0,0:00:08.84,0:00:11.04,Default,,0,0,0,,”{\c&H0000FFFF&\b1}将士{\c&H00FFFFFF&\b0}们振臂高呼“不怕
+Dialogue: 0,0:00:11.20,0:00:14.12,Default,,0,0,0,,”声浪震天{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}接着激昂陈词
+Dialogue: 0,0:00:14.25,0:00:15.41,Default,,0,0,0,,痛斥{\c&H0000FFFF&\b1}薛延陀{\c&H00FFFFFF&\b0}犯境
+Dialogue: 0,0:00:15.49,0:00:17.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}质问{\c&H00FFFFFF&\b0}他们何敢如此
+Dialogue: 0,0:00:17.25,0:00:19.20,Default,,0,0,0,,并强调{\c&H0000FFFF&\b1}大唐{\c&H00FFFFFF&\b0}儿郎亦有刀
+Dialogue: 0,0:00:19.36,0:00:21.61,Default,,0,0,0,,随后他更是立下惊天{\c&H0000FFFF&\b1}誓言{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.80,0:00:24.77,Default,,0,0,0,,“此番征战{\c&H0000FFFF&\b1}孤必{\c&H00FFFFFF&\b0}率先冲阵
+Dialogue: 0,0:00:24.91,0:00:26.48,Default,,0,0,0,,你们之中{\c&H0000FFFF&\b1}任何人{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:26.61,0:00:29.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}发现{\c&H00FFFFFF&\b0}孤临阵退却皆可斩孤
+Dialogue: 0,0:00:29.60,0:00:31.00,Default,,0,0,0,,”{\c&H0000FFFF&\b1}言罢长刀一横{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:31.26,0:00:33.46,Default,,0,0,0,,砍下一缕{\c&H0000FFFF&\b1}发丝{\c&H00FFFFFF&\b0}以发为誓
+Dialogue: 0,0:00:33.62,0:00:36.08,Default,,0,0,0,,这一举动瞬间将{\c&H0000FFFF&\b1}士气{\c&H00FFFFFF&\b0}拉至顶峰
+Dialogue: 0,0:00:36.24,0:00:38.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}将士{\c&H00FFFFFF&\b0}们爆发出“我等誓与殿
+Dialogue: 0,0:00:38.08,0:00:40.02,Default,,0,0,0,,下同生共死”的{\c&H0000FFFF&\b1}呐喊{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:40.35,0:00:41.77,Default,,0,0,0,,战{\c&H0000FFFF&\b1}鼓声{\c&H00FFFFFF&\b0}再次响起
+Dialogue: 0,0:00:41.94,0:00:43.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}如潮水般向前推进

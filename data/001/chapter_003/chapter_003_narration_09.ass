@@ -1,0 +1,38 @@
+[Script Info]
+Title: chapter_003 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}与北向辉深入交谈
+Dialogue: 0,0:00:02.21,0:00:03.77,Default,,0,0,0,,得知他们都是{\c&H0000FFFF&\b1}太原{\c&H00FFFFFF&\b0}同乡
+Dialogue: 0,0:00:04.28,0:00:06.35,Default,,0,0,0,,且多为{\c&H0000FFFF&\b1}孤儿{\c&H00FFFFFF&\b0}心中狂喜
+Dialogue: 0,0:00:06.73,0:00:07.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}认为{\c&H00FFFFFF&\b0}这是拉拢人
+Dialogue: 0,0:00:07.62,0:00:08.52,Default,,0,0,0,,心的绝佳{\c&H0000FFFF&\b1}机会{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.95,0:00:09.94,Default,,0,0,0,,他{\c&H0000FFFF&\b1}亲切{\c&H00FFFFFF&\b0}地以“向
+Dialogue: 0,0:00:09.94,0:00:11.10,Default,,0,0,0,,辉{\c&H0000FFFF&\b1}老弟{\c&H00FFFFFF&\b0}”相称
+Dialogue: 0,0:00:11.28,0:00:13.13,Default,,0,0,0,,并将招募{\c&H0000FFFF&\b1}身世{\c&H00FFFFFF&\b0}相似士兵作
+Dialogue: 0,0:00:13.13,0:00:14.01,Default,,0,0,0,,为自己{\c&H0000FFFF&\b1}部曲{\c&H00FFFFFF&\b0}的秘
+Dialogue: 0,0:00:14.01,0:00:15.26,Default,,0,0,0,,密{\c&H0000FFFF&\b1}任务{\c&H00FFFFFF&\b0}交给了他
+Dialogue: 0,0:00:15.41,0:00:16.74,Default,,0,0,0,,嘱咐其务必{\c&H0000FFFF&\b1}保密{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.93,0:00:18.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}谎称{\c&H00FFFFFF&\b0}是为了在战场上给
+Dialogue: 0,0:00:18.38,0:00:19.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}等人一个惊喜
+Dialogue: 0,0:00:20.20,0:00:22.55,Default,,0,0,0,,北向辉深受感动当即{\c&H0000FFFF&\b1}答应{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:22.73,0:00:25.19,Default,,0,0,0,,并表示会发动{\c&H0000FFFF&\b1}同乡{\c&H00FFFFFF&\b0}兄弟一起帮忙
+Dialogue: 0,0:00:25.37,0:00:27.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}随后叫来总管杜立
+Dialogue: 0,0:00:27.50,0:00:29.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}吩咐{\c&H00FFFFFF&\b0}其配合北向辉
+Dialogue: 0,0:00:29.31,0:00:30.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}提供{\c&H00FFFFFF&\b0}所需钱银
+Dialogue: 0,0:00:30.57,0:00:32.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}杜立{\c&H00FFFFFF&\b0}办事牢靠简洁领命
+Dialogue: 0,0:00:32.84,0:00:34.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}看着二人离开背影
+Dialogue: 0,0:00:35.06,0:00:36.69,Default,,0,0,0,,心中虽有{\c&H0000FFFF&\b1}利用{\c&H00FFFFFF&\b0}的愧疚
+Dialogue: 0,0:00:36.77,0:00:38.65,Default,,0,0,0,,但为了{\c&H0000FFFF&\b1}生存{\c&H00FFFFFF&\b0}也只能如此
