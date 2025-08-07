@@ -4,6 +4,7 @@
 
 ## ✨ 最新更新
 
+- 🎵 **音频混合优化**: 修复 `concat_finish_video.py` 中BGM盖住原有narration音频的问题，使用FFmpeg的amix滤镜将原有音频（音量1.0）与BGM（音量0.3）进行混合，确保解说声音清晰可听
 - 📊 **统计逻辑优化**: 优化语音生成统计逻辑，添加文件存在检查和跳过机制，统计结果更准确
 - 🛠️ **错误处理改进**: 改进语音生成错误处理，增加详细错误信息显示，提升调试体验
 - 🔊 **语音生成优化**: 优化语音生成日志输出，移除详细API响应日志（包含phone、start_time、end_time等字段），减少终端输出冗余信息
@@ -86,7 +87,9 @@ wrmVideo/
 ├── generate_all_images.py  # 完整图片生成流程脚本
 ├── gen_script.py           # 解说文案生成脚本
 ├── gen_audio.py            # 音频生成脚本
-├── gen_video.py            # 视频生成脚本
+├── gen_first_video_async.py # 第一个narration视频生成脚本（异步生成video_1和video_2）
+├── concat_first_video.py   # 合并video_1与video_2并加入转场特效脚本
+├── gen_video.py            # 最终视频合成脚本
 ├── requirements.txt        # 项目依赖
 
 ### 核心脚本说明
@@ -278,11 +281,23 @@ python gen_image.py data/001
 # 完整流程脚本
 python generate_all_images.py data/001
 
-# 3. 生成音频
+# 3. 生成第一个narration的视频（异步生成 video_1 和 video_2）
+python gen_first_video_async.py data/001
+
+# 检查异步视频任务状态
+python check_async_tasks.py --check-once
+
+# 4. 合并 video_1 和 video_2（加入转场特效）
+python concat_first_video.py data/001
+
+# 5. 生成音频
 python gen_audio.py data/001
 
-# 4. 合成视频
+# 6. 合成最终视频
 python gen_video.py data/001
+
+# 7. 生成完整章节视频（拼接narration视频+BGM+片尾）
+python concat_finish_video.py data/001
 ```
 
 ### 3. 图片生成规则
@@ -367,6 +382,8 @@ python batch_generate_character_images_async.py
 - **智能字幕**: 自动居中对齐、透明背景、智能断句
 - **高质量编码**: H.264视频编码，AAC音频编码
 - **自动同步**: 音频、图片、字幕完美同步
+- **音频混合**: 智能混合原有narration音频与BGM，确保解说声音清晰（原音频音量1.0，BGM音量0.3）
+- **章节拼接**: 支持将多个narration视频按顺序拼接，自动添加随机BGM和片尾视频
 
 ## ⚠️ 注意事项
 
@@ -462,8 +479,9 @@ ls async_tasks/
 - `generate.py`: 主程序入口，协调各模块工作
 - `gen_script.py`: AI解说文案生成
 - `gen_image.py` / `gen_image_async.py`: 图片生成（同步/异步）
+- `gen_first_video_async.py`: 第一个narration视频生成（异步生成video_1和video_2）
 - `gen_audio.py`: TTS语音合成
-- `gen_video.py`: 视频合成
+- `gen_video.py`: 最终视频合成
 
 ### 扩展开发
 

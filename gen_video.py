@@ -331,15 +331,34 @@ def image_to_video(image_path, output_path, duration=5, width=None, height=None,
 
 
 def create_simple_image_video(image_path, output_path, duration=5, width=720, height=1280, fps=30):
-    """创建简单的图片视频，不添加fuceng叠加，专用于narration_01的图片部分"""
+    """创建简单的图片视频，添加动态效果，专用于narration_01的图片部分"""
     print(f"开始转换图片到简单视频: {image_path} -> {output_path}, 时长: {duration}s")
     try:
-        # 使用简单的Ken Burns效果，强制填满整个画面，避免黑边
+        # 使用改进的Ken Burns效果，包含多种动态效果
+        import random
+        
+        # 定义多种动态效果
+        effects = [
+            # 缓慢放大 + 左右平移
+            f"zoompan=z='min(zoom+0.001,1.3)':x='iw/2-(iw/zoom/2)+sin(t*0.1)*20':y='ih/2-(ih/zoom/2)':d=1:s={width}x{height}:fps={fps}",
+            # 缓慢缩小 + 上下平移
+            f"zoompan=z='max(zoom-0.001,1.0)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)+cos(t*0.1)*15':d=1:s={width}x{height}:fps={fps}",
+            # 对角线移动
+            f"zoompan=z='1.1+sin(t*0.05)*0.1':x='iw/2-(iw/zoom/2)+sin(t*0.08)*25':y='ih/2-(ih/zoom/2)+cos(t*0.08)*25':d=1:s={width}x{height}:fps={fps}",
+            # 圆形运动
+            f"zoompan=z='1.15':x='iw/2-(iw/zoom/2)+sin(t*0.2)*30':y='ih/2-(ih/zoom/2)+cos(t*0.2)*30':d=1:s={width}x{height}:fps={fps}",
+            # 简单放大
+            f"zoompan=z='min(zoom+0.0015,1.5)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={width}x{height}:fps={fps}"
+        ]
+        
+        # 随机选择一种效果
+        selected_effect = random.choice(effects)
+        
         cmd = [
             'ffmpeg', '-y',
             '-loop', '1', '-i', image_path,
             '-t', str(duration),
-            '-vf', f'scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height},zoompan=z=\'min(zoom+0.0015,1.5)\':\'x=iw/2-(iw/zoom/2)\':\'y=ih/2-(ih/zoom/2)\':\'d=1\':\'s={width}x{height}\':\'fps={fps}\'',
+            '-vf', f'scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height},{selected_effect}',
             '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'medium',
             '-r', str(fps),
             output_path
@@ -364,13 +383,32 @@ def image_to_video_ffmpeg(image_path, output_path, duration=5, width=720, height
     
     print(f"开始转换图片到视频 (ffmpeg): {image_path} -> {output_path}, 时长: {duration}s")
     try:
-        # 使用简化的Ken Burns效果，强制填满整个画面，避免黑边
+        # 使用改进的Ken Burns效果，包含多种动态效果
+        import random
+        
+        # 定义多种动态效果参数
+        effects = [
+            # 缓慢放大 + 左右平移
+            {'z': 'min(zoom+0.001,1.3)', 'x': 'iw/2-(iw/zoom/2)+sin(t*0.1)*20', 'y': 'ih/2-(ih/zoom/2)'},
+            # 缓慢缩小 + 上下平移  
+            {'z': 'max(zoom-0.001,1.0)', 'x': 'iw/2-(iw/zoom/2)', 'y': 'ih/2-(ih/zoom/2)+cos(t*0.1)*15'},
+            # 对角线移动
+            {'z': '1.1+sin(t*0.05)*0.1', 'x': 'iw/2-(iw/zoom/2)+sin(t*0.08)*25', 'y': 'ih/2-(ih/zoom/2)+cos(t*0.08)*25'},
+            # 圆形运动
+            {'z': '1.15', 'x': 'iw/2-(iw/zoom/2)+sin(t*0.2)*30', 'y': 'ih/2-(ih/zoom/2)+cos(t*0.2)*30'},
+            # 简单放大
+            {'z': 'min(zoom+0.0015,1.5)', 'x': 'iw/2-(iw/zoom/2)', 'y': 'ih/2-(ih/zoom/2)'}
+        ]
+        
+        # 随机选择一种效果
+        selected_effect = random.choice(effects)
+        
         base_video = (
             ffmpeg
             .input(image_path, loop=1, t=duration)
             .filter('scale', width, height, force_original_aspect_ratio='increase')
             .filter('crop', width, height)
-            .filter('zoompan', z='min(zoom+0.0015,1.5)', x='iw/2-(iw/zoom/2)', y='ih/2-(ih/zoom/2)', d=1, s=f'{width}x{height}', fps=fps)
+            .filter('zoompan', z=selected_effect['z'], x=selected_effect['x'], y=selected_effect['y'], d=1, s=f'{width}x{height}', fps=fps)
         )
         
         # 定义overlay文件路径 - 随机选择一个fuceng文件
@@ -1381,15 +1419,16 @@ def process_chapter(chapter_path):
             narration_videos = []
             import shutil
             
-            # 1. 处理前5秒的video_1
+            # 1. 处理前5秒的video_1，调整分辨率
             video1_duration = min(5.0, video_durations[0])
             if video1_duration > 0:
                 video1_trimmed = os.path.join(temp_dir, "narration_01_video_1_trimmed.mp4")
-                # 裁剪video_1到5秒
+                # 裁剪video_1到5秒并调整分辨率
                 cmd = [
                     'ffmpeg', '-y', '-i', video_paths[0],
+                    '-vf', f'scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height}',
                     '-t', str(video1_duration),
-                    '-c', 'copy',
+                    '-c:v', 'libx264', '-c:a', 'aac', '-r', str(fps),
                     video1_trimmed
                 ]
                 try:
@@ -1409,19 +1448,19 @@ def process_chapter(chapter_path):
                     # 获取fuceng1.mov的时长
                     _, _, _, fuceng_duration = get_video_info(fuceng_path)
                     if fuceng_duration is not None:
-                        # 裁剪video_2到指定时长，并叠加fuceng1.mov
+                        # 裁剪video_2到指定时长，并叠加fuceng1.mov，同时调整分辨率
                         cmd = [
                             'ffmpeg', '-y',
                             '-i', video_paths[1],  # 主视频
                             '-i', fuceng_path,     # 叠加视频
                             '-filter_complex', 
                             f'[0:v]scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height}[bg];'
-                            f'[1:v]scale={width//3}:{height//3}:force_original_aspect_ratio=decrease[overlay];'
-                            f'[bg][overlay]overlay=10:10:enable=\'between(t,0,{min(video2_duration, fuceng_duration)})\'[v]',
+                            f'[1:v]scale={width//3}:{height//3}:force_original_aspect_ratio=decrease,format=rgba,colorkey=0x000000:0.3:0.0[overlay];'
+                            f'[bg][overlay]overlay=10:10:enable=between(t\,0\,{min(video2_duration, fuceng_duration)})[v]',
                             '-map', '[v]',
                             '-map', '0:a?',  # 保留主视频的音频
                             '-t', str(video2_duration),
-                            '-c:v', 'libx264', '-c:a', 'aac',
+                            '-c:v', 'libx264', '-c:a', 'aac', '-r', str(fps),
                             video2_with_overlay
                         ]
                         try:
@@ -1430,12 +1469,13 @@ def process_chapter(chapter_path):
                             print(f"Narration {narration_num} video_2+fuceng1.mov叠加成功，时长: {video2_duration:.2f}s")
                         except subprocess.CalledProcessError as e:
                             print(f"video_2+fuceng1.mov叠加失败: {e}")
-                            # 如果叠加失败，使用原video_2
+                            # 如果叠加失败，使用缩放后的video_2
                             video2_trimmed = os.path.join(temp_dir, "narration_01_video_2_trimmed.mp4")
                             cmd = [
                                 'ffmpeg', '-y', '-i', video_paths[1],
+                                '-vf', f'scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height}',
                                 '-t', str(video2_duration),
-                                '-c', 'copy',
+                                '-c:v', 'libx264', '-c:a', 'aac', '-r', str(fps),
                                 video2_trimmed
                             ]
                             try:
@@ -1448,12 +1488,13 @@ def process_chapter(chapter_path):
                         print(f"无法获取fuceng1.mov时长信息")
                 else:
                     print(f"未找到fuceng1.mov文件: {fuceng_path}")
-                    # 如果没有fuceng1.mov，直接使用video_2
+                    # 如果没有fuceng1.mov，使用缩放后的video_2
                     video2_trimmed = os.path.join(temp_dir, "narration_01_video_2_trimmed.mp4")
                     cmd = [
                         'ffmpeg', '-y', '-i', video_paths[1],
+                        '-vf', f'scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height}',
                         '-t', str(video2_duration),
-                        '-c', 'copy',
+                        '-c:v', 'libx264', '-c:a', 'aac', '-r', str(fps),
                         video2_trimmed
                     ]
                     try:
