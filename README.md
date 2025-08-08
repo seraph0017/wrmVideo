@@ -4,6 +4,7 @@
 
 ## ✨ 最新更新
 
+- 🔄 **gen_video.py 重构**: 彻底重写 `gen_video.py` 脚本，现在作为流程编排器，按顺序执行 `concat_first_video.py`、`concat_narration_video.py` 和 `concat_finish_video.py`，实现模块化的视频生成流程
 - 🎵 **音频混合优化**: 修复 `concat_finish_video.py` 中BGM盖住原有narration音频的问题，使用FFmpeg的amix滤镜将原有音频（音量1.0）与BGM（音量0.3）进行混合，确保解说声音清晰可听
 - 📊 **统计逻辑优化**: 优化语音生成统计逻辑，添加文件存在检查和跳过机制，统计结果更准确
 - 🛠️ **错误处理改进**: 改进语音生成错误处理，增加详细错误信息显示，提升调试体验
@@ -89,7 +90,9 @@ wrmVideo/
 ├── gen_audio.py            # 音频生成脚本
 ├── gen_first_video_async.py # 第一个narration视频生成脚本（异步生成video_1和video_2）
 ├── concat_first_video.py   # 合并video_1与video_2并加入转场特效脚本
-├── gen_video.py            # 最终视频合成脚本
+├── concat_narration_video.py # 生成主视频（添加旁白、BGM、音效等）
+├── concat_finish_video.py  # 生成完整视频（添加片尾视频）
+├── gen_video.py            # 视频生成流程编排器（依次执行上述三个脚本）
 ├── requirements.txt        # 项目依赖
 
 ### 核心脚本说明
@@ -293,10 +296,20 @@ python concat_first_video.py data/001
 # 5. 生成音频
 python gen_audio.py data/001
 
-# 6. 合成最终视频
+# 6. 生成字幕文件
+python gen_ass.py data/001
+
+# 7. 执行完整视频生成流程（推荐）
 python gen_video.py data/001
 
-# 7. 生成完整章节视频（拼接narration视频+BGM+片尾）
+# 或者分步执行：
+# 7a. 合并 video_1 和 video_2（加入转场特效）
+python concat_first_video.py data/001
+
+# 7b. 生成主视频（添加旁白、BGM、音效等）
+python concat_narration_video.py data/001
+
+# 7c. 生成完整视频（添加片尾视频）
 python concat_finish_video.py data/001
 ```
 
@@ -481,7 +494,10 @@ ls async_tasks/
 - `gen_image.py` / `gen_image_async.py`: 图片生成（同步/异步）
 - `gen_first_video_async.py`: 第一个narration视频生成（异步生成video_1和video_2）
 - `gen_audio.py`: TTS语音合成
-- `gen_video.py`: 最终视频合成
+- `gen_video.py`: 视频生成流程编排器，按顺序执行三个阶段的视频处理
+- `concat_first_video.py`: 第一阶段 - 合并video_1与video_2并加入转场特效
+- `concat_narration_video.py`: 第二阶段 - 生成主视频（添加旁白、BGM、音效等）
+- `concat_finish_video.py`: 第三阶段 - 生成完整视频（添加片尾视频）
 
 ### 扩展开发
 

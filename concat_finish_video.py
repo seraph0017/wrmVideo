@@ -15,10 +15,54 @@ import subprocess
 import random
 import glob
 from pathlib import Path
+import ffmpeg
 
-# 导入gen_video.py中的VIDEO_STANDARDS
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from gen_video import VIDEO_STANDARDS, get_video_info, get_audio_duration
+# 视频输出标准配置（从 gen_video.py 复制）
+VIDEO_STANDARDS = {
+    'width': 720,
+    'height': 1280,
+    'fps': 30,
+    'max_size_mb': 50,
+    'audio_bitrate': '128k',
+    'video_codec': 'libx264',
+    'audio_codec': 'aac',
+    'format': 'mp4',
+    'min_duration_warning': 180  # 3分钟，仅提醒不强制
+}
+
+def get_video_info(video_path):
+    """获取视频的分辨率、帧率和时长（从 gen_video.py 复制）"""
+    try:
+        probe = ffmpeg.probe(video_path)
+        video_stream = next((stream for stream in probe['streams'] if stream['codec_type'] == 'video'), None)
+        if video_stream is None:
+            raise ValueError("找不到视频流")
+        
+        width = int(video_stream['width'])
+        height = int(video_stream['height'])
+        
+        # 解析帧率（可能是分数形式，如 "30000/1000"）
+        r_frame_rate = video_stream['r_frame_rate']
+        fps_num, fps_den = map(int, r_frame_rate.split('/'))
+        fps = fps_num / fps_den
+        
+        # 获取时长
+        duration = float(probe['format']['duration'])
+        
+        return width, height, fps, duration
+    except Exception as e:
+        print(f"获取视频信息失败: {e}")
+        return None, None, None, None
+
+def get_audio_duration(audio_path):
+    """获取音频文件时长（从 gen_video.py 复制）"""
+    try:
+        probe = ffmpeg.probe(audio_path)
+        duration = float(probe['format']['duration'])
+        return duration
+    except Exception as e:
+        print(f"获取音频时长失败: {e}")
+        return 0
 
 def get_available_bgm_files():
     """获取可用的BGM文件列表"""

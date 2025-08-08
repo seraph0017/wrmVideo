@@ -16,17 +16,148 @@ import random
 import subprocess
 from pathlib import Path
 
-# 导入gen_video.py中的配置和函数
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from gen_video import (
-    VIDEO_STANDARDS, 
-    parse_ass_time, 
-    format_ass_time, 
-    get_ass_duration, 
-    get_audio_duration,
-    get_video_info,
-    check_video_standards
-)
+# 视频输出标准配置（从 gen_video.py 复制）
+VIDEO_STANDARDS = {
+    'width': 720,
+    'height': 1280,
+    'fps': 30,
+    'max_size_mb': 50,
+    'audio_bitrate': '128k',
+    'video_codec': 'libx264',
+    'audio_codec': 'aac',
+    'format': 'mp4',
+    'min_duration_warning': 180  # 3分钟，仅提醒不强制
+}
+
+def parse_ass_time(time_str):
+    """解析ASS时间格式 (H:MM:SS.CC) 为秒数（从 gen_video.py 复制）"""
+    try:
+        # 格式: H:MM:SS.CC
+        parts = time_str.split(':')
+        hours = int(parts[0])
+        minutes = int(parts[1])
+        seconds_parts = parts[2].split('.')
+        seconds = int(seconds_parts[0])
+        centiseconds = int(seconds_parts[1])
+        
+        total_seconds = hours * 3600 + minutes * 60 + seconds + centiseconds / 100.0
+        return total_seconds
+    except Exception as e:
+        print(f"解析时间格式失败: {time_str}, 错误: {e}")
+        return 0
+
+def format_ass_time(seconds):
+    """将秒数转换为ASS时间格式（从 gen_video.py 复制）"""
+    hours = int(seconds // 3600)
+    minutes = int((seconds % 3600) // 60)
+    secs = int(seconds % 60)
+    centiseconds = int((seconds % 1) * 100)
+    
+    return f"{hours}:{minutes:02d}:{secs:02d}.{centiseconds:02d}"
+
+def get_ass_duration(ass_path):
+    """获取ASS字幕文件的总时长（从 gen_video.py 复制）"""
+    try:
+        with open(ass_path, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+        
+        max_end_time = 0
+        for line in lines:
+            line = line.strip()
+            if line.startswith('Dialogue:'):
+                # 格式: Dialogue: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+                parts = line.split(',')
+                if len(parts) >= 3:
+                    end_time_str = parts[2]
+                    end_time = parse_ass_time(end_time_str)
+                    max_end_time = max(max_end_time, end_time)
+        
+        return max_end_time
+    except Exception as e:
+        print(f"读取ASS文件失败: {e}")
+        return 0
+
+def get_audio_duration(audio_path):
+    """获取音频文件时长（从 gen_video.py 复制）"""
+    try:
+        probe = ffmpeg.probe(audio_path)
+        duration = float(probe['format']['duration'])
+        return duration
+    except Exception as e:
+        print(f"获取音频时长失败: {e}")
+        return 0
+
+def get_video_info(video_path):
+    """获取视频的分辨率、帧率和时长（从 gen_video.py 复制）"""
+    try:
+        probe = ffmpeg.probe(video_path)
+        video_stream = next((stream for stream in probe['streams'] if stream['codec_type'] == 'video'), None)
+        if video_stream is None:
+            raise ValueError("找不到视频流")
+        
+        width = int(video_stream['width'])
+        height = int(video_stream['height'])
+        
+        # 解析帧率（可能是分数形式，如 "30000/1000"）
+        r_frame_rate = video_stream['r_frame_rate']
+        fps_num, fps_den = map(int, r_frame_rate.split('/'))
+        fps = fps_num / fps_den
+        
+        # 获取时长
+        duration = float(probe['format']['duration'])
+        
+        return width, height, fps, duration
+    except Exception as e:
+        print(f"获取视频信息失败: {e}")
+        return None, None, None, None
+
+def get_file_size_mb(file_path):
+    """获取文件大小（MB）（从 gen_video.py 复制）"""
+    try:
+        size_bytes = os.path.getsize(file_path)
+        size_mb = size_bytes / (1024 * 1024)
+        return size_mb
+    except Exception as e:
+        print(f"获取文件大小失败: {e}")
+        return 0
+
+def check_video_standards(video_path):
+    """检查视频是否符合输出标准（从 gen_video.py 复制）"""
+    try:
+        # 检查文件大小
+        file_size_mb = get_file_size_mb(video_path)
+        print(f"视频文件大小: {file_size_mb:.2f}MB")
+        
+        # 获取视频信息
+        width, height, fps, duration = get_video_info(video_path)
+        if width is None:
+            return False
+            
+        print(f"视频参数: {width}x{height}px, {fps}fps, {duration:.2f}s")
+        
+        # 检查时长（仅提醒）
+        if duration < VIDEO_STANDARDS['min_duration_warning']:
+            print(f"⚠️  提醒: 视频时长 {duration:.2f}s 小于建议的 {VIDEO_STANDARDS['min_duration_warning']}s (3分钟)")
+        
+        # 严格检查文件大小
+        if file_size_mb > VIDEO_STANDARDS['max_size_mb']:
+            print(f"❌ 错误: 视频文件大小 {file_size_mb:.2f}MB 超过限制 {VIDEO_STANDARDS['max_size_mb']}MB")
+            return False
+        
+        # 检查分辨率
+        if width != VIDEO_STANDARDS['width'] or height != VIDEO_STANDARDS['height']:
+            print(f"⚠️  警告: 视频分辨率 {width}x{height} 不符合标准 {VIDEO_STANDARDS['width']}x{VIDEO_STANDARDS['height']}")
+        
+        # 检查帧率
+        if abs(fps - VIDEO_STANDARDS['fps']) > 1:
+            print(f"⚠️  警告: 视频帧率 {fps} 不符合标准 {VIDEO_STANDARDS['fps']}")
+        
+        print(f"✓ 视频文件大小符合标准: {file_size_mb:.2f}MB <= {VIDEO_STANDARDS['max_size_mb']}MB")
+        return True
+        
+    except Exception as e:
+        print(f"检查视频标准失败: {e}")
+        return False
 
 def find_sound_effect(text, work_dir):
     """
