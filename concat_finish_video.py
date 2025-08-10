@@ -18,16 +18,29 @@ from pathlib import Path
 import ffmpeg
 
 def check_nvidia_gpu():
-    """检测系统是否有NVIDIA GPU可用"""
+    """检测系统是否有NVIDIA GPU和nvenc编码器可用"""
     try:
-        # 尝试运行nvidia-smi命令
+        # 首先检测nvidia-smi
         result = subprocess.run(['nvidia-smi'], capture_output=True, text=True, timeout=10)
-        if result.returncode == 0:
-            print("✓ 检测到NVIDIA GPU，将使用硬件加速")
-            return True
-        else:
+        if result.returncode != 0:
             print("⚠️  未检测到NVIDIA GPU或驱动，使用CPU编码")
             return False
+        
+        # 检测nvenc编码器是否可用
+        # 使用一个简单的测试命令来验证h264_nvenc是否工作
+        test_cmd = [
+            'ffmpeg', '-f', 'lavfi', '-i', 'testsrc=duration=1:size=320x240:rate=1',
+            '-c:v', 'h264_nvenc', '-f', 'null', '-'
+        ]
+        result = subprocess.run(test_cmd, capture_output=True, text=True, timeout=15)
+        
+        if result.returncode == 0:
+            print("✓ 检测到NVIDIA GPU和nvenc编码器，将使用硬件加速")
+            return True
+        else:
+            print(f"⚠️  nvenc编码器不可用，使用CPU编码: {result.stderr}")
+            return False
+            
     except (subprocess.TimeoutExpired, FileNotFoundError, Exception) as e:
         print(f"⚠️  GPU检测失败，使用CPU编码: {e}")
         return False
