@@ -16,6 +16,47 @@ import random
 import subprocess
 from pathlib import Path
 
+def check_nvidia_gpu():
+    """检测系统是否有NVIDIA GPU可用"""
+    try:
+        # 尝试运行nvidia-smi命令
+        result = subprocess.run(['nvidia-smi'], capture_output=True, text=True, timeout=10)
+        if result.returncode == 0:
+            print("✓ 检测到NVIDIA GPU，将使用硬件加速")
+            return True
+        else:
+            print("⚠️  未检测到NVIDIA GPU或驱动，使用CPU编码")
+            return False
+    except (subprocess.TimeoutExpired, FileNotFoundError, Exception) as e:
+        print(f"⚠️  GPU检测失败，使用CPU编码: {e}")
+        return False
+
+def get_ffmpeg_gpu_params():
+    """获取FFmpeg GPU优化参数 - 优化速度版本"""
+    if check_nvidia_gpu():
+        return {
+            'hwaccel': 'cuda',
+            'hwaccel_output_format': 'cuda',
+            'video_codec': 'h264_nvenc',
+            'preset': 'p2',  # 更快的预设 (p1=fastest, p2=faster, p7=slowest)
+            'tune': 'll',    # Low latency - 更快的编码
+            'extra_params': [
+                '-rc-lookahead', '8',  # 减少前瞻帧数以提高速度
+                '-bf', '2',            # 减少B帧数量
+                '-refs', '1'           # 减少参考帧数量
+            ]
+        }
+    else:
+        return {
+            'video_codec': 'libx264',
+            'preset': 'fast',  # 更快的CPU预设
+            'extra_params': [
+                '-refs', '2',      # 限制参考帧数量
+                '-me_method', 'hex', # 使用更快的运动估计
+                '-subq', '6'       # 降低子像素运动估计质量以提高速度
+            ]
+        }
+
 # 视频输出标准配置（从 gen_video.py 复制）
 VIDEO_STANDARDS = {
     'width': 720,
@@ -431,18 +472,37 @@ def create_image_video_with_effects(image_path, output_path, duration, width=720
         # 随机选择一种效果
         selected_effect = random.choice(effects)
         
+        # 获取GPU优化参数
+        gpu_params = get_ffmpeg_gpu_params()
+        
         # 使用subprocess调用ffmpeg
-        cmd = [
-            'ffmpeg', '-y',
+        cmd = ['ffmpeg', '-y']
+        
+        # 添加硬件加速参数（如果有GPU）
+        if 'hwaccel' in gpu_params:
+            cmd.extend(['-hwaccel', gpu_params['hwaccel']])
+        if 'hwaccel_output_format' in gpu_params:
+            cmd.extend(['-hwaccel_output_format', gpu_params['hwaccel_output_format']])
+        
+        cmd.extend([
             '-loop', '1', '-i', image_path,
             '-t', str(duration),
             '-vf', f'scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height},{selected_effect}',
-            '-c:v', VIDEO_STANDARDS['video_codec'], 
+            '-c:v', gpu_params['video_codec'], 
             '-pix_fmt', 'yuv420p', 
-            '-preset', 'medium',
-            '-r', str(fps),
-            output_path
-        ]
+            '-preset', gpu_params['preset'],
+            '-r', str(fps)
+        ])
+        
+        # 添加调优参数（如果有）
+        if 'tune' in gpu_params:
+            cmd.extend(['-tune', gpu_params['tune']])
+        
+        # 添加额外参数
+        if gpu_params['extra_params']:
+            cmd.extend(gpu_params['extra_params'])
+        
+        cmd.append(output_path)
         
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.returncode != 0:
@@ -589,19 +649,34 @@ def create_narration_video(chapter_path, narration_num, work_dir):
                 # 需要裁剪
                 temp_video = os.path.join(temp_dir, f"segment_{narration_num}_{i}.mp4")
                 try:
-                    (
-                        ffmpeg
-                        .input(segment['path'])
-                        .output(
-                            temp_video,
-                            t=segment['duration'],
-                            vcodec=VIDEO_STANDARDS['video_codec'],
-                            acodec=VIDEO_STANDARDS['audio_codec'],
-                            r=VIDEO_STANDARDS['fps']
-                        )
-                        .overwrite_output()
-                        .run(quiet=True)
-                    )
+                    # 获取GPU优化参数
+                    gpu_params = get_ffmpeg_gpu_params()
+                    
+                    # 构建输出参数
+                    output_params = {
+                        't': segment['duration'],
+                        'vcodec': gpu_params['video_codec'],
+                        'acodec': VIDEO_STANDARDS['audio_codec'],
+                        'r': VIDEO_STANDARDS['fps'],
+                        'preset': gpu_params['preset']
+                    }
+                    
+                    # 添加调优参数（如果有）
+                    if 'tune' in gpu_params:
+                        output_params['tune'] = gpu_params['tune']
+                    
+                    # 构建ffmpeg流
+                    stream = ffmpeg.input(segment['path'])
+                    
+                    # 添加硬件加速参数（如果有GPU）
+                    if 'hwaccel' in gpu_params:
+                        stream = ffmpeg.input(segment['path'], hwaccel=gpu_params['hwaccel'])
+                        if 'hwaccel_output_format' in gpu_params:
+                            stream = ffmpeg.input(segment['path'], 
+                                                hwaccel=gpu_params['hwaccel'],
+                                                hwaccel_output_format=gpu_params['hwaccel_output_format'])
+                    
+                    stream.output(temp_video, **output_params).overwrite_output().run(quiet=True)
                     segment_files.append(temp_video)
                 except Exception as e:
                     print(f"裁剪视频失败: {e}")
@@ -626,15 +701,25 @@ def create_narration_video(chapter_path, narration_num, work_dir):
         
         base_video = os.path.join(temp_dir, f"base_video_{narration_num}.mp4")
         try:
+            # 获取GPU优化参数
+            gpu_params = get_ffmpeg_gpu_params()
+            
+            # 构建输出参数
+            output_params = {
+                'vcodec': gpu_params['video_codec'],
+                'acodec': VIDEO_STANDARDS['audio_codec'],
+                'r': VIDEO_STANDARDS['fps'],
+                'preset': gpu_params['preset']
+            }
+            
+            # 添加调优参数（如果有）
+            if 'tune' in gpu_params:
+                output_params['tune'] = gpu_params['tune']
+            
             (
                 ffmpeg
                 .input(concat_list_file, format='concat', safe=0)
-                .output(
-                    base_video,
-                    vcodec=VIDEO_STANDARDS['video_codec'],
-                    acodec=VIDEO_STANDARDS['audio_codec'],
-                    r=VIDEO_STANDARDS['fps']
-                )
+                .output(base_video, **output_params)
                 .overwrite_output()
                 .run(quiet=True)
             )
@@ -690,8 +775,17 @@ def add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir
             print(f"水印文件不存在: {watermark_path}")
             watermark_path = None
         
+        # 获取GPU优化参数
+        gpu_params = get_ffmpeg_gpu_params()
+        
         # 使用subprocess构建ffmpeg命令，避免ffmpeg-python的复杂性
         cmd = ['ffmpeg', '-y']
+        
+        # 添加硬件加速参数（如果有GPU）
+        if 'hwaccel' in gpu_params:
+            cmd.extend(['-hwaccel', gpu_params['hwaccel']])
+        if 'hwaccel_output_format' in gpu_params:
+            cmd.extend(['-hwaccel_output_format', gpu_params['hwaccel_output_format']])
         
         # 输入文件
         cmd.extend(['-i', base_video])  # 输入0: 基础视频
@@ -814,13 +908,21 @@ def add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir
         
         # 输出参数
         cmd.extend([
-            '-c:v', VIDEO_STANDARDS['video_codec'],
+            '-c:v', gpu_params['video_codec'],
             '-c:a', VIDEO_STANDARDS['audio_codec'],
             '-b:v', VIDEO_STANDARDS.get('video_bitrate', '1500k'),
             '-b:a', VIDEO_STANDARDS['audio_bitrate'],
             '-r', str(VIDEO_STANDARDS['fps']),
-            '-preset', 'medium'
+            '-preset', gpu_params['preset']
         ])
+        
+        # 添加调优参数（如果有）
+        if 'tune' in gpu_params:
+            cmd.extend(['-tune', gpu_params['tune']])
+        
+        # 添加额外参数
+        if gpu_params['extra_params']:
+            cmd.extend(gpu_params['extra_params'])
         
         # 添加时长限制，确保不超过ASS字幕文件时长
         if max_duration:

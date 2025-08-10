@@ -17,6 +17,47 @@ import glob
 from pathlib import Path
 import ffmpeg
 
+def check_nvidia_gpu():
+    """检测系统是否有NVIDIA GPU可用"""
+    try:
+        # 尝试运行nvidia-smi命令
+        result = subprocess.run(['nvidia-smi'], capture_output=True, text=True, timeout=10)
+        if result.returncode == 0:
+            print("✓ 检测到NVIDIA GPU，将使用硬件加速")
+            return True
+        else:
+            print("⚠️  未检测到NVIDIA GPU或驱动，使用CPU编码")
+            return False
+    except (subprocess.TimeoutExpired, FileNotFoundError, Exception) as e:
+        print(f"⚠️  GPU检测失败，使用CPU编码: {e}")
+        return False
+
+def get_ffmpeg_gpu_params():
+    """获取FFmpeg GPU优化参数 - 优化速度版本"""
+    if check_nvidia_gpu():
+        return {
+            'hwaccel': 'cuda',
+            'hwaccel_output_format': 'cuda',
+            'video_codec': 'h264_nvenc',
+            'preset': 'p2',  # 更快的预设 (p1=fastest, p2=faster, p7=slowest)
+            'tune': 'll',    # Low latency - 更快的编码
+            'extra_params': [
+                '-rc-lookahead', '8',  # 减少前瞻帧数以提高速度
+                '-bf', '2',            # 减少B帧数量
+                '-refs', '1'           # 减少参考帧数量
+            ]
+        }
+    else:
+        return {
+            'video_codec': 'libx264',
+            'preset': 'fast',  # 更快的CPU预设
+            'extra_params': [
+                '-refs', '2',      # 限制参考帧数量
+                '-me_method', 'hex', # 使用更快的运动估计
+                '-subq', '6'       # 降低子像素运动估计质量以提高速度
+            ]
+        }
+
 # 视频输出标准配置（从 gen_video.py 复制）
 VIDEO_STANDARDS = {
     'width': 720,
@@ -126,8 +167,17 @@ def create_bgm_audio(bgm_file, target_duration, output_path):
         
         print(f"BGM原始时长: {bgm_duration:.2f}s, 目标时长: {target_duration:.2f}s")
         
+        # 获取GPU优化参数
+        gpu_params = get_ffmpeg_gpu_params()
+        
         # 构建FFmpeg命令
         cmd = ["ffmpeg", "-y"]
+        
+        # 添加硬件加速参数（如果可用）
+        if 'hwaccel' in gpu_params:
+            cmd.extend(["-hwaccel", gpu_params['hwaccel']])
+        if 'hwaccel_output_format' in gpu_params:
+            cmd.extend(["-hwaccel_output_format", gpu_params['hwaccel_output_format']])
         
         if bgm_duration >= target_duration:
             # BGM比视频长，直接裁剪并在最后3秒淡出
@@ -179,21 +229,41 @@ def concat_videos_with_bgm(video_files, bgm_audio_path, output_path):
             for video_file in video_files:
                 f.write(f"file '{os.path.abspath(video_file)}'\n")
         
+        # 获取GPU优化参数
+        gpu_params = get_ffmpeg_gpu_params()
+        
         # 使用FFmpeg拼接视频并混合音频（原有音频+BGM）
-        cmd = [
-            "ffmpeg", "-y",
+        cmd = ["ffmpeg", "-y"]
+        
+        # 添加硬件加速参数（如果可用）
+        if 'hwaccel' in gpu_params:
+            cmd.extend(["-hwaccel", gpu_params['hwaccel']])
+        if 'hwaccel_output_format' in gpu_params:
+            cmd.extend(["-hwaccel_output_format", gpu_params['hwaccel_output_format']])
+        
+        cmd.extend([
             "-f", "concat",
             "-safe", "0",
             "-i", concat_list_path,
             "-i", bgm_audio_path,
-            "-c:v", "copy",  # 视频流直接复制，提高速度
+            "-c:v", gpu_params.get('video_codec', 'libx264'),  # 使用GPU编码器或CPU编码器
             "-filter_complex", "[0:a]volume=1.0[original];[1:a]volume=0.3[bgm];[original][bgm]amix=inputs=2:duration=first:dropout_transition=3[mixed]",
             "-map", "0:v:0",  # 使用第一个输入的视频流
             "-map", "[mixed]",  # 使用混合后的音频流
             "-c:a", "aac",
-            "-b:a", "128k",
-            output_path
-        ]
+            "-b:a", "128k"
+        ])
+        
+        # 添加GPU特定的编码参数
+        if 'preset' in gpu_params:
+            cmd.extend(["-preset", gpu_params['preset']])
+        if 'tune' in gpu_params:
+            cmd.extend(["-tune", gpu_params['tune']])
+        
+        # 添加额外的优化参数
+        cmd.extend(gpu_params.get('extra_params', []))
+        
+        cmd.append(output_path)
         
         print(f"执行视频拼接命令: {' '.join(cmd)}")
         result = subprocess.run(cmd, capture_output=True, text=True)

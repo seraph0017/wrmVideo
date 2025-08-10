@@ -4,6 +4,10 @@
 
 ## ✨ 最新更新
 
+- 🚀 **FFmpeg参数优化**: 全面优化视频编码参数以提升合成速度，在保证输出标准的前提下：
+  - **NVIDIA GPU**: 使用更快的预设(p2)和低延迟调优(ll)，减少前瞻帧数和B帧数量
+  - **CPU编码**: 使用fast预设，优化运动估计和参考帧设置，显著提升编码速度
+  - **智能检测**: 自动检测GPU环境并应用相应的优化参数
 - 🔄 **gen_video.py 重构**: 彻底重写 `gen_video.py` 脚本，现在作为流程编排器，按顺序执行 `concat_first_video.py`、`concat_narration_video.py` 和 `concat_finish_video.py`，实现模块化的视频生成流程
 - 🎵 **音频混合优化**: 修复 `concat_finish_video.py` 中BGM盖住原有narration音频的问题，使用FFmpeg的amix滤镜将原有音频（音量1.0）与BGM（音量0.3）进行混合，确保解说声音清晰可听
 - 📊 **统计逻辑优化**: 优化语音生成统计逻辑，添加文件存在检查和跳过机制，统计结果更准确

@@ -21,6 +21,47 @@ import subprocess
 from pathlib import Path
 from typing import List
 
+def check_nvidia_gpu():
+    """检测系统是否有NVIDIA GPU可用"""
+    try:
+        # 尝试运行nvidia-smi命令
+        result = subprocess.run(['nvidia-smi'], capture_output=True, text=True, timeout=10)
+        if result.returncode == 0:
+            print("✓ 检测到NVIDIA GPU，将使用硬件加速")
+            return True
+        else:
+            print("⚠️  未检测到NVIDIA GPU或驱动，使用CPU编码")
+            return False
+    except (subprocess.TimeoutExpired, FileNotFoundError, Exception) as e:
+        print(f"⚠️  GPU检测失败，使用CPU编码: {e}")
+        return False
+
+def get_ffmpeg_gpu_params():
+    """获取FFmpeg GPU优化参数 - 优化速度版本"""
+    if check_nvidia_gpu():
+        return {
+            'hwaccel': 'cuda',
+            'hwaccel_output_format': 'cuda',
+            'video_codec': 'h264_nvenc',
+            'preset': 'p2',  # 更快的预设 (p1=fastest, p2=faster, p7=slowest)
+            'tune': 'll',    # Low latency - 更快的编码
+            'extra_params': [
+                '-rc-lookahead', '8',  # 减少前瞻帧数以提高速度
+                '-bf', '2',            # 减少B帧数量
+                '-refs', '1'           # 减少参考帧数量
+            ]
+        }
+    else:
+        return {
+            'video_codec': 'libx264',
+            'preset': 'fast',  # 更快的CPU预设
+            'extra_params': [
+                '-refs', '2',      # 限制参考帧数量
+                '-me_method', 'hex', # 使用更快的运动估计
+                '-subq', '6'       # 降低子像素运动估计质量以提高速度
+            ]
+        }
+
 # ------------------------- 全局常量 ------------------------- #
 
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -61,6 +102,9 @@ def generate_overlay_video(video2: Path, temp_dir: Path) -> Path:
         print("⚠️ 未找到 fuceng1.mov，直接返回原 video2")
         return video2
 
+    # 获取GPU优化参数
+    gpu_params = get_ffmpeg_gpu_params()
+
     # 先统一分辨率，并在前 5 秒（或 fuceng 时长更短者）叠加转场
     # 由于无法提前获取 fuceng 时长，直接在前 5 秒启用 enable between(t,0,5)
     filter_complex = (
@@ -70,31 +114,35 @@ def generate_overlay_video(video2: Path, temp_dir: Path) -> Path:
         f"[v0][fg]overlay=(W-w)/2:(H-h)/2:enable='between(t,0,5)'[v]"
     )
 
-    cmd = [
-        "ffmpeg",
-        "-y",
-        "-i",
-        str(video2),
-        "-i",
-        str(FUCENG_PATH),
-        "-filter_complex",
-        filter_complex,
-        "-map",
-        "[v]",
-        "-map",
-        "0:a?",  # 若存在音轨则保留
-        "-c:v",
-        VIDEO_STANDARDS["video_codec"],
-        "-c:a",
-        VIDEO_STANDARDS["audio_codec"],
-        "-r",
-        str(fps),
-        "-preset",
-        "medium",
-        "-pix_fmt",
-        "yuv420p",
-        str(output_path),
-    ]
+    cmd = ["ffmpeg", "-y"]
+    
+    # 添加硬件加速参数（如果可用）
+    if 'hwaccel' in gpu_params:
+        cmd.extend(["-hwaccel", gpu_params['hwaccel']])
+    if 'hwaccel_output_format' in gpu_params:
+        cmd.extend(["-hwaccel_output_format", gpu_params['hwaccel_output_format']])
+    
+    cmd.extend([
+        "-i", str(video2),
+        "-i", str(FUCENG_PATH),
+        "-filter_complex", filter_complex,
+        "-map", "[v]",
+        "-map", "0:a?",  # 若存在音轨则保留
+        "-c:v", gpu_params.get('video_codec', VIDEO_STANDARDS["video_codec"]),
+        "-c:a", VIDEO_STANDARDS["audio_codec"],
+        "-r", str(fps)
+    ])
+    
+    # 添加GPU特定的编码参数
+    if 'preset' in gpu_params:
+        cmd.extend(["-preset", gpu_params['preset']])
+    if 'tune' in gpu_params:
+        cmd.extend(["-tune", gpu_params['tune']])
+    
+    # 添加额外的优化参数
+    cmd.extend(gpu_params.get('extra_params', []))
+    
+    cmd.extend(["-pix_fmt", "yuv420p", str(output_path)])
 
     print("执行转场叠加...", " ".join(cmd))
     run_cmd(cmd)
@@ -142,25 +190,37 @@ def process_chapter(chapter_dir: Path) -> None:
     temp_dir = chapter_dir / TEMP_DIR_NAME
     temp_dir.mkdir(exist_ok=True)
 
+    # 获取GPU优化参数
+    gpu_params = get_ffmpeg_gpu_params()
+    
     # 统一分辨率与帧率到 video1
     scaled_video1 = temp_dir / f"{video1.stem}_scaled.mp4"
-    cmd_scale_v1 = [
-        "ffmpeg",
-        "-y",
-        "-i",
-        str(video1),
-        "-vf",
-        f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=increase,crop={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}",
-        "-c:v",
-        VIDEO_STANDARDS["video_codec"],
-        "-c:a",
-        VIDEO_STANDARDS["audio_codec"],
-        "-r",
-        str(VIDEO_STANDARDS["fps"]),
-        "-pix_fmt",
-        "yuv420p",
-        str(scaled_video1),
-    ]
+    cmd_scale_v1 = ["ffmpeg", "-y"]
+    
+    # 添加硬件加速参数（如果可用）
+    if 'hwaccel' in gpu_params:
+        cmd_scale_v1.extend(["-hwaccel", gpu_params['hwaccel']])
+    if 'hwaccel_output_format' in gpu_params:
+        cmd_scale_v1.extend(["-hwaccel_output_format", gpu_params['hwaccel_output_format']])
+    
+    cmd_scale_v1.extend([
+        "-i", str(video1),
+        "-vf", f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=increase,crop={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}",
+        "-c:v", gpu_params.get('video_codec', VIDEO_STANDARDS["video_codec"]),
+        "-c:a", VIDEO_STANDARDS["audio_codec"],
+        "-r", str(VIDEO_STANDARDS["fps"])
+    ])
+    
+    # 添加GPU特定的编码参数
+    if 'preset' in gpu_params:
+        cmd_scale_v1.extend(["-preset", gpu_params['preset']])
+    if 'tune' in gpu_params:
+        cmd_scale_v1.extend(["-tune", gpu_params['tune']])
+    
+    # 添加额外的优化参数
+    cmd_scale_v1.extend(gpu_params.get('extra_params', []))
+    
+    cmd_scale_v1.extend(["-pix_fmt", "yuv420p", str(scaled_video1)])
     print("统一 video_1 分辨率...", " ".join(cmd_scale_v1))
     run_cmd(cmd_scale_v1)
 
@@ -173,23 +233,32 @@ def process_chapter(chapter_dir: Path) -> None:
     else:
         # 若未叠加则仍需缩放裁剪
         scaled_video2 = temp_dir / f"{video2.stem}_scaled.mp4"
-        cmd_scale_v2 = [
-            "ffmpeg",
-            "-y",
-            "-i",
-            str(video2),
-            "-vf",
-            f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=increase,crop={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}",
-            "-c:v",
-            VIDEO_STANDARDS["video_codec"],
-            "-c:a",
-            VIDEO_STANDARDS["audio_codec"],
-            "-r",
-            str(VIDEO_STANDARDS["fps"]),
-            "-pix_fmt",
-            "yuv420p",
-            str(scaled_video2),
-        ]
+        cmd_scale_v2 = ["ffmpeg", "-y"]
+        
+        # 添加硬件加速参数（如果可用）
+        if 'hwaccel' in gpu_params:
+            cmd_scale_v2.extend(["-hwaccel", gpu_params['hwaccel']])
+        if 'hwaccel_output_format' in gpu_params:
+            cmd_scale_v2.extend(["-hwaccel_output_format", gpu_params['hwaccel_output_format']])
+        
+        cmd_scale_v2.extend([
+            "-i", str(video2),
+            "-vf", f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=increase,crop={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}",
+            "-c:v", gpu_params.get('video_codec', VIDEO_STANDARDS["video_codec"]),
+            "-c:a", VIDEO_STANDARDS["audio_codec"],
+            "-r", str(VIDEO_STANDARDS["fps"])
+        ])
+        
+        # 添加GPU特定的编码参数
+        if 'preset' in gpu_params:
+            cmd_scale_v2.extend(["-preset", gpu_params['preset']])
+        if 'tune' in gpu_params:
+            cmd_scale_v2.extend(["-tune", gpu_params['tune']])
+        
+        # 添加额外的优化参数
+        cmd_scale_v2.extend(gpu_params.get('extra_params', []))
+        
+        cmd_scale_v2.extend(["-pix_fmt", "yuv420p", str(scaled_video2)])
         print("统一 video_2 分辨率...", " ".join(cmd_scale_v2))
         run_cmd(cmd_scale_v2)
 
