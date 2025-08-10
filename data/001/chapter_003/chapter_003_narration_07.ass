@@ -14,24 +14,20 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}行进中
-Dialogue: 0,0:00:01.37,0:00:03.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}突然带着数十骑从后
-Dialogue: 0,0:00:03.52,0:00:06.40,Default,,0,0,0,,军飞奔而来作为{\c&H0000FFFF&\b1}前锋{\c&H00FFFFFF&\b0}却擅离职守
-Dialogue: 0,0:00:06.75,0:00:07.76,Default,,0,0,0,,其{\c&H0000FFFF&\b1}目的{\c&H00FFFFFF&\b0}不言而喻
-Dialogue: 0,0:00:08.40,0:00:11.02,Default,,0,0,0,,监视{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}李承乾心中明镜
-Dialogue: 0,0:00:11.21,0:00:12.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}就是李世民派来看
-Dialogue: 0,0:00:12.89,0:00:14.21,Default,,0,0,0,,着他的“{\c&H0000FFFF&\b1}监狱长{\c&H00FFFFFF&\b0}”
-Dialogue: 0,0:00:14.36,0:00:17.50,Default,,0,0,0,,两人见面后{\c&H0000FFFF&\b1}言语{\c&H00FFFFFF&\b0}间充满试探与交锋
-Dialogue: 0,0:00:17.65,0:00:19.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}注意到李承乾随行的
-Dialogue: 0,0:00:19.70,0:00:21.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}行李{\c&H00FFFFFF&\b0}和人员众多
-Dialogue: 0,0:00:21.49,0:00:22.79,Default,,0,0,0,,尤其是{\c&H0000FFFF&\b1}发现{\c&H00FFFFFF&\b0}其中似
-Dialogue: 0,0:00:22.79,0:00:25.45,Default,,0,0,0,,乎有{\c&H0000FFFF&\b1}女眷{\c&H00FFFFFF&\b0}时更是面露怀疑
-Dialogue: 0,0:00:25.72,0:00:27.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}极力否认
-Dialogue: 0,0:00:27.50,0:00:28.95,Default,,0,0,0,,心中却暗自{\c&H0000FFFF&\b1}焦急{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:29.06,0:00:30.55,Default,,0,0,0,,因为这些{\c&H0000FFFF&\b1}行李{\c&H00FFFFFF&\b0}中不仅有
-Dialogue: 0,0:00:30.55,0:00:31.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}金银{\c&H00FFFFFF&\b0}细软和歌姬
-Dialogue: 0,0:00:31.92,0:00:34.57,Default,,0,0,0,,更有对他至关重要的人一旦{\c&H0000FFFF&\b1}暴露{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:34.73,0:00:37.16,Default,,0,0,0,,远走{\c&H0000FFFF&\b1}大漠{\c&H00FFFFFF&\b0}的计划将功亏一篑
-Dialogue: 0,0:00:37.28,0:00:39.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}在大军行进的道路上
-Dialogue: 0,0:00:39.37,0:00:41.12,Default,,0,0,0,,周围是整齐的{\c&H0000FFFF&\b1}士兵{\c&H00FFFFFF&\b0}队列
-Dialogue: 0,0:00:41.33,0:00:42.84,Default,,0,0,0,,尘土飞扬{\c&H0000FFFF&\b1}气氛{\c&H00FFFFFF&\b0}紧张
+Dialogue: 0,0:00:00.02,0:00:02.85,Default,,0,0,0,,大军行进中{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}突然带着数十
+Dialogue: 0,0:00:02.85,0:00:04.38,Default,,0,0,0,,骑从后军飞奔而来
+Dialogue: 0,0:00:04.88,0:00:06.40,Default,,0,0,0,,作为前锋却擅离职守
+Dialogue: 0,0:00:06.75,0:00:09.13,Default,,0,0,0,,其目的不言而喻监视{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.48,0:00:12.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中明镜程知节就是李世
+Dialogue: 0,0:00:12.09,0:00:15.69,Default,,0,0,0,,民派来看着他的“监狱长”
+Dialogue: 0,0:00:15.69,0:00:19.89,Default,,0,0,0,,两人见面后{\c&H0000FFFF&\b1}言语{\c&H00FFFFFF&\b0}间充满试探与交
+Dialogue: 0,0:00:16.64,0:00:19.39,Default,,0,0,0,,锋{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}注意到李承乾随行的行
+Dialogue: 0,0:00:19.39,0:00:22.39,Default,,0,0,0,,李和人员众多尤其是发现其中似
+Dialogue: 0,0:00:22.39,0:00:24.76,Default,,0,0,0,,乎有女眷时更是面露怀疑
+Dialogue: 0,0:00:25.17,0:00:28.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}极力否认心中却暗自焦急
+Dialogue: 0,0:00:28.78,0:00:30.78,Default,,0,0,0,,因为这些行李中不仅有{\c&H0000FFFF&\b1}金银{\c&H00FFFFFF&\b0}细软和
+Dialogue: 0,0:00:30.78,0:00:33.02,Default,,0,0,0,,歌姬更有对他至关重要的人
+Dialogue: 0,0:00:33.27,0:00:36.17,Default,,0,0,0,,一旦暴露远走大漠的计划将功亏
+Dialogue: 0,0:00:36.17,0:00:38.59,Default,,0,0,0,,一篑场景在大军行进的道路上
+Dialogue: 0,0:00:38.94,0:00:40.45,Default,,0,0,0,,周围是整齐的士兵队列
+Dialogue: 0,0:00:40.77,0:00:42.69,Default,,0,0,0,,尘土飞扬气氛紧张

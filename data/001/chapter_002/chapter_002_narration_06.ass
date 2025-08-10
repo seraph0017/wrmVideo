@@ -15,19 +15,16 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.01,0:00:01.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}东市挥金如土
-Dialogue: 0,0:00:02.15,0:00:03.92,Default,,0,0,0,,数十丈长的{\c&H0000FFFF&\b1}木架{\c&H00FFFFFF&\b0}上挂满越
-Dialogue: 0,0:00:03.92,0:00:05.05,Default,,0,0,0,,州缭绫与{\c&H0000FFFF&\b1}蜀锦{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:05.56,0:00:07.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}西域{\c&H00FFFFFF&\b0}商人开箱露出鸽
-Dialogue: 0,0:00:07.09,0:00:09.51,Default,,0,0,0,,血宝石毛毯龙眼大的{\c&H0000FFFF&\b1}夜明珠{\c&H00FFFFFF&\b0}在晨
-Dialogue: 0,0:00:09.51,0:00:10.46,Default,,0,0,0,,光下{\c&H0000FFFF&\b1}流转{\c&H00FFFFFF&\b0}异彩
-Dialogue: 0,0:00:10.81,0:00:12.65,Default,,0,0,0,,这位被视为将死{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}的
-Dialogue: 0,0:00:12.65,0:00:14.30,Default,,0,0,0,,举动震惊了整个{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:14.45,0:00:16.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}达官显贵{\c&H00FFFFFF&\b0}们看着他将东市珍
-Dialogue: 0,0:00:16.50,0:00:19.51,Default,,0,0,0,,宝席卷一空纷纷以为他已{\c&H0000FFFF&\b1}放弃{\c&H00FFFFFF&\b0}挣扎
-Dialogue: 0,0:00:19.62,0:00:21.39,Default,,0,0,0,,唯有{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}自己知道
-Dialogue: 0,0:00:21.54,0:00:23.41,Default,,0,0,0,,这些{\c&H0000FFFF&\b1}价值连城{\c&H00FFFFFF&\b0}的货物将成
-Dialogue: 0,0:00:23.41,0:00:25.55,Default,,0,0,0,,为他运送{\c&H0000FFFF&\b1}金银{\c&H00FFFFFF&\b0}的绝佳掩护
-Dialogue: 0,0:00:25.69,0:00:27.64,Default,,0,0,0,,当杜总管{\c&H0000FFFF&\b1}平静{\c&H00FFFFFF&\b0}地吩咐全
-Dialogue: 0,0:00:27.64,0:00:29.23,Default,,0,0,0,,部送到{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}时
-Dialogue: 0,0:00:29.39,0:00:31.32,Default,,0,0,0,,牙{\c&H0000FFFF&\b1}人们{\c&H00FFFFFF&\b0}眼中闪烁的贪婪
-Dialogue: 0,0:00:31.45,0:00:32.75,Default,,0,0,0,,恰好落入{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}深邃的眼眸
+Dialogue: 0,0:00:02.15,0:00:04.62,Default,,0,0,0,,数十丈长的木架上挂满{\c&H0000FFFF&\b1}越州{\c&H00FFFFFF&\b0}缭绫与
+Dialogue: 0,0:00:04.62,0:00:07.52,Default,,0,0,0,,蜀锦西域商人开箱露出鸽血{\c&H0000FFFF&\b1}宝石{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.52,0:00:09.93,Default,,0,0,0,,毛毯龙眼大的{\c&H0000FFFF&\b1}夜明珠{\c&H00FFFFFF&\b0}在晨光下流
+Dialogue: 0,0:00:09.93,0:00:12.17,Default,,0,0,0,,转异彩这位被视为将死太子
+Dialogue: 0,0:00:12.17,0:00:13.79,Default,,0,0,0,,的举动震惊了整个{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.14,0:00:16.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}达官显贵{\c&H00FFFFFF&\b0}们看着他将东市珍宝席卷
+Dialogue: 0,0:00:16.66,0:00:19.04,Default,,0,0,0,,一空纷纷以为他已放弃挣扎
+Dialogue: 0,0:00:19.41,0:00:20.79,Default,,0,0,0,,唯有{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}自己知道
+Dialogue: 0,0:00:21.30,0:00:23.79,Default,,0,0,0,,这些价值连城的货物将成为他运送
+Dialogue: 0,0:00:23.79,0:00:26.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}金银{\c&H00FFFFFF&\b0}的绝佳掩护当杜总管平静地
+Dialogue: 0,0:00:26.48,0:00:28.29,Default,,0,0,0,,吩咐全部送到{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}时
+Dialogue: 0,0:00:28.69,0:00:30.43,Default,,0,0,0,,牙人们眼中闪烁的贪婪
+Dialogue: 0,0:00:30.85,0:00:32.59,Default,,0,0,0,,恰好落入太子深邃的眼眸

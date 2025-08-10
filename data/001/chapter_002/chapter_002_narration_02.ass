@@ -14,19 +14,17 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.40,Default,,0,0,0,,就在{\c&H0000FFFF&\b1}群臣{\c&H00FFFFFF&\b0}散去之际
-Dialogue: 0,0:00:01.91,0:00:03.56,Default,,0,0,0,,一个意想不到的{\c&H0000FFFF&\b1}人物{\c&H00FFFFFF&\b0}拦住了
-Dialogue: 0,0:00:03.56,0:00:04.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}的去路
-Dialogue: 0,0:00:05.08,0:00:07.06,Default,,0,0,0,,大唐宗室重臣{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}突然现
-Dialogue: 0,0:00:07.06,0:00:09.37,Default,,0,0,0,,身{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫他肩宽背阔如山岳
-Dialogue: 0,0:00:09.73,0:00:11.23,Default,,0,0,0,,刀削般的{\c&H0000FFFF&\b1}眉宇{\c&H00FFFFFF&\b0}间带着耐
-Dialogue: 0,0:00:11.23,0:00:12.14,Default,,0,0,0,,人寻味的{\c&H0000FFFF&\b1}笑意{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:12.36,0:00:14.01,Default,,0,0,0,,这位平定{\c&H0000FFFF&\b1}江南{\c&H00FFFFFF&\b0}的开国功臣
-Dialogue: 0,0:00:14.44,0:00:16.41,Default,,0,0,0,,竟拍着{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}肩膀感叹真
-Dialogue: 0,0:00:16.41,0:00:17.82,Default,,0,0,0,,像你{\c&H0000FFFF&\b1}父亲{\c&H00FFFFFF&\b0}年轻时
-Dialogue: 0,0:00:18.11,0:00:21.09,Default,,0,0,0,,此言一出不仅让{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心头巨震
-Dialogue: 0,0:00:21.21,0:00:23.34,Default,,0,0,0,,更让离去的{\c&H0000FFFF&\b1}大臣{\c&H00FFFFFF&\b0}们纷纷侧目
-Dialogue: 0,0:00:23.48,0:00:25.86,Default,,0,0,0,,要知道{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}多年不问朝政
-Dialogue: 0,0:00:26.02,0:00:28.70,Default,,0,0,0,,此刻突然{\c&H0000FFFF&\b1}示好{\c&H00FFFFFF&\b0}究竟是福是祸
-Dialogue: 0,0:00:28.84,0:00:30.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}夕阳{\c&H00FFFFFF&\b0}将两人身影拉得颀长
-Dialogue: 0,0:00:30.86,0:00:33.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}宫墙{\c&H00FFFFFF&\b0}阴影中似乎藏着更多未解之谜
+Dialogue: 0,0:00:00.02,0:00:01.40,Default,,0,0,0,,就在群臣散去之际
+Dialogue: 0,0:00:01.91,0:00:04.05,Default,,0,0,0,,一个意想不到的人物拦住了{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.05,0:00:06.89,Default,,0,0,0,,的去路大唐宗室重臣{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}突然
+Dialogue: 0,0:00:06.89,0:00:09.37,Default,,0,0,0,,现身{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫他肩宽背阔如山岳
+Dialogue: 0,0:00:09.73,0:00:11.98,Default,,0,0,0,,刀削般的眉宇间带着耐人寻味的笑
+Dialogue: 0,0:00:11.98,0:00:14.01,Default,,0,0,0,,意这位平定{\c&H0000FFFF&\b1}江南{\c&H00FFFFFF&\b0}的开国功臣
+Dialogue: 0,0:00:14.44,0:00:16.80,Default,,0,0,0,,竟拍着太子肩膀感叹真像你父亲
+Dialogue: 0,0:00:16.80,0:00:18.56,Default,,0,0,0,,年轻时此言一出
+Dialogue: 0,0:00:18.87,0:00:20.48,Default,,0,0,0,,不仅让{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心头巨震
+Dialogue: 0,0:00:20.97,0:00:22.80,Default,,0,0,0,,更让离去的大臣们纷纷侧目
+Dialogue: 0,0:00:23.23,0:00:25.14,Default,,0,0,0,,要知道{\c&H0000FFFF&\b1}李孝恭{\c&H00FFFFFF&\b0}多年不问朝政
+Dialogue: 0,0:00:25.70,0:00:28.14,Default,,0,0,0,,此刻突然示好究竟是福是祸
+Dialogue: 0,0:00:28.52,0:00:30.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}夕阳{\c&H00FFFFFF&\b0}将两人身影拉得颀长
+Dialogue: 0,0:00:30.49,0:00:33.53,Default,,0,0,0,,宫墙阴影中似乎藏着更多未解之谜

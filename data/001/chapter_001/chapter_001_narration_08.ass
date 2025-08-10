@@ -14,25 +14,24 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.53,Default,,0,0,0,,“八百里加急{\c&H0000FFFF&\b1}战报{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:01.65,0:00:03.63,Default,,0,0,0,,”就在{\c&H0000FFFF&\b1}群臣{\c&H00FFFFFF&\b0}慌乱之际
-Dialogue: 0,0:00:03.79,0:00:06.01,Default,,0,0,0,,一名士兵疾步闯入{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿
-Dialogue: 0,0:00:06.13,0:00:09.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}声音{\c&H00FFFFFF&\b0}嘶哑太医院御医匆匆赶来
-Dialogue: 0,0:00:09.24,0:00:10.58,Default,,0,0,0,,施针{\c&H0000FFFF&\b1}开药{\c&H00FFFFFF&\b0}后禀报
-Dialogue: 0,0:00:10.77,0:00:12.12,Default,,0,0,0,,“{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}怒急攻心
-Dialogue: 0,0:00:12.27,0:00:14.18,Default,,0,0,0,,需静养十天半月方能{\c&H0000FFFF&\b1}苏醒{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:14.34,0:00:16.11,Default,,0,0,0,,”{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌手持战报
-Dialogue: 0,0:00:18.96,0:00:22.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}大军{\c&H00FFFFFF&\b0}犯境军情如火可皇帝昏迷
-Dialogue: 0,0:00:22.39,0:00:25.56,Default,,0,0,0,,谁来决断“{\c&H0000FFFF&\b1}军情{\c&H00FFFFFF&\b0}紧急当共览战报
-Dialogue: 0,0:00:25.82,0:00:28.08,Default,,0,0,0,,他日{\c&H0000FFFF&\b1}陛下{\c&H00FFFFFF&\b0}追究吾等共担
-Dialogue: 0,0:00:28.40,0:00:29.77,Default,,0,0,0,,”{\c&H0000FFFF&\b1}魏征{\c&H00FFFFFF&\b0}挺身而出
-Dialogue: 0,0:00:30.06,0:00:31.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}群臣{\c&H00FFFFFF&\b0}纷纷附议
-Dialogue: 0,0:00:31.34,0:00:34.17,Default,,0,0,0,,战报拆开果然是薛{\c&H0000FFFF&\b1}延陀夷{\c&H00FFFFFF&\b0}男之子大
-Dialogue: 0,0:00:34.17,0:00:35.33,Default,,0,0,0,,度{\c&H0000FFFF&\b1}设率{\c&H00FFFFFF&\b0}军来犯
-Dialogue: 0,0:00:35.53,0:00:37.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌沉声道
-Dialogue: 0,0:00:37.43,0:00:38.53,Default,,0,0,0,,“需早作{\c&H0000FFFF&\b1}决断{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:38.83,0:00:41.49,Default,,0,0,0,,否则东北{\c&H0000FFFF&\b1}高句丽{\c&H00FFFFFF&\b0}西南吐蕃恐
-Dialogue: 0,0:00:41.49,0:00:42.03,Default,,0,0,0,,趁机{\c&H0000FFFF&\b1}生事{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:42.34,0:00:44.94,Default,,0,0,0,,”{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}却看向一旁的李承
-Dialogue: 0,0:00:44.94,0:00:46.28,Default,,0,0,0,,乾眼中{\c&H0000FFFF&\b1}闪过{\c&H00FFFFFF&\b0}算计
-Dialogue: 0,0:00:46.63,0:00:48.05,Default,,0,0,0,,“太子殿下{\c&H0000FFFF&\b1}监国{\c&H00FFFFFF&\b0}理政
+Dialogue: 0,0:00:00.00,0:00:02.40,Default,,0,0,0,,“八百里加急战报
+Dialogue: 0,0:00:02.40,0:00:05.10,Default,,0,0,0,,”就在群臣慌乱之际
+Dialogue: 0,0:00:03.55,0:00:05.30,Default,,0,0,0,,一名士兵疾步闯入{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿
+Dialogue: 0,0:00:05.86,0:00:08.62,Default,,0,0,0,,声音嘶哑太医院御医匆匆赶来
+Dialogue: 0,0:00:08.62,0:00:12.82,Default,,0,0,0,,施针开药后禀报“陛下怒急攻心
+Dialogue: 0,0:00:11.79,0:00:13.65,Default,,0,0,0,,需静养十天半月方能{\c&H0000FFFF&\b1}苏醒{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.65,0:00:16.36,Default,,0,0,0,,”{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌手持战报
+Dialogue: 0,0:00:15.58,0:00:18.45,Default,,0,0,0,,眉头紧锁{\c&H0000FFFF&\b1}薛延陀{\c&H00FFFFFF&\b0}数十万大军犯
+Dialogue: 0,0:00:18.45,0:00:21.01,Default,,0,0,0,,境军情如火可皇帝昏迷
+Dialogue: 0,0:00:21.01,0:00:23.71,Default,,0,0,0,,谁来决断“军情紧急
+Dialogue: 0,0:00:23.55,0:00:25.82,Default,,0,0,0,,当共览战报他日陛下追究
+Dialogue: 0,0:00:25.82,0:00:29.12,Default,,0,0,0,,吾等共担”{\c&H0000FFFF&\b1}魏征{\c&H00FFFFFF&\b0}挺身而出
+Dialogue: 0,0:00:28.70,0:00:30.75,Default,,0,0,0,,群臣纷纷附议战报拆开
+Dialogue: 0,0:00:31.13,0:00:33.52,Default,,0,0,0,,果然是薛{\c&H0000FFFF&\b1}延陀夷{\c&H00FFFFFF&\b0}男之子大度设率军
+Dialogue: 0,0:00:33.52,0:00:35.53,Default,,0,0,0,,来犯{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌沉声道
+Dialogue: 0,0:00:35.53,0:00:39.43,Default,,0,0,0,,“需早作决断否则{\c&H0000FFFF&\b1}东北{\c&H00FFFFFF&\b0}高句丽
+Dialogue: 0,0:00:38.83,0:00:40.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}西南{\c&H00FFFFFF&\b0}吐蕃恐趁机生事
+Dialogue: 0,0:00:40.54,0:00:44.44,Default,,0,0,0,,”{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}却看向一旁的李承乾
+Dialogue: 0,0:00:44.44,0:00:48.64,Default,,0,0,0,,眼中闪过算计“太子殿下{\c&H0000FFFF&\b1}监国{\c&H00FFFFFF&\b0}理
+Dialogue: 0,0:00:46.05,0:00:48.05,Default,,0,0,0,,政当由您批答出兵方略
+Dialogue: 0,0:00:48.05,0:00:48.34,Default,,0,0,0,,”

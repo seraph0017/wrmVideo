@@ -14,26 +14,22 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:01.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}对李承乾的行
-Dialogue: 0,0:00:01.35,0:00:02.67,Default,,0,0,0,,李始终{\c&H0000FFFF&\b1}心存{\c&H00FFFFFF&\b0}疑虑
-Dialogue: 0,0:00:03.15,0:00:05.74,Default,,0,0,0,,坚持要搜查{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}情急之下
-Dialogue: 0,0:00:06.18,0:00:08.63,Default,,0,0,0,,抽出{\c&H0000FFFF&\b1}佩剑{\c&H00FFFFFF&\b0}横在脖颈以死相逼
-Dialogue: 0,0:00:09.00,0:00:11.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}声称{\c&H00FFFFFF&\b0}“太子尊严不容冒犯”
-Dialogue: 0,0:00:11.43,0:00:13.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}起初不以为意
-Dialogue: 0,0:00:13.38,0:00:15.07,Default,,0,0,0,,但见{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}动真格
-Dialogue: 0,0:00:15.22,0:00:16.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}脖颈{\c&H00FFFFFF&\b0}已现血痕
-Dialogue: 0,0:00:16.66,0:00:18.73,Default,,0,0,0,,生怕担上逼死{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}的罪名
-Dialogue: 0,0:00:18.88,0:00:21.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}权衡利弊{\c&H00FFFFFF&\b0}后只能放弃搜查
-Dialogue: 0,0:00:21.14,0:00:22.42,Default,,0,0,0,,带着手下{\c&H0000FFFF&\b1}离去{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:22.63,0:00:23.98,Default,,0,0,0,,但心中{\c&H0000FFFF&\b1}疑窦{\c&H00FFFFFF&\b0}更深
-Dialogue: 0,0:00:24.17,0:00:26.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}虽暂时化解危机
-Dialogue: 0,0:00:26.20,0:00:28.15,Default,,0,0,0,,却也{\c&H0000FFFF&\b1}明白{\c&H00FFFFFF&\b0}此地不宜久留
-Dialogue: 0,0:00:28.32,0:00:30.62,Default,,0,0,0,,必须尽快想办法转移{\c&H0000FFFF&\b1}关键人物{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:30.82,0:00:33.12,Default,,0,0,0,,他随即召来{\c&H0000FFFF&\b1}杜立{\c&H00FFFFFF&\b0}商议对策
-Dialogue: 0,0:00:33.28,0:00:35.83,Default,,0,0,0,,最终决定利用{\c&H0000FFFF&\b1}胡姬{\c&H00FFFFFF&\b0}迷惑程知
-Dialogue: 0,0:00:35.83,0:00:36.98,Default,,0,0,0,,节午夜{\c&H0000FFFF&\b1}时分{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:37.16,0:00:39.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}营帐内传出悠扬歌
-Dialogue: 0,0:00:39.19,0:00:40.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}舞声{\c&H00FFFFFF&\b0}和放肆笑声
-Dialogue: 0,0:00:40.80,0:00:43.02,Default,,0,0,0,,故意制造寻欢作乐的{\c&H0000FFFF&\b1}假象{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:43.16,0:00:44.99,Default,,0,0,0,,成功吸引了{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}和李绩的
-Dialogue: 0,0:00:44.99,0:00:47.27,Default,,0,0,0,,注意为后续{\c&H0000FFFF&\b1}计划{\c&H00FFFFFF&\b0}争取了时间
+Dialogue: 0,0:00:00.01,0:00:02.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}对李承乾的行李始终心存疑
+Dialogue: 0,0:00:02.45,0:00:05.74,Default,,0,0,0,,虑坚持要搜查{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}情急之下
+Dialogue: 0,0:00:06.18,0:00:07.65,Default,,0,0,0,,抽出{\c&H0000FFFF&\b1}佩剑{\c&H00FFFFFF&\b0}横在脖颈
+Dialogue: 0,0:00:07.65,0:00:11.85,Default,,0,0,0,,以死相逼声称“太子尊严不容冒
+Dialogue: 0,0:00:11.85,0:00:15.15,Default,,0,0,0,,犯”{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}起初不以为意
+Dialogue: 0,0:00:13.04,0:00:14.44,Default,,0,0,0,,但见{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}动真格
+Dialogue: 0,0:00:14.93,0:00:17.64,Default,,0,0,0,,脖颈已现血痕生怕担上逼死太子
+Dialogue: 0,0:00:17.64,0:00:20.46,Default,,0,0,0,,的罪名权衡利弊后只能放弃搜查
+Dialogue: 0,0:00:20.88,0:00:23.43,Default,,0,0,0,,带着手下离去但心中疑窦更深
+Dialogue: 0,0:00:23.88,0:00:25.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}虽暂时化解危机
+Dialogue: 0,0:00:25.95,0:00:27.63,Default,,0,0,0,,却也{\c&H0000FFFF&\b1}明白{\c&H00FFFFFF&\b0}此地不宜久留
+Dialogue: 0,0:00:27.98,0:00:30.17,Default,,0,0,0,,必须尽快想办法转移关键人物
+Dialogue: 0,0:00:30.48,0:00:32.55,Default,,0,0,0,,他随即召来{\c&H0000FFFF&\b1}杜立{\c&H00FFFFFF&\b0}商议对策
+Dialogue: 0,0:00:33.01,0:00:35.40,Default,,0,0,0,,最终决定利用{\c&H0000FFFF&\b1}胡姬{\c&H00FFFFFF&\b0}迷惑程知节
+Dialogue: 0,0:00:35.83,0:00:38.63,Default,,0,0,0,,午夜时分{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}营帐内传出悠扬
+Dialogue: 0,0:00:38.63,0:00:40.15,Default,,0,0,0,,歌舞声和放肆笑声
+Dialogue: 0,0:00:40.55,0:00:42.44,Default,,0,0,0,,故意制造寻欢作乐的假象
+Dialogue: 0,0:00:42.80,0:00:44.99,Default,,0,0,0,,成功吸引了{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}和李绩的注意
+Dialogue: 0,0:00:45.44,0:00:47.12,Default,,0,0,0,,为后续计划争取了时间

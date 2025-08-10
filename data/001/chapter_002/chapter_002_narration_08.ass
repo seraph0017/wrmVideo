@@ -14,19 +14,18 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}西市{\c&H00FFFFFF&\b0}惊现神秘胡商
-Dialogue: 0,0:00:01.96,0:00:03.38,Default,,0,0,0,,当{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}瘸着腿踏
-Dialogue: 0,0:00:03.38,0:00:04.42,Default,,0,0,0,,入喧闹{\c&H0000FFFF&\b1}市集{\c&H00FFFFFF&\b0}时
-Dialogue: 0,0:00:05.00,0:00:06.78,Default,,0,0,0,,一个{\c&H0000FFFF&\b1}头戴{\c&H00FFFFFF&\b0}异域头巾的商贩突
-Dialogue: 0,0:00:06.78,0:00:08.01,Default,,0,0,0,,然将他拉进{\c&H0000FFFF&\b1}暗巷{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:08.56,0:00:09.54,Default,,0,0,0,,殿下要{\c&H0000FFFF&\b1}奴婢{\c&H00FFFFFF&\b0}吗
-Dialogue: 0,0:00:09.85,0:00:11.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}胡商{\c&H00FFFFFF&\b0}掀开马车帘
-Dialogue: 0,0:00:11.34,0:00:12.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}露出{\c&H00FFFFFF&\b0}几个身着波
-Dialogue: 0,0:00:12.62,0:00:13.68,Default,,0,0,0,,斯{\c&H0000FFFF&\b1}服饰{\c&H00FFFFFF&\b0}的女子
-Dialogue: 0,0:00:13.79,0:00:14.98,Default,,0,0,0,,她们低垂的{\c&H0000FFFF&\b1}头颅{\c&H00FFFFFF&\b0}与
-Dialogue: 0,0:00:14.98,0:00:17.60,Default,,0,0,0,,惶恐的眼神让{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中一凛
-Dialogue: 0,0:00:17.73,0:00:19.59,Default,,0,0,0,,这是{\c&H0000FFFF&\b1}陷阱{\c&H00FFFFFF&\b0}还是巧合
-Dialogue: 0,0:00:19.71,0:00:21.16,Default,,0,0,0,,就在他{\c&H0000FFFF&\b1}假意{\c&H00FFFFFF&\b0}挑选时
-Dialogue: 0,0:00:21.33,0:00:23.87,Default,,0,0,0,,眼角{\c&H0000FFFF&\b1}余光{\c&H00FFFFFF&\b0}瞥见巷口晃动的人
-Dialogue: 0,0:00:25.96,0:00:27.97,Default,,0,0,0,,夏季{\c&H0000FFFF&\b1}蝉鸣{\c&H00FFFFFF&\b0}突然停止的瞬间
-Dialogue: 0,0:00:28.18,0:00:30.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}已知这场偶遇背后定有文章
+Dialogue: 0,0:00:00.02,0:00:01.53,Default,,0,0,0,,西市惊现神秘{\c&H0000FFFF&\b1}胡商{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.96,0:00:04.42,Default,,0,0,0,,当{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}瘸着腿踏入喧闹市集时
+Dialogue: 0,0:00:05.00,0:00:07.30,Default,,0,0,0,,一个头戴异域头巾的商贩突然将他
+Dialogue: 0,0:00:07.30,0:00:09.28,Default,,0,0,0,,拉进暗巷殿下要奴婢吗
+Dialogue: 0,0:00:09.54,0:00:10.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}胡商{\c&H00FFFFFF&\b0}掀开马车帘
+Dialogue: 0,0:00:11.06,0:00:13.21,Default,,0,0,0,,露出几个身着{\c&H0000FFFF&\b1}波斯{\c&H00FFFFFF&\b0}服饰的女子
+Dialogue: 0,0:00:13.59,0:00:15.53,Default,,0,0,0,,她们低垂的头颅与惶恐的眼神
+Dialogue: 0,0:00:15.88,0:00:17.15,Default,,0,0,0,,让{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中一凛
+Dialogue: 0,0:00:17.51,0:00:18.95,Default,,0,0,0,,这是陷阱还是巧合
+Dialogue: 0,0:00:19.46,0:00:20.73,Default,,0,0,0,,就在他假意挑选时
+Dialogue: 0,0:00:21.02,0:00:23.25,Default,,0,0,0,,眼角{\c&H0000FFFF&\b1}余光{\c&H00FFFFFF&\b0}瞥见巷口晃动的人影
+Dialogue: 0,0:00:23.87,0:00:25.09,Default,,0,0,0,,监视者果然跟来了
+Dialogue: 0,0:00:25.50,0:00:27.27,Default,,0,0,0,,夏季蝉鸣突然停止的瞬间
+Dialogue: 0,0:00:27.70,0:00:29.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}已知这场偶遇背后定有
+Dialogue: 0,0:00:29.73,0:00:30.14,Default,,0,0,0,,文章

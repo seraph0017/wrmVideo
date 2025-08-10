@@ -14,24 +14,21 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:01.97,Default,,0,0,0,,两日后{\c&H0000FFFF&\b1}出征{\c&H00FFFFFF&\b0}之日到来
-Dialogue: 0,0:00:02.28,0:00:03.29,Default,,0,0,0,,清晨{\c&H0000FFFF&\b1}薄雾{\c&H00FFFFFF&\b0}未散
-Dialogue: 0,0:00:03.79,0:00:04.95,Default,,0,0,0,,天边泛着{\c&H0000FFFF&\b1}鱼肚白{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:05.37,0:00:06.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}长安城{\c&H00FFFFFF&\b0}明德门外已
-Dialogue: 0,0:00:06.71,0:00:08.52,Default,,0,0,0,,是大军{\c&H0000FFFF&\b1}云集{\c&H00FFFFFF&\b0}军威雄壮
-Dialogue: 0,0:00:08.90,0:00:10.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}骑在雪白战马上
-Dialogue: 0,0:00:10.80,0:00:13.85,Default,,0,0,0,,身披{\c&H0000FFFF&\b1}明光{\c&H00FFFFFF&\b0}铠腰间悬挂镶金嵌玉横刀
-Dialogue: 0,0:00:14.08,0:00:16.30,Default,,0,0,0,,头盔{\c&H0000FFFF&\b1}红缨{\c&H00FFFFFF&\b0}在晨风中猎猎作响
-Dialogue: 0,0:00:16.58,0:00:18.18,Default,,0,0,0,,他仰头望着眼前{\c&H0000FFFF&\b1}绵延{\c&H00FFFFFF&\b0}数
-Dialogue: 0,0:00:18.18,0:00:19.23,Default,,0,0,0,,里的{\c&H0000FFFF&\b1}大唐{\c&H00FFFFFF&\b0}军队
-Dialogue: 0,0:00:19.71,0:00:20.77,Default,,0,0,0,,心中{\c&H0000FFFF&\b1}百感交集{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:21.13,0:00:22.38,Default,,0,0,0,,既有作为{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}的骄傲
-Dialogue: 0,0:00:22.91,0:00:24.57,Default,,0,0,0,,又有面对强悍{\c&H0000FFFF&\b1}军力{\c&H00FFFFFF&\b0}的迷茫
-Dialogue: 0,0:00:24.88,0:00:27.45,Default,,0,0,0,,此时一阵沉稳{\c&H0000FFFF&\b1}有力{\c&H00FFFFFF&\b0}的战鼓声将
-Dialogue: 0,0:00:27.45,0:00:30.43,Default,,0,0,0,,他拉回{\c&H0000FFFF&\b1}现实{\c&H00FFFFFF&\b0}前排重甲步兵手持长刀
-Dialogue: 0,0:00:30.80,0:00:33.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}步伐{\c&H00FFFFFF&\b0}整齐铁甲寒光凛冽
-Dialogue: 0,0:00:33.35,0:00:35.12,Default,,0,0,0,,左右两翼{\c&H0000FFFF&\b1}轻骑兵{\c&H00FFFFFF&\b0}手持铁枪
-Dialogue: 0,0:00:35.52,0:00:37.37,Default,,0,0,0,,腰挂短弩{\c&H0000FFFF&\b1}气势如虹{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.01,0:00:01.97,Default,,0,0,0,,两日后出征之日到来
+Dialogue: 0,0:00:02.28,0:00:04.95,Default,,0,0,0,,清晨薄雾未散天边泛着鱼肚白
+Dialogue: 0,0:00:05.37,0:00:07.61,Default,,0,0,0,,长安城{\c&H0000FFFF&\b1}明德门{\c&H00FFFFFF&\b0}外已是大军云集
+Dialogue: 0,0:00:07.87,0:00:10.52,Default,,0,0,0,,军威雄壮{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}骑在雪白战马上
+Dialogue: 0,0:00:10.80,0:00:13.63,Default,,0,0,0,,身披{\c&H0000FFFF&\b1}明光{\c&H00FFFFFF&\b0}铠腰间悬挂镶金嵌玉横
+Dialogue: 0,0:00:13.63,0:00:16.30,Default,,0,0,0,,刀头盔{\c&H0000FFFF&\b1}红缨{\c&H00FFFFFF&\b0}在晨风中猎猎作响
+Dialogue: 0,0:00:16.58,0:00:19.02,Default,,0,0,0,,他仰头望着眼前绵延数里的{\c&H0000FFFF&\b1}大唐{\c&H00FFFFFF&\b0}军
+Dialogue: 0,0:00:19.02,0:00:20.77,Default,,0,0,0,,队心中百感交集
+Dialogue: 0,0:00:21.13,0:00:22.38,Default,,0,0,0,,既有作为太子的骄傲
+Dialogue: 0,0:00:22.91,0:00:24.57,Default,,0,0,0,,又有面对强悍军力的迷茫
+Dialogue: 0,0:00:24.88,0:00:27.57,Default,,0,0,0,,此时一阵沉稳有力的战鼓声将他
+Dialogue: 0,0:00:27.57,0:00:30.43,Default,,0,0,0,,拉回现实前排重甲步兵手持长刀
+Dialogue: 0,0:00:30.80,0:00:33.04,Default,,0,0,0,,步伐整齐铁甲寒光凛冽
+Dialogue: 0,0:00:33.35,0:00:35.12,Default,,0,0,0,,左右两翼轻骑兵手持铁枪
+Dialogue: 0,0:00:35.52,0:00:37.37,Default,,0,0,0,,腰挂短弩气势如虹
 Dialogue: 0,0:00:37.59,0:00:39.35,Default,,0,0,0,,前锋{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}挥手下令
-Dialogue: 0,0:00:39.73,0:00:41.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}骑兵{\c&H00FFFFFF&\b0}举枪勒马发出震天嘶吼
-Dialogue: 0,0:00:42.19,0:00:43.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}场面{\c&H00FFFFFF&\b0}震撼人心
+Dialogue: 0,0:00:39.73,0:00:41.97,Default,,0,0,0,,骑兵举枪勒马发出震天嘶吼
+Dialogue: 0,0:00:42.19,0:00:43.22,Default,,0,0,0,,场面震撼人心

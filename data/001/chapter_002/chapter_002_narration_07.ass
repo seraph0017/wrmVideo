@@ -15,18 +15,15 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.01,0:00:01.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}乔装探杜府
-Dialogue: 0,0:00:02.00,0:00:04.02,Default,,0,0,0,,这位{\c&H0000FFFF&\b1}瘸腿{\c&H00FFFFFF&\b0}太子换上平民灰袍
-Dialogue: 0,0:00:04.68,0:00:06.29,Default,,0,0,0,,一瘸一拐穿过三条{\c&H0000FFFF&\b1}暗巷{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.00,0:00:04.02,Default,,0,0,0,,这位瘸腿太子换上平民灰袍
+Dialogue: 0,0:00:04.68,0:00:06.29,Default,,0,0,0,,一瘸一拐穿过三条暗巷
 Dialogue: 0,0:00:06.77,0:00:08.10,Default,,0,0,0,,终于抵达{\c&H0000FFFF&\b1}杜如{\c&H00FFFFFF&\b0}晦旧宅
 Dialogue: 0,0:00:08.45,0:00:10.18,Default,,0,0,0,,当{\c&H0000FFFF&\b1}杜荷{\c&H00FFFFFF&\b0}等亲信见到他时
-Dialogue: 0,0:00:10.45,0:00:11.82,Default,,0,0,0,,惊讶得{\c&H0000FFFF&\b1}差点{\c&H00FFFFFF&\b0}打翻茶盏
-Dialogue: 0,0:00:12.16,0:00:13.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}将密信塞给最有
-Dialogue: 0,0:00:13.67,0:00:14.61,Default,,0,0,0,,才干的{\c&H0000FFFF&\b1}杜正伦{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:14.95,0:00:17.05,Default,,0,0,0,,只留下按计{\c&H0000FFFF&\b1}行事{\c&H00FFFFFF&\b0}四
-Dialogue: 0,0:00:17.05,0:00:18.31,Default,,0,0,0,,字便匆匆{\c&H0000FFFF&\b1}离去{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:18.45,0:00:20.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}杜府{\c&H00FFFFFF&\b0}四人展开密信时
-Dialogue: 0,0:00:20.40,0:00:21.91,Default,,0,0,0,,窗外突然闪过{\c&H0000FFFF&\b1}黑影{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:22.09,0:00:24.02,Default,,0,0,0,,是监视者还是另有{\c&H0000FFFF&\b1}眼线{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:24.16,0:00:26.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}残阳{\c&H00FFFFFF&\b0}透过窗棂在信纸上投
-Dialogue: 0,0:00:26.12,0:00:28.57,Default,,0,0,0,,下斑驳{\c&H0000FFFF&\b1}光影{\c&H00FFFFFF&\b0}恰如他们此刻明
-Dialogue: 0,0:00:28.57,0:00:29.31,Default,,0,0,0,,暗未卜的{\c&H0000FFFF&\b1}命运{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.45,0:00:11.82,Default,,0,0,0,,惊讶得差点打翻茶盏
+Dialogue: 0,0:00:12.16,0:00:14.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}将密信塞给最有才干的杜正
+Dialogue: 0,0:00:14.32,0:00:17.23,Default,,0,0,0,,伦只留下按计行事四字便匆
+Dialogue: 0,0:00:17.23,0:00:19.82,Default,,0,0,0,,匆离去{\c&H0000FFFF&\b1}杜府{\c&H00FFFFFF&\b0}四人展开密信时
+Dialogue: 0,0:00:20.14,0:00:21.34,Default,,0,0,0,,窗外突然闪过黑影
+Dialogue: 0,0:00:21.75,0:00:23.48,Default,,0,0,0,,是监视者还是另有眼线
+Dialogue: 0,0:00:23.88,0:00:26.41,Default,,0,0,0,,残阳透过窗棂在信纸上投下斑驳光
+Dialogue: 0,0:00:26.41,0:00:29.15,Default,,0,0,0,,影恰如他们此刻明暗未卜的命运

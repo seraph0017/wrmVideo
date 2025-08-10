@@ -15,21 +15,16 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.01,0:00:01.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}披甲闯东宫
-Dialogue: 0,0:00:01.88,0:00:03.59,Default,,0,0,0,,这位眉骨{\c&H0000FFFF&\b1}高耸{\c&H00FFFFFF&\b0}的猛将带着一
-Dialogue: 0,0:00:03.59,0:00:04.99,Default,,0,0,0,,身{\c&H0000FFFF&\b1}杀气{\c&H00FFFFFF&\b0}直闯大堂
-Dialogue: 0,0:00:05.42,0:00:07.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}盔甲{\c&H00FFFFFF&\b0}碰撞声在寂静的东
-Dialogue: 0,0:00:07.04,0:00:09.69,Default,,0,0,0,,宫格外{\c&H0000FFFF&\b1}刺耳{\c&H00FFFFFF&\b0}当他提出半途杀将
-Dialogue: 0,0:00:09.85,0:00:11.77,Default,,0,0,0,,回攻{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}的疯狂计划时
-Dialogue: 0,0:00:11.95,0:00:13.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}惊出一身冷汗
-Dialogue: 0,0:00:13.82,0:00:16.25,Default,,0,0,0,,这位{\c&H0000FFFF&\b1}战功{\c&H00FFFFFF&\b0}赫赫的将军政治智
-Dialogue: 0,0:00:16.25,0:00:17.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}慧竟{\c&H00FFFFFF&\b0}如此堪忧
-Dialogue: 0,0:00:17.58,0:00:19.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}强忍吐槽
-Dialogue: 0,0:00:19.29,0:00:20.98,Default,,0,0,0,,转而{\c&H0000FFFF&\b1}诱导{\c&H00FFFFFF&\b0}他接受暗
-Dialogue: 0,0:00:20.98,0:00:22.45,Default,,0,0,0,,中{\c&H0000FFFF&\b1}随军{\c&H00FFFFFF&\b0}的方案
-Dialogue: 0,0:00:22.58,0:00:24.66,Default,,0,0,0,,并用{\c&H0000FFFF&\b1}封王{\c&H00FFFFFF&\b0}承诺安抚其心
-Dialogue: 0,0:00:24.75,0:00:26.07,Default,,0,0,0,,窗外{\c&H0000FFFF&\b1}暴雨{\c&H00FFFFFF&\b0}突至
-Dialogue: 0,0:00:26.21,0:00:27.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}恰似{\c&H00FFFFFF&\b0}两人心中翻
-Dialogue: 0,0:00:27.25,0:00:28.48,Default,,0,0,0,,腾的{\c&H0000FFFF&\b1}惊涛骇浪{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:28.61,0:00:30.09,Default,,0,0,0,,而{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}转身离去时
-Dialogue: 0,0:00:30.09,0:00:31.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}铁盔{\c&H00FFFFFF&\b0}上的水珠
-Dialogue: 0,0:00:31.35,0:00:32.60,Default,,0,0,0,,正预示着这场{\c&H0000FFFF&\b1}冒险{\c&H00FFFFFF&\b0}的凶险
+Dialogue: 0,0:00:01.88,0:00:04.18,Default,,0,0,0,,这位眉骨{\c&H0000FFFF&\b1}高耸{\c&H00FFFFFF&\b0}的猛将带着一身杀气
+Dialogue: 0,0:00:04.18,0:00:07.04,Default,,0,0,0,,直闯大堂盔甲碰撞声在寂静的东
+Dialogue: 0,0:00:07.04,0:00:09.41,Default,,0,0,0,,宫格外刺耳当他提出半途杀将
+Dialogue: 0,0:00:09.69,0:00:11.34,Default,,0,0,0,,回攻{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}的疯狂计划时
+Dialogue: 0,0:00:11.67,0:00:13.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}惊出一身冷汗
+Dialogue: 0,0:00:13.63,0:00:16.36,Default,,0,0,0,,这位战功赫赫的将军政治{\c&H0000FFFF&\b1}智慧{\c&H00FFFFFF&\b0}竟如
+Dialogue: 0,0:00:16.36,0:00:18.61,Default,,0,0,0,,此堪忧{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}强忍吐槽
+Dialogue: 0,0:00:19.03,0:00:21.32,Default,,0,0,0,,转而诱导他接受暗中随军的方
+Dialogue: 0,0:00:21.32,0:00:23.74,Default,,0,0,0,,案并用{\c&H0000FFFF&\b1}封王{\c&H00FFFFFF&\b0}承诺安抚其心
+Dialogue: 0,0:00:24.20,0:00:26.89,Default,,0,0,0,,窗外暴雨突至恰似两人心中翻腾
+Dialogue: 0,0:00:26.89,0:00:29.50,Default,,0,0,0,,的惊涛骇浪而{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}转身离去时
+Dialogue: 0,0:00:29.50,0:00:31.94,Default,,0,0,0,,铁盔上的水珠正预示着这场冒险
+Dialogue: 0,0:00:31.94,0:00:32.44,Default,,0,0,0,,的凶险

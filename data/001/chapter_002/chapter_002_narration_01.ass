@@ -14,22 +14,18 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫大殿内
-Dialogue: 0,0:00:01.57,0:00:03.35,Default,,0,0,0,,一场关乎{\c&H0000FFFF&\b1}大唐{\c&H00FFFFFF&\b0}太子命运的谈
-Dialogue: 0,0:00:03.35,0:00:04.60,Default,,0,0,0,,判正在{\c&H0000FFFF&\b1}激烈{\c&H00FFFFFF&\b0}上演
-Dialogue: 0,0:00:05.27,0:00:07.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}魏征{\c&H00FFFFFF&\b0}突然站出来提出惊天条
-Dialogue: 0,0:00:09.70,0:00:12.03,Default,,0,0,0,,但必须由{\c&H0000FFFF&\b1}李世积{\c&H00FFFFFF&\b0}程知节掌控
-Dialogue: 0,0:00:12.03,0:00:14.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}兵权{\c&H00FFFFFF&\b0}这个看似妥协的方案
-Dialogue: 0,0:00:14.78,0:00:16.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}实则{\c&H00FFFFFF&\b0}暗藏将太子软
-Dialogue: 0,0:00:16.32,0:00:17.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}禁军{\c&H00FFFFFF&\b0}中的算计
-Dialogue: 0,0:00:17.91,0:00:20.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中狂喜却故作沉吟
-Dialogue: 0,0:00:20.53,0:00:21.61,Default,,0,0,0,,他{\c&H0000FFFF&\b1}深知{\c&H00FFFFFF&\b0}这是离开长
-Dialogue: 0,0:00:21.61,0:00:22.87,Default,,0,0,0,,安的唯一{\c&H0000FFFF&\b1}机会{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:23.04,0:00:24.18,Default,,0,0,0,,当{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌以舅
-Dialogue: 0,0:00:24.18,0:00:25.52,Default,,0,0,0,,舅{\c&H0000FFFF&\b1}身份{\c&H00FFFFFF&\b0}施压时
-Dialogue: 0,0:00:25.70,0:00:27.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}太子{\c&H00FFFFFF&\b0}殿下终于点头
-Dialogue: 0,0:00:27.46,0:00:29.00,Default,,0,0,0,,却{\c&H0000FFFF&\b1}抛出{\c&H00FFFFFF&\b0}最后通牒
-Dialogue: 0,0:00:29.16,0:00:30.68,Default,,0,0,0,,两日内必须{\c&H0000FFFF&\b1}出兵{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:30.82,0:00:33.58,Default,,0,0,0,,晨光透过雕花窗棂洒在{\c&H0000FFFF&\b1}紫檀木{\c&H00FFFFFF&\b0}案上
-Dialogue: 0,0:00:33.91,0:00:35.92,Default,,0,0,0,,映照出{\c&H0000FFFF&\b1}文臣{\c&H00FFFFFF&\b0}们复杂的神色
-Dialogue: 0,0:00:36.13,0:00:37.59,Default,,0,0,0,,一场{\c&H0000FFFF&\b1}权力{\c&H00FFFFFF&\b0}博弈正悄然落幕
+Dialogue: 0,0:00:00.02,0:00:02.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}宫大殿内一场关乎大唐太子
+Dialogue: 0,0:00:02.79,0:00:04.60,Default,,0,0,0,,命运的谈判正在激烈上演
+Dialogue: 0,0:00:05.27,0:00:07.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}魏征{\c&H00FFFFFF&\b0}突然站出来提出惊天条件
+Dialogue: 0,0:00:07.80,0:00:09.23,Default,,0,0,0,,允许{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}随军出征
+Dialogue: 0,0:00:09.49,0:00:12.32,Default,,0,0,0,,但必须由{\c&H0000FFFF&\b1}李世积{\c&H00FFFFFF&\b0}程知节掌控兵权
+Dialogue: 0,0:00:12.66,0:00:14.16,Default,,0,0,0,,这个看似妥协的方案
+Dialogue: 0,0:00:14.58,0:00:16.76,Default,,0,0,0,,实则暗藏将太子软禁军中的算
+Dialogue: 0,0:00:16.76,0:00:19.62,Default,,0,0,0,,计{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}心中狂喜却故作沉吟
+Dialogue: 0,0:00:20.04,0:00:22.11,Default,,0,0,0,,他深知这是离开{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}的唯一机会
+Dialogue: 0,0:00:22.50,0:00:24.80,Default,,0,0,0,,当{\c&H0000FFFF&\b1}长孙{\c&H00FFFFFF&\b0}无忌以舅舅身份施压时
+Dialogue: 0,0:00:25.21,0:00:26.59,Default,,0,0,0,,太子殿下终于点头
+Dialogue: 0,0:00:26.98,0:00:29.83,Default,,0,0,0,,却抛出最后通牒两日内必须出兵
+Dialogue: 0,0:00:30.30,0:00:32.94,Default,,0,0,0,,晨光透过雕花窗棂洒在{\c&H0000FFFF&\b1}紫檀木{\c&H00FFFFFF&\b0}案上
+Dialogue: 0,0:00:33.27,0:00:35.15,Default,,0,0,0,,映照出文臣们复杂的神色
+Dialogue: 0,0:00:35.62,0:00:37.44,Default,,0,0,0,,一场权力博弈正悄然落幕

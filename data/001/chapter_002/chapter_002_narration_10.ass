@@ -14,18 +14,16 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.25,Default,,0,0,0,,出征前夜{\c&H0000FFFF&\b1}暗流{\c&H00FFFFFF&\b0}涌
-Dialogue: 0,0:00:01.56,0:00:04.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}库房内苏宁玉正将最后一箱珠
-Dialogue: 0,0:00:04.56,0:00:05.71,Default,,0,0,0,,宝{\c&H0000FFFF&\b1}伪装成{\c&H00FFFFFF&\b0}药材
-Dialogue: 0,0:00:06.18,0:00:08.22,Default,,0,0,0,,她{\c&H0000FFFF&\b1}圆领{\c&H00FFFFFF&\b0}襦裙上沾着的药草碎屑
-Dialogue: 0,0:00:08.52,0:00:10.38,Default,,0,0,0,,是这场惊天{\c&H0000FFFF&\b1}骗局{\c&H00FFFFFF&\b0}的最后一环
+Dialogue: 0,0:00:00.02,0:00:02.40,Default,,0,0,0,,出征前夜暗流涌{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}库房内
+Dialogue: 0,0:00:02.94,0:00:05.41,Default,,0,0,0,,苏宁{\c&H0000FFFF&\b1}玉正{\c&H00FFFFFF&\b0}将最后一箱珠宝伪装成药
+Dialogue: 0,0:00:05.41,0:00:08.22,Default,,0,0,0,,材她圆领襦裙上沾着的药草碎屑
+Dialogue: 0,0:00:08.52,0:00:10.38,Default,,0,0,0,,是这场惊天骗局的最后一环
 Dialogue: 0,0:00:10.67,0:00:13.26,Default,,0,0,0,,与此同时{\c&H0000FFFF&\b1}侯君集{\c&H00FFFFFF&\b0}在军营中借着检
-Dialogue: 0,0:00:13.26,0:00:14.15,Default,,0,0,0,,查{\c&H0000FFFF&\b1}军械{\c&H00FFFFFF&\b0}之名
-Dialogue: 0,0:00:14.63,0:00:16.84,Default,,0,0,0,,悄悄将三百{\c&H0000FFFF&\b1}亲信{\c&H00FFFFFF&\b0}编入先锋营
-Dialogue: 0,0:00:17.14,0:00:18.95,Default,,0,0,0,,而{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}独自站在城楼上
-Dialogue: 0,0:00:19.33,0:00:20.60,Default,,0,0,0,,望着{\c&H0000FFFF&\b1}星空{\c&H00FFFFFF&\b0}喃喃自语
-Dialogue: 0,0:00:21.24,0:00:23.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}父皇{\c&H00FFFFFF&\b0}儿臣此去并非叛国
-Dialogue: 0,0:00:23.85,0:00:26.93,Default,,0,0,0,,只为求生当第一声{\c&H0000FFFF&\b1}鸡鸣{\c&H00FFFFFF&\b0}响起时
-Dialogue: 0,0:00:27.08,0:00:28.64,Default,,0,0,0,,三路{\c&H0000FFFF&\b1}人马{\c&H00FFFFFF&\b0}同时行动
-Dialogue: 0,0:00:28.82,0:00:30.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}大唐{\c&H00FFFFFF&\b0}的命运齿轮
-Dialogue: 0,0:00:30.20,0:00:31.91,Default,,0,0,0,,已在这{\c&H0000FFFF&\b1}寂静{\c&H00FFFFFF&\b0}夏夜悄然转向
+Dialogue: 0,0:00:13.26,0:00:16.20,Default,,0,0,0,,查军械之名悄悄将三百亲信编入
+Dialogue: 0,0:00:16.20,0:00:18.95,Default,,0,0,0,,先锋营而{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}独自站在城楼上
+Dialogue: 0,0:00:19.33,0:00:20.60,Default,,0,0,0,,望着星空喃喃自语
+Dialogue: 0,0:00:21.07,0:00:23.27,Default,,0,0,0,,父皇儿臣此去并非叛国
+Dialogue: 0,0:00:23.73,0:00:26.43,Default,,0,0,0,,只为求生当第一声鸡鸣响起时
+Dialogue: 0,0:00:26.75,0:00:28.16,Default,,0,0,0,,三路人马同时行动
+Dialogue: 0,0:00:28.51,0:00:31.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}大唐{\c&H00FFFFFF&\b0}的命运齿轮已在这寂静夏夜
+Dialogue: 0,0:00:31.02,0:00:31.75,Default,,0,0,0,,悄然转向
