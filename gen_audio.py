@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-独立的语音生成脚本（异步版本）
+独立的语音生成脚本
 从脚本文件生成语音和时间戳文件
-使用ThreadPoolExecutor实现多线程处理
 """
 
 import os
@@ -12,10 +11,6 @@ import re
 import json
 import argparse
 from datetime import datetime
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import threading
-
-# 多线程处理
 
 # 添加src目录到路径
 src_dir = os.path.join(os.path.dirname(__file__), 'src')
@@ -114,7 +109,7 @@ def extract_narration_content(narration_file_path):
 
 def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, narration_text, index):
     """
-    异步生成单个解说内容的语音
+    生成单个解说内容的语音
     
     Args:
         voice_generator: 语音生成器实例
@@ -145,7 +140,7 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
         
         # 检查文件是否已存在
         if os.path.exists(audio_path) and os.path.exists(timestamp_path):
-            print(f"[协程 {index}] ✓ 第 {index} 段语音文件已存在，跳过生成: {audio_path}")
+            print(f"✓ 第 {index} 段语音文件已存在，跳过生成: {audio_path}")
             return {
                 'success': True,
                 'index': index,
@@ -154,13 +149,13 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
                 'skipped': True
             }
         
-        print(f"[协程 {index}] 正在生成第 {index} 段解说语音...")
-        print(f"[协程 {index}] 文本内容: {clean_narration[:50]}{'...' if len(clean_narration) > 50 else ''}")
+        print(f"正在生成第 {index} 段解说语音...")
+        print(f"文本内容: {clean_narration[:50]}{'...' if len(clean_narration) > 50 else ''}")
         
         # 使用语音生成器生成语音并获取时间戳
         result = voice_generator.generate_voice_with_timestamps(clean_narration, audio_path)
         if result and result.get('success', False):
-            print(f"[协程 {index}] ✓ 第 {index} 段语音生成成功: {audio_path}")
+            print(f"✓ 第 {index} 段语音生成成功: {audio_path}")
             
             # 从API响应中提取时间戳信息
             api_response = result.get('api_response', {})
@@ -183,19 +178,19 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
                     try:
                         frontend_data = json.loads(frontend_str)
                     except json.JSONDecodeError as e:
-                        print(f"[协程 {index}] ⚠ JSON格式错误，尝试修复: {e}")
-                        print(f"[协程 {index}] 错误位置: line {e.lineno}, column {e.colno}, char {e.pos}")
+                        print(f"⚠ JSON格式错误，尝试修复: {e}")
+                        print(f"错误位置: line {e.lineno}, column {e.colno}, char {e.pos}")
                         
                         # 显示完整的frontend字符串
-                        print(f"[协程 {index}] === 完整frontend内容 ===")
+                        print(f"=== 完整frontend内容 ===")
                         print(frontend_str)
-                        print(f"[协程 {index}] === frontend内容结束 ===\n")
+                        print(f"=== frontend内容结束 ===\n")
                         
                         # 显示错误位置附近的内容
                         if e.pos < len(frontend_str):
                             start = max(0, e.pos - 50)
                             end = min(len(frontend_str), e.pos + 50)
-                            print(f"[协程 {index}] 错误位置附近: ...{frontend_str[start:end]}...")
+                            print(f"错误位置附近: ...{frontend_str[start:end]}...")
                         
                         # 尝试多种修复策略
                         fixed_str = frontend_str
@@ -224,10 +219,10 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
                         
                         try:
                             frontend_data = json.loads(fixed_str)
-                            print(f"[协程 {index}] ✓ JSON修复成功")
+                            print(f"✓ JSON修复成功")
                         except json.JSONDecodeError as e2:
-                            print(f"[协程 {index}] ✗ JSON修复失败: {e2}")
-                            print(f"[协程 {index}] 修复后的内容（前500字符）: {fixed_str[:500]}...")
+                            print(f"✗ JSON修复失败: {e2}")
+                            print(f"修复后的内容（前500字符）: {fixed_str[:500]}...")
                             frontend_data = {'words': []}
                 else:
                     frontend_data = frontend_str
@@ -241,12 +236,12 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
                         "end_time": float(word_info.get('end_time', 0))
                     })
                 
-                print(f"[协程 {index}] ✓ 从API响应中解析到 {len(words)} 个字符的时间戳")
+                print(f"✓ 从API响应中解析到 {len(words)} 个字符的时间戳")
                 
             except (json.JSONDecodeError, KeyError, ValueError) as e:
-                print(f"[协程 {index}] ⚠ 解析时间戳失败，使用估算值: {e}")
-                print(f"[协程 {index}] 原始frontend数据: {frontend_str[:500] if isinstance(frontend_str, str) else str(frontend_str)[:500]}...")
-                print(f"[协程 {index}] 完整API响应: {json.dumps(api_response, ensure_ascii=False, indent=2)[:1000]}...")
+                print(f"⚠ 解析时间戳失败，使用估算值: {e}")
+                print(f"原始frontend数据: {frontend_str[:500] if isinstance(frontend_str, str) else str(frontend_str)[:500]}...")
+                print(f"完整API响应: {json.dumps(api_response, ensure_ascii=False, indent=2)[:1000]}...")
                 # 如果解析失败，回退到估算方式
                 current_time = 0.0
                 char_duration = timestamp_data["duration"] / len(clean_narration) if clean_narration else 0.15
@@ -262,9 +257,9 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
             try:
                 with open(timestamp_path, 'w', encoding='utf-8') as f:
                     json.dump(timestamp_data, f, ensure_ascii=False, indent=2)
-                print(f"[协程 {index}] ✓ 时间戳文件保存成功: {timestamp_path}")
+                print(f"✓ 时间戳文件保存成功: {timestamp_path}")
             except Exception as e:
-                print(f"[协程 {index}] ✗ 时间戳文件保存失败: {e}")
+                print(f"✗ 时间戳文件保存失败: {e}")
             
             return {
                 'success': True,
@@ -274,7 +269,7 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
             }
         else:
             error_msg = result.get('error_message', '未知错误')
-            print(f"[协程 {index}] ✗ 语音生成失败: {error_msg}")
+            print(f"✗ 语音生成失败: {error_msg}")
             return {
                 'success': False,
                 'index': index,
@@ -288,21 +283,19 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
             'error': str(e)
         }
 
-def generate_voices_from_scripts(data_dir, max_workers=5):
+def generate_voices_from_scripts(data_dir):
     """
-    根据脚本生成语音（多线程版本）
+    根据脚本生成语音（顺序执行版本）
     
     Args:
         data_dir: 数据目录路径（可以是包含多个章节的目录，也可以是单个章节目录）
-        max_workers: 最大并发线程数
     
     Returns:
         bool: 是否成功
     """
     try:
-        print(f"=== 开始多线程生成语音 ===")
+        print(f"=== 开始生成语音 ===")
         print(f"数据目录: {data_dir}")
-        print(f"最大并发数: {max_workers}")
         
         if not os.path.exists(data_dir):
             print(f"错误: 数据目录不存在 {data_dir}")
@@ -331,13 +324,16 @@ def generate_voices_from_scripts(data_dir, max_workers=5):
         # 创建语音生成器
         voice_generator = VoiceGenerator()
         
-        # 收集所有需要处理的任务
-        tasks = []
+        # 统计结果
+        success_count = 0
+        failed_count = 0
+        skipped_count = 0
+        total_count = 0
         
         # 处理每个章节
         for chapter_dir in chapter_dirs:
             chapter_name = os.path.basename(chapter_dir)
-            print(f"\n--- 准备处理章节: {chapter_name} ---")
+            print(f"\n--- 处理章节: {chapter_name} ---")
             
             # 查找解说文件
             narration_file = os.path.join(chapter_dir, "narration.txt")
@@ -352,104 +348,63 @@ def generate_voices_from_scripts(data_dir, max_workers=5):
                 print(f"警告: 未找到解说内容")
                 continue
             
-            print(f"找到 {len(narration_contents)} 段解说内容，准备多线程处理")
+            print(f"找到 {len(narration_contents)} 段解说内容，开始顺序处理")
             
-            # 为每段解说内容创建任务参数
+            # 顺序处理每段解说内容
             for i, narration_text in enumerate(narration_contents, 1):
-                task_params = {
-                    'voice_generator': voice_generator,
-                    'chapter_dir': chapter_dir,
-                    'chapter_name': chapter_name,
-                    'narration_text': narration_text,
-                    'index': i
-                }
-                tasks.append(task_params)
-        
-        if not tasks:
-            print("没有找到需要处理的任务")
-            return False
-        
-        print(f"\n开始执行 {len(tasks)} 个多线程任务...")
-        print(f"使用 {max_workers} 个线程并发处理")
-        
-        # 统计结果
-        success_count = 0
-        failed_count = 0
-        skipped_count = 0
-        
-        # 使用ThreadPoolExecutor执行任务
-        with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            # 提交所有任务
-            future_to_params = {
-                executor.submit(
-                    generate_single_narration_voice,
-                    task_params['voice_generator'],
-                    task_params['chapter_dir'],
-                    task_params['chapter_name'],
-                    task_params['narration_text'],
-                    task_params['index']
-                ): task_params
-                for task_params in tasks
-            }
-            
-            # 收集结果
-            for future in as_completed(future_to_params):
-                task_params = future_to_params[future]
-                try:
-                    result = future.result()
-                    if result and result.get('success', False):
-                        if result.get('skipped', False):
-                            skipped_count += 1
-                            print(f"线程 {threading.current_thread().name}: ⏭ 任务 {result.get('index', '?')} 跳过")
-                        else:
-                            success_count += 1
-                            print(f"线程 {threading.current_thread().name}: ✓ 任务 {result.get('index', '?')} 完成")
+                total_count += 1
+                print(f"\n处理第 {i}/{len(narration_contents)} 段解说...")
+                
+                result = generate_single_narration_voice(
+                    voice_generator, chapter_dir, chapter_name, narration_text, i
+                )
+                
+                if result and result.get('success', False):
+                    if result.get('skipped', False):
+                        skipped_count += 1
+                        print(f"⏭ 第 {i} 段跳过")
                     else:
-                        failed_count += 1
-                        error_msg = result.get('error', '未知错误') if result else '任务返回空结果'
-                        print(f"线程 {threading.current_thread().name}: ✗ 任务 {result.get('index', '?') if result else '?'} 失败: {error_msg}")
-                except Exception as e:
+                        success_count += 1
+                        print(f"✓ 第 {i} 段完成")
+                else:
                     failed_count += 1
-                    index = task_params.get('index', '?')
-                    print(f"线程 {threading.current_thread().name}: ✗ 任务 {index} 执行异常: {e}")
+                    error_msg = result.get('error', '未知错误') if result else '任务返回空结果'
+                    print(f"✗ 第 {i} 段失败: {error_msg}")
         
-        print(f"\n多线程语音生成完成")
+        print(f"\n语音生成完成")
         print(f"新生成: {success_count} 个")
         print(f"跳过: {skipped_count} 个")
         print(f"失败: {failed_count} 个")
-        print(f"总计: {len(tasks)} 个")
+        print(f"总计: {total_count} 个")
         
-        return success_count > 0
+        return success_count > 0 or skipped_count > 0
         
     except Exception as e:
-        print(f"多线程生成语音时发生错误: {e}")
+        print(f"生成语音时发生错误: {e}")
         return False
 
 def main():
     """
     主函数
     """
-    parser = argparse.ArgumentParser(description='独立的语音生成脚本（多线程版本）')
+    parser = argparse.ArgumentParser(description='独立的语音生成脚本')
     parser.add_argument('data_dir', help='数据目录路径')
-    parser.add_argument('--max-workers', type=int, default=5, 
-                       help='最大并发线程数 (默认: 5)')
     parser.add_argument('--verbose', '-v', action='store_true',
                        help='显示详细输出')
     
     args = parser.parse_args()
     
-    print(f"开始多线程处理数据目录: {args.data_dir}")
-    print(f"并发线程数: {args.max_workers}")
+    print(f"开始处理数据目录: {args.data_dir}")
     
     # 生成语音
-    success = generate_voices_from_scripts(args.data_dir, args.max_workers)
+    success = generate_voices_from_scripts(args.data_dir)
     if success:
-        print(f"\n✓ 多线程语音生成完成")
+        print(f"\n✓ 语音生成完成")
     else:
-        print(f"\n✗ 多线程语音生成失败")
+        print(f"\n✗ 语音生成失败")
         sys.exit(1)
     
-    print("\n=== 多线程处理完成 ===")
+    print("\n=== 处理完成 ===")
 
 if __name__ == '__main__':
     main()
