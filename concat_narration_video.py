@@ -881,9 +881,11 @@ def add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir
             )
             current_video = '[v2]'
         
-        # 添加字幕
+        # 添加字幕（需要转义路径中的特殊字符）
+        # 转义路径中的特殊字符，特别是冒号和反斜杠
+        escaped_ass_file = ass_file.replace('\\', '/').replace(':', '\\:')
         filter_complex.append(
-            f'{current_video}subtitles={ass_file}[vout]'
+            f'{current_video}subtitles={escaped_ass_file}[vout]'
         )
         
         # 处理音频混合
