@@ -174,7 +174,7 @@ def clean_subtitle_text(text: str) -> str:
     text_with_placeholders = re.sub(tag_pattern, replace_tag, text)
     
     # 移除所有标点符号
-    cleaned_text = re.sub(r'[，。；：、！？""''（）【】《》〈〉「」『』〔〕\[\]｛｝｜～·…—–,.;:!?"\'()\[\]{}|~`@#$%^&*+=<>/\\-]', '', text_with_placeholders)
+    cleaned_text = re.sub(r'[，。；：、！？""“”''（）【】《》〈〉「」『』〔〕\[\]｛｝｜～·…—–,.;:!?"\'()\[\]{}|~`@#$%^&*+=<>/\\-]', '', text_with_placeholders)
     
     # 恢复ASS标签
     for i, tag in enumerate(ass_tags):
