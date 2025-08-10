@@ -14,25 +14,25 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:02.10,Default,,0,0,0,,“太子不仁当废
-Dialogue: 0,0:00:02.10,0:00:06.00,Default,,0,0,0,,”御史大夫{\c&H0000FFFF&\b1}韦挺{\c&H00FFFFFF&\b0}第一个跳出来
+Dialogue: 0,0:00:00.02,0:00:01.51,Default,,0,0,0,,太子不仁当废
+Dialogue: 0,0:00:02.00,0:00:03.88,Default,,0,0,0,,御史大夫{\c&H0000FFFF&\b1}韦挺{\c&H00FFFFFF&\b0}第一个跳出来
 Dialogue: 0,0:00:04.39,0:00:05.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}党羽纷纷附和
-Dialogue: 0,0:00:05.70,0:00:08.70,Default,,0,0,0,,“不忠不孝应流放边疆
-Dialogue: 0,0:00:08.70,0:00:11.40,Default,,0,0,0,,”“跪下求陛下宽恕
-Dialogue: 0,0:00:11.40,0:00:15.60,Default,,0,0,0,,或可从轻发落”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}突然放声
+Dialogue: 0,0:00:06.13,0:00:08.06,Default,,0,0,0,,不忠不孝应流放边疆
+Dialogue: 0,0:00:08.38,0:00:09.69,Default,,0,0,0,,跪下求陛下宽恕
+Dialogue: 0,0:00:10.03,0:00:12.43,Default,,0,0,0,,或可从轻发落{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}突然放声
 Dialogue: 0,0:00:12.43,0:00:14.59,Default,,0,0,0,,狂笑笑声在大殿中回荡
-Dialogue: 0,0:00:14.59,0:00:18.19,Default,,0,0,0,,带着无尽嘲讽“哈哈哈哈哈
+Dialogue: 0,0:00:14.72,0:00:16.94,Default,,0,0,0,,带着无尽嘲讽哈哈哈哈哈
 Dialogue: 0,0:00:17.13,0:00:18.73,Default,,0,0,0,,皇帝说孤不配为太子
 Dialogue: 0,0:00:19.19,0:00:20.86,Default,,0,0,0,,那你当年做太子时就配
 Dialogue: 0,0:00:21.21,0:00:22.82,Default,,0,0,0,,拎着兄弟头颅逼父退位
-Dialogue: 0,0:00:22.82,0:00:27.02,Default,,0,0,0,,也配谈‘仁’”这话如惊雷炸响
+Dialogue: 0,0:00:22.82,0:00:26.71,Default,,0,0,0,,也配谈‘仁’这话如惊雷炸响
 Dialogue: 0,0:00:25.84,0:00:28.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}满殿{\c&H00FFFFFF&\b0}死寂李世民脸色瞬间铁青
 Dialogue: 0,0:00:29.16,0:00:30.94,Default,,0,0,0,,手指颤抖着指向{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:30.94,0:00:32.74,Default,,0,0,0,,“你你个逆子
-Dialogue: 0,0:00:32.74,0:00:36.04,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}却看向史官方向
-Dialogue: 0,0:00:36.04,0:00:38.74,Default,,0,0,0,,声如洪钟“{\c&H0000FFFF&\b1}史官{\c&H00FFFFFF&\b0}何在
+Dialogue: 0,0:00:30.94,0:00:32.44,Default,,0,0,0,,你你个逆子
+Dialogue: 0,0:00:33.12,0:00:34.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}却看向史官方向
+Dialogue: 0,0:00:35.20,0:00:37.06,Default,,0,0,0,,声如洪钟{\c&H0000FFFF&\b1}史官{\c&H00FFFFFF&\b0}何在
 Dialogue: 0,0:00:37.55,0:00:39.94,Default,,0,0,0,,孤之言当记录流传后世
-Dialogue: 0,0:00:39.94,0:00:42.34,Default,,0,0,0,,”{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}无奈出列
+Dialogue: 0,0:00:40.19,0:00:41.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}房玄龄{\c&H00FFFFFF&\b0}无奈出列
 Dialogue: 0,0:00:41.90,0:00:44.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}从袍袖中捧出一物赫然
 Dialogue: 0,0:00:44.66,0:00:45.89,Default,,0,0,0,,是{\c&H0000FFFF&\b1}文德{\c&H00FFFFFF&\b0}皇后的灵位
 Dialogue: 0,0:00:46.20,0:00:47.66,Default,,0,0,0,,群臣眼中闪过不屑

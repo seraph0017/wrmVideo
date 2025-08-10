@@ -14,27 +14,27 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:03.30,Default,,0,0,0,,“太子殿下陛下请您进宫
-Dialogue: 0,0:00:03.30,0:00:06.60,Default,,0,0,0,,”一声沉稳喝问打破寂静
+Dialogue: 0,0:00:00.02,0:00:02.14,Default,,0,0,0,,太子殿下陛下请您进宫
+Dialogue: 0,0:00:02.62,0:00:04.28,Default,,0,0,0,,一声沉稳喝问打破寂静
 Dialogue: 0,0:00:04.82,0:00:06.49,Default,,0,0,0,,四周甲士如潮水般涌出
 Dialogue: 0,0:00:06.83,0:00:08.68,Default,,0,0,0,,瞬间将{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}团团围住
 Dialogue: 0,0:00:08.96,0:00:10.31,Default,,0,0,0,,为首将领身高八尺
 Dialogue: 0,0:00:10.57,0:00:13.32,Default,,0,0,0,,铁甲威风凛凛手中{\c&H0000FFFF&\b1}铁槊{\c&H00FFFFFF&\b0}寒光慑人
-Dialogue: 0,0:00:13.32,0:00:17.22,Default,,0,0,0,,竟是有“单鞭挣定李{\c&H0000FFFF&\b1}乾坤{\c&H00FFFFFF&\b0}”之
-Dialogue: 0,0:00:17.22,0:00:20.82,Default,,0,0,0,,称的{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}李承乾眯眼冷笑
-Dialogue: 0,0:00:20.82,0:00:25.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}竟派这位铁杆心腹来“请”
-Dialogue: 0,0:00:25.32,0:00:27.72,Default,,0,0,0,,他倒是给足了排面
-Dialogue: 0,0:00:27.72,0:00:30.72,Default,,0,0,0,,“{\c&H0000FFFF&\b1}孤乃{\c&H00FFFFFF&\b0}大唐太子李承乾
+Dialogue: 0,0:00:13.74,0:00:15.38,Default,,0,0,0,,竟是有单鞭挣定李{\c&H0000FFFF&\b1}乾坤{\c&H00FFFFFF&\b0}之
+Dialogue: 0,0:00:15.38,0:00:18.21,Default,,0,0,0,,称的{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}李承乾眯眼冷笑
+Dialogue: 0,0:00:18.57,0:00:20.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}竟派这位铁杆心腹来请
+Dialogue: 0,0:00:20.65,0:00:22.35,Default,,0,0,0,,他倒是给足了排面
+Dialogue: 0,0:00:22.71,0:00:24.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}孤乃{\c&H00FFFFFF&\b0}大唐太子李承乾
 Dialogue: 0,0:00:24.77,0:00:26.20,Default,,0,0,0,,你见了本宫安敢不拜
-Dialogue: 0,0:00:26.20,0:00:28.60,Default,,0,0,0,,”他声音陡然拔高
+Dialogue: 0,0:00:26.45,0:00:27.55,Default,,0,0,0,,他声音陡然拔高
 Dialogue: 0,0:00:27.93,0:00:29.42,Default,,0,0,0,,往日的怯懦荡然无存
 Dialogue: 0,0:00:29.73,0:00:31.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}脸上闪过诧异
 Dialogue: 0,0:00:31.55,0:00:34.05,Default,,0,0,0,,刚要发怒却被{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}眼中的决绝
-Dialogue: 0,0:00:34.05,0:00:36.16,Default,,0,0,0,,震慑“你若不拜
+Dialogue: 0,0:00:34.05,0:00:35.48,Default,,0,0,0,,震慑你若不拜
 Dialogue: 0,0:00:35.76,0:00:38.15,Default,,0,0,0,,就杀了孤把尸体抬进{\c&H0000FFFF&\b1}太极{\c&H00FFFFFF&\b0}殿
-Dialogue: 0,0:00:38.15,0:00:42.35,Default,,0,0,0,,”锵然一声{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}拔剑直指程知
+Dialogue: 0,0:00:38.60,0:00:41.08,Default,,0,0,0,,锵然一声{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}拔剑直指程知
 Dialogue: 0,0:00:41.08,0:00:43.04,Default,,0,0,0,,节鼻尖剑锋映着晨光
 Dialogue: 0,0:00:43.42,0:00:45.59,Default,,0,0,0,,亮得刺眼{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}神色变幻
 Dialogue: 0,0:00:45.99,0:00:47.66,Default,,0,0,0,,最终还是不情愿地躬身
-Dialogue: 0,0:00:47.66,0:00:50.37,Default,,0,0,0,,“臣{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}奉陛下旨
-Dialogue: 0,0:00:50.37,0:00:52.77,Default,,0,0,0,,请太子殿下进宫”
+Dialogue: 0,0:00:48.06,0:00:49.97,Default,,0,0,0,,臣{\c&H0000FFFF&\b1}程知节{\c&H00FFFFFF&\b0}奉陛下旨
+Dialogue: 0,0:00:50.38,0:00:51.52,Default,,0,0,0,,请太子殿下进宫

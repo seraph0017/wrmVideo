@@ -14,18 +14,18 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:02.40,Default,,0,0,0,,“大{\c&H0000FFFF&\b1}唐贞观{\c&H00FFFFFF&\b0}十六年
+Dialogue: 0,0:00:00.01,0:00:01.35,Default,,0,0,0,,大{\c&H0000FFFF&\b1}唐贞观{\c&H00FFFFFF&\b0}十六年
 Dialogue: 0,0:00:01.67,0:00:04.81,Default,,0,0,0,,皇太子{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}手捧母后文德皇后
 Dialogue: 0,0:00:04.81,0:00:07.88,Default,,0,0,0,,之灵位身着{\c&H0000FFFF&\b1}高祖{\c&H00FFFFFF&\b0}亲赐皇太孙冕服
-Dialogue: 0,0:00:07.88,0:00:12.07,Default,,0,0,0,,自刎于太极殿中”{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}声音朗
-Dialogue: 0,0:00:12.07,0:00:16.27,Default,,0,0,0,,朗每一字都如重锤砸在众人心上
-Dialogue: 0,0:00:16.27,0:00:19.88,Default,,0,0,0,,“自此史书可表{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}囚父
+Dialogue: 0,0:00:08.32,0:00:10.63,Default,,0,0,0,,自刎于太极殿中{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}声音朗
+Dialogue: 0,0:00:10.63,0:00:13.52,Default,,0,0,0,,朗每一字都如重锤砸在众人心上
+Dialogue: 0,0:00:13.75,0:00:16.32,Default,,0,0,0,,自此史书可表{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}囚父
 Dialogue: 0,0:00:16.66,0:00:18.55,Default,,0,0,0,,弑兄杀弟灭侄
 Dialogue: 0,0:00:18.77,0:00:21.66,Default,,0,0,0,,烝弟媳今日再加一项逼死嫡
-Dialogue: 0,0:00:21.66,0:00:23.77,Default,,0,0,0,,长子”话音未落
+Dialogue: 0,0:00:21.66,0:00:23.03,Default,,0,0,0,,长子话音未落
 Dialogue: 0,0:00:23.39,0:00:26.32,Default,,0,0,0,,他卯足力气一头向旁边{\c&H0000FFFF&\b1}金柱{\c&H00FFFFFF&\b0}撞去
-Dialogue: 0,0:00:26.32,0:00:27.82,Default,,0,0,0,,“拦拦住他
-Dialogue: 0,0:00:27.82,0:00:30.21,Default,,0,0,0,,”{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}状若疯魔
+Dialogue: 0,0:00:26.32,0:00:27.52,Default,,0,0,0,,拦拦住他
+Dialogue: 0,0:00:28.21,0:00:29.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}李世民{\c&H00FFFFFF&\b0}状若疯魔
 Dialogue: 0,0:00:29.91,0:00:31.52,Default,,0,0,0,,嘶吼着从龙座上跳下
 Dialogue: 0,0:00:31.95,0:00:33.44,Default,,0,0,0,,连{\c&H0000FFFF&\b1}帝王{\c&H00FFFFFF&\b0}仪态都顾不上了
 Dialogue: 0,0:00:33.92,0:00:36.21,Default,,0,0,0,,大臣们还在发懵唯有一人反应极
@@ -33,6 +33,6 @@ Dialogue: 0,0:00:36.21,0:00:38.94,Default,,0,0,0,,快身高八尺的{\c&H0000FFF
 Dialogue: 0,0:00:38.94,0:00:41.44,Default,,0,0,0,,扑食一把扯住{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}后脖领
 Dialogue: 0,0:00:41.75,0:00:44.67,Default,,0,0,0,,将他硬生生拽回{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}奋力挣扎
 Dialogue: 0,0:00:45.07,0:00:46.95,Default,,0,0,0,,却被围上来的大臣死死按住
-Dialogue: 0,0:00:46.95,0:00:49.05,Default,,0,0,0,,心中大喊“完了
+Dialogue: 0,0:00:47.31,0:00:48.87,Default,,0,0,0,,心中大喊完了
 Dialogue: 0,0:00:49.09,0:00:51.15,Default,,0,0,0,,死不成怕是要遭大罪了
-Dialogue: 0,0:00:51.15,0:00:51.45,Default,,0,0,0,,”
+Dialogue: 0,0:00:51.15,0:00:51.15,Default,,0,0,0,,
