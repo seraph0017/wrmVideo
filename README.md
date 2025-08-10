@@ -4,6 +4,10 @@
 
 ## ✨ 最新更新
 
+- 🛠️ **CUDA兼容性修复**: 修复NVIDIA GPU硬件加速与FFmpeg滤镜的兼容性问题：
+  - **问题解决**: 移除hwaccel_output_format参数，避免CUDA格式与scale滤镜不兼容
+  - **稳定性提升**: 确保GPU加速在使用复杂滤镜链时的稳定性
+  - **全面修复**: 同步修复concat_first_video.py、concat_finish_video.py、concat_narration_video.py三个文件
 - 🔄 **gen_audio.py简化**: 移除多线程、多进程、多协程相关代码，改为简单的顺序执行方式：
   - **简化架构**: 去除ThreadPoolExecutor和threading模块依赖
   - **顺序处理**: 按章节和解说段落顺序生成语音文件

@@ -37,7 +37,7 @@ def get_ffmpeg_gpu_params():
     if check_nvidia_gpu():
         return {
             'hwaccel': 'cuda',
-            'hwaccel_output_format': 'cuda',
+            # 移除 hwaccel_output_format 以避免与滤镜不兼容
             'video_codec': 'h264_nvenc',
             'preset': 'p2',  # 更快的预设 (p1=fastest, p2=faster, p7=slowest)
             'tune': 'll',    # Low latency - 更快的编码
