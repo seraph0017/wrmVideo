@@ -882,11 +882,10 @@ def add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir
             current_video = '[v2]'
         
         # 添加字幕（需要转义路径中的特殊字符）
-        # 转义路径中的特殊字符，特别是冒号、反斜杠和单引号
-        # 对于FFmpeg的subtitles滤镜，需要用单引号包围路径并转义内部的单引号
-        escaped_ass_file = ass_file.replace("'", "'\\\\\\'").replace('\\', '/')
+        # 对于FFmpeg的subtitles滤镜，需要转义冒号和反斜杠
+        escaped_ass_file = ass_file.replace('\\', '/').replace(':', '\\:')
         filter_complex.append(
-            f"{current_video}subtitles='{escaped_ass_file}'[vout]"
+            f'{current_video}subtitles={escaped_ass_file}[vout]'
         )
         
         # 处理音频混合
