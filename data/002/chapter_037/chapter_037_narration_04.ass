@@ -1,0 +1,33 @@
+[Script Info]
+Title: chapter_037 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:03.00,Default,,0,0,0,,殿内光线昏暗六尊半步{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}端坐
+Dialogue: 0,0:00:03.00,0:00:05.37,Default,,0,0,0,,于{\c&H0000FFFF&\b1}宋式红{\c&H00FFFFFF&\b0}木椅上玄祖居中
+Dialogue: 0,0:00:05.83,0:00:08.07,Default,,0,0,0,,银袍广袖面容隐在阴影中
+Dialogue: 0,0:00:08.33,0:00:10.88,Default,,0,0,0,,唯有双眸如星赵硕率众人行礼时
+Dialogue: 0,0:00:11.10,0:00:13.37,Default,,0,0,0,,感应到六道恐怖气息锁定自身
+Dialogue: 0,0:00:13.68,0:00:16.09,Default,,0,0,0,,却依旧从容道{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}幸不辱命
+Dialogue: 0,0:00:16.46,0:00:18.43,Default,,0,0,0,,带回援军二十名道祖巅峰
+Dialogue: 0,0:00:18.70,0:00:21.25,Default,,0,0,0,,话音刚落右侧一位红脸老者突
+Dialogue: 0,0:00:21.25,0:00:24.36,Default,,0,0,0,,然拍案好我{\c&H0000FFFF&\b1}万古{\c&H00FFFFFF&\b0}大世界终于
+Dialogue: 0,0:00:24.36,0:00:27.02,Default,,0,0,0,,有此等魄力案几上的茶盏震起
+Dialogue: 0,0:00:27.02,0:00:30.07,Default,,0,0,0,,水花映着殿内唯一的光柱那
+Dialogue: 0,0:00:30.07,0:00:31.90,Default,,0,0,0,,是从穹顶藻井投下的天光
+Dialogue: 0,0:00:32.16,0:00:34.68,Default,,0,0,0,,正照在{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}身上将其身影拉长
+Dialogue: 0,0:00:34.98,0:00:37.55,Default,,0,0,0,,宛如画{\c&H0000FFFF&\b1}中仙{\c&H00FFFFFF&\b0}场景设定为大殿
+Dialogue: 0,0:00:37.88,0:00:39.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}梁柱{\c&H00FFFFFF&\b0}盘龙地面铺青石
+Dialogue: 0,0:00:40.23,0:00:42.34,Default,,0,0,0,,两侧立青铜鼎香烟袅袅
+Dialogue: 0,0:00:42.72,0:00:43.77,Default,,0,0,0,,氛围威严神秘

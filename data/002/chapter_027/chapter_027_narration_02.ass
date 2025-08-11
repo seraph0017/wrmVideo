@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_027 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}修者驾着木筏穿梭尸海
+Dialogue: 0,0:00:02.87,0:00:04.78,Default,,0,0,0,,将混沌魔神尸身拖拽上岸
+Dialogue: 0,0:00:05.38,0:00:07.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与白蒹葭站在崖边
+Dialogue: 0,0:00:07.46,0:00:09.18,Default,,0,0,0,,望着忙碌的属下忽然
+Dialogue: 0,0:00:09.44,0:00:10.95,Default,,0,0,0,,远处传来激昂战鼓声
+Dialogue: 0,0:00:11.24,0:00:13.19,Default,,0,0,0,,震天动地众人循声望去
+Dialogue: 0,0:00:13.38,0:00:14.73,Default,,0,0,0,,只见天边{\c&H0000FFFF&\b1}黑云{\c&H00FFFFFF&\b0}压境
+Dialogue: 0,0:00:15.03,0:00:17.27,Default,,0,0,0,,大秦禁军的黑色旌旗隐约可见
+Dialogue: 0,0:00:17.55,0:00:18.35,Default,,0,0,0,,气势恢宏

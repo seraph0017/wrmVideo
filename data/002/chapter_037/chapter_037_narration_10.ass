@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_037 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄祖{\c&H00FFFFFF&\b0}与鸿钧老祖隔空对话
+Dialogue: 0,0:00:02.38,0:00:05.14,Default,,0,0,0,,决定全线反攻{\c&H0000FFFF&\b1}赵硕率{\c&H00FFFFFF&\b0}齐天府主力
+Dialogue: 0,0:00:05.14,0:00:07.84,Default,,0,0,0,,冲锋在前白蒹葭等女修组成凤
+Dialogue: 0,0:00:07.84,0:00:10.12,Default,,0,0,0,,仪阵断后她们皆着圆领白袍
+Dialogue: 0,0:00:10.39,0:00:12.67,Default,,0,0,0,,背向镜头衣袂飘飘如{\c&H0000FFFF&\b1}白凤{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.96,0:00:14.81,Default,,0,0,0,,长生老人与薛开山{\c&H0000FFFF&\b1}左右翼{\c&H00FFFFFF&\b0}护
+Dialogue: 0,0:00:15.14,0:00:16.88,Default,,0,0,0,,血衣杀神直捣魔阵核心
+Dialogue: 0,0:00:17.32,0:00:19.05,Default,,0,0,0,,恶人谷主搜刮魔神宝物
+Dialogue: 0,0:00:19.39,0:00:21.93,Default,,0,0,0,,笑声响彻战场最终{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}鸿蒙尺劈
+Dialogue: 0,0:00:21.93,0:00:23.55,Default,,0,0,0,,下紫电贯穿天地
+Dialogue: 0,0:00:23.82,0:00:25.80,Default,,0,0,0,,混沌魔神哀嚎着化为飞灰
+Dialogue: 0,0:00:26.16,0:00:27.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}东海{\c&H00FFFFFF&\b0}防线终被突破
+Dialogue: 0,0:00:28.00,0:00:29.68,Default,,0,0,0,,场景设定为战后{\c&H0000FFFF&\b1}东海{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:29.96,0:00:32.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}云开雾散{\c&H00FFFFFF&\b0}阳光洒在海面上
+Dialogue: 0,0:00:32.77,0:00:35.65,Default,,0,0,0,,幸存修者欢呼远处{\c&H0000FFFF&\b1}海岛{\c&H00FFFFFF&\b0}升起炊烟
+Dialogue: 0,0:00:36.09,0:00:37.41,Default,,0,0,0,,氛围悲壮中带希望

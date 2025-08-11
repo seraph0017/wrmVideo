@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_045 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.91,Default,,0,0,0,,藤蔓狂舞战局胶着
+Dialogue: 0,0:00:02.21,0:00:04.04,Default,,0,0,0,,荒木恶魔见对方三人配合默
+Dialogue: 0,0:00:04.04,0:00:05.90,Default,,0,0,0,,契眼中闪过一丝意外
+Dialogue: 0,0:00:06.29,0:00:08.45,Default,,0,0,0,,随即狞笑更盛他双臂{\c&H0000FFFF&\b1}张开{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.77,0:00:11.27,Default,,0,0,0,,无穷无尽的藤蔓从地底钻出
+Dialogue: 0,0:00:11.59,0:00:13.00,Default,,0,0,0,,如潮水般涌向三尊
+Dialogue: 0,0:00:13.32,0:00:15.26,Default,,0,0,0,,有些藤蔓甚至燃烧着黑色火焰
+Dialogue: 0,0:00:15.59,0:00:16.96,Default,,0,0,0,,所过之处草木尽枯
+Dialogue: 0,0:00:17.26,0:00:19.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}黑牙{\c&H00FFFFFF&\b0}大尊三人背靠背结成阵势
+Dialogue: 0,0:00:19.80,0:00:21.29,Default,,0,0,0,,在藤蔓海中艰难支撑

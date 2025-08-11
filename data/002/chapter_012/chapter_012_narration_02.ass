@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_012 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.05,Default,,0,0,0,,百花天女声音清脆如{\c&H0000FFFF&\b1}黄莺{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.52,0:00:04.16,Default,,0,0,0,,带着一丝颤抖质问{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.53,0:00:06.73,Default,,0,0,0,,道出她们衣物被暴熊一族夺走的窘
+Dialogue: 0,0:00:06.73,0:00:09.87,Default,,0,0,0,,境{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}恍然轻咳一声化解尴尬
+Dialogue: 0,0:00:10.34,0:00:12.95,Default,,0,0,0,,手中凭空出现数件圆领长袍递出
+Dialogue: 0,0:00:13.31,0:00:15.74,Default,,0,0,0,,女子们接过衣物以惊人速度穿戴
+Dialogue: 0,0:00:15.74,0:00:18.71,Default,,0,0,0,,整齐动作间显露出修行者的迅捷
+Dialogue: 0,0:00:19.20,0:00:21.41,Default,,0,0,0,,原本散乱的队伍因这几位女子的存
+Dialogue: 0,0:00:21.41,0:00:22.41,Default,,0,0,0,,在而有了秩序

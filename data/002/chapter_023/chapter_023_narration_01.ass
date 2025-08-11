@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_023 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.44,Default,,0,0,0,,重伤濒死的火娘子突然发出凄厉尖
+Dialogue: 0,0:00:02.44,0:00:05.13,Default,,0,0,0,,叫画面定格在忘忧谷深处的断崖
+Dialogue: 0,0:00:05.13,0:00:07.72,Default,,0,0,0,,边残阳如血洒在破碎的岩石上
+Dialogue: 0,0:00:08.03,0:00:10.79,Default,,0,0,0,,火娘子半跪在地青色圆领道袍沾
+Dialogue: 0,0:00:10.79,0:00:13.60,Default,,0,0,0,,满血污后背衣料撕裂露出狰狞伤
+Dialogue: 0,0:00:13.60,0:00:15.08,Default,,0,0,0,,口她颤抖着抬头
+Dialogue: 0,0:00:15.46,0:00:17.18,Default,,0,0,0,,看到{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}逆光而立的身影
+Dialogue: 0,0:00:17.50,0:00:19.30,Default,,0,0,0,,金色圆领长衫无风自动
+Dialogue: 0,0:00:19.68,0:00:21.33,Default,,0,0,0,,手中天王塔微光闪烁
+Dialogue: 0,0:00:21.64,0:00:24.21,Default,,0,0,0,,火娘子瞳孔骤缩以为见到鬼魅
+Dialogue: 0,0:00:24.54,0:00:26.52,Default,,0,0,0,,嘶哑质问你是人是鬼
+Dialogue: 0,0:00:26.52,0:00:26.52,Default,,0,0,0,,

@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_050 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}雷海{\c&H00FFFFFF&\b0}降临鸿钧老祖突破引发天劫
+Dialogue: 0,0:00:03.42,0:00:05.13,Default,,0,0,0,,紫色{\c&H0000FFFF&\b1}雷龙{\c&H00FFFFFF&\b0}环绕战争浮屠
+Dialogue: 0,0:00:05.61,0:00:07.92,Default,,0,0,0,,他走出战争{\c&H0000FFFF&\b1}浮屠{\c&H00FFFFFF&\b0}盘坐虚空
+Dialogue: 0,0:00:08.28,0:00:10.87,Default,,0,0,0,,任由雷电劈打躯体不断破碎重组
+Dialogue: 0,0:00:11.11,0:00:12.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}见状停止追杀
+Dialogue: 0,0:00:13.02,0:00:15.67,Default,,0,0,0,,返回守护{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}尺化为光罩挡住外
+Dialogue: 0,0:00:15.67,0:00:17.86,Default,,0,0,0,,泄的{\c&H0000FFFF&\b1}雷光{\c&H00FFFFFF&\b0}胖大圣趁机逃脱
+Dialogue: 0,0:00:18.16,0:00:19.57,Default,,0,0,0,,瘦{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}被冰牢镇压
+Dialogue: 0,0:00:19.89,0:00:21.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}牛神{\c&H00FFFFFF&\b0}大圣早已不见踪影
+Dialogue: 0,0:00:21.78,0:00:23.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿钧{\c&H00FFFFFF&\b0}老祖在雷海中狂笑
+Dialogue: 0,0:00:24.14,0:00:25.59,Default,,0,0,0,,今日我证道{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}

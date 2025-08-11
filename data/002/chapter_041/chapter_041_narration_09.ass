@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_041 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}华光{\c&H00FFFFFF&\b0}魔祖得意抬头
+Dialogue: 0,0:00:01.72,0:00:03.15,Default,,0,0,0,,却见{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}面容含笑
+Dialogue: 0,0:00:03.56,0:00:06.28,Default,,0,0,0,,毫无痛苦之色反而带着几分欢喜
+Dialogue: 0,0:00:06.57,0:00:09.04,Default,,0,0,0,,他心中咯噔一下一股不安涌上心
+Dialogue: 0,0:00:09.04,0:00:11.13,Default,,0,0,0,,头你你怎么不疼
+Dialogue: 0,0:00:11.21,0:00:13.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}淡淡开口华光魔祖
+Dialogue: 0,0:00:13.49,0:00:15.73,Default,,0,0,0,,难道你没听说过我这一指不是谁
+Dialogue: 0,0:00:15.73,0:00:17.56,Default,,0,0,0,,都能接的吗声音平静
+Dialogue: 0,0:00:17.90,0:00:19.07,Default,,0,0,0,,却带着莫名的威压
+Dialogue: 0,0:00:19.34,0:00:21.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}华光{\c&H00FFFFFF&\b0}魔祖的笑容彻底消失
+Dialogue: 0,0:00:21.43,0:00:22.93,Default,,0,0,0,,脸上开始浮现恐惧

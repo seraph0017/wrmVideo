@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_014 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.56,Default,,0,0,0,,大阳尊者失声惊呼
+Dialogue: 0,0:00:01.91,0:00:03.23,Default,,0,0,0,,脸上写满难以置信
+Dialogue: 0,0:00:03.62,0:00:04.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}赵硕府主
+Dialogue: 0,0:00:05.62,0:00:07.33,Default,,0,0,0,,人族{\c&H0000FFFF&\b1}古老{\c&H00FFFFFF&\b0}势力千怜圣女
+Dialogue: 0,0:00:07.72,0:00:10.21,Default,,0,0,0,,他颤声{\c&H0000FFFF&\b1}低语{\c&H00FFFFFF&\b0}几乎不敢相信自己
+Dialogue: 0,0:00:10.21,0:00:12.52,Default,,0,0,0,,的耳朵这两位传说中已被混沌魔
+Dialogue: 0,0:00:12.52,0:00:14.90,Default,,0,0,0,,神灭杀的人物竟然活生生出现在
+Dialogue: 0,0:00:14.90,0:00:17.18,Default,,0,0,0,,眼前{\c&H0000FFFF&\b1}大阳{\c&H00FFFFFF&\b0}宗弟子更是哗然
+Dialogue: 0,0:00:17.59,0:00:20.00,Default,,0,0,0,,看向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与千怜圣女的目光充满敬
+Dialogue: 0,0:00:20.00,0:00:22.39,Default,,0,0,0,,畏与激动青衣人则如遭雷击
+Dialogue: 0,0:00:22.77,0:00:23.81,Default,,0,0,0,,脸色瞬间惨白

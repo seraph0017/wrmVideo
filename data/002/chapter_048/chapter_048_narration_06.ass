@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_048 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:03.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}巡视领地时发现山林中七彩
+Dialogue: 0,0:00:03.03,0:00:06.12,Default,,0,0,0,,霞光冲天一只凤形凶兽正在觅食
+Dialogue: 0,0:00:06.47,0:00:08.51,Default,,0,0,0,,白蒹葭惊喜道夫君
+Dialogue: 0,0:00:08.75,0:00:11.11,Default,,0,0,0,,帮我们收服它赵硕大笑出手
+Dialogue: 0,0:00:11.44,0:00:12.86,Default,,0,0,0,,用精血催动恶魔{\c&H0000FFFF&\b1}古堡{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.14,0:00:14.73,Default,,0,0,0,,七彩{\c&H0000FFFF&\b1}凤凰{\c&H00FFFFFF&\b0}喷出火焰抵抗
+Dialogue: 0,0:00:15.13,0:00:17.38,Default,,0,0,0,,却被{\c&H0000FFFF&\b1}古堡{\c&H00FFFFFF&\b0}镇压以后你就跟着蒹
+Dialogue: 0,0:00:17.38,0:00:19.39,Default,,0,0,0,,葭她们{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}点化其灵智
+Dialogue: 0,0:00:19.86,0:00:21.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}凤凰{\c&H00FFFFFF&\b0}温顺地蹭了蹭白蒹葭的手
+Dialogue: 0,0:00:22.14,0:00:24.62,Default,,0,0,0,,众女欢呼青龙在旁发出{\c&H0000FFFF&\b1}龙吟{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:25.03,0:00:26.29,Default,,0,0,0,,似在欢迎新伙伴

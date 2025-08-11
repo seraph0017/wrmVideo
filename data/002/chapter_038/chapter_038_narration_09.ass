@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_038 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.27,Default,,0,0,0,,五道流光从千怜圣女袖中飞出
+Dialogue: 0,0:00:02.72,0:00:04.05,Default,,0,0,0,,化作半透明的人形
+Dialogue: 0,0:00:04.58,0:00:05.80,Default,,0,0,0,,正是她的道祖化身
+Dialogue: 0,0:00:06.32,0:00:08.29,Default,,0,0,0,,流光分别没入四名侍女眉心
+Dialogue: 0,0:00:08.65,0:00:10.05,Default,,0,0,0,,侍女们身体微微一颤
+Dialogue: 0,0:00:10.37,0:00:12.89,Default,,0,0,0,,面色露出讶异最右侧侍女抬手抚
+Dialogue: 0,0:00:12.89,0:00:15.12,Default,,0,0,0,,上小腹感受着体内新生的悸动
+Dialogue: 0,0:00:15.54,0:00:17.64,Default,,0,0,0,,宋代风格的烛火在她身后摇曳
+Dialogue: 0,0:00:18.00,0:00:19.10,Default,,0,0,0,,映出长长的影子

@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_045 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.31,Default,,0,0,0,,绝境逢生{\c&H0000FFFF&\b1}黑牙{\c&H00FFFFFF&\b0}青山驰援
+Dialogue: 0,0:00:02.58,0:00:04.33,Default,,0,0,0,,虚元大尊灵力将近枯竭
+Dialogue: 0,0:00:04.88,0:00:07.34,Default,,0,0,0,,正被荒木恶魔的藤蔓逼至悬崖边缘
+Dialogue: 0,0:00:07.58,0:00:09.43,Default,,0,0,0,,脚下碎石不断坠落{\c&H0000FFFF&\b1}深渊{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.71,0:00:12.24,Default,,0,0,0,,突然两道强横气息撕裂云层
+Dialogue: 0,0:00:12.56,0:00:14.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}黑牙{\c&H00FFFFFF&\b0}大尊手持巨斧踏空而来
+Dialogue: 0,0:00:14.86,0:00:17.89,Default,,0,0,0,,斧刃寒光凛冽{\c&H0000FFFF&\b1}青山{\c&H00FFFFFF&\b0}大尊身背长剑
+Dialogue: 0,0:00:18.16,0:00:19.61,Default,,0,0,0,,周身萦绕着{\c&H0000FFFF&\b1}苍翠{\c&H00FFFFFF&\b0}绿意
+Dialogue: 0,0:00:20.01,0:00:21.80,Default,,0,0,0,,两人看到虚元大尊的惨状
+Dialogue: 0,0:00:22.10,0:00:23.59,Default,,0,0,0,,眼神瞬间凝重如铁

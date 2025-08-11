@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_029 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}闭关在云霄等人相助下
+Dialogue: 0,0:00:02.83,0:00:04.60,Default,,0,0,0,,体内世界时间流速达最快
+Dialogue: 0,0:00:05.21,0:00:07.69,Default,,0,0,0,,外界八百年体内八十亿年
+Dialogue: 0,0:00:07.97,0:00:10.52,Default,,0,0,0,,他心神沉浸独自度过漫长岁月
+Dialogue: 0,0:00:10.76,0:00:12.46,Default,,0,0,0,,四周元气被疯狂汲取
+Dialogue: 0,0:00:12.70,0:00:14.11,Default,,0,0,0,,形成巨大元气漩涡
+Dialogue: 0,0:00:14.35,0:00:15.04,Default,,0,0,0,,场面壮观

@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_017 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵坐在电脑前
+Dialogue: 0,0:00:01.83,0:00:03.61,Default,,0,0,0,,滑动鼠标浏览礼服图片
+Dialogue: 0,0:00:04.15,0:00:05.85,Default,,0,0,0,,白色衬衫的袖子挽到小臂
+Dialogue: 0,0:00:06.33,0:00:08.94,Default,,0,0,0,,露出{\c&H0000FFFF&\b1}白皙{\c&H00FFFFFF&\b0}的皮肤赵硕站在她身后
+Dialogue: 0,0:00:09.21,0:00:11.00,Default,,0,0,0,,灰色T恤的圆领贴合颈部
+Dialogue: 0,0:00:11.37,0:00:13.70,Default,,0,0,0,,右手搭在椅背上目光落在屏幕上
+Dialogue: 0,0:00:13.70,0:00:16.28,Default,,0,0,0,,的黑色长裙{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵兴奋地指着屏
+Dialogue: 0,0:00:16.28,0:00:18.69,Default,,0,0,0,,幕完全没注意{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}的目光在她腰
+Dialogue: 0,0:00:18.69,0:00:20.68,Default,,0,0,0,,间停留两人距离极近
+Dialogue: 0,0:00:21.11,0:00:22.91,Default,,0,0,0,,空气中弥漫着淡淡的香水味

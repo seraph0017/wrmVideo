@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_033 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}指尖划过虚空
+Dialogue: 0,0:00:01.83,0:00:03.29,Default,,0,0,0,,地面涌出汩汩{\c&H0000FFFF&\b1}清泉{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.67,0:00:05.46,Default,,0,0,0,,水底铺着打磨光滑的{\c&H0000FFFF&\b1}温玉{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.97,0:00:08.56,Default,,0,0,0,,蒸腾的热气在{\c&H0000FFFF&\b1}星光照耀{\c&H00FFFFFF&\b0}下形成七彩
+Dialogue: 0,0:00:08.56,0:00:10.96,Default,,0,0,0,,光晕他挥手撤去周围的碎石
+Dialogue: 0,0:00:11.37,0:00:12.69,Default,,0,0,0,,露出平整的玉质地面
+Dialogue: 0,0:00:12.97,0:00:14.29,Default,,0,0,0,,夕月道人立于{\c&H0000FFFF&\b1}泉边{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.65,0:00:17.14,Default,,0,0,0,,月白色圆领长袍与泉中{\c&H0000FFFF&\b1}温玉{\c&H00FFFFFF&\b0}相映成
+Dialogue: 0,0:00:17.14,0:00:20.02,Default,,0,0,0,,辉{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}解下腰间玉带这是进
+Dialogue: 0,0:00:20.02,0:00:21.93,Default,,0,0,0,,入小世界前通天教主所赠
+Dialogue: 0,0:00:22.39,0:00:24.93,Default,,0,0,0,,此刻玉带上的蟠龙纹在水汽{\c&H0000FFFF&\b1}中若隐{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.93,0:00:26.94,Default,,0,0,0,,若现散发出淡淡的威压

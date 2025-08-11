@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_031 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}体内元阳暴涨
+Dialogue: 0,0:00:01.66,0:00:02.85,Default,,0,0,0,,根基变得无人可比
+Dialogue: 0,0:00:03.23,0:00:06.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}温泉{\c&H00FFFFFF&\b0}水汽渐散赵硕盘膝坐在池边
+Dialogue: 0,0:00:06.40,0:00:07.85,Default,,0,0,0,,周身萦绕淡金色光晕
+Dialogue: 0,0:00:08.21,0:00:10.70,Default,,0,0,0,,夕月已穿好白衣将丧魂岭抛给赵
+Dialogue: 0,0:00:10.70,0:00:12.99,Default,,0,0,0,,硕我去闭关有事以后说
+Dialogue: 0,0:00:13.28,0:00:15.84,Default,,0,0,0,,身影瞬间消失{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}手握古朴山
+Dialogue: 0,0:00:15.84,0:00:17.49,Default,,0,0,0,,岭状{\c&H0000FFFF&\b1}法宝{\c&H00FFFFFF&\b0}眼神茫然
+Dialogue: 0,0:00:17.84,0:00:20.59,Default,,0,0,0,,随即转为狂喜{\c&H0000FFFF&\b1}元阳{\c&H00FFFFFF&\b0}之气比先前
+Dialogue: 0,0:00:20.59,0:00:22.27,Default,,0,0,0,,暴涨数倍可化精血
+Dialogue: 0,0:00:22.59,0:00:25.16,Default,,0,0,0,,根基扎实无比再无实力暴涨的隐
+Dialogue: 0,0:00:25.16,0:00:25.39,Default,,0,0,0,,患

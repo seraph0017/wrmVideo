@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_017 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨清慧{\c&H00FFFFFF&\b0}匆忙告别抓起请帖转身就
+Dialogue: 0,0:00:02.83,0:00:05.28,Default,,0,0,0,,走米白色{\c&H0000FFFF&\b1}连衣裙{\c&H00FFFFFF&\b0}的裙摆随着快步
+Dialogue: 0,0:00:05.28,0:00:07.88,Default,,0,0,0,,动作飘动苏青婵追到门口挥手
+Dialogue: 0,0:00:08.12,0:00:10.20,Default,,0,0,0,,白色衬衫的圆领随着动作拉伸
+Dialogue: 0,0:00:10.59,0:00:13.17,Default,,0,0,0,,露出锁骨{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}看着杨清慧消失的
+Dialogue: 0,0:00:13.17,0:00:15.91,Default,,0,0,0,,背影眼神深邃右手无意识{\c&H0000FFFF&\b1}地摩{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.91,0:00:18.68,Default,,0,0,0,,挲着下巴办公室内只剩下两人
+Dialogue: 0,0:00:19.02,0:00:21.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵兴奋地拉着赵硕看电脑上的
+Dialogue: 0,0:00:21.61,0:00:24.22,Default,,0,0,0,,礼服完全没注意他若有所思的表
+Dialogue: 0,0:00:24.22,0:00:24.52,Default,,0,0,0,,情

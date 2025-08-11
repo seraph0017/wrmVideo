@@ -1,0 +1,30 @@
+[Script Info]
+Title: chapter_049 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.99,Default,,0,0,0,,烈日悬空金色大殿内
+Dialogue: 0,0:00:02.42,0:00:04.54,Default,,0,0,0,,日月大圣{\c&H0000FFFF&\b1}玄色{\c&H00FFFFFF&\b0}圆领龙纹袍鼓荡
+Dialogue: 0,0:00:05.12,0:00:07.61,Default,,0,0,0,,一掌拍碎玉案百余名半步{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.91,0:00:09.26,Default,,0,0,0,,竟被十二天刀搅黄
+Dialogue: 0,0:00:09.56,0:00:11.95,Default,,0,0,0,,天王{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}青灰色圆领蟒纹袍拂袖
+Dialogue: 0,0:00:12.40,0:00:13.89,Default,,0,0,0,,传我令所有联军
+Dialogue: 0,0:00:14.19,0:00:16.45,Default,,0,0,0,,无论强弱三日内开赴战场
+Dialogue: 0,0:00:16.65,0:00:18.02,Default,,0,0,0,,半月{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}躬身领命
+Dialogue: 0,0:00:18.45,0:00:19.75,Default,,0,0,0,,银色圆领甲胄反光
+Dialogue: 0,0:00:20.16,0:00:22.26,Default,,0,0,0,,属下{\c&H0000FFFF&\b1}遵命{\c&H00FFFFFF&\b0}远处联军营地
+Dialogue: 0,0:00:22.52,0:00:23.82,Default,,0,0,0,,七叶{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}望着军令
+Dialogue: 0,0:00:24.10,0:00:25.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄铁{\c&H00FFFFFF&\b0}圆领战甲紧握双拳
+Dialogue: 0,0:00:26.30,0:00:27.72,Default,,0,0,0,,身后修者窃窃私语
+Dialogue: 0,0:00:27.91,0:00:28.55,Default,,0,0,0,,满脸不甘

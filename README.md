@@ -116,6 +116,7 @@ wrmVideo/
 ├── concat_narration_video.py # 生成主视频（添加旁白、BGM、音效等）
 ├── concat_finish_video.py  # 生成完整视频（添加片尾视频）
 ├── gen_video.py            # 视频生成流程编排器（依次执行上述三个脚本）
+├── upload_tos.py           # TOS存储服务上传脚本
 ├── requirements.txt        # 项目依赖
 
 ### 核心脚本说明
@@ -220,11 +221,24 @@ IMAGE_CONFIG = {
     "watermark": False,       # 是否添加水印
     "model": "doubao-seedream-3-0-t2i-250415"  # 使用的图像生成模型
 }
+
+# TOS存储配置（从config.py的IMAGE_TWO_CONFIG中读取）
+# TOS配置已集成到config.py文件中，使用上海区域
+# endpoint: tos-cn-shanghai.volces.com
+# region: cn-shanghai
 ```
 
 ### 3. 获取API密钥
 - **火山引擎TTS**: 访问[火山引擎控制台](https://console.volcengine.com/)获取
 - **豆包API**: 访问[豆包开放平台](https://www.volcengine.com/product/doubao)获取
+- **TOS存储服务**: 访问[火山引擎TOS控制台](https://console.volcengine.com/tos)获取访问密钥
+
+### 4. TOS存储配置说明
+TOS上传功能的配置已集成到 `config/config.py` 文件中：
+
+- **访问密钥**: 从 `IMAGE_TWO_CONFIG` 中的 `access_key` 和 `secret_key` 读取
+- **服务区域**: 使用上海区域 (`tos-cn-shanghai.volces.com`)
+- **无需额外配置**: 如果您已经配置了图片生成功能，TOS上传功能即可直接使用
 
 ## 🚀 快速开始
 
@@ -334,6 +348,16 @@ python concat_narration_video.py data/001
 
 # 7c. 生成完整视频（添加片尾视频）
 python concat_finish_video.py data/001
+
+# 8. 上传完整视频到TOS存储服务
+# 基本用法（自动推导TOS路径）
+python upload_tos.py data/002
+
+# 自定义bucket和路径前缀
+python upload_tos.py data/002 --bucket rm-tos-001 --prefix data002
+
+# 查看帮助信息
+python upload_tos.py --help
 ```
 
 ### 3. 图片生成规则
@@ -420,6 +444,14 @@ python batch_generate_character_images_async.py
 - **自动同步**: 音频、图片、字幕完美同步
 - **音频混合**: 智能混合原有narration音频与BGM，确保解说声音清晰（原音频音量1.0，BGM音量0.3）
 - **章节拼接**: 支持将多个narration视频按顺序拼接，自动添加随机BGM和片尾视频
+
+### 📤 TOS存储上传
+- **批量上传**: 自动遍历章节目录，上传所有完整视频文件
+- **智能路径**: 自动推导TOS存储路径，支持自定义前缀
+- **进度监控**: 实时显示上传进度和状态
+- **错误处理**: 完善的错误处理和重试机制
+- **配置集成**: 直接使用config.py中的配置，无需额外设置
+- **上海区域**: 使用火山引擎上海区域服务，提升上传速度
 
 ## ⚠️ 注意事项
 
@@ -521,6 +553,7 @@ ls async_tasks/
 - `concat_first_video.py`: 第一阶段 - 合并video_1与video_2并加入转场特效
 - `concat_narration_video.py`: 第二阶段 - 生成主视频（添加旁白、BGM、音效等）
 - `concat_finish_video.py`: 第三阶段 - 生成完整视频（添加片尾视频）
+- `upload_tos.py`: TOS存储服务上传工具，批量上传完整视频文件
 
 ### 扩展开发
 

@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_039 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.47,Default,,0,0,0,,弥勒佛祖突然开口
+Dialogue: 0,0:00:01.76,0:00:03.93,Default,,0,0,0,,目光扫过众人{\c&H0000FFFF&\b1}赵硕府{\c&H00FFFFFF&\b0}主
+Dialogue: 0,0:00:04.21,0:00:05.70,Default,,0,0,0,,鬼脸大王既已降服
+Dialogue: 0,0:00:06.08,0:00:07.50,Default,,0,0,0,,何不让他讲讲遗迹情况
+Dialogue: 0,0:00:07.86,0:00:09.42,Default,,0,0,0,,说不定大家能寻得{\c&H0000FFFF&\b1}宝藏{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.64,0:00:11.94,Default,,0,0,0,,此言一出周围修士眼睛骤亮
+Dialogue: 0,0:00:12.20,0:00:14.66,Default,,0,0,0,,纷纷看向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}期待的光芒在眼中
+Dialogue: 0,0:00:14.66,0:00:16.84,Default,,0,0,0,,闪烁气氛瞬间变得紧张

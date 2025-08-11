@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_028 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}紫霄宫{\c&H00FFFFFF&\b0}大殿内燃灯道祖枯坐蒲团
+Dialogue: 0,0:00:03.22,0:00:04.86,Default,,0,0,0,,土黄色圆领僧袍打补丁
+Dialogue: 0,0:00:05.41,0:00:07.98,Default,,0,0,0,,念珠垂落膝前他睁眼看向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.27,0:00:10.36,Default,,0,0,0,,目露精光{\c&H0000FFFF&\b1}赵府{\c&H00FFFFFF&\b0}主修行速度
+Dialogue: 0,0:00:10.53,0:00:12.54,Default,,0,0,0,,古今罕见殿内光线昏暗
+Dialogue: 0,0:00:12.85,0:00:14.78,Default,,0,0,0,,仅穹顶一颗{\c&H0000FFFF&\b1}夜明珠{\c&H00FFFFFF&\b0}散发柔光
+Dialogue: 0,0:00:15.01,0:00:16.49,Default,,0,0,0,,百余强者分坐两侧
+Dialogue: 0,0:00:16.84,0:00:18.73,Default,,0,0,0,,衣袂摩擦声与呼吸声交织
+Dialogue: 0,0:00:19.05,0:00:20.07,Default,,0,0,0,,气氛凝重如铁

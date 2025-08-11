@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_032 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.41,Default,,0,0,0,,你值得尊敬通天教祖突然收
+Dialogue: 0,0:00:02.41,0:00:05.18,Default,,0,0,0,,敛杀机目光平静地看向无法魔祖
+Dialogue: 0,0:00:05.86,0:00:07.50,Default,,0,0,0,,这场战斗让他心境提升
+Dialogue: 0,0:00:07.80,0:00:10.10,Default,,0,0,0,,哪怕是敌对也认可对方的强悍
+Dialogue: 0,0:00:10.38,0:00:11.81,Default,,0,0,0,,无法魔祖却冷哼一声
+Dialogue: 0,0:00:12.15,0:00:13.62,Default,,0,0,0,,血色嘴角勾起嘲讽
+Dialogue: 0,0:00:13.88,0:00:15.19,Default,,0,0,0,,收起你那虚伪的尊重
+Dialogue: 0,0:00:15.54,0:00:18.15,Default,,0,0,0,,他挣扎站起玄色长袍无风自动
+Dialogue: 0,0:00:18.55,0:00:20.21,Default,,0,0,0,,虽重伤却气势不减
+Dialogue: 0,0:00:20.54,0:00:22.07,Default,,0,0,0,,我败在大阵而非你
+Dialogue: 0,0:00:22.07,0:00:22.07,Default,,0,0,0,,

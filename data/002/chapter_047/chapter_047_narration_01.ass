@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_047 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}虚空之中赵硕手托恶魔古堡
+Dialogue: 0,0:00:03.27,0:00:04.85,Default,,0,0,0,,与牛神{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}遥遥对峙
+Dialogue: 0,0:00:05.36,0:00:07.62,Default,,0,0,0,,两人刚刚经历一场惊天动地的碰撞
+Dialogue: 0,0:00:07.92,0:00:10.42,Default,,0,0,0,,暂时停歇恶魔{\c&H0000FFFF&\b1}古堡{\c&H00FFFFFF&\b0}散发着幽暗光
+Dialogue: 0,0:00:10.42,0:00:12.16,Default,,0,0,0,,芒悬浮于{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}掌心
+Dialogue: 0,0:00:12.42,0:00:14.32,Default,,0,0,0,,散发出超越寻常{\c&H0000FFFF&\b1}至宝{\c&H00FFFFFF&\b0}的威压
+Dialogue: 0,0:00:14.68,0:00:16.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}牛神{\c&H00FFFFFF&\b0}大圣手持紫金长棍
+Dialogue: 0,0:00:16.76,0:00:19.52,Default,,0,0,0,,神色凝重他能感受到恶魔{\c&H0000FFFF&\b1}古堡{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:19.52,0:00:21.88,Default,,0,0,0,,恐怖力量远超自己的紫金长棍
+Dialogue: 0,0:00:22.25,0:00:24.06,Default,,0,0,0,,周围虚空残留着战斗{\c&H0000FFFF&\b1}余波{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.49,0:00:27.30,Default,,0,0,0,,星辰碎片漂浮显示出战斗的激烈

@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_014 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.07,Default,,0,0,0,,大家分头逃跑禀报祖师
+Dialogue: 0,0:00:02.54,0:00:04.07,Default,,0,0,0,,青衣人首领见势不妙
+Dialogue: 0,0:00:04.60,0:00:07.54,Default,,0,0,0,,竟想四散奔逃{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与千怜圣女却
+Dialogue: 0,0:00:07.54,0:00:09.20,Default,,0,0,0,,相视一笑并未阻拦
+Dialogue: 0,0:00:09.52,0:00:11.79,Default,,0,0,0,,任由他们化作几道{\c&H0000FFFF&\b1}青虹{\c&H00FFFFFF&\b0}射向不同方
+Dialogue: 0,0:00:11.79,0:00:13.98,Default,,0,0,0,,向{\c&H0000FFFF&\b1}大阳{\c&H00FFFFFF&\b0}尊者看得目瞪口呆
+Dialogue: 0,0:00:14.32,0:00:15.65,Default,,0,0,0,,以为他们怕了神魔{\c&H0000FFFF&\b1}道宗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.00,0:00:18.46,Default,,0,0,0,,殊不知{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}早已布下天罗地网
+Dialogue: 0,0:00:18.74,0:00:20.66,Default,,0,0,0,,这些青衣人不过是瓮中之鳖

@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_022 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.62,Default,,0,0,0,,隐龙岛{\c&H0000FFFF&\b1}温泉{\c&H00FFFFFF&\b0}池赵硕与白蒹葭
+Dialogue: 0,0:00:02.97,0:00:05.13,Default,,0,0,0,,摇光天女{\c&H0000FFFF&\b1}青丘{\c&H00FFFFFF&\b0}妙儿共浴
+Dialogue: 0,0:00:05.47,0:00:08.12,Default,,0,0,0,,水汽氤氲{\c&H0000FFFF&\b1}中摇光{\c&H00FFFFFF&\b0}天女依偎肩头
+Dialogue: 0,0:00:08.45,0:00:10.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}青丘{\c&H00FFFFFF&\b0}妙儿轻按太阳穴
+Dialogue: 0,0:00:10.19,0:00:11.69,Default,,0,0,0,,白蒹葭为其揉捏肩颈
+Dialogue: 0,0:00:11.96,0:00:13.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}享受难得放松笑道
+Dialogue: 0,0:00:14.39,0:00:16.62,Default,,0,0,0,,千年未见今日当好好补偿
+Dialogue: 0,0:00:16.62,0:00:16.62,Default,,0,0,0,,

@@ -1,0 +1,603 @@
+{
+  "text": "场景设定在齐天府大殿，午后阳光透过雕花窗棂洒入，空气中漂浮着微尘。赵硕站在殿中，目光凝重地望着殿外云雾缭绕的山峦，回忆起曾闯入时空断层所见的上古大劫——星辰破碎、生灵陨落如雨，惨烈景象让他握拳自语：\"千万属下也不嫌多，大劫之下，人手永远不够。\"",
+  "audio_file": "data/002/chapter_006/chapter_006_narration_01.mp3",
+  "duration": 23.165,
+  "character_timestamps": [
+    {
+      "character": "场",
+      "start_time": 0.02,
+      "end_time": 0.245
+    },
+    {
+      "character": "景",
+      "start_time": 0.245,
+      "end_time": 0.41
+    },
+    {
+      "character": "设",
+      "start_time": 0.41,
+      "end_time": 0.575
+    },
+    {
+      "character": "定",
+      "start_time": 0.575,
+      "end_time": 0.735
+    },
+    {
+      "character": "在",
+      "start_time": 0.735,
+      "end_time": 0.925
+    },
+    {
+      "character": "齐",
+      "start_time": 0.925,
+      "end_time": 1.095
+    },
+    {
+      "character": "天",
+      "start_time": 1.095,
+      "end_time": 1.285
+    },
+    {
+      "character": "府",
+      "start_time": 1.285,
+      "end_time": 1.415
+    },
+    {
+      "character": "大",
+      "start_time": 1.415,
+      "end_time": 1.585
+    },
+    {
+      "character": "殿",
+      "start_time": 1.585,
+      "end_time": 1.865
+    },
+    {
+      "character": "，",
+      "start_time": 1.865,
+      "end_time": 2.305
+    },
+    {
+      "character": "午",
+      "start_time": 2.305,
+      "end_time": 2.42
+    },
+    {
+      "character": "后",
+      "start_time": 2.42,
+      "end_time": 2.725
+    },
+    {
+      "character": "阳",
+      "start_time": 2.725,
+      "end_time": 2.88
+    },
+    {
+      "character": "光",
+      "start_time": 2.88,
+      "end_time": 3.05
+    },
+    {
+      "character": "透",
+      "start_time": 3.05,
+      "end_time": 3.22
+    },
+    {
+      "character": "过",
+      "start_time": 3.22,
+      "end_time": 3.36
+    },
+    {
+      "character": "雕",
+      "start_time": 3.36,
+      "end_time": 3.54
+    },
+    {
+      "character": "花",
+      "start_time": 3.54,
+      "end_time": 3.685
+    },
+    {
+      "character": "窗",
+      "start_time": 3.685,
+      "end_time": 3.86
+    },
+    {
+      "character": "棂",
+      "start_time": 3.86,
+      "end_time": 3.99
+    },
+    {
+      "character": "洒",
+      "start_time": 3.99,
+      "end_time": 4.175
+    },
+    {
+      "character": "入",
+      "start_time": 4.175,
+      "end_time": 4.415
+    },
+    {
+      "character": "，",
+      "start_time": 4.415,
+      "end_time": 4.9
+    },
+    {
+      "character": "空",
+      "start_time": 4.9,
+      "end_time": 5.055
+    },
+    {
+      "character": "气",
+      "start_time": 5.055,
+      "end_time": 5.195
+    },
+    {
+      "character": "中",
+      "start_time": 5.195,
+      "end_time": 5.425
+    },
+    {
+      "character": "漂",
+      "start_time": 5.425,
+      "end_time": 5.625
+    },
+    {
+      "character": "浮",
+      "start_time": 5.625,
+      "end_time": 5.76
+    },
+    {
+      "character": "着",
+      "start_time": 5.76,
+      "end_time": 5.89
+    },
+    {
+      "character": "微",
+      "start_time": 5.89,
+      "end_time": 6.0
+    },
+    {
+      "character": "尘",
+      "start_time": 6.0,
+      "end_time": 6.325
+    },
+    {
+      "character": "，",
+      "start_time": 6.325,
+      "end_time": 6.81
+    },
+    {
+      "character": "赵",
+      "start_time": 6.81,
+      "end_time": 6.98
+    },
+    {
+      "character": "硕",
+      "start_time": 6.98,
+      "end_time": 7.15
+    },
+    {
+      "character": "站",
+      "start_time": 7.15,
+      "end_time": 7.3
+    },
+    {
+      "character": "在",
+      "start_time": 7.3,
+      "end_time": 7.42
+    },
+    {
+      "character": "殿",
+      "start_time": 7.42,
+      "end_time": 7.605
+    },
+    {
+      "character": "中",
+      "start_time": 7.605,
+      "end_time": 7.83
+    },
+    {
+      "character": "，",
+      "start_time": 7.83,
+      "end_time": 8.18
+    },
+    {
+      "character": "目",
+      "start_time": 8.18,
+      "end_time": 8.27
+    },
+    {
+      "character": "光",
+      "start_time": 8.27,
+      "end_time": 8.415
+    },
+    {
+      "character": "凝",
+      "start_time": 8.415,
+      "end_time": 8.58
+    },
+    {
+      "character": "重",
+      "start_time": 8.58,
+      "end_time": 8.74
+    },
+    {
+      "character": "地",
+      "start_time": 8.74,
+      "end_time": 8.83
+    },
+    {
+      "character": "望",
+      "start_time": 8.83,
+      "end_time": 8.95
+    },
+    {
+      "character": "着",
+      "start_time": 8.95,
+      "end_time": 9.045
+    },
+    {
+      "character": "殿",
+      "start_time": 9.045,
+      "end_time": 9.25
+    },
+    {
+      "character": "外",
+      "start_time": 9.25,
+      "end_time": 9.385
+    },
+    {
+      "character": "云",
+      "start_time": 9.385,
+      "end_time": 9.525
+    },
+    {
+      "character": "雾",
+      "start_time": 9.525,
+      "end_time": 9.675
+    },
+    {
+      "character": "缭",
+      "start_time": 9.675,
+      "end_time": 9.84
+    },
+    {
+      "character": "绕",
+      "start_time": 9.84,
+      "end_time": 9.955
+    },
+    {
+      "character": "的",
+      "start_time": 9.955,
+      "end_time": 10.03
+    },
+    {
+      "character": "山",
+      "start_time": 10.03,
+      "end_time": 10.21
+    },
+    {
+      "character": "峦",
+      "start_time": 10.21,
+      "end_time": 10.505
+    },
+    {
+      "character": "，",
+      "start_time": 10.505,
+      "end_time": 10.71
+    },
+    {
+      "character": "回",
+      "start_time": 10.71,
+      "end_time": 10.87
+    },
+    {
+      "character": "忆",
+      "start_time": 10.87,
+      "end_time": 10.97
+    },
+    {
+      "character": "起",
+      "start_time": 10.97,
+      "end_time": 11.2
+    },
+    {
+      "character": "曾",
+      "start_time": 11.2,
+      "end_time": 11.395
+    },
+    {
+      "character": "闯",
+      "start_time": 11.395,
+      "end_time": 11.56
+    },
+    {
+      "character": "入",
+      "start_time": 11.56,
+      "end_time": 11.695
+    },
+    {
+      "character": "时",
+      "start_time": 11.695,
+      "end_time": 11.87
+    },
+    {
+      "character": "空",
+      "start_time": 11.87,
+      "end_time": 12.085
+    },
+    {
+      "character": "断",
+      "start_time": 12.085,
+      "end_time": 12.245
+    },
+    {
+      "character": "层",
+      "start_time": 12.245,
+      "end_time": 12.405
+    },
+    {
+      "character": "所",
+      "start_time": 12.405,
+      "end_time": 12.58
+    },
+    {
+      "character": "见",
+      "start_time": 12.58,
+      "end_time": 12.75
+    },
+    {
+      "character": "的",
+      "start_time": 12.75,
+      "end_time": 12.81
+    },
+    {
+      "character": "上",
+      "start_time": 12.81,
+      "end_time": 13.01
+    },
+    {
+      "character": "古",
+      "start_time": 13.01,
+      "end_time": 13.11
+    },
+    {
+      "character": "大",
+      "start_time": 13.11,
+      "end_time": 13.29
+    },
+    {
+      "character": "劫",
+      "start_time": 13.29,
+      "end_time": 13.585
+    },
+    {
+      "character": "pau",
+      "start_time": 13.585,
+      "end_time": 14.055
+    },
+    {
+      "character": "星",
+      "start_time": 14.055,
+      "end_time": 14.225
+    },
+    {
+      "character": "辰",
+      "start_time": 14.225,
+      "end_time": 14.375
+    },
+    {
+      "character": "破",
+      "start_time": 14.375,
+      "end_time": 14.545
+    },
+    {
+      "character": "碎",
+      "start_time": 14.545,
+      "end_time": 14.795
+    },
+    {
+      "character": "，",
+      "start_time": 14.795,
+      "end_time": 15.165
+    },
+    {
+      "character": "生",
+      "start_time": 15.165,
+      "end_time": 15.34
+    },
+    {
+      "character": "灵",
+      "start_time": 15.34,
+      "end_time": 15.47
+    },
+    {
+      "character": "陨",
+      "start_time": 15.47,
+      "end_time": 15.595
+    },
+    {
+      "character": "落",
+      "start_time": 15.595,
+      "end_time": 15.79
+    },
+    {
+      "character": "如",
+      "start_time": 15.79,
+      "end_time": 15.965
+    },
+    {
+      "character": "雨",
+      "start_time": 15.965,
+      "end_time": 16.23
+    },
+    {
+      "character": "，",
+      "start_time": 16.23,
+      "end_time": 16.58
+    },
+    {
+      "character": "惨",
+      "start_time": 16.58,
+      "end_time": 16.75
+    },
+    {
+      "character": "烈",
+      "start_time": 16.75,
+      "end_time": 16.895
+    },
+    {
+      "character": "景",
+      "start_time": 16.895,
+      "end_time": 17.07
+    },
+    {
+      "character": "象",
+      "start_time": 17.07,
+      "end_time": 17.33
+    },
+    {
+      "character": "让",
+      "start_time": 17.33,
+      "end_time": 17.485
+    },
+    {
+      "character": "他",
+      "start_time": 17.485,
+      "end_time": 17.59
+    },
+    {
+      "character": "握",
+      "start_time": 17.59,
+      "end_time": 17.73
+    },
+    {
+      "character": "拳",
+      "start_time": 17.73,
+      "end_time": 18.06
+    },
+    {
+      "character": "自",
+      "start_time": 18.31,
+      "end_time": 18.45
+    },
+    {
+      "character": "语",
+      "start_time": 18.45,
+      "end_time": 18.71
+    },
+    {
+      "character": "：",
+      "start_time": 18.71,
+      "end_time": 19.165
+    },
+    {
+      "character": "千",
+      "start_time": 19.165,
+      "end_time": 19.355
+    },
+    {
+      "character": "万",
+      "start_time": 19.355,
+      "end_time": 19.49
+    },
+    {
+      "character": "属",
+      "start_time": 19.49,
+      "end_time": 19.67
+    },
+    {
+      "character": "下",
+      "start_time": 19.67,
+      "end_time": 19.88
+    },
+    {
+      "character": "也",
+      "start_time": 19.88,
+      "end_time": 19.955
+    },
+    {
+      "character": "不",
+      "start_time": 19.955,
+      "end_time": 20.05
+    },
+    {
+      "character": "嫌",
+      "start_time": 20.05,
+      "end_time": 20.265
+    },
+    {
+      "character": "多",
+      "start_time": 20.265,
+      "end_time": 20.53
+    },
+    {
+      "character": "，",
+      "start_time": 20.53,
+      "end_time": 20.795
+    },
+    {
+      "character": "大",
+      "start_time": 20.795,
+      "end_time": 20.97
+    },
+    {
+      "character": "劫",
+      "start_time": 20.97,
+      "end_time": 21.115
+    },
+    {
+      "character": "之",
+      "start_time": 21.115,
+      "end_time": 21.235
+    },
+    {
+      "character": "下",
+      "start_time": 21.235,
+      "end_time": 21.48
+    },
+    {
+      "character": "，",
+      "start_time": 21.48,
+      "end_time": 22.005
+    },
+    {
+      "character": "人",
+      "start_time": 22.005,
+      "end_time": 22.16
+    },
+    {
+      "character": "手",
+      "start_time": 22.16,
+      "end_time": 22.37
+    },
+    {
+      "character": "永",
+      "start_time": 22.37,
+      "end_time": 22.52
+    },
+    {
+      "character": "远",
+      "start_time": 22.52,
+      "end_time": 22.66
+    },
+    {
+      "character": "不",
+      "start_time": 22.66,
+      "end_time": 22.76
+    },
+    {
+      "character": "够",
+      "start_time": 22.76,
+      "end_time": 23.0
+    },
+    {
+      "character": "。",
+      "start_time": 23.0,
+      "end_time": 23.16
+    }
+  ],
+  "generated_at": "2025-08-10T22:09:06.114778"
+}

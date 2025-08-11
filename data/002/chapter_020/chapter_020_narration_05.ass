@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_020 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}青丘{\c&H00FFFFFF&\b0}怜儿出手她背身立于虚空
+Dialogue: 0,0:00:02.94,0:00:04.70,Default,,0,0,0,,淡紫圆领长裙无风自动
+Dialogue: 0,0:00:05.26,0:00:07.71,Default,,0,0,0,,玉指轻点无数花瓣状能量飞出
+Dialogue: 0,0:00:08.04,0:00:09.54,Default,,0,0,0,,将暴风魔尊困于其中
+Dialogue: 0,0:00:09.79,0:00:11.24,Default,,0,0,0,,暴风魔尊怒吼挣扎
+Dialogue: 0,0:00:11.53,0:00:13.78,Default,,0,0,0,,黑袍鼓荡圆领下青筋暴起
+Dialogue: 0,0:00:14.09,0:00:16.21,Default,,0,0,0,,却难破此阵{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}在旁掠阵
+Dialogue: 0,0:00:16.60,0:00:18.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}青丘{\c&H00FFFFFF&\b0}妙儿背身静立
+Dialogue: 0,0:00:18.27,0:00:20.13,Default,,0,0,0,,与姐姐形成绝美守护姿态

@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_019 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.77,Default,,0,0,0,,哪吒三头六臂法相显现
+Dialogue: 0,0:00:02.19,0:00:05.05,Default,,0,0,0,,火尖枪横扫千军九件顶级{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}同
+Dialogue: 0,0:00:05.05,0:00:07.82,Default,,0,0,0,,时轰出混沌魔神魔躯崩碎如雨
+Dialogue: 0,0:00:08.06,0:00:09.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}分身催动四绝杀阵
+Dialogue: 0,0:00:10.03,0:00:11.46,Default,,0,0,0,,四方大旗搅动煞气
+Dialogue: 0,0:00:11.62,0:00:13.43,Default,,0,0,0,,硬生生撕开群魔大阵缺口
+Dialogue: 0,0:00:13.63,0:00:16.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}青丘{\c&H00FFFFFF&\b0}怜儿六长老联手镇压三名魔尊
+Dialogue: 0,0:00:16.36,0:00:19.07,Default,,0,0,0,,锁链穿透魔躯神魂被囚于通天锁
+Dialogue: 0,0:00:19.07,0:00:21.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙柱{\c&H00FFFFFF&\b0}内星空战场哀嚎震天

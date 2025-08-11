@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_033 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.46,Default,,0,0,0,,当最后一缕{\c&H0000FFFF&\b1}银辉{\c&H00FFFFFF&\b0}融入夕月道人体内
+Dialogue: 0,0:00:02.94,0:00:04.68,Default,,0,0,0,,她周身的气息猛然暴涨
+Dialogue: 0,0:00:05.25,0:00:07.62,Default,,0,0,0,,月白色圆领长袍上的云纹全部亮起
+Dialogue: 0,0:00:08.05,0:00:10.66,Default,,0,0,0,,如同一轮微型{\c&H0000FFFF&\b1}皓月{\c&H00FFFFFF&\b0}悬浮在星岩之上
+Dialogue: 0,0:00:10.96,0:00:12.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}能清晰感受到
+Dialogue: 0,0:00:12.62,0:00:15.28,Default,,0,0,0,,她体内原本枯竭的元气已完全恢复
+Dialogue: 0,0:00:15.71,0:00:17.68,Default,,0,0,0,,甚至比{\c&H0000FFFF&\b1}全盛时期{\c&H00FFFFFF&\b0}更加凝练
+Dialogue: 0,0:00:18.06,0:00:19.59,Default,,0,0,0,,夕月道人缓缓睁开眼
+Dialogue: 0,0:00:19.85,0:00:22.48,Default,,0,0,0,,眸中星辰幻灭这是力量达到新
+Dialogue: 0,0:00:22.48,0:00:24.43,Default,,0,0,0,,境界的征兆她并未多言
+Dialogue: 0,0:00:24.86,0:00:27.50,Default,,0,0,0,,只是素手轻扬{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}便感到识海一
+Dialogue: 0,0:00:27.50,0:00:29.73,Default,,0,0,0,,震她的分神已悄然回归

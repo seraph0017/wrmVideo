@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_043 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}掷出寒冰宝珠
+Dialogue: 0,0:00:01.85,0:00:03.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝珠{\c&H00FFFFFF&\b0}在空中化作巨大冰莲
+Dialogue: 0,0:00:04.34,0:00:06.22,Default,,0,0,0,,花瓣绽放射出万千道寒气
+Dialogue: 0,0:00:06.61,0:00:08.91,Default,,0,0,0,,将一名试图突围的魔神瞬间{\c&H0000FFFF&\b1}冰封{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.16,0:00:10.48,Default,,0,0,0,,魔神保持挣扎姿态
+Dialogue: 0,0:00:10.80,0:00:12.36,Default,,0,0,0,,体表覆盖三尺厚冰层
+Dialogue: 0,0:00:12.57,0:00:14.54,Default,,0,0,0,,冰层内部可见蓝色寒气流动
+Dialogue: 0,0:00:15.04,0:00:17.70,Default,,0,0,0,,血翼{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}等三名魔神见状惊恐后退
+Dialogue: 0,0:00:18.05,0:00:19.53,Default,,0,0,0,,抱团形成防御阵型
+Dialogue: 0,0:00:19.91,0:00:21.75,Default,,0,0,0,,血红色魔气汇聚成盾牌
+Dialogue: 0,0:00:21.98,0:00:23.82,Default,,0,0,0,,盾牌表面有血色纹路流转
+Dialogue: 0,0:00:24.21,0:00:25.75,Default,,0,0,0,,却因恐惧而微微颤抖

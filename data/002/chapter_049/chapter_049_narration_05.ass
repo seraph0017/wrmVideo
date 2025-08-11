@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_049 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.54,Default,,0,0,0,,杀啊{\c&H0000FFFF&\b1}玄玄{\c&H00FFFFFF&\b0}老祖挥刀怒吼
+Dialogue: 0,0:00:02.85,0:00:05.42,Default,,0,0,0,,身后战阵如黑色潮水涌向联军大阵
+Dialogue: 0,0:00:06.04,0:00:07.50,Default,,0,0,0,,通天教祖青袍翻飞
+Dialogue: 0,0:00:07.82,0:00:09.38,Default,,0,0,0,,八卦镜砸向半月{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.92,0:00:12.39,Default,,0,0,0,,老贼纳命来半月{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}横刀
+Dialogue: 0,0:00:12.39,0:00:14.45,Default,,0,0,0,,格挡火星四溅另一侧
+Dialogue: 0,0:00:14.77,0:00:16.15,Default,,0,0,0,,象牙{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}银枪虚刺
+Dialogue: 0,0:00:16.57,0:00:18.02,Default,,0,0,0,,七叶{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}长刀慢劈
+Dialogue: 0,0:00:18.28,0:00:20.04,Default,,0,0,0,,两人枪刀相碰却无实招
+Dialogue: 0,0:00:20.36,0:00:22.12,Default,,0,0,0,,眼神交流暗通款曲
+Dialogue: 0,0:00:22.39,0:00:23.80,Default,,0,0,0,,四周修者厮杀震天
+Dialogue: 0,0:00:24.06,0:00:24.86,Default,,0,0,0,,血流成河

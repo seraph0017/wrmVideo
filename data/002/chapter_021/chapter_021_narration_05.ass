@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_021 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.46,Default,,0,0,0,,血色飞溅{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}被斩中腰间
+Dialogue: 0,0:00:02.79,0:00:04.67,Default,,0,0,0,,开膛破肚内脏外露
+Dialogue: 0,0:00:04.97,0:00:08.03,Default,,0,0,0,,剧痛中他难以置信地看{\c&H0000FFFF&\b1}向天奇{\c&H00FFFFFF&\b0}圣者
+Dialogue: 0,0:00:08.31,0:00:09.72,Default,,0,0,0,,对方脸上只剩狰狞
+Dialogue: 0,0:00:10.23,0:00:12.20,Default,,0,0,0,,至宝归我{\c&H0000FFFF&\b1}阴罗{\c&H00FFFFFF&\b0}圣者狂笑
+Dialogue: 0,0:00:12.57,0:00:14.59,Default,,0,0,0,,你被算计了{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}强忍剧痛
+Dialogue: 0,0:00:14.85,0:00:17.42,Default,,0,0,0,,青铜鼎悬浮头顶喷出药液修复伤
+Dialogue: 0,0:00:17.42,0:00:18.95,Default,,0,0,0,,势眼神冰冷如霜

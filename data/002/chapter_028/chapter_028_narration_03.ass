@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_028 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.54,Default,,0,0,0,,莲池畔九曲{\c&H0000FFFF&\b1}石桥{\c&H00FFFFFF&\b0}上
+Dialogue: 0,0:00:01.89,0:00:03.07,Default,,0,0,0,,莲女背影亭亭玉立
+Dialogue: 0,0:00:03.36,0:00:04.88,Default,,0,0,0,,水绿色圆领宫装曳地
+Dialogue: 0,0:00:05.25,0:00:08.08,Default,,0,0,0,,青丝绾成垂挂髻她转身望向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.45,0:00:09.54,Default,,0,0,0,,气运既能助渡劫
+Dialogue: 0,0:00:09.74,0:00:11.00,Default,,0,0,0,,各方势力岂会不用
+Dialogue: 0,0:00:11.39,0:00:13.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}池中{\c&H00FFFFFF&\b0}锦鲤摆尾搅碎倒影
+Dialogue: 0,0:00:13.45,0:00:14.86,Default,,0,0,0,,岸边{\c&H0000FFFF&\b1}柳枝{\c&H00FFFFFF&\b0}垂落露珠
+Dialogue: 0,0:00:15.20,0:00:17.72,Default,,0,0,0,,晨雾尚未散尽将{\c&H0000FFFF&\b1}汉白玉{\c&H00FFFFFF&\b0}栏杆染得
+Dialogue: 0,0:00:17.72,0:00:18.11,Default,,0,0,0,,湿润

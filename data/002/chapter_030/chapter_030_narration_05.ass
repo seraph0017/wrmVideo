@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_030 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.60,Default,,0,0,0,,绝境中牛头魔祖竟引爆下身
+Dialogue: 0,0:00:03.00,0:00:05.30,Default,,0,0,0,,残躯飞向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}神魂欲逃
+Dialogue: 0,0:00:05.71,0:00:08.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕冷{\c&H00FFFFFF&\b0}哼一声打出数道玉符
+Dialogue: 0,0:00:08.34,0:00:10.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}符光{\c&H00FFFFFF&\b0}如网将其神魂牢牢锁住
+Dialogue: 0,0:00:10.87,0:00:12.25,Default,,0,0,0,,牛头魔祖神魂哀嚎
+Dialogue: 0,0:00:12.46,0:00:15.18,Default,,0,0,0,,最终被收入玉球永世受魔火煅烧

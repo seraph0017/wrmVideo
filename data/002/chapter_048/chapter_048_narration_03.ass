@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_048 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿钧{\c&H00FFFFFF&\b0}老祖一声令下
+Dialogue: 0,0:00:01.35,0:00:04.65,Default,,0,0,0,,50尊凶兽组成冲击阵型
+Dialogue: 0,0:00:04.26,0:00:06.74,Default,,0,0,0,,巨象在前开路巨蛇两侧包抄
+Dialogue: 0,0:00:07.17,0:00:08.91,Default,,0,0,0,,狮形凶兽发出音波攻击
+Dialogue: 0,0:00:09.21,0:00:11.26,Default,,0,0,0,,牛神一族阵型瞬间崩溃
+Dialogue: 0,0:00:11.58,0:00:13.74,Default,,0,0,0,,半步{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}强者被数头凶兽围攻
+Dialogue: 0,0:00:14.12,0:00:16.20,Default,,0,0,0,,绿灵{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}被巨象和巨蛇夹击
+Dialogue: 0,0:00:16.64,0:00:19.43,Default,,0,0,0,,肩头血肉模糊通天教祖趁机偷袭
+Dialogue: 0,0:00:19.97,0:00:22.84,Default,,0,0,0,,诛仙剑划出寒光绿灵{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}惨叫一
+Dialogue: 0,0:00:22.84,0:00:24.95,Default,,0,0,0,,声倒飞身上又添新伤
+Dialogue: 0,0:00:25.34,0:00:28.17,Default,,0,0,0,,凶兽配合默契每一头都悍不畏死
+Dialogue: 0,0:00:28.66,0:00:30.33,Default,,0,0,0,,杀得牛{\c&H0000FFFF&\b1}神一族{\c&H00FFFFFF&\b0}节节败退

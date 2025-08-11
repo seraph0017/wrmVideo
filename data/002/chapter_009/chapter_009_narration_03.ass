@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_009 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.07,Default,,0,0,0,,白蒹葭惊呼当心自爆
+Dialogue: 0,0:00:02.34,0:00:03.83,Default,,0,0,0,,在血雨腥风的战场上
+Dialogue: 0,0:00:04.21,0:00:06.96,Default,,0,0,0,,她站在云端淡紫裙裾被风吹得猎
+Dialogue: 0,0:00:06.96,0:00:09.59,Default,,0,0,0,,猎作响面色苍白地看着{\c&H0000FFFF&\b1}镇山{\c&H00FFFFFF&\b0}始祖
+Dialogue: 0,0:00:09.59,0:00:12.21,Default,,0,0,0,,爆发气势周围守护强者瞬间结成
+Dialogue: 0,0:00:12.21,0:00:13.74,Default,,0,0,0,,防御阵{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}大盛
+Dialogue: 0,0:00:14.04,0:00:15.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}镇山{\c&H00FFFFFF&\b0}始祖周身气血暴涨
+Dialogue: 0,0:00:16.05,0:00:17.95,Default,,0,0,0,,山石悬浮杀气冲天
+Dialogue: 0,0:00:18.30,0:00:19.98,Default,,0,0,0,,却在最后关头转身突围
+Dialogue: 0,0:00:20.30,0:00:21.62,Default,,0,0,0,,留下一片狼藉战场

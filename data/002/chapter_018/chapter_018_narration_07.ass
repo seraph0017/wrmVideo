@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_018 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.83,Default,,0,0,0,,巨大{\c&H0000FFFF&\b1}恒星{\c&H00FFFFFF&\b0}前落月魔神颤抖着指向
+Dialogue: 0,0:00:02.83,0:00:05.83,Default,,0,0,0,,烈焰核心{\c&H0000FFFF&\b1}宝库{\c&H00FFFFFF&\b0}就在那里
+Dialogue: 0,0:00:05.83,0:00:08.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}眯眼望向恒星
+Dialogue: 0,0:00:07.50,0:00:09.41,Default,,0,0,0,,表面烈焰翻滚如金色{\c&H0000FFFF&\b1}海洋{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.79,0:00:11.02,Default,,0,0,0,,温度高得扭曲空间
+Dialogue: 0,0:00:11.31,0:00:12.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}天乾{\c&H00FFFFFF&\b0}始祖祭出冰魄镜
+Dialogue: 0,0:00:13.07,0:00:15.52,Default,,0,0,0,,寒气形成护罩九曲{\c&H0000FFFF&\b1}妖圣{\c&H00FFFFFF&\b0}背起炸药
+Dialogue: 0,0:00:15.52,0:00:18.07,Default,,0,0,0,,包咧嘴笑道炸穿核心
+Dialogue: 0,0:00:18.43,0:00:20.92,Default,,0,0,0,,把{\c&H0000FFFF&\b1}宝贝{\c&H00FFFFFF&\b0}全搬走青丘妙儿隐在众
+Dialogue: 0,0:00:20.92,0:00:22.64,Default,,0,0,0,,人身后指尖绿光流转
+Dialogue: 0,0:00:22.97,0:00:24.33,Default,,0,0,0,,警惕四周空间波动

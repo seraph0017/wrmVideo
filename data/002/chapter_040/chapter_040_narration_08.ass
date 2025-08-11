@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_040 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.95,Default,,0,0,0,,血色法阵中伸出无数魔臂抓向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.39,0:00:05.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}鸿蒙尺舞成紫电陀螺
+Dialogue: 0,0:00:05.82,0:00:07.79,Default,,0,0,0,,硬生生在魔臂阵中开出通路
+Dialogue: 0,0:00:08.02,0:00:10.23,Default,,0,0,0,,就是现在{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}突然俯身冲出
+Dialogue: 0,0:00:10.44,0:00:12.22,Default,,0,0,0,,尺尖直指{\c&H0000FFFF&\b1}恒生{\c&H00FFFFFF&\b0}魔祖眉心
+Dialogue: 0,0:00:12.46,0:00:13.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}恒生{\c&H00FFFFFF&\b0}魔祖狞笑抬手
+Dialogue: 0,0:00:14.16,0:00:15.21,Default,,0,0,0,,终于露出破绽了
+Dialogue: 0,0:00:15.61,0:00:17.34,Default,,0,0,0,,魔掌与尺尖距离不足三寸

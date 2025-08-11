@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_048 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.99,Default,,0,0,0,,巨大的混沌{\c&H0000FFFF&\b1}巨石{\c&H00FFFFFF&\b0}破空而来
+Dialogue: 0,0:00:02.35,0:00:03.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}牛神{\c&H00FFFFFF&\b0}大圣立于石上
+Dialogue: 0,0:00:04.40,0:00:05.86,Default,,0,0,0,,棕色圆领兽皮袍鼓荡
+Dialogue: 0,0:00:06.19,0:00:08.16,Default,,0,0,0,,双角闪烁{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}赵硕
+Dialogue: 0,0:00:08.41,0:00:09.64,Default,,0,0,0,,你竟用凶兽当炮灰
+Dialogue: 0,0:00:09.96,0:00:11.37,Default,,0,0,0,,他怒吼着一拳轰出
+Dialogue: 0,0:00:11.61,0:00:14.12,Default,,0,0,0,,拳风撕裂虚空{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}冷笑迎上
+Dialogue: 0,0:00:14.39,0:00:15.79,Default,,0,0,0,,恶魔{\c&H0000FFFF&\b1}古堡{\c&H00FFFFFF&\b0}悬浮头顶
+Dialogue: 0,0:00:16.01,0:00:17.72,Default,,0,0,0,,洒下{\c&H0000FFFF&\b1}玄光{\c&H00FFFFFF&\b0}彼此彼此
+Dialogue: 0,0:00:18.07,0:00:19.61,Default,,0,0,0,,双方{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}级威压碰撞
+Dialogue: 0,0:00:19.90,0:00:21.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}虚空泛起涟漪
+Dialogue: 0,0:00:21.30,0:00:25.50,Default,,0,0,0,,下方20尊半步{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}凶兽与牛神
+Dialogue: 0,0:00:24.50,0:00:27.20,Default,,0,0,0,,一族强者绞杀巨象用{\c&H0000FFFF&\b1}长牙{\c&H00FFFFFF&\b0}挑飞敌
+Dialogue: 0,0:00:27.20,0:00:28.70,Default,,0,0,0,,人巨蛇缠绕对手
+Dialogue: 0,0:00:28.94,0:00:31.31,Default,,0,0,0,,鲜血染红混沌石战况惨烈

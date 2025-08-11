@@ -1,0 +1,30 @@
+[Script Info]
+Title: chapter_011 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}太平{\c&H00FFFFFF&\b0}鬼祖拾级而上
+Dialogue: 0,0:00:01.90,0:00:04.32,Default,,0,0,0,,青色圆领道袍的衣摆扫过{\c&H0000FFFF&\b1}石阶{\c&H00FFFFFF&\b0}上的
+Dialogue: 0,0:00:04.32,0:00:06.92,Default,,0,0,0,,血渍他每一步都踏在{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}节点
+Dialogue: 0,0:00:07.20,0:00:09.04,Default,,0,0,0,,传送阵随之发出低沉嗡鸣
+Dialogue: 0,0:00:09.20,0:00:11.06,Default,,0,0,0,,本尊定以天魔一族利益为重
+Dialogue: 0,0:00:11.34,0:00:13.62,Default,,0,0,0,,声音不大却如重锤砸在每个人
+Dialogue: 0,0:00:13.62,0:00:16.50,Default,,0,0,0,,心头{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}祖面具后的瞳孔骤缩
+Dialogue: 0,0:00:17.09,0:00:18.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}太平{\c&H00FFFFFF&\b0}鬼祖左手无名指上
+Dialogue: 0,0:00:19.23,0:00:21.70,Default,,0,0,0,,那枚本该在百年前碎裂的镇魂戒
+Dialogue: 0,0:00:21.70,0:00:22.94,Default,,0,0,0,,正泛着幽蓝微光
+Dialogue: 0,0:00:23.23,0:00:24.92,Default,,0,0,0,,台下黑煞突然呛咳
+Dialogue: 0,0:00:25.23,0:00:27.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄色劲{\c&H00FFFFFF&\b0}装领口渗出鲜血
+Dialogue: 0,0:00:27.52,0:00:30.24,Default,,0,0,0,,他死死捂住嘴指缝间流出的血沫
+Dialogue: 0,0:00:30.24,0:00:31.91,Default,,0,0,0,,在朝阳下如{\c&H0000FFFF&\b1}红梅{\c&H00FFFFFF&\b0}绽放

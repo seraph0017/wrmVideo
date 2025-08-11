@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_022 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}取出数枚灵果
+Dialogue: 0,0:00:01.91,0:00:04.06,Default,,0,0,0,,称可助凡人{\c&H0000FFFF&\b1}成圣白{\c&H00FFFFFF&\b0}蒹葭
+Dialogue: 0,0:00:04.50,0:00:06.83,Default,,0,0,0,,摇光天女等实力较高者纷纷推让
+Dialogue: 0,0:00:07.42,0:00:09.62,Default,,0,0,0,,愿将机缘让与{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}等修为较低者
+Dialogue: 0,0:00:09.92,0:00:12.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}欣慰又取出生死天舟赠予白
+Dialogue: 0,0:00:12.46,0:00:14.57,Default,,0,0,0,,蒹葭造化塔赠予摇光天女
+Dialogue: 0,0:00:14.91,0:00:16.55,Default,,0,0,0,,至宝光华{\c&H0000FFFF&\b1}映亮{\c&H00FFFFFF&\b0}整个隐龙岛

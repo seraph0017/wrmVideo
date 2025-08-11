@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_019 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}本体与六分身互换位置
+Dialogue: 0,0:00:02.44,0:00:05.28,Default,,0,0,0,,迷惑魔尊星河重宝突然爆发强光
+Dialogue: 0,0:00:05.75,0:00:07.20,Default,,0,0,0,,将百名魔神卷入其中
+Dialogue: 0,0:00:07.46,0:00:10.16,Default,,0,0,0,,惨叫声戛然而止{\c&H0000FFFF&\b1}青丘怜{\c&H00FFFFFF&\b0}儿率长老
+Dialogue: 0,0:00:10.16,0:00:12.69,Default,,0,0,0,,突袭暴风魔尊锁链如毒蛇缠上其
+Dialogue: 0,0:00:12.69,0:00:15.54,Default,,0,0,0,,四肢紫雾中{\c&H0000FFFF&\b1}青丘{\c&H00FFFFFF&\b0}妙儿祭出先天灵
+Dialogue: 0,0:00:15.54,0:00:17.07,Default,,0,0,0,,宝{\c&H0000FFFF&\b1}紫光{\c&H00FFFFFF&\b0}穿透魔掌
+Dialogue: 0,0:00:17.42,0:00:19.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨戬玉{\c&H00FFFFFF&\b0}虚大阵金光暴涨
+Dialogue: 0,0:00:19.20,0:00:23.39,Default,,0,0,0,,与群魔大阵再次collisi
+Dialogue: 0,0:00:23.39,0:00:26.09,Default,,0,0,0,,on空间扭曲如波纹

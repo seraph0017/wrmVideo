@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_015 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:03.02,Default,,0,0,0,,剧痛{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女突然感觉全身如被
+Dialogue: 0,0:00:03.02,0:00:05.14,Default,,0,0,0,,亿万蚂蚁啃噬奇痒钻心
+Dialogue: 0,0:00:05.70,0:00:07.29,Default,,0,0,0,,她不受控制地伸手抓挠
+Dialogue: 0,0:00:07.58,0:00:09.86,Default,,0,0,0,,指甲划破肌肤鲜血淋漓
+Dialogue: 0,0:00:10.01,0:00:12.48,Default,,0,0,0,,更恐怖的是这痒意源自灵魂深处
+Dialogue: 0,0:00:12.82,0:00:15.24,Default,,0,0,0,,越抓越烈她甚至能听到自己指甲
+Dialogue: 0,0:00:15.46,0:00:16.89,Default,,0,0,0,,刮过骨头的刺耳声响

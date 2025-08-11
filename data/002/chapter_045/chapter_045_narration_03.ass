@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_045 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.19,Default,,0,0,0,,惊天秘闻域外强者降临
+Dialogue: 0,0:00:02.48,0:00:03.50,Default,,0,0,0,,三人短暂汇合
+Dialogue: 0,0:00:04.02,0:00:06.28,Default,,0,0,0,,虚元大尊喘息着道出惊人推测
+Dialogue: 0,0:00:06.94,0:00:09.18,Default,,0,0,0,,荒木恶魔及其同伴可能来自万象
+Dialogue: 0,0:00:09.18,0:00:11.62,Default,,0,0,0,,大世界之外这番话让{\c&H0000FFFF&\b1}黑牙{\c&H00FFFFFF&\b0}大尊
+Dialogue: 0,0:00:11.62,0:00:14.31,Default,,0,0,0,,与{\c&H0000FFFF&\b1}青山{\c&H00FFFFFF&\b0}大尊瞳孔骤缩他们毕生
+Dialogue: 0,0:00:14.31,0:00:16.27,Default,,0,0,0,,都在寻找离开这片牢笼的方法
+Dialogue: 0,0:00:16.59,0:00:18.46,Default,,0,0,0,,虚元大尊指向荒木恶魔
+Dialogue: 0,0:00:18.88,0:00:20.99,Default,,0,0,0,,抓住他或许就能找到出路
+Dialogue: 0,0:00:20.99,0:00:20.99,Default,,0,0,0,,

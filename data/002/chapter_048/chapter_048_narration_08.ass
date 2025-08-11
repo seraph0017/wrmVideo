@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_048 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.75,Default,,0,0,0,,日月{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}天王大圣联手攻来
+Dialogue: 0,0:00:03.12,0:00:04.46,Default,,0,0,0,,日月{\c&H0000FFFF&\b1}宝剑{\c&H00FFFFFF&\b0}斩出银辉
+Dialogue: 0,0:00:05.01,0:00:07.76,Default,,0,0,0,,天王旗卷起风暴{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}独战双圣
+Dialogue: 0,0:00:08.20,0:00:09.54,Default,,0,0,0,,恶魔{\c&H0000FFFF&\b1}古堡{\c&H00FFFFFF&\b0}抵挡日月剑
+Dialogue: 0,0:00:09.77,0:00:11.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}尺硬撼天王旗
+Dialogue: 0,0:00:11.43,0:00:12.46,Default,,0,0,0,,你们两{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}联手
+Dialogue: 0,0:00:12.78,0:00:15.05,Default,,0,0,0,,也未必胜我他怒吼着喷出精血
+Dialogue: 0,0:00:15.45,0:00:17.66,Default,,0,0,0,,恶魔古堡暴涨将{\c&H0000FFFF&\b1}双圣震{\c&H00FFFFFF&\b0}退
+Dialogue: 0,0:00:18.00,0:00:21.13,Default,,0,0,0,,下方{\c&H0000FFFF&\b1}白眉{\c&H00FFFFFF&\b0}老祖通天教祖率联军
+Dialogue: 0,0:00:21.13,0:00:23.39,Default,,0,0,0,,与日月宗天王宗人马绞杀
+Dialogue: 0,0:00:23.62,0:00:26.16,Default,,0,0,0,,喊杀震天{\c&H0000FFFF&\b1}法宝{\c&H00FFFFFF&\b0}光芒照亮整个混乱
+Dialogue: 0,0:00:26.16,0:00:26.50,Default,,0,0,0,,地带

@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_043 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖趁光阴老祖分神之际
+Dialogue: 0,0:00:02.83,0:00:04.26,Default,,0,0,0,,拂尘化作{\c&H0000FFFF&\b1}青龙{\c&H00FFFFFF&\b0}虚影
+Dialogue: 0,0:00:04.68,0:00:06.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}张口{\c&H00FFFFFF&\b0}喷出青色火焰
+Dialogue: 0,0:00:06.47,0:00:07.97,Default,,0,0,0,,将光阴{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}左臂冰封
+Dialogue: 0,0:00:08.23,0:00:09.73,Default,,0,0,0,,光阴{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}惨叫着后退
+Dialogue: 0,0:00:09.93,0:00:11.37,Default,,0,0,0,,左臂覆盖青蓝色冰层
+Dialogue: 0,0:00:11.65,0:00:14.39,Default,,0,0,0,,冰层蔓延至肩头黑色魔气疯狂涌
+Dialogue: 0,0:00:14.39,0:00:17.24,Default,,0,0,0,,动试图破冰{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}操控天河圣殿压
+Dialogue: 0,0:00:17.24,0:00:19.91,Default,,0,0,0,,向血翼{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}圣殿底部符文亮起
+Dialogue: 0,0:00:20.18,0:00:21.80,Default,,0,0,0,,散发出镇压时空的重力场
+Dialogue: 0,0:00:22.18,0:00:24.11,Default,,0,0,0,,血翼{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}等三人膝盖弯曲
+Dialogue: 0,0:00:24.42,0:00:25.41,Default,,0,0,0,,面色痛苦不堪

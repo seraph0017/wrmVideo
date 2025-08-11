@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_043 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于天河圣殿顶端
+Dialogue: 0,0:00:02.11,0:00:04.89,Default,,0,0,0,,俯瞰战场残局{\c&H0000FFFF&\b1}冰封{\c&H00FFFFFF&\b0}的魔神与散落
+Dialogue: 0,0:00:04.89,0:00:06.74,Default,,0,0,0,,的法宝残骸点缀{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}虚空
+Dialogue: 0,0:00:07.17,0:00:09.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖与鬼脸大王侍立两侧
+Dialogue: 0,0:00:09.99,0:00:12.54,Default,,0,0,0,,前者整理道袍后者擦拭鬼头刀
+Dialogue: 0,0:00:12.91,0:00:14.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}取出玉瓶倒出疗伤丹药
+Dialogue: 0,0:00:15.16,0:00:16.89,Default,,0,0,0,,金色丹药散发柔和光晕
+Dialogue: 0,0:00:17.35,0:00:19.73,Default,,0,0,0,,正欲服用时突然望向混沌深处
+Dialogue: 0,0:00:20.10,0:00:22.48,Default,,0,0,0,,眉头微皱似察觉远方异动
+Dialogue: 0,0:00:23.00,0:00:24.66,Default,,0,0,0,,天河圣殿{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}随之微亮

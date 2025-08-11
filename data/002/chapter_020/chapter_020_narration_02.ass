@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_020 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.85,Default,,0,0,0,,通天吼妖圣现身万丈妖魔真身遮
+Dialogue: 0,0:00:02.85,0:00:05.14,Default,,0,0,0,,天蔽日一声怒吼天地变色
+Dialogue: 0,0:00:05.54,0:00:08.12,Default,,0,0,0,,声波震碎虚空他周身鬃毛倒竖
+Dialogue: 0,0:00:08.40,0:00:10.88,Default,,0,0,0,,圆领兽皮袍紧绷尽显{\c&H0000FFFF&\b1}上古{\c&H00FFFFFF&\b0}妖兽威
+Dialogue: 0,0:00:10.88,0:00:13.62,Default,,0,0,0,,严暴风魔尊不甘示弱催动飓风迎
+Dialogue: 0,0:00:13.62,0:00:14.98,Default,,0,0,0,,击二者{\c&H0000FFFF&\b1}神通{\c&H00FFFFFF&\b0}碰撞
+Dialogue: 0,0:00:15.30,0:00:16.95,Default,,0,0,0,,飓风与音波撕裂星空
+Dialogue: 0,0:00:17.25,0:00:19.09,Default,,0,0,0,,双双受创鲜血飞溅

@@ -1,0 +1,34 @@
+[Script Info]
+Title: chapter_037 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄祖将玉{\c&H00FFFFFF&\b0}简递给身旁红脸老者
+Dialogue: 0,0:00:02.79,0:00:04.08,Default,,0,0,0,,老者看完拍案而起
+Dialogue: 0,0:00:04.50,0:00:06.00,Default,,0,0,0,,好个七情六欲分神诀
+Dialogue: 0,0:00:06.47,0:00:08.68,Default,,0,0,0,,原来{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}献出的化身神通已在万
+Dialogue: 0,0:00:08.68,0:00:11.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}古大{\c&H00FFFFFF&\b0}世界传开却因消耗天材地宝
+Dialogue: 0,0:00:11.32,0:00:13.86,Default,,0,0,0,,引发资源危机{\c&H0000FFFF&\b1}丹阳{\c&H00FFFFFF&\b0}子突然躬身请
+Dialogue: 0,0:00:13.86,0:00:16.06,Default,,0,0,0,,战弟子愿率援军打头阵
+Dialogue: 0,0:00:16.45,0:00:18.73,Default,,0,0,0,,为{\c&H0000FFFF&\b1}洪荒{\c&H00FFFFFF&\b0}修者分忧声音激昂
+Dialogue: 0,0:00:19.28,0:00:20.61,Default,,0,0,0,,震得殿内铜铃轻响
+Dialogue: 0,0:00:20.90,0:00:23.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}连忙劝阻大战需统筹
+Dialogue: 0,0:00:23.86,0:00:26.07,Default,,0,0,0,,贸然出击恐中混沌魔神埋伏
+Dialogue: 0,0:00:26.43,0:00:28.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄祖抚{\c&H00FFFFFF&\b0}须赞同目光扫过众人
+Dialogue: 0,0:00:29.47,0:00:31.06,Default,,0,0,0,,诸位随{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}熟悉防线
+Dialogue: 0,0:00:31.50,0:00:34.18,Default,,0,0,0,,三日后开拔场景设定为大殿
+Dialogue: 0,0:00:34.47,0:00:36.19,Default,,0,0,0,,光柱已移至{\c&H0000FFFF&\b1}丹阳{\c&H00FFFFFF&\b0}子身上
+Dialogue: 0,0:00:36.63,0:00:39.52,Default,,0,0,0,,他白袍{\c&H0000FFFF&\b1}生辉{\c&H00FFFFFF&\b0}身后众道祖眼神炽热
+Dialogue: 0,0:00:39.88,0:00:42.30,Default,,0,0,0,,长明灯光将众人身影投在墙上
+Dialogue: 0,0:00:42.73,0:00:43.49,Default,,0,0,0,,如群仙图

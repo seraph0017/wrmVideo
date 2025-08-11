@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_041 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}目光锁定逃窜的华光魔祖
+Dialogue: 0,0:00:02.52,0:00:05.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}尺脱手飞出化作一道紫色流
+Dialogue: 0,0:00:05.51,0:00:08.34,Default,,0,0,0,,光追去{\c&H0000FFFF&\b1}华光{\c&H00FFFFFF&\b0}魔祖感应到死亡危机
+Dialogue: 0,0:00:08.65,0:00:10.03,Default,,0,0,0,,竟拼着硬受对手一击
+Dialogue: 0,0:00:10.29,0:00:12.59,Default,,0,0,0,,转身拔腿狂奔速度快如闪电
+Dialogue: 0,0:00:12.86,0:00:14.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}见状先是一愣
+Dialogue: 0,0:00:14.38,0:00:16.43,Default,,0,0,0,,随即仰头大笑想逃
+Dialogue: 0,0:00:16.75,0:00:19.11,Default,,0,0,0,,没那么容易笑声中充满不屑
+Dialogue: 0,0:00:19.43,0:00:21.46,Default,,0,0,0,,脚下遁光一闪紧追不舍

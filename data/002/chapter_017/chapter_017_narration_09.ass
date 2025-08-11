@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_017 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}的大手滑到苏青婵的臀部
+Dialogue: 0,0:00:02.57,0:00:04.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵发出一声娇呼
+Dialogue: 0,0:00:04.48,0:00:05.70,Default,,0,0,0,,双手按住他的肩膀
+Dialogue: 0,0:00:06.00,0:00:07.78,Default,,0,0,0,,红色短裙在拉扯下变形
+Dialogue: 0,0:00:08.09,0:00:09.46,Default,,0,0,0,,圆领边缘微微倾斜
+Dialogue: 0,0:00:09.72,0:00:11.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}低头靠近她的耳朵
+Dialogue: 0,0:00:11.56,0:00:13.63,Default,,0,0,0,,灰色T恤的领口贴近她的脸颊
+Dialogue: 0,0:00:13.99,0:00:16.31,Default,,0,0,0,,语气暧昧{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵眼神迷离
+Dialogue: 0,0:00:16.54,0:00:18.10,Default,,0,0,0,,双手慢慢环上他的脖子
+Dialogue: 0,0:00:18.54,0:00:20.59,Default,,0,0,0,,黑色{\c&H0000FFFF&\b1}长发{\c&H00FFFFFF&\b0}垂落在红色短裙上

@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_017 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵心念一动身上的白色衬衫
+Dialogue: 0,0:00:02.83,0:00:04.36,Default,,0,0,0,,瞬间变成黑色长裙
+Dialogue: 0,0:00:04.76,0:00:06.08,Default,,0,0,0,,圆领设计贴合颈部
+Dialogue: 0,0:00:06.50,0:00:09.10,Default,,0,0,0,,裙摆垂到脚踝她兴奋地在原地转
+Dialogue: 0,0:00:09.10,0:00:11.38,Default,,0,0,0,,圈黑色{\c&H0000FFFF&\b1}长发{\c&H00FFFFFF&\b0}随着动作飞扬
+Dialogue: 0,0:00:11.66,0:00:13.16,Default,,0,0,0,,裙摆划出优美弧线
+Dialogue: 0,0:00:13.46,0:00:16.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}眼神发亮双手抱胸靠在办公
+Dialogue: 0,0:00:16.12,0:00:19.18,Default,,0,0,0,,桌边嘴角含笑苏青婵转晕了靠
+Dialogue: 0,0:00:19.18,0:00:21.77,Default,,0,0,0,,在{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}怀里黑色长裙的圆领微微
+Dialogue: 0,0:00:21.77,0:00:23.84,Default,,0,0,0,,变形露出纤细的肩膀

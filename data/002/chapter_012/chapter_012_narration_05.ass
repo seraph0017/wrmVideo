@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_012 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.66,Default,,0,0,0,,幻影天女接着介绍自己
+Dialogue: 0,0:00:02.10,0:00:03.27,Default,,0,0,0,,她是幻影宗{\c&H0000FFFF&\b1}大长老{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.53,0:00:05.10,Default,,0,0,0,,同样拥有上古道主修为
+Dialogue: 0,0:00:05.47,0:00:07.29,Default,,0,0,0,,凭借幻术保全了部分姐妹
+Dialogue: 0,0:00:07.64,0:00:08.85,Default,,0,0,0,,但仍有无数人被害
+Dialogue: 0,0:00:09.06,0:00:11.56,Default,,0,0,0,,她提及此事语气中充满自责与愤
+Dialogue: 0,0:00:11.56,0:00:13.89,Default,,0,0,0,,怒周身散发出淡淡的幻术波动
+Dialogue: 0,0:00:14.24,0:00:16.43,Default,,0,0,0,,周围景物似乎都随之扭曲了一瞬

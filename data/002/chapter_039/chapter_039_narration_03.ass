@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_039 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}心中冷哼识破弥勒佛祖的算
+Dialogue: 0,0:00:02.81,0:00:05.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}计若{\c&H00FFFFFF&\b0}让鬼脸大王讲出捷径
+Dialogue: 0,0:00:05.54,0:00:07.11,Default,,0,0,0,,众人得利若拒绝
+Dialogue: 0,0:00:07.33,0:00:09.57,Default,,0,0,0,,必遭猜忌多宝道人暗中传音
+Dialogue: 0,0:00:09.85,0:00:11.35,Default,,0,0,0,,小心{\c&H0000FFFF&\b1}弥勒{\c&H00FFFFFF&\b0}有意针对
+Dialogue: 0,0:00:11.63,0:00:12.95,Default,,0,0,0,,可让鬼脸大王简述
+Dialogue: 0,0:00:13.16,0:00:15.97,Default,,0,0,0,,关键处含糊其辞{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}嘴角勾起
+Dialogue: 0,0:00:15.97,0:00:17.91,Default,,0,0,0,,一抹{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}看向鬼脸大王

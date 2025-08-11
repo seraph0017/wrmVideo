@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_008 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.58,Default,,0,0,0,,又一头狼将突破防线
+Dialogue: 0,0:00:01.99,0:00:04.53,Default,,0,0,0,,它目露凶光涎水顺着獠牙滴落
+Dialogue: 0,0:00:04.96,0:00:06.33,Default,,0,0,0,,朝着撤退人群猛扑
+Dialogue: 0,0:00:06.67,0:00:09.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙欣{\c&H00FFFFFF&\b0}银甲闪烁圆领战裙下摆翻飞
+Dialogue: 0,0:00:09.71,0:00:11.51,Default,,0,0,0,,手中长剑划出七道寒光
+Dialogue: 0,0:00:11.76,0:00:13.16,Default,,0,0,0,,与{\c&H0000FFFF&\b1}凤岚{\c&H00FFFFFF&\b0}澹台沧海
+Dialogue: 0,0:00:13.42,0:00:15.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}兰心{\c&H00FFFFFF&\b0}天女呈四角之势拦截
+Dialogue: 0,0:00:15.72,0:00:17.55,Default,,0,0,0,,四件先天{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}光华交织
+Dialogue: 0,0:00:17.81,0:00:19.02,Default,,0,0,0,,将狼将困在中央

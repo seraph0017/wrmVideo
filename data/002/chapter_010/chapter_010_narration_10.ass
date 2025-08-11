@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_010 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.76,Default,,0,0,0,,玄心道人{\c&H0000FFFF&\b1}闻讯{\c&H00FFFFFF&\b0}惊摔茶杯
+Dialogue: 0,0:00:02.33,0:00:04.28,Default,,0,0,0,,冷汗涔涔下令追查{\c&H0000FFFF&\b1}南胡{\c&H00FFFFFF&\b0}道人
+Dialogue: 0,0:00:04.83,0:00:06.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕抚{\c&H00FFFFFF&\b0}着脸颊伤口冷笑
+Dialogue: 0,0:00:07.02,0:00:08.27,Default,,0,0,0,,想嫁祸{\c&H0000FFFF&\b1}玄心{\c&H00FFFFFF&\b0}正宗
+Dialogue: 0,0:00:08.64,0:00:09.86,Default,,0,0,0,,通天鬼祖厉声道
+Dialogue: 0,0:00:10.49,0:00:13.09,Default,,0,0,0,,请府主下令属下愿荡平玄{\c&H0000FFFF&\b1}灵山{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.37,0:00:14.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}摆手不急
+Dialogue: 0,0:00:14.82,0:00:17.64,Default,,0,0,0,,这出戏才刚开场殿外{\c&H0000FFFF&\b1}雷雨{\c&H00FFFFFF&\b0}欲来
+Dialogue: 0,0:00:17.98,0:00:20.52,Default,,0,0,0,,一场席卷八大{\c&H0000FFFF&\b1}道宗{\c&H00FFFFFF&\b0}的风暴正在酝酿

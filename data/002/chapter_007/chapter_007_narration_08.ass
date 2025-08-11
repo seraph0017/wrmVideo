@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_007 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}屠魔{\c&H00FFFFFF&\b0}联盟帅帐擎天宗主指着地图
+Dialogue: 0,0:00:03.44,0:00:05.87,Default,,0,0,0,,我们在此设伏等三眼魔族攻北
+Dialogue: 0,0:00:05.87,0:00:08.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}宫山{\c&H00FFFFFF&\b0}西方联盟必来求援
+Dialogue: 0,0:00:08.42,0:00:09.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}白眉长{\c&H00FFFFFF&\b0}老谄媚笑道
+Dialogue: 0,0:00:10.16,0:00:12.20,Default,,0,0,0,,宗主{\c&H0000FFFF&\b1}英明{\c&H00FFFFFF&\b0}让他们两败俱伤
+Dialogue: 0,0:00:12.45,0:00:14.73,Default,,0,0,0,,我们坐收渔利鬼算子站在角落
+Dialogue: 0,0:00:15.02,0:00:17.30,Default,,0,0,0,,张了{\c&H0000FFFF&\b1}张嘴{\c&H00FFFFFF&\b0}最终化为一声叹息
+Dialogue: 0,0:00:17.55,0:00:18.97,Default,,0,0,0,,帐外传来集合号角
+Dialogue: 0,0:00:19.35,0:00:21.86,Default,,0,0,0,,士兵脚步声杂乱一场阴谋悄然展
+Dialogue: 0,0:00:21.86,0:00:22.07,Default,,0,0,0,,开

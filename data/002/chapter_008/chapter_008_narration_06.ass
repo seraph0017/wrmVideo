@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_008 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}凝视沙盘指尖划过狼族营地
+Dialogue: 0,0:00:02.88,0:00:05.38,Default,,0,0,0,,标记狼人主力退守黑风谷
+Dialogue: 0,0:00:05.72,0:00:07.13,Default,,0,0,0,,传令各军休整三日
+Dialogue: 0,0:00:07.45,0:00:09.20,Default,,0,0,0,,白蒹葭为他披上玄狐裘
+Dialogue: 0,0:00:09.60,0:00:11.38,Default,,0,0,0,,月白袖口掠过他腕间{\c&H0000FFFF&\b1}佛珠{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.64,0:00:13.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}展开羊皮地图
+Dialogue: 0,0:00:13.31,0:00:15.45,Default,,0,0,0,,浅紫衣袖拂过标注陷阱的{\c&H0000FFFF&\b1}朱砂{\c&H00FFFFFF&\b0}点
+Dialogue: 0,0:00:15.73,0:00:18.15,Default,,0,0,0,,轻声道{\c&H0000FFFF&\b1}谷中{\c&H00FFFFFF&\b0}设有九九归墟阵
+Dialogue: 0,0:00:18.15,0:00:18.15,Default,,0,0,0,,

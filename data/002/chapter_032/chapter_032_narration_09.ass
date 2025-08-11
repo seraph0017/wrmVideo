@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_032 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.74,Default,,0,0,0,,我会用最强手段送你{\c&H0000FFFF&\b1}上路{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.19,0:00:04.08,Default,,0,0,0,,通天教祖双手缓缓合十
+Dialogue: 0,0:00:04.70,0:00:06.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}青萍{\c&H00FFFFFF&\b0}古剑与阵图悬浮于身后
+Dialogue: 0,0:00:07.08,0:00:09.19,Default,,0,0,0,,周身散发出半步{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}的威压
+Dialogue: 0,0:00:09.50,0:00:11.20,Default,,0,0,0,,无法魔祖眼中闪过决绝
+Dialogue: 0,0:00:11.42,0:00:13.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄色{\c&H00FFFFFF&\b0}长袍鼓荡我会拉你一起
+Dialogue: 0,0:00:13.89,0:00:16.48,Default,,0,0,0,,两人双目对视虚空因战意扭曲
+Dialogue: 0,0:00:16.77,0:00:19.09,Default,,0,0,0,,一个杀意凛然一个气势不屈
+Dialogue: 0,0:00:19.36,0:00:21.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}大战{\c&H00FFFFFF&\b0}一触即发这是最后的对决

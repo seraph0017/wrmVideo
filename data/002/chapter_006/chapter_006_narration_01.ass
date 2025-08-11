@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_006 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.86,Default,,0,0,0,,场景设定在{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}大殿
+Dialogue: 0,0:00:02.31,0:00:04.42,Default,,0,0,0,,午后{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}透过雕花窗棂洒入
+Dialogue: 0,0:00:04.90,0:00:06.33,Default,,0,0,0,,空气中漂浮着微尘
+Dialogue: 0,0:00:06.81,0:00:09.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}站在殿中目光凝重地望着殿
+Dialogue: 0,0:00:09.25,0:00:10.51,Default,,0,0,0,,外云雾缭绕的山峦
+Dialogue: 0,0:00:10.71,0:00:13.11,Default,,0,0,0,,回忆起曾闯入时空断层所见的{\c&H0000FFFF&\b1}上古{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.11,0:00:14.79,Default,,0,0,0,,大劫星辰破碎
+Dialogue: 0,0:00:15.16,0:00:18.06,Default,,0,0,0,,生灵陨落如雨惨烈景象让他{\c&H0000FFFF&\b1}握拳{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.31,0:00:20.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}自语{\c&H00FFFFFF&\b0}千万属下也不嫌多
+Dialogue: 0,0:00:20.80,0:00:23.00,Default,,0,0,0,,大劫之下人手永远不够
+Dialogue: 0,0:00:23.00,0:00:23.00,Default,,0,0,0,,

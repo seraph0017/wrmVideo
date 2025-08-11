@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_032 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.81,Default,,0,0,0,,轰然巨响通天教祖最强一击落下
+Dialogue: 0,0:00:03.35,0:00:04.90,Default,,0,0,0,,无法魔祖脑袋当场爆开
+Dialogue: 0,0:00:05.42,0:00:06.85,Default,,0,0,0,,一道虚弱神魂飞出
+Dialogue: 0,0:00:07.25,0:00:09.90,Default,,0,0,0,,他探手一抓数道{\c&H0000FFFF&\b1}封印{\c&H00FFFFFF&\b0}打在神魂上
+Dialogue: 0,0:00:10.13,0:00:12.25,Default,,0,0,0,,结束了神魂在{\c&H0000FFFF&\b1}封印{\c&H00FFFFFF&\b0}中嘶吼
+Dialogue: 0,0:00:12.53,0:00:14.95,Default,,0,0,0,,却无力反抗通天教祖收起阵法
+Dialogue: 0,0:00:15.38,0:00:18.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}青萍{\c&H00FFFFFF&\b0}古剑入体身形晃动这场
+Dialogue: 0,0:00:18.32,0:00:20.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}大战{\c&H00FFFFFF&\b0}耗尽了他大半元气
+Dialogue: 0,0:00:20.44,0:00:23.23,Default,,0,0,0,,虚空突然破碎鸿钧道祖与{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老
+Dialogue: 0,0:00:23.23,0:00:24.66,Default,,0,0,0,,祖的神念同时降临

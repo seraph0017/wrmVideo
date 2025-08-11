@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_008 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.54,Default,,0,0,0,,夜探斥候回报狼人营地异动
+Dialogue: 0,0:00:02.83,0:00:04.96,Default,,0,0,0,,似有援军{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}猛地起身
+Dialogue: 0,0:00:05.47,0:00:07.28,Default,,0,0,0,,圆领袍下摆扫落案头茶杯
+Dialogue: 0,0:00:07.66,0:00:10.19,Default,,0,0,0,,青瓷碎裂声中他抓起身侧通天锁
+Dialogue: 0,0:00:10.19,0:00:11.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙柱{\c&H00FFFFFF&\b0}全军戒备
+Dialogue: 0,0:00:11.79,0:00:13.38,Default,,0,0,0,,帐外骤然响起牛角号
+Dialogue: 0,0:00:13.62,0:00:15.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄甲{\c&H00FFFFFF&\b0}士兵如潮水般涌向城墙

@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_050 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.62,Default,,0,0,0,,胖大圣和瘦大圣得知{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}截杀牛神
+Dialogue: 0,0:00:02.62,0:00:04.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}后神色剧变
+Dialogue: 0,0:00:04.67,0:00:06.39,Default,,0,0,0,,在{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}虚空的幽暗背景下
+Dialogue: 0,0:00:06.79,0:00:08.35,Default,,0,0,0,,两人立于祭炼的大陆之上
+Dialogue: 0,0:00:08.65,0:00:10.23,Default,,0,0,0,,周围是闪烁的星辰碎片
+Dialogue: 0,0:00:10.51,0:00:12.79,Default,,0,0,0,,胖{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}咬牙切齿肥肉震颤
+Dialogue: 0,0:00:13.12,0:00:14.60,Default,,0,0,0,,瘦{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}则眼神阴鸷
+Dialogue: 0,0:00:14.89,0:00:16.43,Default,,0,0,0,,周身散发着黑色雾气
+Dialogue: 0,0:00:16.80,0:00:18.93,Default,,0,0,0,,他们没想到{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}竟能猜到计划
+Dialogue: 0,0:00:19.24,0:00:21.42,Default,,0,0,0,,还将二十尊半步{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}几乎全灭
+Dialogue: 0,0:00:21.82,0:00:24.56,Default,,0,0,0,,愤怒与震惊交织决定趁{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}未归
+Dialogue: 0,0:00:24.91,0:00:26.44,Default,,0,0,0,,全力进攻战争{\c&H0000FFFF&\b1}浮屠{\c&H00FFFFFF&\b0}

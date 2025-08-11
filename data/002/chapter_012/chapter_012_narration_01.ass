@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_012 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.51,Default,,0,0,0,,幽暗潮湿的洞穴深处
+Dialogue: 0,0:00:01.91,0:00:04.38,Default,,0,0,0,,上万名女子赤身裸体被囚禁于此
+Dialogue: 0,0:00:04.93,0:00:06.80,Default,,0,0,0,,空气中弥漫着绝望与恐惧
+Dialogue: 0,0:00:07.24,0:00:10.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}踏入洞穴眼前景象令他震惊
+Dialogue: 0,0:00:10.43,0:00:11.71,Default,,0,0,0,,女子们虽衣衫尽失
+Dialogue: 0,0:00:12.04,0:00:13.74,Default,,0,0,0,,眼神中却尚存不屈之光
+Dialogue: 0,0:00:14.06,0:00:16.45,Default,,0,0,0,,其中四位身姿最为出众的女子缓缓
+Dialogue: 0,0:00:16.45,0:00:18.39,Default,,0,0,0,,走出为首者玉腿修长
+Dialogue: 0,0:00:18.71,0:00:21.38,Default,,0,0,0,,正是百花天女她们在{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}审视的
+Dialogue: 0,0:00:21.38,0:00:24.02,Default,,0,0,0,,目光下脸上交织着震惊与羞愤

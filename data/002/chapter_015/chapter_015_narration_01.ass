@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_015 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.97,Default,,0,0,0,,混沌空间中{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女怒喝着挥掌
+Dialogue: 0,0:00:02.97,0:00:05.86,Default,,0,0,0,,拍向烈火魔尊掌风裹挟着血色魔
+Dialogue: 0,0:00:05.86,0:00:08.64,Default,,0,0,0,,焰撕裂虚空然而烈火魔尊身影骤
+Dialogue: 0,0:00:08.64,0:00:11.54,Default,,0,0,0,,散{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女的攻击狠狠砸在身后
+Dialogue: 0,0:00:11.54,0:00:13.24,Default,,0,0,0,,如虬龙般纠缠的血管壁上
+Dialogue: 0,0:00:13.46,0:00:15.04,Default,,0,0,0,,爆发出震耳欲聋的轰鸣
+Dialogue: 0,0:00:15.29,0:00:17.25,Default,,0,0,0,,破碎的血管喷涌出猩红液体
+Dialogue: 0,0:00:17.61,0:00:19.13,Default,,0,0,0,,却在眨眼间诡异复原
+Dialogue: 0,0:00:19.43,0:00:21.95,Default,,0,0,0,,显露出混沌魔尊魔躯的恐怖恢复力
+Dialogue: 0,0:00:22.48,0:00:25.09,Default,,0,0,0,,烈火魔尊的消失让{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女瞳孔骤
+Dialogue: 0,0:00:25.09,0:00:26.80,Default,,0,0,0,,缩警惕地扫视四周

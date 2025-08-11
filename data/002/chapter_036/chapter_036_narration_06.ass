@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_036 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}玉城{\c&H00FFFFFF&\b0}城主眼中精光一闪
+Dialogue: 0,0:00:02.28,0:00:05.27,Default,,0,0,0,,化身神通{\c&H0000FFFF&\b1}薛卿{\c&H00FFFFFF&\b0}取出玉简递上
+Dialogue: 0,0:00:05.73,0:00:07.32,Default,,0,0,0,,此乃七情六欲分神诀
+Dialogue: 0,0:00:07.67,0:00:10.11,Default,,0,0,0,,可祭炼道祖化身城主接过{\c&H0000FFFF&\b1}玉简{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.33,0:00:12.11,Default,,0,0,0,,神念探入面色骤变
+Dialogue: 0,0:00:12.45,0:00:14.44,Default,,0,0,0,,竟能分十三身{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}补充
+Dialogue: 0,0:00:14.72,0:00:16.97,Default,,0,0,0,,三日之内召集{\c&H0000FFFF&\b1}玉城{\c&H00FFFFFF&\b0}所有道祖
+Dialogue: 0,0:00:17.23,0:00:18.23,Default,,0,0,0,,机缘仅此一次

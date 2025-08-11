@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_040 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.27,Default,,0,0,0,,紫电与血光在不足三寸间僵持
+Dialogue: 0,0:00:02.73,0:00:05.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}额角青筋暴起手臂肌肉虬结
+Dialogue: 0,0:00:05.59,0:00:08.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}恒生{\c&H00FFFFFF&\b0}魔祖三颗头颅同时鼓胀如球
+Dialogue: 0,0:00:08.28,0:00:10.40,Default,,0,0,0,,给我爆{\c&H0000FFFF&\b1}恒生{\c&H00FFFFFF&\b0}魔祖突然嘶吼
+Dialogue: 0,0:00:10.53,0:00:12.92,Default,,0,0,0,,魔掌竟膨胀三倍{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}眼神一凛
+Dialogue: 0,0:00:13.23,0:00:14.79,Default,,0,0,0,,想同归于尽没门
+Dialogue: 0,0:00:15.08,0:00:17.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}尺突然缩小飞回掌心
+Dialogue: 0,0:00:17.35,0:00:19.12,Default,,0,0,0,,身形化作流光倒射而出

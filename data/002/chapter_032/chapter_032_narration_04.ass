@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_032 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.94,Default,,0,0,0,,杀机骤现通天教祖眉心亮起{\c&H0000FFFF&\b1}白光{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.36,0:00:06.45,Default,,0,0,0,,双手合十间一座虚幻{\c&H0000FFFF&\b1}小山{\c&H00FFFFFF&\b0}凝聚成
+Dialogue: 0,0:00:06.45,0:00:09.00,Default,,0,0,0,,形正是心剑秘术的变种杀招
+Dialogue: 0,0:00:09.32,0:00:10.72,Default,,0,0,0,,无法魔祖瞳孔骤缩
+Dialogue: 0,0:00:11.04,0:00:12.71,Default,,0,0,0,,他亲身领教过这招的恐怖
+Dialogue: 0,0:00:13.01,0:00:15.54,Default,,0,0,0,,连忙捏碎玉瓶最后几滴精血燃烧
+Dialogue: 0,0:00:15.54,0:00:18.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}成符文{\c&H00FFFFFF&\b0}拼了符文化作玄奥
+Dialogue: 0,0:00:18.33,0:00:21.36,Default,,0,0,0,,印记撞向{\c&H0000FFFF&\b1}小山{\c&H00FFFFFF&\b0}同时他挥拳轰出
+Dialogue: 0,0:00:21.66,0:00:24.29,Default,,0,0,0,,拳风撕裂虚空却在接触{\c&H0000FFFF&\b1}小山{\c&H00FFFFFF&\b0}的瞬
+Dialogue: 0,0:00:24.29,0:00:25.75,Default,,0,0,0,,间被震得鲜血飞溅

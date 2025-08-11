@@ -1,0 +1,568 @@
+{
+  "text": "云霄指挥大阵硬撼沙浪！巨人虚影双臂交叉成盾，符文流转，辛芦催动铃铛发出清越声响，声波化作金色涟漪扩散，白蒹葭踏前一步，巨人虚影随之挥拳，拳风与沙浪碰撞，发出闷响，沙浪溃散成漫天沙尘，巨人虚影也震颤不已，诸女嘴角同时溢出血丝！",
+  "audio_file": "data/002/chapter_046/chapter_046_narration_04.mp3",
+  "duration": 21.105,
+  "character_timestamps": [
+    {
+      "character": "云",
+      "start_time": 0.02,
+      "end_time": 0.15
+    },
+    {
+      "character": "霄",
+      "start_time": 0.15,
+      "end_time": 0.35
+    },
+    {
+      "character": "指",
+      "start_time": 0.35,
+      "end_time": 0.54
+    },
+    {
+      "character": "挥",
+      "start_time": 0.54,
+      "end_time": 0.795
+    },
+    {
+      "character": "大",
+      "start_time": 0.795,
+      "end_time": 0.99
+    },
+    {
+      "character": "阵",
+      "start_time": 0.99,
+      "end_time": 1.115
+    },
+    {
+      "character": "硬",
+      "start_time": 1.115,
+      "end_time": 1.255
+    },
+    {
+      "character": "撼",
+      "start_time": 1.255,
+      "end_time": 1.42
+    },
+    {
+      "character": "沙",
+      "start_time": 1.42,
+      "end_time": 1.62
+    },
+    {
+      "character": "浪",
+      "start_time": 1.62,
+      "end_time": 1.84
+    },
+    {
+      "character": "，",
+      "start_time": 1.84,
+      "end_time": 2.245
+    },
+    {
+      "character": "巨",
+      "start_time": 2.245,
+      "end_time": 2.37
+    },
+    {
+      "character": "人",
+      "start_time": 2.37,
+      "end_time": 2.485
+    },
+    {
+      "character": "虚",
+      "start_time": 2.485,
+      "end_time": 2.66
+    },
+    {
+      "character": "影",
+      "start_time": 2.66,
+      "end_time": 2.755
+    },
+    {
+      "character": "双",
+      "start_time": 2.755,
+      "end_time": 2.99
+    },
+    {
+      "character": "臂",
+      "start_time": 2.99,
+      "end_time": 3.175
+    },
+    {
+      "character": "交",
+      "start_time": 3.175,
+      "end_time": 3.335
+    },
+    {
+      "character": "叉",
+      "start_time": 3.335,
+      "end_time": 3.48
+    },
+    {
+      "character": "成",
+      "start_time": 3.48,
+      "end_time": 3.68
+    },
+    {
+      "character": "盾",
+      "start_time": 3.68,
+      "end_time": 3.87
+    },
+    {
+      "character": "，",
+      "start_time": 3.87,
+      "end_time": 4.55
+    },
+    {
+      "character": "符",
+      "start_time": 4.55,
+      "end_time": 4.735
+    },
+    {
+      "character": "文",
+      "start_time": 4.735,
+      "end_time": 4.825
+    },
+    {
+      "character": "流",
+      "start_time": 4.825,
+      "end_time": 5.04
+    },
+    {
+      "character": "转",
+      "start_time": 5.04,
+      "end_time": 5.275
+    },
+    {
+      "character": "，",
+      "start_time": 5.275,
+      "end_time": 5.7
+    },
+    {
+      "character": "辛",
+      "start_time": 5.7,
+      "end_time": 5.85
+    },
+    {
+      "character": "芦",
+      "start_time": 5.85,
+      "end_time": 6.025
+    },
+    {
+      "character": "催",
+      "start_time": 6.025,
+      "end_time": 6.185
+    },
+    {
+      "character": "动",
+      "start_time": 6.185,
+      "end_time": 6.315
+    },
+    {
+      "character": "铃",
+      "start_time": 6.315,
+      "end_time": 6.49
+    },
+    {
+      "character": "铛",
+      "start_time": 6.49,
+      "end_time": 6.705
+    },
+    {
+      "character": "发",
+      "start_time": 6.705,
+      "end_time": 6.86
+    },
+    {
+      "character": "出",
+      "start_time": 6.86,
+      "end_time": 6.99
+    },
+    {
+      "character": "清",
+      "start_time": 6.99,
+      "end_time": 7.145
+    },
+    {
+      "character": "越",
+      "start_time": 7.145,
+      "end_time": 7.285
+    },
+    {
+      "character": "声",
+      "start_time": 7.285,
+      "end_time": 7.47
+    },
+    {
+      "character": "响",
+      "start_time": 7.47,
+      "end_time": 7.69
+    },
+    {
+      "character": "，",
+      "start_time": 7.69,
+      "end_time": 7.955
+    },
+    {
+      "character": "声",
+      "start_time": 7.955,
+      "end_time": 8.175
+    },
+    {
+      "character": "波",
+      "start_time": 8.175,
+      "end_time": 8.405
+    },
+    {
+      "character": "化",
+      "start_time": 8.405,
+      "end_time": 8.605
+    },
+    {
+      "character": "作",
+      "start_time": 8.605,
+      "end_time": 8.745
+    },
+    {
+      "character": "金",
+      "start_time": 8.745,
+      "end_time": 8.925
+    },
+    {
+      "character": "色",
+      "start_time": 8.925,
+      "end_time": 9.095
+    },
+    {
+      "character": "涟",
+      "start_time": 9.095,
+      "end_time": 9.235
+    },
+    {
+      "character": "漪",
+      "start_time": 9.235,
+      "end_time": 9.34
+    },
+    {
+      "character": "扩",
+      "start_time": 9.34,
+      "end_time": 9.515
+    },
+    {
+      "character": "散",
+      "start_time": 9.515,
+      "end_time": 9.765
+    },
+    {
+      "character": "，",
+      "start_time": 9.765,
+      "end_time": 9.91
+    },
+    {
+      "character": "白",
+      "start_time": 9.91,
+      "end_time": 10.055
+    },
+    {
+      "character": "蒹",
+      "start_time": 10.055,
+      "end_time": 10.23
+    },
+    {
+      "character": "葭",
+      "start_time": 10.23,
+      "end_time": 10.455
+    },
+    {
+      "character": "踏",
+      "start_time": 10.455,
+      "end_time": 10.625
+    },
+    {
+      "character": "前",
+      "start_time": 10.625,
+      "end_time": 10.81
+    },
+    {
+      "character": "一",
+      "start_time": 10.81,
+      "end_time": 10.925
+    },
+    {
+      "character": "步",
+      "start_time": 10.925,
+      "end_time": 11.145
+    },
+    {
+      "character": "，",
+      "start_time": 11.145,
+      "end_time": 11.41
+    },
+    {
+      "character": "巨",
+      "start_time": 11.41,
+      "end_time": 11.52
+    },
+    {
+      "character": "人",
+      "start_time": 11.52,
+      "end_time": 11.685
+    },
+    {
+      "character": "虚",
+      "start_time": 11.685,
+      "end_time": 11.86
+    },
+    {
+      "character": "影",
+      "start_time": 11.86,
+      "end_time": 11.995
+    },
+    {
+      "character": "随",
+      "start_time": 11.995,
+      "end_time": 12.175
+    },
+    {
+      "character": "之",
+      "start_time": 12.175,
+      "end_time": 12.315
+    },
+    {
+      "character": "挥",
+      "start_time": 12.315,
+      "end_time": 12.48
+    },
+    {
+      "character": "拳",
+      "start_time": 12.48,
+      "end_time": 12.805
+    },
+    {
+      "character": "，",
+      "start_time": 12.805,
+      "end_time": 13.02
+    },
+    {
+      "character": "拳",
+      "start_time": 13.02,
+      "end_time": 13.24
+    },
+    {
+      "character": "风",
+      "start_time": 13.24,
+      "end_time": 13.535
+    },
+    {
+      "character": "与",
+      "start_time": 13.535,
+      "end_time": 13.635
+    },
+    {
+      "character": "沙",
+      "start_time": 13.635,
+      "end_time": 13.795
+    },
+    {
+      "character": "浪",
+      "start_time": 13.795,
+      "end_time": 13.925
+    },
+    {
+      "character": "碰",
+      "start_time": 13.925,
+      "end_time": 14.11
+    },
+    {
+      "character": "撞",
+      "start_time": 14.11,
+      "end_time": 14.305
+    },
+    {
+      "character": "，",
+      "start_time": 14.305,
+      "end_time": 14.62
+    },
+    {
+      "character": "发",
+      "start_time": 14.62,
+      "end_time": 14.765
+    },
+    {
+      "character": "出",
+      "start_time": 14.765,
+      "end_time": 14.895
+    },
+    {
+      "character": "闷",
+      "start_time": 14.895,
+      "end_time": 15.07
+    },
+    {
+      "character": "响",
+      "start_time": 15.07,
+      "end_time": 15.35
+    },
+    {
+      "character": "，",
+      "start_time": 15.35,
+      "end_time": 15.665
+    },
+    {
+      "character": "沙",
+      "start_time": 15.665,
+      "end_time": 15.85
+    },
+    {
+      "character": "浪",
+      "start_time": 15.85,
+      "end_time": 16.025
+    },
+    {
+      "character": "溃",
+      "start_time": 16.025,
+      "end_time": 16.205
+    },
+    {
+      "character": "散",
+      "start_time": 16.205,
+      "end_time": 16.385
+    },
+    {
+      "character": "成",
+      "start_time": 16.385,
+      "end_time": 16.515
+    },
+    {
+      "character": "漫",
+      "start_time": 16.515,
+      "end_time": 16.655
+    },
+    {
+      "character": "天",
+      "start_time": 16.655,
+      "end_time": 16.79
+    },
+    {
+      "character": "沙",
+      "start_time": 16.79,
+      "end_time": 16.96
+    },
+    {
+      "character": "尘",
+      "start_time": 16.96,
+      "end_time": 17.28
+    },
+    {
+      "character": "，",
+      "start_time": 17.28,
+      "end_time": 17.58
+    },
+    {
+      "character": "巨",
+      "start_time": 17.58,
+      "end_time": 17.705
+    },
+    {
+      "character": "人",
+      "start_time": 17.705,
+      "end_time": 17.845
+    },
+    {
+      "character": "虚",
+      "start_time": 17.845,
+      "end_time": 18.035
+    },
+    {
+      "character": "影",
+      "start_time": 18.035,
+      "end_time": 18.12
+    },
+    {
+      "character": "也",
+      "start_time": 18.12,
+      "end_time": 18.22
+    },
+    {
+      "character": "震",
+      "start_time": 18.22,
+      "end_time": 18.365
+    },
+    {
+      "character": "颤",
+      "start_time": 18.365,
+      "end_time": 18.545
+    },
+    {
+      "character": "不",
+      "start_time": 18.545,
+      "end_time": 18.665
+    },
+    {
+      "character": "已",
+      "start_time": 18.665,
+      "end_time": 18.925
+    },
+    {
+      "character": "，",
+      "start_time": 18.925,
+      "end_time": 19.27
+    },
+    {
+      "character": "诸",
+      "start_time": 19.27,
+      "end_time": 19.41
+    },
+    {
+      "character": "女",
+      "start_time": 19.41,
+      "end_time": 19.53
+    },
+    {
+      "character": "嘴",
+      "start_time": 19.53,
+      "end_time": 19.685
+    },
+    {
+      "character": "角",
+      "start_time": 19.685,
+      "end_time": 19.92
+    },
+    {
+      "character": "同",
+      "start_time": 19.92,
+      "end_time": 20.13
+    },
+    {
+      "character": "时",
+      "start_time": 20.13,
+      "end_time": 20.27
+    },
+    {
+      "character": "溢",
+      "start_time": 20.27,
+      "end_time": 20.355
+    },
+    {
+      "character": "出",
+      "start_time": 20.355,
+      "end_time": 20.505
+    },
+    {
+      "character": "血",
+      "start_time": 20.505,
+      "end_time": 20.7
+    },
+    {
+      "character": "丝",
+      "start_time": 20.7,
+      "end_time": 20.945
+    },
+    {
+      "character": "！",
+      "start_time": 20.945,
+      "end_time": 21.105
+    }
+  ],
+  "generated_at": "2025-08-10T22:27:03.465849"
+}

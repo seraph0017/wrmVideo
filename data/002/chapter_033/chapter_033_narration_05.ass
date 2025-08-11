@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_033 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.52,Default,,0,0,0,,星岩之上夕月道人缓缓颔首
+Dialogue: 0,0:00:02.89,0:00:05.20,Default,,0,0,0,,她月白色圆领长袍上的云纹仿佛活
+Dialogue: 0,0:00:05.20,0:00:07.28,Default,,0,0,0,,了过来散发出淡淡的银光
+Dialogue: 0,0:00:07.64,0:00:10.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}收势而立掌心仍残留着时间
+Dialogue: 0,0:00:10.40,0:00:12.73,Default,,0,0,0,,之力的酥麻感这处小世界因他成
+Dialogue: 0,0:00:12.73,0:00:14.49,Default,,0,0,0,,功施展{\c&H0000FFFF&\b1}神通{\c&H00FFFFFF&\b0}而产生共鸣
+Dialogue: 0,0:00:14.79,0:00:17.04,Default,,0,0,0,,远处星云旋转速度明显加快
+Dialogue: 0,0:00:17.39,0:00:19.53,Default,,0,0,0,,洒下的星辉比先前浓郁数倍
+Dialogue: 0,0:00:19.88,0:00:21.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}能清晰感受到
+Dialogue: 0,0:00:21.82,0:00:24.16,Default,,0,0,0,,夕月道人周身的气息不再是初遇时
+Dialogue: 0,0:00:24.16,0:00:26.07,Default,,0,0,0,,的虚弱而是如渊似海
+Dialogue: 0,0:00:26.48,0:00:28.27,Default,,0,0,0,,只是被某种力量刻意收敛

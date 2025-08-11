@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_032 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}小山{\c&H00FFFFFF&\b0}轰然消散无法魔祖却如断线
+Dialogue: 0,0:00:02.92,0:00:05.43,Default,,0,0,0,,风筝般倒飞左肩炸开一团血雾
+Dialogue: 0,0:00:06.12,0:00:08.14,Default,,0,0,0,,通天教祖趁机凝聚能量{\c&H0000FFFF&\b1}古剑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.53,0:00:10.03,Default,,0,0,0,,剑光如电射穿他的肩膀
+Dialogue: 0,0:00:10.26,0:00:12.40,Default,,0,0,0,,结束了通天教祖身影一闪而
+Dialogue: 0,0:00:12.40,0:00:14.63,Default,,0,0,0,,至伸手抓向无法魔祖头颅
+Dialogue: 0,0:00:14.96,0:00:17.75,Default,,0,0,0,,就在此时无法魔祖狼狈的脸上突
+Dialogue: 0,0:00:17.75,0:00:20.43,Default,,0,0,0,,然露出诡异笑容眼中闪过阴谋得
+Dialogue: 0,0:00:20.43,0:00:23.11,Default,,0,0,0,,逞的精光吓得通天教祖下意识后
+Dialogue: 0,0:00:23.11,0:00:23.34,Default,,0,0,0,,退

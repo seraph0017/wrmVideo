@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_041 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}华光{\c&H00FFFFFF&\b0}魔祖逃得精疲力尽
+Dialogue: 0,0:00:02.15,0:00:04.43,Default,,0,0,0,,终于停下脚步转身面对{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.79,0:00:06.79,Default,,0,0,0,,色厉内荏地嘶吼{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.06,0:00:09.41,Default,,0,0,0,,你不要欺人太甚兔子急了还咬人
+Dialogue: 0,0:00:09.74,0:00:11.44,Default,,0,0,0,,我若是拼命你也不好受
+Dialogue: 0,0:00:11.69,0:00:14.04,Default,,0,0,0,,他双拳紧握魔气在拳头上凝聚
+Dialogue: 0,0:00:14.37,0:00:17.24,Default,,0,0,0,,摆出拼命架势眼神中却难掩恐惧
+Dialogue: 0,0:00:17.61,0:00:20.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}缓步逼近嘴角噙着嘲讽笑意
+Dialogue: 0,0:00:20.85,0:00:23.11,Default,,0,0,0,,战场的喊杀声在远处隐约可闻

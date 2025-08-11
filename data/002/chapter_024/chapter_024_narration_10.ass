@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_024 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.85,Default,,0,0,0,,广场上{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}将解毒丹分发给众头
+Dialogue: 0,0:00:02.85,0:00:04.43,Default,,0,0,0,,领有人当场服用
+Dialogue: 0,0:00:04.83,0:00:06.92,Default,,0,0,0,,有人犹豫纳兰萩站在一旁
+Dialogue: 0,0:00:07.22,0:00:09.70,Default,,0,0,0,,观察众人反应此前{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}已言明
+Dialogue: 0,0:00:10.01,0:00:11.71,Default,,0,0,0,,愿留则留愿走不留
+Dialogue: 0,0:00:11.91,0:00:13.66,Default,,0,0,0,,三日后大部分人离去
+Dialogue: 0,0:00:13.89,0:00:15.18,Default,,0,0,0,,仅剩十三位忠心者
+Dialogue: 0,0:00:15.63,0:00:16.84,Default,,0,0,0,,赵硕望着留下的人
+Dialogue: 0,0:00:17.16,0:00:19.70,Default,,0,0,0,,露出欣慰笑容这些将是他未来的
+Dialogue: 0,0:00:19.70,0:00:20.16,Default,,0,0,0,,基石

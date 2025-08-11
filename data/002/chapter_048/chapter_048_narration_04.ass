@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_048 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.54,Default,,0,0,0,,绿灵{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}被两头凶兽和通天教祖围
+Dialogue: 0,0:00:02.54,0:00:04.83,Default,,0,0,0,,攻肩头白骨外露仍死战
+Dialogue: 0,0:00:05.20,0:00:06.26,Default,,0,0,0,,我跟你们同归于尽
+Dialogue: 0,0:00:06.62,0:00:07.79,Default,,0,0,0,,他怒吼着引爆本源
+Dialogue: 0,0:00:08.11,0:00:10.54,Default,,0,0,0,,青光爆闪巨象被炸得骨骼外露
+Dialogue: 0,0:00:10.88,0:00:13.60,Default,,0,0,0,,巨蛇断成两截通天教祖及时后退
+Dialogue: 0,0:00:13.60,0:00:16.32,Default,,0,0,0,,仍被气浪掀飞{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}趁机猛攻牛神
+Dialogue: 0,0:00:16.32,0:00:18.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}你的人快死光了
+Dialogue: 0,0:00:18.73,0:00:20.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}牛神{\c&H00FFFFFF&\b0}大圣吐血怒吼
+Dialogue: 0,0:00:20.27,0:00:22.02,Default,,0,0,0,,却被夕月道人从旁偷袭
+Dialogue: 0,0:00:22.45,0:00:24.58,Default,,0,0,0,,心口出现血洞狼狈遁逃
+Dialogue: 0,0:00:24.92,0:00:26.87,Default,,0,0,0,,只留下我会回来的的咆哮回荡
+Dialogue: 0,0:00:26.87,0:00:27.25,Default,,0,0,0,,虚空

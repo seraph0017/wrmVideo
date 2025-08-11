@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_038 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.27,Default,,0,0,0,,千怜圣女的阁楼内
+Dialogue: 0,0:00:01.70,0:00:04.08,Default,,0,0,0,,宋代风格的八仙桌摆放着青瓷茶具
+Dialogue: 0,0:00:04.62,0:00:05.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与她相对而坐
+Dialogue: 0,0:00:06.25,0:00:08.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}手捧茶盏玄色圆领锦袍袖口
+Dialogue: 0,0:00:08.71,0:00:10.95,Default,,0,0,0,,绣暗纹千怜圣女背对着镜头
+Dialogue: 0,0:00:11.25,0:00:13.12,Default,,0,0,0,,月白襦裙领口绣缠枝莲纹
+Dialogue: 0,0:00:13.47,0:00:15.79,Default,,0,0,0,,正为他斟茶化身无法修行
+Dialogue: 0,0:00:16.10,0:00:17.89,Default,,0,0,0,,根源在于先天生机缺失
+Dialogue: 0,0:00:18.18,0:00:20.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}放下茶盏金瞳锐利如刀
+Dialogue: 0,0:00:21.03,0:00:23.18,Default,,0,0,0,,我想到了轮回转生之法
+Dialogue: 0,0:00:23.18,0:00:23.18,Default,,0,0,0,,

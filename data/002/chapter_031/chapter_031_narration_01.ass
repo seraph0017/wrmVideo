@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_031 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.75,Default,,0,0,0,,夕月彻底复生身上散发动人心魄
+Dialogue: 0,0:00:02.75,0:00:05.50,Default,,0,0,0,,的气息{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}只看一眼便迷失其中
+Dialogue: 0,0:00:05.89,0:00:07.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}温泉{\c&H00FFFFFF&\b0}密室水汽氤氲
+Dialogue: 0,0:00:07.46,0:00:08.67,Default,,0,0,0,,石质浴池泛着微光
+Dialogue: 0,0:00:09.03,0:00:10.75,Default,,0,0,0,,夕月一袭白衣立于池边
+Dialogue: 0,0:00:11.04,0:00:13.54,Default,,0,0,0,,气质空灵神秘{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}坐在池水中
+Dialogue: 0,0:00:13.85,0:00:16.43,Default,,0,0,0,,眼神迷离气息因夕月而波动
+Dialogue: 0,0:00:16.82,0:00:18.17,Default,,0,0,0,,凶器再次变得狰狞
+Dialogue: 0,0:00:18.56,0:00:20.70,Default,,0,0,0,,夕月感受到变化嘴角{\c&H0000FFFF&\b1}浅笑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.96,0:00:22.45,Default,,0,0,0,,声音清冷{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:22.77,0:00:25.12,Default,,0,0,0,,就让我服侍你吧权当感谢
+Dialogue: 0,0:00:25.12,0:00:25.12,Default,,0,0,0,,

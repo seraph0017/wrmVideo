@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_009 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:03.04,Default,,0,0,0,,鬼算子{\c&H0000FFFF&\b1}汇报{\c&H00FFFFFF&\b0}战果在临时帅帐中
+Dialogue: 0,0:00:03.44,0:00:06.22,Default,,0,0,0,,他手持{\c&H0000FFFF&\b1}龟甲{\c&H00FFFFFF&\b0}面色凝重地对白蒹葭
+Dialogue: 0,0:00:06.22,0:00:09.01,Default,,0,0,0,,说{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}陨落十名上古道主
+Dialogue: 0,0:00:09.22,0:00:10.59,Default,,0,0,0,,敌方陨落二十五名
+Dialogue: 0,0:00:10.81,0:00:13.03,Default,,0,0,0,,俘虏十名白蒹葭坐在主位
+Dialogue: 0,0:00:13.27,0:00:15.38,Default,,0,0,0,,淡紫圆领襦裙神色平静
+Dialogue: 0,0:00:15.65,0:00:18.38,Default,,0,0,0,,手指轻叩桌面帐外传来士兵清点
+Dialogue: 0,0:00:18.38,0:00:20.40,Default,,0,0,0,,战场的声音血腥味弥漫
+Dialogue: 0,0:00:20.82,0:00:21.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}阴云{\c&H00FFFFFF&\b0}笼罩帅帐

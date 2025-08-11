@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_038 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.44,Default,,0,0,0,,云雾缭绕的{\c&H0000FFFF&\b1}温泉{\c&H00FFFFFF&\b0}池边
+Dialogue: 0,0:00:01.81,0:00:03.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}赤裸上身单膝跪地
+Dialogue: 0,0:00:04.18,0:00:05.62,Default,,0,0,0,,银发湿漉漉贴在颈侧
+Dialogue: 0,0:00:06.04,0:00:08.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄色{\c&H00FFFFFF&\b0}圆领浴袍松垮系在腰间
+Dialogue: 0,0:00:08.44,0:00:10.42,Default,,0,0,0,,夕月道人背对着镜头立于池畔
+Dialogue: 0,0:00:10.71,0:00:12.64,Default,,0,0,0,,素白圆领道袍垂落至脚踝
+Dialogue: 0,0:00:13.02,0:00:14.68,Default,,0,0,0,,青丝用木簪束成道髻
+Dialogue: 0,0:00:14.99,0:00:17.30,Default,,0,0,0,,她指尖轻点水面激起涟漪
+Dialogue: 0,0:00:17.70,0:00:19.86,Default,,0,0,0,,化身虽强却无生人气息
+Dialogue: 0,0:00:20.24,0:00:22.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}猛然抬头金瞳闪过精光
+Dialogue: 0,0:00:22.86,0:00:25.00,Default,,0,0,0,,水花溅上他棱角分明的下颌

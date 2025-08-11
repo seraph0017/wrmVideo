@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_001 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.80,Default,,0,0,0,,课堂上夫子讲授荒古世界起源
+Dialogue: 0,0:00:03.22,0:00:05.72,Default,,0,0,0,,天地初开盘古父神开辟{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.72,0:00:08.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}听到天圆地方说
+Dialogue: 0,0:00:07.88,0:00:10.26,Default,,0,0,0,,忍不住嗤笑夫子锐利目光扫来
+Dialogue: 0,0:00:10.54,0:00:11.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}你笑什么
+Dialogue: 0,0:00:11.99,0:00:13.47,Default,,0,0,0,,同窗{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}讥笑道
+Dialogue: 0,0:00:13.81,0:00:15.27,Default,,0,0,0,,他定是觉得夫子讲错了
+Dialogue: 0,0:00:15.54,0:00:17.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}起身朗声说
+Dialogue: 0,0:00:17.46,0:00:20.02,Default,,0,0,0,,大地是圆的如天上星辰一般
+Dialogue: 0,0:00:20.29,0:00:22.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}满堂{\c&H00FFFFFF&\b0}哗然夫子捋须
+Dialogue: 0,0:00:22.50,0:00:23.43,Default,,0,0,0,,眼中闪过异色

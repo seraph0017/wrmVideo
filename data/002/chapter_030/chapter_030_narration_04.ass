@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_030 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.55,Default,,0,0,0,,牛头魔祖怒吼连连
+Dialogue: 0,0:00:01.82,0:00:03.54,Default,,0,0,0,,催动秘术大地崩裂
+Dialogue: 0,0:00:03.84,0:00:05.58,Default,,0,0,0,,无数修者与魔神被其吞噬
+Dialogue: 0,0:00:05.93,0:00:08.20,Default,,0,0,0,,伤口飞速再生{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}怒喝
+Dialogue: 0,0:00:08.49,0:00:10.80,Default,,0,0,0,,邪魔外道{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}尺化作巨剑
+Dialogue: 0,0:00:11.01,0:00:13.57,Default,,0,0,0,,携紫电劈下牛头魔祖以血肉之躯
+Dialogue: 0,0:00:13.57,0:00:15.11,Default,,0,0,0,,硬抗胸膛被洞穿
+Dialogue: 0,0:00:15.38,0:00:16.08,Default,,0,0,0,,鲜血喷溅

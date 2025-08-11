@@ -1,0 +1,30 @@
+[Script Info]
+Title: chapter_050 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.70,Default,,0,0,0,,胖{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}三人疯狂攻击
+Dialogue: 0,0:00:02.12,0:00:03.79,Default,,0,0,0,,瘦{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}祭出降魔宝杖
+Dialogue: 0,0:00:04.46,0:00:06.27,Default,,0,0,0,,绿色光芒砸向战争{\c&H0000FFFF&\b1}浮屠{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.86,0:00:08.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}牛神{\c&H00FFFFFF&\b0}大圣化为牛头人身
+Dialogue: 0,0:00:08.98,0:00:11.78,Default,,0,0,0,,双斧劈砍符文胖{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}双拳齐出
+Dialogue: 0,0:00:12.07,0:00:14.71,Default,,0,0,0,,拳影如雨战争{\c&H0000FFFF&\b1}浮屠{\c&H00FFFFFF&\b0}表面符文明灭
+Dialogue: 0,0:00:14.71,0:00:16.81,Default,,0,0,0,,不定{\c&H0000FFFF&\b1}鸿钧{\c&H00FFFFFF&\b0}老祖面色惨白
+Dialogue: 0,0:00:17.23,0:00:18.86,Default,,0,0,0,,接引道人等也气喘吁吁
+Dialogue: 0,0:00:19.23,0:00:20.96,Default,,0,0,0,,突然瘦{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}狂笑
+Dialogue: 0,0:00:21.62,0:00:22.54,Default,,0,0,0,,他们快撑不住了
+Dialogue: 0,0:00:22.70,0:00:24.75,Default,,0,0,0,,宝物是我们的了就在此时
+Dialogue: 0,0:00:25.16,0:00:27.93,Default,,0,0,0,,一声长啸传来一道窈窕身影出现
+Dialogue: 0,0:00:27.93,0:00:30.18,Default,,0,0,0,,在虚空夕月道人横空一指
+Dialogue: 0,0:00:30.50,0:00:31.48,Default,,0,0,0,,直点牛神{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}

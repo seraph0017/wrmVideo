@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_041 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.96,Default,,0,0,0,,混沌战场之上{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}手持鸿蒙尺凌
+Dialogue: 0,0:00:02.96,0:00:05.68,Default,,0,0,0,,空而立面对风霜魔祖的重拳轰击
+Dialogue: 0,0:00:06.05,0:00:08.43,Default,,0,0,0,,他眼神{\c&H0000FFFF&\b1}凌厉{\c&H00FFFFFF&\b0}冷哼一声去死吧
+Dialogue: 0,0:00:08.85,0:00:11.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}尺紫光大盛瞬间击碎风霜魔
+Dialogue: 0,0:00:11.63,0:00:13.65,Default,,0,0,0,,祖的拳头顺势向上猛劈
+Dialogue: 0,0:00:13.87,0:00:16.19,Default,,0,0,0,,将其头颅震碎血光飞溅中
+Dialogue: 0,0:00:16.58,0:00:18.45,Default,,0,0,0,,风霜魔祖的神魂惊恐飞出
+Dialogue: 0,0:00:18.76,0:00:20.43,Default,,0,0,0,,场景充斥着浓烈的血腥味
+Dialogue: 0,0:00:20.79,0:00:23.57,Default,,0,0,0,,天空阴沉魔气与灵气交织碰撞
+Dialogue: 0,0:00:24.05,0:00:25.52,Default,,0,0,0,,形成扭曲的能量乱流

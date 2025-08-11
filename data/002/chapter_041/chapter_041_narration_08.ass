@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_041 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}不闪不避反而一指点向华光
+Dialogue: 0,0:00:02.86,0:00:05.52,Default,,0,0,0,,魔祖的拳头华光魔祖心中{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.96,0:00:08.02,Default,,0,0,0,,以为{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}轻敌加重拳力
+Dialogue: 0,0:00:08.29,0:00:09.53,Default,,0,0,0,,誓要将其手指轰爆
+Dialogue: 0,0:00:09.89,0:00:12.21,Default,,0,0,0,,指尖与拳面接触发出咔嚓脆
+Dialogue: 0,0:00:12.21,0:00:14.62,Default,,0,0,0,,响{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}的手指竟被当场轰碎
+Dialogue: 0,0:00:14.90,0:00:16.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}华光{\c&H00FFFFFF&\b0}魔祖脸上露出得意笑容
+Dialogue: 0,0:00:17.28,0:00:19.83,Default,,0,0,0,,以为得手却见{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}嘴角笑意更浓
+Dialogue: 0,0:00:20.27,0:00:21.67,Default,,0,0,0,,眼中闪过一丝狡黠

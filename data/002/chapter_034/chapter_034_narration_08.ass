@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_034 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.66,Default,,0,0,0,,火灵族营地内火狐长老将储物戒
+Dialogue: 0,0:00:02.66,0:00:05.28,Default,,0,0,0,,指中的火灵释放无数红色光点悬
+Dialogue: 0,0:00:05.28,0:00:07.59,Default,,0,0,0,,浮空中散发着熟悉的气息
+Dialogue: 0,0:00:07.83,0:00:09.34,Default,,0,0,0,,火灵族修者纷纷落泪
+Dialogue: 0,0:00:09.60,0:00:11.12,Default,,0,0,0,,向逝去族人的火灵行礼
+Dialogue: 0,0:00:11.37,0:00:13.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于一旁看着这感人一幕
+Dialogue: 0,0:00:13.86,0:00:15.20,Default,,0,0,0,,嘴角露出欣慰笑容

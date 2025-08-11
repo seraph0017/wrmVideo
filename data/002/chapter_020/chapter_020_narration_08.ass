@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_020 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天大圣{\c&H00FFFFFF&\b0}镇压乌列魔尊
+Dialogue: 0,0:00:02.19,0:00:03.54,Default,,0,0,0,,金箍棒直指其眉心
+Dialogue: 0,0:00:04.04,0:00:05.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}乌列魔{\c&H00FFFFFF&\b0}尊瘫倒在地
+Dialogue: 0,0:00:05.91,0:00:07.61,Default,,0,0,0,,银色圆领战甲彻底破碎
+Dialogue: 0,0:00:07.97,0:00:10.46,Default,,0,0,0,,露出内衬血污远处通天吼妖圣一
+Dialogue: 0,0:00:10.46,0:00:13.12,Default,,0,0,0,,声咆哮声波震碎暴风魔尊飓风
+Dialogue: 0,0:00:13.40,0:00:16.02,Default,,0,0,0,,二者双双力竭{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}操控星河重宝
+Dialogue: 0,0:00:16.34,0:00:19.05,Default,,0,0,0,,星光点点如囚笼将残余混沌魔神
+Dialogue: 0,0:00:19.05,0:00:19.71,Default,,0,0,0,,困于其中

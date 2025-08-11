@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_024 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.29,Default,,0,0,0,,月华如水的庭院中
+Dialogue: 0,0:00:01.70,0:00:03.85,Default,,0,0,0,,纳兰萩凭栏而立白衣胜雪
+Dialogue: 0,0:00:04.45,0:00:06.04,Default,,0,0,0,,她望着{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}密室的方向
+Dialogue: 0,0:00:06.43,0:00:08.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}秀眉{\c&H00FFFFFF&\b0}微蹙直觉告诉她九阳圣女的
+Dialogue: 0,0:00:08.95,0:00:11.54,Default,,0,0,0,,态度异常此前{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与九阳圣女对
+Dialogue: 0,0:00:11.54,0:00:13.51,Default,,0,0,0,,话时对方虽同意同行
+Dialogue: 0,0:00:13.77,0:00:15.93,Default,,0,0,0,,却眼神闪烁似有隐情
+Dialogue: 0,0:00:16.32,0:00:17.43,Default,,0,0,0,,夜风拂动她的衣袂
+Dialogue: 0,0:00:17.75,0:00:18.93,Default,,0,0,0,,更显心事重重

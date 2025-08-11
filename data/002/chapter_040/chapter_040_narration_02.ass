@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_040 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}紧握鸿蒙尺尺身紫电游走发
+Dialogue: 0,0:00:02.75,0:00:05.50,Default,,0,0,0,,出嗡鸣他望着法阵中逐渐融合力
+Dialogue: 0,0:00:05.50,0:00:08.32,Default,,0,0,0,,量的恒生魔祖{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}道邪术终
+Dialogue: 0,0:00:08.32,0:00:10.31,Default,,0,0,0,,究是邪术纵能提升力量
+Dialogue: 0,0:00:10.57,0:00:12.74,Default,,0,0,0,,不过饮鸩止渴今日便让你{\c&H0000FFFF&\b1}明白{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.02,0:00:14.76,Default,,0,0,0,,正道之力远超魔道歪门
+Dialogue: 0,0:00:15.06,0:00:17.52,Default,,0,0,0,,山间狂风骤起吹动他青色衣袍下
+Dialogue: 0,0:00:17.52,0:00:20.25,Default,,0,0,0,,摆{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}尺紫光大盛映亮半边天空

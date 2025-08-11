@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_021 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}天奇{\c&H00FFFFFF&\b0}圣者狂笑出声
+Dialogue: 0,0:00:01.98,0:00:03.79,Default,,0,0,0,,出头鸟易死话音未落
+Dialogue: 0,0:00:04.20,0:00:05.46,Default,,0,0,0,,突然转向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}传音
+Dialogue: 0,0:00:06.14,0:00:08.06,Default,,0,0,0,,速助我{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}不及细想
+Dialogue: 0,0:00:08.33,0:00:09.84,Default,,0,0,0,,九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑出鞘
+Dialogue: 0,0:00:10.16,0:00:11.86,Default,,0,0,0,,剑光如电射向{\c&H0000FFFF&\b1}阴罗{\c&H00FFFFFF&\b0}圣者
+Dialogue: 0,0:00:12.19,0:00:13.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}阴罗{\c&H00FFFFFF&\b0}圣者不屑冷笑
+Dialogue: 0,0:00:14.03,0:00:16.50,Default,,0,0,0,,蠢货{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}猛然察觉身后恶风
+Dialogue: 0,0:00:16.73,0:00:19.09,Default,,0,0,0,,回身只见{\c&H0000FFFF&\b1}天奇{\c&H00FFFFFF&\b0}圣者一刀劈来
+Dialogue: 0,0:00:19.33,0:00:20.46,Default,,0,0,0,,刀光森寒刺骨

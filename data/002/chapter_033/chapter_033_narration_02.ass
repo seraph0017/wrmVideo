@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_033 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.10,Default,,0,0,0,,执着于停顿反落了下乘
+Dialogue: 0,0:00:02.44,0:00:04.01,Default,,0,0,0,,清冷女声{\c&H0000FFFF&\b1}如玉{\c&H00FFFFFF&\b0}石相击
+Dialogue: 0,0:00:04.44,0:00:06.84,Default,,0,0,0,,夕月道人不知何时已出现在三丈外
+Dialogue: 0,0:00:06.84,0:00:09.59,Default,,0,0,0,,的星岩上她月白色圆领长袍无风
+Dialogue: 0,0:00:09.59,0:00:11.77,Default,,0,0,0,,自动袖摆绣着暗银色{\c&H0000FFFF&\b1}云纹{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.09,0:00:14.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}猛然转身却见她素手轻扬
+Dialogue: 0,0:00:15.23,0:00:16.95,Default,,0,0,0,,指尖凝结的不是耀眼光芒
+Dialogue: 0,0:00:17.26,0:00:19.39,Default,,0,0,0,,而是一缕若有若无的灰色气流
+Dialogue: 0,0:00:19.71,0:00:22.30,Default,,0,0,0,,在指尖如活物般缠绕这正是他
+Dialogue: 0,0:00:22.30,0:00:24.05,Default,,0,0,0,,苦寻不得的时间本源形态

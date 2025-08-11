@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_006 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}山门午后
+Dialogue: 0,0:00:02.00,0:00:05.57,Default,,0,0,0,,春风{\c&H0000FFFF&\b1}和煦{\c&H00FFFFFF&\b0}赵硕龙欣亲自迎接远
+Dialogue: 0,0:00:05.57,0:00:06.92,Default,,0,0,0,,道而来的{\c&H0000FFFF&\b1}灵慧宗{\c&H00FFFFFF&\b0}众人
+Dialogue: 0,0:00:07.43,0:00:09.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}灵慧宗{\c&H00FFFFFF&\b0}宗主灵慧道人风尘仆仆
+Dialogue: 0,0:00:09.89,0:00:12.12,Default,,0,0,0,,拱手道愿{\c&H0000FFFF&\b1}归顺{\c&H00FFFFFF&\b0}齐天府
+Dialogue: 0,0:00:12.35,0:00:14.70,Default,,0,0,0,,赵硕大笑{\c&H0000FFFF&\b1}灵慧{\c&H00FFFFFF&\b0}宗主深明大义
+Dialogue: 0,0:00:14.93,0:00:16.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}山门{\c&H00FFFFFF&\b0}处锣鼓喧天
+Dialogue: 0,0:00:16.56,0:00:19.36,Default,,0,0,0,,弟子们{\c&H0000FFFF&\b1}列队欢迎{\c&H00FFFFFF&\b0}灵慧宗弟子虽面
+Dialogue: 0,0:00:19.36,0:00:21.84,Default,,0,0,0,,带疲惫却难掩对新归宿的期待

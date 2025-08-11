@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_032 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.12,Default,,0,0,0,,我倒要看看你还有多少精血可耗
+Dialogue: 0,0:00:02.61,0:00:04.45,Default,,0,0,0,,通天教祖悬浮于阵法核心
+Dialogue: 0,0:00:05.01,0:00:07.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}青萍{\c&H00FFFFFF&\b0}古剑在阵眼处发出嗡鸣
+Dialogue: 0,0:00:07.53,0:00:09.14,Default,,0,0,0,,剑光照亮他冷傲的面容
+Dialogue: 0,0:00:09.43,0:00:11.04,Default,,0,0,0,,无法魔祖{\c&H0000FFFF&\b1}闻言{\c&H00FFFFFF&\b0}心头一紧
+Dialogue: 0,0:00:11.31,0:00:13.46,Default,,0,0,0,,玉瓶险些脱手他清楚通天教祖
+Dialogue: 0,0:00:13.46,0:00:15.43,Default,,0,0,0,,的算计被困第一绝阵
+Dialogue: 0,0:00:15.85,0:00:17.57,Default,,0,0,0,,每分每秒都在消耗元气
+Dialogue: 0,0:00:17.86,0:00:19.32,Default,,0,0,0,,而道祖精血一旦耗尽
+Dialogue: 0,0:00:19.63,0:00:21.93,Default,,0,0,0,,便是死路一条他强压下心悸
+Dialogue: 0,0:00:22.29,0:00:23.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄色{\c&H00FFFFFF&\b0}长袍无风自动
+Dialogue: 0,0:00:24.32,0:00:25.28,Default,,0,0,0,,我不会让你得逞

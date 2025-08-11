@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_048 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.68,Default,,0,0,0,,中立联盟中部分势力见势不妙欲
+Dialogue: 0,0:00:02.68,0:00:04.60,Default,,0,0,0,,退第三天刀怒喝
+Dialogue: 0,0:00:04.96,0:00:07.38,Default,,0,0,0,,谁走我杀谁第一天刀沉声道
+Dialogue: 0,0:00:07.83,0:00:09.99,Default,,0,0,0,,我们已无退路{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}趁机传音
+Dialogue: 0,0:00:10.48,0:00:12.39,Default,,0,0,0,,助我破敌平分混乱地带
+Dialogue: 0,0:00:12.68,0:00:15.03,Default,,0,0,0,,联盟士气大振{\c&H0000FFFF&\b1}白眉{\c&H00FFFFFF&\b0}老祖率人猛
+Dialogue: 0,0:00:15.03,0:00:17.75,Default,,0,0,0,,攻天王{\c&H0000FFFF&\b1}宗大阵{\c&H00FFFFFF&\b0}通天教祖斩伤满星
+Dialogue: 0,0:00:17.75,0:00:21.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}半月老祖被数名半步大圣围
+Dialogue: 0,0:00:21.00,0:00:22.48,Default,,0,0,0,,攻联军阵脚松动
+Dialogue: 0,0:00:22.84,0:00:24.38,Default,,0,0,0,,胜利天平开始倾斜

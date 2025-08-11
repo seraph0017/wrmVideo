@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_007 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.21,Default,,0,0,0,,月色下鬼算子独立{\c&H0000FFFF&\b1}山岗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.71,0:00:04.04,Default,,0,0,0,,望着西方联盟方向
+Dialogue: 0,0:00:04.64,0:00:07.01,Default,,0,0,0,,眉头紧锁{\c&H0000FFFF&\b1}无极{\c&H00FFFFFF&\b0}长老走到身旁
+Dialogue: 0,0:00:07.50,0:00:09.06,Default,,0,0,0,,真要坐视西方联盟覆灭
+Dialogue: 0,0:00:09.35,0:00:11.58,Default,,0,0,0,,鬼算子轻叹但愿他们能撑到
+Dialogue: 0,0:00:11.58,0:00:14.88,Default,,0,0,0,,求援否则我们也难逃三眼
+Dialogue: 0,0:00:13.90,0:00:16.18,Default,,0,0,0,,魔族追杀山风吹动衣袍
+Dialogue: 0,0:00:16.45,0:00:17.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}无极{\c&H00FFFFFF&\b0}长老默然点头
+Dialogue: 0,0:00:18.05,0:00:20.73,Default,,0,0,0,,两人身影在月光下显得格外孤寂
+Dialogue: 0,0:00:21.18,0:00:23.29,Default,,0,0,0,,远处隐约传来三眼魔族的嘶吼

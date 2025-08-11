@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_033 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.56,Default,,0,0,0,,如遭雷击{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}脑中轰然炸响
+Dialogue: 0,0:00:02.94,0:00:05.38,Default,,0,0,0,,夕月道人指尖那缕灰气仿佛化作钥
+Dialogue: 0,0:00:05.38,0:00:07.86,Default,,0,0,0,,匙瞬间打开他对时间法则的认知
+Dialogue: 0,0:00:07.86,0:00:10.70,Default,,0,0,0,,盲区他想起方才每次凝聚光芒时
+Dialogue: 0,0:00:10.96,0:00:13.74,Default,,0,0,0,,周围空间都在微妙震颤那是强
+Dialogue: 0,0:00:13.74,0:00:15.38,Default,,0,0,0,,行扭曲空间导致的反噬
+Dialogue: 0,0:00:15.72,0:00:17.80,Default,,0,0,0,,深吸一口气他闭目凝神
+Dialogue: 0,0:00:18.14,0:00:20.14,Default,,0,0,0,,引导灵力不再追求耀眼光芒
+Dialogue: 0,0:00:20.39,0:00:22.09,Default,,0,0,0,,而是模仿那缕灰气的形态
+Dialogue: 0,0:00:22.52,0:00:23.93,Default,,0,0,0,,在{\c&H0000FFFF&\b1}丹田{\c&H00FFFFFF&\b0}内缓缓盘旋
+Dialogue: 0,0:00:24.23,0:00:26.39,Default,,0,0,0,,周身翻涌的幽蓝雾霭渐渐平息
+Dialogue: 0,0:00:26.65,0:00:28.61,Default,,0,0,0,,化作无数细小光点融入经脉

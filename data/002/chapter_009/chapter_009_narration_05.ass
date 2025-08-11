@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_009 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.42,Default,,0,0,0,,四女祭出先天{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.72,0:00:03.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}兰心{\c&H00FFFFFF&\b0}天女弯弓搭箭
+Dialogue: 0,0:00:03.52,0:00:05.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}澹台{\c&H00FFFFFF&\b0}沧海双掌推出
+Dialogue: 0,0:00:05.35,0:00:06.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙欣{\c&H00FFFFFF&\b0}凤岚各持法宝
+Dialogue: 0,0:00:07.05,0:00:09.21,Default,,0,0,0,,四件{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}同时轰向镇山始祖
+Dialogue: 0,0:00:09.55,0:00:11.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}蓝光红光
+Dialogue: 0,0:00:11.51,0:00:13.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}紫光{\c&H00FFFFFF&\b0}交织形成巨大光罩
+Dialogue: 0,0:00:14.30,0:00:15.85,Default,,0,0,0,,将镇山始祖困在中央
+Dialogue: 0,0:00:16.20,0:00:17.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}镇山{\c&H00FFFFFF&\b0}始祖怒吼挣扎
+Dialogue: 0,0:00:18.03,0:00:20.27,Default,,0,0,0,,气血冲击光罩却无法突破
+Dialogue: 0,0:00:20.68,0:00:23.07,Default,,0,0,0,,面色狰狞如兽周围空间扭曲
+Dialogue: 0,0:00:23.32,0:00:24.14,Default,,0,0,0,,碎石悬浮

@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_017 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.04,Default,,0,0,0,,苏青婵翻到红色短裙图片
+Dialogue: 0,0:00:02.60,0:00:03.94,Default,,0,0,0,,脸颊泛红连忙划过
+Dialogue: 0,0:00:04.59,0:00:05.99,Default,,0,0,0,,却被{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}按住手腕
+Dialogue: 0,0:00:06.36,0:00:08.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}指着屏幕语气带着蛊惑
+Dialogue: 0,0:00:08.76,0:00:11.18,Default,,0,0,0,,灰色T恤的圆领随着低头动作靠近
+Dialogue: 0,0:00:11.18,0:00:13.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵的耳朵苏青婵犹豫地咬着
+Dialogue: 0,0:00:13.56,0:00:16.12,Default,,0,0,0,,下唇双手抓着黑色长裙的裙摆
+Dialogue: 0,0:00:16.42,0:00:18.61,Default,,0,0,0,,眼神闪烁{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}继续劝说
+Dialogue: 0,0:00:18.98,0:00:20.68,Default,,0,0,0,,手指轻点屏幕上的短裙
+Dialogue: 0,0:00:20.96,0:00:21.64,Default,,0,0,0,,笑容玩味

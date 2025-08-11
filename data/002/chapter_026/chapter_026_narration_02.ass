@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_026 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.82,Default,,0,0,0,,三头凶兽化身为坐骑
+Dialogue: 0,0:00:02.16,0:00:03.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}一行踏上征途
+Dialogue: 0,0:00:04.12,0:00:06.19,Default,,0,0,0,,场景切换至{\c&H0000FFFF&\b1}洪荒{\c&H00FFFFFF&\b0}边缘荒野
+Dialogue: 0,0:00:06.52,0:00:09.12,Default,,0,0,0,,午后{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}斜照地面覆盖稀疏青草
+Dialogue: 0,0:00:09.48,0:00:11.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}稳稳坐在月光灵豹背上
+Dialogue: 0,0:00:11.52,0:00:14.17,Default,,0,0,0,,此豹通体银白{\c&H0000FFFF&\b1}毛发{\c&H00FFFFFF&\b0}如月光流淌
+Dialogue: 0,0:00:14.46,0:00:16.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}太阳{\c&H00FFFFFF&\b0}尊者夫妇分乘另两头怪兽
+Dialogue: 0,0:00:16.87,0:00:18.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}太阳{\c&H00FFFFFF&\b0}尊者金袍耀眼
+Dialogue: 0,0:00:18.43,0:00:20.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}太阴{\c&H00FFFFFF&\b0}尊者素白圆领长袍
+Dialogue: 0,0:00:20.50,0:00:23.02,Default,,0,0,0,,青丝束成发髻{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}轻抚豹首
+Dialogue: 0,0:00:23.32,0:00:26.34,Default,,0,0,0,,询问洪荒信息{\c&H0000FFFF&\b1}灵豹{\c&H00FFFFFF&\b0}却茫然摇头
+Dialogue: 0,0:00:26.70,0:00:28.39,Default,,0,0,0,,显露出对大世界的无知

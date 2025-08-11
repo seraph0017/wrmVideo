@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_018 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.62,Default,,0,0,0,,战场侧翼{\c&H0000FFFF&\b1}青丘{\c&H00FFFFFF&\b0}妙儿悄然现身
+Dialogue: 0,0:00:03.03,0:00:05.87,Default,,0,0,0,,她背对着镜头浅绿色长裙在能量
+Dialogue: 0,0:00:05.87,0:00:08.70,Default,,0,0,0,,乱流中轻轻摆动双手轻摇银色铃
+Dialogue: 0,0:00:08.70,0:00:10.82,Default,,0,0,0,,铛清脆铃声如魔音穿脑
+Dialogue: 0,0:00:11.15,0:00:13.02,Default,,0,0,0,,被铃声{\c&H0000FFFF&\b1}波及{\c&H00FFFFFF&\b0}的魔神纷纷呆滞
+Dialogue: 0,0:00:13.26,0:00:15.40,Default,,0,0,0,,神魂离体时已被绿光缠绕
+Dialogue: 0,0:00:15.86,0:00:17.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}青丘{\c&H00FFFFFF&\b0}妙儿指尖划过虚空
+Dialogue: 0,0:00:17.89,0:00:20.56,Default,,0,0,0,,绿光暴涨将十数道神魂绞成碎片
+Dialogue: 0,0:00:20.84,0:00:23.12,Default,,0,0,0,,身后是混乱的战场和陨落的星辰

@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_032 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.46,Default,,0,0,0,,苦肉计通天教祖心头{\c&H0000FFFF&\b1}巨震{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.90,0:00:05.29,Default,,0,0,0,,只见无法魔祖手中突然出现另一瓶
+Dialogue: 0,0:00:05.29,0:00:07.97,Default,,0,0,0,,道祖精血毫不犹豫地引爆他
+Dialogue: 0,0:00:07.97,0:00:09.30,Default,,0,0,0,,从一开始就留了后手
+Dialogue: 0,0:00:09.53,0:00:11.24,Default,,0,0,0,,精血化作洪流席卷而来
+Dialogue: 0,0:00:11.53,0:00:12.96,Default,,0,0,0,,带着毁天灭地的威能
+Dialogue: 0,0:00:13.29,0:00:14.72,Default,,0,0,0,,通天教祖瞳孔骤缩
+Dialogue: 0,0:00:15.04,0:00:16.64,Default,,0,0,0,,连忙催动第一绝阵抵挡
+Dialogue: 0,0:00:17.03,0:00:19.67,Default,,0,0,0,,阵法光芒{\c&H0000FFFF&\b1}大盛{\c&H00FFFFFF&\b0}却仍被洪流震得气
+Dialogue: 0,0:00:19.67,0:00:22.05,Default,,0,0,0,,血翻涌嘴角溢出金色血液
+Dialogue: 0,0:00:22.45,0:00:24.72,Default,,0,0,0,,狼狈后退你竟敢算计我
+Dialogue: 0,0:00:24.72,0:00:24.72,Default,,0,0,0,,

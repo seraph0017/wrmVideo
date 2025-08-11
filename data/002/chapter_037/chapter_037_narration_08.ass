@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_037 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}化身与齐天大圣并肩立于东海
+Dialogue: 0,0:00:02.65,0:00:05.47,Default,,0,0,0,,云端下方是混沌魔神的黑色潮涌
+Dialogue: 0,0:00:05.89,0:00:07.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天大圣{\c&H00FFFFFF&\b0}金箍棒指处
+Dialogue: 0,0:00:07.82,0:00:10.19,Default,,0,0,0,,妖气冲天俺老孙去会会那些魔
+Dialogue: 0,0:00:10.19,0:00:11.92,Default,,0,0,0,,头{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}化身劝阻
+Dialogue: 0,0:00:12.28,0:00:14.88,Default,,0,0,0,,且慢待我本尊与通天教祖汇合
+Dialogue: 0,0:00:15.30,0:00:17.57,Default,,0,0,0,,话音未落海面突然炸开{\c&H0000FFFF&\b1}巨浪{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.95,0:00:19.91,Default,,0,0,0,,三头魔祖率百万魔神杀来
+Dialogue: 0,0:00:20.21,0:00:21.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天大圣{\c&H00FFFFFF&\b0}大笑迎上
+Dialogue: 0,0:00:22.09,0:00:23.39,Default,,0,0,0,,金箍棒舞得如金轮
+Dialogue: 0,0:00:23.70,0:00:25.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}化身祭出鸿蒙尺
+Dialogue: 0,0:00:25.81,0:00:28.71,Default,,0,0,0,,紫电缠绕尺身场景设定为{\c&H0000FFFF&\b1}东海{\c&H00FFFFFF&\b0}战
+Dialogue: 0,0:00:28.71,0:00:30.84,Default,,0,0,0,,场{\c&H0000FFFF&\b1}阴云密布{\c&H00FFFFFF&\b0}海浪滔天
+Dialogue: 0,0:00:31.17,0:00:33.09,Default,,0,0,0,,金色妖气与紫色电光交映
+Dialogue: 0,0:00:33.48,0:00:35.19,Default,,0,0,0,,远处{\c&H0000FFFF&\b1}海岛{\c&H00FFFFFF&\b0}在战火中燃烧
+Dialogue: 0,0:00:35.60,0:00:36.68,Default,,0,0,0,,氛围惨烈激昂

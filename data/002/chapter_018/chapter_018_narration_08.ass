@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_018 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:03.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}恒星{\c&H00FFFFFF&\b0}核心内金色火焰中浮现出古
+Dialogue: 0,0:00:03.28,0:00:05.78,Default,,0,0,0,,朴石门门上刻满魔神{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.17,0:00:08.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}以精血激活石门缓缓开启
+Dialogue: 0,0:00:09.27,0:00:11.01,Default,,0,0,0,,露出内部堆积如山的{\c&H0000FFFF&\b1}宝贝{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.32,0:00:13.10,Default,,0,0,0,,先天{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}散发七彩霞光
+Dialogue: 0,0:00:13.30,0:00:14.76,Default,,0,0,0,,混沌晶石堆成{\c&H0000FFFF&\b1}小山{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.07,0:00:16.68,Default,,0,0,0,,丹药香气弥漫整个核心
+Dialogue: 0,0:00:16.96,0:00:19.11,Default,,0,0,0,,九曲妖圣双眼放光扑向{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.44,0:00:21.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}天乾{\c&H00FFFFFF&\b0}始祖则小心检查符文
+Dialogue: 0,0:00:21.71,0:00:23.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}青丘{\c&H00FFFFFF&\b0}妙儿背立门边
+Dialogue: 0,0:00:23.41,0:00:25.77,Default,,0,0,0,,绿光扫过{\c&H0000FFFF&\b1}宝库{\c&H00FFFFFF&\b0}警惕可能的陷阱

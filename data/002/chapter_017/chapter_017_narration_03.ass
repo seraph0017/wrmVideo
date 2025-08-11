@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_017 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}走到杨清慧面前
+Dialogue: 0,0:00:01.99,0:00:04.20,Default,,0,0,0,,目光锐利地扫过她紧握的双手
+Dialogue: 0,0:00:04.80,0:00:06.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨清慧{\c&H00FFFFFF&\b0}下意识并拢双腿
+Dialogue: 0,0:00:06.96,0:00:08.88,Default,,0,0,0,,米白色{\c&H0000FFFF&\b1}连衣裙{\c&H00FFFFFF&\b0}的裙摆微微摆动
+Dialogue: 0,0:00:09.38,0:00:12.10,Default,,0,0,0,,她低着头长长的睫毛在眼睑下投
+Dialogue: 0,0:00:12.10,0:00:14.50,Default,,0,0,0,,出扇形阴影{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}嘴角勾起一抹玩
+Dialogue: 0,0:00:14.50,0:00:17.31,Default,,0,0,0,,味的笑语气平淡地解释是修行者
+Dialogue: 0,0:00:17.31,0:00:18.71,Default,,0,0,0,,血气涌动导致脸红
+Dialogue: 0,0:00:19.17,0:00:21.32,Default,,0,0,0,,眼神却若有似无地停留在她交握的
+Dialogue: 0,0:00:21.32,0:00:23.50,Default,,0,0,0,,手上{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵恍然大悟
+Dialogue: 0,0:00:23.92,0:00:25.26,Default,,0,0,0,,拍着胸口松了口气
+Dialogue: 0,0:00:25.68,0:00:28.16,Default,,0,0,0,,完全没注意{\c&H0000FFFF&\b1}杨清慧{\c&H00FFFFFF&\b0}悄悄将请帖放在
+Dialogue: 0,0:00:28.16,0:00:28.56,Default,,0,0,0,,桌上

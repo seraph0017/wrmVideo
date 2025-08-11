@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_043 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.95,Default,,0,0,0,,血翼{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}见光阴老祖落败
+Dialogue: 0,0:00:02.38,0:00:03.90,Default,,0,0,0,,与另两名魔神对视一眼
+Dialogue: 0,0:00:04.38,0:00:06.47,Default,,0,0,0,,突然爆发魔气震退光柱牢笼
+Dialogue: 0,0:00:06.76,0:00:08.95,Default,,0,0,0,,化作三道流光向{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}深处逃遁
+Dialogue: 0,0:00:09.28,0:00:12.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕冷{\c&H00FFFFFF&\b0}哼一声操控天河圣殿射出
+Dialogue: 0,0:00:12.05,0:00:13.30,Default,,0,0,0,,数十道银白色锁链
+Dialogue: 0,0:00:13.60,0:00:15.03,Default,,0,0,0,,缠绕住一名魔神脚踝
+Dialogue: 0,0:00:15.38,0:00:16.88,Default,,0,0,0,,锁链表面{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}闪烁
+Dialogue: 0,0:00:17.25,0:00:20.09,Default,,0,0,0,,将魔神拖拽而回{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖追击光
+Dialogue: 0,0:00:20.09,0:00:22.89,Default,,0,0,0,,阴{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}拂尘丝线缠绕光阴老祖双
+Dialogue: 0,0:00:22.89,0:00:25.67,Default,,0,0,0,,腿青色火焰顺着丝线蔓延燃烧

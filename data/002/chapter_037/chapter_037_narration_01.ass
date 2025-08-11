@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_037 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄教{\c&H00FFFFFF&\b0}山门外云雾缭绕
+Dialogue: 0,0:00:02.15,0:00:03.88,Default,,0,0,0,,顽石道人率弟子躬身迎接
+Dialogue: 0,0:00:04.37,0:00:06.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}携二十余名道祖巅峰强者踏空
+Dialogue: 0,0:00:06.92,0:00:09.59,Default,,0,0,0,,而至青灰色道袍在{\c&H0000FFFF&\b1}山风中{\c&H00FFFFFF&\b0}猎猎作
+Dialogue: 0,0:00:09.59,0:00:12.08,Default,,0,0,0,,响这是{\c&H0000FFFF&\b1}玄教{\c&H00FFFFFF&\b0}首次迎来如此阵容
+Dialogue: 0,0:00:12.37,0:00:13.97,Default,,0,0,0,,顽石道人眼中闪过震惊
+Dialogue: 0,0:00:14.38,0:00:16.52,Default,,0,0,0,,却依旧保持镇定拱手笑道
+Dialogue: 0,0:00:17.04,0:00:18.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕府{\c&H00FFFFFF&\b0}主长生道友
+Dialogue: 0,0:00:19.39,0:00:21.47,Default,,0,0,0,,一路辛苦{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}回礼时
+Dialogue: 0,0:00:21.77,0:00:24.43,Default,,0,0,0,,身后血衣杀神的猩红披风与{\c&H0000FFFF&\b1}盘山{\c&H00FFFFFF&\b0}大
+Dialogue: 0,0:00:24.43,0:00:26.52,Default,,0,0,0,,王的{\c&H0000FFFF&\b1}玄铁{\c&H00FFFFFF&\b0}铠甲形成鲜明对比
+Dialogue: 0,0:00:26.83,0:00:28.39,Default,,0,0,0,,无声彰显着援军的强悍
+Dialogue: 0,0:00:28.68,0:00:30.40,Default,,0,0,0,,场景设定为{\c&H0000FFFF&\b1}宋式{\c&H00FFFFFF&\b0}山门
+Dialogue: 0,0:00:30.86,0:00:33.42,Default,,0,0,0,,青瓦飞檐{\c&H0000FFFF&\b1}石阶{\c&H00FFFFFF&\b0}两侧古松苍劲
+Dialogue: 0,0:00:33.87,0:00:35.93,Default,,0,0,0,,晨光穿透云层洒在众人身上
+Dialogue: 0,0:00:36.23,0:00:38.88,Default,,0,0,0,,光影明暗交错凸显庄重氛围

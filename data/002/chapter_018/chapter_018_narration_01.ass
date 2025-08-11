@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_018 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.76,Default,,0,0,0,,星空边缘的荒芜星球上
+Dialogue: 0,0:00:02.20,0:00:04.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与天乾始祖九曲妖圣汇合
+Dialogue: 0,0:00:05.27,0:00:07.58,Default,,0,0,0,,众人面色凝重讨论着诡异现象
+Dialogue: 0,0:00:07.91,0:00:09.77,Default,,0,0,0,,连续劫掠三个混沌魔神部落
+Dialogue: 0,0:00:10.04,0:00:12.47,Default,,0,0,0,,竟未遇一名魔尊{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}指尖划过虚
+Dialogue: 0,0:00:12.47,0:00:15.18,Default,,0,0,0,,空星图沉声道所有部落的魔
+Dialogue: 0,0:00:15.18,0:00:17.09,Default,,0,0,0,,尊同时失踪绝非巧合
+Dialogue: 0,0:00:17.58,0:00:20.12,Default,,0,0,0,,背后定有大阴谋{\c&H0000FFFF&\b1}天乾{\c&H00FFFFFF&\b0}始祖抚须
+Dialogue: 0,0:00:20.12,0:00:22.43,Default,,0,0,0,,皱眉九曲{\c&H0000FFFF&\b1}妖圣{\c&H00FFFFFF&\b0}握紧腰间骨刃
+Dialogue: 0,0:00:22.80,0:00:25.52,Default,,0,0,0,,星空背景下三人身影被星光勾勒
+Dialogue: 0,0:00:25.52,0:00:26.43,Default,,0,0,0,,出坚毅轮廓

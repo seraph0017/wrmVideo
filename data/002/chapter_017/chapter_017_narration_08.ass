@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_017 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵身上光芒一闪
+Dialogue: 0,0:00:02.06,0:00:03.90,Default,,0,0,0,,黑色长裙变成红色短裙
+Dialogue: 0,0:00:04.39,0:00:06.00,Default,,0,0,0,,圆领设计露出纤细脖颈
+Dialogue: 0,0:00:06.36,0:00:07.59,Default,,0,0,0,,裙摆短到大腿中部
+Dialogue: 0,0:00:07.87,0:00:09.59,Default,,0,0,0,,她羞涩地拉着裙摆往下扯
+Dialogue: 0,0:00:09.93,0:00:12.44,Default,,0,0,0,,却让上衣更紧双手下意识挡在胸
+Dialogue: 0,0:00:12.44,0:00:14.06,Default,,0,0,0,,前{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}眼神灼热
+Dialogue: 0,0:00:14.43,0:00:17.09,Default,,0,0,0,,伸手揽住她的腰灰色T恤的袖口
+Dialogue: 0,0:00:17.09,0:00:19.55,Default,,0,0,0,,随着动作卷起露出小臂肌肉

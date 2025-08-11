@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_015 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女悬浮在混沌中
+Dialogue: 0,0:00:02.26,0:00:04.33,Default,,0,0,0,,高声怒斥烈火魔尊为缩头乌龟
+Dialogue: 0,0:00:04.92,0:00:07.45,Default,,0,0,0,,声音在虚空回荡她环绕着不断复
+Dialogue: 0,0:00:07.45,0:00:09.91,Default,,0,0,0,,原的血管壁游走突然心头警兆狂
+Dialogue: 0,0:00:09.91,0:00:12.38,Default,,0,0,0,,跳那熟悉的心悸感正是来自烈
+Dialogue: 0,0:00:12.38,0:00:13.63,Default,,0,0,0,,火魔尊的黑色书卷
+Dialogue: 0,0:00:13.89,0:00:15.73,Default,,0,0,0,,她猛然发力{\c&H0000FFFF&\b1}双掌齐{\c&H00FFFFFF&\b0}出
+Dialogue: 0,0:00:16.02,0:00:18.21,Default,,0,0,0,,血色魔焰如潮水般冲击血管
+Dialogue: 0,0:00:18.61,0:00:19.99,Default,,0,0,0,,这次血管竟未复原
+Dialogue: 0,0:00:20.32,0:00:21.57,Default,,0,0,0,,露出蛛网般的裂纹

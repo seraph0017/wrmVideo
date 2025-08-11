@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_005 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}突然话锋一转
+Dialogue: 0,0:00:01.88,0:00:03.85,Default,,0,0,0,,目光落在{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}和白蒹葭身上
+Dialogue: 0,0:00:04.42,0:00:06.36,Default,,0,0,0,,带着探究笑意你们修为
+Dialogue: 0,0:00:06.36,0:00:09.96,Default,,0,0,0,,似乎没长进白蒹葭俏脸一红
+Dialogue: 0,0:00:09.40,0:00:11.16,Default,,0,0,0,,嗔道还不是忙府中事
+Dialogue: 0,0:00:11.38,0:00:13.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}也轻哼你这怪物
+Dialogue: 0,0:00:13.46,0:00:15.62,Default,,0,0,0,,我们哪比得过赵硕大笑
+Dialogue: 0,0:00:15.90,0:00:18.13,Default,,0,0,0,,指尖轻叩桌面我有办法帮你们
+Dialogue: 0,0:00:18.13,0:00:19.60,Default,,0,0,0,,提升要不要试试

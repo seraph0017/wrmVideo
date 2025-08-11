@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_036 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.91,Default,,0,0,0,,玉城城门前{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}一行人身着朴素
+Dialogue: 0,0:00:02.91,0:00:05.13,Default,,0,0,0,,青衫收敛气息混入人流
+Dialogue: 0,0:00:05.50,0:00:07.55,Default,,0,0,0,,正午{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}炽烈城墙高耸
+Dialogue: 0,0:00:07.88,0:00:09.61,Default,,0,0,0,,灰褐色砖石上爬满青苔
+Dialogue: 0,0:00:09.90,0:00:11.82,Default,,0,0,0,,城门两侧{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}铠甲泛着冷光
+Dialogue: 0,0:00:12.08,0:00:13.37,Default,,0,0,0,,长生老人须发皆白
+Dialogue: 0,0:00:13.55,0:00:15.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}步履{\c&H00FFFFFF&\b0}沉稳薛卿紧随其后
+Dialogue: 0,0:00:16.19,0:00:18.92,Default,,0,0,0,,青布圆领长裙青丝束成简单发髻
+Dialogue: 0,0:00:19.30,0:00:20.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}目光扫过众人
+Dialogue: 0,0:00:20.91,0:00:23.39,Default,,0,0,0,,对收敛气息的{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}几人并未多加盘
+Dialogue: 0,0:00:23.39,0:00:24.67,Default,,0,0,0,,问顺利入城

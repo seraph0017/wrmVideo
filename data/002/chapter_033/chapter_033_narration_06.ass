@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_033 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.38,Default,,0,0,0,,我闭关多久了{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}擦拭着额
+Dialogue: 0,0:00:02.38,0:00:05.25,Default,,0,0,0,,头汗水问道他担心外界已过千年
+Dialogue: 0,0:00:05.65,0:00:07.46,Default,,0,0,0,,混沌{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}的封印即将失效
+Dialogue: 0,0:00:07.87,0:00:09.82,Default,,0,0,0,,夕月道人指尖凝出一面水镜
+Dialogue: 0,0:00:10.20,0:00:12.53,Default,,0,0,0,,映出{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}略显憔悴却神采奕奕的面
+Dialogue: 0,0:00:12.53,0:00:15.34,Default,,0,0,0,,容不过一年水镜中{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:15.34,0:00:17.11,Default,,0,0,0,,青色圆领道袍虽有褶皱
+Dialogue: 0,0:00:17.46,0:00:20.07,Default,,0,0,0,,眼神却比初入小世界时更加深邃
+Dialogue: 0,0:00:20.46,0:00:23.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕松{\c&H00FFFFFF&\b0}了口气却见水镜突然泛起
+Dialogue: 0,0:00:23.36,0:00:26.09,Default,,0,0,0,,涟漪夕月道人的影像在镜中一
+Dialogue: 0,0:00:26.09,0:00:28.70,Default,,0,0,0,,闪而逝露出她嘴角一抹意味深长
+Dialogue: 0,0:00:28.70,0:00:29.21,Default,,0,0,0,,的{\c&H0000FFFF&\b1}浅笑{\c&H00FFFFFF&\b0}

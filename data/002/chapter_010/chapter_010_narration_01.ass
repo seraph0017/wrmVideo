@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_010 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.58,Default,,0,0,0,,云中山巅的{\c&H0000FFFF&\b1}白玉{\c&H00FFFFFF&\b0}小亭内
+Dialogue: 0,0:00:02.06,0:00:03.68,Default,,0,0,0,,辛芦依偎在{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}怀中
+Dialogue: 0,0:00:04.23,0:00:06.69,Default,,0,0,0,,众女围坐讨论清心小筑是否算计齐
+Dialogue: 0,0:00:06.69,0:00:08.51,Default,,0,0,0,,天府{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}粉面微红
+Dialogue: 0,0:00:08.81,0:00:10.92,Default,,0,0,0,,提出怕{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}占山不还的猜测
+Dialogue: 0,0:00:11.37,0:00:13.01,Default,,0,0,0,,却因理由牵强而语塞
+Dialogue: 0,0:00:13.32,0:00:14.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}兰心{\c&H00FFFFFF&\b0}天女睁着杏眼反驳
+Dialogue: 0,0:00:15.34,0:00:17.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}澹台{\c&H00FFFFFF&\b0}沧海则冷着脸沉默
+Dialogue: 0,0:00:17.59,0:00:20.36,Default,,0,0,0,,亭外云雾缭绕晨光透过雕花窗棂
+Dialogue: 0,0:00:20.36,0:00:22.95,Default,,0,0,0,,洒在青石桌上气氛凝重如坠冰

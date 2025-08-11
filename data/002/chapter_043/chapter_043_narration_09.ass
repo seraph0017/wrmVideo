@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_043 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}将被锁链拖拽的魔神收入寒冰
+Dialogue: 0,0:00:02.35,0:00:05.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝珠{\c&H00FFFFFF&\b0}宝珠表面浮现魔神挣扎的虚
+Dialogue: 0,0:00:05.11,0:00:06.58,Default,,0,0,0,,影随即恢复平静
+Dialogue: 0,0:00:06.95,0:00:08.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖返回与赵硕汇合
+Dialogue: 0,0:00:09.33,0:00:11.22,Default,,0,0,0,,青灰色道袍沾染黑色血液
+Dialogue: 0,0:00:11.49,0:00:13.88,Default,,0,0,0,,拂尘银丝凌乱拱手向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}行礼
+Dialogue: 0,0:00:14.21,0:00:16.14,Default,,0,0,0,,远处通天教祖等修士欢呼
+Dialogue: 0,0:00:16.43,0:00:18.51,Default,,0,0,0,,玄青色道袍修士御剑飞来
+Dialogue: 0,0:00:18.84,0:00:21.30,Default,,0,0,0,,紫色道袍修士挥手释放庆功烟火
+Dialogue: 0,0:00:21.64,0:00:24.15,Default,,0,0,0,,战场上空绽放出五颜六色的{\c&H0000FFFF&\b1}灵光{\c&H00FFFFFF&\b0}花
+Dialogue: 0,0:00:24.15,0:00:24.38,Default,,0,0,0,,朵

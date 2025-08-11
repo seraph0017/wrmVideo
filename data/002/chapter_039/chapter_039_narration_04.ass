@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_039 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕朗{\c&H00FFFFFF&\b0}声道弥勒佛祖所言有理
+Dialogue: 0,0:00:03.06,0:00:05.41,Default,,0,0,0,,鬼脸大王你且讲讲遗迹情况
+Dialogue: 0,0:00:05.78,0:00:08.09,Default,,0,0,0,,鬼脸大王抬头声音阴沉如雷
+Dialogue: 0,0:00:08.39,0:00:10.06,Default,,0,0,0,,此乃天河大圣{\c&H0000FFFF&\b1}宝殿{\c&H00FFFFFF&\b0}遗迹
+Dialogue: 0,0:00:10.31,0:00:11.80,Default,,0,0,0,,我曾被困偏殿无数年
+Dialogue: 0,0:00:12.06,0:00:13.39,Default,,0,0,0,,禁制险些将我磨灭
+Dialogue: 0,0:00:13.61,0:00:15.38,Default,,0,0,0,,我不过囚徒怎知全貌
+Dialogue: 0,0:00:15.68,0:00:18.01,Default,,0,0,0,,众人{\c&H0000FFFF&\b1}闻言{\c&H00FFFFFF&\b0}了然看向赵硕的目光
+Dialogue: 0,0:00:18.01,0:00:18.73,Default,,0,0,0,,缓和许多

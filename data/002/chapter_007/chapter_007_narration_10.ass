@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_007 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.80,Default,,0,0,0,,高空云层{\c&H0000FFFF&\b1}中白{\c&H00FFFFFF&\b0}蒹葭一身白色圆领
+Dialogue: 0,0:00:02.80,0:00:05.62,Default,,0,0,0,,长裙带领数十名{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}弟子御剑
+Dialogue: 0,0:00:05.62,0:00:07.13,Default,,0,0,0,,飞行加快速度
+Dialogue: 0,0:00:07.46,0:00:09.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}北宫{\c&H00FFFFFF&\b0}山快到了她声音清脆
+Dialogue: 0,0:00:09.98,0:00:11.21,Default,,0,0,0,,不死鬼祖在旁指路
+Dialogue: 0,0:00:11.52,0:00:14.07,Default,,0,0,0,,夫人前方那座{\c&H0000FFFF&\b1}高峰{\c&H00FFFFFF&\b0}就是北宫山
+Dialogue: 0,0:00:14.32,0:00:16.97,Default,,0,0,0,,众人穿透云层{\c&H0000FFFF&\b1}北宫{\c&H00FFFFFF&\b0}山全貌展现
+Dialogue: 0,0:00:17.30,0:00:19.06,Default,,0,0,0,,山腰已有结界光芒闪烁
+Dialogue: 0,0:00:19.30,0:00:21.95,Default,,0,0,0,,白蒹葭面色凝重看来西方联盟
+Dialogue: 0,0:00:21.95,0:00:23.00,Default,,0,0,0,,真的准备迎战了

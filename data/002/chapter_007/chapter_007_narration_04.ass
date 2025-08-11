@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_007 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.81,Default,,0,0,0,,山间小路上鬼算子与{\c&H0000FFFF&\b1}无极{\c&H00FFFFFF&\b0}长老并
+Dialogue: 0,0:00:02.81,0:00:05.59,Default,,0,0,0,,肩而行{\c&H0000FFFF&\b1}夕阳{\c&H00FFFFFF&\b0}将两人影子拉得很长
+Dialogue: 0,0:00:05.97,0:00:07.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}无极{\c&H00FFFFFF&\b0}长老百思不解
+Dialogue: 0,0:00:07.68,0:00:09.08,Default,,0,0,0,,西方联盟为何拒绝
+Dialogue: 0,0:00:09.40,0:00:11.21,Default,,0,0,0,,联手对抗三眼魔族不好吗
+Dialogue: 0,0:00:11.49,0:00:12.76,Default,,0,0,0,,鬼算子苦笑一声
+Dialogue: 0,0:00:13.07,0:00:15.18,Default,,0,0,0,,望向远方你以为他们信得过我
+Dialogue: 0,0:00:15.18,0:00:17.02,Default,,0,0,0,,们屠魔联盟名声已臭
+Dialogue: 0,0:00:17.58,0:00:20.05,Default,,0,0,0,,他们怕被吞并啊{\c&H0000FFFF&\b1}无极{\c&H00FFFFFF&\b0}长老恍然
+Dialogue: 0,0:00:20.05,0:00:23.01,Default,,0,0,0,,大悟面色凝重山间虫鸣渐起
+Dialogue: 0,0:00:23.37,0:00:25.02,Default,,0,0,0,,两人身影消失在暮色中

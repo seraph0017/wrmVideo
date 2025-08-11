@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_029 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}决定亲自会见大东山联盟的三
+Dialogue: 0,0:00:02.52,0:00:04.97,Default,,0,0,0,,位潜在归附者他带鬼算子
+Dialogue: 0,0:00:05.42,0:00:06.87,Default,,0,0,0,,青叶道人等五人前往
+Dialogue: 0,0:00:07.09,0:00:08.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}太阳{\c&H00FFFFFF&\b0}尊者夫妇负责警戒
+Dialogue: 0,0:00:08.94,0:00:10.38,Default,,0,0,0,,众人潜行至约定地点
+Dialogue: 0,0:00:10.69,0:00:12.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}东山{\c&H00FFFFFF&\b0}道祖三人已等候
+Dialogue: 0,0:00:12.47,0:00:15.32,Default,,0,0,0,,气氛紧张一场暗中较量即将开始

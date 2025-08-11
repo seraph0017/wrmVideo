@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_039 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.35,Default,,0,0,0,,多宝道人轻咳一声
+Dialogue: 0,0:00:01.95,0:00:04.23,Default,,0,0,0,,诸位{\c&H0000FFFF&\b1}大岛{\c&H00FFFFFF&\b0}除遗迹外已无凶兽
+Dialogue: 0,0:00:04.68,0:00:06.22,Default,,0,0,0,,不如在此建道盟驻地
+Dialogue: 0,0:00:06.54,0:00:08.78,Default,,0,0,0,,众人纷纷赞同五人长老团商议
+Dialogue: 0,0:00:08.78,0:00:11.28,Default,,0,0,0,,后决定建宏伟大殿作聚会用
+Dialogue: 0,0:00:11.63,0:00:13.37,Default,,0,0,0,,周边筑群落供各方落脚
+Dialogue: 0,0:00:13.60,0:00:15.42,Default,,0,0,0,,更布下大阵防备混沌魔神
+Dialogue: 0,0:00:15.69,0:00:17.14,Default,,0,0,0,,九成精力皆耗于此

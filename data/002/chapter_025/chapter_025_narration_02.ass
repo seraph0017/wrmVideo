@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_025 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:03.00,Default,,0,0,0,,纳兰萩被东方北方鬼使死死缠住
+Dialogue: 0,0:00:03.62,0:00:05.27,Default,,0,0,0,,万劫门户刚镇压住鬼雾
+Dialogue: 0,0:00:05.58,0:00:07.34,Default,,0,0,0,,鬼使{\c&H0000FFFF&\b1}双剑交{\c&H00FFFFFF&\b0}错封锁退路
+Dialogue: 0,0:00:07.71,0:00:09.49,Default,,0,0,0,,她{\c&H0000FFFF&\b1}余光{\c&H00FFFFFF&\b0}瞥见九阳圣女遇险
+Dialogue: 0,0:00:09.84,0:00:12.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}银牙{\c&H00FFFFFF&\b0}紧咬周身魔气暴涨却难敌二
+Dialogue: 0,0:00:12.29,0:00:14.30,Default,,0,0,0,,人联手战场位于山谷隘口
+Dialogue: 0,0:00:14.52,0:00:17.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}巨石{\c&H00FFFFFF&\b0}嶙峋月光透过云层洒下斑驳
+Dialogue: 0,0:00:17.17,0:00:19.14,Default,,0,0,0,,光影纳兰萩衣袂翻飞
+Dialogue: 0,0:00:19.46,0:00:20.48,Default,,0,0,0,,眼神焦急如焚

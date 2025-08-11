@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_015 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女瞳孔骤缩
+Dialogue: 0,0:00:01.80,0:00:03.10,Default,,0,0,0,,警兆如针刺般尖锐
+Dialogue: 0,0:00:03.56,0:00:06.17,Default,,0,0,0,,她不顾伤势化作一道红芒射向烈
+Dialogue: 0,0:00:06.17,0:00:08.62,Default,,0,0,0,,火魔尊必须阻止他发动最后杀
+Dialogue: 0,0:00:08.62,0:00:10.80,Default,,0,0,0,,招然而烈火魔尊见她冲来
+Dialogue: 0,0:00:11.04,0:00:13.33,Default,,0,0,0,,非但不躲反而露出诡异笑容
+Dialogue: 0,0:00:13.55,0:00:15.07,Default,,0,0,0,,苍白的脸上血色尽褪
+Dialogue: 0,0:00:15.42,0:00:17.68,Default,,0,0,0,,黑色书卷突然爆发出刺眼血光

@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_024 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.23,Default,,0,0,0,,竹林小径上{\c&H0000FFFF&\b1}九阳{\c&H00FFFFFF&\b0}圣女独行
+Dialogue: 0,0:00:02.73,0:00:04.29,Default,,0,0,0,,青色道袍在风中摆动
+Dialogue: 0,0:00:04.84,0:00:06.05,Default,,0,0,0,,她望着手中的玉瓶
+Dialogue: 0,0:00:06.50,0:00:08.57,Default,,0,0,0,,瓶中盛着可解奇毒的{\c&H0000FFFF&\b1}九阳{\c&H00FFFFFF&\b0}真血
+Dialogue: 0,0:00:08.87,0:00:11.34,Default,,0,0,0,,神色复杂此前{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}虽未明说
+Dialogue: 0,0:00:11.64,0:00:13.38,Default,,0,0,0,,但她已知其需要自己相助
+Dialogue: 0,0:00:13.56,0:00:15.88,Default,,0,0,0,,竹叶飘落肩头她却浑然不觉
+Dialogue: 0,0:00:16.24,0:00:17.28,Default,,0,0,0,,似在权衡利弊

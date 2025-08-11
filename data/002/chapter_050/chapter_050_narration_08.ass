@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_050 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}追杀胖大圣鸿蒙尺化为紫色
+Dialogue: 0,0:00:02.95,0:00:04.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}巨龙{\c&H00FFFFFF&\b0}张口喷出剑气
+Dialogue: 0,0:00:05.17,0:00:06.85,Default,,0,0,0,,胖{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}不断抛出法宝抵挡
+Dialogue: 0,0:00:07.24,0:00:09.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}法宝{\c&H00FFFFFF&\b0}接连破碎夕月道人截住瘦大
+Dialogue: 0,0:00:09.62,0:00:11.46,Default,,0,0,0,,圣指尖{\c&H0000FFFF&\b1}白光{\c&H00FFFFFF&\b0}冻结虚空
+Dialogue: 0,0:00:11.73,0:00:13.77,Default,,0,0,0,,瘦{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}被困冰牢动弹不得
+Dialogue: 0,0:00:14.29,0:00:16.77,Default,,0,0,0,,战争{\c&H0000FFFF&\b1}浮屠{\c&H00FFFFFF&\b0}内鸿钧老祖终于支撑不
+Dialogue: 0,0:00:16.77,0:00:19.75,Default,,0,0,0,,住瘫倒在地接引道人连忙扶住
+Dialogue: 0,0:00:19.75,0:00:23.05,Default,,0,0,0,,却见他嘴角带笑我突破了
+Dialogue: 0,0:00:22.98,0:00:25.05,Default,,0,0,0,,周身散发出{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}级别的气息

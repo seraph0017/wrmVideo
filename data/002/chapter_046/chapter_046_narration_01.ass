@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_046 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.80,Default,,0,0,0,,荒漠之上{\c&H0000FFFF&\b1}黄沙{\c&H00FFFFFF&\b0}漫天
+Dialogue: 0,0:00:02.08,0:00:03.96,Default,,0,0,0,,白蒹葭诸女脚踏{\c&H0000FFFF&\b1}玄奥{\c&H00FFFFFF&\b0}步法
+Dialogue: 0,0:00:04.62,0:00:05.87,Default,,0,0,0,,结成巨人虚影大阵
+Dialogue: 0,0:00:06.39,0:00:08.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}云霄{\c&H00FFFFFF&\b0}立于头颅位置凝神控阵
+Dialogue: 0,0:00:08.77,0:00:11.01,Default,,0,0,0,,白蒹葭与{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}坐镇心脏枢纽
+Dialogue: 0,0:00:11.24,0:00:12.79,Default,,0,0,0,,数十道身影气息相连
+Dialogue: 0,0:00:13.06,0:00:14.60,Default,,0,0,0,,巨人虚影在风沙中凝实
+Dialogue: 0,0:00:14.95,0:00:17.55,Default,,0,0,0,,一拳轰向迎面扑来的巨蛇沙鼠联军
+Dialogue: 0,0:00:17.84,0:00:19.66,Default,,0,0,0,,大地震颤{\c&H0000FFFF&\b1}沙尘{\c&H00FFFFFF&\b0}翻涌
+Dialogue: 0,0:00:19.94,0:00:22.80,Default,,0,0,0,,双方还未近身气劲已让周遭{\c&H0000FFFF&\b1}沙丘{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:22.80,0:00:23.18,Default,,0,0,0,,崩塌

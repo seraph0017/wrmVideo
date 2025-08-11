@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_010 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}将辛芦平放玉桌
+Dialogue: 0,0:00:02.15,0:00:03.81,Default,,0,0,0,,冰凉触感让她骤然清醒
+Dialogue: 0,0:00:04.41,0:00:06.83,Default,,0,0,0,,见兰心等女在场{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}羞愤欲遮
+Dialogue: 0,0:00:07.22,0:00:08.98,Default,,0,0,0,,胸前衣衫却被{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}扯开
+Dialogue: 0,0:00:09.24,0:00:11.52,Default,,0,0,0,,肚兜系带断裂{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}急呼不要在
+Dialogue: 0,0:00:11.52,0:00:13.65,Default,,0,0,0,,此玉指死死按住{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}手腕
+Dialogue: 0,0:00:13.94,0:00:15.27,Default,,0,0,0,,亭外侍女垂首侍立
+Dialogue: 0,0:00:15.70,0:00:17.71,Default,,0,0,0,,无人敢抬眼窥看这场{\c&H0000FFFF&\b1}香艳{\c&H00FFFFFF&\b0}对峙

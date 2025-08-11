@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_022 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}现身紫竹大道主身前
+Dialogue: 0,0:00:02.46,0:00:04.62,Default,,0,0,0,,探手一抓便将两尊魔尊擒获
+Dialogue: 0,0:00:04.95,0:00:07.28,Default,,0,0,0,,魔尊惊恐尖叫其为魔祖级别强者
+Dialogue: 0,0:00:07.58,0:00:09.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}冷然震杀二人笑道
+Dialogue: 0,0:00:09.96,0:00:11.36,Default,,0,0,0,,做得干净便无人知晓
+Dialogue: 0,0:00:11.59,0:00:13.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}紫竹{\c&H00FFFFFF&\b0}大道主震惊转身
+Dialogue: 0,0:00:13.44,0:00:16.21,Default,,0,0,0,,见{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}笑容温和昔日仇敌竟已成
+Dialogue: 0,0:00:16.21,0:00:17.52,Default,,0,0,0,,圣恍如隔世

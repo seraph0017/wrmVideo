@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_006 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}主殿深夜
+Dialogue: 0,0:00:02.15,0:00:04.62,Default,,0,0,0,,烛火通明{\c&H0000FFFF&\b1}赵硕白{\c&H00FFFFFF&\b0}蒹葭
+Dialogue: 0,0:00:05.04,0:00:07.17,Default,,0,0,0,,辛{\c&H0000FFFF&\b1}芦龙欣{\c&H00FFFFFF&\b0}围坐长桌
+Dialogue: 0,0:00:07.51,0:00:09.20,Default,,0,0,0,,商议应对{\c&H0000FFFF&\b1}屠魔{\c&H00FFFFFF&\b0}联盟之策
+Dialogue: 0,0:00:09.50,0:00:11.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙欣{\c&H00FFFFFF&\b0}汇报屠魔联盟欲借三眼魔
+Dialogue: 0,0:00:11.89,0:00:13.71,Default,,0,0,0,,族削弱我们{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}冷笑
+Dialogue: 0,0:00:14.03,0:00:15.85,Default,,0,0,0,,让他们算计我们坐收渔利
+Dialogue: 0,0:00:16.15,0:00:18.76,Default,,0,0,0,,四人达成共识殿外传来打更人
+Dialogue: 0,0:00:18.95,0:00:20.24,Default,,0,0,0,,三更天的吆喝
+Dialogue: 0,0:00:20.57,0:00:21.30,Default,,0,0,0,,夜色渐深

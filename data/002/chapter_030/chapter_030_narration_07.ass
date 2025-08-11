@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_030 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}抱起九阳圣女
+Dialogue: 0,0:00:01.83,0:00:03.47,Default,,0,0,0,,以自身精血为其驱毒
+Dialogue: 0,0:00:03.96,0:00:05.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}九阳{\c&H00FFFFFF&\b0}圣女虚弱睁眼
+Dialogue: 0,0:00:05.30,0:00:07.71,Default,,0,0,0,,夫君{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}怒视远方
+Dialogue: 0,0:00:07.91,0:00:09.59,Default,,0,0,0,,伤我妻子者定不{\c&H0000FFFF&\b1}饶恕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.96,0:00:12.35,Default,,0,0,0,,此时数名混沌魔神趁机偷袭
+Dialogue: 0,0:00:12.59,0:00:13.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}背护九阳圣女
+Dialogue: 0,0:00:14.14,0:00:15.56,Default,,0,0,0,,一拳轰爆领头魔神

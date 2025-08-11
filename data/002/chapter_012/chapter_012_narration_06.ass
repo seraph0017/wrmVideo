@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_012 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}玉美人{\c&H00FFFFFF&\b0}自称散修修为道主巅峰
+Dialogue: 0,0:00:03.01,0:00:05.09,Default,,0,0,0,,因幻影天女保全才得以存活
+Dialogue: 0,0:00:05.48,0:00:08.24,Default,,0,0,0,,她肌肤{\c&H0000FFFF&\b1}白皙{\c&H00FFFFFF&\b0}如瓷血管隐约可见
+Dialogue: 0,0:00:08.54,0:00:09.98,Default,,0,0,0,,给人一种脆弱易碎之感
+Dialogue: 0,0:00:10.24,0:00:13.06,Default,,0,0,0,,魅姬同样是散修千年前进山时被
+Dialogue: 0,0:00:13.06,0:00:15.52,Default,,0,0,0,,擒数百年前突破至上古道主
+Dialogue: 0,0:00:15.76,0:00:17.93,Default,,0,0,0,,她面容清纯与魅姬之名反差
+Dialogue: 0,0:00:17.93,0:00:20.14,Default,,0,0,0,,极大说话时带着一丝腼腆

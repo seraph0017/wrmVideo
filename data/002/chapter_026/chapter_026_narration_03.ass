@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_026 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.52,Default,,0,0,0,,血衣男子破空拦截
+Dialogue: 0,0:00:01.86,0:00:04.79,Default,,0,0,0,,杀气席卷荒野画面来到{\c&H0000FFFF&\b1}洪荒{\c&H00FFFFFF&\b0}边缘
+Dialogue: 0,0:00:04.79,0:00:06.47,Default,,0,0,0,,某峡谷黄昏时分
+Dialogue: 0,0:00:06.86,0:00:08.26,Default,,0,0,0,,血色残阳染红天空
+Dialogue: 0,0:00:08.54,0:00:09.97,Default,,0,0,0,,血衣男子悬浮半空
+Dialogue: 0,0:00:10.20,0:00:12.06,Default,,0,0,0,,暗红色圆领长袍无风自动
+Dialogue: 0,0:00:12.35,0:00:15.18,Default,,0,0,0,,手提血色长刀刀身散发浓郁煞气
+Dialogue: 0,0:00:15.42,0:00:16.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}等人勒停坐骑
+Dialogue: 0,0:00:17.29,0:00:18.64,Default,,0,0,0,,月光{\c&H0000FFFF&\b1}灵豹{\c&H00FFFFFF&\b0}警惕低鸣
+Dialogue: 0,0:00:18.96,0:00:20.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}眼神锐利如鹰
+Dialogue: 0,0:00:20.68,0:00:22.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}太阳{\c&H00FFFFFF&\b0}尊者夫妇分立两侧
+Dialogue: 0,0:00:23.05,0:00:24.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}宝镜若隐若现
+Dialogue: 0,0:00:24.84,0:00:26.60,Default,,0,0,0,,留下宝物饶你们不死
+Dialogue: 0,0:00:27.11,0:00:28.50,Default,,0,0,0,,血衣男子声如洪钟
+Dialogue: 0,0:00:28.77,0:00:29.77,Default,,0,0,0,,打破峡谷寂静

@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_014 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}坦言并未真的控制他们心神
+Dialogue: 0,0:00:02.81,0:00:04.56,Default,,0,0,0,,却已吓得青衣人魂飞魄散
+Dialogue: 0,0:00:05.11,0:00:07.58,Default,,0,0,0,,他伸手一抓便夺下其中一人的储
+Dialogue: 0,0:00:07.58,0:00:10.13,Default,,0,0,0,,物戒指里面竟有数十件先天{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.13,0:00:12.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}和如山{\c&H00FFFFFF&\b0}珍宝原来这些青衣人早已
+Dialogue: 0,0:00:12.68,0:00:15.23,Default,,0,0,0,,敲诈了无数势力{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}冷笑着质问
+Dialogue: 0,0:00:15.23,0:00:17.86,Default,,0,0,0,,神魔大道主下落青衣人却咬紧牙
+Dialogue: 0,0:00:17.86,0:00:19.12,Default,,0,0,0,,关{\c&H0000FFFF&\b1}宁死{\c&H00FFFFFF&\b0}不说

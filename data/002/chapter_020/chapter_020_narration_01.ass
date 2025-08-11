@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_020 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.83,Default,,0,0,0,,混沌战场之上暴风魔尊怒啸出手
+Dialogue: 0,0:00:03.19,0:00:04.64,Default,,0,0,0,,他化作一道黑色飓风
+Dialogue: 0,0:00:04.92,0:00:07.58,Default,,0,0,0,,所过之处{\c&H0000FFFF&\b1}洪荒{\c&H00FFFFFF&\b0}仙神血肉被无情侵
+Dialogue: 0,0:00:07.58,0:00:09.13,Default,,0,0,0,,蚀神魂摇曳欲灭
+Dialogue: 0,0:00:09.36,0:00:11.78,Default,,0,0,0,,星空破碎星辰碎片化为尘埃
+Dialogue: 0,0:00:12.06,0:00:14.30,Default,,0,0,0,,数千名{\c&H0000FFFF&\b1}洪荒{\c&H00FFFFFF&\b0}仙神在飓风中哀嚎
+Dialogue: 0,0:00:14.61,0:00:17.32,Default,,0,0,0,,血肉剥离仅余骷髅与暗淡神魂
+Dialogue: 0,0:00:17.59,0:00:19.09,Default,,0,0,0,,暴风魔尊眼神疯狂
+Dialogue: 0,0:00:19.42,0:00:22.05,Default,,0,0,0,,黑袍猎猎圆领衣袍下肌肉贲张
+Dialogue: 0,0:00:22.39,0:00:23.39,Default,,0,0,0,,尽显魔族凶悍

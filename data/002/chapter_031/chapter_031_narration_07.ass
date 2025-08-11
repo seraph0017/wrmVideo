@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_031 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.41,Default,,0,0,0,,侍女通报{\c&H0000FFFF&\b1}白起{\c&H00FFFFFF&\b0}求见
+Dialogue: 0,0:00:01.85,0:00:03.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}知大秦帝朝将离去
+Dialogue: 0,0:00:04.14,0:00:06.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}庭院青石板铺地
+Dialogue: 0,0:00:06.74,0:00:08.69,Default,,0,0,0,,两侧有石灯笼{\c&H0000FFFF&\b1}阳光明媚{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.93,0:00:11.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于台阶上身着锦蓝圆领长
+Dialogue: 0,0:00:11.43,0:00:13.65,Default,,0,0,0,,袍神情淡然侍女躬身
+Dialogue: 0,0:00:13.90,0:00:16.23,Default,,0,0,0,,府主闭关时武安君{\c&H0000FFFF&\b1}白起{\c&H00FFFFFF&\b0}求见
+Dialogue: 0,0:00:16.70,0:00:17.95,Default,,0,0,0,,摇光天女凑上前
+Dialogue: 0,0:00:18.23,0:00:19.45,Default,,0,0,0,,定是大秦想走了
+Dialogue: 0,0:00:19.68,0:00:21.02,Default,,0,0,0,,始皇大帝那么骄傲
+Dialogue: 0,0:00:21.28,0:00:22.23,Default,,0,0,0,,怎会{\c&H0000FFFF&\b1}屈居人{\c&H00FFFFFF&\b0}下

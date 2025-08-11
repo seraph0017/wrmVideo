@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_006 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.72,Default,,0,0,0,,八荒山战场{\c&H0000FFFF&\b1}黎明{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.99,0:00:04.36,Default,,0,0,0,,硝烟弥漫三眼魔族黑压压一片围
+Dialogue: 0,0:00:04.36,0:00:06.61,Default,,0,0,0,,城至阴天魔高声叫嚣
+Dialogue: 0,0:00:07.09,0:00:08.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}小儿速来受死
+Dialogue: 0,0:00:09.16,0:00:11.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于城头不屑回应
+Dialogue: 0,0:00:11.53,0:00:12.95,Default,,0,0,0,,上次被打得狼狈逃窜
+Dialogue: 0,0:00:13.22,0:00:15.18,Default,,0,0,0,,还敢狂吠双方骂战升级
+Dialogue: 0,0:00:15.64,0:00:17.20,Default,,0,0,0,,城头弓箭手搭箭待发
+Dialogue: 0,0:00:17.59,0:00:20.35,Default,,0,0,0,,气氛剑拔弩张山下魔族阵中传来
+Dialogue: 0,0:00:20.35,0:00:21.06,Default,,0,0,0,,阵阵咆哮

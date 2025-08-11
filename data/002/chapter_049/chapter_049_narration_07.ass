@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_049 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,杀戮之熊咆哮着撞向{\c&H0000FFFF&\b1}青龙{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.37,0:00:05.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}熊掌{\c&H00FFFFFF&\b0}拍碎龙鳞嗜血猛虎从侧面扑
+Dialogue: 0,0:00:05.25,0:00:06.83,Default,,0,0,0,,咬虎爪撕裂龙腹
+Dialogue: 0,0:00:07.23,0:00:09.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}青龙{\c&H00FFFFFF&\b0}怒吼龙血洒向虚空
+Dialogue: 0,0:00:09.38,0:00:11.76,Default,,0,0,0,,却瞬间愈合反口咬住猛虎脖颈
+Dialogue: 0,0:00:12.04,0:00:13.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}抚掌大笑好
+Dialogue: 0,0:00:13.92,0:00:16.17,Default,,0,0,0,,给我撕碎它们日月{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}与天王
+Dialogue: 0,0:00:16.17,0:00:19.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}脸色惨白坐骑乃心血所养
+Dialogue: 0,0:00:19.27,0:00:21.40,Default,,0,0,0,,此刻竟落下风对视一眼
+Dialogue: 0,0:00:21.59,0:00:22.33,Default,,0,0,0,,皆见惊惧

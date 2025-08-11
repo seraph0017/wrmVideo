@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_025 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.10,Default,,0,0,0,,九阳圣女掷出最后一道{\c&H0000FFFF&\b1}灵符{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.45,0:00:05.42,Default,,0,0,0,,道祖级威压降临{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}如瀑布倾泻
+Dialogue: 0,0:00:05.72,0:00:06.96,Default,,0,0,0,,鬼主祭出断指抵抗
+Dialogue: 0,0:00:07.40,0:00:09.77,Default,,0,0,0,,指骨与{\c&H0000FFFF&\b1}灵符{\c&H00FFFFFF&\b0}碰撞产生恐怖冲击波
+Dialogue: 0,0:00:10.03,0:00:11.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}趁机召回不死神墓
+Dialogue: 0,0:00:12.20,0:00:13.51,Default,,0,0,0,,墓中飞出万千傀儡
+Dialogue: 0,0:00:13.80,0:00:15.69,Default,,0,0,0,,与{\c&H0000FFFF&\b1}太阳{\c&H00FFFFFF&\b0}夫妇联手组成三才阵
+Dialogue: 0,0:00:15.96,0:00:17.31,Default,,0,0,0,,鬼主断指出现裂纹
+Dialogue: 0,0:00:17.61,0:00:19.25,Default,,0,0,0,,惊怒交加却不敢硬接

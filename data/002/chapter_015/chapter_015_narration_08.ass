@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_015 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.41,Default,,0,0,0,,烈火魔尊咬破舌尖
+Dialogue: 0,0:00:01.85,0:00:03.75,Default,,0,0,0,,一大口精血喷在黑色书卷上
+Dialogue: 0,0:00:04.14,0:00:06.91,Default,,0,0,0,,血光骤然{\c&H0000FFFF&\b1}大盛{\c&H00FFFFFF&\b0}化作一道血箭射向
+Dialogue: 0,0:00:06.91,0:00:08.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女她想躲
+Dialogue: 0,0:00:08.76,0:00:10.49,Default,,0,0,0,,身体却如被无形锁链捆绑
+Dialogue: 0,0:00:10.79,0:00:13.03,Default,,0,0,0,,眼睁睁看着血箭穿透护体魔焰
+Dialogue: 0,0:00:13.22,0:00:15.14,Default,,0,0,0,,没入眉心那股灼热感
+Dialogue: 0,0:00:15.39,0:00:16.71,Default,,0,0,0,,仿佛要将灵魂煮沸

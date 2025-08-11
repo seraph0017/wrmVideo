@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_026 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:03.00,Default,,0,0,0,,血煞道祖降临{\c&H0000FFFF&\b1}黑云{\c&H00FFFFFF&\b0}压顶天地变色
+Dialogue: 0,0:00:03.54,0:00:06.11,Default,,0,0,0,,场景骤变{\c&H0000FFFF&\b1}洪荒{\c&H00FFFFFF&\b0}边缘峡谷上空
+Dialogue: 0,0:00:06.50,0:00:08.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}墨黑{\c&H00FFFFFF&\b0}云层翻滚电闪雷鸣
+Dialogue: 0,0:00:08.98,0:00:10.71,Default,,0,0,0,,血煞道祖悬浮{\c&H0000FFFF&\b1}黑云{\c&H00FFFFFF&\b0}之中
+Dialogue: 0,0:00:10.92,0:00:13.73,Default,,0,0,0,,青黑色圆领道袍面容枯槁如僵尸
+Dialogue: 0,0:00:13.95,0:00:15.71,Default,,0,0,0,,头顶血煞{\c&H0000FFFF&\b1}宝旗{\c&H00FFFFFF&\b0}猎猎作响
+Dialogue: 0,0:00:16.02,0:00:17.74,Default,,0,0,0,,旗面无数怨魂嘶吼
+Dialogue: 0,0:00:17.92,0:00:19.25,Default,,0,0,0,,血衣男子跪拜在地
+Dialogue: 0,0:00:19.57,0:00:21.95,Default,,0,0,0,,面露狂喜{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}等人面色凝重
+Dialogue: 0,0:00:22.40,0:00:24.39,Default,,0,0,0,,天王{\c&H0000FFFF&\b1}塔虚影{\c&H00FFFFFF&\b0}在赵硕头顶浮现
+Dialogue: 0,0:00:24.70,0:00:26.89,Default,,0,0,0,,散发紫色{\c&H0000FFFF&\b1}光辉{\c&H00FFFFFF&\b0}伤我弟子
+Dialogue: 0,0:00:27.30,0:00:29.86,Default,,0,0,0,,尔等找死道祖声音如魔音灌耳
+Dialogue: 0,0:00:30.30,0:00:31.86,Default,,0,0,0,,震得峡谷岩石簌簌掉落

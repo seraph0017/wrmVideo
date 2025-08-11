@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_011 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}伏龙{\c&H00FFFFFF&\b0}山巅赵硕白衣胜雪
+Dialogue: 0,0:00:02.85,0:00:05.46,Default,,0,0,0,,立于悬崖边他白色圆领锦袍的衣
+Dialogue: 0,0:00:05.46,0:00:08.21,Default,,0,0,0,,摆被山风掀起露出腰间悬挂的玉
+Dialogue: 0,0:00:08.21,0:00:10.38,Default,,0,0,0,,佩那是青叶道主亲传的镇岳
+Dialogue: 0,0:00:10.38,0:00:12.77,Default,,0,0,0,,佩白衣尊者的玄色圆领僧袍随
+Dialogue: 0,0:00:12.77,0:00:14.47,Default,,0,0,0,,风飘动右手捻{\c&H0000FFFF&\b1}佛珠{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.74,0:00:17.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}紫檀{\c&H00FFFFFF&\b0}珠子在晨光中泛着温润光泽
+Dialogue: 0,0:00:17.75,0:00:20.02,Default,,0,0,0,,他们在挖地道{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}声音平静
+Dialogue: 0,0:00:20.02,0:00:22.55,Default,,0,0,0,,无波目光却如鹰隼锁定{\c&H0000FFFF&\b1}山脚{\c&H00FFFFFF&\b0}的异
+Dialogue: 0,0:00:22.55,0:00:25.25,Default,,0,0,0,,常隆起白衣尊者的{\c&H0000FFFF&\b1}佛珠{\c&H00FFFFFF&\b0}突然断裂
+Dialogue: 0,0:00:25.57,0:00:27.25,Default,,0,0,0,,第十七颗珠子滚落在地
+Dialogue: 0,0:00:27.68,0:00:30.20,Default,,0,0,0,,摔成两半露出里面的血色纹路

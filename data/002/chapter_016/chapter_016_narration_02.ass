@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_016 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天大圣{\c&H00FFFFFF&\b0}乘胜追击
+Dialogue: 0,0:00:01.95,0:00:03.54,Default,,0,0,0,,金箍棒化作万千光影
+Dialogue: 0,0:00:03.92,0:00:05.76,Default,,0,0,0,,九天魔女祭出{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}魔幡抵挡
+Dialogue: 0,0:00:06.17,0:00:08.15,Default,,0,0,0,,两件{\c&H0000FFFF&\b1}至宝{\c&H00FFFFFF&\b0}碰撞迸发刺目强光
+Dialogue: 0,0:00:08.49,0:00:10.51,Default,,0,0,0,,她被逼入绝境却不甘示弱
+Dialogue: 0,0:00:10.82,0:00:13.36,Default,,0,0,0,,催动魔功反击战斗在破碎{\c&H0000FFFF&\b1}山峰{\c&H00FFFFFF&\b0}上
+Dialogue: 0,0:00:13.36,0:00:14.95,Default,,0,0,0,,空进行地火喷涌
+Dialogue: 0,0:00:15.21,0:00:18.05,Default,,0,0,0,,空间裂缝显现杀气与魔气笼罩四
+Dialogue: 0,0:00:18.05,0:00:19.25,Default,,0,0,0,,野风云变色

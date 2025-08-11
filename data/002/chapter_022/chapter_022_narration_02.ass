@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_022 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}三人抵达战场
+Dialogue: 0,0:00:01.88,0:00:04.42,Default,,0,0,0,,正见亘古天界与天外天世界联军被
+Dialogue: 0,0:00:04.42,0:00:05.88,Default,,0,0,0,,百余尊混沌魔尊压制
+Dialogue: 0,0:00:06.21,0:00:08.79,Default,,0,0,0,,战场中心{\c&H0000FFFF&\b1}紫竹{\c&H00FFFFFF&\b0}大道主被两尊魔尊
+Dialogue: 0,0:00:08.79,0:00:10.32,Default,,0,0,0,,围攻虽已半步{\c&H0000FFFF&\b1}成圣{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.71,0:00:12.58,Default,,0,0,0,,却险象环生{\c&H0000FFFF&\b1}太阳{\c&H00FFFFFF&\b0}尊者
+Dialogue: 0,0:00:12.85,0:00:14.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}太阴{\c&H00FFFFFF&\b0}尊者如虎入羊群
+Dialogue: 0,0:00:14.89,0:00:17.88,Default,,0,0,0,,圣人威压横扫半数魔尊瞬间被镇
+Dialogue: 0,0:00:17.88,0:00:19.29,Default,,0,0,0,,杀战局逆转

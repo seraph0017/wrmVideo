@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_021 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.49,Default,,0,0,0,,惊天动地的一战爆发
+Dialogue: 0,0:00:01.92,0:00:04.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}阴罗{\c&H00FFFFFF&\b0}圣者的腕足被天奇圣者斩落
+Dialogue: 0,0:00:04.85,0:00:06.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}墨绿色{\c&H00FFFFFF&\b0}血液喷溅如泉
+Dialogue: 0,0:00:06.91,0:00:08.98,Default,,0,0,0,,失去肢体的圣者发出震耳咆哮
+Dialogue: 0,0:00:09.29,0:00:10.54,Default,,0,0,0,,万足真身猛然膨胀
+Dialogue: 0,0:00:10.81,0:00:12.25,Default,,0,0,0,,无数腕足如毒蟒狂舞
+Dialogue: 0,0:00:12.49,0:00:13.88,Default,,0,0,0,,携着腥风直扑对手
+Dialogue: 0,0:00:14.18,0:00:15.46,Default,,0,0,0,,远处{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}负手而立
+Dialogue: 0,0:00:15.72,0:00:17.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄色{\c&H00FFFFFF&\b0}圆领长袍无风自动
+Dialogue: 0,0:00:17.95,0:00:19.54,Default,,0,0,0,,深邃眼眸紧盯战局
+Dialogue: 0,0:00:19.82,0:00:21.46,Default,,0,0,0,,指尖悄然凝结护体{\c&H0000FFFF&\b1}灵光{\c&H00FFFFFF&\b0}

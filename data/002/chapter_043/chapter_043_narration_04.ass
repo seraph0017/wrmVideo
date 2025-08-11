@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_043 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.13,Default,,0,0,0,,血翼{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}在光柱牢笼中怒吼
+Dialogue: 0,0:00:02.48,0:00:05.10,Default,,0,0,0,,赤红色双翼展开羽毛如刀片般飞
+Dialogue: 0,0:00:05.10,0:00:07.64,Default,,0,0,0,,射却被光柱表面{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}反弹
+Dialogue: 0,0:00:08.01,0:00:09.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于圣殿顶端
+Dialogue: 0,0:00:09.71,0:00:12.26,Default,,0,0,0,,左手持寒冰{\c&H0000FFFF&\b1}宝珠{\c&H00FFFFFF&\b0}宝珠散发森白寒
+Dialogue: 0,0:00:12.26,0:00:14.41,Default,,0,0,0,,气右手结印指向血翼{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:14.71,0:00:16.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝珠{\c&H00FFFFFF&\b0}周围凝聚出数十枚冰棱
+Dialogue: 0,0:00:16.77,0:00:19.23,Default,,0,0,0,,通天教祖等远处观战的修士面露喜
+Dialogue: 0,0:00:19.23,0:00:21.85,Default,,0,0,0,,色玄青色道袍修士抚须微笑
+Dialogue: 0,0:00:22.27,0:00:24.04,Default,,0,0,0,,紫色道袍修士紧握拳头
+Dialogue: 0,0:00:24.59,0:00:27.27,Default,,0,0,0,,战场局势因{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖加入逐渐逆转

@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_039 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.36,Default,,0,0,0,,一名魔祖冲出阵前叫嚣
+Dialogue: 0,0:00:02.73,0:00:04.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}何在敢与我一战
+Dialogue: 0,0:00:04.90,0:00:07.22,Default,,0,0,0,,此乃神目魔祖不知{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}威名
+Dialogue: 0,0:00:07.47,0:00:09.80,Default,,0,0,0,,洪荒修士{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}赵硕一步踏出
+Dialogue: 0,0:00:10.12,0:00:11.77,Default,,0,0,0,,你找死双方阵前
+Dialogue: 0,0:00:12.03,0:00:13.73,Default,,0,0,0,,杀气碰撞风云变色
+Dialogue: 0,0:00:14.05,0:00:16.12,Default,,0,0,0,,一场惊天大战即将{\c&H0000FFFF&\b1}拉开序幕{\c&H00FFFFFF&\b0}

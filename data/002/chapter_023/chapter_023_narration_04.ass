@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_023 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝塔{\c&H00FFFFFF&\b0}悬空赵硕祭出天王塔收走火
+Dialogue: 0,0:00:02.89,0:00:05.08,Default,,0,0,0,,娘子画面转到夜空中
+Dialogue: 0,0:00:05.50,0:00:08.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}单手结印古朴宝塔从掌心飞
+Dialogue: 0,0:00:08.36,0:00:11.13,Default,,0,0,0,,出放大如山峰垂下万千{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.37,0:00:12.69,Default,,0,0,0,,火娘子被{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}托起
+Dialogue: 0,0:00:12.98,0:00:14.70,Default,,0,0,0,,青色道袍在光流中翻卷
+Dialogue: 0,0:00:15.02,0:00:16.80,Default,,0,0,0,,背部肌肉紧绷却无力反抗
+Dialogue: 0,0:00:17.11,0:00:19.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}漠然看着她被吸入塔内
+Dialogue: 0,0:00:19.58,0:00:21.36,Default,,0,0,0,,转身化作流光射向东方
+Dialogue: 0,0:00:21.66,0:00:23.52,Default,,0,0,0,,留下{\c&H0000FFFF&\b1}宝塔{\c&H00FFFFFF&\b0}在空中缩小消失

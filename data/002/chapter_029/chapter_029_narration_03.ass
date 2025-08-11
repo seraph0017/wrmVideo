@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_029 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.52,Default,,0,0,0,,又一道更强{\c&H0000FFFF&\b1}雷劫{\c&H00FFFFFF&\b0}袭来
+Dialogue: 0,0:00:01.86,0:00:03.83,Default,,0,0,0,,赵硕果断放出气运{\c&H0000FFFF&\b1}苍龙{\c&H00FFFFFF&\b0}抵挡
+Dialogue: 0,0:00:04.38,0:00:06.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}苍龙{\c&H00FFFFFF&\b0}与雷霆相撞身形渐虚
+Dialogue: 0,0:00:07.13,0:00:09.20,Default,,0,0,0,,他趁机助摇光天女恢复元气
+Dialogue: 0,0:00:09.42,0:00:11.84,Default,,0,0,0,,但劫云继续酝酿众人想起无为大
+Dialogue: 0,0:00:11.84,0:00:14.21,Default,,0,0,0,,道主陨落心悬到嗓子眼

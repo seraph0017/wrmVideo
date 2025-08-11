@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_048 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:03.06,Default,,0,0,0,,日月{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}天王大圣见势不妙遁逃
+Dialogue: 0,0:00:03.45,0:00:05.64,Default,,0,0,0,,联军{\c&H0000FFFF&\b1}大胜{\c&H00FFFFFF&\b0}赵硕立于高空
+Dialogue: 0,0:00:06.01,0:00:08.37,Default,,0,0,0,,宣布混乱地带三足鼎立
+Dialogue: 0,0:00:08.70,0:00:10.33,Default,,0,0,0,,中立联盟{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}势力
+Dialogue: 0,0:00:10.54,0:00:12.43,Default,,0,0,0,,残余三{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}势力划分地盘
+Dialogue: 0,0:00:12.71,0:00:15.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}白眉{\c&H00FFFFFF&\b0}老祖感慨终不用当炮灰了
+Dialogue: 0,0:00:15.35,0:00:18.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿钧{\c&H00FFFFFF&\b0}老祖抚须凶兽需尽快补
+Dialogue: 0,0:00:18.00,0:00:20.02,Default,,0,0,0,,充通天教祖擦拭{\c&H0000FFFF&\b1}宝剑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.52,0:00:23.00,Default,,0,0,0,,下次定斩{\c&H0000FFFF&\b1}双圣{\c&H00FFFFFF&\b0}众人望着重新
+Dialogue: 0,0:00:23.00,0:00:25.07,Default,,0,0,0,,划分的势力图神色复杂
+Dialogue: 0,0:00:25.50,0:00:28.20,Default,,0,0,0,,此战虽定却也预示着更大的风暴
+Dialogue: 0,0:00:28.20,0:00:28.95,Default,,0,0,0,,正在酝酿

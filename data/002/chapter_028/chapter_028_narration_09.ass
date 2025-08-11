@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_028 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}紫霄宫{\c&H00FFFFFF&\b0}大门洞开鸿钧道祖身影模
+Dialogue: 0,0:00:02.83,0:00:04.99,Default,,0,0,0,,糊立于高台声音如{\c&H0000FFFF&\b1}洪钟{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.99,0:00:07.69,Default,,0,0,0,,混沌魔神万年後现世
+Dialogue: 0,0:00:07.30,0:00:08.49,Default,,0,0,0,,众强者起身行礼
+Dialogue: 0,0:00:08.78,0:00:10.28,Default,,0,0,0,,衣袂摩擦声汇聚成潮
+Dialogue: 0,0:00:10.56,0:00:13.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于人群中青色道袍在攒动
+Dialogue: 0,0:00:13.24,0:00:14.70,Default,,0,0,0,,人影中如静水深流
+Dialogue: 0,0:00:14.95,0:00:17.75,Default,,0,0,0,,指尖悄然掐诀袖口{\c&H0000FFFF&\b1}云纹{\c&H00FFFFFF&\b0}仿佛活过
+Dialogue: 0,0:00:17.75,0:00:18.34,Default,,0,0,0,,来般游动

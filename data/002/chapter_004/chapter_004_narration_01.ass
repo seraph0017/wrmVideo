@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_004 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.99,Default,,0,0,0,,天星宗大殿内{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}双手抱拳向天
+Dialogue: 0,0:00:02.99,0:00:05.56,Default,,0,0,0,,雷上人行礼{\c&H0000FFFF&\b1}言辞{\c&H00FFFFFF&\b0}间充满自责
+Dialogue: 0,0:00:06.14,0:00:08.38,Default,,0,0,0,,称自己因对抗僵神一族而连累{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.38,0:00:10.55,Default,,0,0,0,,宗天雷上人表面维持笑意
+Dialogue: 0,0:00:10.79,0:00:12.39,Default,,0,0,0,,心中却暗骂{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}狡猾
+Dialogue: 0,0:00:12.68,0:00:14.83,Default,,0,0,0,,这番话将天星宗架在{\c&H0000FFFF&\b1}道德{\c&H00FFFFFF&\b0}高地
+Dialogue: 0,0:00:15.09,0:00:16.63,Default,,0,0,0,,使其不得不出手相助
+Dialogue: 0,0:00:16.93,0:00:18.97,Default,,0,0,0,,殿内气氛凝重{\c&H0000FFFF&\b1}檀香{\c&H00FFFFFF&\b0}缭绕
+Dialogue: 0,0:00:19.27,0:00:21.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}宋式{\c&H00FFFFFF&\b0}雕花梁柱彰显古朴宗门底蕴

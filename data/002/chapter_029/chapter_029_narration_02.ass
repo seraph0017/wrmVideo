@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_029 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.60,Default,,0,0,0,,第七十一{\c&H0000FFFF&\b1}道天劫{\c&H00FFFFFF&\b0}落下
+Dialogue: 0,0:00:02.03,0:00:03.63,Default,,0,0,0,,威力堪比九九{\c&H0000FFFF&\b1}天劫{\c&H00FFFFFF&\b0}紫雷
+Dialogue: 0,0:00:03.96,0:00:05.43,Default,,0,0,0,,鬼算子推算后震惊
+Dialogue: 0,0:00:05.88,0:00:08.68,Default,,0,0,0,,称天劫已带天罚摇光天女玉色骷
+Dialogue: 0,0:00:08.68,0:00:10.46,Default,,0,0,0,,髅崩碎只剩神魂摇曳
+Dialogue: 0,0:00:10.65,0:00:13.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}心急如焚众人担忧她性命
+Dialogue: 0,0:00:13.28,0:00:13.94,Default,,0,0,0,,气氛凝重

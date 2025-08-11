@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_015 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.43,Default,,0,0,0,,妖女尝到命运魔书的滋味了吧
+Dialogue: 0,0:00:03.12,0:00:04.53,Default,,0,0,0,,烈火魔尊声音沙哑
+Dialogue: 0,0:00:04.96,0:00:06.60,Default,,0,0,0,,黑色书卷在他掌心旋转
+Dialogue: 0,0:00:07.03,0:00:08.94,Default,,0,0,0,,这只是开胃菜下次发作
+Dialogue: 0,0:00:09.22,0:00:11.53,Default,,0,0,0,,你会扯掉哪条腿还是挖出心肝
+Dialogue: 0,0:00:11.81,0:00:13.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女怒视着他
+Dialogue: 0,0:00:13.34,0:00:15.05,Default,,0,0,0,,残存的右手紧握成拳
+Dialogue: 0,0:00:15.40,0:00:17.96,Default,,0,0,0,,指甲嵌入掌心鲜血顺指缝滴落

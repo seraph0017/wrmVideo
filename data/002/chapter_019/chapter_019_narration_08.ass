@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_019 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}乌列魔{\c&H00FFFFFF&\b0}尊暗笑下令
+Dialogue: 0,0:00:01.72,0:00:02.82,Default,,0,0,0,,让第九部落先上
+Dialogue: 0,0:00:03.17,0:00:04.58,Default,,0,0,0,,暴风魔尊察觉中计
+Dialogue: 0,0:00:05.08,0:00:06.43,Default,,0,0,0,,怒吼着却无可奈何
+Dialogue: 0,0:00:06.78,0:00:08.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}抓住破绽七星阵突刺
+Dialogue: 0,0:00:09.29,0:00:11.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天大圣{\c&H00FFFFFF&\b0}金箍棒如擎天柱
+Dialogue: 0,0:00:11.46,0:00:14.01,Default,,0,0,0,,砸穿魔阵核心哪吒火尖枪投出
+Dialogue: 0,0:00:14.21,0:00:15.55,Default,,0,0,0,,直取暴风魔尊眉心
+Dialogue: 0,0:00:15.93,0:00:17.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨戬玉{\c&H00FFFFFF&\b0}虚大阵金光暴涨
+Dialogue: 0,0:00:17.86,0:00:19.07,Default,,0,0,0,,与{\c&H0000FFFF&\b1}天罗地网{\c&H00FFFFFF&\b0}阵合并
+Dialogue: 0,0:00:19.41,0:00:22.02,Default,,0,0,0,,形成巨大光茧将万魔困于其中

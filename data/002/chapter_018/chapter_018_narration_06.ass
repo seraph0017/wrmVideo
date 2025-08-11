@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_018 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.85,Default,,0,0,0,,战后废墟上九曲{\c&H0000FFFF&\b1}妖圣{\c&H00FFFFFF&\b0}单手掐住落
+Dialogue: 0,0:00:02.85,0:00:05.72,Default,,0,0,0,,月魔神咽喉落月魔神浑身浴血
+Dialogue: 0,0:00:06.17,0:00:08.70,Default,,0,0,0,,嘶吼道休想知道{\c&H0000FFFF&\b1}宝库{\c&H00FFFFFF&\b0}所在
+Dialogue: 0,0:00:08.97,0:00:10.10,Default,,0,0,0,,九曲{\c&H0000FFFF&\b1}妖圣{\c&H00FFFFFF&\b0}狞笑道
+Dialogue: 0,0:00:10.56,0:00:12.65,Default,,0,0,0,,不说我有一百种方法让你开口
+Dialogue: 0,0:00:12.88,0:00:14.12,Default,,0,0,0,,骨刃抵住其眉心
+Dialogue: 0,0:00:14.36,0:00:16.11,Default,,0,0,0,,地面上是数千魔神尸体
+Dialogue: 0,0:00:16.43,0:00:19.09,Default,,0,0,0,,血色月光下落月魔神眼中闪过恐
+Dialogue: 0,0:00:19.09,0:00:21.44,Default,,0,0,0,,惧远处{\c&H0000FFFF&\b1}赵硕正{\c&H00FFFFFF&\b0}检查战利品
+Dialogue: 0,0:00:21.68,0:00:22.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝光映{\c&H00FFFFFF&\b0}红半边天

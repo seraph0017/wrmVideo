@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_020 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}修炼吞天功法
+Dialogue: 0,0:00:01.82,0:00:03.46,Default,,0,0,0,,他盘坐于星辰碎片之上
+Dialogue: 0,0:00:03.96,0:00:05.28,Default,,0,0,0,,周身环绕血色光晕
+Dialogue: 0,0:00:05.70,0:00:07.19,Default,,0,0,0,,正吞噬混沌魔尊精血
+Dialogue: 0,0:00:07.57,0:00:08.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于一旁护法
+Dialogue: 0,0:00:09.25,0:00:10.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}青丘{\c&H00FFFFFF&\b0}怜儿背身静立
+Dialogue: 0,0:00:10.82,0:00:12.13,Default,,0,0,0,,淡紫圆领长裙曳地
+Dialogue: 0,0:00:12.45,0:00:14.06,Default,,0,0,0,,青丝垂腰尽显神秘
+Dialogue: 0,0:00:14.48,0:00:17.11,Default,,0,0,0,,远处霞光漫天为这场残酷修炼染
+Dialogue: 0,0:00:17.11,0:00:17.86,Default,,0,0,0,,上一丝瑰丽

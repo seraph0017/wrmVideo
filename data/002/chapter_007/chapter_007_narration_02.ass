@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_007 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.02,Default,,0,0,0,,告辞鬼算子冷哼一声
+Dialogue: 0,0:00:02.32,0:00:05.08,Default,,0,0,0,,转身便走玄色衣袍在{\c&H0000FFFF&\b1}山风中{\c&H00FFFFFF&\b0}猎猎
+Dialogue: 0,0:00:05.08,0:00:07.57,Default,,0,0,0,,作响西方盟主负手立于{\c&H0000FFFF&\b1}山门{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.79,0:00:09.14,Default,,0,0,0,,声音冰冷不送
+Dialogue: 0,0:00:09.38,0:00:11.52,Default,,0,0,0,,话音未落鬼算子猛然回头
+Dialogue: 0,0:00:11.87,0:00:14.29,Default,,0,0,0,,眼中闪过厉色若西方联盟撑不
+Dialogue: 0,0:00:14.29,0:00:16.25,Default,,0,0,0,,住我屠魔联盟随时恭候
+Dialogue: 0,0:00:16.55,0:00:17.98,Default,,0,0,0,,西方盟主面色一沉
+Dialogue: 0,0:00:18.29,0:00:20.30,Default,,0,0,0,,衣袖一挥{\c&H0000FFFF&\b1}山门{\c&H00FFFFFF&\b0}缓缓关闭
+Dialogue: 0,0:00:20.62,0:00:23.04,Default,,0,0,0,,发出沉重声响{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}透过门缝
+Dialogue: 0,0:00:23.34,0:00:24.88,Default,,0,0,0,,在地面投下斑驳光影
+Dialogue: 0,0:00:25.10,0:00:26.18,Default,,0,0,0,,双方彻底决裂

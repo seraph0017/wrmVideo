@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_048 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.20,Default,,0,0,0,,战后统计牛神一族陨落9尊半步
+Dialogue: 0,0:00:04.20,0:00:06.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}被生擒1尊
+Dialogue: 0,0:00:06.30,0:00:10.50,Default,,0,0,0,,凶兽陨落13头己方半步{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}陨
+Dialogue: 0,0:00:10.50,0:00:13.20,Default,,0,0,0,,落2人{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于虚空
+Dialogue: 0,0:00:09.71,0:00:11.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄色{\c&H00FFFFFF&\b0}长袍在风中猎猎作响
+Dialogue: 0,0:00:11.88,0:00:13.97,Default,,0,0,0,,虽胜犹败鸿钧{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}叹息
+Dialogue: 0,0:00:14.27,0:00:16.70,Default,,0,0,0,,凶兽损耗太大需尽快补充
+Dialogue: 0,0:00:17.04,0:00:18.56,Default,,0,0,0,,通天教祖擦拭诛仙剑
+Dialogue: 0,0:00:18.99,0:00:21.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}牛神{\c&H00FFFFFF&\b0}大圣逃脱后患无穷
+Dialogue: 0,0:00:21.50,0:00:23.71,Default,,0,0,0,,众人望着漂浮的尸体和残破的混
+Dialogue: 0,0:00:23.71,0:00:26.32,Default,,0,0,0,,沌石神色凝重此战虽胜
+Dialogue: 0,0:00:26.78,0:00:28.52,Default,,0,0,0,,却也暴露了底蕴不足的隐患

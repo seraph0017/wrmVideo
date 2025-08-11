@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_040 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}恒生{\c&H00FFFFFF&\b0}魔祖乘胜追击
+Dialogue: 0,0:00:01.91,0:00:04.01,Default,,0,0,0,,魔掌裹挟血色风暴拍向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.57,0:00:05.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}强忍气血翻涌
+Dialogue: 0,0:00:06.28,0:00:08.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}尺划出紫色光墙抵挡
+Dialogue: 0,0:00:08.43,0:00:09.59,Default,,0,0,0,,却被震得连连后退
+Dialogue: 0,0:00:09.81,0:00:12.19,Default,,0,0,0,,每退一步脚下便陷出半尺深的脚印
+Dialogue: 0,0:00:12.56,0:00:14.82,Default,,0,0,0,,噗黑青色血液喷溅在光墙
+Dialogue: 0,0:00:14.82,0:00:16.68,Default,,0,0,0,,上瞬间蒸腾为毒雾
+Dialogue: 0,0:00:16.96,0:00:19.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}面色苍白如纸却仍死死咬牙坚
+Dialogue: 0,0:00:19.56,0:00:19.82,Default,,0,0,0,,持

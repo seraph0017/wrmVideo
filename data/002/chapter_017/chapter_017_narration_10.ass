@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_017 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.38,Default,,0,0,0,,办公室内气氛暧昧
+Dialogue: 0,0:00:01.83,0:00:04.25,Default,,0,0,0,,苏青婵的红色短裙和{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}的灰色T
+Dialogue: 0,0:00:04.25,0:00:07.20,Default,,0,0,0,,恤形成鲜明对比{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}将苏青婵抱
+Dialogue: 0,0:00:07.20,0:00:09.64,Default,,0,0,0,,起放在办公桌上白色衬衫的圆领
+Dialogue: 0,0:00:09.64,0:00:12.65,Default,,0,0,0,,皱起露出锁骨{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵双腿环住
+Dialogue: 0,0:00:12.65,0:00:14.38,Default,,0,0,0,,他的腰黑色{\c&H0000FFFF&\b1}长发{\c&H00FFFFFF&\b0}散落
+Dialogue: 0,0:00:14.70,0:00:16.14,Default,,0,0,0,,红色短裙裙摆翻起
+Dialogue: 0,0:00:16.45,0:00:18.55,Default,,0,0,0,,两人距离极近眼神交汇
+Dialogue: 0,0:00:18.96,0:00:20.89,Default,,0,0,0,,空气中弥漫着荷尔蒙的气息

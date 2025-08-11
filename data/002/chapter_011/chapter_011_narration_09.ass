@@ -1,0 +1,32 @@
+[Script Info]
+Title: chapter_011 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}突然挥手千万修者同时跺脚
+Dialogue: 0,0:00:03.34,0:00:06.33,Default,,0,0,0,,地面如{\c&H0000FFFF&\b1}波浪{\c&H00FFFFFF&\b0}起伏裂缝如蛛网蔓延
+Dialogue: 0,0:00:06.67,0:00:08.48,Default,,0,0,0,,惨叫声从地底喷涌而出
+Dialogue: 0,0:00:08.79,0:00:10.34,Default,,0,0,0,,金鼠始祖被气浪掀飞
+Dialogue: 0,0:00:10.51,0:00:12.41,Default,,0,0,0,,灰色圆领布衣破烂如布条
+Dialogue: 0,0:00:12.72,0:00:14.73,Default,,0,0,0,,右手死死攥着传讯符的灰烬
+Dialogue: 0,0:00:15.09,0:00:17.41,Default,,0,0,0,,你这恶魔他嘶吼着喷出鲜血
+Dialogue: 0,0:00:17.84,0:00:20.29,Default,,0,0,0,,血珠在空中凝成血箭射向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.66,0:00:23.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}侧身避开白色圆领锦袍下摆
+Dialogue: 0,0:00:23.32,0:00:26.12,Default,,0,0,0,,被血箭擦过留下一道猩红痕迹
+Dialogue: 0,0:00:26.67,0:00:28.16,Default,,0,0,0,,银鼠始祖趁机遁地
+Dialogue: 0,0:00:28.59,0:00:30.77,Default,,0,0,0,,银色{\c&H0000FFFF&\b1}皮裘{\c&H00FFFFFF&\b0}的衣角在洞口一闪而逝
+Dialogue: 0,0:00:31.21,0:00:32.55,Default,,0,0,0,,留下满地凌乱爪痕
+Dialogue: 0,0:00:32.96,0:00:35.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}冷笑一声左手按在地面
+Dialogue: 0,0:00:35.55,0:00:38.24,Default,,0,0,0,,紫金冠虚影在掌心浮现那是青
+Dialogue: 0,0:00:38.24,0:00:40.34,Default,,0,0,0,,叶道主亲传的覆海印起手式

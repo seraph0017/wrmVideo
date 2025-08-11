@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_050 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.77,Default,,0,0,0,,战争{\c&H0000FFFF&\b1}浮屠{\c&H00FFFFFF&\b0}外胖大圣三人驱动大陆
+Dialogue: 0,0:00:02.77,0:00:05.72,Default,,0,0,0,,逼近巨大的战争{\c&H0000FFFF&\b1}浮屠{\c&H00FFFFFF&\b0}悬浮于鸿蒙
+Dialogue: 0,0:00:05.72,0:00:07.45,Default,,0,0,0,,虚空通体青铜色
+Dialogue: 0,0:00:07.91,0:00:10.45,Default,,0,0,0,,刻有复杂{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}九道金色光柱冲天
+Dialogue: 0,0:00:10.45,0:00:12.93,Default,,0,0,0,,而起牛神大圣望着战争{\c&H0000FFFF&\b1}浮屠{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.16,0:00:15.62,Default,,0,0,0,,神色古怪他从未见过如此宝物
+Dialogue: 0,0:00:15.87,0:00:17.45,Default,,0,0,0,,胖{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}得意解释其威力
+Dialogue: 0,0:00:17.80,0:00:19.92,Default,,0,0,0,,却不知这正是因他们而来的杀器
+Dialogue: 0,0:00:20.34,0:00:23.17,Default,,0,0,0,,战争{\c&H0000FFFF&\b1}浮屠{\c&H00FFFFFF&\b0}内鸿钧老祖感知到危机
+Dialogue: 0,0:00:23.52,0:00:26.14,Default,,0,0,0,,召集接引道人等面色凝重地宣布
+Dialogue: 0,0:00:26.52,0:00:28.04,Default,,0,0,0,,必须坚守到{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}归来

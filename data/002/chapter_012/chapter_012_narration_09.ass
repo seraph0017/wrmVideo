@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_012 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}玉美人{\c&H00FFFFFF&\b0}告知赵硕她们姐妹已开辟
+Dialogue: 0,0:00:02.66,0:00:05.05,Default,,0,0,0,,出一方{\c&H0000FFFF&\b1}温泉{\c&H00FFFFFF&\b0}请他前去沐浴
+Dialogue: 0,0:00:05.37,0:00:07.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}应允随着四女来到一处山间
+Dialogue: 0,0:00:07.88,0:00:09.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}温泉{\c&H00FFFFFF&\b0}泉水清澈见底
+Dialogue: 0,0:00:09.83,0:00:11.87,Default,,0,0,0,,周围绿树环绕鸟语花香
+Dialogue: 0,0:00:12.20,0:00:14.45,Default,,0,0,0,,四女站在{\c&H0000FFFF&\b1}温泉{\c&H00FFFFFF&\b0}边神情轻松
+Dialogue: 0,0:00:14.86,0:00:17.27,Default,,0,0,0,,经历了磨难此刻终于有了片刻的
+Dialogue: 0,0:00:17.27,0:00:17.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}安宁{\c&H00FFFFFF&\b0}

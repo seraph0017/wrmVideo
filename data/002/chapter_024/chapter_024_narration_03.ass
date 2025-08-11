@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_024 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.10,Default,,0,0,0,,炼丹房内{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与太阳
+Dialogue: 0,0:00:02.38,0:00:03.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}太阴{\c&H00FFFFFF&\b0}尊者围着丹炉
+Dialogue: 0,0:00:04.13,0:00:05.59,Default,,0,0,0,,炉中升腾着黑色毒雾
+Dialogue: 0,0:00:05.95,0:00:08.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}皱眉道此毒需九阳之力破
+Dialogue: 0,0:00:08.56,0:00:10.55,Default,,0,0,0,,解此前他尝试多种药材
+Dialogue: 0,0:00:10.85,0:00:12.78,Default,,0,0,0,,均无法{\c&H0000FFFF&\b1}中和毒{\c&H00FFFFFF&\b0}中的极阴之气
+Dialogue: 0,0:00:12.98,0:00:15.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}太阴{\c&H00FFFFFF&\b0}尊者递上记载毒理的古籍
+Dialogue: 0,0:00:15.32,0:00:17.14,Default,,0,0,0,,书页泛黄字迹古朴
+Dialogue: 0,0:00:17.45,0:00:20.16,Default,,0,0,0,,三人神色凝重皆知此毒关乎能否
+Dialogue: 0,0:00:20.16,0:00:20.97,Default,,0,0,0,,收服众强

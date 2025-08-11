@@ -1,0 +1,30 @@
+[Script Info]
+Title: chapter_011 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女柳腰轻扭
+Dialogue: 0,0:00:01.75,0:00:04.19,Default,,0,0,0,,粉色圆领襦裙在烛光中泛起涟漪
+Dialogue: 0,0:00:04.70,0:00:06.33,Default,,0,0,0,,她行至{\c&H0000FFFF&\b1}太平{\c&H00FFFFFF&\b0}鬼祖身侧
+Dialogue: 0,0:00:06.88,0:00:08.33,Default,,0,0,0,,衣袖拂过对方胳膊时
+Dialogue: 0,0:00:08.71,0:00:10.62,Default,,0,0,0,,刻意让酥胸若有似无地蹭过
+Dialogue: 0,0:00:10.93,0:00:13.22,Default,,0,0,0,,这么绝情她声音甜腻如蜜糖
+Dialogue: 0,0:00:13.58,0:00:15.69,Default,,0,0,0,,右手食指轻勾{\c&H0000FFFF&\b1}太平{\c&H00FFFFFF&\b0}鬼祖的袖口
+Dialogue: 0,0:00:15.91,0:00:17.37,Default,,0,0,0,,指甲{\c&H0000FFFF&\b1}蔻丹{\c&H00FFFFFF&\b0}鲜红似血
+Dialogue: 0,0:00:17.79,0:00:19.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}太平{\c&H00FFFFFF&\b0}鬼祖浑身肌肉骤然紧绷
+Dialogue: 0,0:00:20.27,0:00:22.92,Default,,0,0,0,,下颌线绷得更紧左手悄然按在石
+Dialogue: 0,0:00:22.92,0:00:25.68,Default,,0,0,0,,床暗格那里藏着他炼化多年的
+Dialogue: 0,0:00:25.68,0:00:28.36,Default,,0,0,0,,镇魂铃洞壁突然传来细微震动
+Dialogue: 0,0:00:28.77,0:00:31.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女眼角余光瞥见石缝中渗出
+Dialogue: 0,0:00:31.56,0:00:33.84,Default,,0,0,0,,的血丝笑容瞬间僵在脸上

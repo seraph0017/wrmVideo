@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_036 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.83,Default,,0,0,0,,黄昏时分广场仅剩数人道祖犹豫
+Dialogue: 0,0:00:03.23,0:00:05.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}收起灵宝不愿者
+Dialogue: 0,0:00:05.47,0:00:07.25,Default,,0,0,0,,不强求转身向城主
+Dialogue: 0,0:00:07.63,0:00:09.63,Default,,0,0,0,,三日后启程{\c&H0000FFFF&\b1}望城{\c&H00FFFFFF&\b0}主斟酌
+Dialogue: 0,0:00:09.96,0:00:11.76,Default,,0,0,0,,城主沉默良久终点头
+Dialogue: 0,0:00:12.06,0:00:14.28,Default,,0,0,0,,我愿同行夕阳余晖洒在众人
+Dialogue: 0,0:00:14.28,0:00:15.90,Default,,0,0,0,,身上拉出长长身影

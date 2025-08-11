@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_010 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}轻拍辛芦翘臀安抚
+Dialogue: 0,0:00:02.31,0:00:04.71,Default,,0,0,0,,目光扫过空荡的座位惊问莲女去向
+Dialogue: 0,0:00:05.16,0:00:07.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}兰心{\c&H00FFFFFF&\b0}天女脆声解释莲女闭关
+Dialogue: 0,0:00:07.40,0:00:08.83,Default,,0,0,0,,神色严肃如临大敌
+Dialogue: 0,0:00:09.05,0:00:10.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}指尖摩挲玉桌纹路
+Dialogue: 0,0:00:11.03,0:00:13.49,Default,,0,0,0,,心中疑窦丛生大道主境界还需
+Dialogue: 0,0:00:13.49,0:00:15.06,Default,,0,0,0,,闭关亭外{\c&H0000FFFF&\b1}松涛{\c&H00FFFFFF&\b0}阵阵
+Dialogue: 0,0:00:15.69,0:00:18.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}穿过云层在地面投下斑驳光
+Dialogue: 0,0:00:18.43,0:00:20.82,Default,,0,0,0,,影一场无声的风暴正在酝酿

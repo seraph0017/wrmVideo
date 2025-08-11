@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_043 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.44,Default,,0,0,0,,鬼脸大王缠住最后一名受伤魔神
+Dialogue: 0,0:00:02.83,0:00:04.40,Default,,0,0,0,,鬼头刀劈出黑色刀气
+Dialogue: 0,0:00:05.01,0:00:07.36,Default,,0,0,0,,在魔神胸前划出深可见骨的伤口
+Dialogue: 0,0:00:07.70,0:00:09.02,Default,,0,0,0,,金色血液喷涌如泉
+Dialogue: 0,0:00:09.25,0:00:11.97,Default,,0,0,0,,魔神怒吼着反击双拳凝聚黄色光
+Dialogue: 0,0:00:11.97,0:00:14.34,Default,,0,0,0,,芒却因伤势过重动作迟缓
+Dialogue: 0,0:00:14.56,0:00:17.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}见状操控数道寒气射向光阴老
+Dialogue: 0,0:00:17.07,0:00:19.38,Default,,0,0,0,,祖迫使光阴{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}分心闪避
+Dialogue: 0,0:00:19.80,0:00:22.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖趁机一掌印在光阴老祖后
+Dialogue: 0,0:00:22.13,0:00:24.40,Default,,0,0,0,,背光阴{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}喷出黑色血液
+Dialogue: 0,0:00:24.86,0:00:26.45,Default,,0,0,0,,身体如断线风筝飞出

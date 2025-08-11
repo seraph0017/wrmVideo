@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_025 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.32,Default,,0,0,0,,鬼主催动断指自爆
+Dialogue: 0,0:00:01.74,0:00:03.31,Default,,0,0,0,,漆黑指骨膨胀如{\c&H0000FFFF&\b1}山峰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.60,0:00:05.42,Default,,0,0,0,,空间崩裂产生无数{\c&H0000FFFF&\b1}黑洞{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.86,0:00:08.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}将纳兰萩九阳圣女推入天王
+Dialogue: 0,0:00:08.43,0:00:10.18,Default,,0,0,0,,塔自身硬抗冲击波
+Dialogue: 0,0:00:10.53,0:00:12.43,Default,,0,0,0,,肉身瞬间汽化关键时刻
+Dialogue: 0,0:00:12.75,0:00:14.15,Default,,0,0,0,,生命古树虚影浮现
+Dialogue: 0,0:00:14.72,0:00:17.48,Default,,0,0,0,,绿光包裹残魂三息后赵硕在神光
+Dialogue: 0,0:00:17.48,0:00:19.91,Default,,0,0,0,,中重生嘴角溢血却眼神更亮

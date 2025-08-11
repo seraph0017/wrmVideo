@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_035 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.20,Default,,0,0,0,,山间小径{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与薛卿并肩而行_
+Dialogue: 0,0:00:03.10,0:00:04.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛卿{\c&H00FFFFFF&\b0}青色圆领襦裙
+Dialogue: 0,0:00:04.67,0:00:08.88,Default,,0,0,0,,背身视角发髻上插着木簪_两人
+Dialogue: 0,0:00:08.88,0:00:12.78,Default,,0,0,0,,谈论洪荒局势_{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}神色担忧
+Dialogue: 0,0:00:12.78,0:00:17.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}薛卿{\c&H00FFFFFF&\b0}轻声安慰_路旁野花盛开_蝴
+Dialogue: 0,0:00:17.27,0:00:21.77,Default,,0,0,0,,蝶飞舞_远处传来弟子修炼的{\c&H0000FFFF&\b1}吐纳{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.77,0:00:25.07,Default,,0,0,0,,声_气氛{\c&H0000FFFF&\b1}宁静{\c&H00FFFFFF&\b0}却暗藏紧张
