@@ -36,16 +36,24 @@ def run_script(script_name, data_path):
         result = subprocess.run(
             [sys.executable, script_path, data_path],
             capture_output=True,
-            text=True,
+            text=False,
             cwd=os.path.dirname(os.path.abspath(__file__))
         )
         
         # 输出执行结果
         if result.stdout:
-            print(result.stdout)
+            try:
+                stdout_text = result.stdout.decode('utf-8', errors='ignore')
+            except:
+                stdout_text = str(result.stdout)
+            print(stdout_text)
         
         if result.stderr:
-            print(f"错误输出: {result.stderr}")
+            try:
+                stderr_text = result.stderr.decode('utf-8', errors='ignore')
+            except:
+                stderr_text = str(result.stderr)
+            print(f"错误输出: {stderr_text}")
         
         if result.returncode == 0:
             print(f"✓ {script_name} 执行成功")

@@ -15,9 +15,13 @@ def get_video_duration(video_path):
         result = subprocess.run([
             'ffprobe', '-v', 'quiet', '-show_entries', 'format=duration',
             '-of', 'csv=p=0', video_path
-        ], capture_output=True, text=True)
+        ], capture_output=True, text=False)
         if result.returncode == 0:
-            return float(result.stdout.strip())
+            try:
+                stdout_text = result.stdout.decode('utf-8', errors='ignore')
+            except:
+                stdout_text = str(result.stdout)
+            return float(stdout_text.strip())
         return None
     except Exception as e:
         print(f"获取视频时长失败: {e}")
@@ -65,7 +69,7 @@ def test_simple_concat(chapter_dir):
     ]
     
     print(f"执行简单拼接: {' '.join(cmd)}")
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    result = subprocess.run(cmd, capture_output=True, text=False)
     
     if result.returncode == 0:
         simple_duration = get_video_duration(simple_output)
@@ -110,7 +114,7 @@ def test_finish_concat(simple_video_path, chapter_dir):
     ]
     
     print(f"执行流复制拼接: {' '.join(cmd_copy)}")
-    result_copy = subprocess.run(cmd_copy, capture_output=True, text=True)
+    result_copy = subprocess.run(cmd_copy, capture_output=True, text=False)
     
     if result_copy.returncode == 0:
         final_duration_copy = get_video_duration(final_output_copy)
@@ -133,7 +137,7 @@ def test_finish_concat(simple_video_path, chapter_dir):
     ]
     
     print(f"执行重新编码拼接: {' '.join(cmd_encode)}")
-    result_encode = subprocess.run(cmd_encode, capture_output=True, text=True)
+    result_encode = subprocess.run(cmd_encode, capture_output=True, text=False)
     
     if result_encode.returncode == 0:
         final_duration_encode = get_video_duration(final_output_encode)

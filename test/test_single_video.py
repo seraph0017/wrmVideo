@@ -45,7 +45,7 @@ def test_single_video_generation():
         cmd = [sys.executable, "gen_first_video.py", first_image, second_image, output_video]
         print(f"执行命令: {' '.join(cmd)}")
         
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, text=False)
         
         print("\n--- 脚本输出 ---")
         print(result.stdout)

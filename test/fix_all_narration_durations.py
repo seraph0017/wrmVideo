@@ -69,7 +69,7 @@ def fix_video_duration(video_path, ass_path, tolerance=0.5):
         ]
         
         print(f"  🔧 正在修复视频时长...")
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, text=False)
         
         if result.returncode == 0:
             # 替换原文件

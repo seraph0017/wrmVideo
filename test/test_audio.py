@@ -22,7 +22,7 @@ def check_video_audio(video_path):
         result = subprocess.run([
             'ffprobe', '-v', 'quiet', '-show_streams', 
             '-select_streams', 'a', video_path
-        ], capture_output=True, text=True)
+        ], capture_output=True, text=False)
         
         return result.returncode == 0 and len(result.stdout.strip()) > 0
     except Exception as e:
@@ -44,14 +44,14 @@ def get_video_info(video_path):
         duration_result = subprocess.run([
             'ffprobe', '-v', 'quiet', '-show_entries', 'format=duration',
             '-of', 'csv=p=0', video_path
-        ], capture_output=True, text=True)
+        ], capture_output=True, text=False)
         
         # 获取音频信息
         audio_result = subprocess.run([
             'ffprobe', '-v', 'quiet', '-show_entries', 
             'stream=codec_name,sample_rate,channels',
             '-select_streams', 'a:0', '-of', 'csv=p=0', video_path
-        ], capture_output=True, text=True)
+        ], capture_output=True, text=False)
         
         info = {
             'duration': float(duration_result.stdout.strip()) if duration_result.stdout.strip() else 0,

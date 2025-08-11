@@ -41,7 +41,7 @@ def test_single_chapter():
                 'ffprobe', '-v', 'quiet', '-show_entries', 
                 'stream=sample_rate', '-select_streams', 'a:0', 
                 '-of', 'csv=p=0', video_file
-            ], capture_output=True, text=True)
+            ], capture_output=True, text=False)
             
             if result.returncode == 0 and result.stdout.strip():
                 sample_rate = int(result.stdout.strip())

@@ -17,7 +17,7 @@ def get_audio_duration(audio_file):
     """
     try:
         cmd = ['ffprobe', '-v', 'quiet', '-print_format', 'json', '-show_format', audio_file]
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, text=False)
         if result.returncode == 0:
             info = json.loads(result.stdout)
             return float(info['format']['duration'])

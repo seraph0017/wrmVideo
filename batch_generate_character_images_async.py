@@ -66,10 +66,10 @@ def parse_directory_info(dir_path):
 
 def generate_character_variations():
     """
-    生成8种不同的角色变化描述
+    生成2种不同的角色变化描述
     
     Returns:
-        list: 包含8种不同描述的列表
+        list: 包含2种不同描述的列表
     """
     hair_colors = ["黑色", "棕色", "金色", "银色", "白色", "红色"]
     hair_styles = ["短发", "长发", "中长发", "盘发", "辫子", "卷发"]
@@ -80,8 +80,8 @@ def generate_character_variations():
     
     variations = []
     
-    # 生成8种组合
-    for i in range(8):
+    # 生成2种组合
+    for i in range(2):
         hair_color = random.choice(hair_colors)
         hair_style = random.choice(hair_styles)
         expression = random.choice(expressions)
@@ -123,7 +123,9 @@ def submit_image_task(prompt, task_info, max_retries=3, retry_delay=2):
             visual_service.set_sk(IMAGE_TWO_CONFIG['secret_key'])
             
             # 构建完整的prompt
-            full_prompt = "以下内容为描述生成图片\n宫崎骏动漫风格，数字插画,高饱和度,卡通,简约画风,完整色块,整洁的画面,宫崎骏艺术风格,高饱和的色彩和柔和的阴影,童话色彩风格。 人物着装：圆领袍，高领设计，严禁V领，绝对不能露出脖子\n\n" + prompt + "\n\n"
+            full_prompt = """以下内容为描述生成图片
+                            宫崎骏动漫风格，人物着装：圆领袍，高领设计，不漏脖子\n\n
+            """ + prompt + "\n\n"
             
             if attempt == 0:
                 print(f"提交任务: {task_info['filename']}")
@@ -275,8 +277,8 @@ def process_directory(base_dir, gender_dir, tasks_dir, filter_age=None, filter_s
             
             # 检查已存在的图片数量
             existing_count = check_existing_images(root)
-            if existing_count >= 4:
-                print(f"  发现 {existing_count} 张已存在的图片（>=4），跳过生成")
+            if existing_count >= 2:
+                print(f"  发现 {existing_count} 张已存在的图片（>=2），跳过生成")
                 continue
             
             # 生成8种变化
@@ -360,9 +362,9 @@ def process_directory(base_dir, gender_dir, tasks_dir, filter_age=None, filter_s
                     task_info["task_id"] = task_id
                     save_task_info(task_id, task_info, tasks_dir)
                     submitted_count += 1
-                    print(f"  ✓ 成功提交第 {i}/8 个任务")
+                    print(f"  ✓ 成功提交第 {i}/2 个任务")
                 else:
-                    print(f"  ✗ 第 {i}/8 个任务提交失败")
+                    print(f"  ✗ 第 {i}/2 个任务提交失败")
                 
                 # 添加请求间隔，避免API频率限制
                 if i < len(variations):  # 不是最后一个任务
@@ -388,7 +390,7 @@ def count_total_directories(base_dir):
                 if root != gender_path and not dirs:  # 最深层目录
                     # 检查是否已有足够图片
                     existing_count = check_existing_images(root)
-                    if existing_count < 4:
+                    if existing_count < 2:
                         total_dirs += 1
     return total_dirs
 
@@ -396,18 +398,22 @@ def main():
     """
     主函数
     """
-    # 检查新旧目录结构
+    # 检查目录结构
+    images_new_dir = "images_new"
     new_base_dir = "Character_Images_New"
     old_base_dir = "Character_Images"
     
-    if os.path.exists(new_base_dir):
+    if os.path.exists(images_new_dir):
+        base_dir = images_new_dir
+        print("使用images_new目录结构")
+    elif os.path.exists(new_base_dir):
         base_dir = new_base_dir
         print("使用新的中式/西式分类目录结构")
     elif os.path.exists(old_base_dir):
         base_dir = old_base_dir
         print("使用旧的目录结构")
     else:
-        print(f"错误: 目录不存在 {new_base_dir} 或 {old_base_dir}")
+        print(f"错误: 目录不存在 {images_new_dir}、{new_base_dir} 或 {old_base_dir}")
         return
     
     # 任务文件保存目录
@@ -420,7 +426,7 @@ def main():
     # 统计总目录数
     total_dirs = count_total_directories(base_dir)
     print(f"发现 {total_dirs} 个需要处理的角色类型目录")
-    print(f"预计提交 {total_dirs * 8} 个异步任务\n")
+    print(f"预计提交 {total_dirs * 2} 个异步任务\n")
     
     # 询问用户是否继续
     user_input = input("是否继续提交所有异步任务？(y/n): ").strip().lower()

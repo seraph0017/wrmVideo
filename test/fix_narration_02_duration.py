@@ -61,7 +61,7 @@ def fix_video_duration(video_path, ass_path):
         ]
         
         print(f"执行命令: {' '.join(cmd)}")
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, text=False)
         
         if result.returncode == 0:
             # 替换原文件

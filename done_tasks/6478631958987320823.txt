@@ -1,0 +1,25 @@
+{
+  "prompt": "图片风格为「动漫」，宫崎骏，西式风格\n比例 「9:16」\n服装要求：必须圆领袍，高领设计，严禁V领或低领，绝对不能露出脖子部位，领口要完全遮盖脖子\n年龄：MiddleAged\n风格：SciFi\n文化：Western\n气质：温柔善良，亲和力强\n角度：正面半身照\n\n单人肖像，男性，白皙肌肤，黑色盘发，表情严肃，西式服装，欧美风格，朴素风格，佩戴头饰，高质量角色设定图，正面视角，清晰面部特征，动漫风格",
+  "output_path": "images_new/Male/31-45_MiddleAged/SciFi/Western/Gentle/MiddleAged_SciFi_Western_Gentle_02.jpeg",
+  "filename": "MiddleAged_SciFi_Western_Gentle_02.jpeg",
+  "directory": "images_new/Male/31-45_MiddleAged/SciFi/Western/Gentle",
+  "dir_info": {
+    "gender": "男",
+    "age": "MiddleAged",
+    "style": "SciFi",
+    "culture": "Western",
+    "temperament": "Gentle"
+  },
+  "variation": {
+    "hair_color": "黑色",
+    "hair_style": "盘发",
+    "expression": "严肃",
+    "clothing": "朴素",
+    "accessory": "头饰",
+    "skin_tone": "白皙"
+  },
+  "variation_index": 2,
+  "status": "completed",
+  "task_id": "6478631958987320823",
+  "completed_time": 1754904762.153547
+}

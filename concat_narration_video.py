@@ -20,7 +20,7 @@ def check_nvidia_gpu():
     """检测系统是否有NVIDIA GPU和nvenc编码器可用"""
     try:
         # 首先检测nvidia-smi
-        result = subprocess.run(['nvidia-smi'], capture_output=True, text=True, timeout=10)
+        result = subprocess.run(['nvidia-smi'], capture_output=True, text=False, timeout=10)
         if result.returncode != 0:
             print("⚠️  未检测到NVIDIA GPU或驱动，使用CPU编码")
             return False
@@ -31,13 +31,18 @@ def check_nvidia_gpu():
             'ffmpeg', '-f', 'lavfi', '-i', 'testsrc=duration=1:size=320x240:rate=1',
             '-c:v', 'h264_nvenc', '-f', 'null', '-'
         ]
-        result = subprocess.run(test_cmd, capture_output=True, text=True, timeout=15)
+        result = subprocess.run(test_cmd, capture_output=True, text=False, timeout=15)
         
         if result.returncode == 0:
             print("✓ 检测到NVIDIA GPU和nvenc编码器，将使用硬件加速")
             return True
         else:
-            print(f"⚠️  nvenc编码器不可用，使用CPU编码: {result.stderr}")
+            # 安全地解码stderr，忽略无法解码的字符
+            try:
+                stderr_text = result.stderr.decode('utf-8', errors='ignore')
+            except:
+                stderr_text = str(result.stderr)
+            print(f"⚠️  nvenc编码器不可用，使用CPU编码: {stderr_text}")
             return False
             
     except (subprocess.TimeoutExpired, FileNotFoundError, Exception) as e:
@@ -517,7 +522,7 @@ def create_image_video_with_effects(image_path, output_path, duration, width=720
         
         cmd.append(output_path)
         
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, text=False)
         if result.returncode != 0:
             print(f"FFmpeg错误: {result.stderr}")
             return False
@@ -948,10 +953,15 @@ def add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir
         
         # 执行命令
         print(f"执行FFmpeg命令: {' '.join(cmd)}")
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, text=False)
         
         if result.returncode != 0:
-            print(f"FFmpeg错误: {result.stderr}")
+            # 安全地解码stderr，忽略无法解码的字符
+            try:
+                stderr_text = result.stderr.decode('utf-8', errors='ignore')
+            except:
+                stderr_text = str(result.stderr)
+            print(f"FFmpeg错误: {stderr_text}")
             return None
         
         print(f"最终视频生成成功: {output_video}")

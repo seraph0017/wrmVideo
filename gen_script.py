@@ -14,6 +14,7 @@ import argparse
 import tempfile
 import zipfile
 import shutil
+import time
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -332,14 +333,19 @@ class ScriptGenerator:
                         continue
                     
                     print(f"尝试使用 {cmd[0]} 命令提取RAR文件...")
-                    result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+                    result = subprocess.run(cmd, capture_output=True, text=False, timeout=300)
                     
                     if result.returncode == 0:
                         print(f"成功使用 {cmd[0]} 提取文件")
                         extracted = True
                         break
                     else:
-                        print(f"{cmd[0]} 提取失败：{result.stderr}")
+                        # 安全地解码stderr，忽略无法解码的字符
+                        try:
+                            stderr_text = result.stderr.decode('utf-8', errors='ignore')
+                        except:
+                            stderr_text = str(result.stderr)
+                        print(f"{cmd[0]} 提取失败：{stderr_text}")
                         
                 except subprocess.TimeoutExpired:
                     print(f"{cmd[0]} 命令超时")
@@ -767,6 +773,311 @@ class ScriptGenerator:
         
         return chapters
     
+    def extract_narration_content(self, narration_file_content: str) -> str:
+        """
+        从narration文件内容中提取所有解说内容
+        
+        Args:
+            narration_file_content: narration文件的完整内容
+        
+        Returns:
+            str: 提取出的所有解说内容，用空格连接
+        """
+        try:
+            # 使用正则表达式提取所有<解说内容>标签中的内容
+            narration_pattern = r'<解说内容>(.*?)</解说内容>'
+            narration_matches = re.findall(narration_pattern, narration_file_content, re.DOTALL)
+            
+            # 清理并合并所有解说内容
+            clean_narrations = []
+            for narration in narration_matches:
+                clean_narration = narration.strip()
+                if clean_narration:
+                    clean_narrations.append(clean_narration)
+            
+            # 将所有解说内容合并为一个字符串
+            combined_narration = ' '.join(clean_narrations)
+            return combined_narration
+            
+        except Exception as e:
+            print(f"提取解说内容时出错：{e}")
+            return ""
+    
+    def validate_narration_content(self, narration: str, min_length: int = 800, max_length: int = 1500) -> Tuple[bool, str]:
+        """
+        验证解说文案是否符合要求
+        
+        Args:
+            narration: 解说文案内容
+            min_length: 最小长度要求
+            max_length: 最大长度要求
+        
+        Returns:
+            Tuple[bool, str]: (是否有效, 错误信息)
+        """
+        if not narration or not narration.strip():
+            return False, "解说文案为空"
+        
+        content_length = len(narration.strip())
+        if content_length < min_length:
+            return False, f"解说文案长度不足，当前{content_length}字，要求至少{min_length}字"
+        
+        if content_length > max_length:
+            return False, f"解说文案长度过长，当前{content_length}字，要求不超过{max_length}字"
+        
+        # 检查是否包含基本的叙述结构（仅提醒，不作为强制约束）
+        if not any(keyword in narration for keyword in ['故事', '情节', '主角', '角色', '场景']):
+            print(f"提醒：解说文案可能缺少基本的故事元素，建议检查内容质量")
+        
+        return True, ""
+    
+    def generate_chapter_narration_with_retry(self, chapter_content: str, chapter_num: int, 
+                                            total_chapters: int, max_retries: int = 3) -> str:
+        """
+        为单个章节生成1500字左右解说文案，带重试机制
+        
+        Args:
+            chapter_content: 章节内容
+            chapter_num: 章节编号
+            total_chapters: 总章节数
+            max_retries: 最大重试次数
+        
+        Returns:
+            str: 生成的解说文案
+        """
+        for attempt in range(max_retries + 1):
+            try:
+                if attempt > 0:
+                    print(f"第{chapter_num}章解说文案第{attempt + 1}次尝试生成...")
+                    time.sleep(2)  # 重试前等待2秒
+                
+                narration = self.generate_chapter_narration(chapter_content, chapter_num, total_chapters)
+                
+                if narration:
+                    # 提取<解说内容>标签内的内容进行验证
+                    extracted_content = self.extract_narration_content(narration)
+                    content_length = len(extracted_content)
+                    print(f"第{chapter_num}章解说文案生成完成，<解说内容>标签内容长度：{content_length}字")
+                    
+                    # 验证提取的解说内容（调整长度限制为2000字）
+                    is_valid, error_msg = self.validate_narration_content(extracted_content, min_length=800, max_length=2000)
+                    if is_valid:
+                        print(f"第{chapter_num}章解说文案验证通过")
+                        return narration
+                    else:
+                        print(f"第{chapter_num}章解说文案验证失败：{error_msg}")
+                        if attempt < max_retries:
+                            print(f"将进行第{attempt + 2}次重试...")
+                        continue
+                else:
+                    print(f"第{chapter_num}章解说文案生成失败")
+                    if attempt < max_retries:
+                        print(f"将进行第{attempt + 2}次重试...")
+                    continue
+                    
+            except Exception as e:
+                print(f"生成第{chapter_num}章解说文案时出错：{e}")
+                if attempt < max_retries:
+                    print(f"将进行第{attempt + 2}次重试...")
+                    time.sleep(2)
+                continue
+        
+        print(f"第{chapter_num}章解说文案生成失败，已达到最大重试次数")
+        return ""
+    
+    def validate_existing_chapters(self, output_dir: str) -> Tuple[List[int], List[int], List[int]]:
+        """
+        验证已生成的章节，返回详细的验证结果
+        
+        Args:
+            output_dir: 输出目录或单个章节目录
+        
+        Returns:
+            Tuple[List[int], List[int], List[int]]: (所有无效章节, 长度不足章节, 其他问题章节)
+        """
+        all_invalid_chapters = []
+        length_insufficient_chapters = []
+        other_invalid_chapters = []
+        
+        if not os.path.exists(output_dir):
+            print(f"输出目录不存在：{output_dir}")
+            return all_invalid_chapters, length_insufficient_chapters, other_invalid_chapters
+        
+        # 检查是否是单个章节目录
+        if os.path.basename(output_dir).startswith('chapter_'):
+            # 单个章节目录验证
+            try:
+                chapter_num = int(os.path.basename(output_dir).split('_')[1])
+                narration_file = os.path.join(output_dir, 'narration.txt')
+                
+                # 验证这个章节
+                validation_result = self._validate_single_chapter(chapter_num, output_dir, narration_file)
+                if validation_result == 'length_insufficient':
+                    all_invalid_chapters.append(chapter_num)
+                    length_insufficient_chapters.append(chapter_num)
+                elif validation_result == 'other_invalid':
+                    all_invalid_chapters.append(chapter_num)
+                    other_invalid_chapters.append(chapter_num)
+                # validation_result == 'valid' 时不添加到任何列表
+                    
+            except ValueError:
+                print(f"无法解析章节编号：{os.path.basename(output_dir)}")
+            except Exception as e:
+                print(f"验证单个章节时出错：{e}")
+        else:
+            # 多个章节目录验证
+            for item in os.listdir(output_dir):
+                if item.startswith('chapter_') and os.path.isdir(os.path.join(output_dir, item)):
+                    try:
+                        # 提取章节编号
+                        chapter_num = int(item.split('_')[1])
+                        chapter_dir = os.path.join(output_dir, item)
+                        narration_file = os.path.join(chapter_dir, 'narration.txt')
+                        
+                        # 验证这个章节
+                        validation_result = self._validate_single_chapter(chapter_num, chapter_dir, narration_file)
+                        if validation_result == 'length_insufficient':
+                            all_invalid_chapters.append(chapter_num)
+                            length_insufficient_chapters.append(chapter_num)
+                        elif validation_result == 'other_invalid':
+                            all_invalid_chapters.append(chapter_num)
+                            other_invalid_chapters.append(chapter_num)
+                        # validation_result == 'valid' 时不添加到任何列表
+                        
+                    except ValueError:
+                        # 无法解析章节编号，跳过
+                        continue
+                    except Exception as e:
+                        print(f"处理章节目录 {item} 时出错：{e}")
+                        continue
+        
+        # 排序结果
+        all_invalid_chapters.sort()
+        length_insufficient_chapters.sort()
+        other_invalid_chapters.sort()
+        
+        if all_invalid_chapters:
+            print(f"发现 {len(all_invalid_chapters)} 个需要重新生成的章节：{all_invalid_chapters}")
+            if length_insufficient_chapters:
+                print(f"其中 {len(length_insufficient_chapters)} 个章节长度不足：{length_insufficient_chapters}")
+            if other_invalid_chapters:
+                print(f"其中 {len(other_invalid_chapters)} 个章节存在其他问题：{other_invalid_chapters}")
+        else:
+            print("所有章节验证通过")
+        
+        return all_invalid_chapters, length_insufficient_chapters, other_invalid_chapters
+    
+    def _validate_single_chapter(self, chapter_num: int, chapter_dir: str, narration_file: str) -> str:
+        """
+        验证单个章节
+        
+        Args:
+            chapter_num: 章节编号
+            chapter_dir: 章节目录
+            narration_file: narration文件路径
+        
+        Returns:
+            str: 'valid', 'length_insufficient', 'other_invalid'
+        """
+        try:
+            # 检查narration文件是否存在
+            if not os.path.exists(narration_file):
+                print(f"第{chapter_num}章缺少narration.txt文件")
+                return 'other_invalid'
+            
+            # 读取并验证narration内容
+            try:
+                with open(narration_file, 'r', encoding='utf-8') as f:
+                    narration_file_content = f.read()
+                
+                # 提取解说内容
+                extracted_narration = self.extract_narration_content(narration_file_content)
+                
+                if not extracted_narration:
+                    print(f"第{chapter_num}章narration文件中未找到解说内容")
+                    return 'other_invalid'
+                
+                # 验证提取出的解说内容（使用2000字最大长度限制）
+                is_valid, error_msg = self.validate_narration_content(extracted_narration, min_length=800, max_length=2000)
+                if not is_valid:
+                    print(f"第{chapter_num}章narration文件验证失败：{error_msg}")
+                    
+                    # 判断是否为长度不足问题
+                    if "长度不足" in error_msg:
+                        return 'length_insufficient'
+                    else:
+                        return 'other_invalid'
+                else:
+                    print(f"第{chapter_num}章narration文件验证通过")
+                    return 'valid'
+                    
+            except Exception as e:
+                print(f"读取第{chapter_num}章narration文件时出错：{e}")
+                return 'other_invalid'
+                
+        except Exception as e:
+            print(f"验证第{chapter_num}章时出错：{e}")
+            return 'other_invalid'
+    
+    def regenerate_invalid_chapters(self, output_dir: str, invalid_chapters: List[int], max_retries: int = 3) -> bool:
+        """
+        重新生成无效的章节
+        
+        Args:
+            output_dir: 输出目录
+            invalid_chapters: 需要重新生成的章节编号列表
+            max_retries: 最大重试次数
+        
+        Returns:
+            bool: 是否全部重新生成成功
+        """
+        if not invalid_chapters:
+            return True
+        
+        print(f"\n=== 开始重新生成 {len(invalid_chapters)} 个无效章节 ===")
+        success_count = 0
+        
+        for chapter_num in invalid_chapters:
+            chapter_dir = os.path.join(output_dir, f"chapter_{chapter_num:03d}")
+            original_content_file = os.path.join(chapter_dir, "original_content.txt")
+            
+            # 检查原始内容文件是否存在
+            if not os.path.exists(original_content_file):
+                print(f"第{chapter_num}章缺少original_content.txt文件，跳过重新生成")
+                continue
+            
+            try:
+                # 读取原始章节内容
+                with open(original_content_file, 'r', encoding='utf-8') as f:
+                    chapter_content = f.read()
+                
+                print(f"\n--- 重新生成第 {chapter_num} 章 ---")
+                
+                # 使用带重试的生成方法
+                narration = self.generate_chapter_narration_with_retry(
+                    chapter_content, chapter_num, len(invalid_chapters), max_retries
+                )
+                
+                if narration:
+                    # 保存重新生成的解说文案
+                    narration_file = os.path.join(chapter_dir, "narration.txt")
+                    with open(narration_file, 'w', encoding='utf-8') as f:
+                        f.write(narration)
+                    
+                    print(f"✓ 第{chapter_num}章重新生成成功")
+                    success_count += 1
+                else:
+                    print(f"✗ 第{chapter_num}章重新生成失败")
+                    
+            except Exception as e:
+                print(f"重新生成第{chapter_num}章时出错：{e}")
+                continue
+        
+        print(f"\n=== 重新生成完成 ===")
+        print(f"成功重新生成 {success_count}/{len(invalid_chapters)} 个章节")
+        
+        return success_count == len(invalid_chapters)
+    
     def generate_chapter_narration(self, chapter_content: str, chapter_num: int, total_chapters: int) -> str:
         """
         为单个章节生成1200字解说文案
@@ -872,8 +1183,8 @@ class ScriptGenerator:
                 with open(chapter_file, 'w', encoding='utf-8') as f:
                     f.write(chapter_content)
                 
-                # 生成1200字解说文案
-                narration = self.generate_chapter_narration(chapter_content, i, len(chapters))
+                # 生成1200字解说文案（带重试机制）
+                narration = self.generate_chapter_narration_with_retry(chapter_content, i, len(chapters))
                 
                 if narration:
                     # 保存解说文案
@@ -886,8 +1197,31 @@ class ScriptGenerator:
                 else:
                     print(f"✗ 第{i}章解说文案生成失败")
             
-            print(f"\n=== 脚本生成完成 ===")
+            print(f"\n=== 初始脚本生成完成 ===")
             print(f"成功生成 {success_count}/{len(chapters)} 个章节的解说文案")
+            
+            # 验证所有章节并重新生成无效的章节
+            print(f"\n=== 开始验证章节质量 ===")
+            invalid_chapters = self.validate_existing_chapters(output_dir)
+            
+            if invalid_chapters:
+                print(f"\n发现 {len(invalid_chapters)} 个章节需要重新生成")
+                retry_success = self.regenerate_invalid_chapters(output_dir, invalid_chapters)
+                
+                if retry_success:
+                    print(f"\n=== 所有章节重新生成成功 ===")
+                else:
+                    print(f"\n=== 部分章节重新生成失败，请检查日志 ===")
+                
+                # 最终验证
+                print(f"\n=== 最终验证 ===")
+                final_invalid = self.validate_existing_chapters(output_dir)
+                if final_invalid:
+                    print(f"仍有 {len(final_invalid)} 个章节存在问题：{final_invalid}")
+                else:
+                    print("所有章节最终验证通过")
+            
+            print(f"\n=== 脚本生成完成 ===")
             print(f"输出目录: {output_dir}")
             
             return success_count > 0
@@ -979,48 +1313,134 @@ def main():
     主函数，处理命令行参数
     """
     parser = argparse.ArgumentParser(description='小说脚本生成工具')
-    parser.add_argument('novel_file', help='小说文件路径')
+    parser.add_argument('novel_file', nargs='?', help='小说文件路径（验证模式下可选）')
     parser.add_argument('--output', '-o', default=None, help='输出目录（默认为小说文件所在目录）')
     parser.add_argument('--chapters', '-c', type=int, default=50, help='目标章节数量（默认50）')
     parser.add_argument('--max-workers', '-w', type=int, default=5, help='最大并发线程数（默认5）')
+    parser.add_argument('--validate', '-v', action='store_true', help='验证现有章节的narration文件是否符合标准')
+    parser.add_argument('--validate-dir', default=None, help='指定要验证的目录路径（仅在验证模式下使用）')
     
     args = parser.parse_args()
-    
-    # 检查输入文件
-    if not os.path.exists(args.novel_file):
-        print(f"错误: 小说文件不存在 {args.novel_file}")
-        return False
-    
-    # 确定输出目录
-    if args.output:
-        output_dir = args.output
-    else:
-        # 使用小说文件所在目录作为输出目录
-        novel_dir = os.path.dirname(os.path.abspath(args.novel_file))
-        output_dir = novel_dir
-    
-    print(f"输入文件: {args.novel_file}")
-    print(f"输出目录: {output_dir}")
-    print(f"目标章节数: {args.chapters}")
-    print(f"最大并发线程数: {args.max_workers}")
     
     # 创建脚本生成器
     generator = ScriptGenerator()
     
-    # 生成脚本
-    success = generator.generate_script_from_novel_new(
-        args.novel_file, 
-        output_dir, 
-        args.chapters,
-        max_workers=args.max_workers
-    )
+    # 验证模式
+    if args.validate:
+        # 确定验证目录
+        if args.validate_dir:
+            validate_dir = args.validate_dir
+        elif args.novel_file:
+            # 使用小说文件所在目录
+            novel_dir = os.path.dirname(os.path.abspath(args.novel_file))
+            validate_dir = novel_dir
+        else:
+            print("错误: 验证模式下需要指定 --validate-dir 或提供小说文件路径")
+            return False
+        
+        if not os.path.exists(validate_dir):
+            print(f"错误: 验证目录不存在 {validate_dir}")
+            return False
+        
+        print(f"=== 开始验证章节质量 ===")
+        print(f"验证目录: {validate_dir}")
+        
+        # 验证现有章节
+        all_invalid, length_insufficient, other_invalid = generator.validate_existing_chapters(validate_dir)
+        
+        regenerated_any = False
+        
+        # 处理长度不足的章节
+        if length_insufficient:
+            print(f"\n发现 {len(length_insufficient)} 个章节长度不足: {length_insufficient}")
+            try:
+                user_input = input("是否重新生成这些长度不足的章节？(y/n): ").strip().lower()
+                if user_input in ['y', 'yes', '是']:
+                    print("\n=== 开始重新生成长度不足的章节 ===")
+                    retry_success = generator.regenerate_invalid_chapters(validate_dir, length_insufficient)
+                    if retry_success:
+                        print("✓ 长度不足的章节重新生成成功")
+                        regenerated_any = True
+                    else:
+                        print("✗ 部分长度不足的章节重新生成失败")
+                else:
+                    print("跳过重新生成长度不足的章节")
+            except EOFError:
+                print("跳过重新生成长度不足的章节（无输入）")
+        
+        # 处理其他问题的章节
+        if other_invalid:
+            print(f"\n发现 {len(other_invalid)} 个章节存在其他问题: {other_invalid}")
+            try:
+                user_input = input("是否重新生成这些有问题的章节？(y/n): ").strip().lower()
+                if user_input in ['y', 'yes', '是']:
+                    print("\n=== 开始重新生成有问题的章节 ===")
+                    retry_success = generator.regenerate_invalid_chapters(validate_dir, other_invalid)
+                    if retry_success:
+                        print("✓ 有问题的章节重新生成成功")
+                        regenerated_any = True
+                    else:
+                        print("✗ 部分有问题的章节重新生成失败")
+                else:
+                    print("跳过重新生成有问题的章节")
+            except EOFError:
+                print("跳过重新生成有问题的章节（无输入）")
+        
+        # 如果有重新生成，进行最终验证
+        if regenerated_any:
+            print("\n=== 最终验证 ===")
+            final_all_invalid, final_length_insufficient, final_other_invalid = generator.validate_existing_chapters(validate_dir)
+            if final_all_invalid:
+                print(f"仍有 {len(final_all_invalid)} 个章节存在问题: {final_all_invalid}")
+                return False
+            else:
+                print("所有章节最终验证通过")
+                return True
+        elif not all_invalid:
+            print("\n✅ 所有章节验证通过，质量符合标准")
+            return True
+        else:
+            print("\n跳过所有重新生成操作")
+            return False
     
-    if success:
-        print("\n=== 脚本生成成功！ ===")
-        return True
+    # 生成模式
     else:
-        print("\n=== 脚本生成失败！ ===")
-        return False
+        # 检查输入文件
+        if not args.novel_file:
+            print("错误: 生成模式下必须提供小说文件路径")
+            return False
+        
+        if not os.path.exists(args.novel_file):
+            print(f"错误: 小说文件不存在 {args.novel_file}")
+            return False
+        
+        # 确定输出目录
+        if args.output:
+            output_dir = args.output
+        else:
+            # 使用小说文件所在目录作为输出目录
+            novel_dir = os.path.dirname(os.path.abspath(args.novel_file))
+            output_dir = novel_dir
+        
+        print(f"输入文件: {args.novel_file}")
+        print(f"输出目录: {output_dir}")
+        print(f"目标章节数: {args.chapters}")
+        print(f"最大并发线程数: {args.max_workers}")
+        
+        # 生成脚本
+        success = generator.generate_script_from_novel_new(
+            args.novel_file, 
+            output_dir, 
+            args.chapters,
+            max_workers=args.max_workers
+        )
+        
+        if success:
+            print("\n=== 脚本生成成功！ ===")
+            return True
+        else:
+            print("\n=== 脚本生成失败！ ===")
+            return False
 
 if __name__ == "__main__":
     main()

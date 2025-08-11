@@ -71,7 +71,7 @@ def analyze_video_content(video_path):
             '-read_intervals', '%+#10',  # 只读取前10帧
             video_path
         ]
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        result = subprocess.run(cmd, capture_output=True, text=False, check=True)
         print("视频帧分析完成")
         
         # 检查关键帧
@@ -80,7 +80,7 @@ def analyze_video_content(video_path):
             '-show_entries', 'frame=key_frame,pkt_pts_time',
             '-of', 'csv=p=0', video_path
         ]
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        result = subprocess.run(cmd, capture_output=True, text=False, check=True)
         
         key_frames = []
         for line in result.stdout.strip().split('\n')[:20]:  # 只看前20帧

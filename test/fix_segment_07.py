@@ -22,12 +22,20 @@ def fix_segment_07():
     try:
         # 获取实际音频时长
         cmd = ['ffprobe', '-v', 'quiet', '-print_format', 'json', '-show_format', audio_file]
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, text=False)
         if result.returncode != 0:
-            print(f"无法获取音频信息: {result.stderr}")
+            try:
+                stderr_text = result.stderr.decode('utf-8', errors='ignore')
+            except:
+                stderr_text = str(result.stderr)
+            print(f"无法获取音频信息: {stderr_text}")
             return False
         
-        info = json.loads(result.stdout)
+        try:
+            stdout_text = result.stdout.decode('utf-8', errors='ignore')
+        except:
+            stdout_text = str(result.stdout)
+        info = json.loads(stdout_text)
         actual_duration = float(info['format']['duration'])
         print(f"实际音频时长: {actual_duration:.6f}s")
         
