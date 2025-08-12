@@ -116,7 +116,8 @@ wrmVideo/
 │   └── test1/              # 测试数据目录
 ├── test/                   # 测试文件目录
 │   ├── test_*.py           # 各种测试脚本
-│   └── debug_*.py          # 调试脚本
+│   ├── debug_*.py          # 调试脚本
+│   └── test_server_ffmpeg.py # 服务器FFmpeg配置检测脚本
 ├── Character_Images/       # 角色图片库（已移至根目录）
 ├── src/                    # 源代码目录
 │   ├── core/               # 核心模块
@@ -139,6 +140,7 @@ wrmVideo/
 ├── concat_finish_video.py  # 生成完整视频（添加片尾视频）
 ├── gen_video.py            # 视频生成流程编排器（依次执行上述三个脚本）
 ├── upload_tos.py           # TOS存储服务上传脚本
+├── llm_image.py            # LLM图片分析工具（批量检查Character_Images目录图片的人物着装领口类型）
 ├── requirements.txt        # 项目依赖
 
 ### 核心脚本说明
@@ -380,6 +382,31 @@ python upload_tos.py data/002 --bucket rm-tos-001 --prefix data002
 
 # 查看帮助信息
 python upload_tos.py --help
+
+# 9. LLM图片分析（检查Character_Images目录下图片的人物着装领口类型）
+# 基本用法（检查默认目录）
+python llm_image.py
+
+# 检查指定目录
+python llm_image.py --directory /path/to/images
+
+# 自定义检查提示词
+python llm_image.py --prompt "自定义检查提示词"
+
+# 限制检查图片数量
+python llm_image.py --max-images 10
+
+# 10. 服务器FFmpeg配置检测（检查线上服务器的FFmpeg配置和GPU编码支持）
+# 检测服务器FFmpeg配置
+python test/test_server_ffmpeg.py
+
+# 该脚本会检测：
+# - FFmpeg版本和配置信息
+# - NVIDIA GPU和驱动支持
+# - 硬件编码器支持（h264_nvenc、hevc_nvenc、h264_videotoolbox等）
+# - 必需的滤镜支持（subtitles、overlay、scale、amix等）
+# - 实际编码器测试（NVENC和CPU编码）
+# - 性能优化建议和配置推荐
 ```
 
 ### 3. 图片生成规则
@@ -474,6 +501,18 @@ python batch_generate_character_images_async.py
 - **错误处理**: 完善的错误处理和重试机制
 - **配置集成**: 直接使用config.py中的配置，无需额外设置
 - **上海区域**: 使用火山引擎上海区域服务，提升上传速度
+
+### 🔍 LLM图片分析
+- **领口检查**: 专门检查人物着装领口类型（圆领、立领、高领 vs V领）
+- **批量分析**: 自动遍历指定目录下的所有图片文件
+- **多格式支持**: 支持jpg、jpeg、png、gif、bmp、webp等常见图片格式
+- **Base64编码**: 使用base64编码处理图片，兼容性更好
+- **自定义提示**: 支持自定义分析提示词，灵活控制分析内容
+- **失败记录**: 自动将检测失败的图片路径和失败原因实时记录到data目录的fail.txt文件
+- **进度反馈**: 实时显示分析进度和结果
+- **Token统计**: 实时显示每次请求的token使用情况，包含输入、输出和总计token数
+- **错误处理**: 完善的错误处理机制，跳过无法处理的图片
+- **配置集成**: 直接使用config.py中的ARK_CONFIG配置，无需设置环境变量
 
 ## ⚠️ 注意事项
 
@@ -576,6 +615,7 @@ ls async_tasks/
 - `concat_narration_video.py`: 第二阶段 - 生成主视频（添加旁白、BGM、音效等）
 - `concat_finish_video.py`: 第三阶段 - 生成完整视频（添加片尾视频）
 - `upload_tos.py`: TOS存储服务上传工具，批量上传完整视频文件
+- `llm_image.py`: LLM图片分析工具，批量检查Character_Images目录下图片的人物着装领口类型，自动记录检测失败的图片路径和失败原因到根目录
 
 ### 扩展开发
 
