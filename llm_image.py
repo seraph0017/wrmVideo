@@ -140,7 +140,7 @@ def analyze_image_with_llm(client: Ark, image_base64: str, prompt: str = "图中
         print(f"LLM分析失败: {e}")
         return None, token_usage
 
-def process_images(directory: str, prompt: str = "图中人物着装在领口处，是不是圆领，或者立领，或者高领，如果不是这三种领口，且是V领，那就是失败，反之通过。如果失败，请说明失败的原因（如：V领、其他领型等）。只给我返回通过或者失败+原因", max_images: Optional[int] = None):
+def process_images(directory: str, prompt: str = "图中人物着装在领口处，是不是圆领，或者立领，或者高领，如果不是这三种领口，且是V领，那就是失败，反之通过。如果失败，请说明失败的原因（如：V领、其他领型等）。只给我返回通过或者失败+原因", max_images: Optional[int] = None, start_from: Optional[str] = None):
     """
     批量处理图片分析
     
@@ -148,6 +148,7 @@ def process_images(directory: str, prompt: str = "图中人物着装在领口处
         directory: 图片目录路径
         prompt: 分析提示词
         max_images: 最大处理图片数量，None表示处理所有图片
+        start_from: 从指定图片开始处理，None表示从头开始
     """
     # 从配置文件获取API密钥
     api_key = ARK_CONFIG.get("api_key")
@@ -165,6 +166,21 @@ def process_images(directory: str, prompt: str = "图中人物着装在领口处
     if not image_files:
         print("未找到任何图片文件")
         return
+    
+    # 查找起始位置
+    start_index = 0
+    if start_from:
+        try:
+            start_index = image_files.index(start_from)
+            print(f"从指定图片开始: {start_from} (索引: {start_index + 1})")
+        except ValueError:
+            print(f"警告: 未找到指定的起始图片 {start_from}，将从头开始处理")
+            start_index = 0
+    
+    # 从指定位置开始处理
+    if start_index > 0:
+        image_files = image_files[start_index:]
+        print(f"跳过前 {start_index} 张图片")
     
     # 限制处理数量
     if max_images and len(image_files) > max_images:
@@ -187,16 +203,22 @@ def process_images(directory: str, prompt: str = "图中人物着装在领口处
     os.makedirs(data_dir, exist_ok=True)
     failed_file_path = os.path.join(data_dir, "fail.txt")
     
-    # 清空之前的失败记录文件
-    with open(failed_file_path, 'w', encoding='utf-8') as f:
-        pass  # 创建空文件
+    # 如果是从头开始，清空之前的失败记录文件；如果是续传，则追加模式
+    if start_index == 0:
+        with open(failed_file_path, 'w', encoding='utf-8') as f:
+            pass  # 创建空文件
+        print("已清空失败记录文件")
+    else:
+        print(f"续传模式，失败记录将追加到: {failed_file_path}")
     
     failed_count = 0
     
     # 处理每张图片
     success_count = 0
     for i, image_path in enumerate(image_files, 1):
-        print(f"\n[{i}/{len(image_files)}] 处理: {image_path}")
+        # 计算实际的全局索引
+        global_index = start_index + i
+        print(f"\n[{global_index}/{start_index + len(image_files)}] 处理: {image_path}")
         
         # 编码图片
         image_base64 = encode_image_to_base64(image_path)
@@ -248,6 +270,7 @@ def main():
   python llm_image.py --directory /path/to/images
   python llm_image.py --prompt "自定义检查提示词"
   python llm_image.py --max-images 10
+  python llm_image.py --start-from "/path/to/specific/image.jpg"
         """
     )
     
@@ -268,6 +291,11 @@ def main():
         help='最大处理图片数量 (默认: 处理所有图片)'
     )
     
+    parser.add_argument(
+        '--start-from', '-s',
+        help='从指定图片开始处理 (提供完整的图片路径)'
+    )
+    
     args = parser.parse_args()
     
     print("=" * 80)
@@ -277,10 +305,12 @@ def main():
     print(f"分析提示: {args.prompt}")
     if args.max_images:
         print(f"最大数量: {args.max_images}")
+    if args.start_from:
+        print(f"起始图片: {args.start_from}")
     print()
     
     # 执行图片分析
-    process_images(args.directory, args.prompt, args.max_images)
+    process_images(args.directory, args.prompt, args.max_images, args.start_from)
 
 if __name__ == "__main__":
     main()

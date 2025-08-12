@@ -40,6 +40,13 @@
   - **问题解决**: 移除hwaccel_output_format参数，避免CUDA格式与scale滤镜不兼容
   - **稳定性提升**: 确保GPU加速在使用复杂滤镜链时的稳定性
   - **全面修复**: 同步修复concat_first_video.py、concat_finish_video.py、concat_narration_video.py三个文件
+- 🐳 **Docker环境GPU支持**: 增强Docker环境下NVIDIA GPU硬件加速的兼容性：
+  - **Docker检测**: 新增Docker环境检测，支持通过环境变量和文件系统检测容器环境
+  - **GPU环境变量**: 支持检测NVIDIA_VISIBLE_DEVICES和CUDA_VISIBLE_DEVICES环境变量
+  - **驱动文件检测**: 检测/proc/driver/nvidia/version文件确认GPU驱动可用性
+  - **全面兼容**: 同步更新concat_first_video.py、concat_narration_video.py、concat_finish_video.py三个文件
+  - **测试工具**: 新增test_docker_ffmpeg.py脚本，提供Docker环境FFmpeg配置检测和优化建议
+  - **运行建议**: 自动生成Docker运行命令建议，包括GPU设备映射和环境变量配置
 - 🔄 **gen_audio.py简化**: 移除多线程、多进程、多协程相关代码，改为简单的顺序执行方式：
   - **简化架构**: 去除ThreadPoolExecutor和threading模块依赖
   - **顺序处理**: 按章节和解说段落顺序生成语音文件
@@ -211,6 +218,52 @@ sudo apt install ffmpeg
 
 **Windows:**
 下载FFmpeg并添加到系统PATH中
+
+### 3. Docker环境部署（推荐用于线上环境）
+
+#### 基础Docker运行
+```bash
+# 基本运行命令（仅CPU）
+docker run -it --rm \
+  -v /path/to/your/project:/workspace \
+  -w /workspace \
+  your-ffmpeg-image:latest
+```
+
+#### NVIDIA GPU支持
+```bash
+# 使用NVIDIA GPU硬件加速（推荐）
+docker run -it --rm \
+  --gpus all \
+  -e NVIDIA_VISIBLE_DEVICES=all \
+  -e NVIDIA_DRIVER_CAPABILITIES=compute,video,utility \
+  -v /path/to/your/project:/workspace \
+  -w /workspace \
+  your-ffmpeg-image:latest
+
+# 或使用nvidia-docker（旧版本）
+nvidia-docker run -it --rm \
+  -v /path/to/your/project:/workspace \
+  -w /workspace \
+  your-ffmpeg-image:latest
+```
+
+#### Docker环境检测
+```bash
+# 检测Docker环境中的FFmpeg和GPU配置
+python test/test_docker_ffmpeg.py
+
+# 该脚本会自动：
+# - 检测Docker环境和NVIDIA运行时
+# - 测试FFmpeg和NVENC编码器
+# - 生成优化的Docker运行命令建议
+```
+
+#### Docker镜像要求
+确保Docker镜像包含以下组件：
+- **FFmpeg**: 支持NVENC编码器（如果使用GPU）
+- **Python 3.6+**: 运行环境
+- **NVIDIA驱动**: GPU支持（通过宿主机映射）
 
 ## ⚙️ 配置设置
 
@@ -396,6 +449,12 @@ python llm_image.py --prompt "自定义检查提示词"
 # 限制检查图片数量
 python llm_image.py --max-images 10
 
+# 从指定图片开始处理（续传功能）
+python llm_image.py --start-from "/Users/xunan/Projects/wrmVideo/Character_Images/Male/23-30_YoungAdult/SciFi/Chinese/Mysterious/YoungAdult_SciFi_Chinese_Mysterious_04.jpeg"
+
+# 组合使用多个参数
+python llm_image.py --start-from "/path/to/start/image.jpg" --max-images 100
+
 # 10. 服务器FFmpeg配置检测（检查线上服务器的FFmpeg配置和GPU编码支持）
 # 检测服务器FFmpeg配置
 python test/test_server_ffmpeg.py
@@ -407,6 +466,17 @@ python test/test_server_ffmpeg.py
 # - 必需的滤镜支持（subtitles、overlay、scale、amix等）
 # - 实际编码器测试（NVENC和CPU编码）
 # - 性能优化建议和配置推荐
+
+# 11. Docker环境FFmpeg配置检测（专用于Docker容器环境）
+# 检测Docker环境中的FFmpeg和GPU配置
+python test/test_docker_ffmpeg.py
+
+# 该脚本会检测：
+# - Docker环境识别（通过/.dockerenv文件和环境变量）
+# - NVIDIA Docker运行时支持
+# - GPU设备映射和环境变量配置
+# - FFmpeg版本和NVENC编码器支持
+# - 生成Docker运行命令建议和配置优化建议
 ```
 
 ### 3. 图片生成规则
@@ -505,11 +575,13 @@ python batch_generate_character_images_async.py
 ### 🔍 LLM图片分析
 - **领口检查**: 专门检查人物着装领口类型（圆领、立领、高领 vs V领）
 - **批量分析**: 自动遍历指定目录下的所有图片文件
+- **续传功能**: 支持从指定图片开始处理，避免重复分析已处理的图片
 - **多格式支持**: 支持jpg、jpeg、png、gif、bmp、webp等常见图片格式
 - **Base64编码**: 使用base64编码处理图片，兼容性更好
 - **自定义提示**: 支持自定义分析提示词，灵活控制分析内容
 - **失败记录**: 自动将检测失败的图片路径和失败原因实时记录到data目录的fail.txt文件
-- **进度反馈**: 实时显示分析进度和结果
+- **智能记录**: 从头开始时清空失败记录文件，续传时追加记录
+- **进度反馈**: 实时显示分析进度和结果，支持全局索引显示
 - **Token统计**: 实时显示每次请求的token使用情况，包含输入、输出和总计token数
 - **错误处理**: 完善的错误处理机制，跳过无法处理的图片
 - **配置集成**: 直接使用config.py中的ARK_CONFIG配置，无需设置环境变量
@@ -561,6 +633,49 @@ python check_async_tasks.py
 
 # 查看任务详情
 ls async_tasks/
+```
+
+#### 5. Docker环境问题
+```bash
+# 检查Docker环境配置
+python test/test_docker_ffmpeg.py
+
+# 常见Docker问题解决：
+
+# 问题1: GPU不可用
+# 解决: 确保使用正确的Docker运行参数
+docker run --gpus all -e NVIDIA_VISIBLE_DEVICES=all ...
+
+# 问题2: NVENC编码器不可用
+# 解决: 检查FFmpeg是否支持NVENC
+ffmpeg -encoders | grep nvenc
+
+# 问题3: 权限问题
+# 解决: 确保容器有足够权限访问GPU设备
+# 检查宿主机NVIDIA驱动
+nvidia-smi
+
+# 问题4: 环境变量缺失
+# 解决: 设置必要的NVIDIA环境变量
+-e NVIDIA_DRIVER_CAPABILITIES=compute,video,utility
+```
+
+#### 6. GPU硬件加速问题
+```bash
+# 检查GPU状态
+nvidia-smi
+
+# 测试NVENC编码器
+ffmpeg -f lavfi -i testsrc=duration=1:size=320x240:rate=1 -c:v h264_nvenc -f null -
+
+# 检查FFmpeg GPU支持
+ffmpeg -hwaccels
+ffmpeg -encoders | grep nvenc
+
+# 常见GPU问题：
+# - 驱动版本过低：更新NVIDIA驱动
+# - FFmpeg不支持NVENC：重新编译FFmpeg或使用支持的版本
+# - Docker环境GPU映射失败：检查Docker GPU运行时配置
 ```
 
 ### 错误代码

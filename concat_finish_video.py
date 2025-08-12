@@ -18,13 +18,38 @@ from pathlib import Path
 import ffmpeg
 
 def check_nvidia_gpu():
-    """检测系统是否有NVIDIA GPU和nvenc编码器可用"""
+    """检测系统是否有NVIDIA GPU和nvenc编码器可用 - 支持Docker环境"""
     try:
-        # 首先检测nvidia-smi
-        result = subprocess.run(['nvidia-smi'], capture_output=True, text=False, timeout=10)
-        if result.returncode != 0:
+        # 方法1: 检测nvidia-smi (传统方式)
+        try:
+            result = subprocess.run(['nvidia-smi'], capture_output=True, text=False, timeout=10)
+            nvidia_smi_available = (result.returncode == 0)
+        except (FileNotFoundError, subprocess.TimeoutExpired):
+            nvidia_smi_available = False
+        
+        # 方法2: 检查Docker中的NVIDIA运行时 (检查/proc/driver/nvidia/version)
+        nvidia_proc_available = os.path.exists('/proc/driver/nvidia/version')
+        
+        # 方法3: 检查Docker环境变量
+        nvidia_visible_devices = os.environ.get('NVIDIA_VISIBLE_DEVICES')
+        cuda_visible_devices = os.environ.get('CUDA_VISIBLE_DEVICES')
+        docker_nvidia_available = (
+            nvidia_visible_devices and nvidia_visible_devices != 'void' or
+            cuda_visible_devices and cuda_visible_devices != ''
+        )
+        
+        # 如果任何一种方式检测到GPU，则继续测试nvenc
+        if not (nvidia_smi_available or nvidia_proc_available or docker_nvidia_available):
             print("⚠️  未检测到NVIDIA GPU或驱动，使用CPU编码")
             return False
+        
+        print("✓ 检测到NVIDIA GPU环境")
+        if docker_nvidia_available:
+            print("  - Docker NVIDIA运行时环境")
+        if nvidia_proc_available:
+            print("  - NVIDIA驱动已加载")
+        if nvidia_smi_available:
+            print("  - nvidia-smi可用")
         
         # 检测nvenc编码器是否可用
         # 使用一个简单的测试命令来验证h264_nvenc是否工作
@@ -35,7 +60,7 @@ def check_nvidia_gpu():
         result = subprocess.run(test_cmd, capture_output=True, text=False, timeout=15)
         
         if result.returncode == 0:
-            print("✓ 检测到NVIDIA GPU和nvenc编码器，将使用硬件加速")
+            print("✓ NVENC编码器测试成功，将使用硬件加速")
             return True
         else:
             # 安全地解码stderr，忽略无法解码的字符
