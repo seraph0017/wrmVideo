@@ -3,11 +3,17 @@
 """
 Docker环境FFmpeg配置检测脚本
 专门用于检测Docker容器中的FFmpeg和NVIDIA GPU配置
+
+使用方法:
+    python test_docker_ffmpeg.py              # 检测当前环境
+    python test_docker_ffmpeg.py --test-run   # 测试Docker运行命令
+    python test_docker_ffmpeg.py --help       # 显示帮助信息
 """
 
 import subprocess
 import sys
 import os
+import argparse
 
 def run_command(cmd, timeout=10):
     """
@@ -208,6 +214,98 @@ def test_docker_nvenc():
         
         return False
 
+def test_docker_run_command():
+    """
+    测试Docker运行命令是否可用
+    
+    Returns:
+        dict: 测试结果
+    """
+    print("\n=== 测试Docker运行命令 ===")
+    
+    results = {
+        'docker_available': False,
+        'nvidia_docker_available': False,
+        'gpu_support': False
+    }
+    
+    # 测试基本docker命令
+    print("检查Docker是否可用...")
+    returncode, stdout, stderr = run_command(['docker', '--version'])
+    if returncode == 0:
+        results['docker_available'] = True
+        print(f"✓ Docker可用: {stdout.strip()}")
+    else:
+        print(f"❌ Docker不可用: {stderr}")
+        return results
+    
+    # 测试nvidia-docker运行时
+    print("\n检查NVIDIA Docker运行时...")
+    test_cmd = [
+        'docker', 'run', '--rm', '--gpus', 'all',
+        'nvidia/cuda:11.0-base', 'nvidia-smi'
+    ]
+    
+    returncode, stdout, stderr = run_command(test_cmd, timeout=30)
+    if returncode == 0:
+        results['nvidia_docker_available'] = True
+        results['gpu_support'] = True
+        print("✓ NVIDIA Docker运行时可用")
+        print("✓ GPU设备可以正常访问")
+        # 显示GPU信息的前几行
+        gpu_lines = stdout.split('\n')[:5]
+        for line in gpu_lines:
+            if line.strip():
+                print(f"   {line}")
+    else:
+        print(f"❌ NVIDIA Docker运行时测试失败: {stderr}")
+        
+        # 尝试不使用GPU的基本测试
+        basic_test_cmd = ['docker', 'run', '--rm', 'hello-world']
+        returncode, stdout, stderr = run_command(basic_test_cmd, timeout=15)
+        if returncode == 0:
+            print("✓ 基本Docker功能正常")
+        else:
+            print(f"❌ 基本Docker功能也有问题: {stderr}")
+    
+    return results
+
+def test_ffmpeg_docker_command(image_name="jrottenberg/ffmpeg:latest"):
+    """
+    测试FFmpeg Docker镜像是否可用
+    
+    Args:
+        image_name: FFmpeg Docker镜像名称
+    
+    Returns:
+        bool: 是否可用
+    """
+    print(f"\n=== 测试FFmpeg Docker镜像 ({image_name}) ===")
+    
+    # 测试FFmpeg版本
+    test_cmd = [
+        'docker', 'run', '--rm', image_name,
+        'ffmpeg', '-version'
+    ]
+    
+    returncode, stdout, stderr = run_command(test_cmd, timeout=20)
+    if returncode == 0:
+        # 提取版本信息
+        lines = stdout.split('\n')
+        version_line = lines[0] if lines else "未知版本"
+        print(f"✓ FFmpeg Docker镜像可用: {version_line}")
+        
+        # 检查NVENC支持
+        if 'enable-nvenc' in stdout:
+            print("✓ 镜像支持NVENC编码器")
+        else:
+            print("⚠️  镜像可能不支持NVENC编码器")
+        
+        return True
+    else:
+        print(f"❌ FFmpeg Docker镜像测试失败: {stderr}")
+        return False
+
 def generate_docker_recommendations(docker_env, nvidia_runtime, ffmpeg_ok, nvenc_works):
     """
     生成Docker环境配置建议
@@ -254,22 +352,107 @@ def generate_docker_recommendations(docker_env, nvidia_runtime, ffmpeg_ok, nvenc
     print("  -e NVIDIA_VISIBLE_DEVICES=all \\")
     print("  -e NVIDIA_DRIVER_CAPABILITIES=compute,video,utility \\")
     print("  -v /path/to/your/project:/workspace \\")
+    print("  -w /workspace \\")
     print("  your-ffmpeg-image:latest")
     
     print("\n# 或使用nvidia-docker (旧版本):")
     print("nvidia-docker run \\")
     print("  -v /path/to/your/project:/workspace \\")
+    print("  -w /workspace \\")
     print("  your-ffmpeg-image:latest")
+    
+    print("\n# 测试命令示例:")
+    print("docker run --gpus all --rm \\")
+    print("  -e NVIDIA_VISIBLE_DEVICES=all \\")
+    print("  -e NVIDIA_DRIVER_CAPABILITIES=compute,video,utility \\")
+    print("  jrottenberg/ffmpeg:latest \\")
+    print("  ffmpeg -f lavfi -i testsrc=duration=1:size=320x240:rate=1 -c:v h264_nvenc -f null -")
+
+def parse_arguments():
+    """
+    解析命令行参数
+    
+    Returns:
+        argparse.Namespace: 解析后的参数
+    """
+    parser = argparse.ArgumentParser(
+        description='Docker环境FFmpeg配置检测脚本',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+示例用法:
+  python test_docker_ffmpeg.py                    # 检测当前环境
+  python test_docker_ffmpeg.py --test-run         # 测试Docker运行命令
+  python test_docker_ffmpeg.py --test-run --image jrottenberg/ffmpeg:latest
+        """
+    )
+    
+    parser.add_argument(
+        '--test-run', 
+        action='store_true',
+        help='测试Docker运行命令（在宿主机上运行）'
+    )
+    
+    parser.add_argument(
+        '--image',
+        default='jrottenberg/ffmpeg:latest',
+        help='指定要测试的FFmpeg Docker镜像（默认: jrottenberg/ffmpeg:latest）'
+    )
+    
+    parser.add_argument(
+        '--skip-pull',
+        action='store_true',
+        help='跳过Docker镜像拉取，使用本地镜像'
+    )
+    
+    return parser.parse_args()
 
 def main():
     """
     主函数
     """
+    args = parse_arguments()
+    
     print("Docker环境FFmpeg配置检测")
     print("=" * 50)
     
+    if args.test_run:
+        # 强制测试Docker运行命令模式
+        print("\n=== 测试Docker运行命令模式 ===")
+        docker_test_results = test_docker_run_command()
+        
+        # 测试指定的FFmpeg Docker镜像
+        if docker_test_results['docker_available']:
+            test_ffmpeg_docker_command(args.image)
+        
+        # 生成Docker运行建议
+        print("\n=== Docker运行建议 ===")
+        if docker_test_results['nvidia_docker_available']:
+            print("🚀 推荐使用GPU加速的Docker命令:")
+            print(f"docker run --gpus all --rm \\")
+            print(f"  -e NVIDIA_VISIBLE_DEVICES=all \\")
+            print(f"  -e NVIDIA_DRIVER_CAPABILITIES=compute,video,utility \\")
+            print(f"  -v $(pwd):/workspace \\")
+            print(f"  -w /workspace \\")
+            print(f"  {args.image}")
+        elif docker_test_results['docker_available']:
+            print("✅ 推荐使用CPU的Docker命令:")
+            print(f"docker run --rm \\")
+            print(f"  -v $(pwd):/workspace \\")
+            print(f"  -w /workspace \\")
+            print(f"  {args.image}")
+        
+        return
+    
     # 检查Docker环境
     docker_env = check_docker_environment()
+    
+    # 如果不在Docker环境中，提示使用--test-run参数
+    docker_test_results = None
+    if not docker_env:
+        print("\n当前不在Docker容器中。")
+        print("提示: 使用 --test-run 参数可以测试Docker运行命令")
+        print("例如: python test_docker_ffmpeg.py --test-run")
+        return
     
     # 检查NVIDIA Docker运行时
     nvidia_runtime = check_nvidia_docker_runtime()
@@ -287,12 +470,13 @@ def main():
     
     # 总结
     print("\n=== 检测总结 ===")
-    if docker_env and ffmpeg_ok and nvenc_works:
-        print("🚀 Docker环境配置完美，支持NVIDIA GPU硬件加速")
-    elif docker_env and ffmpeg_ok:
-        print("✅ Docker环境基本配置正常，但GPU加速需要调整")
-    elif docker_env:
-        print("⚠️  Docker环境检测到，但FFmpeg配置有问题")
+    if docker_env:
+        if ffmpeg_ok and nvenc_works:
+            print("🚀 Docker环境配置完美，支持NVIDIA GPU硬件加速")
+        elif ffmpeg_ok:
+            print("✅ Docker环境基本配置正常，但GPU加速需要调整")
+        else:
+            print("⚠️  Docker环境检测到，但FFmpeg配置有问题")
     else:
         print("❌ 未检测到Docker环境或配置有严重问题")
 

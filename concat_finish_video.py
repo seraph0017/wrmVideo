@@ -76,20 +76,58 @@ def check_nvidia_gpu():
         return False
 
 def get_ffmpeg_gpu_params():
-    """获取FFmpeg GPU优化参数 - 优化速度版本"""
-    if check_nvidia_gpu():
-        return {
-            'hwaccel': 'cuda',
-            # 移除 hwaccel_output_format 以避免与滤镜不兼容
-            'video_codec': 'h264_nvenc',
-            'preset': 'p2',  # 更快的预设 (p1=fastest, p2=faster, p7=slowest)
-            'tune': 'll',    # Low latency - 更快的编码
-            'extra_params': [
-                '-rc-lookahead', '8',  # 减少前瞻帧数以提高速度
-                '-bf', '2',            # 减少B帧数量
-                '-refs', '1'           # 减少参考帧数量
-            ]
-        }
+    """获取FFmpeg GPU优化参数 - 支持L4 GPU优化配置"""
+    # 检测GPU并获取型号信息
+    gpu_available = False
+    is_l4_gpu = False
+    
+    try:
+        result = subprocess.run(['nvidia-smi'], capture_output=True, text=True, timeout=10)
+        if result.returncode == 0:
+            gpu_available = True
+            # 检查是否为L4 GPU
+            if 'L4' in result.stdout:
+                is_l4_gpu = True
+    except:
+        pass
+    
+    # 如果没有nvidia-smi，尝试其他检测方法
+    if not gpu_available:
+        gpu_available = check_nvidia_gpu()
+    
+    if gpu_available:
+        if is_l4_gpu:
+            # L4 GPU优化配置
+            return {
+                'hwaccel': 'cuda',
+                'video_codec': 'h264_nvenc',
+                'preset': 'p4',  # L4 GPU最佳平衡预设
+                'profile': 'high',
+                'extra_params': [
+                    '-rc', 'vbr',          # 可变比特率
+                    '-cq', '23',           # 恒定质量
+                    '-bf', '3',            # B帧数量
+                    '-refs', '3',          # 参考帧数量
+                    '-spatial_aq', '1',    # 空间自适应量化
+                    '-temporal_aq', '1',   # 时间自适应量化
+                    '-rc-lookahead', '20', # 前瞻帧数
+                    '-surfaces', '32',     # 编码表面数量
+                    '-gpu', '0'            # 指定GPU
+                ]
+            }
+        else:
+            # 通用NVIDIA GPU配置
+            return {
+                'hwaccel': 'cuda',
+                'video_codec': 'h264_nvenc',
+                'preset': 'p2',  # 更快的预设
+                'tune': 'll',    # Low latency
+                'extra_params': [
+                    '-rc-lookahead', '8',  # 减少前瞻帧数以提高速度
+                    '-bf', '2',            # 减少B帧数量
+                    '-refs', '1'           # 减少参考帧数量
+                ]
+            }
     else:
         return {
             'video_codec': 'libx264',

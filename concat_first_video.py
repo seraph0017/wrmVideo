@@ -22,12 +22,29 @@ from pathlib import Path
 from typing import List
 
 def check_nvidia_gpu():
-    """检测系统是否有NVIDIA GPU和nvenc编码器可用 - 支持Docker环境"""
+    """检测系统是否有NVIDIA GPU和nvenc编码器可用 - 支持Docker环境和L4 GPU优化"""
     try:
+        gpu_info = {'model': None, 'is_l4': False, 'driver_version': None}
+        
         # 方法1: 检测nvidia-smi (传统方式)
         try:
-            result = subprocess.run(['nvidia-smi'], capture_output=True, text=False, timeout=10)
+            result = subprocess.run(['nvidia-smi'], capture_output=True, text=True, timeout=10)
             nvidia_smi_available = (result.returncode == 0)
+            
+            # 提取GPU型号信息
+            if nvidia_smi_available:
+                lines = result.stdout.split('\n')
+                for line in lines:
+                    if 'Tesla' in line or 'GeForce' in line or 'Quadro' in line or 'RTX' in line or 'GTX' in line:
+                        # 提取GPU型号
+                        parts = line.split()
+                        for i, part in enumerate(parts):
+                            if part in ['Tesla', 'GeForce', 'Quadro', 'RTX', 'GTX'] and i + 1 < len(parts):
+                                gpu_info['model'] = f"{part} {parts[i + 1]}"
+                                if 'L4' in parts[i + 1]:
+                                    gpu_info['is_l4'] = True
+                                break
+                        break
         except (FileNotFoundError, subprocess.TimeoutExpired):
             nvidia_smi_available = False
         
@@ -48,6 +65,10 @@ def check_nvidia_gpu():
             return False
         
         print("✓ 检测到NVIDIA GPU环境")
+        if gpu_info['model']:
+            print(f"  - GPU型号: {gpu_info['model']}")
+            if gpu_info['is_l4']:
+                print("  - 🚀 检测到L4 GPU，将使用优化配置")
         if docker_nvidia_available:
             print("  - Docker NVIDIA运行时环境")
         if nvidia_proc_available:
@@ -65,6 +86,8 @@ def check_nvidia_gpu():
         
         if result.returncode == 0:
             print("✓ NVENC编码器测试成功，将使用硬件加速")
+            if gpu_info['is_l4']:
+                print("  - L4 GPU建议使用预设p4以获得最佳性能")
             return True
         else:
             # 安全地解码stderr，忽略无法解码的字符
@@ -73,6 +96,9 @@ def check_nvidia_gpu():
             except:
                 stderr_text = str(result.stderr)
             print(f"⚠️  nvenc编码器不可用，使用CPU编码: {stderr_text}")
+            if gpu_info['is_l4']:
+                print("  - L4 GPU检测到但NVENC不可用，请检查FFmpeg编译配置")
+                print("  - 建议运行: python test/test_volcano_l4_ffmpeg.py --compile")
             return False
             
     except (subprocess.TimeoutExpired, FileNotFoundError, Exception) as e:
@@ -80,20 +106,58 @@ def check_nvidia_gpu():
         return False
 
 def get_ffmpeg_gpu_params():
-    """获取FFmpeg GPU优化参数 - 优化速度版本"""
-    if check_nvidia_gpu():
-        return {
-            'hwaccel': 'cuda',
-            # 移除 hwaccel_output_format 以避免与滤镜不兼容
-            'video_codec': 'h264_nvenc',
-            'preset': 'p2',  # 更快的预设 (p1=fastest, p2=faster, p7=slowest)
-            'tune': 'll',    # Low latency - 更快的编码
-            'extra_params': [
-                '-rc-lookahead', '8',  # 减少前瞻帧数以提高速度
-                '-bf', '2',            # 减少B帧数量
-                '-refs', '1'           # 减少参考帧数量
-            ]
-        }
+    """获取FFmpeg GPU优化参数 - 支持L4 GPU优化配置"""
+    # 检测GPU并获取型号信息
+    gpu_available = False
+    is_l4_gpu = False
+    
+    try:
+        result = subprocess.run(['nvidia-smi'], capture_output=True, text=True, timeout=10)
+        if result.returncode == 0:
+            gpu_available = True
+            # 检查是否为L4 GPU
+            if 'L4' in result.stdout:
+                is_l4_gpu = True
+    except:
+        pass
+    
+    # 如果没有nvidia-smi，尝试其他检测方法
+    if not gpu_available:
+        gpu_available = check_nvidia_gpu()
+    
+    if gpu_available:
+        if is_l4_gpu:
+            # L4 GPU优化配置
+            return {
+                'hwaccel': 'cuda',
+                'video_codec': 'h264_nvenc',
+                'preset': 'p4',  # L4 GPU最佳平衡预设
+                'profile': 'high',
+                'extra_params': [
+                    '-rc', 'vbr',          # 可变比特率
+                    '-cq', '23',           # 恒定质量
+                    '-bf', '3',            # B帧数量
+                    '-refs', '3',          # 参考帧数量
+                    '-spatial_aq', '1',    # 空间自适应量化
+                    '-temporal_aq', '1',   # 时间自适应量化
+                    '-rc-lookahead', '20', # 前瞻帧数
+                    '-surfaces', '32',     # 编码表面数量
+                    '-gpu', '0'            # 指定GPU
+                ]
+            }
+        else:
+            # 通用NVIDIA GPU配置
+            return {
+                'hwaccel': 'cuda',
+                'video_codec': 'h264_nvenc',
+                'preset': 'p2',  # 更快的预设
+                'tune': 'll',    # Low latency
+                'extra_params': [
+                    '-rc-lookahead', '8',  # 减少前瞻帧数以提高速度
+                    '-bf', '2',            # 减少B帧数量
+                    '-refs', '1'           # 减少参考帧数量
+                ]
+            }
     else:
         return {
             'video_codec': 'libx264',

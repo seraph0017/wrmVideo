@@ -4,6 +4,13 @@
 
 ## ✨ 最新更新
 
+- 🚀 **火山云L4 GPU支持**: 全面支持火山云L4 GPU环境的FFmpeg配置和优化：
+  - **L4 GPU检测**: 自动识别NVIDIA L4 GPU并应用专门的优化配置
+  - **专用配置**: L4 GPU使用p4预设、VBR码率控制、空间/时间自适应量化等优化参数
+  - **编译脚本**: 提供`test_volcano_l4_ffmpeg.py`脚本，支持L4环境检测、性能测试和编译脚本生成
+  - **Docker支持**: 生成针对L4 GPU优化的Docker配置和运行命令
+  - **生产环境**: 完整的L4 GPU生产环境配置指南和自动化部署脚本
+  - **性能优化**: 针对L4 GPU的NVENC编码器进行专门优化，提升编码效率和质量
 - 🛠️ **subprocess编码问题修复**: 全面修复FFmpeg和其他子进程调用中的UTF-8解码错误：
   - **编码安全**: 将所有 `subprocess.run` 调用的 `text=True` 改为 `text=False`，以字节模式处理输出
   - **安全解码**: 为所有 `stderr` 和 `stdout` 使用添加安全解码逻辑，使用 `errors='ignore'` 忽略无法解码的字符
@@ -751,6 +758,110 @@ python test/test_integration.py
 python test/test_character_images.py
 ```
 
+## 🚀 火山云L4 GPU配置指南
+
+### 环境检测和配置
+
+#### 1. 环境检测
+```bash
+# 检测当前L4 GPU环境
+python test/test_volcano_l4_ffmpeg.py
+
+# 生成优化配置
+python test/test_volcano_l4_ffmpeg.py --optimize
+
+# 生成编译脚本
+python test/test_volcano_l4_ffmpeg.py --compile
+
+# 生成Docker配置
+python test/test_volcano_l4_ffmpeg.py --docker
+
+# 生成所有配置
+python test/test_volcano_l4_ffmpeg.py --all
+```
+
+#### 2. L4 GPU优化配置
+
+**自动检测**: 系统会自动检测L4 GPU并应用以下优化配置：
+- **预设**: p4（L4 GPU最佳平衡预设）
+- **码率控制**: VBR（可变比特率）
+- **质量**: CQ 23（恒定质量）
+- **自适应量化**: 空间和时间自适应量化
+- **前瞻帧数**: 20帧
+- **编码表面**: 32个
+
+#### 3. 生产环境部署
+
+**方式一：直接编译**
+```bash
+# 运行自动生成的编译脚本
+bash l4_ffmpeg_compile.sh
+```
+
+**方式二：Docker部署**
+```bash
+# 构建L4优化的FFmpeg镜像
+docker build -t ffmpeg-l4:latest -f Dockerfile.l4 .
+
+# 运行容器（GPU支持）
+docker run --gpus all -v /workspace:/workspace ffmpeg-l4:latest
+```
+
+#### 4. 性能验证
+```bash
+# 测试NVENC编码性能
+ffmpeg -f lavfi -i testsrc2=duration=10:size=1920x1080:rate=30 \
+  -c:v h264_nvenc -preset p4 -rc vbr -cq 23 \
+  -spatial_aq 1 -temporal_aq 1 -rc-lookahead 20 \
+  test_l4.mp4
+```
+
+### L4 GPU特性
+
+- **计算能力**: 8.9（Ada Lovelace架构）
+- **NVENC会话**: 支持多路并发编码
+- **编码格式**: H.264/H.265 NVENC
+- **解码加速**: NVDEC硬件解码
+- **内存**: 24GB GDDR6
+
+### 📋 完整依赖清单
+
+详细的L4 GPU环境配置和依赖安装指南，请参考：
+- **[L4 GPU依赖清单](L4_GPU_DEPENDENCIES.md)** - 包含系统依赖、CUDA环境、FFmpeg编译、Python包等完整配置指南
+
+该文档包含：
+- 🔧 NVIDIA驱动和CUDA环境配置
+- 📦 FFmpeg编译依赖和优化配置
+- 🐍 Python环境和包依赖
+- 🐳 Docker环境配置
+- ✅ 环境验证和性能测试
+- 🚨 常见问题解决方案
+
+### 🔍 快速环境检查
+
+使用我们提供的依赖检查脚本快速验证您的L4 GPU环境：
+
+```bash
+# 基本检查
+python test/check_l4_dependencies.py
+
+# 详细检查（包含性能测试）
+python test/check_l4_dependencies.py --performance
+
+# 显示详细输出
+python test/check_l4_dependencies.py --verbose
+```
+
+该脚本会自动检查：
+- ✅ 系统环境（操作系统、Python版本）
+- ✅ NVIDIA GPU 和驱动（L4 GPU检测）
+- ✅ CUDA 环境和工具链
+- ✅ FFmpeg 和 NVENC 编码器
+- ✅ Python 包依赖
+- ✅ 项目目录结构
+- ✅ API 配置文件
+- ✅ L4 GPU 性能测试（可选）
+
 ## 📋 项目特色
 
 ### ✨ 核心功能
@@ -759,6 +870,7 @@ python test/test_character_images.py
 - 🎵 **高质量语音合成**: 火山引擎TTS，支持时间戳
 - 🎬 **智能视频合成**: 音频、图片、字幕完美同步
 - 👥 **角色图片系统**: 五层属性分类，智能角色匹配
+- 🚀 **L4 GPU加速**: 专门优化的NVENC编码配置
 
 ### 🚀 技术亮点
 - ⚡ **异步处理**: 支持大批量任务的异步处理
@@ -766,6 +878,7 @@ python test/test_character_images.py
 - 📁 **模块化设计**: 清晰的代码结构和职责分离
 - 🛡️ **内容安全**: 自动规避敏感内容
 - 🔧 **配置灵活**: 丰富的自定义配置选项
+- 🚀 **GPU优化**: 自动检测并优化L4 GPU性能
 
 ## 📝 更新日志
 
