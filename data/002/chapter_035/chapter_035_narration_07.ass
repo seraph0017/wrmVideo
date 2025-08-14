@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_035 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.06,Default,,0,0,0,,多宝道人轻叹大局已定
+Dialogue: 0,0:00:02.52,0:00:04.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕镇{\c&H00FFFFFF&\b0}元大仙立于云端观战
+Dialogue: 0,0:00:05.51,0:00:07.28,Default,,0,0,0,,场景为战场高空云层上
+Dialogue: 0,0:00:07.66,0:00:08.89,Default,,0,0,0,,多宝道人手持{\c&H0000FFFF&\b1}宝珠{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.15,0:00:11.14,Default,,0,0,0,,面露感慨{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}负手而立
+Dialogue: 0,0:00:11.43,0:00:13.86,Default,,0,0,0,,眼神平静镇{\c&H0000FFFF&\b1}元大仙{\c&H00FFFFFF&\b0}抚须摇头
+Dialogue: 0,0:00:14.15,0:00:15.94,Default,,0,0,0,,似在惋惜下方战场
+Dialogue: 0,0:00:16.27,0:00:18.52,Default,,0,0,0,,人教弟子正清除残余{\c&H0000FFFF&\b1}蜀山{\c&H00FFFFFF&\b0}精锐
+Dialogue: 0,0:00:18.82,0:00:19.59,Default,,0,0,0,,杀声渐歇

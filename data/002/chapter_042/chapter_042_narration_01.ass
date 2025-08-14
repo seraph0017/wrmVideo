@@ -14,14 +14,15 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖谄媚劝降天元老祖
-Dialogue: 0,0:00:02.60,0:00:04.47,Default,,0,0,0,,反遭怒斥昏暗{\c&H0000FFFF&\b1}石室中{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:04.84,0:00:06.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖佝偻着背
-Dialogue: 0,0:00:06.51,0:00:07.95,Default,,0,0,0,,灰袍圆领紧束脖颈
-Dialogue: 0,0:00:08.23,0:00:11.00,Default,,0,0,0,,脸上堆着假笑天元{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}蓝袍圆领
-Dialogue: 0,0:00:11.00,0:00:13.11,Default,,0,0,0,,沾着尘土血丝怒目圆睁
-Dialogue: 0,0:00:13.37,0:00:15.20,Default,,0,0,0,,须发皆{\c&H0000FFFF&\b1}张赵硕{\c&H00FFFFFF&\b0}端坐石座
-Dialogue: 0,0:00:15.67,0:00:17.07,Default,,0,0,0,,白袍圆领纤尘不染
-Dialogue: 0,0:00:17.36,0:00:20.00,Default,,0,0,0,,指尖轻叩扶手冷眼旁观这场叛徒
-Dialogue: 0,0:00:20.00,0:00:22.21,Default,,0,0,0,,与忠臣的对峙空气因二人的怒火
-Dialogue: 0,0:00:22.21,0:00:22.85,Default,,0,0,0,,微微震颤
+Dialogue: 0,0:00:00.01,0:00:02.91,Default,,0,0,0,,混沌虚空之中{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖突然转向
+Dialogue: 0,0:00:02.91,0:00:05.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}躬身行礼声音带着谄媚
+Dialogue: 0,0:00:05.74,0:00:08.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕府{\c&H00FFFFFF&\b0}主天元老祖冥顽不灵
+Dialogue: 0,0:00:08.71,0:00:11.23,Default,,0,0,0,,留之必为大祸不如由属下将其打
+Dialogue: 0,0:00:11.23,0:00:13.89,Default,,0,0,0,,杀话音未落被束缚的天{\c&H0000FFFF&\b1}元老{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.89,0:00:16.00,Default,,0,0,0,,祖目眦欲裂周身魔气暴涨
+Dialogue: 0,0:00:16.38,0:00:18.73,Default,,0,0,0,,却被夕月道人布下的禁制死死压制
+Dialogue: 0,0:00:19.05,0:00:20.32,Default,,0,0,0,,只能发出愤怒咆哮
+Dialogue: 0,0:00:20.86,0:00:22.46,Default,,0,0,0,,叛徒我便是陨落
+Dialogue: 0,0:00:22.82,0:00:25.05,Default,,0,0,0,,也要拉你垫背场景光线昏暗
+Dialogue: 0,0:00:25.57,0:00:28.28,Default,,0,0,0,,混沌气流环绕双方对峙气氛剑拔
+Dialogue: 0,0:00:28.28,0:00:28.64,Default,,0,0,0,,弩张

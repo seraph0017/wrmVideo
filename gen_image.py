@@ -12,6 +12,7 @@ import base64
 import sys
 import json
 import time
+import random
 from config.config import IMAGE_TWO_CONFIG, STORY_STYLE
 from config.prompt_config import ART_STYLES
 from volcengine.visual.VisualService import VisualService
@@ -277,9 +278,159 @@ def find_character_image(chapter_path, character_name):
         print(f"查找角色图片时发生错误: {e}")
         return None
 
-def find_character_image_by_attributes(gender, age_group, character_style, culture='Chinese', temperament='Common'):
+def find_similar_character_image_by_prompt(prompt, gender=None, character_style=None):
     """
-    根据角色属性查找Character_Images目录中的角色图片
+    根据prompt内容查找相似的角色图片
+    
+    Args:
+        prompt: 图片描述文本
+        gender: 性别偏好 (Male/Female)，可选
+        character_style: 风格偏好 (Ancient/Fantasy/Modern/SciFi)，可选
+    
+    Returns:
+        str: 角色图片文件路径，如果未找到返回None
+    """
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    character_images_dir = os.path.join(script_dir, 'Character_Images')
+    
+    if not os.path.exists(character_images_dir):
+        print(f"    警告: Character_Images目录不存在: {character_images_dir}")
+        return None
+    
+    # 从prompt中提取关键词
+    prompt_lower = prompt.lower()
+    
+    # 定义关键词映射
+    gender_keywords = {
+        'male': ['男', '男性', '男人', '少年', '青年', '中年', '老人', '武士', '将军', '皇帝', '王子', '书生'],
+        'female': ['女', '女性', '女人', '少女', '女子', '美女', '公主', '皇后', '仙女', '侍女']
+    }
+    
+    age_keywords = {
+        '15-22_Youth': ['少年', '少女', '青春', '年轻', '稚嫩'],
+        '23-30_YoungAdult': ['青年', '年轻人', '成年'],
+        '25-40_FantasyAdult': ['成人', '壮年'],
+        '31-45_MiddleAged': ['中年', '成熟']
+    }
+    
+    style_keywords = {
+        'Ancient': ['古代', '古装', '传统', '古典', '汉服', '唐装', '宫廷'],
+        'Fantasy': ['仙侠', '修仙', '玄幻', '仙人', '神仙', '法师', '魔法'],
+        'Modern': ['现代', '当代', '都市', '时尚'],
+        'SciFi': ['科幻', '未来', '机甲', '太空']
+    }
+    
+    temperament_keywords = {
+        'Royal': ['皇帝', '皇后', '王子', '公主', '贵族', '宫廷'],
+        'Chivalrous': ['武士', '侠客', '英雄', '勇士'],
+        'Scholar': ['书生', '学者', '文人'],
+        'Assassin': ['刺客', '杀手', '暗杀'],
+        'Monk': ['僧人', '和尚', '道士'],
+        'Beggar': ['乞丐', '流浪'],
+        'Common': ['平民', '普通', '百姓']
+    }
+    
+    # 分析prompt，确定最佳匹配
+    detected_gender = gender
+    detected_style = character_style
+    detected_age = None
+    detected_temperament = 'Common'
+    
+    # 检测性别
+    if not detected_gender:
+        for g, keywords in gender_keywords.items():
+            if any(keyword in prompt_lower for keyword in keywords):
+                detected_gender = g.capitalize()
+                break
+    
+    # 检测风格
+    if not detected_style:
+        for s, keywords in style_keywords.items():
+            if any(keyword in prompt_lower for keyword in keywords):
+                detected_style = s
+                break
+    
+    # 检测年龄段
+    for age, keywords in age_keywords.items():
+        if any(keyword in prompt_lower for keyword in keywords):
+            detected_age = age
+            break
+    
+    # 检测气质
+    for temp, keywords in temperament_keywords.items():
+        if any(keyword in prompt_lower for keyword in keywords):
+            detected_temperament = temp
+            break
+    
+    # 设置默认值
+    if not detected_gender:
+        detected_gender = 'Male'
+    if not detected_style:
+        detected_style = 'Ancient'
+    if not detected_age:
+        detected_age = '23-30_YoungAdult'
+    
+    print(f"    根据prompt分析: {detected_gender}/{detected_age}/{detected_style}/Chinese/{detected_temperament}")
+    
+    # 尝试查找匹配的图片
+    search_combinations = [
+        (detected_gender, detected_age, detected_style, 'Chinese', detected_temperament),
+        (detected_gender, detected_age, detected_style, 'Chinese', 'Common'),
+        (detected_gender, '23-30_YoungAdult', detected_style, 'Chinese', 'Common'),
+        (detected_gender, detected_age, 'Ancient', 'Chinese', 'Common'),
+        ('Male', '23-30_YoungAdult', 'Ancient', 'Chinese', 'Common'),
+        ('Female', '23-30_YoungAdult', 'Ancient', 'Chinese', 'Common')
+    ]
+    
+    for gender_try, age_try, style_try, culture_try, temp_try in search_combinations:
+        character_dir = os.path.join(character_images_dir, gender_try, age_try, style_try, culture_try, temp_try)
+        if os.path.exists(character_dir):
+            for file in os.listdir(character_dir):
+                if file.lower().endswith(('.jpg', '.jpeg', '.png', '.webp')):
+                    print(f"    找到相似角色图片: {gender_try}/{age_try}/{style_try}/{culture_try}/{temp_try}/{file}")
+                    return os.path.join(character_dir, file)
+    
+    # 如果所有搜索组合都失败，随机选择一张角色图片作为备选
+    print(f"    所有搜索组合都失败，尝试随机选择角色图片...")
+    random_image = get_random_character_image()
+    if random_image:
+        return random_image
+    
+    print(f"    未找到任何角色图片")
+    return None
+
+def get_random_character_image():
+    """
+    从Character_Images目录中随机选择一张角色图片
+    
+    Returns:
+        str: 随机角色图片文件路径，如果未找到返回None
+    """
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    character_images_dir = os.path.join(script_dir, 'Character_Images')
+    
+    if not os.path.exists(character_images_dir):
+        print(f"警告: Character_Images目录不存在: {character_images_dir}")
+        return None
+    
+    # 收集所有图片文件
+    all_images = []
+    for root, dirs, files in os.walk(character_images_dir):
+        for file in files:
+            if file.lower().endswith(('.jpg', '.jpeg', '.png', '.webp')):
+                all_images.append(os.path.join(root, file))
+    
+    if all_images:
+        selected_image = random.choice(all_images)
+        print(f"    随机选择角色图片: {os.path.relpath(selected_image, character_images_dir)}")
+        return selected_image
+    else:
+        print("    警告: Character_Images目录中未找到任何图片文件")
+        return None
+
+def find_character_image_by_attributes(gender, age_group, character_style, culture='Chinese', temperament='Common', prompt=None):
+    """
+    根据角色属性查找Character_Images目录中的角色图片，如果找不到则尝试根据prompt查找相似图片
     
     Args:
         gender: 性别 (Male/Female)
@@ -287,6 +438,7 @@ def find_character_image_by_attributes(gender, age_group, character_style, cultu
         character_style: 风格 (Ancient/Fantasy/Modern/SciFi)
         culture: 文化类型 (Chinese/Western)，默认Chinese
         temperament: 气质类型 (Common/Royal/Chivalrous等)，默认Common
+        prompt: 图片描述文本，用于相似度匹配，可选
     
     Returns:
         str: 角色图片文件路径，如果未找到返回None
@@ -309,9 +461,14 @@ def find_character_image_by_attributes(gender, age_group, character_style, cultu
         prompt_file = os.path.join(character_dir, 'prompt.txt')
         if os.path.exists(prompt_file):
             print(f"    找到角色描述文件但无图片: {gender}/{age_group}/{character_style}/{culture}/{temperament}/prompt.txt")
-            return None
+    else:
+        print(f"    警告: 未找到角色目录 {gender}/{age_group}/{character_style}/{culture}/{temperament}")
     
-    print(f"    警告: 未找到角色目录 {gender}/{age_group}/{character_style}/{culture}/{temperament}")
+    # 如果精确匹配失败且提供了prompt，尝试根据prompt查找相似图片
+    if prompt:
+        print(f"    尝试根据prompt查找相似角色图片...")
+        return find_similar_character_image_by_prompt(prompt, gender, character_style)
+    
     return None
 
 def encode_image_to_base64(image_path):
@@ -441,9 +598,29 @@ def generate_image_with_character(prompt, output_path, character_images=None, st
                 form["binary_data_base64"] = binary_data_list
                 print(f"已添加 {len(binary_data_list)} 个角色图片到请求中")
             else:
-                print("没有有效的角色图片数据")
+                print("没有有效的角色图片数据，尝试随机选择角色图片")
+                random_image = get_random_character_image()
+                if random_image:
+                    base64_data = encode_image_to_base64(random_image)
+                    if base64_data:
+                        form["binary_data_base64"] = [base64_data]
+                        print(f"已添加随机角色图片到请求中: {random_image}")
+                    else:
+                        print(f"随机角色图片编码失败: {random_image}")
+                else:
+                    print("未能获取随机角色图片")
         else:
-            print("没有角色图片参数")
+            print("没有角色图片参数，尝试随机选择角色图片")
+            random_image = get_random_character_image()
+            if random_image:
+                base64_data = encode_image_to_base64(random_image)
+                if base64_data:
+                    form["binary_data_base64"] = [base64_data]
+                    print(f"已添加随机角色图片到请求中: {random_image}")
+                else:
+                    print(f"随机角色图片编码失败: {random_image}")
+            else:
+                print("未能获取随机角色图片")
         
         # 调用同步API
         resp = visual_service.cv_process(form)
@@ -547,7 +724,7 @@ def generate_images_for_chapter(chapter_dir):
                 character_images = []
                 if gender and age_group and character_style:
                     print(f"    查找角色图片: {gender}/{age_group}/{character_style}/{culture}/{temperament}")
-                    char_img_path = find_character_image_by_attributes(gender, age_group, character_style, culture, temperament)
+                    char_img_path = find_character_image_by_attributes(gender, age_group, character_style, culture, temperament, prompt)
                     if char_img_path:
                         character_images.append(char_img_path)
                         print(f"    找到角色图片: {char_img_path}")
@@ -682,7 +859,7 @@ def generate_images_from_scripts(data_dir):
                     character_images = []
                     if gender and age_group and character_style:
                         print(f"    查找角色图片: {gender}/{age_group}/{character_style}/{culture}/{temperament}")
-                        char_img_path = find_character_image_by_attributes(gender, age_group, character_style, culture, temperament)
+                        char_img_path = find_character_image_by_attributes(gender, age_group, character_style, culture, temperament, prompt)
                         if char_img_path:
                             character_images.append(char_img_path)
                             print(f"    找到角色图片: {char_img_path}")

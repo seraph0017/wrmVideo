@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_042 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:03.09,Default,,0,0,0,,深夜{\c&H0000FFFF&\b1}赵硕鸿钧{\c&H00FFFFFF&\b0}老祖分兵两路
+Dialogue: 0,0:00:03.58,0:00:05.16,Default,,0,0,0,,如鬼魅般潜入混沌{\c&H0000FFFF&\b1}大岛{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.62,0:00:07.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖引赵硕直达阵眼
+Dialogue: 0,0:00:07.91,0:00:09.27,Default,,0,0,0,,却见神鱼{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}坐镇
+Dialogue: 0,0:00:09.60,0:00:12.04,Default,,0,0,0,,叛徒受死{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}祭出寒冰宝
+Dialogue: 0,0:00:12.04,0:00:13.88,Default,,0,0,0,,珠寒气瞬间冻结阵眼
+Dialogue: 0,0:00:14.18,0:00:15.53,Default,,0,0,0,,神鱼{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}惊怒交加
+Dialogue: 0,0:00:15.89,0:00:17.57,Default,,0,0,0,,却被夕月道人从后偷袭
+Dialogue: 0,0:00:17.90,0:00:19.92,Default,,0,0,0,,万界{\c&H0000FFFF&\b1}宝殿{\c&H00FFFFFF&\b0}当头砸下轰
+Dialogue: 0,0:00:20.20,0:00:22.67,Default,,0,0,0,,大阵崩溃混沌魔神惨叫着被镇
+Dialogue: 0,0:00:22.67,0:00:24.21,Default,,0,0,0,,压{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}环视战场
+Dialogue: 0,0:00:24.53,0:00:25.94,Default,,0,0,0,,突然望向{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}深处
+Dialogue: 0,0:00:26.43,0:00:28.68,Default,,0,0,0,,该清理余孽了场景为混沌大
+Dialogue: 0,0:00:28.68,0:00:30.68,Default,,0,0,0,,岛中心阵法光柱崩塌
+Dialogue: 0,0:00:30.97,0:00:31.70,Default,,0,0,0,,碎片四溅

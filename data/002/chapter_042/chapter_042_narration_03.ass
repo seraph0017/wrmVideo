@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_042 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.69,Default,,0,0,0,,激战中{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖攻势最为凶狠
+Dialogue: 0,0:00:03.26,0:00:04.78,Default,,0,0,0,,黑色魔焰凝聚成爪
+Dialogue: 0,0:00:05.23,0:00:07.30,Default,,0,0,0,,每一击都直指天元{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}要害
+Dialogue: 0,0:00:07.61,0:00:09.63,Default,,0,0,0,,天元{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}嘶吼你这叛徒
+Dialogue: 0,0:00:09.91,0:00:11.12,Default,,0,0,0,,我做鬼也不会放过你
+Dialogue: 0,0:00:11.44,0:00:13.46,Default,,0,0,0,,却被{\c&H0000FFFF&\b1}鸿钧{\c&H00FFFFFF&\b0}老祖一剑斩中肩头
+Dialogue: 0,0:00:13.71,0:00:16.22,Default,,0,0,0,,骨骼碎裂声刺耳{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}漠然注视
+Dialogue: 0,0:00:16.51,0:00:17.86,Default,,0,0,0,,突然开口停手
+Dialogue: 0,0:00:18.15,0:00:20.60,Default,,0,0,0,,留他半条命用万界{\c&H0000FFFF&\b1}宝殿{\c&H00FFFFFF&\b0}炼化
+Dialogue: 0,0:00:20.88,0:00:23.34,Default,,0,0,0,,众人{\c&H0000FFFF&\b1}闻言{\c&H00FFFFFF&\b0}收招天元老祖如断线
+Dialogue: 0,0:00:23.34,0:00:25.49,Default,,0,0,0,,风筝坠地只剩一口气吊着
+Dialogue: 0,0:00:25.91,0:00:28.23,Default,,0,0,0,,场景为战后废墟血腥味弥漫
+Dialogue: 0,0:00:28.50,0:00:29.12,Default,,0,0,0,,光线昏暗

@@ -1,0 +1,127 @@
+Character_Images 目录文件完整性检查报告
+============================================================
+生成时间: 2025-08-13 20:43:00
+检查目录: /Users/xunan/Projects/wrmVideo/Character_Images
+
+📊 检查结果统计:
+  ✅ 完整目录: 1262
+  ❌ 不完整目录: 18
+  ⚠️  错误目录: 0
+  📁 总目录数: 1280
+
+❌ 不完整的目录详情:
+============================================================
+ 1. Female/15-22_Youth/Modern/Chinese/Assassin
+    文件数量: 7/8
+    现有编号: [2, 3, 4, 5, 6, 7, 8]
+    缺少编号: 01
+
+ 2. Female/15-22_Youth/Modern/Chinese/Monk
+    文件数量: 7/8
+    现有编号: [1, 2, 3, 4, 5, 6, 7]
+    缺少编号: 08
+
+ 3. Female/15-22_Youth/Modern/Western/Beggar
+    文件数量: 5/8
+    现有编号: [1, 2, 3, 5, 6]
+    缺少编号: 04, 07, 08
+
+ 4. Female/15-22_Youth/SciFi/Chinese/Common
+    文件数量: 7/8
+    现有编号: [1, 2, 3, 4, 6, 7, 8]
+    缺少编号: 05
+
+ 5. Female/23-30_YoungAdult/Fantasy/Chinese/Scholarly
+    文件数量: 7/8
+    现有编号: [1, 2, 3, 4, 5, 6, 7]
+    缺少编号: 08
+
+ 6. Female/25-40_FantasyAdult/Ancient/Chinese/Monk
+    文件数量: 7/8
+    现有编号: [1, 2, 3, 5, 6, 7, 8]
+    缺少编号: 04
+
+ 7. Female/25-40_FantasyAdult/Modern/Western/Knight
+    文件数量: 7/8
+    现有编号: [1, 2, 3, 4, 5, 6, 7]
+    缺少编号: 08
+
+ 8. Female/25-40_FantasyAdult/SciFi/Western/Scientist
+    文件数量: 7/8
+    现有编号: [1, 2, 3, 4, 6, 7, 8]
+    缺少编号: 05
+
+ 9. Female/31-45_MiddleAged/Ancient/Western/Royal
+    文件数量: 7/8
+    现有编号: [1, 2, 4, 5, 6, 7, 8]
+    缺少编号: 03
+
+10. Female/31-45_MiddleAged/SciFi/Chinese/Monk
+    文件数量: 7/8
+    现有编号: [1, 2, 4, 5, 6, 7, 8]
+    缺少编号: 03
+
+11. Male/15-22_Youth/Modern/Chinese/Beggar
+    文件数量: 7/8
+    现有编号: [1, 2, 3, 5, 6, 7, 8]
+    缺少编号: 04
+
+12. Male/15-22_Youth/SciFi/Chinese/Cool
+    文件数量: 7/8
+    现有编号: [1, 3, 4, 5, 6, 7, 8]
+    缺少编号: 02
+
+13. Male/25-40_FantasyAdult/SciFi/Chinese/Monk
+    文件数量: 7/8
+    现有编号: [1, 2, 3, 4, 5, 6, 7]
+    缺少编号: 08
+
+14. Male/31-45_MiddleAged/Ancient/Chinese/Monk
+    文件数量: 7/8
+    现有编号: [1, 2, 4, 5, 6, 7, 8]
+    缺少编号: 03
+
+15. Male/31-45_MiddleAged/Modern/Chinese/Knight
+    文件数量: 7/8
+    现有编号: [1, 2, 3, 4, 6, 7, 8]
+    缺少编号: 05
+
+16. Male/31-45_MiddleAged/SciFi/Chinese/Chivalrous
+    文件数量: 7/8
+    现有编号: [1, 2, 3, 4, 6, 7, 8]
+    缺少编号: 05
+
+17. Male/31-45_MiddleAged/SciFi/Western/Beggar
+    文件数量: 7/8
+    现有编号: [1, 2, 3, 4, 5, 6, 8]
+    缺少编号: 07
+
+18. Male/31-45_MiddleAged/SciFi/Western/Monk
+    文件数量: 7/8
+    现有编号: [1, 2, 3, 4, 5, 6, 8]
+    缺少编号: 07
+
+📈 按缺失数量分组统计:
+============================================================
+缺失 1 个文件的目录 (17 个):
+  - Female/15-22_Youth/Modern/Chinese/Assassin
+  - Female/15-22_Youth/Modern/Chinese/Monk
+  - Female/15-22_Youth/SciFi/Chinese/Common
+  - Female/23-30_YoungAdult/Fantasy/Chinese/Scholarly
+  - Female/25-40_FantasyAdult/Ancient/Chinese/Monk
+  - Female/25-40_FantasyAdult/Modern/Western/Knight
+  - Female/25-40_FantasyAdult/SciFi/Western/Scientist
+  - Female/31-45_MiddleAged/Ancient/Western/Royal
+  - Female/31-45_MiddleAged/SciFi/Chinese/Monk
+  - Male/15-22_Youth/Modern/Chinese/Beggar
+  - Male/15-22_Youth/SciFi/Chinese/Cool
+  - Male/25-40_FantasyAdult/SciFi/Chinese/Monk
+  - Male/31-45_MiddleAged/Ancient/Chinese/Monk
+  - Male/31-45_MiddleAged/Modern/Chinese/Knight
+  - Male/31-45_MiddleAged/SciFi/Chinese/Chivalrous
+  - Male/31-45_MiddleAged/SciFi/Western/Beggar
+  - Male/31-45_MiddleAged/SciFi/Western/Monk
+
+缺失 3 个文件的目录 (1 个):
+  - Female/15-22_Youth/Modern/Western/Beggar
+

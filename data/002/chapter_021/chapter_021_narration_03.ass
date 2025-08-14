@@ -15,9 +15,9 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.01,0:00:02.56,Default,,0,0,0,,战局突变{\c&H0000FFFF&\b1}天奇{\c&H00FFFFFF&\b0}圣者刀势陡变
-Dialogue: 0,0:00:02.78,0:00:05.43,Default,,0,0,0,,不再防御每刀皆带血色残影
-Dialogue: 0,0:00:05.79,0:00:07.56,Default,,0,0,0,,竟硬生生将阴罗圣者压制
-Dialogue: 0,0:00:07.89,0:00:10.46,Default,,0,0,0,,腕足纷飞如雨{\c&H0000FFFF&\b1}墨绿色{\c&H00FFFFFF&\b0}血液染红半
+Dialogue: 0,0:00:02.77,0:00:05.43,Default,,0,0,0,,不再防御每刀皆带血色残影
+Dialogue: 0,0:00:05.79,0:00:07.55,Default,,0,0,0,,竟硬生生将阴罗圣者压制
+Dialogue: 0,0:00:07.88,0:00:10.46,Default,,0,0,0,,腕足纷飞如雨{\c&H0000FFFF&\b1}墨绿色{\c&H00FFFFFF&\b0}血液染红半
 Dialogue: 0,0:00:10.46,0:00:12.52,Default,,0,0,0,,边{\c&H0000FFFF&\b1}天阴{\c&H00FFFFFF&\b0}罗圣者惊恐嘶吼
 Dialogue: 0,0:00:12.80,0:00:14.65,Default,,0,0,0,,你隐藏实力{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}瞳孔微缩
 Dialogue: 0,0:00:14.94,0:00:16.77,Default,,0,0,0,,察觉{\c&H0000FFFF&\b1}天奇{\c&H00FFFFFF&\b0}圣者气息暴涨

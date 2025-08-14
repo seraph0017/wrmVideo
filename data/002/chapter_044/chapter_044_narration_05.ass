@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_044 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}虚空之中赵硕与万应老祖骤
+Dialogue: 0,0:00:02.78,0:00:04.88,Default,,0,0,0,,然现身四周星辰破碎
+Dialogue: 0,0:00:05.32,0:00:06.58,Default,,0,0,0,,一片荒凉不好
+Dialogue: 0,0:00:06.87,0:00:09.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}话音未落数百道身影从虚
+Dialogue: 0,0:00:09.23,0:00:11.26,Default,,0,0,0,,空中浮现组成巨大阵法
+Dialogue: 0,0:00:11.55,0:00:13.80,Default,,0,0,0,,气势如狱万应{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}沉声道
+Dialogue: 0,0:00:14.16,0:00:15.37,Default,,0,0,0,,是巅峰魔神大阵
+Dialogue: 0,0:00:15.71,0:00:17.86,Default,,0,0,0,,阵法中央羽西魔神{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}道
+Dialogue: 0,0:00:18.41,0:00:19.82,Default,,0,0,0,,光暗{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}很快就到
+Dialogue: 0,0:00:20.21,0:00:21.08,Default,,0,0,0,,你们插翅难飞

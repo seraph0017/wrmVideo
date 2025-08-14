@@ -14,13 +14,13 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:02.79,Default,,0,0,0,,论道台上{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}通天教主
-Dialogue: 0,0:00:03.00,0:00:05.04,Default,,0,0,0,,多宝道人长生老人围坐
-Dialogue: 0,0:00:05.46,0:00:07.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕正{\c&H00FFFFFF&\b0}讲述洪荒大世界的战局
-Dialogue: 0,0:00:07.93,0:00:09.32,Default,,0,0,0,,手中比划着阵法变化
-Dialogue: 0,0:00:09.56,0:00:12.01,Default,,0,0,0,,神情激昂通天教主抚须沉思
-Dialogue: 0,0:00:12.27,0:00:13.70,Default,,0,0,0,,多宝道人手持{\c&H0000FFFF&\b1}玉简{\c&H00FFFFFF&\b0}记录
-Dialogue: 0,0:00:13.91,0:00:15.76,Default,,0,0,0,,长生老人则面露忧色
-Dialogue: 0,0:00:16.18,0:00:18.63,Default,,0,0,0,,不时摇头台下弟子们盘膝而坐
-Dialogue: 0,0:00:19.02,0:00:21.14,Default,,0,0,0,,凝神听讲山间清风徐来
-Dialogue: 0,0:00:21.40,0:00:23.38,Default,,0,0,0,,吹动衣袂远处{\c&H0000FFFF&\b1}云海{\c&H00FFFFFF&\b0}翻腾
+Dialogue: 0,0:00:00.01,0:00:01.46,Default,,0,0,0,,纯阳道祖剑势突变
+Dialogue: 0,0:00:01.82,0:00:03.25,Default,,0,0,0,,如春雨绵绵编织剑网
+Dialogue: 0,0:00:03.60,0:00:05.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}长眉{\c&H00FFFFFF&\b0}真人每一击都打在空处
+Dialogue: 0,0:00:06.02,0:00:08.51,Default,,0,0,0,,剑网缓缓收缩将其困在中央
+Dialogue: 0,0:00:08.86,0:00:11.29,Default,,0,0,0,,场景为战场上空剑网泛着柔和白
+Dialogue: 0,0:00:11.29,0:00:13.51,Default,,0,0,0,,光长眉真人在网中{\c&H0000FFFF&\b1}左冲右{\c&H00FFFFFF&\b0}突
+Dialogue: 0,0:00:13.79,0:00:15.09,Default,,0,0,0,,剑气碰撞发出闷响
+Dialogue: 0,0:00:15.35,0:00:16.69,Default,,0,0,0,,纯阳道祖立于网外
+Dialogue: 0,0:00:16.95,0:00:18.70,Default,,0,0,0,,神情淡然手指轻点
+Dialogue: 0,0:00:19.12,0:00:20.09,Default,,0,0,0,,剑网越收越紧

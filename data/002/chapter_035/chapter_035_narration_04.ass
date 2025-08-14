@@ -14,14 +14,11 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:02.11,Default,,0,0,0,,密室之中{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}盘膝而坐
-Dialogue: 0,0:00:02.73,0:00:04.21,Default,,0,0,0,,身前悬浮着一团液体
-Dialogue: 0,0:00:04.67,0:00:06.88,Default,,0,0,0,,正祭炼化身室内简朴
-Dialogue: 0,0:00:07.21,0:00:09.93,Default,,0,0,0,,仅一桌一榻墙壁上刻有道家{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:10.19,0:00:12.12,Default,,0,0,0,,烛光摇曳{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}面色凝重
-Dialogue: 0,0:00:12.37,0:00:14.37,Default,,0,0,0,,双手结印口中喷出精血
-Dialogue: 0,0:00:14.72,0:00:17.29,Default,,0,0,0,,融入液体之中液体逐渐凝聚成形
-Dialogue: 0,0:00:17.60,0:00:19.54,Default,,0,0,0,,散发出莹莹{\c&H0000FFFF&\b1}光辉{\c&H00FFFFFF&\b0}突然
-Dialogue: 0,0:00:19.93,0:00:22.54,Default,,0,0,0,,窗外传来{\c&H0000FFFF&\b1}雷声{\c&H00FFFFFF&\b0}化身吸收雷霆之力
-Dialogue: 0,0:00:22.86,0:00:25.62,Default,,0,0,0,,气势节节攀升最终化为{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}模样
-Dialogue: 0,0:00:25.97,0:00:27.31,Default,,0,0,0,,气息达到道祖级别
+Dialogue: 0,0:00:00.01,0:00:02.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}长眉{\c&H00FFFFFF&\b0}真人爆发无尽剑光从体内冲
+Dialogue: 0,0:00:02.79,0:00:05.05,Default,,0,0,0,,出摧枯拉朽般瓦解剑网
+Dialogue: 0,0:00:05.45,0:00:08.14,Default,,0,0,0,,场景为战场中央剑光如火山喷发
+Dialogue: 0,0:00:08.52,0:00:10.99,Default,,0,0,0,,剑网寸寸断裂{\c&H0000FFFF&\b1}长眉{\c&H00FFFFFF&\b0}真人衣衫染血
+Dialogue: 0,0:00:11.24,0:00:13.40,Default,,0,0,0,,气息萎靡显然已是强弩之末
+Dialogue: 0,0:00:13.63,0:00:15.06,Default,,0,0,0,,纯阳道祖退开数丈
+Dialogue: 0,0:00:15.38,0:00:17.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}剑眉{\c&H00FFFFFF&\b0}微皱看着长眉真人
+Dialogue: 0,0:00:17.70,0:00:19.27,Default,,0,0,0,,眼神中闪过一丝惋惜

@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_044 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.83,Default,,0,0,0,,虚空通道中{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与万应老祖急速
+Dialogue: 0,0:00:02.83,0:00:05.44,Default,,0,0,0,,穿行此番多亏{\c&H0000FFFF&\b1}羽西{\c&H00FFFFFF&\b0}魔神引路
+Dialogue: 0,0:00:05.79,0:00:06.94,Default,,0,0,0,,否则难以探得核心
+Dialogue: 0,0:00:07.42,0:00:08.79,Default,,0,0,0,,万应{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}抚须笑道
+Dialogue: 0,0:00:09.19,0:00:11.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}却眉头紧锁光暗老祖实力
+Dialogue: 0,0:00:11.70,0:00:13.45,Default,,0,0,0,,极强且知晓我的底细
+Dialogue: 0,0:00:13.73,0:00:16.18,Default,,0,0,0,,日后需更加谨慎两人身影逐渐
+Dialogue: 0,0:00:16.18,0:00:18.01,Default,,0,0,0,,消失在{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}深处身后
+Dialogue: 0,0:00:18.33,0:00:20.80,Default,,0,0,0,,羽西魔神与光暗{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}的气息紧追不
+Dialogue: 0,0:00:20.80,0:00:21.11,Default,,0,0,0,,舍

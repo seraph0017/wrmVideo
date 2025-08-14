@@ -14,14 +14,15 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.85,Default,,0,0,0,,清晨的截教山道上
-Dialogue: 0,0:00:02.21,0:00:04.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与多宝道人并肩而行
-Dialogue: 0,0:00:04.72,0:00:07.57,Default,,0,0,0,,山间云雾缭绕青石铺就的小径蜿
-Dialogue: 0,0:00:07.57,0:00:09.43,Default,,0,0,0,,蜒而上两侧古松苍劲
-Dialogue: 0,0:00:09.74,0:00:12.51,Default,,0,0,0,,偶有仙鹤飞过多宝道人身着灰色
-Dialogue: 0,0:00:12.51,0:00:14.26,Default,,0,0,0,,圆领道袍须发微飘
-Dialogue: 0,0:00:14.51,0:00:16.98,Default,,0,0,0,,正向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}解释教中弟子闭关修炼化
-Dialogue: 0,0:00:16.98,0:00:19.66,Default,,0,0,0,,身神通之事{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}一袭青色圆领长
-Dialogue: 0,0:00:19.66,0:00:22.04,Default,,0,0,0,,衫腰悬{\c&H0000FFFF&\b1}玉佩{\c&H00FFFFFF&\b0}神情专注
-Dialogue: 0,0:00:22.31,0:00:25.33,Default,,0,0,0,,不时点头回应远处隐约可见弟子
-Dialogue: 0,0:00:25.33,0:00:27.55,Default,,0,0,0,,们闭关的洞府禁制光芒闪烁
+Dialogue: 0,0:00:00.01,0:00:01.46,Default,,0,0,0,,纯阳道祖剑指长空
+Dialogue: 0,0:00:01.87,0:00:03.40,Default,,0,0,0,,凛冽剑气撕裂云层
+Dialogue: 0,0:00:03.92,0:00:05.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}人教{\c&H00FFFFFF&\b0}众人因势力被截教
+Dialogue: 0,0:00:06.03,0:00:08.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}五庄观接收而憋闷
+Dialogue: 0,0:00:08.50,0:00:09.77,Default,,0,0,0,,纯阳道祖怒火爆发
+Dialogue: 0,0:00:10.07,0:00:11.81,Default,,0,0,0,,手持{\c&H0000FFFF&\b1}宝剑{\c&H00FFFFFF&\b0}直刺长眉真人
+Dialogue: 0,0:00:12.09,0:00:14.34,Default,,0,0,0,,场景为荒芜战场残阳如血
+Dialogue: 0,0:00:14.65,0:00:17.38,Default,,0,0,0,,风沙卷起碎石远处可见各方势力
+Dialogue: 0,0:00:17.38,0:00:19.45,Default,,0,0,0,,营帐纯阳道祖白衣胜雪
+Dialogue: 0,0:00:19.79,0:00:21.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}长眉{\c&H00FFFFFF&\b0}真人青衫飘动
+Dialogue: 0,0:00:21.52,0:00:23.56,Default,,0,0,0,,两人气息碰撞地面龟裂
+Dialogue: 0,0:00:23.98,0:00:25.82,Default,,0,0,0,,剑气与剑光交织成网

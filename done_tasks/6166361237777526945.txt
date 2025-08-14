@@ -1,0 +1,27 @@
+{
+  "prompt": "图片风格为「动漫」，宫崎骏，中式古典风格\n比例 「9:16」\n服装要求：必须圆领袍，高领设计，严禁V领或低领，绝对不能露出脖子部位，领口要完全遮盖脖子\n年龄：Youth\n风格：SciFi\n文化：Chinese\n气质：冷酷帅气，个性十足\n角度：正面半身照\n\n单人肖像，男性，健康肌肤，银色辫子，表情温和，中式传统服装，汉服、唐装或古代袍服，精致风格，佩戴头饰，高质量角色设定图，正面视角，清晰面部特征，动漫风格",
+  "output_path": "/Users/xunan/Projects/wrmVideo/Character_Images/Male/15-22_Youth/SciFi/Chinese/Cool/Youth_SciFi_Chinese_Cool_02.jpeg",
+  "filename": "Youth_SciFi_Chinese_Cool_02.jpeg",
+  "directory": "/Users/xunan/Projects/wrmVideo/Character_Images/Male/15-22_Youth/SciFi/Chinese/Cool",
+  "dir_info": {
+    "gender": "男",
+    "age": "Youth",
+    "style": "SciFi",
+    "culture": "Chinese",
+    "temperament": "Cool"
+  },
+  "variation": {
+    "hair_color": "银色",
+    "hair_style": "辫子",
+    "expression": "温和",
+    "clothing": "精致",
+    "accessory": "头饰",
+    "skin_tone": "健康"
+  },
+  "variation_index": 2,
+  "missing_number": 2,
+  "status": "completed",
+  "source": "missing_images_report",
+  "task_id": "6166361237777526945",
+  "completed_time": 1755091014.046241
+}

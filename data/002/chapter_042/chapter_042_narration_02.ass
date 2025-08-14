@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_042 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}眼神冰冷扫过天元老祖
+Dialogue: 0,0:00:02.67,0:00:04.35,Default,,0,0,0,,突然抬手诸位出手
+Dialogue: 0,0:00:04.74,0:00:06.51,Default,,0,0,0,,不必留情刹那间
+Dialogue: 0,0:00:06.79,0:00:08.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿钧{\c&H00FFFFFF&\b0}老祖等强者同时发难
+Dialogue: 0,0:00:08.97,0:00:11.02,Default,,0,0,0,,各色{\c&H0000FFFF&\b1}灵光{\c&H00FFFFFF&\b0}冲天而起剑气
+Dialogue: 0,0:00:11.26,0:00:13.07,Default,,0,0,0,,神光魔焰交织成网
+Dialogue: 0,0:00:13.29,0:00:15.40,Default,,0,0,0,,狠狠砸向无法动弹的天元{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.73,0:00:18.00,Default,,0,0,0,,天元{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}怒吼着催动本源抵挡
+Dialogue: 0,0:00:18.29,0:00:19.75,Default,,0,0,0,,周身骨骼噼啪作响
+Dialogue: 0,0:00:20.20,0:00:22.14,Default,,0,0,0,,每承受一击便喷出一口精血
+Dialogue: 0,0:00:22.44,0:00:24.43,Default,,0,0,0,,气息以肉眼可见速度衰弱
+Dialogue: 0,0:00:24.83,0:00:27.72,Default,,0,0,0,,场景为混沌战场能量冲击形成环
+Dialogue: 0,0:00:27.72,0:00:29.61,Default,,0,0,0,,形波纹光影剧烈闪烁

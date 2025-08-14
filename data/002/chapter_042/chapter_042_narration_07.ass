@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_042 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.47,Default,,0,0,0,,三日后夕月道人走出万界{\c&H0000FFFF&\b1}宝殿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.90,0:00:04.33,Default,,0,0,0,,面色苍白却眼神明亮
+Dialogue: 0,0:00:04.92,0:00:06.96,Default,,0,0,0,,天元{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}本源已被炼化七成
+Dialogue: 0,0:00:07.33,0:00:09.72,Default,,0,0,0,,再需七日可成{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}递过一枚丹
+Dialogue: 0,0:00:09.72,0:00:11.63,Default,,0,0,0,,药先恢复备战要紧
+Dialogue: 0,0:00:11.86,0:00:13.94,Default,,0,0,0,,突然{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖匆匆闯入
+Dialogue: 0,0:00:14.21,0:00:16.80,Default,,0,0,0,,不好混沌魔神在{\c&H0000FFFF&\b1}洪荒{\c&H00FFFFFF&\b0}边境集结
+Dialogue: 0,0:00:17.14,0:00:19.40,Default,,0,0,0,,似有异动{\c&H0000FFFF&\b1}鸿钧{\c&H00FFFFFF&\b0}老祖猛地站起
+Dialogue: 0,0:00:19.81,0:00:20.89,Default,,0,0,0,,他们竟提前动手
+Dialogue: 0,0:00:21.11,0:00:22.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}却冷静异常
+Dialogue: 0,0:00:22.66,0:00:24.95,Default,,0,0,0,,是调虎离山想救天元{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:25.34,0:00:26.64,Default,,0,0,0,,场景为{\c&H0000FFFF&\b1}升龙{\c&H00FFFFFF&\b0}山巅
+Dialogue: 0,0:00:26.95,0:00:28.86,Default,,0,0,0,,云雾缭绕殿宇若隐若现

@@ -14,14 +14,14 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:02.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}虚空之中赵硕手托恶魔古堡
-Dialogue: 0,0:00:03.27,0:00:04.85,Default,,0,0,0,,与牛神{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}遥遥对峙
-Dialogue: 0,0:00:05.36,0:00:07.62,Default,,0,0,0,,两人刚刚经历一场惊天动地的碰撞
-Dialogue: 0,0:00:07.92,0:00:10.42,Default,,0,0,0,,暂时停歇恶魔{\c&H0000FFFF&\b1}古堡{\c&H00FFFFFF&\b0}散发着幽暗光
-Dialogue: 0,0:00:10.42,0:00:12.16,Default,,0,0,0,,芒悬浮于{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}掌心
-Dialogue: 0,0:00:12.42,0:00:14.32,Default,,0,0,0,,散发出超越寻常{\c&H0000FFFF&\b1}至宝{\c&H00FFFFFF&\b0}的威压
-Dialogue: 0,0:00:14.68,0:00:16.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}牛神{\c&H00FFFFFF&\b0}大圣手持紫金长棍
-Dialogue: 0,0:00:16.76,0:00:19.52,Default,,0,0,0,,神色凝重他能感受到恶魔{\c&H0000FFFF&\b1}古堡{\c&H00FFFFFF&\b0}的
-Dialogue: 0,0:00:19.52,0:00:21.88,Default,,0,0,0,,恐怖力量远超自己的紫金长棍
-Dialogue: 0,0:00:22.25,0:00:24.06,Default,,0,0,0,,周围虚空残留着战斗{\c&H0000FFFF&\b1}余波{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:24.49,0:00:27.30,Default,,0,0,0,,星辰碎片漂浮显示出战斗的激烈
+Dialogue: 0,0:00:00.01,0:00:02.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿蒙{\c&H00FFFFFF&\b0}虚空之中赵硕与牛神大圣隔
+Dialogue: 0,0:00:02.90,0:00:05.42,Default,,0,0,0,,空对峙{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}手托漆黑古堡
+Dialogue: 0,0:00:05.91,0:00:08.37,Default,,0,0,0,,周身{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}流转正是镇压万物的
+Dialogue: 0,0:00:08.37,0:00:10.81,Default,,0,0,0,,恶魔古堡{\c&H0000FFFF&\b1}牛神{\c&H00FFFFFF&\b0}大圣紧握紫金长
+Dialogue: 0,0:00:10.81,0:00:13.31,Default,,0,0,0,,棍牛角峥嵘周身肌肉虬结
+Dialogue: 0,0:00:13.55,0:00:15.95,Default,,0,0,0,,二者气息碰撞引得虚空震颤
+Dialogue: 0,0:00:16.34,0:00:18.99,Default,,0,0,0,,星辰摇曳{\c&H0000FFFF&\b1}牛神{\c&H00FFFFFF&\b0}大圣眼中满是忌惮
+Dialogue: 0,0:00:19.61,0:00:21.43,Default,,0,0,0,,这{\c&H0000FFFF&\b1}古堡{\c&H00FFFFFF&\b0}竟能压制他的紫金棍
+Dialogue: 0,0:00:21.75,0:00:23.91,Default,,0,0,0,,而{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}平静的神情更让他心惊
+Dialogue: 0,0:00:24.47,0:00:26.92,Default,,0,0,0,,对方竟能将这等{\c&H0000FFFF&\b1}至宝{\c&H00FFFFFF&\b0}的威能收敛自
+Dialogue: 0,0:00:26.92,0:00:27.18,Default,,0,0,0,,如

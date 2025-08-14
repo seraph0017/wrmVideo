@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_047 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.42,Default,,0,0,0,,战后议事通天教祖兴奋拍案
+Dialogue: 0,0:00:03.04,0:00:05.41,Default,,0,0,0,,当趁胜追击直捣{\c&H0000FFFF&\b1}牛神{\c&H00FFFFFF&\b0}老巢
+Dialogue: 0,0:00:05.93,0:00:08.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}却摇头牛神一族根基未
+Dialogue: 0,0:00:08.44,0:00:10.53,Default,,0,0,0,,损且{\c&H0000FFFF&\b1}巨星{\c&H00FFFFFF&\b0}之上必有埋伏
+Dialogue: 0,0:00:10.68,0:00:13.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿钧{\c&H00FFFFFF&\b0}老祖赞同当务之急是潜
+Dialogue: 0,0:00:13.41,0:00:15.04,Default,,0,0,0,,入{\c&H0000FFFF&\b1}巨星{\c&H00FFFFFF&\b0}破坏其根基
+Dialogue: 0,0:00:15.32,0:00:16.82,Default,,0,0,0,,罗睺教祖舔唇{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.36,0:00:19.41,Default,,0,0,0,,正合我意搅他个天翻地覆
+Dialogue: 0,0:00:19.68,0:00:22.30,Default,,0,0,0,,众人眼神交汇皆露锋芒一
+Dialogue: 0,0:00:22.30,0:00:23.57,Default,,0,0,0,,场潜入敌营的冒险
+Dialogue: 0,0:00:23.84,0:00:24.52,Default,,0,0,0,,即将展开

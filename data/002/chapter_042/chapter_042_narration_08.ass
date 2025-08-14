@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_042 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}站在山巅远眺
+Dialogue: 0,0:00:01.78,0:00:03.12,Default,,0,0,0,,突然祭出{\c&H0000FFFF&\b1}寒冰{\c&H00FFFFFF&\b0}宝珠
+Dialogue: 0,0:00:03.50,0:00:04.87,Default,,0,0,0,,寒气瞬间笼罩千里
+Dialogue: 0,0:00:05.33,0:00:06.99,Default,,0,0,0,,设下陷阱引他们来
+Dialogue: 0,0:00:07.29,0:00:08.58,Default,,0,0,0,,夕月道人布下阵法
+Dialogue: 0,0:00:08.81,0:00:10.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿钧{\c&H00FFFFFF&\b0}老祖等隐藏气息
+Dialogue: 0,0:00:10.69,0:00:12.24,Default,,0,0,0,,只留{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖作为诱饵
+Dialogue: 0,0:00:12.50,0:00:14.70,Default,,0,0,0,,三日后混沌魔神果然突袭
+Dialogue: 0,0:00:15.01,0:00:16.80,Default,,0,0,0,,光阴{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}带队冲破防线
+Dialogue: 0,0:00:17.09,0:00:18.93,Default,,0,0,0,,却踏入阵法{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}乍现
+Dialogue: 0,0:00:19.23,0:00:20.98,Default,,0,0,0,,无数{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}锁链破土而出
+Dialogue: 0,0:00:21.30,0:00:23.91,Default,,0,0,0,,将其死死缠住{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}冷笑现身
+Dialogue: 0,0:00:24.36,0:00:27.05,Default,,0,0,0,,恭候多时场景为{\c&H0000FFFF&\b1}洪荒{\c&H00FFFFFF&\b0}边境山
+Dialogue: 0,0:00:27.05,0:00:29.14,Default,,0,0,0,,谷阵法启动{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}冲天
+Dialogue: 0,0:00:29.43,0:00:30.78,Default,,0,0,0,,魔神队伍陷入混乱

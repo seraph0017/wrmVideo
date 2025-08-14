@@ -14,13 +14,15 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:02.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}步步紧逼每一步都让地面微
-Dialogue: 0,0:00:02.68,0:00:05.57,Default,,0,0,0,,微震颤他脸上的狞笑因{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}的痛
-Dialogue: 0,0:00:05.57,0:00:08.41,Default,,0,0,0,,苦而愈发狰狞黑色圆领劲装下肌
-Dialogue: 0,0:00:08.41,0:00:10.41,Default,,0,0,0,,肉虬结右手缓缓抬起
-Dialogue: 0,0:00:10.74,0:00:12.54,Default,,0,0,0,,一股更强的气势锁定{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:12.81,0:00:14.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}脚下青石板碎裂
-Dialogue: 0,0:00:14.65,0:00:15.88,Default,,0,0,0,,嘴角溢出一丝血迹
-Dialogue: 0,0:00:16.17,0:00:18.73,Default,,0,0,0,,却依旧挺直脊梁眼中燃烧着不屈
-Dialogue: 0,0:00:18.73,0:00:21.32,Default,,0,0,0,,的火焰仿佛要将这压迫他的气势
-Dialogue: 0,0:00:21.32,0:00:21.75,Default,,0,0,0,,点燃
+Dialogue: 0,0:00:00.02,0:00:02.00,Default,,0,0,0,,院内{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}一步步逼近
+Dialogue: 0,0:00:02.47,0:00:05.11,Default,,0,0,0,,脸上狞笑因{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}痛苦表情而更显狰
+Dialogue: 0,0:00:05.11,0:00:08.08,Default,,0,0,0,,狞他每走一步地面便微微震动
+Dialogue: 0,0:00:08.45,0:00:10.57,Default,,0,0,0,,无形气势如潮水般涌向{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.78,0:00:12.84,Default,,0,0,0,,赵丰单膝跪地双手撑地
+Dialogue: 0,0:00:13.07,0:00:15.12,Default,,0,0,0,,指节发白体内气血翻涌
+Dialogue: 0,0:00:15.39,0:00:17.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}北冥{\c&H00FFFFFF&\b0}吞天秘法运转到极致
+Dialogue: 0,0:00:17.55,0:00:18.85,Default,,0,0,0,,却仍难敌境界差距
+Dialogue: 0,0:00:19.12,0:00:21.71,Default,,0,0,0,,给我去死吧{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}眼中闪过血
+Dialogue: 0,0:00:21.71,0:00:24.41,Default,,0,0,0,,光低吼一声蒲扇般的大手带着
+Dialogue: 0,0:00:24.41,0:00:26.38,Default,,0,0,0,,破{\c&H0000FFFF&\b1}空之声{\c&H00FFFFFF&\b0}抓向赵丰头颅
+Dialogue: 0,0:00:26.70,0:00:27.41,Default,,0,0,0,,杀意凛然

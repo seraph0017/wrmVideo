@@ -14,14 +14,13 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.88,Default,,0,0,0,,截教禁地前通天教主盘坐于青石
-Dialogue: 0,0:00:02.88,0:00:04.64,Default,,0,0,0,,之上周身道韵流转
-Dialogue: 0,0:00:05.24,0:00:06.55,Default,,0,0,0,,身后是古朴的殿宇
-Dialogue: 0,0:00:06.90,0:00:08.43,Default,,0,0,0,,匾额上书三千世界
-Dialogue: 0,0:00:08.69,0:00:10.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}恭敬行礼教主目光深邃
-Dialogue: 0,0:00:11.21,0:00:13.77,Default,,0,0,0,,示意其上前殿宇周围{\c&H0000FFFF&\b1}古柏{\c&H00FFFFFF&\b0}参天
-Dialogue: 0,0:00:14.00,0:00:16.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}石阶{\c&H00FFFFFF&\b0}上苔藓遍布透着岁月沧桑
-Dialogue: 0,0:00:17.11,0:00:19.71,Default,,0,0,0,,教主缓缓开口讲述{\c&H0000FFFF&\b1}洪荒{\c&H00FFFFFF&\b0}大世界与
-Dialogue: 0,0:00:19.71,0:00:22.27,Default,,0,0,0,,混沌魔神的{\c&H0000FFFF&\b1}大战{\c&H00FFFFFF&\b0}声音低沉却蕴含
-Dialogue: 0,0:00:22.27,0:00:24.05,Default,,0,0,0,,威严{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}凝神倾听
-Dialogue: 0,0:00:24.36,0:00:25.11,Default,,0,0,0,,神色凝重
+Dialogue: 0,0:00:00.01,0:00:01.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}长眉{\c&H00FFFFFF&\b0}真人怒吼一声
+Dialogue: 0,0:00:01.72,0:00:04.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}万剑{\c&H00FFFFFF&\b0}归宗漫天剑光骤然收缩
+Dialogue: 0,0:00:04.42,0:00:06.79,Default,,0,0,0,,化作一柄千丈{\c&H0000FFFF&\b1}巨剑{\c&H00FFFFFF&\b0}斩向纯阳道祖
+Dialogue: 0,0:00:07.12,0:00:09.64,Default,,0,0,0,,场景为战场中央云层被剑气驱散
+Dialogue: 0,0:00:09.87,0:00:11.62,Default,,0,0,0,,地面塌陷碎石悬浮
+Dialogue: 0,0:00:11.87,0:00:13.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}长眉{\c&H00FFFFFF&\b0}真人衣袍鼓胀
+Dialogue: 0,0:00:13.27,0:00:15.83,Default,,0,0,0,,眉心发光周身环绕无数剑影
+Dialogue: 0,0:00:16.09,0:00:17.41,Default,,0,0,0,,纯阳道祖屹立场中
+Dialogue: 0,0:00:17.66,0:00:20.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝剑{\c&H00FFFFFF&\b0}横胸道袍上符文流转
+Dialogue: 0,0:00:20.41,0:00:21.39,Default,,0,0,0,,准备硬接此招

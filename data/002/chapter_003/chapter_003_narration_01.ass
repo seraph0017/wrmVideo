@@ -14,13 +14,15 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:01.41,Default,,0,0,0,,望{\c&H0000FFFF&\b1}海城{\c&H00FFFFFF&\b0}老家的小院中
-Dialogue: 0,0:00:01.87,0:00:03.62,Default,,0,0,0,,一场生死危机骤然降临
-Dialogue: 0,0:00:04.25,0:00:06.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}带着如山般的气势压迫而来
-Dialogue: 0,0:00:06.97,0:00:09.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}浑身骨骼发出咔吧脆响
-Dialogue: 0,0:00:09.38,0:00:11.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}北冥{\c&H00FFFFFF&\b0}吞天秘法在体内疯狂运转
-Dialogue: 0,0:00:11.97,0:00:13.36,Default,,0,0,0,,却仍难抵境界差距
-Dialogue: 0,0:00:13.59,0:00:15.85,Default,,0,0,0,,他死死咬牙额头青筋暴起
-Dialogue: 0,0:00:16.16,0:00:17.77,Default,,0,0,0,,硬是不让自己发出痛呼
-Dialogue: 0,0:00:18.07,0:00:20.01,Default,,0,0,0,,灰色圆领{\c&H0000FFFF&\b1}布衫{\c&H00FFFFFF&\b0}被汗水浸透
-Dialogue: 0,0:00:20.36,0:00:22.05,Default,,0,0,0,,眼神中满是倔强与不甘
+Dialogue: 0,0:00:00.01,0:00:02.88,Default,,0,0,0,,望海城{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}老家青瓦白墙的宋式
+Dialogue: 0,0:00:02.88,0:00:04.81,Default,,0,0,0,,小院午后{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}斜照
+Dialogue: 0,0:00:05.25,0:00:07.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}正在屋内盘膝苦修
+Dialogue: 0,0:00:07.37,0:00:08.54,Default,,0,0,0,,一身粗布圆领短打
+Dialogue: 0,0:00:08.87,0:00:11.91,Default,,0,0,0,,面色沉静突然三道强悍气息如
+Dialogue: 0,0:00:11.91,0:00:13.46,Default,,0,0,0,,乌云压顶般笼罩小院
+Dialogue: 0,0:00:13.76,0:00:15.91,Default,,0,0,0,,正是{\c&H0000FFFF&\b1}卢三卢{\c&H00FFFFFF&\b0}大卢二
+Dialogue: 0,0:00:16.55,0:00:19.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}猛然睁眼感受到如山威压
+Dialogue: 0,0:00:19.50,0:00:21.52,Default,,0,0,0,,体内{\c&H0000FFFF&\b1}北冥{\c&H00FFFFFF&\b0}吞天秘法急速运转
+Dialogue: 0,0:00:21.84,0:00:23.89,Default,,0,0,0,,骨骼发出不堪重负的咔吧声
+Dialogue: 0,0:00:24.42,0:00:26.82,Default,,0,0,0,,他咬牙坚持额角青筋暴起
+Dialogue: 0,0:00:27.12,0:00:27.98,Default,,0,0,0,,却不肯示弱

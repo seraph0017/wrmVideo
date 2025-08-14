@@ -14,13 +14,15 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.03,Default,,0,0,0,,前方洞窟中魔神数量减少
-Dialogue: 0,0:00:02.48,0:00:05.09,Default,,0,0,0,,但实力更强都是精锐中的精锐
-Dialogue: 0,0:00:05.61,0:00:07.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}羽西{\c&H00FFFFFF&\b0}魔神一路畅通无阻
-Dialogue: 0,0:00:07.67,0:00:10.42,Default,,0,0,0,,无人盘查{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}和万应老祖感叹抓
-Dialogue: 0,0:00:10.42,0:00:12.95,Default,,0,0,0,,到了大鱼{\c&H0000FFFF&\b1}羽西{\c&H00FFFFFF&\b0}魔神持有重要的定
-Dialogue: 0,0:00:12.95,0:00:15.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}位玉符{\c&H00FFFFFF&\b0}突然前方出现禁制波动
-Dialogue: 0,0:00:16.23,0:00:18.71,Default,,0,0,0,,一股强大力量束缚{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}和万应老祖
-Dialogue: 0,0:00:19.09,0:00:20.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}和万应老祖以为中计
-Dialogue: 0,0:00:21.25,0:00:23.98,Default,,0,0,0,,欲攻击{\c&H0000FFFF&\b1}羽西{\c&H00FFFFFF&\b0}魔神羽西魔神急忙解
-Dialogue: 0,0:00:23.98,0:00:24.80,Default,,0,0,0,,释是传送阵
+Dialogue: 0,0:00:00.01,0:00:01.50,Default,,0,0,0,,万应{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}轻抚胡须
+Dialogue: 0,0:00:01.92,0:00:03.24,Default,,0,0,0,,目光扫过石壁{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.83,0:00:05.45,Default,,0,0,0,,这些禁制手法倒是罕见
+Dialogue: 0,0:00:05.86,0:00:08.14,Default,,0,0,0,,羽西魔神从怀中取出一枚{\c&H0000FFFF&\b1}玉符{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.44,0:00:10.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}骤然亮起石壁缓缓移开
+Dialogue: 0,0:00:11.13,0:00:13.64,Default,,0,0,0,,露出幽深通道通道内传来隐约的
+Dialogue: 0,0:00:13.64,0:00:15.79,Default,,0,0,0,,能量波动{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}敏锐察觉
+Dialogue: 0,0:00:16.18,0:00:17.82,Default,,0,0,0,,前方有大量强者气息
+Dialogue: 0,0:00:18.14,0:00:20.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}羽西{\c&H00FFFFFF&\b0}魔神笑道都是部落精锐
+Dialogue: 0,0:00:21.13,0:00:23.64,Default,,0,0,0,,见到我自会放行三人踏入通道
+Dialogue: 0,0:00:24.05,0:00:25.52,Default,,0,0,0,,两侧石壁{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}流转
+Dialogue: 0,0:00:25.96,0:00:27.67,Default,,0,0,0,,似在监视着他们的一举一动

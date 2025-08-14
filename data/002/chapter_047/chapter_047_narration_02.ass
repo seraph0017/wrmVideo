@@ -14,13 +14,15 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}巨星{\c&H00FFFFFF&\b0}之上赵硕带领鸿钧老祖
-Dialogue: 0,0:00:03.15,0:00:04.88,Default,,0,0,0,,通天教祖等人观察地形
-Dialogue: 0,0:00:05.39,0:00:08.13,Default,,0,0,0,,周围是蛮荒景象参天{\c&H0000FFFF&\b1}古木{\c&H00FFFFFF&\b0}遮天蔽
-Dialogue: 0,0:00:08.13,0:00:10.64,Default,,0,0,0,,日空气中弥漫着浓郁的天地元气
-Dialogue: 0,0:00:10.89,0:00:13.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}神色凝重分析牛神一族可能
-Dialogue: 0,0:00:13.48,0:00:15.85,Default,,0,0,0,,的动向{\c&H0000FFFF&\b1}鸿钧{\c&H00FFFFFF&\b0}老祖手持拂尘
-Dialogue: 0,0:00:16.23,0:00:18.86,Default,,0,0,0,,若有所思通天教祖则兴奋地打量
-Dialogue: 0,0:00:18.86,0:00:20.05,Default,,0,0,0,,着周围的灵材灵药
-Dialogue: 0,0:00:20.45,0:00:22.02,Default,,0,0,0,,远处传来凶兽的咆哮
-Dialogue: 0,0:00:22.54,0:00:24.82,Default,,0,0,0,,显示出{\c&H0000FFFF&\b1}巨星{\c&H00FFFFFF&\b0}的危险与机遇并存
+Dialogue: 0,0:00:00.01,0:00:02.75,Default,,0,0,0,,战场突发{\c&H0000FFFF&\b1}巨变{\c&H00FFFFFF&\b0}牛神一族一尊半步
+Dialogue: 0,0:00:02.75,0:00:04.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}大圣{\c&H00FFFFFF&\b0}发出凄厉惨叫
+Dialogue: 0,0:00:04.83,0:00:07.25,Default,,0,0,0,,竟被无生{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}与通天教祖联手斩于
+Dialogue: 0,0:00:07.25,0:00:09.40,Default,,0,0,0,,虚空无生{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}灰袍翻飞
+Dialogue: 0,0:00:09.65,0:00:12.38,Default,,0,0,0,,手中长剑染血通天教祖紫袍鼓荡
+Dialogue: 0,0:00:12.76,0:00:14.27,Default,,0,0,0,,诛仙四剑悬浮周身
+Dialogue: 0,0:00:14.67,0:00:16.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}牛神{\c&H00FFFFFF&\b0}大圣见同族陨落
+Dialogue: 0,0:00:16.77,0:00:18.77,Default,,0,0,0,,脸色铁青周身气息暴涨
+Dialogue: 0,0:00:19.05,0:00:20.52,Default,,0,0,0,,紫金长棍直指{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.04,0:00:23.43,Default,,0,0,0,,你敢伤我族人{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}却淡淡回
+Dialogue: 0,0:00:23.43,0:00:26.27,Default,,0,0,0,,应战场之上各凭本事
+Dialogue: 0,0:00:26.27,0:00:26.27,Default,,0,0,0,,

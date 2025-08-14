@@ -389,7 +389,7 @@ def get_sound_effects_for_narration(dialogues, narration_num, work_dir):
                 'path': bell_path,
                 'start_time': 0,
                 'duration': 5,
-                'volume': 0.3
+                'volume': 0.15
             })
         
         # 5-10秒如果没有匹配到音效，使用脚步声
@@ -403,7 +403,7 @@ def get_sound_effects_for_narration(dialogues, narration_num, work_dir):
                         'path': effect_path,
                         'start_time': dialogue['start_time'],
                         'duration': min(3, dialogue['end_time'] - dialogue['start_time']),
-                        'volume': 0.2
+                        'volume': 0.1
                     })
                     break
         
@@ -415,7 +415,7 @@ def get_sound_effects_for_narration(dialogues, narration_num, work_dir):
                     'path': footsteps_path,
                     'start_time': 5,
                     'duration': 5,
-                    'volume': 0.2
+                    'volume': 0.1
                 })
     
     # 为所有对话匹配音效
@@ -432,7 +432,7 @@ def get_sound_effects_for_narration(dialogues, narration_num, work_dir):
                 'path': effect_path,
                 'start_time': dialogue['start_time'],
                 'duration': max_duration,
-                'volume': 0.2
+                'volume': 0.1
             })
     
     print(f"为 narration_{narration_num} 找到 {len(sound_effects)} 个音效")

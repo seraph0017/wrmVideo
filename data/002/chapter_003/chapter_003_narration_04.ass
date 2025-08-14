@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_003 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}终于反应过来那无头尸体是自
+Dialogue: 0,0:00:02.37,0:00:04.49,Default,,0,0,0,,己脸上恐惧瞬间凝固
+Dialogue: 0,0:00:04.84,0:00:07.37,Default,,0,0,0,,九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑已将其脑袋搅成粉
+Dialogue: 0,0:00:07.37,0:00:10.04,Default,,0,0,0,,碎法相{\c&H0000FFFF&\b1}和元{\c&H00FFFFFF&\b0}神祖相皆未来得及逃
+Dialogue: 0,0:00:10.04,0:00:11.72,Default,,0,0,0,,出这变故突如其来
+Dialogue: 0,0:00:11.97,0:00:14.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二在卢三被杀后才回过神
+Dialogue: 0,0:00:15.14,0:00:17.50,Default,,0,0,0,,见三弟惨死双目瞬间血红
+Dialogue: 0,0:00:17.84,0:00:19.92,Default,,0,0,0,,杀气毕露死死盯着{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.31,0:00:22.31,Default,,0,0,0,,周身黑气缭绕悲痛欲绝
+Dialogue: 0,0:00:22.66,0:00:24.66,Default,,0,0,0,,三弟{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}发出撕心裂肺
+Dialogue: 0,0:00:24.66,0:00:26.43,Default,,0,0,0,,的怒吼声音在小院回荡

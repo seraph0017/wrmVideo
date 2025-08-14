@@ -15,9 +15,9 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.02,0:00:03.02,Default,,0,0,0,,天庭备战{\c&H0000FFFF&\b1}玉皇大帝{\c&H00FFFFFF&\b0}召见托塔天王
-Dialogue: 0,0:00:03.50,0:00:05.35,Default,,0,0,0,,令雷部火部诸神出兵
-Dialogue: 0,0:00:05.78,0:00:07.79,Default,,0,0,0,,托塔天王担忧{\c&H0000FFFF&\b1}诸神{\c&H00FFFFFF&\b0}不听调遣
-Dialogue: 0,0:00:08.13,0:00:09.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}玉帝{\c&H00FFFFFF&\b0}冷笑自有算计
-Dialogue: 0,0:00:09.68,0:00:11.22,Default,,0,0,0,,场景在天庭{\c&H0000FFFF&\b1}凌霄{\c&H00FFFFFF&\b0}宝殿
+Dialogue: 0,0:00:03.50,0:00:05.36,Default,,0,0,0,,令雷部火部诸神出兵
+Dialogue: 0,0:00:05.79,0:00:07.80,Default,,0,0,0,,托塔天王担忧{\c&H0000FFFF&\b1}诸神{\c&H00FFFFFF&\b0}不听调遣
+Dialogue: 0,0:00:08.13,0:00:09.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}玉帝{\c&H00FFFFFF&\b0}冷笑自有算计
+Dialogue: 0,0:00:09.69,0:00:11.23,Default,,0,0,0,,场景在天庭{\c&H0000FFFF&\b1}凌霄{\c&H00FFFFFF&\b0}宝殿
 Dialogue: 0,0:00:11.54,0:00:13.21,Default,,0,0,0,,云雾缭绕{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}璀璨
-Dialogue: 0,0:00:13.52,0:00:15.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}玉帝{\c&H00FFFFFF&\b0}高坐龙椅托塔天王躬身听令
+Dialogue: 0,0:00:13.53,0:00:15.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}玉帝{\c&H00FFFFFF&\b0}高坐龙椅托塔天王躬身听令

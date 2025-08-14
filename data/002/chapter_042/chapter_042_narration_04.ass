@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_042 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.54,Default,,0,0,0,,夕月道人祭出万界{\c&H0000FFFF&\b1}宝殿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.91,0:00:04.43,Default,,0,0,0,,古朴殿宇悬浮空中散发镇压之力
+Dialogue: 0,0:00:05.03,0:00:07.33,Default,,0,0,0,,天元{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}被青光包裹拖向殿门
+Dialogue: 0,0:00:07.61,0:00:08.98,Default,,0,0,0,,口中发出凄厉诅咒
+Dialogue: 0,0:00:09.23,0:00:10.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}转向太初老祖
+Dialogue: 0,0:00:10.84,0:00:12.12,Default,,0,0,0,,混沌魔神有何机密
+Dialogue: 0,0:00:12.35,0:00:14.77,Default,,0,0,0,,速速道来{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖连忙躬身
+Dialogue: 0,0:00:15.39,0:00:17.41,Default,,0,0,0,,他们计划集结千名巅峰魔祖
+Dialogue: 0,0:00:17.80,0:00:20.71,Default,,0,0,0,,由九位{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}带队三个月后突袭洪
+Dialogue: 0,0:00:20.71,0:00:23.20,Default,,0,0,0,,荒大世界{\c&H0000FFFF&\b1}鸿钧{\c&H00FFFFFF&\b0}老祖等闻言色变
+Dialogue: 0,0:00:23.64,0:00:25.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}却冷笑我们早已知晓
+Dialogue: 0,0:00:26.14,0:00:27.86,Default,,0,0,0,,场景为万界{\c&H0000FFFF&\b1}宝殿{\c&H00FFFFFF&\b0}殿前
+Dialogue: 0,0:00:28.20,0:00:29.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝光{\c&H00FFFFFF&\b0}冲天气氛凝重

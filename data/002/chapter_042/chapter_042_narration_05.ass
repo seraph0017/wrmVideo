@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_042 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖震惊地瞪大眼睛
+Dialogue: 0,0:00:02.40,0:00:04.67,Default,,0,0,0,,你们怎会知晓这是魔神核心机
+Dialogue: 0,0:00:04.67,0:00:06.33,Default,,0,0,0,,密{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}突然靠近
+Dialogue: 0,0:00:06.72,0:00:09.10,Default,,0,0,0,,声音压低因为当初你们在{\c&H0000FFFF&\b1}万界{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.10,0:00:11.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝殿{\c&H00FFFFFF&\b0}议事时我和夕月道人就在旁
+Dialogue: 0,0:00:11.44,0:00:13.46,Default,,0,0,0,,听{\c&H0000FFFF&\b1}太初{\c&H00FFFFFF&\b0}老祖倒吸凉气
+Dialogue: 0,0:00:13.76,0:00:16.09,Default,,0,0,0,,恍然大悟难怪你们能悄无声息
+Dialogue: 0,0:00:16.09,0:00:18.77,Default,,0,0,0,,潜入神鱼{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}定是被你们偷袭了
+Dialogue: 0,0:00:19.30,0:00:21.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}不置可否转身望向洪荒方
+Dialogue: 0,0:00:21.89,0:00:24.09,Default,,0,0,0,,向混沌魔神元气大伤
+Dialogue: 0,0:00:24.43,0:00:26.98,Default,,0,0,0,,正好趁机备战场景为万界{\c&H0000FFFF&\b1}宝殿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:26.98,0:00:29.76,Default,,0,0,0,,侧殿光线昏暗只有两人对话时
+Dialogue: 0,0:00:29.76,0:00:30.49,Default,,0,0,0,,的面部微光

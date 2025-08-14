@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_042 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}鸿钧{\c&H00FFFFFF&\b0}老祖皱眉混沌魔神有大圣
+Dialogue: 0,0:00:02.62,0:00:04.54,Default,,0,0,0,,强者坐镇我们如何应对
+Dialogue: 0,0:00:04.95,0:00:06.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}突然击掌分兵两路
+Dialogue: 0,0:00:07.41,0:00:09.10,Default,,0,0,0,,一部分留下炼化天元{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.33,0:00:10.70,Default,,0,0,0,,另一部分随我召集人马
+Dialogue: 0,0:00:10.97,0:00:13.22,Default,,0,0,0,,通天教祖担忧需十日炼化
+Dialogue: 0,0:00:13.43,0:00:15.74,Default,,0,0,0,,只剩二十日备战天元{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}突然
+Dialogue: 0,0:00:15.74,0:00:17.96,Default,,0,0,0,,狂笑我死也要拖你们陪葬
+Dialogue: 0,0:00:18.25,0:00:20.35,Default,,0,0,0,,混沌大军一到你们都得死
+Dialogue: 0,0:00:20.69,0:00:21.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}一脚将其踹晕
+Dialogue: 0,0:00:22.61,0:00:24.71,Default,,0,0,0,,聒噪场景为临时议事厅
+Dialogue: 0,0:00:25.02,0:00:26.46,Default,,0,0,0,,石桌周围众人围坐
+Dialogue: 0,0:00:26.84,0:00:27.56,Default,,0,0,0,,气氛紧张

@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_003 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕听{\c&H00FFFFFF&\b0}赵丰说完心中松了口气
+Dialogue: 0,0:00:03.17,0:00:04.42,Default,,0,0,0,,他还以为是什么大事
+Dialogue: 0,0:00:04.84,0:00:07.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}却更显自责我连敌人是谁
+Dialogue: 0,0:00:07.42,0:00:11.02,Default,,0,0,0,,都不知道{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}拍了拍他肩膀
+Dialogue: 0,0:00:09.68,0:00:11.02,Default,,0,0,0,,笑道大哥放心
+Dialogue: 0,0:00:11.31,0:00:13.04,Default,,0,0,0,,娘亲和小妹现在很安全
+Dialogue: 0,0:00:13.23,0:00:15.29,Default,,0,0,0,,冲霄宗嘛我与他们也有旧怨
+Dialogue: 0,0:00:15.49,0:00:17.11,Default,,0,0,0,,他们巴不得将我大卸八块呢
+Dialogue: 0,0:00:17.39,0:00:19.81,Default,,0,0,0,,他语气轻松眼中却闪过一丝厉
+Dialogue: 0,0:00:19.81,0:00:22.00,Default,,0,0,0,,色显然没打算放过冲霄宗
+Dialogue: 0,0:00:22.36,0:00:24.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}闻言一愣随即激动道
+Dialogue: 0,0:00:25.09,0:00:26.80,Default,,0,0,0,,二弟你知道她们下落
+Dialogue: 0,0:00:26.80,0:00:26.80,Default,,0,0,0,,
