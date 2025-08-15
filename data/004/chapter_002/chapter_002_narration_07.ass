@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_002 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕醒{\c&H00FFFFFF&\b0}后从姜素卿口中得知冲霄
+Dialogue: 0,0:00:02.87,0:00:04.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}宗少{\c&H00FFFFFF&\b0}宗主罗通强娶赵鸾
+Dialogue: 0,0:00:05.00,0:00:07.82,Default,,0,0,0,,他猛地坐起脸色铁青{\c&H0000FFFF&\b1}赵鸾正{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.82,0:00:10.52,Default,,0,0,0,,是他小妹{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}说罗通用苏绣威
+Dialogue: 0,0:00:10.52,0:00:12.47,Default,,0,0,0,,胁{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}冲霄宗势力庞大
+Dialogue: 0,0:00:12.80,0:00:14.52,Default,,0,0,0,,灵药谷每年需上缴贡物
+Dialogue: 0,0:00:14.91,0:00:17.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}攥紧拳头眼中杀意沸腾
+Dialogue: 0,0:00:17.77,0:00:19.05,Default,,0,0,0,,冲霄宗我必闯

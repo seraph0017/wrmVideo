@@ -42,118 +42,353 @@ def identify_key_word(text: str) -> str:
     return ""
 
 def split_text_naturally(text: str, max_length: int = 12) -> List[str]:
-    """自然分割文本，优先在标点符号处分割"""
+    """自然分割文本，确保语义完整性，避免断句问题"""
     if len(text) <= max_length:
         return [text]
     
     segments = []
-    current_segment = ""
     
     # 标点符号优先级（越小优先级越高）
     punctuation_priority = {
-        '。': 1, '！': 1, '？': 1,
-        '；': 2, '：': 2,
-        '，': 3, '、': 3,
-        '）': 4, '】': 4, '》': 4, '」': 4, '』': 4,
-        '（': 5, '【': 5, '《': 5, '「': 5, '『': 5
+        '。': 1, '！': 1, '？': 1,  # 句号类，最高优先级
+        '；': 2, '：': 2,           # 分号冒号类
+        '，': 3, '、': 3,           # 逗号顿号类
+        '）': 4, '】': 4, '》': 4, '」': 4, '』': 4,  # 右括号类
+        '（': 5, '【': 5, '《': 5, '「': 5, '『': 5   # 左括号类，最低优先级
     }
     
-    i = 0
-    while i < len(text):
-        char = text[i]
-        current_segment += char
-        
-        # 检查是否需要分割
-        if len(current_segment) >= max_length:
-            # 寻找最佳分割点
-            best_split_pos = -1
-            best_priority = float('inf')
-            
-            # 从当前位置向前搜索标点符号
-            for j in range(len(current_segment) - 1, max(0, len(current_segment) - 5), -1):
-                if current_segment[j] in punctuation_priority:
-                    priority = punctuation_priority[current_segment[j]]
-                    if priority < best_priority:
-                        best_priority = priority
-                        best_split_pos = j
-            
-            if best_split_pos != -1:
-                # 在标点符号后分割
-                segments.append(current_segment[:best_split_pos + 1])
-                current_segment = current_segment[best_split_pos + 1:]
-            else:
-                # 没找到合适的标点符号，强制分割
-                if len(current_segment) > max_length + 3:  # 允许稍微超出
-                    segments.append(current_segment[:-1])
-                    current_segment = current_segment[-1:]
-        
-        i += 1
+    # 成对符号，不应在其中间分割
+    paired_symbols = {
+        '（': '）', '【': '】', '《': '》', '「': '」', '『': '』',
+        '"': '"', '"': '"'
+    }
     
+    # 语义紧密相关的词汇模式，不应分割
+    semantic_patterns = [
+        # 动宾结构
+        ['决定', '联手'], ['联手', '攻'], ['攻', '进'],
+        ['听得', '心惊肉跳'], ['感叹', '二弟'], ['二弟', '福缘'],
+        # 主谓结构
+        ['赵硕', '简单'], ['赵丰', '神色'], ['赵丰', '听得'],
+        # 修饰结构
+        ['皆是', '宋朝'], ['宋朝', '风格'], ['死亡', '岛'],
+        ['兄弟', '情谊'], ['血海', '深仇'], ['宋式', '民居'],
+        # 连接词
+        ['与此', '同时'], ['终于', '按捺'], ['按捺', '不住'],
+        ['对视', '一眼'], ['眼中', '杀意'], ['杀意', '暴涨']
+    ]
+    
+    # 使用jieba分词获取词汇边界
+    words = list(jieba.cut(text, cut_all=False))
+    
+    # 预处理：合并语义相关的词汇
+    merged_words = _merge_semantic_words(words, semantic_patterns)
+    
+    current_segment = ""
+    
+    for word in merged_words:
+        # 检查添加当前词后是否超出长度限制
+        potential_segment = current_segment + word
+        
+        if len(potential_segment) <= max_length:
+            # 未超出限制，直接添加
+            current_segment = potential_segment
+        else:
+            # 超出限制，需要分割
+            if current_segment:
+                # 检查当前段落是否在成对符号内部或语义不完整
+                if (not _is_inside_paired_symbols(current_segment, paired_symbols) and 
+                    not _is_semantic_incomplete(current_segment, word)):
+                    segments.append(current_segment)
+                    current_segment = word
+                else:
+                    # 在成对符号内部或语义不完整，寻找合适的分割点
+                    split_result = _find_safe_split_point(current_segment + word, max_length, punctuation_priority, paired_symbols)
+                    if split_result:
+                        segments.append(split_result[0])
+                        current_segment = split_result[1]
+                    else:
+                        # 无法安全分割，保持完整
+                        current_segment = potential_segment
+            else:
+                # 当前段落为空，直接使用当前词
+                current_segment = word
+            
+            # 如果当前段落仍然过长，尝试进一步分割
+            if len(current_segment) > max_length + 5:  # 允许适当超出
+                split_result = _find_safe_split_point(current_segment, max_length, punctuation_priority, paired_symbols)
+                if split_result:
+                    segments.append(split_result[0])
+                    current_segment = split_result[1]
+    
+    # 添加最后一个段落
     if current_segment:
         segments.append(current_segment)
     
-    return segments
+    # 后处理：合并过短的段落和优化语义完整性
+    return _optimize_segments(segments, max_length)
+
+def _is_inside_paired_symbols(text: str, paired_symbols: dict) -> bool:
+    """检查文本是否在成对符号内部（未闭合）"""
+    stack = []
+    for char in text:
+        if char in paired_symbols:
+            stack.append(paired_symbols[char])
+        elif char in paired_symbols.values():
+            if stack and stack[-1] == char:
+                stack.pop()
+    return len(stack) > 0
+
+def _find_safe_split_point(text: str, max_length: int, punctuation_priority: dict, paired_symbols: dict) -> tuple:
+    """寻找安全的分割点，确保不破坏语义完整性"""
+    if len(text) <= max_length:
+        return None
+    
+    best_split_pos = -1
+    best_priority = float('inf')
+    
+    # 从理想长度位置向前搜索
+    search_start = min(max_length, len(text) - 1)
+    search_end = max(0, search_start - 8)  # 向前搜索8个字符
+    
+    for i in range(search_start, search_end, -1):
+        char = text[i]
+        
+        # 检查是否为合适的分割点
+        if char in punctuation_priority:
+            # 检查分割后是否破坏成对符号
+            left_part = text[:i + 1]
+            if not _is_inside_paired_symbols(left_part, paired_symbols):
+                priority = punctuation_priority[char]
+                if priority < best_priority:
+                    best_priority = priority
+                    best_split_pos = i
+    
+    if best_split_pos != -1:
+        left_part = text[:best_split_pos + 1]
+        right_part = text[best_split_pos + 1:]
+        return (left_part, right_part)
+    
+    return None
+
+def _merge_semantic_words(words: List[str], semantic_patterns: List[List[str]]) -> List[str]:
+    """合并语义相关的词汇"""
+    merged_words = []
+    i = 0
+    
+    while i < len(words):
+        current_word = words[i]
+        merged = False
+        
+        # 检查是否与下一个词语义相关
+        if i + 1 < len(words):
+            next_word = words[i + 1]
+            for pattern in semantic_patterns:
+                if len(pattern) == 2 and pattern[0] == current_word and pattern[1] == next_word:
+                    merged_words.append(current_word + next_word)
+                    i += 2
+                    merged = True
+                    break
+        
+        if not merged:
+            merged_words.append(current_word)
+            i += 1
+    
+    return merged_words
+
+def _is_semantic_incomplete(current_segment: str, next_word: str) -> bool:
+    """检查当前段落是否语义不完整，需要与下一个词合并"""
+    # 检查是否以不完整的结构结尾
+    incomplete_endings = [
+        '决定', '联手', '听得', '感叹', '皆是', '与此', '终于', '按捺',
+        '对视', '眼中', '杀意', '兄弟', '血海', '宋式', '死亡'
+    ]
+    
+    for ending in incomplete_endings:
+        if current_segment.endswith(ending):
+            return True
+    
+    # 检查是否以动词结尾但缺少宾语
+    if current_segment.endswith(('攻', '进', '听', '看', '说', '做', '来', '去')):
+        return True
+    
+    return False
+
+def _optimize_segments(segments: List[str], max_length: int) -> List[str]:
+    """优化段落，合并过短的段落并确保语义完整性"""
+    if not segments:
+        return segments
+    
+    # 第一步：合并过短的段落
+    merged_segments = []
+    current_segment = segments[0]
+    
+    for i in range(1, len(segments)):
+        next_segment = segments[i]
+        
+        # 如果当前段落很短，且与下一段落合并后不超过限制，则合并
+        if (len(current_segment) < max_length // 2 and 
+            len(current_segment + next_segment) <= max_length + 3):
+            current_segment += next_segment
+        else:
+            merged_segments.append(current_segment)
+            current_segment = next_segment
+    
+    merged_segments.append(current_segment)
+    
+    # 第二步：检查语义完整性
+    final_segments = []
+    for i, segment in enumerate(merged_segments):
+        # 检查段落是否以不完整的词汇结尾
+        if (i + 1 < len(merged_segments) and 
+            _is_semantic_incomplete(segment, merged_segments[i + 1])):
+            # 尝试与下一段合并
+            combined = segment + merged_segments[i + 1]
+            if len(combined) <= max_length + 5:
+                final_segments.append(combined)
+                # 跳过下一段
+                merged_segments[i + 1] = ""
+            else:
+                final_segments.append(segment)
+        elif segment:  # 非空段落
+            final_segments.append(segment)
+    
+    return final_segments
 
 def calculate_segment_timestamps(segments: List[str], character_timestamps: List[Dict], original_text: str) -> List[Dict]:
-    """为分割后的段落计算时间戳"""
+    """为分割后的段落计算时间戳，确保不会出现重叠"""
     segment_timestamps = []
     current_char_index = 0
     
-    for segment in segments:
+    # 预处理：创建清理后文本到原始字符索引的映射
+    clean_to_original_mapping = []
+    clean_original_text = ""
+    
+    for i, char_data in enumerate(character_timestamps):
+        char = char_data.get('character', '')
+        # 跳过标点符号和特殊字符，但记录映射关系
+        if char not in '，。；：、！？""''（）【】《》〈〉「」『』〔〕\[\]｛｝｜～·…—–,.;:!?"\':[]{}|~\npau':
+            clean_original_text += char
+            clean_to_original_mapping.append(i)
+    
+    print(f"原始文本长度: {len(original_text)}, 清理后长度: {len(clean_original_text)}")
+    
+    for segment_idx, segment in enumerate(segments):
         # 清理段落文本（移除标点符号用于匹配）
         clean_segment = clean_subtitle_text(segment)
         
-        # 在原始文本中找到这个段落的起始和结束字符索引
-        segment_start_index = -1
-        segment_end_index = -1
+        print(f"\n处理段落 {segment_idx + 1}: '{segment}' -> '{clean_segment}'")
         
-        # 从当前字符索引开始搜索
-        temp_clean_text = ""
-        char_count = 0
+        # 在清理后的文本中查找段落位置
+        segment_start_clean_index = -1
+        segment_end_clean_index = -1
         
-        for i, char_data in enumerate(character_timestamps[current_char_index:], current_char_index):
-            if i >= len(character_timestamps):
-                break
-                
-            char = char_data.get('character', '')
-            
-            # 跳过标点符号和特殊字符
-            if char not in '，。；：、！？""''（）【】《》〈〉「」『』〔〕\[\]｛｝｜～·…—–,.;:!?"\':[]{}|~\npau':
-                temp_clean_text += char
-                
-                if len(temp_clean_text) == 1:  # 第一个字符匹配
-                    segment_start_index = i
-                
-                if segment_start_index != -1 and temp_clean_text == clean_segment:
-                    segment_end_index = i
+        # 从当前位置开始搜索
+        search_start = min(current_char_index, len(clean_original_text) - 1)
+        
+        # 在清理后的文本中查找匹配
+        for start_pos in range(search_start, len(clean_original_text)):
+            if start_pos + len(clean_segment) <= len(clean_original_text):
+                if clean_original_text[start_pos:start_pos + len(clean_segment)] == clean_segment:
+                    segment_start_clean_index = start_pos
+                    segment_end_clean_index = start_pos + len(clean_segment) - 1
                     break
-                    
-                if segment_start_index != -1 and not clean_segment.startswith(temp_clean_text):
-                    # 匹配失败，重置
-                    temp_clean_text = ""
-                    segment_start_index = -1
         
-        if segment_start_index == -1 or segment_end_index == -1:
-            print(f"警告: 无法找到段落 '{segment}' 在字符时间戳中的位置")
+        if segment_start_clean_index == -1 or segment_end_clean_index == -1:
+            print(f"警告: 无法找到段落 '{clean_segment}' 在清理后文本中的位置")
             # 使用估算时间
             if segment_timestamps:
-                start_time = segment_timestamps[-1]['end_time']
+                start_time = segment_timestamps[-1]['end_time'] + 0.1  # 添加小间隔避免重叠
             else:
                 start_time = 0
             end_time = start_time + len(clean_segment) * 0.3  # 估算每字0.3秒
         else:
-            # 根据字符索引获取时间戳
-            start_time = character_timestamps[segment_start_index]['start_time']
-            end_time = character_timestamps[segment_end_index]['end_time']
+             # 安全地将清理后的索引映射回原始字符索引
+             if (segment_start_clean_index < len(clean_to_original_mapping) and 
+                 segment_end_clean_index < len(clean_to_original_mapping)):
+                 
+                 original_start_index = clean_to_original_mapping[segment_start_clean_index]
+                 original_end_index = clean_to_original_mapping[segment_end_clean_index]
+                 
+                 # 确保索引在有效范围内
+                 if (original_start_index < len(character_timestamps) and 
+                     original_end_index < len(character_timestamps)):
+                     
+                     # 根据字符索引获取时间戳
+                     start_time = character_timestamps[original_start_index]['start_time']
+                     end_time = character_timestamps[original_end_index]['end_time']
+                     
+                     print(f"找到匹配: 清理索引 {segment_start_clean_index}-{segment_end_clean_index}, 原始索引 {original_start_index}-{original_end_index}")
+                     print(f"时间戳: {start_time:.2f}-{end_time:.2f}")
+                     
+                     # 更新当前字符索引
+                     current_char_index = segment_end_clean_index + 1
+                 else:
+                     print(f"警告: 原始索引超出范围 {original_start_index}-{original_end_index}, 字符时间戳长度: {len(character_timestamps)}")
+                     # 使用估算时间
+                     if segment_timestamps:
+                         start_time = segment_timestamps[-1]['end_time'] + 0.1
+                     else:
+                         start_time = 0
+                     end_time = start_time + len(clean_segment) * 0.3
+             else:
+                 print(f"警告: 清理索引超出范围 {segment_start_clean_index}-{segment_end_clean_index}, 映射长度: {len(clean_to_original_mapping)}")
+                 # 使用估算时间
+                 if segment_timestamps:
+                     start_time = segment_timestamps[-1]['end_time'] + 0.1
+                 else:
+                     start_time = 0
+                 end_time = start_time + len(clean_segment) * 0.3
+        
+        # 检查并修正重叠问题
+        if segment_timestamps:
+            prev_end_time = segment_timestamps[-1]['end_time']
+            if start_time < prev_end_time:
+                print(f"检测到重叠: 前一段结束时间 {prev_end_time:.2f}, 当前段开始时间 {start_time:.2f}")
+                # 修正重叠：将当前段的开始时间设置为前一段结束时间 + 0.1秒
+                start_time = prev_end_time + 0.1
+                # 如果修正后开始时间大于等于结束时间，则调整结束时间
+                if start_time >= end_time:
+                    end_time = start_time + len(clean_segment) * 0.3
+                print(f"修正后时间戳: {start_time:.2f}-{end_time:.2f}")
+            # 额外检查：确保当前段的结束时间不会与开始时间重叠
+            elif end_time <= start_time:
+                print(f"检测到无效时间戳: 开始时间 {start_time:.2f} >= 结束时间 {end_time:.2f}")
+                end_time = start_time + len(clean_segment) * 0.3
+                print(f"修正后结束时间: {end_time:.2f}")
         
         segment_timestamps.append({
-            'text': clean_segment,  # 使用已经清理过的文本
+            'text': segment,  # 使用原始段落文本（包含标点符号）
             'start_time': start_time,
             'end_time': end_time
         })
+    
+    # 最终检查：确保所有时间戳都是递增的且无重叠
+    for i in range(1, len(segment_timestamps)):
+        prev_segment = segment_timestamps[i-1]
+        curr_segment = segment_timestamps[i]
         
-        # 更新当前字符索引到段落结束后
-        current_char_index = segment_end_index + 1 if segment_end_index != -1 else current_char_index + len(clean_segment)
+        # 检查当前段开始时间是否早于前一段结束时间
+        if curr_segment['start_time'] < prev_segment['end_time']:
+            print(f"最终修正: 段落 {i+1} 时间戳重叠 - 前段: {prev_segment['start_time']:.2f}-{prev_segment['end_time']:.2f}, 当前段: {curr_segment['start_time']:.2f}-{curr_segment['end_time']:.2f}")
+            
+            # 修正策略1：调整当前段开始时间
+            new_start_time = prev_segment['end_time'] + 0.1
+            duration = curr_segment['end_time'] - curr_segment['start_time']
+            
+            # 如果原始持续时间太短，设置最小持续时间
+            if duration < 0.5:
+                duration = max(0.5, len(clean_subtitle_text(curr_segment['text'])) * 0.3)
+            
+            segment_timestamps[i]['start_time'] = new_start_time
+            segment_timestamps[i]['end_time'] = new_start_time + duration
+            
+            print(f"修正后: {segment_timestamps[i]['start_time']:.2f}-{segment_timestamps[i]['end_time']:.2f}")
+        
+        # 检查时间戳有效性
+        if curr_segment['start_time'] >= curr_segment['end_time']:
+            print(f"修正无效时间戳: 段落 {i+1}")
+            segment_timestamps[i]['end_time'] = segment_timestamps[i]['start_time'] + 1.0
     
     return segment_timestamps
 
@@ -311,43 +546,52 @@ def process_chapter(chapter_path: str, max_length: int = 12) -> bool:
 def main():
     """主函数"""
     parser = argparse.ArgumentParser(description='生成ASS字幕文件')
-    parser.add_argument('data_dir', help='数据目录路径')
+    parser.add_argument('path', help='数据目录路径或单个章节目录路径')
     parser.add_argument('--max-length', type=int, default=12, help='每段最大字符数（默认12）')
     
     args = parser.parse_args()
     
-    if not os.path.exists(args.data_dir):
-        print(f"❌ 数据目录不存在: {args.data_dir}")
+    if not os.path.exists(args.path):
+        print(f"❌ 路径不存在: {args.path}")
         return
     
-    # 查找所有章节目录
-    chapter_dirs = []
-    for item in os.listdir(args.data_dir):
-        item_path = os.path.join(args.data_dir, item)
-        if os.path.isdir(item_path) and item.startswith('chapter'):
-            chapter_dirs.append(item_path)
-    
-    chapter_dirs.sort()
-    
-    if not chapter_dirs:
-        print(f"❌ 在 {args.data_dir} 中未找到章节目录")
-        return
-    
-    print(f"找到 {len(chapter_dirs)} 个章节目录")
-    
-    # 处理每个章节
-    success_count = 0
-    for chapter_dir in chapter_dirs:
-        if process_chapter(chapter_dir, args.max_length):
-            success_count += 1
-    
-    print(f"\n=== 处理完成 ===")
-    print(f"成功: {success_count}/{len(chapter_dirs)}")
-    
-    if success_count == len(chapter_dirs):
-        print("✓ 所有章节处理成功！")
+    # 判断是单个章节目录还是数据目录
+    if os.path.basename(args.path).startswith('chapter'):
+        # 单个章节目录
+        print(f"处理单个章节: {os.path.basename(args.path)}")
+        if process_chapter(args.path, args.max_length):
+            print("✓ 章节处理成功！")
+        else:
+            print("❌ 章节处理失败")
     else:
-        print(f"⚠️  有 {len(chapter_dirs) - success_count} 个章节处理失败")
+        # 数据目录，查找所有章节目录
+        chapter_dirs = []
+        for item in os.listdir(args.path):
+            item_path = os.path.join(args.path, item)
+            if os.path.isdir(item_path) and item.startswith('chapter'):
+                chapter_dirs.append(item_path)
+        
+        chapter_dirs.sort()
+        
+        if not chapter_dirs:
+            print(f"❌ 在 {args.path} 中未找到章节目录")
+            return
+        
+        print(f"找到 {len(chapter_dirs)} 个章节目录")
+        
+        # 处理每个章节
+        success_count = 0
+        for chapter_dir in chapter_dirs:
+            if process_chapter(chapter_dir, args.max_length):
+                success_count += 1
+        
+        print(f"\n=== 处理完成 ===")
+        print(f"成功: {success_count}/{len(chapter_dirs)}")
+        
+        if success_count == len(chapter_dirs):
+            print("✓ 所有章节处理成功！")
+        else:
+            print(f"⚠️  有 {len(chapter_dirs) - success_count} 个章节处理失败")
 
 if __name__ == '__main__':
     main()

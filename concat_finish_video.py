@@ -328,7 +328,7 @@ def concat_videos_with_bgm(video_files, bgm_audio_path, output_path):
             "-i", concat_list_path,
             "-i", bgm_audio_path,
             "-c:v", gpu_params.get('video_codec', 'libx264'),  # 使用GPU编码器或CPU编码器
-            "-filter_complex", "[0:a]volume=1.0[original];[1:a]volume=0.15[bgm];[original][bgm]amix=inputs=2:duration=first:dropout_transition=3[mixed]",
+            "-filter_complex", "[0:a]volume=1.0[original];[1:a]volume=0.1[bgm];[original][bgm]amix=inputs=2:duration=first:dropout_transition=3[mixed]",
             "-map", "0:v:0",  # 使用第一个输入的视频流
             "-map", "[mixed]",  # 使用混合后的音频流
             "-c:a", "aac",

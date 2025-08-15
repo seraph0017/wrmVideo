@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_003 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.54,Default,,0,0,0,,望海城{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}老家，青瓦白墙
+Dialogue: 0,0:00:02.54,0:00:04.81,Default,,0,0,0,,的{\c&H0000FFFF&\b1}宋式{\c&H00FFFFFF&\b0}小院，午后阳光斜照
+Dialogue: 0,0:00:05.25,0:00:07.01,Default,,0,0,0,,。{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}正在屋内盘膝苦修，
+Dialogue: 0,0:00:07.37,0:00:09.11,Default,,0,0,0,,一身粗布圆领短打，面色
+Dialogue: 0,0:00:09.11,0:00:11.68,Default,,0,0,0,,沉静。突然，三道强悍气息
+Dialogue: 0,0:00:11.68,0:00:13.46,Default,,0,0,0,,如乌云压顶般笼罩小院，
+Dialogue: 0,0:00:13.76,0:00:15.91,Default,,0,0,0,,正是{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}、卢大、卢二。
+Dialogue: 0,0:00:16.55,0:00:18.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}猛然睁眼，感受到如山
+Dialogue: 0,0:00:18.70,0:00:20.86,Default,,0,0,0,,威压，体内{\c&H0000FFFF&\b1}北冥{\c&H00FFFFFF&\b0}吞天秘法
+Dialogue: 0,0:00:20.86,0:00:22.61,Default,,0,0,0,,急速运转，骨骼发出
+Dialogue: 0,0:00:22.61,0:00:24.56,Default,,0,0,0,,不堪重负的“咔吧”声，他
+Dialogue: 0,0:00:24.56,0:00:26.82,Default,,0,0,0,,咬牙坚持，额角青筋暴起，
+Dialogue: 0,0:00:27.12,0:00:27.98,Default,,0,0,0,,却不肯示弱。

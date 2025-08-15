@@ -11,6 +11,7 @@ import sys
 import time
 import json
 import base64
+import random
 from volcenginesdkarkruntime import Ark
 
 # 添加config目录到路径
@@ -19,6 +20,161 @@ sys.path.insert(0, config_dir)
 
 # 导入配置
 from config import ARK_CONFIG, IMAGE_TO_VIDEO_CONFIG
+
+def find_sound_effect(text, work_dir):
+    """
+    根据字幕文本匹配音效文件
+    
+    Args:
+        text: 字幕文本
+        work_dir: 工作目录
+    
+    Returns:
+        str: 音效文件路径，未找到返回None
+    """
+    # 音效关键词映射
+    sound_keywords = {
+        # 动作类
+        '脚步': ['action/footsteps_normal.wav'],
+        '走': ['action/footsteps_normal.wav'],
+        '跑': ['action/footsteps_normal.wav'],
+        '门': ['action/door_open.wav', 'action/door_close.wav'],
+        '开门': ['action/door_open.wav'],
+        '关门': ['action/door_close.wav'],
+        '衣服': ['action/cloth_rustle.wav'],
+        '纸': ['action/paper_rustle.mp3'],
+        '水': ['action/water_splash.wav'],
+        '玻璃': ['action/glass_break.mp3'],
+        
+        # 战斗类
+        '打': ['combat/punch_impact.wav'],
+        '击': ['combat/punch_impact.wav'],
+        '剑': ['combat/sword_clash.wav'],
+        '箭': ['combat/arrow_whoosh.wav'],
+        '爆炸': ['combat/explosion_large.wav', 'combat/explosion_small.wav'],
+        
+        # 情感类
+        '心跳': ['emotion/heartbeat_normal.mp3'],
+        '紧张': ['emotion/tension_build.mp3'],
+        '笑': ['emotion/laugh_gentle.wav'],
+        
+        # 环境类
+        '鸟': ['environment/birds_chirping.wav'],
+        '风': ['environment/wind_gentle.wav', 'environment/wind_strong.wav'],
+        '雨': ['environment/rain_light.wav', 'environment/rain_heavy.wav'],
+        '雷': ['environment/thunder.wav'],
+        '火': ['environment/fire_crackling.wav'],
+        '森林': ['environment/forest_ambient.wav'],
+        '城市': ['environment/city_ambient.wav'],
+        '市场': ['environment/marketplace_ambient.wav'],
+        '人群': ['environment/crowd_murmur.WAV'],
+        '夜': ['environment/night_crickets.wav'],
+        '山': ['environment/mountain_wind.wav'],
+        '流水': ['environment/water_flowing.wav'],
+        
+        # 杂项
+        '铃': ['misc/bell.wav', 'misc/bell_ring.wav'],
+        '钟': ['misc/bell.wav', 'misc/bell_ring.wav'],
+        '马': ['misc/horse.wav'],
+        '车': ['misc/carriage_wheels.wav'],
+        '钱': ['misc/coin_drop.wav']
+    }
+    
+    # 优先搜索路径
+    primary_sound_dir = os.path.join(work_dir, 'src', 'sound_effects')
+    secondary_sound_dir = os.path.join(work_dir, 'sound')
+    
+    # 遍历关键词匹配
+    for keyword, sound_files in sound_keywords.items():
+        if keyword in text:
+            # 在每个音效文件中查找
+            for sound_file in sound_files:
+                # 优先在 src/sound_effects 中查找
+                primary_path = os.path.join(primary_sound_dir, sound_file)
+                if os.path.exists(primary_path):
+                    print(f"匹配音效: '{keyword}' -> {primary_path}")
+                    return primary_path
+                
+                # 在 sound 目录中递归查找
+                sound_filename = os.path.basename(sound_file)
+                for root, dirs, files in os.walk(secondary_sound_dir):
+                    for file in files:
+                        if file.lower() == sound_filename.lower():
+                            secondary_path = os.path.join(root, file)
+                            print(f"匹配音效: '{keyword}' -> {secondary_path}")
+                            return secondary_path
+    
+    return None
+
+def get_sound_effects_for_first_video(chapter_path, work_dir):
+    """
+    为第一个视频获取音效列表，参考concat_narration_video.py中的逻辑
+    
+    Args:
+        chapter_path: 章节目录路径
+        work_dir: 工作目录
+    
+    Returns:
+        list: 音效信息列表，每个元素包含 {'path': 音效路径, 'start_time': 开始时间, 'duration': 持续时间, 'volume': 音量}
+    """
+    sound_effects = []
+    
+    # 检查是否为第一个章节（chapter_001）
+    chapter_name = os.path.basename(chapter_path)
+    is_first_chapter = chapter_name.endswith('_001') or chapter_name == 'chapter_001'
+    
+    if is_first_chapter:
+        # 第一个章节前5秒固定使用铃声
+        bell_path = os.path.join(work_dir, 'src', 'sound_effects', 'misc', 'bell_ring.wav')
+        if os.path.exists(bell_path):
+            sound_effects.append({
+                'path': bell_path,
+                'start_time': 0,
+                'duration': 5,
+                'volume': 0.5
+            })
+            print(f"添加铃声音效: {bell_path}")
+    
+    # 尝试读取narration文件来匹配音效
+    narration_file = os.path.join(chapter_path, 'narration_01.txt')
+    if os.path.exists(narration_file):
+        try:
+            with open(narration_file, 'r', encoding='utf-8') as f:
+                narration_content = f.read()
+            
+            # 简单的文本分析，为关键词添加音效
+            effect_path = find_sound_effect(narration_content, work_dir)
+            if effect_path:
+                # 如果是第一个章节，音效从5秒后开始，避免与铃声重叠
+                start_time = 5 if is_first_chapter else 0
+                sound_effects.append({
+                    'path': effect_path,
+                    'start_time': start_time,
+                    'duration': 3,
+                    'volume': 0.5
+                })
+                print(f"添加匹配音效: {effect_path}")
+        except Exception as e:
+            print(f"读取narration文件失败: {e}")
+    
+    # 如果没有找到任何音效，添加默认的脚步声（除了第一个章节的前5秒）
+    if not sound_effects or (is_first_chapter and len(sound_effects) == 1):
+        footsteps_path = os.path.join(work_dir, 'src', 'sound_effects', 'action', 'footsteps_normal.wav')
+        if os.path.exists(footsteps_path):
+            start_time = 5 if is_first_chapter else 0
+            sound_effects.append({
+                'path': footsteps_path,
+                'start_time': start_time,
+                'duration': 3,
+                'volume': 0.5
+            })
+            print(f"添加默认脚步声音效: {footsteps_path}")
+    
+    print(f"为章节 {chapter_name} 找到 {len(sound_effects)} 个音效")
+    for effect in sound_effects:
+        print(f"  - {os.path.basename(effect['path'])} at {effect['start_time']}s for {effect['duration']}s")
+    
+    return sound_effects
 
 def upload_image_to_server(image_path):
     """
@@ -222,7 +378,7 @@ def get_chapter_images(chapter_path):
 
 def generate_videos_for_chapter(chapter_dir):
     """
-    为单个章节生成视频
+    为单个章节生成视频，并匹配音效
     
     Args:
         chapter_dir: 章节目录路径
@@ -233,6 +389,9 @@ def generate_videos_for_chapter(chapter_dir):
     try:
         chapter_name = os.path.basename(chapter_dir)
         print(f"\n=== 处理章节: {chapter_name} ===")
+        
+        # 获取工作目录（项目根目录）
+        work_dir = os.path.dirname(os.path.abspath(__file__))
         
         # 获取章节的前两张图片
         first_image, second_image = get_chapter_images(chapter_dir)
@@ -247,6 +406,22 @@ def generate_videos_for_chapter(chapter_dir):
         
         # 默认每个视频5秒时长
         duration = 5
+        
+        # 获取音效列表
+        print(f"\n=== 匹配音效 ===")
+        sound_effects = get_sound_effects_for_first_video(chapter_dir, work_dir)
+        
+        # 保存音效信息到文件
+        if sound_effects:
+            sound_effects_file = os.path.join(chapter_dir, 'sound_effects.json')
+            try:
+                with open(sound_effects_file, 'w', encoding='utf-8') as f:
+                    json.dump(sound_effects, f, ensure_ascii=False, indent=2)
+                print(f"✓ 音效信息已保存到: {sound_effects_file}")
+            except Exception as e:
+                print(f"⚠ 保存音效信息失败: {e}")
+        else:
+            print(f"⚠ 未找到匹配的音效")
         
         success_count = 0
         

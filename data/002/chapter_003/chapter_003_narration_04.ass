@@ -14,14 +14,16 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:02.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}终于反应过来那无头尸体是自
-Dialogue: 0,0:00:02.37,0:00:04.49,Default,,0,0,0,,己脸上恐惧瞬间凝固
-Dialogue: 0,0:00:04.84,0:00:07.37,Default,,0,0,0,,九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑已将其脑袋搅成粉
-Dialogue: 0,0:00:07.37,0:00:10.04,Default,,0,0,0,,碎法相{\c&H0000FFFF&\b1}和元{\c&H00FFFFFF&\b0}神祖相皆未来得及逃
-Dialogue: 0,0:00:10.04,0:00:11.72,Default,,0,0,0,,出这变故突如其来
-Dialogue: 0,0:00:11.97,0:00:14.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二在卢三被杀后才回过神
-Dialogue: 0,0:00:15.14,0:00:17.50,Default,,0,0,0,,见三弟惨死双目瞬间血红
-Dialogue: 0,0:00:17.84,0:00:19.92,Default,,0,0,0,,杀气毕露死死盯着{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:20.31,0:00:22.31,Default,,0,0,0,,周身黑气缭绕悲痛欲绝
-Dialogue: 0,0:00:22.66,0:00:24.66,Default,,0,0,0,,三弟{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}发出撕心裂肺
-Dialogue: 0,0:00:24.66,0:00:26.43,Default,,0,0,0,,的怒吼声音在小院回荡
+Dialogue: 0,0:00:00.01,0:00:01.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}终于反应过来那无头
+Dialogue: 0,0:00:01.78,0:00:04.08,Default,,0,0,0,,尸体是自己，脸上恐惧瞬间
+Dialogue: 0,0:00:04.08,0:00:06.35,Default,,0,0,0,,凝固，九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑已将
+Dialogue: 0,0:00:06.35,0:00:08.62,Default,,0,0,0,,其脑袋搅成粉碎，法相{\c&H0000FFFF&\b1}和元{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.62,0:00:10.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}神祖相{\c&H00FFFFFF&\b0}皆未来得及逃出。这
+Dialogue: 0,0:00:10.66,0:00:12.27,Default,,0,0,0,,变故突如其来，{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}、
+Dialogue: 0,0:00:12.72,0:00:14.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}在卢三被杀后才回过神
+Dialogue: 0,0:00:15.14,0:00:17.04,Default,,0,0,0,,，见三弟惨死，双目瞬间
+Dialogue: 0,0:00:17.04,0:00:19.47,Default,,0,0,0,,血红，杀气毕露，死死盯着
+Dialogue: 0,0:00:19.47,0:00:21.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}，周身黑气缭绕，
+Dialogue: 0,0:00:21.52,0:00:23.07,Default,,0,0,0,,悲痛欲绝。“三弟——！”
+Dialogue: 0,0:00:23.46,0:00:25.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}发出撕心裂肺的怒吼，
+Dialogue: 0,0:00:25.34,0:00:26.43,Default,,0,0,0,,声音在小院回荡。

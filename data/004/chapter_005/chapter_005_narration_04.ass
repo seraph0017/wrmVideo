@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_005 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.40,Default,,0,0,0,,白蒹葭指尖划过案头最厚的{\c&H0000FFFF&\b1}卷宗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.79,0:00:04.22,Default,,0,0,0,,瞥见{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}眼下淡青
+Dialogue: 0,0:00:04.59,0:00:06.57,Default,,0,0,0,,突然嗔怪{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}这混蛋
+Dialogue: 0,0:00:07.04,0:00:08.32,Default,,0,0,0,,建了{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}就闭关
+Dialogue: 0,0:00:08.61,0:00:10.33,Default,,0,0,0,,把我们当牛使话音未落
+Dialogue: 0,0:00:10.62,0:00:12.51,Default,,0,0,0,,一个清朗男声自虚空中传来
+Dialogue: 0,0:00:12.72,0:00:13.97,Default,,0,0,0,,是谁在说我坏话
+Dialogue: 0,0:00:14.24,0:00:16.80,Default,,0,0,0,,光影扭曲间{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}青衫身影渐显
+Dialogue: 0,0:00:17.00,0:00:19.54,Default,,0,0,0,,墨发用玉冠束起腰间悬着{\c&H0000FFFF&\b1}玉佩{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:19.89,0:00:21.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}唇角{\c&H00FFFFFF&\b0}噙笑望着三女

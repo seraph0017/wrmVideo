@@ -14,15 +14,16 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.00,Default,,0,0,0,,院内{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}一步步逼近
-Dialogue: 0,0:00:02.47,0:00:05.11,Default,,0,0,0,,脸上狞笑因{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}痛苦表情而更显狰
-Dialogue: 0,0:00:05.11,0:00:08.08,Default,,0,0,0,,狞他每走一步地面便微微震动
-Dialogue: 0,0:00:08.45,0:00:10.57,Default,,0,0,0,,无形气势如潮水般涌向{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:10.78,0:00:12.84,Default,,0,0,0,,赵丰单膝跪地双手撑地
-Dialogue: 0,0:00:13.07,0:00:15.12,Default,,0,0,0,,指节发白体内气血翻涌
-Dialogue: 0,0:00:15.39,0:00:17.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}北冥{\c&H00FFFFFF&\b0}吞天秘法运转到极致
-Dialogue: 0,0:00:17.55,0:00:18.85,Default,,0,0,0,,却仍难敌境界差距
-Dialogue: 0,0:00:19.12,0:00:21.71,Default,,0,0,0,,给我去死吧{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}眼中闪过血
-Dialogue: 0,0:00:21.71,0:00:24.41,Default,,0,0,0,,光低吼一声蒲扇般的大手带着
-Dialogue: 0,0:00:24.41,0:00:26.38,Default,,0,0,0,,破{\c&H0000FFFF&\b1}空之声{\c&H00FFFFFF&\b0}抓向赵丰头颅
-Dialogue: 0,0:00:26.70,0:00:27.41,Default,,0,0,0,,杀意凛然
+Dialogue: 0,0:00:00.02,0:00:02.00,Default,,0,0,0,,院内，{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}一步步逼近，
+Dialogue: 0,0:00:02.47,0:00:04.63,Default,,0,0,0,,脸上狞笑因{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}痛苦表情而
+Dialogue: 0,0:00:04.63,0:00:06.53,Default,,0,0,0,,更显狰狞。他每走一步，
+Dialogue: 0,0:00:07.05,0:00:09.14,Default,,0,0,0,,地面便微微震动，无形气势
+Dialogue: 0,0:00:09.14,0:00:11.21,Default,,0,0,0,,如潮水般涌向{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}。赵丰
+Dialogue: 0,0:00:11.21,0:00:13.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}单膝{\c&H00FFFFFF&\b0}跪地，双手撑地，指节
+Dialogue: 0,0:00:13.35,0:00:15.12,Default,,0,0,0,,发白，体内气血翻涌，
+Dialogue: 0,0:00:15.39,0:00:17.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}北冥{\c&H00FFFFFF&\b0}吞天秘法运转到极致，
+Dialogue: 0,0:00:17.55,0:00:19.32,Default,,0,0,0,,却仍难敌境界差距。“给我
+Dialogue: 0,0:00:19.32,0:00:21.53,Default,,0,0,0,,去死吧！”{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}眼中闪过
+Dialogue: 0,0:00:21.53,0:00:23.75,Default,,0,0,0,,血光，低吼一声，蒲扇般的
+Dialogue: 0,0:00:23.75,0:00:25.90,Default,,0,0,0,,大手带着破{\c&H0000FFFF&\b1}空之声{\c&H00FFFFFF&\b0}抓向赵丰
+Dialogue: 0,0:00:25.90,0:00:27.41,Default,,0,0,0,,头颅，杀意凛然。

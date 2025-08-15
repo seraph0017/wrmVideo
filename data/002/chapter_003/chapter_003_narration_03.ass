@@ -14,15 +14,16 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.74,Default,,0,0,0,,千钧一发之际一声炸雷般的大喝
-Dialogue: 0,0:00:02.74,0:00:04.61,Default,,0,0,0,,从院外传来尔敢
-Dialogue: 0,0:00:04.93,0:00:07.13,Default,,0,0,0,,我{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}在此谁敢伤我大哥
-Dialogue: 0,0:00:07.55,0:00:10.26,Default,,0,0,0,,声音未落一道身影如鬼魅般出
-Dialogue: 0,0:00:10.26,0:00:11.93,Default,,0,0,0,,现在院中正是{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:12.12,0:00:14.43,Default,,0,0,0,,他眼神冰冷手中不知何时多了一
-Dialogue: 0,0:00:14.43,0:00:16.00,Default,,0,0,0,,柄长剑剑光一闪
-Dialogue: 0,0:00:16.27,0:00:18.25,Default,,0,0,0,,快如闪电{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}反应不及
-Dialogue: 0,0:00:18.52,0:00:21.02,Default,,0,0,0,,只觉脖颈一凉随即看到一具无头
-Dialogue: 0,0:00:21.02,0:00:23.75,Default,,0,0,0,,尸体立在原地热血从脖颈喷涌
-Dialogue: 0,0:00:24.05,0:00:25.96,Default,,0,0,0,,他脑中一片空白咦
-Dialogue: 0,0:00:26.38,0:00:27.48,Default,,0,0,0,,这尸体好眼熟
+Dialogue: 0,0:00:00.02,0:00:02.07,Default,,0,0,0,,千钧一发之际，一声炸雷
+Dialogue: 0,0:00:02.07,0:00:03.62,Default,,0,0,0,,般的大喝从院外传来：“
+Dialogue: 0,0:00:04.24,0:00:06.61,Default,,0,0,0,,尔敢，我{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}在此，谁敢伤
+Dialogue: 0,0:00:06.61,0:00:08.77,Default,,0,0,0,,我大哥！”声音未落，一道
+Dialogue: 0,0:00:08.77,0:00:10.97,Default,,0,0,0,,身影如鬼魅般出现在院中，
+Dialogue: 0,0:00:11.23,0:00:12.88,Default,,0,0,0,,正是{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}。他眼神冰冷，
+Dialogue: 0,0:00:13.13,0:00:15.01,Default,,0,0,0,,手中不知何时多了一柄长剑
+Dialogue: 0,0:00:15.35,0:00:16.96,Default,,0,0,0,,，剑光一闪，快如闪电。
+Dialogue: 0,0:00:17.23,0:00:19.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}反应不及，只觉脖颈一
+Dialogue: 0,0:00:19.25,0:00:21.43,Default,,0,0,0,,凉，随即看到一具无头尸体
+Dialogue: 0,0:00:21.43,0:00:23.75,Default,,0,0,0,,立在原地，热血从脖颈喷涌
+Dialogue: 0,0:00:24.05,0:00:25.96,Default,,0,0,0,,。他脑中一片空白，“咦，
+Dialogue: 0,0:00:26.38,0:00:27.48,Default,,0,0,0,,这尸体好眼熟……”
