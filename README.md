@@ -4,6 +4,81 @@
 
 ## ✨ 最新更新
 
+- 🔄 **异步任务监控优化**: 优化check_async_tasks.py脚本，默认启用持续监控模式：
+  - **默认常驻模式**: 直接执行`python check_async_tasks.py`即默认启用`--process-all --monitor`功能，持续监控所有数据目录
+  - **智能监控**: 自动扫描data目录下所有00x/chapter_xxx结构，持续处理异步图片生成任务
+  - **不退出运行**: 脚本持续运行，每30秒检查一次所有异步任务状态，自动下载完成的图片
+  - **向下兼容**: 保留所有原有参数选项，添加`--legacy-mode`参数进入交互模式
+  - **错误恢复**: 监控过程中遇到错误会自动重试，确保服务稳定性
+  - **实时统计**: 每轮检查后显示处理统计信息，包括章节数、任务数、成功率等
+- 📁 **项目目录整理**: 完成项目目录结构优化，提升代码组织和维护性：
+  - **测试文件统一**: 将所有测试文件移动到test目录，包括test_character_image_matching.py、test_character_parsing.py、test_dynamic_characters.py等
+  - **目录结构清理**: 清理根目录下的测试文件，保持项目根目录整洁
+  - **文档更新**: 同步更新README.md文档，反映最新的项目结构
+  - **便于维护**: 统一的测试文件管理，便于开发和测试工作
+- 📹 **视频文件大小优化**: 全面优化视频编码参数，确保最终生成的视频文件大小控制在50MB以下：
+  - **多级压缩策略**: 在concat_first_video.py、concat_narration_video.py和concat_finish_video.py中优化编码参数
+  - **GPU加速编码**: 支持NVIDIA GPU (h264_nvenc)、macOS VideoToolbox和CPU (libx264)多种编码方式
+  - **智能比特率控制**: 根据不同硬件平台调整CQ/CRF值（32）和最大比特率限制
+  - **最终压缩机制**: 在concat_finish_video.py中新增compress_final_video()函数，对超过50MB的视频进行二次压缩
+  - **质量保证**: 保持720x1280分辨率和30fps帧率，确保视频质量的同时大幅减小文件大小
+  - **自动检测压缩**: 生成完成后自动检测文件大小，超过50MB时自动触发最终压缩
+  - **压缩效果显著**: 测试显示可将136MB文件压缩至17-31MB，在保持良好视频质量的同时确保文件大小控制在50MB以内
+- 🔊 **音频标准化优化**: 修复视频中不同narration段之间音量不一致的问题：
+  - **动态音频标准化**: 在concat_finish_video.py中使用dynaudnorm滤镜自动平衡音频音量
+  - **解决音量突变**: 修复不同narration段之间音量差异导致的声音突然变小问题
+  - **智能音量控制**: 自动调整音频动态范围，确保整个视频音量保持一致
+  - **保持音质**: 在标准化过程中保持音频质量和清晰度，避免音质损失
+- 🖼️ **角标图片尺寸优化**: 调整rmxs.png角标图片尺寸以匹配视频分辨率：
+  - **尺寸标准化**: 将src/banner/rmxs.png从1080x1920调整为720x1280，与视频分辨率完全匹配
+  - **智能缩放**: 在concat_narration_video.py中添加水印缩放逻辑，将720x1280的水印缩放到360x640（1/2大小）
+  - **尺寸优化**: 经过测试调整，从最初的180x320（1/4大小）调整为360x640（1/2大小），确保角标既不会过小也不会覆盖视频
+  - **解决显示问题**: 修复角标大小不一致和底部角标显示不完整的问题，避免水印覆盖整个视频
+  - **保持质量**: 使用FFmpeg高质量缩放算法，确保角标图片清晰度
+  - **完美适配**: 角标以合适的大小显示在视频右上角，不影响主要内容的观看
+- 🖼️ **图片格式检测优化**: 优化gen_first_video_async.py中的图片格式识别机制，基于文件实际内容而非扩展名判断格式：
+  - **内容检测**: 使用imghdr模块和文件头检测技术，准确识别图片的真实格式
+  - **MIME类型映射**: 支持JPEG、PNG、GIF、BMP、WebP等主流图片格式的准确识别
+  - **扩展名容错**: 解决扩展名与实际格式不符的问题（如.jpeg文件实际为PNG格式）
+  - **向下兼容**: 保持对现有代码的完全兼容，仅优化格式检测逻辑
+  - **测试验证**: 提供test_image_format_detection.py测试脚本，验证各种格式混淆场景
+  - **错误处理**: 增强错误处理机制，对无法识别的格式提供合理的默认值
+- 🎭 **角色解析功能升级**: 全面升级gen_character_image.py中的角色解析功能，支持新格式动态角色标签：
+  - **动态角色识别**: 支持新格式 `<角色1>`、`<角色2>` 等动态角色标签，不再限制于固定的四个角色
+  - **向下兼容**: 保持对旧格式 `<主角1>`、`<配角1>` 的完全兼容，确保现有项目正常运行
+  - **增强解析能力**: 新增对 `<特殊标记>` 字段的解析，更完整地提取角色特征信息
+  - **智能过滤**: 自动过滤 "无" 值的配饰和特殊标记，避免无效信息干扰图片生成
+  - **测试验证**: 提供 `test_character_parsing.py` 测试脚本，验证角色解析功能的准确性
+  - **灵活扩展**: 支持任意数量的角色定义，适应不同小说的角色设定需求
+- 📁 **异步任务目录优化**: 优化llm_image.py中的异步任务管理，将任务文件保存到各个chapter的async_tasks目录：
+  - **分布式任务管理**: 新增 `generate_image_with_character_to_chapter_async()` 函数，将异步任务保存到对应chapter的async_tasks子目录
+  - **智能路径解析**: 自动解析图片路径，识别对应的chapter目录（如data/004/chapter_001）
+  - **目录自动创建**: 自动创建chapter下的async_tasks目录，无需手动管理
+  - **任务信息完整**: 保存完整的任务信息，包括task_id、输出路径、提示词、角色图片等
+  - **重新生成优化**: 修改 `regenerate_failed_image()` 函数，使用新的分布式任务管理机制
+  - **测试工具**: 新增 `test_chapter_async_tasks.py` 测试脚本，验证分布式任务管理功能
+  - **便于管理**: 每个chapter的异步任务独立管理，便于追踪和调试
+- 🔍 **图片领口审查优化**: 全面优化llm_image.py中的领口审查prompt，提升交领等问题领口的识别准确性：
+  - **详细审查标准**: 明确定义通过和失败的领口类型，包括圆领、立领、高领等通过类型
+  - **重点识别交领**: 特别强调交领/衽领的识别，明确其"左右衣襟交叉重叠，形成V字形开口"的特征
+  - **皮肤露出检测**: 重点关注领口是否露出脖子以下皮肤区域，提升检测精度
+  - **传统服装适配**: 针对汉服、古装等传统服装的交领设计进行专门优化
+  - **结构化prompt**: 采用清晰的标准分类和判断要求，提升LLM理解准确性
+  - **测试工具**: 新增test_optimized_prompt.py测试脚本，便于验证prompt优化效果
+  - **自动重新生成**: 支持--auto-regenerate参数，检测到失败图片时自动重新生成
+- 🚀 **增强版脚本生成器 gen_script_v2.py**: 基于gen_script.py的全面增强版本，新增多项高级功能：
+  - **自动章节质量验证**: 生成完成后自动验证所有章节的解说文案质量（长度、内容完整性等）
+  - **智能重新生成**: 对不达标章节自动重新生成，支持最多3次重试，确保所有章节质量达标
+  - **指定章节数量生成**: 支持 `--limit N` 参数，可指定只生成前N个章节（如前5章、前10章）
+  - **智能验证机制**: 仅验证字数范围（1200-1800字），自动修复XML标签闭合问题，无需重新生成
+  - **模板化Prompt**: 使用chapter_narration_prompt.j2模板文件生成解说内容，便于维护和调整
+  - **智能目录结构**: 根据小说文件路径自动确定输出目录（如data/004/xxx.txt输出到data/004）
+  - **内存优化处理**: 采用分批处理和即时保存策略，生成内容后立即保存到文件并释放内存，避免大量数据在内存中积累
+  - **验证模式**: 支持 `--validate-only` 仅验证现有章节，不生成新内容
+  - **重新生成模式**: 支持 `--regenerate` 重新生成无效章节
+  - **灵活配置**: 支持自定义最小/最大长度、最大重试次数等参数
+  - **详细日志**: 提供完整的生成、验证、重试过程日志，便于问题排查
+  - **命令行友好**: 丰富的命令行参数支持，适合自动化脚本和批处理
 - 🧪 **图片生成Prompt测试工具**: 新增专门的图片生成prompt测试脚本，便于调试和优化图片生成效果：
   - **多种预设prompt**: 提供5种不同类型的测试prompt（基础男性、神秘女性、西式骑士、科幻战士、简化测试）
   - **6种测试模式**: 单个预设测试、批量预设测试、自定义prompt测试、预设prompt批量比较、自定义prompt专业测试、退出
@@ -173,6 +248,14 @@ wrmVideo/
 ├── test/                   # 测试文件目录
 │   ├── test_*.py           # 各种测试脚本
 │   ├── debug_*.py          # 调试脚本
+│   ├── test_character_image_matching.py # 角色图片匹配测试
+│   ├── test_character_parsing.py # 角色解析测试
+│   ├── test_dynamic_characters.py # 动态角色测试
+│   ├── test_json_fix.py    # JSON修复测试
+│   ├── test_videotoolbox.py # VideoToolbox测试
+│   ├── test_voice_debug.py # 语音调试测试
+│   ├── test_voice_direct.py # 语音直接测试
+│   ├── test_concat.txt     # 合并测试文本
 │   └── test_server_ffmpeg.py # 服务器FFmpeg配置检测脚本
 ├── Character_Images/       # 角色图片库（已移至根目录）
 ├── src/                    # 源代码目录
@@ -189,6 +272,7 @@ wrmVideo/
 ├── check_async_tasks.py    # 异步任务状态查询和下载脚本
 ├── generate_all_images.py  # 完整图片生成流程脚本
 ├── gen_script.py           # 解说文案生成脚本
+├── gen_script_v2.py        # 增强版解说文案生成脚本（支持章节质量验证、重新生成、指定章节数量）
 ├── gen_audio.py            # 音频生成脚本
 ├── gen_first_video_async.py # 第一个narration视频生成脚本（异步生成video_1和video_2）
 ├── concat_first_video.py   # 合并video_1与video_2并加入转场特效脚本
@@ -424,7 +508,23 @@ python generate.py data/001/chapter_001
 #### 分步骤处理
 ```bash
 # 1. 生成解说文案
+# 基础版本
 python gen_script.py data/001
+
+# 增强版本（推荐）- 支持质量验证和重新生成
+python gen_script_v2.py novel.txt --output data/001 --chapters 50
+
+# 只生成前5个章节
+python gen_script_v2.py novel.txt --output data/001 --limit 5
+
+# 仅验证现有章节质量
+python gen_script_v2.py novel.txt --output data/001 --validate-only
+
+# 验证并重新生成无效章节
+python gen_script_v2.py novel.txt --output data/001 --validate-only --regenerate
+
+# 自定义验证参数
+python gen_script_v2.py novel.txt --output data/001 --min-length 1000 --max-length 1800 --max-retries 5
 
 # 2. 生成图片（推荐使用异步模式）
 # 推荐方式 - 异步生成（每个章节固定30张图片：10个分镜×3张图片）

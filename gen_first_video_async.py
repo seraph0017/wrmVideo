@@ -12,6 +12,7 @@ import time
 import json
 import base64
 import random
+import imghdr
 from volcenginesdkarkruntime import Ark
 
 # 添加config目录到路径
@@ -194,20 +195,37 @@ def upload_image_to_server(image_path):
             image_data = image_file.read()
             base64_encoded = base64.b64encode(image_data).decode('utf-8')
         
-        # 根据文件扩展名确定MIME类型
-        file_ext = os.path.splitext(image_path)[1].lower()
-        if file_ext in ['.jpg', '.jpeg']:
+        # 根据文件实际内容确定MIME类型
+        image_format = imghdr.what(image_path)
+        if image_format == 'jpeg':
             mime_type = 'image/jpeg'
-        elif file_ext == '.png':
+        elif image_format == 'png':
             mime_type = 'image/png'
-        elif file_ext == '.gif':
+        elif image_format == 'gif':
             mime_type = 'image/gif'
-        elif file_ext == '.bmp':
+        elif image_format == 'bmp':
             mime_type = 'image/bmp'
+        elif image_format == 'webp':
+            mime_type = 'image/webp'
         else:
-            mime_type = 'image/jpeg'  # 默认使用jpeg
+            # 如果imghdr无法识别，尝试通过文件头手动检测
+            with open(image_path, 'rb') as f:
+                header = f.read(16)
+                if header.startswith(b'\xff\xd8\xff'):
+                    mime_type = 'image/jpeg'
+                elif header.startswith(b'\x89PNG\r\n\x1a\n'):
+                    mime_type = 'image/png'
+                elif header.startswith(b'GIF87a') or header.startswith(b'GIF89a'):
+                    mime_type = 'image/gif'
+                elif header.startswith(b'BM'):
+                    mime_type = 'image/bmp'
+                elif header.startswith(b'RIFF') and b'WEBP' in header:
+                    mime_type = 'image/webp'
+                else:
+                    mime_type = 'image/jpeg'  # 默认使用jpeg
         
         # 返回data URL格式
+        print(mime_type)
         data_url = f"data:{mime_type};base64,{base64_encoded}"
         print(f"图片转换成功: {os.path.basename(image_path)}")
         return data_url
@@ -279,7 +297,7 @@ def create_video_from_single_image_async(image_path, duration, output_path, max_
                 content=[
                     {
                         "type": "text",
-                        "text": f"画面有轻微的动态效果，保持画面稳定 --ratio adaptive --dur {duration}"
+                        "text": f"画面有轻微的动态效果，保持画面稳定 --ratio 9:16 --dur {duration}"
                     },
                     {
                         "type": "image_url",

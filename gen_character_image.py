@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-角色图片生成脚本
-根据narration.txt中的角色信息生成角色图片
+角色图片生成脚本（异步版本）
+根据narration.txt中的角色信息异步生成角色图片
 """
 
 import os
@@ -10,6 +10,8 @@ import re
 import argparse
 import sys
 import base64
+import json
+import time
 from config.prompt_config import ART_STYLES
 from config.config import STORY_STYLE, IMAGE_TWO_CONFIG
 from volcengine.visual.VisualService import VisualService
@@ -38,61 +40,227 @@ def parse_character_info(narration_file_path):
         style_match = re.search(r'<绘画风格>([^<]+)</绘画风格>', content)
         drawing_style = style_match.group(1) if style_match else None
         
-        # 查找本章出镜人物部分
-        character_section_match = re.search(r'<本章出镜人物>(.*?)</本章出镜人物>', content, re.DOTALL)
-        if not character_section_match:
-            print("警告: 未找到本章出镜人物信息")
-            return characters, drawing_style
+        # 首先尝试解析新格式的角色定义（<角色1>、<角色2>等）
+        character_pattern = r'<角色(\d+)>(.*?)</角色\d+>'
+        character_matches = re.findall(character_pattern, content, re.DOTALL)
         
-        character_section = character_section_match.group(1)
+        if character_matches:
+            # 新格式：<角色1>、<角色2>等
+            for char_num, char_content in character_matches:
+                character_info = {}
+                
+                # 提取姓名
+                name_match = re.search(r'<姓名>([^<]+)</姓名>', char_content)
+                if name_match:
+                    character_info['name'] = name_match.group(1).strip()
+                else:
+                    character_info['name'] = f'角色{char_num}'
+                
+                # 提取性别
+                gender_match = re.search(r'<性别>([^<]+)</性别>', char_content)
+                character_info['gender'] = gender_match.group(1).strip() if gender_match else '未知'
+                
+                # 提取年龄段
+                age_match = re.search(r'<年龄段>([^<]+)</年龄段>', char_content)
+                age_group = age_match.group(1).strip() if age_match else '未知'
+                
+                # 构建角色描述
+                details = []
+                
+                # 外貌特征
+                appearance_section = re.search(r'<外貌特征>(.*?)</外貌特征>', char_content, re.DOTALL)
+                if appearance_section:
+                    appearance_content = appearance_section.group(1)
+                    
+                    # 发型
+                    hair_style_match = re.search(r'<发型>([^<]+)</发型>', appearance_content)
+                    if hair_style_match:
+                        details.append(hair_style_match.group(1).strip())
+                    
+                    # 发色
+                    hair_color_match = re.search(r'<发色>([^<]+)</发色>', appearance_content)
+                    if hair_color_match:
+                        details.append(hair_color_match.group(1).strip())
+                    
+                    # 面部特征
+                    face_match = re.search(r'<面部特征>([^<]+)</面部特征>', appearance_content)
+                    if face_match:
+                        details.append(face_match.group(1).strip())
+                    
+                    # 身材特征
+                    body_match = re.search(r'<身材特征>([^<]+)</身材特征>', appearance_content)
+                    if body_match:
+                        details.append(body_match.group(1).strip())
+                    
+                    # 特殊标记
+                    special_match = re.search(r'<特殊标记>([^<]+)</特殊标记>', appearance_content)
+                    if special_match and special_match.group(1).strip() != '无':
+                        details.append(special_match.group(1).strip())
+                
+                # 服装风格
+                clothing_section = re.search(r'<服装风格>(.*?)</服装风格>', char_content, re.DOTALL)
+                if clothing_section:
+                    clothing_content = clothing_section.group(1)
+                    
+                    # 上衣
+                    top_match = re.search(r'<上衣>([^<]+)</上衣>', clothing_content)
+                    if top_match:
+                        details.append(top_match.group(1).strip())
+                    
+                    # 下装
+                    bottom_match = re.search(r'<下装>([^<]+)</下装>', clothing_content)
+                    if bottom_match:
+                        details.append(bottom_match.group(1).strip())
+                    
+                    # 配饰
+                    accessory_match = re.search(r'<配饰>([^<]+)</配饰>', clothing_content)
+                    if accessory_match and accessory_match.group(1).strip() != '无':
+                        details.append(accessory_match.group(1).strip())
+                
+                character_info['description'] = '，'.join(details)
+                character_info['age_group'] = age_group
+                characters.append(character_info)
+                
+                print(f"解析到角色: {character_info['name']} -> {character_info['description']}")
         
-        # 解析每个角色
-        character_matches = re.findall(r'<角色\d+>(.*?)</角色\d+>', character_section, re.DOTALL)
-        
-        for i, character_content in enumerate(character_matches, 1):
-            character_info = {}
+        else:
+            # 兼容旧格式：<主角1>、<配角1>等
+            # 解析主角定义
+            protagonist_pattern = r'<主角(\d+)>(.*?)</主角\d+>'
+            protagonist_matches = re.findall(protagonist_pattern, content, re.DOTALL)
             
-            # 提取角色名
-            name_match = re.search(r'<角色名>([^<]+)</角色名>', character_content)
-            if name_match:
-                character_info['name'] = name_match.group(1)
-            else:
-                character_info['name'] = f'角色{i}'
+            for char_num, char_content in protagonist_matches:
+                character_info = {}
+                
+                # 提取姓名
+                name_match = re.search(r'<姓名>([^<]+)</姓名>', char_content)
+                if name_match:
+                    character_info['name'] = name_match.group(1).strip()
+                else:
+                    character_info['name'] = f'主角{char_num}'
+                
+                # 提取性别
+                gender_match = re.search(r'<性别>([^<]+)</性别>', char_content)
+                character_info['gender'] = gender_match.group(1).strip() if gender_match else '未知'
+                
+                # 提取年龄段
+                age_match = re.search(r'<年龄段>([^<]+)</年龄段>', char_content)
+                age_group = age_match.group(1).strip() if age_match else '未知'
+                
+                # 构建角色描述
+                details = []
+                
+                # 外貌特征
+                appearance_section = re.search(r'<外貌特征>(.*?)</外貌特征>', char_content, re.DOTALL)
+                if appearance_section:
+                    appearance_content = appearance_section.group(1)
+                    
+                    # 发型
+                    hair_style_match = re.search(r'<发型>([^<]+)</发型>', appearance_content)
+                    if hair_style_match:
+                        details.append(hair_style_match.group(1).strip())
+                    
+                    # 发色
+                    hair_color_match = re.search(r'<发色>([^<]+)</发色>', appearance_content)
+                    if hair_color_match:
+                        details.append(hair_color_match.group(1).strip())
+                    
+                    # 面部特征
+                    face_match = re.search(r'<面部特征>([^<]+)</面部特征>', appearance_content)
+                    if face_match:
+                        details.append(face_match.group(1).strip())
+                    
+                    # 身材特征
+                    body_match = re.search(r'<身材特征>([^<]+)</身材特征>', appearance_content)
+                    if body_match:
+                        details.append(body_match.group(1).strip())
+                
+                # 服装风格
+                clothing_section = re.search(r'<服装风格>(.*?)</服装风格>', char_content, re.DOTALL)
+                if clothing_section:
+                    clothing_content = clothing_section.group(1)
+                    
+                    # 上衣
+                    top_match = re.search(r'<上衣>([^<]+)</上衣>', clothing_content)
+                    if top_match:
+                        details.append(top_match.group(1).strip())
+                    
+                    # 下装
+                    bottom_match = re.search(r'<下装>([^<]+)</下装>', clothing_content)
+                    if bottom_match:
+                        details.append(bottom_match.group(1).strip())
+                    
+                    # 配饰
+                    accessory_match = re.search(r'<配饰>([^<]+)</配饰>', clothing_content)
+                    if accessory_match:
+                        details.append(accessory_match.group(1).strip())
+                
+                character_info['description'] = '，'.join(details)
+                character_info['age_group'] = age_group
+                characters.append(character_info)
+                
+                print(f"解析到主角: {character_info['name']} -> {character_info['description']}")
             
-            # 提取各项信息
-            fields = ['性别', '年龄', '发型', '发色', '面部细节', '面部表情', '衣着款式', '衣着颜色', '其他特点']
-            details = []
+            # 解析配角定义
+            supporting_pattern = r'<配角(\d+)>(.*?)</配角\d+>'
+            supporting_matches = re.findall(supporting_pattern, content, re.DOTALL)
             
-            # 单独保存性别信息
-            gender_match = re.search(r'<性别>([^<]+)</性别>', character_content)
-            character_info['gender'] = gender_match.group(1) if gender_match else '未知'
-            
-            for field in fields:
-                field_match = re.search(f'<{field}>([^<]+)</{field}>', character_content)
-                if field_match:
-                    value = field_match.group(1)
-                    if value and value != '未提及':
-                        if field == '性别':
-                            details.append(value)
-                        elif field == '年龄':
-                            details.append(f'{value}人')
-                        elif field == '发型' or field == '发色':
-                            details.append(value)
-                        elif field == '面部细节':
-                            details.append(value)
-                        elif field == '面部表情':
-                            details.append(f'表情{value}')
-                        elif field == '衣着款式':
-                            details.append(value)
-                        elif field == '衣着颜色':
-                            details.append(f'{value}色')
-                        elif field == '其他特点':
-                            details.append(value)
-            
-            character_info['description'] = '，'.join(details)
-            characters.append(character_info)
-            
-            print(f"解析到角色: {character_info['name']} -> {character_info['description']}")
+            for char_num, char_content in supporting_matches:
+                character_info = {}
+                
+                # 提取姓名
+                name_match = re.search(r'<姓名>([^<]+)</姓名>', char_content)
+                if name_match:
+                    character_info['name'] = name_match.group(1).strip()
+                else:
+                    character_info['name'] = f'配角{char_num}'
+                
+                # 提取性别
+                gender_match = re.search(r'<性别>([^<]+)</性别>', char_content)
+                character_info['gender'] = gender_match.group(1).strip() if gender_match else '未知'
+                
+                # 提取年龄段
+                age_match = re.search(r'<年龄段>([^<]+)</年龄段>', char_content)
+                age_group = age_match.group(1).strip() if age_match else '未知'
+                
+                # 构建角色描述（简化版）
+                details = []
+                
+                # 外貌特征
+                appearance_section = re.search(r'<外貌特征>(.*?)</外貌特征>', char_content, re.DOTALL)
+                if appearance_section:
+                    appearance_content = appearance_section.group(1)
+                    
+                    # 发型
+                    hair_style_match = re.search(r'<发型>([^<]+)</发型>', appearance_content)
+                    if hair_style_match:
+                        details.append(hair_style_match.group(1).strip())
+                    
+                    # 发色
+                    hair_color_match = re.search(r'<发色>([^<]+)</发色>', appearance_content)
+                    if hair_color_match:
+                        details.append(hair_color_match.group(1).strip())
+                    
+                    # 面部特征
+                    face_match = re.search(r'<面部特征>([^<]+)</面部特征>', appearance_content)
+                    if face_match:
+                        details.append(face_match.group(1).strip())
+                
+                # 服装风格
+                clothing_section = re.search(r'<服装风格>(.*?)</服装风格>', char_content, re.DOTALL)
+                if clothing_section:
+                    clothing_content = clothing_section.group(1)
+                    
+                    # 上衣
+                    top_match = re.search(r'<上衣>([^<]+)</上衣>', clothing_content)
+                    if top_match:
+                        details.append(top_match.group(1).strip())
+                
+                character_info['description'] = '，'.join(details)
+                character_info['age_group'] = age_group
+                characters.append(character_info)
+                
+                print(f"解析到配角: {character_info['name']} -> {character_info['description']}")
         
         return characters, drawing_style
         
@@ -100,100 +268,163 @@ def parse_character_info(narration_file_path):
         print(f"解析角色信息时发生错误: {e}")
         return characters, None
 
-def generate_image(prompt, output_path, style=None, chapter_path=None):
+def save_task_info(task_id, task_info, tasks_dir):
     """
-    生成图片文件
+    保存任务信息到txt文件
+    
+    Args:
+        task_id: 任务ID
+        task_info: 任务信息
+        tasks_dir: 任务文件保存目录
+    """
+    task_file = os.path.join(tasks_dir, f"{task_id}.txt")
+    
+    # 确保目录存在
+    os.makedirs(tasks_dir, exist_ok=True)
+    
+    # 保存任务信息
+    with open(task_file, 'w', encoding='utf-8') as f:
+        json.dump(task_info, f, ensure_ascii=False, indent=2)
+    
+    print(f"任务信息已保存: {task_file}")
+
+def generate_character_image_async(prompt, output_path, character_name, style=None, chapter_path=None, max_retries=3):
+    """
+    异步生成角色图片
     
     Args:
         prompt: 图片描述
         output_path: 输出文件路径
+        character_name: 角色名称
         style: 艺术风格，如果为None则使用配置文件中的默认风格
-        chapter_path: 章节路径，用于获取人物描述信息
+        chapter_path: 章节路径，用于保存任务信息
+        max_retries: 最大重试次数
     
     Returns:
-        bool: 是否成功生成
+        bool: 是否成功提交任务
     """
-    try:
-        visual_service = VisualService()
-        
-        # 设置访问密钥
-        visual_service.set_ak(IMAGE_TWO_CONFIG['access_key'])
-        visual_service.set_sk(IMAGE_TWO_CONFIG['secret_key'])
-        
-        # 获取风格设置
-        if style is None:
-            style = IMAGE_TWO_CONFIG.get('default_style', 'manga')
-        
-        style_config = ART_STYLES.get(style, ART_STYLES['manga'])
-        style_prompt = style_config.get('description', style_config)
-        
-        print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
-        
-        # 构建完整的prompt
-        full_prompt = "以下内容为描述生成图片\n宫崎骏动漫风格，数字插画,高饱和度,卡通,简约画风,完整色块,整洁的画面,宫崎骏艺术风格,高饱和的色彩和柔和的阴影,童话色彩风格。 人物着装：圆领袍\n\n" + style_prompt + "\n\n" + prompt + "\n\n"
-        
-        print("这里是完整的prompt===>>>{}".format(full_prompt))
-        # 请求参数 - 使用配置文件中的值
-        form = {
-            "req_key": IMAGE_TWO_CONFIG['req_key'],
-            "prompt": full_prompt,
-            "llm_seed": -1,
-            "seed": -1,
-            "scale": IMAGE_TWO_CONFIG['scale'],
-            "ddim_steps": IMAGE_TWO_CONFIG['ddim_steps'],
-            "width": IMAGE_TWO_CONFIG['default_width'],
-            "height": IMAGE_TWO_CONFIG['default_height'],
-            "use_pre_llm": IMAGE_TWO_CONFIG['use_pre_llm'],
-            "use_sr": IMAGE_TWO_CONFIG['use_sr'],
-            "return_url": IMAGE_TWO_CONFIG['return_url'],  # 返回base64格式
-            "negative_prompt": IMAGE_TWO_CONFIG['negative_prompt'],
-            "logo_info": {
-                "add_logo": False,
-                "position": 0,
-                "language": 0,
-                "opacity": 0.3,
-                "logo_text_content": "这里是明水印内容"
+    # 检查图片是否已存在
+    if os.path.exists(output_path):
+        print(f"✓ 图片已存在，跳过生成: {os.path.basename(output_path)}")
+        return True
+    
+    for attempt in range(max_retries + 1):
+        try:
+            if attempt > 0:
+                print(f"🔄 第 {attempt} 次重试生成角色图片: {character_name}")
+                time.sleep(2 * attempt)  # 递增延迟
+            
+            visual_service = VisualService()
+            
+            # 设置访问密钥
+            visual_service.set_ak(IMAGE_TWO_CONFIG['access_key'])
+            visual_service.set_sk(IMAGE_TWO_CONFIG['secret_key'])
+            
+            # 获取风格设置
+            if style is None:
+                style = IMAGE_TWO_CONFIG.get('default_style', 'manga')
+            
+            style_config = ART_STYLES.get(style, ART_STYLES['manga'])
+            style_prompt = style_config.get('description', style_config)
+            
+            print(f"正在异步生成{style}风格角色图片: {character_name}")
+            
+            # 构建完整的prompt
+            full_prompt = "以下内容为描述生成图片\n 人物着装：圆领袍\n领口：高领，圆领，立领，不要V领，不要衽领，不要交领，不要y型领，不要漏脖子以下的皮肤\n宫崎骏动漫风格，数字插画,高饱和度,卡通,简约画风,完整色块,整洁的画面,宫崎骏艺术风格,高饱和的色彩和柔和的阴影,童话色彩风格。\n\n" + style_prompt + "\n\n" + prompt + "\n\n"
+            
+            if attempt == 0:  # 只在第一次尝试时打印完整prompt
+                print("这里是完整的prompt===>>>{}".format(full_prompt))
+            
+            # 构建请求参数
+            form = {
+                "req_key": "high_aes_general_v21_L",
+                "prompt": full_prompt,
+                "seed": 10 + attempt,  # 每次重试使用不同的seed
+                "scale": 3.5,
+                "return_url": IMAGE_TWO_CONFIG['return_url'],  # 返回base64格式
+                "negative_prompt": IMAGE_TWO_CONFIG['negative_prompt'],
+                "logo_info": {
+                    "add_logo": False,
+                    "position": 0,
+                    "language": 0,
+                    "opacity": 0.3,
+                    "logo_text_content": "这里是明水印内容"
+                }
             }
-        }
-        
-        resp = visual_service.cv_process(form)
-        
-        # 检查响应
-        if 'data' in resp and 'binary_data_base64' in resp['data']:
-            # 获取base64图片数据
-            base64_data = resp['data']['binary_data_base64'][0]  # 取第一张图片
             
-            # 确保输出目录存在
-            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+            # 调用异步API提交任务
+            if attempt == 0:
+                print("提交异步任务...")
             
-            # 解码并保存图片
-            image_data = base64.b64decode(base64_data)
-            with open(output_path, 'wb') as f:
-                f.write(image_data)
+            resp = visual_service.cv_sync2async_submit_task(form)
             
-            print(f"图片已保存: {output_path}")
-            return True
-        else:
-            print(f"图片生成失败: {resp}")
-            return False
+            if attempt == 0:
+                print(f"异步任务响应: {resp}")
             
-    except Exception as e:
-        print(f"生成图片时发生错误: {e}")
-        return False
+            # 检查响应
+            if 'data' in resp and 'task_id' in resp['data']:
+                task_id = resp['data']['task_id']
+                print(f"✓ 角色图片任务提交成功，Task ID: {task_id}")
+                
+                # 保存任务信息到章节的async_tasks目录
+                safe_character_name = character_name.replace('&', '')
+                task_info = {
+                    'task_id': task_id,
+                    'output_path': output_path,
+                    'filename': os.path.basename(output_path),
+                    'character_name': safe_character_name,
+                    'prompt': prompt,
+                    'full_prompt': full_prompt,
+                    'style': style,
+                    'submit_time': time.time(),
+                    'status': 'submitted',
+                    'attempt': attempt + 1
+                }
+                
+                # 保存到章节目录下的async_tasks文件夹
+                if chapter_path:
+                    async_tasks_dir = os.path.join(chapter_path, 'async_tasks')
+                else:
+                    async_tasks_dir = 'async_tasks'
+                
+                save_task_info(task_id, task_info, async_tasks_dir)
+                return True
+            else:
+                error_msg = resp.get('message', '未知错误')
+                print(f"✗ 角色图片任务提交失败 (尝试 {attempt + 1}/{max_retries + 1}): {error_msg}")
+                
+                if attempt == max_retries:
+                    print(f"✗ 达到最大重试次数，角色图片任务最终失败")
+                    return False
+                
+                # 继续下一次重试
+                continue
+                
+        except Exception as e:
+            print(f"✗ 生成角色图片时发生错误 (尝试 {attempt + 1}/{max_retries + 1}): {e}")
+            
+            if attempt == max_retries:
+                print(f"✗ 达到最大重试次数，角色图片任务最终失败")
+                return False
+            
+            # 继续下一次重试
+            continue
+    
+    return False
 
-def generate_character_images(input_path):
+def generate_character_images_async(input_path):
     """
-    为指定路径生成角色图片
+    为指定路径异步生成角色图片
     支持单个章节目录或包含多个章节的数据目录
     
     Args:
         input_path: 输入路径（可以是单个章节目录或数据目录）
     
     Returns:
-        bool: 是否成功生成
+        bool: 是否成功提交任务
     """
     try:
-        print(f"=== 开始生成角色图片 ===")
+        print(f"=== 开始异步生成角色图片 ===")
         print(f"输入路径: {input_path}")
         
         if not os.path.exists(input_path):
@@ -223,7 +454,9 @@ def generate_character_images(input_path):
             print(f"错误: 在 {input_path} 中没有找到有效的章节目录")
             return False
         
-        success_count = 0
+        submitted_count = 0
+        skipped_count = 0
+        failed_count = 0
         
         # 处理每个章节
         for chapter_dir in chapter_dirs:
@@ -257,7 +490,7 @@ def generate_character_images(input_path):
                     style_prompt = style_config.get('model_prompt', '')
                 print(f"使用风格提示: {style_prompt}")
             
-            # 为每个角色生成图片
+            # 为每个角色异步生成图片
             for i, character in enumerate(characters, 1):
                 character_name = character['name']
                 character_desc = character['description']
@@ -279,40 +512,63 @@ def generate_character_images(input_path):
                 print(f"  角色描述: {character_desc}")
                 print(f"  完整提示词: {character_prompt}")
                 
-                # 生成图片
-                image_path = os.path.join(chapter_dir, f"{chapter_name}_character_{i:02d}_{character_name}.jpeg")
+                # 生成图片（去掉文件名中的&符号）
+                safe_character_name = character_name.replace('&', '')
+                image_path = os.path.join(chapter_dir, f"{chapter_name}_character_{i:02d}_{safe_character_name}.jpeg")
                 
-                if generate_image(character_prompt, image_path, chapter_path=chapter_dir):
-                    print(f"  ✓ 角色图片生成成功: {character_name}")
-                    success_count += 1
+                # 检查图片是否已存在
+                if os.path.exists(image_path):
+                    print(f"  ✓ 角色图片已存在，跳过: {character_name}")
+                    skipped_count += 1
+                    continue
+                
+                # 异步生成图片
+                if generate_character_image_async(character_prompt, image_path, character_name, chapter_path=chapter_dir):
+                    print(f"  ✓ 角色图片任务提交成功: {character_name}")
+                    submitted_count += 1
                 else:
-                    print(f"  ✗ 角色图片生成失败: {character_name}")
+                    print(f"  ✗ 角色图片任务提交失败: {character_name}")
+                    failed_count += 1
+                
+                # 添加短暂延迟，避免API请求过于频繁
+                if i < len(characters):
+                    time.sleep(1)
             
-            print(f"章节 {chapter_name} 处理完成，成功生成 {len(characters)} 张角色图片")
+            print(f"章节 {chapter_name} 处理完成")
         
-        print(f"\n角色图片生成完成，成功生成 {success_count} 张图片")
-        return success_count > 0
+        # 输出统计信息
+        print(f"\n{'='*50}")
+        print(f"角色图片异步生成任务提交完成")
+        print(f"任务提交成功: {submitted_count}")
+        print(f"图片已存在: {skipped_count}")
+        print(f"任务提交失败: {failed_count}")
+        print(f"{'='*50}")
+        
+        return submitted_count > 0 or skipped_count > 0
         
     except Exception as e:
         print(f"生成角色图片时发生错误: {e}")
         return False
 
 def main():
-    parser = argparse.ArgumentParser(description='角色图片生成脚本')
+    parser = argparse.ArgumentParser(description='角色图片生成脚本（异步版本）')
     parser.add_argument('path', help='输入路径（可以是单个章节目录或包含多个章节的数据目录）')
     
     args = parser.parse_args()
     
-    print(f"目标路径: {args.path}")
+    print(f"开始异步生成角色图片...")
+    print(f"输入路径: {args.path}")
     
-    success = generate_character_images(args.path)
+    # 调用异步生成函数
+    success = generate_character_images_async(args.path)
     if success:
-        print(f"\n✓ 角色图片生成完成")
+        print(f"\n✓ 角色图片异步任务提交完成")
+        print("请使用相应的任务监控工具查看生成进度和结果。")
     else:
-        print(f"\n✗ 角色图片生成失败")
+        print(f"\n✗ 角色图片异步任务提交失败")
         sys.exit(1)
     
-    print("\n=== 处理完成 ===")
+    print("\n=== 异步任务提交完成 ===")
 
 if __name__ == '__main__':
     main()

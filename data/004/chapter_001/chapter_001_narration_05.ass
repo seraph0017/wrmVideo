@@ -14,13 +14,18 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}二哥{\c&H00FFFFFF&\b0}你醒了吗
-Dialogue: 0,0:00:01.82,0:00:04.26,Default,,0,0,0,,清脆女声传来{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}推门而入
-Dialogue: 0,0:00:04.80,0:00:06.37,Default,,0,0,0,,她身着圆领浅绿{\c&H0000FFFF&\b1}布裙{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:06.70,0:00:09.42,Default,,0,0,0,,梳着双丫髻蹦跳着扑进{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}怀中
-Dialogue: 0,0:00:09.68,0:00:11.47,Default,,0,0,0,,你昨天摔晕了吓死我了
-Dialogue: 0,0:00:11.73,0:00:14.49,Default,,0,0,0,,她仰着小脸水灵眸子满是关切
-Dialogue: 0,0:00:14.69,0:00:15.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}下意识接住她
-Dialogue: 0,0:00:16.23,0:00:17.70,Default,,0,0,0,,陌生的亲情涌上心头
-Dialogue: 0,0:00:17.98,0:00:20.36,Default,,0,0,0,,窗外晨光正好照在她发间的珠花
-Dialogue: 0,0:00:20.36,0:00:22.01,Default,,0,0,0,,上折射出细碎光芒
+Dialogue: 0,0:00:00.01,0:00:02.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}猛然惊醒发现身处
+Dialogue: 0,0:00:02.44,0:00:05.01,Default,,0,0,0,,古色古香房间身体竟缩水成
+Dialogue: 0,0:00:05.01,0:00:07.58,Default,,0,0,0,,十五岁少年场景骤变为宋朝
+Dialogue: 0,0:00:07.58,0:00:10.38,Default,,0,0,0,,风格房间木质结构雕花窗棂
+Dialogue: 0,0:00:10.56,0:00:12.32,Default,,0,0,0,,桌上放着铜镜和粗布衣物
+Dialogue: 0,0:00:12.58,0:00:14.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}躺在硬板床上身上盖着
+Dialogue: 0,0:00:14.75,0:00:17.28,Default,,0,0,0,,麻布被子他挣扎坐起低头
+Dialogue: 0,0:00:17.28,0:00:19.25,Default,,0,0,0,,看着自己稚嫩的双手和瘦弱
+Dialogue: 0,0:00:19.25,0:00:21.89,Default,,0,0,0,,的胳膊一脸茫然房间角落有
+Dialogue: 0,0:00:21.89,0:00:23.95,Default,,0,0,0,,一个旧木箱墙上挂着蓑衣
+Dialogue: 0,0:00:23.95,0:00:26.51,Default,,0,0,0,,斗笠充满古代农家气息这
+Dialogue: 0,0:00:26.51,0:00:28.82,Default,,0,0,0,,突如其来的时空转换让{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:28.82,0:00:30.93,Default,,0,0,0,,怀疑自己仍在梦中直到他摸
+Dialogue: 0,0:00:30.93,0:00:33.15,Default,,0,0,0,,到脖颈间消失的磨盘饰品才
+Dialogue: 0,0:00:33.15,0:00:35.75,Default,,0,0,0,,惊觉现实残酷他真的穿越了

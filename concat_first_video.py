@@ -21,6 +21,44 @@ import subprocess
 from pathlib import Path
 from typing import List
 
+def check_macos_videotoolbox():
+    """检测macOS系统是否支持VideoToolbox硬件编码器"""
+    try:
+        import platform
+        if platform.system() != 'Darwin':
+            return False, None
+        
+        # 测试h264_videotoolbox编码器
+        test_cmd_h264 = [
+            'ffmpeg', '-f', 'lavfi', '-i', 'testsrc=duration=1:size=320x240:rate=1',
+            '-c:v', 'h264_videotoolbox', '-f', 'null', '-'
+        ]
+        result_h264 = subprocess.run(test_cmd_h264, capture_output=True, text=False, timeout=15)
+        h264_available = result_h264.returncode == 0
+        
+        # 测试hevc_videotoolbox编码器
+        test_cmd_hevc = [
+            'ffmpeg', '-f', 'lavfi', '-i', 'testsrc=duration=1:size=320x240:rate=1',
+            '-c:v', 'hevc_videotoolbox', '-f', 'null', '-'
+        ]
+        result_hevc = subprocess.run(test_cmd_hevc, capture_output=True, text=False, timeout=15)
+        hevc_available = result_hevc.returncode == 0
+        
+        if h264_available or hevc_available:
+            print("✓ 检测到macOS VideoToolbox硬件编码器")
+            if h264_available:
+                print("  - h264_videotoolbox 可用")
+            if hevc_available:
+                print("  - hevc_videotoolbox 可用")
+            return True, {'h264': h264_available, 'hevc': hevc_available}
+        else:
+            print("⚠️  VideoToolbox编码器不可用，使用CPU编码")
+            return False, None
+            
+    except (subprocess.TimeoutExpired, FileNotFoundError, Exception) as e:
+        print(f"⚠️  VideoToolbox检测失败，使用CPU编码: {e}")
+        return False, None
+
 def check_nvidia_gpu():
     """检测系统是否有NVIDIA GPU和nvenc编码器可用 - 支持Docker环境和L4 GPU优化"""
     try:
@@ -106,8 +144,29 @@ def check_nvidia_gpu():
         return False
 
 def get_ffmpeg_gpu_params():
-    """获取FFmpeg GPU优化参数 - 支持L4 GPU优化配置"""
-    # 检测GPU并获取型号信息
+    """获取FFmpeg GPU优化参数 - 支持L4 GPU优化配置和macOS VideoToolbox"""
+    # 首先检测macOS VideoToolbox
+    videotoolbox_available, videotoolbox_info = check_macos_videotoolbox()
+    if videotoolbox_available:
+        # 优先使用h264_videotoolbox，如果不可用则使用hevc_videotoolbox
+        if videotoolbox_info['h264']:
+            return {
+                'video_codec': 'h264_videotoolbox',
+                'extra_params': [
+                    '-allow_sw', '1',      # 允许软件回退
+                    '-realtime', '1'       # 实时编码
+                ]
+            }
+        elif videotoolbox_info['hevc']:
+            return {
+                'video_codec': 'hevc_videotoolbox',
+                'extra_params': [
+                    '-allow_sw', '1',      # 允许软件回退
+                    '-realtime', '1'       # 实时编码
+                ]
+            }
+    
+    # 检测NVIDIA GPU并获取型号信息
     gpu_available = False
     is_l4_gpu = False
     
@@ -127,7 +186,7 @@ def get_ffmpeg_gpu_params():
     
     if gpu_available:
         if is_l4_gpu:
-            # L4 GPU优化配置
+            # L4 GPU优化配置 - 优化文件大小
             return {
                 'hwaccel': 'cuda',
                 'video_codec': 'h264_nvenc',
@@ -135,37 +194,47 @@ def get_ffmpeg_gpu_params():
                 'profile': 'high',
                 'extra_params': [
                     '-rc', 'vbr',          # 可变比特率
-                    '-cq', '23',           # 恒定质量
+                    '-cq', '32',           # 恒定质量（降低以减小文件大小）
+                    '-maxrate', '2200k',   # 最大比特率限制
+                    '-bufsize', '4400k',   # 缓冲区大小
                     '-bf', '3',            # B帧数量
-                    '-refs', '3',          # 参考帧数量
+                    '-refs', '2',          # 减少参考帧数量
                     '-spatial_aq', '1',    # 空间自适应量化
                     '-temporal_aq', '1',   # 时间自适应量化
-                    '-rc-lookahead', '20', # 前瞻帧数
-                    '-surfaces', '32',     # 编码表面数量
+                    '-rc-lookahead', '15', # 减少前瞻帧数
+                    '-surfaces', '16',     # 减少编码表面数量
                     '-gpu', '0'            # 指定GPU
                 ]
             }
         else:
-            # 通用NVIDIA GPU配置
+            # 通用NVIDIA GPU配置 - 优化文件大小
             return {
                 'hwaccel': 'cuda',
                 'video_codec': 'h264_nvenc',
-                'preset': 'p2',  # 更快的预设
-                'tune': 'll',    # Low latency
+                'preset': 'p4',  # 平衡预设（更好压缩）
                 'extra_params': [
-                    '-rc-lookahead', '8',  # 减少前瞻帧数以提高速度
-                    '-bf', '2',            # 减少B帧数量
-                    '-refs', '1'           # 减少参考帧数量
+                    '-rc', 'vbr',          # 可变比特率
+                    '-cq', '32',           # 恒定质量
+                    '-maxrate', '2200k',   # 最大比特率限制
+                    '-bufsize', '4400k',   # 缓冲区大小
+                    '-rc-lookahead', '10', # 前瞻帧数
+                    '-bf', '2',            # B帧数量
+                    '-refs', '1'           # 参考帧数量
                 ]
             }
     else:
+        # CPU编码配置 - 优化文件大小
         return {
             'video_codec': 'libx264',
-            'preset': 'fast',  # 更快的CPU预设
+            'preset': 'medium',  # 平衡预设（更好压缩）
             'extra_params': [
-                '-refs', '2',      # 限制参考帧数量
-                '-me_method', 'hex', # 使用更快的运动估计
-                '-subq', '6'       # 降低子像素运动估计质量以提高速度
+                '-crf', '32',        # 恒定质量因子
+                '-maxrate', '2200k', # 最大比特率限制
+                '-bufsize', '4400k', # 缓冲区大小
+                '-refs', '2',        # 参考帧数量
+                '-me_method', 'hex', # 运动估计方法
+                '-subq', '7',        # 子像素运动估计质量
+                '-trellis', '1'      # 启用trellis量化
             ]
         }
 
@@ -180,6 +249,8 @@ VIDEO_STANDARDS = {
     "width": 720,
     "height": 1280,
     "fps": 30,
+    "video_bitrate": "2200k",  # 视频码率2200kbps
+    "audio_bitrate": "128k",   # 音频码率128kbps
     "video_codec": "libx264",
     "audio_codec": "aac",
 }
@@ -241,7 +312,8 @@ def generate_overlay_video(video2: Path, temp_dir: Path) -> Path:
     ])
     
     # 添加GPU特定的编码参数
-    if 'preset' in gpu_params:
+    # 只有非VideoToolbox编码器才添加preset参数
+    if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
         cmd.extend(["-preset", gpu_params['preset']])
     if 'tune' in gpu_params:
         cmd.extend(["-tune", gpu_params['tune']])
@@ -312,14 +384,15 @@ def process_chapter(chapter_dir: Path) -> None:
     
     cmd_scale_v1.extend([
         "-i", str(video1),
-        "-vf", f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=increase,crop={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}",
+        "-vf", f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=decrease,pad={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:(ow-iw)/2:(oh-ih)/2:black",
         "-c:v", gpu_params.get('video_codec', VIDEO_STANDARDS["video_codec"]),
         "-c:a", VIDEO_STANDARDS["audio_codec"],
         "-r", str(VIDEO_STANDARDS["fps"])
     ])
     
     # 添加GPU特定的编码参数
-    if 'preset' in gpu_params:
+    # 只有非VideoToolbox编码器才添加preset参数
+    if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
         cmd_scale_v1.extend(["-preset", gpu_params['preset']])
     if 'tune' in gpu_params:
         cmd_scale_v1.extend(["-tune", gpu_params['tune']])
@@ -350,14 +423,15 @@ def process_chapter(chapter_dir: Path) -> None:
         
         cmd_scale_v2.extend([
             "-i", str(video2),
-            "-vf", f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=increase,crop={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}",
+            "-vf", f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=decrease,pad={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:(ow-iw)/2:(oh-ih)/2:black",
             "-c:v", gpu_params.get('video_codec', VIDEO_STANDARDS["video_codec"]),
             "-c:a", VIDEO_STANDARDS["audio_codec"],
             "-r", str(VIDEO_STANDARDS["fps"])
         ])
         
         # 添加GPU特定的编码参数
-        if 'preset' in gpu_params:
+        # 只有非VideoToolbox编码器才添加preset参数
+        if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
             cmd_scale_v2.extend(["-preset", gpu_params['preset']])
         if 'tune' in gpu_params:
             cmd_scale_v2.extend(["-tune", gpu_params['tune']])

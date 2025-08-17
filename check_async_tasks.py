@@ -506,17 +506,316 @@ def monitor_tasks(tasks_dir, check_interval=30):
         print(f"\n等待 {check_interval} 秒后进行下一轮检查...")
         time.sleep(check_interval)
 
+def process_chapter_async_tasks(chapter_dir):
+    """
+    处理单个章节目录下的异步任务
+    
+    Args:
+        chapter_dir: 章节目录路径
+    
+    Returns:
+        dict: 处理统计信息
+    """
+    async_tasks_dir = os.path.join(chapter_dir, 'async_tasks')
+    
+    if not os.path.exists(async_tasks_dir):
+        return {'total': 0, 'success': 0, 'failed': 0, 'images_moved': 0}
+    
+    # 创建目标目录
+    done_dir = os.path.join(chapter_dir, 'done')
+    failed_dir = os.path.join(chapter_dir, 'failed')
+    images_dir = os.path.join(chapter_dir, 'images')
+    
+    os.makedirs(done_dir, exist_ok=True)
+    os.makedirs(failed_dir, exist_ok=True)
+    os.makedirs(images_dir, exist_ok=True)
+    
+    stats = {'total': 0, 'success': 0, 'failed': 0, 'images_moved': 0}
+    
+    try:
+        for filename in os.listdir(async_tasks_dir):
+            file_path = os.path.join(async_tasks_dir, filename)
+            
+            # 跳过目录
+            if os.path.isdir(file_path):
+                continue
+            
+            # 处理图片文件
+            if filename.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp')):
+                try:
+                    target_path = os.path.join(images_dir, filename)
+                    os.rename(file_path, target_path)
+                    stats['images_moved'] += 1
+                    print(f"✓ 图片文件已移动: {filename} -> images/")
+                except Exception as e:
+                    print(f"✗ 移动图片文件失败 {filename}: {e}")
+                continue
+            
+            # 处理txt文件
+            if filename.endswith('.txt'):
+                stats['total'] += 1
+                
+                try:
+                    # 加载任务信息
+                    task_info = load_task_info(file_path)
+                    if not task_info:
+                        # 无法加载任务信息，移动到失败目录
+                        target_path = os.path.join(failed_dir, filename)
+                        os.rename(file_path, target_path)
+                        stats['failed'] += 1
+                        print(f"✗ 任务文件格式错误，已移动到failed: {filename}")
+                        continue
+                    
+                    # 检查任务状态
+                    task_status = task_info.get('status', 'unknown')
+                    
+                    if task_status == 'completed':
+                        # 任务已完成，移动到done目录
+                        target_path = os.path.join(done_dir, filename)
+                        os.rename(file_path, target_path)
+                        stats['success'] += 1
+                        print(f"✓ 已完成任务已移动到done: {filename}")
+                    elif task_status == 'failed':
+                        # 任务失败，移动到failed目录
+                        target_path = os.path.join(failed_dir, filename)
+                        os.rename(file_path, target_path)
+                        stats['failed'] += 1
+                        print(f"✗ 失败任务已移动到failed: {filename}")
+                    else:
+                        # 任务还在处理中，查询最新状态
+                        task_id = task_info.get('task_id')
+                        task_type = task_info.get('task_type', 'image')
+                        
+                        if task_type == 'video':
+                            resp = query_video_task_status(task_id)
+                            if resp and resp.status == 'succeeded':
+                                # 处理完成的视频任务
+                                if process_completed_video_task(task_info, file_path, resp):
+                                    target_path = os.path.join(done_dir, filename)
+                                    if os.path.exists(file_path):
+                                        os.rename(file_path, target_path)
+                                    stats['success'] += 1
+                                else:
+                                    target_path = os.path.join(failed_dir, filename)
+                                    os.rename(file_path, target_path)
+                                    stats['failed'] += 1
+                            elif resp and resp.status == 'failed':
+                                # 任务失败
+                                error_msg = getattr(resp, 'error', '未知错误')
+                                process_failed_task(task_info, file_path, str(error_msg))
+                                target_path = os.path.join(failed_dir, filename)
+                                os.rename(file_path, target_path)
+                                stats['failed'] += 1
+                            else:
+                                # 任务还在处理中，保持原位置
+                                print(f"⏳ 视频任务处理中: {filename}")
+                        else:
+                            # 图片任务
+                            resp = query_image_task_status(task_id)
+                            if resp and 'data' in resp:
+                                data = resp['data']
+                                status = data.get('status', 'unknown')
+                                
+                                if status == 'done':
+                                    # 处理完成的图片任务
+                                    if process_completed_image_task(task_info, file_path, data):
+                                        target_path = os.path.join(done_dir, filename)
+                                        if os.path.exists(file_path):
+                                            os.rename(file_path, target_path)
+                                        stats['success'] += 1
+                                    else:
+                                        target_path = os.path.join(failed_dir, filename)
+                                        os.rename(file_path, target_path)
+                                        stats['failed'] += 1
+                                elif status == 'failed':
+                                    # 任务失败
+                                    error_msg = data.get('reason', '未知错误')
+                                    process_failed_task(task_info, file_path, error_msg)
+                                    target_path = os.path.join(failed_dir, filename)
+                                    os.rename(file_path, target_path)
+                                    stats['failed'] += 1
+                                else:
+                                    # 任务还在处理中，保持原位置
+                                    print(f"⏳ 图片任务处理中: {filename}")
+                            else:
+                                # 查询失败，保持原位置
+                                print(f"⚠️ 查询任务状态失败: {filename}")
+                    
+                except Exception as e:
+                    print(f"✗ 处理任务文件失败 {filename}: {e}")
+                    try:
+                        target_path = os.path.join(failed_dir, filename)
+                        os.rename(file_path, target_path)
+                        stats['failed'] += 1
+                    except Exception as move_e:
+                        print(f"✗ 移动失败文件也失败 {filename}: {move_e}")
+    
+    except Exception as e:
+        print(f"✗ 处理章节目录失败 {chapter_dir}: {e}")
+    
+    return stats
+
+def process_all_data_directories(data_dir='data'):
+    """
+    处理所有数据目录下的异步任务
+    
+    Args:
+        data_dir: 数据根目录路径
+    
+    Returns:
+        dict: 总体统计信息
+    """
+    if not os.path.exists(data_dir):
+        print(f"数据目录不存在: {data_dir}")
+        return {'total_chapters': 0, 'total_tasks': 0, 'total_success': 0, 'total_failed': 0, 'total_images': 0}
+    
+    total_stats = {
+        'total_chapters': 0,
+        'total_tasks': 0,
+        'total_success': 0,
+        'total_failed': 0,
+        'total_images': 0
+    }
+    
+    print(f"=== 开始处理数据目录: {data_dir} ===")
+    
+    # 遍历所有00x子文件夹
+    for item in os.listdir(data_dir):
+        item_path = os.path.join(data_dir, item)
+        
+        # 跳过非目录项
+        if not os.path.isdir(item_path):
+            continue
+        
+        # 检查是否是00x格式的目录
+        if not (item.startswith('00') and len(item) == 3 and item[2:].isdigit()):
+            continue
+        
+        print(f"\n--- 处理数据集: {item} ---")
+        
+        # 遍历chapter_xxx子文件夹
+        try:
+            for chapter_item in os.listdir(item_path):
+                chapter_path = os.path.join(item_path, chapter_item)
+                
+                # 跳过非目录项
+                if not os.path.isdir(chapter_path):
+                    continue
+                
+                # 检查是否是chapter_xxx格式的目录
+                if not chapter_item.startswith('chapter_'):
+                    continue
+                
+                print(f"\n处理章节: {item}/{chapter_item}")
+                total_stats['total_chapters'] += 1
+                
+                # 处理该章节的异步任务
+                chapter_stats = process_chapter_async_tasks(chapter_path)
+                
+                # 累计统计
+                total_stats['total_tasks'] += chapter_stats['total']
+                total_stats['total_success'] += chapter_stats['success']
+                total_stats['total_failed'] += chapter_stats['failed']
+                total_stats['total_images'] += chapter_stats['images_moved']
+                
+                print(f"  章节统计: 任务{chapter_stats['total']}个, 成功{chapter_stats['success']}个, 失败{chapter_stats['failed']}个, 图片{chapter_stats['images_moved']}个")
+                
+        except Exception as e:
+            print(f"✗ 处理数据集失败 {item}: {e}")
+    
+    return total_stats
+
+def monitor_all_data_directories(data_dir='data', check_interval=30):
+    """
+    持续监控所有数据目录下的异步任务
+    
+    Args:
+        data_dir: 数据根目录路径
+        check_interval: 检查间隔（秒）
+    """
+    if not os.path.exists(data_dir):
+        print(f"数据目录不存在: {data_dir}")
+        return
+    
+    print(f"=== 开始持续监控数据目录: {data_dir} ===")
+    
+    try:
+        while True:
+            print(f"\n{time.strftime('%Y-%m-%d %H:%M:%S')} - 开始检查所有数据目录...")
+            
+            total_stats = process_all_data_directories(data_dir)
+            
+            print(f"\n=== 本轮检查完成 ===")
+            print(f"处理章节数: {total_stats['total_chapters']}")
+            print(f"总任务数: {total_stats['total_tasks']}")
+            print(f"成功处理: {total_stats['total_success']}")
+            print(f"失败处理: {total_stats['total_failed']}")
+            print(f"图片移动: {total_stats['total_images']}")
+            if total_stats['total_tasks'] > 0:
+                success_rate = (total_stats['total_success'] / total_stats['total_tasks'] * 100)
+                print(f"成功率: {success_rate:.1f}%")
+            
+            print(f"\n等待 {check_interval} 秒后进行下一轮检查...")
+            time.sleep(check_interval)
+            
+    except KeyboardInterrupt:
+        print(f"\n\n监控已停止")
+    except Exception as e:
+        print(f"\n监控过程中发生错误: {e}")
+        print(f"等待 {check_interval} 秒后重试...")
+        time.sleep(check_interval)
+        # 递归重新开始监控
+        monitor_all_data_directories(data_dir, check_interval)
+
 def main():
     """
-    主函数
+    主函数 - 默认启用--process-all --monitor模式，持续监控所有数据目录
     """
-    parser = argparse.ArgumentParser(description='异步任务状态查询工具')
+    parser = argparse.ArgumentParser(description='异步任务状态查询工具 - 默认持续监控所有数据目录')
     parser.add_argument('--check-once', action='store_true', help='检查一次所有任务状态后退出')
     parser.add_argument('--monitor', action='store_true', help='持续监控任务状态')
     parser.add_argument('--interval', type=int, default=30, help='监控间隔（秒，默认30）')
     parser.add_argument('--tasks-dir', default='async_tasks', help='任务目录路径')
+    parser.add_argument('--process-all', action='store_true', help='处理所有数据目录下的异步任务')
+    parser.add_argument('--data-dir', default='data', help='数据根目录路径')
+    parser.add_argument('--legacy-mode', action='store_true', help='使用旧版交互模式')
     
     args = parser.parse_args()
+    
+    # 如果没有指定任何参数，默认启用--process-all --monitor模式
+    if not any([args.check_once, args.monitor, args.process_all, args.legacy_mode]):
+        args.process_all = True
+        args.monitor = True
+        print("默认模式：持续监控所有数据目录下的异步任务")
+    
+    if args.process_all:
+        # 处理所有数据目录下的异步任务
+        data_dir = args.data_dir
+        print(f"异步任务批量处理工具")
+        print(f"数据目录: {data_dir}")
+        
+        if args.monitor:
+            # 持续监控模式
+            print(f"监控间隔: {args.interval}秒")
+            print(f"按 Ctrl+C 停止监控\n")
+            monitor_all_data_directories(data_dir, args.interval)
+        else:
+            # 单次处理模式
+            total_stats = process_all_data_directories(data_dir)
+            
+            print(f"\n=== 处理完成 ===")
+            print(f"处理章节数: {total_stats['total_chapters']}")
+            print(f"总任务数: {total_stats['total_tasks']}")
+            print(f"成功处理: {total_stats['total_success']}")
+            print(f"失败处理: {total_stats['total_failed']}")
+            print(f"图片移动: {total_stats['total_images']}")
+            if total_stats['total_tasks'] > 0:
+                success_rate = (total_stats['total_success'] / total_stats['total_tasks'] * 100)
+                print(f"成功率: {success_rate:.1f}%")
+        
+        return
+    
+    # 原有功能
     tasks_dir = args.tasks_dir
     
     if not os.path.exists(tasks_dir):
@@ -541,13 +840,14 @@ def main():
         # 持续监控
         monitor_tasks(tasks_dir, args.interval)
         
-    else:
-        # 交互式模式
+    elif args.legacy_mode:
+        # 交互式模式（旧版模式）
         print(f"\n请选择运行模式:")
         print(f"1. 检查一次所有任务状态")
         print(f"2. 持续监控直到所有任务完成")
+        print(f"3. 处理所有数据目录下的异步任务")
         
-        choice = input(f"\n请输入选择 (1/2): ").strip()
+        choice = input(f"\n请输入选择 (1/2/3): ").strip()
         
         if choice == '1':
             # 单次检查
@@ -569,8 +869,31 @@ def main():
             
             monitor_tasks(tasks_dir, check_interval)
             
+        elif choice == '3':
+            # 处理所有数据目录下的异步任务
+            data_dir = input(f"\n请输入数据目录路径（默认data）: ").strip()
+            data_dir = data_dir if data_dir else 'data'
+            
+            total_stats = process_all_data_directories(data_dir)
+            
+            print(f"\n=== 处理完成 ===")
+            print(f"处理章节数: {total_stats['total_chapters']}")
+            print(f"总任务数: {total_stats['total_tasks']}")
+            print(f"成功处理: {total_stats['total_success']}")
+            print(f"失败处理: {total_stats['total_failed']}")
+            print(f"图片移动: {total_stats['total_images']}")
+            if total_stats['total_tasks'] > 0:
+                success_rate = (total_stats['total_success'] / total_stats['total_tasks'] * 100)
+                print(f"成功率: {success_rate:.1f}%")
+            
         else:
             print(f"无效选择，退出")
+    
+    else:
+        # 如果没有匹配任何参数，显示帮助信息
+        print(f"使用 --help 查看所有可用选项")
+        print(f"默认模式：持续监控所有数据目录下的异步任务")
+        print(f"使用 --legacy-mode 进入交互模式")
 
 if __name__ == '__main__':
     main()

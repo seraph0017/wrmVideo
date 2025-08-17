@@ -183,9 +183,20 @@ def parse_narration_file(narration_file_path):
                     character_match = re.search(r'<特写人物>([^<]+)</特写人物>', closeup_content)
                     character_id_match = re.search(r'<角色编号>([^<]+)</角色编号>', closeup_content)
                     
-                    if character_match:
+                    # 优先从<角色姓名>标签中提取角色名称
+                    character_name_match = re.search(r'<角色姓名>([^<]+)</角色姓名>', closeup_content)
+                    
+                    character_name = None
+                    if character_name_match:
+                        character_name = character_name_match.group(1).strip()
+                        closeup_info['character'] = character_name
+                        print(f"      从<角色姓名>提取到角色: {character_name}")
+                    elif character_match:
                         character_name = character_match.group(1).strip()
                         closeup_info['character'] = character_name
+                        print(f"      从<特写人物>提取到角色: {character_name}")
+                    
+                    if character_name:
                         
                         # 根据角色编号查找角色定义
                         if character_name in character_map:
@@ -231,12 +242,14 @@ def find_character_image(chapter_path, character_name):
     """
     try:
         chapter_name = os.path.basename(chapter_path)
+        # 移除角色名称中的&符号
+        safe_character_name = character_name.replace('&', '')
         # 构造角色图片文件名模式
-        pattern = f"{chapter_name}_character_*_{character_name}.jpeg"
+        pattern = f"{chapter_name}_character_*_{safe_character_name}.jpeg"
         
         # 在章节目录中查找匹配的文件
         for filename in os.listdir(chapter_path):
-            if filename.endswith(f"_{character_name}.jpeg") and "character" in filename:
+            if filename.endswith(f"_{safe_character_name}.jpeg") and "character" in filename:
                 image_path = os.path.join(chapter_path, filename)
                 print(f"找到角色图片: {image_path}")
                 return image_path
@@ -607,20 +620,27 @@ def generate_image_with_character_async(prompt, output_path, character_images=No
             
             # 构建请求参数 - 使用配置文件中的值
             form = {
-                "req_key": IMAGE_TWO_CONFIG['req_key'],
+                "req_key": "high_aes_scheduler_svr_controlnet_v2.0",
                 "prompt": full_prompt,
-                # "llm_seed": -1,
+                "llm_seed": -1,
                 "seed": 10 + attempt,  # 每次重试使用不同的seed
-                "scale": IMAGE_TWO_CONFIG['scale'],
-                # "ddim_steps": IMAGE_TWO_CONFIG['ddim_steps'],
-                # "width": IMAGE_TWO_CONFIG['default_width'],
-                # "height": IMAGE_TWO_CONFIG['default_height'],
-                # "use_pre_llm": IMAGE_TWO_CONFIG['use_pre_llm'],
-                # "use_sr": IMAGE_TWO_CONFIG['use_sr'],
+                "scale": 3.5,
+                "ddim_steps": IMAGE_TWO_CONFIG['ddim_steps'],
+                "width": IMAGE_TWO_CONFIG['default_width'],
+                "height": IMAGE_TWO_CONFIG['default_height'],
+                "use_pre_llm": IMAGE_TWO_CONFIG['use_pre_llm'],
+                "use_sr": IMAGE_TWO_CONFIG['use_sr'],
                 "return_url": IMAGE_TWO_CONFIG['return_url'],  # 返回base64格式
                 "negative_prompt": IMAGE_TWO_CONFIG['negative_prompt'],
-                # "ref_ip_weight": 0,
-                # "ref_id_weight": 0.4,
+                "controlnet_args": [
+                    {
+                        "type": "depth",
+                        "binary_data_index": 0,
+                        "strength": 0.6
+                    }
+                ],
+                "ref_ip_weight": 0,
+                "ref_id_weight": 0.4,
                 "logo_info": {
                     "add_logo": False,
                     "position": 0,
@@ -835,12 +855,23 @@ def generate_images_for_chapter(chapter_dir):
                         
                         print(f"    使用分镜信息: {character} ({gender}/{age_group}/{character_style})")
                         
-                        # 查找角色图片
-                        if gender and age_group and character_style:
+                        # 查找角色图片 - 优先根据角色姓名匹配章节中的角色图片
+                        char_img_path = None
+                        if character:
+                            # 首先尝试根据角色姓名在当前章节目录中查找角色图片
+                            char_img_path = find_character_image(chapter_dir, character)
+                            if char_img_path:
+                                character_images.append(char_img_path)
+                                print(f"    根据角色姓名找到角色图片: {char_img_path}")
+                            else:
+                                print(f"    未找到角色 {character} 的图片，尝试根据属性查找...")
+                        
+                        # 如果根据角色姓名未找到，则根据角色属性查找
+                        if not char_img_path and gender and age_group and character_style:
                             char_img_path = find_character_image_by_attributes(gender, age_group, character_style, culture, temperament, prompt)
                             if char_img_path:
                                 character_images.append(char_img_path)
-                                print(f"    找到角色图片: {char_img_path}")
+                                print(f"    根据属性找到角色图片: {char_img_path}")
                         
                         # 根据角色性别调整视角
                         view_angle_prompt = ""

@@ -42,53 +42,28 @@ def identify_key_word(text: str) -> str:
     return ""
 
 def split_text_naturally(text: str, max_length: int = 12) -> List[str]:
-    """自然分割文本，确保语义完整性，避免断句问题"""
-    if len(text) <= max_length:
-        return [text]
+    """自然分割文本，去除标点符号，严格控制每行不超过12个字，宁可多断几次"""
+    # 首先去除所有标点符号和空格
+    cleaned_text = clean_subtitle_text(text)
+    
+    if len(cleaned_text) <= max_length:
+        return [cleaned_text] if cleaned_text else []
     
     segments = []
     
-    # 标点符号优先级（越小优先级越高）
-    punctuation_priority = {
-        '。': 1, '！': 1, '？': 1,  # 句号类，最高优先级
-        '；': 2, '：': 2,           # 分号冒号类
-        '，': 3, '、': 3,           # 逗号顿号类
-        '）': 4, '】': 4, '》': 4, '」': 4, '』': 4,  # 右括号类
-        '（': 5, '【': 5, '《': 5, '「': 5, '『': 5   # 左括号类，最低优先级
-    }
-    
-    # 成对符号，不应在其中间分割
-    paired_symbols = {
-        '（': '）', '【': '】', '《': '》', '「': '」', '『': '』',
-        '"': '"', '"': '"'
-    }
-    
-    # 语义紧密相关的词汇模式，不应分割
-    semantic_patterns = [
-        # 动宾结构
-        ['决定', '联手'], ['联手', '攻'], ['攻', '进'],
-        ['听得', '心惊肉跳'], ['感叹', '二弟'], ['二弟', '福缘'],
-        # 主谓结构
-        ['赵硕', '简单'], ['赵丰', '神色'], ['赵丰', '听得'],
-        # 修饰结构
-        ['皆是', '宋朝'], ['宋朝', '风格'], ['死亡', '岛'],
-        ['兄弟', '情谊'], ['血海', '深仇'], ['宋式', '民居'],
-        # 连接词
-        ['与此', '同时'], ['终于', '按捺'], ['按捺', '不住'],
-        ['对视', '一眼'], ['眼中', '杀意'], ['杀意', '暴涨']
-    ]
-    
     # 使用jieba分词获取词汇边界
-    words = list(jieba.cut(text, cut_all=False))
-    
-    # 预处理：合并语义相关的词汇
-    merged_words = _merge_semantic_words(words, semantic_patterns)
+    words = list(jieba.cut(cleaned_text, cut_all=False))
     
     current_segment = ""
     
-    for word in merged_words:
+    for word in words:
+        # 去除词汇中的标点符号
+        clean_word = clean_subtitle_text(word)
+        if not clean_word:  # 如果清理后为空，跳过
+            continue
+            
         # 检查添加当前词后是否超出长度限制
-        potential_segment = current_segment + word
+        potential_segment = current_segment + clean_word
         
         if len(potential_segment) <= max_length:
             # 未超出限制，直接添加
@@ -96,37 +71,61 @@ def split_text_naturally(text: str, max_length: int = 12) -> List[str]:
         else:
             # 超出限制，需要分割
             if current_segment:
-                # 检查当前段落是否在成对符号内部或语义不完整
-                if (not _is_inside_paired_symbols(current_segment, paired_symbols) and 
-                    not _is_semantic_incomplete(current_segment, word)):
-                    segments.append(current_segment)
-                    current_segment = word
-                else:
-                    # 在成对符号内部或语义不完整，寻找合适的分割点
-                    split_result = _find_safe_split_point(current_segment + word, max_length, punctuation_priority, paired_symbols)
-                    if split_result:
-                        segments.append(split_result[0])
-                        current_segment = split_result[1]
-                    else:
-                        # 无法安全分割，保持完整
-                        current_segment = potential_segment
+                # 保存当前段落
+                segments.append(current_segment)
+                current_segment = clean_word
+                
+                # 如果单个词就超过长度限制，强制按字符分割
+                if len(current_segment) > max_length:
+                    char_segments = _split_by_characters(current_segment, max_length)
+                    segments.extend(char_segments[:-1])  # 添加除最后一个外的所有段落
+                    current_segment = char_segments[-1] if char_segments else ""
             else:
                 # 当前段落为空，直接使用当前词
-                current_segment = word
-            
-            # 如果当前段落仍然过长，尝试进一步分割
-            if len(current_segment) > max_length + 5:  # 允许适当超出
-                split_result = _find_safe_split_point(current_segment, max_length, punctuation_priority, paired_symbols)
-                if split_result:
-                    segments.append(split_result[0])
-                    current_segment = split_result[1]
+                current_segment = clean_word
+                
+                # 如果单个词就超过长度限制，强制按字符分割
+                if len(current_segment) > max_length:
+                    char_segments = _split_by_characters(current_segment, max_length)
+                    segments.extend(char_segments[:-1])  # 添加除最后一个外的所有段落
+                    current_segment = char_segments[-1] if char_segments else ""
     
     # 添加最后一个段落
     if current_segment:
         segments.append(current_segment)
     
-    # 后处理：合并过短的段落和优化语义完整性
-    return _optimize_segments(segments, max_length)
+    # 最终检查：确保没有段落超过最大长度
+    final_segments = []
+    for segment in segments:
+        if len(segment) <= max_length:
+            final_segments.append(segment)
+        else:
+            # 强制按字符分割过长的段落
+            char_segments = _split_by_characters(segment, max_length)
+            final_segments.extend(char_segments)
+    
+    return final_segments
+
+def _split_by_characters(text: str, max_length: int) -> List[str]:
+    """按字符强制分割文本，确保每段不超过最大长度"""
+    if len(text) <= max_length:
+        return [text]
+    
+    segments = []
+    start = 0
+    
+    while start < len(text):
+        end = start + max_length
+        if end >= len(text):
+            # 最后一段
+            segments.append(text[start:])
+            break
+        else:
+            # 分割当前段
+            segments.append(text[start:end])
+            start = end
+    
+    return segments
 
 def _is_inside_paired_symbols(text: str, paired_symbols: dict) -> bool:
     """检查文本是否在成对符号内部（未闭合）"""

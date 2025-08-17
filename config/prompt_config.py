@@ -135,28 +135,32 @@ VOICE_PRESETS = {
         'volume_ratio': 1.0,
         'pitch_ratio': 1.0,
         'sample_rate': 44100,
-        'bitrate': 192000
+        'bitrate': 192000,
+        'voice_type': 'BV701_streaming'
     },
     'slow': {
         'speed_ratio': 0.9,
         'volume_ratio': 1.0,
         'pitch_ratio': 1.0,
         'sample_rate': 44100,
-        'bitrate': 192000
+        'bitrate': 192000,
+        'voice_type': 'BV701_streaming'
     },
     'fast': {
         'speed_ratio': 1.5,
         'volume_ratio': 1.0,
         'pitch_ratio': 1.0,
         'sample_rate': 44100,
-        'bitrate': 192000
+        'bitrate': 192000,
+        'voice_type': 'BV701_streaming'
     },
     'deep': {
         'speed_ratio': 1.0,
         'volume_ratio': 1.2,
         'pitch_ratio': 0.8,
         'sample_rate': 44100,
-        'bitrate': 192000
+        'bitrate': 192000,
+        'voice_type': 'BV701_streaming'
     }
 }
 

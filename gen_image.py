@@ -261,12 +261,14 @@ def find_character_image(chapter_path, character_name):
     """
     try:
         chapter_name = os.path.basename(chapter_path)
+        # 移除角色名称中的&符号
+        safe_character_name = character_name.replace('&', '')
         # 构造角色图片文件名模式
-        pattern = f"{chapter_name}_character_*_{character_name}.jpeg"
+        pattern = f"{chapter_name}_character_*_{safe_character_name}.jpeg"
         
         # 在章节目录中查找匹配的文件
         for filename in os.listdir(chapter_path):
-            if filename.endswith(f"_{character_name}.jpeg") and "character" in filename:
+            if filename.endswith(f"_{safe_character_name}.jpeg") and "character" in filename:
                 image_path = os.path.join(chapter_path, filename)
                 print(f"找到角色图片: {image_path}")
                 return image_path

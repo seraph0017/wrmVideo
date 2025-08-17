@@ -14,11 +14,11 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:02.81,Default,,0,0,0,,昏暗洞穴中{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}被骷髅骑士围攻
-Dialogue: 0,0:00:03.29,0:00:05.54,Default,,0,0,0,,他眼神锐利手中{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}一闪
-Dialogue: 0,0:00:06.01,0:00:08.43,Default,,0,0,0,,千年法相{\c&H0000FFFF&\b1}灵符{\c&H00FFFFFF&\b0}拍入冲在最前的骷髅
-Dialogue: 0,0:00:08.43,0:00:10.62,Default,,0,0,0,,体内同时脚尖轻点枪尖
-Dialogue: 0,0:00:10.89,0:00:12.55,Default,,0,0,0,,身形如陀螺般翻转升空
-Dialogue: 0,0:00:12.82,0:00:15.60,Default,,0,0,0,,瞬间拔高数十丈洞穴岩壁潮湿
-Dialogue: 0,0:00:15.80,0:00:18.50,Default,,0,0,0,,火把摇曳骷髅骑士的骨枪反射寒
-Dialogue: 0,0:00:18.50,0:00:20.36,Default,,0,0,0,,光气氛紧张到极点
+Dialogue: 0,0:00:00.01,0:00:02.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}胡同{\c&H00FFFFFF&\b0}深处赵丰背靠木门嘴角
+Dialogue: 0,0:00:02.67,0:00:04.79,Default,,0,0,0,,渗血眼神倔强地盯着步步
+Dialogue: 0,0:00:04.79,0:00:06.64,Default,,0,0,0,,紧逼的{\c&H0000FFFF&\b1}卢三卢{\c&H00FFFFFF&\b0}三狞笑着
+Dialogue: 0,0:00:06.64,0:00:09.01,Default,,0,0,0,,伸出手强大的气势压得{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.01,0:00:11.02,Default,,0,0,0,,骨骼作响就在这千钧一发
+Dialogue: 0,0:00:11.02,0:00:13.31,Default,,0,0,0,,之际一道黑影如闪电般掠过
+Dialogue: 0,0:00:13.82,0:00:15.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}的头颅冲天而起鲜血
+Dialogue: 0,0:00:15.96,0:00:17.40,Default,,0,0,0,,喷溅染红了青石板路

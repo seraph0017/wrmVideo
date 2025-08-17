@@ -14,12 +14,10 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}咬牙背起赵硕
-Dialogue: 0,0:00:01.98,0:00:04.70,Default,,0,0,0,,艰难走向灵药谷她淬体期修为难
-Dialogue: 0,0:00:04.70,0:00:06.12,Default,,0,0,0,,以承受成年男子重量
-Dialogue: 0,0:00:06.40,0:00:08.04,Default,,0,0,0,,脚步踉跄额头冒汗
-Dialogue: 0,0:00:08.29,0:00:10.11,Default,,0,0,0,,谷口{\c&H0000FFFF&\b1}姜华{\c&H00FFFFFF&\b0}拄着拐杖等候
-Dialogue: 0,0:00:10.38,0:00:11.74,Default,,0,0,0,,见此情景皱眉质问
-Dialogue: 0,0:00:12.05,0:00:14.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}急忙解释两人争执间
-Dialogue: 0,0:00:14.71,0:00:17.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}气息微弱姜华终是心软
-Dialogue: 0,0:00:17.73,0:00:18.40,Default,,0,0,0,,同意救人
+Dialogue: 0,0:00:00.02,0:00:02.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}抓住鬼爪与剑光僵持的
+Dialogue: 0,0:00:02.02,0:00:05.00,Default,,0,0,0,,瞬间身形如电瞬间出现在
+Dialogue: 0,0:00:05.00,0:00:07.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}面前右手食指中指并拢
+Dialogue: 0,0:00:07.70,0:00:10.11,Default,,0,0,0,,点向{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}眉心卢大瞳孔骤缩
+Dialogue: 0,0:00:10.36,0:00:12.34,Default,,0,0,0,,想要后退却发现身体被{\c&H0000FFFF&\b1}紫光{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.34,0:00:14.28,Default,,0,0,0,,塔的光芒禁锢只能眼睁睁
+Dialogue: 0,0:00:14.28,0:00:16.67,Default,,0,0,0,,看着指尖临近眼中充满绝望
