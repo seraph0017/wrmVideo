@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_009 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:03.27,Default,,0,0,0,,小世界{\c&H0000FFFF&\b1}温泉{\c&H00FFFFFF&\b0}池黄昏霞光染红
+Dialogue: 0,0:00:03.27,0:00:07.37,Default,,0,0,0,,水面{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与白蒹葭辛芦兰心
+Dialogue: 0,0:00:07.37,0:00:11.03,Default,,0,0,0,,天女{\c&H0000FFFF&\b1}澹台{\c&H00FFFFFF&\b0}沧海四女沐浴水汽
+Dialogue: 0,0:00:11.03,0:00:14.81,Default,,0,0,0,,氤氲{\c&H0000FFFF&\b1}中四{\c&H00FFFFFF&\b0}女背对着镜头长发
+Dialogue: 0,0:00:14.81,0:00:17.75,Default,,0,0,0,,湿哒哒贴在圆领衣背上白蒹
+Dialogue: 0,0:00:17.75,0:00:20.69,Default,,0,0,0,,葭坐于池边{\c&H0000FFFF&\b1}石阶{\c&H00FFFFFF&\b0}白色长裙
+Dialogue: 0,0:00:20.69,0:00:23.76,Default,,0,0,0,,裙摆沾湿{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}粉色襦裙领口
+Dialogue: 0,0:00:23.76,0:00:27.36,Default,,0,0,0,,微湿兰心天女{\c&H0000FFFF&\b1}澹台{\c&H00FFFFFF&\b0}沧海分立
+Dialogue: 0,0:00:27.36,0:00:31.00,Default,,0,0,0,,两侧姿态放松{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}忽然起身
+Dialogue: 0,0:00:31.41,0:00:34.28,Default,,0,0,0,,道有急事需回玄{\c&H0000FFFF&\b1}灵山{\c&H00FFFFFF&\b0}不顾
+Dialogue: 0,0:00:34.28,0:00:37.62,Default,,0,0,0,,四女诧异赤身化作清风消失
+Dialogue: 0,0:00:38.16,0:00:41.09,Default,,0,0,0,,留下四女面面相觑水面涟漪
+Dialogue: 0,0:00:41.09,0:00:43.88,Default,,0,0,0,,未平霞光映得池水泛红

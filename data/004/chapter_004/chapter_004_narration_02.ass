@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_004 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.90,Default,,0,0,0,,锦衣卫密报震撼全场{\c&H0000FFFF&\b1}龙欣{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.90,0:00:05.88,Default,,0,0,0,,手持密信蓝色劲装衬得背影
+Dialogue: 0,0:00:05.88,0:00:10.06,Default,,0,0,0,,挺拔她沉声禀报僵神骷髅
+Dialogue: 0,0:00:10.60,0:00:14.12,Default,,0,0,0,,不死{\c&H0000FFFF&\b1}三族{\c&H00FFFFFF&\b0}已结盟始祖复生正
+Dialogue: 0,0:00:14.12,0:00:17.05,Default,,0,0,0,,疯狂扩张万年之内将逼近
+Dialogue: 0,0:00:17.05,0:00:19.77,Default,,0,0,0,,八荒山地界议事厅内气氛
+Dialogue: 0,0:00:19.77,0:00:23.48,Default,,0,0,0,,骤紧辛芦眉头紧锁白蒹葭
+Dialogue: 0,0:00:23.48,0:00:26.66,Default,,0,0,0,,面露忧色{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}指尖轻叩桌面
+Dialogue: 0,0:00:27.09,0:00:29.68,Default,,0,0,0,,目光扫过墙上八荒山防御图
+Dialogue: 0,0:00:30.07,0:00:32.74,Default,,0,0,0,,窗外{\c&H0000FFFF&\b1}乌云{\c&H00FFFFFF&\b0}渐起仿佛预示着
+Dialogue: 0,0:00:32.74,0:00:33.71,Default,,0,0,0,,风暴将至

@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_010 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:03.47,Default,,0,0,0,,联军与域外异族激战上古道
+Dialogue: 0,0:00:03.47,0:00:06.70,Default,,0,0,0,,主级强者疯狂厮杀场景位于
+Dialogue: 0,0:00:06.70,0:00:10.08,Default,,0,0,0,,伏{\c&H0000FFFF&\b1}龙山{\c&H00FFFFFF&\b0}山腰午后天空血色
+Dialogue: 0,0:00:10.08,0:00:13.02,Default,,0,0,0,,弥漫双方士兵绞杀在一起
+Dialogue: 0,0:00:13.56,0:00:17.05,Default,,0,0,0,,刀光剑影血肉横飞{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}手持
+Dialogue: 0,0:00:17.05,0:00:20.47,Default,,0,0,0,,长剑剑光闪烁每一剑都斩杀
+Dialogue: 0,0:00:20.47,0:00:23.98,Default,,0,0,0,,数名域外异族银月始祖长枪
+Dialogue: 0,0:00:23.98,0:00:27.55,Default,,0,0,0,,横扫联军士兵成片倒下远处
+Dialogue: 0,0:00:27.93,0:00:30.42,Default,,0,0,0,,翻天始祖与魅影始祖拳掌
+Dialogue: 0,0:00:30.42,0:00:33.66,Default,,0,0,0,,相交气劲四溢山石崩裂

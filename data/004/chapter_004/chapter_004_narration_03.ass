@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_004 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.92,Default,,0,0,0,,八荒山防御固若金汤{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.92,0:00:05.77,Default,,0,0,0,,立于主峰之巅俯瞰整座{\c&H0000FFFF&\b1}山脉{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.26,0:00:08.96,Default,,0,0,0,,青色长袍在{\c&H0000FFFF&\b1}山风中{\c&H00FFFFFF&\b0}猎猎作响
+Dialogue: 0,0:00:09.62,0:00:12.65,Default,,0,0,0,,护山大阵光幕流转{\c&H0000FFFF&\b1}符文{\c&H00FFFFFF&\b0}闪烁
+Dialogue: 0,0:00:12.96,0:00:15.90,Default,,0,0,0,,将八荒山笼罩其中阵眼处
+Dialogue: 0,0:00:15.90,0:00:19.25,Default,,0,0,0,,十二根{\c&H0000FFFF&\b1}盘龙{\c&H00FFFFFF&\b0}柱金光冲天远处
+Dialogue: 0,0:00:19.70,0:00:21.91,Default,,0,0,0,,三十万{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}弟子正进行
+Dialogue: 0,0:00:21.91,0:00:25.50,Default,,0,0,0,,操练刀光剑影映着{\c&H0000FFFF&\b1}朝阳{\c&H00FFFFFF&\b0}喊杀
+Dialogue: 0,0:00:25.50,0:00:28.41,Default,,0,0,0,,声震彻山谷{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}满意颔首
+Dialogue: 0,0:00:28.77,0:00:31.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦递{\c&H00FFFFFF&\b0}上防御阵盘白蒹葭
+Dialogue: 0,0:00:31.80,0:00:35.06,Default,,0,0,0,,指着阵眼细节三人低声讨论
+Dialogue: 0,0:00:35.63,0:00:38.80,Default,,0,0,0,,身后{\c&H0000FFFF&\b1}龙欣{\c&H00FFFFFF&\b0}凤岚静立八荒山已
+Dialogue: 0,0:00:38.80,0:00:40.12,Default,,0,0,0,,化作钢铁堡垒

@@ -14,10 +14,12 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:01.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}的骷髅项链化作无数
-Dialogue: 0,0:00:01.86,0:00:04.67,Default,,0,0,0,,鬼影发出凄厉尖叫铺天盖地
-Dialogue: 0,0:00:04.67,0:00:07.57,Default,,0,0,0,,涌向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}赵硕冷哼一声周天
-Dialogue: 0,0:00:07.57,0:00:09.52,Default,,0,0,0,,如意{\c&H0000FFFF&\b1}紫光{\c&H00FFFFFF&\b0}塔浮现头顶塔身
-Dialogue: 0,0:00:09.52,0:00:12.13,Default,,0,0,0,,旋转散发出柔和{\c&H0000FFFF&\b1}紫光{\c&H00FFFFFF&\b0}将鬼影
-Dialogue: 0,0:00:12.13,0:00:14.12,Default,,0,0,0,,一一净化{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}趁机从侧面
-Dialogue: 0,0:00:14.12,0:00:16.19,Default,,0,0,0,,突袭匕首直刺{\c&H0000FFFF&\b1}赵硕后{\c&H00FFFFFF&\b0}心
+Dialogue: 0,0:00:00.02,0:00:02.67,Default,,0,0,0,,三弟{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}发出撕心裂肺的
+Dialogue: 0,0:00:02.67,0:00:05.42,Default,,0,0,0,,咆哮归一期中阶的气势如
+Dialogue: 0,0:00:05.42,0:00:08.13,Default,,0,0,0,,山崩般压向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}赵硕将
+Dialogue: 0,0:00:08.13,0:00:11.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰护{\c&H00FFFFFF&\b0}在身后九子鬼母阴阳
+Dialogue: 0,0:00:11.21,0:00:14.07,Default,,0,0,0,,剑嗡嗡作响剑身上萦绕着
+Dialogue: 0,0:00:14.07,0:00:17.11,Default,,0,0,0,,黑色雾气卢二则悄然绕到
+Dialogue: 0,0:00:17.11,0:00:20.07,Default,,0,0,0,,侧面手中匕首反射着寒光
+Dialogue: 0,0:00:20.43,0:00:23.52,Default,,0,0,0,,准备发动偷袭院落中的空气
+Dialogue: 0,0:00:23.52,0:00:26.33,Default,,0,0,0,,仿佛被冻结杀机四伏

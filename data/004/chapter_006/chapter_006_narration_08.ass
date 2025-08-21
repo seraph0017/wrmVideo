@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_006 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.98,Default,,0,0,0,,白蒹葭舌战西方盟主{\c&H0000FFFF&\b1}凤岚{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.98,0:00:06.26,Default,,0,0,0,,暗藏杀机场景在{\c&H0000FFFF&\b1}北宫{\c&H00FFFFFF&\b0}山大殿
+Dialogue: 0,0:00:06.67,0:00:10.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}宋式{\c&H00FFFFFF&\b0}建筑殿内烛火摇曳天气
+Dialogue: 0,0:00:10.46,0:00:13.93,Default,,0,0,0,,夜晚白蒹葭粉裙背立{\c&H0000FFFF&\b1}凤岚{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.93,0:00:17.21,Default,,0,0,0,,蓝袍按剑西方盟主犹豫不决
+Dialogue: 0,0:00:17.77,0:00:21.44,Default,,0,0,0,,白蒹葭声音清冷降则生抗则
+Dialogue: 0,0:00:21.44,0:00:24.73,Default,,0,0,0,,亡西方联盟何去何从{\c&H0000FFFF&\b1}凤岚{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.73,0:00:28.01,Default,,0,0,0,,剑鞘轻响西方盟主冷汗直流
+Dialogue: 0,0:00:28.54,0:00:32.02,Default,,0,0,0,,突然{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}冲报三眼魔族前锋
+Dialogue: 0,0:00:32.02,0:00:32.59,Default,,0,0,0,,至山下

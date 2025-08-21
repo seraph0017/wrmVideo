@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_010 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女密室诱惑太平鬼祖
+Dialogue: 0,0:00:03.27,0:00:06.17,Default,,0,0,0,,两人密谋背叛银月始祖场景
+Dialogue: 0,0:00:06.17,0:00:08.38,Default,,0,0,0,,位于伏{\c&H0000FFFF&\b1}龙山{\c&H00FFFFFF&\b0}深处的山洞秘境
+Dialogue: 0,0:00:08.99,0:00:11.98,Default,,0,0,0,,洞内石壁光滑有发光晶石
+Dialogue: 0,0:00:11.98,0:00:15.29,Default,,0,0,0,,照明中央有石床四周散落
+Dialogue: 0,0:00:15.29,0:00:18.61,Default,,0,0,0,,衣物{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女身姿曼妙正
+Dialogue: 0,0:00:18.61,0:00:21.82,Default,,0,0,0,,俯身靠近{\c&H0000FFFF&\b1}太平{\c&H00FFFFFF&\b0}鬼祖太平鬼祖
+Dialogue: 0,0:00:21.82,0:00:25.64,Default,,0,0,0,,面色阴沉眼神挣扎被{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:25.64,0:00:28.61,Default,,0,0,0,,女的美色诱惑{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女低语
+Dialogue: 0,0:00:28.61,0:00:31.11,Default,,0,0,0,,承诺给予太平鬼祖{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:31.11,0:00:33.97,Default,,0,0,0,,尊之位实则暗中施展牵魂
+Dialogue: 0,0:00:33.97,0:00:36.20,Default,,0,0,0,,密咒欲控制其心神

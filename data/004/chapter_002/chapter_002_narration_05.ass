@@ -14,11 +14,12 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:01.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大见{\c&H00FFFFFF&\b0}二弟也遭重创
-Dialogue: 0,0:00:01.88,0:00:04.29,Default,,0,0,0,,怒不可遏骷髅项链黑气大盛
-Dialogue: 0,0:00:04.63,0:00:06.92,Default,,0,0,0,,凝聚成一只巨大的鬼爪抓向
-Dialogue: 0,0:00:06.92,0:00:09.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}头顶的紫光塔赵硕神色
-Dialogue: 0,0:00:09.18,0:00:11.14,Default,,0,0,0,,不变九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑自动
-Dialogue: 0,0:00:11.14,0:00:13.72,Default,,0,0,0,,迎敌剑光与鬼爪碰撞发出
-Dialogue: 0,0:00:13.72,0:00:16.11,Default,,0,0,0,,刺耳的金{\c&H0000FFFF&\b1}铁交鸣{\c&H00FFFFFF&\b0}之声气浪将
-Dialogue: 0,0:00:16.11,0:00:17.50,Default,,0,0,0,,周围石桌石凳掀翻
+Dialogue: 0,0:00:00.02,0:00:02.68,Default,,0,0,0,,我要你偿命{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}双目赤红
+Dialogue: 0,0:00:02.99,0:00:06.29,Default,,0,0,0,,全身肌肉虬结双拳轰出拳
+Dialogue: 0,0:00:06.29,0:00:09.39,Default,,0,0,0,,风带着音爆声砸向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}赵硕
+Dialogue: 0,0:00:09.39,0:00:12.13,Default,,0,0,0,,不退反进九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑与
+Dialogue: 0,0:00:12.13,0:00:15.21,Default,,0,0,0,,双拳碰撞发出金{\c&H0000FFFF&\b1}铁交鸣{\c&H00FFFFFF&\b0}之声
+Dialogue: 0,0:00:15.73,0:00:18.45,Default,,0,0,0,,他借力向后飘出落在{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.45,0:00:22.58,Default,,0,0,0,,身边低声道大哥退后{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:22.58,0:00:25.25,Default,,0,0,0,,看着弟弟坚毅的侧脸眼眶
+Dialogue: 0,0:00:25.25,0:00:25.68,Default,,0,0,0,,微湿

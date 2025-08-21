@@ -14,12 +14,12 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.56,Default,,0,0,0,,兄弟二人相拥而泣多年分离
-Dialogue: 0,0:00:02.56,0:00:04.47,Default,,0,0,0,,的思念在这一刻宣泄而出
-Dialogue: 0,0:00:04.88,0:00:06.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}拍着赵硕的背哽咽道
-Dialogue: 0,0:00:06.93,0:00:10.54,Default,,0,0,0,,回来就好回来就好{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}感受
-Dialogue: 0,0:00:10.63,0:00:11.59,Default,,0,0,0,,着大哥温暖的怀抱心中
-Dialogue: 0,0:00:11.59,0:00:14.04,Default,,0,0,0,,百感交集庭院中{\c&H0000FFFF&\b1}卢氏{\c&H00FFFFFF&\b0}三兄弟
-Dialogue: 0,0:00:14.04,0:00:16.29,Default,,0,0,0,,的尸体{\c&H0000FFFF&\b1}静静{\c&H00FFFFFF&\b0}躺着阳光透过
-Dialogue: 0,0:00:16.29,0:00:18.40,Default,,0,0,0,,云层洒下仿佛在见证这迟来
-Dialogue: 0,0:00:18.50,0:00:19.40,Default,,0,0,0,,的重逢
+Dialogue: 0,0:00:00.02,0:00:02.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}走到赵丰面前伸手扶住
+Dialogue: 0,0:00:02.97,0:00:05.71,Default,,0,0,0,,他摇摇欲坠的身体一股精纯
+Dialogue: 0,0:00:05.71,0:00:08.41,Default,,0,0,0,,的法力注入{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}体内赵丰
+Dialogue: 0,0:00:08.41,0:00:10.51,Default,,0,0,0,,感受到温暖的力量修复着
+Dialogue: 0,0:00:10.51,0:00:14.35,Default,,0,0,0,,伤势苦笑道二弟你怎么会来
+Dialogue: 0,0:00:14.93,0:00:18.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}眼眶微红我感应到大哥
+Dialogue: 0,0:00:18.07,0:00:20.77,Default,,0,0,0,,有危险兄弟二人相视一笑
+Dialogue: 0,0:00:21.27,0:00:23.29,Default,,0,0,0,,多年未见的隔阂在这一刻
+Dialogue: 0,0:00:23.29,0:00:24.20,Default,,0,0,0,,烟消云散

@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_006 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.40,Default,,0,0,0,,擎天宗主与鬼算子在屠魔
+Dialogue: 0,0:00:02.40,0:00:05.10,Default,,0,0,0,,联盟大殿决裂{\c&H0000FFFF&\b1}白眉长{\c&H00FFFFFF&\b0}老
+Dialogue: 0,0:00:05.10,0:00:08.06,Default,,0,0,0,,煽风点火场景在屠魔联盟
+Dialogue: 0,0:00:08.06,0:00:11.96,Default,,0,0,0,,大殿{\c&H0000FFFF&\b1}宋式{\c&H00FFFFFF&\b0}建筑梁柱歪斜地面
+Dialogue: 0,0:00:11.96,0:00:15.62,Default,,0,0,0,,有血迹光线昏暗天气{\c&H0000FFFF&\b1}阴雨天{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.11,0:00:19.64,Default,,0,0,0,,擎天宗主金袍怒视鬼算子鬼
+Dialogue: 0,0:00:19.64,0:00:22.77,Default,,0,0,0,,算子灰衣{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}白眉长老在旁
+Dialogue: 0,0:00:22.77,0:00:26.57,Default,,0,0,0,,挑拨鬼算子通敌{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}当诛
+Dialogue: 0,0:00:26.99,0:00:30.14,Default,,0,0,0,,殿内长老分成两派剑拔弩张
+Dialogue: 0,0:00:30.64,0:00:34.28,Default,,0,0,0,,突然殿外传来喊杀声三眼魔
+Dialogue: 0,0:00:34.28,0:00:35.24,Default,,0,0,0,,族杀进来了

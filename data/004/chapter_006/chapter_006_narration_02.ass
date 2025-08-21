@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_006 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.88,Default,,0,0,0,,白蒹葭与{\c&H0000FFFF&\b1}凤岚{\c&H00FFFFFF&\b0}在玄灵山高空
+Dialogue: 0,0:00:02.88,0:00:05.78,Default,,0,0,0,,观战目睹{\c&H0000FFFF&\b1}玄心{\c&H00FFFFFF&\b0}正宗与三眼
+Dialogue: 0,0:00:05.78,0:00:08.73,Default,,0,0,0,,魔族大战场景设定在玄{\c&H0000FFFF&\b1}灵山{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.73,0:00:12.29,Default,,0,0,0,,主峰上空云雾缭绕{\c&H0000FFFF&\b1}宋式{\c&H00FFFFFF&\b0}建筑
+Dialogue: 0,0:00:12.29,0:00:15.44,Default,,0,0,0,,轮廓在云雾中若隐若现光线
+Dialogue: 0,0:00:15.44,0:00:18.77,Default,,0,0,0,,昏暗天气{\c&H0000FFFF&\b1}多云{\c&H00FFFFFF&\b0}白蒹葭一身
+Dialogue: 0,0:00:18.77,0:00:22.34,Default,,0,0,0,,粉裙{\c&H0000FFFF&\b1}凤岚{\c&H00FFFFFF&\b0}蓝袍佩剑立于云端
+Dialogue: 0,0:00:22.82,0:00:25.97,Default,,0,0,0,,下方杀声震天{\c&H0000FFFF&\b1}玄心{\c&H00FFFFFF&\b0}正宗联军
+Dialogue: 0,0:00:25.97,0:00:28.79,Default,,0,0,0,,与三眼魔族厮杀{\c&H0000FFFF&\b1}法宝{\c&H00FFFFFF&\b0}光芒
+Dialogue: 0,0:00:28.79,0:00:33.05,Default,,0,0,0,,闪烁{\c&H0000FFFF&\b1}凤岚{\c&H00FFFFFF&\b0}握紧剑柄姐姐玄心
+Dialogue: 0,0:00:33.05,0:00:36.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}正宗{\c&H00FFFFFF&\b0}快撑不住了白蒹葭遥望
+Dialogue: 0,0:00:36.30,0:00:40.48,Default,,0,0,0,,战场轻叹三眼魔族实力远超
+Dialogue: 0,0:00:40.48,0:00:40.89,Default,,0,0,0,,预期

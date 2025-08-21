@@ -14,11 +14,12 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:02.35,Default,,0,0,0,,指尖点中{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}眉心一道金光
-Dialogue: 0,0:00:02.35,0:00:05.11,Default,,0,0,0,,透体而入{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}身体一僵骷髅
-Dialogue: 0,0:00:05.11,0:00:07.67,Default,,0,0,0,,项链黑气消散鬼爪崩溃整个
-Dialogue: 0,0:00:07.67,0:00:10.16,Default,,0,0,0,,人直挺挺倒下生机断绝{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:10.16,0:00:12.68,Default,,0,0,0,,收回手指转身看向{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}脸上
-Dialogue: 0,0:00:12.68,0:00:15.30,Default,,0,0,0,,露出久违的笑容大哥我回来
-Dialogue: 0,0:00:15.30,0:00:17.74,Default,,0,0,0,,了{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}眼中含泪嘴唇颤抖
-Dialogue: 0,0:00:18.02,0:00:18.84,Default,,0,0,0,,说不出话来
+Dialogue: 0,0:00:00.02,0:00:02.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}拖着断臂连滚带爬地
+Dialogue: 0,0:00:02.80,0:00:05.92,Default,,0,0,0,,冲向院外口中尖叫你等着
+Dialogue: 0,0:00:06.29,0:00:09.12,Default,,0,0,0,,我们{\c&H0000FFFF&\b1}黑风寨{\c&H00FFFFFF&\b0}不会放过你赵硕
+Dialogue: 0,0:00:09.12,0:00:11.87,Default,,0,0,0,,眼神一{\c&H0000FFFF&\b1}寒九子{\c&H00FFFFFF&\b0}鬼母阴阳剑
+Dialogue: 0,0:00:11.87,0:00:14.97,Default,,0,0,0,,脱手飞出化作一道流光追上
+Dialogue: 0,0:00:14.97,0:00:18.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}从后心刺入卢二身体
+Dialogue: 0,0:00:18.30,0:00:21.55,Default,,0,0,0,,一僵扑倒在地彻底没了气息
+Dialogue: 0,0:00:22.14,0:00:24.95,Default,,0,0,0,,院落中只剩下兄弟二人以及
+Dialogue: 0,0:00:24.95,0:00:26.93,Default,,0,0,0,,三具逐渐冰冷的尸体

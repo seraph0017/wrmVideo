@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_010 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.73,Default,,0,0,0,,银月始祖发现被算计决定
+Dialogue: 0,0:00:02.73,0:00:05.51,Default,,0,0,0,,挖地道逃生场景位于伏{\c&H0000FFFF&\b1}龙山{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.51,0:00:09.71,Default,,0,0,0,,山顶密室深夜烛光摇曳银月
+Dialogue: 0,0:00:09.71,0:00:13.40,Default,,0,0,0,,始祖面色{\c&H0000FFFF&\b1}铁青{\c&H00FFFFFF&\b0}手中捏碎茶杯
+Dialogue: 0,0:00:13.74,0:00:17.45,Default,,0,0,0,,金鼠始祖{\c&H0000FFFF&\b1}蓝炎{\c&H00FFFFFF&\b0}始祖围坐神色
+Dialogue: 0,0:00:17.45,0:00:20.84,Default,,0,0,0,,慌乱银月始祖怒吼{\c&H0000FFFF&\b1}天魔圣{\c&H00FFFFFF&\b0}女
+Dialogue: 0,0:00:20.84,0:00:23.48,Default,,0,0,0,,背叛决定让金鼠始祖带噬
+Dialogue: 0,0:00:23.48,0:00:26.48,Default,,0,0,0,,宝鼠一族挖地道从地底逃离
+Dialogue: 0,0:00:26.48,0:00:29.27,Default,,0,0,0,,伏{\c&H0000FFFF&\b1}龙山{\c&H00FFFFFF&\b0}务必在联军大队到来
+Dialogue: 0,0:00:29.27,0:00:29.96,Default,,0,0,0,,前脱身

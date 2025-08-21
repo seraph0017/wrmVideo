@@ -14,18 +14,16 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:02.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}猛然惊醒发现身处
-Dialogue: 0,0:00:02.44,0:00:05.01,Default,,0,0,0,,古色古香房间身体竟缩水成
-Dialogue: 0,0:00:05.01,0:00:07.58,Default,,0,0,0,,十五岁少年场景骤变为宋朝
-Dialogue: 0,0:00:07.58,0:00:10.38,Default,,0,0,0,,风格房间木质结构雕花窗棂
-Dialogue: 0,0:00:10.56,0:00:12.32,Default,,0,0,0,,桌上放着铜镜和粗布衣物
-Dialogue: 0,0:00:12.58,0:00:14.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}躺在硬板床上身上盖着
-Dialogue: 0,0:00:14.75,0:00:17.28,Default,,0,0,0,,麻布被子他挣扎坐起低头
-Dialogue: 0,0:00:17.28,0:00:19.25,Default,,0,0,0,,看着自己稚嫩的双手和瘦弱
-Dialogue: 0,0:00:19.25,0:00:21.89,Default,,0,0,0,,的胳膊一脸茫然房间角落有
-Dialogue: 0,0:00:21.89,0:00:23.95,Default,,0,0,0,,一个旧木箱墙上挂着蓑衣
-Dialogue: 0,0:00:23.95,0:00:26.51,Default,,0,0,0,,斗笠充满古代农家气息这
-Dialogue: 0,0:00:26.51,0:00:28.82,Default,,0,0,0,,突如其来的时空转换让{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:28.82,0:00:30.93,Default,,0,0,0,,怀疑自己仍在梦中直到他摸
-Dialogue: 0,0:00:30.93,0:00:33.15,Default,,0,0,0,,到脖颈间消失的磨盘饰品才
-Dialogue: 0,0:00:33.15,0:00:35.75,Default,,0,0,0,,惊觉现实残酷他真的穿越了
+Dialogue: 0,0:00:00.03,0:00:02.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}被赵鸾拉着走向餐厅
+Dialogue: 0,0:00:02.71,0:00:05.30,Default,,0,0,0,,庭院中草木{\c&H0000FFFF&\b1}青翠{\c&H00FFFFFF&\b0}透着宋代
+Dialogue: 0,0:00:05.30,0:00:08.64,Default,,0,0,0,,农家气息二哥{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}去年
+Dialogue: 0,0:00:08.64,0:00:11.38,Default,,0,0,0,,星图开窍成了灵窍期咱们
+Dialogue: 0,0:00:11.38,0:00:14.64,Default,,0,0,0,,惹不起{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}边走边说小手
+Dialogue: 0,0:00:14.64,0:00:17.89,Default,,0,0,0,,紧紧攥着他衣袖餐厅{\c&H0000FFFF&\b1}内楚秀{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.89,0:00:20.59,Default,,0,0,0,,正盛粥她盘发穿浅灰圆领
+Dialogue: 0,0:00:20.59,0:00:23.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}布衫{\c&H00FFFFFF&\b0}见赵硕进来眼中露出
+Dialogue: 0,0:00:23.53,0:00:26.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}慈爱{\c&H00FFFFFF&\b0}快吃娘一定让你和小鸾
+Dialogue: 0,0:00:26.78,0:00:30.12,Default,,0,0,0,,开灵窍{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}接过粗瓷碗心中
+Dialogue: 0,0:00:30.12,0:00:32.56,Default,,0,0,0,,一暖这就是穿越后的家人吗
+Dialogue: 0,0:00:33.11,0:00:35.83,Default,,0,0,0,,他低头喝粥没看到{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}偷偷
+Dialogue: 0,0:00:35.83,0:00:36.72,Default,,0,0,0,,抹泪的动作

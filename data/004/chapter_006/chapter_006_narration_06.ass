@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_006 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:03.19,Default,,0,0,0,,惑心魔使荒原下令三眼魔族
+Dialogue: 0,0:00:03.19,0:00:06.33,Default,,0,0,0,,百万大军追杀{\c&H0000FFFF&\b1}屠魔{\c&H00FFFFFF&\b0}联盟场景
+Dialogue: 0,0:00:06.33,0:00:09.65,Default,,0,0,0,,在荒原{\c&H0000FFFF&\b1}宋式{\c&H00FFFFFF&\b0}边境地貌枯树
+Dialogue: 0,0:00:09.65,0:00:13.79,Default,,0,0,0,,乱石光线夕阳{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}惑心
+Dialogue: 0,0:00:13.79,0:00:16.78,Default,,0,0,0,,魔使紫发狰狞立于{\c&H0000FFFF&\b1}黑马{\c&H00FFFFFF&\b0}上
+Dialogue: 0,0:00:17.18,0:00:19.84,Default,,0,0,0,,身后是三眼魔族黑色洪流
+Dialogue: 0,0:00:20.17,0:00:23.71,Default,,0,0,0,,无欲天魔躬身神使屠魔联盟
+Dialogue: 0,0:00:23.71,0:00:26.91,Default,,0,0,0,,残部逃向西方联盟惑心魔使
+Dialogue: 0,0:00:26.91,0:00:30.94,Default,,0,0,0,,狂笑传令追上者赏魔晶万颗
+Dialogue: 0,0:00:31.45,0:00:34.24,Default,,0,0,0,,魔兵{\c&H0000FFFF&\b1}齐声{\c&H00FFFFFF&\b0}咆哮声震原野

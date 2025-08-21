@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_005 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.03,0:00:02.94,Default,,0,0,0,,战略会议{\c&H0000FFFF&\b1}定乾坤{\c&H00FFFFFF&\b0}白蒹葭献策
+Dialogue: 0,0:00:02.94,0:00:06.14,Default,,0,0,0,,诱敌{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}议事厅烛火通明
+Dialogue: 0,0:00:06.50,0:00:09.35,Default,,0,0,0,,地图摊开白蒹葭玉指指向
+Dialogue: 0,0:00:09.35,0:00:12.59,Default,,0,0,0,,地图上的断魂岭此岭狭窄可
+Dialogue: 0,0:00:12.59,0:00:15.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}伏兵{\c&H00FFFFFF&\b0}十万待魔众入岭断其后
+Dialogue: 0,0:00:15.84,0:00:19.65,Default,,0,0,0,,路首尾夹击辛芦补充{\c&H0000FFFF&\b1}龙欣{\c&H00FFFFFF&\b0}率
+Dialogue: 0,0:00:19.65,0:00:22.32,Default,,0,0,0,,锦衣卫截断魔族粮道我与
+Dialogue: 0,0:00:22.32,0:00:25.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}凤岚{\c&H00FFFFFF&\b0}领三十上古道主守主峰
+Dialogue: 0,0:00:25.41,0:00:28.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}亲率主力诱敌赵硕抚掌
+Dialogue: 0,0:00:29.05,0:00:32.81,Default,,0,0,0,,好计传令下去明日子时按计
+Dialogue: 0,0:00:32.81,0:00:36.19,Default,,0,0,0,,行事众人起身领命议事厅内
+Dialogue: 0,0:00:36.19,0:00:37.33,Default,,0,0,0,,杀气凛然

@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_003 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.03,0:00:03.54,Default,,0,0,0,,场景回到广场{\c&H0000FFFF&\b1}大战{\c&H00FFFFFF&\b0}爆发天星
+Dialogue: 0,0:00:03.54,0:00:05.78,Default,,0,0,0,,宗的星形阵法爆发出耀眼
+Dialogue: 0,0:00:05.78,0:00:09.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}蓝光{\c&H00FFFFFF&\b0}数十名道尊级强者从阵
+Dialogue: 0,0:00:09.04,0:00:11.93,Default,,0,0,0,,中飞出身着圆领灰色道袍
+Dialogue: 0,0:00:12.46,0:00:15.25,Default,,0,0,0,,手持各种法器冲向空中的
+Dialogue: 0,0:00:15.25,0:00:18.69,Default,,0,0,0,,僵帝和走尸僵帝们怒吼指挥
+Dialogue: 0,0:00:18.69,0:00:21.81,Default,,0,0,0,,走尸反击黑色雾气与蓝色
+Dialogue: 0,0:00:21.81,0:00:24.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}灵光{\c&H00FFFFFF&\b0}碰撞发出震耳欲聋的
+Dialogue: 0,0:00:24.24,0:00:27.20,Default,,0,0,0,,爆炸声地面上{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗门人
+Dialogue: 0,0:00:27.20,0:00:29.96,Default,,0,0,0,,结成{\c&H0000FFFF&\b1}小阵{\c&H00FFFFFF&\b0}用长剑斩杀漏网的
+Dialogue: 0,0:00:29.96,0:00:33.70,Default,,0,0,0,,走尸鲜血染红了青石板场面
+Dialogue: 0,0:00:33.70,0:00:34.17,Default,,0,0,0,,惨烈

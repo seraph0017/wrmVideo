@@ -14,10 +14,12 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}抓住鬼爪与剑光僵持的
-Dialogue: 0,0:00:02.02,0:00:05.00,Default,,0,0,0,,瞬间身形如电瞬间出现在
-Dialogue: 0,0:00:05.00,0:00:07.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}面前右手食指中指并拢
-Dialogue: 0,0:00:07.70,0:00:10.11,Default,,0,0,0,,点向{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}眉心卢大瞳孔骤缩
-Dialogue: 0,0:00:10.36,0:00:12.34,Default,,0,0,0,,想要后退却发现身体被{\c&H0000FFFF&\b1}紫光{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:12.34,0:00:14.28,Default,,0,0,0,,塔的光芒禁锢只能眼睁睁
-Dialogue: 0,0:00:14.28,0:00:16.67,Default,,0,0,0,,看着指尖临近眼中充满绝望
+Dialogue: 0,0:00:00.02,0:00:03.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大如{\c&H00FFFFFF&\b0}疯虎般扑来双拳挥舞
+Dialogue: 0,0:00:03.10,0:00:06.39,Default,,0,0,0,,间碎石飞溅{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}脚尖点地
+Dialogue: 0,0:00:06.92,0:00:10.21,Default,,0,0,0,,身形如鬼魅般在拳影中穿梭
+Dialogue: 0,0:00:10.82,0:00:13.01,Default,,0,0,0,,九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑不断刺向
+Dialogue: 0,0:00:13.01,0:00:16.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}破绽突然他抓住卢大
+Dialogue: 0,0:00:16.20,0:00:19.08,Default,,0,0,0,,旧力已尽新力未生之际一剑
+Dialogue: 0,0:00:19.08,0:00:21.82,Default,,0,0,0,,刺穿其心脏{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}难以置信地
+Dialogue: 0,0:00:21.82,0:00:24.70,Default,,0,0,0,,低头看着胸口的剑口中涌出
+Dialogue: 0,0:00:24.70,0:00:26.57,Default,,0,0,0,,鲜血轰然倒地

@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_003 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:03.08,Default,,0,0,0,,场景回到广场上空僵帝们见
+Dialogue: 0,0:00:03.08,0:00:05.71,Default,,0,0,0,,天星宗{\c&H0000FFFF&\b1}布阵{\c&H00FFFFFF&\b0}其中一名领头
+Dialogue: 0,0:00:05.71,0:00:09.28,Default,,0,0,0,,僵帝厉声咆哮交出{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}否则
+Dialogue: 0,0:00:09.28,0:00:12.71,Default,,0,0,0,,屠你{\c&H0000FFFF&\b1}满门{\c&H00FFFFFF&\b0}声音如雷震得广场
+Dialogue: 0,0:00:12.71,0:00:15.46,Default,,0,0,0,,上的瓦片簌簌作响僵帝身着
+Dialogue: 0,0:00:15.46,0:00:18.03,Default,,0,0,0,,黑色同色制服身体周围
+Dialogue: 0,0:00:18.03,0:00:20.98,Default,,0,0,0,,环绕着黑色雾气眼神凶狠地
+Dialogue: 0,0:00:20.98,0:00:23.60,Default,,0,0,0,,盯着下方的天雷上人天雷
+Dialogue: 0,0:00:23.60,0:00:26.89,Default,,0,0,0,,上人站在高台仰头怒视我
+Dialogue: 0,0:00:26.89,0:00:29.61,Default,,0,0,0,,天星{\c&H0000FFFF&\b1}宗立宗{\c&H00FFFFFF&\b0}亿万年岂惧你
+Dialogue: 0,0:00:29.61,0:00:33.59,Default,,0,0,0,,区区僵神双方隔空对峙杀气
+Dialogue: 0,0:00:33.59,0:00:37.10,Default,,0,0,0,,弥漫天空{\c&H0000FFFF&\b1}乌云{\c&H00FFFFFF&\b0}更浓仿佛预示
+Dialogue: 0,0:00:37.10,0:00:38.22,Default,,0,0,0,,着一场{\c&H0000FFFF&\b1}大战{\c&H00FFFFFF&\b0}

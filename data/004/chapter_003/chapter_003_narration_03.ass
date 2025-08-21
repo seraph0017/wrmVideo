@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_003 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.03,0:00:02.00,Default,,0,0,0,,场景仍在{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗广场
+Dialogue: 0,0:00:02.47,0:00:05.61,Default,,0,0,0,,警钟长鸣天雷上人站在广场
+Dialogue: 0,0:00:05.61,0:00:08.29,Default,,0,0,0,,高台身后跟着四名中年道
+Dialogue: 0,0:00:08.29,0:00:11.66,Default,,0,0,0,,人均着圆领灰色道袍手持
+Dialogue: 0,0:00:11.66,0:00:15.06,Default,,0,0,0,,法器天雷上人高声下令{\c&H0000FFFF&\b1}布阵{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.06,0:00:18.39,Default,,0,0,0,,迎敌周围数千名{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗门人
+Dialogue: 0,0:00:18.39,0:00:21.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}迅速行动{\c&H00FFFFFF&\b0}以广场为中心结成
+Dialogue: 0,0:00:21.93,0:00:24.91,Default,,0,0,0,,一个巨大的星形阵法蓝色
+Dialogue: 0,0:00:24.91,0:00:27.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}灵光{\c&H00FFFFFF&\b0}从阵眼升起直冲云霄
+Dialogue: 0,0:00:28.32,0:00:31.68,Default,,0,0,0,,僵帝们在空中{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}指挥走尸
+Dialogue: 0,0:00:31.68,0:00:35.02,Default,,0,0,0,,如潮水般冲向阵法双方即将
+Dialogue: 0,0:00:35.02,0:00:37.41,Default,,0,0,0,,碰撞气氛紧张到极点

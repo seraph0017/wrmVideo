@@ -14,12 +14,13 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}从储物戒指中取出疗伤
-Dialogue: 0,0:00:02.02,0:00:05.46,Default,,0,0,0,,丹药递给{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}大哥先疗伤
-Dialogue: 0,0:00:05.91,0:00:08.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}接过丹药眼中充满信任
-Dialogue: 0,0:00:08.77,0:00:11.42,Default,,0,0,0,,窗外{\c&H0000FFFF&\b1}阳光明媚{\c&H00FFFFFF&\b0}照在庭院中
-Dialogue: 0,0:00:11.65,0:00:13.13,Default,,0,0,0,,仿佛预示着新的开始
-Dialogue: 0,0:00:13.40,0:00:15.36,Default,,0,0,0,,兄弟二人相视一笑多年的
-Dialogue: 0,0:00:15.36,0:00:16.84,Default,,0,0,0,,隔阂与分离在这一刻
-Dialogue: 0,0:00:16.84,0:00:19.18,Default,,0,0,0,,烟消云散未来的路他们将
-Dialogue: 0,0:00:19.18,0:00:20.00,Default,,0,0,0,,并肩前行
+Dialogue: 0,0:00:00.02,0:00:02.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}背着赵丰走出胡同口
+Dialogue: 0,0:00:02.91,0:00:06.16,Default,,0,0,0,,远处{\c&H0000FFFF&\b1}望海{\c&H00FFFFFF&\b0}城内火光点点隐约
+Dialogue: 0,0:00:06.16,0:00:08.99,Default,,0,0,0,,传来打斗声他抬头望向动荡
+Dialogue: 0,0:00:08.99,0:00:11.86,Default,,0,0,0,,的城池眼中闪过一丝凝重
+Dialogue: 0,0:00:12.48,0:00:15.73,Default,,0,0,0,,大哥天罚转轮将出望{\c&H0000FFFF&\b1}海城{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:15.73,0:00:18.76,Default,,0,0,0,,已成是非之地我们必须尽快
+Dialogue: 0,0:00:18.76,0:00:22.21,Default,,0,0,0,,离开{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}点了点头兄弟二人
+Dialogue: 0,0:00:22.21,0:00:24.88,Default,,0,0,0,,的身影消失在暮色之中只
+Dialogue: 0,0:00:24.88,0:00:27.45,Default,,0,0,0,,留下身后残破的家园和未解
+Dialogue: 0,0:00:27.45,0:00:28.05,Default,,0,0,0,,的谜团

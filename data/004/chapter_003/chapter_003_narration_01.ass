@@ -1,0 +1,31 @@
+[Script Info]
+Title: chapter_003 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.03,0:00:02.02,Default,,0,0,0,,场景位于{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗大殿前的
+Dialogue: 0,0:00:02.02,0:00:04.98,Default,,0,0,0,,广场正午时分{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}刺眼
+Dialogue: 0,0:00:05.53,0:00:09.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕辛{\c&H00FFFFFF&\b0}芦白蒹葭姜素卿四人
+Dialogue: 0,0:00:09.15,0:00:11.89,Default,,0,0,0,,突然出现在广场中央周围
+Dialogue: 0,0:00:11.89,0:00:14.40,Default,,0,0,0,,迅速围拢了数十名{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗
+Dialogue: 0,0:00:14.40,0:00:18.18,Default,,0,0,0,,门人手持长剑神色戒备{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:18.18,0:00:21.35,Default,,0,0,0,,身着圆领青色长袍眉头微皱
+Dialogue: 0,0:00:21.73,0:00:24.57,Default,,0,0,0,,右手下意识按在剑柄{\c&H0000FFFF&\b1}上辛芦{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:24.57,0:00:27.36,Default,,0,0,0,,和白蒹葭站在他身侧背部对
+Dialogue: 0,0:00:27.36,0:00:30.34,Default,,0,0,0,,着镜头圆领长裙遮盖脖颈
+Dialogue: 0,0:00:30.89,0:00:33.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}躲在最后粉色短衫的
+Dialogue: 0,0:00:33.80,0:00:37.50,Default,,0,0,0,,领口紧贴颈部眼神慌乱{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:37.50,0:00:39.78,Default,,0,0,0,,宗门人统一穿着圆领蓝色
+Dialogue: 0,0:00:39.78,0:00:43.18,Default,,0,0,0,,短衫形成半圆形包围圈气氛
+Dialogue: 0,0:00:43.18,0:00:43.66,Default,,0,0,0,,紧张

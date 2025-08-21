@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_007 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.81,Default,,0,0,0,,无名{\c&H0000FFFF&\b1}小山{\c&H00FFFFFF&\b0}屠魔联盟残部被
+Dialogue: 0,0:00:02.81,0:00:06.08,Default,,0,0,0,,三眼魔族团团包围擎天宗主
+Dialogue: 0,0:00:06.08,0:00:08.10,Default,,0,0,0,,被数名{\c&H0000FFFF&\b1}上古{\c&H00FFFFFF&\b0}天魔追杀
+Dialogue: 0,0:00:08.59,0:00:12.20,Default,,0,0,0,,披头散发神环黯淡狼狈不堪
+Dialogue: 0,0:00:12.71,0:00:15.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}白眉长{\c&H00FFFFFF&\b0}老为护宗主惨死于天
+Dialogue: 0,0:00:15.89,0:00:18.52,Default,,0,0,0,,魔爪下鬼算子假意自爆
+Dialogue: 0,0:00:18.90,0:00:22.17,Default,,0,0,0,,趁惑心魔使闪避之机携残部
+Dialogue: 0,0:00:22.17,0:00:25.84,Default,,0,0,0,,遁走僵{\c&H0000FFFF&\b1}神族{\c&H00FFFFFF&\b0}骷髅族趁机扩张
+Dialogue: 0,0:00:26.22,0:00:28.79,Default,,0,0,0,,三界势力席卷而来人族
+Dialogue: 0,0:00:28.79,0:00:29.67,Default,,0,0,0,,危在旦夕

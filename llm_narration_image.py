@@ -506,12 +506,31 @@ def process_narration_images(data_directory: str, prompt: str = "请仔细观察
         if result:
             print(f"分析结果: {result}")
             
-            # 判断是否通过
-            if "通过" in result or "pass" in result.lower():
+            # 判断是否通过 - 修复逻辑：优先检查失败关键词
+            if "失败" in result or "fail" in result.lower():
+                print(f"✗ 检查失败")
+                failed_count += 1
+                
+                # 记录失败图片到文件
+                with open(failed_file_path, 'a', encoding='utf-8') as f:
+                    f.write(f"{image_path}\n")
+                    f.write(f"失败原因: {result}\n")
+                    f.write("-" * 50 + "\n")
+                
+                # 如果启用自动重新生成
+                if auto_regenerate:
+                    print(f"正在尝试重新生成失败的图片...")
+                    if regenerate_failed_image(image_path):
+                        regenerated_count += 1
+                        print(f"✓ 重新生成任务已提交")
+                    else:
+                        print(f"✗ 重新生成失败")
+                        
+            elif "通过" in result or "pass" in result.lower():
                 print(f"✓ 检查通过")
                 passed_count += 1
             else:
-                print(f"✗ 检查失败")
+                print(f"? 结果不明确，默认为失败")
                 failed_count += 1
                 
                 # 记录失败图片到文件
