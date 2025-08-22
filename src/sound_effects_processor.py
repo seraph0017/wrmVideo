@@ -59,10 +59,10 @@ class SoundEffectsProcessor:
             '打字': ['打字', 'typing', '键盘'],
             
             # 环境音效
-            '人群': ['人群', 'crowd', '嘈杂'],
+            # 移除人声音效：'人群': ['人群', 'crowd', '嘈杂'],
             '嘈杂': ['嘈杂', 'noise', '喧闹'],
             '喧闹': ['喧闹', 'noise', '嘈杂'],
-            '议论': ['议论', 'talk', '说话'],
+            # 移除人声音效：'议论': ['议论', 'talk', '说话'],
         }
     
     def _load_sound_effects(self):

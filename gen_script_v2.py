@@ -41,6 +41,136 @@ sys.path.insert(0, project_root)
 from config.prompt_config import prompt_config, SCRIPT_CONFIG
 from config.config import ARK_CONFIG
 
+class ContentFilter:
+    """
+    内容过滤器，用于检测和替换违禁词汇和露骨文案
+    """
+    
+    def __init__(self):
+        # 违禁词汇列表
+        self.forbidden_words = {
+            '睡觉', '拥抱', '双修', '采补', '吸精', '吸精气', '乱摸', '乱动', '赤裸裸', 
+            '风韵', '韵味', '味道', '服侍', '爆浆', '口味', '尝鲜', '床上', '大宝贝', 
+            '勾引', '色情', '偷人', '欲望', '互动', '鼎炉', '温柔', '温热', '目光', 
+            '润湿', '洗澡', '不轨', '大腿', '怀孕', '抱起', '姿势', '春药', '媚药', 
+            '软床', '丝袜', '诱惑', '催情', '允吸', '怀里', '亲吻', '毒品', '上床', 
+            '强暴', '性欲'
+        }
+        
+        # 联想性词汇
+        self.suggestive_words = {
+            '内心空虚', '挤眉弄眼', '衣衫不整', '脸色潮红', '蹭了蹭', '双腿间', 
+            '我想和你在一起', '生命大和谐', '欲望上头', '房间互动', '皮肤发烫', 
+            '浑身燥热', '轻轻划过', '躺在床上', '抱入怀中', '抱起'
+        }
+        
+        # 禁用句式模式
+        self.forbidden_patterns = [
+            r'我和.*一起睡', r'打扰我和.*一起睡', r'好久没抱着.*睡觉', 
+            r'我不喜欢和.*睡在一起', r'.*沾了.*身子', r'贴在衣服的包裹下',
+            r'身体微微的起浮', r'面部发烫的感觉', r'将.*搂在怀中', 
+            r'完美S型身材', r'几乎将衣服撑爆'
+        ]
+        
+        # 敏感词替换映射
+        self.word_replacements = {
+            '罪犯': '嫌疑人',
+            '通缉犯': 'TJ',
+            '警察': 'jc',
+            '监狱': '牢狱',
+            '遗体': 'YT',
+            '死': 'S',
+            '上吊': 'SD',
+            '自杀': 'ZS',
+            '跳楼': 'TL',
+            '尸体': 'ST',
+            '回房睡觉': '回房休息',
+            '睡觉': '休息'
+        }
+    
+    def check_content(self, content: str) -> Tuple[bool, List[str]]:
+        """
+        检查内容是否包含违禁词汇或露骨文案
+        
+        Args:
+            content: 要检查的内容
+            
+        Returns:
+            Tuple[bool, List[str]]: (是否通过检查, 发现的问题列表)
+        """
+        issues = []
+        
+        # 检查违禁词汇
+        for word in self.forbidden_words:
+            if word in content:
+                issues.append(f"发现违禁词汇: {word}")
+        
+        # 检查联想性词汇
+        for word in self.suggestive_words:
+            if word in content:
+                issues.append(f"发现联想性词汇: {word}")
+        
+        # 检查禁用句式
+        import re
+        for pattern in self.forbidden_patterns:
+            matches = re.findall(pattern, content)
+            if matches:
+                issues.append(f"发现禁用句式: {matches}")
+        
+        return len(issues) == 0, issues
+    
+    def filter_content(self, content: str) -> str:
+        """
+        过滤内容，替换敏感词汇
+        
+        Args:
+            content: 原始内容
+            
+        Returns:
+            str: 过滤后的内容
+        """
+        filtered_content = content
+        
+        # 执行词汇替换
+        for original, replacement in self.word_replacements.items():
+            filtered_content = filtered_content.replace(original, replacement)
+        
+        # 移除违禁词汇（简单替换为空或同义词）
+        word_substitutions = {
+            '拥抱': '相伴',
+            '温柔': '和善',
+            '温热': '温暖',
+            '目光': '视线',
+            '欲望': '愿望',
+            '互动': '交流',
+            '诱惑': '吸引',
+            '怀里': '身边',
+            '大腿': '腿部',
+            '抱起': '扶起',
+            '姿势': '动作'
+        }
+        
+        for word, substitute in word_substitutions.items():
+            filtered_content = filtered_content.replace(word, substitute)
+        
+        # 移除其他严重违禁词汇
+        serious_forbidden = {
+            '双修', '采补', '吸精', '吸精气', '乱摸', '乱动', '赤裸裸', 
+            '服侍', '爆浆', '床上', '大宝贝', '勾引', '色情', '偷人', 
+            '鼎炉', '春药', '媚药', '软床', '丝袜', '催情', '允吸', 
+            '毒品', '上床', '强暴', '性欲'
+        }
+        
+        for word in serious_forbidden:
+            filtered_content = filtered_content.replace(word, '')
+        
+        # 清理多余空格
+        import re
+        filtered_content = re.sub(r'\s+', ' ', filtered_content)
+        filtered_content = filtered_content.strip()
+        
+        return filtered_content
+
 class ScriptGeneratorV2:
     """
     增强版脚本生成器
@@ -67,6 +197,9 @@ class ScriptGeneratorV2:
         self.model = ARK_CONFIG.get('model', 'doubao-seed-1-6-flash-250615')
         self.lock = threading.Lock()
         print(f"使用模型: {self.model}")
+        
+        # 初始化内容过滤器
+        self.content_filter = ContentFilter()
         
         # 验证配置
         self.validation_config = {
@@ -280,9 +413,9 @@ class ScriptGeneratorV2:
             print(f"生成第{chapter_num}章解说时出错：{e}")
             return ""
     
-    def validate_narration_content(self, narration: str, min_length: int = 1200, max_length: int = 1800) -> Tuple[bool, str]:
+    def validate_narration_content(self, narration: str, min_length: int = 1200, max_length: int = 1700) -> Tuple[bool, str]:
         """
-        验证解说内容的质量（检查字数、自动修复XML标签闭合、移除不需要的标签）
+        验证解说内容的质量（检查字数、自动修复XML标签闭合、移除不需要的标签、内容审查）
         
         Args:
             narration: 完整的narration内容
@@ -299,6 +432,20 @@ class ScriptGeneratorV2:
         
         # 检查并移除不需要的标签
         cleaned_narration = self._remove_unwanted_tags(narration)
+        
+        # 内容审查 - 检查违禁词汇和露骨文案
+        is_content_safe, content_issues = self.content_filter.check_content(cleaned_narration)
+        if not is_content_safe:
+            print(f"内容审查发现问题: {'; '.join(content_issues)}")
+            # 尝试自动过滤内容
+            filtered_narration = self.content_filter.filter_content(cleaned_narration)
+            print("已自动过滤敏感内容")
+            cleaned_narration = filtered_narration
+            
+            # 再次检查过滤后的内容
+            is_filtered_safe, filtered_issues = self.content_filter.check_content(cleaned_narration)
+            if not is_filtered_safe:
+                return False, f"内容包含无法自动过滤的违禁内容: {'; '.join(filtered_issues)}"
         
         # 提取所有<解说内容>标签内的文本进行字数统计
         import re
@@ -405,7 +552,47 @@ class ScriptGeneratorV2:
         
         return fixed_content
     
-
+    def audit_and_filter_narration(self, narration: str, chapter_num: int) -> Tuple[bool, str]:
+        """
+        对生成的解说内容进行审查和过滤
+        
+        Args:
+            narration: 原始解说内容
+            chapter_num: 章节编号
+            
+        Returns:
+            Tuple[bool, str]: (是否通过审查, 审查后的内容或错误信息)
+        """
+        try:
+            # 检查内容是否包含违禁词汇
+            is_safe, issues = self.content_filter.check_content(narration)
+            
+            if not is_safe:
+                print(f"第{chapter_num}章内容审查发现问题:")
+                for issue in issues:
+                    print(f"  - {issue}")
+                
+                # 尝试自动过滤
+                filtered_content = self.content_filter.filter_content(narration)
+                print(f"第{chapter_num}章已自动过滤敏感内容")
+                
+                # 再次检查过滤后的内容
+                is_filtered_safe, remaining_issues = self.content_filter.check_content(filtered_content)
+                
+                if not is_filtered_safe:
+                    print(f"第{chapter_num}章过滤后仍存在问题:")
+                    for issue in remaining_issues:
+                        print(f"  - {issue}")
+                    return False, f"内容包含无法自动过滤的违禁内容: {'; '.join(remaining_issues)}"
+                
+                return True, filtered_content
+            else:
+                print(f"第{chapter_num}章内容审查通过")
+                return True, narration
+                
+        except Exception as e:
+            print(f"第{chapter_num}章内容审查时出错: {e}")
+            return False, f"内容审查失败: {e}"
     
     def generate_chapter_narration_with_retry(self, chapter_content: str, chapter_num: int, 
                                             total_chapters: int, max_retries: int = 3) -> str:
@@ -428,25 +615,41 @@ class ScriptGeneratorV2:
                 narration = self.generate_chapter_narration(chapter_content, chapter_num, total_chapters)
                 
                 if narration:
+                    # 首先进行内容审查和过滤
+                    audit_passed, audit_result = self.audit_and_filter_narration(narration, chapter_num)
+                    
+                    if not audit_passed:
+                        print(f"✗ 第{chapter_num}章内容审查失败：{audit_result}")
+                        del narration
+                        if attempt < max_retries - 1:
+                            print(f"将进行第 {attempt + 2} 次尝试...")
+                            time.sleep(2)
+                        continue
+                    
+                    # 使用审查后的内容进行验证
+                    filtered_narration = audit_result
+                    
                     # 验证并修复生成的内容
                     is_valid, result = self.validate_narration_content(
-                        narration, 
+                        filtered_narration, 
                         self.validation_config['min_length'], 
                         self.validation_config['max_length']
                     )
                     
                     if is_valid:
                         # result是修复后的内容
-                        fixed_narration = result
-                        print(f"✓ 第{chapter_num}章解说文案生成成功（{len(fixed_narration)}字）")
+                        final_narration = result
+                        print(f"✓ 第{chapter_num}章解说文案生成成功（{len(final_narration)}字，已通过内容审查）")
                         # 释放原始narration内存
                         del narration
-                        return fixed_narration
+                        del filtered_narration
+                        return final_narration
                     else:
                         # result是错误信息
                         print(f"✗ 第{chapter_num}章解说文案验证失败：{result}")
                         # 立即释放失败的narration内存
                         del narration
+                        del filtered_narration
                         if attempt < max_retries - 1:
                             print(f"将进行第 {attempt + 2} 次尝试...")
                             time.sleep(2)  # 等待2秒后重试

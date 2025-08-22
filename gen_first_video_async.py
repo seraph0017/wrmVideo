@@ -57,7 +57,7 @@ def find_sound_effect(text, work_dir):
         # 情感类
         '心跳': ['emotion/heartbeat_normal.mp3'],
         '紧张': ['emotion/tension_build.mp3'],
-        '笑': ['emotion/laugh_gentle.wav'],
+        # 移除人声音效：'笑': ['emotion/laugh_gentle.wav'],
         
         # 环境类
         '鸟': ['environment/birds_chirping.wav'],
@@ -68,7 +68,7 @@ def find_sound_effect(text, work_dir):
         '森林': ['environment/forest_ambient.wav'],
         '城市': ['environment/city_ambient.wav'],
         '市场': ['environment/marketplace_ambient.wav'],
-        '人群': ['environment/crowd_murmur.WAV'],
+        # 移除人声音效：'人群': ['environment/crowd_murmur.WAV'],
         '夜': ['environment/night_crickets.wav'],
         '山': ['environment/mountain_wind.wav'],
         '流水': ['environment/water_flowing.wav'],
@@ -125,12 +125,12 @@ def get_sound_effects_for_first_video(chapter_path, work_dir):
     is_first_chapter = chapter_name.endswith('_001') or chapter_name == 'chapter_001'
     
     if is_first_chapter:
-        # 第一个章节前5秒固定使用铃声
+        # 第一个章节从第3秒开始使用铃声
         bell_path = os.path.join(work_dir, 'src', 'sound_effects', 'misc', 'bell_ring.wav')
         if os.path.exists(bell_path):
             sound_effects.append({
                 'path': bell_path,
-                'start_time': 0,
+                'start_time': 3,
                 'duration': 5,
                 'volume': 0.5
             })
@@ -146,8 +146,8 @@ def get_sound_effects_for_first_video(chapter_path, work_dir):
             # 简单的文本分析，为关键词添加音效
             effect_path = find_sound_effect(narration_content, work_dir)
             if effect_path:
-                # 如果是第一个章节，音效从5秒后开始，避免与铃声重叠
-                start_time = 5 if is_first_chapter else 0
+                # 如果是第一个章节，音效从8秒后开始，避免与铃声重叠
+                start_time = 8 if is_first_chapter else 0
                 sound_effects.append({
                     'path': effect_path,
                     'start_time': start_time,
@@ -158,11 +158,11 @@ def get_sound_effects_for_first_video(chapter_path, work_dir):
         except Exception as e:
             print(f"读取narration文件失败: {e}")
     
-    # 如果没有找到任何音效，添加默认的脚步声（除了第一个章节的前5秒）
+    # 如果没有找到任何音效，添加默认的脚步声（除了第一个章节的前8秒）
     if not sound_effects or (is_first_chapter and len(sound_effects) == 1):
         footsteps_path = os.path.join(work_dir, 'src', 'sound_effects', 'action', 'footsteps_normal.wav')
         if os.path.exists(footsteps_path):
-            start_time = 5 if is_first_chapter else 0
+            start_time = 8 if is_first_chapter else 0
             sound_effects.append({
                 'path': footsteps_path,
                 'start_time': start_time,
@@ -297,7 +297,7 @@ def create_video_from_single_image_async(image_path, duration, output_path, max_
                 content=[
                     {
                         "type": "text",
-                        "text": f"画面有轻微的动态效果，保持画面稳定 --ratio 9:16 --dur {duration}"
+                        "text": f"画面有明显的动态效果，保持画面整体稳定 --ratio 9:16 --dur {duration}"
                     },
                     {
                         "type": "image_url",

@@ -386,7 +386,7 @@ def find_sound_effect(text, work_dir):
         # 情感类
         '心跳': ['emotion/heartbeat_normal.mp3'],
         '紧张': ['emotion/tension_build.mp3'],
-        '笑': ['emotion/laugh_gentle.wav'],
+        # 移除人声音效：'笑': ['emotion/laugh_gentle.wav'],
         
         # 环境类
         '鸟': ['environment/birds_chirping.wav'],
@@ -397,7 +397,7 @@ def find_sound_effect(text, work_dir):
         '森林': ['environment/forest_ambient.wav'],
         '城市': ['environment/city_ambient.wav'],
         '市场': ['environment/marketplace_ambient.wav'],
-        '人群': ['environment/crowd_murmur.WAV'],
+        # 移除人声音效：'人群': ['environment/crowd_murmur.WAV'],
         '夜': ['environment/night_crickets.wav'],
         '山': ['environment/mountain_wind.wav'],
         '流水': ['environment/water_flowing.wav'],
@@ -484,7 +484,7 @@ def get_sound_effects_for_narration(dialogues, narration_num, work_dir):
                 sound_effects.append({
                     'path': footsteps_path,
                     'start_time': 5,
-                    'duration': 5,
+                    'duration': 3,
                     'volume': 0.5
                 })
     

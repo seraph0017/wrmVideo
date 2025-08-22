@@ -152,8 +152,8 @@ def generate_single_narration_voice(voice_generator, chapter_dir, chapter_name, 
         print(f"正在生成第 {index} 段解说语音...")
         print(f"文本内容: {clean_narration[:50]}{'...' if len(clean_narration) > 50 else ''}")
         
-        # 使用语音生成器生成语音并获取时间戳
-        result = voice_generator.generate_voice_with_timestamps(clean_narration, audio_path)
+        # 使用语音生成器生成语音并获取时间戳（1.2倍速）
+        result = voice_generator.generate_voice_with_timestamps(clean_narration, audio_path, speed_ratio=1.2)
         if result and result.get('success', False):
             print(f"✓ 第 {index} 段语音生成成功: {audio_path}")
             
