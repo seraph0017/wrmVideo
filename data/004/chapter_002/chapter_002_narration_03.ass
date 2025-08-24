@@ -14,12 +14,18 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.67,Default,,0,0,0,,三弟{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}发出撕心裂肺的
-Dialogue: 0,0:00:02.67,0:00:05.42,Default,,0,0,0,,咆哮归一期中阶的气势如
-Dialogue: 0,0:00:05.42,0:00:08.13,Default,,0,0,0,,山崩般压向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}赵硕将
-Dialogue: 0,0:00:08.13,0:00:11.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰护{\c&H00FFFFFF&\b0}在身后九子鬼母阴阳
-Dialogue: 0,0:00:11.21,0:00:14.07,Default,,0,0,0,,剑嗡嗡作响剑身上萦绕着
-Dialogue: 0,0:00:14.07,0:00:17.11,Default,,0,0,0,,黑色雾气卢二则悄然绕到
-Dialogue: 0,0:00:17.11,0:00:20.07,Default,,0,0,0,,侧面手中匕首反射着寒光
-Dialogue: 0,0:00:20.43,0:00:23.52,Default,,0,0,0,,准备发动偷袭院落中的空气
-Dialogue: 0,0:00:23.52,0:00:26.33,Default,,0,0,0,,仿佛被冻结杀机四伏
+Dialogue: 0,0:00:00.02,0:00:01.15,Default,,0,0,0,,谁敢伤我大哥
+Dialogue: 0,0:00:01.54,0:00:04.34,Default,,0,0,0,,破空声撕裂空气{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}如鲲鹏
+Dialogue: 0,0:00:04.34,0:00:06.60,Default,,0,0,0,,掠空九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑化作
+Dialogue: 0,0:00:06.60,0:00:08.17,Default,,0,0,0,,流光刺向{\c&H0000FFFF&\b1}卢三后{\c&H00FFFFFF&\b0}心
+Dialogue: 0,0:00:08.67,0:00:11.31,Default,,0,0,0,,土院上空风云变色他青色
+Dialogue: 0,0:00:11.31,0:00:13.81,Default,,0,0,0,,道袍猎猎作响归一期{\c&H0000FFFF&\b1}高阶{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.81,0:00:16.48,Default,,0,0,0,,威压如泰山压顶{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}降魔杵
+Dialogue: 0,0:00:16.48,0:00:18.50,Default,,0,0,0,,距{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}头颅仅三寸却
+Dialogue: 0,0:00:18.50,0:00:20.26,Default,,0,0,0,,在杀气锁定下僵如石雕
+Dialogue: 0,0:00:20.66,0:00:22.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}瞳孔骤缩看着
+Dialogue: 0,0:00:22.46,0:00:24.55,Default,,0,0,0,,这张与记忆中重合又更显
+Dialogue: 0,0:00:24.55,0:00:26.29,Default,,0,0,0,,坚毅的脸嘴唇颤抖
+Dialogue: 0,0:00:26.39,0:00:27.89,Default,,0,0,0,,二弟你没S
+Dialogue: 0,0:00:28.63,0:00:31.30,Default,,0,0,0,,十年生S两茫茫重逢竟在生
+Dialogue: 0,0:00:31.40,0:00:32.30,Default,,0,0,0,,S一线

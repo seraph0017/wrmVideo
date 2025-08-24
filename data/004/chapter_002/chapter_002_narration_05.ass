@@ -14,12 +14,18 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.68,Default,,0,0,0,,我要你偿命{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}双目赤红
-Dialogue: 0,0:00:02.99,0:00:06.29,Default,,0,0,0,,全身肌肉虬结双拳轰出拳
-Dialogue: 0,0:00:06.29,0:00:09.39,Default,,0,0,0,,风带着音爆声砸向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}赵硕
-Dialogue: 0,0:00:09.39,0:00:12.13,Default,,0,0,0,,不退反进九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑与
-Dialogue: 0,0:00:12.13,0:00:15.21,Default,,0,0,0,,双拳碰撞发出金{\c&H0000FFFF&\b1}铁交鸣{\c&H00FFFFFF&\b0}之声
-Dialogue: 0,0:00:15.73,0:00:18.45,Default,,0,0,0,,他借力向后飘出落在{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:18.45,0:00:22.58,Default,,0,0,0,,身边低声道大哥退后{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:22.58,0:00:25.25,Default,,0,0,0,,看着弟弟坚毅的侧脸眼眶
-Dialogue: 0,0:00:25.25,0:00:25.68,Default,,0,0,0,,微湿
+Dialogue: 0,0:00:00.02,0:00:00.41,Default,,0,0,0,,三弟
+Dialogue: 0,0:00:00.84,0:00:03.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二双目赤红如血联袂
+Dialogue: 0,0:00:03.49,0:00:04.25,Default,,0,0,0,,扑向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.60,0:00:06.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}鬼头刀劈出黑色刀气
+Dialogue: 0,0:00:06.99,0:00:09.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}折扇展开飞出七道毒针
+Dialogue: 0,0:00:09.62,0:00:11.86,Default,,0,0,0,,归一期中阶气势如海啸席卷
+Dialogue: 0,0:00:11.86,0:00:12.24,Default,,0,0,0,,土院
+Dialogue: 0,0:00:12.69,0:00:14.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}将赵丰护在身后青色
+Dialogue: 0,0:00:14.93,0:00:17.62,Default,,0,0,0,,道袍无风自动{\c&H0000FFFF&\b1}北冥{\c&H00FFFFFF&\b0}鲲鹏虚影
+Dialogue: 0,0:00:17.62,0:00:20.03,Default,,0,0,0,,在身后凝聚双翼遮天蔽日
+Dialogue: 0,0:00:20.28,0:00:22.82,Default,,0,0,0,,破旧木门在气劲中粉碎褪色
+Dialogue: 0,0:00:22.82,0:00:25.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵府{\c&H00FFFFFF&\b0}木匾被刀气斩为两半而
+Dialogue: 0,0:00:25.73,0:00:28.32,Default,,0,0,0,,他却{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}一声指尖九子鬼母
+Dialogue: 0,0:00:28.32,0:00:30.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑再次出鞘剑鸣震得
+Dialogue: 0,0:00:30.72,0:00:31.94,Default,,0,0,0,,地面簌簌落灰

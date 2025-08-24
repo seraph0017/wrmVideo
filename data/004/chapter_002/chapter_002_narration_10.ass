@@ -14,13 +14,19 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}背着赵丰走出胡同口
-Dialogue: 0,0:00:02.91,0:00:06.16,Default,,0,0,0,,远处{\c&H0000FFFF&\b1}望海{\c&H00FFFFFF&\b0}城内火光点点隐约
-Dialogue: 0,0:00:06.16,0:00:08.99,Default,,0,0,0,,传来打斗声他抬头望向动荡
-Dialogue: 0,0:00:08.99,0:00:11.86,Default,,0,0,0,,的城池眼中闪过一丝凝重
-Dialogue: 0,0:00:12.48,0:00:15.73,Default,,0,0,0,,大哥天罚转轮将出望{\c&H0000FFFF&\b1}海城{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:15.73,0:00:18.76,Default,,0,0,0,,已成是非之地我们必须尽快
-Dialogue: 0,0:00:18.76,0:00:22.21,Default,,0,0,0,,离开{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}点了点头兄弟二人
-Dialogue: 0,0:00:22.21,0:00:24.88,Default,,0,0,0,,的身影消失在暮色之中只
-Dialogue: 0,0:00:24.88,0:00:27.45,Default,,0,0,0,,留下身后残破的家园和未解
-Dialogue: 0,0:00:27.45,0:00:28.05,Default,,0,0,0,,的谜团
+Dialogue: 0,0:00:00.02,0:00:01.07,Default,,0,0,0,,谁敢动我赵家
+Dialogue: 0,0:00:01.48,0:00:03.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于土院中央北冥鲲鹏
+Dialogue: 0,0:00:03.83,0:00:06.17,Default,,0,0,0,,法相盘旋上空归一期{\c&H0000FFFF&\b1}高阶{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.17,0:00:08.14,Default,,0,0,0,,威压如巨浪席卷望{\c&H0000FFFF&\b1}海城{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.60,0:00:11.18,Default,,0,0,0,,黄昏暮色中远处城区隐现
+Dialogue: 0,0:00:11.18,0:00:12.86,Default,,0,0,0,,无数强横气息却
+Dialogue: 0,0:00:12.86,0:00:14.66,Default,,0,0,0,,在这股威压下噤若寒蝉
+Dialogue: 0,0:00:15.04,0:00:17.06,Default,,0,0,0,,他握着{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}的手兄弟俩站在
+Dialogue: 0,0:00:17.06,0:00:19.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵府{\c&H00FFFFFF&\b0}断匾前青色道袍与
+Dialogue: 0,0:00:19.40,0:00:21.70,Default,,0,0,0,,灰色短打在晚风中猎猎作响
+Dialogue: 0,0:00:22.19,0:00:24.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}感受着弟弟远超当年的
+Dialogue: 0,0:00:24.05,0:00:25.27,Default,,0,0,0,,实力哽咽道
+Dialogue: 0,0:00:25.63,0:00:27.11,Default,,0,0,0,,二弟我们守住家了
+Dialogue: 0,0:00:27.47,0:00:29.39,Default,,0,0,0,,而赵硕望着城中越来越密集
+Dialogue: 0,0:00:29.39,0:00:32.40,Default,,0,0,0,,的{\c&H0000FFFF&\b1}灵光{\c&H00FFFFFF&\b0}眼神坚定天罚转轮将
+Dialogue: 0,0:00:32.50,0:00:36.10,Default,,0,0,0,,出他要护得大哥与家园{\c&H0000FFFF&\b1}无虞{\c&H00FFFFFF&\b0}

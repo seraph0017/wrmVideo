@@ -14,16 +14,14 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵突然从身后轻拥
-Dialogue: 0,0:00:02.19,0:00:04.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕米{\c&H00FFFFFF&\b0}白长裙紧贴他后背
-Dialogue: 0,0:00:05.47,0:00:08.53,Default,,0,0,0,,发间{\c&H0000FFFF&\b1}清香{\c&H00FFFFFF&\b0}萦绕赵硕浑身僵硬
-Dialogue: 0,0:00:08.98,0:00:12.11,Default,,0,0,0,,脸颊通红手中矿泉水瓶差点
-Dialogue: 0,0:00:12.11,0:00:15.11,Default,,0,0,0,,滑落我们认识五年做你女友
-Dialogue: 0,0:00:15.21,0:00:18.51,Default,,0,0,0,,三年你却从不碰我{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵
-Dialogue: 0,0:00:18.59,0:00:21.39,Default,,0,0,0,,声音带着委屈手指轻划{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:21.39,0:00:24.97,Default,,0,0,0,,胸膛{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}脑中一片空白只觉
-Dialogue: 0,0:00:24.97,0:00:28.01,Default,,0,0,0,,少女温软身躯紧贴自己磨盘
-Dialogue: 0,0:00:28.01,0:00:31.32,Default,,0,0,0,,饰品突然发烫让他猛地回神
-Dialogue: 0,0:00:31.32,0:00:33.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}超新星{\c&H00FFFFFF&\b0}爆发的关键时刻到了
-Dialogue: 0,0:00:33.93,0:00:36.85,Default,,0,0,0,,他挣脱怀抱冲向{\c&H0000FFFF&\b1}望远镜{\c&H00FFFFFF&\b0}却没
-Dialogue: 0,0:00:36.95,0:00:40.55,Default,,0,0,0,,看到{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵眼中闪过的决绝
+Dialogue: 0,0:00:00.02,0:00:01.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青{\c&H00FFFFFF&\b0}婵穿着白色圆领真丝
+Dialogue: 0,0:00:01.91,0:00:04.67,Default,,0,0,0,,长裙夜风拂动裙摆勾勒出
+Dialogue: 0,0:00:04.67,0:00:05.29,Default,,0,0,0,,玲珑身段
+Dialogue: 0,0:00:05.62,0:00:07.53,Default,,0,0,0,,她走到{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}身边轻声问
+Dialogue: 0,0:00:08.06,0:00:10.01,Default,,0,0,0,,阿硕我今天穿的衣服漂亮吗
+Dialogue: 0,0:00:10.53,0:00:13.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}转头看到她素面朝天的
+Dialogue: 0,0:00:13.21,0:00:15.90,Default,,0,0,0,,精致面容脸颊微红结巴道
+Dialogue: 0,0:00:16.25,0:00:16.52,Default,,0,0,0,,漂
+Dialogue: 0,0:00:16.99,0:00:17.62,Default,,0,0,0,,漂亮
+Dialogue: 0,0:00:17.62,0:00:20.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青婵轻{\c&H00FFFFFF&\b0}笑凑近他一股清香
+Dialogue: 0,0:00:20.48,0:00:22.88,Default,,0,0,0,,袭来让他头晕目眩

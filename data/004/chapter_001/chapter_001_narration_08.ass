@@ -14,18 +14,15 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.60,Default,,0,0,0,,医馆{\c&H0000FFFF&\b1}内楚秀{\c&H00FFFFFF&\b0}看着赵硕包扎的
-Dialogue: 0,0:00:02.60,0:00:05.45,Default,,0,0,0,,伤口眼泪直流都怪娘没用
-Dialogue: 0,0:00:05.55,0:00:09.15,Default,,0,0,0,,不能让你星图开窍{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}黝黑
-Dialogue: 0,0:00:09.25,0:00:11.76,Default,,0,0,0,,的脸上满是愧疚二弟我打渔
-Dialogue: 0,0:00:11.76,0:00:14.16,Default,,0,0,0,,攒了钱明天就带你去开启
-Dialogue: 0,0:00:14.16,0:00:17.25,Default,,0,0,0,,灵窍{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}心中一暖这家人的
-Dialogue: 0,0:00:17.25,0:00:20.66,Default,,0,0,0,,关爱是穿越最大的幸运大哥
-Dialogue: 0,0:00:20.66,0:00:23.66,Default,,0,0,0,,不用急他低声道脑中闪过
-Dialogue: 0,0:00:23.66,0:00:26.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}望远镜{\c&H00FFFFFF&\b0}中的巨人那或许不是
-Dialogue: 0,0:00:26.21,0:00:29.55,Default,,0,0,0,,幻觉如果能找到巨人的秘密
-Dialogue: 0,0:00:29.55,0:00:32.72,Default,,0,0,0,,或许能回去见苏青婵但现在
-Dialogue: 0,0:00:32.72,0:00:35.24,Default,,0,0,0,,他更要守护眼前的家人
-Dialogue: 0,0:00:35.24,0:00:38.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}的事我会解决赵硕
-Dialogue: 0,0:00:38.23,0:00:41.01,Default,,0,0,0,,眼神坚定一个计划在脑中
-Dialogue: 0,0:00:41.11,0:00:41.71,Default,,0,0,0,,成形
+Dialogue: 0,0:00:00.02,0:00:02.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}看到赵硕眼中闪过
+Dialogue: 0,0:00:02.11,0:00:03.72,Default,,0,0,0,,一丝异样随即笑道
+Dialogue: 0,0:00:03.96,0:00:04.69,Default,,0,0,0,,硕儿醒了
+Dialogue: 0,0:00:05.01,0:00:05.44,Default,,0,0,0,,快吃饭
+Dialogue: 0,0:00:05.86,0:00:07.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}看着她略显苍老的
+Dialogue: 0,0:00:07.45,0:00:09.29,Default,,0,0,0,,面容心中涌起莫名的
+Dialogue: 0,0:00:09.29,0:00:10.85,Default,,0,0,0,,亲切感脱口而出
+Dialogue: 0,0:00:11.15,0:00:11.50,Default,,0,0,0,,母亲
+Dialogue: 0,0:00:11.73,0:00:14.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}手一抖饭菜险些洒出她
+Dialogue: 0,0:00:14.25,0:00:15.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}慈爱{\c&H00FFFFFF&\b0}的摸了摸赵硕的头
+Dialogue: 0,0:00:16.10,0:00:17.76,Default,,0,0,0,,快吃学堂要迟到了
+Dialogue: 0,0:00:18.18,0:00:20.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}接过碗筷心中五味杂陈

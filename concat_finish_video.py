@@ -258,7 +258,7 @@ def get_audio_duration(audio_path):
 
 def get_available_bgm_files():
     """获取可用的BGM文件列表"""
-    bgm_dir = "/Users/xunan/Projects/wrmVideo/src/bgm"
+    bgm_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "bgm")
     bgm_files = [
         "wn1.mp3", "wn3.mp3", "wn4.mp3", "wn5.mp3", "wn6.mp3", 
         "wn7.mp3", "wn8.mp3", "wn9.mp3", "wn10.mp3", "wn11.mp3", 

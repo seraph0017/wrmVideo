@@ -42,69 +42,154 @@ def identify_key_word(text: str) -> str:
     return ""
 
 def split_text_naturally(text: str, max_length: int = 12) -> List[str]:
-    """自然分割文本，去除标点符号，严格控制每行不超过12个字，宁可多断几次"""
-    # 首先去除所有标点符号和空格
-    cleaned_text = clean_subtitle_text(text)
+    """按句子自然分割文本，确保每句话尽量完整，对于过长句子选择自然断开位置"""
+    # 首先按句子分割，保留原始标点符号用于句子识别
+    sentence_endings = ['。', '！', '？', '；', '…', '：']
     
-    if len(cleaned_text) <= max_length:
-        return [cleaned_text] if cleaned_text else []
+    # 分割成句子
+    sentences = []
+    current_sentence = ""
+    
+    for char in text:
+        current_sentence += char
+        if char in sentence_endings:
+            if current_sentence.strip():
+                sentences.append(current_sentence.strip())
+            current_sentence = ""
+    
+    # 添加最后一个句子（如果没有以句号结尾）
+    if current_sentence.strip():
+        sentences.append(current_sentence.strip())
+    
+    # 如果没有明显的句子分割，按逗号等次级标点分割
+    if len(sentences) == 1 and len(sentences[0]) > max_length * 2:
+        secondary_endings = ['，', '、', '；']
+        temp_sentences = []
+        for sentence in sentences:
+            current_part = ""
+            for char in sentence:
+                current_part += char
+                if char in secondary_endings:
+                    if current_part.strip():
+                        temp_sentences.append(current_part.strip())
+                    current_part = ""
+            if current_part.strip():
+                temp_sentences.append(current_part.strip())
+        sentences = temp_sentences
     
     segments = []
     
-    # 使用jieba分词获取词汇边界
-    words = list(jieba.cut(cleaned_text, cut_all=False))
+    for sentence in sentences:
+        # 清理句子，去除标点符号用于长度计算
+        cleaned_sentence = clean_subtitle_text(sentence)
+        
+        if len(cleaned_sentence) <= max_length:
+            # 句子长度合适，直接添加
+            segments.append(cleaned_sentence)
+        else:
+            # 句子太长，需要智能分割
+            sentence_segments = _split_long_sentence_naturally(cleaned_sentence, max_length)
+            segments.extend(sentence_segments)
     
+    # 过滤空段落
+    segments = [seg for seg in segments if seg.strip()]
+    
+    return segments
+
+def _split_long_sentence_naturally(sentence: str, max_length: int) -> List[str]:
+    """智能分割过长的句子，选择自然的断开位置"""
+    segments = []
+    
+    # 定义自然断开位置的优先级（数字越小优先级越高）
+    break_points = {
+        '，': 1,  # 逗号 - 最自然的断开位置
+        '、': 2,  # 顿号
+        '；': 3,  # 分号
+        '：': 4,  # 冒号
+        '的': 5,  # "的"字后面
+        '了': 6,  # "了"字后面
+        '着': 7,  # "着"字后面
+        '过': 8,  # "过"字后面
+        '与': 9,  # "与"字后面
+        '和': 10, # "和"字后面
+        '或': 11, # "或"字后面
+        '但': 12, # "但"字前面
+        '而': 13, # "而"字前面
+        '却': 14, # "却"字前面
+        '则': 15, # "则"字前面
+    }
+    
+    # 使用jieba分词获取词汇边界
+    words = list(jieba.cut(sentence, cut_all=False))
     current_segment = ""
     
     for word in words:
-        # 去除词汇中的标点符号
         clean_word = clean_subtitle_text(word)
-        if not clean_word:  # 如果清理后为空，跳过
+        if not clean_word:
             continue
-            
-        # 检查添加当前词后是否超出长度限制
+        
         potential_segment = current_segment + clean_word
         
         if len(potential_segment) <= max_length:
-            # 未超出限制，直接添加
             current_segment = potential_segment
         else:
-            # 超出限制，需要分割
+            # 超出长度限制，需要断开
             if current_segment:
-                # 保存当前段落
-                segments.append(current_segment)
-                current_segment = clean_word
-                
-                # 如果单个词就超过长度限制，强制按字符分割
-                if len(current_segment) > max_length:
-                    char_segments = _split_by_characters(current_segment, max_length)
-                    segments.extend(char_segments[:-1])  # 添加除最后一个外的所有段落
-                    current_segment = char_segments[-1] if char_segments else ""
+                # 尝试在当前段落中找到最佳断开位置
+                best_segment = _find_best_break_point(current_segment, max_length, break_points)
+                if best_segment:
+                    segments.append(best_segment['before'])
+                    current_segment = best_segment['after'] + clean_word
+                else:
+                    # 没有找到合适的断开位置，直接保存当前段落
+                    segments.append(current_segment)
+                    current_segment = clean_word
             else:
-                # 当前段落为空，直接使用当前词
                 current_segment = clean_word
-                
-                # 如果单个词就超过长度限制，强制按字符分割
-                if len(current_segment) > max_length:
-                    char_segments = _split_by_characters(current_segment, max_length)
-                    segments.extend(char_segments[:-1])  # 添加除最后一个外的所有段落
-                    current_segment = char_segments[-1] if char_segments else ""
+            
+            # 如果单个词过长，强制按字符分割
+            if len(current_segment) > max_length:
+                char_segments = _split_by_characters(current_segment, max_length)
+                segments.extend(char_segments[:-1])
+                current_segment = char_segments[-1] if char_segments else ""
     
     # 添加最后一个段落
     if current_segment:
         segments.append(current_segment)
     
-    # 最终检查：确保没有段落超过最大长度
-    final_segments = []
-    for segment in segments:
-        if len(segment) <= max_length:
-            final_segments.append(segment)
-        else:
-            # 强制按字符分割过长的段落
-            char_segments = _split_by_characters(segment, max_length)
-            final_segments.extend(char_segments)
+    return segments
+
+def _find_best_break_point(text: str, max_length: int, break_points: dict) -> dict:
+    """在文本中找到最佳的自然断开位置"""
+    best_break = None
+    best_priority = float('inf')
     
-    return final_segments
+    # 从理想长度位置向前搜索自然断开点
+    search_start = min(max_length - 1, len(text) - 1)
+    search_end = max(0, max_length // 2)  # 至少保留一半长度
+    
+    for i in range(search_start, search_end - 1, -1):
+        char = text[i]
+        
+        if char in break_points:
+            priority = break_points[char]
+            if priority < best_priority:
+                best_priority = priority
+                # 对于标点符号，断开位置在标点符号之后
+                if char in ['，', '、', '；', '：']:
+                    break_pos = i + 1
+                else:
+                    # 对于"的"、"了"等字，断开位置也在字后面
+                    break_pos = i + 1
+                
+                best_break = {
+                    'before': text[:break_pos].strip(),
+                    'after': text[break_pos:].strip(),
+                    'position': break_pos,
+                    'priority': priority
+                }
+    
+    return best_break
 
 def _split_by_characters(text: str, max_length: int) -> List[str]:
     """按字符强制分割文本，确保每段不超过最大长度"""

@@ -613,14 +613,14 @@ def generate_image_with_character_async(prompt, output_path, character_images=No
             print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
             
             # 构建完整的prompt
-            full_prompt = "去掉衽领，交领，V领，换成高领圆领袍\n人物姿势要换一下，不要和原来的一样\n以下内容为描述生成图片\n宫崎骏动漫风格，数字插画,高饱和度,卡通,简约画风,完整色块,整洁的画面,宫崎骏艺术风格,高饱和的色彩和柔和的阴影,童话色彩,人物着装：圆领袍 ，领口不能是V领，领口不能是衽领，领口不能是交领，领口不能是任何y字型或者v字型的领子\n\n" + style_prompt + "\n\n" + prompt + "\n\n"
+            full_prompt = "去掉衽领，交领，V领，换成高领圆领袍\n人物姿势和背景变化要大\n以下内容为描述生成图片\n2d漫画，细线条，厚涂，简洁，柔和的灯光，平面插画，动漫美感，数字技术技艺，\n\n" + style_prompt + "\n\n" + prompt + "\n\n"
             
             if attempt == 0:  # 只在第一次尝试时打印完整prompt
                 print("这里是完整的prompt===>>>{}".format(full_prompt))
             
             # 构建请求参数 - 使用配置文件中的值
             form = {
-                "req_key": "high_aes_scheduler_svr_controlnet_v2.0",
+                "req_key": "high_aes_ip_v20",
                 "prompt": full_prompt,
                 "llm_seed": -1,
                 "seed": 10 + attempt,  # 每次重试使用不同的seed
@@ -632,15 +632,15 @@ def generate_image_with_character_async(prompt, output_path, character_images=No
                 "use_sr": IMAGE_TWO_CONFIG['use_sr'],
                 "return_url": IMAGE_TWO_CONFIG['return_url'],  # 返回base64格式
                 "negative_prompt": IMAGE_TWO_CONFIG['negative_prompt'],
-                "controlnet_args": [
-                    {
-                        "type": "depth",
-                        "binary_data_index": 0,
-                        "strength": 0.6
-                    }
-                ],
+                # "controlnet_args": [
+                #     {
+                #         "type": "depth",
+                #         "binary_data_index": 0,
+                #         "strength": 0.6
+                #     }
+                # ],
                 "ref_ip_weight": 0,
-                "ref_id_weight": 0.4,
+                "ref_id_weight": 0.6,
                 "logo_info": {
                     "add_logo": False,
                     "position": 0,

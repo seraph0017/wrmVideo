@@ -14,16 +14,13 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:03.76,Default,,0,0,0,,场景在{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗广场夜晚月光
-Dialogue: 0,0:00:03.76,0:00:07.15,Default,,0,0,0,,惨淡战斗已结束走尸被全歼
-Dialogue: 0,0:00:07.43,0:00:10.59,Default,,0,0,0,,僵帝尸体被分尸示众广场上
-Dialogue: 0,0:00:10.59,0:00:13.47,Default,,0,0,0,,到处是血迹和残肢数十名
-Dialogue: 0,0:00:13.47,0:00:16.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗门人正在清理战场有
-Dialogue: 0,0:00:16.22,0:00:19.61,Default,,0,0,0,,的搬运尸体有的用清水冲刷
-Dialogue: 0,0:00:19.61,0:00:22.77,Default,,0,0,0,,地面天雷上人站在广场中央
-Dialogue: 0,0:00:23.11,0:00:25.55,Default,,0,0,0,,手持拂尘对着幸存的弟子
-Dialogue: 0,0:00:25.55,0:00:28.69,Default,,0,0,0,,高声道今日之战我{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗
-Dialogue: 0,0:00:28.69,0:00:31.57,Default,,0,0,0,,伤亡惨重但守住了宗门{\c&H0000FFFF&\b1}荣耀{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:32.10,0:00:35.30,Default,,0,0,0,,伤者救治死者厚葬弟子们
-Dialogue: 0,0:00:35.30,0:00:38.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐声{\c&H00FFFFFF&\b0}应和声音嘶哑月光下
-Dialogue: 0,0:00:39.41,0:00:40.96,Default,,0,0,0,,广场一片狼藉
+Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,场景设定在清心小筑山门外
+Dialogue: 0,0:00:02.61,0:00:04.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}四人与天星宗弟子抵达
+Dialogue: 0,0:00:04.75,0:00:05.09,Default,,0,0,0,,此处
+Dialogue: 0,0:00:05.65,0:00:08.60,Default,,0,0,0,,辛芦上前敲门{\c&H0000FFFF&\b1}山门{\c&H00FFFFFF&\b0}缓缓打开
+Dialogue: 0,0:00:09.10,0:00:10.73,Default,,0,0,0,,一名道姑迎接他们进入
+Dialogue: 0,0:00:11.24,0:00:13.06,Default,,0,0,0,,天雷上人向道姑说明情况
+Dialogue: 0,0:00:13.47,0:00:15.28,Default,,0,0,0,,道姑表示愿意收留众人
+Dialogue: 0,0:00:15.68,0:00:17.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕四{\c&H00FFFFFF&\b0}人感谢天雷上人的
+Dialogue: 0,0:00:17.47,0:00:20.34,Default,,0,0,0,,帮助决定在此暂时落脚等待
+Dialogue: 0,0:00:20.34,0:00:21.70,Default,,0,0,0,,前往星辰海的时机

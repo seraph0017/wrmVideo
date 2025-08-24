@@ -14,12 +14,18 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}匕首刺出的瞬间一道
-Dialogue: 0,0:00:02.79,0:00:05.59,Default,,0,0,0,,青影如闪电般掠过{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:05.59,0:00:08.27,Default,,0,0,0,,凭空出现在院中九子鬼母
-Dialogue: 0,0:00:08.27,0:00:11.44,Default,,0,0,0,,阴阳剑划破空气{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}的头颅
-Dialogue: 0,0:00:11.44,0:00:15.43,Default,,0,0,0,,冲天而起鲜血喷溅如泉{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:15.43,0:00:18.09,Default,,0,0,0,,震惊地瞪大双眼不敢相信
-Dialogue: 0,0:00:18.09,0:00:21.19,Default,,0,0,0,,眼前的一幕而{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二的
-Dialogue: 0,0:00:21.19,0:00:24.32,Default,,0,0,0,,脸上瞬间{\c&H0000FFFF&\b1}布满{\c&H00FFFFFF&\b0}血色杀气如
-Dialogue: 0,0:00:24.32,0:00:25.49,Default,,0,0,0,,实质般爆发
+Dialogue: 0,0:00:00.02,0:00:01.07,Default,,0,0,0,,给我滚出这破院
+Dialogue: 0,0:00:01.52,0:00:03.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}狞笑着踏碎赵丰家门槛
+Dialogue: 0,0:00:03.95,0:00:05.71,Default,,0,0,0,,降魔杵砸出三尺{\c&H0000FFFF&\b1}深坑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.19,0:00:08.33,Default,,0,0,0,,黄昏残阳如血破旧土院的
+Dialogue: 0,0:00:08.33,0:00:10.71,Default,,0,0,0,,木门摇摇欲坠{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}背靠斑驳
+Dialogue: 0,0:00:10.71,0:00:13.69,Default,,0,0,0,,门板嘴角淌血灰色圆领短打
+Dialogue: 0,0:00:13.69,0:00:16.33,Default,,0,0,0,,沾满尘土左额月牙疤痕狰狞
+Dialogue: 0,0:00:16.67,0:00:18.15,Default,,0,0,0,,他紧握锈迹斑斑的
+Dialogue: 0,0:00:18.15,0:00:20.54,Default,,0,0,0,,柴刀法相期修为在归一期的
+Dialogue: 0,0:00:20.54,0:00:22.63,Default,,0,0,0,,威压下如风中残烛却
+Dialogue: 0,0:00:22.63,0:00:24.20,Default,,0,0,0,,SS护住身后褪色的
+Dialogue: 0,0:00:24.20,0:00:25.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵府{\c&H00FFFFFF&\b0}木匾这是他与
+Dialogue: 0,0:00:25.80,0:00:28.21,Default,,0,0,0,,失散十年的弟妹唯一的念想
+Dialogue: 0,0:00:28.21,0:00:30.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三肥{\c&H00FFFFFF&\b0}脸横肉抖动铜铃
+Dialogue: 0,0:00:30.52,0:00:34.12,Default,,0,0,0,,撞击声中降魔杵直指其头颅

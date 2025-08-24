@@ -1,543 +1,803 @@
 {
-  "text": "赵硕走到赵丰面前，伸手扶住他摇摇欲坠的身体，一股精纯的法力注入赵丰体内。赵丰感受到温暖的力量修复着伤势，苦笑道：“二弟，你怎么会来？”赵硕眼眶微红：“我感应到大哥有危险。”兄弟二人相视一笑，多年未见的隔阂在这一刻烟消云散。",
+  "text": "\"北冥吞天！\"赵硕转身时，北冥鲲鹏法相遮天蔽日，双翅一振便将卢二卷入腹中！青灰色巨鸟虚影翅展十丈，喙如弯钩，眸若幽冥火海，卢二毒针在法相面前如蝼蚁，整个人连同折扇被吞入时发出凄厉惨叫。卢大鬼头刀砍中法相翅膀却只留白痕，他看着三弟二哥接连惨S，肝胆俱裂，归一期中阶气势竟崩溃大半，而赵硕已提着剑一步步逼近，眼神冷如万年寒冰！",
   "audio_file": "data/004/chapter_002/chapter_002_narration_08.mp3",
-  "duration": 24.365,
+  "duration": 32.208,
   "character_timestamps": [
     {
-      "character": "赵",
-      "start_time": 0.02,
-      "end_time": 0.21
+      "character": "北",
+      "start_time": 0.016,
+      "end_time": 0.158
     },
     {
-      "character": "硕",
-      "start_time": 0.21,
-      "end_time": 0.385
+      "character": "冥",
+      "start_time": 0.158,
+      "end_time": 0.312
     },
     {
-      "character": "走",
-      "start_time": 0.385,
-      "end_time": 0.56
+      "character": "吞",
+      "start_time": 0.312,
+      "end_time": 0.491
     },
     {
-      "character": "到",
-      "start_time": 0.56,
-      "end_time": 0.69
-    },
-    {
-      "character": "赵",
-      "start_time": 0.69,
-      "end_time": 0.925
-    },
-    {
-      "character": "丰",
-      "start_time": 0.925,
-      "end_time": 1.1
-    },
-    {
-      "character": "面",
-      "start_time": 1.1,
-      "end_time": 1.305
-    },
-    {
-      "character": "前",
-      "start_time": 1.305,
-      "end_time": 1.635
+      "character": "天",
+      "start_time": 0.491,
+      "end_time": 0.712
     },
     {
       "character": "，",
-      "start_time": 1.635,
-      "end_time": 2.17
+      "start_time": 0.712,
+      "end_time": 1.095
     },
     {
-      "character": "伸",
-      "start_time": 2.17,
-      "end_time": 2.415
+      "character": "赵",
+      "start_time": 1.095,
+      "end_time": 1.245
     },
     {
-      "character": "手",
-      "start_time": 2.415,
-      "end_time": 2.615
+      "character": "硕",
+      "start_time": 1.245,
+      "end_time": 1.379
     },
     {
-      "character": "扶",
-      "start_time": 2.615,
-      "end_time": 2.83
-    },
-    {
-      "character": "住",
-      "start_time": 2.83,
-      "end_time": 2.97
-    },
-    {
-      "character": "他",
-      "start_time": 2.97,
-      "end_time": 3.125
-    },
-    {
-      "character": "摇",
-      "start_time": 3.125,
-      "end_time": 3.375
-    },
-    {
-      "character": "摇",
-      "start_time": 3.375,
-      "end_time": 3.57
-    },
-    {
-      "character": "欲",
-      "start_time": 3.57,
-      "end_time": 3.775
-    },
-    {
-      "character": "坠",
-      "start_time": 3.775,
-      "end_time": 3.93
-    },
-    {
-      "character": "的",
-      "start_time": 3.93,
-      "end_time": 4.015
+      "character": "转",
+      "start_time": 1.379,
+      "end_time": 1.591
     },
     {
       "character": "身",
-      "start_time": 4.015,
-      "end_time": 4.255
+      "start_time": 1.591,
+      "end_time": 1.77
     },
     {
-      "character": "体",
-      "start_time": 4.255,
-      "end_time": 4.455
+      "character": "时",
+      "start_time": 1.77,
+      "end_time": 2.016
     },
     {
       "character": "，",
-      "start_time": 4.455,
-      "end_time": 4.955
+      "start_time": 2.016,
+      "end_time": 2.299
     },
     {
-      "character": "一",
-      "start_time": 4.955,
-      "end_time": 5.08
+      "character": "北",
+      "start_time": 2.299,
+      "end_time": 2.441
     },
     {
-      "character": "股",
-      "start_time": 5.08,
-      "end_time": 5.24
+      "character": "冥",
+      "start_time": 2.441,
+      "end_time": 2.595
     },
     {
-      "character": "精",
-      "start_time": 5.24,
-      "end_time": 5.54
+      "character": "鲲",
+      "start_time": 2.595,
+      "end_time": 2.816
     },
     {
-      "character": "纯",
-      "start_time": 5.54,
-      "end_time": 5.705
-    },
-    {
-      "character": "的",
-      "start_time": 5.705,
-      "end_time": 5.785
+      "character": "鹏",
+      "start_time": 2.816,
+      "end_time": 3.058
     },
     {
       "character": "法",
-      "start_time": 5.785,
-      "end_time": 6.035
-    },
-    {
-      "character": "力",
-      "start_time": 6.035,
-      "end_time": 6.19
-    },
-    {
-      "character": "注",
-      "start_time": 6.19,
-      "end_time": 6.4
-    },
-    {
-      "character": "入",
-      "start_time": 6.4,
-      "end_time": 6.56
-    },
-    {
-      "character": "赵",
-      "start_time": 6.56,
-      "end_time": 6.815
-    },
-    {
-      "character": "丰",
-      "start_time": 6.815,
-      "end_time": 7.02
-    },
-    {
-      "character": "体",
-      "start_time": 7.02,
-      "end_time": 7.22
-    },
-    {
-      "character": "内",
-      "start_time": 7.22,
-      "end_time": 7.405
-    },
-    {
-      "character": "，",
-      "start_time": 7.405,
-      "end_time": 7.975
-    },
-    {
-      "character": "赵",
-      "start_time": 7.975,
-      "end_time": 8.175
-    },
-    {
-      "character": "丰",
-      "start_time": 8.175,
-      "end_time": 8.415
-    },
-    {
-      "character": "感",
-      "start_time": 8.415,
-      "end_time": 8.69
-    },
-    {
-      "character": "受",
-      "start_time": 8.69,
-      "end_time": 8.855
-    },
-    {
-      "character": "到",
-      "start_time": 8.855,
-      "end_time": 9.035
-    },
-    {
-      "character": "温",
-      "start_time": 9.035,
-      "end_time": 9.27
-    },
-    {
-      "character": "暖",
-      "start_time": 9.27,
-      "end_time": 9.42
-    },
-    {
-      "character": "的",
-      "start_time": 9.42,
-      "end_time": 9.52
-    },
-    {
-      "character": "力",
-      "start_time": 9.52,
-      "end_time": 9.7
-    },
-    {
-      "character": "量",
-      "start_time": 9.7,
-      "end_time": 9.935
-    },
-    {
-      "character": "修",
-      "start_time": 9.935,
-      "end_time": 10.26
-    },
-    {
-      "character": "复",
-      "start_time": 10.26,
-      "end_time": 10.41
-    },
-    {
-      "character": "着",
-      "start_time": 10.41,
-      "end_time": 10.51
-    },
-    {
-      "character": "伤",
-      "start_time": 10.51,
-      "end_time": 10.765
-    },
-    {
-      "character": "势",
-      "start_time": 10.765,
-      "end_time": 10.96
-    },
-    {
-      "character": "，",
-      "start_time": 10.96,
-      "end_time": 11.435
-    },
-    {
-      "character": "苦",
-      "start_time": 11.435,
-      "end_time": 11.68
-    },
-    {
-      "character": "笑",
-      "start_time": 11.68,
-      "end_time": 11.905
-    },
-    {
-      "character": "道",
-      "start_time": 11.905,
-      "end_time": 12.04
-    },
-    {
-      "character": "：",
-      "start_time": 12.04,
-      "end_time": 12.6
-    },
-    {
-      "character": "二",
-      "start_time": 12.6,
-      "end_time": 12.785
-    },
-    {
-      "character": "弟",
-      "start_time": 12.785,
-      "end_time": 12.995
-    },
-    {
-      "character": "，",
-      "start_time": 12.995,
-      "end_time": 13.5
-    },
-    {
-      "character": "你",
-      "start_time": 13.5,
-      "end_time": 13.715
-    },
-    {
-      "character": "怎",
-      "start_time": 13.715,
-      "end_time": 13.825
-    },
-    {
-      "character": "么",
-      "start_time": 13.825,
-      "end_time": 13.915
-    },
-    {
-      "character": "会",
-      "start_time": 13.915,
-      "end_time": 14.085
-    },
-    {
-      "character": "来",
-      "start_time": 14.085,
-      "end_time": 14.345
-    },
-    {
-      "character": "，",
-      "start_time": 14.345,
-      "end_time": 14.925
-    },
-    {
-      "character": "赵",
-      "start_time": 14.925,
-      "end_time": 15.125
-    },
-    {
-      "character": "硕",
-      "start_time": 15.125,
-      "end_time": 15.29
-    },
-    {
-      "character": "眼",
-      "start_time": 15.29,
-      "end_time": 15.595
-    },
-    {
-      "character": "眶",
-      "start_time": 15.595,
-      "end_time": 15.865
-    },
-    {
-      "character": "微",
-      "start_time": 15.865,
-      "end_time": 16.04
-    },
-    {
-      "character": "红",
-      "start_time": 16.04,
-      "end_time": 16.34
-    },
-    {
-      "character": "：",
-      "start_time": 16.34,
-      "end_time": 16.825
-    },
-    {
-      "character": "我",
-      "start_time": 16.825,
-      "end_time": 16.945
-    },
-    {
-      "character": "感",
-      "start_time": 16.945,
-      "end_time": 17.21
-    },
-    {
-      "character": "应",
-      "start_time": 17.21,
-      "end_time": 17.375
-    },
-    {
-      "character": "到",
-      "start_time": 17.375,
-      "end_time": 17.54
-    },
-    {
-      "character": "大",
-      "start_time": 17.54,
-      "end_time": 17.865
-    },
-    {
-      "character": "哥",
-      "start_time": 17.865,
-      "end_time": 18.065
-    },
-    {
-      "character": "有",
-      "start_time": 18.065,
-      "end_time": 18.26
-    },
-    {
-      "character": "危",
-      "start_time": 18.26,
-      "end_time": 18.445
-    },
-    {
-      "character": "险",
-      "start_time": 18.445,
-      "end_time": 18.68
-    },
-    {
-      "character": "，",
-      "start_time": 18.68,
-      "end_time": 19.015
-    },
-    {
-      "character": "兄",
-      "start_time": 19.015,
-      "end_time": 19.26
-    },
-    {
-      "character": "弟",
-      "start_time": 19.26,
-      "end_time": 19.425
-    },
-    {
-      "character": "二",
-      "start_time": 19.425,
-      "end_time": 19.635
-    },
-    {
-      "character": "人",
-      "start_time": 19.635,
-      "end_time": 19.955
+      "start_time": 3.058,
+      "end_time": 3.333
     },
     {
       "character": "相",
-      "start_time": 19.955,
-      "end_time": 20.245
+      "start_time": 3.333,
+      "end_time": 3.52
     },
     {
-      "character": "视",
-      "start_time": 20.245,
-      "end_time": 20.415
+      "character": "遮",
+      "start_time": 3.52,
+      "end_time": 3.72
     },
     {
-      "character": "一",
-      "start_time": 20.415,
-      "end_time": 20.57
+      "character": "天",
+      "start_time": 3.72,
+      "end_time": 3.908
     },
     {
-      "character": "笑",
-      "start_time": 20.57,
-      "end_time": 20.77
+      "character": "蔽",
+      "start_time": 3.908,
+      "end_time": 4.07
+    },
+    {
+      "character": "日",
+      "start_time": 4.07,
+      "end_time": 4.229
     },
     {
       "character": "，",
-      "start_time": 20.77,
-      "end_time": 21.265
+      "start_time": 4.229,
+      "end_time": 4.608
     },
     {
-      "character": "多",
-      "start_time": 21.265,
-      "end_time": 21.44
+      "character": "双",
+      "start_time": 4.608,
+      "end_time": 4.829
     },
     {
-      "character": "年",
-      "start_time": 21.44,
-      "end_time": 21.665
-    },
-    {
-      "character": "未",
-      "start_time": 21.665,
-      "end_time": 21.835
-    },
-    {
-      "character": "见",
-      "start_time": 21.835,
-      "end_time": 22.015
-    },
-    {
-      "character": "的",
-      "start_time": 22.015,
-      "end_time": 22.1
-    },
-    {
-      "character": "隔",
-      "start_time": 22.1,
-      "end_time": 22.37
-    },
-    {
-      "character": "阂",
-      "start_time": 22.37,
-      "end_time": 22.685
-    },
-    {
-      "character": "在",
-      "start_time": 22.685,
-      "end_time": 22.875
-    },
-    {
-      "character": "这",
-      "start_time": 22.875,
-      "end_time": 22.98
+      "character": "翅",
+      "start_time": 4.829,
+      "end_time": 4.962
     },
     {
       "character": "一",
-      "start_time": 22.98,
-      "end_time": 23.09
+      "start_time": 4.962,
+      "end_time": 5.12
     },
     {
-      "character": "刻",
-      "start_time": 23.09,
-      "end_time": 23.29
+      "character": "振",
+      "start_time": 5.12,
+      "end_time": 5.287
     },
     {
-      "character": "烟",
-      "start_time": 23.29,
-      "end_time": 23.58
+      "character": "便",
+      "start_time": 5.287,
+      "end_time": 5.483
     },
     {
-      "character": "消",
-      "start_time": 23.58,
-      "end_time": 23.82
+      "character": "将",
+      "start_time": 5.483,
+      "end_time": 5.629
     },
     {
-      "character": "云",
-      "start_time": 23.82,
-      "end_time": 23.995
+      "character": "卢",
+      "start_time": 5.629,
+      "end_time": 5.812
     },
     {
-      "character": "散",
-      "start_time": 23.995,
-      "end_time": 24.195
+      "character": "二",
+      "start_time": 5.812,
+      "end_time": 5.949
     },
     {
-      "character": "。",
-      "start_time": 24.195,
-      "end_time": 24.36
+      "character": "卷",
+      "start_time": 5.949,
+      "end_time": 6.199
+    },
+    {
+      "character": "入",
+      "start_time": 6.199,
+      "end_time": 6.37
+    },
+    {
+      "character": "腹",
+      "start_time": 6.37,
+      "end_time": 6.524
+    },
+    {
+      "character": "中",
+      "start_time": 6.524,
+      "end_time": 6.691
+    },
+    {
+      "character": "，",
+      "start_time": 6.691,
+      "end_time": 7.145
+    },
+    {
+      "character": "青",
+      "start_time": 7.145,
+      "end_time": 7.379
+    },
+    {
+      "character": "灰",
+      "start_time": 7.379,
+      "end_time": 7.533
+    },
+    {
+      "character": "色",
+      "start_time": 7.533,
+      "end_time": 7.67
+    },
+    {
+      "character": "巨",
+      "start_time": 7.67,
+      "end_time": 7.829
+    },
+    {
+      "character": "鸟",
+      "start_time": 7.829,
+      "end_time": 8.004
+    },
+    {
+      "character": "虚",
+      "start_time": 8.004,
+      "end_time": 8.204
+    },
+    {
+      "character": "影",
+      "start_time": 8.204,
+      "end_time": 8.412
+    },
+    {
+      "character": "翅",
+      "start_time": 8.412,
+      "end_time": 8.699
+    },
+    {
+      "character": "展",
+      "start_time": 8.699,
+      "end_time": 8.866
+    },
+    {
+      "character": "十",
+      "start_time": 8.866,
+      "end_time": 9.054
+    },
+    {
+      "character": "丈",
+      "start_time": 9.054,
+      "end_time": 9.191
+    },
+    {
+      "character": "，",
+      "start_time": 9.191,
+      "end_time": 9.649
+    },
+    {
+      "character": "喙",
+      "start_time": 9.649,
+      "end_time": 9.804
+    },
+    {
+      "character": "如",
+      "start_time": 9.804,
+      "end_time": 9.979
+    },
+    {
+      "character": "弯",
+      "start_time": 9.979,
+      "end_time": 10.145
+    },
+    {
+      "character": "钩",
+      "start_time": 10.145,
+      "end_time": 10.337
+    },
+    {
+      "character": "，",
+      "start_time": 10.337,
+      "end_time": 10.758
+    },
+    {
+      "character": "眸",
+      "start_time": 10.758,
+      "end_time": 10.941
+    },
+    {
+      "character": "若",
+      "start_time": 10.941,
+      "end_time": 11.104
+    },
+    {
+      "character": "幽",
+      "start_time": 11.104,
+      "end_time": 11.337
+    },
+    {
+      "character": "冥",
+      "start_time": 11.337,
+      "end_time": 11.52
+    },
+    {
+      "character": "火",
+      "start_time": 11.52,
+      "end_time": 11.729
+    },
+    {
+      "character": "海",
+      "start_time": 11.729,
+      "end_time": 11.916
+    },
+    {
+      "character": "，",
+      "start_time": 11.916,
+      "end_time": 12.329
+    },
+    {
+      "character": "卢",
+      "start_time": 12.329,
+      "end_time": 12.499
+    },
+    {
+      "character": "二",
+      "start_time": 12.499,
+      "end_time": 12.624
+    },
+    {
+      "character": "毒",
+      "start_time": 12.624,
+      "end_time": 12.791
+    },
+    {
+      "character": "针",
+      "start_time": 12.791,
+      "end_time": 12.995
+    },
+    {
+      "character": "在",
+      "start_time": 12.995,
+      "end_time": 13.17
+    },
+    {
+      "character": "法",
+      "start_time": 13.17,
+      "end_time": 13.354
+    },
+    {
+      "character": "相",
+      "start_time": 13.354,
+      "end_time": 13.495
+    },
+    {
+      "character": "面",
+      "start_time": 13.495,
+      "end_time": 13.687
+    },
+    {
+      "character": "前",
+      "start_time": 13.687,
+      "end_time": 13.849
+    },
+    {
+      "character": "如",
+      "start_time": 13.849,
+      "end_time": 14.004
+    },
+    {
+      "character": "蝼",
+      "start_time": 14.004,
+      "end_time": 14.195
+    },
+    {
+      "character": "蚁",
+      "start_time": 14.195,
+      "end_time": 14.337
+    },
+    {
+      "character": "，",
+      "start_time": 14.337,
+      "end_time": 14.854
+    },
+    {
+      "character": "整",
+      "start_time": 14.854,
+      "end_time": 15.037
+    },
+    {
+      "character": "个",
+      "start_time": 15.037,
+      "end_time": 15.141
+    },
+    {
+      "character": "人",
+      "start_time": 15.141,
+      "end_time": 15.358
+    },
+    {
+      "character": "连",
+      "start_time": 15.358,
+      "end_time": 15.608
+    },
+    {
+      "character": "同",
+      "start_time": 15.608,
+      "end_time": 15.787
+    },
+    {
+      "character": "折",
+      "start_time": 15.787,
+      "end_time": 15.991
+    },
+    {
+      "character": "扇",
+      "start_time": 15.991,
+      "end_time": 16.154
+    },
+    {
+      "character": "被",
+      "start_time": 16.154,
+      "end_time": 16.279
+    },
+    {
+      "character": "吞",
+      "start_time": 16.279,
+      "end_time": 16.495
+    },
+    {
+      "character": "入",
+      "start_time": 16.495,
+      "end_time": 16.637
+    },
+    {
+      "character": "时",
+      "start_time": 16.637,
+      "end_time": 16.904
+    },
+    {
+      "character": "发",
+      "start_time": 16.904,
+      "end_time": 17.108
+    },
+    {
+      "character": "出",
+      "start_time": 17.108,
+      "end_time": 17.254
+    },
+    {
+      "character": "凄",
+      "start_time": 17.254,
+      "end_time": 17.549
+    },
+    {
+      "character": "厉",
+      "start_time": 17.549,
+      "end_time": 17.679
+    },
+    {
+      "character": "惨",
+      "start_time": 17.679,
+      "end_time": 17.929
+    },
+    {
+      "character": "叫",
+      "start_time": 17.929,
+      "end_time": 18.104
+    },
+    {
+      "character": "，",
+      "start_time": 18.104,
+      "end_time": 18.504
+    },
+    {
+      "character": "卢",
+      "start_time": 18.504,
+      "end_time": 18.683
+    },
+    {
+      "character": "大",
+      "start_time": 18.683,
+      "end_time": 18.837
+    },
+    {
+      "character": "鬼",
+      "start_time": 18.837,
+      "end_time": 18.995
+    },
+    {
+      "character": "头",
+      "start_time": 18.995,
+      "end_time": 19.145
+    },
+    {
+      "character": "刀",
+      "start_time": 19.145,
+      "end_time": 19.341
+    },
+    {
+      "character": "砍",
+      "start_time": 19.341,
+      "end_time": 19.637
+    },
+    {
+      "character": "中",
+      "start_time": 19.637,
+      "end_time": 19.808
+    },
+    {
+      "character": "法",
+      "start_time": 19.808,
+      "end_time": 19.954
+    },
+    {
+      "character": "相",
+      "start_time": 19.954,
+      "end_time": 20.12
+    },
+    {
+      "character": "翅",
+      "start_time": 20.12,
+      "end_time": 20.37
+    },
+    {
+      "character": "膀",
+      "start_time": 20.37,
+      "end_time": 20.579
+    },
+    {
+      "character": "却",
+      "start_time": 20.579,
+      "end_time": 20.729
+    },
+    {
+      "character": "只",
+      "start_time": 20.729,
+      "end_time": 20.916
+    },
+    {
+      "character": "留",
+      "start_time": 20.916,
+      "end_time": 21.079
+    },
+    {
+      "character": "白",
+      "start_time": 21.079,
+      "end_time": 21.241
+    },
+    {
+      "character": "痕",
+      "start_time": 21.241,
+      "end_time": 21.495
+    },
+    {
+      "character": "，",
+      "start_time": 21.495,
+      "end_time": 21.912
+    },
+    {
+      "character": "他",
+      "start_time": 21.912,
+      "end_time": 21.999
+    },
+    {
+      "character": "看",
+      "start_time": 21.999,
+      "end_time": 22.199
+    },
+    {
+      "character": "着",
+      "start_time": 22.199,
+      "end_time": 22.279
+    },
+    {
+      "character": "三",
+      "start_time": 22.279,
+      "end_time": 22.504
+    },
+    {
+      "character": "弟",
+      "start_time": 22.504,
+      "end_time": 22.658
+    },
+    {
+      "character": "二",
+      "start_time": 22.658,
+      "end_time": 22.82
+    },
+    {
+      "character": "哥",
+      "start_time": 22.82,
+      "end_time": 22.97
+    },
+    {
+      "character": "接",
+      "start_time": 22.97,
+      "end_time": 23.191
+    },
+    {
+      "character": "连",
+      "start_time": 23.191,
+      "end_time": 23.358
+    },
+    {
+      "character": "惨",
+      "start_time": 23.358,
+      "end_time": 23.616
+    },
+    {
+      "character": "S",
+      "start_time": 23.616,
+      "end_time": 23.816
+    },
+    {
+      "character": "，",
+      "start_time": 23.816,
+      "end_time": 24.183
+    },
+    {
+      "character": "肝",
+      "start_time": 24.183,
+      "end_time": 24.399
+    },
+    {
+      "character": "胆",
+      "start_time": 24.399,
+      "end_time": 24.579
+    },
+    {
+      "character": "俱",
+      "start_time": 24.579,
+      "end_time": 24.766
+    },
+    {
+      "character": "裂",
+      "start_time": 24.766,
+      "end_time": 24.899
+    },
+    {
+      "character": "，",
+      "start_time": 24.899,
+      "end_time": 25.387
+    },
+    {
+      "character": "归",
+      "start_time": 25.387,
+      "end_time": 25.524
+    },
+    {
+      "character": "一",
+      "start_time": 25.524,
+      "end_time": 25.687
+    },
+    {
+      "character": "期",
+      "start_time": 25.687,
+      "end_time": 25.833
+    },
+    {
+      "character": "中",
+      "start_time": 25.833,
+      "end_time": 25.974
+    },
+    {
+      "character": "阶",
+      "start_time": 25.974,
+      "end_time": 26.124
+    },
+    {
+      "character": "气",
+      "start_time": 26.124,
+      "end_time": 26.358
+    },
+    {
+      "character": "势",
+      "start_time": 26.358,
+      "end_time": 26.583
+    },
+    {
+      "character": "竟",
+      "start_time": 26.583,
+      "end_time": 26.808
+    },
+    {
+      "character": "崩",
+      "start_time": 26.808,
+      "end_time": 27.054
+    },
+    {
+      "character": "溃",
+      "start_time": 27.054,
+      "end_time": 27.237
+    },
+    {
+      "character": "大",
+      "start_time": 27.237,
+      "end_time": 27.404
+    },
+    {
+      "character": "半",
+      "start_time": 27.404,
+      "end_time": 27.558
+    },
+    {
+      "character": "，",
+      "start_time": 27.558,
+      "end_time": 28.07
+    },
+    {
+      "character": "而",
+      "start_time": 28.07,
+      "end_time": 28.204
+    },
+    {
+      "character": "赵",
+      "start_time": 28.204,
+      "end_time": 28.399
+    },
+    {
+      "character": "硕",
+      "start_time": 28.399,
+      "end_time": 28.524
+    },
+    {
+      "character": "已",
+      "start_time": 28.524,
+      "end_time": 28.649
+    },
+    {
+      "character": "提",
+      "start_time": 28.649,
+      "end_time": 28.862
+    },
+    {
+      "character": "着",
+      "start_time": 28.862,
+      "end_time": 28.945
+    },
+    {
+      "character": "剑",
+      "start_time": 28.945,
+      "end_time": 29.216
+    },
+    {
+      "character": "一",
+      "start_time": 29.216,
+      "end_time": 29.412
+    },
+    {
+      "character": "步",
+      "start_time": 29.412,
+      "end_time": 29.595
+    },
+    {
+      "character": "步",
+      "start_time": 29.595,
+      "end_time": 29.724
+    },
+    {
+      "character": "逼",
+      "start_time": 29.724,
+      "end_time": 29.891
+    },
+    {
+      "character": "近",
+      "start_time": 29.891,
+      "end_time": 30.041
+    },
+    {
+      "character": "，",
+      "start_time": 30.041,
+      "end_time": 30.499
+    },
+    {
+      "character": "眼",
+      "start_time": 30.499,
+      "end_time": 30.699
+    },
+    {
+      "character": "神",
+      "start_time": 30.699,
+      "end_time": 30.841
+    },
+    {
+      "character": "冷",
+      "start_time": 30.841,
+      "end_time": 31.054
+    },
+    {
+      "character": "如",
+      "start_time": 31.054,
+      "end_time": 31.258
+    },
+    {
+      "character": "万",
+      "start_time": 31.258,
+      "end_time": 31.399
+    },
+    {
+      "character": "年",
+      "start_time": 31.399,
+      "end_time": 31.637
+    },
+    {
+      "character": "寒",
+      "start_time": 31.637,
+      "end_time": 31.866
+    },
+    {
+      "character": "冰",
+      "start_time": 31.866,
+      "end_time": 32.049
+    },
+    {
+      "character": "！",
+      "start_time": 32.049,
+      "end_time": 32.208
     }
   ],
-  "generated_at": "2025-08-20T21:49:02.245170"
+  "generated_at": "2025-08-23T11:37:44.865891"
 }

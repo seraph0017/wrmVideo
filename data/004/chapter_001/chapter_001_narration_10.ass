@@ -14,18 +14,16 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:03.26,Default,,0,0,0,,清晨{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}提着竹篮走向海边
-Dialogue: 0,0:00:03.77,0:00:06.79,Default,,0,0,0,,浅绿色裙摆飘动{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}果然
-Dialogue: 0,0:00:06.79,0:00:09.61,Default,,0,0,0,,带着两个小厮尾随眼中闪烁
-Dialogue: 0,0:00:09.61,0:00:13.30,Default,,0,0,0,,淫光{\c&H0000FFFF&\b1}小美人{\c&H00FFFFFF&\b0}跑哪儿去他捡起
-Dialogue: 0,0:00:13.30,0:00:16.04,Default,,0,0,0,,地上的绣花手绢猛嗅却没
-Dialogue: 0,0:00:16.04,0:00:18.94,Default,,0,0,0,,发现手绢上涂着麝香{\c&H0000FFFF&\b1}青蛟{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:18.94,0:00:22.18,Default,,0,0,0,,最爱的诱饵{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}跑进洞穴我
-Dialogue: 0,0:00:22.18,0:00:24.84,Default,,0,0,0,,在这儿洗澡呢{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}狂喜
-Dialogue: 0,0:00:24.84,0:00:27.64,Default,,0,0,0,,冲进去却见{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}举着鱼叉从
-Dialogue: 0,0:00:27.64,0:00:30.84,Default,,0,0,0,,暗处冲出{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}握着磨盘饰品
-Dialogue: 0,0:00:30.84,0:00:33.99,Default,,0,0,0,,念动咒语洞穴深处{\c&H0000FFFF&\b1}青蛟{\c&H00FFFFFF&\b0}被
-Dialogue: 0,0:00:33.99,0:00:36.49,Default,,0,0,0,,麝香引来发出震耳欲聋的
-Dialogue: 0,0:00:37.03,0:00:40.12,Default,,0,0,0,,咆哮{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}惊恐回头只看到
-Dialogue: 0,0:00:40.12,0:00:42.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}冰冷的笑容和扑来的
-Dialogue: 0,0:00:42.25,0:00:43.45,Default,,0,0,0,,巨大蛟影
+Dialogue: 0,0:00:00.02,0:00:02.45,Default,,0,0,0,,夫子停下讲课视线锐利地盯
+Dialogue: 0,0:00:02.45,0:00:02.88,Default,,0,0,0,,着{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.34,0:00:04.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}为何发笑
+Dialogue: 0,0:00:04.90,0:00:06.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}起身朗声道
+Dialogue: 0,0:00:06.90,0:00:08.62,Default,,0,0,0,,夫子天圆地方是谬论
+Dialogue: 0,0:00:08.91,0:00:09.82,Default,,0,0,0,,大地是圆球
+Dialogue: 0,0:00:10.24,0:00:12.72,Default,,0,0,0,,全班哗然一个锦衣少年讥讽
+Dialogue: 0,0:00:12.97,0:00:14.38,Default,,0,0,0,,赵草包你懂什么
+Dialogue: 0,0:00:14.72,0:00:16.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}不理他继续解释地球
+Dialogue: 0,0:00:16.79,0:00:18.80,Default,,0,0,0,,自转公转引来更多嘲笑
+Dialogue: 0,0:00:19.11,0:00:20.31,Default,,0,0,0,,夫子却若有所思
+Dialogue: 0,0:00:20.67,0:00:20.91,Default,,0,0,0,,哦
+Dialogue: 0,0:00:21.36,0:00:22.14,Default,,0,0,0,,你且细说

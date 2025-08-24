@@ -14,17 +14,15 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.51,Default,,0,0,0,,场景转换至广场角落的偏殿
-Dialogue: 0,0:00:02.51,0:00:06.21,Default,,0,0,0,,门口午后{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}斜照赵硕辛
-Dialogue: 0,0:00:06.21,0:00:09.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}芦白{\c&H00FFFFFF&\b0}蒹葭姜素卿四人被天雷
-Dialogue: 0,0:00:09.54,0:00:12.46,Default,,0,0,0,,上人请至此处周围有四名
-Dialogue: 0,0:00:12.46,0:00:15.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗门人看守天雷上人站
-Dialogue: 0,0:00:15.19,0:00:18.20,Default,,0,0,0,,在{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}对面手持拂尘面色
-Dialogue: 0,0:00:18.20,0:00:20.75,Default,,0,0,0,,复杂地看着他阁下擅闯我
-Dialogue: 0,0:00:20.75,0:00:24.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗还引来僵神一族这笔
-Dialogue: 0,0:00:24.01,0:00:27.41,Default,,0,0,0,,账该如何算{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}苦笑正欲
-Dialogue: 0,0:00:27.41,0:00:30.46,Default,,0,0,0,,解释{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}上前一步背部对着
-Dialogue: 0,0:00:30.46,0:00:33.57,Default,,0,0,0,,镜头圆领白色长裙在{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:33.57,0:00:36.33,Default,,0,0,0,,下泛着微光天雷前辈我乃
-Dialogue: 0,0:00:36.33,0:00:39.55,Default,,0,0,0,,清心小筑门下{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}此事或有
-Dialogue: 0,0:00:39.55,0:00:39.95,Default,,0,0,0,,误会
+Dialogue: 0,0:00:00.02,0:00:01.82,Default,,0,0,0,,场景转换至天星宗{\c&H0000FFFF&\b1}后山{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.37,0:00:04.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}四人在天雷上人的
+Dialogue: 0,0:00:04.01,0:00:05.29,Default,,0,0,0,,安排下在此躲避
+Dialogue: 0,0:00:05.78,0:00:08.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}后山{\c&H00FFFFFF&\b0}环境清幽有瀑布溪流
+Dialogue: 0,0:00:08.55,0:00:09.32,Default,,0,0,0,,绿树成荫
+Dialogue: 0,0:00:09.76,0:00:11.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}坐在一块巨石上思考
+Dialogue: 0,0:00:11.91,0:00:14.31,Default,,0,0,0,,对策{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}和白蒹葭在一旁
+Dialogue: 0,0:00:14.31,0:00:16.16,Default,,0,0,0,,讨论如何应对僵神一族的
+Dialogue: 0,0:00:16.16,0:00:18.12,Default,,0,0,0,,后续追杀{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}则
+Dialogue: 0,0:00:18.12,0:00:20.53,Default,,0,0,0,,在溪边玩水暂时忘记了恐惧
+Dialogue: 0,0:00:20.97,0:00:23.48,Default,,0,0,0,,突然远处传来爆炸声僵帝
+Dialogue: 0,0:00:23.48,0:00:25.39,Default,,0,0,0,,突破防线再次追来

@@ -14,16 +14,13 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.70,Default,,0,0,0,,场景在偏殿内黄昏时分
-Dialogue: 0,0:00:03.24,0:00:06.84,Default,,0,0,0,,夕阳西下{\c&H0000FFFF&\b1}赵硕辛{\c&H00FFFFFF&\b0}芦白蒹葭
-Dialogue: 0,0:00:07.12,0:00:09.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}四人围坐在一张木
-Dialogue: 0,0:00:09.17,0:00:11.97,Default,,0,0,0,,桌旁桌上摆放着简单的茶水
-Dialogue: 0,0:00:12.52,0:00:15.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}背部对着镜头轻声道
-Dialogue: 0,0:00:15.74,0:00:18.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗实力远超预期僵帝
-Dialogue: 0,0:00:18.55,0:00:21.28,Default,,0,0,0,,应该能被全歼但僵神一族
-Dialogue: 0,0:00:21.28,0:00:24.77,Default,,0,0,0,,始祖若知晓恐会报复白蒹葭
-Dialogue: 0,0:00:24.77,0:00:27.86,Default,,0,0,0,,同样背部视角淡紫色长裙在
-Dialogue: 0,0:00:27.86,0:00:31.15,Default,,0,0,0,,夕阳下泛着暖光{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}我们下
-Dialogue: 0,0:00:31.15,0:00:33.19,Default,,0,0,0,,一步该去清心小筑请援吗
-Dialogue: 0,0:00:33.78,0:00:37.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕端{\c&H00FFFFFF&\b0}起茶杯若有所思窗外
-Dialogue: 0,0:00:37.16,0:00:39.66,Default,,0,0,0,,传来战斗的爆炸声渐渐平息
+Dialogue: 0,0:00:00.02,0:00:02.47,Default,,0,0,0,,场景转换至森林深处{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}等
+Dialogue: 0,0:00:02.47,0:00:03.99,Default,,0,0,0,,人与僵帝展开激战
+Dialogue: 0,0:00:04.45,0:00:06.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}祭出通天锁龙柱锁链飞
+Dialogue: 0,0:00:06.90,0:00:09.15,Default,,0,0,0,,出缠住僵{\c&H0000FFFF&\b1}帝辛{\c&H00FFFFFF&\b0}芦和
+Dialogue: 0,0:00:09.15,0:00:11.68,Default,,0,0,0,,白蒹葭则攻击走尸{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.68,0:00:13.40,Default,,0,0,0,,负责保护{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗弟子
+Dialogue: 0,0:00:13.70,0:00:16.04,Default,,0,0,0,,天雷上人虽重伤未愈仍使出
+Dialogue: 0,0:00:16.04,0:00:18.10,Default,,0,0,0,,绝招与{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}合力对抗僵帝
+Dialogue: 0,0:00:18.44,0:00:20.86,Default,,0,0,0,,最终僵帝被击败化为飞灰
+Dialogue: 0,0:00:21.16,0:00:22.20,Default,,0,0,0,,众人得以脱险

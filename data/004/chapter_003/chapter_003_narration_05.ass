@@ -14,16 +14,15 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:03.08,Default,,0,0,0,,场景回到广场上空僵帝们见
-Dialogue: 0,0:00:03.08,0:00:05.71,Default,,0,0,0,,天星宗{\c&H0000FFFF&\b1}布阵{\c&H00FFFFFF&\b0}其中一名领头
-Dialogue: 0,0:00:05.71,0:00:09.28,Default,,0,0,0,,僵帝厉声咆哮交出{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}否则
-Dialogue: 0,0:00:09.28,0:00:12.71,Default,,0,0,0,,屠你{\c&H0000FFFF&\b1}满门{\c&H00FFFFFF&\b0}声音如雷震得广场
-Dialogue: 0,0:00:12.71,0:00:15.46,Default,,0,0,0,,上的瓦片簌簌作响僵帝身着
-Dialogue: 0,0:00:15.46,0:00:18.03,Default,,0,0,0,,黑色同色制服身体周围
-Dialogue: 0,0:00:18.03,0:00:20.98,Default,,0,0,0,,环绕着黑色雾气眼神凶狠地
-Dialogue: 0,0:00:20.98,0:00:23.60,Default,,0,0,0,,盯着下方的天雷上人天雷
-Dialogue: 0,0:00:23.60,0:00:26.89,Default,,0,0,0,,上人站在高台仰头怒视我
-Dialogue: 0,0:00:26.89,0:00:29.61,Default,,0,0,0,,天星{\c&H0000FFFF&\b1}宗立宗{\c&H00FFFFFF&\b0}亿万年岂惧你
-Dialogue: 0,0:00:29.61,0:00:33.59,Default,,0,0,0,,区区僵神双方隔空对峙杀气
-Dialogue: 0,0:00:33.59,0:00:37.10,Default,,0,0,0,,弥漫天空{\c&H0000FFFF&\b1}乌云{\c&H00FFFFFF&\b0}更浓仿佛预示
-Dialogue: 0,0:00:37.10,0:00:38.22,Default,,0,0,0,,着一场{\c&H0000FFFF&\b1}大战{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:02.54,Default,,0,0,0,,场景设定在{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗广场僵帝
+Dialogue: 0,0:00:02.54,0:00:04.90,Default,,0,0,0,,带领走尸与{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗门人展开
+Dialogue: 0,0:00:04.90,0:00:05.22,Default,,0,0,0,,决战
+Dialogue: 0,0:00:05.68,0:00:07.73,Default,,0,0,0,,天雷上人祭出宗门{\c&H0000FFFF&\b1}至宝{\c&H00FFFFFF&\b0}天星
+Dialogue: 0,0:00:07.73,0:00:10.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝镜{\c&H00FFFFFF&\b0}宝镜发出耀眼光芒照射
+Dialogue: 0,0:00:10.78,0:00:12.89,Default,,0,0,0,,在走尸身上走尸纷纷
+Dialogue: 0,0:00:12.89,0:00:13.54,Default,,0,0,0,,化为灰烬
+Dialogue: 0,0:00:13.86,0:00:16.52,Default,,0,0,0,,僵帝见状暴怒不已使出绝招
+Dialogue: 0,0:00:16.85,0:00:19.42,Default,,0,0,0,,巨斧劈向{\c&H0000FFFF&\b1}宝镜{\c&H00FFFFFF&\b0}宝镜应声而
+Dialogue: 0,0:00:19.42,0:00:21.18,Default,,0,0,0,,碎天雷上人受重伤
+Dialogue: 0,0:00:21.58,0:00:24.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕四{\c&H00FFFFFF&\b0}人趁机出手协助天星
+Dialogue: 0,0:00:24.06,0:00:25.33,Default,,0,0,0,,宗门人击退僵帝

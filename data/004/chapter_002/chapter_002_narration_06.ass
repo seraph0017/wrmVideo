@@ -14,12 +14,19 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:03.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大如{\c&H00FFFFFF&\b0}疯虎般扑来双拳挥舞
-Dialogue: 0,0:00:03.10,0:00:06.39,Default,,0,0,0,,间碎石飞溅{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}脚尖点地
-Dialogue: 0,0:00:06.92,0:00:10.21,Default,,0,0,0,,身形如鬼魅般在拳影中穿梭
-Dialogue: 0,0:00:10.82,0:00:13.01,Default,,0,0,0,,九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑不断刺向
-Dialogue: 0,0:00:13.01,0:00:16.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}破绽突然他抓住卢大
-Dialogue: 0,0:00:16.20,0:00:19.08,Default,,0,0,0,,旧力已尽新力未生之际一剑
-Dialogue: 0,0:00:19.08,0:00:21.82,Default,,0,0,0,,刺穿其心脏{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}难以置信地
-Dialogue: 0,0:00:21.82,0:00:24.70,Default,,0,0,0,,低头看着胸口的剑口中涌出
-Dialogue: 0,0:00:24.70,0:00:26.57,Default,,0,0,0,,鲜血轰然倒地
+Dialogue: 0,0:00:00.00,0:00:01.80,Default,,0,0,0,,二弟真的是你
+Dialogue: 0,0:00:02.01,0:00:04.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}突然抓住赵硕衣袖十年
+Dialogue: 0,0:00:04.58,0:00:06.49,Default,,0,0,0,,未见的兄弟终于相认
+Dialogue: 0,0:00:06.49,0:00:08.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}转身时青色道袍袖口
+Dialogue: 0,0:00:08.92,0:00:10.20,Default,,0,0,0,,露出与{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}同款的
+Dialogue: 0,0:00:10.20,0:00:12.64,Default,,0,0,0,,月牙{\c&H0000FFFF&\b1}玉佩{\c&H00FFFFFF&\b0}这是母亲苏绣当年
+Dialogue: 0,0:00:12.64,0:00:13.84,Default,,0,0,0,,分别时所赠
+Dialogue: 0,0:00:13.84,0:00:16.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}圆领短打沾满尘土手掌
+Dialogue: 0,0:00:16.41,0:00:18.42,Default,,0,0,0,,粗糙{\c&H0000FFFF&\b1}布满{\c&H00FFFFFF&\b0}老茧紧紧攥着
+Dialogue: 0,0:00:18.42,0:00:20.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}玉佩{\c&H00FFFFFF&\b0}泣不成声而
+Dialogue: 0,0:00:20.29,0:00:22.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}眼中也泛起水光左手拍
+Dialogue: 0,0:00:22.72,0:00:24.79,Default,,0,0,0,,他肩膀掌心温暖
+Dialogue: 0,0:00:24.79,0:00:27.09,Default,,0,0,0,,土院血腥味未散{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二的
+Dialogue: 0,0:00:27.09,0:00:29.33,Default,,0,0,0,,怒吼犹在耳畔兄弟俩却
+Dialogue: 0,0:00:29.33,0:00:31.52,Default,,0,0,0,,在尸身旁重逢泪光映着
+Dialogue: 0,0:00:31.62,0:00:33.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}恍如隔世

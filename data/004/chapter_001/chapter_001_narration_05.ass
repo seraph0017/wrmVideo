@@ -14,16 +14,16 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.03,0:00:02.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}被赵鸾拉着走向餐厅
-Dialogue: 0,0:00:02.71,0:00:05.30,Default,,0,0,0,,庭院中草木{\c&H0000FFFF&\b1}青翠{\c&H00FFFFFF&\b0}透着宋代
-Dialogue: 0,0:00:05.30,0:00:08.64,Default,,0,0,0,,农家气息二哥{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}去年
-Dialogue: 0,0:00:08.64,0:00:11.38,Default,,0,0,0,,星图开窍成了灵窍期咱们
-Dialogue: 0,0:00:11.38,0:00:14.64,Default,,0,0,0,,惹不起{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}边走边说小手
-Dialogue: 0,0:00:14.64,0:00:17.89,Default,,0,0,0,,紧紧攥着他衣袖餐厅{\c&H0000FFFF&\b1}内楚秀{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:17.89,0:00:20.59,Default,,0,0,0,,正盛粥她盘发穿浅灰圆领
-Dialogue: 0,0:00:20.59,0:00:23.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}布衫{\c&H00FFFFFF&\b0}见赵硕进来眼中露出
-Dialogue: 0,0:00:23.53,0:00:26.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}慈爱{\c&H00FFFFFF&\b0}快吃娘一定让你和小鸾
-Dialogue: 0,0:00:26.78,0:00:30.12,Default,,0,0,0,,开灵窍{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}接过粗瓷碗心中
-Dialogue: 0,0:00:30.12,0:00:32.56,Default,,0,0,0,,一暖这就是穿越后的家人吗
-Dialogue: 0,0:00:33.11,0:00:35.83,Default,,0,0,0,,他低头喝粥没看到{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}偷偷
-Dialogue: 0,0:00:35.83,0:00:36.72,Default,,0,0,0,,抹泪的动作
+Dialogue: 0,0:00:00.02,0:00:00.32,Default,,0,0,0,,啪嗒
+Dialogue: 0,0:00:00.83,0:00:03.28,Default,,0,0,0,,矿泉水瓶掉在地上{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}瘫坐
+Dialogue: 0,0:00:03.28,0:00:04.75,Default,,0,0,0,,在地满脸震惊
+Dialogue: 0,0:00:05.20,0:00:05.80,Default,,0,0,0,,他喃喃道
+Dialogue: 0,0:00:06.14,0:00:06.57,Default,,0,0,0,,不可能
+Dialogue: 0,0:00:06.92,0:00:07.84,Default,,0,0,0,,是幻觉
+Dialogue: 0,0:00:08.20,0:00:10.34,Default,,0,0,0,,但镜头中的巨人清晰可见
+Dialogue: 0,0:00:10.34,0:00:12.64,Default,,0,0,0,,他用力揉眼却见巨人缓缓
+Dialogue: 0,0:00:12.64,0:00:14.45,Default,,0,0,0,,合十双手{\c&H0000FFFF&\b1}超新星{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:14.45,0:00:15.85,Default,,0,0,0,,光芒被其收拢
+Dialogue: 0,0:00:16.30,0:00:18.31,Default,,0,0,0,,突然巨人猛地回头一道
+Dialogue: 0,0:00:18.31,0:00:20.63,Default,,0,0,0,,淡紫色闪电劈向{\c&H0000FFFF&\b1}天文台{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.73,0:00:24.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}被强光吞噬失去意识

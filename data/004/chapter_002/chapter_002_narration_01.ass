@@ -14,11 +14,19 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:03.32,Default,,0,0,0,,黄昏时分破旧的院落中{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:03.32,0:00:06.28,Default,,0,0,0,,背靠木门嘴角淌血眼神
-Dialogue: 0,0:00:06.28,0:00:09.28,Default,,0,0,0,,倔强地盯着前方三名黑衣人
-Dialogue: 0,0:00:09.28,0:00:11.86,Default,,0,0,0,,将他团团围住为首的{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:11.86,0:00:14.80,Default,,0,0,0,,狞笑着逼近手中闪烁着寒光
-Dialogue: 0,0:00:14.80,0:00:17.99,Default,,0,0,0,,的匕首直指{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}咽喉空气中
-Dialogue: 0,0:00:17.99,0:00:20.52,Default,,0,0,0,,弥漫着铁锈味和紧张的气息
-Dialogue: 0,0:00:21.08,0:00:23.33,Default,,0,0,0,,一场生死较量一触即发
+Dialogue: 0,0:00:00.02,0:00:02.62,Default,,0,0,0,,滔天魔音如泣如诉{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于
+Dialogue: 0,0:00:02.62,0:00:05.46,Default,,0,0,0,,望{\c&H0000FFFF&\b1}海城{\c&H00FFFFFF&\b0}海边礁石七窍竟渗出
+Dialogue: 0,0:00:05.46,0:00:05.84,Default,,0,0,0,,鲜血
+Dialogue: 0,0:00:06.29,0:00:08.97,Default,,0,0,0,,正午{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}刺眼蔚蓝海面卷起
+Dialogue: 0,0:00:08.97,0:00:11.52,Default,,0,0,0,,三丈{\c&H0000FFFF&\b1}巨浪{\c&H00FFFFFF&\b0}咸腥海风裹挟着
+Dialogue: 0,0:00:11.52,0:00:13.82,Default,,0,0,0,,能勾魂摄魄的哭声扑面而来
+Dialogue: 0,0:00:14.24,0:00:16.48,Default,,0,0,0,,他身着青色圆领道袍{\c&H0000FFFF&\b1}长发{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.48,0:00:19.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}束冠{\c&H00FFFFFF&\b0}被风吹得猎猎作响双手
+Dialogue: 0,0:00:19.04,0:00:21.42,Default,,0,0,0,,结印抵在眉心镇魂心经在
+Dialogue: 0,0:00:21.42,0:00:24.00,Default,,0,0,0,,识海疯狂运转{\c&H0000FFFF&\b1}玄奥{\c&H00FFFFFF&\b0}符文如
+Dialogue: 0,0:00:24.00,0:00:24.78,Default,,0,0,0,,繁星闪烁
+Dialogue: 0,0:00:25.11,0:00:27.22,Default,,0,0,0,,远处{\c&H0000FFFF&\b1}海天{\c&H00FFFFFF&\b0}交界线隐现两道
+Dialogue: 0,0:00:27.22,0:00:30.27,Default,,0,0,0,,人影激战气劲撕裂云层而
+Dialogue: 0,0:00:30.27,0:00:32.40,Default,,0,0,0,,他却在魔音冲击下坚守心神
+Dialogue: 0,0:00:32.85,0:00:34.23,Default,,0,0,0,,只因这哭声{\c&H0000FFFF&\b1}中藏{\c&H00FFFFFF&\b0}着
+Dialogue: 0,0:00:34.23,0:00:35.99,Default,,0,0,0,,能动摇道君的摄魂秘术

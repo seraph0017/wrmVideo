@@ -14,17 +14,14 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.19,Default,,0,0,0,,场景在{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗深处的闭关
-Dialogue: 0,0:00:02.19,0:00:05.67,Default,,0,0,0,,洞府洞内昏暗仅有一盏油灯
-Dialogue: 0,0:00:05.67,0:00:08.80,Default,,0,0,0,,照明天雷上人躬身站在洞府
-Dialogue: 0,0:00:08.80,0:00:11.18,Default,,0,0,0,,中央对着前方一道模糊的
-Dialogue: 0,0:00:11.18,0:00:14.47,Default,,0,0,0,,身影汇报{\c&H0000FFFF&\b1}师尊{\c&H00FFFFFF&\b0}僵神一族已至
-Dialogue: 0,0:00:14.47,0:00:18.02,Default,,0,0,0,,广场{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}等人在偏殿那身影
-Dialogue: 0,0:00:18.02,0:00:20.84,Default,,0,0,0,,缓缓转身露出天殇道人的
-Dialogue: 0,0:00:20.84,0:00:23.91,Default,,0,0,0,,面容身着圆领深色道袍
-Dialogue: 0,0:00:24.23,0:00:27.50,Default,,0,0,0,,须发皆白眼神深邃{\c&H0000FFFF&\b1}赵硕乃{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:27.50,0:00:30.83,Default,,0,0,0,,清心小筑贵客不可怠慢传令
-Dialogue: 0,0:00:30.83,0:00:34.06,Default,,0,0,0,,下去全歼僵神一族一个不留
-Dialogue: 0,0:00:34.63,0:00:37.76,Default,,0,0,0,,天雷上人躬身领命转身退出
-Dialogue: 0,0:00:37.76,0:00:41.62,Default,,0,0,0,,洞府洞内油灯闪烁映照天殇
-Dialogue: 0,0:00:41.62,0:00:42.44,Default,,0,0,0,,道人的剪影
+Dialogue: 0,0:00:00.02,0:00:02.55,Default,,0,0,0,,场景转换至{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗大殿战后
+Dialogue: 0,0:00:02.55,0:00:04.62,Default,,0,0,0,,清理现场{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗门人
+Dialogue: 0,0:00:04.62,0:00:07.28,Default,,0,0,0,,伤亡惨重天雷上人坐在{\c&H0000FFFF&\b1}宝座{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.28,0:00:09.61,Default,,0,0,0,,上面色苍白正在调息
+Dialogue: 0,0:00:10.09,0:00:12.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕四{\c&H00FFFFFF&\b0}人前来探望天雷上人
+Dialogue: 0,0:00:12.51,0:00:14.57,Default,,0,0,0,,感谢他们的帮助并表示愿意
+Dialogue: 0,0:00:14.57,0:00:15.19,Default,,0,0,0,,收留他们
+Dialogue: 0,0:00:15.64,0:00:18.15,Default,,0,0,0,,此时一名弟子来报僵神一族
+Dialogue: 0,0:00:18.15,0:00:20.53,Default,,0,0,0,,主力正在逼近天雷上人决定
+Dialogue: 0,0:00:20.53,0:00:23.17,Default,,0,0,0,,带领宗门弟子撤退{\c&H0000FFFF&\b1}赵硕四{\c&H00FFFFFF&\b0}人
+Dialogue: 0,0:00:23.17,0:00:24.15,Default,,0,0,0,,也一同随行

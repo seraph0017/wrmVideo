@@ -373,7 +373,7 @@ def find_sound_effect(text, work_dir):
         '关门': ['action/door_close.wav'],
         '衣服': ['action/cloth_rustle.wav'],
         '纸': ['action/paper_rustle.mp3'],
-        '水': ['action/water_splash.wav'],
+        # 移除水声音效：'水': ['action/water_splash.wav'],
         '玻璃': ['action/glass_break.mp3'],
         
         # 战斗类
@@ -390,7 +390,7 @@ def find_sound_effect(text, work_dir):
         
         # 环境类
         '鸟': ['environment/birds_chirping.wav'],
-        '风': ['environment/wind_gentle.wav', 'environment/wind_strong.wav'],
+        # 移除风声音效：'风': ['environment/wind_gentle.wav', 'environment/wind_strong.wav'],
         '雨': ['environment/rain_light.wav', 'environment/rain_heavy.wav'],
         '雷': ['environment/thunder.wav'],
         '火': ['environment/fire_crackling.wav'],
@@ -399,8 +399,8 @@ def find_sound_effect(text, work_dir):
         '市场': ['environment/marketplace_ambient.wav'],
         # 移除人声音效：'人群': ['environment/crowd_murmur.WAV'],
         '夜': ['environment/night_crickets.wav'],
-        '山': ['environment/mountain_wind.wav'],
-        '流水': ['environment/water_flowing.wav'],
+        # 移除风声音效：'山': ['environment/mountain_wind.wav'],
+        # 移除水声音效：'流水': ['environment/water_flowing.wav'],
         
         # 杂项
         '铃': ['misc/bell.wav', 'misc/bell_ring.wav'],
@@ -462,7 +462,7 @@ def get_sound_effects_for_narration(dialogues, narration_num, work_dir):
                 'volume': 0.5
             })
         
-        # 5-10秒如果没有匹配到音效，使用脚步声
+        # 5-10秒强制确保有音效
         has_effect_5_10 = False
         for dialogue in dialogues:
             if 5 <= dialogue['start_time'] <= 10:
@@ -477,16 +477,26 @@ def get_sound_effects_for_narration(dialogues, narration_num, work_dir):
                     })
                     break
         
+        # 强制确保6-10秒有音效，如果没有匹配到则使用脚步声
         if not has_effect_5_10:
-            # 添加脚步声
             footsteps_path = os.path.join(work_dir, 'src', 'sound_effects', 'action', 'footsteps_normal.wav')
             if os.path.exists(footsteps_path):
                 sound_effects.append({
                     'path': footsteps_path,
-                    'start_time': 5,
-                    'duration': 3,
+                    'start_time': 6,
+                    'duration': 4,
                     'volume': 0.5
                 })
+            else:
+                # 如果脚步声文件不存在，使用铃声作为备选
+                bell_path = os.path.join(work_dir, 'src', 'sound_effects', 'misc', 'bell_ring.wav')
+                if os.path.exists(bell_path):
+                    sound_effects.append({
+                        'path': bell_path,
+                        'start_time': 6,
+                        'duration': 4,
+                        'volume': 0.3
+                    })
     
     # 为所有对话匹配音效
     for dialogue in dialogues:

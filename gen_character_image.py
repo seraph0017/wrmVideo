@@ -330,7 +330,7 @@ def generate_character_image_async(prompt, output_path, character_name, style=No
             print(f"正在异步生成{style}风格角色图片: {character_name}")
             
             # 构建完整的prompt
-            full_prompt = "以下内容为描述生成图片\n 人物着装：圆领袍\n领口：高领，圆领，立领，不要V领，不要衽领，不要交领，不要y型领，不要漏脖子以下的皮肤\n宫崎骏动漫风格，数字插画,高饱和度,卡通,简约画风,完整色块,整洁的画面,宫崎骏艺术风格,高饱和的色彩和柔和的阴影,童话色彩风格。\n\n" + style_prompt + "\n\n" + prompt + "\n\n"
+            full_prompt = "以下内容为描述生成图片\n 人物着装：圆领袍\n领口：高领，圆领，立领，不要V领，不要衽领，不要交领，不要y型领，不要漏脖子以下的皮肤\n2d漫画，细线条，厚涂，简洁，柔和的灯光，平面插画，动漫美感，数字技术技艺 \n\n" + style_prompt + "\n\n" + prompt + "\n\n"
             
             if attempt == 0:  # 只在第一次尝试时打印完整prompt
                 print("这里是完整的prompt===>>>{}".format(full_prompt))

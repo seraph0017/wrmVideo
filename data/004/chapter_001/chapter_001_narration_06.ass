@@ -14,17 +14,15 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.62,Default,,0,0,0,,学堂门口{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}带着跟班
-Dialogue: 0,0:00:02.62,0:00:05.50,Default,,0,0,0,,拦住{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}他穿红色圆领锦缎
-Dialogue: 0,0:00:05.50,0:00:09.35,Default,,0,0,0,,短衫肚腩挺起一脸嚣张赵
-Dialogue: 0,0:00:09.35,0:00:11.88,Default,,0,0,0,,草包昨天还敢笑夫子说错
-Dialogue: 0,0:00:12.38,0:00:15.07,Default,,0,0,0,,今天就忘了疼他猛地推{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:15.07,0:00:18.34,Default,,0,0,0,,后背{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}踉跄倒地膝盖磕在
-Dialogue: 0,0:00:18.34,0:00:21.34,Default,,0,0,0,,青石板上渗出血迹不许欺负
-Dialogue: 0,0:00:21.34,0:00:24.75,Default,,0,0,0,,我二哥{\c&H0000FFFF&\b1}赵鸾冲{\c&H00FFFFFF&\b0}上前绿裙飘动
-Dialogue: 0,0:00:24.75,0:00:27.48,Default,,0,0,0,,挡在{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}身前怒视陈天贵
-Dialogue: 0,0:00:27.75,0:00:30.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}却盯着赵鸾舔嘴唇
-Dialogue: 0,0:00:30.50,0:00:33.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}小美人{\c&H00FFFFFF&\b0}跟我当小妾我就放过
-Dialogue: 0,0:00:33.53,0:00:35.83,Default,,0,0,0,,你二哥{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}怒火中烧
-Dialogue: 0,0:00:36.25,0:00:38.66,Default,,0,0,0,,握紧拳头这具身体的懦弱
-Dialogue: 0,0:00:39.10,0:00:39.90,Default,,0,0,0,,到此为止
+Dialogue: 0,0:00:00.02,0:00:01.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}醒来发现自己躺在
+Dialogue: 0,0:00:01.96,0:00:04.17,Default,,0,0,0,,古色古香的房间里木质家具
+Dialogue: 0,0:00:04.44,0:00:05.15,Default,,0,0,0,,铜镜模糊
+Dialogue: 0,0:00:05.46,0:00:07.67,Default,,0,0,0,,他掐了自己一把剧痛传来
+Dialogue: 0,0:00:08.08,0:00:09.44,Default,,0,0,0,,身上穿着宋朝风格的
+Dialogue: 0,0:00:09.44,0:00:11.19,Default,,0,0,0,,圆领长袍完全陌生
+Dialogue: 0,0:00:11.56,0:00:11.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}二哥{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.27,0:00:12.79,Default,,0,0,0,,起床了
+Dialogue: 0,0:00:13.15,0:00:15.17,Default,,0,0,0,,清脆的女声传来一个梳着
+Dialogue: 0,0:00:15.17,0:00:17.51,Default,,0,0,0,,双马尾的少女冲进房间扑到
+Dialogue: 0,0:00:17.61,0:00:20.31,Default,,0,0,0,,他身边正是15岁的
+Dialogue: 0,0:00:20.41,0:00:21.61,Default,,0,0,0,,妹妹{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}
