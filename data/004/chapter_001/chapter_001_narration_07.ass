@@ -14,14 +14,10 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}拉着赵硕走出房间穿过
-Dialogue: 0,0:00:02.48,0:00:02.85,Default,,0,0,0,,庭院
-Dialogue: 0,0:00:03.15,0:00:04.08,Default,,0,0,0,,她叽叽喳喳地说
-Dialogue: 0,0:00:04.37,0:00:06.31,Default,,0,0,0,,二哥{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}他们已经星图
-Dialogue: 0,0:00:06.31,0:00:09.07,Default,,0,0,0,,开窍是灵窍期了我们惹不起
-Dialogue: 0,0:00:09.53,0:00:11.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}脑中涌入陌生记忆
-Dialogue: 0,0:00:11.39,0:00:14.99,Default,,0,0,0,,这是荒古世界他现在是15
-Dialogue: 0,0:00:15.09,0:00:16.14,Default,,0,0,0,,岁的赵家二公子母亲是{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:16.63,0:00:17.18,Default,,0,0,0,,父亲失踪
-Dialogue: 0,0:00:17.65,0:00:19.70,Default,,0,0,0,,两人走到餐厅{\c&H0000FFFF&\b1}楚秀正{\c&H00FFFFFF&\b0}端着
-Dialogue: 0,0:00:19.70,0:00:21.42,Default,,0,0,0,,饭菜出来眼神{\c&H0000FFFF&\b1}慈爱{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:02.48,Default,,0,0,0,,闪电击中磨盘饰品{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}感觉
+Dialogue: 0,0:00:02.48,0:00:04.59,Default,,0,0,0,,身体消融却被磨盘放出的
+Dialogue: 0,0:00:04.59,0:00:06.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄光{\c&H00FFFFFF&\b0}包裹卷起他的
+Dialogue: 0,0:00:06.45,0:00:08.09,Default,,0,0,0,,魂魄破开虚空消失
+Dialogue: 0,0:00:08.47,0:00:10.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}天文台{\c&H00FFFFFF&\b0}恢复寂静只有射电
+Dialogue: 0,0:00:10.95,0:00:13.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}望远镜{\c&H00FFFFFF&\b0}仍在运行记录着
+Dialogue: 0,0:00:13.16,0:00:14.10,Default,,0,0,0,,星空的变化

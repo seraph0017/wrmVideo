@@ -14,13 +14,13 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.47,Default,,0,0,0,,场景转换至森林深处{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}等
-Dialogue: 0,0:00:02.47,0:00:03.99,Default,,0,0,0,,人与僵帝展开激战
-Dialogue: 0,0:00:04.45,0:00:06.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}祭出通天锁龙柱锁链飞
-Dialogue: 0,0:00:06.90,0:00:09.15,Default,,0,0,0,,出缠住僵{\c&H0000FFFF&\b1}帝辛{\c&H00FFFFFF&\b0}芦和
-Dialogue: 0,0:00:09.15,0:00:11.68,Default,,0,0,0,,白蒹葭则攻击走尸{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:11.68,0:00:13.40,Default,,0,0,0,,负责保护{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗弟子
-Dialogue: 0,0:00:13.70,0:00:16.04,Default,,0,0,0,,天雷上人虽重伤未愈仍使出
-Dialogue: 0,0:00:16.04,0:00:18.10,Default,,0,0,0,,绝招与{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}合力对抗僵帝
-Dialogue: 0,0:00:18.44,0:00:20.86,Default,,0,0,0,,最终僵帝被击败化为飞灰
-Dialogue: 0,0:00:21.16,0:00:22.20,Default,,0,0,0,,众人得以脱险
+Dialogue: 0,0:00:00.02,0:00:02.29,Default,,0,0,0,,场景在望{\c&H0000FFFF&\b1}海城{\c&H00FFFFFF&\b0}上空时间为
+Dialogue: 0,0:00:02.29,0:00:02.82,Default,,0,0,0,,几天后
+Dialogue: 0,0:00:03.20,0:00:05.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与赵丰讨论望海城局势
+Dialogue: 0,0:00:05.98,0:00:08.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}担忧赵硕卷入灵宝争夺
+Dialogue: 0,0:00:08.52,0:00:10.19,Default,,0,0,0,,提醒有大道君强者出手
+Dialogue: 0,0:00:10.65,0:00:12.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}保证不插手除非灵宝
+Dialogue: 0,0:00:12.85,0:00:13.74,Default,,0,0,0,,自动送上门
+Dialogue: 0,0:00:14.16,0:00:16.42,Default,,0,0,0,,此时几名修者被{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}气息
+Dialogue: 0,0:00:16.42,0:00:18.57,Default,,0,0,0,,惊退显示{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}实力已非
+Dialogue: 0,0:00:18.57,0:00:19.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴下阿蒙{\c&H00FFFFFF&\b0}

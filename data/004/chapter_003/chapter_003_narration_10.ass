@@ -14,13 +14,12 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.10,Default,,0,0,0,,场景转换至清心小筑大殿
-Dialogue: 0,0:00:02.62,0:00:04.62,Default,,0,0,0,,辛芦向摘星天女说明情况
-Dialogue: 0,0:00:05.10,0:00:06.92,Default,,0,0,0,,摘星天女表示愿意帮助他们
-Dialogue: 0,0:00:06.92,0:00:08.13,Default,,0,0,0,,寻找寰宇灵心
-Dialogue: 0,0:00:08.66,0:00:10.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}四人被安排在客房休息
-Dialogue: 0,0:00:11.12,0:00:13.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}因连日奔波疲惫入睡
-Dialogue: 0,0:00:14.14,0:00:15.52,Default,,0,0,0,,白蒹葭在一旁守护
-Dialogue: 0,0:00:15.93,0:00:18.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}和辛芦则在庭院中商议
-Dialogue: 0,0:00:18.19,0:00:20.91,Default,,0,0,0,,前往星辰海的细节月光洒下
-Dialogue: 0,0:00:21.36,0:00:22.68,Default,,0,0,0,,庭院内一片{\c&H0000FFFF&\b1}宁静{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:02.31,Default,,0,0,0,,场景在望{\c&H0000FFFF&\b1}海城{\c&H00FFFFFF&\b0}上空时间为
+Dialogue: 0,0:00:02.31,0:00:02.68,Default,,0,0,0,,夜晚
+Dialogue: 0,0:00:03.07,0:00:05.92,Default,,0,0,0,,天空{\c&H0000FFFF&\b1}乌云密布{\c&H00FFFFFF&\b0}死气弥漫天罚
+Dialogue: 0,0:00:05.92,0:00:08.13,Default,,0,0,0,,转轮即将出世异象显现
+Dialogue: 0,0:00:08.66,0:00:11.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}认出多位隐士强者陆
+Dialogue: 0,0:00:11.18,0:00:13.05,Default,,0,0,0,,清风震惊有上百名大道君
+Dialogue: 0,0:00:13.52,0:00:15.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}感慨底蕴深厚
+Dialogue: 0,0:00:15.40,0:00:18.07,Default,,0,0,0,,远处传来巨响似有强者争斗
+Dialogue: 0,0:00:18.38,0:00:20.75,Default,,0,0,0,,气氛紧张{\c&H0000FFFF&\b1}大战{\c&H00FFFFFF&\b0}一触即发

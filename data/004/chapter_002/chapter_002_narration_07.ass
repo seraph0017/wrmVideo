@@ -14,19 +14,14 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.46,Default,,0,0,0,,受S
-Dialogue: 0,0:00:00.78,0:00:02.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}鬼头刀裹挟黑色刀罡劈
-Dialogue: 0,0:00:02.94,0:00:03.79,Default,,0,0,0,,向{\c&H0000FFFF&\b1}赵硕后{\c&H00FFFFFF&\b0}心
-Dialogue: 0,0:00:04.28,0:00:05.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}惊呼着扑挡却
-Dialogue: 0,0:00:05.84,0:00:07.46,Default,,0,0,0,,被一股柔和力量推开
-Dialogue: 0,0:00:08.02,0:00:10.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}不转身仅凭感应便
-Dialogue: 0,0:00:10.20,0:00:12.55,Default,,0,0,0,,知刀气轨迹青色道袍泛起
-Dialogue: 0,0:00:12.55,0:00:15.08,Default,,0,0,0,,涟漪周天如意{\c&H0000FFFF&\b1}紫光{\c&H00FFFFFF&\b0}塔虚影在
-Dialogue: 0,0:00:15.08,0:00:17.55,Default,,0,0,0,,头顶旋转{\c&H0000FFFF&\b1}塔尖{\c&H00FFFFFF&\b0}射出一道金光
-Dialogue: 0,0:00:17.55,0:00:18.39,Default,,0,0,0,,形成防护罩
-Dialogue: 0,0:00:18.86,0:00:19.04,Default,,0,0,0,,铛
-Dialogue: 0,0:00:19.40,0:00:21.36,Default,,0,0,0,,刀气斩在罩上如泥牛入海
-Dialogue: 0,0:00:21.62,0:00:23.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大震{\c&H00FFFFFF&\b0}得虎口开裂而
-Dialogue: 0,0:00:23.54,0:00:25.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}已被推到五丈外安全区
-Dialogue: 0,0:00:25.92,0:00:26.95,Default,,0,0,0,,只能眼睁睁看着
-Dialogue: 0,0:00:26.95,0:00:28.22,Default,,0,0,0,,大哥{\c&H0000FFFF&\b1}舍命{\c&H00FFFFFF&\b0}攻击
+Dialogue: 0,0:00:00.02,0:00:01.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二疯狂反扑
+Dialogue: 0,0:00:01.96,0:00:04.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}巨斧带起恶风劈向赵硕
+Dialogue: 0,0:00:04.65,0:00:06.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}长剑化作毒蛇刺向赵丰
+Dialogue: 0,0:00:07.35,0:00:07.79,Default,,0,0,0,,找死
+Dialogue: 0,0:00:08.12,0:00:10.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}将赵丰推开九子鬼母
+Dialogue: 0,0:00:10.49,0:00:12.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑舞出剑花叮叮当当
+Dialogue: 0,0:00:12.92,0:00:13.71,Default,,0,0,0,,挡住攻击
+Dialogue: 0,0:00:14.09,0:00:14.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}狞笑道
+Dialogue: 0,0:00:15.27,0:00:16.69,Default,,0,0,0,,归一期{\c&H0000FFFF&\b1}高阶{\c&H00FFFFFF&\b0}又如何
+Dialogue: 0,0:00:17.00,0:00:18.94,Default,,0,0,0,,我们兄弟联手定能杀你
+Dialogue: 0,0:00:19.40,0:00:21.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}阴笑附和剑招越发刁钻

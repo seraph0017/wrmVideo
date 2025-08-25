@@ -168,7 +168,7 @@ def find_character_images_in_chapters(data_directory: str) -> List[str]:
     print(f"总共找到 {len(character_images)} 张角色图片")
     return sorted(character_images)
 
-def analyze_image_with_llm(client: Ark, image_base64: str, prompt: str = "请仔细观察这张角色图片的服装领口设计，进行以下审查：\n\n【领口审查标准】\n✅ 通过的领口类型：圆领、立领、高领、方领、一字领等完全遮盖脖子和胸部的领口\n❌ 失败的领口类型：\n- 交领/衽领：左右衣襟交叉重叠，形成V字形开口，露出脖子和胸部皮肤\n- V领：任何形式的V字形领口\n- 低领：领口过低，露出脖子以下皮肤\n- 开胸装：胸前有明显开口或缝隙\n\n【皮肤暴露检查 - 严格标准】\n检查角色是否存在以下问题（任何一项都视为失败）：\n- 脖子暴露：脖子部位不能有任何皮肤暴露，必须完全被服装遮盖\n- 后背脖子以下皮肤暴露：后背脖子以下区域不能有皮肤暴露\n- 胸部皮肤暴露：胸前不能有皮肤暴露\n\n【内容审查】\n检查图片中是否存在文字、乱码、水印等不当内容\n\n【判断要求】\n请重点关注：\n1. 领口是否露出脖子以下的皮肤区域\n2. 脖子是否有任何暴露（即使是很小的暴露也不允许）\n3. 后背脖子以下是否有皮肤暴露\n4. 如果角色穿着交领袍服、汉服等传统服装，要特别注意交领处是否形成开口露出胸部\n\n如果发现任何问题，请返回'失败'并详细说明原因。如果完全符合要求，请返回'通过'。") -> tuple[Optional[str], dict]:
+def analyze_image_with_llm(client: Ark, image_base64: str, prompt: str = "请仔细观察这张角色图片的服装领口设计，进行以下审查：\n\n【领口审查标准】\n✅ 通过的类型：完全遮盖脖子到胸口的皮肤的衣服\n❌ 失败的类型：\n- 露出脖子和胸部皮肤\n- V领：任何形式的V字形领口\n- 低领：领口过低，露出脖子以下皮肤\n- 开胸装：胸前有明显开口或缝隙\n\n【皮肤暴露检查 - 严格标准】\n检查角色是否存在以下问题（任何一项都视为失败）：\n- 脖子暴露：脖子部位不能有任何皮肤暴露，必须完全被服装遮盖\n- 后背脖子以下皮肤暴露：后背脖子以下区域不能有皮肤暴露\n- 胸部皮肤暴露：胸前不能有皮肤暴露\n\n【内容审查】\n检查图片中是否存在文字、乱码、水印等不当内容\n\n【判断要求】\n请重点关注：\n1. 领口是否露出脖子以下的皮肤区域\n2. 脖子是否有任何暴露（即使是很小的暴露也不允许）\n3. 后背脖子以下是否有皮肤暴露\n4. 如果角色穿着交领袍服、汉服等传统服装，要特别注意交领处是否形成开口露出胸部\n\n如果发现任何问题，请返回'失败'并详细说明原因。如果完全符合要求，请返回'通过'。") -> tuple[Optional[str], dict]:
     """
     使用LLM分析图片内容
     
@@ -274,17 +274,17 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
         
         for attempt in range(max_retries + 1):
             # 构建完整提示词
-            full_prompt = "去掉衽领，交领，V领，换成高领圆领袍\n领口不能是V领，领口不能是衽领，领口不能是交领，领口不能是任何y字型或者v字型的领子\n脖子必须完全被服装遮盖不能有任何暴露，后背脖子以下不能有皮肤暴露，胸部不能有皮肤暴露\n\n" + style_prompt + "\n\n" + prompt + "\n\n"
+            full_prompt = "把胸口到脖子的皮肤全部覆盖住,去掉衽领，交领，V领，换成高领圆领袍\n领口不能是V领，领口不能是衽领，领口不能是交领，领口不能是任何y字型或者v字型的领子\n" + style_prompt + "\n\n" + prompt + "\n\n"
             
             if attempt == 0:  # 只在第一次尝试时打印完整prompt
                 print("完整的prompt: {}".format(full_prompt))
             
             # 构建请求参数
             form = {
-                "req_key": IMAGE_TWO_CONFIG['req_key'],
+                "req_key": "byteedit_v2.0",
                 "prompt": full_prompt,
                 "seed": 10 + attempt,  # 每次重试使用不同的seed
-                "scale": IMAGE_TWO_CONFIG['scale'],
+                "scale": 0.4,
                 "return_url": IMAGE_TWO_CONFIG['return_url'],
                 "negative_prompt": IMAGE_TWO_CONFIG['negative_prompt'],
                 "logo_info": {

@@ -14,13 +14,13 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,场景设定在清心小筑山门外
-Dialogue: 0,0:00:02.61,0:00:04.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}四人与天星宗弟子抵达
-Dialogue: 0,0:00:04.75,0:00:05.09,Default,,0,0,0,,此处
-Dialogue: 0,0:00:05.65,0:00:08.60,Default,,0,0,0,,辛芦上前敲门{\c&H0000FFFF&\b1}山门{\c&H00FFFFFF&\b0}缓缓打开
-Dialogue: 0,0:00:09.10,0:00:10.73,Default,,0,0,0,,一名道姑迎接他们进入
-Dialogue: 0,0:00:11.24,0:00:13.06,Default,,0,0,0,,天雷上人向道姑说明情况
-Dialogue: 0,0:00:13.47,0:00:15.28,Default,,0,0,0,,道姑表示愿意收留众人
-Dialogue: 0,0:00:15.68,0:00:17.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕四{\c&H00FFFFFF&\b0}人感谢天雷上人的
-Dialogue: 0,0:00:17.47,0:00:20.34,Default,,0,0,0,,帮助决定在此暂时落脚等待
-Dialogue: 0,0:00:20.34,0:00:21.70,Default,,0,0,0,,前往星辰海的时机
+Dialogue: 0,0:00:00.02,0:00:02.16,Default,,0,0,0,,场景在望{\c&H0000FFFF&\b1}海城{\c&H00FFFFFF&\b0}街道时间为
+Dialogue: 0,0:00:02.16,0:00:02.60,Default,,0,0,0,,白天
+Dialogue: 0,0:00:02.90,0:00:05.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与辛芦陆清风相遇三人
+Dialogue: 0,0:00:05.48,0:00:06.75,Default,,0,0,0,,之前有过两面之缘
+Dialogue: 0,0:00:07.12,0:00:09.48,Default,,0,0,0,,辛芦轻笑{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}不急于夺宝陆
+Dialogue: 0,0:00:09.48,0:00:11.12,Default,,0,0,0,,清风赞同{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}看得透彻
+Dialogue: 0,0:00:11.56,0:00:13.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}询问两人为何也在后方
+Dialogue: 0,0:00:13.93,0:00:16.20,Default,,0,0,0,,辛芦反问{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}三人相视而
+Dialogue: 0,0:00:16.20,0:00:19.06,Default,,0,0,0,,笑气氛轻松远处传来修者
+Dialogue: 0,0:00:19.06,0:00:20.52,Default,,0,0,0,,惊呼似有变故

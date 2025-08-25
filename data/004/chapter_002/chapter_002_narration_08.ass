@@ -14,18 +14,14 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.71,Default,,0,0,0,,北冥吞天
-Dialogue: 0,0:00:01.09,0:00:03.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}转身时北冥鲲鹏法相
-Dialogue: 0,0:00:03.52,0:00:05.95,Default,,0,0,0,,遮天蔽日双翅一振便将{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:05.95,0:00:06.69,Default,,0,0,0,,卷入腹中
-Dialogue: 0,0:00:07.14,0:00:09.80,Default,,0,0,0,,青灰色巨鸟虚影翅展十丈喙
-Dialogue: 0,0:00:09.80,0:00:12.62,Default,,0,0,0,,如弯钩眸若幽冥火海{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:12.62,0:00:15.14,Default,,0,0,0,,毒针在法相面前如蝼蚁整个
-Dialogue: 0,0:00:15.14,0:00:17.25,Default,,0,0,0,,人连同折扇被吞{\c&H0000FFFF&\b1}入时{\c&H00FFFFFF&\b0}发出
-Dialogue: 0,0:00:17.25,0:00:18.10,Default,,0,0,0,,凄厉惨叫
-Dialogue: 0,0:00:18.50,0:00:20.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}鬼头刀砍中法相翅膀却
-Dialogue: 0,0:00:20.73,0:00:22.28,Default,,0,0,0,,只留白痕他看着
-Dialogue: 0,0:00:22.28,0:00:24.90,Default,,0,0,0,,三弟{\c&H0000FFFF&\b1}二哥{\c&H00FFFFFF&\b0}接连惨S肝胆俱裂
-Dialogue: 0,0:00:25.39,0:00:27.56,Default,,0,0,0,,归一期中阶气势竟崩溃大半
-Dialogue: 0,0:00:28.07,0:00:30.04,Default,,0,0,0,,而{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}已提着剑一步步逼近
-Dialogue: 0,0:00:30.50,0:00:32.05,Default,,0,0,0,,眼神冷如万年{\c&H0000FFFF&\b1}寒冰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:01.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}召唤北冥鲲鹏法相
+Dialogue: 0,0:00:02.18,0:00:04.52,Default,,0,0,0,,巨大黑影遮天蔽日双翅扇动
+Dialogue: 0,0:00:04.52,0:00:04.94,Default,,0,0,0,,狂风
+Dialogue: 0,0:00:05.29,0:00:05.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}北冥{\c&H00FFFFFF&\b0}鲸吞
+Dialogue: 0,0:00:06.39,0:00:08.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与法相合体气势暴涨
+Dialogue: 0,0:00:09.05,0:00:10.90,Default,,0,0,0,,九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑威力倍增
+Dialogue: 0,0:00:11.24,0:00:13.73,Default,,0,0,0,,一剑逼退{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}一脚踹飞卢二
+Dialogue: 0,0:00:14.09,0:00:16.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二撞在墙上口吐鲜血
+Dialogue: 0,0:00:16.91,0:00:17.78,Default,,0,0,0,,满脸惊骇
+Dialogue: 0,0:00:18.11,0:00:18.87,Default,,0,0,0,,鲲鹏法相
+Dialogue: 0,0:00:19.20,0:00:19.77,Default,,0,0,0,,这不可能

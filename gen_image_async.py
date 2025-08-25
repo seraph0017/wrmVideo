@@ -613,12 +613,40 @@ def generate_image_with_character_async(prompt, output_path, character_images=No
             print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
             
             # 构建完整的prompt
-            full_prompt = "去掉衽领，交领，V领，换成高领圆领袍\n人物姿势和背景变化要大\n以下内容为描述生成图片\n2d漫画，细线条，厚涂，简洁，柔和的灯光，平面插画，动漫美感，数字技术技艺，\n\n" + style_prompt + "\n\n" + prompt + "\n\n"
+            full_prompt = "去掉衽领，交领，V领，换成高领圆领袍\n\
+                人物姿势和背景变化要大\n\
+                    以下内容为描述生成图片\n\
+                        2d漫画，细线条，厚涂，简洁，柔和的灯光，平面插画，动漫美感，数字技术技艺\n\
+                            " + style_prompt + "\n" + prompt
             
             if attempt == 0:  # 只在第一次尝试时打印完整prompt
                 print("这里是完整的prompt===>>>{}".format(full_prompt))
             
             # 构建请求参数 - 使用配置文件中的值
+            # form = {
+            #     # "req_key": "high_aes_ip_v20",
+            #     "req_key": "high_aes_ip_v20",
+            #     "prompt": full_prompt,
+            #     "llm_seed": 10 + attempt,  # 每次重试使用不同的seed
+            #     "seed": 10 + attempt,
+            #     "scale": 0.4,
+            #     "ddim_steps": IMAGE_TWO_CONFIG['ddim_steps'],
+            #     "width": IMAGE_TWO_CONFIG['default_width'],
+            #     "height": IMAGE_TWO_CONFIG['default_height'],
+            #     "ref_ip_weight": 0.5,
+            #     "ref_id_weight": 0.5,
+            #     "use_sr": IMAGE_TWO_CONFIG['use_sr'],
+            #     "return_url": IMAGE_TWO_CONFIG['return_url'],
+            #     "use_pre_llm": True,
+            #     "negative_prompt": IMAGE_TWO_CONFIG.get('negative_prompt', []),
+            #     "logo_info": {
+            #         "add_logo": False,
+            #         "position": 0,
+            #         "language": 0,
+            #         "opacity": 0.3,
+            #         "logo_text_content": "这里是明水印内容"
+            #     }
+            # }
             form = {
                 "req_key": "high_aes_ip_v20",
                 "prompt": full_prompt,
@@ -649,27 +677,28 @@ def generate_image_with_character_async(prompt, output_path, character_images=No
                     "logo_text_content": "这里是明水印内容"
                 }
             }
+            print(form)
             
             # 如果有角色图片，添加到请求中
             print(f"角色图片参数: {character_images}")
             if character_images:
                 print(f"开始处理 {len(character_images)} 个角色图片")
-                binary_data_list = []
+                binary_data_base64_list = []
                 for img_path in character_images:
                     print(f"处理角色图片: {img_path}")
                     if img_path and os.path.exists(img_path):
                         base64_data = encode_image_to_base64(img_path)
                         if base64_data:
-                            binary_data_list.append(base64_data)
-                            print(f"成功添加角色图片: {img_path}")
+                            binary_data_base64_list.append(base64_data)
+                            print(f"成功编码角色图片: {img_path}")
                         else:
-                            print(f"角色图片编码失败: {img_path}")
+                            print(f"编码角色图片失败: {img_path}")
                     else:
                         print(f"角色图片不存在: {img_path}")
                 
-                if binary_data_list:
-                    form["binary_data_base64"] = binary_data_list
-                    print(f"已添加 {len(binary_data_list)} 个角色图片到请求中")
+                if binary_data_base64_list:
+                    form["binary_data_base64"] = binary_data_base64_list
+                    print(f"已添加 {len(binary_data_base64_list)} 个角色图片到请求中")
                 else:
                     print("没有有效的角色图片数据，尝试随机选择角色图片")
                     random_image = get_random_character_image()
@@ -679,7 +708,7 @@ def generate_image_with_character_async(prompt, output_path, character_images=No
                             form["binary_data_base64"] = [base64_data]
                             print(f"已添加随机角色图片到请求中: {random_image}")
                         else:
-                            print(f"随机角色图片编码失败: {random_image}")
+                            print(f"编码随机角色图片失败: {random_image}")
                     else:
                         print("未能获取随机角色图片")
             else:

@@ -264,10 +264,10 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
             
             # 构建请求参数
             form = {
-                "req_key": IMAGE_TWO_CONFIG['req_key'],
+                "req_key": "byteedit_v2.0",
                 "prompt": full_prompt,
                 "seed": 10 + attempt,  # 每次重试使用不同的seed
-                "scale": IMAGE_TWO_CONFIG['scale'],
+                "scale": 0.4,
                 "return_url": IMAGE_TWO_CONFIG['return_url'],
                 "negative_prompt": IMAGE_TWO_CONFIG['negative_prompt'] + ", three hands, multiple hands, extra hands, extra arms, deformed hands",
                 "logo_info": {

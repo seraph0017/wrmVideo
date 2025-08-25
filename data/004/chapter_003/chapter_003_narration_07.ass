@@ -14,14 +14,11 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.00,Default,,0,0,0,,场景设定在前往清心小筑的
-Dialogue: 0,0:00:02.00,0:00:03.69,Default,,0,0,0,,路上{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}四人与
-Dialogue: 0,0:00:03.69,0:00:05.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗弟子一同撤退
-Dialogue: 0,0:00:05.71,0:00:08.29,Default,,0,0,0,,队伍行至一片森林天色已晚
-Dialogue: 0,0:00:08.74,0:00:09.73,Default,,0,0,0,,众人扎营休息
-Dialogue: 0,0:00:10.22,0:00:12.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}和辛芦在篝火旁讨论
-Dialogue: 0,0:00:12.29,0:00:14.04,Default,,0,0,0,,后续计划白蒹葭和
-Dialogue: 0,0:00:14.04,0:00:15.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}则在帐篷内休息
-Dialogue: 0,0:00:16.17,0:00:18.60,Default,,0,0,0,,突然森林中传来异响僵帝
-Dialogue: 0,0:00:18.60,0:00:21.13,Default,,0,0,0,,带领残余走尸追至众人再次
-Dialogue: 0,0:00:21.13,0:00:21.76,Default,,0,0,0,,陷入战斗
+Dialogue: 0,0:00:00.02,0:00:02.02,Default,,0,0,0,,场景仍在屋内时间未变
+Dialogue: 0,0:00:02.42,0:00:04.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}安慰赵丰告知娘亲和
+Dialogue: 0,0:00:04.54,0:00:07.08,Default,,0,0,0,,小妹被冲霄宗抓走{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}实力
+Dialogue: 0,0:00:07.08,0:00:08.88,Default,,0,0,0,,不足前去只会送死
+Dialogue: 0,0:00:09.20,0:00:11.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}震惊激动询问是否知道
+Dialogue: 0,0:00:11.62,0:00:14.45,Default,,0,0,0,,下落{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}点头赵丰起身欲去
+Dialogue: 0,0:00:14.45,0:00:17.14,Default,,0,0,0,,救人被{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}劝阻告知冲霄宗
+Dialogue: 0,0:00:17.14,0:00:19.05,Default,,0,0,0,,实力强大需从长计议

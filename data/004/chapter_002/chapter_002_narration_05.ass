@@ -14,18 +14,17 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.41,Default,,0,0,0,,三弟
-Dialogue: 0,0:00:00.84,0:00:03.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二双目赤红如血联袂
-Dialogue: 0,0:00:03.49,0:00:04.25,Default,,0,0,0,,扑向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:04.60,0:00:06.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}鬼头刀劈出黑色刀气
-Dialogue: 0,0:00:06.99,0:00:09.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}折扇展开飞出七道毒针
-Dialogue: 0,0:00:09.62,0:00:11.86,Default,,0,0,0,,归一期中阶气势如海啸席卷
-Dialogue: 0,0:00:11.86,0:00:12.24,Default,,0,0,0,,土院
-Dialogue: 0,0:00:12.69,0:00:14.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}将赵丰护在身后青色
-Dialogue: 0,0:00:14.93,0:00:17.62,Default,,0,0,0,,道袍无风自动{\c&H0000FFFF&\b1}北冥{\c&H00FFFFFF&\b0}鲲鹏虚影
-Dialogue: 0,0:00:17.62,0:00:20.03,Default,,0,0,0,,在身后凝聚双翼遮天蔽日
-Dialogue: 0,0:00:20.28,0:00:22.82,Default,,0,0,0,,破旧木门在气劲中粉碎褪色
-Dialogue: 0,0:00:22.82,0:00:25.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵府{\c&H00FFFFFF&\b0}木匾被刀气斩为两半而
-Dialogue: 0,0:00:25.73,0:00:28.32,Default,,0,0,0,,他却{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}一声指尖九子鬼母
-Dialogue: 0,0:00:28.32,0:00:30.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑再次出鞘剑鸣震得
-Dialogue: 0,0:00:30.72,0:00:31.94,Default,,0,0,0,,地面簌簌落灰
+Dialogue: 0,0:00:00.02,0:00:00.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二暴怒
+Dialogue: 0,0:00:01.44,0:00:01.81,Default,,0,0,0,,三弟
+Dialogue: 0,0:00:02.25,0:00:04.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}三角眼赤红巨斧直指
+Dialogue: 0,0:00:04.55,0:00:04.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.42,0:00:08.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}阴鸷冷笑长剑遥指赵丰
+Dialogue: 0,0:00:08.46,0:00:11.17,Default,,0,0,0,,杀我三弟今日让你血债血偿
+Dialogue: 0,0:00:11.57,0:00:14.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}魁梧身躯挡住院门黑色
+Dialogue: 0,0:00:14.19,0:00:15.27,Default,,0,0,0,,劲装猎猎作响
+Dialogue: 0,0:00:15.68,0:00:17.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}瘦高身影游走深蓝色
+Dialogue: 0,0:00:17.80,0:00:19.04,Default,,0,0,0,,长袍带起阴风
+Dialogue: 0,0:00:19.39,0:00:21.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}将赵丰护在身后长剑
+Dialogue: 0,0:00:21.79,0:00:22.18,Default,,0,0,0,,一横
+Dialogue: 0,0:00:22.42,0:00:23.15,Default,,0,0,0,,想报仇
+Dialogue: 0,0:00:23.51,0:00:24.70,Default,,0,0,0,,先问问我手中剑

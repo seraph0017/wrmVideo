@@ -14,15 +14,12 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}看到赵硕眼中闪过
-Dialogue: 0,0:00:02.11,0:00:03.72,Default,,0,0,0,,一丝异样随即笑道
-Dialogue: 0,0:00:03.96,0:00:04.69,Default,,0,0,0,,硕儿醒了
-Dialogue: 0,0:00:05.01,0:00:05.44,Default,,0,0,0,,快吃饭
-Dialogue: 0,0:00:05.86,0:00:07.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}看着她略显苍老的
-Dialogue: 0,0:00:07.45,0:00:09.29,Default,,0,0,0,,面容心中涌起莫名的
-Dialogue: 0,0:00:09.29,0:00:10.85,Default,,0,0,0,,亲切感脱口而出
-Dialogue: 0,0:00:11.15,0:00:11.50,Default,,0,0,0,,母亲
-Dialogue: 0,0:00:11.73,0:00:14.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}手一抖饭菜险些洒出她
-Dialogue: 0,0:00:14.25,0:00:15.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}慈爱{\c&H00FFFFFF&\b0}的摸了摸赵硕的头
-Dialogue: 0,0:00:16.10,0:00:17.76,Default,,0,0,0,,快吃学堂要迟到了
-Dialogue: 0,0:00:18.18,0:00:20.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}接过碗筷心中五味杂陈
+Dialogue: 0,0:00:00.02,0:00:01.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}在古色古香的
+Dialogue: 0,0:00:01.20,0:00:03.72,Default,,0,0,0,,房间醒来发现自己身处陌生
+Dialogue: 0,0:00:03.72,0:00:06.00,Default,,0,0,0,,环境身体变成十五六岁的
+Dialogue: 0,0:00:06.00,0:00:06.43,Default,,0,0,0,,少年
+Dialogue: 0,0:00:06.79,0:00:09.33,Default,,0,0,0,,他摸向脖颈磨盘饰品已消失
+Dialogue: 0,0:00:09.85,0:00:11.21,Default,,0,0,0,,回忆起被闪电击中的
+Dialogue: 0,0:00:11.21,0:00:13.61,Default,,0,0,0,,情景意识到自己可能穿越到
+Dialogue: 0,0:00:13.61,0:00:15.69,Default,,0,0,0,,了异世界占据了同名少年的
+Dialogue: 0,0:00:15.69,0:00:17.64,Default,,0,0,0,,身体并吸收了对方的记忆

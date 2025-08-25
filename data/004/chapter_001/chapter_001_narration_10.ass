@@ -14,16 +14,12 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.45,Default,,0,0,0,,夫子停下讲课视线锐利地盯
-Dialogue: 0,0:00:02.45,0:00:02.88,Default,,0,0,0,,着{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:03.34,0:00:04.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}为何发笑
-Dialogue: 0,0:00:04.90,0:00:06.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}起身朗声道
-Dialogue: 0,0:00:06.90,0:00:08.62,Default,,0,0,0,,夫子天圆地方是谬论
-Dialogue: 0,0:00:08.91,0:00:09.82,Default,,0,0,0,,大地是圆球
-Dialogue: 0,0:00:10.24,0:00:12.72,Default,,0,0,0,,全班哗然一个锦衣少年讥讽
-Dialogue: 0,0:00:12.97,0:00:14.38,Default,,0,0,0,,赵草包你懂什么
-Dialogue: 0,0:00:14.72,0:00:16.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}不理他继续解释地球
-Dialogue: 0,0:00:16.79,0:00:18.80,Default,,0,0,0,,自转公转引来更多嘲笑
-Dialogue: 0,0:00:19.11,0:00:20.31,Default,,0,0,0,,夫子却若有所思
-Dialogue: 0,0:00:20.67,0:00:20.91,Default,,0,0,0,,哦
-Dialogue: 0,0:00:21.36,0:00:22.14,Default,,0,0,0,,你且细说
+Dialogue: 0,0:00:00.02,0:00:02.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}随赵鸾来到餐厅见到
+Dialogue: 0,0:00:02.33,0:00:05.00,Default,,0,0,0,,略显苍老的妇人{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}原主的
+Dialogue: 0,0:00:05.00,0:00:05.40,Default,,0,0,0,,母亲
+Dialogue: 0,0:00:05.84,0:00:08.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}见到他们眼中露出慈爱
+Dialogue: 0,0:00:08.64,0:00:10.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}心中涌起亲切感
+Dialogue: 0,0:00:10.75,0:00:12.08,Default,,0,0,0,,不由自主喊出母亲
+Dialogue: 0,0:00:12.43,0:00:14.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}察觉赵硕异样却
+Dialogue: 0,0:00:14.14,0:00:16.39,Default,,0,0,0,,未深究让他们吃饭准备去
+Dialogue: 0,0:00:16.39,0:00:18.85,Default,,0,0,0,,学堂并叮嘱不要招惹{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}

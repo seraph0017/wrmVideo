@@ -14,15 +14,13 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.54,Default,,0,0,0,,场景设定在{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗广场僵帝
-Dialogue: 0,0:00:02.54,0:00:04.90,Default,,0,0,0,,带领走尸与{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗门人展开
-Dialogue: 0,0:00:04.90,0:00:05.22,Default,,0,0,0,,决战
-Dialogue: 0,0:00:05.68,0:00:07.73,Default,,0,0,0,,天雷上人祭出宗门{\c&H0000FFFF&\b1}至宝{\c&H00FFFFFF&\b0}天星
-Dialogue: 0,0:00:07.73,0:00:10.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝镜{\c&H00FFFFFF&\b0}宝镜发出耀眼光芒照射
-Dialogue: 0,0:00:10.78,0:00:12.89,Default,,0,0,0,,在走尸身上走尸纷纷
-Dialogue: 0,0:00:12.89,0:00:13.54,Default,,0,0,0,,化为灰烬
-Dialogue: 0,0:00:13.86,0:00:16.52,Default,,0,0,0,,僵帝见状暴怒不已使出绝招
-Dialogue: 0,0:00:16.85,0:00:19.42,Default,,0,0,0,,巨斧劈向{\c&H0000FFFF&\b1}宝镜{\c&H00FFFFFF&\b0}宝镜应声而
-Dialogue: 0,0:00:19.42,0:00:21.18,Default,,0,0,0,,碎天雷上人受重伤
-Dialogue: 0,0:00:21.58,0:00:24.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕四{\c&H00FFFFFF&\b0}人趁机出手协助天星
-Dialogue: 0,0:00:24.06,0:00:25.33,Default,,0,0,0,,宗门人击退僵帝
+Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,场景在小院时间未变
+Dialogue: 0,0:00:02.52,0:00:05.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二身体倒下彻底失去
+Dialogue: 0,0:00:05.33,0:00:05.70,Default,,0,0,0,,生机
+Dialogue: 0,0:00:06.16,0:00:08.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}在一旁看得目瞪口呆揉
+Dialogue: 0,0:00:08.65,0:00:11.05,Default,,0,0,0,,眼以为做梦不敢相信{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.05,0:00:12.26,Default,,0,0,0,,如此轻易取胜
+Dialogue: 0,0:00:12.81,0:00:14.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}捡起地上板斧发现是
+Dialogue: 0,0:00:14.97,0:00:17.64,Default,,0,0,0,,中级后天{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}惋惜卢氏兄弟
+Dialogue: 0,0:00:17.64,0:00:20.17,Default,,0,0,0,,未发挥其威力随后叫{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.17,0:00:20.67,Default,,0,0,0,,回屋

@@ -14,18 +14,14 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.15,Default,,0,0,0,,谁敢伤我大哥
-Dialogue: 0,0:00:01.54,0:00:04.34,Default,,0,0,0,,破空声撕裂空气{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}如鲲鹏
-Dialogue: 0,0:00:04.34,0:00:06.60,Default,,0,0,0,,掠空九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑化作
-Dialogue: 0,0:00:06.60,0:00:08.17,Default,,0,0,0,,流光刺向{\c&H0000FFFF&\b1}卢三后{\c&H00FFFFFF&\b0}心
-Dialogue: 0,0:00:08.67,0:00:11.31,Default,,0,0,0,,土院上空风云变色他青色
-Dialogue: 0,0:00:11.31,0:00:13.81,Default,,0,0,0,,道袍猎猎作响归一期{\c&H0000FFFF&\b1}高阶{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:13.81,0:00:16.48,Default,,0,0,0,,威压如泰山压顶{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}降魔杵
-Dialogue: 0,0:00:16.48,0:00:18.50,Default,,0,0,0,,距{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}头颅仅三寸却
-Dialogue: 0,0:00:18.50,0:00:20.26,Default,,0,0,0,,在杀气锁定下僵如石雕
-Dialogue: 0,0:00:20.66,0:00:22.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}瞳孔骤缩看着
-Dialogue: 0,0:00:22.46,0:00:24.55,Default,,0,0,0,,这张与记忆中重合又更显
-Dialogue: 0,0:00:24.55,0:00:26.29,Default,,0,0,0,,坚毅的脸嘴唇颤抖
-Dialogue: 0,0:00:26.39,0:00:27.89,Default,,0,0,0,,二弟你没S
-Dialogue: 0,0:00:28.63,0:00:31.30,Default,,0,0,0,,十年生S两茫茫重逢竟在生
-Dialogue: 0,0:00:31.40,0:00:32.30,Default,,0,0,0,,S一线
+Dialogue: 0,0:00:00.02,0:00:00.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}暴起发难
+Dialogue: 0,0:00:01.45,0:00:03.46,Default,,0,0,0,,归一期中阶威压如泰山压顶
+Dialogue: 0,0:00:03.98,0:00:05.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}法相期修为难以抵挡
+Dialogue: 0,0:00:06.33,0:00:07.31,Default,,0,0,0,,骨骼咔吧作响
+Dialogue: 0,0:00:07.77,0:00:08.42,Default,,0,0,0,,给我去死
+Dialogue: 0,0:00:08.88,0:00:10.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}砂锅大的拳头带着
+Dialogue: 0,0:00:10.29,0:00:13.10,Default,,0,0,0,,劲风砸向{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}面门赵丰嘶吼
+Dialogue: 0,0:00:13.10,0:00:15.45,Default,,0,0,0,,着运转{\c&H0000FFFF&\b1}北冥{\c&H00FFFFFF&\b0}吞天秘法灰色
+Dialogue: 0,0:00:15.45,0:00:16.89,Default,,0,0,0,,短打无风自动却
+Dialogue: 0,0:00:16.89,0:00:19.09,Default,,0,0,0,,仍被震得连连后退木门吱呀
+Dialogue: 0,0:00:19.09,0:00:21.01,Default,,0,0,0,,作响灰尘簌簌落下

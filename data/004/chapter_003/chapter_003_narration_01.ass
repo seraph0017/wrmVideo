@@ -14,16 +14,13 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.47,Default,,0,0,0,,场景设定在千机山巅天空
-Dialogue: 0,0:00:02.47,0:00:05.27,Default,,0,0,0,,阴沉{\c&H0000FFFF&\b1}乌云密布{\c&H00FFFFFF&\b0}空气中弥漫着
-Dialogue: 0,0:00:05.27,0:00:05.83,Default,,0,0,0,,血腥味
-Dialogue: 0,0:00:06.42,0:00:08.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕辛{\c&H00FFFFFF&\b0}芦白蒹葭和
-Dialogue: 0,0:00:08.82,0:00:10.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}四人正被一群僵神
-Dialogue: 0,0:00:10.70,0:00:13.27,Default,,0,0,0,,一族追杀僵帝带领上万走尸
-Dialogue: 0,0:00:13.27,0:00:14.39,Default,,0,0,0,,将他们团团围住
-Dialogue: 0,0:00:14.84,0:00:17.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}手持长剑神色凝重辛芦
-Dialogue: 0,0:00:17.84,0:00:20.38,Default,,0,0,0,,和白蒹葭分别祭出{\c&H0000FFFF&\b1}法宝{\c&H00FFFFFF&\b0}准备
-Dialogue: 0,0:00:20.38,0:00:22.80,Default,,0,0,0,,迎敌{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}则躲在赵硕身
-Dialogue: 0,0:00:22.80,0:00:24.12,Default,,0,0,0,,后面露惊恐
-Dialogue: 0,0:00:24.36,0:00:26.75,Default,,0,0,0,,僵帝发出一声怒吼指挥走尸
-Dialogue: 0,0:00:26.75,0:00:29.49,Default,,0,0,0,,发动攻击一场{\c&H0000FFFF&\b1}大战{\c&H00FFFFFF&\b0}即将爆发
+Dialogue: 0,0:00:00.02,0:00:01.12,Default,,0,0,0,,场景位于{\c&H0000FFFF&\b1}山林{\c&H00FFFFFF&\b0}中的
+Dialogue: 0,0:00:01.12,0:00:03.09,Default,,0,0,0,,一处小院时间为白天
+Dialogue: 0,0:00:03.46,0:00:04.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}天气晴朗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.60,0:00:06.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与赵丰站在院中卢大
+Dialogue: 0,0:00:07.29,0:00:09.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}突然出现手持板斧
+Dialogue: 0,0:00:09.74,0:00:10.47,Default,,0,0,0,,气势汹汹
+Dialogue: 0,0:00:10.90,0:00:12.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}看到赵硕与
+Dialogue: 0,0:00:12.10,0:00:14.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}面露惊色大声质问两人
+Dialogue: 0,0:00:14.92,0:00:17.76,Default,,0,0,0,,关系场面剑拔弩张一场{\c&H0000FFFF&\b1}大战{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.76,0:00:18.50,Default,,0,0,0,,一触即发

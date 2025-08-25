@@ -14,19 +14,13 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.36,Default,,0,0,0,,噗嗤
-Dialogue: 0,0:00:00.83,0:00:02.93,Default,,0,0,0,,九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑如切豆腐般
-Dialogue: 0,0:00:02.93,0:00:05.85,Default,,0,0,0,,斩断{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}脖颈鲜血喷溅三尺
-Dialogue: 0,0:00:05.85,0:00:06.67,Default,,0,0,0,,染红土院
-Dialogue: 0,0:00:07.18,0:00:08.95,Default,,0,0,0,,正午{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}穿过剑穗流苏
-Dialogue: 0,0:00:09.35,0:00:12.05,Default,,0,0,0,,折射出诡异{\c&H0000FFFF&\b1}红光{\c&H00FFFFFF&\b0}无头ST仍
-Dialogue: 0,0:00:12.05,0:00:14.82,Default,,0,0,0,,保持举杵动作肥硕身躯轰然
-Dialogue: 0,0:00:14.82,0:00:17.39,Default,,0,0,0,,倒地归一期中阶元神刚离体
-Dialogue: 0,0:00:17.39,0:00:19.22,Default,,0,0,0,,便被剑器绞成血雾
-Dialogue: 0,0:00:19.22,0:00:21.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}落地时剑已回鞘青色
-Dialogue: 0,0:00:21.63,0:00:23.02,Default,,0,0,0,,道袍下摆沾血却
-Dialogue: 0,0:00:23.02,0:00:24.63,Default,,0,0,0,,眼神冰冷他踏过
-Dialogue: 0,0:00:24.63,0:00:27.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}尸身走向赵丰脚下血渍
-Dialogue: 0,0:00:27.41,0:00:29.60,Default,,0,0,0,,在青石板印出{\c&H0000FFFF&\b1}梅花{\c&H00FFFFFF&\b0}状而
-Dialogue: 0,0:00:29.60,0:00:31.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二的怒吼已如惊雷
-Dialogue: 0,0:00:31.65,0:00:32.25,Default,,0,0,0,,炸响
+Dialogue: 0,0:00:00.02,0:00:01.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}怒喝出手
+Dialogue: 0,0:00:01.45,0:00:03.43,Default,,0,0,0,,九子鬼母{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}剑化作流光
+Dialogue: 0,0:00:03.92,0:00:05.52,Default,,0,0,0,,瞬间斩断{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}脖颈
+Dialogue: 0,0:00:06.03,0:00:08.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}胡同{\c&H00FFFFFF&\b0}中血光飞溅卢三头颅
+Dialogue: 0,0:00:08.57,0:00:10.84,Default,,0,0,0,,滚落眼中还凝固着惊恐
+Dialogue: 0,0:00:11.17,0:00:12.35,Default,,0,0,0,,谁敢伤我大哥
+Dialogue: 0,0:00:12.82,0:00:15.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}青色身影如鬼魅般出现
+Dialogue: 0,0:00:15.14,0:00:17.94,Default,,0,0,0,,在院中长剑滴血杀气凛然
+Dialogue: 0,0:00:18.29,0:00:21.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}无头尸体轰然倒地鲜血
+Dialogue: 0,0:00:21.06,0:00:23.44,Default,,0,0,0,,染红地面法相未出便已陨落

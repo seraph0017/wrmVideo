@@ -14,13 +14,10 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.54,Default,,0,0,0,,场景设定在{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗大殿天雷
-Dialogue: 0,0:00:02.54,0:00:04.64,Default,,0,0,0,,上人召集宗门长老商议对策
-Dialogue: 0,0:00:05.17,0:00:07.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}四人被安排在偏殿休息
-Dialogue: 0,0:00:07.64,0:00:08.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}因惊吓过
-Dialogue: 0,0:00:08.98,0:00:11.31,Default,,0,0,0,,度面色苍白{\c&H0000FFFF&\b1}辛芦和{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:11.31,0:00:12.90,Default,,0,0,0,,白蒹葭在一旁安慰她
-Dialogue: 0,0:00:13.39,0:00:16.05,Default,,0,0,0,,此时僵帝突破宗门防线杀入
-Dialogue: 0,0:00:16.05,0:00:18.58,Default,,0,0,0,,大殿天雷上人亲自出手与
-Dialogue: 0,0:00:18.58,0:00:21.11,Default,,0,0,0,,僵帝展开对决大殿内{\c&H0000FFFF&\b1}梁柱{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:21.11,0:00:22.59,Default,,0,0,0,,断裂瓦片纷飞
+Dialogue: 0,0:00:00.02,0:00:02.30,Default,,0,0,0,,场景在小院上空时间未变
+Dialogue: 0,0:00:02.82,0:00:05.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}释放强大气势如大山
+Dialogue: 0,0:00:05.10,0:00:07.82,Default,,0,0,0,,压向{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二两人被气势
+Dialogue: 0,0:00:07.82,0:00:10.34,Default,,0,0,0,,压迫面露痛苦身形摇晃
+Dialogue: 0,0:00:10.72,0:00:13.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大卢{\c&H00FFFFFF&\b0}二对视一眼眼中闪过
+Dialogue: 0,0:00:13.50,0:00:16.95,Default,,0,0,0,,决绝同时祭出板斧斧身发光
+Dialogue: 0,0:00:17.31,0:00:19.95,Default,,0,0,0,,显现开山劈地大字{\c&H0000FFFF&\b1}宝光{\c&H00FFFFFF&\b0}闪烁

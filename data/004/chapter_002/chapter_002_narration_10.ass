@@ -14,19 +14,14 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.07,Default,,0,0,0,,谁敢动我赵家
-Dialogue: 0,0:00:01.48,0:00:03.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于土院中央北冥鲲鹏
-Dialogue: 0,0:00:03.83,0:00:06.17,Default,,0,0,0,,法相盘旋上空归一期{\c&H0000FFFF&\b1}高阶{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:06.17,0:00:08.14,Default,,0,0,0,,威压如巨浪席卷望{\c&H0000FFFF&\b1}海城{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:08.60,0:00:11.18,Default,,0,0,0,,黄昏暮色中远处城区隐现
-Dialogue: 0,0:00:11.18,0:00:12.86,Default,,0,0,0,,无数强横气息却
-Dialogue: 0,0:00:12.86,0:00:14.66,Default,,0,0,0,,在这股威压下噤若寒蝉
-Dialogue: 0,0:00:15.04,0:00:17.06,Default,,0,0,0,,他握着{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}的手兄弟俩站在
-Dialogue: 0,0:00:17.06,0:00:19.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵府{\c&H00FFFFFF&\b0}断匾前青色道袍与
-Dialogue: 0,0:00:19.40,0:00:21.70,Default,,0,0,0,,灰色短打在晚风中猎猎作响
-Dialogue: 0,0:00:22.19,0:00:24.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}感受着弟弟远超当年的
-Dialogue: 0,0:00:24.05,0:00:25.27,Default,,0,0,0,,实力哽咽道
-Dialogue: 0,0:00:25.63,0:00:27.11,Default,,0,0,0,,二弟我们守住家了
-Dialogue: 0,0:00:27.47,0:00:29.39,Default,,0,0,0,,而赵硕望着城中越来越密集
-Dialogue: 0,0:00:29.39,0:00:32.40,Default,,0,0,0,,的{\c&H0000FFFF&\b1}灵光{\c&H00FFFFFF&\b0}眼神坚定天罚转轮将
-Dialogue: 0,0:00:32.50,0:00:36.10,Default,,0,0,0,,出他要护得大哥与家园{\c&H0000FFFF&\b1}无虞{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:02.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}搀扶赵丰回小院荆不死
+Dialogue: 0,0:00:03.01,0:00:04.40,Default,,0,0,0,,荆不灭欢喜迎接
+Dialogue: 0,0:00:04.84,0:00:05.18,Default,,0,0,0,,大哥
+Dialogue: 0,0:00:05.53,0:00:06.55,Default,,0,0,0,,你没事太好了
+Dialogue: 0,0:00:07.00,0:00:08.73,Default,,0,0,0,,荆不死荆不灭围着
+Dialogue: 0,0:00:08.73,0:00:11.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}问长问短苏传宗站在院
+Dialogue: 0,0:00:11.23,0:00:13.47,Default,,0,0,0,,门口手持折扇微笑点头
+Dialogue: 0,0:00:13.97,0:00:14.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}看着熟悉的
+Dialogue: 0,0:00:14.99,0:00:17.16,Default,,0,0,0,,兄弟和前辈灰色短打沾满
+Dialogue: 0,0:00:17.16,0:00:18.52,Default,,0,0,0,,尘土却难掩激动
+Dialogue: 0,0:00:18.62,0:00:21.62,Default,,0,0,0,,二弟{\c&H0000FFFF&\b1}谢谢{\c&H00FFFFFF&\b0}你我们回家了

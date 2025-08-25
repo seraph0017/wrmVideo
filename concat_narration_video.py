@@ -452,13 +452,13 @@ def get_sound_effects_for_narration(dialogues, narration_num, work_dir):
     
     # narration1特殊处理
     if narration_num == "01":
-        # 前5秒固定使用铃声
+        # 第3秒固定使用铃声
         bell_path = os.path.join(work_dir, 'src', 'sound_effects', 'misc', 'bell_ring.wav')
         if os.path.exists(bell_path):
             sound_effects.append({
                 'path': bell_path,
-                'start_time': 0,
-                'duration': 5,
+                'start_time': 3,
+                'duration': 2,
                 'volume': 0.5
             })
         
