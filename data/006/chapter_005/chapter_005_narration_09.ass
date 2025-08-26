@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_005 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.29,Default,,0,0,0,,深夜八荒山{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}独自立于
+Dialogue: 0,0:00:02.29,0:00:04.84,Default,,0,0,0,,山巅青色长袍被夜风吹动
+Dialogue: 0,0:00:05.33,0:00:06.47,Default,,0,0,0,,他望着魔族大营的
+Dialogue: 0,0:00:06.47,0:00:08.30,Default,,0,0,0,,火光手中紧握着
+Dialogue: 0,0:00:08.30,0:00:10.16,Default,,0,0,0,,一枚{\c&H0000FFFF&\b1}玉简{\c&H00FFFFFF&\b0}上面刻着
+Dialogue: 0,0:00:10.16,0:00:11.29,Default,,0,0,0,,东方氏族四字
+Dialogue: 0,0:00:11.72,0:00:14.62,Default,,0,0,0,,白蒹葭悄然走来粉色长袍在
+Dialogue: 0,0:00:14.62,0:00:16.04,Default,,0,0,0,,夜色中如一朵花
+Dialogue: 0,0:00:16.47,0:00:19.06,Default,,0,0,0,,夫君东方{\c&H0000FFFF&\b1}庆明{\c&H00FFFFFF&\b0}求见说有要事
+Dialogue: 0,0:00:19.06,0:00:19.43,Default,,0,0,0,,相商
+Dialogue: 0,0:00:19.75,0:00:22.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}回头眼中闪过一丝疲惫
+Dialogue: 0,0:00:22.30,0:00:25.90,Default,,0,0,0,,让他来吧或许我们需要联手

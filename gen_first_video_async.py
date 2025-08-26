@@ -297,7 +297,7 @@ def create_video_from_single_image_async(image_path, duration, output_path, max_
                 content=[
                     {
                         "type": "text",
-                        "text": f"画面有明显的动态效果，保持画面整体稳定 --ratio 9:16 --dur {duration}"
+                        "text": f"画面有明显的动态效果，动作大一些 --ratio 9:16 --dur {duration}"
                     },
                     {
                         "type": "image_url",
@@ -341,11 +341,124 @@ def create_video_from_single_image_async(image_path, duration, output_path, max_
     
     return False
 
+def parse_narration_closeups(narration_file_path):
+    """
+    解析narration文件中的特写人物信息，提取角色姓名和时代背景
+    
+    Args:
+        narration_file_path: narration.txt文件路径
+    
+    Returns:
+        list: 特写人物信息列表，每个元素包含 {'character_name': 角色姓名, 'era': 时代背景}
+    """
+    closeups = []
+    
+    try:
+        if not os.path.exists(narration_file_path):
+            print(f"警告: narration.txt文件不存在: {narration_file_path}")
+            return closeups
+        
+        with open(narration_file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # 使用正则表达式提取所有特写人物信息
+        import re
+        
+        # 匹配特写人物块
+        closeup_pattern = r'<特写人物>(.*?)</特写人物>'
+        closeup_matches = re.findall(closeup_pattern, content, re.DOTALL)
+        
+        for closeup_content in closeup_matches:
+            character_info = {}
+            
+            # 提取角色姓名
+            name_match = re.search(r'<角色姓名>([^<]+)</角色姓名>', closeup_content)
+            if name_match:
+                character_info['character_name'] = name_match.group(1).strip()
+            
+            # 提取时代背景
+            era_match = re.search(r'<时代背景>([^<]+)</时代背景>', closeup_content)
+            if era_match:
+                era_text = era_match.group(1).strip()
+                if '现代' in era_text:
+                    character_info['era'] = 'modern'
+                elif '古代' in era_text:
+                    character_info['era'] = 'ancient'
+                else:
+                    character_info['era'] = 'single'
+            else:
+                # 如果没有时代背景标签，默认为单一时代
+                character_info['era'] = 'single'
+            
+            if 'character_name' in character_info:
+                closeups.append(character_info)
+        
+        print(f"解析到 {len(closeups)} 个特写人物信息")
+        for i, closeup in enumerate(closeups[:5]):  # 只显示前5个
+            era_text = {'modern': '现代', 'ancient': '古代', 'single': '单一时代'}[closeup['era']]
+            print(f"  特写 {i+1}: {closeup['character_name']} ({era_text})")
+        
+        return closeups
+        
+    except Exception as e:
+        print(f"解析narration文件时发生错误: {e}")
+        return closeups
+
+def find_character_image_by_era(chapter_path, character_name, era):
+    """
+    根据角色姓名和时代背景查找对应的角色图片
+    
+    Args:
+        chapter_path: 章节目录路径
+        character_name: 角色姓名
+        era: 时代背景 ('modern', 'ancient', 'single')
+    
+    Returns:
+        str: 角色图片路径，未找到返回None
+    """
+    try:
+        chapter_name = os.path.basename(chapter_path)
+        
+        # 根据时代背景构建文件名后缀
+        if era == 'modern':
+            era_suffix = '_modern'
+        elif era == 'ancient':
+            era_suffix = '_ancient'
+        else:
+            era_suffix = ''
+        
+        # 查找角色图片文件
+        image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.gif']
+        
+        for file in os.listdir(chapter_path):
+            if any(file.lower().endswith(ext) for ext in image_extensions):
+                # 检查文件名是否包含角色姓名和时代后缀
+                if character_name in file and era_suffix in file:
+                    image_path = os.path.join(chapter_path, file)
+                    print(f"找到角色图片: {character_name} ({era}) -> {file}")
+                    return image_path
+        
+        # 如果没找到带时代后缀的，尝试查找不带后缀的（适用于单一时代）
+        if era == 'single':
+            for file in os.listdir(chapter_path):
+                if any(file.lower().endswith(ext) for ext in image_extensions):
+                    if character_name in file and '_modern' not in file and '_ancient' not in file:
+                        image_path = os.path.join(chapter_path, file)
+                        print(f"找到角色图片: {character_name} (单一时代) -> {file}")
+                        return image_path
+        
+        print(f"未找到角色图片: {character_name} ({era})")
+        return None
+        
+    except Exception as e:
+        print(f"查找角色图片时发生错误: {e}")
+        return None
+
 def get_chapter_images(chapter_path):
     """
     获取章节目录中的前两张图片
-    优先查找特定命名格式：chapter_XXX_image_01_1.jpeg 和 chapter_XXX_image_01_2.jpeg
-    如果找不到，则回退到原来的逻辑
+    优先查找特定命名格式的图片，然后根据narration文件中的特写人物信息查找对应的角色图片
+    如果都找不到，则使用通用查找方式
     
     Args:
         chapter_path: 章节目录路径
@@ -367,7 +480,37 @@ def get_chapter_images(chapter_path):
             print(f"找到特定命名格式的图片: {first_image_name}, {second_image_name}")
             return first_image_path, second_image_path
         
-        # 如果找不到特定命名格式，回退到原来的逻辑
+        # 如果特定命名格式的图片不存在，尝试根据narration文件查找角色图片
+        narration_file = os.path.join(chapter_path, 'narration.txt')
+        if os.path.exists(narration_file):
+            print(f"特定命名格式图片未找到，根据narration文件查找角色图片...")
+            closeups = parse_narration_closeups(narration_file)
+            
+            if len(closeups) >= 2:
+                # 查找前两个特写对应的角色图片
+                first_closeup = closeups[0]
+                second_closeup = closeups[1]
+                
+                first_image = find_character_image_by_era(
+                    chapter_path, 
+                    first_closeup['character_name'], 
+                    first_closeup['era']
+                )
+                second_image = find_character_image_by_era(
+                    chapter_path, 
+                    second_closeup['character_name'], 
+                    second_closeup['era']
+                )
+                
+                if first_image and second_image:
+                    print(f"成功根据特写信息找到图片: {os.path.basename(first_image)}, {os.path.basename(second_image)}")
+                    return first_image, second_image
+                else:
+                    print(f"部分角色图片未找到，回退到通用查找方式")
+            else:
+                print(f"特写信息不足，回退到通用查找方式")
+        
+        # 如果找不到特定命名格式，使用通用查找方式
         print(f"未找到特定命名格式的图片，使用通用查找方式")
         
         # 获取目录中的所有图片文件

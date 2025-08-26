@@ -465,6 +465,12 @@ class ScriptGeneratorV2:
         if explanation_length > max_length:
             return False, f"解说文本过长，当前{explanation_length}字，最多允许{max_length}字"
         
+        # 验证图片特写是否为单人画面（仅提示，不强制重新生成）
+        single_person_valid, single_person_error = self._validate_single_person_closeups(cleaned_narration)
+        if not single_person_valid:
+            print(f"警告：检测到多人特写描述 - {single_person_error}")
+            # 不返回错误，仅记录警告
+        
         # 自动修复XML标签闭合
         fixed_narration = self._fix_xml_tags(cleaned_narration)
         
@@ -551,6 +557,56 @@ class ScriptGeneratorV2:
                 print(f"自动修复：添加缺失的闭合标签 </{tag}>")
         
         return fixed_content
+    
+    def _validate_single_person_closeups(self, content: str) -> Tuple[bool, str]:
+        """
+        验证图片特写是否为单人画面
+        
+        Args:
+            content: 解说内容
+            
+        Returns:
+            Tuple[bool, str]: (是否有效, 错误信息)
+        """
+        import re
+        
+        # 查找所有图片prompt内容
+        prompt_pattern = r'<图片prompt>(.*?)</图片prompt>'
+        prompt_matches = re.findall(prompt_pattern, content, re.DOTALL)
+        
+        if not prompt_matches:
+            return False, "未找到图片prompt标签"
+        
+        # 检查每个图片prompt是否包含多人描述
+        multi_person_keywords = [
+            '两人', '三人', '多人', '一群人', '众人', '大家', '他们', '她们',
+            '两个人', '三个人', '几个人', '所有人', '人群', '一对', '夫妻',
+            '情侣', '朋友们', '同伴', '伙伴们', '兄弟', '姐妹', '父子',
+            '母女', '师徒', '主仆', '君臣', '同时', '一起', '共同',
+            '相视', '对视', '面对面', '并肩', '携手', '拥抱', '依偎'
+        ]
+        
+        for i, prompt in enumerate(prompt_matches, 1):
+            prompt_text = prompt.strip().lower()
+            
+            # 检查是否包含多人关键词
+            for keyword in multi_person_keywords:
+                if keyword in prompt_text:
+                    return False, f"第{i}个图片prompt包含多人描述关键词：'{keyword}'，每个特写必须只有一个人物"
+            
+            # 检查是否包含数字+人的模式
+            number_person_pattern = r'[二三四五六七八九十\d]+[个]?人'
+            if re.search(number_person_pattern, prompt_text):
+                match = re.search(number_person_pattern, prompt_text)
+                return False, f"第{i}个图片prompt包含多人数量描述：'{match.group()}'，每个特写必须只有一个人物"
+            
+            # 检查是否包含复数人称代词
+            plural_pronouns = ['他们的', '她们的', '大家的', '众人的', '人们的']
+            for pronoun in plural_pronouns:
+                if pronoun in prompt_text:
+                    return False, f"第{i}个图片prompt包含复数人称代词：'{pronoun}'，每个特写必须只有一个人物"
+        
+        return True, ""
     
     def audit_and_filter_narration(self, narration: str, chapter_num: int) -> Tuple[bool, str]:
         """

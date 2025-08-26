@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_001 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.15,Default,,0,0,0,,少年身中魂穿
+Dialogue: 0,0:00:01.60,0:00:03.74,Default,,0,0,0,,头痛欲裂的{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}在古色房间
+Dialogue: 0,0:00:03.74,0:00:07.10,Default,,0,0,0,,惊醒雕花木床青色纱帐身下
+Dialogue: 0,0:00:07.10,0:00:08.41,Default,,0,0,0,,锦被绣着{\c&H0000FFFF&\b1}兰草{\c&H00FFFFFF&\b0}纹样
+Dialogue: 0,0:00:08.81,0:00:11.25,Default,,0,0,0,,他掐痛腿部确认{\c&H0000FFFF&\b1}非梦{\c&H00FFFFFF&\b0}脑中
+Dialogue: 0,0:00:11.25,0:00:13.50,Default,,0,0,0,,涌入陌生记忆这里是荒古
+Dialogue: 0,0:00:13.50,0:00:15.99,Default,,0,0,0,,世界望{\c&H0000FFFF&\b1}海城{\c&H00FFFFFF&\b0}赵家原主也叫
+Dialogue: 0,0:00:15.99,0:00:17.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}是庶出支脉少年
+Dialogue: 0,0:00:18.30,0:00:20.57,Default,,0,0,0,,当他摸到脖颈磨盘饰品时
+Dialogue: 0,0:00:20.85,0:00:22.35,Default,,0,0,0,,门外传来清脆女声
+Dialogue: 0,0:00:22.82,0:00:23.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}二哥{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:23.62,0:00:24.36,Default,,0,0,0,,上学堂了

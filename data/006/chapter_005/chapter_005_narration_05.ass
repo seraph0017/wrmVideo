@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_005 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙欣{\c&H00FFFFFF&\b0}率十万精锐镇守左翼
+Dialogue: 0,0:00:02.77,0:00:04.45,Default,,0,0,0,,紫色长袍在风中翻飞
+Dialogue: 0,0:00:04.84,0:00:07.59,Default,,0,0,0,,她立于阵前双手结印身后
+Dialogue: 0,0:00:07.59,0:00:10.17,Default,,0,0,0,,修者结成防御大阵刀枪{\c&H0000FFFF&\b1}如林{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.66,0:00:12.99,Default,,0,0,0,,远处三眼魔族先锋黑压压涌
+Dialogue: 0,0:00:12.99,0:00:15.62,Default,,0,0,0,,来青黑色身影在{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}下泛着
+Dialogue: 0,0:00:15.62,0:00:16.51,Default,,0,0,0,,诡异光泽
+Dialogue: 0,0:00:16.95,0:00:19.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙欣{\c&H00FFFFFF&\b0}红唇轻启声音清冷
+Dialogue: 0,0:00:19.68,0:00:20.41,Default,,0,0,0,,结{\c&H0000FFFF&\b1}玄冰阵{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:20.75,0:00:23.34,Default,,0,0,0,,刹那间地面凝结{\c&H0000FFFF&\b1}寒冰{\c&H00FFFFFF&\b0}寒气
+Dialogue: 0,0:00:23.34,0:00:25.51,Default,,0,0,0,,弥漫魔族先锋纷纷滑倒

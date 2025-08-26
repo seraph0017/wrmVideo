@@ -97,31 +97,101 @@ def parse_character_info(narration_file_path):
                     if special_match and special_match.group(1).strip() != '无':
                         details.append(special_match.group(1).strip())
                 
-                # 服装风格
-                clothing_section = re.search(r'<服装风格>(.*?)</服装风格>', char_content, re.DOTALL)
-                if clothing_section:
-                    clothing_content = clothing_section.group(1)
-                    
-                    # 上衣
-                    top_match = re.search(r'<上衣>([^<]+)</上衣>', clothing_content)
-                    if top_match:
-                        details.append(top_match.group(1).strip())
-                    
-                    # 下装
-                    bottom_match = re.search(r'<下装>([^<]+)</下装>', clothing_content)
-                    if bottom_match:
-                        details.append(bottom_match.group(1).strip())
-                    
-                    # 配饰
-                    accessory_match = re.search(r'<配饰>([^<]+)</配饰>', clothing_content)
-                    if accessory_match and accessory_match.group(1).strip() != '无':
-                        details.append(accessory_match.group(1).strip())
+                # 检查是否有现代形象和古代形象（新格式）
+                modern_section = re.search(r'<现代形象>(.*?)</现代形象>', char_content, re.DOTALL)
+                ancient_section = re.search(r'<古代形象>(.*?)</古代形象>', char_content, re.DOTALL)
                 
-                character_info['description'] = '，'.join(details)
-                character_info['age_group'] = age_group
-                characters.append(character_info)
+                if modern_section and ancient_section:
+                    # 新格式：双时代格式
+                    # 现代形象
+                    modern_details = list(details)  # 复制基础外貌特征
+                    modern_content = modern_section.group(1)
+                    
+                    # 现代上衣
+                    modern_top_match = re.search(r'<上衣>([^<]+)</上衣>', modern_content)
+                    if modern_top_match:
+                        modern_details.append(modern_top_match.group(1).strip())
+                    
+                    # 现代下装
+                    modern_bottom_match = re.search(r'<下装>([^<]+)</下装>', modern_content)
+                    if modern_bottom_match:
+                        modern_details.append(modern_bottom_match.group(1).strip())
+                    
+                    # 现代配饰
+                    modern_accessory_match = re.search(r'<配饰>([^<]+)</配饰>', modern_content)
+                    if modern_accessory_match and modern_accessory_match.group(1).strip() != '无':
+                        modern_details.append(modern_accessory_match.group(1).strip())
+                    
+                    # 古代形象
+                    ancient_details = list(details)  # 复制基础外貌特征
+                    ancient_content = ancient_section.group(1)
+                    
+                    # 古代上衣
+                    ancient_top_match = re.search(r'<上衣>([^<]+)</上衣>', ancient_content)
+                    if ancient_top_match:
+                        ancient_details.append(ancient_top_match.group(1).strip())
+                    
+                    # 古代下装
+                    ancient_bottom_match = re.search(r'<下装>([^<]+)</下装>', ancient_content)
+                    if ancient_bottom_match:
+                        ancient_details.append(ancient_bottom_match.group(1).strip())
+                    
+                    # 古代配饰
+                    ancient_accessory_match = re.search(r'<配饰>([^<]+)</配饰>', ancient_content)
+                    if ancient_accessory_match and ancient_accessory_match.group(1).strip() != '无':
+                        ancient_details.append(ancient_accessory_match.group(1).strip())
+                    
+                    # 创建两个角色信息：现代和古代
+                    modern_character = {
+                        'name': character_info['name'],
+                        'gender': character_info['gender'],
+                        'description': '，'.join(modern_details),
+                        'age_group': age_group,
+                        'era': 'modern'
+                    }
+                    
+                    ancient_character = {
+                        'name': character_info['name'],
+                        'gender': character_info['gender'],
+                        'description': '，'.join(ancient_details),
+                        'age_group': age_group,
+                        'era': 'ancient'
+                    }
+                    
+                    characters.append(modern_character)
+                    characters.append(ancient_character)
+                    
+                else:
+                    # 兼容旧格式或单一时代格式
+                    clothing_section = re.search(r'<服装风格>(.*?)</服装风格>', char_content, re.DOTALL)
+                    if clothing_section:
+                        clothing_content = clothing_section.group(1)
+                        
+                        # 上衣
+                        top_match = re.search(r'<上衣>([^<]+)</上衣>', clothing_content)
+                        if top_match:
+                            details.append(top_match.group(1).strip())
+                        
+                        # 下装
+                        bottom_match = re.search(r'<下装>([^<]+)</下装>', clothing_content)
+                        if bottom_match:
+                            details.append(bottom_match.group(1).strip())
+                        
+                        # 配饰
+                        accessory_match = re.search(r'<配饰>([^<]+)</配饰>', clothing_content)
+                        if accessory_match and accessory_match.group(1).strip() != '无':
+                            details.append(accessory_match.group(1).strip())
+                    
+                    character_info['description'] = '，'.join(details)
+                    character_info['age_group'] = age_group
+                    character_info['era'] = 'single'  # 单一时代
+                    characters.append(character_info)
                 
-                print(f"解析到角色: {character_info['name']} -> {character_info['description']}")
+                if modern_section and ancient_section:
+                    print(f"解析到角色: {character_info['name']} (现代) -> {modern_character['description']}")
+                    print(f"解析到角色: {character_info['name']} (古代) -> {ancient_character['description']}")
+                else:
+                    print(f"解析到角色: {character_info['name']} -> {character_info['description']}")
         
         else:
             # 兼容旧格式：<主角1>、<配角1>等
@@ -197,6 +267,7 @@ def parse_character_info(narration_file_path):
                 
                 character_info['description'] = '，'.join(details)
                 character_info['age_group'] = age_group
+                character_info['era'] = 'single'  # 兼容旧格式，标记为单一时代
                 characters.append(character_info)
                 
                 print(f"解析到主角: {character_info['name']} -> {character_info['description']}")
@@ -258,6 +329,7 @@ def parse_character_info(narration_file_path):
                 
                 character_info['description'] = '，'.join(details)
                 character_info['age_group'] = age_group
+                character_info['era'] = 'single'  # 兼容旧格式，标记为单一时代
                 characters.append(character_info)
                 
                 print(f"解析到配角: {character_info['name']} -> {character_info['description']}")
@@ -495,6 +567,7 @@ def generate_character_images_async(input_path):
                 character_name = character['name']
                 character_desc = character['description']
                 character_gender = character.get('gender', '未知')
+                character_era = character.get('era', 'single')
                 
                 # 根据性别决定视角
                 if character_gender == '女':
@@ -508,26 +581,37 @@ def generate_character_images_async(input_path):
                 else:
                     character_prompt = f"单人肖像，{character_desc}，高质量角色设定图，{view_angle}，动漫风格"
                 
-                print(f"  生成第 {i}/{len(characters)} 个角色图片: {character_name}")
+                # 根据时代信息生成不同的显示名称和文件名
+                if character_era == 'modern':
+                    display_name = f"{character_name}(现代)"
+                    era_suffix = "_modern"
+                elif character_era == 'ancient':
+                    display_name = f"{character_name}(古代)"
+                    era_suffix = "_ancient"
+                else:
+                    display_name = character_name
+                    era_suffix = ""
+                
+                print(f"  生成第 {i}/{len(characters)} 个角色图片: {display_name}")
                 print(f"  角色描述: {character_desc}")
                 print(f"  完整提示词: {character_prompt}")
                 
-                # 生成图片（去掉文件名中的&符号）
+                # 生成图片（去掉文件名中的&符号，并加入时代标识）
                 safe_character_name = character_name.replace('&', '')
-                image_path = os.path.join(chapter_dir, f"{chapter_name}_character_{i:02d}_{safe_character_name}.jpeg")
+                image_path = os.path.join(chapter_dir, f"{chapter_name}_character_{i:02d}_{safe_character_name}{era_suffix}.jpeg")
                 
                 # 检查图片是否已存在
                 if os.path.exists(image_path):
-                    print(f"  ✓ 角色图片已存在，跳过: {character_name}")
+                    print(f"  ✓ 角色图片已存在，跳过: {display_name}")
                     skipped_count += 1
                     continue
                 
                 # 异步生成图片
-                if generate_character_image_async(character_prompt, image_path, character_name, chapter_path=chapter_dir):
-                    print(f"  ✓ 角色图片任务提交成功: {character_name}")
+                if generate_character_image_async(character_prompt, image_path, display_name, chapter_path=chapter_dir):
+                    print(f"  ✓ 角色图片任务提交成功: {display_name}")
                     submitted_count += 1
                 else:
-                    print(f"  ✗ 角色图片任务提交失败: {character_name}")
+                    print(f"  ✗ 角色图片任务提交失败: {display_name}")
                     failed_count += 1
                 
                 # 添加短暂延迟，避免API请求过于频繁

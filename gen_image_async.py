@@ -196,6 +196,20 @@ def parse_narration_file(narration_file_path):
                         closeup_info['character'] = character_name
                         print(f"      从<特写人物>提取到角色: {character_name}")
                     
+                    # 提取时代背景信息
+                    era_background_match = re.search(r'<时代背景>([^<]+)</时代背景>', closeup_content)
+                    if era_background_match:
+                        era_background = era_background_match.group(1).strip()
+                        closeup_info['era_background'] = era_background
+                        print(f"      提取到时代背景: {era_background}")
+                    
+                    # 提取角色形象信息
+                    character_image_match = re.search(r'<角色形象>([^<]+)</角色形象>', closeup_content)
+                    if character_image_match:
+                        character_image = character_image_match.group(1).strip()
+                        closeup_info['character_image'] = character_image
+                        print(f"      提取到角色形象: {character_image}")
+                    
                     if character_name:
                         
                         # 根据角色编号查找角色定义
@@ -229,13 +243,14 @@ def parse_narration_file(narration_file_path):
         print(f"解析narration文件时发生错误: {e}")
         return scenes, drawing_style, character_map
 
-def find_character_image(chapter_path, character_name):
+def find_character_image(chapter_path, character_name, era_background=None):
     """
-    查找角色图片文件（旧版本兼容）
+    查找角色图片文件，支持时代背景区分
     
     Args:
         chapter_path: 章节目录路径
         character_name: 角色名称
+        era_background: 时代背景（现代/古代），可选
     
     Returns:
         str: 角色图片文件路径，如果未找到返回None
@@ -244,17 +259,32 @@ def find_character_image(chapter_path, character_name):
         chapter_name = os.path.basename(chapter_path)
         # 移除角色名称中的&符号
         safe_character_name = character_name.replace('&', '')
-        # 构造角色图片文件名模式
-        pattern = f"{chapter_name}_character_*_{safe_character_name}.jpeg"
         
-        # 在章节目录中查找匹配的文件
+        # 根据时代背景确定文件名后缀
+        era_suffix = ""
+        if era_background == "现代":
+            era_suffix = "_modern"
+        elif era_background == "古代":
+            era_suffix = "_ancient"
+        
+        # 优先查找带时代后缀的图片
+        if era_suffix:
+            for filename in os.listdir(chapter_path):
+                if (filename.endswith(f"_{safe_character_name}{era_suffix}.jpeg") and "character" in filename):
+                    image_path = os.path.join(chapter_path, filename)
+                    print(f"找到时代背景角色图片: {image_path}")
+                    return image_path
+        
+        # 如果没有找到时代背景图片，查找通用角色图片
         for filename in os.listdir(chapter_path):
-            if filename.endswith(f"_{safe_character_name}.jpeg") and "character" in filename:
+            if (filename.endswith(f"_{safe_character_name}.jpeg") and "character" in filename and 
+                not filename.endswith(f"_{safe_character_name}_modern.jpeg") and 
+                not filename.endswith(f"_{safe_character_name}_ancient.jpeg")):
                 image_path = os.path.join(chapter_path, filename)
-                print(f"找到角色图片: {image_path}")
+                print(f"找到通用角色图片: {image_path}")
                 return image_path
         
-        print(f"未找到角色 {character_name} 的图片文件")
+        print(f"未找到角色 {character_name} 的图片文件 (时代背景: {era_background})")
         return None
         
     except Exception as e:
@@ -881,14 +911,15 @@ def generate_images_for_chapter(chapter_dir):
                         character_style = closeup.get('character_style', '')
                         culture = closeup.get('culture', 'Chinese')
                         temperament = closeup.get('temperament', 'Common')
+                        era_background = closeup.get('era_background', '')
                         
-                        print(f"    使用分镜信息: {character} ({gender}/{age_group}/{character_style})")
+                        print(f"    使用分镜信息: {character} ({gender}/{age_group}/{character_style}) 时代背景: {era_background}")
                         
                         # 查找角色图片 - 优先根据角色姓名匹配章节中的角色图片
                         char_img_path = None
                         if character:
-                            # 首先尝试根据角色姓名在当前章节目录中查找角色图片
-                            char_img_path = find_character_image(chapter_dir, character)
+                            # 首先尝试根据角色姓名在当前章节目录中查找角色图片，传递时代背景信息
+                            char_img_path = find_character_image(chapter_dir, character, era_background)
                             if char_img_path:
                                 character_images.append(char_img_path)
                                 print(f"    根据角色姓名找到角色图片: {char_img_path}")

@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_005 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.40,Default,,0,0,0,,八荒山主峰广场千万修者
+Dialogue: 0,0:00:02.40,0:00:02.80,Default,,0,0,0,,集结
+Dialogue: 0,0:00:03.22,0:00:05.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于高台之上青色长袍
+Dialogue: 0,0:00:05.54,0:00:08.18,Default,,0,0,0,,在{\c&H0000FFFF&\b1}山风中{\c&H00FFFFFF&\b0}猎猎作响身后百名
+Dialogue: 0,0:00:08.18,0:00:09.87,Default,,0,0,0,,上古道主气息冲天
+Dialogue: 0,0:00:10.35,0:00:11.79,Default,,0,0,0,,他环视下方黑压压的
+Dialogue: 0,0:00:11.79,0:00:14.42,Default,,0,0,0,,人群{\c&H0000FFFF&\b1}剑眉{\c&H00FFFFFF&\b0}紧锁高声喝道
+Dialogue: 0,0:00:14.77,0:00:17.09,Default,,0,0,0,,三眼魔族明日便至今日我
+Dialogue: 0,0:00:17.09,0:00:19.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}当以血还血以牙还牙
+Dialogue: 0,0:00:20.09,0:00:23.07,Default,,0,0,0,,声浪如雷震得云层翻滚千万
+Dialogue: 0,0:00:23.07,0:00:25.67,Default,,0,0,0,,修者{\c&H0000FFFF&\b1}齐声{\c&H00FFFFFF&\b0}应和杀气直冲九霄

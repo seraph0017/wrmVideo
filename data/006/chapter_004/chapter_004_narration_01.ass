@@ -1,0 +1,26 @@
+[Script Info]
+Title: chapter_004 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与辛芦行至八荒山别院
+Dialogue: 0,0:00:02.17,0:00:04.81,Default,,0,0,0,,前只见院门紧闭两侧侍女
+Dialogue: 0,0:00:04.81,0:00:05.52,Default,,0,0,0,,垂首而立
+Dialogue: 0,0:00:06.06,0:00:08.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕正{\c&H00FFFFFF&\b0}欲开口院内忽传轻响
+Dialogue: 0,0:00:09.14,0:00:10.45,Default,,0,0,0,,一名身着圆领{\c&H0000FFFF&\b1}白衫{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:10.45,0:00:13.30,Default,,0,0,0,,侍女迎出见辛芦同来眼中
+Dialogue: 0,0:00:13.30,0:00:15.54,Default,,0,0,0,,闪过一丝讶异随即躬身引
+Dialogue: 0,0:00:15.54,0:00:16.15,Default,,0,0,0,,二人入内
+Dialogue: 0,0:00:16.43,0:00:18.87,Default,,0,0,0,,别院{\c&H0000FFFF&\b1}朴素无华{\c&H00FFFFFF&\b0}四周竹篱环绕
+Dialogue: 0,0:00:19.23,0:00:21.68,Default,,0,0,0,,隐约可见院内亭台气氛{\c&H0000FFFF&\b1}静谧{\c&H00FFFFFF&\b0}

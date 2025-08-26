@@ -1,0 +1,29 @@
+[Script Info]
+Title: chapter_001 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.21,Default,,0,0,0,,星空惊现巨人
+Dialogue: 0,0:00:01.57,0:00:03.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}天文台{\c&H00FFFFFF&\b0}深夜异变天文硕士
+Dialogue: 0,0:00:03.67,0:00:05.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}竟目睹超新星旁浮现
+Dialogue: 0,0:00:05.65,0:00:06.81,Default,,0,0,0,,顶天立地的身影
+Dialogue: 0,0:00:07.26,0:00:09.64,Default,,0,0,0,,夏夜星空下{\c&H0000FFFF&\b1}紫金山天文台{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.64,0:00:12.13,Default,,0,0,0,,射电{\c&H0000FFFF&\b1}望远镜{\c&H00FFFFFF&\b0}前赵硕紧盯着
+Dialogue: 0,0:00:12.13,0:00:14.70,Default,,0,0,0,,屏幕脖颈间黝黑磨盘饰品
+Dialogue: 0,0:00:14.70,0:00:15.38,Default,,0,0,0,,泛着微光
+Dialogue: 0,0:00:15.81,0:00:17.51,Default,,0,0,0,,当他发现{\c&H0000FFFF&\b1}超新星{\c&H00FFFFFF&\b0}爆发的
+Dialogue: 0,0:00:17.51,0:00:20.22,Default,,0,0,0,,异常光芒时脸色骤变那璀璨
+Dialogue: 0,0:00:20.22,0:00:22.04,Default,,0,0,0,,星光中竟有{\c&H0000FFFF&\b1}盘古{\c&H00FFFFFF&\b0}般的
+Dialogue: 0,0:00:22.04,0:00:24.27,Default,,0,0,0,,巨人双手合十正吞噬着
+Dialogue: 0,0:00:24.27,0:00:25.18,Default,,0,0,0,,爆发的星芒

@@ -89,12 +89,19 @@ def encode_image_to_base64(image_path: str) -> Optional[str]:
             # 编码为base64
             base64_data = base64.b64encode(image_data).decode('utf-8')
             
-            # 获取图片格式
-            file_extension = Path(image_path).suffix.lower()
-            if file_extension == '.jpg':
-                image_format = 'jpeg'
+            # 获取图片格式 - 根据实际文件内容而不是扩展名
+            import imghdr
+            detected_format = imghdr.what(image_path)
+            if detected_format:
+                # 使用检测到的实际格式
+                image_format = detected_format
             else:
-                image_format = file_extension[1:]  # 去掉点号
+                # 如果检测失败，回退到扩展名判断
+                file_extension = Path(image_path).suffix.lower()
+                if file_extension == '.jpg':
+                    image_format = 'jpeg'
+                else:
+                    image_format = file_extension[1:]  # 去掉点号
             
             # 构造完整的data URL
             return f"data:image/{image_format};base64,{base64_data}"
@@ -168,7 +175,7 @@ def find_character_images_in_chapters(data_directory: str) -> List[str]:
     print(f"总共找到 {len(character_images)} 张角色图片")
     return sorted(character_images)
 
-def analyze_image_with_llm(client: Ark, image_base64: str, prompt: str = "请仔细观察这张角色图片的服装领口设计，进行以下审查：\n\n【领口审查标准】\n✅ 通过的类型：完全遮盖脖子到胸口的皮肤的衣服\n❌ 失败的类型：\n- 露出脖子和胸部皮肤\n- V领：任何形式的V字形领口\n- 低领：领口过低，露出脖子以下皮肤\n- 开胸装：胸前有明显开口或缝隙\n\n【皮肤暴露检查 - 严格标准】\n检查角色是否存在以下问题（任何一项都视为失败）：\n- 脖子暴露：脖子部位不能有任何皮肤暴露，必须完全被服装遮盖\n- 后背脖子以下皮肤暴露：后背脖子以下区域不能有皮肤暴露\n- 胸部皮肤暴露：胸前不能有皮肤暴露\n\n【内容审查】\n检查图片中是否存在文字、乱码、水印等不当内容\n\n【判断要求】\n请重点关注：\n1. 领口是否露出脖子以下的皮肤区域\n2. 脖子是否有任何暴露（即使是很小的暴露也不允许）\n3. 后背脖子以下是否有皮肤暴露\n4. 如果角色穿着交领袍服、汉服等传统服装，要特别注意交领处是否形成开口露出胸部\n\n如果发现任何问题，请返回'失败'并详细说明原因。如果完全符合要求，请返回'通过'。") -> tuple[Optional[str], dict]:
+def analyze_image_with_llm(client: Ark, image_base64: str, prompt: str = "请仔细观察这张角色图片，进行以下全面审查：\n\n【领口审查标准】\n✅ 通过的类型：完全遮盖脖子到胸口的皮肤的衣服\n❌ 失败的类型：\n- 露出脖子和胸部皮肤\n- V领：任何形式的V字形领口\n- 低领：领口过低，露出脖子以下皮肤\n- 开胸装：胸前有明显开口或缝隙\n\n【皮肤暴露检查 - 严格标准】\n检查角色是否存在以下问题（任何一项都视为失败）：\n- 脖子暴露：脖子部位不能有任何皮肤暴露，必须完全被服装遮盖\n- 后背脖子以下皮肤暴露：后背脖子以下区域不能有皮肤暴露\n- 胸部皮肤暴露：胸前不能有皮肤暴露\n\n【身体部位异常检查 - 严格标准】\n检查角色是否存在以下身体部位异常（任何一项都视为失败）：\n- 多手：角色有超过2只手臂或手\n- 多脚：角色有超过2只脚或腿\n- 多手指：单只手有超过5根手指\n- 手指异常：手指形状扭曲、融合或数量明显错误\n- 肢体畸形：手臂、腿部或其他肢体出现明显的解剖学错误\n- 身体比例异常：头部、四肢比例严重失调\n\n【亲密行为检查 - 严格标准】\n检查图片中是否存在以下亲密行为（任何一项都视为失败）：\n- 拥抱：两人或多人相互拥抱的姿势\n- 勾肩搭背：手臂搭在他人肩膀或背部的亲密姿势\n- 亲密接触：任何形式的身体亲密接触或暧昧姿势\n- 过度亲近：角色之间距离过近，呈现亲密关系的画面\n\n【内容审查】\n检查图片中是否存在文字、乱码、水印等不当内容\n\n【判断要求】\n请重点关注：\n1. 领口是否露出脖子以下的皮肤区域\n2. 脖子是否有任何暴露（即使是很小的暴露也不允许）\n3. 后背脖子以下是否有皮肤暴露\n4. 如果角色穿着交领袍服、汉服等传统服装，要特别注意交领处是否形成开口露出胸部\n5. 仔细检查角色的手、脚、手指数量是否正常\n6. 观察身体各部位的解剖学正确性\n7. 检查是否存在拥抱、勾肩搭背等亲密行为\n\n如果发现任何问题，请返回'失败'并详细说明原因。如果完全符合要求，请返回'通过'。") -> tuple[Optional[str], dict]:
     """
     使用LLM分析图片内容
     
@@ -274,7 +281,7 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
         
         for attempt in range(max_retries + 1):
             # 构建完整提示词
-            full_prompt = "把胸口到脖子的皮肤全部覆盖住,去掉衽领，交领，V领，换成高领圆领袍\n领口不能是V领，领口不能是衽领，领口不能是交领，领口不能是任何y字型或者v字型的领子\n" + style_prompt + "\n\n" + prompt + "\n\n"
+            full_prompt = "把胸口到脖子的皮肤全部覆盖住,去掉衽领，交领，V领，换成高领圆领袍\n领口不能是V领，领口不能是衽领，领口不能是交领，领口不能是任何y字型或者v字型的领子\n手指数量修改到正常\n角色之间不能有拥抱、挽手、亲密接触等行为，角色之间要保持适当距离\n" + style_prompt + "\n\n" + prompt + "\n\n"
             
             if attempt == 0:  # 只在第一次尝试时打印完整prompt
                 print("完整的prompt: {}".format(full_prompt))
@@ -384,7 +391,7 @@ def regenerate_failed_image(image_path: str) -> bool:
             return False
         
         # 构建生成提示词，强调领口和皮肤暴露要求
-        regenerate_prompt = "基于原图进行改进，一个古代中国女性角色，穿着传统服装，必须是圆领、立领或高领，绝对不能是V领、交领、衽领或其他露出脖子以下皮肤的领型，脖子必须完全被服装遮盖不能有任何暴露，后背脖子以下不能有皮肤暴露，胸部不能有皮肤暴露，画面清晰，细节丰富，宫崎骏动漫风格"
+        regenerate_prompt = "基于原图进行改进，领口必须是圆领、立领或高领，绝对不能是V领、交领、衽领或其他露出脖子以下皮肤的领型，脖子必须完全被服装遮盖不能有任何暴露，后背脖子以下不能有皮肤暴露，胸部不能有皮肤暴露，手指数量要正常，画面清晰，细节丰富，"
         
         print(f"正在重新生成图片: {image_path}")
         print(f"生成提示词: {regenerate_prompt}")

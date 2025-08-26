@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_001 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.06,Default,,0,0,0,,恶少推搡撞地
+Dialogue: 0,0:00:01.52,0:00:03.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕刚{\c&H00FFFFFF&\b0}出学馆后背突遭猛力
+Dialogue: 0,0:00:04.33,0:00:06.81,Default,,0,0,0,,整个人向前扑去膝盖重重磕
+Dialogue: 0,0:00:06.81,0:00:07.66,Default,,0,0,0,,在青石板上
+Dialogue: 0,0:00:08.15,0:00:10.14,Default,,0,0,0,,回头见{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}带着跟班狞笑
+Dialogue: 0,0:00:10.55,0:00:11.11,Default,,0,0,0,,赵草包
+Dialogue: 0,0:00:11.40,0:00:13.03,Default,,0,0,0,,脑袋进水说大地是圆的
+Dialogue: 0,0:00:13.52,0:00:15.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}冲来扶住赵硕怒视
+Dialogue: 0,0:00:15.38,0:00:15.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:16.20,0:00:17.14,Default,,0,0,0,,不许欺负{\c&H0000FFFF&\b1}二哥{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:17.58,0:00:18.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}贪婪盯着她
+Dialogue: 0,0:00:19.19,0:00:21.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}小美人{\c&H00FFFFFF&\b0}你替他挨揍如何
