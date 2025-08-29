@@ -1,0 +1,23 @@
+[Script Info]
+Title: Merged Narration
+ScriptType: v4.00+
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.94,Default,,0,0,0,,夏夜{\c&H0000FFFF&\b1}天文台{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.27,0:00:02.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}紧盯射电望远镜
+Dialogue: 0,0:00:03.29,0:00:05.29,Default,,0,0,0,,期待千年一遇的{\c&H0000FFFF&\b1}超新星{\c&H00FFFFFF&\b0}爆发
+Dialogue: 0,0:00:05.70,0:00:07.01,Default,,0,0,0,,神情专注而兴奋
+Dialogue: 0,0:00:07.03,0:00:09.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青蝉{\c&H00FFFFFF&\b0}身着白色长裙来到
+Dialogue: 0,0:00:09.00,0:00:09.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}身边
+Dialogue: 0,0:00:10.24,0:00:11.34,Default,,0,0,0,,微风拂动裙摆
+Dialogue: 0,0:00:11.93,0:00:13.64,Default,,0,0,0,,她温柔注视着专注的{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.96,0:00:15.19,Default,,0,0,0,,眼中满是情意
+Dialogue: 0,0:00:15.21,0:00:16.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}发现超新星爆发
+Dialogue: 0,0:00:17.25,0:00:18.53,Default,,0,0,0,,兴奋跑出监控室
+Dialogue: 0,0:00:18.87,0:00:20.98,Default,,0,0,0,,却在{\c&H0000FFFF&\b1}望远镜{\c&H00FFFFFF&\b0}中看到星空异象
+Dialogue: 0,0:00:21.32,0:00:22.23,Default,,0,0,0,,满脸震惊

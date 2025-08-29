@@ -2,8 +2,12 @@
 """
 concat_finish_video.py
 
-拼接每个chapter下面的chapter_xxx_narration_xx_video.mp4按顺序从1到10拼接成一个文件，
-配上随机选择的BGM，并在最后拼接finish.mp4文件。
+拼接每个chapter下面的narration视频文件，配上随机选择的BGM，并在最后拼接finish.mp4文件。
+
+新逻辑：
+- 收集合并的narration_01-03视频（chapter_xxx_narration_01-03_video.mp4）
+- 收集正常的narration_04-30视频（chapter_xxx_narration_04_video.mp4 到 chapter_xxx_narration_30_video.mp4）
+- 如果合并视频不存在，回退到收集单独的narration_01-03视频
 
 使用方法:
     python concat_finish_video.py data/001
@@ -276,13 +280,37 @@ def get_available_bgm_files():
     return available_files
 
 def collect_chapter_narration_videos(chapter_path, chapter_name):
-    """收集单个chapter目录下的narration视频文件"""
+    """收集单个chapter目录下的narration视频文件
+    
+    新逻辑：
+    - 收集合并的narration_01-03视频
+    - 收集正常的narration_04-30视频
+    """
     video_files = []
     
     print(f"处理章节: {chapter_name}")
     
-    # 收集该章节的narration视频文件 (1-10)
-    for i in range(1, 11):
+    # 1. 收集合并的narration_01-03视频
+    merged_video_filename = f"{chapter_name}_narration_01-03_video.mp4"
+    merged_video_path = os.path.join(chapter_path, merged_video_filename)
+    
+    if os.path.exists(merged_video_path):
+        video_files.append(merged_video_path)
+        print(f"  找到合并视频: {merged_video_filename}")
+    else:
+        print(f"  警告: 合并视频文件不存在: {merged_video_filename}")
+        # 如果合并视频不存在，尝试收集单独的narration_01-03视频作为备选
+        for i in range(1, 4):
+            video_filename = f"{chapter_name}_narration_{i:02d}_video.mp4"
+            video_path = os.path.join(chapter_path, video_filename)
+            if os.path.exists(video_path):
+                video_files.append(video_path)
+                print(f"  找到备选视频: {video_filename}")
+            else:
+                print(f"  警告: 备选视频文件不存在: {video_filename}")
+    
+    # 2. 收集正常的narration_04-30视频
+    for i in range(4, 31):
         video_filename = f"{chapter_name}_narration_{i:02d}_video.mp4"
         video_path = os.path.join(chapter_path, video_filename)
         

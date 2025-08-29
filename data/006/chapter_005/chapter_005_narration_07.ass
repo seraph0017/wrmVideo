@@ -14,16 +14,8 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.00,Default,,0,0,0,,八荒山{\c&H0000FFFF&\b1}护山大阵{\c&H00FFFFFF&\b0}剧烈摇晃
-Dialogue: 0,0:00:02.51,0:00:04.58,Default,,0,0,0,,金色光罩上出现蛛网裂痕
-Dialogue: 0,0:00:05.00,0:00:07.29,Default,,0,0,0,,至阴天魔立于阵外青黑色
-Dialogue: 0,0:00:07.29,0:00:09.86,Default,,0,0,0,,大手按在光罩上黑袍无风
-Dialogue: 0,0:00:09.86,0:00:10.15,Default,,0,0,0,,自动
-Dialogue: 0,0:00:10.67,0:00:13.25,Default,,0,0,0,,阵内{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}口吐鲜血青色长袍
-Dialogue: 0,0:00:13.25,0:00:15.58,Default,,0,0,0,,前襟染红却依旧双手结印
-Dialogue: 0,0:00:15.92,0:00:17.06,Default,,0,0,0,,额头青筋暴起
-Dialogue: 0,0:00:17.35,0:00:19.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}众修听令注入灵力
-Dialogue: 0,0:00:19.78,0:00:20.57,Default,,0,0,0,,死守大阵
-Dialogue: 0,0:00:21.01,0:00:22.48,Default,,0,0,0,,千万修者{\c&H0000FFFF&\b1}齐声{\c&H00FFFFFF&\b0}应和
-Dialogue: 0,0:00:22.75,0:00:25.35,Default,,0,0,0,,灵力如潮水般涌入光罩裂痕
-Dialogue: 0,0:00:25.35,0:00:26.22,Default,,0,0,0,,缓缓修复
+Dialogue: 0,0:00:00.02,0:00:02.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}躲在营帐后偷偷看着
+Dialogue: 0,0:00:02.18,0:00:04.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}率军出征眼中充满担忧
+Dialogue: 0,0:00:05.30,0:00:07.70,Default,,0,0,0,,她身着粉色圆领襦裙双手
+Dialogue: 0,0:00:07.70,0:00:10.09,Default,,0,0,0,,紧握衣角默默为兄长祈祷
+Dialogue: 0,0:00:10.09,0:00:10.51,Default,,0,0,0,,平安

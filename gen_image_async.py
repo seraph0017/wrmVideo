@@ -44,26 +44,93 @@ def parse_character_gender(content, character_name):
 
 def parse_character_definitions(content):
     """
-    解析角色定义，建立角色编号映射
+    解析角色定义，建立角色姓名映射（适配新格式）
     
     Args:
         content: narration.txt文件内容
     
     Returns:
-        dict: 角色编号映射字典，格式为 {"主角1": {"数字编号": "01", "性别": "Male", ...}}
+        dict: 角色姓名映射字典，格式为 {"角色姓名": {"数字编号": "01", "性别": "Male", ...}}
     """
     character_map = {}
     
-    # 解析主角定义
+    # 解析新格式的角色定义（角色1、角色2等）
+    character_pattern = r'<角色(\d+)>(.*?)</角色\d+>'
+    character_matches = re.findall(character_pattern, content, re.DOTALL)
+    
+    for char_num, char_content in character_matches:
+        char_info = {}
+        
+        # 提取角色姓名
+        name_match = re.search(r'<姓名>([^<]+)</姓名>', char_content)
+        if not name_match:
+            continue  # 没有姓名的角色跳过
+        
+        character_name = name_match.group(1).strip()
+        
+        # 提取各种属性
+        gender_match = re.search(r'<性别>([^<]+)</性别>', char_content)
+        age_match = re.search(r'<年龄段>([^<]+)</年龄段>', char_content)
+        
+        # 提取外貌特征
+        appearance_block = re.search(r'<外貌特征>(.*?)</外貌特征>', char_content, re.DOTALL)
+        if appearance_block:
+            appearance_content = appearance_block.group(1)
+            hair_style_match = re.search(r'<发型>([^<]+)</发型>', appearance_content)
+            hair_color_match = re.search(r'<发色>([^<]+)</发色>', appearance_content)
+            face_match = re.search(r'<面部特征>([^<]+)</面部特征>', appearance_content)
+            body_match = re.search(r'<身材特征>([^<]+)</身材特征>', appearance_content)
+            
+            if hair_style_match:
+                char_info['发型'] = hair_style_match.group(1).strip()
+            if hair_color_match:
+                char_info['发色'] = hair_color_match.group(1).strip()
+            if face_match:
+                char_info['面部特征'] = face_match.group(1).strip()
+            if body_match:
+                char_info['身材特征'] = body_match.group(1).strip()
+        
+        # 提取服装风格（现代形象或古代形象或单一服装风格）
+        modern_style_block = re.search(r'<现代形象>(.*?)</现代形象>', char_content, re.DOTALL)
+        ancient_style_block = re.search(r'<古代形象>(.*?)</古代形象>', char_content, re.DOTALL)
+        single_style_block = re.search(r'<服装风格>(.*?)</服装风格>', char_content, re.DOTALL)
+        
+        if modern_style_block:
+            char_info['现代形象'] = modern_style_block.group(1).strip()
+        if ancient_style_block:
+            char_info['古代形象'] = ancient_style_block.group(1).strip()
+        if single_style_block:
+            char_info['服装风格'] = single_style_block.group(1).strip()
+        
+        # 设置基本属性
+        if gender_match:
+            char_info['性别'] = gender_match.group(1).strip()
+        if age_match:
+            char_info['年龄段'] = age_match.group(1).strip()
+        
+        # 设置默认值
+        char_info['风格'] = 'Common'
+        char_info['文化'] = 'Chinese'
+        char_info['气质'] = 'Common'
+        char_info['数字编号'] = f"{int(char_num):02d}"
+        
+        # 使用角色姓名作为键
+        character_map[character_name] = char_info
+    
+    # 兼容旧格式的主角和配角定义
     protagonist_pattern = r'<主角(\d+)>(.*?)</主角\d+>'
     protagonist_matches = re.findall(protagonist_pattern, content, re.DOTALL)
     
     for char_num, char_content in protagonist_matches:
-        char_key = f"主角{char_num}"
         char_info = {}
         
         # 提取各种属性
         name_match = re.search(r'<姓名>([^<]+)</姓名>', char_content)
+        if not name_match:
+            continue
+        
+        character_name = name_match.group(1).strip()
+        
         gender_match = re.search(r'<性别>([^<]+)</性别>', char_content)
         age_match = re.search(r'<年龄段>([^<]+)</年龄段>', char_content)
         style_match = re.search(r'<风格>([^<]+)</风格>', char_content)
@@ -71,8 +138,6 @@ def parse_character_definitions(content):
         temperament_match = re.search(r'<气质>([^<]+)</气质>', char_content)
         number_match = re.search(r'<角色编号>([^<]+)</角色编号>', char_content)
         
-        if name_match:
-            char_info['姓名'] = name_match.group(1).strip()
         if gender_match:
             char_info['性别'] = gender_match.group(1).strip()
         if age_match:
@@ -86,18 +151,22 @@ def parse_character_definitions(content):
         if number_match:
             char_info['数字编号'] = number_match.group(1).strip()
         
-        character_map[char_key] = char_info
+        character_map[character_name] = char_info
     
-    # 解析配角定义
+    # 兼容旧格式的配角定义
     supporting_pattern = r'<配角(\d+)>(.*?)</配角\d+>'
     supporting_matches = re.findall(supporting_pattern, content, re.DOTALL)
     
     for char_num, char_content in supporting_matches:
-        char_key = f"配角{char_num}"
         char_info = {}
         
         # 提取各种属性
         name_match = re.search(r'<姓名>([^<]+)</姓名>', char_content)
+        if not name_match:
+            continue
+        
+        character_name = name_match.group(1).strip()
+        
         gender_match = re.search(r'<性别>([^<]+)</性别>', char_content)
         age_match = re.search(r'<年龄段>([^<]+)</年龄段>', char_content)
         style_match = re.search(r'<风格>([^<]+)</风格>', char_content)
@@ -105,8 +174,6 @@ def parse_character_definitions(content):
         temperament_match = re.search(r'<气质>([^<]+)</气质>', char_content)
         number_match = re.search(r'<角色编号>([^<]+)</角色编号>', char_content)
         
-        if name_match:
-            char_info['姓名'] = name_match.group(1).strip()
         if gender_match:
             char_info['性别'] = gender_match.group(1).strip()
         if age_match:
@@ -120,7 +187,7 @@ def parse_character_definitions(content):
         if number_match:
             char_info['数字编号'] = number_match.group(1).strip()
         
-        character_map[char_key] = char_info
+        character_map[character_name] = char_info
     
     return character_map
 
@@ -164,12 +231,7 @@ def parse_narration_file(narration_file_path):
             print(f"处理分镜 {idx+1}")
             scene_info = {}
             
-            # 提取解说内容
-            narration_match = re.search(r'<解说内容>([^<]+)</解说内容>', scene_content, re.DOTALL)
-            if narration_match:
-                scene_info['narration'] = narration_match.group(1).strip()
-            
-            # 提取所有特写
+            # 提取所有特写（新格式：每个特写包含独立的解说内容）
             scene_info['closeups'] = []
             # 动态检测特写数量，最多支持10个特写
             for i in range(1, 11):  # 图片特写1到图片特写10
@@ -179,40 +241,51 @@ def parse_narration_file(narration_file_path):
                     closeup_content = closeup_match.group(1)
                     closeup_info = {}
                     
-                    # 提取特写人物和角色编号
-                    character_match = re.search(r'<特写人物>([^<]+)</特写人物>', closeup_content)
-                    character_id_match = re.search(r'<角色编号>([^<]+)</角色编号>', closeup_content)
+                    # 提取该特写的解说内容（新格式）
+                    narration_match = re.search(r'<解说内容>([^<]+)</解说内容>', closeup_content, re.DOTALL)
+                    if narration_match:
+                        closeup_info['narration'] = narration_match.group(1).strip()
+                        print(f"      特写{i}解说内容: {closeup_info['narration'][:30]}...")
                     
-                    # 优先从<角色姓名>标签中提取角色名称
-                    character_name_match = re.search(r'<角色姓名>([^<]+)</角色姓名>', closeup_content)
-                    
+                    # 提取特写人物信息
                     character_name = None
-                    if character_name_match:
-                        character_name = character_name_match.group(1).strip()
-                        closeup_info['character'] = character_name
-                        print(f"      从<角色姓名>提取到角色: {character_name}")
-                    elif character_match:
-                        character_name = character_match.group(1).strip()
-                        closeup_info['character'] = character_name
-                        print(f"      从<特写人物>提取到角色: {character_name}")
                     
-                    # 提取时代背景信息
-                    era_background_match = re.search(r'<时代背景>([^<]+)</时代背景>', closeup_content)
-                    if era_background_match:
-                        era_background = era_background_match.group(1).strip()
-                        closeup_info['era_background'] = era_background
-                        print(f"      提取到时代背景: {era_background}")
+                    # 从<特写人物>块中提取角色姓名
+                    character_block_match = re.search(r'<特写人物>(.*?)</特写人物>', closeup_content, re.DOTALL)
+                    if character_block_match:
+                        character_block = character_block_match.group(1)
+                        
+                        # 优先从<角色姓名>标签中提取角色名称
+                        character_name_match = re.search(r'<角色姓名>([^<]+)</角色姓名>', character_block)
+                        if character_name_match:
+                            character_name = character_name_match.group(1).strip()
+                            closeup_info['character'] = character_name
+                            print(f"      从<角色姓名>提取到角色: {character_name}")
+                        
+                        # 提取时代背景信息
+                        era_background_match = re.search(r'<时代背景>([^<]+)</时代背景>', character_block)
+                        if era_background_match:
+                            era_background = era_background_match.group(1).strip()
+                            closeup_info['era_background'] = era_background
+                            print(f"      提取到时代背景: {era_background}")
+                        
+                        # 提取角色形象信息
+                        character_image_match = re.search(r'<角色形象>([^<]+)</角色形象>', character_block)
+                        if character_image_match:
+                            character_image = character_image_match.group(1).strip()
+                            closeup_info['character_image'] = character_image
+                            print(f"      提取到角色形象: {character_image}")
                     
-                    # 提取角色形象信息
-                    character_image_match = re.search(r'<角色形象>([^<]+)</角色形象>', closeup_content)
-                    if character_image_match:
-                        character_image = character_image_match.group(1).strip()
-                        closeup_info['character_image'] = character_image
-                        print(f"      提取到角色形象: {character_image}")
+                    # 兼容旧格式的角色提取
+                    if not character_name:
+                        character_match = re.search(r'<特写人物>([^<]+)</特写人物>', closeup_content)
+                        if character_match:
+                            character_name = character_match.group(1).strip()
+                            closeup_info['character'] = character_name
+                            print(f"      从<特写人物>提取到角色: {character_name}")
                     
                     if character_name:
-                        
-                        # 根据角色编号查找角色定义
+                        # 根据角色名称查找角色定义
                         if character_name in character_map:
                             char_info = character_map[character_name]
                             closeup_info['gender'] = char_info.get('性别', '')
@@ -566,18 +639,41 @@ def ensure_30_images_per_chapter(chapter_dir):
 
 def encode_image_to_base64(image_path):
     """
-    将图片文件编码为base64
+    将图片文件编码为base64格式，包含实际图片类型信息
     
     Args:
         image_path: 图片文件路径
     
     Returns:
-        str: base64编码的图片数据
+        str: base64编码的图片数据，格式为 data:image/<format>;base64,<data>
+             如果编码失败返回None
     """
     try:
-        with open(image_path, 'rb') as f:
-            image_data = f.read()
-        return base64.b64encode(image_data).decode('utf-8')
+        with open(image_path, 'rb') as image_file:
+            # 读取图片二进制数据
+            image_data = image_file.read()
+            # 编码为base64
+            base64_data = base64.b64encode(image_data).decode('utf-8')
+            
+            # 获取图片格式 - 根据实际文件内容而不是扩展名
+            import imghdr
+            from pathlib import Path
+            detected_format = imghdr.what(image_path)
+            if detected_format:
+                # 使用检测到的实际格式
+                image_format = detected_format
+            else:
+                # 如果检测失败，回退到扩展名判断
+                file_extension = Path(image_path).suffix.lower()
+                if file_extension == '.jpg':
+                    image_format = 'jpeg'
+                else:
+                    image_format = file_extension[1:]  # 去掉点号
+            
+            # 构造完整的data URL
+            print(f"image_format: {image_format}")
+            return f"data:image/{image_format};base64,{base64_data}"
+            
     except Exception as e:
         print(f"编码图片为base64时发生错误: {e}")
         return None
@@ -707,7 +803,6 @@ def generate_image_with_character_async(prompt, output_path, character_images=No
                     "logo_text_content": "这里是明水印内容"
                 }
             }
-            print(form)
             
             # 如果有角色图片，添加到请求中
             print(f"角色图片参数: {character_images}")

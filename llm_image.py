@@ -281,7 +281,7 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
         
         for attempt in range(max_retries + 1):
             # 构建完整提示词
-            full_prompt = "把胸口到脖子的皮肤全部覆盖住,去掉衽领，交领，V领，换成高领圆领袍\n领口不能是V领，领口不能是衽领，领口不能是交领，领口不能是任何y字型或者v字型的领子\n手指数量修改到正常\n角色之间不能有拥抱、挽手、亲密接触等行为，角色之间要保持适当距离\n" + style_prompt + "\n\n" + prompt + "\n\n"
+            full_prompt = "女性衣服不能漏膝盖以上遮盖掉,把胸口到脖子的皮肤全部覆盖住,去掉衽领，交领，V领，换成高领圆领袍\n领口不能是V领，领口不能是衽领，领口不能是交领，领口不能是任何y字型或者v字型的领子\n手指数量修改到正常\n角色之间不能有拥抱、挽手、亲密接触等行为，角色之间要保持适当距离\n" + style_prompt + "\n\n" + prompt + "\n\n"
             
             if attempt == 0:  # 只在第一次尝试时打印完整prompt
                 print("完整的prompt: {}".format(full_prompt))

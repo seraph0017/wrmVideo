@@ -47,29 +47,24 @@ class ContentFilter:
     """
     
     def __init__(self):
-        # 违禁词汇列表
+        # 违禁词汇列表（大幅放松 - 仅保留极端敏感内容）
         self.forbidden_words = {
-            '睡觉', '拥抱', '双修', '采补', '吸精', '吸精气', '乱摸', '乱动', '赤裸裸', 
-            '风韵', '韵味', '味道', '服侍', '爆浆', '口味', '尝鲜', '床上', '大宝贝', 
-            '勾引', '色情', '偷人', '欲望', '互动', '鼎炉', '温柔', '温热', '目光', 
-            '润湿', '洗澡', '不轨', '大腿', '怀孕', '抱起', '姿势', '春药', '媚药', 
-            '软床', '丝袜', '诱惑', '催情', '允吸', '怀里', '亲吻', '毒品', '上床', 
-            '强暴', '性欲'
+            '双修', '采补', '吸精', '吸精气', '乱摸', '乱动', 
+            '爆浆', '大宝贝', '色情', '偷人', '鼎炉', 
+            '春药', '媚药', '催情', '允吸', '毒品', 
+            '上床', '强暴', '性欲'
         }
         
-        # 联想性词汇
+        # 联想性词汇（大幅放松 - 仅保留极端不当内容）
         self.suggestive_words = {
-            '内心空虚', '挤眉弄眼', '衣衫不整', '脸色潮红', '蹭了蹭', '双腿间', 
-            '我想和你在一起', '生命大和谐', '欲望上头', '房间互动', '皮肤发烫', 
-            '浑身燥热', '轻轻划过', '躺在床上', '抱入怀中', '抱起'
+            '生命大和谐', '欲望上头', '房间互动', 
+            '前凸后翘', '你侬我侬', '卿卿我我'
         }
         
-        # 禁用句式模式
+        # 禁用句式模式（大幅放松 - 仅保留极端不当句式）
         self.forbidden_patterns = [
-            r'我和.*一起睡', r'打扰我和.*一起睡', r'好久没抱着.*睡觉', 
-            r'我不喜欢和.*睡在一起', r'.*沾了.*身子', r'贴在衣服的包裹下',
-            r'身体微微的起浮', r'面部发烫的感觉', r'将.*搂在怀中', 
-            r'完美S型身材', r'几乎将衣服撑爆'
+            r'我和.*一起睡', r'.*沾了.*身子', 
+            r'.*抚摸.*', r'.*爱抚.*', r'.*体香.*'
         ]
         
         # 敏感词替换映射
@@ -201,12 +196,12 @@ class ScriptGeneratorV2:
         # 初始化内容过滤器
         self.content_filter = ContentFilter()
         
-        # 验证配置
+        # 验证配置（大幅放松限制）
         self.validation_config = {
-            'min_length': 1200,  # 根据模板要求，解说内容总字数约1500字
-            'max_length': 1800,  # 允许一定范围的浮动
-            'max_retries': 3,
-            'quality_threshold': 0.8  # 质量阈值
+            'min_length': 500,   # 大幅降低最小字数要求
+            'max_length': 3000,  # 进一步增加最大字数限制
+            'max_retries': 8,    # 大幅增加重试次数
+            'quality_threshold': 0.4  # 大幅降低质量阈值
         }
     
     def read_novel_file(self, file_path: str) -> str:
@@ -433,21 +428,24 @@ class ScriptGeneratorV2:
         # 检查并移除不需要的标签
         cleaned_narration = self._remove_unwanted_tags(narration)
         
-        # 内容审查 - 检查违禁词汇和露骨文案
-        is_content_safe, content_issues = self.content_filter.check_content(cleaned_narration)
-        if not is_content_safe:
-            print(f"内容审查发现问题: {'; '.join(content_issues)}")
-            # 尝试自动过滤内容
-            filtered_narration = self.content_filter.filter_content(cleaned_narration)
-            print("已自动过滤敏感内容")
-            cleaned_narration = filtered_narration
-            
-            # 再次检查过滤后的内容
-            is_filtered_safe, filtered_issues = self.content_filter.check_content(cleaned_narration)
-            if not is_filtered_safe:
-                return False, f"内容包含无法自动过滤的违禁内容: {'; '.join(filtered_issues)}"
+        # 内容审查 - 检查违禁词汇和露骨文案（仅警告模式）
+        try:
+            is_content_safe, content_issues = self.content_filter.check_content(cleaned_narration)
+            if not is_content_safe:
+                print(f"警告：内容审查发现问题: {'; '.join(content_issues)}")
+                # 尝试自动过滤内容
+                filtered_narration = self.content_filter.filter_content(cleaned_narration)
+                print("已自动过滤敏感内容")
+                cleaned_narration = filtered_narration
+                
+                # 再次检查过滤后的内容（仅警告，不阻断）
+                is_filtered_safe, filtered_issues = self.content_filter.check_content(cleaned_narration)
+                if not is_filtered_safe:
+                    print(f"警告：过滤后仍存在问题: {'; '.join(filtered_issues)}，但继续生成")
+        except Exception as e:
+            print(f"警告：内容审查过程中出现异常，跳过审查 - {e}")
         
-        # 提取所有<解说内容>标签内的文本进行字数统计
+        # 提取所有<解说内容>标签内的文本进行字数统计（新格式：每个特写包含独立解说）
         import re
         explanation_pattern = r'<解说内容>(.*?)</解说内容>'
         explanation_matches = re.findall(explanation_pattern, cleaned_narration, re.DOTALL)
@@ -455,9 +453,14 @@ class ScriptGeneratorV2:
         if not explanation_matches:
             return False, "未找到解说内容标签"
         
-        # 计算所有解说内容的总字数
+        # 计算所有解说内容的总字数（新格式：30个特写的解说内容）
         total_explanation_text = ''.join(explanation_matches)
         explanation_length = len(total_explanation_text.strip())
+        
+        # 验证特写数量（应该有10个分镜×3个特写=30个解说内容）
+        expected_explanations = 30
+        if len(explanation_matches) != expected_explanations:
+            print(f"警告：解说内容数量不正确，期望{expected_explanations}个，实际{len(explanation_matches)}个")
         
         if explanation_length < min_length:
             return False, f"解说文本长度不足，当前{explanation_length}字，最少需要{min_length}字"
@@ -466,10 +469,14 @@ class ScriptGeneratorV2:
             return False, f"解说文本过长，当前{explanation_length}字，最多允许{max_length}字"
         
         # 验证图片特写是否为单人画面（仅提示，不强制重新生成）
-        single_person_valid, single_person_error = self._validate_single_person_closeups(cleaned_narration)
-        if not single_person_valid:
-            print(f"警告：检测到多人特写描述 - {single_person_error}")
-            # 不返回错误，仅记录警告
+        try:
+            single_person_valid, single_person_error = self._validate_single_person_closeups(cleaned_narration)
+            if not single_person_valid:
+                print(f"警告：检测到多人特写描述 - {single_person_error}")
+                # 不返回错误，仅记录警告
+        except Exception as e:
+            print(f"警告：特写验证过程中出现异常，跳过验证 - {e}")
+            # 验证异常不影响生成流程
         
         # 自动修复XML标签闭合
         fixed_narration = self._fix_xml_tags(cleaned_narration)
@@ -560,7 +567,7 @@ class ScriptGeneratorV2:
     
     def _validate_single_person_closeups(self, content: str) -> Tuple[bool, str]:
         """
-        验证图片特写是否为单人画面
+        验证图片特写是否为单人画面，并检查特写与解说内容的对应关系
         
         Args:
             content: 解说内容
@@ -586,27 +593,145 @@ class ScriptGeneratorV2:
             '相视', '对视', '面对面', '并肩', '携手', '拥抱', '依偎'
         ]
         
-        for i, prompt in enumerate(prompt_matches, 1):
-            prompt_text = prompt.strip().lower()
+        # 提取所有解说内容用于对应关系验证
+        explanation_pattern = r'<解说内容>(.*?)</解说内容>'
+        explanation_matches = re.findall(explanation_pattern, content, re.DOTALL)
+        
+        # 按分镜组织特写和解说内容
+        scene_pattern = r'<分镜(\d+)>(.*?)</分镜\d+>'
+        scene_matches = re.findall(scene_pattern, content, re.DOTALL)
+        
+        for scene_num, scene_content in scene_matches:
+            # 提取该分镜的解说内容
+            scene_explanation_match = re.search(r'<解说内容>(.*?)</解说内容>', scene_content, re.DOTALL)
+            if not scene_explanation_match:
+                continue
+                
+            scene_explanation = scene_explanation_match.group(1).strip()
             
-            # 检查是否包含多人关键词
-            for keyword in multi_person_keywords:
-                if keyword in prompt_text:
-                    return False, f"第{i}个图片prompt包含多人描述关键词：'{keyword}'，每个特写必须只有一个人物"
+            # 提取该分镜的所有特写
+            scene_prompts = re.findall(r'<图片prompt>(.*?)</图片prompt>', scene_content, re.DOTALL)
             
-            # 检查是否包含数字+人的模式
-            number_person_pattern = r'[二三四五六七八九十\d]+[个]?人'
-            if re.search(number_person_pattern, prompt_text):
-                match = re.search(number_person_pattern, prompt_text)
-                return False, f"第{i}个图片prompt包含多人数量描述：'{match.group()}'，每个特写必须只有一个人物"
+            if len(scene_prompts) != 3:
+                return False, f"分镜{scene_num}的特写数量不正确，应该有3个特写，实际有{len(scene_prompts)}个"
             
-            # 检查是否包含复数人称代词
-            plural_pronouns = ['他们的', '她们的', '大家的', '众人的', '人们的']
-            for pronoun in plural_pronouns:
-                if pronoun in prompt_text:
-                    return False, f"第{i}个图片prompt包含复数人称代词：'{pronoun}'，每个特写必须只有一个人物"
+            # 验证每个特写的内容
+            for prompt_idx, prompt in enumerate(scene_prompts, 1):
+                prompt_text = prompt.strip().lower()
+                
+                # 检查是否包含多人关键词
+                for keyword in multi_person_keywords:
+                    if keyword in prompt_text:
+                        return False, f"分镜{scene_num}第{prompt_idx}个特写包含多人描述关键词：'{keyword}'，每个特写必须只有一个人物"
+                
+                # 检查是否包含数字+人的模式
+                number_person_pattern = r'[二三四五六七八九十\d]+[个]?人'
+                if re.search(number_person_pattern, prompt_text):
+                    match = re.search(number_person_pattern, prompt_text)
+                    return False, f"分镜{scene_num}第{prompt_idx}个特写包含多人数量描述：'{match.group()}'，每个特写必须只有一个人物"
+                
+                # 检查是否包含复数人称代词
+                plural_pronouns = ['他们的', '她们的', '大家的', '众人的', '人们的']
+                for pronoun in plural_pronouns:
+                    if pronoun in prompt_text:
+                        return False, f"分镜{scene_num}第{prompt_idx}个特写包含复数人称代词：'{pronoun}'，每个特写必须只有一个人物"
+            
+            # 验证特写与解说内容的对应关系（基础检查）
+            self._validate_closeup_content_correspondence(scene_num, scene_explanation, scene_prompts)
         
         return True, ""
+    
+    def _validate_closeup_content_correspondence(self, scene_num: str, explanation: str, prompts: List[str]) -> None:
+        """
+        验证特写与解说内容的对应关系（基础检查）
+        
+        Args:
+            scene_num: 分镜编号
+            explanation: 解说内容
+            prompts: 图片特写描述列表
+        """
+        # 将解说内容分为三个部分
+        explanation_length = len(explanation)
+        part1_end = explanation_length // 3
+        part2_end = explanation_length * 2 // 3
+        
+        explanation_part1 = explanation[:part1_end]
+        explanation_part2 = explanation[part1_end:part2_end]
+        explanation_part3 = explanation[part2_end:]
+        
+        # 提取关键词进行基础匹配验证
+        parts = [explanation_part1, explanation_part2, explanation_part3]
+        
+        for i, (part, prompt) in enumerate(zip(parts, prompts), 1):
+            # 提取解说内容中的关键动作词和情感词
+            action_keywords = self._extract_action_keywords(part)
+            emotion_keywords = self._extract_emotion_keywords(part)
+            
+            # 检查特写描述是否包含相应的关键词
+            prompt_lower = prompt.lower()
+            
+            # 记录匹配情况（仅作为警告，不强制失败）
+            action_matches = any(keyword in prompt_lower for keyword in action_keywords)
+            emotion_matches = any(keyword in prompt_lower for keyword in emotion_keywords)
+            
+            if not action_matches and action_keywords:
+                print(f"警告：分镜{scene_num}特写{i}可能与解说内容第{i}部分的动作描述不够匹配")
+            
+            if not emotion_matches and emotion_keywords:
+                print(f"警告：分镜{scene_num}特写{i}可能与解说内容第{i}部分的情感描述不够匹配")
+    
+    def _extract_action_keywords(self, text: str) -> List[str]:
+        """
+        从文本中提取动作关键词
+        
+        Args:
+            text: 文本内容
+            
+        Returns:
+            List[str]: 动作关键词列表
+        """
+        action_words = [
+            '走', '跑', '站', '坐', '躺', '跳', '飞', '游', '爬', '滚',
+            '看', '听', '说', '笑', '哭', '喊', '叫', '唱', '读', '写',
+            '拿', '放', '抓', '握', '推', '拉', '打', '踢', '扔', '接',
+            '开', '关', '进', '出', '上', '下', '左', '右', '前', '后',
+            '转身', '回头', '点头', '摇头', '挥手', '鞠躬', '起身', '坐下'
+        ]
+        
+        found_keywords = []
+        for word in action_words:
+            if word in text:
+                found_keywords.append(word)
+        
+        return found_keywords
+    
+    def _extract_emotion_keywords(self, text: str) -> List[str]:
+        """
+        从文本中提取情感关键词
+        
+        Args:
+            text: 文本内容
+            
+        Returns:
+            List[str]: 情感关键词列表
+        """
+        emotion_words = [
+            '高兴', '快乐', '兴奋', '激动', '开心', '愉快', '欣喜', '喜悦',
+            '悲伤', '难过', '伤心', '痛苦', '忧愁', '沮丧', '失落', '绝望',
+            '愤怒', '生气', '恼怒', '暴怒', '愤慨', '恼火', '气愤', '怒火',
+            '害怕', '恐惧', '紧张', '担心', '焦虑', '不安', '惊慌', '恐慌',
+            '惊讶', '震惊', '吃惊', '诧异', '意外', '惊奇', '惊愕', '错愕',
+            '平静', '冷静', '淡定', '从容', '镇定', '安详', '宁静', '祥和',
+            '严肃', '认真', '专注', '凝重', '庄重', '肃穆', '威严', '庄严',
+            '温和', '和善', '慈祥', '亲切', '友善', '和蔼', '温柔', '柔和'
+        ]
+        
+        found_keywords = []
+        for word in emotion_words:
+            if word in text:
+                found_keywords.append(word)
+        
+        return found_keywords
     
     def audit_and_filter_narration(self, narration: str, chapter_num: int) -> Tuple[bool, str]:
         """

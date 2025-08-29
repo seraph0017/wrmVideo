@@ -71,9 +71,108 @@ SUPPORTED_FORMATS = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp'}
 # 旁白图片文件名模式：chapter_xxx_image_xx_x
 NARRATION_IMAGE_PATTERN = re.compile(r'^chapter_\d+_image_\d+_\d+\.(jpg|jpeg|png|gif|bmp|webp)$', re.IGNORECASE)
 
+def resize_image_if_needed(image_path: str, max_size_mb: float = 4.7) -> str:
+    """
+    处理图片：转换为JPG格式，如果大小超过限制则压缩
+    
+    Args:
+        image_path: 图片文件路径
+        max_size_mb: 最大文件大小（MB）
+        
+    Returns:
+        str: 处理后的图片路径（临时文件路径）
+    """
+    try:
+        from PIL import Image
+        import tempfile
+        
+        # 检查文件大小
+        file_size_mb = os.path.getsize(image_path) / (1024 * 1024)
+        
+        # 检查是否已经是JPG格式
+        file_extension = Path(image_path).suffix.lower()
+        is_jpg = file_extension in ['.jpg', '.jpeg']
+        
+        # 如果是JPG格式且大小符合要求，直接返回原路径
+        if is_jpg and file_size_mb <= max_size_mb:
+            return image_path
+        
+        # 需要处理的情况：非JPG格式或大小超限
+        if not is_jpg:
+            print(f"转换图片格式为JPG: {os.path.basename(image_path)}")
+        if file_size_mb > max_size_mb:
+            print(f"图片大小 {file_size_mb:.2f}MB 超过限制 {max_size_mb}MB，正在压缩...")
+        
+        # 打开图片
+        with Image.open(image_path) as img:
+            # 转换为RGB模式（如果是RGBA或其他模式）
+            if img.mode in ('RGBA', 'LA', 'P'):
+                # 创建白色背景
+                background = Image.new('RGB', img.size, (255, 255, 255))
+                if img.mode == 'P':
+                    img = img.convert('RGBA')
+                background.paste(img, mask=img.split()[-1] if img.mode == 'RGBA' else None)
+                img = background
+            elif img.mode != 'RGB':
+                img = img.convert('RGB')
+            
+            # 创建临时文件
+            temp_fd, temp_path = tempfile.mkstemp(suffix='.jpg')
+            os.close(temp_fd)
+            
+            # 如果文件大小符合要求，直接转换格式
+            if file_size_mb <= max_size_mb:
+                img.save(temp_path, 'JPEG', quality=95, optimize=True)
+                temp_size_mb = os.path.getsize(temp_path) / (1024 * 1024)
+                print(f"格式转换完成: {file_size_mb:.2f}MB -> {temp_size_mb:.2f}MB (JPG)")
+                return temp_path
+            
+            # 需要压缩的情况
+            # 计算压缩比例
+            target_ratio = max_size_mb / file_size_mb
+            scale_factor = min(0.9, target_ratio ** 0.5)  # 保守的缩放因子
+            
+            # 计算新尺寸
+            new_width = int(img.width * scale_factor)
+            new_height = int(img.height * scale_factor)
+            
+            # 调整图片尺寸
+            img_resized = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+            
+            # 保存压缩后的图片，调整质量
+            quality = 85
+            while quality > 20:
+                img_resized.save(temp_path, 'JPEG', quality=quality, optimize=True)
+                
+                # 检查文件大小
+                temp_size_mb = os.path.getsize(temp_path) / (1024 * 1024)
+                if temp_size_mb <= max_size_mb:
+                    print(f"压缩完成: {file_size_mb:.2f}MB -> {temp_size_mb:.2f}MB (质量: {quality})")
+                    return temp_path
+                
+                quality -= 10
+            
+            # 如果还是太大，进一步缩小尺寸
+            scale_factor *= 0.8
+            new_width = int(img.width * scale_factor)
+            new_height = int(img.height * scale_factor)
+            img_resized = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+            img_resized.save(temp_path, 'JPEG', quality=70, optimize=True)
+            
+            temp_size_mb = os.path.getsize(temp_path) / (1024 * 1024)
+            print(f"强制压缩完成: {file_size_mb:.2f}MB -> {temp_size_mb:.2f}MB")
+            return temp_path
+            
+    except ImportError:
+        print("警告: PIL库未安装，无法处理图片")
+        return image_path
+    except Exception as e:
+        print(f"处理图片失败: {e}")
+        return image_path
+
 def encode_image_to_base64(image_path: str) -> Optional[str]:
     """
-    将图片文件编码为base64格式
+    将图片文件编码为base64格式，会先转换为JPG格式并在必要时进行压缩
     
     Args:
         image_path: 图片文件路径
@@ -82,8 +181,13 @@ def encode_image_to_base64(image_path: str) -> Optional[str]:
         base64编码的图片数据，格式为 data:image/<format>;base64,<data>
         如果编码失败返回None
     """
+    temp_path = None
     try:
-        with open(image_path, 'rb') as image_file:
+        # 处理图片：转换为JPG格式，如果过大则压缩
+        processed_path = resize_image_if_needed(image_path)
+        temp_path = processed_path if processed_path != image_path else None
+        
+        with open(processed_path, 'rb') as image_file:
             # 读取图片二进制数据
             image_data = image_file.read()
             # 编码为base64
@@ -91,13 +195,13 @@ def encode_image_to_base64(image_path: str) -> Optional[str]:
             
             # 获取图片格式 - 根据实际文件内容而不是扩展名
             import imghdr
-            detected_format = imghdr.what(image_path)
+            detected_format = imghdr.what(processed_path)
             if detected_format:
                 # 使用检测到的实际格式
                 image_format = detected_format
             else:
                 # 如果检测失败，回退到扩展名判断
-                file_extension = Path(image_path).suffix.lower()
+                file_extension = Path(processed_path).suffix.lower()
                 if file_extension == '.jpg':
                     image_format = 'jpeg'
                 else:
@@ -109,6 +213,13 @@ def encode_image_to_base64(image_path: str) -> Optional[str]:
     except Exception as e:
         print(f"编码图片失败 {image_path}: {e}")
         return None
+    finally:
+        # 清理临时文件
+        if temp_path and os.path.exists(temp_path):
+            try:
+                os.unlink(temp_path)
+            except:
+                pass
 
 def find_narration_images_in_chapters(data_directory: str) -> List[str]:
     """
@@ -264,7 +375,7 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
         
         for attempt in range(max_retries + 1):
             # 构建完整提示词，特别强调领口、皮肤暴露和手部要求
-            full_prompt = "去掉衽领，交领，V领，y字型领，换成高领圆领袍\n\
+            full_prompt = "女性衣服不能漏膝盖以上,去掉衽领，交领，V领，y字型领，换成高领圆领袍\n\
                 领口不能是V领，领口不能是衽领，领口不能是交领，领口不能是任何y字型或者v字型的领子\n\
                     脖子必须完全被服装遮盖不能有任何暴露，后背脖子以下不能有皮肤暴露，胸部不能有皮肤暴露\n\
                         角色只能有两只手，不能有三只手或更多手臂,手指数量要正常,不能有多余的手指\n\
@@ -298,7 +409,12 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
                     if img_path and os.path.exists(img_path):
                         base64_data = gen_encode_image_to_base64(img_path)
                         if base64_data:
-                            binary_data_list.append(base64_data)
+                            # 从data URL中提取纯base64数据（去掉"data:image/xxx;base64,"前缀）
+                            if base64_data.startswith('data:'):
+                                pure_base64 = base64_data.split(',')[1]
+                            else:
+                                pure_base64 = base64_data
+                            binary_data_list.append(pure_base64)
                             print(f"成功添加角色图片: {img_path}")
                         else:
                             print(f"角色图片编码失败: {img_path}")
@@ -388,15 +504,28 @@ def regenerate_failed_image(image_path: str) -> bool:
         print(f"生成提示词: {regenerate_prompt}")
         print("注意: 使用原始失败图片作为参考进行改进")
         
+        # 先压缩原始图片，然后使用压缩后的版本作为参考
+        compressed_image_path = resize_image_if_needed(image_path)
+        
         # 调用新的异步生成函数，将任务保存到对应chapter的async_tasks目录
-        # 传入原始失败图片作为character_images参数
+        # 使用压缩后的图片作为参考
+        character_images_to_use = [compressed_image_path] if compressed_image_path != image_path else [image_path]
+        
         success = generate_image_with_character_to_chapter_async(
             prompt=regenerate_prompt,
             output_path=image_path,  # 直接替换原图片
-            character_images=[image_path],  # 使用原始失败图片作为参考
+            character_images=character_images_to_use,  # 使用压缩后的图片作为参考
             style='manga',  # 使用manga风格
             max_retries=3
         )
+        
+        # 清理临时压缩文件
+        if compressed_image_path != image_path and os.path.exists(compressed_image_path):
+            try:
+                os.unlink(compressed_image_path)
+                print(f"已清理临时压缩文件: {compressed_image_path}")
+            except:
+                pass
         
         if success:
             print(f"✓ 重新生成任务已提交: {os.path.basename(image_path)}")

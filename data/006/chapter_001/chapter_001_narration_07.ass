@@ -14,16 +14,7 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.40,Default,,0,0,0,,夫子讲授天圆地方
-Dialogue: 0,0:00:01.91,0:00:04.22,Default,,0,0,0,,学馆内{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}坐在末排听夫子
-Dialogue: 0,0:00:04.22,0:00:06.12,Default,,0,0,0,,讲荒古世界乃神人开辟
-Dialogue: 0,0:00:06.62,0:00:07.31,Default,,0,0,0,,天圆地方
-Dialogue: 0,0:00:07.71,0:00:10.25,Default,,0,0,0,,当听到大地平坦如棋局时他
-Dialogue: 0,0:00:10.25,0:00:11.10,Default,,0,0,0,,噗嗤笑出声
-Dialogue: 0,0:00:11.39,0:00:12.18,Default,,0,0,0,,大地是圆的
-Dialogue: 0,0:00:12.52,0:00:14.76,Default,,0,0,0,,同窗哗然{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}讥笑道
-Dialogue: 0,0:00:15.06,0:00:16.10,Default,,0,0,0,,赵草包懂什么
-Dialogue: 0,0:00:16.44,0:00:17.57,Default,,0,0,0,,夫子视线如炬
-Dialogue: 0,0:00:17.91,0:00:19.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}你说大地是圆的
-Dialogue: 0,0:00:20.08,0:00:21.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}挺直腰杆
-Dialogue: 0,0:00:21.36,0:00:21.93,Default,,0,0,0,,是球体
+Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与赵鸾来到餐厅
+Dialogue: 0,0:00:01.91,0:00:03.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}对古代环境感到陌生
+Dialogue: 0,0:00:04.25,0:00:05.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}向他解释家族情况
+Dialogue: 0,0:00:06.18,0:00:07.02,Default,,0,0,0,,神情认真

@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_002 Narration 22 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}擦干眼泪
+Dialogue: 0,0:00:01.46,0:00:02.85,Default,,0,0,0,,拉着{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}走向屋内
+Dialogue: 0,0:00:03.20,0:00:04.80,Default,,0,0,0,,兴奋地讲述这些年的经历
+Dialogue: 0,0:00:05.28,0:00:06.01,Default,,0,0,0,,虽然艰苦
+Dialogue: 0,0:00:06.21,0:00:07.86,Default,,0,0,0,,却从未放弃寻找家人
+Dialogue: 0,0:00:08.13,0:00:09.40,Default,,0,0,0,,对未来{\c&H0000FFFF&\b1}充满希望{\c&H00FFFFFF&\b0}

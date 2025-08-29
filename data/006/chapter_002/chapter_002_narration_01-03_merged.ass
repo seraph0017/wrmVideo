@@ -1,0 +1,26 @@
+[Script Info]
+Title: Merged Narration
+ScriptType: v4.00+
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}背靠木门
+Dialogue: 0,0:00:01.37,0:00:02.12,Default,,0,0,0,,嘴角带血
+Dialogue: 0,0:00:02.50,0:00:03.99,Default,,0,0,0,,眼神倔强地盯着前方
+Dialogue: 0,0:00:04.41,0:00:06.08,Default,,0,0,0,,面对强敌仍不肯退让
+Dialogue: 0,0:00:06.45,0:00:08.56,Default,,0,0,0,,守护家园的决心显露无疑
+Dialogue: 0,0:00:08.58,0:00:10.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}狞笑着步步逼近
+Dialogue: 0,0:00:10.48,0:00:12.25,Default,,0,0,0,,身上散发着归一期中阶的
+Dialogue: 0,0:00:12.25,0:00:12.58,Default,,0,0,0,,威压
+Dialogue: 0,0:00:13.08,0:00:15.22,Default,,0,0,0,,强大的气势让空气都仿佛
+Dialogue: 0,0:00:15.22,0:00:15.58,Default,,0,0,0,,凝固
+Dialogue: 0,0:00:15.99,0:00:17.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵丰{\c&H00FFFFFF&\b0}的处境愈发危险
+Dialogue: 0,0:00:17.77,0:00:19.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}如闪电般出现在院内
+Dialogue: 0,0:00:19.96,0:00:22.97,Default,,0,0,0,,青色长袍飘动长剑出鞘一声
+Dialogue: 0,0:00:22.97,0:00:23.39,Default,,0,0,0,,怒喝
+Dialogue: 0,0:00:23.60,0:00:24.62,Default,,0,0,0,,尔敢伤我大哥
+Dialogue: 0,0:00:24.94,0:00:27.76,Default,,0,0,0,,杀气瞬间锁定{\c&H0000FFFF&\b1}卢三{\c&H00FFFFFF&\b0}局势骤变

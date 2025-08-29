@@ -14,14 +14,10 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}收印墨龙禀明
-Dialogue: 0,0:00:02.45,0:00:04.75,Default,,0,0,0,,潜龙宗主力已被制服余孽
-Dialogue: 0,0:00:04.75,0:00:05.15,Default,,0,0,0,,逃散
-Dialogue: 0,0:00:05.67,0:00:08.23,Default,,0,0,0,,赵硕望向潜龙宗主后者面如
-Dialogue: 0,0:00:08.23,0:00:08.61,Default,,0,0,0,,S灰
-Dialogue: 0,0:00:08.99,0:00:09.77,Default,,0,0,0,,辛芦轻叹
-Dialogue: 0,0:00:10.11,0:00:11.80,Default,,0,0,0,,早知今日{\c&H0000FFFF&\b1}何必当初{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:12.23,0:00:14.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}沉吟命墨龙清点俘虏
-Dialogue: 0,0:00:15.18,0:00:17.73,Default,,0,0,0,,自身则与{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}移步窗边望向
-Dialogue: 0,0:00:17.73,0:00:20.87,Default,,0,0,0,,院外天色渐暗厮杀声渐息仅
-Dialogue: 0,0:00:20.87,0:00:21.84,Default,,0,0,0,,余火光点点
+Dialogue: 0,0:00:00.02,0:00:01.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙欣{\c&H00FFFFFF&\b0}策马奔出山门
+Dialogue: 0,0:00:01.78,0:00:03.70,Default,,0,0,0,,深蓝色劲装在{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}下泛着
+Dialogue: 0,0:00:03.70,0:00:04.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}冷光{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.63,0:00:06.20,Default,,0,0,0,,腰间{\c&H0000FFFF&\b1}佩剑{\c&H00FFFFFF&\b0}轻撞马鞍
+Dialogue: 0,0:00:06.64,0:00:08.31,Default,,0,0,0,,身后锦衣卫亲卫百人队
+Dialogue: 0,0:00:08.31,0:00:09.12,Default,,0,0,0,,紧随其后
+Dialogue: 0,0:00:09.52,0:00:11.09,Default,,0,0,0,,前往前线督查防务

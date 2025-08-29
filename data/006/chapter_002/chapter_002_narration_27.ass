@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_002 Narration 27 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}接过水杯
+Dialogue: 0,0:00:01.47,0:00:02.66,Default,,0,0,0,,感受着杯中的暖意
+Dialogue: 0,0:00:03.10,0:00:04.20,Default,,0,0,0,,如同心中的温暖
+Dialogue: 0,0:00:04.55,0:00:04.92,Default,,0,0,0,,他知道
+Dialogue: 0,0:00:05.14,0:00:06.64,Default,,0,0,0,,兄弟重逢只是开始
+Dialogue: 0,0:00:07.13,0:00:08.36,Default,,0,0,0,,未来的路还很长
+Dialogue: 0,0:00:08.78,0:00:10.17,Default,,0,0,0,,他将守护这份亲情
+Dialogue: 0,0:00:10.45,0:00:11.67,Default,,0,0,0,,迎接新的挑战

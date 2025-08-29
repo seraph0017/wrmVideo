@@ -14,15 +14,8 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.12,Default,,0,0,0,,油灯下缝补衣裳
-Dialogue: 0,0:00:01.57,0:00:04.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}坐在油灯旁给赵硕缝补
-Dialogue: 0,0:00:04.03,0:00:04.85,Default,,0,0,0,,刮破的长衫
-Dialogue: 0,0:00:05.29,0:00:07.82,Default,,0,0,0,,昏黄灯光映着她鬓边{\c&H0000FFFF&\b1}白发{\c&H00FFFFFF&\b0}她
-Dialogue: 0,0:00:07.82,0:00:08.33,Default,,0,0,0,,轻声道
-Dialogue: 0,0:00:08.76,0:00:10.25,Default,,0,0,0,,娘一定让你星图开窍
-Dialogue: 0,0:00:10.76,0:00:12.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}看着母亲粗糙的
-Dialogue: 0,0:00:12.02,0:00:14.15,Default,,0,0,0,,手突然想起现代{\c&H0000FFFF&\b1}天文台{\c&H00FFFFFF&\b0}的
-Dialogue: 0,0:00:14.15,0:00:15.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青蝉{\c&H00FFFFFF&\b0}眼眶一热
-Dialogue: 0,0:00:16.18,0:00:17.66,Default,,0,0,0,,娘我会努力的
-Dialogue: 0,0:00:18.04,0:00:20.57,Default,,0,0,0,,窗外月光洒进照在磨盘饰品
-Dialogue: 0,0:00:20.57,0:00:21.79,Default,,0,0,0,,上泛着幽光
+Dialogue: 0,0:00:00.02,0:00:01.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}带人拦住赵硕兄妹
+Dialogue: 0,0:00:02.22,0:00:03.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}言语{\c&H00FFFFFF&\b0}挑衅
+Dialogue: 0,0:00:03.39,0:00:04.20,Default,,0,0,0,,神情嚣张
+Dialogue: 0,0:00:04.67,0:00:05.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}隐忍不发
+Dialogue: 0,0:00:06.04,0:00:07.35,Default,,0,0,0,,拉着{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}欲离开

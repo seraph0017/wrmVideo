@@ -475,18 +475,40 @@ def find_character_image_by_attributes(gender, age_group, character_style, cultu
 
 def encode_image_to_base64(image_path):
     """
-    将图片文件编码为base64
+    将图片文件编码为base64格式，包含实际图片类型信息
     
     Args:
         image_path: 图片文件路径
     
     Returns:
-        str: base64编码的图片数据
+        str: base64编码的图片数据，格式为 data:image/<format>;base64,<data>
+             如果编码失败返回None
     """
     try:
-        with open(image_path, 'rb') as f:
-            image_data = f.read()
-        return base64.b64encode(image_data).decode('utf-8')
+        with open(image_path, 'rb') as image_file:
+            # 读取图片二进制数据
+            image_data = image_file.read()
+            # 编码为base64
+            base64_data = base64.b64encode(image_data).decode('utf-8')
+            
+            # 获取图片格式 - 根据实际文件内容而不是扩展名
+            import imghdr
+            from pathlib import Path
+            detected_format = imghdr.what(image_path)
+            if detected_format:
+                # 使用检测到的实际格式
+                image_format = detected_format
+            else:
+                # 如果检测失败，回退到扩展名判断
+                file_extension = Path(image_path).suffix.lower()
+                if file_extension == '.jpg':
+                    image_format = 'jpeg'
+                else:
+                    image_format = file_extension[1:]  # 去掉点号
+            
+            # 构造完整的data URL
+            return f"data:image/{image_format};base64,{base64_data}"
+            
     except Exception as e:
         print(f"编码图片为base64时发生错误: {e}")
         return None

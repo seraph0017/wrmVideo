@@ -14,15 +14,9 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,诸事既定{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与
-Dialogue: 0,0:00:01.45,0:00:02.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}返回别院
-Dialogue: 0,0:00:03.09,0:00:04.20,Default,,0,0,0,,途中辛芦道
-Dialogue: 0,0:00:04.55,0:00:07.32,Default,,0,0,0,,潜龙宗归降{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}实力大增
-Dialogue: 0,0:00:07.67,0:00:08.87,Default,,0,0,0,,然需防后续动荡
-Dialogue: 0,0:00:09.34,0:00:10.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}点头
-Dialogue: 0,0:00:10.43,0:00:13.16,Default,,0,0,0,,当务之急是整合势力稳固八
-Dialogue: 0,0:00:13.16,0:00:13.53,Default,,0,0,0,,荒山
-Dialogue: 0,0:00:13.83,0:00:15.97,Default,,0,0,0,,行至别院门前侍女迎出
-Dialogue: 0,0:00:16.22,0:00:17.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}嘱其备茶与
-Dialogue: 0,0:00:17.91,0:00:20.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}步入院内月光洒落竹影
-Dialogue: 0,0:00:20.80,0:00:22.27,Default,,0,0,0,,婆娑气氛渐缓
+Dialogue: 0,0:00:00.02,0:00:01.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}于军械库清点法宝
+Dialogue: 0,0:00:02.27,0:00:03.79,Default,,0,0,0,,浅色襦裙袖口挽起
+Dialogue: 0,0:00:04.03,0:00:04.70,Default,,0,0,0,,露出皓腕
+Dialogue: 0,0:00:05.17,0:00:07.15,Default,,0,0,0,,案上整齐码放着新炼的法符
+Dialogue: 0,0:00:07.48,0:00:09.11,Default,,0,0,0,,每张都注入了道主级灵力
+Dialogue: 0,0:00:09.42,0:00:11.14,Default,,0,0,0,,足以重创归一期修者

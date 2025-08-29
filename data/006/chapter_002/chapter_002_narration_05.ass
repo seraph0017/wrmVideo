@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_002 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢大{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.80,0:00:02.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}卢二{\c&H00FFFFFF&\b0}目睹三弟惨死
+Dialogue: 0,0:00:02.72,0:00:04.09,Default,,0,0,0,,双眼瞬间血红
+Dialogue: 0,0:00:04.57,0:00:06.61,Default,,0,0,0,,归一期中阶的气势全面爆发
+Dialogue: 0,0:00:07.04,0:00:08.82,Default,,0,0,0,,杀意如实质般笼罩{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.10,0:00:11.22,Default,,0,0,0,,兄弟情深化为滔天怒火

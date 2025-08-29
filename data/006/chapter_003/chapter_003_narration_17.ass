@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_003 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}见状
+Dialogue: 0,0:00:00.93,0:00:01.63,Default,,0,0,0,,剑势再催
+Dialogue: 0,0:00:01.90,0:00:02.67,Default,,0,0,0,,青芒暴涨
+Dialogue: 0,0:00:02.87,0:00:04.08,Default,,0,0,0,,将僵帝黑气压制
+Dialogue: 0,0:00:04.37,0:00:05.13,Default,,0,0,0,,身形急退
+Dialogue: 0,0:00:05.40,0:00:06.25,Default,,0,0,0,,避免{\c&H0000FFFF&\b1}波及{\c&H00FFFFFF&\b0}

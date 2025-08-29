@@ -14,14 +14,8 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.15,Default,,0,0,0,,东方{\c&H0000FFFF&\b1}庆明{\c&H00FFFFFF&\b0}跌跌撞撞闯入大殿
-Dialogue: 0,0:00:02.63,0:00:05.01,Default,,0,0,0,,灰色长袍沾满血迹左脸颊
-Dialogue: 0,0:00:05.01,0:00:05.82,Default,,0,0,0,,疤痕狰狞
-Dialogue: 0,0:00:06.18,0:00:08.24,Default,,0,0,0,,他扑倒在地声音嘶哑
-Dialogue: 0,0:00:08.34,0:00:11.94,Default,,0,0,0,,三眼魔族两千万人马明日便
-Dialogue: 0,0:00:12.04,0:00:15.04,Default,,0,0,0,,至{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}瞳孔骤缩白蒹葭
-Dialogue: 0,0:00:15.14,0:00:17.22,Default,,0,0,0,,脸色苍白{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}紧握剑柄
-Dialogue: 0,0:00:17.22,0:00:19.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙欣{\c&H00FFFFFF&\b0}迅速展开地图紫色长袍
-Dialogue: 0,0:00:19.84,0:00:22.19,Default,,0,0,0,,滑落肩头露出纤细背影
-Dialogue: 0,0:00:22.19,0:00:24.95,Default,,0,0,0,,大兴山已破八荒山{\c&H0000FFFF&\b1}左翼{\c&H00FFFFFF&\b0}空虚
-Dialogue: 0,0:00:25.05,0:00:26.55,Default,,0,0,0,,需即刻调兵
+Dialogue: 0,0:00:00.02,0:00:02.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}手持密报匆匆走来向
+Dialogue: 0,0:00:02.46,0:00:04.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}汇报三眼魔族最新动向
+Dialogue: 0,0:00:05.19,0:00:07.40,Default,,0,0,0,,已越过大{\c&H0000FFFF&\b1}兴山{\c&H00FFFFFF&\b0}明日将抵达
+Dialogue: 0,0:00:07.40,0:00:09.70,Default,,0,0,0,,八荒山脚下兵力约两千万
+Dialogue: 0,0:00:09.99,0:00:11.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}上古{\c&H00FFFFFF&\b0}天魔百名

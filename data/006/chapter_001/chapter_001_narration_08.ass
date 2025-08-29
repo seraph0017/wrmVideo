@@ -14,15 +14,8 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.06,Default,,0,0,0,,恶少推搡撞地
-Dialogue: 0,0:00:01.52,0:00:03.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕刚{\c&H00FFFFFF&\b0}出学馆后背突遭猛力
-Dialogue: 0,0:00:04.33,0:00:06.81,Default,,0,0,0,,整个人向前扑去膝盖重重磕
-Dialogue: 0,0:00:06.81,0:00:07.66,Default,,0,0,0,,在青石板上
-Dialogue: 0,0:00:08.15,0:00:10.14,Default,,0,0,0,,回头见{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}带着跟班狞笑
-Dialogue: 0,0:00:10.55,0:00:11.11,Default,,0,0,0,,赵草包
-Dialogue: 0,0:00:11.40,0:00:13.03,Default,,0,0,0,,脑袋进水说大地是圆的
-Dialogue: 0,0:00:13.52,0:00:15.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}冲来扶住赵硕怒视
-Dialogue: 0,0:00:15.38,0:00:15.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:16.20,0:00:17.14,Default,,0,0,0,,不许欺负{\c&H0000FFFF&\b1}二哥{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:17.58,0:00:18.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}贪婪盯着她
-Dialogue: 0,0:00:19.19,0:00:21.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}小美人{\c&H00FFFFFF&\b0}你替他挨揍如何
+Dialogue: 0,0:00:00.02,0:00:00.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}楚秀端{\c&H00FFFFFF&\b0}来饭菜
+Dialogue: 0,0:00:01.54,0:00:02.63,Default,,0,0,0,,看着{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}和赵鸾
+Dialogue: 0,0:00:02.97,0:00:03.72,Default,,0,0,0,,眼神{\c&H0000FFFF&\b1}慈爱{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.02,0:00:05.47,Default,,0,0,0,,叮嘱他们上学要小心
+Dialogue: 0,0:00:05.78,0:00:06.56,Default,,0,0,0,,充满{\c&H0000FFFF&\b1}母爱{\c&H00FFFFFF&\b0}

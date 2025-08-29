@@ -14,11 +14,8 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.77,Default,,0,0,0,,离别前夕
-Dialogue: 0,0:00:01.27,0:00:03.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}依依不舍送别赵硕
-Dialogue: 0,0:00:03.51,0:00:05.17,Default,,0,0,0,,赠以亲手缝制的护身符
-Dialogue: 0,0:00:05.64,0:00:08.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}郑重收下承诺定会归来
-Dialogue: 0,0:00:08.55,0:00:11.03,Default,,0,0,0,,天雷上人立于{\c&H0000FFFF&\b1}山门{\c&H00FFFFFF&\b0}冷眼注视
-Dialogue: 0,0:00:11.03,0:00:12.95,Default,,0,0,0,,一行人离去拂尘轻摆
-Dialogue: 0,0:00:13.33,0:00:15.18,Default,,0,0,0,,暗藏杀机{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗的
-Dialogue: 0,0:00:15.18,0:00:16.98,Default,,0,0,0,,平静下暗流涌动
+Dialogue: 0,0:00:00.02,0:00:01.54,Default,,0,0,0,,天雷上人拂尘挥动
+Dialogue: 0,0:00:02.04,0:00:02.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}万道
+Dialogue: 0,0:00:03.15,0:00:03.85,Default,,0,0,0,,直击僵帝
+Dialogue: 0,0:00:04.26,0:00:05.08,Default,,0,0,0,,口中怒喝
+Dialogue: 0,0:00:05.43,0:00:06.34,Default,,0,0,0,,声震山谷

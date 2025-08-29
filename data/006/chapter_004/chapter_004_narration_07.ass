@@ -14,13 +14,9 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.30,Default,,0,0,0,,忽闻院外传来厮杀声潜龙
-Dialogue: 0,0:00:02.30,0:00:03.40,Default,,0,0,0,,宗主面色大变
-Dialogue: 0,0:00:03.82,0:00:05.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}起身墨龙破门而入
-Dialogue: 0,0:00:06.36,0:00:08.52,Default,,0,0,0,,潜龙宗弟子哗变已围厅外
-Dialogue: 0,0:00:09.02,0:00:12.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}冷笑辛芦戒备潜龙宗主
-Dialogue: 0,0:00:12.07,0:00:12.67,Default,,0,0,0,,颤声道
-Dialogue: 0,0:00:13.00,0:00:13.67,Default,,0,0,0,,非我所愿
-Dialogue: 0,0:00:14.05,0:00:16.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}挥手布下结界墨龙护于
-Dialogue: 0,0:00:16.72,0:00:19.88,Default,,0,0,0,,厅门厅外杀声渐起兵器碰撞
-Dialogue: 0,0:00:19.88,0:00:21.09,Default,,0,0,0,,声清晰可闻
+Dialogue: 0,0:00:00.02,0:00:02.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}猛击案几玄色长袍下摆
+Dialogue: 0,0:00:02.75,0:00:05.33,Default,,0,0,0,,散开如墨莲案上茶杯震起
+Dialogue: 0,0:00:05.33,0:00:05.76,Default,,0,0,0,,水花
+Dialogue: 0,0:00:06.30,0:00:06.95,Default,,0,0,0,,传我将令
+Dialogue: 0,0:00:07.33,0:00:09.38,Default,,0,0,0,,征东{\c&H0000FFFF&\b1}大元帅{\c&H00FFFFFF&\b0}率十五万精锐
+Dialogue: 0,0:00:09.38,0:00:12.04,Default,,0,0,0,,驰援青石关务必死守三月

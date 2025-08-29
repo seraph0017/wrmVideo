@@ -14,11 +14,8 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.60,Default,,0,0,0,,天星宗{\c&H0000FFFF&\b1}山门{\c&H00FFFFFF&\b0}突遭浩劫
-Dialogue: 0,0:00:02.00,0:00:04.56,Default,,0,0,0,,僵帝无视宗门警告悍然出手
-Dialogue: 0,0:00:04.56,0:00:07.28,Default,,0,0,0,,吞噬巡山弟子鲜血飞溅染红
-Dialogue: 0,0:00:07.28,0:00:07.62,Default,,0,0,0,,云端
-Dialogue: 0,0:00:08.09,0:00:10.13,Default,,0,0,0,,天雷上人率众弟子腾空而
-Dialogue: 0,0:00:10.13,0:00:13.22,Default,,0,0,0,,起蓝色道袍猎猎作响拂尘
-Dialogue: 0,0:00:13.22,0:00:16.06,Default,,0,0,0,,指向苍穹怒斥僵帝狂妄{\c&H0000FFFF&\b1}上古{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:16.06,0:00:17.81,Default,,0,0,0,,宗门的怒火一触即发
+Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,辛芦立于{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}身侧
+Dialogue: 0,0:00:01.89,0:00:02.63,Default,,0,0,0,,白衣胜雪
+Dialogue: 0,0:00:02.93,0:00:03.61,Default,,0,0,0,,背部视角
+Dialogue: 0,0:00:03.87,0:00:04.74,Default,,0,0,0,,身姿挺拔
+Dialogue: 0,0:00:05.09,0:00:06.44,Default,,0,0,0,,静观前方变局

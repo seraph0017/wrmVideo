@@ -14,13 +14,8 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.31,Default,,0,0,0,,布衣母亲盛饭添菜
-Dialogue: 0,0:00:01.82,0:00:03.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}端着粗瓷碗从厨房走出
-Dialogue: 0,0:00:04.25,0:00:05.53,Default,,0,0,0,,灰色{\c&H0000FFFF&\b1}布裙{\c&H00FFFFFF&\b0}沾着面粉
-Dialogue: 0,0:00:05.87,0:00:08.12,Default,,0,0,0,,见到{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}她眼中泛起慈爱
-Dialogue: 0,0:00:08.63,0:00:10.40,Default,,0,0,0,,快吃学堂快结业了
-Dialogue: 0,0:00:10.77,0:00:13.12,Default,,0,0,0,,当{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}喊出母亲时她手微微
-Dialogue: 0,0:00:13.12,0:00:14.59,Default,,0,0,0,,一颤随即笑道
-Dialogue: 0,0:00:14.90,0:00:16.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}家势大莫惹他
-Dialogue: 0,0:00:17.21,0:00:19.25,Default,,0,0,0,,说着将腌菜碟推到他面前
-Dialogue: 0,0:00:19.55,0:00:21.63,Default,,0,0,0,,晨光透过窗棂照在粗木桌上
+Dialogue: 0,0:00:00.02,0:00:01.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}推门而入
+Dialogue: 0,0:00:01.40,0:00:02.94,Default,,0,0,0,,身着绿色圆领长袍
+Dialogue: 0,0:00:03.44,0:00:04.55,Default,,0,0,0,,活泼地冲向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.93,0:00:05.99,Default,,0,0,0,,口中喊着{\c&H0000FFFF&\b1}二哥{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.25,0:00:07.09,Default,,0,0,0,,充满活力

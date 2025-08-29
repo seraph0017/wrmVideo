@@ -14,11 +14,9 @@ Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.85,Default,,0,0,0,,深夜密谈
-Dialogue: 0,0:00:01.26,0:00:04.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕辛{\c&H00FFFFFF&\b0}芦白蒹葭在房中商议
-Dialogue: 0,0:00:04.70,0:00:06.86,Default,,0,0,0,,决定前往清心小筑寻求庇护
-Dialogue: 0,0:00:07.34,0:00:08.65,Default,,0,0,0,,辛芦道出星辰海与
-Dialogue: 0,0:00:08.65,0:00:10.79,Default,,0,0,0,,混沌海交界处有寰宇灵心
-Dialogue: 0,0:00:11.21,0:00:12.55,Default,,0,0,0,,可助众人提升修为
-Dialogue: 0,0:00:12.87,0:00:14.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}眼神坚定一场新的
-Dialogue: 0,0:00:14.89,0:00:16.22,Default,,0,0,0,,冒险即将启程
+Dialogue: 0,0:00:00.02,0:00:02.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}随众弟子退至殿内
+Dialogue: 0,0:00:02.30,0:00:03.04,Default,,0,0,0,,绿衣娇小
+Dialogue: 0,0:00:03.39,0:00:04.04,Default,,0,0,0,,背部视角
+Dialogue: 0,0:00:04.30,0:00:04.89,Default,,0,0,0,,双丫髻
+Dialogue: 0,0:00:05.16,0:00:06.00,Default,,0,0,0,,面露紧张
+Dialogue: 0,0:00:06.25,0:00:07.19,Default,,0,0,0,,紧握双拳
