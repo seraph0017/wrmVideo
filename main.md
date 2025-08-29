@@ -18,6 +18,7 @@ python check_async_tasks.py 开启异步队列
 
 
 python gen_script_v2.py data/001 用来根据文本生成解说文案，带检查
+python validate_narration.py data/001 --auto-rewrite 用来验证解说文案字数
 python gen_character_image.py data/001 用来根据文本生成角色图片
 python llm_image.py data/001 --auto-regenerate 用来检测图片是否符合要求并替换
 python gen_audio.py data/001 用来根据解说文案生成旁白

@@ -457,8 +457,8 @@ class ScriptGeneratorV2:
         total_explanation_text = ''.join(explanation_matches)
         explanation_length = len(total_explanation_text.strip())
         
-        # 验证特写数量（应该有10个分镜×3个特写=30个解说内容）
-        expected_explanations = 30
+        # 验证特写数量（第一个分镜4个特写+其余9个分镜各3个特写=31个解说内容）
+        expected_explanations = 31
         if len(explanation_matches) != expected_explanations:
             print(f"警告：解说内容数量不正确，期望{expected_explanations}个，实际{len(explanation_matches)}个")
         
@@ -476,6 +476,15 @@ class ScriptGeneratorV2:
                 # 不返回错误，仅记录警告
         except Exception as e:
             print(f"警告：特写验证过程中出现异常，跳过验证 - {e}")
+            # 验证异常不影响生成流程
+        
+        # 验证特写人物是否都在出镜人物列表中定义
+        try:
+            character_valid, character_error = self._validate_character_consistency(cleaned_narration)
+            if not character_valid:
+                return False, f"角色一致性验证失败：{character_error}"
+        except Exception as e:
+            print(f"警告：角色一致性验证过程中出现异常，跳过验证 - {e}")
             # 验证异常不影响生成流程
         
         # 自动修复XML标签闭合
@@ -732,6 +741,67 @@ class ScriptGeneratorV2:
                 found_keywords.append(word)
         
         return found_keywords
+    
+    def _validate_character_consistency(self, content: str) -> Tuple[bool, str]:
+        """
+        验证特写人物是否都在出镜人物列表中定义
+        
+        Args:
+            content: 解说内容
+            
+        Returns:
+            Tuple[bool, str]: (是否有效, 错误信息)
+        """
+        import re
+        
+        # 提取出镜人物列表
+        cast_pattern = r'<出镜人物>(.*?)</出镜人物>'
+        cast_match = re.search(cast_pattern, content, re.DOTALL)
+        
+        if not cast_match:
+            return False, "未找到出镜人物标签"
+        
+        cast_content = cast_match.group(1).strip()
+        
+        # 解析出镜人物列表中的角色姓名
+        character_pattern = r'<姓名>(.*?)</姓名>'
+        cast_characters = re.findall(character_pattern, cast_content, re.DOTALL)
+        cast_characters = [char.strip() for char in cast_characters if char.strip()]
+        
+        if not cast_characters:
+            return False, "出镜人物列表中未找到有效的角色姓名"
+        
+        # 提取所有特写人物
+        closeup_pattern = r'<特写人物>(.*?)</特写人物>'
+        closeup_matches = re.findall(closeup_pattern, content, re.DOTALL)
+        
+        if not closeup_matches:
+            return False, "未找到特写人物标签"
+        
+        # 检查每个特写人物是否在出镜人物列表中
+        invalid_characters = []
+        valid_non_character_closeups = [
+            '无（环境特写）', '环境', '道具', '细节', '特效', '景物', '建筑', 
+            '天空', '山水', '花草', '动物', '物品', '文字', '符号'
+        ]
+        
+        for i, closeup_char in enumerate(closeup_matches, 1):
+            closeup_char = closeup_char.strip()
+            
+            # 跳过非人物特写
+            if closeup_char in valid_non_character_closeups:
+                continue
+            
+            # 检查是否为有效的角色姓名
+            if closeup_char not in cast_characters:
+                invalid_characters.append(f"第{i}个特写人物'{closeup_char}'")
+        
+        if invalid_characters:
+            error_msg = f"以下特写人物未在出镜人物列表中定义：{', '.join(invalid_characters)}。\n"
+            error_msg += f"出镜人物列表：{', '.join(cast_characters)}"
+            return False, error_msg
+        
+        return True, ""
     
     def audit_and_filter_narration(self, narration: str, chapter_num: int) -> Tuple[bool, str]:
         """

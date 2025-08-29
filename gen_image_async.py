@@ -671,7 +671,6 @@ def encode_image_to_base64(image_path):
                     image_format = file_extension[1:]  # 去掉点号
             
             # 构造完整的data URL
-            print(f"image_format: {image_format}")
             return f"data:image/{image_format};base64,{base64_data}"
             
     except Exception as e:
@@ -814,7 +813,12 @@ def generate_image_with_character_async(prompt, output_path, character_images=No
                     if img_path and os.path.exists(img_path):
                         base64_data = encode_image_to_base64(img_path)
                         if base64_data:
-                            binary_data_base64_list.append(base64_data)
+                            # 从data URL中提取纯base64数据（去掉"data:image/xxx;base64,"前缀）
+                            if base64_data.startswith('data:'):
+                                pure_base64 = base64_data.split(',')[1]
+                            else:
+                                pure_base64 = base64_data
+                            binary_data_base64_list.append(pure_base64)
                             print(f"成功编码角色图片: {img_path}")
                         else:
                             print(f"编码角色图片失败: {img_path}")
