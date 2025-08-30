@@ -13,6 +13,7 @@ import json
 import base64
 import random
 import imghdr
+import math
 from volcenginesdkarkruntime import Ark
 
 # 添加config目录到路径
@@ -21,6 +22,61 @@ sys.path.insert(0, config_dir)
 
 # 导入配置
 from config import ARK_CONFIG, IMAGE_TO_VIDEO_CONFIG
+
+def get_ass_duration(ass_file_path):
+    """
+    获取ASS字幕文件的总时长（秒）
+    
+    Args:
+        ass_file_path: ASS文件路径
+        
+    Returns:
+        float: 时长（秒），如果解析失败返回5.0作为默认值
+    """
+    try:
+        if not os.path.exists(ass_file_path):
+            print(f"ASS文件不存在: {ass_file_path}")
+            return 5
+            
+        with open(ass_file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # 查找所有的Dialogue行
+        dialogue_lines = []
+        for line in content.split('\n'):
+            if line.startswith('Dialogue:'):
+                dialogue_lines.append(line)
+        
+        if not dialogue_lines:
+            print(f"ASS文件中未找到Dialogue行: {ass_file_path}")
+            return 5
+        
+        # 解析最后一行的结束时间
+        last_line = dialogue_lines[-1]
+        parts = last_line.split(',')
+        if len(parts) >= 3:
+            end_time_str = parts[2].strip()  # End时间
+            # 解析时间格式 H:MM:SS.CC
+            time_parts = end_time_str.split(':')
+            if len(time_parts) == 3:
+                hours = int(time_parts[0])
+                minutes = int(time_parts[1])
+                seconds_parts = time_parts[2].split('.')
+                seconds = int(seconds_parts[0])
+                centiseconds = int(seconds_parts[1]) if len(seconds_parts) > 1 else 0
+                
+                total_seconds = hours * 3600 + minutes * 60 + seconds + centiseconds / 100.0
+                # 向上取整到最近的整数秒
+                rounded_seconds = math.ceil(total_seconds)
+                print(f"从ASS文件获取时长: {total_seconds:.2f}秒，向上取整为: {rounded_seconds}秒 ({ass_file_path})")
+                return rounded_seconds
+        
+        print(f"无法解析ASS文件时长: {ass_file_path}")
+        return 5
+        
+    except Exception as e:
+        print(f"解析ASS文件时长时出错: {e}")
+        return 5
 
 def find_sound_effect(text, work_dir):
     """
@@ -565,8 +621,15 @@ def generate_videos_for_chapter(chapter_dir):
         first_video_path = os.path.join(chapter_dir, f"{chapter_name}_video_1.mp4")
         second_video_path = os.path.join(chapter_dir, f"{chapter_name}_video_2.mp4")
         
-        # 默认每个视频5秒时长
-        duration = 5
+        # 获取对应ASS文件的时长
+        ass_01_path = os.path.join(chapter_dir, f"{chapter_name}_narration_01.ass")
+        ass_02_path = os.path.join(chapter_dir, f"{chapter_name}_narration_02.ass")
+        
+        duration_1 = get_ass_duration(ass_01_path)
+        duration_2 = get_ass_duration(ass_02_path)
+        
+        print(f"Video1时长: {duration_1:.2f}秒 (基于{chapter_name}_narration_01.ass)")
+        print(f"Video2时长: {duration_2:.2f}秒 (基于{chapter_name}_narration_02.ass)")
         
         # 获取音效列表
         print(f"\n=== 匹配音效 ===")
@@ -588,12 +651,13 @@ def generate_videos_for_chapter(chapter_dir):
         
         # 生成第一个视频
         print(f"\n提交第一个视频生成任务...")
-        if create_video_from_single_image_async(first_image, duration, first_video_path):
+        print(duration_1)
+        if create_video_from_single_image_async(first_image, duration_1, first_video_path):
             success_count += 1
         
         # 生成第二个视频
         print(f"\n提交第二个视频生成任务...")
-        if create_video_from_single_image_async(second_image, duration, second_video_path):
+        if create_video_from_single_image_async(second_image, duration_2, second_video_path):
             success_count += 1
         
         if success_count == 2:

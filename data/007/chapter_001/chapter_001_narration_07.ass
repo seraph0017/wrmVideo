@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_001 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,240,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,240,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}冷哼一声
+Dialogue: 0,0:00:01.62,0:00:02.94,Default,,0,0,0,,甩袍袖昂首{\c&H0000FFFF&\b1}入宫{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.40,0:00:05.36,Default,,0,0,0,,朱漆回廊两侧龙纹柱雕刻
+Dialogue: 0,0:00:05.36,0:00:05.69,Default,,0,0,0,,精美
+Dialogue: 0,0:00:06.17,0:00:08.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}透过窗棂在地面投下
+Dialogue: 0,0:00:08.19,0:00:08.97,Default,,0,0,0,,斑驳光影
+Dialogue: 0,0:00:09.27,0:00:10.61,Default,,0,0,0,,尽显{\c&H0000FFFF&\b1}大唐{\c&H00FFFFFF&\b0}繁华

@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_003 Narration 25 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,240,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,240,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}急喊
+Dialogue: 0,0:00:01.16,0:00:02.55,Default,,0,0,0,,程将军留个活口
+Dialogue: 0,0:00:02.82,0:00:05.20,Default,,0,0,0,,怀疑刺客是{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}所派若留
+Dialogue: 0,0:00:05.20,0:00:08.02,Default,,0,0,0,,口供可借此事牵制{\c&H0000FFFF&\b1}李泰{\c&H00FFFFFF&\b0}为
+Dialogue: 0,0:00:08.02,0:00:09.13,Default,,0,0,0,,自己争取生机

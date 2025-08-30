@@ -18,6 +18,7 @@ import argparse
 import json
 import shutil
 import subprocess
+import os
 from pathlib import Path
 from typing import List
 
@@ -267,8 +268,48 @@ def run_cmd(cmd: List[str]) -> None:
         raise RuntimeError(f"命令执行失败: {' '.join(cmd)}\n{e}")
 
 
-def generate_overlay_video(video2: Path, temp_dir: Path) -> Path:
-    """在 video2 上叠加 fuceng1.mov 转场特效，返回处理后的视频路径。"""
+def get_audio_duration(audio_path: Path) -> float:
+    """获取音频文件的时长（秒）
+    
+    Args:
+        audio_path: 音频文件路径
+        
+    Returns:
+        float: 时长（秒），如果解析失败返回5.0作为默认值
+    """
+    try:
+        if not audio_path.exists():
+            print(f"音频文件不存在: {audio_path}")
+            return 5.0
+            
+        cmd = [
+            'ffprobe', '-v', 'quiet', '-show_entries', 'format=duration',
+            '-of', 'csv=p=0', str(audio_path)
+        ]
+        
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+        
+        if result.returncode == 0 and result.stdout.strip():
+            duration = float(result.stdout.strip())
+            print(f"从音频文件获取时长: {duration:.2f}秒 ({audio_path.name})")
+            return duration
+        else:
+            print(f"无法解析音频文件时长: {audio_path}")
+            return 5.0
+            
+    except Exception as e:
+        print(f"解析音频文件时长时出错: {e}")
+        return 5.0
+
+
+def generate_overlay_video(video2: Path, temp_dir: Path, target_duration: float = None) -> Path:
+    """在 video2 上叠加 fuceng1.mov 转场特效，返回处理后的视频路径。
+    
+    Args:
+        video2: 输入视频路径
+        temp_dir: 临时目录
+        target_duration: 目标时长（秒），如果提供则调整视频时长
+    """
     output_path = temp_dir / f"{video2.stem}_overlay.mp4"
     width, height, fps = (
         VIDEO_STANDARDS["width"],
@@ -310,6 +351,10 @@ def generate_overlay_video(video2: Path, temp_dir: Path) -> Path:
         "-c:a", VIDEO_STANDARDS["audio_codec"],
         "-r", str(fps)
     ])
+    
+    # 如果指定了目标时长，添加时长控制
+    if target_duration is not None:
+        cmd.extend(["-t", str(target_duration)])
     
     # 添加GPU特定的编码参数
     # 只有非VideoToolbox编码器才添加preset参数
@@ -366,13 +411,24 @@ def process_chapter(chapter_dir: Path) -> None:
         print(f"✅ 已存在，跳过: {output_video}")
         return
 
+    # 获取对应的音频文件时长
+    chapter_name = chapter_dir.name
+    audio1_path = chapter_dir / f"{chapter_name}_narration_01.mp3"
+    audio2_path = chapter_dir / f"{chapter_name}_narration_02.mp3"
+    
+    duration1 = get_audio_duration(audio1_path)
+    duration2 = get_audio_duration(audio2_path)
+    
+    print(f"Video1目标时长: {duration1:.2f}秒 (基于{audio1_path.name})")
+    print(f"Video2目标时长: {duration2:.2f}秒 (基于{audio2_path.name})")
+
     temp_dir = chapter_dir / TEMP_DIR_NAME
     temp_dir.mkdir(exist_ok=True)
 
     # 获取GPU优化参数
     gpu_params = get_ffmpeg_gpu_params()
     
-    # 统一分辨率与帧率到 video1
+    # 统一分辨率与帧率到 video1，并调整时长
     scaled_video1 = temp_dir / f"{video1.stem}_scaled.mp4"
     cmd_scale_v1 = ["ffmpeg", "-y"]
     
@@ -385,6 +441,7 @@ def process_chapter(chapter_dir: Path) -> None:
     cmd_scale_v1.extend([
         "-i", str(video1),
         "-vf", f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=decrease,pad={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:(ow-iw)/2:(oh-ih)/2:black",
+        "-t", str(duration1),  # 设置视频时长为音频时长
         "-c:v", gpu_params.get('video_codec', VIDEO_STANDARDS["video_codec"]),
         "-c:a", VIDEO_STANDARDS["audio_codec"],
         "-r", str(VIDEO_STANDARDS["fps"])
@@ -404,8 +461,8 @@ def process_chapter(chapter_dir: Path) -> None:
     print("统一 video_1 分辨率...", " ".join(cmd_scale_v1))
     run_cmd(cmd_scale_v1)
 
-    # 对 video2 处理叠加 & 分辨率
-    processed_video2 = generate_overlay_video(video2, temp_dir)
+    # 对 video2 处理叠加 & 分辨率，并调整时长
+    processed_video2 = generate_overlay_video(video2, temp_dir, duration2)
 
     if processed_video2 != video2:
         # 处理后视频已保证分辨率，直接用
@@ -424,6 +481,7 @@ def process_chapter(chapter_dir: Path) -> None:
         cmd_scale_v2.extend([
             "-i", str(video2),
             "-vf", f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=decrease,pad={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:(ow-iw)/2:(oh-ih)/2:black",
+            "-t", str(duration2),  # 设置视频时长为音频时长
             "-c:v", gpu_params.get('video_codec', VIDEO_STANDARDS["video_codec"]),
             "-c:a", VIDEO_STANDARDS["audio_codec"],
             "-r", str(VIDEO_STANDARDS["fps"])

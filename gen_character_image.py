@@ -40,13 +40,19 @@ def parse_character_info(narration_file_path):
         style_match = re.search(r'<绘画风格>([^<]+)</绘画风格>', content)
         drawing_style = style_match.group(1) if style_match else None
         
-        # 首先尝试解析新格式的角色定义（<角色1>、<角色2>等）
-        character_pattern = r'<角色(\d+)>(.*?)</角色\d+>'
-        character_matches = re.findall(character_pattern, content, re.DOTALL)
+        # 优先解析出镜人物列表中的角色定义
+        cast_pattern = r'<出镜人物>(.*?)</出镜人物>'
+        cast_match = re.search(cast_pattern, content, re.DOTALL)
         
-        if character_matches:
-            # 新格式：<角色1>、<角色2>等
-            for char_num, char_content in character_matches:
+        if cast_match:
+            # 从出镜人物列表中解析角色
+            cast_content = cast_match.group(1)
+            character_pattern = r'<角色>(.*?)</角色>'
+            character_matches = re.findall(character_pattern, cast_content, re.DOTALL)
+            
+            print(f"从出镜人物列表中找到 {len(character_matches)} 个角色")
+            
+            for i, char_content in enumerate(character_matches, 1):
                 character_info = {}
                 
                 # 提取姓名
@@ -54,7 +60,7 @@ def parse_character_info(narration_file_path):
                 if name_match:
                     character_info['name'] = name_match.group(1).strip()
                 else:
-                    character_info['name'] = f'角色{char_num}'
+                    character_info['name'] = f'角色{i}'
                 
                 # 提取性别
                 gender_match = re.search(r'<性别>([^<]+)</性别>', char_content)
@@ -63,6 +69,13 @@ def parse_character_info(narration_file_path):
                 # 提取年龄段
                 age_match = re.search(r'<年龄段>([^<]+)</年龄段>', char_content)
                 age_group = age_match.group(1).strip() if age_match else '未知'
+                
+                # 提取时代背景和角色形象
+                era_match = re.search(r'<时代背景>([^<]+)</时代背景>', char_content)
+                era_background = era_match.group(1).strip() if era_match else '未知'
+                
+                image_match = re.search(r'<角色形象>([^<]+)</角色形象>', char_content)
+                character_image = image_match.group(1).strip() if image_match else '未知'
                 
                 # 构建角色描述
                 details = []
@@ -97,101 +110,195 @@ def parse_character_info(narration_file_path):
                     if special_match and special_match.group(1).strip() != '无':
                         details.append(special_match.group(1).strip())
                 
-                # 检查是否有现代形象和古代形象（新格式）
-                modern_section = re.search(r'<现代形象>(.*?)</现代形象>', char_content, re.DOTALL)
-                ancient_section = re.search(r'<古代形象>(.*?)</古代形象>', char_content, re.DOTALL)
+                # 服装风格
+                clothing_section = re.search(r'<服装风格>(.*?)</服装风格>', char_content, re.DOTALL)
+                if clothing_section:
+                    clothing_content = clothing_section.group(1)
+                    
+                    # 上衣
+                    top_match = re.search(r'<上衣>([^<]+)</上衣>', clothing_content)
+                    if top_match:
+                        details.append(top_match.group(1).strip())
+                    
+                    # 下装
+                    bottom_match = re.search(r'<下装>([^<]+)</下装>', clothing_content)
+                    if bottom_match:
+                        details.append(bottom_match.group(1).strip())
+                    
+                    # 鞋履
+                    shoes_match = re.search(r'<鞋履>([^<]+)</鞋履>', clothing_content)
+                    if shoes_match and shoes_match.group(1).strip() != '无':
+                        details.append(shoes_match.group(1).strip())
+                    
+                    # 配饰
+                    accessory_match = re.search(r'<配饰>([^<]+)</配饰>', clothing_content)
+                    if accessory_match and accessory_match.group(1).strip() != '无':
+                        details.append(accessory_match.group(1).strip())
                 
-                if modern_section and ancient_section:
-                    # 新格式：双时代格式
-                    # 现代形象
-                    modern_details = list(details)  # 复制基础外貌特征
-                    modern_content = modern_section.group(1)
-                    
-                    # 现代上衣
-                    modern_top_match = re.search(r'<上衣>([^<]+)</上衣>', modern_content)
-                    if modern_top_match:
-                        modern_details.append(modern_top_match.group(1).strip())
-                    
-                    # 现代下装
-                    modern_bottom_match = re.search(r'<下装>([^<]+)</下装>', modern_content)
-                    if modern_bottom_match:
-                        modern_details.append(modern_bottom_match.group(1).strip())
-                    
-                    # 现代配饰
-                    modern_accessory_match = re.search(r'<配饰>([^<]+)</配饰>', modern_content)
-                    if modern_accessory_match and modern_accessory_match.group(1).strip() != '无':
-                        modern_details.append(modern_accessory_match.group(1).strip())
-                    
-                    # 古代形象
-                    ancient_details = list(details)  # 复制基础外貌特征
-                    ancient_content = ancient_section.group(1)
-                    
-                    # 古代上衣
-                    ancient_top_match = re.search(r'<上衣>([^<]+)</上衣>', ancient_content)
-                    if ancient_top_match:
-                        ancient_details.append(ancient_top_match.group(1).strip())
-                    
-                    # 古代下装
-                    ancient_bottom_match = re.search(r'<下装>([^<]+)</下装>', ancient_content)
-                    if ancient_bottom_match:
-                        ancient_details.append(ancient_bottom_match.group(1).strip())
-                    
-                    # 古代配饰
-                    ancient_accessory_match = re.search(r'<配饰>([^<]+)</配饰>', ancient_content)
-                    if ancient_accessory_match and ancient_accessory_match.group(1).strip() != '无':
-                        ancient_details.append(ancient_accessory_match.group(1).strip())
-                    
-                    # 创建两个角色信息：现代和古代
-                    modern_character = {
-                        'name': character_info['name'],
-                        'gender': character_info['gender'],
-                        'description': '，'.join(modern_details),
-                        'age_group': age_group,
-                        'era': 'modern'
-                    }
-                    
-                    ancient_character = {
-                        'name': character_info['name'],
-                        'gender': character_info['gender'],
-                        'description': '，'.join(ancient_details),
-                        'age_group': age_group,
-                        'era': 'ancient'
-                    }
-                    
-                    characters.append(modern_character)
-                    characters.append(ancient_character)
-                    
-                else:
-                    # 兼容旧格式或单一时代格式
-                    clothing_section = re.search(r'<服装风格>(.*?)</服装风格>', char_content, re.DOTALL)
-                    if clothing_section:
-                        clothing_content = clothing_section.group(1)
-                        
-                        # 上衣
-                        top_match = re.search(r'<上衣>([^<]+)</上衣>', clothing_content)
-                        if top_match:
-                            details.append(top_match.group(1).strip())
-                        
-                        # 下装
-                        bottom_match = re.search(r'<下装>([^<]+)</下装>', clothing_content)
-                        if bottom_match:
-                            details.append(bottom_match.group(1).strip())
-                        
-                        # 配饰
-                        accessory_match = re.search(r'<配饰>([^<]+)</配饰>', clothing_content)
-                        if accessory_match and accessory_match.group(1).strip() != '无':
-                            details.append(accessory_match.group(1).strip())
-                    
-                    character_info['description'] = '，'.join(details)
-                    character_info['age_group'] = age_group
-                    character_info['era'] = 'single'  # 单一时代
-                    characters.append(character_info)
+                character_info['description'] = '，'.join(details)
+                character_info['age_group'] = age_group
+                character_info['era_background'] = era_background
+                character_info['character_image'] = character_image
+                character_info['era'] = 'single'  # 标记为单一时代（从出镜人物列表解析）
+                characters.append(character_info)
                 
-                if modern_section and ancient_section:
-                    print(f"解析到角色: {character_info['name']} (现代) -> {modern_character['description']}")
-                    print(f"解析到角色: {character_info['name']} (古代) -> {ancient_character['description']}")
-                else:
-                    print(f"解析到角色: {character_info['name']} -> {character_info['description']}")
+                print(f"解析到角色: {character_info['name']} ({era_background}, {character_image}) -> {character_info['description']}")
+        
+        # 如果出镜人物列表中没有找到角色，尝试解析旧格式
+        if not characters:
+            print("出镜人物列表中未找到角色，尝试解析旧格式...")
+            # 首先尝试解析新格式的角色定义（<角色1>、<角色2>等）
+            character_pattern = r'<角色(\d+)>(.*?)</角色\d+>'
+            character_matches = re.findall(character_pattern, content, re.DOTALL)
+            
+            if character_matches:
+                 # 新格式：<角色1>、<角色2>等
+                 for char_num, char_content in character_matches:
+                     character_info = {}
+                     
+                     # 提取姓名
+                     name_match = re.search(r'<姓名>([^<]+)</姓名>', char_content)
+                     if name_match:
+                         character_info['name'] = name_match.group(1).strip()
+                     else:
+                         character_info['name'] = f'角色{char_num}'
+                     
+                     # 提取性别
+                     gender_match = re.search(r'<性别>([^<]+)</性别>', char_content)
+                     character_info['gender'] = gender_match.group(1).strip() if gender_match else '未知'
+                     
+                     # 提取年龄段
+                     age_match = re.search(r'<年龄段>([^<]+)</年龄段>', char_content)
+                     age_group = age_match.group(1).strip() if age_match else '未知'
+                     
+                     # 构建角色描述
+                     details = []
+                     
+                     # 外貌特征
+                     appearance_section = re.search(r'<外貌特征>(.*?)</外貌特征>', char_content, re.DOTALL)
+                     if appearance_section:
+                         appearance_content = appearance_section.group(1)
+                         
+                         # 发型
+                         hair_style_match = re.search(r'<发型>([^<]+)</发型>', appearance_content)
+                         if hair_style_match:
+                             details.append(hair_style_match.group(1).strip())
+                         
+                         # 发色
+                         hair_color_match = re.search(r'<发色>([^<]+)</发色>', appearance_content)
+                         if hair_color_match:
+                             details.append(hair_color_match.group(1).strip())
+                         
+                         # 面部特征
+                         face_match = re.search(r'<面部特征>([^<]+)</面部特征>', appearance_content)
+                         if face_match:
+                             details.append(face_match.group(1).strip())
+                         
+                         # 身材特征
+                         body_match = re.search(r'<身材特征>([^<]+)</身材特征>', appearance_content)
+                         if body_match:
+                             details.append(body_match.group(1).strip())
+                         
+                         # 特殊标记
+                         special_match = re.search(r'<特殊标记>([^<]+)</特殊标记>', appearance_content)
+                         if special_match and special_match.group(1).strip() != '无':
+                             details.append(special_match.group(1).strip())
+                     
+                     # 检查是否有现代形象和古代形象（新格式）
+                     modern_section = re.search(r'<现代形象>(.*?)</现代形象>', char_content, re.DOTALL)
+                     ancient_section = re.search(r'<古代形象>(.*?)</古代形象>', char_content, re.DOTALL)
+                     
+                     if modern_section and ancient_section:
+                         # 新格式：双时代格式
+                         # 现代形象
+                         modern_details = list(details)  # 复制基础外貌特征
+                         modern_content = modern_section.group(1)
+                         
+                         # 现代上衣
+                         modern_top_match = re.search(r'<上衣>([^<]+)</上衣>', modern_content)
+                         if modern_top_match:
+                             modern_details.append(modern_top_match.group(1).strip())
+                         
+                         # 现代下装
+                         modern_bottom_match = re.search(r'<下装>([^<]+)</下装>', modern_content)
+                         if modern_bottom_match:
+                             modern_details.append(modern_bottom_match.group(1).strip())
+                         
+                         # 现代配饰
+                         modern_accessory_match = re.search(r'<配饰>([^<]+)</配饰>', modern_content)
+                         if modern_accessory_match and modern_accessory_match.group(1).strip() != '无':
+                             modern_details.append(modern_accessory_match.group(1).strip())
+                         
+                         # 古代形象
+                         ancient_details = list(details)  # 复制基础外貌特征
+                         ancient_content = ancient_section.group(1)
+                         
+                         # 古代上衣
+                         ancient_top_match = re.search(r'<上衣>([^<]+)</上衣>', ancient_content)
+                         if ancient_top_match:
+                             ancient_details.append(ancient_top_match.group(1).strip())
+                         
+                         # 古代下装
+                         ancient_bottom_match = re.search(r'<下装>([^<]+)</下装>', ancient_content)
+                         if ancient_bottom_match:
+                             ancient_details.append(ancient_bottom_match.group(1).strip())
+                         
+                         # 古代配饰
+                         ancient_accessory_match = re.search(r'<配饰>([^<]+)</配饰>', ancient_content)
+                         if ancient_accessory_match and ancient_accessory_match.group(1).strip() != '无':
+                             ancient_details.append(ancient_accessory_match.group(1).strip())
+                         
+                         # 创建两个角色信息：现代和古代
+                         modern_character = {
+                             'name': character_info['name'],
+                             'gender': character_info['gender'],
+                             'description': '，'.join(modern_details),
+                             'age_group': age_group,
+                             'era': 'modern'
+                         }
+                         
+                         ancient_character = {
+                             'name': character_info['name'],
+                             'gender': character_info['gender'],
+                             'description': '，'.join(ancient_details),
+                             'age_group': age_group,
+                             'era': 'ancient'
+                         }
+                         
+                         characters.append(modern_character)
+                         characters.append(ancient_character)
+                         
+                     else:
+                         # 兼容旧格式或单一时代格式
+                         clothing_section = re.search(r'<服装风格>(.*?)</服装风格>', char_content, re.DOTALL)
+                         if clothing_section:
+                             clothing_content = clothing_section.group(1)
+                             
+                             # 上衣
+                             top_match = re.search(r'<上衣>([^<]+)</上衣>', clothing_content)
+                             if top_match:
+                                 details.append(top_match.group(1).strip())
+                             
+                             # 下装
+                             bottom_match = re.search(r'<下装>([^<]+)</下装>', clothing_content)
+                             if bottom_match:
+                                 details.append(bottom_match.group(1).strip())
+                             
+                             # 配饰
+                             accessory_match = re.search(r'<配饰>([^<]+)</配饰>', clothing_content)
+                             if accessory_match and accessory_match.group(1).strip() != '无':
+                                 details.append(accessory_match.group(1).strip())
+                         
+                         character_info['description'] = '，'.join(details)
+                         character_info['age_group'] = age_group
+                         character_info['era'] = 'single'  # 单一时代
+                         characters.append(character_info)
+                     
+                     if modern_section and ancient_section:
+                         print(f"解析到角色: {character_info['name']} (现代) -> {modern_character['description']}")
+                         print(f"解析到角色: {character_info['name']} (古代) -> {ancient_character['description']}")
+                     else:
+                         print(f"解析到角色: {character_info['name']} -> {character_info['description']}")
         
         else:
             # 兼容旧格式：<主角1>、<配角1>等

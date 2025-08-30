@@ -807,195 +807,17 @@ def create_image_video_with_effects(image_path, output_path, duration, width=720
         print(f"创建图片视频失败: {e}")
         return False
 
-def create_merged_narration_video(chapter_path, work_dir):
-    """
-    创建合并的narration_01-03视频
-    
-    新逻辑：合并narration_01-03的ASS和MP3文件，
-    前10秒使用first_video，后面时间用image_01-03平均分配
-    
-    Args:
-        chapter_path: 章节目录路径
-        work_dir: 工作目录
-    
-    Returns:
-        str: 输出视频路径，失败时返回None
-    """
-    chapter_name = os.path.basename(chapter_path)
-    
-    # 合并文件路径
-    merged_ass_file = os.path.join(chapter_path, f"{chapter_name}_narration_01-03_merged.ass")
-    merged_mp3_file = os.path.join(chapter_path, f"{chapter_name}_narration_01-03_merged.mp3")
-    output_video = os.path.join(chapter_path, f"{chapter_name}_narration_01-03_video.mp4")
-    
-    print(f"\n开始处理合并的 narration_01-03")
-    
-    # 合并ASS文件
-    if not merge_ass_files(chapter_path, ["01", "02", "03"], merged_ass_file):
-        return None
-    
-    # 合并MP3文件
-    if not merge_mp3_files(chapter_path, ["01", "02", "03"], merged_mp3_file):
-        return None
-    
-    # 获取音频时长和字幕时长
-    audio_duration = get_audio_duration(merged_mp3_file)
-    if audio_duration <= 0:
-        print(f"无法获取音频时长: {merged_mp3_file}")
-        return None
-    
-    ass_duration = get_ass_duration(merged_ass_file)
-    if ass_duration <= 0:
-        print(f"无法获取ASS字幕时长: {merged_ass_file}")
-        return None
-    
-    video_duration = min(audio_duration, ass_duration)
-    
-    print(f"音频时长: {audio_duration:.2f}s, 字幕时长: {ass_duration:.2f}s")
-    print(f"使用视频时长: {video_duration:.2f}s")
-    
-    # 解析ASS文件获取对话时间戳
-    dialogues = parse_ass_dialogues(merged_ass_file)
-    if not dialogues:
-        print(f"无法解析合并的ASS文件: {merged_ass_file}")
-        return None
-    
-    # 创建视频片段
-    first_video = os.path.join(chapter_path, f"{chapter_name}_first_video.mp4")
-    if not os.path.exists(first_video):
-        print(f"first_video文件不存在: {first_video}")
-        return None
-    
-    video_segments = []
-    
-    # 前10秒使用first_video
-    video_segments.append({
-        'type': 'video',
-        'path': first_video,
-        'duration': min(10.0, video_duration)
-    })
-    
-    # 10秒后的时间用image_01-03平均分配
-    if video_duration > 10.0:
-        remaining_duration = video_duration - 10.0
-        image_duration_each = remaining_duration / 3
-        
-        for i in range(1, 4):
-            image_file = os.path.join(chapter_path, f"{chapter_name}_image_{i:02d}.jpeg")
-            if os.path.exists(image_file):
-                video_segments.append({
-                    'type': 'image',
-                    'path': image_file,
-                    'duration': image_duration_each
-                })
-            else:
-                print(f"⚠️  图片文件不存在: {image_file}")
-    
-    # 创建临时目录
-    temp_dir = os.path.join(chapter_path, 'temp_narration_videos')
-    os.makedirs(temp_dir, exist_ok=True)
-    
-    # 生成视频片段
-    segment_files = []
-    for i, segment in enumerate(video_segments):
-        if segment['type'] == 'image':
-            temp_video = os.path.join(temp_dir, f"segment_merged_{i}.mp4")
-            if create_image_video_with_effects(
-                segment['path'], 
-                temp_video, 
-                segment['duration'],
-                VIDEO_STANDARDS['width'],
-                VIDEO_STANDARDS['height'],
-                VIDEO_STANDARDS['fps']
-            ):
-                segment_files.append(temp_video)
-        elif segment['type'] == 'video':
-            if segment['duration'] < get_video_info(segment['path'])[3]:
-                temp_video = os.path.join(temp_dir, f"segment_merged_{i}.mp4")
-                try:
-                    gpu_params = get_ffmpeg_gpu_params()
-                    output_params = {
-                        't': segment['duration'],
-                        'vcodec': gpu_params['video_codec'],
-                        'acodec': VIDEO_STANDARDS['audio_codec'],
-                        'r': VIDEO_STANDARDS['fps']
-                    }
-                    if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
-                        output_params['preset'] = gpu_params['preset']
-                    if 'tune' in gpu_params:
-                        output_params['tune'] = gpu_params['tune']
-                    
-                    stream = ffmpeg.input(segment['path'])
-                    if 'hwaccel' in gpu_params:
-                        stream = ffmpeg.input(segment['path'], hwaccel=gpu_params['hwaccel'])
-                        if 'hwaccel_output_format' in gpu_params:
-                            stream = ffmpeg.input(segment['path'], 
-                                                hwaccel=gpu_params['hwaccel'],
-                                                hwaccel_output_format=gpu_params['hwaccel_output_format'])
-                    
-                    stream.output(temp_video, **output_params).overwrite_output().run(quiet=True)
-                    segment_files.append(temp_video)
-                except Exception as e:
-                    print(f"裁剪视频失败: {e}")
-                    segment_files.append(segment['path'])
-            else:
-                segment_files.append(segment['path'])
-    
-    if not segment_files:
-        print(f"没有生成任何视频片段用于合并的narration_01-03")
-        return None
-    
-    # 合并视频片段
-    if len(segment_files) == 1:
-        base_video = segment_files[0]
-    else:
-        concat_list_file = os.path.join(temp_dir, "concat_list_merged.txt")
-        with open(concat_list_file, 'w') as f:
-            for segment_file in segment_files:
-                f.write(f"file '{os.path.abspath(segment_file)}'\n")
-        
-        base_video = os.path.join(temp_dir, "base_video_merged.mp4")
-        try:
-            gpu_params = get_ffmpeg_gpu_params()
-            output_params = {
-                'vcodec': gpu_params['video_codec'],
-                'acodec': VIDEO_STANDARDS['audio_codec'],
-                'r': VIDEO_STANDARDS['fps']
-            }
-            if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
-                output_params['preset'] = gpu_params['preset']
-            if 'tune' in gpu_params:
-                output_params['tune'] = gpu_params['tune']
-            
-            (
-                ffmpeg
-                .input(concat_list_file, format='concat', safe=0)
-                .output(base_video, **output_params)
-                .overwrite_output()
-                .run(quiet=True)
-            )
-        except Exception as e:
-            print(f"合并视频片段失败: {e}")
-            return None
-    
-    # 收集片段时长信息
-    segment_durations = [segment['duration'] for segment in video_segments]
-    
-    # 获取音效列表
-    sound_effects = get_sound_effects_for_narration(dialogues, "01-03", work_dir)
-    
-    # 添加转场、水印、字幕和音频
-    final_video = add_effects_and_audio(base_video, output_video, merged_ass_file, merged_mp3_file, work_dir, segment_durations, sound_effects)
-    
-    return final_video if final_video else None
+# 删除create_merged_narration_video函数，不再需要合并处理
 
 def create_narration_video(chapter_path, narration_num, work_dir):
     """
     创建单个narration的视频
     
     新的逻辑：
-    - narration_01-03: 使用create_merged_narration_video处理
-    - narration_04-30: 正常合成，1个MP3对应1个ASS对应1个图片
+    - narration_01: 使用video_1.mp4 + narration_01.ass + narration_01.mp3
+    - narration_02: 使用video_2.mp4 + narration_02.ass + narration_02.mp3
+    - narration_03及其他: 使用图片 + ASS + MP3合成
+    - 时长都使用对应MP3的时长
     
     Args:
         chapter_path: 章节目录路径
@@ -1005,12 +827,6 @@ def create_narration_video(chapter_path, narration_num, work_dir):
     Returns:
         str: 输出视频路径，失败时返回None
     """
-    # narration_01-03使用合并处理
-    if narration_num in ["01", "02", "03"]:
-        print(f"narration_{narration_num} 将通过合并处理，跳过单独生成")
-        return None
-    
-    # narration_04-30正常处理
     chapter_name = os.path.basename(chapter_path)
     
     # 文件路径
@@ -1027,24 +843,16 @@ def create_narration_video(chapter_path, narration_num, work_dir):
         print(f"MP3文件不存在: {mp3_file}")
         return None
     
-    # 获取音频时长和字幕时长
+    # 获取音频时长（使用MP3时长作为视频时长）
     audio_duration = get_audio_duration(mp3_file)
     if audio_duration <= 0:
         print(f"无法获取音频时长: {mp3_file}")
         return None
     
-    # 获取ASS字幕文件的时长
-    ass_duration = get_ass_duration(ass_file)
-    if ass_duration <= 0:
-        print(f"无法获取ASS字幕时长: {ass_file}")
-        return None
-    
-    # 使用较短的时长作为视频时长，确保视频不超过字幕时长
-    video_duration = min(audio_duration, ass_duration)
+    video_duration = audio_duration  # 使用MP3时长
     
     print(f"\n开始处理 narration_{narration_num}")
-    print(f"音频时长: {audio_duration:.2f}s, 字幕时长: {ass_duration:.2f}s")
-    print(f"使用视频时长: {video_duration:.2f}s")
+    print(f"使用MP3时长作为视频时长: {video_duration:.2f}s")
     
     # 解析ASS文件获取对话时间戳
     dialogues = parse_ass_dialogues(ass_file)
@@ -1052,139 +860,114 @@ def create_narration_video(chapter_path, narration_num, work_dir):
         print(f"无法解析ASS文件: {ass_file}")
         return None
     
-    # 获取对应的图片文件
-    image_file = get_images_for_narration(chapter_path, narration_num)
-    if not image_file:
-        print(f"没有找到图片文件用于 narration_{narration_num}")
-        return None
+    # 根据narration编号选择视频源
+    base_video = None
     
-    # 创建视频片段列表
-    video_segments = []
-    video_segments.append({
-        'type': 'image',
-        'path': image_file,
-        'duration': video_duration
-    })
-    
-    # 创建临时目录
-    temp_dir = os.path.join(chapter_path, 'temp_narration_videos')
-    os.makedirs(temp_dir, exist_ok=True)
-    
-    # 生成视频片段
-    segment_files = []
-    for i, segment in enumerate(video_segments):
-        if segment['type'] == 'image':
-            # 创建图片视频
-            temp_video = os.path.join(temp_dir, f"segment_{narration_num}_{i}.mp4")
-            if create_image_video_with_effects(
-                segment['path'], 
-                temp_video, 
-                segment['duration'],
-                VIDEO_STANDARDS['width'],
-                VIDEO_STANDARDS['height'],
-                VIDEO_STANDARDS['fps']
-            ):
-                segment_files.append(temp_video)
-        elif segment['type'] == 'video':
-            # 直接使用视频文件（可能需要裁剪时长）
-            if segment['duration'] < get_video_info(segment['path'])[3]:
-                # 需要裁剪
-                temp_video = os.path.join(temp_dir, f"segment_{narration_num}_{i}.mp4")
-                try:
-                    # 获取GPU优化参数
-                    gpu_params = get_ffmpeg_gpu_params()
-                    
-                    # 构建输出参数
-                    output_params = {
-                        't': segment['duration'],
-                        'vcodec': gpu_params['video_codec'],
-                        'acodec': VIDEO_STANDARDS['audio_codec'],
-                        'r': VIDEO_STANDARDS['fps']
-                    }
-                    
-                    # 只有非VideoToolbox编码器才添加preset参数
-                    if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
-                        output_params['preset'] = gpu_params['preset']
-                    
-                    # 添加调优参数（如果有）
-                    if 'tune' in gpu_params:
-                        output_params['tune'] = gpu_params['tune']
-                    
-                    # 构建ffmpeg流
-                    stream = ffmpeg.input(segment['path'])
-                    
-                    # 添加硬件加速参数（如果有GPU）
-                    if 'hwaccel' in gpu_params:
-                        stream = ffmpeg.input(segment['path'], hwaccel=gpu_params['hwaccel'])
-                        if 'hwaccel_output_format' in gpu_params:
-                            stream = ffmpeg.input(segment['path'], 
-                                                hwaccel=gpu_params['hwaccel'],
-                                                hwaccel_output_format=gpu_params['hwaccel_output_format'])
-                    
-                    stream.output(temp_video, **output_params).overwrite_output().run(quiet=True)
-                    segment_files.append(temp_video)
-                except Exception as e:
-                    print(f"裁剪视频失败: {e}")
-                    segment_files.append(segment['path'])  # 使用原文件
-            else:
-                segment_files.append(segment['path'])
-    
-    if not segment_files:
-        print(f"没有生成任何视频片段用于 narration_{narration_num}")
-        return None
-    
-    # 合并视频片段
-    if len(segment_files) == 1:
-        # 只有一个片段，直接复制
-        base_video = segment_files[0]
+    if narration_num == "01":
+        # 使用video_1.mp4
+        video_1_file = os.path.join(chapter_path, f"{chapter_name}_video_1.mp4")
+        if os.path.exists(video_1_file):
+            base_video = video_1_file
+            print(f"使用video_1.mp4作为视频源")
+        else:
+            print(f"video_1.mp4文件不存在: {video_1_file}")
+            return None
+    elif narration_num == "02":
+        # 使用video_2.mp4
+        video_2_file = os.path.join(chapter_path, f"{chapter_name}_video_2.mp4")
+        if os.path.exists(video_2_file):
+            base_video = video_2_file
+            print(f"使用video_2.mp4作为视频源")
+        else:
+            print(f"video_2.mp4文件不存在: {video_2_file}")
+            return None
     else:
-        # 多个片段，需要合并
-        concat_list_file = os.path.join(temp_dir, f"concat_list_{narration_num}.txt")
-        with open(concat_list_file, 'w') as f:
-            for segment_file in segment_files:
-                f.write(f"file '{os.path.abspath(segment_file)}'\n")
+        # narration_03及其他使用图片合成
+        image_file = get_images_for_narration(chapter_path, narration_num)
+        if not image_file:
+            print(f"没有找到图片文件用于 narration_{narration_num}")
+            return None
         
-        base_video = os.path.join(temp_dir, f"base_video_{narration_num}.mp4")
-        try:
-            # 获取GPU优化参数
-            gpu_params = get_ffmpeg_gpu_params()
-            
-            # 构建输出参数
-            output_params = {
-                'vcodec': gpu_params['video_codec'],
-                'acodec': VIDEO_STANDARDS['audio_codec'],
-                'r': VIDEO_STANDARDS['fps']
-            }
-            
-            # 只有非VideoToolbox编码器才添加preset参数
-            if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
-                output_params['preset'] = gpu_params['preset']
-            
-            # 添加调优参数（如果有）
-            if 'tune' in gpu_params:
-                output_params['tune'] = gpu_params['tune']
-            
-            (
-                ffmpeg
-                .input(concat_list_file, format='concat', safe=0)
-                .output(base_video, **output_params)
-                .overwrite_output()
-                .run(quiet=True)
-            )
-        except Exception as e:
-            print(f"合并视频片段失败: {e}")
+        # 创建临时目录
+        temp_dir = os.path.join(chapter_path, 'temp_narration_videos')
+        os.makedirs(temp_dir, exist_ok=True)
+        
+        # 创建图片视频
+        temp_video = os.path.join(temp_dir, f"base_video_{narration_num}.mp4")
+        if create_image_video_with_effects(
+            image_file, 
+            temp_video, 
+            video_duration,
+            VIDEO_STANDARDS['width'],
+            VIDEO_STANDARDS['height'],
+            VIDEO_STANDARDS['fps']
+        ):
+            base_video = temp_video
+            print(f"使用图片{os.path.basename(image_file)}创建视频")
+        else:
+            print(f"创建图片视频失败")
             return None
     
-    # 收集片段时长信息
-    segment_durations = []
-    for segment in video_segments:
-        segment_durations.append(segment['duration'])
+    if not base_video:
+        print(f"无法获取基础视频用于 narration_{narration_num}")
+        return None
+    
+    # 如果使用现有视频文件，需要调整时长
+    if narration_num in ["01", "02"]:
+        # 检查视频时长是否需要调整
+        _, _, _, original_duration = get_video_info(base_video)
+        if original_duration and abs(original_duration - video_duration) > 0.5:
+            # 需要调整时长
+            temp_dir = os.path.join(chapter_path, 'temp_narration_videos')
+            os.makedirs(temp_dir, exist_ok=True)
+            
+            adjusted_video = os.path.join(temp_dir, f"adjusted_video_{narration_num}.mp4")
+            try:
+                gpu_params = get_ffmpeg_gpu_params()
+                
+                cmd = ['ffmpeg', '-y']
+                
+                # 添加硬件加速参数
+                if 'hwaccel' in gpu_params:
+                    cmd.extend(['-hwaccel', gpu_params['hwaccel']])
+                if 'hwaccel_output_format' in gpu_params:
+                    cmd.extend(['-hwaccel_output_format', gpu_params['hwaccel_output_format']])
+                
+                cmd.extend([
+                    '-i', base_video,
+                    '-t', str(video_duration),  # 设置时长
+                    '-c:v', gpu_params['video_codec'],
+                    '-c:a', VIDEO_STANDARDS['audio_codec']
+                ])
+                
+                # 只有非VideoToolbox编码器才添加preset参数
+                if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
+                    cmd.extend(['-preset', gpu_params['preset']])
+                
+                if 'tune' in gpu_params:
+                    cmd.extend(['-tune', gpu_params['tune']])
+                
+                # 添加额外参数
+                if gpu_params['extra_params']:
+                    cmd.extend(gpu_params['extra_params'])
+                
+                cmd.append(adjusted_video)
+                
+                result = subprocess.run(cmd, capture_output=True, text=False)
+                if result.returncode == 0:
+                    base_video = adjusted_video
+                    print(f"调整视频时长为: {video_duration:.2f}s")
+                else:
+                    print(f"调整视频时长失败，使用原视频")
+                    
+            except Exception as e:
+                print(f"调整视频时长失败: {e}，使用原视频")
     
     # 获取音效列表
     sound_effects = get_sound_effects_for_narration(dialogues, narration_num, work_dir)
     
     # 添加转场、水印、字幕和音频
-    final_video = add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir, segment_durations, sound_effects)
+    final_video = add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir, [video_duration], sound_effects)
     
     return final_video if final_video else None
 
@@ -1319,12 +1102,14 @@ def add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir
             )
             current_video = '[v2]'
         
-        # 添加字幕（不使用单引号包围路径）
+        # 添加字幕（位置在距离视频下方三分之一高处）
         # 对于FFmpeg的subtitles滤镜，直接使用路径，转义特殊字符
         # 转义反斜杠、冒号、等号和逗号
         escaped_ass_file = ass_file.replace('\\', '\\\\').replace(':', '\\:').replace('=', '\\=').replace(',', '\\,')
+        # 计算字幕位置：视频高度的2/3处（距离下方1/3）
+        subtitle_y_position = int(VIDEO_STANDARDS['height'] * 2 / 3)
         filter_complex.append(
-            f"{current_video}subtitles={escaped_ass_file}[vout]"
+            f"{current_video}subtitles={escaped_ass_file}:force_style='MarginV={VIDEO_STANDARDS['height'] - subtitle_y_position}'[vout]"
         )
         
         # 处理音频混合
@@ -1412,8 +1197,10 @@ def process_chapter(chapter_path, work_dir):
     处理单个章节的所有narration
     
     新逻辑：
-    - 先处理合并的narration_01-03
-    - 再处理正常的narration_04-30
+    - narration_01: 使用video_1.mp4 + narration_01.ass + narration_01.mp3
+    - narration_02: 使用video_2.mp4 + narration_02.ass + narration_02.mp3
+    - narration_03及其他: 使用图片 + ASS + MP3合成
+    - 时长都使用对应MP3的时长
     
     Args:
         chapter_path: 章节目录路径
@@ -1441,46 +1228,19 @@ def process_chapter(chapter_path, work_dir):
     
     generated_videos = []
     
-    # 1. 处理合并的narration_01-03
-    if all(num in narration_nums for num in ["01", "02", "03"]):
-        print(f"\n{'='*50}")
-        print(f"处理合并的 narration_01-03")
-        print(f"{'='*50}")
-        
-        merged_video_path = create_merged_narration_video(chapter_path, work_dir)
-        if merged_video_path:
-            generated_videos.append(merged_video_path)
+    # 处理所有narration
+    for narration_num in narration_nums:
+        video_path = create_narration_video(chapter_path, narration_num, work_dir)
+        if video_path:
+            generated_videos.append(video_path)
             
             # 检查视频标准
-            if check_video_standards(merged_video_path):
-                print(f"✓ 合并的 narration_01-03 视频符合标准")
+            if check_video_standards(video_path):
+                print(f"✓ narration_{narration_num} 视频符合标准")
             else:
-                print(f"⚠️  合并的 narration_01-03 视频不完全符合标准")
+                print(f"⚠️  narration_{narration_num} 视频不完全符合标准")
         else:
-            print(f"❌ 合并的 narration_01-03 视频生成失败")
-    else:
-        print(f"⚠️  缺少 narration_01-03 中的某些文件，跳过合并处理")
-    
-    # 2. 处理narration_04-30
-    normal_narrations = [num for num in narration_nums if int(num) >= 4]
-    
-    if normal_narrations:
-        print(f"\n{'='*50}")
-        print(f"处理正常的 narration_04-30")
-        print(f"{'='*50}")
-        
-        for narration_num in normal_narrations:
-            video_path = create_narration_video(chapter_path, narration_num, work_dir)
-            if video_path:
-                generated_videos.append(video_path)
-                
-                # 检查视频标准
-                if check_video_standards(video_path):
-                    print(f"✓ narration_{narration_num} 视频符合标准")
-                else:
-                    print(f"⚠️  narration_{narration_num} 视频不完全符合标准")
-            else:
-                print(f"❌ narration_{narration_num} 视频生成失败")
+            print(f"❌ narration_{narration_num} 视频生成失败")
     
     return generated_videos
 

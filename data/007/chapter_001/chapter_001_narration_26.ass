@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_001 Narration 26 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,240,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,240,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}推开大臣上前
+Dialogue: 0,0:00:01.88,0:00:02.68,Default,,0,0,0,,孤来下旨
+Dialogue: 0,0:00:02.98,0:00:04.35,Default,,0,0,0,,深青色圆领袍拂过
+Dialogue: 0,0:00:04.35,0:00:05.90,Default,,0,0,0,,地面他眼神锐利
+Dialogue: 0,0:00:06.29,0:00:08.01,Default,,0,0,0,,孤要随军出征{\c&H0000FFFF&\b1}薛延陀{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.35,0:00:09.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}戴罪立功{\c&H00FFFFFF&\b0}

@@ -1,0 +1,22 @@
+[Script Info]
+Title: Merged Narration
+ScriptType: v4.00+
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}东宫{\c&H00FFFFFF&\b0}晨雾中
+Dialogue: 0,0:00:01.34,0:00:03.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}一瘸一拐走来
+Dialogue: 0,0:00:03.31,0:00:04.25,Default,,0,0,0,,望紧闭宫门
+Dialogue: 0,0:00:04.62,0:00:06.08,Default,,0,0,0,,暗下决心带{\c&H0000FFFF&\b1}玉儿{\c&H00FFFFFF&\b0}走
+Dialogue: 0,0:00:06.10,0:00:06.62,Default,,0,0,0,,大堂内
+Dialogue: 0,0:00:07.05,0:00:08.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏宁{\c&H00FFFFFF&\b0}玉背向坐椅
+Dialogue: 0,0:00:08.58,0:00:09.53,Default,,0,0,0,,面前放嫁衣
+Dialogue: 0,0:00:09.90,0:00:11.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}自语{\c&H00FFFFFF&\b0}死也要体面
+Dialogue: 0,0:00:11.58,0:00:12.37,Default,,0,0,0,,声静决
+Dialogue: 0,0:00:12.39,0:00:14.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}推门而入听到取嫁衣
+Dialogue: 0,0:00:15.17,0:00:17.73,Default,,0,0,0,,瞬间{\c&H0000FFFF&\b1}明白{\c&H00FFFFFF&\b0}妻子用意心中一紧
+Dialogue: 0,0:00:18.03,0:00:19.14,Default,,0,0,0,,她要随我赴死

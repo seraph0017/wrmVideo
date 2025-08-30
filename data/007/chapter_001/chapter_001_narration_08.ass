@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_001 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,240,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,240,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.69,Default,,0,0,0,,太极殿门口{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}见他到来
+Dialogue: 0,0:00:01.69,0:00:03.72,Default,,0,0,0,,竟无一人{\c&H0000FFFF&\b1}施礼{\c&H00FFFFFF&\b0}李承乾
+Dialogue: 0,0:00:03.72,0:00:05.78,Default,,0,0,0,,怒火中烧抬剑指着{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.14,0:00:07.37,Default,,0,0,0,,把门给本宫打开
+Dialogue: 0,0:00:07.65,0:00:09.17,Default,,0,0,0,,声音在{\c&H0000FFFF&\b1}宫殿{\c&H00FFFFFF&\b0}前回荡

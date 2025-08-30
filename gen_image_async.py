@@ -250,11 +250,25 @@ def parse_narration_file(narration_file_path):
                     # 提取特写人物信息
                     character_name = None
                     
-                    # 从<特写人物>块中提取角色姓名
+                    # 从<特写人物>块中提取角色姓名（支持容错处理）
                     character_block_match = re.search(r'<特写人物>(.*?)</特写人物>', closeup_content, re.DOTALL)
+                    character_block = None
+                    
                     if character_block_match:
                         character_block = character_block_match.group(1)
-                        
+                        print(f"      找到完整的<特写人物>标签")
+                    else:
+                        # 容错处理：检查是否有缺失开始标签的情况
+                        # 查找</特写人物>结束标签，然后向前查找角色信息
+                        end_tag_match = re.search(r'(.*?)</特写人物>', closeup_content, re.DOTALL)
+                        if end_tag_match:
+                            potential_block = end_tag_match.group(1).strip()
+                            # 检查是否包含角色相关标签
+                            if re.search(r'<角色姓名>.*?</角色姓名>', potential_block) or re.search(r'<时代背景>.*?</时代背景>', potential_block):
+                                character_block = potential_block
+                                print(f"      容错处理：找到缺失开始标签的<特写人物>内容")
+                    
+                    if character_block:
                         # 优先从<角色姓名>标签中提取角色名称
                         character_name_match = re.search(r'<角色姓名>([^<]+)</角色姓名>', character_block)
                         if character_name_match:

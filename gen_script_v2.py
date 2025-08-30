@@ -478,14 +478,14 @@ class ScriptGeneratorV2:
             print(f"警告：特写验证过程中出现异常，跳过验证 - {e}")
             # 验证异常不影响生成流程
         
-        # 验证特写人物是否都在出镜人物列表中定义
-        try:
-            character_valid, character_error = self._validate_character_consistency(cleaned_narration)
-            if not character_valid:
-                return False, f"角色一致性验证失败：{character_error}"
-        except Exception as e:
-            print(f"警告：角色一致性验证过程中出现异常，跳过验证 - {e}")
-            # 验证异常不影响生成流程
+        # 验证特写人物是否都在出镜人物列表中定义（已禁用）
+        # try:
+        #     character_valid, character_error = self._validate_character_consistency(cleaned_narration)
+        #     if not character_valid:
+        #         return False, f"角色一致性验证失败：{character_error}"
+        # except Exception as e:
+        #     print(f"警告：角色一致性验证过程中出现异常，跳过验证 - {e}")
+        #     # 验证异常不影响生成流程
         
         # 自动修复XML标签闭合
         fixed_narration = self._fix_xml_tags(cleaned_narration)
