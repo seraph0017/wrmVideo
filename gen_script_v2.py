@@ -408,7 +408,7 @@ class ScriptGeneratorV2:
             print(f"生成第{chapter_num}章解说时出错：{e}")
             return ""
     
-    def validate_narration_content(self, narration: str, min_length: int = 1200, max_length: int = 1700) -> Tuple[bool, str]:
+    def validate_narration_content(self, narration: str, min_length: int = 1300, max_length: int = 1700) -> Tuple[bool, str]:
         """
         验证解说内容的质量（检查字数、自动修复XML标签闭合、移除不需要的标签、内容审查）
         
@@ -457,8 +457,8 @@ class ScriptGeneratorV2:
         total_explanation_text = ''.join(explanation_matches)
         explanation_length = len(total_explanation_text.strip())
         
-        # 验证特写数量（第一个分镜4个特写+其余9个分镜各3个特写=31个解说内容）
-        expected_explanations = 31
+        # 验证特写数量（10个分镜各3个特写=30个解说内容）
+        expected_explanations = 30
         if len(explanation_matches) != expected_explanations:
             print(f"警告：解说内容数量不正确，期望{expected_explanations}个，实际{len(explanation_matches)}个")
         
@@ -478,14 +478,7 @@ class ScriptGeneratorV2:
             print(f"警告：特写验证过程中出现异常，跳过验证 - {e}")
             # 验证异常不影响生成流程
         
-        # 验证特写人物是否都在出镜人物列表中定义
-        try:
-            character_valid, character_error = self._validate_character_consistency(cleaned_narration)
-            if not character_valid:
-                return False, f"角色一致性验证失败：{character_error}"
-        except Exception as e:
-            print(f"警告：角色一致性验证过程中出现异常，跳过验证 - {e}")
-            # 验证异常不影响生成流程
+        # 角色一致性验证已移除
         
         # 自动修复XML标签闭合
         fixed_narration = self._fix_xml_tags(cleaned_narration)
@@ -742,66 +735,7 @@ class ScriptGeneratorV2:
         
         return found_keywords
     
-    def _validate_character_consistency(self, content: str) -> Tuple[bool, str]:
-        """
-        验证特写人物是否都在出镜人物列表中定义
-        
-        Args:
-            content: 解说内容
-            
-        Returns:
-            Tuple[bool, str]: (是否有效, 错误信息)
-        """
-        import re
-        
-        # 提取出镜人物列表
-        cast_pattern = r'<出镜人物>(.*?)</出镜人物>'
-        cast_match = re.search(cast_pattern, content, re.DOTALL)
-        
-        if not cast_match:
-            return False, "未找到出镜人物标签"
-        
-        cast_content = cast_match.group(1).strip()
-        
-        # 解析出镜人物列表中的角色姓名
-        character_pattern = r'<姓名>(.*?)</姓名>'
-        cast_characters = re.findall(character_pattern, cast_content, re.DOTALL)
-        cast_characters = [char.strip() for char in cast_characters if char.strip()]
-        
-        if not cast_characters:
-            return False, "出镜人物列表中未找到有效的角色姓名"
-        
-        # 提取所有特写人物
-        closeup_pattern = r'<特写人物>(.*?)</特写人物>'
-        closeup_matches = re.findall(closeup_pattern, content, re.DOTALL)
-        
-        if not closeup_matches:
-            return False, "未找到特写人物标签"
-        
-        # 检查每个特写人物是否在出镜人物列表中
-        invalid_characters = []
-        valid_non_character_closeups = [
-            '无（环境特写）', '环境', '道具', '细节', '特效', '景物', '建筑', 
-            '天空', '山水', '花草', '动物', '物品', '文字', '符号'
-        ]
-        
-        for i, closeup_char in enumerate(closeup_matches, 1):
-            closeup_char = closeup_char.strip()
-            
-            # 跳过非人物特写
-            if closeup_char in valid_non_character_closeups:
-                continue
-            
-            # 检查是否为有效的角色姓名
-            if closeup_char not in cast_characters:
-                invalid_characters.append(f"第{i}个特写人物'{closeup_char}'")
-        
-        if invalid_characters:
-            error_msg = f"以下特写人物未在出镜人物列表中定义：{', '.join(invalid_characters)}。\n"
-            error_msg += f"出镜人物列表：{', '.join(cast_characters)}"
-            return False, error_msg
-        
-        return True, ""
+    # _validate_character_consistency 函数已移除
     
     def audit_and_filter_narration(self, narration: str, chapter_num: int) -> Tuple[bool, str]:
         """
@@ -1286,8 +1220,8 @@ def main():
     parser.add_argument('--workers', '-w', type=int, default=5, help='最大并发线程数（默认：5）')
     parser.add_argument('--validate-only', action='store_true', help='仅验证现有章节，不生成新内容')
     parser.add_argument('--regenerate', action='store_true', help='重新生成无效章节')
-    parser.add_argument('--min-length', type=int, default=800, help='解说文案最小长度（默认：800）')
-    parser.add_argument('--max-length', type=int, default=2000, help='解说文案最大长度（默认：2000）')
+    parser.add_argument('--min-length', type=int, default=1300, help='解说文案最小长度（默认：1300）')
+    parser.add_argument('--max-length', type=int, default=1700, help='解说文案最大长度（默认：1700）')
     parser.add_argument('--max-retries', type=int, default=3, help='最大重试次数（默认：3）')
     
     args = parser.parse_args()

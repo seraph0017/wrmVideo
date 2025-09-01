@@ -9,13 +9,14 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}楚秀端{\c&H00FFFFFF&\b0}来饭菜
-Dialogue: 0,0:00:01.54,0:00:02.63,Default,,0,0,0,,看着{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}和赵鸾
-Dialogue: 0,0:00:02.97,0:00:03.72,Default,,0,0,0,,眼神{\c&H0000FFFF&\b1}慈爱{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:04.02,0:00:05.47,Default,,0,0,0,,叮嘱他们上学要小心
-Dialogue: 0,0:00:05.78,0:00:06.56,Default,,0,0,0,,充满{\c&H0000FFFF&\b1}母爱{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:00.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}望远镜{\c&H00FFFFFF&\b0}中
+Dialogue: 0,0:00:01.19,0:00:03.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}超新星{\c&H00FFFFFF&\b0}旁竟出现顶天立地的
+Dialogue: 0,0:00:03.30,0:00:04.02,Default,,0,0,0,,巨人虚影
+Dialogue: 0,0:00:04.58,0:00:05.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}惊得瘫坐地上
+Dialogue: 0,0:00:06.18,0:00:07.27,Default,,0,0,0,,矿泉水瓶摔落
+Dialogue: 0,0:00:07.69,0:00:08.98,Default,,0,0,0,,口中喃喃不可能

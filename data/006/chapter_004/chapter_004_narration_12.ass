@@ -9,14 +9,15 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}于藏经阁翻阅古籍
-Dialogue: 0,0:00:02.31,0:00:04.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄色{\c&H00FFFFFF&\b0}长袍下摆垂落于台阶
-Dialogue: 0,0:00:05.01,0:00:06.30,Default,,0,0,0,,指尖划过泛黄书页
-Dialogue: 0,0:00:06.62,0:00:08.05,Default,,0,0,0,,寻找克制僵神尸毒的
-Dialogue: 0,0:00:08.05,0:00:08.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}上古{\c&H00FFFFFF&\b0}秘法
-Dialogue: 0,0:00:09.19,0:00:10.63,Default,,0,0,0,,窗外忽传警钟声
+Dialogue: 0,0:00:00.02,0:00:01.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}凤岚{\c&H00FFFFFF&\b0}负责府中资源调配
+Dialogue: 0,0:00:02.12,0:00:03.01,Default,,0,0,0,,清点库存
+Dialogue: 0,0:00:03.41,0:00:04.07,Default,,0,0,0,,统计丹药
+Dialogue: 0,0:00:04.47,0:00:05.17,Default,,0,0,0,,兵器数量
+Dialogue: 0,0:00:05.58,0:00:06.59,Default,,0,0,0,,制定分配方案
+Dialogue: 0,0:00:06.89,0:00:08.25,Default,,0,0,0,,确保资源合理利用
+Dialogue: 0,0:00:08.61,0:00:09.37,Default,,0,0,0,,保障供给

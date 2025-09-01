@@ -14,8 +14,8 @@ from datetime import datetime
 # 添加项目根目录到路径
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from config.prompt_config import ART_STYLES
-from config.config import STORY_STYLE, IMAGE_TWO_CONFIG
+# ART_STYLES 配置已移除
+from config.config import IMAGE_TWO_CONFIG
 from volcengine.visual.VisualService import VisualService
 
 def generate_test_prompts():

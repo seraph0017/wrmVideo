@@ -9,12 +9,15 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}起身解释地球是圆的
-Dialogue: 0,0:00:02.31,0:00:03.35,Default,,0,0,0,,引来同学嘲笑
-Dialogue: 0,0:00:03.75,0:00:04.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}趁机发难
-Dialogue: 0,0:00:05.27,0:00:07.23,Default,,0,0,0,,要求夫子将他逐出学堂
+Dialogue: 0,0:00:00.02,0:00:00.55,Default,,0,0,0,,转角处
+Dialogue: 0,0:00:01.03,0:00:02.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}带人拦住去路
+Dialogue: 0,0:00:02.67,0:00:03.44,Default,,0,0,0,,身材肥胖
+Dialogue: 0,0:00:03.69,0:00:04.49,Default,,0,0,0,,眼神嚣张
+Dialogue: 0,0:00:04.82,0:00:06.09,Default,,0,0,0,,嘲讽{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}是草包
+Dialogue: 0,0:00:06.32,0:00:07.35,Default,,0,0,0,,抬脚将其绊倒
+Dialogue: 0,0:00:07.69,0:00:08.83,Default,,0,0,0,,引得跟班哄笑

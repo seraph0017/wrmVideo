@@ -454,72 +454,78 @@ def get_sound_effects_for_narration(dialogues, narration_num, work_dir):
     Returns:
         list: 音效信息列表，每个元素包含 {'path': 音效路径, 'start_time': 开始时间, 'duration': 持续时间, 'volume': 音量}
     """
-    sound_effects = []
+    # 只有narration_01、narration_02和narration_03才添加音效
+    if narration_num not in ["01", "02", "03"]:
+        print(f"narration_{narration_num} 不添加音效（仅narration_01-03添加音效）")
+        return []
     
-    # narration1特殊处理
-    if narration_num == "01":
-        # 第3秒固定使用铃声
-        bell_path = os.path.join(work_dir, 'src', 'sound_effects', 'misc', 'bell_ring.wav')
-        if os.path.exists(bell_path):
+    sound_effects = []
+    used_sound_files = set()  # 记录已使用的音效文件，确保每种音效最多使用一次
+    
+    # 默认音效路径
+    default_sound_path = os.path.join(work_dir, 'src', 'sound_effects', 'environment', 'wind_gentle.wav')
+    
+    # 为所有对话匹配音效（先收集所有可能的音效）
+    potential_effects = []
+    for dialogue in dialogues:
+        effect_path = find_sound_effect(dialogue['text'], work_dir)
+        if effect_path:
+            potential_effects.append({
+                'path': effect_path,
+                'start_time': dialogue['start_time'],
+                'end_time': dialogue['end_time'],
+                'text': dialogue['text']
+            })
+    
+    # 去重处理：每种音效最多使用一次
+    for effect in potential_effects:
+        effect_filename = os.path.basename(effect['path'])
+        if effect_filename not in used_sound_files:
+            used_sound_files.add(effect_filename)
+            # 计算音效持续时间（不超过对话时长，最长3秒）
+            max_duration = min(3, effect['end_time'] - effect['start_time'])
             sound_effects.append({
-                'path': bell_path,
+                'path': effect['path'],
+                'start_time': effect['start_time'],
+                'duration': max_duration,
+                'volume': 0.5
+            })
+    
+    # 特殊处理：第一个narration视频
+    if narration_num == "01":
+        # 如果没有匹配到任何音效，在第3秒添加默认音效
+        if not sound_effects and os.path.exists(default_sound_path):
+            sound_effects.append({
+                'path': default_sound_path,
                 'start_time': 3,
                 'duration': 2,
                 'volume': 0.5
             })
-        
-        # 5-10秒强制确保有音效
-        has_effect_5_10 = False
-        for dialogue in dialogues:
-            if 5 <= dialogue['start_time'] <= 10:
-                effect_path = find_sound_effect(dialogue['text'], work_dir)
-                if effect_path:
-                    has_effect_5_10 = True
-                    sound_effects.append({
-                        'path': effect_path,
-                        'start_time': dialogue['start_time'],
-                        'duration': min(3, dialogue['end_time'] - dialogue['start_time']),
-                        'volume': 0.5
-                    })
-                    break
-        
-        # 强制确保6-10秒有音效，如果没有匹配到则使用脚步声
-        if not has_effect_5_10:
-            footsteps_path = os.path.join(work_dir, 'src', 'sound_effects', 'action', 'footsteps_normal.wav')
-            if os.path.exists(footsteps_path):
-                sound_effects.append({
-                    'path': footsteps_path,
-                    'start_time': 6,
-                    'duration': 4,
-                    'volume': 0.5
-                })
-            else:
-                # 如果脚步声文件不存在，使用铃声作为备选
-                bell_path = os.path.join(work_dir, 'src', 'sound_effects', 'misc', 'bell_ring.wav')
-                if os.path.exists(bell_path):
-                    sound_effects.append({
-                        'path': bell_path,
-                        'start_time': 6,
-                        'duration': 4,
-                        'volume': 0.3
-                    })
+            used_sound_files.add(os.path.basename(default_sound_path))
+            print(f"第一个narration视频没有匹配到音效，在第3秒添加默认音效(wind_gentle)")
     
-    # 为所有对话匹配音效
-    for dialogue in dialogues:
-        # narration1的前10秒已经特殊处理，跳过
-        if narration_num == "01" and dialogue['start_time'] < 10:
-            continue
+    # 特殊处理：第二个narration视频
+    elif narration_num == "02":
+        # 如果没有匹配到任何音效，在视频中间添加默认音效
+        if not sound_effects and os.path.exists(default_sound_path):
+            # 计算对话总时长来确定视频中间位置
+            total_duration = 0
+            if dialogues:
+                for dialogue in dialogues:
+                    if 'end_time' in dialogue and 'start_time' in dialogue:
+                        total_duration = max(total_duration, dialogue['end_time'])
             
-        effect_path = find_sound_effect(dialogue['text'], work_dir)
-        if effect_path:
-            # 计算音效持续时间（不超过对话时长，最长3秒）
-            max_duration = min(3, dialogue['end_time'] - dialogue['start_time'])
+            # 在视频中间位置添加音效（如果时长小于6秒，则在第3秒添加）
+            middle_time = max(3, total_duration / 2) if total_duration > 6 else 3
+            
             sound_effects.append({
-                'path': effect_path,
-                'start_time': dialogue['start_time'],
-                'duration': max_duration,
+                'path': default_sound_path,
+                'start_time': middle_time,
+                'duration': 2,
                 'volume': 0.5
             })
+            used_sound_files.add(os.path.basename(default_sound_path))
+            print(f"第二个narration视频没有匹配到音效，在视频中间({middle_time:.1f}秒)添加默认音效(wind_gentle)")
     
     print(f"为 narration_{narration_num} 找到 {len(sound_effects)} 个音效")
     for effect in sound_effects:
@@ -577,7 +583,7 @@ def merge_ass_files(chapter_path, narration_nums, output_path):
             f.write("\n")
             f.write("[V4+ Styles]\n")
             f.write("Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n")
-            f.write("Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1\n")
+            f.write("Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1\n")
             f.write("\n")
             f.write("[Events]\n")
             f.write("Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n")
@@ -807,9 +813,257 @@ def create_image_video_with_effects(image_path, output_path, duration, width=720
         print(f"创建图片视频失败: {e}")
         return False
 
+def create_first_narration_video(chapter_path, work_dir):
+    """
+    创建第一个narration视频
+    
+    新逻辑：第一个narration和video_1合成，时间使用narration_01的mp3时间
+    
+    Args:
+        chapter_path: 章节目录路径
+        work_dir: 工作目录
+    
+    Returns:
+        str: 输出视频路径，失败时返回None
+    """
+    chapter_name = os.path.basename(chapter_path)
+    
+    # 文件路径
+    ass_file = os.path.join(chapter_path, f"{chapter_name}_narration_01.ass")
+    mp3_file = os.path.join(chapter_path, f"{chapter_name}_narration_01.mp3")
+    video_1_file = os.path.join(chapter_path, f"{chapter_name}_video_1.mp4")
+    output_video = os.path.join(chapter_path, f"{chapter_name}_narration_01_video.mp4")
+    
+    print(f"\n开始处理第一个narration视频")
+    
+    # 检查必要文件是否存在
+    if not os.path.exists(ass_file):
+        print(f"ASS文件不存在: {ass_file}")
+        return None
+    
+    if not os.path.exists(mp3_file):
+        print(f"MP3文件不存在: {mp3_file}")
+        return None
+    
+    if not os.path.exists(video_1_file):
+        print(f"video_1文件不存在: {video_1_file}")
+        return None
+    
+    # 获取音频时长和字幕时长
+    audio_duration = get_audio_duration(mp3_file)
+    if audio_duration <= 0:
+        print(f"无法获取音频时长: {mp3_file}")
+        return None
+    
+    ass_duration = get_ass_duration(ass_file)
+    if ass_duration <= 0:
+        print(f"无法获取ASS字幕时长: {ass_file}")
+        return None
+    
+    # 使用音频时长作为视频时长，确保音频不被截断
+    video_duration = audio_duration
+    
+    print(f"音频时长: {audio_duration:.2f}s, 字幕时长: {ass_duration:.2f}s")
+    print(f"使用视频时长: {video_duration:.2f}s (以音频时长为准，确保音频完整)")
+    
+    # 解析ASS文件获取对话时间戳
+    dialogues = parse_ass_dialogues(ass_file)
+    if not dialogues:
+        print(f"无法解析ASS文件: {ass_file}")
+        return None
+    
+    # 创建视频片段列表 - 使用video_1作为基础视频
+    video_segments = []
+    video_segments.append({
+        'type': 'video',
+        'path': video_1_file,
+        'duration': video_duration
+    })
+    
+    # 创建临时目录
+    temp_dir = os.path.join(chapter_path, 'temp_narration_videos')
+    os.makedirs(temp_dir, exist_ok=True)
+    
+    # 生成视频片段
+    segment_files = []
+    for i, segment in enumerate(video_segments):
+        if segment['type'] == 'video':
+            # 裁剪video_1到指定时长
+            temp_video = os.path.join(temp_dir, f"segment_01_{i}.mp4")
+            try:
+                gpu_params = get_ffmpeg_gpu_params()
+                output_params = {
+                    'vcodec': gpu_params['video_codec'],
+                    'acodec': VIDEO_STANDARDS['audio_codec'],
+                    'r': VIDEO_STANDARDS['fps'],
+                    't': segment['duration']  # 裁剪到指定时长
+                }
+                if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
+                    output_params['preset'] = gpu_params['preset']
+                if 'tune' in gpu_params:
+                    output_params['tune'] = gpu_params['tune']
+                
+                stream = ffmpeg.input(segment['path'])
+                if 'hwaccel' in gpu_params:
+                    stream = ffmpeg.input(segment['path'], hwaccel=gpu_params['hwaccel'])
+                    if 'hwaccel_output_format' in gpu_params:
+                        stream = ffmpeg.input(segment['path'], 
+                                            hwaccel=gpu_params['hwaccel'],
+                                            hwaccel_output_format=gpu_params['hwaccel_output_format'])
+                
+                stream.output(temp_video, **output_params).overwrite_output().run(quiet=True)
+                segment_files.append(temp_video)
+            except Exception as e:
+                print(f"裁剪视频失败: {e}")
+                segment_files.append(segment['path'])
+        else:
+            segment_files.append(segment['path'])
+    
+    if not segment_files:
+        print(f"没有生成任何视频片段用于第一个narration")
+        return None
+    
+    # 使用第一个片段作为基础视频
+    base_video = segment_files[0]
+    
+    # 收集片段时长信息
+    segment_durations = [segment['duration'] for segment in video_segments]
+    
+    # 获取音效列表
+    sound_effects = get_sound_effects_for_narration(dialogues, "01", work_dir)
+    
+    # 添加转场、水印、字幕和音频
+    final_video = add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir, segment_durations, sound_effects)
+    
+    return final_video if final_video else None
+
+def create_second_narration_video(chapter_path, work_dir):
+    """
+    创建第二个narration视频
+    
+    新逻辑：第二个narration和video_2合成，时间使用narration_02的mp3时间
+    
+    Args:
+        chapter_path: 章节目录路径
+        work_dir: 工作目录
+    
+    Returns:
+        str: 输出视频路径，失败时返回None
+    """
+    chapter_name = os.path.basename(chapter_path)
+    
+    # 文件路径
+    ass_file = os.path.join(chapter_path, f"{chapter_name}_narration_02.ass")
+    mp3_file = os.path.join(chapter_path, f"{chapter_name}_narration_02.mp3")
+    video_2_file = os.path.join(chapter_path, f"{chapter_name}_video_2.mp4")
+    output_video = os.path.join(chapter_path, f"{chapter_name}_narration_02_video.mp4")
+    
+    print(f"\n开始处理第二个narration视频")
+    
+    # 检查必要文件是否存在
+    if not os.path.exists(ass_file):
+        print(f"ASS文件不存在: {ass_file}")
+        return None
+    
+    if not os.path.exists(mp3_file):
+        print(f"MP3文件不存在: {mp3_file}")
+        return None
+    
+    if not os.path.exists(video_2_file):
+        print(f"video_2文件不存在: {video_2_file}")
+        return None
+    
+    # 获取音频时长和字幕时长
+    audio_duration = get_audio_duration(mp3_file)
+    if audio_duration <= 0:
+        print(f"无法获取音频时长: {mp3_file}")
+        return None
+    
+    ass_duration = get_ass_duration(ass_file)
+    if ass_duration <= 0:
+        print(f"无法获取ASS字幕时长: {ass_file}")
+        return None
+    
+    # 使用音频时长作为视频时长，确保音频不被截断
+    video_duration = audio_duration
+    
+    print(f"音频时长: {audio_duration:.2f}s, 字幕时长: {ass_duration:.2f}s")
+    print(f"使用视频时长: {video_duration:.2f}s (以音频时长为准，确保音频完整)")
+    
+    # 解析ASS文件获取对话时间戳
+    dialogues = parse_ass_dialogues(ass_file)
+    if not dialogues:
+        print(f"无法解析ASS文件: {ass_file}")
+        return None
+    
+    # 创建视频片段列表 - 使用video_2作为基础视频
+    video_segments = []
+    video_segments.append({
+        'type': 'video',
+        'path': video_2_file,
+        'duration': video_duration
+    })
+    
+    # 创建临时目录
+    temp_dir = os.path.join(chapter_path, 'temp_narration_videos')
+    os.makedirs(temp_dir, exist_ok=True)
+    
+    # 生成视频片段
+    segment_files = []
+    for i, segment in enumerate(video_segments):
+        if segment['type'] == 'video':
+            # 裁剪video_2到指定时长
+            temp_video = os.path.join(temp_dir, f"segment_02_{i}.mp4")
+            try:
+                gpu_params = get_ffmpeg_gpu_params()
+                output_params = {
+                    'vcodec': gpu_params['video_codec'],
+                    'acodec': VIDEO_STANDARDS['audio_codec'],
+                    'r': VIDEO_STANDARDS['fps'],
+                    't': segment['duration']  # 裁剪到指定时长
+                }
+                if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
+                    output_params['preset'] = gpu_params['preset']
+                if 'tune' in gpu_params:
+                    output_params['tune'] = gpu_params['tune']
+                
+                stream = ffmpeg.input(segment['path'])
+                if 'hwaccel' in gpu_params:
+                    stream = ffmpeg.input(segment['path'], hwaccel=gpu_params['hwaccel'])
+                    if 'hwaccel_output_format' in gpu_params:
+                        stream = ffmpeg.input(segment['path'], 
+                                            hwaccel=gpu_params['hwaccel'],
+                                            hwaccel_output_format=gpu_params['hwaccel_output_format'])
+                
+                stream.output(temp_video, **output_params).overwrite_output().run(quiet=True)
+                segment_files.append(temp_video)
+            except Exception as e:
+                print(f"裁剪视频失败: {e}")
+                segment_files.append(segment['path'])
+        else:
+            segment_files.append(segment['path'])
+    
+    if not segment_files:
+        print(f"没有生成任何视频片段用于第二个narration")
+        return None
+    
+    # 使用第一个片段作为基础视频
+    base_video = segment_files[0]
+    
+    # 收集片段时长信息
+    segment_durations = [segment['duration'] for segment in video_segments]
+    
+    # 获取音效列表
+    sound_effects = get_sound_effects_for_narration(dialogues, "02", work_dir)
+    
+    # 添加转场、水印、字幕和音频
+    final_video = add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir, segment_durations, sound_effects)
+    
+    return final_video if final_video else None
+
 def create_merged_narration_video(chapter_path, work_dir):
     """
-    创建合并的narration_01-03视频
+    创建合并的narration_01-03视频（已废弃，保留用于兼容性）
     
     新逻辑：合并narration_01-03的ASS和MP3文件，
     前10秒使用first_video，后面时间用image_01-03平均分配
@@ -849,10 +1103,11 @@ def create_merged_narration_video(chapter_path, work_dir):
         print(f"无法获取ASS字幕时长: {merged_ass_file}")
         return None
     
-    video_duration = min(audio_duration, ass_duration)
+    # 使用音频时长作为视频时长，确保音频不被截断
+    video_duration = audio_duration
     
     print(f"音频时长: {audio_duration:.2f}s, 字幕时长: {ass_duration:.2f}s")
-    print(f"使用视频时长: {video_duration:.2f}s")
+    print(f"使用视频时长: {video_duration:.2f}s (以音频时长为准，确保音频完整)")
     
     # 解析ASS文件获取对话时间戳
     dialogues = parse_ass_dialogues(merged_ass_file)
@@ -1005,9 +1260,9 @@ def create_narration_video(chapter_path, narration_num, work_dir):
     Returns:
         str: 输出视频路径，失败时返回None
     """
-    # narration_01-03使用合并处理
-    if narration_num in ["01", "02", "03"]:
-        print(f"narration_{narration_num} 将通过合并处理，跳过单独生成")
+    # narration_01和02使用专门的处理函数
+    if narration_num in ["01", "02"]:
+        print(f"narration_{narration_num} 将通过专门的处理函数处理，跳过单独生成")
         return None
     
     # narration_04-30正常处理
@@ -1039,12 +1294,12 @@ def create_narration_video(chapter_path, narration_num, work_dir):
         print(f"无法获取ASS字幕时长: {ass_file}")
         return None
     
-    # 使用较短的时长作为视频时长，确保视频不超过字幕时长
-    video_duration = min(audio_duration, ass_duration)
+    # 使用音频时长作为视频时长，确保音频不被截断
+    video_duration = audio_duration
     
     print(f"\n开始处理 narration_{narration_num}")
     print(f"音频时长: {audio_duration:.2f}s, 字幕时长: {ass_duration:.2f}s")
-    print(f"使用视频时长: {video_duration:.2f}s")
+    print(f"使用视频时长: {video_duration:.2f}s (以音频时长为准，确保音频完整)")
     
     # 解析ASS文件获取对话时间戳
     dialogues = parse_ass_dialogues(ass_file)
@@ -1204,11 +1459,14 @@ def add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir
     Returns:
         str: 输出视频路径，失败时返回None
     """
-    # 获取ASS字幕文件的时长作为最大输出时长
-    max_duration = get_ass_duration(ass_file)
+    # 获取音频文件的时长作为最大输出时长，确保音频不被截断
+    max_duration = get_audio_duration(mp3_file)
     if max_duration <= 0:
-        print(f"无法获取ASS字幕时长，使用默认处理: {ass_file}")
-        max_duration = None
+        print(f"无法获取音频时长，使用ASS字幕时长: {mp3_file}")
+        max_duration = get_ass_duration(ass_file)
+        if max_duration <= 0:
+            print(f"无法获取ASS字幕时长，使用默认处理: {ass_file}")
+            max_duration = None
     try:
         # 文件路径
         fuceng_path = os.path.join(work_dir, 'src', 'banner', 'fuceng1.mov')
@@ -1441,28 +1699,48 @@ def process_chapter(chapter_path, work_dir):
     
     generated_videos = []
     
-    # 1. 处理合并的narration_01-03
-    if all(num in narration_nums for num in ["01", "02", "03"]):
+    # 1. 处理第一个narration视频
+    if "01" in narration_nums:
         print(f"\n{'='*50}")
-        print(f"处理合并的 narration_01-03")
+        print(f"处理第一个narration视频")
         print(f"{'='*50}")
         
-        merged_video_path = create_merged_narration_video(chapter_path, work_dir)
-        if merged_video_path:
-            generated_videos.append(merged_video_path)
+        first_video_path = create_first_narration_video(chapter_path, work_dir)
+        if first_video_path:
+            generated_videos.append(first_video_path)
             
             # 检查视频标准
-            if check_video_standards(merged_video_path):
-                print(f"✓ 合并的 narration_01-03 视频符合标准")
+            if check_video_standards(first_video_path):
+                print(f"✓ 第一个narration视频符合标准")
             else:
-                print(f"⚠️  合并的 narration_01-03 视频不完全符合标准")
+                print(f"⚠️  第一个narration视频不完全符合标准")
         else:
-            print(f"❌ 合并的 narration_01-03 视频生成失败")
+            print(f"❌ 第一个narration视频生成失败")
     else:
-        print(f"⚠️  缺少 narration_01-03 中的某些文件，跳过合并处理")
+        print(f"⚠️  缺少 narration_01 文件，跳过第一个narration处理")
     
-    # 2. 处理narration_04-30
-    normal_narrations = [num for num in narration_nums if int(num) >= 4]
+    # 2. 处理第二个narration视频
+    if "02" in narration_nums:
+        print(f"\n{'='*50}")
+        print(f"处理第二个narration视频")
+        print(f"{'='*50}")
+        
+        second_video_path = create_second_narration_video(chapter_path, work_dir)
+        if second_video_path:
+            generated_videos.append(second_video_path)
+            
+            # 检查视频标准
+            if check_video_standards(second_video_path):
+                print(f"✓ 第二个narration视频符合标准")
+            else:
+                print(f"⚠️  第二个narration视频不完全符合标准")
+        else:
+            print(f"❌ 第二个narration视频生成失败")
+    else:
+        print(f"⚠️  缺少 narration_02 文件，跳过第二个narration处理")
+    
+    # 3. 处理narration_03及narration_04-30
+    normal_narrations = [num for num in narration_nums if int(num) >= 3]
     
     if normal_narrations:
         print(f"\n{'='*50}")

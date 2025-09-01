@@ -1,283 +1,228 @@
 {
-  "text": "议事殿内，辛芦转身禀报，僵神、骷髅、不死三族联军已破七大宗门，血洗三城，所过之处生灵涂炭，怨气凝聚成黑云压城！",
+  "text": "龙欣汇报锦衣卫情报，僵神、骷髅、不死三族结盟，正疯狂扩张，预计万年左右将威胁齐天府地界。",
   "audio_file": "data/006/chapter_004/chapter_004_narration_05.mp3",
-  "duration": 12.075,
+  "duration": 9.183,
   "character_timestamps": [
     {
-      "character": "议",
+      "character": "龙",
       "start_time": 0.016,
-      "end_time": 0.183
+      "end_time": 0.208
     },
     {
-      "character": "事",
-      "start_time": 0.183,
-      "end_time": 0.316
+      "character": "欣",
+      "start_time": 0.208,
+      "end_time": 0.383
     },
     {
-      "character": "殿",
-      "start_time": 0.316,
-      "end_time": 0.462
-    },
-    {
-      "character": "内",
-      "start_time": 0.462,
-      "end_time": 0.637
-    },
-    {
-      "character": "，",
-      "start_time": 0.637,
-      "end_time": 1.012
-    },
-    {
-      "character": "辛",
-      "start_time": 1.012,
-      "end_time": 1.241
-    },
-    {
-      "character": "芦",
-      "start_time": 1.241,
-      "end_time": 1.395
-    },
-    {
-      "character": "转",
-      "start_time": 1.395,
-      "end_time": 1.654
-    },
-    {
-      "character": "身",
-      "start_time": 1.654,
-      "end_time": 1.845
-    },
-    {
-      "character": "禀",
-      "start_time": 1.845,
-      "end_time": 2.045
+      "character": "汇",
+      "start_time": 0.383,
+      "end_time": 0.541
     },
     {
       "character": "报",
-      "start_time": 2.045,
-      "end_time": 2.224
+      "start_time": 0.541,
+      "end_time": 0.683
+    },
+    {
+      "character": "锦",
+      "start_time": 0.683,
+      "end_time": 0.92
+    },
+    {
+      "character": "衣",
+      "start_time": 0.92,
+      "end_time": 1.037
+    },
+    {
+      "character": "卫",
+      "start_time": 1.037,
+      "end_time": 1.137
+    },
+    {
+      "character": "情",
+      "start_time": 1.137,
+      "end_time": 1.391
+    },
+    {
+      "character": "报",
+      "start_time": 1.391,
+      "end_time": 1.533
     },
     {
       "character": "，",
-      "start_time": 2.224,
-      "end_time": 2.624
+      "start_time": 1.533,
+      "end_time": 1.937
     },
     {
       "character": "僵",
-      "start_time": 2.624,
-      "end_time": 2.799
+      "start_time": 1.937,
+      "end_time": 2.095
     },
     {
       "character": "神",
-      "start_time": 2.799,
-      "end_time": 3.062
+      "start_time": 2.095,
+      "end_time": 2.354
     },
     {
       "character": "，",
-      "start_time": 3.062,
-      "end_time": 3.508
+      "start_time": 2.354,
+      "end_time": 2.787
     },
     {
       "character": "骷",
-      "start_time": 3.508,
-      "end_time": 3.687
+      "start_time": 2.787,
+      "end_time": 2.954
     },
     {
       "character": "髅",
-      "start_time": 3.687,
-      "end_time": 3.904
+      "start_time": 2.954,
+      "end_time": 3.17
     },
     {
       "character": "，",
-      "start_time": 3.904,
-      "end_time": 4.283
+      "start_time": 3.17,
+      "end_time": 3.424
     },
     {
       "character": "不",
-      "start_time": 4.283,
-      "end_time": 4.42
+      "start_time": 3.424,
+      "end_time": 3.562
     },
     {
       "character": "死",
-      "start_time": 4.42,
-      "end_time": 4.566
+      "start_time": 3.562,
+      "end_time": 3.737
     },
     {
       "character": "三",
-      "start_time": 4.566,
-      "end_time": 4.758
+      "start_time": 3.737,
+      "end_time": 3.991
     },
     {
       "character": "族",
-      "start_time": 4.758,
-      "end_time": 4.895
+      "start_time": 3.991,
+      "end_time": 4.158
     },
     {
-      "character": "联",
-      "start_time": 4.895,
-      "end_time": 5.079
+      "character": "结",
+      "start_time": 4.158,
+      "end_time": 4.32
     },
     {
-      "character": "军",
-      "start_time": 5.079,
-      "end_time": 5.312
-    },
-    {
-      "character": "已",
-      "start_time": 5.312,
-      "end_time": 5.429
-    },
-    {
-      "character": "破",
-      "start_time": 5.429,
-      "end_time": 5.595
-    },
-    {
-      "character": "七",
-      "start_time": 5.595,
-      "end_time": 5.854
-    },
-    {
-      "character": "大",
-      "start_time": 5.854,
-      "end_time": 6.004
-    },
-    {
-      "character": "宗",
-      "start_time": 6.004,
-      "end_time": 6.174
-    },
-    {
-      "character": "门",
-      "start_time": 6.174,
-      "end_time": 6.387
+      "character": "盟",
+      "start_time": 4.32,
+      "end_time": 4.533
     },
     {
       "character": "，",
-      "start_time": 6.387,
-      "end_time": 6.674
+      "start_time": 4.533,
+      "end_time": 4.966
     },
     {
-      "character": "血",
-      "start_time": 6.674,
-      "end_time": 6.974
+      "character": "正",
+      "start_time": 4.966,
+      "end_time": 5.116
     },
     {
-      "character": "洗",
-      "start_time": 6.974,
-      "end_time": 7.166
+      "character": "疯",
+      "start_time": 5.116,
+      "end_time": 5.387
     },
     {
-      "character": "三",
-      "start_time": 7.166,
-      "end_time": 7.358
+      "character": "狂",
+      "start_time": 5.387,
+      "end_time": 5.608
     },
     {
-      "character": "城",
-      "start_time": 7.358,
-      "end_time": 7.587
+      "character": "扩",
+      "start_time": 5.608,
+      "end_time": 5.791
     },
     {
-      "character": "，",
-      "start_time": 7.587,
-      "end_time": 8.12
-    },
-    {
-      "character": "所",
-      "start_time": 8.12,
-      "end_time": 8.32
-    },
-    {
-      "character": "过",
-      "start_time": 8.32,
-      "end_time": 8.433
-    },
-    {
-      "character": "之",
-      "start_time": 8.433,
-      "end_time": 8.566
-    },
-    {
-      "character": "处",
-      "start_time": 8.566,
-      "end_time": 8.812
-    },
-    {
-      "character": "生",
-      "start_time": 8.812,
-      "end_time": 9.12
-    },
-    {
-      "character": "灵",
-      "start_time": 9.12,
-      "end_time": 9.274
-    },
-    {
-      "character": "涂",
-      "start_time": 9.274,
-      "end_time": 9.424
-    },
-    {
-      "character": "炭",
-      "start_time": 9.424,
-      "end_time": 9.583
+      "character": "张",
+      "start_time": 5.791,
+      "end_time": 5.962
     },
     {
       "character": "，",
-      "start_time": 9.583,
-      "end_time": 9.916
+      "start_time": 5.962,
+      "end_time": 6.374
     },
     {
-      "character": "怨",
-      "start_time": 9.916,
-      "end_time": 10.137
+      "character": "预",
+      "start_time": 6.374,
+      "end_time": 6.524
     },
     {
-      "character": "气",
-      "start_time": 10.137,
-      "end_time": 10.304
+      "character": "计",
+      "start_time": 6.524,
+      "end_time": 6.712
     },
     {
-      "character": "凝",
-      "start_time": 10.304,
-      "end_time": 10.529
+      "character": "万",
+      "start_time": 6.712,
+      "end_time": 6.849
     },
     {
-      "character": "聚",
-      "start_time": 10.529,
-      "end_time": 10.679
+      "character": "年",
+      "start_time": 6.849,
+      "end_time": 7.041
     },
     {
-      "character": "成",
-      "start_time": 10.679,
-      "end_time": 10.941
+      "character": "左",
+      "start_time": 7.041,
+      "end_time": 7.22
     },
     {
-      "character": "黑",
-      "start_time": 10.941,
-      "end_time": 11.308
+      "character": "右",
+      "start_time": 7.22,
+      "end_time": 7.374
     },
     {
-      "character": "云",
-      "start_time": 11.308,
-      "end_time": 11.499
+      "character": "将",
+      "start_time": 7.374,
+      "end_time": 7.62
     },
     {
-      "character": "压",
-      "start_time": 11.499,
-      "end_time": 11.674
+      "character": "威",
+      "start_time": 7.62,
+      "end_time": 7.82
     },
     {
-      "character": "城",
-      "start_time": 11.674,
-      "end_time": 11.916
+      "character": "胁",
+      "start_time": 7.82,
+      "end_time": 8.037
     },
     {
-      "character": "！",
-      "start_time": 11.916,
-      "end_time": 12.075
+      "character": "齐",
+      "start_time": 8.037,
+      "end_time": 8.245
+    },
+    {
+      "character": "天",
+      "start_time": 8.245,
+      "end_time": 8.495
+    },
+    {
+      "character": "府",
+      "start_time": 8.495,
+      "end_time": 8.658
+    },
+    {
+      "character": "地",
+      "start_time": 8.658,
+      "end_time": 8.833
+    },
+    {
+      "character": "界",
+      "start_time": 8.833,
+      "end_time": 9.02
+    },
+    {
+      "character": "。",
+      "start_time": 9.02,
+      "end_time": 9.179
     }
   ],
-  "generated_at": "2025-08-27T22:43:35.056675"
+  "generated_at": "2025-08-30T22:45:38.855056"
 }

@@ -1,253 +1,228 @@
 {
-  "text": "龙欣于驿站接收密信，深蓝色劲装立于邮差前，接过密封竹筒，指尖灵力扫过确认无误，转身疾奔议事殿汇报！",
+  "text": "赵硕为先锋部队践行，赐酒壮行，发表动员讲话，激励将士奋勇杀敌，保家卫国，将士们高呼口号。",
   "audio_file": "data/006/chapter_004/chapter_004_narration_22.mp3",
-  "duration": 9.6,
+  "duration": 8.5,
   "character_timestamps": [
     {
-      "character": "龙",
+      "character": "赵",
       "start_time": 0.016,
-      "end_time": 0.208
+      "end_time": 0.179
     },
     {
-      "character": "欣",
-      "start_time": 0.208,
-      "end_time": 0.487
+      "character": "硕",
+      "start_time": 0.179,
+      "end_time": 0.337
     },
     {
-      "character": "于",
-      "start_time": 0.487,
-      "end_time": 0.599
+      "character": "为",
+      "start_time": 0.337,
+      "end_time": 0.449
     },
     {
-      "character": "驿",
-      "start_time": 0.599,
-      "end_time": 0.737
+      "character": "先",
+      "start_time": 0.449,
+      "end_time": 0.649
     },
     {
-      "character": "站",
-      "start_time": 0.737,
-      "end_time": 0.912
+      "character": "锋",
+      "start_time": 0.649,
+      "end_time": 0.812
     },
     {
-      "character": "接",
-      "start_time": 0.912,
-      "end_time": 1.12
+      "character": "部",
+      "start_time": 0.812,
+      "end_time": 0.941
     },
     {
-      "character": "收",
-      "start_time": 1.12,
-      "end_time": 1.279
+      "character": "队",
+      "start_time": 0.941,
+      "end_time": 1.058
     },
     {
-      "character": "密",
-      "start_time": 1.279,
-      "end_time": 1.433
+      "character": "践",
+      "start_time": 1.058,
+      "end_time": 1.249
     },
     {
-      "character": "信",
-      "start_time": 1.433,
-      "end_time": 1.612
-    },
-    {
-      "character": "，",
-      "start_time": 1.612,
-      "end_time": 2.095
-    },
-    {
-      "character": "深",
-      "start_time": 2.095,
-      "end_time": 2.299
-    },
-    {
-      "character": "蓝",
-      "start_time": 2.299,
-      "end_time": 2.445
-    },
-    {
-      "character": "色",
-      "start_time": 2.445,
-      "end_time": 2.579
-    },
-    {
-      "character": "劲",
-      "start_time": 2.579,
-      "end_time": 2.754
-    },
-    {
-      "character": "装",
-      "start_time": 2.754,
-      "end_time": 2.991
-    },
-    {
-      "character": "立",
-      "start_time": 2.991,
-      "end_time": 3.124
-    },
-    {
-      "character": "于",
-      "start_time": 3.124,
-      "end_time": 3.249
-    },
-    {
-      "character": "邮",
-      "start_time": 3.249,
-      "end_time": 3.424
-    },
-    {
-      "character": "差",
-      "start_time": 3.424,
-      "end_time": 3.604
-    },
-    {
-      "character": "前",
-      "start_time": 3.604,
-      "end_time": 3.874
+      "character": "行",
+      "start_time": 1.249,
+      "end_time": 1.524
     },
     {
       "character": "，",
-      "start_time": 3.874,
-      "end_time": 4.345
+      "start_time": 1.524,
+      "end_time": 1.783
     },
     {
-      "character": "接",
-      "start_time": 4.345,
-      "end_time": 4.533
+      "character": "赐",
+      "start_time": 1.783,
+      "end_time": 1.991
     },
     {
-      "character": "过",
-      "start_time": 4.533,
-      "end_time": 4.679
+      "character": "酒",
+      "start_time": 1.991,
+      "end_time": 2.17
     },
     {
-      "character": "密",
-      "start_time": 4.679,
-      "end_time": 4.841
+      "character": "壮",
+      "start_time": 2.17,
+      "end_time": 2.341
     },
     {
-      "character": "封",
-      "start_time": 4.841,
-      "end_time": 5.008
-    },
-    {
-      "character": "竹",
-      "start_time": 5.008,
-      "end_time": 5.162
-    },
-    {
-      "character": "筒",
-      "start_time": 5.162,
-      "end_time": 5.333
+      "character": "行",
+      "start_time": 2.341,
+      "end_time": 2.604
     },
     {
       "character": "，",
-      "start_time": 5.333,
-      "end_time": 5.862
+      "start_time": 2.604,
+      "end_time": 2.833
     },
     {
-      "character": "指",
-      "start_time": 5.862,
-      "end_time": 5.974
+      "character": "发",
+      "start_time": 2.833,
+      "end_time": 2.987
     },
     {
-      "character": "尖",
-      "start_time": 5.974,
-      "end_time": 6.129
+      "character": "表",
+      "start_time": 2.987,
+      "end_time": 3.174
     },
     {
-      "character": "灵",
-      "start_time": 6.129,
-      "end_time": 6.291
+      "character": "动",
+      "start_time": 3.174,
+      "end_time": 3.354
     },
     {
-      "character": "力",
-      "start_time": 6.291,
-      "end_time": 6.399
+      "character": "员",
+      "start_time": 3.354,
+      "end_time": 3.508
     },
     {
-      "character": "扫",
-      "start_time": 6.399,
-      "end_time": 6.633
+      "character": "讲",
+      "start_time": 3.508,
+      "end_time": 3.695
     },
     {
-      "character": "过",
-      "start_time": 6.633,
-      "end_time": 6.833
-    },
-    {
-      "character": "确",
-      "start_time": 6.833,
-      "end_time": 7.066
-    },
-    {
-      "character": "认",
-      "start_time": 7.066,
-      "end_time": 7.204
-    },
-    {
-      "character": "无",
-      "start_time": 7.204,
-      "end_time": 7.354
-    },
-    {
-      "character": "误",
-      "start_time": 7.354,
-      "end_time": 7.483
+      "character": "话",
+      "start_time": 3.695,
+      "end_time": 3.879
     },
     {
       "character": "，",
-      "start_time": 7.483,
-      "end_time": 7.899
+      "start_time": 3.879,
+      "end_time": 4.245
     },
     {
-      "character": "转",
-      "start_time": 7.899,
-      "end_time": 8.108
+      "character": "激",
+      "start_time": 4.245,
+      "end_time": 4.424
     },
     {
-      "character": "身",
-      "start_time": 8.108,
-      "end_time": 8.291
+      "character": "励",
+      "start_time": 4.424,
+      "end_time": 4.549
     },
     {
-      "character": "疾",
-      "start_time": 8.291,
-      "end_time": 8.441
+      "character": "将",
+      "start_time": 4.549,
+      "end_time": 4.712
     },
     {
-      "character": "奔",
-      "start_time": 8.441,
-      "end_time": 8.599
+      "character": "士",
+      "start_time": 4.712,
+      "end_time": 4.874
     },
     {
-      "character": "议",
-      "start_time": 8.599,
-      "end_time": 8.779
+      "character": "奋",
+      "start_time": 4.874,
+      "end_time": 5.17
     },
     {
-      "character": "事",
-      "start_time": 8.779,
-      "end_time": 8.924
+      "character": "勇",
+      "start_time": 5.17,
+      "end_time": 5.32
     },
     {
-      "character": "殿",
-      "start_time": 8.924,
-      "end_time": 9.07
+      "character": "杀",
+      "start_time": 5.32,
+      "end_time": 5.524
     },
     {
-      "character": "汇",
-      "start_time": 9.07,
-      "end_time": 9.295
+      "character": "敌",
+      "start_time": 5.524,
+      "end_time": 5.749
     },
     {
-      "character": "报",
-      "start_time": 9.295,
-      "end_time": 9.441
+      "character": "，",
+      "start_time": 5.749,
+      "end_time": 6.041
     },
     {
-      "character": "！",
-      "start_time": 9.441,
-      "end_time": 9.6
+      "character": "保",
+      "start_time": 6.041,
+      "end_time": 6.233
+    },
+    {
+      "character": "家",
+      "start_time": 6.233,
+      "end_time": 6.416
+    },
+    {
+      "character": "卫",
+      "start_time": 6.416,
+      "end_time": 6.549
+    },
+    {
+      "character": "国",
+      "start_time": 6.549,
+      "end_time": 6.795
+    },
+    {
+      "character": "，",
+      "start_time": 6.795,
+      "end_time": 7.104
+    },
+    {
+      "character": "将",
+      "start_time": 7.104,
+      "end_time": 7.287
+    },
+    {
+      "character": "士",
+      "start_time": 7.287,
+      "end_time": 7.412
+    },
+    {
+      "character": "们",
+      "start_time": 7.412,
+      "end_time": 7.529
+    },
+    {
+      "character": "高",
+      "start_time": 7.529,
+      "end_time": 7.779
+    },
+    {
+      "character": "呼",
+      "start_time": 7.779,
+      "end_time": 7.954
+    },
+    {
+      "character": "口",
+      "start_time": 7.954,
+      "end_time": 8.149
+    },
+    {
+      "character": "号",
+      "start_time": 8.149,
+      "end_time": 8.341
+    },
+    {
+      "character": "。",
+      "start_time": 8.341,
+      "end_time": 8.5
     }
   ],
-  "generated_at": "2025-08-27T22:43:53.123956"
+  "generated_at": "2025-08-30T22:45:53.161438"
 }

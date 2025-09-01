@@ -1,253 +1,223 @@
 {
-  "text": "凤岚于医馆调配药剂，浅绿色襦裙立于药柜前，玉手取药精准，药童按方抓药，这批特制解毒剂可解僵神尸毒！",
+  "text": "凤岚坐镇八荒山，主持护山大阵，监控三族联军动向，及时传递情报，确保后方安全，调度有序。",
   "audio_file": "data/006/chapter_004/chapter_004_narration_24.mp3",
-  "duration": 9.733,
+  "duration": 8.975,
   "character_timestamps": [
     {
       "character": "凤",
-      "start_time": 0.02,
-      "end_time": 0.179
+      "start_time": 0.016,
+      "end_time": 0.17
     },
     {
       "character": "岚",
-      "start_time": 0.179,
-      "end_time": 0.42
+      "start_time": 0.17,
+      "end_time": 0.358
     },
     {
-      "character": "于",
-      "start_time": 0.42,
-      "end_time": 0.583
+      "character": "坐",
+      "start_time": 0.358,
+      "end_time": 0.529
     },
     {
-      "character": "医",
-      "start_time": 0.583,
-      "end_time": 0.733
+      "character": "镇",
+      "start_time": 0.529,
+      "end_time": 0.674
     },
     {
-      "character": "馆",
-      "start_time": 0.733,
-      "end_time": 0.937
+      "character": "八",
+      "start_time": 0.674,
+      "end_time": 0.858
     },
     {
-      "character": "调",
-      "start_time": 0.937,
-      "end_time": 1.179
+      "character": "荒",
+      "start_time": 0.858,
+      "end_time": 1.033
     },
     {
-      "character": "配",
-      "start_time": 1.179,
-      "end_time": 1.341
-    },
-    {
-      "character": "药",
-      "start_time": 1.341,
-      "end_time": 1.512
-    },
-    {
-      "character": "剂",
-      "start_time": 1.512,
-      "end_time": 1.67
+      "character": "山",
+      "start_time": 1.033,
+      "end_time": 1.229
     },
     {
       "character": "，",
-      "start_time": 1.67,
-      "end_time": 2.145
+      "start_time": 1.229,
+      "end_time": 1.616
     },
     {
-      "character": "浅",
-      "start_time": 2.145,
-      "end_time": 2.395
+      "character": "主",
+      "start_time": 1.616,
+      "end_time": 1.766
     },
     {
-      "character": "绿",
-      "start_time": 2.395,
+      "character": "持",
+      "start_time": 1.766,
+      "end_time": 1.966
+    },
+    {
+      "character": "护",
+      "start_time": 1.966,
+      "end_time": 2.187
+    },
+    {
+      "character": "山",
+      "start_time": 2.187,
+      "end_time": 2.362
+    },
+    {
+      "character": "大",
+      "start_time": 2.362,
       "end_time": 2.52
     },
     {
-      "character": "色",
+      "character": "阵",
       "start_time": 2.52,
-      "end_time": 2.658
-    },
-    {
-      "character": "襦",
-      "start_time": 2.658,
-      "end_time": 2.82
-    },
-    {
-      "character": "裙",
-      "start_time": 2.82,
-      "end_time": 3.087
-    },
-    {
-      "character": "立",
-      "start_time": 3.087,
-      "end_time": 3.299
-    },
-    {
-      "character": "于",
-      "start_time": 3.299,
-      "end_time": 3.416
-    },
-    {
-      "character": "药",
-      "start_time": 3.416,
-      "end_time": 3.554
-    },
-    {
-      "character": "柜",
-      "start_time": 3.554,
-      "end_time": 3.708
-    },
-    {
-      "character": "前",
-      "start_time": 3.708,
-      "end_time": 4.008
+      "end_time": 2.687
     },
     {
       "character": "，",
-      "start_time": 4.008,
-      "end_time": 4.341
+      "start_time": 2.687,
+      "end_time": 3.145
     },
     {
-      "character": "玉",
-      "start_time": 4.341,
-      "end_time": 4.529
+      "character": "监",
+      "start_time": 3.145,
+      "end_time": 3.345
     },
     {
-      "character": "手",
-      "start_time": 4.529,
-      "end_time": 4.724
+      "character": "控",
+      "start_time": 3.345,
+      "end_time": 3.529
     },
     {
-      "character": "取",
-      "start_time": 4.724,
-      "end_time": 4.895
+      "character": "三",
+      "start_time": 3.529,
+      "end_time": 3.758
     },
     {
-      "character": "药",
-      "start_time": 4.895,
-      "end_time": 5.008
+      "character": "族",
+      "start_time": 3.758,
+      "end_time": 3.924
     },
     {
-      "character": "精",
-      "start_time": 5.008,
-      "end_time": 5.216
+      "character": "联",
+      "start_time": 3.924,
+      "end_time": 4.129
     },
     {
-      "character": "准",
-      "start_time": 5.216,
-      "end_time": 5.349
+      "character": "军",
+      "start_time": 4.129,
+      "end_time": 4.299
+    },
+    {
+      "character": "动",
+      "start_time": 4.299,
+      "end_time": 4.466
+    },
+    {
+      "character": "向",
+      "start_time": 4.466,
+      "end_time": 4.645
     },
     {
       "character": "，",
-      "start_time": 5.349,
-      "end_time": 5.762
+      "start_time": 4.645,
+      "end_time": 5.083
     },
     {
-      "character": "药",
-      "start_time": 5.762,
-      "end_time": 5.92
+      "character": "及",
+      "start_time": 5.083,
+      "end_time": 5.254
     },
     {
-      "character": "童",
-      "start_time": 5.92,
-      "end_time": 6.091
+      "character": "时",
+      "start_time": 5.254,
+      "end_time": 5.416
     },
     {
-      "character": "按",
-      "start_time": 6.091,
-      "end_time": 6.329
+      "character": "传",
+      "start_time": 5.416,
+      "end_time": 5.658
+    },
+    {
+      "character": "递",
+      "start_time": 5.658,
+      "end_time": 5.787
+    },
+    {
+      "character": "情",
+      "start_time": 5.787,
+      "end_time": 6.012
+    },
+    {
+      "character": "报",
+      "start_time": 6.012,
+      "end_time": 6.145
+    },
+    {
+      "character": "，",
+      "start_time": 6.145,
+      "end_time": 6.504
+    },
+    {
+      "character": "确",
+      "start_time": 6.504,
+      "end_time": 6.729
+    },
+    {
+      "character": "保",
+      "start_time": 6.729,
+      "end_time": 6.929
+    },
+    {
+      "character": "后",
+      "start_time": 6.929,
+      "end_time": 7.154
     },
     {
       "character": "方",
-      "start_time": 6.329,
-      "end_time": 6.533
+      "start_time": 7.154,
+      "end_time": 7.333
     },
     {
-      "character": "抓",
-      "start_time": 6.533,
-      "end_time": 6.72
+      "character": "安",
+      "start_time": 7.333,
+      "end_time": 7.533
     },
     {
-      "character": "药",
-      "start_time": 6.72,
-      "end_time": 6.845
+      "character": "全",
+      "start_time": 7.533,
+      "end_time": 7.783
     },
     {
       "character": "，",
-      "start_time": 6.845,
-      "end_time": 7.233
+      "start_time": 7.783,
+      "end_time": 8.083
     },
     {
-      "character": "这",
-      "start_time": 7.233,
-      "end_time": 7.329
+      "character": "调",
+      "start_time": 8.083,
+      "end_time": 8.308
     },
     {
-      "character": "批",
-      "start_time": 7.329,
-      "end_time": 7.554
+      "character": "度",
+      "start_time": 8.308,
+      "end_time": 8.449
     },
     {
-      "character": "特",
-      "start_time": 7.554,
-      "end_time": 7.733
+      "character": "有",
+      "start_time": 8.449,
+      "end_time": 8.633
     },
     {
-      "character": "制",
-      "start_time": 7.733,
-      "end_time": 7.854
+      "character": "序",
+      "start_time": 8.633,
+      "end_time": 8.816
     },
     {
-      "character": "解",
-      "start_time": 7.854,
-      "end_time": 8.02
-    },
-    {
-      "character": "毒",
-      "start_time": 8.02,
-      "end_time": 8.17
-    },
-    {
-      "character": "剂",
-      "start_time": 8.17,
-      "end_time": 8.387
-    },
-    {
-      "character": "可",
-      "start_time": 8.387,
-      "end_time": 8.595
-    },
-    {
-      "character": "解",
-      "start_time": 8.595,
-      "end_time": 8.754
-    },
-    {
-      "character": "僵",
-      "start_time": 8.754,
-      "end_time": 8.954
-    },
-    {
-      "character": "神",
-      "start_time": 8.954,
-      "end_time": 9.145
-    },
-    {
-      "character": "尸",
-      "start_time": 9.145,
-      "end_time": 9.349
-    },
-    {
-      "character": "毒",
-      "start_time": 9.349,
-      "end_time": 9.574
-    },
-    {
-      "character": "！",
-      "start_time": 9.574,
-      "end_time": 9.733
+      "character": "。",
+      "start_time": 8.816,
+      "end_time": 8.975
     }
   ],
-  "generated_at": "2025-08-27T22:43:55.039750"
+  "generated_at": "2025-08-30T22:45:55.088794"
 }

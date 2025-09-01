@@ -1,7 +1,7 @@
 {
-  "text": "龙欣于敌营后方放火，深蓝色劲装潜行于帐篷间，手中火把点燃粮草堆，火光冲天而起，僵神联军阵脚大乱！",
+  "text": "龙欣传来最新情报，三族联军集结百万大军，由三大始祖亲自统帅，正向八荒山逼近，大战一触即发。",
   "audio_file": "data/006/chapter_004/chapter_004_narration_29.mp3",
-  "duration": 9.433,
+  "duration": 9.416,
   "character_timestamps": [
     {
       "character": "龙",
@@ -11,238 +11,223 @@
     {
       "character": "欣",
       "start_time": 0.204,
-      "end_time": 0.379
+      "end_time": 0.395
     },
     {
-      "character": "于",
-      "start_time": 0.379,
-      "end_time": 0.491
+      "character": "传",
+      "start_time": 0.395,
+      "end_time": 0.537
     },
     {
-      "character": "敌",
-      "start_time": 0.491,
-      "end_time": 0.649
+      "character": "来",
+      "start_time": 0.537,
+      "end_time": 0.687
     },
     {
-      "character": "营",
-      "start_time": 0.649,
-      "end_time": 0.795
+      "character": "最",
+      "start_time": 0.687,
+      "end_time": 0.92
     },
     {
-      "character": "后",
-      "start_time": 0.795,
-      "end_time": 1.008
+      "character": "新",
+      "start_time": 0.92,
+      "end_time": 1.12
     },
     {
-      "character": "方",
-      "start_time": 1.008,
-      "end_time": 1.17
-    },
-    {
-      "character": "放",
-      "start_time": 1.17,
+      "character": "情",
+      "start_time": 1.12,
       "end_time": 1.345
     },
     {
-      "character": "火",
+      "character": "报",
       "start_time": 1.345,
-      "end_time": 1.566
+      "end_time": 1.474
     },
     {
       "character": "，",
-      "start_time": 1.566,
-      "end_time": 2.008
+      "start_time": 1.474,
+      "end_time": 1.979
     },
     {
-      "character": "深",
-      "start_time": 2.008,
-      "end_time": 2.216
+      "character": "三",
+      "start_time": 1.979,
+      "end_time": 2.199
     },
     {
-      "character": "蓝",
-      "start_time": 2.216,
-      "end_time": 2.374
-    },
-    {
-      "character": "色",
-      "start_time": 2.374,
-      "end_time": 2.512
-    },
-    {
-      "character": "劲",
-      "start_time": 2.512,
-      "end_time": 2.683
-    },
-    {
-      "character": "装",
-      "start_time": 2.683,
-      "end_time": 2.887
-    },
-    {
-      "character": "潜",
-      "start_time": 2.887,
-      "end_time": 3.145
-    },
-    {
-      "character": "行",
-      "start_time": 3.145,
-      "end_time": 3.295
-    },
-    {
-      "character": "于",
-      "start_time": 3.295,
-      "end_time": 3.395
-    },
-    {
-      "character": "帐",
-      "start_time": 3.395,
-      "end_time": 3.591
-    },
-    {
-      "character": "篷",
-      "start_time": 3.591,
-      "end_time": 3.749
-    },
-    {
-      "character": "间",
-      "start_time": 3.749,
-      "end_time": 3.945
-    },
-    {
-      "character": "，",
-      "start_time": 3.945,
-      "end_time": 4.42
-    },
-    {
-      "character": "手",
-      "start_time": 4.42,
-      "end_time": 4.612
-    },
-    {
-      "character": "中",
-      "start_time": 4.612,
-      "end_time": 4.749
-    },
-    {
-      "character": "火",
-      "start_time": 4.749,
-      "end_time": 4.937
-    },
-    {
-      "character": "把",
-      "start_time": 4.937,
-      "end_time": 5.091
-    },
-    {
-      "character": "点",
-      "start_time": 5.091,
-      "end_time": 5.337
-    },
-    {
-      "character": "燃",
-      "start_time": 5.337,
-      "end_time": 5.495
-    },
-    {
-      "character": "粮",
-      "start_time": 5.495,
-      "end_time": 5.658
-    },
-    {
-      "character": "草",
-      "start_time": 5.658,
-      "end_time": 5.837
-    },
-    {
-      "character": "堆",
-      "start_time": 5.837,
-      "end_time": 6.02
-    },
-    {
-      "character": "，",
-      "start_time": 6.02,
-      "end_time": 6.354
-    },
-    {
-      "character": "火",
-      "start_time": 6.354,
-      "end_time": 6.537
-    },
-    {
-      "character": "光",
-      "start_time": 6.537,
-      "end_time": 6.712
-    },
-    {
-      "character": "冲",
-      "start_time": 6.712,
-      "end_time": 6.979
-    },
-    {
-      "character": "天",
-      "start_time": 6.979,
-      "end_time": 7.149
-    },
-    {
-      "character": "而",
-      "start_time": 7.149,
-      "end_time": 7.291
-    },
-    {
-      "character": "起",
-      "start_time": 7.291,
-      "end_time": 7.495
-    },
-    {
-      "character": "，",
-      "start_time": 7.495,
-      "end_time": 7.712
-    },
-    {
-      "character": "僵",
-      "start_time": 7.712,
-      "end_time": 7.849
-    },
-    {
-      "character": "神",
-      "start_time": 7.849,
-      "end_time": 8.041
+      "character": "族",
+      "start_time": 2.199,
+      "end_time": 2.349
     },
     {
       "character": "联",
-      "start_time": 8.041,
-      "end_time": 8.291
+      "start_time": 2.349,
+      "end_time": 2.533
     },
     {
       "character": "军",
-      "start_time": 8.291,
-      "end_time": 8.487
+      "start_time": 2.533,
+      "end_time": 2.737
     },
     {
-      "character": "阵",
-      "start_time": 8.487,
-      "end_time": 8.733
+      "character": "集",
+      "start_time": 2.737,
+      "end_time": 3.029
     },
     {
-      "character": "脚",
-      "start_time": 8.733,
-      "end_time": 8.945
+      "character": "结",
+      "start_time": 3.029,
+      "end_time": 3.187
+    },
+    {
+      "character": "百",
+      "start_time": 3.187,
+      "end_time": 3.462
+    },
+    {
+      "character": "万",
+      "start_time": 3.462,
+      "end_time": 3.604
     },
     {
       "character": "大",
-      "start_time": 8.945,
-      "end_time": 9.12
+      "start_time": 3.604,
+      "end_time": 3.766
     },
     {
-      "character": "乱",
-      "start_time": 9.12,
-      "end_time": 9.27
+      "character": "军",
+      "start_time": 3.766,
+      "end_time": 3.949
     },
     {
-      "character": "！",
-      "start_time": 9.27,
-      "end_time": 9.429
+      "character": "，",
+      "start_time": 3.949,
+      "end_time": 4.366
+    },
+    {
+      "character": "由",
+      "start_time": 4.366,
+      "end_time": 4.524
+    },
+    {
+      "character": "三",
+      "start_time": 4.524,
+      "end_time": 4.758
+    },
+    {
+      "character": "大",
+      "start_time": 4.758,
+      "end_time": 4.891
+    },
+    {
+      "character": "始",
+      "start_time": 4.891,
+      "end_time": 5.066
+    },
+    {
+      "character": "祖",
+      "start_time": 5.066,
+      "end_time": 5.233
+    },
+    {
+      "character": "亲",
+      "start_time": 5.233,
+      "end_time": 5.57
+    },
+    {
+      "character": "自",
+      "start_time": 5.57,
+      "end_time": 5.712
+    },
+    {
+      "character": "统",
+      "start_time": 5.712,
+      "end_time": 5.941
+    },
+    {
+      "character": "帅",
+      "start_time": 5.941,
+      "end_time": 6.133
+    },
+    {
+      "character": "，",
+      "start_time": 6.133,
+      "end_time": 6.579
+    },
+    {
+      "character": "正",
+      "start_time": 6.579,
+      "end_time": 6.745
+    },
+    {
+      "character": "向",
+      "start_time": 6.745,
+      "end_time": 6.933
+    },
+    {
+      "character": "八",
+      "start_time": 6.933,
+      "end_time": 7.087
+    },
+    {
+      "character": "荒",
+      "start_time": 7.087,
+      "end_time": 7.283
+    },
+    {
+      "character": "山",
+      "start_time": 7.283,
+      "end_time": 7.449
+    },
+    {
+      "character": "逼",
+      "start_time": 7.449,
+      "end_time": 7.608
+    },
+    {
+      "character": "近",
+      "start_time": 7.608,
+      "end_time": 7.758
+    },
+    {
+      "character": "，",
+      "start_time": 7.758,
+      "end_time": 8.129
+    },
+    {
+      "character": "大",
+      "start_time": 8.129,
+      "end_time": 8.304
+    },
+    {
+      "character": "战",
+      "start_time": 8.304,
+      "end_time": 8.504
+    },
+    {
+      "character": "一",
+      "start_time": 8.504,
+      "end_time": 8.704
+    },
+    {
+      "character": "触",
+      "start_time": 8.704,
+      "end_time": 8.883
+    },
+    {
+      "character": "即",
+      "start_time": 8.883,
+      "end_time": 9.062
+    },
+    {
+      "character": "发",
+      "start_time": 9.062,
+      "end_time": 9.254
+    },
+    {
+      "character": "。",
+      "start_time": 9.254,
+      "end_time": 9.412
     }
   ],
-  "generated_at": "2025-08-27T22:44:00.179671"
+  "generated_at": "2025-08-30T22:45:59.831157"
 }

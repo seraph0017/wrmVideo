@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 视频生成脚本 - 重写版本
-按顺序执行：concat_first_video.py -> concat_narration_video.py -> concat_finish_video.py
+按顺序执行：concat_narration_video.py -> concat_finish_video.py
 """
 
 import os
@@ -93,9 +93,8 @@ def process_data_directory(data_path):
     
     print(f"找到 {len(chapter_dirs)} 个章节目录")
     
-    # 按顺序执行三个脚本
+    # 按顺序执行两个脚本
     scripts = [
-        "concat_first_video.py",
         "concat_narration_video.py", 
         "concat_finish_video.py"
     ]
@@ -148,16 +147,15 @@ def main():
     主函数
     """
     parser = argparse.ArgumentParser(
-        description='视频生成脚本 - 按顺序执行 concat_first_video.py、concat_narration_video.py、concat_finish_video.py',
+        description='视频生成脚本 - 按顺序执行 concat_narration_video.py、concat_finish_video.py',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用示例:
   python gen_video.py data/001
   
 执行流程:
-  1. concat_first_video.py - 生成 first_video (拼接 video_1 和 video_2)
-  2. concat_narration_video.py - 生成 main_video (添加旁白、BGM、音效等)
-  3. concat_finish_video.py - 生成 complete_video (添加片尾视频)
+  1. concat_narration_video.py - 生成 main_video (添加旁白、BGM、音效等)
+  2. concat_finish_video.py - 生成 complete_video (添加片尾视频)
         """
     )
     
@@ -183,7 +181,7 @@ def main():
     
     print(f"视频生成脚本启动")
     print(f"数据路径: {data_path}")
-    print(f"执行顺序: concat_first_video.py -> concat_narration_video.py -> concat_finish_video.py")
+    print(f"执行顺序: concat_narration_video.py -> concat_finish_video.py")
     
     # 处理数据目录
     if process_data_directory(data_path):

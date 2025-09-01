@@ -1,173 +1,218 @@
 {
-  "text": "天雷上人率众弟子现身，手持拂尘，面色严肃，立于山门之前，严阵以待。",
+  "text": "赵硕等人闯入天星宗广场，数十名天星宗门人围拢上来，手持长剑，神色戒备，气氛剑拔弩张。",
   "audio_file": "data/006/chapter_003/chapter_003_narration_04.mp3",
-  "duration": 6.458,
+  "duration": 8.575,
   "character_timestamps": [
     {
-      "character": "天",
+      "character": "赵",
       "start_time": 0.016,
-      "end_time": 0.183
+      "end_time": 0.179
     },
     {
-      "character": "雷",
-      "start_time": 0.183,
-      "end_time": 0.341
+      "character": "硕",
+      "start_time": 0.179,
+      "end_time": 0.316
     },
     {
-      "character": "上",
-      "start_time": 0.341,
-      "end_time": 0.524
+      "character": "等",
+      "start_time": 0.316,
+      "end_time": 0.445
     },
     {
       "character": "人",
-      "start_time": 0.524,
-      "end_time": 0.783
+      "start_time": 0.445,
+      "end_time": 0.654
     },
     {
-      "character": "率",
-      "start_time": 0.783,
-      "end_time": 1.049
+      "character": "闯",
+      "start_time": 0.654,
+      "end_time": 0.87
     },
     {
-      "character": "众",
-      "start_time": 1.049,
-      "end_time": 1.254
+      "character": "入",
+      "start_time": 0.87,
+      "end_time": 0.995
     },
     {
-      "character": "弟",
-      "start_time": 1.254,
-      "end_time": 1.383
+      "character": "天",
+      "start_time": 0.995,
+      "end_time": 1.241
     },
     {
-      "character": "子",
-      "start_time": 1.383,
-      "end_time": 1.504
+      "character": "星",
+      "start_time": 1.241,
+      "end_time": 1.416
     },
     {
-      "character": "现",
-      "start_time": 1.504,
-      "end_time": 1.695
+      "character": "宗",
+      "start_time": 1.416,
+      "end_time": 1.579
     },
     {
-      "character": "身",
-      "start_time": 1.695,
-      "end_time": 1.891
+      "character": "广",
+      "start_time": 1.579,
+      "end_time": 1.762
     },
     {
-      "character": "，",
-      "start_time": 1.891,
-      "end_time": 2.224
-    },
-    {
-      "character": "手",
-      "start_time": 2.224,
-      "end_time": 2.474
-    },
-    {
-      "character": "持",
-      "start_time": 2.474,
-      "end_time": 2.641
-    },
-    {
-      "character": "拂",
-      "start_time": 2.641,
-      "end_time": 2.795
-    },
-    {
-      "character": "尘",
-      "start_time": 2.795,
-      "end_time": 3.037
+      "character": "场",
+      "start_time": 1.762,
+      "end_time": 1.954
     },
     {
       "character": "，",
-      "start_time": 3.037,
-      "end_time": 3.299
+      "start_time": 1.954,
+      "end_time": 2.466
     },
     {
-      "character": "面",
-      "start_time": 3.299,
-      "end_time": 3.512
+      "character": "数",
+      "start_time": 2.466,
+      "end_time": 2.683
     },
     {
-      "character": "色",
-      "start_time": 3.512,
-      "end_time": 3.674
+      "character": "十",
+      "start_time": 2.683,
+      "end_time": 2.812
     },
     {
-      "character": "严",
-      "start_time": 3.674,
-      "end_time": 3.879
+      "character": "名",
+      "start_time": 2.812,
+      "end_time": 2.974
     },
     {
-      "character": "肃",
-      "start_time": 3.879,
-      "end_time": 4.062
+      "character": "天",
+      "start_time": 2.974,
+      "end_time": 3.22
     },
     {
-      "character": "，",
-      "start_time": 4.062,
-      "end_time": 4.304
+      "character": "星",
+      "start_time": 3.22,
+      "end_time": 3.391
     },
     {
-      "character": "立",
-      "start_time": 4.304,
-      "end_time": 4.47
-    },
-    {
-      "character": "于",
-      "start_time": 4.47,
-      "end_time": 4.566
-    },
-    {
-      "character": "山",
-      "start_time": 4.566,
-      "end_time": 4.749
+      "character": "宗",
+      "start_time": 3.391,
+      "end_time": 3.533
     },
     {
       "character": "门",
-      "start_time": 4.749,
-      "end_time": 4.92
+      "start_time": 3.533,
+      "end_time": 3.662
     },
     {
-      "character": "之",
-      "start_time": 4.92,
-      "end_time": 5.037
+      "character": "人",
+      "start_time": 3.662,
+      "end_time": 3.929
     },
     {
-      "character": "前",
-      "start_time": 5.037,
-      "end_time": 5.316
+      "character": "围",
+      "start_time": 3.929,
+      "end_time": 4.108
+    },
+    {
+      "character": "拢",
+      "start_time": 4.108,
+      "end_time": 4.279
+    },
+    {
+      "character": "上",
+      "start_time": 4.279,
+      "end_time": 4.458
+    },
+    {
+      "character": "来",
+      "start_time": 4.458,
+      "end_time": 4.591
     },
     {
       "character": "，",
-      "start_time": 5.316,
-      "end_time": 5.541
+      "start_time": 4.591,
+      "end_time": 4.949
     },
     {
-      "character": "严",
-      "start_time": 5.541,
-      "end_time": 5.829
+      "character": "手",
+      "start_time": 4.949,
+      "end_time": 5.212
     },
     {
-      "character": "阵",
-      "start_time": 5.829,
-      "end_time": 6.004
+      "character": "持",
+      "start_time": 5.212,
+      "end_time": 5.391
     },
     {
-      "character": "以",
-      "start_time": 6.004,
-      "end_time": 6.129
+      "character": "长",
+      "start_time": 5.391,
+      "end_time": 5.595
     },
     {
-      "character": "待",
-      "start_time": 6.129,
-      "end_time": 6.299
+      "character": "剑",
+      "start_time": 5.595,
+      "end_time": 5.758
+    },
+    {
+      "character": "，",
+      "start_time": 5.758,
+      "end_time": 6.058
+    },
+    {
+      "character": "神",
+      "start_time": 6.058,
+      "end_time": 6.316
+    },
+    {
+      "character": "色",
+      "start_time": 6.316,
+      "end_time": 6.483
+    },
+    {
+      "character": "戒",
+      "start_time": 6.483,
+      "end_time": 6.687
+    },
+    {
+      "character": "备",
+      "start_time": 6.687,
+      "end_time": 6.854
+    },
+    {
+      "character": "，",
+      "start_time": 6.854,
+      "end_time": 7.145
+    },
+    {
+      "character": "气",
+      "start_time": 7.145,
+      "end_time": 7.354
+    },
+    {
+      "character": "氛",
+      "start_time": 7.354,
+      "end_time": 7.566
+    },
+    {
+      "character": "剑",
+      "start_time": 7.566,
+      "end_time": 7.862
+    },
+    {
+      "character": "拔",
+      "start_time": 7.862,
+      "end_time": 8.041
+    },
+    {
+      "character": "弩",
+      "start_time": 8.041,
+      "end_time": 8.208
+    },
+    {
+      "character": "张",
+      "start_time": 8.208,
+      "end_time": 8.412
     },
     {
       "character": "。",
-      "start_time": 6.299,
-      "end_time": 6.458
+      "start_time": 8.412,
+      "end_time": 8.571
     }
   ],
-  "generated_at": "2025-08-27T22:43:09.338274"
+  "generated_at": "2025-08-30T22:45:10.334577"
 }

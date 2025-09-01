@@ -1,268 +1,223 @@
 {
-  "text": "赵硕于演武场试剑，玄色长袍翻飞，剑光如匹练横斩，三丈巨石应声碎裂，碎屑纷飞，周围弟子齐声喝彩，士气高昂！",
+  "text": "白蒹葭挑选精锐弟子组成先锋部队，进行最后特训，强调战术配合，鼓舞士气，弟子们斗志昂扬。",
   "audio_file": "data/006/chapter_004/chapter_004_narration_21.mp3",
-  "duration": 11.4,
+  "duration": 8.5,
   "character_timestamps": [
     {
-      "character": "赵",
+      "character": "白",
       "start_time": 0.016,
       "end_time": 0.179
     },
     {
-      "character": "硕",
+      "character": "蒹",
       "start_time": 0.179,
-      "end_time": 0.341
+      "end_time": 0.362
     },
     {
-      "character": "于",
-      "start_time": 0.341,
-      "end_time": 0.608
+      "character": "葭",
+      "start_time": 0.362,
+      "end_time": 0.52
     },
     {
-      "character": "演",
-      "start_time": 0.608,
-      "end_time": 0.812
+      "character": "挑",
+      "start_time": 0.52,
+      "end_time": 0.729
     },
     {
-      "character": "武",
-      "start_time": 0.812,
+      "character": "选",
+      "start_time": 0.729,
       "end_time": 0.924
     },
     {
-      "character": "场",
+      "character": "精",
       "start_time": 0.924,
       "end_time": 1.099
     },
     {
-      "character": "试",
+      "character": "锐",
       "start_time": 1.099,
-      "end_time": 1.254
-    },
-    {
-      "character": "剑",
-      "start_time": 1.254,
-      "end_time": 1.416
-    },
-    {
-      "character": "，",
-      "start_time": 1.416,
-      "end_time": 1.883
-    },
-    {
-      "character": "玄",
-      "start_time": 1.883,
-      "end_time": 2.124
-    },
-    {
-      "character": "色",
-      "start_time": 2.124,
-      "end_time": 2.287
-    },
-    {
-      "character": "长",
-      "start_time": 2.287,
-      "end_time": 2.549
-    },
-    {
-      "character": "袍",
-      "start_time": 2.549,
-      "end_time": 2.729
-    },
-    {
-      "character": "翻",
-      "start_time": 2.729,
-      "end_time": 2.899
-    },
-    {
-      "character": "飞",
-      "start_time": 2.899,
-      "end_time": 3.083
-    },
-    {
-      "character": "，",
-      "start_time": 3.083,
-      "end_time": 3.533
-    },
-    {
-      "character": "剑",
-      "start_time": 3.533,
-      "end_time": 3.749
-    },
-    {
-      "character": "光",
-      "start_time": 3.749,
-      "end_time": 3.92
-    },
-    {
-      "character": "如",
-      "start_time": 3.92,
-      "end_time": 4.095
-    },
-    {
-      "character": "匹",
-      "start_time": 4.095,
-      "end_time": 4.329
-    },
-    {
-      "character": "练",
-      "start_time": 4.329,
-      "end_time": 4.491
-    },
-    {
-      "character": "横",
-      "start_time": 4.491,
-      "end_time": 4.687
-    },
-    {
-      "character": "斩",
-      "start_time": 4.687,
-      "end_time": 4.849
-    },
-    {
-      "character": "，",
-      "start_time": 4.849,
-      "end_time": 5.291
-    },
-    {
-      "character": "三",
-      "start_time": 5.291,
-      "end_time": 5.533
-    },
-    {
-      "character": "丈",
-      "start_time": 5.533,
-      "end_time": 5.716
-    },
-    {
-      "character": "巨",
-      "start_time": 5.716,
-      "end_time": 5.912
-    },
-    {
-      "character": "石",
-      "start_time": 5.912,
-      "end_time": 6.258
-    },
-    {
-      "character": "应",
-      "start_time": 6.258,
-      "end_time": 6.504
-    },
-    {
-      "character": "声",
-      "start_time": 6.504,
-      "end_time": 6.687
-    },
-    {
-      "character": "碎",
-      "start_time": 6.687,
-      "end_time": 6.887
-    },
-    {
-      "character": "裂",
-      "start_time": 6.887,
-      "end_time": 7.024
-    },
-    {
-      "character": "，",
-      "start_time": 7.024,
-      "end_time": 7.362
-    },
-    {
-      "character": "碎",
-      "start_time": 7.362,
-      "end_time": 7.616
-    },
-    {
-      "character": "屑",
-      "start_time": 7.616,
-      "end_time": 7.804
-    },
-    {
-      "character": "纷",
-      "start_time": 7.804,
-      "end_time": 7.974
-    },
-    {
-      "character": "飞",
-      "start_time": 7.974,
-      "end_time": 8.158
-    },
-    {
-      "character": "，",
-      "start_time": 8.158,
-      "end_time": 8.541
-    },
-    {
-      "character": "周",
-      "start_time": 8.541,
-      "end_time": 8.704
-    },
-    {
-      "character": "围",
-      "start_time": 8.704,
-      "end_time": 8.816
+      "end_time": 1.241
     },
     {
       "character": "弟",
-      "start_time": 8.816,
-      "end_time": 8.97
+      "start_time": 1.241,
+      "end_time": 1.383
     },
     {
       "character": "子",
-      "start_time": 8.97,
-      "end_time": 9.133
+      "start_time": 1.383,
+      "end_time": 1.633
     },
     {
-      "character": "齐",
-      "start_time": 9.133,
-      "end_time": 9.358
+      "character": "组",
+      "start_time": 1.633,
+      "end_time": 1.87
     },
     {
-      "character": "声",
-      "start_time": 9.358,
-      "end_time": 9.529
+      "character": "成",
+      "start_time": 1.87,
+      "end_time": 2.07
     },
     {
-      "character": "喝",
-      "start_time": 9.529,
-      "end_time": 9.733
+      "character": "先",
+      "start_time": 2.07,
+      "end_time": 2.362
     },
     {
-      "character": "彩",
-      "start_time": 9.733,
-      "end_time": 9.954
+      "character": "锋",
+      "start_time": 2.362,
+      "end_time": 2.524
+    },
+    {
+      "character": "部",
+      "start_time": 2.524,
+      "end_time": 2.637
+    },
+    {
+      "character": "队",
+      "start_time": 2.637,
+      "end_time": 2.774
     },
     {
       "character": "，",
-      "start_time": 9.954,
-      "end_time": 10.287
+      "start_time": 2.774,
+      "end_time": 3.099
+    },
+    {
+      "character": "进",
+      "start_time": 3.099,
+      "end_time": 3.237
+    },
+    {
+      "character": "行",
+      "start_time": 3.237,
+      "end_time": 3.391
+    },
+    {
+      "character": "最",
+      "start_time": 3.391,
+      "end_time": 3.587
+    },
+    {
+      "character": "后",
+      "start_time": 3.587,
+      "end_time": 3.733
+    },
+    {
+      "character": "特",
+      "start_time": 3.733,
+      "end_time": 3.92
+    },
+    {
+      "character": "训",
+      "start_time": 3.92,
+      "end_time": 4.087
+    },
+    {
+      "character": "，",
+      "start_time": 4.087,
+      "end_time": 4.529
+    },
+    {
+      "character": "强",
+      "start_time": 4.529,
+      "end_time": 4.779
+    },
+    {
+      "character": "调",
+      "start_time": 4.779,
+      "end_time": 4.958
+    },
+    {
+      "character": "战",
+      "start_time": 4.958,
+      "end_time": 5.17
+    },
+    {
+      "character": "术",
+      "start_time": 5.17,
+      "end_time": 5.312
+    },
+    {
+      "character": "配",
+      "start_time": 5.312,
+      "end_time": 5.495
+    },
+    {
+      "character": "合",
+      "start_time": 5.495,
+      "end_time": 5.741
+    },
+    {
+      "character": "，",
+      "start_time": 5.741,
+      "end_time": 6.129
+    },
+    {
+      "character": "鼓",
+      "start_time": 6.129,
+      "end_time": 6.333
+    },
+    {
+      "character": "舞",
+      "start_time": 6.333,
+      "end_time": 6.441
     },
     {
       "character": "士",
-      "start_time": 10.287,
-      "end_time": 10.579
+      "start_time": 6.441,
+      "end_time": 6.612
     },
     {
       "character": "气",
-      "start_time": 10.579,
-      "end_time": 10.779
+      "start_time": 6.612,
+      "end_time": 6.783
     },
     {
-      "character": "高",
-      "start_time": 10.779,
-      "end_time": 11.062
+      "character": "，",
+      "start_time": 6.783,
+      "end_time": 7.12
+    },
+    {
+      "character": "弟",
+      "start_time": 7.12,
+      "end_time": 7.262
+    },
+    {
+      "character": "子",
+      "start_time": 7.262,
+      "end_time": 7.387
+    },
+    {
+      "character": "们",
+      "start_time": 7.387,
+      "end_time": 7.524
+    },
+    {
+      "character": "斗",
+      "start_time": 7.524,
+      "end_time": 7.774
+    },
+    {
+      "character": "志",
+      "start_time": 7.774,
+      "end_time": 7.945
     },
     {
       "character": "昂",
-      "start_time": 11.062,
-      "end_time": 11.237
+      "start_time": 7.945,
+      "end_time": 8.112
     },
     {
-      "character": "！",
-      "start_time": 11.237,
-      "end_time": 11.396
+      "character": "扬",
+      "start_time": 8.112,
+      "end_time": 8.341
+    },
+    {
+      "character": "。",
+      "start_time": 8.341,
+      "end_time": 8.5
     }
   ],
-  "generated_at": "2025-08-27T22:43:52.045301"
+  "generated_at": "2025-08-30T22:45:52.205900"
 }

@@ -1,183 +1,258 @@
 {
-  "text": "天雷上人走到赵硕面前，面色缓和，拱手示意，赞赏之情流露，邀请入山详谈。",
+  "text": "白蒹葭端来汤药，递给姜素卿，姜素卿喝下汤药，脸色渐渐恢复，白蒹葭松了口气，看向赵硕，眼神中带着担忧。",
   "audio_file": "data/006/chapter_003/chapter_003_narration_21.mp3",
-  "duration": 7.2,
+  "duration": 10.133,
   "character_timestamps": [
     {
-      "character": "天",
+      "character": "白",
       "start_time": 0.02,
-      "end_time": 0.187
+      "end_time": 0.179
     },
     {
-      "character": "雷",
-      "start_time": 0.187,
-      "end_time": 0.354
+      "character": "蒹",
+      "start_time": 0.179,
+      "end_time": 0.366
     },
     {
-      "character": "上",
-      "start_time": 0.354,
-      "end_time": 0.533
+      "character": "葭",
+      "start_time": 0.366,
+      "end_time": 0.524
     },
     {
-      "character": "人",
-      "start_time": 0.533,
-      "end_time": 0.687
+      "character": "端",
+      "start_time": 0.524,
+      "end_time": 0.666
     },
     {
-      "character": "走",
-      "start_time": 0.687,
-      "end_time": 0.845
+      "character": "来",
+      "start_time": 0.666,
+      "end_time": 0.799
     },
     {
-      "character": "到",
-      "start_time": 0.845,
-      "end_time": 0.954
+      "character": "汤",
+      "start_time": 0.799,
+      "end_time": 0.991
     },
     {
-      "character": "赵",
-      "start_time": 0.954,
-      "end_time": 1.145
-    },
-    {
-      "character": "硕",
-      "start_time": 1.145,
-      "end_time": 1.274
-    },
-    {
-      "character": "面",
-      "start_time": 1.274,
-      "end_time": 1.437
-    },
-    {
-      "character": "前",
-      "start_time": 1.437,
-      "end_time": 1.708
+      "character": "药",
+      "start_time": 0.991,
+      "end_time": 1.129
     },
     {
       "character": "，",
-      "start_time": 1.708,
-      "end_time": 2.008
+      "start_time": 1.129,
+      "end_time": 1.52
     },
     {
-      "character": "面",
-      "start_time": 2.008,
-      "end_time": 2.245
+      "character": "递",
+      "start_time": 1.52,
+      "end_time": 1.662
+    },
+    {
+      "character": "给",
+      "start_time": 1.662,
+      "end_time": 1.804
+    },
+    {
+      "character": "姜",
+      "start_time": 1.804,
+      "end_time": 1.945
+    },
+    {
+      "character": "素",
+      "start_time": 1.945,
+      "end_time": 2.116
+    },
+    {
+      "character": "卿",
+      "start_time": 2.116,
+      "end_time": 2.333
+    },
+    {
+      "character": "，",
+      "start_time": 2.333,
+      "end_time": 2.549
+    },
+    {
+      "character": "姜",
+      "start_time": 2.549,
+      "end_time": 2.699
+    },
+    {
+      "character": "素",
+      "start_time": 2.699,
+      "end_time": 2.899
+    },
+    {
+      "character": "卿",
+      "start_time": 2.899,
+      "end_time": 3.083
+    },
+    {
+      "character": "喝",
+      "start_time": 3.083,
+      "end_time": 3.295
+    },
+    {
+      "character": "下",
+      "start_time": 3.295,
+      "end_time": 3.441
+    },
+    {
+      "character": "汤",
+      "start_time": 3.441,
+      "end_time": 3.645
+    },
+    {
+      "character": "药",
+      "start_time": 3.645,
+      "end_time": 3.774
+    },
+    {
+      "character": "，",
+      "start_time": 3.774,
+      "end_time": 4.287
+    },
+    {
+      "character": "脸",
+      "start_time": 4.287,
+      "end_time": 4.504
     },
     {
       "character": "色",
-      "start_time": 2.245,
-      "end_time": 2.424
+      "start_time": 4.504,
+      "end_time": 4.658
     },
     {
-      "character": "缓",
-      "start_time": 2.424,
-      "end_time": 2.662
+      "character": "渐",
+      "start_time": 4.658,
+      "end_time": 4.891
     },
     {
-      "character": "和",
-      "start_time": 2.662,
-      "end_time": 2.937
-    },
-    {
-      "character": "，",
-      "start_time": 2.937,
-      "end_time": 3.404
-    },
-    {
-      "character": "拱",
-      "start_time": 3.404,
-      "end_time": 3.587
-    },
-    {
-      "character": "手",
-      "start_time": 3.587,
-      "end_time": 3.749
-    },
-    {
-      "character": "示",
-      "start_time": 3.749,
-      "end_time": 3.916
-    },
-    {
-      "character": "意",
-      "start_time": 3.916,
-      "end_time": 4.074
-    },
-    {
-      "character": "，",
-      "start_time": 4.074,
-      "end_time": 4.395
-    },
-    {
-      "character": "赞",
-      "start_time": 4.395,
-      "end_time": 4.599
-    },
-    {
-      "character": "赏",
-      "start_time": 4.599,
-      "end_time": 4.795
-    },
-    {
-      "character": "之",
-      "start_time": 4.795,
-      "end_time": 4.916
-    },
-    {
-      "character": "情",
-      "start_time": 4.916,
+      "character": "渐",
+      "start_time": 4.891,
       "end_time": 5.079
     },
     {
-      "character": "流",
+      "character": "恢",
       "start_time": 5.079,
-      "end_time": 5.249
+      "end_time": 5.287
     },
     {
-      "character": "露",
-      "start_time": 5.249,
-      "end_time": 5.399
+      "character": "复",
+      "start_time": 5.287,
+      "end_time": 5.454
     },
     {
       "character": "，",
-      "start_time": 5.399,
-      "end_time": 5.679
+      "start_time": 5.454,
+      "end_time": 5.891
     },
     {
-      "character": "邀",
-      "start_time": 5.679,
-      "end_time": 5.912
+      "character": "白",
+      "start_time": 5.891,
+      "end_time": 6.054
     },
     {
-      "character": "请",
-      "start_time": 5.912,
-      "end_time": 6.129
+      "character": "蒹",
+      "start_time": 6.054,
+      "end_time": 6.237
     },
     {
-      "character": "入",
-      "start_time": 6.129,
-      "end_time": 6.354
+      "character": "葭",
+      "start_time": 6.237,
+      "end_time": 6.449
     },
     {
-      "character": "山",
-      "start_time": 6.354,
-      "end_time": 6.549
+      "character": "松",
+      "start_time": 6.449,
+      "end_time": 6.679
     },
     {
-      "character": "详",
-      "start_time": 6.549,
-      "end_time": 6.804
+      "character": "了",
+      "start_time": 6.679,
+      "end_time": 6.749
     },
     {
-      "character": "谈",
-      "start_time": 6.804,
-      "end_time": 7.037
+      "character": "口",
+      "start_time": 6.749,
+      "end_time": 6.908
+    },
+    {
+      "character": "气",
+      "start_time": 6.908,
+      "end_time": 7.104
+    },
+    {
+      "character": "，",
+      "start_time": 7.104,
+      "end_time": 7.595
+    },
+    {
+      "character": "看",
+      "start_time": 7.595,
+      "end_time": 7.808
+    },
+    {
+      "character": "向",
+      "start_time": 7.808,
+      "end_time": 7.987
+    },
+    {
+      "character": "赵",
+      "start_time": 7.987,
+      "end_time": 8.179
+    },
+    {
+      "character": "硕",
+      "start_time": 8.179,
+      "end_time": 8.358
+    },
+    {
+      "character": "，",
+      "start_time": 8.358,
+      "end_time": 8.699
+    },
+    {
+      "character": "眼",
+      "start_time": 8.699,
+      "end_time": 8.916
+    },
+    {
+      "character": "神",
+      "start_time": 8.916,
+      "end_time": 9.095
+    },
+    {
+      "character": "中",
+      "start_time": 9.095,
+      "end_time": 9.274
+    },
+    {
+      "character": "带",
+      "start_time": 9.274,
+      "end_time": 9.524
+    },
+    {
+      "character": "着",
+      "start_time": 9.524,
+      "end_time": 9.624
+    },
+    {
+      "character": "担",
+      "start_time": 9.624,
+      "end_time": 9.804
+    },
+    {
+      "character": "忧",
+      "start_time": 9.804,
+      "end_time": 9.97
     },
     {
       "character": "。",
-      "start_time": 7.037,
-      "end_time": 7.196
+      "start_time": 9.97,
+      "end_time": 10.129
     }
   ],
-  "generated_at": "2025-08-27T22:43:22.622710"
+  "generated_at": "2025-08-30T22:45:25.815340"
 }

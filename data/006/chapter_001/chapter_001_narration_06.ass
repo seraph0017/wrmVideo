@@ -9,13 +9,15 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}推门而入
-Dialogue: 0,0:00:01.40,0:00:02.94,Default,,0,0,0,,身着绿色圆领长袍
-Dialogue: 0,0:00:03.44,0:00:04.55,Default,,0,0,0,,活泼地冲向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:04.93,0:00:05.99,Default,,0,0,0,,口中喊着{\c&H0000FFFF&\b1}二哥{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:06.25,0:00:07.09,Default,,0,0,0,,充满活力
+Dialogue: 0,0:00:00.02,0:00:00.66,Default,,0,0,0,,激情过后
+Dialogue: 0,0:00:01.10,0:00:02.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}将昏睡的苏青蝉抱入
+Dialogue: 0,0:00:02.90,0:00:03.86,Default,,0,0,0,,监控室床铺
+Dialogue: 0,0:00:04.27,0:00:04.97,Default,,0,0,0,,盖好被单
+Dialogue: 0,0:00:05.33,0:00:06.57,Default,,0,0,0,,望着她恬静睡颜
+Dialogue: 0,0:00:07.04,0:00:08.21,Default,,0,0,0,,心中柔情万千
+Dialogue: 0,0:00:08.49,0:00:10.20,Default,,0,0,0,,忽然瞥见手表惊呼

@@ -9,16 +9,15 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.64,Default,,0,0,0,,议事殿内
-Dialogue: 0,0:00:01.01,0:00:02.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}转身禀报
-Dialogue: 0,0:00:02.62,0:00:03.06,Default,,0,0,0,,僵神
-Dialogue: 0,0:00:03.51,0:00:03.90,Default,,0,0,0,,骷髅
-Dialogue: 0,0:00:04.28,0:00:06.39,Default,,0,0,0,,不死{\c&H0000FFFF&\b1}三族{\c&H00FFFFFF&\b0}联军已破七大宗门
-Dialogue: 0,0:00:06.67,0:00:07.59,Default,,0,0,0,,血洗{\c&H0000FFFF&\b1}三城{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:08.12,0:00:09.58,Default,,0,0,0,,所过之处生灵涂炭
-Dialogue: 0,0:00:09.92,0:00:11.92,Default,,0,0,0,,怨气凝聚成黑云压城
+Dialogue: 0,0:00:00.02,0:00:01.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙欣{\c&H00FFFFFF&\b0}汇报锦衣卫情报
+Dialogue: 0,0:00:01.94,0:00:02.35,Default,,0,0,0,,僵神
+Dialogue: 0,0:00:02.79,0:00:03.17,Default,,0,0,0,,骷髅
+Dialogue: 0,0:00:03.42,0:00:04.53,Default,,0,0,0,,不死{\c&H0000FFFF&\b1}三族{\c&H00FFFFFF&\b0}结盟
+Dialogue: 0,0:00:04.97,0:00:05.96,Default,,0,0,0,,正疯狂扩张
+Dialogue: 0,0:00:06.37,0:00:08.66,Default,,0,0,0,,预计万年左右将威胁{\c&H0000FFFF&\b1}齐天府{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.66,0:00:09.02,Default,,0,0,0,,地界

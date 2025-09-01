@@ -1,213 +1,223 @@
 {
-  "text": "赵硕拉住愤怒的赵丰，劝他不要冲动，说明现在不宜与陈家冲突，需要从长计议，神情冷静。",
+  "text": "家中，楚秀见赵硕伤势，心疼落泪，听闻经过后叹息家族庶出与嫡系差距，承诺定让兄妹开灵窍",
   "audio_file": "data/006/chapter_001/chapter_001_narration_23.mp3",
-  "duration": 7.275,
+  "duration": 8.491,
   "character_timestamps": [
     {
+      "character": "家",
+      "start_time": 0.02,
+      "end_time": 0.191
+    },
+    {
+      "character": "中",
+      "start_time": 0.191,
+      "end_time": 0.383
+    },
+    {
+      "character": "，",
+      "start_time": 0.383,
+      "end_time": 0.791
+    },
+    {
+      "character": "楚",
+      "start_time": 0.791,
+      "end_time": 0.962
+    },
+    {
+      "character": "秀",
+      "start_time": 0.962,
+      "end_time": 1.124
+    },
+    {
+      "character": "见",
+      "start_time": 1.124,
+      "end_time": 1.287
+    },
+    {
       "character": "赵",
-      "start_time": 0.016,
-      "end_time": 0.174
+      "start_time": 1.287,
+      "end_time": 1.437
     },
     {
       "character": "硕",
-      "start_time": 0.174,
-      "end_time": 0.312
+      "start_time": 1.437,
+      "end_time": 1.57
     },
     {
-      "character": "拉",
-      "start_time": 0.312,
-      "end_time": 0.487
+      "character": "伤",
+      "start_time": 1.57,
+      "end_time": 1.77
     },
     {
-      "character": "住",
-      "start_time": 0.487,
-      "end_time": 0.629
-    },
-    {
-      "character": "愤",
-      "start_time": 0.629,
-      "end_time": 0.841
-    },
-    {
-      "character": "怒",
-      "start_time": 0.841,
-      "end_time": 0.979
-    },
-    {
-      "character": "的",
-      "start_time": 0.979,
-      "end_time": 1.058
-    },
-    {
-      "character": "赵",
-      "start_time": 1.058,
-      "end_time": 1.233
-    },
-    {
-      "character": "丰",
-      "start_time": 1.233,
-      "end_time": 1.445
-    },
-    {
-      "character": "，",
-      "start_time": 1.445,
-      "end_time": 1.795
-    },
-    {
-      "character": "劝",
-      "start_time": 1.795,
+      "character": "势",
+      "start_time": 1.77,
       "end_time": 1.949
     },
     {
-      "character": "他",
+      "character": "，",
       "start_time": 1.949,
-      "end_time": 2.058
+      "end_time": 2.32
     },
     {
-      "character": "不",
-      "start_time": 2.058,
-      "end_time": 2.166
+      "character": "心",
+      "start_time": 2.32,
+      "end_time": 2.558
     },
     {
-      "character": "要",
-      "start_time": 2.166,
-      "end_time": 2.279
+      "character": "疼",
+      "start_time": 2.558,
+      "end_time": 2.733
     },
     {
-      "character": "冲",
-      "start_time": 2.279,
-      "end_time": 2.479
+      "character": "落",
+      "start_time": 2.733,
+      "end_time": 2.891
     },
     {
-      "character": "动",
-      "start_time": 2.479,
-      "end_time": 2.604
+      "character": "泪",
+      "start_time": 2.891,
+      "end_time": 3.029
     },
     {
       "character": "，",
-      "start_time": 2.604,
-      "end_time": 2.958
+      "start_time": 3.029,
+      "end_time": 3.474
     },
     {
-      "character": "说",
-      "start_time": 2.958,
-      "end_time": 3.091
+      "character": "听",
+      "start_time": 3.474,
+      "end_time": 3.662
     },
     {
-      "character": "明",
-      "start_time": 3.091,
-      "end_time": 3.216
+      "character": "闻",
+      "start_time": 3.662,
+      "end_time": 3.795
     },
     {
-      "character": "现",
-      "start_time": 3.216,
-      "end_time": 3.37
+      "character": "经",
+      "start_time": 3.795,
+      "end_time": 3.974
     },
     {
-      "character": "在",
-      "start_time": 3.37,
-      "end_time": 3.491
+      "character": "过",
+      "start_time": 3.974,
+      "end_time": 4.083
     },
     {
-      "character": "不",
-      "start_time": 3.491,
-      "end_time": 3.645
+      "character": "后",
+      "start_time": 4.083,
+      "end_time": 4.245
     },
     {
-      "character": "宜",
-      "start_time": 3.645,
-      "end_time": 3.779
+      "character": "叹",
+      "start_time": 4.245,
+      "end_time": 4.524
     },
     {
-      "character": "与",
-      "start_time": 3.779,
-      "end_time": 3.879
-    },
-    {
-      "character": "陈",
-      "start_time": 3.879,
-      "end_time": 4.095
+      "character": "息",
+      "start_time": 4.524,
+      "end_time": 4.691
     },
     {
       "character": "家",
-      "start_time": 4.095,
-      "end_time": 4.237
+      "start_time": 4.691,
+      "end_time": 4.866
     },
     {
-      "character": "冲",
-      "start_time": 4.237,
-      "end_time": 4.433
+      "character": "族",
+      "start_time": 4.866,
+      "end_time": 5.004
     },
     {
-      "character": "突",
-      "start_time": 4.433,
-      "end_time": 4.612
+      "character": "庶",
+      "start_time": 5.004,
+      "end_time": 5.191
     },
     {
-      "character": "，",
-      "start_time": 4.612,
-      "end_time": 4.945
+      "character": "出",
+      "start_time": 5.191,
+      "end_time": 5.516
     },
     {
-      "character": "需",
-      "start_time": 4.945,
-      "end_time": 5.074
+      "character": "与",
+      "start_time": 5.516,
+      "end_time": 5.649
     },
     {
-      "character": "要",
-      "start_time": 5.074,
-      "end_time": 5.183
+      "character": "嫡",
+      "start_time": 5.649,
+      "end_time": 5.883
     },
     {
-      "character": "从",
-      "start_time": 5.183,
-      "end_time": 5.449
+      "character": "系",
+      "start_time": 5.883,
+      "end_time": 6.041
     },
     {
-      "character": "长",
-      "start_time": 5.449,
-      "end_time": 5.645
+      "character": "差",
+      "start_time": 6.041,
+      "end_time": 6.254
     },
     {
-      "character": "计",
-      "start_time": 5.645,
-      "end_time": 5.812
-    },
-    {
-      "character": "议",
-      "start_time": 5.812,
-      "end_time": 5.949
+      "character": "距",
+      "start_time": 6.254,
+      "end_time": 6.404
     },
     {
       "character": "，",
-      "start_time": 5.949,
-      "end_time": 6.245
+      "start_time": 6.404,
+      "end_time": 6.758
     },
     {
-      "character": "神",
-      "start_time": 6.245,
-      "end_time": 6.512
+      "character": "承",
+      "start_time": 6.758,
+      "end_time": 6.974
     },
     {
-      "character": "情",
-      "start_time": 6.512,
-      "end_time": 6.72
-    },
-    {
-      "character": "冷",
-      "start_time": 6.72,
-      "end_time": 6.941
-    },
-    {
-      "character": "静",
-      "start_time": 6.941,
+      "character": "诺",
+      "start_time": 6.974,
       "end_time": 7.116
     },
     {
-      "character": "。",
+      "character": "定",
       "start_time": 7.116,
-      "end_time": 7.275
+      "end_time": 7.258
+    },
+    {
+      "character": "让",
+      "start_time": 7.258,
+      "end_time": 7.399
+    },
+    {
+      "character": "兄",
+      "start_time": 7.399,
+      "end_time": 7.658
+    },
+    {
+      "character": "妹",
+      "start_time": 7.658,
+      "end_time": 7.824
+    },
+    {
+      "character": "开",
+      "start_time": 7.824,
+      "end_time": 8.029
+    },
+    {
+      "character": "灵",
+      "start_time": 8.029,
+      "end_time": 8.162
+    },
+    {
+      "character": "窍",
+      "start_time": 8.162,
+      "end_time": 8.333
+    },
+    {
+      "character": "。",
+      "start_time": 8.333,
+      "end_time": 8.492
     }
   ],
-  "generated_at": "2025-08-27T22:42:31.619708"
+  "generated_at": "2025-08-30T22:45:00.407537"
 }

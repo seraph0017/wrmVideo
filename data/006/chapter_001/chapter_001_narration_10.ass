@@ -9,13 +9,14 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈天贵{\c&H00FFFFFF&\b0}带人拦住赵硕兄妹
-Dialogue: 0,0:00:02.22,0:00:03.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}言语{\c&H00FFFFFF&\b0}挑衅
-Dialogue: 0,0:00:03.39,0:00:04.20,Default,,0,0,0,,神情嚣张
-Dialogue: 0,0:00:04.67,0:00:05.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}隐忍不发
-Dialogue: 0,0:00:06.04,0:00:07.35,Default,,0,0,0,,拉着{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}欲离开
+Dialogue: 0,0:00:00.02,0:00:02.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}在古色古香的房间醒来
+Dialogue: 0,0:00:02.54,0:00:03.33,Default,,0,0,0,,雕花木床
+Dialogue: 0,0:00:03.61,0:00:04.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}青铜镜{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.62,0:00:06.04,Default,,0,0,0,,脑中涌入陌生记忆
+Dialogue: 0,0:00:06.39,0:00:08.42,Default,,0,0,0,,发现自己穿越成同名同姓的
+Dialogue: 0,0:00:08.42,0:00:09.34,Default,,0,0,0,,赵家二公子

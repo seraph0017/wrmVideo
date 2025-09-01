@@ -17,8 +17,8 @@ import random
 import time
 import argparse
 from pathlib import Path
-from config.prompt_config import ART_STYLES
-from config.config import STORY_STYLE, IMAGE_TWO_CONFIG
+# ART_STYLES 配置已移除
+from config.config import IMAGE_TWO_CONFIG
 from volcengine.visual.VisualService import VisualService
 
 def parse_fail_txt(fail_file_path):

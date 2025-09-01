@@ -13,8 +13,7 @@ import sys
 import json
 import time
 import random
-from config.config import IMAGE_TWO_CONFIG, STORY_STYLE
-from config.prompt_config import ART_STYLES
+from config.config import IMAGE_TWO_CONFIG
 from volcengine.visual.VisualService import VisualService
 
 def parse_character_gender(content, character_name):

@@ -1,158 +1,158 @@
 {
-  "text": "赵硕立于山巅，遥望天际黑云压城，眉头紧锁，周身气势凝重如铁。",
+  "text": "赵硕等人遭僵神追杀，奔逃至天星宗山门前，乌云密布，杀机四伏。",
   "audio_file": "data/006/chapter_003/chapter_003_narration_01.mp3",
-  "duration": 6.133,
+  "duration": 5.916,
   "character_timestamps": [
     {
       "character": "赵",
       "start_time": 0.016,
-      "end_time": 0.187
+      "end_time": 0.179
     },
     {
       "character": "硕",
-      "start_time": 0.187,
-      "end_time": 0.341
+      "start_time": 0.179,
+      "end_time": 0.32
     },
     {
-      "character": "立",
-      "start_time": 0.341,
-      "end_time": 0.479
+      "character": "等",
+      "start_time": 0.32,
+      "end_time": 0.445
     },
     {
-      "character": "于",
-      "start_time": 0.479,
-      "end_time": 0.562
+      "character": "人",
+      "start_time": 0.445,
+      "end_time": 0.679
     },
     {
-      "character": "山",
-      "start_time": 0.562,
-      "end_time": 0.766
+      "character": "遭",
+      "start_time": 0.679,
+      "end_time": 0.899
     },
     {
-      "character": "巅",
-      "start_time": 0.766,
-      "end_time": 0.962
+      "character": "僵",
+      "start_time": 0.899,
+      "end_time": 1.049
+    },
+    {
+      "character": "神",
+      "start_time": 1.049,
+      "end_time": 1.212
+    },
+    {
+      "character": "追",
+      "start_time": 1.212,
+      "end_time": 1.37
+    },
+    {
+      "character": "杀",
+      "start_time": 1.37,
+      "end_time": 1.57
     },
     {
       "character": "，",
-      "start_time": 0.962,
-      "end_time": 1.354
+      "start_time": 1.57,
+      "end_time": 1.933
     },
     {
-      "character": "遥",
-      "start_time": 1.354,
-      "end_time": 1.541
+      "character": "奔",
+      "start_time": 1.933,
+      "end_time": 2.083
     },
     {
-      "character": "望",
-      "start_time": 1.541,
-      "end_time": 1.699
+      "character": "逃",
+      "start_time": 2.083,
+      "end_time": 2.249
+    },
+    {
+      "character": "至",
+      "start_time": 2.249,
+      "end_time": 2.362
     },
     {
       "character": "天",
-      "start_time": 1.699,
-      "end_time": 1.958
-    },
-    {
-      "character": "际",
-      "start_time": 1.958,
-      "end_time": 2.116
-    },
-    {
-      "character": "黑",
-      "start_time": 2.116,
-      "end_time": 2.291
-    },
-    {
-      "character": "云",
-      "start_time": 2.291,
-      "end_time": 2.458
-    },
-    {
-      "character": "压",
-      "start_time": 2.458,
+      "start_time": 2.362,
       "end_time": 2.616
     },
     {
-      "character": "城",
+      "character": "星",
       "start_time": 2.616,
-      "end_time": 2.883
+      "end_time": 2.795
+    },
+    {
+      "character": "宗",
+      "start_time": 2.795,
+      "end_time": 2.941
+    },
+    {
+      "character": "山",
+      "start_time": 2.941,
+      "end_time": 3.07
+    },
+    {
+      "character": "门",
+      "start_time": 3.07,
+      "end_time": 3.224
+    },
+    {
+      "character": "前",
+      "start_time": 3.224,
+      "end_time": 3.495
     },
     {
       "character": "，",
-      "start_time": 2.883,
-      "end_time": 3.208
-    },
-    {
-      "character": "眉",
-      "start_time": 3.208,
-      "end_time": 3.408
-    },
-    {
-      "character": "头",
-      "start_time": 3.408,
-      "end_time": 3.57
-    },
-    {
-      "character": "紧",
-      "start_time": 3.57,
+      "start_time": 3.495,
       "end_time": 3.812
     },
     {
-      "character": "锁",
+      "character": "乌",
       "start_time": 3.812,
-      "end_time": 4.033
+      "end_time": 4.029
+    },
+    {
+      "character": "云",
+      "start_time": 4.029,
+      "end_time": 4.17
+    },
+    {
+      "character": "密",
+      "start_time": 4.17,
+      "end_time": 4.358
+    },
+    {
+      "character": "布",
+      "start_time": 4.358,
+      "end_time": 4.537
     },
     {
       "character": "，",
-      "start_time": 4.033,
-      "end_time": 4.387
+      "start_time": 4.537,
+      "end_time": 4.812
     },
     {
-      "character": "周",
-      "start_time": 4.387,
-      "end_time": 4.549
+      "character": "杀",
+      "start_time": 4.812,
+      "end_time": 5.12
     },
     {
-      "character": "身",
-      "start_time": 4.549,
-      "end_time": 4.729
+      "character": "机",
+      "start_time": 5.12,
+      "end_time": 5.304
     },
     {
-      "character": "气",
-      "start_time": 4.729,
-      "end_time": 4.904
+      "character": "四",
+      "start_time": 5.304,
+      "end_time": 5.483
     },
     {
-      "character": "势",
-      "start_time": 4.904,
-      "end_time": 5.112
-    },
-    {
-      "character": "凝",
-      "start_time": 5.112,
-      "end_time": 5.437
-    },
-    {
-      "character": "重",
-      "start_time": 5.437,
-      "end_time": 5.629
-    },
-    {
-      "character": "如",
-      "start_time": 5.629,
-      "end_time": 5.795
-    },
-    {
-      "character": "铁",
-      "start_time": 5.795,
-      "end_time": 5.974
+      "character": "伏",
+      "start_time": 5.483,
+      "end_time": 5.754
     },
     {
       "character": "。",
-      "start_time": 5.974,
-      "end_time": 6.133
+      "start_time": 5.754,
+      "end_time": 5.912
     }
   ],
-  "generated_at": "2025-08-27T22:43:06.718187"
+  "generated_at": "2025-08-30T22:45:07.559790"
 }

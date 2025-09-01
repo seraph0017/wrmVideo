@@ -9,13 +9,14 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙欣{\c&H00FFFFFF&\b0}于驿站接收密信
-Dialogue: 0,0:00:02.10,0:00:03.87,Default,,0,0,0,,深蓝色劲装立于邮差前
-Dialogue: 0,0:00:04.34,0:00:05.33,Default,,0,0,0,,接过{\c&H0000FFFF&\b1}密封{\c&H00FFFFFF&\b0}竹筒
-Dialogue: 0,0:00:05.86,0:00:07.48,Default,,0,0,0,,指尖灵力扫过确认无误
-Dialogue: 0,0:00:07.90,0:00:09.44,Default,,0,0,0,,转身疾奔议事殿{\c&H0000FFFF&\b1}汇报{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:01.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}为先锋部队践行
+Dialogue: 0,0:00:01.78,0:00:02.60,Default,,0,0,0,,赐酒壮行
+Dialogue: 0,0:00:02.83,0:00:03.88,Default,,0,0,0,,发表动员讲话
+Dialogue: 0,0:00:04.25,0:00:05.75,Default,,0,0,0,,激励将士奋勇杀敌
+Dialogue: 0,0:00:06.04,0:00:06.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}保家卫国{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.10,0:00:08.34,Default,,0,0,0,,将士们高呼口号

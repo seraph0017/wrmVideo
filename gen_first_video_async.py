@@ -13,6 +13,7 @@ import json
 import base64
 import random
 import imghdr
+import ffmpeg
 from volcenginesdkarkruntime import Ark
 
 # 添加config目录到路径
@@ -21,6 +22,25 @@ sys.path.insert(0, config_dir)
 
 # 导入配置
 from config import ARK_CONFIG, IMAGE_TO_VIDEO_CONFIG
+
+def get_audio_duration(audio_path):
+    """
+    获取音频文件时长
+    
+    Args:
+        audio_path: 音频文件路径
+    
+    Returns:
+        int: 音频时长（秒，向上取整），失败返回0
+    """
+    try:
+        probe = ffmpeg.probe(audio_path)
+        duration = float(probe['format']['duration'])
+        import math
+        return math.ceil(duration)
+    except Exception as e:
+        print(f"获取音频时长失败: {e}")
+        return 0
 
 def find_sound_effect(text, work_dir):
     """
@@ -125,16 +145,16 @@ def get_sound_effects_for_first_video(chapter_path, work_dir):
     is_first_chapter = chapter_name.endswith('_001') or chapter_name == 'chapter_001'
     
     if is_first_chapter:
-        # 第一个章节从第3秒开始使用铃声
-        bell_path = os.path.join(work_dir, 'src', 'sound_effects', 'misc', 'bell_ring.wav')
-        if os.path.exists(bell_path):
+        # 第一个章节从第3秒开始使用默认音效
+        default_sound_path = os.path.join(work_dir, 'src', 'sound_effects', 'environment', 'wind_gentle.wav')
+        if os.path.exists(default_sound_path):
             sound_effects.append({
-                'path': bell_path,
+                'path': default_sound_path,
                 'start_time': 3,
                 'duration': 5,
                 'volume': 0.5
             })
-            print(f"添加铃声音效: {bell_path}")
+            print(f"添加默认音效: {default_sound_path}")
     
     # 尝试读取narration文件来匹配音效
     narration_file = os.path.join(chapter_path, 'narration_01.txt')
@@ -430,6 +450,27 @@ def find_character_image_by_era(chapter_path, character_name, era):
         # 查找角色图片文件
         image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.gif']
         
+        # 首先在 images 子目录中查找
+        images_dir = os.path.join(chapter_path, 'images')
+        if os.path.exists(images_dir):
+            for file in os.listdir(images_dir):
+                if any(file.lower().endswith(ext) for ext in image_extensions):
+                    # 检查文件名是否包含角色姓名和时代后缀
+                    if character_name in file and era_suffix in file:
+                        image_path = os.path.join(images_dir, file)
+                        print(f"找到角色图片: {character_name} ({era}) -> {file}")
+                        return image_path
+            
+            # 如果没找到带时代后缀的，尝试查找不带后缀的（适用于单一时代）
+            if era == 'single':
+                for file in os.listdir(images_dir):
+                    if any(file.lower().endswith(ext) for ext in image_extensions):
+                        if character_name in file and '_modern' not in file and '_ancient' not in file:
+                            image_path = os.path.join(images_dir, file)
+                            print(f"找到角色图片: {character_name} (单一时代) -> {file}")
+                            return image_path
+        
+        # 如果 images 目录不存在或没找到，回退到章节根目录查找（兼容旧格式）
         for file in os.listdir(chapter_path):
             if any(file.lower().endswith(ext) for ext in image_extensions):
                 # 检查文件名是否包含角色姓名和时代后缀
@@ -456,9 +497,8 @@ def find_character_image_by_era(chapter_path, character_name, era):
 
 def get_chapter_images(chapter_path):
     """
-    获取章节目录中的前两张图片
-    优先查找特定命名格式的图片，然后根据narration文件中的特写人物信息查找对应的角色图片
-    如果都找不到，则使用通用查找方式
+    获取章节目录中的chapter_xxx_image_01和chapter_xxx_image_02图片
+    查找chapter_xxx_image_01和chapter_xxx_image_02格式的文件
     
     Args:
         chapter_path: 章节目录路径
@@ -467,70 +507,40 @@ def get_chapter_images(chapter_path):
         tuple: (第一张图片路径, 第二张图片路径) 或 (None, None)
     """
     try:
+        # 获取章节名称
         chapter_name = os.path.basename(chapter_path)
         
-        # 优先查找特定命名格式的图片
-        first_image_name = f"{chapter_name}_image_01_1.jpeg"
-        second_image_name = f"{chapter_name}_image_01_2.jpeg"
-        
-        first_image_path = os.path.join(chapter_path, first_image_name)
-        second_image_path = os.path.join(chapter_path, second_image_name)
-        
-        if os.path.exists(first_image_path) and os.path.exists(second_image_path):
-            print(f"找到特定命名格式的图片: {first_image_name}, {second_image_name}")
-            return first_image_path, second_image_path
-        
-        # 如果特定命名格式的图片不存在，尝试根据narration文件查找角色图片
-        narration_file = os.path.join(chapter_path, 'narration.txt')
-        if os.path.exists(narration_file):
-            print(f"特定命名格式图片未找到，根据narration文件查找角色图片...")
-            closeups = parse_narration_closeups(narration_file)
-            
-            if len(closeups) >= 2:
-                # 查找前两个特写对应的角色图片
-                first_closeup = closeups[0]
-                second_closeup = closeups[1]
-                
-                first_image = find_character_image_by_era(
-                    chapter_path, 
-                    first_closeup['character_name'], 
-                    first_closeup['era']
-                )
-                second_image = find_character_image_by_era(
-                    chapter_path, 
-                    second_closeup['character_name'], 
-                    second_closeup['era']
-                )
-                
-                if first_image and second_image:
-                    print(f"成功根据特写信息找到图片: {os.path.basename(first_image)}, {os.path.basename(second_image)}")
-                    return first_image, second_image
-                else:
-                    print(f"部分角色图片未找到，回退到通用查找方式")
-            else:
-                print(f"特写信息不足，回退到通用查找方式")
-        
-        # 如果找不到特定命名格式，使用通用查找方式
-        print(f"未找到特定命名格式的图片，使用通用查找方式")
-        
-        # 获取目录中的所有图片文件
+        # 支持的图片扩展名
         image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.gif']
-        image_files = []
         
-        for file in os.listdir(chapter_path):
-            if any(file.lower().endswith(ext) for ext in image_extensions):
-                image_files.append(os.path.join(chapter_path, file))
+        first_image_path = None
+        second_image_path = None
         
-        # 按文件名排序
-        image_files.sort()
+        # 查找chapter_xxx_image_01文件
+        for ext in image_extensions:
+            image_01_path = os.path.join(chapter_path, f"{chapter_name}_image_01{ext}")
+            if os.path.exists(image_01_path):
+                first_image_path = image_01_path
+                break
         
-        if len(image_files) >= 2:
-            return image_files[0], image_files[1]
-        elif len(image_files) == 1:
-            print(f"警告: 章节 {chapter_path} 只有一张图片，无法生成视频")
+        # 查找chapter_xxx_image_02文件
+        for ext in image_extensions:
+            image_02_path = os.path.join(chapter_path, f"{chapter_name}_image_02{ext}")
+            if os.path.exists(image_02_path):
+                second_image_path = image_02_path
+                break
+        
+        if first_image_path and second_image_path:
+            print(f"找到图片: {os.path.basename(first_image_path)}, {os.path.basename(second_image_path)}")
+            return first_image_path, second_image_path
+        elif first_image_path:
+            print(f"警告: 只找到 {os.path.basename(first_image_path)}，缺少 {chapter_name}_image_02")
+            return None, None
+        elif second_image_path:
+            print(f"警告: 只找到 {os.path.basename(second_image_path)}，缺少 {chapter_name}_image_01")
             return None, None
         else:
-            print(f"警告: 章节 {chapter_path} 没有找到图片文件")
+            print(f"警告: 章节 {chapter_path} 没有找到 {chapter_name}_image_01 和 {chapter_name}_image_02 文件")
             return None, None
             
     except Exception as e:
@@ -565,8 +575,16 @@ def generate_videos_for_chapter(chapter_dir):
         first_video_path = os.path.join(chapter_dir, f"{chapter_name}_video_1.mp4")
         second_video_path = os.path.join(chapter_dir, f"{chapter_name}_video_2.mp4")
         
-        # 默认每个视频5秒时长
-        duration = 5
+        # 获取narration音频文件的时长
+        narration_01_path = os.path.join(chapter_dir, f"{chapter_name}_narration_01.mp3")
+        narration_02_path = os.path.join(chapter_dir, f"{chapter_name}_narration_02.mp3")
+        
+        # image_01使用narration_01的时长，image_02使用narration_02的时长
+        duration_1 = get_audio_duration(narration_01_path) if os.path.exists(narration_01_path) else 5
+        duration_2 = get_audio_duration(narration_02_path) if os.path.exists(narration_02_path) else 5
+        
+        print(f"第一个视频时长: {duration_1:.2f}s (来自 narration_01.mp3)")
+        print(f"第二个视频时长: {duration_2:.2f}s (来自 narration_02.mp3)")
         
         # 获取音效列表
         print(f"\n=== 匹配音效 ===")
@@ -588,12 +606,12 @@ def generate_videos_for_chapter(chapter_dir):
         
         # 生成第一个视频
         print(f"\n提交第一个视频生成任务...")
-        if create_video_from_single_image_async(first_image, duration, first_video_path):
+        if create_video_from_single_image_async(first_image, duration_1, first_video_path):
             success_count += 1
         
         # 生成第二个视频
         print(f"\n提交第二个视频生成任务...")
-        if create_video_from_single_image_async(second_image, duration, second_video_path):
+        if create_video_from_single_image_async(second_image, duration_2, second_video_path):
             success_count += 1
         
         if success_count == 2:

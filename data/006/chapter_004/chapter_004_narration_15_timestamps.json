@@ -1,273 +1,233 @@
 {
-  "text": "辛芦于议事殿部署防务，浅色襦裙衬得身形挺拔，手指点向舆图上的咽喉要道，\"此处需派五千精锐驻守，辅以三重法阵！\"",
+  "text": "白蒹葭组织弟子进行实战演练，模拟与三族战斗场景，设置各种障碍，提升弟子应变能力，场面激烈。",
   "audio_file": "data/006/chapter_004/chapter_004_narration_15.mp3",
-  "duration": 10.391,
+  "duration": 9.025,
   "character_timestamps": [
     {
-      "character": "辛",
+      "character": "白",
       "start_time": 0.02,
-      "end_time": 0.245
+      "end_time": 0.187
     },
     {
-      "character": "芦",
-      "start_time": 0.245,
-      "end_time": 0.408
+      "character": "蒹",
+      "start_time": 0.187,
+      "end_time": 0.37
     },
     {
-      "character": "于",
-      "start_time": 0.408,
-      "end_time": 0.508
+      "character": "葭",
+      "start_time": 0.37,
+      "end_time": 0.537
     },
     {
-      "character": "议",
-      "start_time": 0.508,
-      "end_time": 0.629
+      "character": "组",
+      "start_time": 0.537,
+      "end_time": 0.716
     },
     {
-      "character": "事",
-      "start_time": 0.629,
-      "end_time": 0.758
+      "character": "织",
+      "start_time": 0.716,
+      "end_time": 0.849
     },
     {
-      "character": "殿",
-      "start_time": 0.758,
-      "end_time": 0.908
+      "character": "弟",
+      "start_time": 0.849,
+      "end_time": 0.991
     },
     {
-      "character": "部",
-      "start_time": 0.908,
-      "end_time": 1.087
+      "character": "子",
+      "start_time": 0.991,
+      "end_time": 1.145
     },
     {
-      "character": "署",
-      "start_time": 1.087,
-      "end_time": 1.262
+      "character": "进",
+      "start_time": 1.145,
+      "end_time": 1.312
     },
     {
-      "character": "防",
-      "start_time": 1.262,
-      "end_time": 1.512
+      "character": "行",
+      "start_time": 1.312,
+      "end_time": 1.487
     },
     {
-      "character": "务",
-      "start_time": 1.512,
-      "end_time": 1.637
+      "character": "实",
+      "start_time": 1.487,
+      "end_time": 1.729
     },
     {
-      "character": "，",
-      "start_time": 1.637,
-      "end_time": 2.104
+      "character": "战",
+      "start_time": 1.729,
+      "end_time": 1.891
     },
     {
-      "character": "浅",
-      "start_time": 2.104,
-      "end_time": 2.333
+      "character": "演",
+      "start_time": 1.891,
+      "end_time": 2.087
     },
     {
-      "character": "色",
-      "start_time": 2.333,
-      "end_time": 2.462
-    },
-    {
-      "character": "襦",
-      "start_time": 2.462,
-      "end_time": 2.616
-    },
-    {
-      "character": "裙",
-      "start_time": 2.616,
-      "end_time": 2.837
-    },
-    {
-      "character": "衬",
-      "start_time": 2.837,
-      "end_time": 3.054
-    },
-    {
-      "character": "得",
-      "start_time": 3.054,
-      "end_time": 3.124
-    },
-    {
-      "character": "身",
-      "start_time": 3.124,
-      "end_time": 3.337
-    },
-    {
-      "character": "形",
-      "start_time": 3.337,
-      "end_time": 3.516
-    },
-    {
-      "character": "挺",
-      "start_time": 3.516,
-      "end_time": 3.712
-    },
-    {
-      "character": "拔",
-      "start_time": 3.712,
-      "end_time": 3.937
+      "character": "练",
+      "start_time": 2.087,
+      "end_time": 2.262
     },
     {
       "character": "，",
-      "start_time": 3.937,
-      "end_time": 4.337
+      "start_time": 2.262,
+      "end_time": 2.695
     },
     {
-      "character": "手",
-      "start_time": 4.337,
-      "end_time": 4.537
+      "character": "模",
+      "start_time": 2.695,
+      "end_time": 2.879
     },
     {
-      "character": "指",
-      "start_time": 4.537,
-      "end_time": 4.674
+      "character": "拟",
+      "start_time": 2.879,
+      "end_time": 3.145
     },
     {
-      "character": "点",
-      "start_time": 4.674,
-      "end_time": 4.879
-    },
-    {
-      "character": "向",
-      "start_time": 4.879,
-      "end_time": 5.066
-    },
-    {
-      "character": "舆",
-      "start_time": 5.066,
-      "end_time": 5.229
-    },
-    {
-      "character": "图",
-      "start_time": 5.229,
-      "end_time": 5.366
-    },
-    {
-      "character": "上",
-      "start_time": 5.366,
-      "end_time": 5.499
-    },
-    {
-      "character": "的",
-      "start_time": 5.499,
-      "end_time": 5.57
-    },
-    {
-      "character": "咽",
-      "start_time": 5.57,
-      "end_time": 5.783
-    },
-    {
-      "character": "喉",
-      "start_time": 5.783,
-      "end_time": 5.958
-    },
-    {
-      "character": "要",
-      "start_time": 5.958,
-      "end_time": 6.099
-    },
-    {
-      "character": "道",
-      "start_time": 6.099,
-      "end_time": 6.224
-    },
-    {
-      "character": "，",
-      "start_time": 6.224,
-      "end_time": 6.729
-    },
-    {
-      "character": "此",
-      "start_time": 6.729,
-      "end_time": 6.904
-    },
-    {
-      "character": "处",
-      "start_time": 6.904,
-      "end_time": 7.22
-    },
-    {
-      "character": "需",
-      "start_time": 7.22,
-      "end_time": 7.429
-    },
-    {
-      "character": "派",
-      "start_time": 7.429,
-      "end_time": 7.616
-    },
-    {
-      "character": "五",
-      "start_time": 7.616,
-      "end_time": 7.77
-    },
-    {
-      "character": "千",
-      "start_time": 7.77,
-      "end_time": 7.966
-    },
-    {
-      "character": "精",
-      "start_time": 7.966,
-      "end_time": 8.195
-    },
-    {
-      "character": "锐",
-      "start_time": 8.195,
-      "end_time": 8.341
-    },
-    {
-      "character": "驻",
-      "start_time": 8.341,
-      "end_time": 8.495
-    },
-    {
-      "character": "守",
-      "start_time": 8.495,
-      "end_time": 8.691
-    },
-    {
-      "character": "，",
-      "start_time": 8.691,
-      "end_time": 9.024
-    },
-    {
-      "character": "辅",
-      "start_time": 9.024,
-      "end_time": 9.237
-    },
-    {
-      "character": "以",
-      "start_time": 9.237,
-      "end_time": 9.374
+      "character": "与",
+      "start_time": 3.145,
+      "end_time": 3.254
     },
     {
       "character": "三",
-      "start_time": 9.374,
-      "end_time": 9.666
+      "start_time": 3.254,
+      "end_time": 3.483
     },
     {
-      "character": "重",
-      "start_time": 9.666,
-      "end_time": 9.87
+      "character": "族",
+      "start_time": 3.483,
+      "end_time": 3.649
     },
     {
-      "character": "法",
-      "start_time": 9.87,
-      "end_time": 10.074
+      "character": "战",
+      "start_time": 3.649,
+      "end_time": 3.862
     },
     {
-      "character": "阵",
-      "start_time": 10.074,
-      "end_time": 10.229
+      "character": "斗",
+      "start_time": 3.862,
+      "end_time": 3.991
     },
     {
-      "character": "！",
-      "start_time": 10.229,
-      "end_time": 10.387
+      "character": "场",
+      "start_time": 3.991,
+      "end_time": 4.229
+    },
+    {
+      "character": "景",
+      "start_time": 4.229,
+      "end_time": 4.383
+    },
+    {
+      "character": "，",
+      "start_time": 4.383,
+      "end_time": 4.841
+    },
+    {
+      "character": "设",
+      "start_time": 4.841,
+      "end_time": 5.045
+    },
+    {
+      "character": "置",
+      "start_time": 5.045,
+      "end_time": 5.179
+    },
+    {
+      "character": "各",
+      "start_time": 5.179,
+      "end_time": 5.395
+    },
+    {
+      "character": "种",
+      "start_time": 5.395,
+      "end_time": 5.549
+    },
+    {
+      "character": "障",
+      "start_time": 5.549,
+      "end_time": 5.745
+    },
+    {
+      "character": "碍",
+      "start_time": 5.745,
+      "end_time": 5.874
+    },
+    {
+      "character": "，",
+      "start_time": 5.874,
+      "end_time": 6.266
+    },
+    {
+      "character": "提",
+      "start_time": 6.266,
+      "end_time": 6.42
+    },
+    {
+      "character": "升",
+      "start_time": 6.42,
+      "end_time": 6.591
+    },
+    {
+      "character": "弟",
+      "start_time": 6.591,
+      "end_time": 6.741
+    },
+    {
+      "character": "子",
+      "start_time": 6.741,
+      "end_time": 6.908
+    },
+    {
+      "character": "应",
+      "start_time": 6.908,
+      "end_time": 7.116
+    },
+    {
+      "character": "变",
+      "start_time": 7.116,
+      "end_time": 7.262
+    },
+    {
+      "character": "能",
+      "start_time": 7.262,
+      "end_time": 7.499
+    },
+    {
+      "character": "力",
+      "start_time": 7.499,
+      "end_time": 7.616
+    },
+    {
+      "character": "，",
+      "start_time": 7.616,
+      "end_time": 8.012
+    },
+    {
+      "character": "场",
+      "start_time": 8.012,
+      "end_time": 8.287
+    },
+    {
+      "character": "面",
+      "start_time": 8.287,
+      "end_time": 8.508
+    },
+    {
+      "character": "激",
+      "start_time": 8.508,
+      "end_time": 8.737
+    },
+    {
+      "character": "烈",
+      "start_time": 8.737,
+      "end_time": 8.862
+    },
+    {
+      "character": "。",
+      "start_time": 8.862,
+      "end_time": 9.021
     }
   ],
-  "generated_at": "2025-08-27T22:43:46.267992"
+  "generated_at": "2025-08-30T22:45:47.387572"
 }

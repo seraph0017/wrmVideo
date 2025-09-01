@@ -9,13 +9,15 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}躺在床上
-Dialogue: 0,0:00:01.42,0:00:02.55,Default,,0,0,0,,回想白天的冲突
-Dialogue: 0,0:00:02.90,0:00:03.65,Default,,0,0,0,,眼神坚定
-Dialogue: 0,0:00:04.07,0:00:05.67,Default,,0,0,0,,默默发誓要努力修炼
-Dialogue: 0,0:00:06.00,0:00:06.67,Default,,0,0,0,,不再受辱
+Dialogue: 0,0:00:00.02,0:00:01.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}接过碗筷
+Dialogue: 0,0:00:01.42,0:00:02.82,Default,,0,0,0,,感受{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}掌心温度
+Dialogue: 0,0:00:03.24,0:00:04.85,Default,,0,0,0,,心中涌起陌生亲情
+Dialogue: 0,0:00:05.19,0:00:06.30,Default,,0,0,0,,脱口唤出母亲
+Dialogue: 0,0:00:06.61,0:00:07.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}楚秀{\c&H00FFFFFF&\b0}身体微僵
+Dialogue: 0,0:00:08.15,0:00:09.04,Default,,0,0,0,,疑惑打量儿子
+Dialogue: 0,0:00:09.29,0:00:10.29,Default,,0,0,0,,未察觉异常

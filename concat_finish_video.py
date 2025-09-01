@@ -463,6 +463,72 @@ def concat_videos_with_bgm(video_files, bgm_audio_path, output_path):
         print(f"拼接视频时发生错误: {e}")
         return False
 
+def super_compress_video(input_path, output_path):
+    """超级压缩视频，用于进一步减小文件大小"""
+    try:
+        # 获取GPU参数
+        gpu_params = get_ffmpeg_gpu_params()
+        
+        # 构建超级压缩命令
+        cmd = [
+            "ffmpeg", "-y",
+            "-i", input_path,
+            "-c:v", gpu_params['video_codec'],
+            "-c:a", "aac",
+            "-b:a", "64k",  # 极低音频比特率
+            "-movflags", "+faststart"
+        ]
+        
+        # 根据GPU类型添加超级压缩参数
+        if gpu_params['video_codec'] == 'h264_nvenc':
+            # NVIDIA GPU - 超级压缩
+            cmd.extend([
+                "-preset", "p7",  # 最慢但压缩率最高
+                "-rc", "vbr",
+                "-cq", "40",  # 很高的CQ值
+                "-maxrate", "1400k",  # 很低的最大比特率
+                "-bufsize", "1400k",
+                "-refs", "1",  # 最少参考帧
+                "-rc-lookahead", "10"
+            ])
+        elif gpu_params['video_codec'] == 'h264_videotoolbox':
+            # macOS VideoToolbox - 超级压缩
+            cmd.extend([
+                "-b:v", "1200k",  # 很低的视频码率
+                "-maxrate", "1400k",
+                "-bufsize", "1400k",
+                "-q:v", "75"  # 很高的质量值（很低质量）
+            ])
+        else:
+            # CPU编码 - 超级压缩
+            cmd.extend([
+                "-preset", "veryslow",  # 最慢预设
+                "-crf", "40",  # 很高的CRF值
+                "-maxrate", "1200k",  # 很低的最大比特率
+                "-bufsize", "1200k",
+                "-refs", "1",  # 最少参考帧
+                "-trellis", "2",
+                "-me_method", "umh",
+                "-subq", "9",  # 最高的子像素运动估计质量
+                "-aq-mode", "2"  # 自适应量化
+            ])
+        
+        cmd.append(output_path)
+        
+        print(f"执行超级压缩命令: {' '.join(cmd)}")
+        result = subprocess.run(cmd, capture_output=True, text=False)
+        
+        if result.returncode != 0:
+            print(f"超级压缩失败: {result.stderr}")
+            return False
+        
+        print(f"超级压缩成功: {output_path}")
+        return True
+        
+    except Exception as e:
+        print(f"超级压缩时发生错误: {e}")
+        return False
+
 def compress_final_video(input_path, output_path):
     """对最终视频进行压缩以确保文件大小小于50MB"""
     try:
@@ -475,38 +541,41 @@ def compress_final_video(input_path, output_path):
             "-i", input_path,
             "-c:v", gpu_params['video_codec'],
             "-c:a", "aac",
-            "-b:a", "96k",  # 降低音频比特率
+            "-b:a", "80k",  # 进一步降低音频比特率
             "-movflags", "+faststart"
         ]
         
-        # 根据GPU类型添加适度的压缩参数，平衡文件大小和质量
+        # 根据GPU类型添加更激进的压缩参数
         if gpu_params['video_codec'] == 'h264_nvenc':
-            # NVIDIA GPU - 适度压缩，保持较好质量
+            # NVIDIA GPU - 更激进的压缩
             cmd.extend([
-                "-preset", "p4",  # 平衡速度和压缩率
+                "-preset", "p6",  # 更慢但压缩率更高
                 "-rc", "vbr",
-                "-cq", "30",  # 适中的CQ值，平衡质量和大小
-                "-maxrate", VIDEO_STANDARDS['video_bitrate'],  # 适中的最大比特率
-                "-bufsize", "2000k",
-                "-refs", "3",
-                "-rc-lookahead", "20"
+                "-cq", "35",  # 更高的CQ值，更小文件
+                "-maxrate", "1800k",  # 降低最大比特率
+                "-bufsize", "1800k",
+                "-refs", "2",  # 减少参考帧
+                "-rc-lookahead", "15"
             ])
         elif gpu_params['video_codec'] == 'h264_videotoolbox':
-            # macOS VideoToolbox - 适度压缩
+            # macOS VideoToolbox - 更激进的压缩
             cmd.extend([
-                "-b:v", VIDEO_STANDARDS['video_bitrate'],  # 使用标准视频码率
-                "-maxrate", VIDEO_STANDARDS['video_bitrate'],
-                "-bufsize", "2000k",
-                "-q:v", "65"  # 适中的质量值
+                "-b:v", "1600k",  # 降低视频码率
+                "-maxrate", "1800k",
+                "-bufsize", "1800k",
+                "-q:v", "70"  # 更高的质量值（更低质量）
             ])
         else:
-            # CPU编码 - 适度的CRF值
+            # CPU编码 - 更激进的CRF值
             cmd.extend([
-                "-preset", "medium",  # 平衡速度和压缩率
-                "-crf", "30",  # 适中的CRF值
-                "-maxrate", VIDEO_STANDARDS['video_bitrate'],
+                "-preset", "slow",  # 更慢但压缩率更高
+                "-crf", "35",  # 更高的CRF值
+                "-maxrate", "1600k",  # 降低最大比特率
                 "-bufsize", "1600k",
-                "-trellis", "1"
+                "-refs", "2",  # 减少参考帧
+                "-trellis", "2",  # 更高的trellis量化
+                "-me_method", "umh",  # 更好的运动估计
+                "-subq", "8"  # 更高的子像素运动估计质量
             ])
         
         cmd.append(output_path)
@@ -658,6 +727,26 @@ def process_single_chapter(data_dir, chapter_dir):
                     print(f"视频参数: {width}x{height}px, {fps}fps")
                     print(f"视频时长: {duration:.2f}s ({duration/60:.2f}分钟)")
                     print(f"文件大小: {file_size_mb:.2f}MB")
+                    
+                    # 如果压缩后仍然超过50MB，进行超级压缩
+                    if file_size_mb > 50:
+                        print(f"\n=== 文件大小仍超过50MB，进行超级压缩 ===")
+                        super_compressed_path = os.path.join(chapter_path, f"{chapter_name}_super_compressed.mp4")
+                        if super_compress_video(final_output_path, super_compressed_path):
+                            # 替换原文件
+                            os.remove(final_output_path)
+                            os.rename(super_compressed_path, final_output_path)
+                            
+                            # 重新检查超级压缩后的文件信息
+                            width, height, fps, duration = get_video_info(final_output_path)
+                            file_size_mb = os.path.getsize(final_output_path) / (1024 * 1024)
+                            print(f"\n=== 章节 {chapter_name} 超级压缩后视频信息 ===")
+                            print(f"文件路径: {final_output_path}")
+                            print(f"视频参数: {width}x{height}px, {fps}fps")
+                            print(f"视频时长: {duration:.2f}s ({duration/60:.2f}分钟)")
+                            print(f"文件大小: {file_size_mb:.2f}MB")
+                        else:
+                            print(f"警告: 超级压缩失败，保留压缩后的文件")
                 else:
                     print(f"警告: 最终压缩失败，保留原文件")
             

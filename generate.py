@@ -23,7 +23,7 @@ import xml.etree.ElementTree as ET
 src_dir = os.path.join(os.path.dirname(__file__), 'src')
 sys.path.insert(0, src_dir)
 
-from config.config import TTS_CONFIG, ARK_CONFIG, IMAGE_TWO_CONFIG, STORY_STYLE
+from config.config import TTS_CONFIG, ARK_CONFIG, IMAGE_TWO_CONFIG
 from src.script.gen_script import ScriptGenerator
 from src.voice.gen_voice import VoiceGenerator
 from src.image.gen_image import generate_image_with_volcengine

@@ -9,12 +9,14 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与赵鸾走在上学路上
-Dialogue: 0,0:00:02.36,0:00:04.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}向他讲述家族星图开窍
-Dialogue: 0,0:00:04.62,0:00:04.91,Default,,0,0,0,,之事
-Dialogue: 0,0:00:05.34,0:00:06.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}若有所思
+Dialogue: 0,0:00:00.02,0:00:01.52,Default,,0,0,0,,巨人虚影双手合十
+Dialogue: 0,0:00:01.85,0:00:02.54,Default,,0,0,0,,紫电劈落
+Dialogue: 0,0:00:03.00,0:00:04.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}被强光吞噬
+Dialogue: 0,0:00:04.54,0:00:06.68,Default,,0,0,0,,脖颈处磨盘饰品爆发出{\c&H0000FFFF&\b1}玄光{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.02,0:00:08.05,Default,,0,0,0,,将他卷入虚空
+Dialogue: 0,0:00:08.38,0:00:09.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}天文台{\c&H00FFFFFF&\b0}恢复寂静

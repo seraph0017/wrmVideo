@@ -1,193 +1,238 @@
 {
-  "text": "赵硕在铜镜中看到陌生的少年面容，约十五六岁，身着青色长袍，神情震惊又茫然。",
+  "text": "赵硕坦言自卑差距，苏青蝉突然吻住他的嘴唇，赵硕脑中一片空白，手中矿泉水瓶滑落，发出清脆声响",
   "audio_file": "data/006/chapter_001/chapter_001_narration_05.mp3",
-  "duration": 7.366,
+  "duration": 8.65,
   "character_timestamps": [
     {
       "character": "赵",
       "start_time": 0.02,
-      "end_time": 0.183
+      "end_time": 0.162
     },
     {
       "character": "硕",
-      "start_time": 0.183,
-      "end_time": 0.316
+      "start_time": 0.162,
+      "end_time": 0.299
     },
     {
-      "character": "在",
-      "start_time": 0.316,
-      "end_time": 0.437
+      "character": "坦",
+      "start_time": 0.299,
+      "end_time": 0.529
     },
     {
-      "character": "铜",
-      "start_time": 0.437,
-      "end_time": 0.645
+      "character": "言",
+      "start_time": 0.529,
+      "end_time": 0.708
     },
     {
-      "character": "镜",
-      "start_time": 0.645,
-      "end_time": 0.804
+      "character": "自",
+      "start_time": 0.708,
+      "end_time": 0.887
     },
     {
-      "character": "中",
-      "start_time": 0.804,
-      "end_time": 0.991
+      "character": "卑",
+      "start_time": 0.887,
+      "end_time": 1.029
     },
     {
-      "character": "看",
-      "start_time": 0.991,
-      "end_time": 1.166
+      "character": "差",
+      "start_time": 1.029,
+      "end_time": 1.245
     },
     {
-      "character": "到",
-      "start_time": 1.166,
-      "end_time": 1.274
+      "character": "距",
+      "start_time": 1.245,
+      "end_time": 1.391
     },
     {
-      "character": "陌",
-      "start_time": 1.274,
-      "end_time": 1.47
+      "character": "，",
+      "start_time": 1.391,
+      "end_time": 1.837
     },
     {
-      "character": "生",
-      "start_time": 1.47,
-      "end_time": 1.62
-    },
-    {
-      "character": "的",
-      "start_time": 1.62,
-      "end_time": 1.691
-    },
-    {
-      "character": "少",
-      "start_time": 1.691,
-      "end_time": 1.887
-    },
-    {
-      "character": "年",
-      "start_time": 1.887,
+      "character": "苏",
+      "start_time": 1.837,
       "end_time": 2.012
     },
     {
-      "character": "面",
-      "start_time": 2.012,
-      "end_time": 2.204
-    },
-    {
-      "character": "容",
-      "start_time": 2.204,
-      "end_time": 2.445
-    },
-    {
-      "character": "，",
-      "start_time": 2.445,
-      "end_time": 2.883
-    },
-    {
-      "character": "约",
-      "start_time": 2.883,
-      "end_time": 3.074
-    },
-    {
-      "character": "十",
-      "start_time": 3.074,
-      "end_time": 3.329
-    },
-    {
-      "character": "五",
-      "start_time": 3.329,
-      "end_time": 3.433
-    },
-    {
-      "character": "六",
-      "start_time": 3.433,
-      "end_time": 3.587
-    },
-    {
-      "character": "岁",
-      "start_time": 3.587,
-      "end_time": 3.766
-    },
-    {
-      "character": "，",
-      "start_time": 3.766,
-      "end_time": 4.124
-    },
-    {
-      "character": "身",
-      "start_time": 4.124,
-      "end_time": 4.333
-    },
-    {
-      "character": "着",
-      "start_time": 4.333,
-      "end_time": 4.487
-    },
-    {
       "character": "青",
-      "start_time": 4.487,
-      "end_time": 4.774
+      "start_time": 2.012,
+      "end_time": 2.162
     },
     {
-      "character": "色",
-      "start_time": 4.774,
-      "end_time": 4.933
+      "character": "蝉",
+      "start_time": 2.162,
+      "end_time": 2.379
     },
     {
-      "character": "长",
-      "start_time": 4.933,
-      "end_time": 5.145
-    },
-    {
-      "character": "袍",
-      "start_time": 5.145,
-      "end_time": 5.404
-    },
-    {
-      "character": "，",
-      "start_time": 5.404,
-      "end_time": 5.737
-    },
-    {
-      "character": "神",
-      "start_time": 5.737,
-      "end_time": 5.97
-    },
-    {
-      "character": "情",
-      "start_time": 5.97,
-      "end_time": 6.183
-    },
-    {
-      "character": "震",
-      "start_time": 6.183,
-      "end_time": 6.437
-    },
-    {
-      "character": "惊",
-      "start_time": 6.437,
-      "end_time": 6.645
-    },
-    {
-      "character": "又",
-      "start_time": 6.645,
-      "end_time": 6.791
-    },
-    {
-      "character": "茫",
-      "start_time": 6.791,
-      "end_time": 7.024
+      "character": "突",
+      "start_time": 2.379,
+      "end_time": 2.591
     },
     {
       "character": "然",
-      "start_time": 7.024,
-      "end_time": 7.204
+      "start_time": 2.591,
+      "end_time": 2.749
+    },
+    {
+      "character": "吻",
+      "start_time": 2.749,
+      "end_time": 2.916
+    },
+    {
+      "character": "住",
+      "start_time": 2.916,
+      "end_time": 3.033
+    },
+    {
+      "character": "他",
+      "start_time": 3.033,
+      "end_time": 3.137
+    },
+    {
+      "character": "的",
+      "start_time": 3.137,
+      "end_time": 3.204
+    },
+    {
+      "character": "嘴",
+      "start_time": 3.204,
+      "end_time": 3.379
+    },
+    {
+      "character": "唇",
+      "start_time": 3.379,
+      "end_time": 3.629
+    },
+    {
+      "character": "，",
+      "start_time": 3.629,
+      "end_time": 4.158
+    },
+    {
+      "character": "赵",
+      "start_time": 4.158,
+      "end_time": 4.287
+    },
+    {
+      "character": "硕",
+      "start_time": 4.287,
+      "end_time": 4.408
+    },
+    {
+      "character": "脑",
+      "start_time": 4.408,
+      "end_time": 4.599
+    },
+    {
+      "character": "中",
+      "start_time": 4.599,
+      "end_time": 4.745
+    },
+    {
+      "character": "一",
+      "start_time": 4.745,
+      "end_time": 4.924
+    },
+    {
+      "character": "片",
+      "start_time": 4.924,
+      "end_time": 5.099
+    },
+    {
+      "character": "空",
+      "start_time": 5.099,
+      "end_time": 5.291
+    },
+    {
+      "character": "白",
+      "start_time": 5.291,
+      "end_time": 5.512
+    },
+    {
+      "character": "，",
+      "start_time": 5.512,
+      "end_time": 5.791
+    },
+    {
+      "character": "手",
+      "start_time": 5.791,
+      "end_time": 5.983
+    },
+    {
+      "character": "中",
+      "start_time": 5.983,
+      "end_time": 6.124
+    },
+    {
+      "character": "矿",
+      "start_time": 6.124,
+      "end_time": 6.312
+    },
+    {
+      "character": "泉",
+      "start_time": 6.312,
+      "end_time": 6.449
+    },
+    {
+      "character": "水",
+      "start_time": 6.449,
+      "end_time": 6.587
+    },
+    {
+      "character": "瓶",
+      "start_time": 6.587,
+      "end_time": 6.745
+    },
+    {
+      "character": "滑",
+      "start_time": 6.745,
+      "end_time": 6.945
+    },
+    {
+      "character": "落",
+      "start_time": 6.945,
+      "end_time": 7.087
+    },
+    {
+      "character": "，",
+      "start_time": 7.087,
+      "end_time": 7.341
+    },
+    {
+      "character": "发",
+      "start_time": 7.341,
+      "end_time": 7.495
+    },
+    {
+      "character": "出",
+      "start_time": 7.495,
+      "end_time": 7.658
+    },
+    {
+      "character": "清",
+      "start_time": 7.658,
+      "end_time": 7.974
+    },
+    {
+      "character": "脆",
+      "start_time": 7.974,
+      "end_time": 8.158
+    },
+    {
+      "character": "声",
+      "start_time": 8.158,
+      "end_time": 8.337
+    },
+    {
+      "character": "响",
+      "start_time": 8.337,
+      "end_time": 8.487
     },
     {
       "character": "。",
-      "start_time": 7.204,
-      "end_time": 7.362
+      "start_time": 8.487,
+      "end_time": 8.646
     }
   ],
-  "generated_at": "2025-08-27T22:42:17.396773"
+  "generated_at": "2025-08-30T22:44:42.204256"
 }

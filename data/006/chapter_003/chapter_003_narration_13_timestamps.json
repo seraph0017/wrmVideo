@@ -1,158 +1,233 @@
 {
-  "text": "天雷上人率众道尊围堵尸群，金光遍地，道法纵横，尸群惨叫连连。",
+  "text": "星图发动，星光如箭，射杀大量僵神一族走尸，僵帝见状大怒，亲自出手，冲向天雷上人，速度极快。",
   "audio_file": "data/006/chapter_003/chapter_003_narration_13.mp3",
-  "duration": 6.5,
+  "duration": 9.191,
   "character_timestamps": [
     {
-      "character": "天",
-      "start_time": 0.02,
-      "end_time": 0.183
+      "character": "星",
+      "start_time": 0.016,
+      "end_time": 0.266
     },
     {
-      "character": "雷",
-      "start_time": 0.183,
-      "end_time": 0.341
+      "character": "图",
+      "start_time": 0.266,
+      "end_time": 0.433
     },
     {
-      "character": "上",
-      "start_time": 0.341,
-      "end_time": 0.508
+      "character": "发",
+      "start_time": 0.433,
+      "end_time": 0.604
     },
     {
-      "character": "人",
-      "start_time": 0.508,
-      "end_time": 0.774
-    },
-    {
-      "character": "率",
-      "start_time": 0.774,
-      "end_time": 1.062
-    },
-    {
-      "character": "众",
-      "start_time": 1.062,
-      "end_time": 1.229
-    },
-    {
-      "character": "道",
-      "start_time": 1.229,
-      "end_time": 1.412
-    },
-    {
-      "character": "尊",
-      "start_time": 1.412,
-      "end_time": 1.654
-    },
-    {
-      "character": "围",
-      "start_time": 1.654,
-      "end_time": 1.858
-    },
-    {
-      "character": "堵",
-      "start_time": 1.858,
-      "end_time": 2.016
-    },
-    {
-      "character": "尸",
-      "start_time": 2.016,
-      "end_time": 2.183
-    },
-    {
-      "character": "群",
-      "start_time": 2.183,
-      "end_time": 2.433
+      "character": "动",
+      "start_time": 0.604,
+      "end_time": 0.754
     },
     {
       "character": "，",
-      "start_time": 2.433,
-      "end_time": 2.749
+      "start_time": 0.754,
+      "end_time": 1.129
     },
     {
-      "character": "金",
-      "start_time": 2.749,
-      "end_time": 2.983
+      "character": "星",
+      "start_time": 1.129,
+      "end_time": 1.404
     },
     {
       "character": "光",
-      "start_time": 2.983,
-      "end_time": 3.183
+      "start_time": 1.404,
+      "end_time": 1.587
     },
     {
-      "character": "遍",
-      "start_time": 3.183,
-      "end_time": 3.362
+      "character": "如",
+      "start_time": 1.587,
+      "end_time": 1.737
     },
     {
-      "character": "地",
-      "start_time": 3.362,
-      "end_time": 3.516
-    },
-    {
-      "character": "，",
-      "start_time": 3.516,
-      "end_time": 3.945
-    },
-    {
-      "character": "道",
-      "start_time": 3.945,
-      "end_time": 4.145
-    },
-    {
-      "character": "法",
-      "start_time": 4.145,
-      "end_time": 4.316
-    },
-    {
-      "character": "纵",
-      "start_time": 4.316,
-      "end_time": 4.504
-    },
-    {
-      "character": "横",
-      "start_time": 4.504,
-      "end_time": 4.758
+      "character": "箭",
+      "start_time": 1.737,
+      "end_time": 1.912
     },
     {
       "character": "，",
-      "start_time": 4.758,
-      "end_time": 4.999
+      "start_time": 1.912,
+      "end_time": 2.329
+    },
+    {
+      "character": "射",
+      "start_time": 2.329,
+      "end_time": 2.541
+    },
+    {
+      "character": "杀",
+      "start_time": 2.541,
+      "end_time": 2.712
+    },
+    {
+      "character": "大",
+      "start_time": 2.712,
+      "end_time": 2.87
+    },
+    {
+      "character": "量",
+      "start_time": 2.87,
+      "end_time": 3.033
+    },
+    {
+      "character": "僵",
+      "start_time": 3.033,
+      "end_time": 3.195
+    },
+    {
+      "character": "神",
+      "start_time": 3.195,
+      "end_time": 3.387
+    },
+    {
+      "character": "一",
+      "start_time": 3.387,
+      "end_time": 3.574
+    },
+    {
+      "character": "族",
+      "start_time": 3.574,
+      "end_time": 3.741
+    },
+    {
+      "character": "走",
+      "start_time": 3.741,
+      "end_time": 3.912
     },
     {
       "character": "尸",
-      "start_time": 4.999,
-      "end_time": 5.208
+      "start_time": 3.912,
+      "end_time": 4.129
     },
     {
-      "character": "群",
-      "start_time": 5.208,
-      "end_time": 5.416
+      "character": "，",
+      "start_time": 4.129,
+      "end_time": 4.474
     },
     {
-      "character": "惨",
-      "start_time": 5.416,
-      "end_time": 5.733
+      "character": "僵",
+      "start_time": 4.474,
+      "end_time": 4.641
     },
     {
-      "character": "叫",
-      "start_time": 5.733,
-      "end_time": 5.937
+      "character": "帝",
+      "start_time": 4.641,
+      "end_time": 4.787
     },
     {
-      "character": "连",
-      "start_time": 5.937,
-      "end_time": 6.108
+      "character": "见",
+      "start_time": 4.787,
+      "end_time": 5.037
     },
     {
-      "character": "连",
-      "start_time": 6.108,
-      "end_time": 6.337
+      "character": "状",
+      "start_time": 5.037,
+      "end_time": 5.216
+    },
+    {
+      "character": "大",
+      "start_time": 5.216,
+      "end_time": 5.404
+    },
+    {
+      "character": "怒",
+      "start_time": 5.404,
+      "end_time": 5.549
+    },
+    {
+      "character": "，",
+      "start_time": 5.549,
+      "end_time": 5.845
+    },
+    {
+      "character": "亲",
+      "start_time": 5.845,
+      "end_time": 6.099
+    },
+    {
+      "character": "自",
+      "start_time": 6.099,
+      "end_time": 6.245
+    },
+    {
+      "character": "出",
+      "start_time": 6.245,
+      "end_time": 6.408
+    },
+    {
+      "character": "手",
+      "start_time": 6.408,
+      "end_time": 6.574
+    },
+    {
+      "character": "，",
+      "start_time": 6.574,
+      "end_time": 6.833
+    },
+    {
+      "character": "冲",
+      "start_time": 6.833,
+      "end_time": 7.016
+    },
+    {
+      "character": "向",
+      "start_time": 7.016,
+      "end_time": 7.204
+    },
+    {
+      "character": "天",
+      "start_time": 7.204,
+      "end_time": 7.424
+    },
+    {
+      "character": "雷",
+      "start_time": 7.424,
+      "end_time": 7.583
+    },
+    {
+      "character": "上",
+      "start_time": 7.583,
+      "end_time": 7.754
+    },
+    {
+      "character": "人",
+      "start_time": 7.754,
+      "end_time": 7.958
+    },
+    {
+      "character": "，",
+      "start_time": 7.958,
+      "end_time": 8.183
+    },
+    {
+      "character": "速",
+      "start_time": 8.183,
+      "end_time": 8.445
+    },
+    {
+      "character": "度",
+      "start_time": 8.445,
+      "end_time": 8.599
+    },
+    {
+      "character": "极",
+      "start_time": 8.599,
+      "end_time": 8.841
+    },
+    {
+      "character": "快",
+      "start_time": 8.841,
+      "end_time": 9.029
     },
     {
       "character": "。",
-      "start_time": 6.337,
-      "end_time": 6.496
+      "start_time": 9.029,
+      "end_time": 9.187
     }
   ],
-  "generated_at": "2025-08-27T22:43:16.209846"
+  "generated_at": "2025-08-30T22:45:18.493419"
 }

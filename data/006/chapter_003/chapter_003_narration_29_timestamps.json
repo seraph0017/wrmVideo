@@ -1,173 +1,293 @@
 {
-  "text": "赵硕面露喜色，拱手致谢，周身气势一振，大殿之内灵气波动，众人侧目。",
+  "text": "白蒹葭和姜素卿在殿外等候，见到赵硕出来，迎上前去，姜素卿体力恢复，向赵硕道谢，三人一同返回住处，身影消失在夜色中。",
   "audio_file": "data/006/chapter_003/chapter_003_narration_29.mp3",
-  "duration": 6.591,
+  "duration": 11.508,
   "character_timestamps": [
     {
-      "character": "赵",
-      "start_time": 0.02,
+      "character": "白",
+      "start_time": 0.016,
       "end_time": 0.17
     },
     {
-      "character": "硕",
+      "character": "蒹",
       "start_time": 0.17,
-      "end_time": 0.316
+      "end_time": 0.349
     },
     {
-      "character": "面",
-      "start_time": 0.316,
-      "end_time": 0.529
+      "character": "葭",
+      "start_time": 0.349,
+      "end_time": 0.504
     },
     {
-      "character": "露",
-      "start_time": 0.529,
-      "end_time": 0.67
+      "character": "和",
+      "start_time": 0.504,
+      "end_time": 0.608
     },
     {
-      "character": "喜",
-      "start_time": 0.67,
-      "end_time": 0.908
+      "character": "姜",
+      "start_time": 0.608,
+      "end_time": 0.766
     },
     {
-      "character": "色",
-      "start_time": 0.908,
-      "end_time": 1.091
+      "character": "素",
+      "start_time": 0.766,
+      "end_time": 0.937
     },
     {
-      "character": "，",
-      "start_time": 1.091,
-      "end_time": 1.52
+      "character": "卿",
+      "start_time": 0.937,
+      "end_time": 1.187
     },
     {
-      "character": "拱",
-      "start_time": 1.52,
-      "end_time": 1.695
-    },
-    {
-      "character": "手",
-      "start_time": 1.695,
-      "end_time": 1.862
-    },
-    {
-      "character": "致",
-      "start_time": 1.862,
-      "end_time": 1.991
-    },
-    {
-      "character": "谢",
-      "start_time": 1.991,
-      "end_time": 2.179
-    },
-    {
-      "character": "，",
-      "start_time": 2.179,
-      "end_time": 2.554
-    },
-    {
-      "character": "周",
-      "start_time": 2.554,
-      "end_time": 2.712
-    },
-    {
-      "character": "身",
-      "start_time": 2.712,
-      "end_time": 2.895
-    },
-    {
-      "character": "气",
-      "start_time": 2.895,
-      "end_time": 3.124
-    },
-    {
-      "character": "势",
-      "start_time": 3.124,
-      "end_time": 3.266
-    },
-    {
-      "character": "一",
-      "start_time": 3.266,
-      "end_time": 3.399
-    },
-    {
-      "character": "振",
-      "start_time": 3.399,
-      "end_time": 3.554
-    },
-    {
-      "character": "，",
-      "start_time": 3.554,
-      "end_time": 3.954
-    },
-    {
-      "character": "大",
-      "start_time": 3.954,
-      "end_time": 4.129
+      "character": "在",
+      "start_time": 1.187,
+      "end_time": 1.374
     },
     {
       "character": "殿",
-      "start_time": 4.129,
-      "end_time": 4.287
+      "start_time": 1.374,
+      "end_time": 1.574
     },
     {
-      "character": "之",
-      "start_time": 4.287,
-      "end_time": 4.404
+      "character": "外",
+      "start_time": 1.574,
+      "end_time": 1.687
     },
     {
-      "character": "内",
-      "start_time": 4.404,
-      "end_time": 4.579
+      "character": "等",
+      "start_time": 1.687,
+      "end_time": 1.866
     },
     {
-      "character": "灵",
-      "start_time": 4.579,
-      "end_time": 4.858
-    },
-    {
-      "character": "气",
-      "start_time": 4.858,
-      "end_time": 5.041
-    },
-    {
-      "character": "波",
-      "start_time": 5.041,
-      "end_time": 5.224
-    },
-    {
-      "character": "动",
-      "start_time": 5.224,
-      "end_time": 5.366
+      "character": "候",
+      "start_time": 1.866,
+      "end_time": 2.045
     },
     {
       "character": "，",
-      "start_time": 5.366,
-      "end_time": 5.695
+      "start_time": 2.045,
+      "end_time": 2.545
     },
     {
-      "character": "众",
-      "start_time": 5.695,
-      "end_time": 5.858
+      "character": "见",
+      "start_time": 2.545,
+      "end_time": 2.691
+    },
+    {
+      "character": "到",
+      "start_time": 2.691,
+      "end_time": 2.808
+    },
+    {
+      "character": "赵",
+      "start_time": 2.808,
+      "end_time": 3.024
+    },
+    {
+      "character": "硕",
+      "start_time": 3.024,
+      "end_time": 3.17
+    },
+    {
+      "character": "出",
+      "start_time": 3.17,
+      "end_time": 3.308
+    },
+    {
+      "character": "来",
+      "start_time": 3.308,
+      "end_time": 3.408
+    },
+    {
+      "character": "，",
+      "start_time": 3.408,
+      "end_time": 3.845
+    },
+    {
+      "character": "迎",
+      "start_time": 3.845,
+      "end_time": 4.037
+    },
+    {
+      "character": "上",
+      "start_time": 4.037,
+      "end_time": 4.199
+    },
+    {
+      "character": "前",
+      "start_time": 4.199,
+      "end_time": 4.387
+    },
+    {
+      "character": "去",
+      "start_time": 4.387,
+      "end_time": 4.562
+    },
+    {
+      "character": "，",
+      "start_time": 4.562,
+      "end_time": 4.837
+    },
+    {
+      "character": "姜",
+      "start_time": 4.837,
+      "end_time": 4.991
+    },
+    {
+      "character": "素",
+      "start_time": 4.991,
+      "end_time": 5.216
+    },
+    {
+      "character": "卿",
+      "start_time": 5.216,
+      "end_time": 5.412
+    },
+    {
+      "character": "体",
+      "start_time": 5.412,
+      "end_time": 5.608
+    },
+    {
+      "character": "力",
+      "start_time": 5.608,
+      "end_time": 5.724
+    },
+    {
+      "character": "恢",
+      "start_time": 5.724,
+      "end_time": 5.933
+    },
+    {
+      "character": "复",
+      "start_time": 5.933,
+      "end_time": 6.095
+    },
+    {
+      "character": "，",
+      "start_time": 6.095,
+      "end_time": 6.491
+    },
+    {
+      "character": "向",
+      "start_time": 6.491,
+      "end_time": 6.679
+    },
+    {
+      "character": "赵",
+      "start_time": 6.679,
+      "end_time": 6.887
+    },
+    {
+      "character": "硕",
+      "start_time": 6.887,
+      "end_time": 7.041
+    },
+    {
+      "character": "道",
+      "start_time": 7.041,
+      "end_time": 7.22
+    },
+    {
+      "character": "谢",
+      "start_time": 7.22,
+      "end_time": 7.408
+    },
+    {
+      "character": "，",
+      "start_time": 7.408,
+      "end_time": 7.937
+    },
+    {
+      "character": "三",
+      "start_time": 7.937,
+      "end_time": 8.095
     },
     {
       "character": "人",
-      "start_time": 5.858,
-      "end_time": 6.041
+      "start_time": 8.095,
+      "end_time": 8.333
     },
     {
-      "character": "侧",
-      "start_time": 6.041,
-      "end_time": 6.279
+      "character": "一",
+      "start_time": 8.333,
+      "end_time": 8.508
     },
     {
-      "character": "目",
-      "start_time": 6.279,
-      "end_time": 6.429
+      "character": "同",
+      "start_time": 8.508,
+      "end_time": 8.695
+    },
+    {
+      "character": "返",
+      "start_time": 8.695,
+      "end_time": 8.954
+    },
+    {
+      "character": "回",
+      "start_time": 8.954,
+      "end_time": 9.129
+    },
+    {
+      "character": "住",
+      "start_time": 9.129,
+      "end_time": 9.279
+    },
+    {
+      "character": "处",
+      "start_time": 9.279,
+      "end_time": 9.445
+    },
+    {
+      "character": "，",
+      "start_time": 9.445,
+      "end_time": 9.837
+    },
+    {
+      "character": "身",
+      "start_time": 9.837,
+      "end_time": 10.054
+    },
+    {
+      "character": "影",
+      "start_time": 10.054,
+      "end_time": 10.237
+    },
+    {
+      "character": "消",
+      "start_time": 10.237,
+      "end_time": 10.483
+    },
+    {
+      "character": "失",
+      "start_time": 10.483,
+      "end_time": 10.633
+    },
+    {
+      "character": "在",
+      "start_time": 10.633,
+      "end_time": 10.791
+    },
+    {
+      "character": "夜",
+      "start_time": 10.791,
+      "end_time": 11.02
+    },
+    {
+      "character": "色",
+      "start_time": 11.02,
+      "end_time": 11.187
+    },
+    {
+      "character": "中",
+      "start_time": 11.187,
+      "end_time": 11.349
     },
     {
       "character": "。",
-      "start_time": 6.429,
-      "end_time": 6.587
+      "start_time": 11.349,
+      "end_time": 11.508
     }
   ],
-  "generated_at": "2025-08-27T22:43:28.691204"
+  "generated_at": "2025-08-30T22:45:33.981102"
 }

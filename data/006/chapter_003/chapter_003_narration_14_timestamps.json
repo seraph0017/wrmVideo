@@ -1,178 +1,228 @@
 {
-  "text": "白蒹葭玉手轻扬，法宝飞出，流光溢彩，直击尸群薄弱之处，解围弟子之困。",
+  "text": "辛芦见状，祭出法宝天音九玄琴，琴弦拨动，发出音波攻击，干扰僵帝动作，为天雷上人争取时间。",
   "audio_file": "data/006/chapter_003/chapter_003_narration_14.mp3",
-  "duration": 6.85,
+  "duration": 8.916,
   "character_timestamps": [
     {
-      "character": "白",
+      "character": "辛",
       "start_time": 0.016,
-      "end_time": 0.187
+      "end_time": 0.22
     },
     {
-      "character": "蒹",
-      "start_time": 0.187,
-      "end_time": 0.379
+      "character": "芦",
+      "start_time": 0.22,
+      "end_time": 0.354
     },
     {
-      "character": "葭",
-      "start_time": 0.379,
-      "end_time": 0.558
+      "character": "见",
+      "start_time": 0.354,
+      "end_time": 0.533
     },
     {
-      "character": "玉",
-      "start_time": 0.558,
-      "end_time": 0.72
-    },
-    {
-      "character": "手",
-      "start_time": 0.72,
-      "end_time": 0.92
-    },
-    {
-      "character": "轻",
-      "start_time": 0.92,
-      "end_time": 1.158
-    },
-    {
-      "character": "扬",
-      "start_time": 1.158,
-      "end_time": 1.379
+      "character": "状",
+      "start_time": 0.533,
+      "end_time": 0.699
     },
     {
       "character": "，",
-      "start_time": 1.379,
-      "end_time": 1.687
+      "start_time": 0.699,
+      "end_time": 1.037
     },
     {
-      "character": "法",
-      "start_time": 1.687,
-      "end_time": 1.908
-    },
-    {
-      "character": "宝",
-      "start_time": 1.908,
-      "end_time": 2.074
-    },
-    {
-      "character": "飞",
-      "start_time": 2.074,
-      "end_time": 2.254
+      "character": "祭",
+      "start_time": 1.037,
+      "end_time": 1.183
     },
     {
       "character": "出",
-      "start_time": 2.254,
-      "end_time": 2.445
+      "start_time": 1.183,
+      "end_time": 1.324
+    },
+    {
+      "character": "法",
+      "start_time": 1.324,
+      "end_time": 1.537
+    },
+    {
+      "character": "宝",
+      "start_time": 1.537,
+      "end_time": 1.708
+    },
+    {
+      "character": "天",
+      "start_time": 1.708,
+      "end_time": 1.933
+    },
+    {
+      "character": "音",
+      "start_time": 1.933,
+      "end_time": 2.083
+    },
+    {
+      "character": "九",
+      "start_time": 2.083,
+      "end_time": 2.287
+    },
+    {
+      "character": "玄",
+      "start_time": 2.287,
+      "end_time": 2.483
+    },
+    {
+      "character": "琴",
+      "start_time": 2.483,
+      "end_time": 2.733
     },
     {
       "character": "，",
-      "start_time": 2.445,
-      "end_time": 2.787
+      "start_time": 2.733,
+      "end_time": 3.062
     },
     {
-      "character": "流",
-      "start_time": 2.787,
-      "end_time": 3.012
+      "character": "琴",
+      "start_time": 3.062,
+      "end_time": 3.291
     },
     {
-      "character": "光",
-      "start_time": 3.012,
-      "end_time": 3.179
+      "character": "弦",
+      "start_time": 3.291,
+      "end_time": 3.474
     },
     {
-      "character": "溢",
-      "start_time": 3.179,
-      "end_time": 3.283
+      "character": "拨",
+      "start_time": 3.474,
+      "end_time": 3.633
     },
     {
-      "character": "彩",
-      "start_time": 3.283,
-      "end_time": 3.545
+      "character": "动",
+      "start_time": 3.633,
+      "end_time": 3.762
     },
     {
       "character": "，",
-      "start_time": 3.545,
-      "end_time": 3.837
-    },
-    {
-      "character": "直",
-      "start_time": 3.837,
+      "start_time": 3.762,
       "end_time": 4.049
     },
     {
-      "character": "击",
+      "character": "发",
       "start_time": 4.049,
-      "end_time": 4.204
+      "end_time": 4.187
     },
     {
-      "character": "尸",
-      "start_time": 4.204,
-      "end_time": 4.358
+      "character": "出",
+      "start_time": 4.187,
+      "end_time": 4.337
     },
     {
-      "character": "群",
-      "start_time": 4.358,
-      "end_time": 4.537
+      "character": "音",
+      "start_time": 4.337,
+      "end_time": 4.604
     },
     {
-      "character": "薄",
-      "start_time": 4.537,
-      "end_time": 4.754
+      "character": "波",
+      "start_time": 4.604,
+      "end_time": 4.787
     },
     {
-      "character": "弱",
-      "start_time": 4.754,
-      "end_time": 4.916
+      "character": "攻",
+      "start_time": 4.787,
+      "end_time": 4.979
     },
     {
-      "character": "之",
-      "start_time": 4.916,
-      "end_time": 5.058
-    },
-    {
-      "character": "处",
-      "start_time": 5.058,
-      "end_time": 5.249
+      "character": "击",
+      "start_time": 4.979,
+      "end_time": 5.154
     },
     {
       "character": "，",
-      "start_time": 5.249,
-      "end_time": 5.487
+      "start_time": 5.154,
+      "end_time": 5.662
     },
     {
-      "character": "解",
-      "start_time": 5.487,
-      "end_time": 5.712
+      "character": "干",
+      "start_time": 5.662,
+      "end_time": 5.824
     },
     {
-      "character": "围",
-      "start_time": 5.712,
-      "end_time": 5.858
+      "character": "扰",
+      "start_time": 5.824,
+      "end_time": 6.02
     },
     {
-      "character": "弟",
-      "start_time": 5.858,
-      "end_time": 6.12
+      "character": "僵",
+      "start_time": 6.02,
+      "end_time": 6.22
     },
     {
-      "character": "子",
-      "start_time": 6.12,
-      "end_time": 6.333
+      "character": "帝",
+      "start_time": 6.22,
+      "end_time": 6.354
     },
     {
-      "character": "之",
-      "start_time": 6.333,
-      "end_time": 6.504
+      "character": "动",
+      "start_time": 6.354,
+      "end_time": 6.524
     },
     {
-      "character": "困",
-      "start_time": 6.504,
-      "end_time": 6.687
+      "character": "作",
+      "start_time": 6.524,
+      "end_time": 6.679
+    },
+    {
+      "character": "，",
+      "start_time": 6.679,
+      "end_time": 7.016
+    },
+    {
+      "character": "为",
+      "start_time": 7.016,
+      "end_time": 7.141
+    },
+    {
+      "character": "天",
+      "start_time": 7.141,
+      "end_time": 7.366
+    },
+    {
+      "character": "雷",
+      "start_time": 7.366,
+      "end_time": 7.529
+    },
+    {
+      "character": "上",
+      "start_time": 7.529,
+      "end_time": 7.704
+    },
+    {
+      "character": "人",
+      "start_time": 7.704,
+      "end_time": 7.899
+    },
+    {
+      "character": "争",
+      "start_time": 7.899,
+      "end_time": 8.174
+    },
+    {
+      "character": "取",
+      "start_time": 8.174,
+      "end_time": 8.362
+    },
+    {
+      "character": "时",
+      "start_time": 8.362,
+      "end_time": 8.558
+    },
+    {
+      "character": "间",
+      "start_time": 8.558,
+      "end_time": 8.754
     },
     {
       "character": "。",
-      "start_time": 6.687,
-      "end_time": 6.846
+      "start_time": 8.754,
+      "end_time": 8.912
     }
   ],
-  "generated_at": "2025-08-27T22:43:17.116812"
+  "generated_at": "2025-08-30T22:45:19.400068"
 }

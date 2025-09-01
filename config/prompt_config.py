@@ -100,33 +100,7 @@ class PromptConfig:
             print(f"=== JSON解析失败信息结束 ===\n")
             raise
 
-# 艺术风格配置
-ART_STYLES = {
-    'manga': {
-        'name': '漫画风格',
-        'description': '动漫插画，精美细腻的画风，鲜艳的色彩，清晰的线条'
-    },
-    'realistic': {
-        'name': '写实风格',
-        'description': '真实感强，细节丰富，高清画质，专业摄影'
-    },
-    'watercolor': {
-        'name': '水彩画风格',
-        'description': '柔和的色彩，艺术感强，手绘质感，淡雅的色调'
-    },
-    'oil_painting': {
-        'name': '油画风格',
-        'description': '厚重的笔触，丰富的色彩层次，古典艺术感'
-    },
-    'chinese_ink': {
-        'name': '中国水墨画风格',
-        'description': '墨色浓淡变化，意境深远，传统国画技法'
-    },
-    'cyberpunk': {
-        'name': '赛博朋克风格',
-        'description': '霓虹灯光，未来科技感，暗色调，电子元素'
-    }
-}
+# 艺术风格配置已移除，简化提示词生成逻辑
 
 # 语音配置预设
 VOICE_PRESETS = {
@@ -176,14 +150,7 @@ SCRIPT_CONFIG = {
 # 全局配置实例
 prompt_config = PromptConfig()
 
-def get_art_style_list():
-    """
-    获取所有可用的艺术风格列表
-    
-    Returns:
-        list: 风格列表
-    """
-    return list(ART_STYLES.keys())
+# 艺术风格相关函数已移除
 
 def get_voice_preset_list():
     """

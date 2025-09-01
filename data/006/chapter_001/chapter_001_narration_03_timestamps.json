@@ -1,188 +1,243 @@
 {
-  "text": "赵硕发现超新星爆发，兴奋跑出监控室，却在望远镜中看到星空异象，满脸震惊。",
+  "text": "赵硕回头撞见苏青蝉靠近，脸颊微红，眼神躲闪，仓促应答\"漂亮\"，手中矿泉水瓶微微晃动，气氛逐渐升温",
   "audio_file": "data/006/chapter_001/chapter_001_narration_03.mp3",
-  "duration": 7.191,
+  "duration": 9.433,
   "character_timestamps": [
     {
       "character": "赵",
       "start_time": 0.016,
-      "end_time": 0.183
+      "end_time": 0.166
     },
     {
       "character": "硕",
-      "start_time": 0.183,
-      "end_time": 0.333
+      "start_time": 0.166,
+      "end_time": 0.316
     },
     {
-      "character": "发",
-      "start_time": 0.333,
-      "end_time": 0.483
+      "character": "回",
+      "start_time": 0.316,
+      "end_time": 0.474
     },
     {
-      "character": "现",
-      "start_time": 0.483,
-      "end_time": 0.654
+      "character": "头",
+      "start_time": 0.474,
+      "end_time": 0.624
     },
     {
-      "character": "超",
-      "start_time": 0.654,
-      "end_time": 0.899
+      "character": "撞",
+      "start_time": 0.624,
+      "end_time": 0.829
     },
     {
-      "character": "新",
-      "start_time": 0.899,
-      "end_time": 1.054
+      "character": "见",
+      "start_time": 0.829,
+      "end_time": 1.004
     },
     {
-      "character": "星",
-      "start_time": 1.054,
-      "end_time": 1.229
+      "character": "苏",
+      "start_time": 1.004,
+      "end_time": 1.233
     },
     {
-      "character": "爆",
-      "start_time": 1.229,
-      "end_time": 1.399
+      "character": "青",
+      "start_time": 1.233,
+      "end_time": 1.395
     },
     {
-      "character": "发",
-      "start_time": 1.399,
-      "end_time": 1.612
+      "character": "蝉",
+      "start_time": 1.395,
+      "end_time": 1.566
     },
     {
-      "character": "，",
-      "start_time": 1.612,
-      "end_time": 2.062
+      "character": "靠",
+      "start_time": 1.566,
+      "end_time": 1.745
     },
     {
-      "character": "兴",
-      "start_time": 2.062,
-      "end_time": 2.291
-    },
-    {
-      "character": "奋",
-      "start_time": 2.291,
-      "end_time": 2.466
-    },
-    {
-      "character": "跑",
-      "start_time": 2.466,
-      "end_time": 2.674
-    },
-    {
-      "character": "出",
-      "start_time": 2.674,
-      "end_time": 2.799
-    },
-    {
-      "character": "监",
-      "start_time": 2.799,
-      "end_time": 2.999
-    },
-    {
-      "character": "控",
-      "start_time": 2.999,
-      "end_time": 3.166
-    },
-    {
-      "character": "室",
-      "start_time": 3.166,
-      "end_time": 3.341
+      "character": "近",
+      "start_time": 1.745,
+      "end_time": 1.899
     },
     {
       "character": "，",
-      "start_time": 3.341,
-      "end_time": 3.683
-    },
-    {
-      "character": "却",
-      "start_time": 3.683,
-      "end_time": 3.795
-    },
-    {
-      "character": "在",
-      "start_time": 3.795,
-      "end_time": 3.933
-    },
-    {
-      "character": "望",
-      "start_time": 3.933,
-      "end_time": 4.133
-    },
-    {
-      "character": "远",
-      "start_time": 4.133,
-      "end_time": 4.312
-    },
-    {
-      "character": "镜",
-      "start_time": 4.312,
-      "end_time": 4.466
-    },
-    {
-      "character": "中",
-      "start_time": 4.466,
-      "end_time": 4.637
-    },
-    {
-      "character": "看",
-      "start_time": 4.637,
-      "end_time": 4.854
-    },
-    {
-      "character": "到",
-      "start_time": 4.854,
-      "end_time": 4.987
-    },
-    {
-      "character": "星",
-      "start_time": 4.987,
-      "end_time": 5.27
-    },
-    {
-      "character": "空",
-      "start_time": 5.27,
-      "end_time": 5.479
-    },
-    {
-      "character": "异",
-      "start_time": 5.479,
-      "end_time": 5.591
-    },
-    {
-      "character": "象",
-      "start_time": 5.591,
-      "end_time": 5.779
-    },
-    {
-      "character": "，",
-      "start_time": 5.779,
-      "end_time": 6.12
-    },
-    {
-      "character": "满",
-      "start_time": 6.12,
-      "end_time": 6.404
+      "start_time": 1.899,
+      "end_time": 2.345
     },
     {
       "character": "脸",
-      "start_time": 6.404,
-      "end_time": 6.604
+      "start_time": 2.345,
+      "end_time": 2.562
     },
     {
-      "character": "震",
-      "start_time": 6.604,
-      "end_time": 6.799
+      "character": "颊",
+      "start_time": 2.562,
+      "end_time": 2.749
     },
     {
-      "character": "惊",
-      "start_time": 6.799,
-      "end_time": 7.029
+      "character": "微",
+      "start_time": 2.749,
+      "end_time": 2.895
+    },
+    {
+      "character": "红",
+      "start_time": 2.895,
+      "end_time": 3.137
+    },
+    {
+      "character": "，",
+      "start_time": 3.137,
+      "end_time": 3.474
+    },
+    {
+      "character": "眼",
+      "start_time": 3.474,
+      "end_time": 3.67
+    },
+    {
+      "character": "神",
+      "start_time": 3.67,
+      "end_time": 3.854
+    },
+    {
+      "character": "躲",
+      "start_time": 3.854,
+      "end_time": 4.054
+    },
+    {
+      "character": "闪",
+      "start_time": 4.054,
+      "end_time": 4.229
+    },
+    {
+      "character": "，",
+      "start_time": 4.229,
+      "end_time": 4.554
+    },
+    {
+      "character": "仓",
+      "start_time": 4.554,
+      "end_time": 4.804
+    },
+    {
+      "character": "促",
+      "start_time": 4.804,
+      "end_time": 4.97
+    },
+    {
+      "character": "应",
+      "start_time": 4.97,
+      "end_time": 5.091
+    },
+    {
+      "character": "答",
+      "start_time": 5.091,
+      "end_time": 5.22
+    },
+    {
+      "character": "漂",
+      "start_time": 5.22,
+      "end_time": 5.462
+    },
+    {
+      "character": "亮",
+      "start_time": 5.462,
+      "end_time": 5.595
+    },
+    {
+      "character": "，",
+      "start_time": 5.595,
+      "end_time": 5.833
+    },
+    {
+      "character": "手",
+      "start_time": 5.833,
+      "end_time": 6.029
+    },
+    {
+      "character": "中",
+      "start_time": 6.029,
+      "end_time": 6.174
+    },
+    {
+      "character": "矿",
+      "start_time": 6.174,
+      "end_time": 6.374
+    },
+    {
+      "character": "泉",
+      "start_time": 6.374,
+      "end_time": 6.52
+    },
+    {
+      "character": "水",
+      "start_time": 6.52,
+      "end_time": 6.67
+    },
+    {
+      "character": "瓶",
+      "start_time": 6.67,
+      "end_time": 6.924
+    },
+    {
+      "character": "微",
+      "start_time": 6.924,
+      "end_time": 7.137
+    },
+    {
+      "character": "微",
+      "start_time": 7.137,
+      "end_time": 7.262
+    },
+    {
+      "character": "晃",
+      "start_time": 7.262,
+      "end_time": 7.495
+    },
+    {
+      "character": "动",
+      "start_time": 7.495,
+      "end_time": 7.637
+    },
+    {
+      "character": "，",
+      "start_time": 7.637,
+      "end_time": 8.041
+    },
+    {
+      "character": "气",
+      "start_time": 8.041,
+      "end_time": 8.241
+    },
+    {
+      "character": "氛",
+      "start_time": 8.241,
+      "end_time": 8.42
+    },
+    {
+      "character": "逐",
+      "start_time": 8.42,
+      "end_time": 8.695
+    },
+    {
+      "character": "渐",
+      "start_time": 8.695,
+      "end_time": 8.883
+    },
+    {
+      "character": "升",
+      "start_time": 8.883,
+      "end_time": 9.129
+    },
+    {
+      "character": "温",
+      "start_time": 9.129,
+      "end_time": 9.274
     },
     {
       "character": "。",
-      "start_time": 7.029,
-      "end_time": 7.187
+      "start_time": 9.274,
+      "end_time": 9.433
     }
   ],
-  "generated_at": "2025-08-27T22:42:15.824292"
+  "generated_at": "2025-08-30T22:44:40.518951"
 }

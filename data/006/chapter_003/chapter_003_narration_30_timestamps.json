@@ -1,153 +1,303 @@
 {
-  "text": "白蒹葭与辛芦相视，背部视角，衣袂微动，似有灵犀，气氛缓和。",
+  "text": "天雷上人站在高处，望着赵硕等人的背影，表情复杂，手中紧握令牌，心中暗下决心，无论如何要守护天星宗，抵御僵神一族的威胁。",
   "audio_file": "data/006/chapter_003/chapter_003_narration_30.mp3",
-  "duration": 6.433,
+  "duration": 11.341,
   "character_timestamps": [
     {
-      "character": "白",
-      "start_time": 0.016,
-      "end_time": 0.179
+      "character": "天",
+      "start_time": 0.02,
+      "end_time": 0.187
     },
     {
-      "character": "蒹",
-      "start_time": 0.179,
-      "end_time": 0.391
+      "character": "雷",
+      "start_time": 0.187,
+      "end_time": 0.362
     },
     {
-      "character": "葭",
-      "start_time": 0.391,
-      "end_time": 0.77
+      "character": "上",
+      "start_time": 0.362,
+      "end_time": 0.541
     },
     {
-      "character": "与",
-      "start_time": 0.77,
-      "end_time": 0.916
+      "character": "人",
+      "start_time": 0.541,
+      "end_time": 0.699
     },
     {
-      "character": "辛",
-      "start_time": 0.916,
-      "end_time": 1.158
+      "character": "站",
+      "start_time": 0.699,
+      "end_time": 0.862
     },
     {
-      "character": "芦",
-      "start_time": 1.158,
-      "end_time": 1.295
+      "character": "在",
+      "start_time": 0.862,
+      "end_time": 0.979
     },
     {
-      "character": "相",
-      "start_time": 1.295,
-      "end_time": 1.52
+      "character": "高",
+      "start_time": 0.979,
+      "end_time": 1.179
     },
     {
-      "character": "视",
-      "start_time": 1.52,
-      "end_time": 1.712
+      "character": "处",
+      "start_time": 1.179,
+      "end_time": 1.341
     },
     {
       "character": "，",
-      "start_time": 1.712,
-      "end_time": 2.083
+      "start_time": 1.341,
+      "end_time": 1.699
+    },
+    {
+      "character": "望",
+      "start_time": 1.699,
+      "end_time": 1.849
+    },
+    {
+      "character": "着",
+      "start_time": 1.849,
+      "end_time": 1.941
+    },
+    {
+      "character": "赵",
+      "start_time": 1.941,
+      "end_time": 2.124
+    },
+    {
+      "character": "硕",
+      "start_time": 2.124,
+      "end_time": 2.262
+    },
+    {
+      "character": "等",
+      "start_time": 2.262,
+      "end_time": 2.437
+    },
+    {
+      "character": "人",
+      "start_time": 2.437,
+      "end_time": 2.554
+    },
+    {
+      "character": "的",
+      "start_time": 2.554,
+      "end_time": 2.616
     },
     {
       "character": "背",
-      "start_time": 2.083,
-      "end_time": 2.245
+      "start_time": 2.616,
+      "end_time": 2.77
     },
     {
-      "character": "部",
-      "start_time": 2.245,
-      "end_time": 2.374
-    },
-    {
-      "character": "视",
-      "start_time": 2.374,
-      "end_time": 2.545
-    },
-    {
-      "character": "角",
-      "start_time": 2.545,
-      "end_time": 2.749
+      "character": "影",
+      "start_time": 2.77,
+      "end_time": 3.029
     },
     {
       "character": "，",
-      "start_time": 2.749,
-      "end_time": 3.112
+      "start_time": 3.029,
+      "end_time": 3.349
     },
     {
-      "character": "衣",
-      "start_time": 3.112,
-      "end_time": 3.283
+      "character": "表",
+      "start_time": 3.349,
+      "end_time": 3.549
     },
     {
-      "character": "袂",
-      "start_time": 3.283,
-      "end_time": 3.454
+      "character": "情",
+      "start_time": 3.549,
+      "end_time": 3.745
     },
     {
-      "character": "微",
-      "start_time": 3.454,
-      "end_time": 3.612
+      "character": "复",
+      "start_time": 3.745,
+      "end_time": 3.924
     },
     {
-      "character": "动",
-      "start_time": 3.612,
-      "end_time": 3.762
-    },
-    {
-      "character": "，",
-      "start_time": 3.762,
-      "end_time": 4.108
-    },
-    {
-      "character": "似",
-      "start_time": 4.108,
-      "end_time": 4.337
-    },
-    {
-      "character": "有",
-      "start_time": 4.337,
-      "end_time": 4.487
-    },
-    {
-      "character": "灵",
-      "start_time": 4.487,
-      "end_time": 4.695
-    },
-    {
-      "character": "犀",
-      "start_time": 4.695,
-      "end_time": 4.933
+      "character": "杂",
+      "start_time": 3.924,
+      "end_time": 4.158
     },
     {
       "character": "，",
-      "start_time": 4.933,
-      "end_time": 5.274
+      "start_time": 4.158,
+      "end_time": 4.558
     },
     {
-      "character": "气",
-      "start_time": 5.274,
-      "end_time": 5.537
+      "character": "手",
+      "start_time": 4.558,
+      "end_time": 4.749
     },
     {
-      "character": "氛",
-      "start_time": 5.537,
-      "end_time": 5.745
+      "character": "中",
+      "start_time": 4.749,
+      "end_time": 4.908
     },
     {
-      "character": "缓",
-      "start_time": 5.745,
-      "end_time": 5.987
+      "character": "紧",
+      "start_time": 4.908,
+      "end_time": 5.17
     },
     {
-      "character": "和",
-      "start_time": 5.987,
-      "end_time": 6.27
+      "character": "握",
+      "start_time": 5.17,
+      "end_time": 5.291
+    },
+    {
+      "character": "令",
+      "start_time": 5.291,
+      "end_time": 5.445
+    },
+    {
+      "character": "牌",
+      "start_time": 5.445,
+      "end_time": 5.699
+    },
+    {
+      "character": "，",
+      "start_time": 5.699,
+      "end_time": 5.904
+    },
+    {
+      "character": "心",
+      "start_time": 5.904,
+      "end_time": 6.091
+    },
+    {
+      "character": "中",
+      "start_time": 6.091,
+      "end_time": 6.241
+    },
+    {
+      "character": "暗",
+      "start_time": 6.241,
+      "end_time": 6.454
+    },
+    {
+      "character": "下",
+      "start_time": 6.454,
+      "end_time": 6.633
+    },
+    {
+      "character": "决",
+      "start_time": 6.633,
+      "end_time": 6.787
+    },
+    {
+      "character": "心",
+      "start_time": 6.787,
+      "end_time": 6.983
+    },
+    {
+      "character": "，",
+      "start_time": 6.983,
+      "end_time": 7.333
+    },
+    {
+      "character": "无",
+      "start_time": 7.333,
+      "end_time": 7.462
+    },
+    {
+      "character": "论",
+      "start_time": 7.462,
+      "end_time": 7.574
+    },
+    {
+      "character": "如",
+      "start_time": 7.574,
+      "end_time": 7.754
+    },
+    {
+      "character": "何",
+      "start_time": 7.754,
+      "end_time": 8.062
+    },
+    {
+      "character": "要",
+      "start_time": 8.062,
+      "end_time": 8.195
+    },
+    {
+      "character": "守",
+      "start_time": 8.195,
+      "end_time": 8.458
+    },
+    {
+      "character": "护",
+      "start_time": 8.458,
+      "end_time": 8.62
+    },
+    {
+      "character": "天",
+      "start_time": 8.62,
+      "end_time": 8.833
+    },
+    {
+      "character": "星",
+      "start_time": 8.833,
+      "end_time": 9.008
+    },
+    {
+      "character": "宗",
+      "start_time": 9.008,
+      "end_time": 9.191
+    },
+    {
+      "character": "，",
+      "start_time": 9.191,
+      "end_time": 9.508
+    },
+    {
+      "character": "抵",
+      "start_time": 9.508,
+      "end_time": 9.679
+    },
+    {
+      "character": "御",
+      "start_time": 9.679,
+      "end_time": 9.854
+    },
+    {
+      "character": "僵",
+      "start_time": 9.854,
+      "end_time": 10.016
+    },
+    {
+      "character": "神",
+      "start_time": 10.016,
+      "end_time": 10.254
+    },
+    {
+      "character": "一",
+      "start_time": 10.254,
+      "end_time": 10.483
+    },
+    {
+      "character": "族",
+      "start_time": 10.483,
+      "end_time": 10.654
+    },
+    {
+      "character": "的",
+      "start_time": 10.654,
+      "end_time": 10.787
+    },
+    {
+      "character": "威",
+      "start_time": 10.787,
+      "end_time": 10.958
+    },
+    {
+      "character": "胁",
+      "start_time": 10.958,
+      "end_time": 11.183
     },
     {
       "character": "。",
-      "start_time": 6.27,
-      "end_time": 6.429
+      "start_time": 11.183,
+      "end_time": 11.342
     }
   ],
-  "generated_at": "2025-08-27T22:43:29.528243"
+  "generated_at": "2025-08-30T22:45:35.079952"
 }

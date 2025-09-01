@@ -9,12 +9,15 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.76,Default,,0,0,0,,天雷上人引{\c&H0000FFFF&\b1}赵硕入{\c&H00FFFFFF&\b0}大殿
-Dialogue: 0,0:00:02.14,0:00:03.13,Default,,0,0,0,,殿内{\c&H0000FFFF&\b1}庄严肃穆{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:03.43,0:00:04.57,Default,,0,0,0,,弟子分列两侧
-Dialogue: 0,0:00:04.83,0:00:05.69,Default,,0,0,0,,气氛凝重
+Dialogue: 0,0:00:00.02,0:00:00.62,Default,,0,0,0,,议事厅内
+Dialogue: 0,0:00:00.99,0:00:02.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗长老们神色凝重
+Dialogue: 0,0:00:03.34,0:00:05.42,Default,,0,0,0,,讨论应对僵神一族后续报复
+Dialogue: 0,0:00:05.42,0:00:05.84,Default,,0,0,0,,的策略
+Dialogue: 0,0:00:06.39,0:00:08.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}提出联合其他宗门共同
+Dialogue: 0,0:00:08.60,0:00:08.96,Default,,0,0,0,,抵抗
+Dialogue: 0,0:00:09.33,0:00:10.53,Default,,0,0,0,,引起长老们的注意

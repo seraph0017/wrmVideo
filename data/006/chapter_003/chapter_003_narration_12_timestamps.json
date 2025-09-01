@@ -1,178 +1,218 @@
 {
-  "text": "辛芦立于山巅，白衣飘动，背部视角，双手结印，周身灵气汇聚，准备支援。",
+  "text": "天雷上人见状，决定动用天星宗秘宝，双手掐诀，天空中出现巨大星图，星光汇聚，威力惊人。",
   "audio_file": "data/006/chapter_003/chapter_003_narration_12.mp3",
-  "duration": 6.716,
+  "duration": 8.883,
   "character_timestamps": [
     {
-      "character": "辛",
+      "character": "天",
       "start_time": 0.02,
-      "end_time": 0.27
+      "end_time": 0.187
     },
     {
-      "character": "芦",
-      "start_time": 0.27,
-      "end_time": 0.449
+      "character": "雷",
+      "start_time": 0.187,
+      "end_time": 0.366
     },
     {
-      "character": "立",
-      "start_time": 0.449,
-      "end_time": 0.591
+      "character": "上",
+      "start_time": 0.366,
+      "end_time": 0.541
     },
     {
-      "character": "于",
-      "start_time": 0.591,
+      "character": "人",
+      "start_time": 0.541,
       "end_time": 0.683
     },
     {
-      "character": "山",
+      "character": "见",
       "start_time": 0.683,
-      "end_time": 0.895
+      "end_time": 0.874
     },
     {
-      "character": "巅",
-      "start_time": 0.895,
-      "end_time": 1.099
+      "character": "状",
+      "start_time": 0.874,
+      "end_time": 1.049
     },
     {
       "character": "，",
-      "start_time": 1.099,
-      "end_time": 1.491
+      "start_time": 1.049,
+      "end_time": 1.391
     },
     {
-      "character": "白",
-      "start_time": 1.491,
-      "end_time": 1.641
+      "character": "决",
+      "start_time": 1.391,
+      "end_time": 1.574
     },
     {
-      "character": "衣",
-      "start_time": 1.641,
-      "end_time": 1.799
-    },
-    {
-      "character": "飘",
-      "start_time": 1.799,
-      "end_time": 2.037
+      "character": "定",
+      "start_time": 1.574,
+      "end_time": 1.737
     },
     {
       "character": "动",
-      "start_time": 2.037,
-      "end_time": 2.174
+      "start_time": 1.737,
+      "end_time": 1.891
+    },
+    {
+      "character": "用",
+      "start_time": 1.891,
+      "end_time": 2.029
+    },
+    {
+      "character": "天",
+      "start_time": 2.029,
+      "end_time": 2.295
+    },
+    {
+      "character": "星",
+      "start_time": 2.295,
+      "end_time": 2.487
+    },
+    {
+      "character": "宗",
+      "start_time": 2.487,
+      "end_time": 2.637
+    },
+    {
+      "character": "秘",
+      "start_time": 2.637,
+      "end_time": 2.783
+    },
+    {
+      "character": "宝",
+      "start_time": 2.783,
+      "end_time": 3.008
     },
     {
       "character": "，",
-      "start_time": 2.174,
-      "end_time": 2.445
-    },
-    {
-      "character": "背",
-      "start_time": 2.445,
-      "end_time": 2.608
-    },
-    {
-      "character": "部",
-      "start_time": 2.608,
-      "end_time": 2.737
-    },
-    {
-      "character": "视",
-      "start_time": 2.737,
-      "end_time": 2.899
-    },
-    {
-      "character": "角",
-      "start_time": 2.899,
-      "end_time": 3.087
-    },
-    {
-      "character": "，",
-      "start_time": 3.087,
-      "end_time": 3.312
+      "start_time": 3.008,
+      "end_time": 3.245
     },
     {
       "character": "双",
-      "start_time": 3.312,
-      "end_time": 3.558
+      "start_time": 3.245,
+      "end_time": 3.504
     },
     {
       "character": "手",
-      "start_time": 3.558,
-      "end_time": 3.724
+      "start_time": 3.504,
+      "end_time": 3.687
     },
     {
-      "character": "结",
-      "start_time": 3.724,
-      "end_time": 3.908
+      "character": "掐",
+      "start_time": 3.687,
+      "end_time": 3.929
     },
     {
-      "character": "印",
-      "start_time": 3.908,
-      "end_time": 4.054
+      "character": "诀",
+      "start_time": 3.929,
+      "end_time": 4.162
     },
     {
       "character": "，",
-      "start_time": 4.054,
-      "end_time": 4.408
+      "start_time": 4.162,
+      "end_time": 4.633
     },
     {
-      "character": "周",
-      "start_time": 4.408,
-      "end_time": 4.554
+      "character": "天",
+      "start_time": 4.633,
+      "end_time": 4.849
     },
     {
-      "character": "身",
-      "start_time": 4.554,
-      "end_time": 4.708
+      "character": "空",
+      "start_time": 4.849,
+      "end_time": 5.033
     },
     {
-      "character": "灵",
-      "start_time": 4.708,
-      "end_time": 4.92
+      "character": "中",
+      "start_time": 5.033,
+      "end_time": 5.183
     },
     {
-      "character": "气",
-      "start_time": 4.92,
-      "end_time": 5.083
+      "character": "出",
+      "start_time": 5.183,
+      "end_time": 5.333
+    },
+    {
+      "character": "现",
+      "start_time": 5.333,
+      "end_time": 5.508
+    },
+    {
+      "character": "巨",
+      "start_time": 5.508,
+      "end_time": 5.779
+    },
+    {
+      "character": "大",
+      "start_time": 5.779,
+      "end_time": 5.937
+    },
+    {
+      "character": "星",
+      "start_time": 5.937,
+      "end_time": 6.145
+    },
+    {
+      "character": "图",
+      "start_time": 6.145,
+      "end_time": 6.379
+    },
+    {
+      "character": "，",
+      "start_time": 6.379,
+      "end_time": 6.633
+    },
+    {
+      "character": "星",
+      "start_time": 6.633,
+      "end_time": 6.958
+    },
+    {
+      "character": "光",
+      "start_time": 6.958,
+      "end_time": 7.158
     },
     {
       "character": "汇",
-      "start_time": 5.083,
-      "end_time": 5.291
+      "start_time": 7.158,
+      "end_time": 7.349
     },
     {
       "character": "聚",
-      "start_time": 5.291,
-      "end_time": 5.483
+      "start_time": 7.349,
+      "end_time": 7.541
     },
     {
       "character": "，",
-      "start_time": 5.483,
-      "end_time": 5.77
+      "start_time": 7.541,
+      "end_time": 7.87
     },
     {
-      "character": "准",
-      "start_time": 5.77,
-      "end_time": 5.979
+      "character": "威",
+      "start_time": 7.87,
+      "end_time": 8.112
     },
     {
-      "character": "备",
-      "start_time": 5.979,
-      "end_time": 6.149
+      "character": "力",
+      "start_time": 8.112,
+      "end_time": 8.274
     },
     {
-      "character": "支",
-      "start_time": 6.149,
-      "end_time": 6.316
+      "character": "惊",
+      "start_time": 8.274,
+      "end_time": 8.516
     },
     {
-      "character": "援",
-      "start_time": 6.316,
-      "end_time": 6.554
+      "character": "人",
+      "start_time": 8.516,
+      "end_time": 8.724
     },
     {
       "character": "。",
-      "start_time": 6.554,
-      "end_time": 6.712
+      "start_time": 8.724,
+      "end_time": 8.883
     }
   ],
-  "generated_at": "2025-08-27T22:43:15.482528"
+  "generated_at": "2025-08-30T22:45:17.520646"
 }

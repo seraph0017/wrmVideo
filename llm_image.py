@@ -55,7 +55,7 @@ try:
     from gen_image_async import generate_image_with_character_async, get_random_character_image, save_task_info, encode_image_to_base64 as gen_encode_image_to_base64
     from volcengine.visual.VisualService import VisualService
     from config.config import IMAGE_TWO_CONFIG
-    from config.prompt_config import ART_STYLES
+    # ART_STYLES 配置已移除
     import time
     import json
 except ImportError:
@@ -414,7 +414,7 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
     Returns:
         bool: 是否成功提交任务
     """
-    if not all([VisualService, IMAGE_TWO_CONFIG, ART_STYLES, save_task_info, gen_encode_image_to_base64]):
+    if not all([VisualService, IMAGE_TWO_CONFIG, save_task_info, gen_encode_image_to_base64]):
         print("错误: 图片生成模块不可用")
         return False
     
@@ -448,11 +448,8 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
         visual_service.set_ak(IMAGE_TWO_CONFIG['access_key'])
         visual_service.set_sk(IMAGE_TWO_CONFIG['secret_key'])
         
-        # 获取艺术风格提示词
-        if style and style in ART_STYLES:
-            style_prompt = ART_STYLES[style]['description']
-        else:
-            style_prompt = ART_STYLES.get('manga', {}).get('description', '动漫插画，精美细腻的画风，鲜艳的色彩，清晰的线条')
+        # 使用固定的艺术风格提示词
+        style_prompt = '动漫插画，精美细腻的画风，鲜艳的色彩，清晰的线条'
         
         for attempt in range(max_retries + 1):
             # 构建完整提示词，特别强调领口、皮肤暴露和手部要求
@@ -521,7 +518,6 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
                     'prompt': prompt,
                     'full_prompt': full_prompt,
                     'character_images': character_images or [],
-                    'style': style,
                     'submit_time': time.time(),
                     'status': 'submitted',
                     'attempt': attempt + 1
@@ -560,7 +556,7 @@ def regenerate_failed_image(image_path: str) -> bool:
     Returns:
         bool: 是否成功重新生成
     """
-    if not all([VisualService, IMAGE_TWO_CONFIG, ART_STYLES, save_task_info]):
+    if not all([VisualService, IMAGE_TWO_CONFIG, save_task_info]):
         print("错误: 图片生成模块不可用")
         return False
     

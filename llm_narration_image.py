@@ -3,23 +3,24 @@
 """
 LLM旁白图片分析工具
 
-该脚本专门用于检测chapter文件夹中的旁白图片（chapter_xxx_image_xx_x格式），
+该脚本专门用于检测chapter文件夹中的旁白图片（chapter_xxx_image_xx.jpeg格式），
 检查衽领、V领、交领、y字型领以及三只手等问题，并支持自动重新生成。
 
 功能特性:
-- 专门检测chapter_xxx_image_xx_x格式的旁白图片
+- 专门检测chapter_xxx_image_xx.jpeg格式的旁白图片
+- 支持批量处理目录下所有旁白图片或单独处理指定图片文件
 - 领口审查：检测衽领、V领、交领、y字型领等会露出脖子以下皮肤的领口类型
 - 手部检测：检测是否存在三只手或多余手臂的情况
 - 内容审查：检测图片中的乱码或文字内容
 - 自动重新生成：检测到失败图片时自动调用图片生成模块重新生成
+- 自定义重新生成提示词：支持用户自定义图片修改要求（如"去掉眼镜"、"换成短发"等）
 - 支持常见图片格式(jpg, jpeg, png, gif, bmp, webp)
 - 使用base64编码处理图片
-- 批量分析图片内容
 - 详细的进度反馈和错误处理
-- 自动记录失败的图片到fail.txt文件
+- 自动记录失败的图片到fail.txt文件（批量模式）
 
 使用方法:
-    # 检查data/004目录下所有chapter中的旁白图片
+    # 批量检查data/004目录下所有chapter中的旁白图片
     python llm_narration_image.py data/004
     
     # 自定义分析提示词
@@ -30,6 +31,12 @@ LLM旁白图片分析工具
     
     # 启用自动重新生成失败图片
     python llm_narration_image.py data/004 --auto-regenerate
+    
+    # 单独处理指定图片文件
+    python llm_narration_image.py data/006/chapter_003/chapter_003_image_08.jpeg --auto-regenerate
+    
+    # 单独处理图片并使用自定义重新生成提示词
+    python llm_narration_image.py data/006/chapter_003/chapter_003_image_08.jpeg --auto-regenerate --custom-prompt "去掉眼镜"
 
 配置要求:
     需要在 config/config.py 中配置 ARK_CONFIG['api_key']
@@ -52,7 +59,7 @@ try:
     from gen_image_async import generate_image_with_character_async, get_random_character_image, save_task_info, encode_image_to_base64 as gen_encode_image_to_base64
     from volcengine.visual.VisualService import VisualService
     from config.config import IMAGE_TWO_CONFIG
-    from config.prompt_config import ART_STYLES
+    # ART_STYLES 配置已移除
     import time
     import json
 except ImportError:
@@ -68,8 +75,8 @@ except ImportError:
 # 支持的图片格式
 SUPPORTED_FORMATS = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp'}
 
-# 旁白图片文件名模式：chapter_xxx_image_xx_x
-NARRATION_IMAGE_PATTERN = re.compile(r'^chapter_\d+_image_\d+_\d+\.(jpg|jpeg|png|gif|bmp|webp)$', re.IGNORECASE)
+# 旁白图片文件名模式：chapter_xxx_image_xx.jpeg
+NARRATION_IMAGE_PATTERN = re.compile(r'^chapter_\d+_image_\d+\.jpeg$', re.IGNORECASE)
 
 def resize_image_if_needed(image_path: str, max_size_mb: float = 4.7) -> str:
     """
@@ -223,7 +230,7 @@ def encode_image_to_base64(image_path: str) -> Optional[str]:
 
 def find_narration_images_in_chapters(data_directory: str) -> List[str]:
     """
-    查找指定数据目录下所有chapter文件夹中的旁白图片（chapter_xxx_image_xx_x格式）
+    查找指定数据目录下所有chapter文件夹中的旁白图片（chapter_xxx_image_xx.jpeg格式）
     
     Args:
         data_directory: 数据目录路径 (如: data/004)
@@ -254,7 +261,7 @@ def find_narration_images_in_chapters(data_directory: str) -> List[str]:
         # 查找该chapter目录下的所有图片文件
         for file_path in chapter_dir.rglob('*'):
             if file_path.is_file() and file_path.suffix.lower() in SUPPORTED_FORMATS:
-                # 检查是否为旁白图片（匹配chapter_xxx_image_xx_x格式）
+                # 检查是否为旁白图片（匹配chapter_xxx_image_xx.jpeg格式）
                 if NARRATION_IMAGE_PATTERN.match(file_path.name):
                     narration_images.append(str(file_path))
                     print(f"  找到旁白图片: {file_path.name}")
@@ -269,6 +276,7 @@ def analyze_image_with_llm(client: Ark, image_base64: str, prompt: str = "\
                 - 后背脖子以下皮肤暴露：后背脖子以下区域不能有皮肤暴露\n- 胸部皮肤暴露：胸前不能有皮肤暴露\n\n【身体部位异常检查 - 严格标准】\
                     \n检查角色是否存在以下身体部位异常（任何一项都视为失败）：\n- 多手：角色有超过2只手臂或手\n- 多脚：角色有超过2只脚或腿\n- 多手指：单只手有超过5根手指\n- \
                     手指异常：手指形状扭曲、融合或数量明显错误\n- 肢体畸形：手臂、腿部或其他肢体出现明显的解剖学错误\n- 身体比例异常：头部、四肢比例严重失调\n\n【\
+                        禁止头部和身体不协调\
                         亲密行为检查 - 严格标准】\n检查图片中是否存在以下亲密行为（任何一项都视为失败）：\n- 拥抱：两人或多人相互拥抱的姿势\n- 勾肩搭背：手臂搭在他人肩膀或背部的亲密姿势\n- 亲密接触：任何形式的身体亲密接触或暧昧姿势\n- 过度亲近：角色之间距离过近，呈现亲密关系的画面\n\n【内容审查】\n检查图片中是否存在文字、乱码、水印等不当内容\n\n【判断要求】\n请重点关注：\n1. 领口是否露出脖子以下的皮肤区域\n2. 脖子是否有任何暴露（即使是很小的暴露也不允许）\n3. 后背脖子以下是否有皮肤暴露\n4. 仔细检查角色的手、脚、手指数量是否正常\n5. 观察身体各部位的解剖学正确性\n6. 如果角色穿着交领袍服、汉服等传统服装，要特别注意交领处是否形成开口露出胸部\n7. 检查是否存在拥抱、勾肩搭背等亲密行为\n\n如果发现任何问题，请返回'失败'并详细说明原因。如果完全符合要求，请返回'通过'。") -> tuple[Optional[str], dict]:
     """
     使用LLM分析图片内容
@@ -333,7 +341,7 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
     Returns:
         bool: 是否成功提交任务
     """
-    if not all([VisualService, IMAGE_TWO_CONFIG, ART_STYLES, save_task_info, gen_encode_image_to_base64]):
+    if not all([VisualService, IMAGE_TWO_CONFIG, save_task_info, gen_encode_image_to_base64]):
         print("错误: 图片生成模块不可用")
         return False
     
@@ -367,11 +375,8 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
         visual_service.set_ak(IMAGE_TWO_CONFIG['access_key'])
         visual_service.set_sk(IMAGE_TWO_CONFIG['secret_key'])
         
-        # 获取艺术风格提示词
-        if style and style in ART_STYLES:
-            style_prompt = ART_STYLES[style]['description']
-        else:
-            style_prompt = ART_STYLES.get('manga', {}).get('description', '动漫插画，精美细腻的画风，鲜艳的色彩，清晰的线条')
+        # 使用固定的艺术风格提示词
+        style_prompt = '动漫插画，精美细腻的画风，鲜艳的色彩，清晰的线条'
         
         for attempt in range(max_retries + 1):
             # 构建完整提示词，特别强调领口、皮肤暴露和手部要求
@@ -379,6 +384,7 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
                 领口不能是V领，领口不能是衽领，领口不能是交领，领口不能是任何y字型或者v字型的领子\n\
                     脖子必须完全被服装遮盖不能有任何暴露，后背脖子以下不能有皮肤暴露，胸部不能有皮肤暴露\n\
                         角色只能有两只手，不能有三只手或更多手臂,手指数量要正常,不能有多余的手指\n\
+                        把眼镜都去掉，身体和头部的比例和正反也要修正\n\
                             角色之间不能有拥抱、挽手、亲密接触等行为，角色之间要保持适当距离,也不能对视\n\n" + style_prompt + "\n\n" + prompt + "\n\n"
             
             if attempt == 0:  # 只在第一次尝试时打印完整prompt
@@ -444,7 +450,6 @@ def generate_image_with_character_to_chapter_async(prompt: str, output_path: str
                     'prompt': prompt,
                     'full_prompt': full_prompt,
                     'character_images': character_images or [],
-                    'style': style,
                     'submit_time': time.time(),
                     'status': 'submitted',
                     'attempt': attempt + 1
@@ -483,7 +488,7 @@ def regenerate_failed_image(image_path: str) -> bool:
     Returns:
         bool: 是否成功重新生成
     """
-    if not all([VisualService, IMAGE_TWO_CONFIG, ART_STYLES, save_task_info]):
+    if not all([VisualService, IMAGE_TWO_CONFIG, save_task_info]):
         print("错误: 图片生成模块不可用")
         return False
     
@@ -538,6 +543,170 @@ def regenerate_failed_image(image_path: str) -> bool:
             
     except Exception as e:
         print(f"重新生成图片时发生错误: {str(e)}")
+        return False
+
+def process_single_image(image_path: str, prompt: str, auto_regenerate: bool = False, custom_prompt: Optional[str] = None, skip_analysis: bool = False):
+    """
+    处理单个图片文件的分析和重新生成
+    
+    Args:
+        image_path: 图片文件路径
+        prompt: 分析提示词
+        auto_regenerate: 是否自动重新生成失败的图片
+        custom_prompt: 自定义重新生成提示词
+        skip_analysis: 是否跳过分析直接重新生成
+    """
+    # 检查文件是否存在
+    if not os.path.exists(image_path):
+        print(f"错误: 图片文件不存在: {image_path}")
+        return
+    
+    # 检查是否为支持的图片格式
+    file_extension = Path(image_path).suffix.lower()
+    if file_extension not in SUPPORTED_FORMATS:
+        print(f"错误: 不支持的图片格式: {file_extension}")
+        print(f"支持的格式: {', '.join(SUPPORTED_FORMATS)}")
+        return
+    
+    # 检查是否为旁白图片格式
+    filename = os.path.basename(image_path)
+    if not NARRATION_IMAGE_PATTERN.match(filename):
+        print(f"警告: 图片文件名不符合旁白图片格式 (chapter_xxx_image_xx.jpeg): {filename}")
+        print("将继续处理，但建议使用标准命名格式")
+    
+    # 从配置文件获取API密钥
+    api_key = ARK_CONFIG.get("api_key")
+    if not api_key:
+        print("错误: 请在 config/config.py 中配置 ARK_CONFIG['api_key']")
+        return
+    
+    # 初始化客户端
+    client = Ark(api_key=api_key)
+    
+    print(f"正在分析图片: {filename}")
+    print(f"完整路径: {image_path}")
+    print("-" * 60)
+    
+    # 如果跳过分析且启用自动重新生成，直接重新生成
+    if skip_analysis and auto_regenerate:
+        print("跳过分析，直接重新生成图片...")
+        try:
+            if custom_prompt:
+                print(f"使用自定义提示词: {custom_prompt}")
+                success = regenerate_single_image_with_custom_prompt(image_path, custom_prompt)
+            else:
+                print("使用默认重新生成逻辑")
+                success = regenerate_failed_image(image_path)
+            
+            if success:
+                print("✓ 重新生成任务已提交")
+                print("请稍后使用 check_async_tasks.py 检查生成结果")
+            else:
+                print("✗ 重新生成任务提交失败")
+        except Exception as e:
+            print(f"重新生成图片时发生错误: {e}")
+        return
+    
+    # 编码图片
+    image_base64 = encode_image_to_base64(image_path)
+    if not image_base64:
+        print(f"✗ 图片编码失败")
+        return
+    
+    # 分析图片
+    result, token_usage = analyze_image_with_llm(client, image_base64, prompt)
+    
+    print(f"Token使用统计:")
+    print(f"输入Token: {token_usage['prompt_tokens']:,}")
+    print(f"输出Token: {token_usage['completion_tokens']:,}")
+    print(f"总Token: {token_usage['total_tokens']:,}")
+    
+    if result:
+        print(f"\n分析结果: {result}")
+        
+        # 判断是否通过检查
+        if "通过" in result or "pass" in result.lower():
+            print("\n✓ 图片检查通过")
+        else:
+            print("\n✗ 图片检查失败")
+            
+            # 如果启用自动重新生成
+            if auto_regenerate:
+                print("\n开始重新生成图片...")
+                
+                # 使用自定义提示词或默认提示词
+                if custom_prompt:
+                    print(f"使用自定义提示词: {custom_prompt}")
+                    success = regenerate_single_image_with_custom_prompt(image_path, custom_prompt)
+                else:
+                    print("使用默认重新生成逻辑")
+                    success = regenerate_failed_image(image_path)
+                
+                if success:
+                    print("✓ 重新生成任务已提交")
+                    print("请稍后使用 check_async_tasks.py 检查生成结果")
+                else:
+                    print("✗ 重新生成任务提交失败")
+            else:
+                print("\n提示: 使用 --auto-regenerate 参数可自动重新生成失败的图片")
+                if custom_prompt:
+                    print("提示: 使用 --custom-prompt 参数可自定义重新生成的提示词")
+    else:
+        print("\n✗ 图片分析失败")
+    
+    print("\n分析完成!")
+
+def regenerate_single_image_with_custom_prompt(image_path: str, custom_prompt: str) -> bool:
+    """
+    使用自定义提示词重新生成单个图片
+    
+    Args:
+        image_path: 图片文件路径
+        custom_prompt: 自定义提示词
+        
+    Returns:
+        bool: 是否成功提交重新生成任务
+    """
+    if not all([VisualService, IMAGE_TWO_CONFIG, save_task_info]):
+        print("错误: 图片生成模块不可用")
+        return False
+    
+    try:
+        # 检查原始图片是否存在
+        if not os.path.exists(image_path):
+            print(f"错误: 原始图片不存在: {image_path}")
+            return False
+        
+        # 直接使用自定义提示词，不添加额外约束
+        regenerate_prompt = custom_prompt
+        
+        # 先压缩原始图片，然后使用压缩后的版本作为参考
+        compressed_image_path = resize_image_if_needed(image_path)
+        
+        # 调用新的异步生成函数，将任务保存到对应chapter的async_tasks目录
+        # 使用压缩后的图片作为参考
+        character_images_to_use = [compressed_image_path] if compressed_image_path != image_path else [image_path]
+        
+        success = generate_image_with_character_to_chapter_async(
+            prompt=regenerate_prompt,
+            output_path=image_path,  # 直接替换原图片
+            character_images=character_images_to_use,  # 使用压缩后的图片作为参考
+            style='manga',  # 使用manga风格
+            max_retries=3
+        )
+        
+        # 清理临时压缩文件
+        if compressed_image_path != image_path and os.path.exists(compressed_image_path):
+            try:
+                os.unlink(compressed_image_path)
+                print(f"已清理临时压缩文件: {compressed_image_path}")
+            except:
+                pass
+        
+        return success
+        
+    except Exception as e:
+        print(f"✗ 重新生成图片时发生错误: {e}")
         return False
 
 def process_narration_images(data_directory: str, prompt: str = "请仔细观察这张旁白图片，进行以下全面审查：\n\n【领口审查标准】\n✅ 通过的领口类型：圆领、立领、高领、方领、一字领等完全遮盖脖子和胸部的领口\n❌ 失败的领口类型：\n- 交领/衽领：左右衣襟交叉重叠，形成V字形开口，露出脖子和胸部皮肤\n- V领：任何形式的V字形领口\n- y字型领：形成Y字形状的领口\n- 低领：领口过低，露出脖子以下皮肤\n- 开胸装：胸前有明显开口或缝隙\n\n【皮肤暴露检查】\n检查角色是否存在以下问题：\n- 脖子暴露：脖子部位不能有任何皮肤暴露\n- 后背脖子以下皮肤暴露：后背脖子以下区域不能有皮肤暴露\n- 胸部皮肤暴露：胸前不能有皮肤暴露\n\n【手部检测】\n检查角色是否存在以下问题：\n- 三只手或更多手臂\n- 多余的手指\n- 手部位置不合理\n- 手部形状异常\n\n【内容审查】\n检查图片中是否存在文字、乱码、水印等不当内容\n\n【判断要求】\n请重点关注：\n1. 领口是否露出脖子以下的皮肤区域\n2. 脖子是否有任何暴露\n3. 后背脖子以下是否有皮肤暴露\n4. 角色手部数量是否正常（最多两只手）\n5. 如果角色穿着交领袍服、汉服等传统服装，要特别注意交领处是否形成开口露出胸部\n\n如果发现任何问题，请返回'失败'并详细说明原因。如果完全符合要求，请返回'通过'。", max_images: Optional[int] = None, start_from: Optional[str] = None, auto_regenerate: bool = False):
@@ -723,22 +892,27 @@ def main():
     主函数 - 处理命令行参数并执行旁白图片分析
     """
     parser = argparse.ArgumentParser(
-        description="LLM旁白图片分析工具 - 批量检查chapter_xxx_image_xx_x格式的旁白图片",
+        description="LLM旁白图片分析工具 - 批量检查chapter_xxx_image_xx.jpeg格式的旁白图片或单独处理指定图片",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 示例用法:
+  # 批量处理目录下所有旁白图片
   python llm_narration_image.py data/004                    # 检查data/004目录下所有chapter中的旁白图片
   python llm_narration_image.py data/004 --prompt "自定义检查提示词"
   python llm_narration_image.py data/004 --max-images 10
   python llm_narration_image.py data/004 --start-from "/path/to/specific/image.jpg"
   python llm_narration_image.py data/004 --auto-regenerate  # 自动重新生成失败的图片
+  
+  # 单独处理指定图片文件
+  python llm_narration_image.py data/006/chapter_003/chapter_003_image_08.jpeg --auto-regenerate
+  python llm_narration_image.py data/006/chapter_003/chapter_003_image_08.jpeg --auto-regenerate --custom-prompt "去掉眼镜"
         """
     )
     
-    # 位置参数：数据目录
+    # 位置参数：数据目录或图片文件路径
     parser.add_argument(
-        'data_directory',
-        help='数据目录路径 (如: data/004)，用于检查该目录下所有chapter中的旁白图片'
+        'input_path',
+        help='数据目录路径 (如: data/004) 或单个图片文件路径 (如: data/006/chapter_003/chapter_003_image_08.jpeg)'
     )
     
     parser.add_argument(
@@ -764,25 +938,65 @@ def main():
         help='自动重新生成检测失败的图片'
     )
     
+    parser.add_argument(
+        '--custom-prompt', '-c',
+        help='自定义重新生成图片的提示词 (如: "去掉眼镜", "换成短发")，仅在处理单个图片且启用--auto-regenerate时有效'
+    )
+    
+    parser.add_argument(
+        '--skip-analysis', '-k',
+        action='store_true',
+        help='跳过图片分析，直接重新生成图片（仅在处理单个图片且启用--auto-regenerate时有效）'
+    )
+    
     args = parser.parse_args()
     
     print("=" * 80)
     print("LLM旁白图片分析工具")
     print("=" * 80)
-    print(f"数据目录: {args.data_directory}")
-    print(f"分析提示: {args.prompt}")
-    if args.max_images:
-        print(f"最大数量: {args.max_images}")
-    if args.start_from:
-        print(f"起始图片: {args.start_from}")
-    if args.auto_regenerate:
-        print(f"自动重新生成: 启用")
-    else:
-        print(f"自动重新生成: 禁用")
-    print()
     
-    # 执行旁白图片分析
-    process_narration_images(args.data_directory, args.prompt, args.max_images, args.start_from, args.auto_regenerate)
+    # 判断输入是目录还是单个文件
+    input_path = args.input_path
+    is_single_file = os.path.isfile(input_path)
+    
+    if is_single_file:
+        print(f"单个图片文件: {input_path}")
+        if args.custom_prompt:
+            print(f"自定义提示词: {args.custom_prompt}")
+        if args.auto_regenerate:
+            print(f"自动重新生成: 启用")
+        else:
+            print(f"自动重新生成: 禁用")
+        
+        # 检查custom_prompt参数的使用
+        if args.custom_prompt and not args.auto_regenerate:
+            print("警告: --custom-prompt 参数仅在启用 --auto-regenerate 时有效")
+        
+        # 检查skip_analysis参数的使用
+        if args.skip_analysis and not args.auto_regenerate:
+            print("警告: --skip-analysis 参数仅在启用 --auto-regenerate 时有效")
+        
+        print()
+        
+        # 处理单个图片文件
+        process_single_image(input_path, args.prompt, args.auto_regenerate, args.custom_prompt, args.skip_analysis)
+    else:
+        print(f"数据目录: {input_path}")
+        print(f"分析提示: {args.prompt}")
+        if args.max_images:
+            print(f"最大数量: {args.max_images}")
+        if args.start_from:
+            print(f"起始图片: {args.start_from}")
+        if args.auto_regenerate:
+            print(f"自动重新生成: 启用")
+        else:
+            print(f"自动重新生成: 禁用")
+        if args.custom_prompt:
+            print(f"警告: --custom-prompt 参数仅在处理单个图片时有效，将被忽略")
+        print()
+        
+        # 执行批量旁白图片分析
+        process_narration_images(input_path, args.prompt, args.max_images, args.start_from, args.auto_regenerate)
 
 if __name__ == "__main__":
     main()

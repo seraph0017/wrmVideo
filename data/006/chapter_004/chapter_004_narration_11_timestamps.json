@@ -1,293 +1,228 @@
 {
-  "text": "白蒹葭于演武场指导弟子，淡蓝色窄袖衫下动作舒展，指尖弹出灵光击中木桩，百名核心弟子凝神观摩，招式精妙暗含天地法则！",
+  "text": "龙欣整顿锦衣卫，淘汰不合格人员，加强训练，提升情报传递效率，安插眼线至三族联盟控制区域。",
   "audio_file": "data/006/chapter_004/chapter_004_narration_11.mp3",
-  "duration": 11.616,
+  "duration": 8.825,
   "character_timestamps": [
     {
-      "character": "白",
+      "character": "龙",
       "start_time": 0.016,
-      "end_time": 0.183
+      "end_time": 0.204
     },
     {
-      "character": "蒹",
-      "start_time": 0.183,
-      "end_time": 0.383
+      "character": "欣",
+      "start_time": 0.204,
+      "end_time": 0.399
     },
     {
-      "character": "葭",
-      "start_time": 0.383,
-      "end_time": 0.708
+      "character": "整",
+      "start_time": 0.399,
+      "end_time": 0.595
     },
     {
-      "character": "于",
-      "start_time": 0.708,
-      "end_time": 0.849
+      "character": "顿",
+      "start_time": 0.595,
+      "end_time": 0.754
     },
     {
-      "character": "演",
-      "start_time": 0.849,
-      "end_time": 1.083
+      "character": "锦",
+      "start_time": 0.754,
+      "end_time": 0.949
     },
     {
-      "character": "武",
-      "start_time": 1.083,
-      "end_time": 1.191
+      "character": "衣",
+      "start_time": 0.949,
+      "end_time": 1.091
     },
     {
-      "character": "场",
-      "start_time": 1.191,
-      "end_time": 1.395
-    },
-    {
-      "character": "指",
-      "start_time": 1.395,
-      "end_time": 1.549
-    },
-    {
-      "character": "导",
-      "start_time": 1.549,
-      "end_time": 1.683
-    },
-    {
-      "character": "弟",
-      "start_time": 1.683,
-      "end_time": 1.833
-    },
-    {
-      "character": "子",
-      "start_time": 1.833,
-      "end_time": 2.024
+      "character": "卫",
+      "start_time": 1.091,
+      "end_time": 1.204
     },
     {
       "character": "，",
-      "start_time": 2.024,
-      "end_time": 2.424
+      "start_time": 1.204,
+      "end_time": 1.666
     },
     {
-      "character": "淡",
-      "start_time": 2.424,
-      "end_time": 2.541
+      "character": "淘",
+      "start_time": 1.666,
+      "end_time": 1.858
     },
     {
-      "character": "蓝",
-      "start_time": 2.541,
-      "end_time": 2.77
+      "character": "汰",
+      "start_time": 1.858,
+      "end_time": 2.037
     },
     {
-      "character": "色",
-      "start_time": 2.77,
-      "end_time": 2.945
+      "character": "不",
+      "start_time": 2.037,
+      "end_time": 2.158
     },
     {
-      "character": "窄",
-      "start_time": 2.945,
-      "end_time": 3.141
+      "character": "合",
+      "start_time": 2.158,
+      "end_time": 2.354
     },
     {
-      "character": "袖",
-      "start_time": 3.141,
-      "end_time": 3.287
+      "character": "格",
+      "start_time": 2.354,
+      "end_time": 2.474
     },
     {
-      "character": "衫",
-      "start_time": 3.287,
-      "end_time": 3.466
+      "character": "人",
+      "start_time": 2.474,
+      "end_time": 2.637
     },
     {
-      "character": "下",
-      "start_time": 3.466,
-      "end_time": 3.645
+      "character": "员",
+      "start_time": 2.637,
+      "end_time": 2.879
     },
     {
-      "character": "动",
-      "start_time": 3.645,
+      "character": "，",
+      "start_time": 2.879,
+      "end_time": 3.162
+    },
+    {
+      "character": "加",
+      "start_time": 3.162,
+      "end_time": 3.362
+    },
+    {
+      "character": "强",
+      "start_time": 3.362,
+      "end_time": 3.554
+    },
+    {
+      "character": "训",
+      "start_time": 3.554,
+      "end_time": 3.737
+    },
+    {
+      "character": "练",
+      "start_time": 3.737,
       "end_time": 3.883
     },
     {
-      "character": "作",
+      "character": "，",
       "start_time": 3.883,
-      "end_time": 4.024
+      "end_time": 4.329
     },
     {
-      "character": "舒",
-      "start_time": 4.024,
-      "end_time": 4.199
+      "character": "提",
+      "start_time": 4.329,
+      "end_time": 4.487
     },
     {
-      "character": "展",
-      "start_time": 4.199,
-      "end_time": 4.337
+      "character": "升",
+      "start_time": 4.487,
+      "end_time": 4.662
+    },
+    {
+      "character": "情",
+      "start_time": 4.662,
+      "end_time": 4.866
+    },
+    {
+      "character": "报",
+      "start_time": 4.866,
+      "end_time": 5.024
+    },
+    {
+      "character": "传",
+      "start_time": 5.024,
+      "end_time": 5.279
+    },
+    {
+      "character": "递",
+      "start_time": 5.279,
+      "end_time": 5.399
+    },
+    {
+      "character": "效",
+      "start_time": 5.399,
+      "end_time": 5.624
+    },
+    {
+      "character": "率",
+      "start_time": 5.624,
+      "end_time": 5.754
     },
     {
       "character": "，",
-      "start_time": 4.337,
-      "end_time": 4.895
-    },
-    {
-      "character": "指",
-      "start_time": 4.895,
-      "end_time": 5.008
-    },
-    {
-      "character": "尖",
-      "start_time": 5.008,
-      "end_time": 5.174
-    },
-    {
-      "character": "弹",
-      "start_time": 5.174,
-      "end_time": 5.379
-    },
-    {
-      "character": "出",
-      "start_time": 5.379,
-      "end_time": 5.504
-    },
-    {
-      "character": "灵",
-      "start_time": 5.504,
-      "end_time": 5.687
-    },
-    {
-      "character": "光",
-      "start_time": 5.687,
-      "end_time": 5.891
-    },
-    {
-      "character": "击",
-      "start_time": 5.891,
+      "start_time": 5.754,
       "end_time": 6.154
     },
     {
-      "character": "中",
+      "character": "安",
       "start_time": 6.154,
-      "end_time": 6.291
+      "end_time": 6.299
     },
     {
-      "character": "木",
-      "start_time": 6.291,
-      "end_time": 6.429
+      "character": "插",
+      "start_time": 6.299,
+      "end_time": 6.466
     },
     {
-      "character": "桩",
-      "start_time": 6.429,
-      "end_time": 6.629
+      "character": "眼",
+      "start_time": 6.466,
+      "end_time": 6.662
     },
     {
-      "character": "，",
-      "start_time": 6.629,
-      "end_time": 7.024
+      "character": "线",
+      "start_time": 6.662,
+      "end_time": 6.887
     },
     {
-      "character": "百",
-      "start_time": 7.024,
-      "end_time": 7.179
+      "character": "至",
+      "start_time": 6.887,
+      "end_time": 7.062
     },
     {
-      "character": "名",
-      "start_time": 7.179,
-      "end_time": 7.345
+      "character": "三",
+      "start_time": 7.062,
+      "end_time": 7.32
     },
     {
-      "character": "核",
-      "start_time": 7.345,
-      "end_time": 7.579
+      "character": "族",
+      "start_time": 7.32,
+      "end_time": 7.479
     },
     {
-      "character": "心",
-      "start_time": 7.579,
-      "end_time": 7.749
+      "character": "联",
+      "start_time": 7.479,
+      "end_time": 7.616
     },
     {
-      "character": "弟",
-      "start_time": 7.749,
-      "end_time": 7.887
+      "character": "盟",
+      "start_time": 7.616,
+      "end_time": 7.841
     },
     {
-      "character": "子",
-      "start_time": 7.887,
-      "end_time": 8.041
+      "character": "控",
+      "start_time": 7.841,
+      "end_time": 8.149
     },
     {
-      "character": "凝",
-      "start_time": 8.041,
-      "end_time": 8.287
+      "character": "制",
+      "start_time": 8.149,
+      "end_time": 8.299
     },
     {
-      "character": "神",
-      "start_time": 8.287,
-      "end_time": 8.483
+      "character": "区",
+      "start_time": 8.299,
+      "end_time": 8.566
     },
     {
-      "character": "观",
-      "start_time": 8.483,
-      "end_time": 8.624
+      "character": "域",
+      "start_time": 8.566,
+      "end_time": 8.662
     },
     {
-      "character": "摩",
-      "start_time": 8.624,
-      "end_time": 8.883
-    },
-    {
-      "character": "，",
-      "start_time": 8.883,
-      "end_time": 9.362
-    },
-    {
-      "character": "招",
-      "start_time": 9.362,
-      "end_time": 9.529
-    },
-    {
-      "character": "式",
-      "start_time": 9.529,
-      "end_time": 9.67
-    },
-    {
-      "character": "精",
-      "start_time": 9.67,
-      "end_time": 9.829
-    },
-    {
-      "character": "妙",
-      "start_time": 9.829,
-      "end_time": 10.07
-    },
-    {
-      "character": "暗",
-      "start_time": 10.07,
-      "end_time": 10.291
-    },
-    {
-      "character": "含",
-      "start_time": 10.291,
-      "end_time": 10.524
-    },
-    {
-      "character": "天",
-      "start_time": 10.524,
-      "end_time": 10.808
-    },
-    {
-      "character": "地",
-      "start_time": 10.808,
-      "end_time": 10.962
-    },
-    {
-      "character": "法",
-      "start_time": 10.962,
-      "end_time": 11.199
-    },
-    {
-      "character": "则",
-      "start_time": 11.199,
-      "end_time": 11.458
-    },
-    {
-      "character": "！",
-      "start_time": 11.458,
-      "end_time": 11.617
+      "character": "。",
+      "start_time": 8.662,
+      "end_time": 8.821
     }
   ],
-  "generated_at": "2025-08-27T22:43:41.746264"
+  "generated_at": "2025-08-30T22:45:43.812582"
 }

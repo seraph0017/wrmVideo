@@ -1,308 +1,243 @@
 {
-  "text": "辛芦于军械库清点法宝，浅色襦裙袖口挽起，露出皓腕，案上整齐码放着新炼的法符，每张都注入了道主级灵力，足以重创归一期修者！",
+  "text": "赵硕采纳众议，决定亲自督导特训营，传授修行心得，同时炼制丹药，提升弟子实力，府中上下士气大振。",
   "audio_file": "data/006/chapter_004/chapter_004_narration_10.mp3",
-  "duration": 11.3,
+  "duration": 9.375,
   "character_timestamps": [
     {
-      "character": "辛",
-      "start_time": 0.02,
-      "end_time": 0.241
+      "character": "赵",
+      "start_time": 0.016,
+      "end_time": 0.17
     },
     {
-      "character": "芦",
-      "start_time": 0.241,
-      "end_time": 0.399
+      "character": "硕",
+      "start_time": 0.17,
+      "end_time": 0.312
     },
     {
-      "character": "于",
-      "start_time": 0.399,
-      "end_time": 0.52
+      "character": "采",
+      "start_time": 0.312,
+      "end_time": 0.545
     },
     {
-      "character": "军",
-      "start_time": 0.52,
-      "end_time": 0.72
+      "character": "纳",
+      "start_time": 0.545,
+      "end_time": 0.666
     },
     {
-      "character": "械",
-      "start_time": 0.72,
-      "end_time": 0.883
+      "character": "众",
+      "start_time": 0.666,
+      "end_time": 0.854
     },
     {
-      "character": "库",
-      "start_time": 0.883,
-      "end_time": 1.058
-    },
-    {
-      "character": "清",
-      "start_time": 1.058,
-      "end_time": 1.329
-    },
-    {
-      "character": "点",
-      "start_time": 1.329,
-      "end_time": 1.499
-    },
-    {
-      "character": "法",
-      "start_time": 1.499,
-      "end_time": 1.683
-    },
-    {
-      "character": "宝",
-      "start_time": 1.683,
-      "end_time": 1.854
+      "character": "议",
+      "start_time": 0.854,
+      "end_time": 0.995
     },
     {
       "character": "，",
-      "start_time": 1.854,
-      "end_time": 2.27
+      "start_time": 0.995,
+      "end_time": 1.433
     },
     {
-      "character": "浅",
-      "start_time": 2.27,
-      "end_time": 2.499
+      "character": "决",
+      "start_time": 1.433,
+      "end_time": 1.587
     },
     {
-      "character": "色",
-      "start_time": 2.499,
-      "end_time": 2.633
+      "character": "定",
+      "start_time": 1.587,
+      "end_time": 1.737
     },
     {
-      "character": "襦",
-      "start_time": 2.633,
-      "end_time": 2.787
+      "character": "亲",
+      "start_time": 1.737,
+      "end_time": 2.024
     },
     {
-      "character": "裙",
-      "start_time": 2.787,
-      "end_time": 2.958
+      "character": "自",
+      "start_time": 2.024,
+      "end_time": 2.199
     },
     {
-      "character": "袖",
-      "start_time": 2.958,
-      "end_time": 3.204
+      "character": "督",
+      "start_time": 2.199,
+      "end_time": 2.37
     },
     {
-      "character": "口",
-      "start_time": 3.204,
-      "end_time": 3.416
+      "character": "导",
+      "start_time": 2.37,
+      "end_time": 2.516
     },
     {
-      "character": "挽",
-      "start_time": 3.416,
-      "end_time": 3.583
+      "character": "特",
+      "start_time": 2.516,
+      "end_time": 2.716
     },
     {
-      "character": "起",
-      "start_time": 3.583,
-      "end_time": 3.791
+      "character": "训",
+      "start_time": 2.716,
+      "end_time": 2.874
     },
     {
-      "character": "，",
-      "start_time": 3.791,
-      "end_time": 4.029
-    },
-    {
-      "character": "露",
-      "start_time": 4.029,
-      "end_time": 4.212
-    },
-    {
-      "character": "出",
-      "start_time": 4.212,
-      "end_time": 4.362
-    },
-    {
-      "character": "皓",
-      "start_time": 4.362,
-      "end_time": 4.579
-    },
-    {
-      "character": "腕",
-      "start_time": 4.579,
-      "end_time": 4.695
+      "character": "营",
+      "start_time": 2.874,
+      "end_time": 3.099
     },
     {
       "character": "，",
-      "start_time": 4.695,
-      "end_time": 5.166
+      "start_time": 3.099,
+      "end_time": 3.445
     },
     {
-      "character": "案",
-      "start_time": 5.166,
-      "end_time": 5.324
+      "character": "传",
+      "start_time": 3.445,
+      "end_time": 3.658
     },
     {
-      "character": "上",
-      "start_time": 5.324,
-      "end_time": 5.495
-    },
-    {
-      "character": "整",
-      "start_time": 5.495,
-      "end_time": 5.687
-    },
-    {
-      "character": "齐",
-      "start_time": 5.687,
-      "end_time": 5.841
-    },
-    {
-      "character": "码",
-      "start_time": 5.841,
-      "end_time": 6.008
-    },
-    {
-      "character": "放",
-      "start_time": 6.008,
-      "end_time": 6.149
-    },
-    {
-      "character": "着",
-      "start_time": 6.149,
-      "end_time": 6.229
-    },
-    {
-      "character": "新",
-      "start_time": 6.229,
-      "end_time": 6.487
-    },
-    {
-      "character": "炼",
-      "start_time": 6.487,
-      "end_time": 6.624
-    },
-    {
-      "character": "的",
-      "start_time": 6.624,
-      "end_time": 6.691
-    },
-    {
-      "character": "法",
-      "start_time": 6.691,
-      "end_time": 6.904
-    },
-    {
-      "character": "符",
-      "start_time": 6.904,
-      "end_time": 7.149
-    },
-    {
-      "character": "，",
-      "start_time": 7.149,
-      "end_time": 7.479
-    },
-    {
-      "character": "每",
-      "start_time": 7.479,
-      "end_time": 7.67
-    },
-    {
-      "character": "张",
-      "start_time": 7.67,
-      "end_time": 7.816
-    },
-    {
-      "character": "都",
-      "start_time": 7.816,
-      "end_time": 7.929
-    },
-    {
-      "character": "注",
-      "start_time": 7.929,
-      "end_time": 8.079
-    },
-    {
-      "character": "入",
-      "start_time": 8.079,
-      "end_time": 8.187
-    },
-    {
-      "character": "了",
-      "start_time": 8.187,
-      "end_time": 8.279
-    },
-    {
-      "character": "道",
-      "start_time": 8.279,
-      "end_time": 8.516
-    },
-    {
-      "character": "主",
-      "start_time": 8.516,
-      "end_time": 8.67
-    },
-    {
-      "character": "级",
-      "start_time": 8.67,
-      "end_time": 8.808
-    },
-    {
-      "character": "灵",
-      "start_time": 8.808,
-      "end_time": 8.995
-    },
-    {
-      "character": "力",
-      "start_time": 8.995,
-      "end_time": 9.112
-    },
-    {
-      "character": "，",
-      "start_time": 9.112,
-      "end_time": 9.416
-    },
-    {
-      "character": "足",
-      "start_time": 9.416,
-      "end_time": 9.637
-    },
-    {
-      "character": "以",
-      "start_time": 9.637,
-      "end_time": 9.787
-    },
-    {
-      "character": "重",
-      "start_time": 9.787,
-      "end_time": 10.004
-    },
-    {
-      "character": "创",
-      "start_time": 10.004,
-      "end_time": 10.224
-    },
-    {
-      "character": "归",
-      "start_time": 10.224,
-      "end_time": 10.433
-    },
-    {
-      "character": "一",
-      "start_time": 10.433,
-      "end_time": 10.612
-    },
-    {
-      "character": "期",
-      "start_time": 10.612,
-      "end_time": 10.783
+      "character": "授",
+      "start_time": 3.658,
+      "end_time": 3.82
     },
     {
       "character": "修",
-      "start_time": 10.783,
-      "end_time": 10.995
+      "start_time": 3.82,
+      "end_time": 4.045
     },
     {
-      "character": "者",
-      "start_time": 10.995,
-      "end_time": 11.141
+      "character": "行",
+      "start_time": 4.045,
+      "end_time": 4.22
     },
     {
-      "character": "！",
-      "start_time": 11.141,
-      "end_time": 11.3
+      "character": "心",
+      "start_time": 4.22,
+      "end_time": 4.416
+    },
+    {
+      "character": "得",
+      "start_time": 4.416,
+      "end_time": 4.612
+    },
+    {
+      "character": "，",
+      "start_time": 4.612,
+      "end_time": 4.983
+    },
+    {
+      "character": "同",
+      "start_time": 4.983,
+      "end_time": 5.204
+    },
+    {
+      "character": "时",
+      "start_time": 5.204,
+      "end_time": 5.383
+    },
+    {
+      "character": "炼",
+      "start_time": 5.383,
+      "end_time": 5.57
+    },
+    {
+      "character": "制",
+      "start_time": 5.57,
+      "end_time": 5.695
+    },
+    {
+      "character": "丹",
+      "start_time": 5.695,
+      "end_time": 5.879
+    },
+    {
+      "character": "药",
+      "start_time": 5.879,
+      "end_time": 6.012
+    },
+    {
+      "character": "，",
+      "start_time": 6.012,
+      "end_time": 6.291
+    },
+    {
+      "character": "提",
+      "start_time": 6.291,
+      "end_time": 6.462
+    },
+    {
+      "character": "升",
+      "start_time": 6.462,
+      "end_time": 6.641
+    },
+    {
+      "character": "弟",
+      "start_time": 6.641,
+      "end_time": 6.783
+    },
+    {
+      "character": "子",
+      "start_time": 6.783,
+      "end_time": 6.916
+    },
+    {
+      "character": "实",
+      "start_time": 6.916,
+      "end_time": 7.129
+    },
+    {
+      "character": "力",
+      "start_time": 7.129,
+      "end_time": 7.237
+    },
+    {
+      "character": "，",
+      "start_time": 7.237,
+      "end_time": 7.558
+    },
+    {
+      "character": "府",
+      "start_time": 7.558,
+      "end_time": 7.741
+    },
+    {
+      "character": "中",
+      "start_time": 7.741,
+      "end_time": 7.887
+    },
+    {
+      "character": "上",
+      "start_time": 7.887,
+      "end_time": 8.066
+    },
+    {
+      "character": "下",
+      "start_time": 8.066,
+      "end_time": 8.299
+    },
+    {
+      "character": "士",
+      "start_time": 8.299,
+      "end_time": 8.633
+    },
+    {
+      "character": "气",
+      "start_time": 8.633,
+      "end_time": 8.845
+    },
+    {
+      "character": "大",
+      "start_time": 8.845,
+      "end_time": 9.062
+    },
+    {
+      "character": "振",
+      "start_time": 9.062,
+      "end_time": 9.216
+    },
+    {
+      "character": "。",
+      "start_time": 9.216,
+      "end_time": 9.375
     }
   ],
-  "generated_at": "2025-08-27T22:43:40.562907"
+  "generated_at": "2025-08-30T22:45:42.893769"
 }

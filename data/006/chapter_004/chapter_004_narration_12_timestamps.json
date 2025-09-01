@@ -1,278 +1,243 @@
 {
-  "text": "赵硕于藏经阁翻阅古籍，玄色长袍下摆垂落于台阶，指尖划过泛黄书页，寻找克制僵神尸毒的上古秘法，窗外忽传警钟声！",
+  "text": "凤岚负责府中资源调配，清点库存，统计丹药、兵器数量，制定分配方案，确保资源合理利用，保障供给。",
   "audio_file": "data/006/chapter_004/chapter_004_narration_12.mp3",
-  "duration": 10.791,
+  "duration": 9.525,
   "character_timestamps": [
     {
-      "character": "赵",
-      "start_time": 0.016,
-      "end_time": 0.179
+      "character": "凤",
+      "start_time": 0.02,
+      "end_time": 0.183
     },
     {
-      "character": "硕",
-      "start_time": 0.179,
-      "end_time": 0.32
+      "character": "岚",
+      "start_time": 0.183,
+      "end_time": 0.358
     },
     {
-      "character": "于",
-      "start_time": 0.32,
-      "end_time": 0.433
+      "character": "负",
+      "start_time": 0.358,
+      "end_time": 0.52
     },
     {
-      "character": "藏",
-      "start_time": 0.433,
-      "end_time": 0.666
+      "character": "责",
+      "start_time": 0.52,
+      "end_time": 0.679
     },
     {
-      "character": "经",
-      "start_time": 0.666,
-      "end_time": 0.829
+      "character": "府",
+      "start_time": 0.679,
+      "end_time": 0.879
     },
     {
-      "character": "阁",
-      "start_time": 0.829,
-      "end_time": 1.054
+      "character": "中",
+      "start_time": 0.879,
+      "end_time": 1.049
     },
     {
-      "character": "翻",
-      "start_time": 1.054,
-      "end_time": 1.312
+      "character": "资",
+      "start_time": 1.049,
+      "end_time": 1.258
     },
     {
-      "character": "阅",
-      "start_time": 1.312,
-      "end_time": 1.466
+      "character": "源",
+      "start_time": 1.258,
+      "end_time": 1.433
     },
     {
-      "character": "古",
-      "start_time": 1.466,
-      "end_time": 1.662
+      "character": "调",
+      "start_time": 1.433,
+      "end_time": 1.612
     },
     {
-      "character": "籍",
-      "start_time": 1.662,
-      "end_time": 1.92
-    },
-    {
-      "character": "，",
-      "start_time": 1.92,
-      "end_time": 2.312
-    },
-    {
-      "character": "玄",
-      "start_time": 2.312,
-      "end_time": 2.541
-    },
-    {
-      "character": "色",
-      "start_time": 2.541,
-      "end_time": 2.687
-    },
-    {
-      "character": "长",
-      "start_time": 2.687,
-      "end_time": 2.92
-    },
-    {
-      "character": "袍",
-      "start_time": 2.92,
-      "end_time": 3.079
-    },
-    {
-      "character": "下",
-      "start_time": 3.079,
-      "end_time": 3.258
-    },
-    {
-      "character": "摆",
-      "start_time": 3.258,
-      "end_time": 3.458
-    },
-    {
-      "character": "垂",
-      "start_time": 3.458,
-      "end_time": 3.762
-    },
-    {
-      "character": "落",
-      "start_time": 3.762,
-      "end_time": 3.908
-    },
-    {
-      "character": "于",
-      "start_time": 3.908,
-      "end_time": 4.012
-    },
-    {
-      "character": "台",
-      "start_time": 4.012,
-      "end_time": 4.237
-    },
-    {
-      "character": "阶",
-      "start_time": 4.237,
-      "end_time": 4.429
+      "character": "配",
+      "start_time": 1.612,
+      "end_time": 1.799
     },
     {
       "character": "，",
-      "start_time": 4.429,
-      "end_time": 5.008
+      "start_time": 1.799,
+      "end_time": 2.124
     },
     {
-      "character": "指",
-      "start_time": 5.008,
-      "end_time": 5.12
+      "character": "清",
+      "start_time": 2.124,
+      "end_time": 2.379
     },
     {
-      "character": "尖",
-      "start_time": 5.12,
-      "end_time": 5.287
+      "character": "点",
+      "start_time": 2.379,
+      "end_time": 2.558
     },
     {
-      "character": "划",
-      "start_time": 5.287,
-      "end_time": 5.499
+      "character": "库",
+      "start_time": 2.558,
+      "end_time": 2.745
     },
     {
-      "character": "过",
-      "start_time": 5.499,
-      "end_time": 5.624
-    },
-    {
-      "character": "泛",
-      "start_time": 5.624,
-      "end_time": 5.82
-    },
-    {
-      "character": "黄",
-      "start_time": 5.82,
-      "end_time": 5.999
-    },
-    {
-      "character": "书",
-      "start_time": 5.999,
-      "end_time": 6.166
-    },
-    {
-      "character": "页",
-      "start_time": 6.166,
-      "end_time": 6.304
+      "character": "存",
+      "start_time": 2.745,
+      "end_time": 3.008
     },
     {
       "character": "，",
-      "start_time": 6.304,
-      "end_time": 6.62
+      "start_time": 3.008,
+      "end_time": 3.408
     },
     {
-      "character": "寻",
-      "start_time": 6.62,
-      "end_time": 6.866
+      "character": "统",
+      "start_time": 3.408,
+      "end_time": 3.62
     },
     {
-      "character": "找",
-      "start_time": 6.866,
-      "end_time": 7.033
+      "character": "计",
+      "start_time": 3.62,
+      "end_time": 3.758
     },
     {
-      "character": "克",
-      "start_time": 7.033,
-      "end_time": 7.187
+      "character": "丹",
+      "start_time": 3.758,
+      "end_time": 3.937
+    },
+    {
+      "character": "药",
+      "start_time": 3.937,
+      "end_time": 4.07
+    },
+    {
+      "character": "，",
+      "start_time": 4.07,
+      "end_time": 4.47
+    },
+    {
+      "character": "兵",
+      "start_time": 4.47,
+      "end_time": 4.666
+    },
+    {
+      "character": "器",
+      "start_time": 4.666,
+      "end_time": 4.833
+    },
+    {
+      "character": "数",
+      "start_time": 4.833,
+      "end_time": 5.024
+    },
+    {
+      "character": "量",
+      "start_time": 5.024,
+      "end_time": 5.166
+    },
+    {
+      "character": "，",
+      "start_time": 5.166,
+      "end_time": 5.583
     },
     {
       "character": "制",
-      "start_time": 7.187,
-      "end_time": 7.283
+      "start_time": 5.583,
+      "end_time": 5.745
     },
     {
-      "character": "僵",
-      "start_time": 7.283,
-      "end_time": 7.441
+      "character": "定",
+      "start_time": 5.745,
+      "end_time": 5.908
     },
     {
-      "character": "神",
-      "start_time": 7.441,
-      "end_time": 7.612
+      "character": "分",
+      "start_time": 5.908,
+      "end_time": 6.133
     },
     {
-      "character": "尸",
-      "start_time": 7.612,
-      "end_time": 7.854
+      "character": "配",
+      "start_time": 6.133,
+      "end_time": 6.308
     },
     {
-      "character": "毒",
-      "start_time": 7.854,
-      "end_time": 7.97
+      "character": "方",
+      "start_time": 6.308,
+      "end_time": 6.483
     },
     {
-      "character": "的",
-      "start_time": 7.97,
-      "end_time": 8.049
-    },
-    {
-      "character": "上",
-      "start_time": 8.049,
-      "end_time": 8.295
-    },
-    {
-      "character": "古",
-      "start_time": 8.295,
-      "end_time": 8.462
-    },
-    {
-      "character": "秘",
-      "start_time": 8.462,
-      "end_time": 8.645
-    },
-    {
-      "character": "法",
-      "start_time": 8.645,
-      "end_time": 8.849
+      "character": "案",
+      "start_time": 6.483,
+      "end_time": 6.591
     },
     {
       "character": "，",
-      "start_time": 8.849,
-      "end_time": 9.191
+      "start_time": 6.591,
+      "end_time": 6.887
     },
     {
-      "character": "窗",
-      "start_time": 9.191,
-      "end_time": 9.424
+      "character": "确",
+      "start_time": 6.887,
+      "end_time": 7.054
     },
     {
-      "character": "外",
-      "start_time": 9.424,
-      "end_time": 9.57
+      "character": "保",
+      "start_time": 7.054,
+      "end_time": 7.224
     },
     {
-      "character": "忽",
-      "start_time": 9.57,
-      "end_time": 9.804
+      "character": "资",
+      "start_time": 7.224,
+      "end_time": 7.449
     },
     {
-      "character": "传",
-      "start_time": 9.804,
-      "end_time": 10.016
+      "character": "源",
+      "start_time": 7.449,
+      "end_time": 7.637
     },
     {
-      "character": "警",
-      "start_time": 10.016,
-      "end_time": 10.262
+      "character": "合",
+      "start_time": 7.637,
+      "end_time": 7.837
     },
     {
-      "character": "钟",
-      "start_time": 10.262,
-      "end_time": 10.445
+      "character": "理",
+      "start_time": 7.837,
+      "end_time": 7.949
     },
     {
-      "character": "声",
-      "start_time": 10.445,
-      "end_time": 10.633
+      "character": "利",
+      "start_time": 7.949,
+      "end_time": 8.124
     },
     {
-      "character": "！",
-      "start_time": 10.633,
-      "end_time": 10.792
+      "character": "用",
+      "start_time": 8.124,
+      "end_time": 8.254
+    },
+    {
+      "character": "，",
+      "start_time": 8.254,
+      "end_time": 8.612
+    },
+    {
+      "character": "保",
+      "start_time": 8.612,
+      "end_time": 8.82
+    },
+    {
+      "character": "障",
+      "start_time": 8.82,
+      "end_time": 9.012
+    },
+    {
+      "character": "供",
+      "start_time": 9.012,
+      "end_time": 9.229
+    },
+    {
+      "character": "给",
+      "start_time": 9.229,
+      "end_time": 9.366
+    },
+    {
+      "character": "。",
+      "start_time": 9.366,
+      "end_time": 9.525
     }
   ],
-  "generated_at": "2025-08-27T22:43:42.813143"
+  "generated_at": "2025-08-30T22:45:44.672387"
 }

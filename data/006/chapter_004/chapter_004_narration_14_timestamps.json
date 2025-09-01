@@ -1,293 +1,253 @@
 {
-  "text": "凤岚于丹房炼药，浅绿色襦裙袖角沾着药粉，玉手翻飞间丹炉霞光四射，炉顶升腾的药气凝聚成丹形，正是疗伤圣药\"九转还魂丹\"！",
+  "text": "辛芦接待来访的周边势力使者，双方友好会谈，使者表示愿与齐天府结盟，共同应对三族威胁，辛芦欣然应允。",
   "audio_file": "data/006/chapter_004/chapter_004_narration_14.mp3",
-  "duration": 11.216,
+  "duration": 10.091,
   "character_timestamps": [
     {
-      "character": "凤",
-      "start_time": 0.016,
-      "end_time": 0.187
+      "character": "辛",
+      "start_time": 0.02,
+      "end_time": 0.216
     },
     {
-      "character": "岚",
-      "start_time": 0.187,
-      "end_time": 0.354
+      "character": "芦",
+      "start_time": 0.216,
+      "end_time": 0.358
     },
     {
-      "character": "于",
-      "start_time": 0.354,
-      "end_time": 0.499
+      "character": "接",
+      "start_time": 0.358,
+      "end_time": 0.537
     },
     {
-      "character": "丹",
-      "start_time": 0.499,
-      "end_time": 0.67
+      "character": "待",
+      "start_time": 0.537,
+      "end_time": 0.658
     },
     {
-      "character": "房",
-      "start_time": 0.67,
-      "end_time": 0.837
+      "character": "来",
+      "start_time": 0.658,
+      "end_time": 0.849
     },
     {
-      "character": "炼",
-      "start_time": 0.837,
+      "character": "访",
+      "start_time": 0.849,
       "end_time": 1.008
     },
     {
-      "character": "药",
+      "character": "的",
       "start_time": 1.008,
-      "end_time": 1.141
+      "end_time": 1.079
+    },
+    {
+      "character": "周",
+      "start_time": 1.079,
+      "end_time": 1.245
+    },
+    {
+      "character": "边",
+      "start_time": 1.245,
+      "end_time": 1.416
+    },
+    {
+      "character": "势",
+      "start_time": 1.416,
+      "end_time": 1.645
+    },
+    {
+      "character": "力",
+      "start_time": 1.645,
+      "end_time": 1.762
+    },
+    {
+      "character": "使",
+      "start_time": 1.762,
+      "end_time": 1.97
+    },
+    {
+      "character": "者",
+      "start_time": 1.97,
+      "end_time": 2.129
     },
     {
       "character": "，",
-      "start_time": 1.141,
-      "end_time": 1.554
+      "start_time": 2.129,
+      "end_time": 2.624
     },
     {
-      "character": "浅",
-      "start_time": 1.554,
-      "end_time": 1.783
+      "character": "双",
+      "start_time": 2.624,
+      "end_time": 2.845
     },
     {
-      "character": "绿",
-      "start_time": 1.783,
-      "end_time": 1.908
+      "character": "方",
+      "start_time": 2.845,
+      "end_time": 3.02
     },
     {
-      "character": "色",
-      "start_time": 1.908,
-      "end_time": 2.049
+      "character": "友",
+      "start_time": 3.02,
+      "end_time": 3.216
     },
     {
-      "character": "襦",
-      "start_time": 2.049,
-      "end_time": 2.237
+      "character": "好",
+      "start_time": 3.216,
+      "end_time": 3.395
     },
     {
-      "character": "裙",
-      "start_time": 2.237,
-      "end_time": 2.408
+      "character": "会",
+      "start_time": 3.395,
+      "end_time": 3.566
     },
     {
-      "character": "袖",
-      "start_time": 2.408,
-      "end_time": 2.612
-    },
-    {
-      "character": "角",
-      "start_time": 2.612,
-      "end_time": 2.824
-    },
-    {
-      "character": "沾",
-      "start_time": 2.824,
-      "end_time": 3.004
-    },
-    {
-      "character": "着",
-      "start_time": 3.004,
-      "end_time": 3.104
-    },
-    {
-      "character": "药",
-      "start_time": 3.104,
-      "end_time": 3.262
-    },
-    {
-      "character": "粉",
-      "start_time": 3.262,
-      "end_time": 3.479
+      "character": "谈",
+      "start_time": 3.566,
+      "end_time": 3.829
     },
     {
       "character": "，",
-      "start_time": 3.479,
-      "end_time": 3.833
+      "start_time": 3.829,
+      "end_time": 4.233
     },
     {
-      "character": "玉",
-      "start_time": 3.833,
-      "end_time": 4.008
+      "character": "使",
+      "start_time": 4.233,
+      "end_time": 4.399
     },
     {
-      "character": "手",
-      "start_time": 4.008,
-      "end_time": 4.187
+      "character": "者",
+      "start_time": 4.399,
+      "end_time": 4.512
     },
     {
-      "character": "翻",
-      "start_time": 4.187,
-      "end_time": 4.374
+      "character": "表",
+      "start_time": 4.512,
+      "end_time": 4.699
     },
     {
-      "character": "飞",
-      "start_time": 4.374,
-      "end_time": 4.52
-    },
-    {
-      "character": "间",
-      "start_time": 4.52,
-      "end_time": 4.712
-    },
-    {
-      "character": "丹",
-      "start_time": 4.712,
+      "character": "示",
+      "start_time": 4.699,
       "end_time": 4.941
     },
     {
-      "character": "炉",
+      "character": "愿",
       "start_time": 4.941,
-      "end_time": 5.108
+      "end_time": 5.095
     },
     {
-      "character": "霞",
-      "start_time": 5.108,
-      "end_time": 5.37
+      "character": "与",
+      "start_time": 5.095,
+      "end_time": 5.229
     },
     {
-      "character": "光",
-      "start_time": 5.37,
-      "end_time": 5.545
+      "character": "齐",
+      "start_time": 5.229,
+      "end_time": 5.445
     },
     {
-      "character": "四",
-      "start_time": 5.545,
-      "end_time": 5.716
+      "character": "天",
+      "start_time": 5.445,
+      "end_time": 5.749
     },
     {
-      "character": "射",
-      "start_time": 5.716,
-      "end_time": 5.899
+      "character": "府",
+      "start_time": 5.749,
+      "end_time": 5.924
     },
     {
-      "character": "，",
-      "start_time": 5.899,
-      "end_time": 6.266
+      "character": "结",
+      "start_time": 5.924,
+      "end_time": 6.099
     },
     {
-      "character": "炉",
-      "start_time": 6.266,
-      "end_time": 6.458
-    },
-    {
-      "character": "顶",
-      "start_time": 6.458,
-      "end_time": 6.624
-    },
-    {
-      "character": "升",
-      "start_time": 6.624,
-      "end_time": 6.854
-    },
-    {
-      "character": "腾",
-      "start_time": 6.854,
-      "end_time": 7.004
-    },
-    {
-      "character": "的",
-      "start_time": 7.004,
-      "end_time": 7.083
-    },
-    {
-      "character": "药",
-      "start_time": 7.083,
-      "end_time": 7.224
-    },
-    {
-      "character": "气",
-      "start_time": 7.224,
-      "end_time": 7.479
-    },
-    {
-      "character": "凝",
-      "start_time": 7.479,
-      "end_time": 7.749
-    },
-    {
-      "character": "聚",
-      "start_time": 7.749,
-      "end_time": 7.883
-    },
-    {
-      "character": "成",
-      "start_time": 7.883,
-      "end_time": 8.062
-    },
-    {
-      "character": "丹",
-      "start_time": 8.062,
-      "end_time": 8.229
-    },
-    {
-      "character": "形",
-      "start_time": 8.229,
-      "end_time": 8.479
+      "character": "盟",
+      "start_time": 6.099,
+      "end_time": 6.308
     },
     {
       "character": "，",
-      "start_time": 8.479,
-      "end_time": 8.849
+      "start_time": 6.308,
+      "end_time": 6.791
     },
     {
-      "character": "正",
-      "start_time": 8.849,
-      "end_time": 8.983
+      "character": "共",
+      "start_time": 6.791,
+      "end_time": 6.958
     },
     {
-      "character": "是",
-      "start_time": 8.983,
-      "end_time": 9.124
+      "character": "同",
+      "start_time": 6.958,
+      "end_time": 7.141
     },
     {
-      "character": "疗",
-      "start_time": 9.124,
-      "end_time": 9.341
+      "character": "应",
+      "start_time": 7.141,
+      "end_time": 7.295
     },
     {
-      "character": "伤",
-      "start_time": 9.341,
-      "end_time": 9.52
+      "character": "对",
+      "start_time": 7.295,
+      "end_time": 7.433
     },
     {
-      "character": "圣",
-      "start_time": 9.52,
-      "end_time": 9.724
+      "character": "三",
+      "start_time": 7.433,
+      "end_time": 7.708
     },
     {
-      "character": "药",
-      "start_time": 9.724,
-      "end_time": 9.92
+      "character": "族",
+      "start_time": 7.708,
+      "end_time": 7.916
     },
     {
-      "character": "九",
-      "start_time": 9.92,
-      "end_time": 10.199
+      "character": "威",
+      "start_time": 7.916,
+      "end_time": 8.058
     },
     {
-      "character": "转",
-      "start_time": 10.199,
-      "end_time": 10.383
+      "character": "胁",
+      "start_time": 8.058,
+      "end_time": 8.295
     },
     {
-      "character": "还",
-      "start_time": 10.383,
-      "end_time": 10.691
+      "character": "，",
+      "start_time": 8.295,
+      "end_time": 8.624
     },
     {
-      "character": "魂",
-      "start_time": 10.691,
-      "end_time": 10.879
+      "character": "辛",
+      "start_time": 8.624,
+      "end_time": 8.883
     },
     {
-      "character": "丹",
-      "start_time": 10.879,
-      "end_time": 11.054
+      "character": "芦",
+      "start_time": 8.883,
+      "end_time": 9.049
     },
     {
-      "character": "！",
-      "start_time": 11.054,
-      "end_time": 11.212
+      "character": "欣",
+      "start_time": 9.049,
+      "end_time": 9.337
+    },
+    {
+      "character": "然",
+      "start_time": 9.337,
+      "end_time": 9.533
+    },
+    {
+      "character": "应",
+      "start_time": 9.533,
+      "end_time": 9.754
+    },
+    {
+      "character": "允",
+      "start_time": 9.754,
+      "end_time": 9.933
+    },
+    {
+      "character": "。",
+      "start_time": 9.933,
+      "end_time": 10.092
     }
   ],
-  "generated_at": "2025-08-27T22:43:45.119966"
+  "generated_at": "2025-08-30T22:45:46.408776"
 }

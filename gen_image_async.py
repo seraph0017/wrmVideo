@@ -14,8 +14,7 @@ import json
 import time
 import shutil
 import random
-from config.config import IMAGE_TWO_CONFIG, STORY_STYLE
-from config.prompt_config import ART_STYLES
+from config.config import IMAGE_TWO_CONFIG, build_scene_prompt
 from volcengine.visual.VisualService import VisualService
 
 def parse_character_gender(content, character_name):
@@ -252,9 +251,23 @@ def parse_narration_file(narration_file_path):
                     
                     # 从<特写人物>块中提取角色姓名
                     character_block_match = re.search(r'<特写人物>(.*?)</特写人物>', closeup_content, re.DOTALL)
+                    character_block = None
+                    
                     if character_block_match:
                         character_block = character_block_match.group(1)
-                        
+                        print(f"      找到完整的<特写人物>块")
+                    else:
+                        # 兼容标签闭合错误的情况，尝试从<特写人物>开始到下一个主要标签结束
+                        character_start_match = re.search(r'<特写人物>(.*?)(?=<解说内容>|<图片prompt>|$)', closeup_content, re.DOTALL)
+                        if character_start_match:
+                            character_block = character_start_match.group(1)
+                            print(f"      找到不完整的<特写人物>块，尝试修复解析")
+                        else:
+                            # 兼容缺少开始标签的情况，直接在特写内容中查找角色信息
+                            print(f"      未找到<特写人物>块，尝试直接提取角色信息")
+                            character_block = closeup_content
+                    
+                    if character_block:
                         # 优先从<角色姓名>标签中提取角色名称
                         character_name_match = re.search(r'<角色姓名>([^<]+)</角色姓名>', character_block)
                         if character_name_match:
@@ -262,15 +275,15 @@ def parse_narration_file(narration_file_path):
                             closeup_info['character'] = character_name
                             print(f"      从<角色姓名>提取到角色: {character_name}")
                         
-                        # 提取时代背景信息
-                        era_background_match = re.search(r'<时代背景>([^<]+)</时代背景>', character_block)
+                        # 提取时代背景信息 - 兼容标签闭合错误，在整个特写内容中查找
+                        era_background_match = re.search(r'<时代背景>([^<]+)</时代背景>', closeup_content)
                         if era_background_match:
                             era_background = era_background_match.group(1).strip()
                             closeup_info['era_background'] = era_background
                             print(f"      提取到时代背景: {era_background}")
                         
-                        # 提取角色形象信息
-                        character_image_match = re.search(r'<角色形象>([^<]+)</角色形象>', character_block)
+                        # 提取角色形象信息 - 兼容标签闭合错误，在整个特写内容中查找
+                        character_image_match = re.search(r'<角色形象>([^<]+)</角色形象>', closeup_content)
                         if character_image_match:
                             character_image = character_image_match.group(1).strip()
                             closeup_info['character_image'] = character_image
@@ -319,6 +332,7 @@ def parse_narration_file(narration_file_path):
 def find_character_image(chapter_path, character_name, era_background=None):
     """
     查找角色图片文件，支持时代背景区分
+    优先在 images 子目录中查找新格式的角色图片，如果未找到则回退到章节根目录查找旧格式
     
     Args:
         chapter_path: 章节目录路径
@@ -340,21 +354,45 @@ def find_character_image(chapter_path, character_name, era_background=None):
         elif era_background == "古代":
             era_suffix = "_ancient"
         
-        # 优先查找带时代后缀的图片
+        # 首先在 images 子目录中查找新格式的角色图片
+        images_dir = os.path.join(chapter_path, "images")
+        if os.path.exists(images_dir):
+            print(f"在 images 目录中查找角色图片: {images_dir}")
+            
+            # 优先查找带时代后缀的图片（新格式：角色名_时代.jpeg）
+            if era_suffix:
+                target_filename = f"{safe_character_name}{era_suffix}.jpeg"
+                image_path = os.path.join(images_dir, target_filename)
+                if os.path.exists(image_path):
+                    print(f"找到时代背景角色图片（新格式）: {image_path}")
+                    return image_path
+            
+            # 查找通用角色图片（新格式：角色名.jpeg）
+            target_filename = f"{safe_character_name}.jpeg"
+            image_path = os.path.join(images_dir, target_filename)
+            if os.path.exists(image_path):
+                print(f"找到通用角色图片（新格式）: {image_path}")
+                return image_path
+            
+            print(f"在 images 目录中未找到角色 {character_name} 的图片")
+        
+        # 如果 images 目录不存在或未找到，回退到章节根目录查找旧格式
+        print(f"回退到章节根目录查找旧格式角色图片")
+        
+        # 优先查找带时代后缀的图片（旧格式）
         if era_suffix:
             for filename in os.listdir(chapter_path):
-                if (filename.endswith(f"_{safe_character_name}{era_suffix}.jpeg") and "character" in filename):
+                if (f"_{safe_character_name}{era_suffix}.jpeg" in filename and "character" in filename):
                     image_path = os.path.join(chapter_path, filename)
-                    print(f"找到时代背景角色图片: {image_path}")
+                    print(f"找到时代背景角色图片（旧格式）: {image_path}")
                     return image_path
         
-        # 如果没有找到时代背景图片，查找通用角色图片
+        # 如果没有找到时代背景图片，查找通用角色图片（旧格式）
         for filename in os.listdir(chapter_path):
-            if (filename.endswith(f"_{safe_character_name}.jpeg") and "character" in filename and 
-                not filename.endswith(f"_{safe_character_name}_modern.jpeg") and 
-                not filename.endswith(f"_{safe_character_name}_ancient.jpeg")):
+            if (f"_{safe_character_name}.jpeg" in filename and "character" in filename and 
+                "_modern.jpeg" not in filename and "_ancient.jpeg" not in filename):
                 image_path = os.path.join(chapter_path, filename)
-                print(f"找到通用角色图片: {image_path}")
+                print(f"找到通用角色图片（旧格式）: {image_path}")
                 return image_path
         
         print(f"未找到角色 {character_name} 的图片文件 (时代背景: {era_background})")
@@ -697,7 +735,7 @@ def save_task_info(task_id, task_info, tasks_dir):
     
     print(f"任务信息已保存: {task_file}")
 
-def generate_image_with_character_async(prompt, output_path, character_images=None, style=None, max_retries=3):
+def generate_image_with_character_async(prompt, output_path, character_images=None, max_retries=3):
     """
     使用角色图片异步生成图片，带重试机制
     
@@ -705,7 +743,6 @@ def generate_image_with_character_async(prompt, output_path, character_images=No
         prompt: 图片描述
         output_path: 输出文件路径
         character_images: 角色图片路径列表
-        style: 艺术风格，如果为None则使用配置文件中的默认风格
         max_retries: 最大重试次数
     
     Returns:
@@ -728,21 +765,10 @@ def generate_image_with_character_async(prompt, output_path, character_images=No
             visual_service.set_ak(IMAGE_TWO_CONFIG['access_key'])
             visual_service.set_sk(IMAGE_TWO_CONFIG['secret_key'])
             
-            # 获取风格设置
-            if style is None:
-                style = IMAGE_TWO_CONFIG.get('default_style', 'manga')
+            print(f"正在生成图片: {os.path.basename(output_path)}")
             
-            style_config = ART_STYLES.get(style, ART_STYLES['manga'])
-            style_prompt = style_config.get('description', style_config)
-            
-            print(f"正在生成{style}风格图片: {os.path.basename(output_path)}")
-            
-            # 构建完整的prompt
-            full_prompt = "去掉衽领，交领，V领，换成高领圆领袍\n\
-                人物姿势和背景变化要大\n\
-                    以下内容为描述生成图片\n\
-                        2d漫画，细线条，厚涂，简洁，柔和的灯光，平面插画，动漫美感，数字技术技艺\n\
-                            " + style_prompt + "\n" + prompt
+            # 使用统一的prompt构建函数
+            full_prompt = build_scene_prompt(prompt)
             
             if attempt == 0:  # 只在第一次尝试时打印完整prompt
                 print("这里是完整的prompt===>>>{}".format(full_prompt))
@@ -876,7 +902,6 @@ def generate_image_with_character_async(prompt, output_path, character_images=No
                     'prompt': prompt,
                     'full_prompt': full_prompt,
                     'character_images': character_images or [],
-                    'style': style,
                     'submit_time': time.time(),
                     'status': 'submitted',
                     'attempt': attempt + 1
@@ -922,7 +947,7 @@ def generate_image_with_character(prompt, output_path, character_images=None, st
     Returns:
         bool: 是否成功提交任务
     """
-    return generate_image_with_character_async(prompt, output_path, character_images, style)
+    return generate_image_with_character_async(prompt, output_path, character_images)
 
 def generate_images_for_chapter(chapter_dir):
     """
@@ -960,15 +985,9 @@ def generate_images_for_chapter(chapter_dir):
         
         print(f"从narration文件解析到 {len(scenes)} 个分镜")
         
-        # 获取绘画风格的model_prompt
-        style_prompt = ""
-        if drawing_style and drawing_style in STORY_STYLE:
-            style_config = STORY_STYLE[drawing_style]
-            if isinstance(style_config.get('model_prompt'), list):
-                style_prompt = style_config['model_prompt'][0]  # 取第一个
-            else:
-                style_prompt = style_config.get('model_prompt', '')
-            print(f"使用风格提示: {style_prompt}")
+        # 绘画风格信息已简化，不再使用额外的风格提示
+        if drawing_style:
+            print(f"检测到绘画风格: {drawing_style}（已简化处理）")
         
         success_count = 0
         
@@ -1032,29 +1051,18 @@ def generate_images_for_chapter(chapter_dir):
                                 character_images.append(char_img_path)
                                 print(f"    根据属性找到角色图片: {char_img_path}")
                         
-                        # 根据角色性别调整视角
-                        view_angle_prompt = ""
-                        if gender:
-                            if gender.lower() in ['female', '女']:
-                                view_angle_prompt = "，背部视角，看不到领口和正面"
-                            else:
-                                view_angle_prompt = "，正面视角，清晰面部特征"
-                        
                         # 构建完整的prompt
-                        if style_prompt:
-                            full_prompt = f"{prompt}{view_angle_prompt}，{style_prompt}"
-                        else:
-                            full_prompt = f"{prompt}{view_angle_prompt}"
+                        full_prompt = build_scene_prompt(prompt)
                 else:
                     # 如果分镜数量不足，使用通用prompt
-                    full_prompt = f"古代中国场景，{style_prompt}" if style_prompt else "古代中国场景"
+                    full_prompt = build_scene_prompt("古代中国场景")
                     print(f"    使用通用prompt（分镜不足）")
                 
                 # 先尝试API生成
                 api_success = False
                 if full_prompt:
                     print(f"    尝试API生成...")
-                    api_success = generate_image_with_character_async(full_prompt, image_path, character_images, drawing_style)
+                    api_success = generate_image_with_character_async(full_prompt, image_path, character_images)
                     
                     if api_success:
                         print(f"    ✓ API生成任务提交成功")
@@ -1228,7 +1236,7 @@ def check_and_retry_failed_tasks(async_tasks_dir='async_tasks', max_retries=3):
                     os.remove(task_path)
                     
                     # 重新提交任务
-                    if generate_image_with_character_async(prompt, output_path, character_images, style, max_retries):
+                    if generate_image_with_character_async(prompt, output_path, character_images, max_retries):
                         print(f"✓ 重试成功: {os.path.basename(output_path)}")
                         retry_success += 1
                     else:

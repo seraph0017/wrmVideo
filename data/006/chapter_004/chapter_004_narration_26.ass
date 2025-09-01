@@ -9,13 +9,14 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}于中军帐发号施令玄色
-Dialogue: 0,0:00:02.35,0:00:04.78,Default,,0,0,0,,长袍立于沙盘前令旗指向
-Dialogue: 0,0:00:04.78,0:00:05.48,Default,,0,0,0,,敌军{\c&H0000FFFF&\b1}左翼{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:05.80,0:00:08.09,Default,,0,0,0,,命征西军从侧翼包抄正午
-Dialogue: 0,0:00:08.09,0:00:09.41,Default,,0,0,0,,时分发起总攻
+Dialogue: 0,0:00:00.02,0:00:01.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}组织后方支援
+Dialogue: 0,0:00:01.83,0:00:02.96,Default,,0,0,0,,输送更多粮草
+Dialogue: 0,0:00:03.21,0:00:04.04,Default,,0,0,0,,兵器至前线
+Dialogue: 0,0:00:04.47,0:00:06.30,Default,,0,0,0,,同时组织百姓加固城防
+Dialogue: 0,0:00:06.57,0:00:07.29,Default,,0,0,0,,全民皆兵
+Dialogue: 0,0:00:07.55,0:00:08.48,Default,,0,0,0,,准备持久战

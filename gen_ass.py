@@ -91,10 +91,29 @@ def split_text_naturally(text: str, max_length: int = 12) -> List[str]:
             sentence_segments = _split_long_sentence_naturally(cleaned_sentence, max_length)
             segments.extend(sentence_segments)
     
-    # 过滤空段落
-    segments = [seg for seg in segments if seg.strip()]
+    # 过滤空段落和单字符段落
+    filtered_segments = []
+    for i, seg in enumerate(segments):
+        if not seg.strip():
+            continue
+        
+        # 检查是否为单字符段落
+        clean_seg = clean_subtitle_text(seg)
+        if len(clean_seg) == 1:
+            # 单字符段落，尝试与前一个或后一个段落合并
+            if filtered_segments:
+                # 与前一个段落合并
+                filtered_segments[-1] += seg
+            elif i + 1 < len(segments) and segments[i + 1].strip():
+                # 与下一个段落合并
+                segments[i + 1] = seg + segments[i + 1]
+            else:
+                # 无法合并，保留单字符（避免丢失内容）
+                filtered_segments.append(seg)
+        else:
+            filtered_segments.append(seg)
     
-    return segments
+    return filtered_segments
 
 def _split_long_sentence_naturally(sentence: str, max_length: int) -> List[str]:
     """智能分割过长的句子，选择自然的断开位置"""
@@ -515,8 +534,8 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,240,1
-Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,240,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text

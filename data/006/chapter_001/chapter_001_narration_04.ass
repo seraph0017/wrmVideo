@@ -9,13 +9,14 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.78,Default,,0,0,0,,古代房间内
-Dialogue: 0,0:00:01.23,0:00:02.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}从床上惊醒
-Dialogue: 0,0:00:02.98,0:00:05.02,Default,,0,0,0,,发现身处古色古香的环境
-Dialogue: 0,0:00:05.43,0:00:07.04,Default,,0,0,0,,身着宋朝圆领长袍
-Dialogue: 0,0:00:07.32,0:00:08.23,Default,,0,0,0,,满脸困惑
+Dialogue: 0,0:00:00.02,0:00:01.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青蝉{\c&H00FFFFFF&\b0}主动靠近
+Dialogue: 0,0:00:01.81,0:00:02.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}清香{\c&H00FFFFFF&\b0}扑鼻
+Dialogue: 0,0:00:03.12,0:00:04.54,Default,,0,0,0,,双手轻搭{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}肩膀
+Dialogue: 0,0:00:04.87,0:00:07.09,Default,,0,0,0,,轻声询问相识五年为何从未
+Dialogue: 0,0:00:07.09,0:00:07.47,Default,,0,0,0,,亲近
+Dialogue: 0,0:00:07.90,0:00:09.48,Default,,0,0,0,,眼中闪过坚定神色

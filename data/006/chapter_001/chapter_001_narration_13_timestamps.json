@@ -1,208 +1,253 @@
 {
-  "text": "楚秀看到受伤的赵硕，眼中满是心疼，为他上药包扎，叮嘱他不要招惹陈天贵，语气担忧。",
+  "text": "餐厅内，楚秀端来饭菜，慈眉善目，望着赵硕眼中满是关爱，轻声叮嘱勿与陈天贵争执，提及丈夫时神色黯然",
   "audio_file": "data/006/chapter_001/chapter_001_narration_13.mp3",
-  "duration": 7.366,
+  "duration": 10.266,
   "character_timestamps": [
     {
-      "character": "楚",
+      "character": "餐",
       "start_time": 0.016,
-      "end_time": 0.174
+      "end_time": 0.204
+    },
+    {
+      "character": "厅",
+      "start_time": 0.204,
+      "end_time": 0.358
+    },
+    {
+      "character": "内",
+      "start_time": 0.358,
+      "end_time": 0.508
+    },
+    {
+      "character": "，",
+      "start_time": 0.508,
+      "end_time": 0.854
+    },
+    {
+      "character": "楚",
+      "start_time": 0.854,
+      "end_time": 1.029
     },
     {
       "character": "秀",
-      "start_time": 0.174,
-      "end_time": 0.337
+      "start_time": 1.029,
+      "end_time": 1.204
     },
     {
-      "character": "看",
-      "start_time": 0.337,
-      "end_time": 0.499
+      "character": "端",
+      "start_time": 1.204,
+      "end_time": 1.358
     },
     {
-      "character": "到",
-      "start_time": 0.499,
-      "end_time": 0.595
+      "character": "来",
+      "start_time": 1.358,
+      "end_time": 1.508
     },
     {
-      "character": "受",
-      "start_time": 0.595,
-      "end_time": 0.799
+      "character": "饭",
+      "start_time": 1.508,
+      "end_time": 1.683
     },
     {
-      "character": "伤",
-      "start_time": 0.799,
-      "end_time": 0.945
+      "character": "菜",
+      "start_time": 1.683,
+      "end_time": 1.87
     },
     {
-      "character": "的",
-      "start_time": 0.945,
-      "end_time": 1.008
+      "character": "，",
+      "start_time": 1.87,
+      "end_time": 2.291
+    },
+    {
+      "character": "慈",
+      "start_time": 2.291,
+      "end_time": 2.433
+    },
+    {
+      "character": "眉",
+      "start_time": 2.433,
+      "end_time": 2.558
+    },
+    {
+      "character": "善",
+      "start_time": 2.558,
+      "end_time": 2.712
+    },
+    {
+      "character": "目",
+      "start_time": 2.712,
+      "end_time": 2.87
+    },
+    {
+      "character": "，",
+      "start_time": 2.87,
+      "end_time": 3.329
+    },
+    {
+      "character": "望",
+      "start_time": 3.329,
+      "end_time": 3.479
+    },
+    {
+      "character": "着",
+      "start_time": 3.479,
+      "end_time": 3.57
     },
     {
       "character": "赵",
-      "start_time": 1.008,
-      "end_time": 1.191
+      "start_time": 3.57,
+      "end_time": 3.724
     },
     {
       "character": "硕",
-      "start_time": 1.191,
-      "end_time": 1.366
-    },
-    {
-      "character": "，",
-      "start_time": 1.366,
-      "end_time": 1.745
+      "start_time": 3.724,
+      "end_time": 3.854
     },
     {
       "character": "眼",
-      "start_time": 1.745,
-      "end_time": 1.954
+      "start_time": 3.854,
+      "end_time": 4.054
     },
     {
       "character": "中",
-      "start_time": 1.954,
-      "end_time": 2.12
+      "start_time": 4.054,
+      "end_time": 4.245
     },
     {
       "character": "满",
-      "start_time": 2.12,
-      "end_time": 2.32
+      "start_time": 4.245,
+      "end_time": 4.549
     },
     {
       "character": "是",
-      "start_time": 2.32,
-      "end_time": 2.454
+      "start_time": 4.549,
+      "end_time": 4.716
     },
     {
-      "character": "心",
-      "start_time": 2.454,
-      "end_time": 2.654
+      "character": "关",
+      "start_time": 4.716,
+      "end_time": 4.929
     },
     {
-      "character": "疼",
-      "start_time": 2.654,
-      "end_time": 2.891
-    },
-    {
-      "character": "，",
-      "start_time": 2.891,
-      "end_time": 3.299
-    },
-    {
-      "character": "为",
-      "start_time": 3.299,
-      "end_time": 3.399
-    },
-    {
-      "character": "他",
-      "start_time": 3.399,
-      "end_time": 3.512
-    },
-    {
-      "character": "上",
-      "start_time": 3.512,
-      "end_time": 3.733
-    },
-    {
-      "character": "药",
-      "start_time": 3.733,
-      "end_time": 3.862
-    },
-    {
-      "character": "包",
-      "start_time": 3.862,
-      "end_time": 4.045
-    },
-    {
-      "character": "扎",
-      "start_time": 4.045,
-      "end_time": 4.233
+      "character": "爱",
+      "start_time": 4.929,
+      "end_time": 5.049
     },
     {
       "character": "，",
-      "start_time": 4.233,
-      "end_time": 4.479
+      "start_time": 5.049,
+      "end_time": 5.549
+    },
+    {
+      "character": "轻",
+      "start_time": 5.549,
+      "end_time": 5.754
+    },
+    {
+      "character": "声",
+      "start_time": 5.754,
+      "end_time": 5.916
     },
     {
       "character": "叮",
-      "start_time": 4.479,
-      "end_time": 4.637
+      "start_time": 5.916,
+      "end_time": 6.104
     },
     {
       "character": "嘱",
-      "start_time": 4.637,
-      "end_time": 4.745
-    },
-    {
-      "character": "他",
-      "start_time": 4.745,
-      "end_time": 4.883
-    },
-    {
-      "character": "不",
-      "start_time": 4.883,
-      "end_time": 5.037
-    },
-    {
-      "character": "要",
-      "start_time": 5.037,
-      "end_time": 5.162
-    },
-    {
-      "character": "招",
-      "start_time": 5.162,
-      "end_time": 5.362
-    },
-    {
-      "character": "惹",
-      "start_time": 5.362,
-      "end_time": 5.504
-    },
-    {
-      "character": "陈",
-      "start_time": 5.504,
-      "end_time": 5.708
-    },
-    {
-      "character": "天",
-      "start_time": 5.708,
-      "end_time": 5.879
-    },
-    {
-      "character": "贵",
-      "start_time": 5.879,
-      "end_time": 6.029
-    },
-    {
-      "character": "，",
-      "start_time": 6.029,
+      "start_time": 6.104,
       "end_time": 6.404
     },
     {
-      "character": "语",
+      "character": "勿",
       "start_time": 6.404,
-      "end_time": 6.608
+      "end_time": 6.57
     },
     {
-      "character": "气",
-      "start_time": 6.608,
-      "end_time": 6.841
+      "character": "与",
+      "start_time": 6.57,
+      "end_time": 6.699
     },
     {
-      "character": "担",
-      "start_time": 6.841,
-      "end_time": 7.049
+      "character": "陈",
+      "start_time": 6.699,
+      "end_time": 6.937
     },
     {
-      "character": "忧",
-      "start_time": 7.049,
-      "end_time": 7.204
+      "character": "天",
+      "start_time": 6.937,
+      "end_time": 7.129
+    },
+    {
+      "character": "贵",
+      "start_time": 7.129,
+      "end_time": 7.27
+    },
+    {
+      "character": "争",
+      "start_time": 7.27,
+      "end_time": 7.474
+    },
+    {
+      "character": "执",
+      "start_time": 7.474,
+      "end_time": 7.695
+    },
+    {
+      "character": "，",
+      "start_time": 7.695,
+      "end_time": 8.158
+    },
+    {
+      "character": "提",
+      "start_time": 8.158,
+      "end_time": 8.329
+    },
+    {
+      "character": "及",
+      "start_time": 8.329,
+      "end_time": 8.479
+    },
+    {
+      "character": "丈",
+      "start_time": 8.479,
+      "end_time": 8.704
+    },
+    {
+      "character": "夫",
+      "start_time": 8.704,
+      "end_time": 8.837
+    },
+    {
+      "character": "时",
+      "start_time": 8.837,
+      "end_time": 9.095
+    },
+    {
+      "character": "神",
+      "start_time": 9.095,
+      "end_time": 9.47
+    },
+    {
+      "character": "色",
+      "start_time": 9.47,
+      "end_time": 9.72
+    },
+    {
+      "character": "黯",
+      "start_time": 9.72,
+      "end_time": 9.874
+    },
+    {
+      "character": "然",
+      "start_time": 9.874,
+      "end_time": 10.104
     },
     {
       "character": "。",
-      "start_time": 7.204,
-      "end_time": 7.362
+      "start_time": 10.104,
+      "end_time": 10.262
     }
   ],
-  "generated_at": "2025-08-27T22:42:23.929966"
+  "generated_at": "2025-08-30T22:44:49.975953"
 }

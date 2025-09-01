@@ -9,13 +9,14 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}长剑出鞘
-Dialogue: 0,0:00:01.45,0:00:02.25,Default,,0,0,0,,青光一闪
-Dialogue: 0,0:00:02.58,0:00:03.77,Default,,0,0,0,,纵身跃下山巅
-Dialogue: 0,0:00:04.08,0:00:04.83,Default,,0,0,0,,直扑僵帝
-Dialogue: 0,0:00:05.16,0:00:06.13,Default,,0,0,0,,气势如虹
+Dialogue: 0,0:00:00.02,0:00:01.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}体力不支倒地
+Dialogue: 0,0:00:01.90,0:00:03.24,Default,,0,0,0,,白蒹葭急忙搀扶
+Dialogue: 0,0:00:03.52,0:00:04.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}姜素卿{\c&H00FFFFFF&\b0}虚弱开口
+Dialogue: 0,0:00:05.16,0:00:06.46,Default,,0,0,0,,请求{\c&H0000FFFF&\b1}天星{\c&H00FFFFFF&\b0}宗收留
+Dialogue: 0,0:00:06.85,0:00:07.50,Default,,0,0,0,,话音未落
+Dialogue: 0,0:00:07.86,0:00:09.24,Default,,0,0,0,,天空突然暗了下来

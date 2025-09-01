@@ -1,253 +1,228 @@
 {
-  "text": "赵硕于中军帐发号施令，玄色长袍立于沙盘前，令旗指向敌军左翼：\"命征西军从侧翼包抄，正午时分发起总攻！\"",
+  "text": "辛芦组织后方支援，输送更多粮草、兵器至前线，同时组织百姓加固城防，全民皆兵，准备持久战。",
   "audio_file": "data/006/chapter_004/chapter_004_narration_26.mp3",
-  "duration": 9.575,
+  "duration": 8.641,
   "character_timestamps": [
     {
-      "character": "赵",
+      "character": "辛",
       "start_time": 0.016,
-      "end_time": 0.179
+      "end_time": 0.212
     },
     {
-      "character": "硕",
-      "start_time": 0.179,
-      "end_time": 0.324
+      "character": "芦",
+      "start_time": 0.212,
+      "end_time": 0.366
     },
     {
-      "character": "于",
-      "start_time": 0.324,
-      "end_time": 0.441
+      "character": "组",
+      "start_time": 0.366,
+      "end_time": 0.533
     },
     {
-      "character": "中",
-      "start_time": 0.441,
-      "end_time": 0.637
+      "character": "织",
+      "start_time": 0.533,
+      "end_time": 0.679
     },
     {
-      "character": "军",
-      "start_time": 0.637,
-      "end_time": 0.791
+      "character": "后",
+      "start_time": 0.679,
+      "end_time": 0.887
     },
     {
-      "character": "帐",
-      "start_time": 0.791,
-      "end_time": 0.962
+      "character": "方",
+      "start_time": 0.887,
+      "end_time": 1.054
     },
     {
-      "character": "发",
-      "start_time": 0.962,
-      "end_time": 1.166
+      "character": "支",
+      "start_time": 1.054,
+      "end_time": 1.187
     },
     {
-      "character": "号",
-      "start_time": 1.166,
-      "end_time": 1.316
-    },
-    {
-      "character": "施",
-      "start_time": 1.316,
-      "end_time": 1.474
-    },
-    {
-      "character": "令",
-      "start_time": 1.474,
-      "end_time": 1.591
+      "character": "援",
+      "start_time": 1.187,
+      "end_time": 1.424
     },
     {
       "character": "，",
-      "start_time": 1.591,
-      "end_time": 1.962
+      "start_time": 1.424,
+      "end_time": 1.829
     },
     {
-      "character": "玄",
-      "start_time": 1.962,
-      "end_time": 2.208
+      "character": "输",
+      "start_time": 1.829,
+      "end_time": 2.02
     },
     {
-      "character": "色",
-      "start_time": 2.208,
-      "end_time": 2.354
+      "character": "送",
+      "start_time": 2.02,
+      "end_time": 2.191
     },
     {
-      "character": "长",
-      "start_time": 2.354,
-      "end_time": 2.566
+      "character": "更",
+      "start_time": 2.191,
+      "end_time": 2.416
     },
     {
-      "character": "袍",
-      "start_time": 2.566,
-      "end_time": 2.837
+      "character": "多",
+      "start_time": 2.416,
+      "end_time": 2.57
     },
     {
-      "character": "立",
-      "start_time": 2.837,
-      "end_time": 3.029
+      "character": "粮",
+      "start_time": 2.57,
+      "end_time": 2.745
     },
     {
-      "character": "于",
-      "start_time": 3.029,
-      "end_time": 3.12
+      "character": "草",
+      "start_time": 2.745,
+      "end_time": 2.962
     },
     {
-      "character": "沙",
-      "start_time": 3.12,
-      "end_time": 3.316
+      "character": "，",
+      "start_time": 2.962,
+      "end_time": 3.208
     },
     {
-      "character": "盘",
-      "start_time": 3.316,
-      "end_time": 3.479
+      "character": "兵",
+      "start_time": 3.208,
+      "end_time": 3.391
+    },
+    {
+      "character": "器",
+      "start_time": 3.391,
+      "end_time": 3.554
+    },
+    {
+      "character": "至",
+      "start_time": 3.554,
+      "end_time": 3.666
     },
     {
       "character": "前",
-      "start_time": 3.479,
-      "end_time": 3.733
+      "start_time": 3.666,
+      "end_time": 3.883
+    },
+    {
+      "character": "线",
+      "start_time": 3.883,
+      "end_time": 4.045
     },
     {
       "character": "，",
-      "start_time": 3.733,
-      "end_time": 4.12
+      "start_time": 4.045,
+      "end_time": 4.474
     },
     {
-      "character": "令",
-      "start_time": 4.12,
-      "end_time": 4.316
-    },
-    {
-      "character": "旗",
-      "start_time": 4.316,
-      "end_time": 4.47
-    },
-    {
-      "character": "指",
-      "start_time": 4.47,
-      "end_time": 4.608
-    },
-    {
-      "character": "向",
-      "start_time": 4.608,
-      "end_time": 4.779
-    },
-    {
-      "character": "敌",
-      "start_time": 4.779,
-      "end_time": 5.004
-    },
-    {
-      "character": "军",
-      "start_time": 5.004,
-      "end_time": 5.166
-    },
-    {
-      "character": "左",
-      "start_time": 5.166,
-      "end_time": 5.337
-    },
-    {
-      "character": "翼",
-      "start_time": 5.337,
-      "end_time": 5.483
-    },
-    {
-      "character": "：",
-      "start_time": 5.483,
-      "end_time": 5.804
-    },
-    {
-      "character": "命",
-      "start_time": 5.804,
-      "end_time": 6.016
-    },
-    {
-      "character": "征",
-      "start_time": 6.016,
-      "end_time": 6.195
-    },
-    {
-      "character": "西",
-      "start_time": 6.195,
-      "end_time": 6.337
-    },
-    {
-      "character": "军",
-      "start_time": 6.337,
-      "end_time": 6.545
-    },
-    {
-      "character": "从",
-      "start_time": 6.545,
-      "end_time": 6.77
-    },
-    {
-      "character": "侧",
-      "start_time": 6.77,
-      "end_time": 7.012
-    },
-    {
-      "character": "翼",
-      "start_time": 7.012,
-      "end_time": 7.129
-    },
-    {
-      "character": "包",
-      "start_time": 7.129,
-      "end_time": 7.312
-    },
-    {
-      "character": "抄",
-      "start_time": 7.312,
-      "end_time": 7.512
-    },
-    {
-      "character": "，",
-      "start_time": 7.512,
-      "end_time": 7.791
-    },
-    {
-      "character": "正",
-      "start_time": 7.791,
-      "end_time": 7.954
-    },
-    {
-      "character": "午",
-      "start_time": 7.954,
-      "end_time": 8.091
+      "character": "同",
+      "start_time": 4.474,
+      "end_time": 4.645
     },
     {
       "character": "时",
-      "start_time": 8.091,
-      "end_time": 8.266
+      "start_time": 4.645,
+      "end_time": 4.795
     },
     {
-      "character": "分",
-      "start_time": 8.266,
-      "end_time": 8.499
+      "character": "组",
+      "start_time": 4.795,
+      "end_time": 4.954
     },
     {
-      "character": "发",
-      "start_time": 8.499,
-      "end_time": 8.841
+      "character": "织",
+      "start_time": 4.954,
+      "end_time": 5.083
     },
     {
-      "character": "起",
-      "start_time": 8.841,
-      "end_time": 9.012
+      "character": "百",
+      "start_time": 5.083,
+      "end_time": 5.262
     },
     {
-      "character": "总",
-      "start_time": 9.012,
-      "end_time": 9.199
+      "character": "姓",
+      "start_time": 5.262,
+      "end_time": 5.449
     },
     {
-      "character": "攻",
-      "start_time": 9.199,
-      "end_time": 9.412
+      "character": "加",
+      "start_time": 5.449,
+      "end_time": 5.72
     },
     {
-      "character": "！",
-      "start_time": 9.412,
-      "end_time": 9.571
+      "character": "固",
+      "start_time": 5.72,
+      "end_time": 5.858
+    },
+    {
+      "character": "城",
+      "start_time": 5.858,
+      "end_time": 6.07
+    },
+    {
+      "character": "防",
+      "start_time": 6.07,
+      "end_time": 6.299
+    },
+    {
+      "character": "，",
+      "start_time": 6.299,
+      "end_time": 6.566
+    },
+    {
+      "character": "全",
+      "start_time": 6.566,
+      "end_time": 6.749
+    },
+    {
+      "character": "民",
+      "start_time": 6.749,
+      "end_time": 6.933
+    },
+    {
+      "character": "皆",
+      "start_time": 6.933,
+      "end_time": 7.104
+    },
+    {
+      "character": "兵",
+      "start_time": 7.104,
+      "end_time": 7.291
+    },
+    {
+      "character": "，",
+      "start_time": 7.291,
+      "end_time": 7.549
+    },
+    {
+      "character": "准",
+      "start_time": 7.549,
+      "end_time": 7.72
+    },
+    {
+      "character": "备",
+      "start_time": 7.72,
+      "end_time": 7.87
+    },
+    {
+      "character": "持",
+      "start_time": 7.87,
+      "end_time": 8.145
+    },
+    {
+      "character": "久",
+      "start_time": 8.145,
+      "end_time": 8.308
+    },
+    {
+      "character": "战",
+      "start_time": 8.308,
+      "end_time": 8.483
+    },
+    {
+      "character": "。",
+      "start_time": 8.483,
+      "end_time": 8.642
     }
   ],
-  "generated_at": "2025-08-27T22:43:57.281768"
+  "generated_at": "2025-08-30T22:45:57.165746"
 }

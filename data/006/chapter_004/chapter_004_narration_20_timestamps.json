@@ -1,283 +1,218 @@
 {
-  "text": "辛芦于粮仓督查粮草，浅色襦裙行走于粮囤间，指尖划过堆积如山的灵米，足够五十万大军三月之用，账房正核对入库清单！",
+  "text": "辛芦负责后勤保障，调度粮草、药品，确保先锋部队补给充足，同时安抚后方百姓，稳定人心。",
   "audio_file": "data/006/chapter_004/chapter_004_narration_20.mp3",
-  "duration": 10.658,
+  "duration": 8.7,
   "character_timestamps": [
     {
       "character": "辛",
-      "start_time": 0.016,
-      "end_time": 0.241
+      "start_time": 0.02,
+      "end_time": 0.237
     },
     {
       "character": "芦",
-      "start_time": 0.241,
-      "end_time": 0.404
+      "start_time": 0.237,
+      "end_time": 0.399
     },
     {
-      "character": "于",
-      "start_time": 0.404,
-      "end_time": 0.52
+      "character": "负",
+      "start_time": 0.399,
+      "end_time": 0.541
+    },
+    {
+      "character": "责",
+      "start_time": 0.541,
+      "end_time": 0.687
+    },
+    {
+      "character": "后",
+      "start_time": 0.687,
+      "end_time": 0.874
+    },
+    {
+      "character": "勤",
+      "start_time": 0.874,
+      "end_time": 1.062
+    },
+    {
+      "character": "保",
+      "start_time": 1.062,
+      "end_time": 1.258
+    },
+    {
+      "character": "障",
+      "start_time": 1.258,
+      "end_time": 1.412
+    },
+    {
+      "character": "，",
+      "start_time": 1.412,
+      "end_time": 1.741
+    },
+    {
+      "character": "调",
+      "start_time": 1.741,
+      "end_time": 1.945
+    },
+    {
+      "character": "度",
+      "start_time": 1.945,
+      "end_time": 2.079
     },
     {
       "character": "粮",
-      "start_time": 0.52,
-      "end_time": 0.708
-    },
-    {
-      "character": "仓",
-      "start_time": 0.708,
-      "end_time": 0.912
-    },
-    {
-      "character": "督",
-      "start_time": 0.912,
-      "end_time": 1.112
-    },
-    {
-      "character": "查",
-      "start_time": 1.112,
-      "end_time": 1.283
-    },
-    {
-      "character": "粮",
-      "start_time": 1.283,
-      "end_time": 1.458
+      "start_time": 2.079,
+      "end_time": 2.266
     },
     {
       "character": "草",
-      "start_time": 1.458,
-      "end_time": 1.649
+      "start_time": 2.266,
+      "end_time": 2.437
     },
     {
       "character": "，",
-      "start_time": 1.649,
-      "end_time": 2.137
+      "start_time": 2.437,
+      "end_time": 2.766
     },
     {
-      "character": "浅",
-      "start_time": 2.137,
-      "end_time": 2.362
+      "character": "药",
+      "start_time": 2.766,
+      "end_time": 2.949
     },
     {
-      "character": "色",
-      "start_time": 2.362,
-      "end_time": 2.495
-    },
-    {
-      "character": "襦",
-      "start_time": 2.495,
-      "end_time": 2.649
-    },
-    {
-      "character": "裙",
-      "start_time": 2.649,
-      "end_time": 2.899
-    },
-    {
-      "character": "行",
-      "start_time": 2.899,
-      "end_time": 3.187
-    },
-    {
-      "character": "走",
-      "start_time": 3.187,
-      "end_time": 3.345
-    },
-    {
-      "character": "于",
-      "start_time": 3.345,
-      "end_time": 3.462
-    },
-    {
-      "character": "粮",
-      "start_time": 3.462,
-      "end_time": 3.67
-    },
-    {
-      "character": "囤",
-      "start_time": 3.67,
-      "end_time": 3.833
-    },
-    {
-      "character": "间",
-      "start_time": 3.833,
-      "end_time": 4.024
+      "character": "品",
+      "start_time": 2.949,
+      "end_time": 3.204
     },
     {
       "character": "，",
-      "start_time": 4.024,
-      "end_time": 4.424
+      "start_time": 3.204,
+      "end_time": 3.537
     },
     {
-      "character": "指",
-      "start_time": 4.424,
-      "end_time": 4.537
+      "character": "确",
+      "start_time": 3.537,
+      "end_time": 3.724
     },
     {
-      "character": "尖",
-      "start_time": 4.537,
-      "end_time": 4.699
+      "character": "保",
+      "start_time": 3.724,
+      "end_time": 3.891
     },
     {
-      "character": "划",
-      "start_time": 4.699,
-      "end_time": 4.904
+      "character": "先",
+      "start_time": 3.891,
+      "end_time": 4.141
     },
     {
-      "character": "过",
-      "start_time": 4.904,
-      "end_time": 5.029
+      "character": "锋",
+      "start_time": 4.141,
+      "end_time": 4.316
     },
     {
-      "character": "堆",
-      "start_time": 5.029,
-      "end_time": 5.237
+      "character": "部",
+      "start_time": 4.316,
+      "end_time": 4.495
     },
     {
-      "character": "积",
-      "start_time": 5.237,
-      "end_time": 5.366
+      "character": "队",
+      "start_time": 4.495,
+      "end_time": 4.649
     },
     {
-      "character": "如",
-      "start_time": 5.366,
-      "end_time": 5.52
+      "character": "补",
+      "start_time": 4.649,
+      "end_time": 4.866
     },
     {
-      "character": "山",
-      "start_time": 5.52,
-      "end_time": 5.67
+      "character": "给",
+      "start_time": 4.866,
+      "end_time": 5.008
     },
     {
-      "character": "的",
-      "start_time": 5.67,
-      "end_time": 5.749
-    },
-    {
-      "character": "灵",
-      "start_time": 5.749,
-      "end_time": 5.941
-    },
-    {
-      "character": "米",
-      "start_time": 5.941,
-      "end_time": 6.079
-    },
-    {
-      "character": "，",
-      "start_time": 6.079,
-      "end_time": 6.508
+      "character": "充",
+      "start_time": 5.008,
+      "end_time": 5.22
     },
     {
       "character": "足",
-      "start_time": 6.508,
-      "end_time": 6.67
-    },
-    {
-      "character": "够",
-      "start_time": 6.67,
-      "end_time": 6.845
-    },
-    {
-      "character": "五",
-      "start_time": 6.845,
-      "end_time": 7.049
-    },
-    {
-      "character": "十",
-      "start_time": 7.049,
-      "end_time": 7.199
-    },
-    {
-      "character": "万",
-      "start_time": 7.199,
-      "end_time": 7.316
-    },
-    {
-      "character": "大",
-      "start_time": 7.316,
-      "end_time": 7.466
-    },
-    {
-      "character": "军",
-      "start_time": 7.466,
-      "end_time": 7.679
-    },
-    {
-      "character": "三",
-      "start_time": 7.679,
-      "end_time": 8.033
-    },
-    {
-      "character": "月",
-      "start_time": 8.033,
-      "end_time": 8.187
-    },
-    {
-      "character": "之",
-      "start_time": 8.187,
-      "end_time": 8.316
-    },
-    {
-      "character": "用",
-      "start_time": 8.316,
-      "end_time": 8.449
+      "start_time": 5.22,
+      "end_time": 5.429
     },
     {
       "character": "，",
-      "start_time": 8.449,
-      "end_time": 8.841
+      "start_time": 5.429,
+      "end_time": 5.883
     },
     {
-      "character": "账",
-      "start_time": 8.841,
-      "end_time": 9.037
+      "character": "同",
+      "start_time": 5.883,
+      "end_time": 6.079
     },
     {
-      "character": "房",
-      "start_time": 9.037,
-      "end_time": 9.237
+      "character": "时",
+      "start_time": 6.079,
+      "end_time": 6.27
     },
     {
-      "character": "正",
-      "start_time": 9.237,
-      "end_time": 9.429
+      "character": "安",
+      "start_time": 6.27,
+      "end_time": 6.462
     },
     {
-      "character": "核",
-      "start_time": 9.429,
-      "end_time": 9.599
+      "character": "抚",
+      "start_time": 6.462,
+      "end_time": 6.629
     },
     {
-      "character": "对",
-      "start_time": 9.599,
-      "end_time": 9.741
+      "character": "后",
+      "start_time": 6.629,
+      "end_time": 6.833
     },
     {
-      "character": "入",
-      "start_time": 9.741,
-      "end_time": 9.954
+      "character": "方",
+      "start_time": 6.833,
+      "end_time": 7.016
     },
     {
-      "character": "库",
-      "start_time": 9.954,
-      "end_time": 10.124
+      "character": "百",
+      "start_time": 7.016,
+      "end_time": 7.204
     },
     {
-      "character": "清",
-      "start_time": 10.124,
-      "end_time": 10.345
+      "character": "姓",
+      "start_time": 7.204,
+      "end_time": 7.391
     },
     {
-      "character": "单",
-      "start_time": 10.345,
-      "end_time": 10.499
+      "character": "，",
+      "start_time": 7.391,
+      "end_time": 7.729
     },
     {
-      "character": "！",
-      "start_time": 10.499,
-      "end_time": 10.658
+      "character": "稳",
+      "start_time": 7.729,
+      "end_time": 7.962
+    },
+    {
+      "character": "定",
+      "start_time": 7.962,
+      "end_time": 8.154
+    },
+    {
+      "character": "人",
+      "start_time": 8.154,
+      "end_time": 8.337
+    },
+    {
+      "character": "心",
+      "start_time": 8.337,
+      "end_time": 8.541
+    },
+    {
+      "character": "。",
+      "start_time": 8.541,
+      "end_time": 8.7
     }
   ],
-  "generated_at": "2025-08-27T22:43:51.039513"
+  "generated_at": "2025-08-30T22:45:51.478609"
 }

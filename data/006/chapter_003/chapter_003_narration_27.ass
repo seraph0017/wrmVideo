@@ -9,13 +9,14 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.43,Default,,0,0,0,,辛芦立于{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}身侧
-Dialogue: 0,0:00:01.82,0:00:02.47,Default,,0,0,0,,白衣静立
-Dialogue: 0,0:00:02.77,0:00:03.47,Default,,0,0,0,,背部视角
-Dialogue: 0,0:00:03.75,0:00:04.59,Default,,0,0,0,,神色平静
-Dialogue: 0,0:00:04.96,0:00:06.54,Default,,0,0,0,,默默支持{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}所言
+Dialogue: 0,0:00:00.02,0:00:01.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}在一旁补充
+Dialogue: 0,0:00:01.79,0:00:03.15,Default,,0,0,0,,提出利用清心小筑的
+Dialogue: 0,0:00:03.15,0:00:04.27,Default,,0,0,0,,人脉加速联络
+Dialogue: 0,0:00:04.74,0:00:06.12,Default,,0,0,0,,天雷上人点头同意
+Dialogue: 0,0:00:06.57,0:00:08.45,Default,,0,0,0,,议事厅内气氛渐渐缓和
+Dialogue: 0,0:00:08.79,0:00:10.29,Default,,0,0,0,,开始讨论具体计划

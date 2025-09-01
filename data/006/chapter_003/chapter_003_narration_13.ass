@@ -9,12 +9,15 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.43,Default,,0,0,0,,天雷上人率众道尊围堵尸群
-Dialogue: 0,0:00:02.75,0:00:03.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}遍地
-Dialogue: 0,0:00:03.94,0:00:04.76,Default,,0,0,0,,道法纵横
-Dialogue: 0,0:00:05.00,0:00:06.34,Default,,0,0,0,,尸群惨叫连连
+Dialogue: 0,0:00:00.02,0:00:00.75,Default,,0,0,0,,星图发动
+Dialogue: 0,0:00:01.13,0:00:01.91,Default,,0,0,0,,星光如箭
+Dialogue: 0,0:00:02.33,0:00:04.13,Default,,0,0,0,,射杀大量僵神一族走尸
+Dialogue: 0,0:00:04.47,0:00:05.55,Default,,0,0,0,,僵帝见状大怒
+Dialogue: 0,0:00:05.84,0:00:06.57,Default,,0,0,0,,亲自出手
+Dialogue: 0,0:00:06.83,0:00:07.96,Default,,0,0,0,,冲向天雷上人
+Dialogue: 0,0:00:08.18,0:00:09.03,Default,,0,0,0,,速度极快

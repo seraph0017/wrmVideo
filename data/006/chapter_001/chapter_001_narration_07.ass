@@ -9,12 +9,14 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}与赵鸾来到餐厅
-Dialogue: 0,0:00:01.91,0:00:03.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}对古代环境感到陌生
-Dialogue: 0,0:00:04.25,0:00:05.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}向他解释家族情况
-Dialogue: 0,0:00:06.18,0:00:07.02,Default,,0,0,0,,神情认真
+Dialogue: 0,0:00:00.02,0:00:01.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}匆忙穿好衣物
+Dialogue: 0,0:00:01.84,0:00:03.46,Default,,0,0,0,,抓起相机冲向{\c&H0000FFFF&\b1}望远镜{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.92,0:00:05.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}超新星{\c&H00FFFFFF&\b0}爆发的璀璨光芒
+Dialogue: 0,0:00:05.67,0:00:06.45,Default,,0,0,0,,映入眼帘
+Dialogue: 0,0:00:06.96,0:00:08.57,Default,,0,0,0,,他兴奋操控设备拍摄
+Dialogue: 0,0:00:08.87,0:00:10.16,Default,,0,0,0,,突然瞳孔骤缩

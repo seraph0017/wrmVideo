@@ -1,188 +1,263 @@
 {
-  "text": "赵鸾推门而入，身着绿色圆领长袍，活泼地冲向赵硕，口中喊着“二哥”，充满活力。",
+  "text": "激情过后，赵硕将昏睡的苏青蝉抱入监控室床铺，盖好被单，望着她恬静睡颜，心中柔情万千，忽然瞥见手表惊呼",
   "audio_file": "data/006/chapter_001/chapter_001_narration_06.mp3",
-  "duration": 7.258,
+  "duration": 10.358,
   "character_timestamps": [
     {
-      "character": "赵",
+      "character": "激",
       "start_time": 0.016,
-      "end_time": 0.183
+      "end_time": 0.179
     },
     {
-      "character": "鸾",
-      "start_time": 0.183,
-      "end_time": 0.366
+      "character": "情",
+      "start_time": 0.179,
+      "end_time": 0.358
     },
     {
-      "character": "推",
-      "start_time": 0.366,
-      "end_time": 0.595
+      "character": "过",
+      "start_time": 0.358,
+      "end_time": 0.499
     },
     {
-      "character": "门",
-      "start_time": 0.595,
-      "end_time": 0.733
-    },
-    {
-      "character": "而",
-      "start_time": 0.733,
-      "end_time": 0.874
-    },
-    {
-      "character": "入",
-      "start_time": 0.874,
-      "end_time": 1.037
+      "character": "后",
+      "start_time": 0.499,
+      "end_time": 0.658
     },
     {
       "character": "，",
-      "start_time": 1.037,
-      "end_time": 1.404
-    },
-    {
-      "character": "身",
-      "start_time": 1.404,
-      "end_time": 1.62
-    },
-    {
-      "character": "着",
-      "start_time": 1.62,
-      "end_time": 1.774
-    },
-    {
-      "character": "绿",
-      "start_time": 1.774,
-      "end_time": 1.962
-    },
-    {
-      "character": "色",
-      "start_time": 1.962,
-      "end_time": 2.137
-    },
-    {
-      "character": "圆",
-      "start_time": 2.137,
-      "end_time": 2.308
-    },
-    {
-      "character": "领",
-      "start_time": 2.308,
-      "end_time": 2.479
-    },
-    {
-      "character": "长",
-      "start_time": 2.479,
-      "end_time": 2.699
-    },
-    {
-      "character": "袍",
-      "start_time": 2.699,
-      "end_time": 2.941
-    },
-    {
-      "character": "，",
-      "start_time": 2.941,
-      "end_time": 3.437
-    },
-    {
-      "character": "活",
-      "start_time": 3.437,
-      "end_time": 3.629
-    },
-    {
-      "character": "泼",
-      "start_time": 3.629,
-      "end_time": 3.749
-    },
-    {
-      "character": "地",
-      "start_time": 3.749,
-      "end_time": 3.833
-    },
-    {
-      "character": "冲",
-      "start_time": 3.833,
-      "end_time": 4.024
-    },
-    {
-      "character": "向",
-      "start_time": 4.024,
-      "end_time": 4.195
+      "start_time": 0.658,
+      "end_time": 1.099
     },
     {
       "character": "赵",
-      "start_time": 4.195,
-      "end_time": 4.374
+      "start_time": 1.099,
+      "end_time": 1.266
     },
     {
       "character": "硕",
-      "start_time": 4.374,
-      "end_time": 4.554
+      "start_time": 1.266,
+      "end_time": 1.395
+    },
+    {
+      "character": "将",
+      "start_time": 1.395,
+      "end_time": 1.537
+    },
+    {
+      "character": "昏",
+      "start_time": 1.537,
+      "end_time": 1.758
+    },
+    {
+      "character": "睡",
+      "start_time": 1.758,
+      "end_time": 1.891
+    },
+    {
+      "character": "的",
+      "start_time": 1.891,
+      "end_time": 1.97
+    },
+    {
+      "character": "苏",
+      "start_time": 1.97,
+      "end_time": 2.17
+    },
+    {
+      "character": "青",
+      "start_time": 2.17,
+      "end_time": 2.337
+    },
+    {
+      "character": "蝉",
+      "start_time": 2.337,
+      "end_time": 2.541
+    },
+    {
+      "character": "抱",
+      "start_time": 2.541,
+      "end_time": 2.77
+    },
+    {
+      "character": "入",
+      "start_time": 2.77,
+      "end_time": 2.904
+    },
+    {
+      "character": "监",
+      "start_time": 2.904,
+      "end_time": 3.154
+    },
+    {
+      "character": "控",
+      "start_time": 3.154,
+      "end_time": 3.329
+    },
+    {
+      "character": "室",
+      "start_time": 3.329,
+      "end_time": 3.445
+    },
+    {
+      "character": "床",
+      "start_time": 3.445,
+      "end_time": 3.708
+    },
+    {
+      "character": "铺",
+      "start_time": 3.708,
+      "end_time": 3.862
     },
     {
       "character": "，",
-      "start_time": 4.554,
-      "end_time": 4.929
+      "start_time": 3.862,
+      "end_time": 4.27
     },
     {
-      "character": "口",
-      "start_time": 4.929,
-      "end_time": 5.12
+      "character": "盖",
+      "start_time": 4.27,
+      "end_time": 4.454
     },
     {
-      "character": "中",
-      "start_time": 5.12,
-      "end_time": 5.279
+      "character": "好",
+      "start_time": 4.454,
+      "end_time": 4.633
     },
     {
-      "character": "喊",
-      "start_time": 5.279,
-      "end_time": 5.533
+      "character": "被",
+      "start_time": 4.633,
+      "end_time": 4.791
+    },
+    {
+      "character": "单",
+      "start_time": 4.791,
+      "end_time": 4.97
+    },
+    {
+      "character": "，",
+      "start_time": 4.97,
+      "end_time": 5.329
+    },
+    {
+      "character": "望",
+      "start_time": 5.329,
+      "end_time": 5.495
     },
     {
       "character": "着",
-      "start_time": 5.533,
-      "end_time": 5.616
+      "start_time": 5.495,
+      "end_time": 5.579
     },
     {
-      "character": "二",
-      "start_time": 5.616,
-      "end_time": 5.783
+      "character": "她",
+      "start_time": 5.579,
+      "end_time": 5.704
     },
     {
-      "character": "哥",
-      "start_time": 5.783,
-      "end_time": 5.987
+      "character": "恬",
+      "start_time": 5.704,
+      "end_time": 5.974
+    },
+    {
+      "character": "静",
+      "start_time": 5.974,
+      "end_time": 6.137
+    },
+    {
+      "character": "睡",
+      "start_time": 6.137,
+      "end_time": 6.304
+    },
+    {
+      "character": "颜",
+      "start_time": 6.304,
+      "end_time": 6.566
     },
     {
       "character": "，",
-      "start_time": 5.987,
-      "end_time": 6.249
+      "start_time": 6.566,
+      "end_time": 7.037
     },
     {
-      "character": "充",
-      "start_time": 6.249,
-      "end_time": 6.504
+      "character": "心",
+      "start_time": 7.037,
+      "end_time": 7.229
     },
     {
-      "character": "满",
-      "start_time": 6.504,
-      "end_time": 6.708
+      "character": "中",
+      "start_time": 7.229,
+      "end_time": 7.374
     },
     {
-      "character": "活",
-      "start_time": 6.708,
-      "end_time": 6.983
+      "character": "柔",
+      "start_time": 7.374,
+      "end_time": 7.604
     },
     {
-      "character": "力",
-      "start_time": 6.983,
-      "end_time": 7.095
+      "character": "情",
+      "start_time": 7.604,
+      "end_time": 7.824
+    },
+    {
+      "character": "万",
+      "start_time": 7.824,
+      "end_time": 7.97
+    },
+    {
+      "character": "千",
+      "start_time": 7.97,
+      "end_time": 8.208
+    },
+    {
+      "character": "，",
+      "start_time": 8.208,
+      "end_time": 8.495
+    },
+    {
+      "character": "忽",
+      "start_time": 8.495,
+      "end_time": 8.674
+    },
+    {
+      "character": "然",
+      "start_time": 8.674,
+      "end_time": 8.841
+    },
+    {
+      "character": "瞥",
+      "start_time": 8.841,
+      "end_time": 9.083
+    },
+    {
+      "character": "见",
+      "start_time": 9.083,
+      "end_time": 9.254
+    },
+    {
+      "character": "手",
+      "start_time": 9.254,
+      "end_time": 9.533
+    },
+    {
+      "character": "表",
+      "start_time": 9.533,
+      "end_time": 9.749
+    },
+    {
+      "character": "惊",
+      "start_time": 9.749,
+      "end_time": 9.999
+    },
+    {
+      "character": "呼",
+      "start_time": 9.999,
+      "end_time": 10.199
     },
     {
       "character": "。",
-      "start_time": 7.095,
-      "end_time": 7.254
+      "start_time": 10.199,
+      "end_time": 10.358
     }
   ],
-  "generated_at": "2025-08-27T22:42:18.144258"
+  "generated_at": "2025-08-30T22:44:43.677869"
 }

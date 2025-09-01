@@ -1,158 +1,233 @@
 {
-  "text": "姜素卿紧随其后，绿衣娇小，背部视角，好奇观望四周，神色轻松。",
+  "text": "天雷上人带领赵硕前往议事厅，路上向赵硕介绍天星宗的历史和实力，言语中透露对僵神一族的担忧。",
   "audio_file": "data/006/chapter_003/chapter_003_narration_24.mp3",
-  "duration": 6.1,
+  "duration": 8.2,
   "character_timestamps": [
     {
-      "character": "姜",
-      "start_time": 0.016,
+      "character": "天",
+      "start_time": 0.02,
       "end_time": 0.183
     },
     {
-      "character": "素",
+      "character": "雷",
       "start_time": 0.183,
-      "end_time": 0.387
+      "end_time": 0.345
     },
     {
-      "character": "卿",
-      "start_time": 0.387,
-      "end_time": 0.574
+      "character": "上",
+      "start_time": 0.345,
+      "end_time": 0.529
     },
     {
-      "character": "紧",
-      "start_time": 0.574,
-      "end_time": 0.783
+      "character": "人",
+      "start_time": 0.529,
+      "end_time": 0.683
     },
     {
-      "character": "随",
-      "start_time": 0.783,
-      "end_time": 0.945
+      "character": "带",
+      "start_time": 0.683,
+      "end_time": 0.845
     },
     {
-      "character": "其",
-      "start_time": 0.945,
-      "end_time": 1.124
+      "character": "领",
+      "start_time": 0.845,
+      "end_time": 1.008
     },
     {
-      "character": "后",
-      "start_time": 1.124,
-      "end_time": 1.291
+      "character": "赵",
+      "start_time": 1.008,
+      "end_time": 1.216
     },
     {
-      "character": "，",
-      "start_time": 1.291,
-      "end_time": 1.595
+      "character": "硕",
+      "start_time": 1.216,
+      "end_time": 1.366
     },
     {
-      "character": "绿",
-      "start_time": 1.595,
-      "end_time": 1.745
+      "character": "前",
+      "start_time": 1.366,
+      "end_time": 1.604
     },
     {
-      "character": "衣",
-      "start_time": 1.745,
-      "end_time": 1.891
+      "character": "往",
+      "start_time": 1.604,
+      "end_time": 1.733
     },
     {
-      "character": "娇",
-      "start_time": 1.891,
-      "end_time": 2.095
+      "character": "议",
+      "start_time": 1.733,
+      "end_time": 1.87
     },
     {
-      "character": "小",
-      "start_time": 2.095,
-      "end_time": 2.283
+      "character": "事",
+      "start_time": 1.87,
+      "end_time": 1.999
     },
     {
-      "character": "，",
-      "start_time": 2.283,
-      "end_time": 2.662
-    },
-    {
-      "character": "背",
-      "start_time": 2.662,
-      "end_time": 2.829
-    },
-    {
-      "character": "部",
-      "start_time": 2.829,
-      "end_time": 2.949
-    },
-    {
-      "character": "视",
-      "start_time": 2.949,
-      "end_time": 3.12
-    },
-    {
-      "character": "角",
-      "start_time": 3.12,
-      "end_time": 3.316
+      "character": "厅",
+      "start_time": 1.999,
+      "end_time": 2.195
     },
     {
       "character": "，",
-      "start_time": 3.316,
-      "end_time": 3.683
+      "start_time": 2.195,
+      "end_time": 2.716
     },
     {
-      "character": "好",
-      "start_time": 3.683,
-      "end_time": 3.879
+      "character": "路",
+      "start_time": 2.716,
+      "end_time": 2.874
     },
     {
-      "character": "奇",
-      "start_time": 3.879,
+      "character": "上",
+      "start_time": 2.874,
+      "end_time": 3.016
+    },
+    {
+      "character": "向",
+      "start_time": 3.016,
+      "end_time": 3.166
+    },
+    {
+      "character": "赵",
+      "start_time": 3.166,
+      "end_time": 3.358
+    },
+    {
+      "character": "硕",
+      "start_time": 3.358,
+      "end_time": 3.495
+    },
+    {
+      "character": "介",
+      "start_time": 3.495,
+      "end_time": 3.649
+    },
+    {
+      "character": "绍",
+      "start_time": 3.649,
+      "end_time": 3.791
+    },
+    {
+      "character": "天",
+      "start_time": 3.791,
       "end_time": 4.045
     },
     {
-      "character": "观",
+      "character": "星",
       "start_time": 4.045,
-      "end_time": 4.274
+      "end_time": 4.22
     },
     {
-      "character": "望",
-      "start_time": 4.274,
-      "end_time": 4.399
+      "character": "宗",
+      "start_time": 4.22,
+      "end_time": 4.362
     },
     {
-      "character": "四",
-      "start_time": 4.399,
-      "end_time": 4.57
+      "character": "的",
+      "start_time": 4.362,
+      "end_time": 4.445
     },
     {
-      "character": "周",
-      "start_time": 4.57,
-      "end_time": 4.749
+      "character": "历",
+      "start_time": 4.445,
+      "end_time": 4.633
+    },
+    {
+      "character": "史",
+      "start_time": 4.633,
+      "end_time": 4.816
+    },
+    {
+      "character": "和",
+      "start_time": 4.816,
+      "end_time": 4.933
+    },
+    {
+      "character": "实",
+      "start_time": 4.933,
+      "end_time": 5.174
+    },
+    {
+      "character": "力",
+      "start_time": 5.174,
+      "end_time": 5.279
     },
     {
       "character": "，",
-      "start_time": 4.749,
-      "end_time": 5.07
+      "start_time": 5.279,
+      "end_time": 5.833
+    },
+    {
+      "character": "言",
+      "start_time": 5.833,
+      "end_time": 6.012
+    },
+    {
+      "character": "语",
+      "start_time": 6.012,
+      "end_time": 6.137
+    },
+    {
+      "character": "中",
+      "start_time": 6.137,
+      "end_time": 6.287
+    },
+    {
+      "character": "透",
+      "start_time": 6.287,
+      "end_time": 6.508
+    },
+    {
+      "character": "露",
+      "start_time": 6.508,
+      "end_time": 6.662
+    },
+    {
+      "character": "对",
+      "start_time": 6.662,
+      "end_time": 6.824
+    },
+    {
+      "character": "僵",
+      "start_time": 6.824,
+      "end_time": 6.987
     },
     {
       "character": "神",
-      "start_time": 5.07,
-      "end_time": 5.362
+      "start_time": 6.987,
+      "end_time": 7.216
     },
     {
-      "character": "色",
-      "start_time": 5.362,
-      "end_time": 5.545
+      "character": "一",
+      "start_time": 7.216,
+      "end_time": 7.441
     },
     {
-      "character": "轻",
-      "start_time": 5.545,
-      "end_time": 5.762
+      "character": "族",
+      "start_time": 7.441,
+      "end_time": 7.612
     },
     {
-      "character": "松",
-      "start_time": 5.762,
-      "end_time": 5.941
+      "character": "的",
+      "start_time": 7.612,
+      "end_time": 7.691
+    },
+    {
+      "character": "担",
+      "start_time": 7.691,
+      "end_time": 7.874
+    },
+    {
+      "character": "忧",
+      "start_time": 7.874,
+      "end_time": 8.041
     },
     {
       "character": "。",
-      "start_time": 5.941,
-      "end_time": 6.1
+      "start_time": 8.041,
+      "end_time": 8.2
     }
   ],
-  "generated_at": "2025-08-27T22:43:24.695880"
+  "generated_at": "2025-08-30T22:45:28.802909"
 }

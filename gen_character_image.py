@@ -12,8 +12,7 @@ import sys
 import base64
 import json
 import time
-from config.prompt_config import ART_STYLES
-from config.config import STORY_STYLE, IMAGE_TWO_CONFIG
+from config.config import build_character_prompt, IMAGE_TWO_CONFIG
 from volcengine.visual.VisualService import VisualService
 
 def parse_character_info(narration_file_path):
@@ -360,7 +359,7 @@ def save_task_info(task_id, task_info, tasks_dir):
     
     print(f"任务信息已保存: {task_file}")
 
-def generate_character_image_async(prompt, output_path, character_name, style=None, chapter_path=None, max_retries=3):
+def generate_character_image_async(prompt, output_path, character_name, chapter_path=None, max_retries=3):
     """
     异步生成角色图片
     
@@ -368,7 +367,6 @@ def generate_character_image_async(prompt, output_path, character_name, style=No
         prompt: 图片描述
         output_path: 输出文件路径
         character_name: 角色名称
-        style: 艺术风格，如果为None则使用配置文件中的默认风格
         chapter_path: 章节路径，用于保存任务信息
         max_retries: 最大重试次数
     
@@ -392,19 +390,10 @@ def generate_character_image_async(prompt, output_path, character_name, style=No
             visual_service.set_ak(IMAGE_TWO_CONFIG['access_key'])
             visual_service.set_sk(IMAGE_TWO_CONFIG['secret_key'])
             
-            # 获取风格设置
-            if style is None:
-                style = IMAGE_TWO_CONFIG.get('default_style', 'manga')
-            
-            style_config = ART_STYLES.get(style, ART_STYLES['manga'])
-            style_prompt = style_config.get('description', style_config)
-            
-            print(f"正在异步生成{style}风格角色图片: {character_name}")
+            print(f"正在异步生成角色图片: {character_name}")
             
             # 构建完整的prompt
-            full_prompt = "以下内容为描述生成图片\n\
-                 人物着装：圆领袍\n领口：高领，圆领，立领，不要V领，不要衽领，不要交领，不要y型领，不要漏脖子以下的皮肤\n\
-                    2d漫画，细线条，厚涂，简洁，柔和的灯光，平面插画，动漫美感，数字技术技艺 \n\n" + style_prompt + "\n\n" + prompt + "\n\n"
+            full_prompt = build_character_prompt(prompt)
             
             if attempt == 0:  # 只在第一次尝试时打印完整prompt
                 print("这里是完整的prompt===>>>{}".format(full_prompt))
@@ -449,7 +438,6 @@ def generate_character_image_async(prompt, output_path, character_name, style=No
                     'character_name': safe_character_name,
                     'prompt': prompt,
                     'full_prompt': full_prompt,
-                    'style': style,
                     'submit_time': time.time(),
                     'status': 'submitted',
                     'attempt': attempt + 1
@@ -554,15 +542,8 @@ def generate_character_images_async(input_path):
             if drawing_style:
                 print(f"绘画风格: {drawing_style}")
             
-            # 获取绘画风格的model_prompt
-            style_prompt = ""
-            if drawing_style and drawing_style in STORY_STYLE:
-                style_config = STORY_STYLE[drawing_style]
-                if isinstance(style_config.get('model_prompt'), list):
-                    style_prompt = style_config['model_prompt'][0]  # 取第一个
-                else:
-                    style_prompt = style_config.get('model_prompt', '')
-                print(f"使用风格提示: {style_prompt}")
+            # 绘画风格配置已简化，不再使用复杂的风格提示
+            print(f"使用简化的风格配置")
             
             # 为每个角色异步生成图片
             for i, character in enumerate(characters, 1):
@@ -571,17 +552,8 @@ def generate_character_images_async(input_path):
                 character_gender = character.get('gender', '未知')
                 character_era = character.get('era', 'single')
                 
-                # 根据性别决定视角
-                if character_gender == '女':
-                    view_angle = "背部视角，看不到领口和正面"
-                else:
-                    view_angle = "正面视角，清晰面部特征"
-                
-                # 构建角色图片的prompt，加入风格提示
-                if style_prompt:
-                    character_prompt = f"单人肖像，{character_desc}，高质量角色设定图，{view_angle}，{style_prompt}"
-                else:
-                    character_prompt = f"单人肖像，{character_desc}，高质量角色设定图，{view_angle}，动漫风格"
+                # 构建角色图片的prompt
+                character_prompt = build_character_prompt(f"单人肖像，{character_desc}，高质量角色设定图")
                 
                 # 根据时代信息生成不同的显示名称和文件名
                 if character_era == 'modern':
@@ -600,7 +572,10 @@ def generate_character_images_async(input_path):
                 
                 # 生成图片（去掉文件名中的&符号，并加入时代标识）
                 safe_character_name = character_name.replace('&', '')
-                image_path = os.path.join(chapter_dir, f"{chapter_name}_character_{i:02d}_{safe_character_name}{era_suffix}.jpeg")
+                # 使用通用的角色图片命名方式，便于在整个章节中复用
+                images_dir = os.path.join(chapter_dir, "images")
+                os.makedirs(images_dir, exist_ok=True)
+                image_path = os.path.join(images_dir, f"{safe_character_name}{era_suffix}.jpeg")
                 
                 # 检查图片是否已存在
                 if os.path.exists(image_path):
