@@ -408,7 +408,7 @@ class ScriptGeneratorV2:
             print(f"生成第{chapter_num}章解说时出错：{e}")
             return ""
     
-    def validate_narration_content(self, narration: str, min_length: int = 1300, max_length: int = 1700) -> Tuple[bool, str]:
+    def validate_narration_content(self, narration: str, min_length: int = 1200, max_length: int = 1700) -> Tuple[bool, str]:
         """
         验证解说内容的质量（检查字数、自动修复XML标签闭合、移除不需要的标签、内容审查）
         
@@ -1220,7 +1220,7 @@ def main():
     parser.add_argument('--workers', '-w', type=int, default=5, help='最大并发线程数（默认：5）')
     parser.add_argument('--validate-only', action='store_true', help='仅验证现有章节，不生成新内容')
     parser.add_argument('--regenerate', action='store_true', help='重新生成无效章节')
-    parser.add_argument('--min-length', type=int, default=1300, help='解说文案最小长度（默认：1300）')
+    parser.add_argument('--min-length', type=int, default=1200, help='解说文案最小长度（默认：1200）')
     parser.add_argument('--max-length', type=int, default=1700, help='解说文案最大长度（默认：1700）')
     parser.add_argument('--max-retries', type=int, default=3, help='最大重试次数（默认：3）')
     

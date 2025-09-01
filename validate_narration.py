@@ -3,7 +3,7 @@
 """
 解说内容字数验证和自动改写脚本
 用于检查指定数据目录下所有章节的narration.txt文件中分镜1的第一个和第二个图片特写的解说内容字数
-确保字数控制在30-32字，并检查总解说内容字数在1300-1700字之间，自动调用模型API改写不符合要求的内容
+确保字数控制在30-32字，并检查总解说内容字数在1200-1700字之间，自动调用模型API改写不符合要求的内容
 
 使用方法:
 python validate_narration.py data/xxx
@@ -635,12 +635,12 @@ def validate_narration_file(narration_file_path, client=None, auto_rewrite=False
         # 检查总解说内容字数
         all_narrations = extract_all_narration_content(updated_content)
         total_char_count = sum(count_chinese_characters(narration) for narration in all_narrations)
-        total_valid = 1300 <= total_char_count <= 1700
+        total_valid = 1200 <= total_char_count <= 1700
         total_rewritten = False
         
         # 如果总字数不符合要求且启用自动改写
         if not total_valid and auto_rewrite and client:
-            print(f"  总解说内容字数不符合要求({total_char_count}字)，需要在1300-1700字之间，正在重写...")
+            print(f"  总解说内容字数不符合要求({total_char_count}字)，需要在1200-1700字之间，正在重写...")
             rewritten_narrations = rewrite_entire_narration_with_llm(client, all_narrations)
             
             if rewritten_narrations != all_narrations:
@@ -654,7 +654,7 @@ def validate_narration_file(narration_file_path, client=None, auto_rewrite=False
                 updated_content = temp_content
                 content_updated = True
                 total_char_count = sum(count_chinese_characters(narration) for narration in rewritten_narrations)
-                total_valid = 1300 <= total_char_count <= 1700
+                total_valid = 1200 <= total_char_count <= 1700
         
         results['total_narration'] = {
             'total_char_count': total_char_count,
