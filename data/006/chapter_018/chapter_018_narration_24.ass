@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_018 Narration 24 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.01,Default,,0,0,0,,无漏魔尊见状
+Dialogue: 0,0:00:01.29,0:00:02.07,Default,,0,0,0,,心中大惊
+Dialogue: 0,0:00:02.49,0:00:04.28,Default,,0,0,0,,他知道再这样下去众人都会
+Dialogue: 0,0:00:04.28,0:00:04.68,Default,,0,0,0,,陨落
+Dialogue: 0,0:00:05.24,0:00:06.17,Default,,0,0,0,,于是决定撤退
+Dialogue: 0,0:00:06.60,0:00:08.36,Default,,0,0,0,,带领剩余魔尊逃离此地

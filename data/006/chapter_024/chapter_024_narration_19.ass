@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_024 Narration 19 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.69,Default,,0,0,0,,中央鬼使向鬼主{\c&H0000FFFF&\b1}汇报{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.13,0:00:03.42,Default,,0,0,0,,称已联合其他势力
+Dialogue: 0,0:00:03.79,0:00:04.85,Default,,0,0,0,,扩大搜索范围
+Dialogue: 0,0:00:05.14,0:00:06.32,Default,,0,0,0,,不日将有{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}消息
+Dialogue: 0,0:00:06.63,0:00:08.04,Default,,0,0,0,,建议鬼主耐心等待

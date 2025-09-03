@@ -1,0 +1,20 @@
+[Script Info]
+Title: chapter_015 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.93,Default,,0,0,0,,九幽鬼圣被一名天将追杀
+Dialogue: 0,0:00:02.40,0:00:03.12,Default,,0,0,0,,狼狈逃窜
+Dialogue: 0,0:00:03.53,0:00:05.09,Default,,0,0,0,,嘴角却露出诡异笑容
+Dialogue: 0,0:00:05.50,0:00:07.50,Default,,0,0,0,,将敌人引向早已布好的陷阱

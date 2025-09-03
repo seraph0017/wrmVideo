@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_001 Narration 22 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏扬{\c&H00FFFFFF&\b0}发现暴鳄
+Dialogue: 0,0:00:01.48,0:00:04.20,Default,,0,0,0,,遂{\c&H0000FFFF&\b1}阳江{\c&H00FFFFFF&\b0}岸边白天晴天略微
+Dialogue: 0,0:00:04.20,0:00:05.53,Default,,0,0,0,,浑浊的{\c&H0000FFFF&\b1}江水{\c&H00FFFFFF&\b0}旁趴着
+Dialogue: 0,0:00:05.53,0:00:07.96,Default,,0,0,0,,七只成年暴鳄{\c&H0000FFFF&\b1}长度{\c&H00FFFFFF&\b0}近两米
+Dialogue: 0,0:00:08.42,0:00:10.94,Default,,0,0,0,,背有乌青色鳞甲{\c&H0000FFFF&\b1}苏扬{\c&H00FFFFFF&\b0}刚抬眼
+Dialogue: 0,0:00:10.94,0:00:13.19,Default,,0,0,0,,就看到它们神情略带惊讶

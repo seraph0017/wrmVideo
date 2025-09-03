@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_021 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.90,Default,,0,0,0,,商纣王立于{\c&H0000FFFF&\b1}青丘山{\c&H00FFFFFF&\b0}上空
+Dialogue: 0,0:00:02.37,0:00:03.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄色{\c&H00FFFFFF&\b0}龙袍加身
+Dialogue: 0,0:00:03.92,0:00:04.87,Default,,0,0,0,,紫金冠巍峨
+Dialogue: 0,0:00:05.22,0:00:06.52,Default,,0,0,0,,周身圣人威压肆虐
+Dialogue: 0,0:00:06.83,0:00:08.81,Default,,0,0,0,,下方{\c&H0000FFFF&\b1}青丘{\c&H00FFFFFF&\b0}族人瑟瑟发抖
+Dialogue: 0,0:00:09.14,0:00:09.76,Default,,0,0,0,,不敢直视

@@ -290,18 +290,92 @@ def extract_closeup_characters(content):
     
     return closeup_characters
 
-def generate_character_definition(character_name):
+def generate_character_definition(character_name, context_content=""):
     """
-    为缺失的角色生成默认的角色定义
+    为缺失的角色生成默认的角色定义，根据角色名称和上下文内容智能推断性别和外貌特征
     
     Args:
         character_name (str): 角色姓名
+        context_content (str): 相关的解说内容和图片描述，用于推断角色特征
         
     Returns:
         str: 角色定义的XML格式字符串
     """
-    # 根据角色名称生成基本的角色定义
-    character_def = f"""<角色>
+    # 根据角色名称和上下文推断性别
+    def infer_gender(name, context):
+        # 女性相关关键词
+        female_keywords = ['天女', '仙女', '公主', '娘娘', '夫人', '小姐', '姑娘', '妃', '后', '嫔', 
+                          '美人', '佳人', '女', '妹', '姐', '母', '婆', '奶', '嫂', '媳', '姨', '姑',
+                          '她', '女子', '女人', '女性', '少女', '女童', '女孩', '女儿', '女士']
+        # 男性相关关键词
+        male_keywords = ['王', '帝', '君', '公', '侯', '爷', '老爷', '少爷', '大人', '先生', 
+                        '将军', '元帅', '统领', '长老', '掌门', '宗主', '祖师', '真人', '道长',
+                        '他', '男子', '男人', '男性', '少年', '男童', '男孩', '儿子', '男士']
+        
+        # 首先检查角色名称
+        for keyword in female_keywords:
+            if keyword in name:
+                return 'Female'
+        
+        for keyword in male_keywords:
+            if keyword in name:
+                return 'Male'
+        
+        # 然后检查上下文内容
+        context_lower = context.lower()
+        female_context_score = 0
+        male_context_score = 0
+        
+        # 在上下文中查找与该角色相关的性别线索
+        for keyword in female_keywords:
+            if keyword in context and name in context:
+                # 检查关键词和角色名是否在相近位置
+                name_pos = context.find(name)
+                keyword_pos = context.find(keyword)
+                if abs(name_pos - keyword_pos) < 50:  # 在50个字符范围内
+                    female_context_score += 1
+        
+        for keyword in male_keywords:
+            if keyword in context and name in context:
+                name_pos = context.find(name)
+                keyword_pos = context.find(keyword)
+                if abs(name_pos - keyword_pos) < 50:
+                    male_context_score += 1
+        
+        # 根据上下文评分决定性别
+        if female_context_score > male_context_score:
+            return 'Female'
+        elif male_context_score > female_context_score:
+            return 'Male'
+        
+        # 默认返回Male
+        return 'Male'
+    
+    # 根据性别生成对应的外貌和服装
+    gender = infer_gender(character_name, context_content)
+    
+    if gender == 'Female':
+        # 女性角色的外貌和服装
+        character_def = f"""<角色>
+<姓名>{character_name}</姓名>
+<性别>Female</性别>
+<年龄段>21-30_YoungAdult</年龄段>
+<外貌特征>
+<发型>长发，发髻</发型>
+<发色>黑色</发色>
+<面部特征>容貌秀美，眼神温婉</面部特征>
+<身材特征>身材窈窕，体态优雅</身材特征>
+<特殊标记>无</特殊标记>
+</外貌特征>
+<服装风格>
+<上衣>古代女装，仙裙或宫装，色彩淡雅</上衣>
+<下装>长裙，飘逸</下装>
+<配饰>发饰，玉佩等精美饰品</配饰>
+</服装风格>
+</角色>"""
+    else:
+        # 男性角色的外貌和服装
+        character_def = f"""<角色>
 <姓名>{character_name}</姓名>
 <性别>Male</性别>
 <年龄段>31-45_MiddleAged</年龄段>
@@ -552,7 +626,22 @@ def validate_narration_file(narration_file_path, client=None, auto_rewrite=False
                 next_role_number = max([int(num) for num in existing_role_numbers]) + 1 if existing_role_numbers else 1
                 
                 for char_name in set(invalid_characters):  # 去重
-                    char_def = generate_character_definition(char_name)
+                    # 提取与该角色相关的上下文内容（解说内容和图片描述）
+                    context_content = ""
+                    
+                    # 查找包含该角色名的解说内容
+                    narration_pattern = r'<解说内容>([^<]*?' + re.escape(char_name) + r'[^<]*?)</解说内容>'
+                    narration_matches = re.findall(narration_pattern, updated_content, re.DOTALL)
+                    if narration_matches:
+                        context_content += " ".join(narration_matches)
+                    
+                    # 查找包含该角色名的图片描述
+                    image_desc_pattern = r'<图片描述>([^<]*?' + re.escape(char_name) + r'[^<]*?)</图片描述>'
+                    image_desc_matches = re.findall(image_desc_pattern, updated_content, re.DOTALL)
+                    if image_desc_matches:
+                        context_content += " " + " ".join(image_desc_matches)
+                    
+                    char_def = generate_character_definition(char_name, context_content)
                     # 添加角色编号
                     char_def = char_def.replace('<角色>', f'<角色{next_role_number}>')
                     char_def = char_def.replace('</角色>', f'</角色{next_role_number}>')

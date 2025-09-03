@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_007 Narration 26 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}立于山巅
+Dialogue: 0,0:00:01.35,0:00:02.12,Default,,0,0,0,,青袍猎猎
+Dialogue: 0,0:00:02.52,0:00:03.60,Default,,0,0,0,,望着东方天际
+Dialogue: 0,0:00:03.85,0:00:04.63,Default,,0,0,0,,眼神深邃
+Dialogue: 0,0:00:05.00,0:00:05.79,Default,,0,0,0,,似有感应
+Dialogue: 0,0:00:06.15,0:00:07.70,Default,,0,0,0,,狼祖气息若隐若现
+Dialogue: 0,0:00:08.02,0:00:09.02,Default,,0,0,0,,杀机暗藏

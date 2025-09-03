@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_029 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}白起{\c&H00FFFFFF&\b0}画戟斜指地面
+Dialogue: 0,0:00:01.73,0:00:02.73,Default,,0,0,0,,黑色劲装浴血
+Dialogue: 0,0:00:03.24,0:00:05.37,Default,,0,0,0,,周围躺倒一片混沌魔神尸体
+Dialogue: 0,0:00:05.82,0:00:07.17,Default,,0,0,0,,正警惕地观察四周
+Dialogue: 0,0:00:07.47,0:00:08.73,Default,,0,0,0,,寻找下一个目标

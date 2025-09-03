@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_008 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.85,Default,,0,0,0,,天香狐祖化身{\c&H0000FFFF&\b1}九尾{\c&H00FFFFFF&\b0}天狐狐火
+Dialogue: 0,0:00:02.85,0:00:04.27,Default,,0,0,0,,燎原焚烧敌军
+Dialogue: 0,0:00:04.62,0:00:07.47,Default,,0,0,0,,她媚笑连连{\c&H0000FFFF&\b1}九尾{\c&H00FFFFFF&\b0}摆动牵制
+Dialogue: 0,0:00:07.47,0:00:09.43,Default,,0,0,0,,多名鬼族强者为友军
+Dialogue: 0,0:00:09.43,0:00:10.29,Default,,0,0,0,,争取时间

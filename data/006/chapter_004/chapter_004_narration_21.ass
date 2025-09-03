@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_004 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}巡视军营
+Dialogue: 0,0:00:01.39,0:00:02.37,Default,,0,0,0,,与士兵交谈
+Dialogue: 0,0:00:02.73,0:00:04.86,Default,,0,0,0,,深蓝色锦袍在士兵中穿行
+Dialogue: 0,0:00:05.32,0:00:06.55,Default,,0,0,0,,他询问士兵状况
+Dialogue: 0,0:00:06.89,0:00:07.58,Default,,0,0,0,,鼓舞士气
+Dialogue: 0,0:00:07.86,0:00:09.44,Default,,0,0,0,,似与士兵同甘共苦

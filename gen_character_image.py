@@ -48,10 +48,16 @@ def parse_character_info(narration_file_path):
             for char_num, char_content in character_matches:
                 character_info = {}
                 
-                # 提取姓名
-                name_match = re.search(r'<姓名>([^<]+)</姓名>', char_content)
+                # 提取姓名（支持嵌套的<角色姓名>标签）
+                name_match = re.search(r'<姓名>(.*?)</姓名>', char_content, re.DOTALL)
                 if name_match:
-                    character_info['name'] = name_match.group(1).strip()
+                    name_content = name_match.group(1).strip()
+                    # 检查是否有嵌套的<角色姓名>标签
+                    role_name_match = re.search(r'<角色姓名>([^<]+)</角色姓名>', name_content)
+                    if role_name_match:
+                        character_info['name'] = role_name_match.group(1).strip()
+                    else:
+                        character_info['name'] = name_content
                 else:
                     character_info['name'] = f'角色{char_num}'
                 

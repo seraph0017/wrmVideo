@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_012 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.86,Default,,0,0,0,,摇光天女来到{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}身边
+Dialogue: 0,0:00:02.29,0:00:04.75,Default,,0,0,0,,浅粉色圆领长衫{\c&H0000FFFF&\b1}长发{\c&H00FFFFFF&\b0}在夜风
+Dialogue: 0,0:00:04.75,0:00:05.25,Default,,0,0,0,,中飘动
+Dialogue: 0,0:00:05.78,0:00:08.20,Default,,0,0,0,,她与{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}并肩看星沉默不语
+Dialogue: 0,0:00:08.53,0:00:09.37,Default,,0,0,0,,气氛{\c&H0000FFFF&\b1}宁静{\c&H00FFFFFF&\b0}

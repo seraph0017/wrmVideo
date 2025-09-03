@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_014 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.56,Default,,0,0,0,,白蒹葭在书房中作画神情
+Dialogue: 0,0:00:02.56,0:00:02.88,Default,,0,0,0,,专注
+Dialogue: 0,0:00:03.38,0:00:05.84,Default,,0,0,0,,她的笔下是一幅{\c&H0000FFFF&\b1}山水图{\c&H00FFFFFF&\b0}笔触
+Dialogue: 0,0:00:05.84,0:00:08.99,Default,,0,0,0,,细腻色彩淡雅周围{\c&H0000FFFF&\b1}文房四宝{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.99,0:00:11.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}齐全{\c&H00FFFFFF&\b0}充满书香气息

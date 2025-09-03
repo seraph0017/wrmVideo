@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_025 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.65,Default,,0,0,0,,洞天之内
+Dialogue: 0,0:00:00.98,0:00:01.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}太阳{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.78,0:00:03.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}太阴{\c&H00FFFFFF&\b0}尊者盘膝相对
+Dialogue: 0,0:00:03.61,0:00:05.04,Default,,0,0,0,,头顶{\c&H0000FFFF&\b1}阴阳{\c&H00FFFFFF&\b0}宝镜旋转
+Dialogue: 0,0:00:05.49,0:00:06.63,Default,,0,0,0,,周身元气如潮
+Dialogue: 0,0:00:06.97,0:00:08.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝镜{\c&H00FFFFFF&\b0}光芒大盛
+Dialogue: 0,0:00:08.39,0:00:09.44,Default,,0,0,0,,隐有突破之兆

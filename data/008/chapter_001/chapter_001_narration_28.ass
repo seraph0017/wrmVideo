@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_001 Narration 28 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.10,Default,,0,0,0,,风刃威力惊人
+Dialogue: 0,0:00:01.43,0:00:04.27,Default,,0,0,0,,遂{\c&H0000FFFF&\b1}阳江{\c&H00FFFFFF&\b0}岸边白天晴天暴风
+Dialogue: 0,0:00:04.27,0:00:06.66,Default,,0,0,0,,之鹰扇动翅膀十数道青色
+Dialogue: 0,0:00:06.66,0:00:09.02,Default,,0,0,0,,风刃狂轰滥炸{\c&H0000FFFF&\b1}苏扬{\c&H00FFFFFF&\b0}看着
+Dialogue: 0,0:00:09.02,0:00:11.13,Default,,0,0,0,,暴鳄鳞甲像纸糊般被击破
+Dialogue: 0,0:00:11.47,0:00:14.63,Default,,0,0,0,,鲜血流淌眼神明亮关注战斗
+Dialogue: 0,0:00:14.63,0:00:14.96,Default,,0,0,0,,进展

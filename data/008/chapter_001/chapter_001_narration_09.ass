@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_001 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}周云健{\c&H00FFFFFF&\b0}揭秘小队传统
+Dialogue: 0,0:00:02.24,0:00:04.86,Default,,0,0,0,,营地空地上白天{\c&H0000FFFF&\b1}晴天{\c&H00FFFFFF&\b0}这位
+Dialogue: 0,0:00:04.86,0:00:07.07,Default,,0,0,0,,中年队友笑着解释欺负新人
+Dialogue: 0,0:00:07.07,0:00:09.06,Default,,0,0,0,,是一队传统化解{\c&H0000FFFF&\b1}桑岳{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:09.06,0:00:11.87,Default,,0,0,0,,不爽他眼角细纹显露语气
+Dialogue: 0,0:00:11.87,0:00:14.06,Default,,0,0,0,,温和尽显资历深的沉稳

@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_012 Narration 24 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}来到长老院深色圆领
+Dialogue: 0,0:00:02.08,0:00:03.69,Default,,0,0,0,,长袍神色轻松
+Dialogue: 0,0:00:04.22,0:00:05.42,Default,,0,0,0,,他听取定方道人和
+Dialogue: 0,0:00:05.42,0:00:06.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}辛芦{\c&H00FFFFFF&\b0}汇报对两人的
+Dialogue: 0,0:00:06.96,0:00:09.52,Default,,0,0,0,,工作表示满意决定举办宴会
+Dialogue: 0,0:00:09.52,0:00:09.88,Default,,0,0,0,,庆祝

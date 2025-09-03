@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_001 Narration 30 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.49,Default,,0,0,0,,两头暴鳄冲至面前
+Dialogue: 0,0:00:01.90,0:00:04.66,Default,,0,0,0,,遂{\c&H0000FFFF&\b1}阳江{\c&H00FFFFFF&\b0}岸边白天晴天两只
+Dialogue: 0,0:00:04.66,0:00:05.79,Default,,0,0,0,,侥幸躲过风刃的
+Dialogue: 0,0:00:05.79,0:00:08.06,Default,,0,0,0,,暴鳄冲到苏扬面前{\c&H0000FFFF&\b1}张开{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.06,0:00:11.02,Default,,0,0,0,,血盆大口{\c&H0000FFFF&\b1}苏扬{\c&H00FFFFFF&\b0}不仅不惧反而
+Dialogue: 0,0:00:11.02,0:00:13.55,Default,,0,0,0,,歪嘴一笑大吼来得好准备
+Dialogue: 0,0:00:13.55,0:00:14.31,Default,,0,0,0,,正面应对

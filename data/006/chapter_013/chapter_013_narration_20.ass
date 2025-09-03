@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_013 Narration 20 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.24,Default,,0,0,0,,悬河魔尊建议调集更多混沌
+Dialogue: 0,0:00:02.24,0:00:02.65,Default,,0,0,0,,魔神
+Dialogue: 0,0:00:02.97,0:00:03.62,Default,,0,0,0,,组成大军
+Dialogue: 0,0:00:03.97,0:00:05.79,Default,,0,0,0,,一举攻破荒古世界的防御
+Dialogue: 0,0:00:06.26,0:00:07.81,Default,,0,0,0,,其他魔尊纷纷赞同
+Dialogue: 0,0:00:08.06,0:00:08.84,Default,,0,0,0,,摩拳擦掌

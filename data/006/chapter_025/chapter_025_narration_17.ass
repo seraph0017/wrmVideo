@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_025 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.22,Default,,0,0,0,,纳兰萩背身而立
+Dialogue: 0,0:00:01.64,0:00:02.50,Default,,0,0,0,,圆领长裙
+Dialogue: 0,0:00:02.87,0:00:04.49,Default,,0,0,0,,万劫门户在身后旋转
+Dialogue: 0,0:00:04.91,0:00:06.14,Default,,0,0,0,,数名鬼使被吸入
+Dialogue: 0,0:00:06.47,0:00:07.34,Default,,0,0,0,,惨叫渐息
+Dialogue: 0,0:00:07.75,0:00:08.91,Default,,0,0,0,,门户光芒更亮
+Dialogue: 0,0:00:09.27,0:00:10.54,Default,,0,0,0,,周围空间扭曲

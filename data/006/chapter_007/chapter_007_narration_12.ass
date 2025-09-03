@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_007 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}天香狐祖{\c&H00FFFFFF&\b0}祭出丝带
+Dialogue: 0,0:00:01.75,0:00:03.52,Default,,0,0,0,,橙色光芒缠绕狼王卡特
+Dialogue: 0,0:00:03.79,0:00:05.46,Default,,0,0,0,,摄魂{\c&H0000FFFF&\b1}美人图{\c&H00FFFFFF&\b0}光芒大放
+Dialogue: 0,0:00:05.90,0:00:07.02,Default,,0,0,0,,卡特眼神迷离
+Dialogue: 0,0:00:07.37,0:00:08.14,Default,,0,0,0,,动作迟滞
