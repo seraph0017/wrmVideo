@@ -1,8 +1,16 @@
 # 🎬 AI视频生成系统
 
-一个基于AI的自动化视频生成系统，能够将小说文本转换为带有解说、图片和字幕的视频内容。系统集成了豆包大模型、火山引擎TTS和图像生成服务，实现从文本到视频的全自动化流程。
+一个基于AI的自动化视频生成系统，能够将小说文本转换为带有解说、图片和字幕的视频内容。系统集成了豆包大模型、火山引擎TTS和图像生成服务，实现从文本到视频的全自动化流程。同时提供Web管理界面，方便用户管理和监控视频生成任务。
 
 ## ✨ 最新更新
+
+- 🌐 **Web管理界面**: 新增Django Web应用，提供视频生成任务的管理和监控：
+  - **Bootstrap 5集成**: 使用django-bootstrap5实现现代化、响应式的用户界面
+  - **任务管理**: 支持创建、查看和管理视频生成任务
+  - **系统监控**: 提供系统运行状态和任务进度的可视化展示
+  - **MySQL支持**: 使用MySQL数据库存储任务和系统数据
+  - **用户友好**: 直观的控制面板，方便操作和监控
+  - **移动适配**: 响应式设计，支持在各种设备上访问
 
 - 🎵 **音效系统优化**: 修改concat_narration_video.py中的默认音效设置：
   - **默认音效变更**: 将默认音效从bell_ring改为wind_gentle，提供更自然的背景音效
@@ -733,7 +741,24 @@ cp config/config.example.py config/config.py
 # 编辑 config/config.py，填入你的API密钥
 ```
 
-### 2. 配置化系统
+### 2. 启动Web管理界面
+
+```bash
+# 创建MySQL数据库
+mysql -u root -p -e "CREATE DATABASE wrm_video CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
+# 执行数据库迁移
+cd web
+python manage.py migrate
+
+# 启动Web服务器
+python manage.py runserver
+
+# 访问管理界面
+# 打开浏览器访问 http://127.0.0.1:8000/video/dashboard/
+```
+
+### 3. 配置化系统
 
 项目现在支持基于Jinja2模板的配置化系统，所有prompt和配置都可以通过模板进行管理：
 
@@ -762,7 +787,7 @@ script_gen = ScriptGenerator()
 script_gen.generate_script("小说内容", "output_dir")
 ```
 
-### 2. 基本使用
+### 4. 基本使用
 
 #### 完整流程（推荐）
 ```bash
