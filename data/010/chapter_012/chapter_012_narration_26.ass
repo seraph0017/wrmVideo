@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_012 Narration 26 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.29,Default,,0,0,0,,朱允熥开始削藩
+Dialogue: 0,0:00:01.77,0:00:02.87,Default,,0,0,0,,加强中央集权
+Dialogue: 0,0:00:03.12,0:00:03.82,Default,,0,0,0,,改革吏治
+Dialogue: 0,0:00:04.07,0:00:04.84,Default,,0,0,0,,推行新政
+Dialogue: 0,0:00:05.23,0:00:06.74,Default,,0,0,0,,朝堂之上君臣同心
+Dialogue: 0,0:00:07.10,0:00:08.18,Default,,0,0,0,,国力日渐强盛
+Dialogue: 0,0:00:08.53,0:00:09.70,Default,,0,0,0,,百姓{\c&H0000FFFF&\b1}安居乐业{\c&H00FFFFFF&\b0}

@@ -687,8 +687,8 @@ def process_all_data_directories(data_dir='data'):
         if not os.path.isdir(item_path):
             continue
         
-        # 检查是否是00x格式的目录
-        if not (item.startswith('00') and len(item) == 3 and item[2:].isdigit()):
+        # 检查是否是3位数字格式的目录（001, 002, ..., 010, 011, ...）
+        if not (len(item) == 3 and item.isdigit()):
             continue
         
         print(f"\n--- 处理数据集: {item} ---")

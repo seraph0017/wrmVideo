@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_014 Narration 16 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}九尾{\c&H00FFFFFF&\b0}天狐降临
+Dialogue: 0,0:00:01.52,0:00:04.20,Default,,0,0,0,,萧大炮白衣胜{\c&H0000FFFF&\b1}雪莲{\c&H00FFFFFF&\b0}步轻移至
+Dialogue: 0,0:00:04.20,0:00:04.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}孙府{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.91,0:00:05.67,Default,,0,0,0,,我们道场见
+Dialogue: 0,0:00:06.12,0:00:08.72,Default,,0,0,0,,白色圆领长裙随风飘动九条
+Dialogue: 0,0:00:08.72,0:00:11.14,Default,,0,0,0,,狐尾若隐若现气质清冷又
+Dialogue: 0,0:00:11.14,0:00:11.57,Default,,0,0,0,,神秘

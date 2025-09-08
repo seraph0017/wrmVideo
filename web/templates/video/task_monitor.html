@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celery任务监控</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .status-time {
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title .icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        .task-card {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .task-name {
+            font-weight: bold;
+            color: #495057;
+        }
+        .task-id {
+            font-family: monospace;
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .task-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            font-size: 0.9em;
+        }
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+        }
+        .detail-label {
+            font-weight: 500;
+            color: #6c757d;
+        }
+        .detail-value {
+            color: #495057;
+        }
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        .status-running {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .status-failed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .no-tasks {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            padding: 40px;
+        }
+        .refresh-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 20px;
+        }
+        .refresh-btn:hover {
+            background: #0056b3;
+        }
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 15px;
+        }
+        .stat-title {
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        .stat-value {
+            font-size: 1.2em;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Celery任务监控</h1>
+            <div class="status-time">最后更新: {{ current_time }}</div>
+        </div>
+
+        <button class="refresh-btn" onclick="location.reload()">🔄 刷新页面</button>
+
+        {% if error %}
+        <div class="error-message">
+            <strong>错误:</strong> {{ error }}
+        </div>
+        {% else %}
+
+        <!-- 活跃任务 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">🚀</span>
+                活跃任务
+            </div>
+            {% if active_tasks %}
+                {% for worker, tasks in active_tasks.items %}
+                    <h4>Worker: {{ worker }}</h4>
+                    {% if tasks %}
+                        {% for task in tasks %}
+                        <div class="task-card">
+                            <div class="task-header">
+                                <div class="task-name">{{ task.name }}</div>
+                                <div class="task-id">{{ task.id|slice:":8" }}...</div>
+                            </div>
+                            <div class="task-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">参数:</span>
+                                    <span class="detail-value">{{ task.args|default:"无" }}</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">开始时间:</span>
+                                    <span class="detail-value">{{ task.time_start|floatformat:0 }}</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">进程ID:</span>
+                                    <span class="detail-value">{{ task.worker_pid }}</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">状态:</span>
+                                    <span class="status-badge status-running">运行中</span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="no-tasks">该Worker当前空闲</div>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <div class="no-tasks">当前没有活跃任务</div>
+            {% endif %}
+        </div>
+
+        <!-- 已注册任务 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">📋</span>
+                已注册任务
+            </div>
+            {% if registered_tasks %}
+                {% for worker, tasks in registered_tasks.items %}
+                    <h4>Worker: {{ worker }}</h4>
+                    <div class="task-details">
+                        {% for task in tasks %}
+                        <div class="detail-item">
+                            <span class="detail-value">{{ task }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-tasks">无法获取已注册任务</div>
+            {% endif %}
+        </div>
+
+        <!-- 统计信息 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">📊</span>
+                Worker统计信息
+            </div>
+            {% if stats %}
+                <div class="stats-grid">
+                    {% for worker, worker_stats in stats.items %}
+                    <div class="stat-card">
+                        <div class="stat-title">{{ worker }}</div>
+                        <div class="detail-item">
+                            <span class="detail-label">总任务数:</span>
+                            <span class="stat-value">{{ worker_stats.total|default:"N/A" }}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">进程池大小:</span>
+                            <span class="stat-value">{{ worker_stats.pool.max_concurrency|default:"N/A" }}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">运行时间:</span>
+                            <span class="stat-value">{{ worker_stats.clock|default:"N/A" }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="no-tasks">无法获取统计信息</div>
+            {% endif %}
+        </div>
+
+        {% endif %}
+    </div>
+
+    <script>
+        // 自动刷新页面
+        setInterval(function() {
+            location.reload();
+        }, 30000); // 每30秒刷新一次
+    </script>
+</body>
+</html>

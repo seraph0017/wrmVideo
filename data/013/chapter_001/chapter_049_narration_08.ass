@@ -1,0 +1,15 @@
+[Script Info]
+Title: Auto-generated Subtitle
+ScriptType: v4.00+
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.26,Default,,0,0,0,,城主府内明月阁长老白琳琳
+Dialogue: 0,0:00:02.26,0:00:04.62,Default,,0,0,0,,正汇报案情突然感受到诡异
+Dialogue: 0,0:00:04.62,0:00:07.38,Default,,0,0,0,,剑意她惊觉城中有恐怖剑修
+Dialogue: 0,0:00:07.38,0:00:09.85,Default,,0,0,0,,下令召回弟子自己亲自外出
+Dialogue: 0,0:00:09.85,0:00:10.32,Default,,0,0,0,,寻人

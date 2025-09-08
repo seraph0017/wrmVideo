@@ -1,0 +1,1636 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}{{ chapter.title }} | {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">章节详情</h5>
+                <div>
+                    <a href="{% url 'video:chapter_list' %}" class="btn btn-light btn-sm">返回列表</a>
+                    <a href="{% url 'admin:video_chapter_change' chapter.id %}" class="btn btn-warning btn-sm">编辑</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>基本信息</h4>
+                        <table class="table">
+                            <tr>
+                                <th style="width: 150px;">ID</th>
+                                <td>{{ chapter.id }}</td>
+                            </tr>
+                            <tr>
+                                <th>章节名</th>
+                                <td>{{ chapter.title }}</td>
+                            </tr>
+                            <tr>
+                                <th>所属小说</th>
+                                <td><a href="{% url 'video:novel_detail' chapter.novel.id %}">{{ chapter.novel.name }}</a></td>
+                            </tr>
+                            <tr>
+                                <th>字数</th>
+                                <td>{{ chapter.word_count }}</td>
+                            </tr>
+                            <tr>
+                                <th>风格</th>
+                                <td>{{ chapter.format }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>视频信息</h4>
+                        <table class="table">
+                            <tr>
+                                <th style="width: 150px;">视频状态</th>
+                                <td>
+                                    {% if chapter.video_path %}
+                                    <span class="badge bg-success">已生成</span>
+                                    {% else %}
+                                    <span class="badge bg-warning">未生成</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% if chapter.video_path %}
+                            <tr>
+                                <th>视频路径</th>
+                                <td>{{ chapter.video_path }}</td>
+                            </tr>
+                            <tr>
+                                <th>视频预览</th>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm">查看视频</a>
+                                </td>
+                            </tr>
+                            {% endif %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 角色列表 -->
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">出场角色</h5>
+                {% if characters %}
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-light btn-sm" onclick="toggleSelectAll()">全选/反选</button>
+                    <button type="button" class="btn btn-warning btn-sm" onclick="batchGenerateImages()" id="batchGenerateBtn" disabled>批量生成图片</button>
+                </div>
+                {% endif %}
+            </div>
+            <div class="card-body">
+                {% if characters %}
+                <div class="row g-4">
+                    {% for character in characters %}
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card character-card h-100 shadow-sm border-0" data-character-id="{{ character.id }}" style="transition: all 0.3s ease; border-radius: 12px;">
+                            <!-- 卡片头部 -->
+                            <div class="card-header text-white border-0 d-flex align-items-center justify-content-between" style="border-radius: var(--border-radius) var(--border-radius) 0 0;">
+                                <div class="d-flex align-items-center">
+                                    <input type="checkbox" class="form-check-input character-checkbox me-3" 
+                                           value="{{ character.id }}" onchange="updateBatchButton()">
+                                    <h5 class="card-title mb-0 fw-bold">{{ character.name }}</h5>
+                                </div>
+                                <div class="character-status">
+                                    <i class="fas fa-user-circle" style="font-size: 1.2em; opacity: 0.8;"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body p-4">
+                                <div class="row g-3">
+                                    <!-- 左侧：角色信息和操作 -->
+                                    <div class="col-md-7">
+                                        <!-- 角色信息 -->
+                                        <div class="character-info mb-4">
+                                            <div class="row g-2 mb-3">
+                                                <div class="col-6">
+                                                    <div class="info-item p-3 rounded" style="border-left: 4px solid var(--primary-light);">
+                                                        <small class="text-muted d-block mb-1">性别</small>
+                                                        <span class="fw-bold fs-6">{{ character.gender }}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="info-item p-3 rounded" style="border-left: 4px solid var(--primary-dark);">
+                                                        <small class="text-muted d-block mb-1">年龄段</small>
+                                                        <span class="fw-bold fs-6">{{ character.age_group }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            {% if character.face_features %}
+                                            <div class="face-features">
+                                                <div class="info-item p-3 rounded" style="border-left: 4px solid var(--success-color);">
+                                                    <small class="text-muted d-block mb-2">面部特征</small>
+                                                    <p class="mb-0" style="line-height: 1.5; color: var(--text-secondary); font-size: 0.9rem;">{{ character.face_features|truncatechars:120 }}</p>
+                                                </div>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                        
+                                        <!-- 操作按钮 -->
+                                        <div class="character-actions">
+                                            <div class="d-grid gap-2">
+                                                <a href="{% url 'video:character_detail' character.id %}" class="btn btn-outline-primary">
+                                                    <i class="fas fa-eye me-2"></i>查看详细信息
+                                                </a>
+                                                <button type="button" class="btn btn-primary generate-image-btn" 
+                                                        data-character-id="{{ character.id }}" 
+                                                        data-character-name="{{ character.name|escapejs }}" 
+                                                        onclick="openGenerateImageModal(this.dataset.characterId, this.dataset.characterName)"
+                                                        style="background: var(--primary-gradient); border: none;">
+                                                    <span class="btn-text">
+                                                        <i class="fas fa-magic me-2"></i>生成角色图片
+                                                    </span>
+                                                    <span class="btn-loading d-none">
+                                                        <i class="fas fa-spinner fa-spin me-2"></i>生成中...
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 右侧：角色图片 -->
+                                    <div class="col-md-5">
+                                        <div class="character-thumbnail-container position-relative h-100 d-flex align-items-center justify-content-center">
+                                            <div class="character-thumbnail" style="width: 200px; height: 200px; border-radius: var(--border-radius-lg); display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer;" onclick="openImageModal('thumbnail-{{ character.id }}', '{{ character.name|escapejs }}')">
+                                                <img id="thumbnail-{{ character.id }}" src="/static/images/default_character.svg" alt="{{ character.name }}" 
+                                                     style="width: 100%; height: 100%; object-fit: cover; border-radius: calc(var(--border-radius-lg) - 4px); transition: transform 0.3s ease;"
+                                                     onerror="this.src='/static/images/default_character.svg'"
+                                                     title="{{ character.name }} - 点击放大查看"
+                                                     onmouseover="this.style.transform='scale(1.05)'"
+                                                     onmouseout="this.style.transform='scale(1)'">
+                                            </div>
+                                            <!-- 状态指示器 -->
+                                            <div class="position-absolute top-0 end-0" style="transform: translate(25%, -25%);">
+                                                <span class="badge bg-success rounded-pill d-flex align-items-center justify-content-center" style="width: 24px; height: 24px;">
+                                                    <i class="fas fa-check" style="font-size: 0.8em;"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="alert alert-info">该章节暂无角色数据</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 解说列表 -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">解说列表</h5>
+                <a href="{% url 'admin:video_narration_add' %}" class="btn btn-light btn-sm">添加解说</a>
+            </div>
+            <div class="card-body">
+                {% if narrations %}
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>分镜序号</th>
+                                <th>特写人物</th>
+                                <th>解说内容</th>
+                                <th>音频播放</th>
+                                <th>字幕文件</th>
+                                <th>视频状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for narration in narrations %}
+                            <tr>
+                                <td>{{ narration.id }}</td>
+                                <td>{{ narration.scene_number }}</td>
+                                <td>{{ narration.featured_character }}</td>
+                                <td>
+                                    <div class="narration-content" title="{{ narration.narration }}">
+                                        {{ narration.narration|truncatechars:50 }}
+                                    </div>
+                                </td>
+                                <td>
+                                    {% if narration.narration_mp3_path %}
+                                    <div class="audio-player-container">
+                                        <audio controls class="narration-audio" style="width: 200px; height: 30px;" data-audio-path="{{ narration.narration_mp3_path }}">
+                                            您的浏览器不支持音频播放。
+                                        </audio>
+                                        <div class="audio-info mt-1">
+                                            <small class="text-success">
+                                                <i class="fas fa-check-circle"></i> 已生成
+                                            </small>
+                                        </div>
+                                    </div>
+                                    {% else %}
+                                    <span class="badge bg-warning">
+                                        <i class="fas fa-clock"></i> 未生成
+                                    </span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if narration.narration_mp3_path %}
+                                    <button class="btn btn-outline-info btn-sm" onclick="showNarrationSubtitle('{{ narration.scene_number }}')" title="查看字幕">
+                                        <i class="fas fa-closed-captioning"></i> 字幕
+                                    </button>
+                                    {% else %}
+                                    <span class="text-muted">-</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if narration.narration_mp4_path %}
+                                    <span class="badge bg-success">
+                                        <i class="fas fa-video"></i> 已生成
+                                    </span>
+                                    {% else %}
+                                    <span class="badge bg-warning">
+                                        <i class="fas fa-clock"></i> 未生成
+                                    </span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a href="{% url 'video:narration_detail' narration.id %}" class="btn btn-info btn-sm" title="查看详情">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a href="{% url 'admin:video_narration_change' narration.id %}" class="btn btn-warning btn-sm" title="编辑">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="alert alert-info">该章节暂无解说数据</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 音频生成和播放 -->
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">音频生成和播放</h5>
+                <button type="button" class="btn btn-light btn-sm" id="generateAudioBtn">
+                    <i class="fas fa-microphone"></i> 生成音频
+                </button>
+            </div>
+            <div class="card-body">
+                <!-- 音频生成状态 -->
+                <div id="audioGenerationStatus" class="alert alert-info" style="display: none;">
+                    <div class="d-flex align-items-center">
+                        <div class="spinner-border spinner-border-sm me-2" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <span id="audioStatusText">正在生成音频...</span>
+                    </div>
+                    <div class="progress mt-2">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" id="audioProgressBar"></div>
+                    </div>
+                </div>
+                
+                <!-- 音频文件列表 -->
+                <div id="audioFilesList">
+                    <div class="row" id="audioFilesContainer">
+                        <!-- 音频文件将通过JavaScript动态加载 -->
+                    </div>
+                </div>
+                
+                <!-- 无音频文件提示 -->
+                <div id="noAudioFiles" class="alert alert-warning">
+                    <i class="fas fa-info-circle"></i> 该章节暂无音频文件，请点击"生成音频"按钮开始生成。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ASS字幕查看模态框 -->
+<div class="modal fade" id="assSubtitleModal" tabindex="-1" aria-labelledby="assSubtitleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="assSubtitleModalLabel">ASS字幕文件</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <pre id="assSubtitleContent" class="bg-light p-3" style="max-height: 400px; overflow-y: auto; font-family: 'Courier New', monospace; font-size: 12px;"></pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="downloadAssBtn">下载ASS文件</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Narration字幕查看模态框 -->
+<div class="modal fade" id="narrationSubtitleModal" tabindex="-1" aria-labelledby="narrationSubtitleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="narrationSubtitleModalLabel">解说字幕文件</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <pre id="narrationSubtitleContent" class="bg-light p-3" style="max-height: 400px; overflow-y: auto; font-family: 'Courier New', monospace; font-size: 12px;"></pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="downloadNarrationAssBtn">下载字幕文件</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 生成角色图片模态框 -->
+<div class="modal fade" id="generateImageModal" tabindex="-1" aria-labelledby="generateImageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="generateImageModalLabel">生成角色图片</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="generateImageForm">
+                    {% csrf_token %}
+                    <input type="hidden" id="characterId" name="character_id">
+                    <input type="hidden" id="chapterId" name="chapter_id" value="{{ chapter.id }}">
+                    
+                    <div class="mb-3">
+                        <label for="characterName" class="form-label">角色名称</label>
+                        <input type="text" class="form-control" id="characterName" name="character_name" readonly>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="imageStyle" class="form-label">图片风格</label>
+                        <select class="form-select" id="imageStyle" name="image_style">
+                            <option value="realistic">写实风格</option>
+                            <option value="anime">动漫风格</option>
+                            <option value="cartoon">卡通风格</option>
+                            <option value="oil_painting">油画风格</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="imageQuality" class="form-label">图片质量</label>
+                        <select class="form-select" id="imageQuality" name="image_quality">
+                            <option value="standard">标准</option>
+                            <option value="hd">高清</option>
+                            <option value="ultra">超高清</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="imageCount" class="form-label">生成数量</label>
+                        <input type="number" class="form-control" id="imageCount" name="image_count" value="1" min="1" max="10">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="customPrompt" class="form-label">自定义提示词（可选）</label>
+                        <textarea class="form-control" id="customPrompt" name="custom_prompt" rows="3" placeholder="输入额外的描述信息..."></textarea>
+                    </div>
+                </form>
+                
+                <!-- 任务状态显示 -->
+                <div id="taskStatus" class="mt-3" style="display: none;">
+                    <div class="alert alert-info">
+                        <div class="d-flex align-items-center">
+                            <div class="spinner-border spinner-border-sm me-2" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <div>
+                                <strong>任务状态：</strong><span id="taskStatusText">正在生成角色图片...</span>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%" id="taskProgress"></div>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <small class="text-muted" id="taskLog">初始化任务...</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="generateImageBtn" onclick="generateCharacterImage()">开始生成</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let currentTaskId = null;
+let currentCharacterId = null;
+let statusCheckInterval = null;
+let batchTaskIds = []; // 存储批量任务的所有角色ID
+
+// 页面加载完成后加载所有角色缩略图和设置音频URL
+document.addEventListener('DOMContentLoaded', function() {
+    loadAllCharacterThumbnails();
+    setupAudioUrls();
+});
+
+// 设置音频文件的正确URL
+function setupAudioUrls() {
+    const audioElements = document.querySelectorAll('.narration-audio');
+    audioElements.forEach(audio => {
+        const audioPath = audio.dataset.audioPath;
+        if (audioPath) {
+            // 从路径中提取文件名
+            const filename = audioPath.split('/').pop();
+            // 构建API URL
+            const audioUrl = `/video/api/novels/{{ chapter.novel.id }}/chapters/{{ chapter.id }}/files/${filename}/`;
+            
+            // 直接设置audio元素的src属性而不是source元素
+            audio.src = audioUrl;
+            audio.preload = 'none'; // 不预加载，避免同时加载太多文件
+            
+            // 添加错误处理
+            audio.addEventListener('error', function(e) {
+                console.log(`音频加载失败: ${filename}`, e);
+                // 可以在这里添加重试逻辑或显示错误信息
+            });
+            
+            audio.addEventListener('loadstart', function() {
+                console.log(`开始加载音频: ${filename}`);
+            });
+        }
+    });
+}
+
+// 加载所有角色缩略图
+function loadAllCharacterThumbnails() {
+    const characterCards = document.querySelectorAll('.character-card');
+    characterCards.forEach(card => {
+        const characterId = card.dataset.characterId;
+        const thumbnailImg = document.getElementById(`thumbnail-${characterId}`);
+        if (thumbnailImg) {
+            loadCharacterThumbnail(characterId, thumbnailImg);
+        }
+    });
+}
+
+// 加载单个角色缩略图
+function loadCharacterThumbnail(characterId, imgElement) {
+    const url = `/video/api/character/${characterId}/thumbnail/?novel_id={{ chapter.novel.id }}&chapter_id={{ chapter.id }}`;
+    
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                if (data.has_image) {
+                    // 使用生成的图片
+                    imgElement.src = data.image_path;
+                    imgElement.title = `任务ID: ${data.task_id}`;
+                } else {
+                    // 使用默认图片
+                    imgElement.src = data.default_image;
+                    
+                    // 构建角色信息提示
+                    let titleText = '暂无生成图片';
+                    if (data.character_info) {
+                        const info = data.character_info;
+                        titleText = `${info.name} (${info.gender}性${info.age_group}) - 暂无生成图片`;
+                    }
+                    imgElement.title = titleText;
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error loading thumbnail for character', characterId, ':', error);
+        });
+}
+
+// 打开生成图片模态框
+function openGenerateImageModal(characterId, characterName) {
+    document.getElementById('characterId').value = characterId;
+    document.getElementById('characterName').value = characterName;
+    document.getElementById('taskStatus').style.display = 'none';
+    document.getElementById('generateImageBtn').disabled = false;
+    
+    // 重置表单
+    document.getElementById('generateImageForm').reset();
+    document.getElementById('characterId').value = characterId;
+    document.getElementById('characterName').value = characterName;
+    document.getElementById('chapterId').value = '{{ chapter.id }}';
+    
+    // 重置模态框按钮状态
+    resetModalButtonState();
+    
+    const modal = new bootstrap.Modal(document.getElementById('generateImageModal'));
+    modal.show();
+}
+
+// 重置模态框按钮状态
+function resetModalButtonState() {
+    const btn = document.getElementById('generateImageBtn');
+    btn.disabled = false;
+    btn.innerHTML = '开始生成';
+}
+
+// 设置按钮加载状态
+function setButtonLoadingState(buttonId, loadingText = '处理中...') {
+    const btn = document.getElementById(buttonId);
+    btn.disabled = true;
+    btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${loadingText}`;
+}
+
+// 设置角色卡片按钮状态
+function setCharacterButtonState(characterId, isLoading) {
+    const characterCard = document.querySelector(`[data-character-id="${characterId}"]`);
+    if (characterCard) {
+        const btn = characterCard.querySelector('.generate-image-btn');
+        if (btn) {
+            const textSpan = btn.querySelector('.btn-text');
+            const loadingSpan = btn.querySelector('.btn-loading');
+            
+            if (isLoading) {
+                btn.disabled = true;
+                textSpan.classList.add('d-none');
+                loadingSpan.classList.remove('d-none');
+            } else {
+                btn.disabled = false;
+                textSpan.classList.remove('d-none');
+                loadingSpan.classList.add('d-none');
+            }
+        }
+    }
+}
+
+// 生成角色图片
+function generateCharacterImage() {
+    const form = document.getElementById('generateImageForm');
+    const formData = new FormData(form);
+    const characterId = formData.get('character_id');
+    
+    // 显示任务状态
+    document.getElementById('taskStatus').style.display = 'block';
+    setButtonLoadingState('generateImageBtn', '提交中...');
+    document.getElementById('taskStatusText').textContent = '正在提交任务...';
+    document.getElementById('taskProgress').style.width = '10%';
+    document.getElementById('taskLog').textContent = '准备生成角色图片...';
+    
+    // 设置角色卡片按钮为加载状态
+    setCharacterButtonState(characterId, true);
+    
+    // 发送AJAX请求
+    fetch('{% url "video:generate_character_image" %}', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            currentTaskId = data.task_id;
+            currentCharacterId = characterId;
+            setButtonLoadingState('generateImageBtn', '生成中...');
+            document.getElementById('taskStatusText').textContent = '任务已提交，正在处理...';
+            document.getElementById('taskProgress').style.width = '20%';
+            document.getElementById('taskLog').textContent = '任务ID: ' + data.task_id;
+            
+            // 开始检查任务状态
+            startStatusCheck();
+        } else {
+            document.getElementById('taskStatusText').textContent = '任务提交失败';
+            document.getElementById('taskLog').textContent = data.error || '未知错误';
+            resetModalButtonState();
+            setCharacterButtonState(characterId, false);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('taskStatusText').textContent = '网络错误';
+        document.getElementById('taskLog').textContent = error.message;
+        resetModalButtonState();
+        setCharacterButtonState(characterId, false);
+    });
+}
+
+// 开始检查任务状态
+function startStatusCheck() {
+    if (statusCheckInterval) {
+        clearInterval(statusCheckInterval);
+    }
+    
+    statusCheckInterval = setInterval(() => {
+        checkTaskStatus();
+    }, 2000); // 每2秒检查一次
+}
+
+// 检查任务状态
+function checkTaskStatus() {
+    if (!currentTaskId) return;
+    
+    fetch(`{% url "video:check_task_status" %}?task_id=${currentTaskId}`)
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            const status = data.status;
+            const progress = data.progress || 0;
+            const log = data.log || '';
+            
+            document.getElementById('taskProgress').style.width = progress + '%';
+            document.getElementById('taskLog').textContent = log;
+            
+            if (status === 'success') {
+                document.getElementById('taskStatusText').textContent = '角色图片生成完成！';
+                document.getElementById('taskProgress').style.width = '100%';
+                document.getElementById('taskProgress').classList.add('bg-success');
+                clearInterval(statusCheckInterval);
+                
+                // 显示生成的图片信息
+                if (data.generated_images && data.generated_images.length > 0) {
+                    document.getElementById('taskLog').textContent = '成功生成 ' + data.generated_images.length + ' 张图片';
+                }
+                
+                // 恢复按钮状态
+                resetModalButtonState();
+                
+                // 更新缩略图
+                if (batchTaskIds.length > 0) {
+                    // 批量任务：更新所有相关角色的缩略图
+                    batchTaskIds.forEach(characterId => {
+                        const thumbnailImg = document.getElementById(`thumbnail-${characterId}`);
+                        if (thumbnailImg) {
+                            loadCharacterThumbnail(characterId, thumbnailImg);
+                        }
+                    });
+                    // 清空批量任务ID
+                    batchTaskIds = [];
+                    // 恢复批量按钮状态
+                    document.getElementById('batchGenerateBtn').disabled = false;
+                } else if (currentCharacterId) {
+                    // 单个任务：更新对应角色的缩略图
+                    setCharacterButtonState(currentCharacterId, false);
+                    const thumbnailImg = document.getElementById(`thumbnail-${currentCharacterId}`);
+                    if (thumbnailImg) {
+                        loadCharacterThumbnail(currentCharacterId, thumbnailImg);
+                    }
+                }
+                
+                // 3秒后关闭模态框
+                setTimeout(() => {
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('generateImageModal'));
+                    modal.hide();
+                }, 3000);
+            } else if (status === 'failed') {
+                document.getElementById('taskStatusText').textContent = '角色图片生成失败';
+                document.getElementById('taskProgress').classList.add('bg-danger');
+                document.getElementById('taskLog').textContent = data.error || '生成失败';
+                clearInterval(statusCheckInterval);
+                resetModalButtonState();
+                
+                // 恢复按钮状态
+                if (batchTaskIds.length > 0) {
+                    document.getElementById('batchGenerateBtn').disabled = false;
+                    batchTaskIds = [];
+                }
+                if (currentCharacterId) {
+                    setCharacterButtonState(currentCharacterId, false);
+                }
+            } else if (status === 'running') {
+                document.getElementById('taskStatusText').textContent = '正在生成角色图片...';
+            } else if (status === 'pending') {
+                document.getElementById('taskStatusText').textContent = '任务排队中...';
+            } else {
+                document.getElementById('taskStatusText').textContent = '任务状态: ' + status;
+            }
+        }
+    })
+    .catch(error => {
+        console.error('Status check error:', error);
+    });
+}
+
+// 清理定时器
+window.addEventListener('beforeunload', () => {
+    if (statusCheckInterval) {
+        clearInterval(statusCheckInterval);
+    }
+});
+
+// 批量操作相关函数
+
+// 全选/反选功能
+function toggleSelectAll() {
+    const checkboxes = document.querySelectorAll('.character-checkbox');
+    const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+    
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = !allChecked;
+    });
+    
+    updateBatchButton();
+}
+
+// 更新批量生成按钮状态
+function updateBatchButton() {
+    const checkedBoxes = document.querySelectorAll('.character-checkbox:checked');
+    const batchBtn = document.getElementById('batchGenerateBtn');
+    
+    if (checkedBoxes.length > 0) {
+        batchBtn.disabled = false;
+        batchBtn.textContent = `批量生成图片 (${checkedBoxes.length})`;
+    } else {
+        batchBtn.disabled = true;
+        batchBtn.textContent = '批量生成图片';
+    }
+}
+
+// 批量生成角色图片
+function batchGenerateImages() {
+    const checkedBoxes = document.querySelectorAll('.character-checkbox:checked');
+    
+    if (checkedBoxes.length === 0) {
+        alert('请先选择要生成图片的角色');
+        return;
+    }
+    
+    const characterIds = Array.from(checkedBoxes).map(cb => cb.value);
+    const characterNames = Array.from(checkedBoxes).map(cb => {
+        const card = cb.closest('.character-card');
+        return card.querySelector('.card-title').textContent.trim();
+    });
+    
+    // 确认对话框
+    if (!confirm(`确定要为以下 ${characterIds.length} 个角色生成图片吗？\n\n${characterNames.join(', ')}`)) {
+        return;
+    }
+    
+    // 准备JSON数据
+    const requestData = {
+        chapter_id: '{{ chapter.id }}',
+        character_ids: characterIds,
+        image_style: 'realistic',
+        image_quality: 'standard',
+        image_count: 1
+    };
+    
+    // 显示任务状态
+    document.getElementById('taskStatus').style.display = 'block';
+    document.getElementById('generateImageBtn').disabled = true;
+    document.getElementById('batchGenerateBtn').disabled = true;
+    document.getElementById('taskStatusText').textContent = '正在提交批量生成任务...';
+    document.getElementById('taskProgress').style.width = '10%';
+    document.getElementById('taskLog').textContent = `准备为 ${characterIds.length} 个角色生成图片...`;
+    
+    // 发送AJAX请求
+    fetch('{% url "video:batch_generate_character_images" %}', {
+        method: 'POST',
+        body: JSON.stringify(requestData),
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // 批量任务返回多个task_id，我们使用第一个作为主要跟踪ID
+            if (data.tasks && data.tasks.length > 0) {
+                currentTaskId = data.tasks[0].task_id;
+                batchTaskIds = characterIds; // 保存批量任务的角色ID
+                document.getElementById('taskStatusText').textContent = `批量任务已提交，正在处理 ${data.tasks.length} 个角色...`;
+                document.getElementById('taskProgress').style.width = '20%';
+                document.getElementById('taskLog').textContent = `已提交 ${data.tasks.length} 个任务: ${data.tasks.map(t => t.character_name).join(', ')}`;
+                
+                // 开始检查任务状态
+                startStatusCheck();
+            } else {
+                document.getElementById('taskStatusText').textContent = '批量任务提交失败';
+                document.getElementById('taskLog').textContent = '未返回有效的任务信息';
+                document.getElementById('generateImageBtn').disabled = false;
+                document.getElementById('batchGenerateBtn').disabled = false;
+            }
+        } else {
+            document.getElementById('taskStatusText').textContent = '批量任务提交失败';
+            document.getElementById('taskLog').textContent = data.error || '未知错误';
+            document.getElementById('generateImageBtn').disabled = false;
+            document.getElementById('batchGenerateBtn').disabled = false;
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('taskStatusText').textContent = '网络错误';
+        document.getElementById('taskLog').textContent = error.message;
+        document.getElementById('generateImageBtn').disabled = false;
+        document.getElementById('batchGenerateBtn').disabled = false;
+    });
+}
+</script>
+
+<!-- 使用统一的任务组件 -->
+{% include 'components/task-components.html' %}
+
+<style>
+/* 统一空间色系配置 */
+:root {
+    /* 主色调 - 深空蓝紫色系 */
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary-light: #8b9dc3;
+    --primary-dark: #5a67d8;
+    
+    /* 辅助色调 - 宇宙色系 */
+    --secondary-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    --accent-color: #ff6b6b;
+    --success-color: #51cf66;
+    --warning-color: #ffd43b;
+    --info-color: #74c0fc;
+    
+    /* 中性色调 - 星空灰色系 */
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #e9ecef;
+    --bg-tertiary: #dee2e6;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --text-muted: #adb5bd;
+    
+    /* 阴影和边框 */
+    --shadow-light: 0 2px 8px rgba(102, 126, 234, 0.1);
+    --shadow-medium: 0 4px 16px rgba(102, 126, 234, 0.15);
+    --shadow-heavy: 0 8px 32px rgba(102, 126, 234, 0.2);
+    --border-radius: 12px;
+    --border-radius-lg: 20px;
+}
+
+/* 角色卡片样式增强 */
+.character-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    box-shadow: var(--shadow-light);
+}
+
+.character-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-heavy);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.character-thumbnail {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 3px solid rgba(102, 126, 234, 0.2);
+}
+
+.character-thumbnail:hover {
+    transform: scale(1.08) rotate(1deg);
+    border-color: rgba(102, 126, 234, 0.4);
+    box-shadow: var(--shadow-medium);
+}
+
+.info-item {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-item:hover {
+    background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-light);
+    border-color: rgba(102, 126, 234, 0.2);
+}
+
+.btn-group .btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-light);
+}
+
+.btn-group .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* 渐变背景动画 */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card-header {
+    background: var(--primary-gradient) !important;
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease-in-out infinite;
+    border: none;
+    box-shadow: var(--shadow-light);
+}
+
+/* 状态指示器动画 */
+.character-status i {
+    animation: pulse 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .character-thumbnail {
+        width: 150px !important;
+        height: 150px !important;
+        border-width: 2px;
+    }
+    
+    .card-body {
+        padding: 1.5rem !important;
+    }
+    
+    .info-item {
+        padding: 0.75rem !important;
+    }
+    
+    /* 移动端改为上下布局 */
+    .character-info {
+        margin-bottom: 2rem !important;
+    }
+    
+    .character-actions {
+        margin-bottom: 2rem !important;
+    }
+    
+    .character-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+}
+
+/* 图片容器增强 */
+.character-thumbnail-container {
+    min-height: 220px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+    border-radius: var(--border-radius-lg);
+}
+
+.character-thumbnail {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.character-thumbnail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.character-thumbnail:hover::before {
+    opacity: 0.1;
+}
+
+.character-thumbnail img {
+    position: relative;
+    z-index: 2;
+}
+
+/* 操作按钮增强 */
+.character-actions .btn {
+    padding: 14px 24px;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.character-actions .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.character-actions .btn:hover::before {
+    left: 100%;
+}
+
+.character-actions .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+
+.character-actions .btn-outline-primary {
+    border: 2px solid var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.character-actions .btn-outline-primary:hover {
+    background: var(--primary-gradient);
+    border-color: transparent;
+    color: white;
+}
+
+/* 加载状态样式 */
+.btn-loading {
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 复选框样式增强 */
+.character-checkbox {
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    accent-color: var(--primary-light);
+    width: 18px;
+    height: 18px;
+}
+
+.character-checkbox:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px rgba(102, 126, 234, 0.4));
+}
+
+.character-checkbox:checked {
+    filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.6));
+}
+
+/* 卡片阴影层次和光效 */
+.character-card {
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.character-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-gradient);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.character-card:hover::before {
+    opacity: 0.03;
+}
+
+.character-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.character-card:hover::after {
+    opacity: 1;
+}
+
+/* 确保内容在覆盖层之上 */
+.character-card .card-header,
+.character-card .card-body,
+.character-card .card-footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* 状态徽章样式统一 */
+.badge {
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.badge.bg-success {
+    background: linear-gradient(135deg, var(--success-color) 0%, #40c057 100%) !important;
+    box-shadow: 0 2px 8px rgba(81, 207, 102, 0.3);
+}
+
+.badge.bg-warning {
+    background: linear-gradient(135deg, var(--warning-color) 0%, #fab005 100%) !important;
+    box-shadow: 0 2px 8px rgba(255, 212, 59, 0.3);
+    color: #495057 !important;
+}
+
+.badge.bg-info {
+    background: linear-gradient(135deg, var(--info-color) 0%, #339af0 100%) !important;
+    box-shadow: 0 2px 8px rgba(116, 192, 252, 0.3);
+}
+
+/* 表格样式优化 */
+.table {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+}
+
+.table th {
+    background: var(--bg-secondary);
+    border: none;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.table td {
+    border-color: rgba(102, 126, 234, 0.1);
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(102, 126, 234, 0.05);
+}
+
+/* 图片模态框样式 */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.image-modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.modal-image:hover {
+    transform: scale(1.02);
+}
+
+.image-modal-header {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-modal-header h3 {
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.image-modal-footer {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* 动画效果 */
+.image-modal.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.image-modal.show .modal-image {
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+</style>
+
+<!-- 图片放大模态框 -->
+<div id="imageModal" class="image-modal" onclick="closeImageModal(event)">
+    <div class="image-modal-content">
+        <span class="modal-close" onclick="closeImageModal()">&times;</span>
+        <div class="image-modal-header">
+            <h3 id="modalImageTitle">角色图片</h3>
+        </div>
+        <img id="modalImage" class="modal-image" src="" alt="">
+        <div class="image-modal-footer">
+            <p>点击图片外区域或右上角 × 关闭</p>
+        </div>
+    </div>
+</div>
+
+<script>
+// 打开图片模态框
+function openImageModal(imageId, characterName) {
+    const img = document.getElementById(imageId);
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalImageTitle');
+    
+    if (img && modal && modalImg && modalTitle) {
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        modalTitle.textContent = characterName + ' - 角色图片';
+        modal.classList.add('show');
+        
+        // 防止页面滚动
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+// 关闭图片模态框
+function closeImageModal(event) {
+    const modal = document.getElementById('imageModal');
+    
+    // 如果点击的是图片本身，不关闭模态框
+    if (event && event.target.classList.contains('modal-image')) {
+        return;
+    }
+    
+    if (modal) {
+        modal.classList.remove('show');
+        
+        // 恢复页面滚动
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// 键盘事件监听
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeImageModal();
+    }
+});
+
+// 防止模态框内容区域点击时关闭
+document.addEventListener('DOMContentLoaded', function() {
+    const modalContent = document.querySelector('.image-modal-content');
+    if (modalContent) {
+        modalContent.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+    }
+    
+    // 初始化音频功能
+    initAudioFunctions();
+    loadAudioFiles();
+});
+
+// 音频相关功能
+function initAudioFunctions() {
+    const generateAudioBtn = document.getElementById('generateAudioBtn');
+    if (generateAudioBtn) {
+        generateAudioBtn.addEventListener('click', generateAudio);
+    }
+}
+
+// 生成音频
+function generateAudio() {
+    const novelId = '{{ chapter.novel.id }}';
+    const chapterId = '{{ chapter.id }}';
+    
+    // 显示生成状态
+    showAudioGenerationStatus();
+    
+    fetch(`/video/api/novels/${novelId}/chapters/${chapterId}/generate-audio/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // 开始轮询任务状态
+            pollAudioTaskStatus(data.task_id);
+        } else {
+            hideAudioGenerationStatus();
+            if (data.error && data.error.includes('解说文件不存在')) {
+                alert('无法生成音频：该章节还没有解说内容。请先在章节详情页面生成解说内容，然后再尝试生成音频。');
+            } else {
+                alert('音频生成失败: ' + (data.error || '未知错误'));
+            }
+        }
+    })
+    .catch(error => {
+        hideAudioGenerationStatus();
+        console.error('Error:', error);
+        alert('音频生成请求失败');
+    });
+}
+
+// 轮询任务状态
+function pollAudioTaskStatus(taskId) {
+    const pollInterval = setInterval(() => {
+        fetch(`/video/api/audio-task/${taskId}/status/`)
+        .then(response => response.json())
+        .then(data => {
+            updateAudioProgress(data.progress || 0, data.status_message || '正在处理...');
+            
+            if (data.status === 'SUCCESS') {
+                clearInterval(pollInterval);
+                hideAudioGenerationStatus();
+                loadAudioFiles();
+                alert('音频生成完成！');
+            } else if (data.status === 'FAILURE') {
+                clearInterval(pollInterval);
+                hideAudioGenerationStatus();
+                alert('音频生成失败: ' + (data.error || '未知错误'));
+            }
+        })
+        .catch(error => {
+            console.error('Error polling task status:', error);
+        });
+    }, 2000); // 每2秒轮询一次
+}
+
+// 显示音频生成状态
+function showAudioGenerationStatus() {
+    const statusDiv = document.getElementById('audioGenerationStatus');
+    const generateBtn = document.getElementById('generateAudioBtn');
+    
+    if (statusDiv) {
+        statusDiv.style.display = 'block';
+    }
+    if (generateBtn) {
+        generateBtn.disabled = true;
+        generateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 生成中...';
+    }
+}
+
+// 隐藏音频生成状态
+function hideAudioGenerationStatus() {
+    const statusDiv = document.getElementById('audioGenerationStatus');
+    const generateBtn = document.getElementById('generateAudioBtn');
+    
+    if (statusDiv) {
+        statusDiv.style.display = 'none';
+    }
+    if (generateBtn) {
+        generateBtn.disabled = false;
+        generateBtn.innerHTML = '<i class="fas fa-microphone"></i> 生成音频';
+    }
+}
+
+// 更新音频生成进度
+function updateAudioProgress(progress, message) {
+    const progressBar = document.getElementById('audioProgressBar');
+    const statusText = document.getElementById('audioStatusText');
+    
+    if (progressBar) {
+        progressBar.style.width = progress + '%';
+    }
+    if (statusText) {
+        statusText.textContent = message;
+    }
+}
+
+// 加载音频文件列表
+function loadAudioFiles() {
+    const novelId = '{{ chapter.novel.id }}';
+    const chapterId = '{{ chapter.id }}';
+    
+    fetch(`/video/api/novels/${novelId}/chapters/${chapterId}/audio-files/`)
+    .then(response => response.json())
+    .then(data => {
+        displayAudioFiles(data.files || []);
+    })
+    .catch(error => {
+        console.error('Error loading audio files:', error);
+    });
+}
+
+// 显示音频文件
+function displayAudioFiles(files) {
+    const container = document.getElementById('audioFilesContainer');
+    const noFilesDiv = document.getElementById('noAudioFiles');
+    
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    if (files.length === 0) {
+        if (noFilesDiv) {
+            noFilesDiv.style.display = 'block';
+        }
+        return;
+    }
+    
+    if (noFilesDiv) {
+        noFilesDiv.style.display = 'none';
+    }
+    
+    files.forEach(file => {
+        const audioCard = createAudioCard(file);
+        container.appendChild(audioCard);
+    });
+}
+
+// 创建音频卡片
+function createAudioCard(file) {
+    const col = document.createElement('div');
+    col.className = 'col-md-6 col-lg-4 mb-3';
+    
+    const novelId = '{{ chapter.novel.id }}';
+    const chapterId = '{{ chapter.id }}';
+    const audioUrl = `/api/novels/${novelId}/chapters/${chapterId}/files/${file.filename}/`;
+    
+    col.innerHTML = `
+        <div class="card h-100">
+            <div class="card-body">
+                <h6 class="card-title">${file.display_name}</h6>
+                <p class="card-text text-muted small">文件大小: ${file.size}</p>
+                <audio controls class="w-100 mb-2">
+                    <source src="${audioUrl}" type="audio/mpeg">
+                    您的浏览器不支持音频播放。
+                </audio>
+                <div class="d-flex gap-2">
+                    <a href="${audioUrl}" class="btn btn-sm btn-outline-primary" download>
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                    ${file.ass_file ? `
+                        <button class="btn btn-sm btn-outline-info" onclick="showAssSubtitle('${file.ass_file}')">
+                            <i class="fas fa-closed-captioning"></i> 字幕
+                        </button>
+                    ` : ''}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    return col;
+}
+
+// 显示ASS字幕
+function showAssSubtitle(assFilename) {
+    const novelId = '{{ chapter.novel.id }}';
+    const chapterId = '{{ chapter.id }}';
+    
+    fetch(`/api/novels/${novelId}/chapters/${chapterId}/files/${assFilename}/`)
+    .then(response => response.text())
+    .then(content => {
+        const modal = new bootstrap.Modal(document.getElementById('assSubtitleModal'));
+        const contentElement = document.getElementById('assSubtitleContent');
+        const downloadBtn = document.getElementById('downloadAssBtn');
+        
+        if (contentElement) {
+            contentElement.textContent = content;
+        }
+        
+        if (downloadBtn) {
+            downloadBtn.onclick = () => {
+                const url = `/api/novels/${novelId}/chapters/${chapterId}/files/${assFilename}/`;
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = assFilename;
+                a.click();
+            };
+        }
+        
+        modal.show();
+    })
+    .catch(error => {
+        console.error('Error loading ASS file:', error);
+        alert('加载字幕文件失败');
+    });
+}
+
+// 显示Narration字幕
+function showNarrationSubtitle(sceneNumber) {
+    const novelId = '{{ chapter.novel.id }}';
+    const chapterId = '{{ chapter.id }}';
+    const assFilename = `chapter_${String(chapterId).padStart(3, '0')}_narration_${String(sceneNumber).padStart(2, '0')}.ass`;
+    
+    fetch(`/api/novels/${novelId}/chapters/${chapterId}/files/${assFilename}/`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('字幕文件不存在');
+        }
+        return response.text();
+    })
+    .then(content => {
+        const modal = new bootstrap.Modal(document.getElementById('narrationSubtitleModal'));
+        const contentElement = document.getElementById('narrationSubtitleContent');
+        const downloadBtn = document.getElementById('downloadNarrationAssBtn');
+        const titleElement = document.getElementById('narrationSubtitleModalLabel');
+        
+        if (titleElement) {
+            titleElement.textContent = `第${sceneNumber}段解说字幕`;
+        }
+        
+        if (contentElement) {
+            contentElement.textContent = content;
+        }
+        
+        if (downloadBtn) {
+            downloadBtn.onclick = () => {
+                const url = `/api/novels/${novelId}/chapters/${chapterId}/files/${assFilename}/`;
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = assFilename;
+                a.click();
+            };
+        }
+        
+        modal.show();
+    })
+    .catch(error => {
+        console.error('Error loading narration ASS file:', error);
+        alert('加载字幕文件失败: ' + error.message);
+    });
+}
+</script>
+
+{% endblock %}

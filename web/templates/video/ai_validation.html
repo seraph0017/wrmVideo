@@ -1,0 +1,381 @@
+{% extends 'video/base.html' %}
+{% load static %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block extra_css %}
+<style>
+    .validation-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .validation-option {
+        background: #f8f9fa;
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 16px;
+        transition: all 0.3s ease;
+    }
+    
+    .validation-option:hover {
+        border-color: #007bff;
+        background: #f0f8ff;
+    }
+    
+    .validation-option.selected {
+        border-color: #007bff;
+        background: #e7f3ff;
+    }
+    
+    .option-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+    
+    .option-title {
+        font-weight: 600;
+        color: #2c3e50;
+        margin-left: 12px;
+        font-size: 16px;
+    }
+    
+    .option-description {
+        color: #6c757d;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-left: 32px;
+    }
+    
+    .validation-checkbox {
+        width: 20px;
+        height: 20px;
+        accent-color: #007bff;
+    }
+    
+    .progress-container {
+        display: none;
+        margin-top: 20px;
+    }
+    
+    .progress {
+        height: 8px;
+        border-radius: 4px;
+        background-color: #e9ecef;
+        overflow: hidden;
+    }
+    
+    .progress-bar {
+        height: 100%;
+        background: linear-gradient(90deg, #007bff, #0056b3);
+        transition: width 0.3s ease;
+    }
+    
+    .status-text {
+        margin-top: 8px;
+        font-size: 14px;
+        color: #6c757d;
+    }
+    
+    .result-container {
+        display: none;
+        margin-top: 20px;
+    }
+    
+    .result-success {
+        background: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+        padding: 16px;
+        border-radius: 8px;
+    }
+    
+    .result-error {
+        background: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+        padding: 16px;
+        border-radius: 8px;
+    }
+    
+    .btn-validate {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        border: none;
+        color: white;
+        padding: 12px 32px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-validate:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+    }
+    
+    .btn-validate:disabled {
+        background: #6c757d;
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .novel-info {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 24px;
+    }
+    
+    .novel-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    
+    .novel-subtitle {
+        font-size: 16px;
+        opacity: 0.9;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <!-- 小说信息 -->
+            <div class="novel-info">
+                <div class="novel-title">{{ novel.name }}</div>
+                <div class="novel-subtitle">AI智能校验解说文案</div>
+            </div>
+            
+            <!-- 校验配置 -->
+            <div class="validation-card">
+                <h3 style="color: #2c3e50; margin-bottom: 24px; font-weight: 600;">
+                    <i class="fas fa-cogs" style="margin-right: 8px; color: #007bff;"></i>
+                    校验配置
+                </h3>
+                
+                <form id="validationForm">
+                    {% csrf_token %}
+                    
+                    <!-- 字数校验选项 -->
+                    <div class="validation-option" data-option="length">
+                        <div class="option-header">
+                            <input type="checkbox" class="validation-checkbox" id="check_closeup_length" name="check_closeup_length" value="true">
+                            <div class="option-title">特写解说字数校验</div>
+                        </div>
+                        <div class="option-description">
+                            检查分镜1中第一个和第二个图片特写的解说内容字数，确保控制在30-32字之间
+                        </div>
+                    </div>
+                    
+                    <div class="validation-option" data-option="total-length">
+                        <div class="option-header">
+                            <input type="checkbox" class="validation-checkbox" id="check_total_length" name="check_total_length" value="true">
+                            <div class="option-title">总解说字数校验</div>
+                        </div>
+                        <div class="option-description">
+                            检查整个章节的解说内容总字数，确保控制在1300-1700字之间
+                        </div>
+                    </div>
+                    
+                    <!-- 自动修复选项 -->
+                    <div class="validation-option" data-option="rewrite">
+                        <div class="option-header">
+                            <input type="checkbox" class="validation-checkbox" id="auto_rewrite" name="auto_rewrite" value="true">
+                            <div class="option-title">自动改写解说内容</div>
+                        </div>
+                        <div class="option-description">
+                            当解说内容字数不符合要求时，自动调用AI模型进行改写，确保字数符合标准
+                        </div>
+                    </div>
+                    
+                    <div class="validation-option" data-option="characters">
+                        <div class="option-header">
+                            <input type="checkbox" class="validation-checkbox" id="auto_fix_characters" name="auto_fix_characters" value="true">
+                            <div class="option-title">自动修复角色定义</div>
+                        </div>
+                        <div class="option-description">
+                            检查特写人物是否在出镜人物列表中，自动生成缺失角色的定义信息
+                        </div>
+                    </div>
+                    
+                    <div class="validation-option" data-option="tags">
+                        <div class="option-header">
+                            <input type="checkbox" class="validation-checkbox" id="auto_fix_tags" name="auto_fix_tags" value="true">
+                            <div class="option-title">自动修复XML标签</div>
+                        </div>
+                        <div class="option-description">
+                            检查并修复narration.txt文件中的XML标签闭合问题，确保格式正确
+                        </div>
+                    </div>
+                    
+                    <!-- 操作按钮 -->
+                    <div style="margin-top: 32px; text-align: center;">
+                        <button type="submit" class="btn btn-validate" id="validateBtn">
+                            <i class="fas fa-play" style="margin-right: 8px;"></i>
+                            开始校验
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- 进度显示 -->
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress">
+                        <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                    </div>
+                    <div class="status-text" id="statusText">正在初始化...</div>
+                </div>
+                
+                <!-- 结果显示 -->
+                <div class="result-container" id="resultContainer">
+                    <div id="resultContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function() {
+    // 选项卡交互效果
+    $('.validation-option').click(function() {
+        const checkbox = $(this).find('.validation-checkbox');
+        checkbox.prop('checked', !checkbox.prop('checked'));
+        updateOptionStyle($(this));
+    });
+    
+    $('.validation-checkbox').click(function(e) {
+        e.stopPropagation();
+        updateOptionStyle($(this).closest('.validation-option'));
+    });
+    
+    function updateOptionStyle(option) {
+        const checkbox = option.find('.validation-checkbox');
+        if (checkbox.prop('checked')) {
+            option.addClass('selected');
+        } else {
+            option.removeClass('selected');
+        }
+    }
+    
+    // 表单提交
+    $('#validationForm').submit(function(e) {
+        e.preventDefault();
+        
+        // 检查是否至少选择了一个选项
+        const checkedOptions = $('.validation-checkbox:checked').length;
+        if (checkedOptions === 0) {
+            alert('请至少选择一个校验选项！');
+            return;
+        }
+        
+        // 禁用按钮并显示进度
+        $('#validateBtn').prop('disabled', true).html('<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i>校验中...');
+        $('#progressContainer').show();
+        $('#resultContainer').hide();
+        
+        // 提交表单数据
+        $.ajax({
+            url: window.location.href,
+            method: 'POST',
+            data: $(this).serialize(),
+            success: function(response) {
+                if (response.success) {
+                    // 开始轮询任务状态
+                    pollTaskStatus(response.task_id);
+                } else {
+                    showError(response.message);
+                }
+            },
+            error: function() {
+                showError('提交校验任务失败，请重试');
+            }
+        });
+    });
+    
+    // 轮询任务状态
+    function pollTaskStatus(taskId) {
+        const pollInterval = setInterval(function() {
+            $.ajax({
+                url: `/video/novels/{{ novel.id }}/task-status/`,
+                method: 'GET',
+                data: { task_id: taskId },
+                success: function(response) {
+                    if (response.state === 'PROGRESS') {
+                        // 更新进度
+                        const progress = response.meta.current || 0;
+                        const total = response.meta.total || 100;
+                        const percentage = Math.round((progress / total) * 100);
+                        
+                        $('#progressBar').css('width', percentage + '%');
+                        $('#statusText').text(response.meta.status || '处理中...');
+                    } else if (response.state === 'SUCCESS') {
+                        // 任务完成
+                        clearInterval(pollInterval);
+                        $('#progressBar').css('width', '100%');
+                        $('#statusText').text('校验完成！');
+                        
+                        setTimeout(function() {
+                            showSuccess(response.result.message, response.result.output);
+                        }, 500);
+                    } else if (response.state === 'FAILURE') {
+                        // 任务失败
+                        clearInterval(pollInterval);
+                        showError(response.result.message || '校验任务失败');
+                    }
+                },
+                error: function() {
+                    clearInterval(pollInterval);
+                    showError('获取任务状态失败');
+                }
+            });
+        }, 1000);
+    }
+    
+    // 显示成功结果
+    function showSuccess(message, output) {
+        $('#progressContainer').hide();
+        $('#resultContent').html(`
+            <div class="result-success">
+                <h5><i class="fas fa-check-circle" style="margin-right: 8px;"></i>校验成功</h5>
+                <p>${message}</p>
+                ${output ? `<details><summary>详细输出</summary><pre style="margin-top: 10px; background: #f8f9fa; padding: 10px; border-radius: 4px; font-size: 12px;">${output}</pre></details>` : ''}
+            </div>
+        `);
+        $('#resultContainer').show();
+        resetForm();
+    }
+    
+    // 显示错误结果
+    function showError(message) {
+        $('#progressContainer').hide();
+        $('#resultContent').html(`
+            <div class="result-error">
+                <h5><i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>校验失败</h5>
+                <p>${message}</p>
+            </div>
+        `);
+        $('#resultContainer').show();
+        resetForm();
+    }
+    
+    // 重置表单
+    function resetForm() {
+        $('#validateBtn').prop('disabled', false).html('<i class="fas fa-play" style="margin-right: 8px;"></i>开始校验');
+        $('#progressBar').css('width', '0%');
+        $('#statusText').text('正在初始化...');
+    }
+});
+</script>
+{% endblock %}

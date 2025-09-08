@@ -940,6 +940,8 @@ def main():
                        help='启用自动改写功能（已合并到--auto-fix中，保留用于兼容性）')
     parser.add_argument('--auto-fix-characters', action='store_true',
                        help='启用自动修复角色功能（已合并到--auto-fix中，保留用于兼容性）')
+    parser.add_argument('--auto-fix-tags', action='store_true',
+                       help='启用自动修复XML标签功能（已合并到--auto-fix中，保留用于兼容性）')
     
     # 兼容旧的命令行格式
     if len(sys.argv) == 2 and not sys.argv[1].startswith('-'):
@@ -956,11 +958,11 @@ def main():
         # 如果使用了新的--auto-fix参数，或者使用了旧的参数，都启用相应功能
         auto_rewrite = args.auto_fix or args.auto_rewrite
         auto_fix_characters = args.auto_fix or args.auto_fix_characters
-        auto_fix_tags = args.auto_fix  # XML标签修复功能集成到--auto-fix中
+        auto_fix_tags = args.auto_fix or args.auto_fix_tags  # XML标签修复功能集成到--auto-fix中
         
         # 如果使用了旧参数，给出提示
-        if args.auto_rewrite or args.auto_fix_characters:
-            print("提示: --auto-rewrite 和 --auto-fix-characters 参数已合并为 --auto-fix")
+        if args.auto_rewrite or args.auto_fix_characters or args.auto_fix_tags:
+            print("提示: --auto-rewrite、--auto-fix-characters 和 --auto-fix-tags 参数已合并为 --auto-fix")
             print("建议使用: python validate_narration.py data/xxx --auto-fix")
     
     validate_data_directory(data_dir, auto_rewrite, auto_fix_characters, auto_fix_tags)

@@ -8,25 +8,135 @@
     <title>{% block title %}文生视频管理系统{% endblock %}</title>
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    
+    <!-- 全局空间色系样式 -->
+    <style>
+        /* 统一蓝色系配置 */
+        :root {
+            /* 主色调 - 经典蓝色系 */
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            --primary-light: #60a5fa;
+            --primary-dark: #1d4ed8;
+            
+            /* 辅助色调 - 深蓝色系 */
+            --secondary-gradient: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            --accent-color: #ff6b6b;
+            --success-color: #51cf66;
+            --warning-color: #ffd43b;
+            --info-color: #74c0fc;
+            
+            /* 中性色调 - 星空灰色系 */
+            --bg-primary: #f8f9fa;
+            --bg-secondary: #e9ecef;
+            --bg-tertiary: #dee2e6;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --text-muted: #adb5bd;
+            
+            /* 阴影和边框 */
+            --shadow-light: 0 2px 8px rgba(59, 130, 246, 0.1);
+            --shadow-medium: 0 4px 16px rgba(59, 130, 246, 0.15);
+            --shadow-heavy: 0 8px 32px rgba(59, 130, 246, 0.2);
+            --border-radius: 12px;
+            --border-radius-lg: 20px;
+        }
+        
+        /* 全局样式优化 */
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+        
+        /* 导航栏悬停效果 */
+        .navbar .nav-link:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar .nav-link.active {
+            background: rgba(255, 255, 255, 0.2) !important;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* 卡片全局样式 */
+        .card {
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            box-shadow: var(--shadow-light);
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-2px);
+        }
+        
+        .card-header {
+            background: var(--primary-gradient) !important;
+            border: none;
+            color: white !important;
+        }
+        
+        /* 按钮全局样式 */
+        .btn-primary {
+            background: var(--primary-gradient);
+            border: none;
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .btn-warning {
+            background: linear-gradient(135deg, var(--warning-color) 0%, #fab005 100%);
+            border: none;
+            color: #495057;
+            box-shadow: var(--shadow-light);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, var(--success-color) 0%, #40c057 100%);
+            border: none;
+            box-shadow: var(--shadow-light);
+        }
+        
+        .btn-info {
+            background: linear-gradient(135deg, var(--info-color) 0%, #339af0 100%);
+            border: none;
+            box-shadow: var(--shadow-light);
+        }
+    </style>
+    
     {% block extra_css %}{% endblock %}
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark mb-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); box-shadow: 0 4px 16px rgba(102, 126, 234, 0.15);">
         <div class="container">
-            <a class="navbar-brand" href="#">文生视频系统</a>
+            <a class="navbar-brand fw-bold" href="#" style="font-size: 1.4rem; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">文生视频系统</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">首页</a>
+                        <a class="nav-link {% if request.path == '/video/dashboard/' %}active{% endif %}" href="{% url 'video:dashboard' %}" style="transition: all 0.3s ease; border-radius: 8px; margin: 0 4px; padding: 8px 16px;">控制面板</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">项目管理</a>
+                        <a class="nav-link {% if '/novels/' in request.path %}active{% endif %}" href="{% url 'video:novel_list' %}" style="transition: all 0.3s ease; border-radius: 8px; margin: 0 4px; padding: 8px 16px;">小说管理</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">任务列表</a>
+                        <a class="nav-link {% if '/chapters/' in request.path %}active{% endif %}" href="{% url 'video:chapter_list' %}" style="transition: all 0.3s ease; border-radius: 8px; margin: 0 4px; padding: 8px 16px;">章节管理</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if '/characters/' in request.path %}active{% endif %}" href="{% url 'video:character_list' %}" style="transition: all 0.3s ease; border-radius: 8px; margin: 0 4px; padding: 8px 16px;">角色管理</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if '/narrations/' in request.path %}active{% endif %}" href="{% url 'video:narration_list' %}" style="transition: all 0.3s ease; border-radius: 8px; margin: 0 4px; padding: 8px 16px;">解说管理</a>
                     </li>
                 </ul>
             </div>
@@ -40,12 +150,14 @@
         {% endblock %}
     </div>
 
-    <footer class="mt-5 py-3 bg-light">
+    <footer class="mt-5 py-4" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-top: 1px solid rgba(102, 126, 234, 0.1);">
         <div class="container text-center">
-            <p class="text-muted">© 2025 文生视频管理系统</p>
+            <p class="text-muted mb-0" style="font-weight: 500;">© 2025 文生视频管理系统</p>
         </div>
     </footer>
 
+    <!-- jQuery库 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     {% block extra_js %}{% endblock %}
 </body>
 </html>

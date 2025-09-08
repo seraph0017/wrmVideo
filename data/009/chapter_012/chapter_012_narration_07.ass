@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_012 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}孙府{\c&H00FFFFFF&\b0}门口灵兽车旁
+Dialogue: 0,0:00:01.90,0:00:03.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}孙怜雪{\c&H00FFFFFF&\b0}粉色襦裙站在车边
+Dialogue: 0,0:00:04.32,0:00:05.42,Default,,0,0,0,,看到{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}时愣住
+Dialogue: 0,0:00:05.80,0:00:07.82,Default,,0,0,0,,眼前贵公子与昨日小流氓
+Dialogue: 0,0:00:07.82,0:00:08.63,Default,,0,0,0,,判若两人
+Dialogue: 0,0:00:08.96,0:00:09.57,Default,,0,0,0,,不敢相信

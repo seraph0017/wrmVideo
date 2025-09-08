@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+
+{% block title %}{% if object %}编辑角色{% else %}创建角色{% endif %}{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">
+                        {% if object %}
+                            <i class="fas fa-edit"></i> 编辑角色
+                        {% else %}
+                            <i class="fas fa-plus"></i> 创建角色
+                        {% endif %}
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="{{ form.name.id_for_label }}" class="form-label">{{ form.name.label }}</label>
+                                    {{ form.name }}
+                                    {% if form.name.errors %}
+                                        <div class="text-danger">
+                                            {% for error in form.name.errors %}
+                                                <small>{{ error }}</small>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label for="{{ form.gender.id_for_label }}" class="form-label">{{ form.gender.label }}</label>
+                                    {{ form.gender }}
+                                    {% if form.gender.errors %}
+                                        <div class="text-danger">
+                                            {% for error in form.gender.errors %}
+                                                <small>{{ error }}</small>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label for="{{ form.age_group.id_for_label }}" class="form-label">{{ form.age_group.label }}</label>
+                                    {{ form.age_group }}
+                                    {% if form.age_group.errors %}
+                                        <div class="text-danger">
+                                            {% for error in form.age_group.errors %}
+                                                <small>{{ error }}</small>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="{{ form.hair_style.id_for_label }}" class="form-label">{{ form.hair_style.label }}</label>
+                                    {{ form.hair_style }}
+                                    {% if form.hair_style.errors %}
+                                        <div class="text-danger">
+                                            {% for error in form.hair_style.errors %}
+                                                <small>{{ error }}</small>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="{{ form.hair_color.id_for_label }}" class="form-label">{{ form.hair_color.label }}</label>
+                                    {{ form.hair_color }}
+                                    {% if form.hair_color.errors %}
+                                        <div class="text-danger">
+                                            {% for error in form.hair_color.errors %}
+                                                <small>{{ error }}</small>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="{{ form.face_features.id_for_label }}" class="form-label">{{ form.face_features.label }}</label>
+                            {{ form.face_features }}
+                            {% if form.face_features.errors %}
+                                <div class="text-danger">
+                                    {% for error in form.face_features.errors %}
+                                        <small>{{ error }}</small>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="{{ form.body_features.id_for_label }}" class="form-label">{{ form.body_features.label }}</label>
+                            {{ form.body_features }}
+                            {% if form.body_features.errors %}
+                                <div class="text-danger">
+                                    {% for error in form.body_features.errors %}
+                                        <small>{{ error }}</small>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="{{ form.special_notes.id_for_label }}" class="form-label">{{ form.special_notes.label }}</label>
+                            {{ form.special_notes }}
+                            {% if form.special_notes.errors %}
+                                <div class="text-danger">
+                                    {% for error in form.special_notes.errors %}
+                                        <small>{{ error }}</small>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="{{ form.chapter.id_for_label }}" class="form-label">{{ form.chapter.label }}</label>
+                            {{ form.chapter }}
+                            {% if form.chapter.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.chapter.errors %}
+                                {{ error }}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'video:character_list' %}" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> 返回列表
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> 
+                                {% if object %}更新{% else %}创建{% endif %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

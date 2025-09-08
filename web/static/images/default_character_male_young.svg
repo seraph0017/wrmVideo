@@ -1,0 +1,19 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆 -->
+  <circle cx="100" cy="100" r="100" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+  
+  <!-- 头部 -->
+  <circle cx="100" cy="80" r="22" fill="#4caf50"/>
+  
+  <!-- 短发装饰 -->
+  <path d="M 85 65 Q 100 60 115 65 Q 115 70 100 75 Q 85 70 85 65" fill="#2e7d32"/>
+  
+  <!-- 身体 -->
+  <ellipse cx="100" cy="135" rx="30" ry="40" fill="#4caf50"/>
+  
+  <!-- 校服装饰 -->
+  <rect x="90" y="115" width="20" height="15" fill="#2e7d32" rx="2"/>
+  
+  <!-- 文字 -->
+  <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">男性少年</text>
+</svg>

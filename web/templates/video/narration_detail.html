@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}解说详情 | {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">解说详情</h5>
+                <div>
+                    <a href="{% url 'video:narration_list' %}" class="btn btn-light btn-sm">返回列表</a>
+                    <a href="{% url 'admin:video_narration_change' narration.id %}" class="btn btn-warning btn-sm">编辑</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>基本信息</h4>
+                        <table class="table">
+                            <tr>
+                                <th style="width: 150px;">ID</th>
+                                <td>{{ narration.id }}</td>
+                            </tr>
+                            <tr>
+                                <th>分镜序号</th>
+                                <td>{{ narration.scene_number }}</td>
+                            </tr>
+                            <tr>
+                                <th>特写人物</th>
+                                <td>{{ narration.featured_character }}</td>
+                            </tr>
+                            <tr>
+                                <th>所属章节</th>
+                                <td><a href="{% url 'video:chapter_detail' narration.chapter.id %}">{{ narration.chapter.title }}</a></td>
+                            </tr>
+                            <tr>
+                                <th>所属小说</th>
+                                <td><a href="{% url 'video:novel_detail' narration.chapter.novel.id %}">{{ narration.chapter.novel.name }}</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>媒体信息</h4>
+                        <table class="table">
+                            <tr>
+                                <th style="width: 150px;">音频状态</th>
+                                <td>
+                                    {% if narration.narration_mp3_path %}
+                                    <span class="badge bg-success">已生成</span>
+                                    {% else %}
+                                    <span class="badge bg-warning">未生成</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>视频状态</th>
+                                <td>
+                                    {% if narration.narration_mp4_path %}
+                                    <span class="badge bg-success">已生成</span>
+                                    {% else %}
+                                    <span class="badge bg-warning">未生成</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% if narration.narration_mp3_path %}
+                            <tr>
+                                <th>音频路径</th>
+                                <td>{{ narration.narration_mp3_path }}</td>
+                            </tr>
+                            <tr>
+                                <th>音频预览</th>
+                                <td>
+                                    <audio controls>
+                                        <source src="{{ narration.narration_mp3_path }}" type="audio/mpeg">
+                                        您的浏览器不支持音频元素。
+                                    </audio>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% if narration.narration_mp4_path %}
+                            <tr>
+                                <th>视频路径</th>
+                                <td>{{ narration.narration_mp4_path }}</td>
+                            </tr>
+                            <tr>
+                                <th>视频预览</th>
+                                <td>
+                                    <video width="320" height="240" controls>
+                                        <source src="{{ narration.narration_mp4_path }}" type="video/mp4">
+                                        您的浏览器不支持视频元素。
+                                    </video>
+                                </td>
+                            </tr>
+                            {% endif %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 解说内容 -->
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">解说内容</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-4">
+                    <h5>解说文本</h5>
+                    <div class="p-3 bg-light rounded">
+                        {{ narration.narration|linebreaks }}
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <h5>图片提示词</h5>
+                    <div class="p-3 bg-light rounded">
+                        {{ narration.image_prompt|linebreaks }}
+                    </div>
+                </div>
+                
+                {% if narration.subtitle_content %}
+                <div class="mb-4">
+                    <h5>字幕内容</h5>
+                    <div class="p-3 bg-light rounded">
+                        <pre>{{ narration.subtitle_content }}</pre>
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if narration.tts_response %}
+                <div>
+                    <h5>TTS响应</h5>
+                    <div class="p-3 bg-light rounded">
+                        <pre>{{ narration.tts_response }}</pre>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

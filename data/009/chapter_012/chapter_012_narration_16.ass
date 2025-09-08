@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_012 Narration 16 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.37,Default,,0,0,0,,莫文咏瞳孔骤缩
+Dialogue: 0,0:00:01.81,0:00:03.42,Default,,0,0,0,,注意到{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}手中红葫芦
+Dialogue: 0,0:00:03.81,0:00:04.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}白发{\c&H00FFFFFF&\b0}无风自动
+Dialogue: 0,0:00:05.30,0:00:06.80,Default,,0,0,0,,灰色道袍下摆飘动
+Dialogue: 0,0:00:07.25,0:00:08.45,Default,,0,0,0,,认出是混沌葫芦
+Dialogue: 0,0:00:08.72,0:00:10.11,Default,,0,0,0,,眼神瞬间火热

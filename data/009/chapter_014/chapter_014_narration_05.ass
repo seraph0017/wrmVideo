@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_014 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.88,Default,,0,0,0,,生死关头
+Dialogue: 0,0:00:01.30,0:00:02.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}孙怜雪{\c&H00FFFFFF&\b0}昏迷在地
+Dialogue: 0,0:00:02.97,0:00:04.43,Default,,0,0,0,,粉色襦裙沾染尘土
+Dialogue: 0,0:00:04.73,0:00:05.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}长发{\c&H00FFFFFF&\b0}散乱
+Dialogue: 0,0:00:05.88,0:00:07.97,Default,,0,0,0,,微弱的呼吸证明她尚存生机
+Dialogue: 0,0:00:08.24,0:00:10.05,Default,,0,0,0,,成为父亲唯一的希望之光

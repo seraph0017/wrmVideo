@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_014 Narration 27 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.73,Default,,0,0,0,,目标成帝
+Dialogue: 0,0:00:01.24,0:00:03.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}眉心金色印记闪耀对
+Dialogue: 0,0:00:03.54,0:00:04.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}阿福道{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.31,0:00:05.84,Default,,0,0,0,,五条{\c&H0000FFFF&\b1}金龙{\c&H00FFFFFF&\b0}出发
+Dialogue: 0,0:00:06.25,0:00:08.43,Default,,0,0,0,,黑色长袍在风中猎猎作响
+Dialogue: 0,0:00:08.87,0:00:11.65,Default,,0,0,0,,杀生剑指向天际前路漫漫亦
+Dialogue: 0,0:00:11.65,0:00:12.00,Default,,0,0,0,,无惧

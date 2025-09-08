@@ -1,0 +1,15 @@
+[Script Info]
+Title: Auto-generated Subtitle
+ScriptType: v4.00+
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.61,Default,,0,0,0,,白琳琳奉命带队临行前南宫
+Dialogue: 0,0:00:02.61,0:00:04.97,Default,,0,0,0,,初雪千叮万嘱一色峰弟子首
+Dialogue: 0,0:00:04.97,0:00:07.31,Default,,0,0,0,,次入秘境安全成首要目标陆
+Dialogue: 0,0:00:07.31,0:00:09.95,Default,,0,0,0,,川却只关心火锅食材是否带
+Dialogue: 0,0:00:09.95,0:00:10.27,Default,,0,0,0,,齐

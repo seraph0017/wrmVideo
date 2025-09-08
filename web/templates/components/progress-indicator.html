@@ -1,0 +1,741 @@
+<!-- 通用任务进度条和状态指示器组件 -->
+
+<!-- 基础进度条组件 -->
+<template id="basicProgressBarTemplate">
+    <div class="progress-container mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="progress-label">进度</span>
+            <span class="progress-percentage">0%</span>
+        </div>
+        <div class="progress" style="height: 8px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                 role="progressbar" 
+                 style="width: 0%" 
+                 aria-valuenow="0" 
+                 aria-valuemin="0" 
+                 aria-valuemax="100">
+            </div>
+        </div>
+        <div class="progress-details mt-1">
+            <small class="text-muted progress-info">等待开始...</small>
+        </div>
+    </div>
+</template>
+
+<!-- 多阶段进度条组件 -->
+<template id="multiStageProgressTemplate">
+    <div class="multi-stage-progress mb-3">
+        <div class="stage-indicators mb-2">
+            <!-- 阶段指示器将动态生成 -->
+        </div>
+        <div class="progress" style="height: 10px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                 role="progressbar" 
+                 style="width: 0%" 
+                 aria-valuenow="0" 
+                 aria-valuemin="0" 
+                 aria-valuemax="100">
+            </div>
+        </div>
+        <div class="stage-details mt-2">
+            <div class="current-stage-info">
+                <small class="text-muted">当前阶段: <span class="current-stage-name">准备中</span></small>
+            </div>
+            <div class="stage-progress-info">
+                <small class="text-muted">阶段进度: <span class="stage-progress-text">0/0</span></small>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- 圆形进度指示器组件 -->
+<template id="circularProgressTemplate">
+    <div class="circular-progress-container text-center">
+        <div class="circular-progress" data-percentage="0">
+            <svg class="circular-progress-svg" width="80" height="80">
+                <circle class="circular-progress-bg" 
+                        cx="40" cy="40" r="35" 
+                        fill="none" 
+                        stroke="#e9ecef" 
+                        stroke-width="6">
+                </circle>
+                <circle class="circular-progress-bar" 
+                        cx="40" cy="40" r="35" 
+                        fill="none" 
+                        stroke="#007bff" 
+                        stroke-width="6" 
+                        stroke-linecap="round" 
+                        stroke-dasharray="219.8" 
+                        stroke-dashoffset="219.8">
+                </circle>
+            </svg>
+            <div class="circular-progress-text">
+                <span class="percentage">0%</span>
+            </div>
+        </div>
+        <div class="circular-progress-label mt-2">
+            <small class="text-muted">处理中...</small>
+        </div>
+    </div>
+</template>
+
+<!-- 任务状态徽章组件 -->
+<template id="statusBadgeTemplate">
+    <div class="status-badge-container">
+        <span class="badge status-badge" data-status="pending">
+            <i class="fas fa-clock me-1"></i>
+            <span class="status-text">等待中</span>
+        </span>
+    </div>
+</template>
+
+<!-- 任务时间线组件 -->
+<template id="taskTimelineTemplate">
+    <div class="task-timeline">
+        <div class="timeline-header mb-3">
+            <h6 class="mb-0">任务时间线</h6>
+        </div>
+        <div class="timeline-content">
+            <!-- 时间线项目将动态生成 -->
+        </div>
+    </div>
+</template>
+
+<!-- 时间线项目模板 -->
+<template id="timelineItemTemplate">
+    <div class="timeline-item">
+        <div class="timeline-marker">
+            <i class="fas fa-circle"></i>
+        </div>
+        <div class="timeline-content">
+            <div class="timeline-time">
+                <small class="text-muted"></small>
+            </div>
+            <div class="timeline-title">
+                <strong></strong>
+            </div>
+            <div class="timeline-description">
+                <small class="text-muted"></small>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- 任务统计卡片组件 -->
+<template id="taskStatsTemplate">
+    <div class="task-stats-container">
+        <div class="row g-3">
+            <div class="col-md-3">
+                <div class="stat-card text-center p-3 border rounded">
+                    <div class="stat-icon mb-2">
+                        <i class="fas fa-tasks text-primary"></i>
+                    </div>
+                    <div class="stat-value">
+                        <h5 class="mb-0 total-tasks">0</h5>
+                    </div>
+                    <div class="stat-label">
+                        <small class="text-muted">总任务数</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card text-center p-3 border rounded">
+                    <div class="stat-icon mb-2">
+                        <i class="fas fa-check-circle text-success"></i>
+                    </div>
+                    <div class="stat-value">
+                        <h5 class="mb-0 completed-tasks">0</h5>
+                    </div>
+                    <div class="stat-label">
+                        <small class="text-muted">已完成</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card text-center p-3 border rounded">
+                    <div class="stat-icon mb-2">
+                        <i class="fas fa-spinner text-warning"></i>
+                    </div>
+                    <div class="stat-value">
+                        <h5 class="mb-0 running-tasks">0</h5>
+                    </div>
+                    <div class="stat-label">
+                        <small class="text-muted">进行中</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card text-center p-3 border rounded">
+                    <div class="stat-icon mb-2">
+                        <i class="fas fa-exclamation-circle text-danger"></i>
+                    </div>
+                    <div class="stat-value">
+                        <h5 class="mb-0 failed-tasks">0</h5>
+                    </div>
+                    <div class="stat-label">
+                        <small class="text-muted">失败</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- 进度条样式 -->
+<style>
+/* 基础进度条样式 */
+.progress-container .progress {
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+.progress-container .progress-bar {
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* 多阶段进度条样式 */
+.multi-stage-progress .stage-indicators {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.stage-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+
+.stage-indicator:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #dee2e6;
+    z-index: 1;
+}
+
+.stage-indicator.completed::after {
+    background-color: #28a745;
+}
+
+.stage-indicator.active::after {
+    background-color: #007bff;
+}
+
+.stage-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dee2e6;
+    color: #6c757d;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.stage-indicator.completed .stage-icon {
+    background-color: #28a745;
+    color: white;
+}
+
+.stage-indicator.active .stage-icon {
+    background-color: #007bff;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.stage-label {
+    margin-top: 8px;
+    font-size: 12px;
+    text-align: center;
+    color: #6c757d;
+}
+
+.stage-indicator.active .stage-label {
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* 圆形进度条样式 */
+.circular-progress {
+    position: relative;
+    display: inline-block;
+}
+
+.circular-progress-svg {
+    transform: rotate(-90deg);
+}
+
+.circular-progress-bar {
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.circular-progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* 状态徽章样式 */
+.status-badge {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.status-badge[data-status="pending"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+.status-badge[data-status="running"] {
+    background-color: #007bff;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.status-badge[data-status="completed"] {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-badge[data-status="failed"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+.status-badge[data-status="paused"] {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+/* 任务时间线样式 */
+.task-timeline {
+    position: relative;
+}
+
+.timeline-content {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #dee2e6;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    z-index: 2;
+}
+
+.timeline-item.completed .timeline-marker {
+    background-color: #28a745;
+}
+
+.timeline-item.failed .timeline-marker {
+    background-color: #dc3545;
+}
+
+.timeline-content .timeline-time {
+    margin-bottom: 4px;
+}
+
+.timeline-content .timeline-title {
+    margin-bottom: 4px;
+}
+
+/* 统计卡片样式 */
+.stat-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.stat-icon i {
+    font-size: 1.5rem;
+}
+
+/* 动画效果 */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .multi-stage-progress .stage-indicators {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .stage-indicator:not(:last-child)::after {
+        display: none;
+    }
+    
+    .timeline-content {
+        padding-left: 20px;
+    }
+    
+    .timeline-marker {
+        left: -15px;
+        width: 15px;
+        height: 15px;
+        font-size: 6px;
+    }
+}
+</style>
+
+<!-- 进度指示器JavaScript功能 -->
+<script>
+// 检查是否已经定义了ProgressIndicator类，避免重复声明
+if (typeof ProgressIndicator === 'undefined') {
+/**
+ * 进度指示器组件类
+ */
+class ProgressIndicator {
+    constructor(container, options = {}) {
+        this.container = container;
+        this.options = {
+            type: 'basic', // basic, multi-stage, circular
+            showPercentage: true,
+            showDetails: true,
+            animated: true,
+            ...options
+        };
+        this.currentProgress = 0;
+        this.stages = [];
+        this.currentStage = 0;
+        
+        this.init();
+    }
+    
+    /**
+     * 初始化进度指示器
+     */
+    init() {
+        this.render();
+    }
+    
+    /**
+     * 渲染进度指示器
+     */
+    render() {
+        let template;
+        
+        switch (this.options.type) {
+            case 'multi-stage':
+                template = document.getElementById('multiStageProgressTemplate');
+                break;
+            case 'circular':
+                template = document.getElementById('circularProgressTemplate');
+                break;
+            default:
+                template = document.getElementById('basicProgressBarTemplate');
+        }
+        
+        if (template) {
+            const clone = template.content.cloneNode(true);
+            this.container.appendChild(clone);
+            
+            if (this.options.type === 'multi-stage') {
+                this.renderStages();
+            }
+        }
+    }
+    
+    /**
+     * 渲染多阶段指示器
+     */
+    renderStages() {
+        const stageContainer = this.container.querySelector('.stage-indicators');
+        if (!stageContainer || !this.stages.length) return;
+        
+        stageContainer.innerHTML = '';
+        
+        this.stages.forEach((stage, index) => {
+            const stageElement = document.createElement('div');
+            stageElement.className = 'stage-indicator';
+            stageElement.innerHTML = `
+                <div class="stage-icon">
+                    <i class="${stage.icon || 'fas fa-circle'}"></i>
+                </div>
+                <div class="stage-label">${stage.name}</div>
+            `;
+            
+            if (index < this.currentStage) {
+                stageElement.classList.add('completed');
+            } else if (index === this.currentStage) {
+                stageElement.classList.add('active');
+            }
+            
+            stageContainer.appendChild(stageElement);
+        });
+    }
+    
+    /**
+     * 设置阶段
+     */
+    setStages(stages) {
+        this.stages = stages;
+        if (this.options.type === 'multi-stage') {
+            this.renderStages();
+        }
+    }
+    
+    /**
+     * 更新进度
+     */
+    updateProgress(percentage, details = '') {
+        this.currentProgress = Math.max(0, Math.min(100, percentage));
+        
+        const progressBar = this.container.querySelector('.progress-bar');
+        const progressPercentage = this.container.querySelector('.progress-percentage');
+        const progressInfo = this.container.querySelector('.progress-info');
+        
+        if (progressBar) {
+            progressBar.style.width = `${this.currentProgress}%`;
+            progressBar.setAttribute('aria-valuenow', this.currentProgress);
+        }
+        
+        if (progressPercentage && this.options.showPercentage) {
+            progressPercentage.textContent = `${Math.round(this.currentProgress)}%`;
+        }
+        
+        if (progressInfo && details && this.options.showDetails) {
+            progressInfo.textContent = details;
+        }
+        
+        // 圆形进度条特殊处理
+        if (this.options.type === 'circular') {
+            this.updateCircularProgress();
+        }
+    }
+    
+    /**
+     * 更新圆形进度条
+     */
+    updateCircularProgress() {
+        const circle = this.container.querySelector('.circular-progress-bar');
+        const percentageText = this.container.querySelector('.percentage');
+        
+        if (circle) {
+            const circumference = 2 * Math.PI * 35; // r=35
+            const offset = circumference - (this.currentProgress / 100) * circumference;
+            circle.style.strokeDashoffset = offset;
+        }
+        
+        if (percentageText) {
+            percentageText.textContent = `${Math.round(this.currentProgress)}%`;
+        }
+    }
+    
+    /**
+     * 设置当前阶段
+     */
+    setCurrentStage(stageIndex, stageProgress = 0) {
+        this.currentStage = stageIndex;
+        
+        if (this.options.type === 'multi-stage') {
+            this.renderStages();
+            
+            const currentStageName = this.container.querySelector('.current-stage-name');
+            const stageProgressText = this.container.querySelector('.stage-progress-text');
+            
+            if (currentStageName && this.stages[stageIndex]) {
+                currentStageName.textContent = this.stages[stageIndex].name;
+            }
+            
+            if (stageProgressText) {
+                const total = this.stages[stageIndex]?.total || 0;
+                const current = Math.round((stageProgress / 100) * total);
+                stageProgressText.textContent = `${current}/${total}`;
+            }
+        }
+    }
+    
+    /**
+     * 完成进度
+     */
+    complete() {
+        this.updateProgress(100, '已完成');
+        
+        const progressBar = this.container.querySelector('.progress-bar');
+        if (progressBar) {
+            progressBar.classList.remove('progress-bar-animated');
+            progressBar.classList.add('bg-success');
+        }
+    }
+    
+    /**
+     * 设置错误状态
+     */
+    setError(message = '执行失败') {
+        const progressBar = this.container.querySelector('.progress-bar');
+        const progressInfo = this.container.querySelector('.progress-info');
+        
+        if (progressBar) {
+            progressBar.classList.remove('progress-bar-animated');
+            progressBar.classList.add('bg-danger');
+        }
+        
+        if (progressInfo) {
+            progressInfo.textContent = message;
+            progressInfo.classList.add('text-danger');
+        }
+    }
+    
+    /**
+     * 重置进度
+     */
+    reset() {
+        this.currentProgress = 0;
+        this.currentStage = 0;
+        
+        const progressBar = this.container.querySelector('.progress-bar');
+        const progressPercentage = this.container.querySelector('.progress-percentage');
+        const progressInfo = this.container.querySelector('.progress-info');
+        
+        if (progressBar) {
+            progressBar.style.width = '0%';
+            progressBar.setAttribute('aria-valuenow', 0);
+            progressBar.className = 'progress-bar progress-bar-striped progress-bar-animated';
+        }
+        
+        if (progressPercentage) {
+            progressPercentage.textContent = '0%';
+        }
+        
+        if (progressInfo) {
+            progressInfo.textContent = '等待开始...';
+            progressInfo.className = 'text-muted progress-info';
+        }
+        
+        if (this.options.type === 'multi-stage') {
+            this.renderStages();
+        }
+    }
+}
+
+/**
+ * 状态徽章组件类
+ */
+class StatusBadge {
+    constructor(container, options = {}) {
+        this.container = container;
+        this.options = {
+            showIcon: true,
+            ...options
+        };
+        this.currentStatus = 'pending';
+        
+        this.init();
+    }
+    
+    init() {
+        this.render();
+    }
+    
+    render() {
+        const template = document.getElementById('statusBadgeTemplate');
+        if (template) {
+            const clone = template.content.cloneNode(true);
+            this.container.appendChild(clone);
+        }
+    }
+    
+    updateStatus(status, text = '') {
+        this.currentStatus = status;
+        
+        const badge = this.container.querySelector('.status-badge');
+        const statusText = this.container.querySelector('.status-text');
+        const icon = this.container.querySelector('i');
+        
+        if (badge) {
+            badge.setAttribute('data-status', status);
+        }
+        
+        if (statusText) {
+            statusText.textContent = text || this.getStatusText(status);
+        }
+        
+        if (icon && this.options.showIcon) {
+            icon.className = this.getStatusIcon(status);
+        }
+    }
+    
+    getStatusText(status) {
+        const statusTexts = {
+            pending: '等待中',
+            running: '进行中',
+            completed: '已完成',
+            failed: '失败',
+            paused: '已暂停'
+        };
+        return statusTexts[status] || status;
+    }
+    
+    getStatusIcon(status) {
+        const statusIcons = {
+            pending: 'fas fa-clock me-1',
+            running: 'fas fa-spinner fa-spin me-1',
+            completed: 'fas fa-check-circle me-1',
+            failed: 'fas fa-exclamation-circle me-1',
+            paused: 'fas fa-pause-circle me-1'
+        };
+        return statusIcons[status] || 'fas fa-circle me-1';
+    }
+}
+
+// 导出组件类
+if (typeof window !== 'undefined') {
+    window.ProgressIndicator = ProgressIndicator;
+    window.StatusBadge = StatusBadge;
+}
+} // 结束 ProgressIndicator 未定义检查
+</script>

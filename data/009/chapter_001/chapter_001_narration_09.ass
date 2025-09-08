@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_001 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.42,Default,,0,0,0,,邪修据点现真容
+Dialogue: 0,0:00:01.88,0:00:04.49,Default,,0,0,0,,油头粉面少年捆住{\c&H0000FFFF&\b1}展溪云{\c&H00FFFFFF&\b0}赵
+Dialogue: 0,0:00:04.49,0:00:06.85,Default,,0,0,0,,落落得意狞笑明月阁仙子
+Dialogue: 0,0:00:06.85,0:00:09.26,Default,,0,0,0,,名不虚传伸手欲扯蓝裙女
+Dialogue: 0,0:00:09.26,0:00:11.20,Default,,0,0,0,,面纱画面紧张刺激

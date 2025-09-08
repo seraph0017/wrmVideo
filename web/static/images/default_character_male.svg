@@ -1,0 +1,16 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆 -->
+  <circle cx="100" cy="100" r="100" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+  
+  <!-- 头部 -->
+  <circle cx="100" cy="75" r="25" fill="#2196f3"/>
+  
+  <!-- 身体 -->
+  <ellipse cx="100" cy="140" rx="35" ry="45" fill="#2196f3"/>
+  
+  <!-- 男性标识 -->
+  <rect x="95" y="110" width="10" height="20" fill="#1976d2"/>
+  
+  <!-- 文字 -->
+  <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1976d2">男性角色</text>
+</svg>
