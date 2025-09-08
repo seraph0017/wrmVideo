@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_002 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.82,Default,,0,0,0,,朝会结束后
+Dialogue: 0,0:00:01.27,0:00:03.27,Default,,0,0,0,,朱允熥搀扶着{\c&H0000FFFF&\b1}朱元璋{\c&H00FFFFFF&\b0}步行回
+Dialogue: 0,0:00:03.27,0:00:03.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}奉天{\c&H00FFFFFF&\b0}殿
+Dialogue: 0,0:00:04.30,0:00:05.44,Default,,0,0,0,,两人低声交谈
+Dialogue: 0,0:00:05.82,0:00:07.04,Default,,0,0,0,,宫人们远远跟随
+Dialogue: 0,0:00:07.36,0:00:09.42,Default,,0,0,0,,不敢打扰这难得的{\c&H0000FFFF&\b1}祖孙{\c&H00FFFFFF&\b0}时光

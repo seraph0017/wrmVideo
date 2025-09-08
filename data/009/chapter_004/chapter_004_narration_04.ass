@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_004 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.79,Default,,0,0,0,,红叶真人突然凑近林小小
+Dialogue: 0,0:00:02.24,0:00:03.70,Default,,0,0,0,,漂亮眼睛弯成月牙
+Dialogue: 0,0:00:04.11,0:00:05.98,Default,,0,0,0,,第一我只吸过好色之徒
+Dialogue: 0,0:00:06.39,0:00:07.52,Default,,0,0,0,,第二我能换脸
+Dialogue: 0,0:00:07.92,0:00:10.56,Default,,0,0,0,,第三六境修士的价值你懂的

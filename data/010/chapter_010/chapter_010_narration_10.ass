@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_010 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.38,Default,,0,0,0,,道静僧舍黑衣僧偷食荤腥
+Dialogue: 0,0:00:02.79,0:00:03.49,Default,,0,0,0,,羊蹄油腻
+Dialogue: 0,0:00:03.89,0:00:06.43,Default,,0,0,0,,道静皱眉斥责灰色僧袍飘动
+Dialogue: 0,0:00:06.82,0:00:09.24,Default,,0,0,0,,黑衣僧咧嘴而笑桌上酒肉
+Dialogue: 0,0:00:09.24,0:00:11.73,Default,,0,0,0,,狼藉与寺庙清净格格不入

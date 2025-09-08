@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}{{ character.name }} | {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">角色详情</h5>
+                <div>
+                    <a href="{% url 'video:character_list' %}" class="btn btn-light btn-sm">返回列表</a>
+                    <a href="{% url 'admin:video_character_change' character.id %}" class="btn btn-warning btn-sm">编辑</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>基本信息</h4>
+                        <table class="table">
+                            <tr>
+                                <th style="width: 150px;">ID</th>
+                                <td>{{ character.id }}</td>
+                            </tr>
+                            <tr>
+                                <th>姓名</th>
+                                <td>{{ character.name }}</td>
+                            </tr>
+                            <tr>
+                                <th>性别</th>
+                                <td>{{ character.gender }}</td>
+                            </tr>
+                            <tr>
+                                <th>年龄段</th>
+                                <td>{{ character.age_group }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>外观特征</h4>
+                        <table class="table">
+                            {% if character.hair_style %}
+                            <tr>
+                                <th style="width: 150px;">发型</th>
+                                <td>{{ character.hair_style }}</td>
+                            </tr>
+                            {% endif %}
+                            {% if character.hair_color %}
+                            <tr>
+                                <th>发色</th>
+                                <td>{{ character.hair_color }}</td>
+                            </tr>
+                            {% endif %}
+                            {% if character.face_features %}
+                            <tr>
+                                <th>面部特征</th>
+                                <td>{{ character.face_features }}</td>
+                            </tr>
+                            {% endif %}
+                            {% if character.body_features %}
+                            <tr>
+                                <th>身材特征</th>
+                                <td>{{ character.body_features }}</td>
+                            </tr>
+                            {% endif %}
+                            {% if character.special_notes %}
+                            <tr>
+                                <th>特殊标记</th>
+                                <td>{{ character.special_notes }}</td>
+                            </tr>
+                            {% endif %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                {% if chapter %}
+                <div class="card mt-4">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-book"></i> 所属章节
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="card border-info">
+                            <div class="card-body">
+                                <h6 class="card-title">{{ chapter.title }}</h6>
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        字数：{{ chapter.word_count }}
+                                    </small>
+                                </p>
+                                <a href="{% url 'video:chapter_detail' chapter.id %}" class="btn btn-sm btn-outline-info">查看章节</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+{% endblock %}

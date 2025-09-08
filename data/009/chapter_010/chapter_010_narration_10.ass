@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_010 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.36,Default,,0,0,0,,雨夜
+Dialogue: 0,0:00:00.77,0:00:02.55,Default,,0,0,0,,客栈门口出现身高三米的
+Dialogue: 0,0:00:02.55,0:00:04.37,Default,,0,0,0,,壮汉和未老先衰的小孩
+Dialogue: 0,0:00:04.83,0:00:06.39,Default,,0,0,0,,两人手中提着红色灯笼
+Dialogue: 0,0:00:06.82,0:00:08.47,Default,,0,0,0,,灯笼似生物眼睛般眨巴
+Dialogue: 0,0:00:08.87,0:00:10.61,Default,,0,0,0,,小二惊恐尖叫着后退

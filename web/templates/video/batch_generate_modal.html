@@ -1,0 +1,97 @@
+<!-- 批量生成角色图片模态框 -->
+<div class="modal fade" id="batchGenerateModal" tabindex="-1" aria-labelledby="batchGenerateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="batchGenerateModalLabel">批量生成角色图片</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="batchGenerateForm">
+                    <div class="mb-3">
+                        <label for="selectedCharacters" class="form-label">选中的角色</label>
+                        <div id="selectedCharacters" class="form-control" style="min-height: 60px; background-color: #f8f9fa;">
+                            <!-- 选中的角色将在这里显示 -->
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="chapterSelect" class="form-label">选择章节（可选）</label>
+                        <select class="form-select" id="chapterSelect" name="chapter_id">
+                            <option value="">-- 不指定章节 --</option>
+                            {% for chapter in chapters %}
+                            <option value="{{ chapter.id }}">第{{ chapter.chapter_number }}章 - {{ chapter.title }}</option>
+                            {% endfor %}
+                        </select>
+                        <div class="form-text">选择章节后，将根据该章节的内容生成角色图片</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="imageStyle" class="form-label">图片风格</label>
+                        <select class="form-select" id="imageStyle" name="style">
+                            <option value="anime">动漫风格</option>
+                            <option value="realistic">写实风格</option>
+                            <option value="cartoon">卡通风格</option>
+                            <option value="watercolor">水彩风格</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="imageSize" class="form-label">图片尺寸</label>
+                        <select class="form-select" id="imageSize" name="size">
+                            <option value="512x512">512x512 (正方形)</option>
+                            <option value="512x768">512x768 (竖版)</option>
+                            <option value="768x512">768x512 (横版)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="overwriteExisting" name="overwrite">
+                            <label class="form-check-label" for="overwriteExisting">
+                                覆盖已有图片
+                            </label>
+                            <div class="form-text">勾选后将重新生成已有图片的角色</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="confirmBatchGenerate">开始生成</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 批量生成进度模态框 -->
+<div class="modal fade" id="batchProgressModal" tabindex="-1" aria-labelledby="batchProgressModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="batchProgressModalLabel">批量生成进度</h5>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>总体进度</span>
+                        <span id="progressText">0/0</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" id="progressBar"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">生成状态</label>
+                    <div id="generationStatus" class="border rounded p-2" style="max-height: 200px; overflow-y: auto; background-color: #f8f9fa;">
+                        <!-- 生成状态信息将在这里显示 -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="closeProgressModal" disabled>关闭</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_015 Narration 24 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}崔英英{\c&H00FFFFFF&\b0}痛改前非
+Dialogue: 0,0:00:01.67,0:00:02.40,Default,,0,0,0,,发奋读书
+Dialogue: 0,0:00:02.77,0:00:04.84,Default,,0,0,0,,在{\c&H0000FFFF&\b1}国子监{\c&H00FFFFFF&\b0}考试中名列前茅
+Dialogue: 0,0:00:05.19,0:00:06.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}杨荣赞{\c&H00FFFFFF&\b0}其浪子回头
+Dialogue: 0,0:00:07.20,0:00:08.57,Default,,0,0,0,,推荐其入吏部历练
+Dialogue: 0,0:00:08.87,0:00:10.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}崔英英{\c&H00FFFFFF&\b0}感激涕零

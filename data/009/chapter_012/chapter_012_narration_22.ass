@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_012 Narration 22 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙腾{\c&H00FFFFFF&\b0}绝望中放出噬元虫
+Dialogue: 0,0:00:02.41,0:00:03.87,Default,,0,0,0,,黑色小球落地爆开
+Dialogue: 0,0:00:04.24,0:00:05.30,Default,,0,0,0,,化作黑气虫群
+Dialogue: 0,0:00:05.74,0:00:06.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}皱眉后退
+Dialogue: 0,0:00:07.16,0:00:08.94,Default,,0,0,0,,白底黑纹剑衣前襟飘动
+Dialogue: 0,0:00:09.23,0:00:10.40,Default,,0,0,0,,意识到闯了大祸

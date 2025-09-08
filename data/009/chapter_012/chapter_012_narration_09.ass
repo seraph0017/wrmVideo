@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_012 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}孙百莫{\c&H00FFFFFF&\b0}将孙怜雪推上车
+Dialogue: 0,0:00:02.27,0:00:03.79,Default,,0,0,0,,自己乐呵着安排仆从
+Dialogue: 0,0:00:04.27,0:00:06.15,Default,,0,0,0,,蓝色锦袍在{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}下显眼
+Dialogue: 0,0:00:06.58,0:00:07.75,Default,,0,0,0,,对{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}态度恭敬
+Dialogue: 0,0:00:08.07,0:00:09.44,Default,,0,0,0,,似想促成两人关系

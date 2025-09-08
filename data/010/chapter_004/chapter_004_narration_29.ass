@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_004 Narration 29 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.37,Default,,0,0,0,,沈溍站在校场边
+Dialogue: 0,0:00:01.76,0:00:03.04,Default,,0,0,0,,看着{\c&H0000FFFF&\b1}朱棣{\c&H00FFFFFF&\b0}操练士兵
+Dialogue: 0,0:00:03.52,0:00:05.33,Default,,0,0,0,,浅灰襕衫在晨风中飘动
+Dialogue: 0,0:00:05.82,0:00:06.63,Default,,0,0,0,,他捋着短须
+Dialogue: 0,0:00:07.07,0:00:08.47,Default,,0,0,0,,眼中露出赞许神色
+Dialogue: 0,0:00:08.85,0:00:10.67,Default,,0,0,0,,对身边随从低声说着什么

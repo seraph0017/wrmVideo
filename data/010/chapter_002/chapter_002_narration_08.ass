@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_002 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.15,Default,,0,0,0,,面对太监的狡辩
+Dialogue: 0,0:00:01.61,0:00:03.00,Default,,0,0,0,,朱允熥怒火更盛
+Dialogue: 0,0:00:03.41,0:00:05.34,Default,,0,0,0,,一脚踹向失职的总管太监
+Dialogue: 0,0:00:05.81,0:00:07.02,Default,,0,0,0,,声色俱厉地斥责
+Dialogue: 0,0:00:07.46,0:00:09.58,Default,,0,0,0,,展现出少年人少有的威严

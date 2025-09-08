@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_006 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}蓝玉{\c&H00FFFFFF&\b0}身着灰色圆领布衣
+Dialogue: 0,0:00:02.27,0:00:03.12,Default,,0,0,0,,满脸胡须
+Dialogue: 0,0:00:03.50,0:00:04.58,Default,,0,0,0,,立于{\c&H0000FFFF&\b1}淮河{\c&H00FFFFFF&\b0}堤坝上
+Dialogue: 0,0:00:04.89,0:00:06.27,Default,,0,0,0,,望着远处{\c&H0000FFFF&\b1}明军{\c&H00FFFFFF&\b0}船队
+Dialogue: 0,0:00:06.69,0:00:08.29,Default,,0,0,0,,听闻士兵高呼大帅
+Dialogue: 0,0:00:08.66,0:00:09.68,Default,,0,0,0,,不禁老泪纵横
+Dialogue: 0,0:00:10.01,0:00:11.32,Default,,0,0,0,,低声哼唱军歌

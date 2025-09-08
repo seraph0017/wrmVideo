@@ -1,0 +1,20 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆 -->
+  <circle cx="100" cy="100" r="100" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>
+  
+  <!-- 头部 -->
+  <circle cx="100" cy="75" r="25" fill="#e91e63"/>
+  
+  <!-- 长发装饰 -->
+  <ellipse cx="85" cy="70" rx="8" ry="18" fill="#c2185b"/>
+  <ellipse cx="115" cy="70" rx="8" ry="18" fill="#c2185b"/>
+  
+  <!-- 身体 -->
+  <ellipse cx="100" cy="140" rx="35" ry="45" fill="#e91e63"/>
+  
+  <!-- 女性标识 -->
+  <path d="M 85 155 Q 100 160 115 155 L 115 170 Q 100 175 85 170 Z" fill="#c2185b"/>
+  
+  <!-- 文字 -->
+  <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#c2185b">女性角色</text>
+</svg>

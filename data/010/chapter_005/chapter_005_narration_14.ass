@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_005 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}奉天{\c&H00FFFFFF&\b0}殿外
+Dialogue: 0,0:00:01.14,0:00:03.25,Default,,0,0,0,,朱允熥身着青色圆领长袍
+Dialogue: 0,0:00:03.72,0:00:04.90,Default,,0,0,0,,正快步走向殿内
+Dialogue: 0,0:00:05.32,0:00:06.13,Default,,0,0,0,,神情急切
+Dialogue: 0,0:00:06.51,0:00:07.38,Default,,0,0,0,,双手{\c&H0000FFFF&\b1}握拳{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.64,0:00:08.42,Default,,0,0,0,,袍角飘动
+Dialogue: 0,0:00:08.82,0:00:10.07,Default,,0,0,0,,身后宫人跟随

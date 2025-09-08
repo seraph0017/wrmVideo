@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}删除角色{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-trash"></i> 删除角色
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <strong>警告：</strong>此操作不可撤销！
+                    </div>
+                    
+                    <p>您确定要删除以下角色吗？</p>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ object.name }}</h5>
+                            <p class="card-text">
+                                <strong>性别：</strong>{{ object.get_gender_display }}<br>
+                                <strong>年龄组：</strong>{{ object.get_age_group_display }}<br>
+                                <strong>发型：</strong>{{ object.hair_style|default:"未设置" }}<br>
+                                <strong>发色：</strong>{{ object.hair_color|default:"未设置" }}
+                            </p>
+                            {% if object.face_features %}
+                                <p><strong>面部特征：</strong>{{ object.face_features }}</p>
+                            {% endif %}
+                            {% if object.body_features %}
+                                <p><strong>身体特征：</strong>{{ object.body_features }}</p>
+                            {% endif %}
+                            {% if object.special_notes %}
+                                <p><strong>特殊说明：</strong>{{ object.special_notes }}</p>
+                            {% endif %}
+                            {% if object.chapter %}
+                                <div class="alert alert-info">
+                                    <i class="fas fa-info-circle"></i>
+                                    该角色出现在章节「{{ object.chapter.title }}」中。
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'video:character_list' %}" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> 取消
+                            </a>
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fas fa-trash"></i> 确认删除
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

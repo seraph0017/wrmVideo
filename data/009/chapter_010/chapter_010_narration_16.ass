@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_010 Narration 16 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.19,Default,,0,0,0,,小男孩抱着小猫
+Dialogue: 0,0:00:01.61,0:00:02.96,Default,,0,0,0,,在客栈废墟上哭泣
+Dialogue: 0,0:00:03.32,0:00:04.07,Default,,0,0,0,,寻找父亲
+Dialogue: 0,0:00:04.55,0:00:05.55,Default,,0,0,0,,声音撕心裂肺
+Dialogue: 0,0:00:05.87,0:00:07.85,Default,,0,0,0,,身体因寒冷和害怕而颤抖
+Dialogue: 0,0:00:08.15,0:00:08.99,Default,,0,0,0,,表情悲伤

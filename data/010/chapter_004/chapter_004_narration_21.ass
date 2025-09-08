@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_004 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}张玉{\c&H00FFFFFF&\b0}上前一步
+Dialogue: 0,0:00:01.38,0:00:03.44,Default,,0,0,0,,对{\c&H0000FFFF&\b1}解缙{\c&H00FFFFFF&\b0}抱拳道末将便是张玉
+Dialogue: 0,0:00:03.90,0:00:05.38,Default,,0,0,0,,不知张统领有何吩咐
+Dialogue: 0,0:00:05.73,0:00:06.42,Default,,0,0,0,,语气沉稳
+Dialogue: 0,0:00:06.90,0:00:08.59,Default,,0,0,0,,目光却紧紧锁定{\c&H0000FFFF&\b1}解缙{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.94,0:00:09.60,Default,,0,0,0,,带着警惕

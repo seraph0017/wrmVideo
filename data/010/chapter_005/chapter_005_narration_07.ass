@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_005 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.99,Default,,0,0,0,,镇抚司大牢内
+Dialogue: 0,0:00:01.38,0:00:02.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}蓝玉{\c&H00FFFFFF&\b0}身着灰色布衣
+Dialogue: 0,0:00:03.12,0:00:04.38,Default,,0,0,0,,被铁链锁在墙上
+Dialogue: 0,0:00:04.72,0:00:05.44,Default,,0,0,0,,头发散乱
+Dialogue: 0,0:00:05.77,0:00:06.57,Default,,0,0,0,,神情疲惫
+Dialogue: 0,0:00:06.85,0:00:08.05,Default,,0,0,0,,眼神中透着不甘
+Dialogue: 0,0:00:08.29,0:00:09.80,Default,,0,0,0,,牢房内阴暗潮湿

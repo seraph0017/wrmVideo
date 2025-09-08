@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_003 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.69,Default,,0,0,0,,朱棣喝止{\c&H0000FFFF&\b1}朱高煦{\c&H00FFFFFF&\b0}转向朱权笑道
+Dialogue: 0,0:00:02.98,0:00:05.23,Default,,0,0,0,,我那战马与你这马王相比皆
+Dialogue: 0,0:00:05.23,0:00:05.77,Default,,0,0,0,,为凡品
+Dialogue: 0,0:00:06.27,0:00:08.83,Default,,0,0,0,,圆脸上笑容温和眼底却闪过
+Dialogue: 0,0:00:08.83,0:00:09.63,Default,,0,0,0,,一丝精光

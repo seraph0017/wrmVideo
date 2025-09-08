@@ -1,0 +1,1002 @@
+{% load static %}
+
+<!-- 引入进度指示器样式 -->
+<link rel="stylesheet" href="{% static 'css/progress-indicator.css' %}">
+
+<!-- 统一任务状态组件 -->
+<div class="unified-task-component" data-task-type="" data-task-id="">
+    <!-- 任务头部信息 -->
+    <div class="task-header mb-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="task-title-section">
+                <h6 class="task-title mb-1">任务执行中</h6>
+                <small class="text-muted task-subtitle">正在处理您的请求...</small>
+            </div>
+            <div class="task-status-section">
+                <div class="status-badge-container"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 进度指示器容器 -->
+    <div class="progress-indicator-container mb-3">
+        <!-- 进度条将在这里动态生成 -->
+    </div>
+    
+    <!-- 任务详情信息 -->
+    <div class="task-details mb-3">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="detail-item">
+                    <small class="text-muted">任务ID:</small>
+                    <span class="task-id-display">-</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="detail-item">
+                    <small class="text-muted">开始时间:</small>
+                    <span class="task-start-time">-</span>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <div class="detail-item">
+                    <small class="text-muted">任务类型:</small>
+                    <span class="task-type-display">-</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="detail-item">
+                    <small class="text-muted">预计时间:</small>
+                    <span class="task-estimated-time">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 任务统计信息 -->
+    <div class="task-stats-container mb-3" style="display: none;">
+        <!-- 统计信息将在这里动态生成 -->
+    </div>
+    
+    <!-- 任务时间线 -->
+    <div class="task-timeline-container mb-3" style="display: none;">
+        <!-- 时间线将在这里动态生成 -->
+    </div>
+    
+    <!-- 任务结果显示区域 -->
+    <div class="task-result-container" style="display: none;">
+        <div class="alert alert-info">
+            <h6 class="alert-heading">任务结果</h6>
+            <div class="task-result-content">
+                <!-- 结果内容将在这里显示 -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- 任务错误信息 -->
+    <div class="task-error-container" style="display: none;">
+        <div class="alert alert-danger">
+            <h6 class="alert-heading">
+                <i class="fas fa-exclamation-triangle me-2"></i>任务执行失败
+            </h6>
+            <div class="task-error-content">
+                <!-- 错误信息将在这里显示 -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- 任务操作按钮 -->
+    <div class="task-actions mt-3">
+        <div class="d-flex gap-2 flex-wrap">
+            <button type="button" class="btn btn-outline-primary btn-sm task-action-log" style="display: none;">
+                <i class="fas fa-file-alt me-1"></i>查看日志
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm task-action-export" style="display: none;">
+                <i class="fas fa-download me-1"></i>导出日志
+            </button>
+            <button type="button" class="btn btn-outline-warning btn-sm task-action-pause" style="display: none;">
+                <i class="fas fa-pause me-1"></i>暂停任务
+            </button>
+            <button type="button" class="btn btn-outline-success btn-sm task-action-resume" style="display: none;">
+                <i class="fas fa-play me-1"></i>继续任务
+            </button>
+            <button type="button" class="btn btn-outline-danger btn-sm task-action-cancel" style="display: none;">
+                <i class="fas fa-stop me-1"></i>取消任务
+            </button>
+            <button type="button" class="btn btn-primary btn-sm task-action-retry" style="display: none;">
+                <i class="fas fa-redo me-1"></i>重试任务
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- 任务日志模态框 -->
+<div class="modal fade" id="taskLogModal" tabindex="-1" aria-labelledby="taskLogModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="taskLogModalLabel">
+                    <i class="fas fa-file-alt me-2"></i>任务日志
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 日志过滤器 -->
+                <div class="log-filters mb-3">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <select class="form-select form-select-sm log-level-filter">
+                                <option value="">所有级别</option>
+                                <option value="DEBUG">调试</option>
+                                <option value="INFO">信息</option>
+                                <option value="WARNING">警告</option>
+                                <option value="ERROR">错误</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control form-control-sm log-search" placeholder="搜索日志内容...">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-outline-secondary btn-sm log-clear">
+                                    <i class="fas fa-trash me-1"></i>清空
+                                </button>
+                                <button type="button" class="btn btn-outline-primary btn-sm log-refresh">
+                                    <i class="fas fa-sync me-1"></i>刷新
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 日志内容 -->
+                <div class="log-content">
+                    <div class="log-container" style="height: 400px; overflow-y: auto; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 0.375rem; padding: 1rem; font-family: 'Courier New', monospace; font-size: 0.875rem;">
+                        <div class="log-loading text-center py-4">
+                            <div class="spinner-border spinner-border-sm me-2" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            正在加载日志...
+                        </div>
+                        <div class="log-entries" style="display: none;">
+                            <!-- 日志条目将在这里动态生成 -->
+                        </div>
+                        <div class="log-empty text-center py-4" style="display: none;">
+                            <i class="fas fa-file-alt text-muted mb-2" style="font-size: 2rem;"></i>
+                            <p class="text-muted mb-0">暂无日志数据</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary log-export">
+                    <i class="fas fa-download me-1"></i>导出日志
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 引入进度指示器组件模板 -->
+{% include 'components/progress-indicator.html' %}
+
+<!-- 统一任务组件样式 -->
+<style>
+.unified-task-component {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.unified-task-component:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.task-header {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1rem;
+}
+
+.task-title {
+    color: #495057;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.task-subtitle {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+.detail-item {
+    margin-bottom: 0.5rem;
+}
+
+.detail-item small {
+    display: inline-block;
+    min-width: 80px;
+    font-weight: 500;
+}
+
+.detail-item span {
+    color: #495057;
+    font-weight: 500;
+}
+
+.task-actions {
+    border-top: 1px solid #e9ecef;
+    padding-top: 1rem;
+}
+
+.task-actions .btn {
+    font-size: 0.875rem;
+}
+
+/* 日志模态框样式 */
+.log-filters {
+    background-color: #f8f9fa;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+}
+
+.log-entry {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border-left: 3px solid #dee2e6;
+    background-color: #fff;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.log-entry.debug {
+    border-left-color: #6c757d;
+    background-color: #f8f9fa;
+}
+
+.log-entry.info {
+    border-left-color: #0dcaf0;
+    background-color: #e7f9ff;
+}
+
+.log-entry.warning {
+    border-left-color: #ffc107;
+    background-color: #fff8e1;
+}
+
+.log-entry.error {
+    border-left-color: #dc3545;
+    background-color: #ffeaea;
+}
+
+.log-timestamp {
+    color: #6c757d;
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+}
+
+.log-level {
+    display: inline-block;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+}
+
+.log-level.debug {
+    background-color: #6c757d;
+    color: white;
+}
+
+.log-level.info {
+    background-color: #0dcaf0;
+    color: white;
+}
+
+.log-level.warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.log-level.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+.log-message {
+    color: #495057;
+    word-break: break-word;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .unified-task-component {
+        padding: 1rem;
+    }
+    
+    .task-actions .btn {
+        font-size: 0.8rem;
+        padding: 0.375rem 0.5rem;
+    }
+    
+    .detail-item {
+        margin-bottom: 0.75rem;
+    }
+    
+    .detail-item small {
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+    
+    .log-filters .row > div {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* 深色主题支持 */
+@media (prefers-color-scheme: dark) {
+    .unified-task-component {
+        background: #343a40;
+        border-color: #495057;
+        color: #fff;
+    }
+    
+    .task-header {
+        border-bottom-color: #495057;
+    }
+    
+    .task-actions {
+        border-top-color: #495057;
+    }
+    
+    .log-filters {
+        background-color: #495057;
+        border-color: #6c757d;
+    }
+    
+    .log-container {
+        background-color: #495057 !important;
+        border-color: #6c757d !important;
+        color: #fff;
+    }
+    
+    .log-entry {
+        background-color: #343a40;
+        color: #fff;
+    }
+}
+</style>
+
+<!-- 统一任务组件JavaScript -->
+<script src="{% static 'js/progress-indicator.js' %}"></script>
+<script>
+/**
+ * 统一任务组件管理器
+ */
+class UnifiedTaskComponent {
+    constructor(container, options = {}) {
+        this.container = typeof container === 'string' ? document.querySelector(container) : container;
+        if (!this.container) {
+            throw new Error('Task component container not found');
+        }
+        
+        this.options = {
+            taskType: '',
+            taskId: '',
+            showStats: false,
+            showTimeline: false,
+            progressType: 'basic', // basic, multi-stage, circular
+            autoRefresh: true,
+            refreshInterval: 2000,
+            ...options
+        };
+        
+        this.progressIndicator = null;
+        this.statusBadge = null;
+        this.taskTimeline = null;
+        this.taskStats = null;
+        
+        this.currentTask = null;
+        this.refreshTimer = null;
+        
+        this.init();
+    }
+    
+    /**
+     * 初始化组件
+     */
+    init() {
+        this.setupComponents();
+        this.bindEvents();
+        
+        if (this.options.taskType) {
+            this.setTaskType(this.options.taskType);
+        }
+        
+        if (this.options.taskId) {
+            this.setTaskId(this.options.taskId);
+        }
+    }
+    
+    /**
+     * 设置组件
+     */
+    setupComponents() {
+        // 初始化进度指示器
+        const progressContainer = this.container.querySelector('.progress-indicator-container');
+        if (progressContainer) {
+            this.progressIndicator = new ProgressIndicator(progressContainer, {
+                type: this.options.progressType,
+                showPercentage: true,
+                showDetails: true,
+                animated: true
+            });
+        }
+        
+        // 初始化状态徽章
+        const statusContainer = this.container.querySelector('.status-badge-container');
+        if (statusContainer) {
+            this.statusBadge = new StatusBadge(statusContainer, {
+                showIcon: true,
+                showText: true
+            });
+        }
+        
+        // 初始化任务时间线（如果需要）
+        if (this.options.showTimeline) {
+            const timelineContainer = this.container.querySelector('.task-timeline-container');
+            if (timelineContainer) {
+                timelineContainer.style.display = 'block';
+                this.taskTimeline = new TaskTimeline(timelineContainer);
+            }
+        }
+        
+        // 初始化任务统计（如果需要）
+        if (this.options.showStats) {
+            const statsContainer = this.container.querySelector('.task-stats-container');
+            if (statsContainer) {
+                statsContainer.style.display = 'block';
+                this.taskStats = new TaskStats(statsContainer);
+            }
+        }
+    }
+    
+    /**
+     * 绑定事件
+     */
+    bindEvents() {
+        // 绑定操作按钮事件
+        this.container.addEventListener('click', (e) => {
+            const target = e.target.closest('button');
+            if (!target) return;
+            
+            if (target.classList.contains('task-action-log')) {
+                this.showTaskLog();
+            } else if (target.classList.contains('task-action-export')) {
+                this.exportTaskLog();
+            } else if (target.classList.contains('task-action-pause')) {
+                this.pauseTask();
+            } else if (target.classList.contains('task-action-resume')) {
+                this.resumeTask();
+            } else if (target.classList.contains('task-action-cancel')) {
+                this.cancelTask();
+            } else if (target.classList.contains('task-action-retry')) {
+                this.retryTask();
+            }
+        });
+        
+        // 绑定日志模态框事件
+        const logModal = document.getElementById('taskLogModal');
+        if (logModal) {
+            logModal.addEventListener('shown.bs.modal', () => {
+                this.loadTaskLog();
+            });
+            
+            // 绑定日志过滤和搜索事件
+            const levelFilter = logModal.querySelector('.log-level-filter');
+            const searchInput = logModal.querySelector('.log-search');
+            const clearBtn = logModal.querySelector('.log-clear');
+            const refreshBtn = logModal.querySelector('.log-refresh');
+            const exportBtn = logModal.querySelector('.log-export');
+            
+            if (levelFilter) {
+                levelFilter.addEventListener('change', () => this.filterLogs());
+            }
+            
+            if (searchInput) {
+                searchInput.addEventListener('input', () => this.filterLogs());
+            }
+            
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => this.clearLogs());
+            }
+            
+            if (refreshBtn) {
+                refreshBtn.addEventListener('click', () => this.loadTaskLog());
+            }
+            
+            if (exportBtn) {
+                exportBtn.addEventListener('click', () => this.exportTaskLog());
+            }
+        }
+    }
+    
+    /**
+     * 设置任务类型
+     */
+    setTaskType(taskType) {
+        this.options.taskType = taskType;
+        this.container.setAttribute('data-task-type', taskType);
+        
+        const typeDisplay = this.container.querySelector('.task-type-display');
+        if (typeDisplay) {
+            typeDisplay.textContent = this.getTaskTypeName(taskType);
+        }
+    }
+    
+    /**
+     * 设置任务ID
+     */
+    setTaskId(taskId) {
+        this.options.taskId = taskId;
+        this.container.setAttribute('data-task-id', taskId);
+        
+        const idDisplay = this.container.querySelector('.task-id-display');
+        if (idDisplay) {
+            idDisplay.textContent = taskId;
+        }
+    }
+    
+    /**
+     * 更新任务状态
+     */
+    updateTaskStatus(status, progress = 0, details = '') {
+        if (this.statusBadge) {
+            this.statusBadge.updateStatus(status);
+        }
+        
+        if (this.progressIndicator) {
+            this.progressIndicator.updateProgress(progress, details);
+        }
+        
+        // 更新操作按钮显示
+        this.updateActionButtons(status);
+        
+        // 添加时间线记录
+        if (this.taskTimeline) {
+            this.taskTimeline.addItem(
+                `状态更新: ${this.getStatusText(status)}`,
+                details,
+                status
+            );
+        }
+    }
+    
+    /**
+     * 更新操作按钮显示
+     */
+    updateActionButtons(status) {
+        const buttons = {
+            log: this.container.querySelector('.task-action-log'),
+            export: this.container.querySelector('.task-action-export'),
+            pause: this.container.querySelector('.task-action-pause'),
+            resume: this.container.querySelector('.task-action-resume'),
+            cancel: this.container.querySelector('.task-action-cancel'),
+            retry: this.container.querySelector('.task-action-retry')
+        };
+        
+        // 隐藏所有按钮
+        Object.values(buttons).forEach(btn => {
+            if (btn) btn.style.display = 'none';
+        });
+        
+        // 根据状态显示相应按钮
+        switch (status) {
+            case 'running':
+                if (buttons.log) buttons.log.style.display = 'inline-block';
+                if (buttons.pause) buttons.pause.style.display = 'inline-block';
+                if (buttons.cancel) buttons.cancel.style.display = 'inline-block';
+                break;
+            case 'paused':
+                if (buttons.log) buttons.log.style.display = 'inline-block';
+                if (buttons.resume) buttons.resume.style.display = 'inline-block';
+                if (buttons.cancel) buttons.cancel.style.display = 'inline-block';
+                break;
+            case 'completed':
+                if (buttons.log) buttons.log.style.display = 'inline-block';
+                if (buttons.export) buttons.export.style.display = 'inline-block';
+                break;
+            case 'failed':
+                if (buttons.log) buttons.log.style.display = 'inline-block';
+                if (buttons.export) buttons.export.style.display = 'inline-block';
+                if (buttons.retry) buttons.retry.style.display = 'inline-block';
+                break;
+        }
+    }
+    
+    /**
+     * 显示任务结果
+     */
+    showTaskResult(result) {
+        const resultContainer = this.container.querySelector('.task-result-container');
+        const resultContent = this.container.querySelector('.task-result-content');
+        
+        if (resultContainer && resultContent) {
+            resultContent.innerHTML = result;
+            resultContainer.style.display = 'block';
+        }
+    }
+    
+    /**
+     * 显示任务错误
+     */
+    showTaskError(error) {
+        const errorContainer = this.container.querySelector('.task-error-container');
+        const errorContent = this.container.querySelector('.task-error-content');
+        
+        if (errorContainer && errorContent) {
+            errorContent.innerHTML = error;
+            errorContainer.style.display = 'block';
+        }
+    }
+    
+    /**
+     * 显示任务日志
+     */
+    showTaskLog() {
+        const logModal = new bootstrap.Modal(document.getElementById('taskLogModal'));
+        logModal.show();
+    }
+    
+    /**
+     * 加载任务日志
+     */
+    async loadTaskLog() {
+        const logContainer = document.querySelector('.log-container');
+        const logLoading = document.querySelector('.log-loading');
+        const logEntries = document.querySelector('.log-entries');
+        const logEmpty = document.querySelector('.log-empty');
+        
+        if (!this.options.taskId) {
+            this.showLogEmpty();
+            return;
+        }
+        
+        try {
+            // 显示加载状态
+            logLoading.style.display = 'block';
+            logEntries.style.display = 'none';
+            logEmpty.style.display = 'none';
+            
+            // 获取日志数据
+            const response = await fetch(`/api/tasks/${this.options.taskId}/logs/`);
+            const data = await response.json();
+            
+            if (data.success && data.logs && data.logs.length > 0) {
+                this.renderLogs(data.logs);
+            } else {
+                this.showLogEmpty();
+            }
+        } catch (error) {
+            console.error('Failed to load task logs:', error);
+            this.showLogEmpty();
+        } finally {
+            logLoading.style.display = 'none';
+        }
+    }
+    
+    /**
+     * 渲染日志
+     */
+    renderLogs(logs) {
+        const logEntries = document.querySelector('.log-entries');
+        const logEmpty = document.querySelector('.log-empty');
+        
+        if (!logs || logs.length === 0) {
+            this.showLogEmpty();
+            return;
+        }
+        
+        logEntries.innerHTML = logs.map(log => `
+            <div class="log-entry ${log.level.toLowerCase()}" data-level="${log.level}" data-message="${log.message}">
+                <span class="log-timestamp">${this.formatLogTime(log.timestamp)}</span>
+                <span class="log-level ${log.level.toLowerCase()}">${log.level}</span>
+                <span class="log-message">${this.escapeHtml(log.message)}</span>
+            </div>
+        `).join('');
+        
+        logEntries.style.display = 'block';
+        logEmpty.style.display = 'none';
+        
+        // 滚动到底部
+        const logContainer = document.querySelector('.log-container');
+        logContainer.scrollTop = logContainer.scrollHeight;
+    }
+    
+    /**
+     * 显示空日志状态
+     */
+    showLogEmpty() {
+        const logEntries = document.querySelector('.log-entries');
+        const logEmpty = document.querySelector('.log-empty');
+        
+        logEntries.style.display = 'none';
+        logEmpty.style.display = 'block';
+    }
+    
+    /**
+     * 过滤日志
+     */
+    filterLogs() {
+        const levelFilter = document.querySelector('.log-level-filter');
+        const searchInput = document.querySelector('.log-search');
+        const logEntries = document.querySelectorAll('.log-entry');
+        
+        const selectedLevel = levelFilter ? levelFilter.value : '';
+        const searchText = searchInput ? searchInput.value.toLowerCase() : '';
+        
+        logEntries.forEach(entry => {
+            const level = entry.getAttribute('data-level');
+            const message = entry.getAttribute('data-message').toLowerCase();
+            
+            const levelMatch = !selectedLevel || level === selectedLevel;
+            const textMatch = !searchText || message.includes(searchText);
+            
+            entry.style.display = levelMatch && textMatch ? 'block' : 'none';
+        });
+    }
+    
+    /**
+     * 清空日志
+     */
+    clearLogs() {
+        const logEntries = document.querySelector('.log-entries');
+        if (logEntries) {
+            logEntries.innerHTML = '';
+        }
+        this.showLogEmpty();
+    }
+    
+    /**
+     * 导出任务日志
+     */
+    async exportTaskLog() {
+        if (!this.options.taskId) {
+            alert('无法导出日志：任务ID不存在');
+            return;
+        }
+        
+        try {
+            const response = await fetch(`/api/tasks/${this.options.taskId}/logs/export/`);
+            const blob = await response.blob();
+            
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `task_${this.options.taskId}_logs.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error('Failed to export logs:', error);
+            alert('导出日志失败，请稍后重试');
+        }
+    }
+    
+    /**
+     * 暂停任务
+     */
+    async pauseTask() {
+        if (!this.options.taskId) return;
+        
+        try {
+            const response = await fetch(`/api/tasks/${this.options.taskId}/pause/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': this.getCSRFToken()
+                }
+            });
+            
+            const data = await response.json();
+            if (data.success) {
+                this.updateTaskStatus('paused', this.progressIndicator?.currentProgress || 0, '任务已暂停');
+            }
+        } catch (error) {
+            console.error('Failed to pause task:', error);
+        }
+    }
+    
+    /**
+     * 恢复任务
+     */
+    async resumeTask() {
+        if (!this.options.taskId) return;
+        
+        try {
+            const response = await fetch(`/api/tasks/${this.options.taskId}/resume/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': this.getCSRFToken()
+                }
+            });
+            
+            const data = await response.json();
+            if (data.success) {
+                this.updateTaskStatus('running', this.progressIndicator?.currentProgress || 0, '任务已恢复');
+            }
+        } catch (error) {
+            console.error('Failed to resume task:', error);
+        }
+    }
+    
+    /**
+     * 取消任务
+     */
+    async cancelTask() {
+        if (!this.options.taskId) return;
+        
+        if (!confirm('确定要取消这个任务吗？')) {
+            return;
+        }
+        
+        try {
+            const response = await fetch(`/api/tasks/${this.options.taskId}/cancel/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': this.getCSRFToken()
+                }
+            });
+            
+            const data = await response.json();
+            if (data.success) {
+                this.updateTaskStatus('cancelled', this.progressIndicator?.currentProgress || 0, '任务已取消');
+            }
+        } catch (error) {
+            console.error('Failed to cancel task:', error);
+        }
+    }
+    
+    /**
+     * 重试任务
+     */
+    async retryTask() {
+        if (!this.options.taskId) return;
+        
+        try {
+            const response = await fetch(`/api/tasks/${this.options.taskId}/retry/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': this.getCSRFToken()
+                }
+            });
+            
+            const data = await response.json();
+            if (data.success) {
+                this.reset();
+                this.updateTaskStatus('pending', 0, '任务已重新提交');
+            }
+        } catch (error) {
+            console.error('Failed to retry task:', error);
+        }
+    }
+    
+    /**
+     * 重置组件状态
+     */
+    reset() {
+        if (this.progressIndicator) {
+            this.progressIndicator.reset();
+        }
+        
+        if (this.statusBadge) {
+            this.statusBadge.updateStatus('pending');
+        }
+        
+        if (this.taskTimeline) {
+            this.taskTimeline.clear();
+        }
+        
+        // 隐藏结果和错误容器
+        const resultContainer = this.container.querySelector('.task-result-container');
+        const errorContainer = this.container.querySelector('.task-error-container');
+        
+        if (resultContainer) resultContainer.style.display = 'none';
+        if (errorContainer) errorContainer.style.display = 'none';
+        
+        this.updateActionButtons('pending');
+    }
+    
+    /**
+     * 获取任务类型名称
+     */
+    getTaskTypeName(taskType) {
+        const typeNames = {
+            'ai_validation': 'AI校验',
+            'script_generation': '解说文案生成',
+            'character_image': '角色图片生成',
+            'audio_generation': '音频生成',
+            'video_generation': '视频生成'
+        };
+        return typeNames[taskType] || taskType;
+    }
+    
+    /**
+     * 获取状态文本
+     */
+    getStatusText(status) {
+        const statusTexts = {
+            pending: '等待中',
+            running: '进行中',
+            completed: '已完成',
+            failed: '失败',
+            paused: '已暂停',
+            cancelled: '已取消'
+        };
+        return statusTexts[status] || status;
+    }
+    
+    /**
+     * 格式化日志时间
+     */
+    formatLogTime(timestamp) {
+        const date = new Date(timestamp);
+        return date.toLocaleTimeString('zh-CN', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+    }
+    
+    /**
+     * HTML转义
+     */
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+    
+    /**
+     * 获取CSRF Token
+     */
+    getCSRFToken() {
+        const token = document.querySelector('[name=csrfmiddlewaretoken]');
+        return token ? token.value : '';
+    }
+    
+    /**
+     * 销毁组件
+     */
+    destroy() {
+        if (this.refreshTimer) {
+            clearInterval(this.refreshTimer);
+        }
+        
+        if (this.progressIndicator) {
+            this.progressIndicator.destroy();
+        }
+    }
+}
+
+// 导出组件类
+if (typeof window !== 'undefined') {
+    window.UnifiedTaskComponent = UnifiedTaskComponent;
+}
+</script>

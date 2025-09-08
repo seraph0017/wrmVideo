@@ -1,0 +1,523 @@
+<!-- 统一任务状态组件模板 -->
+<!-- 用于AI生成、AI校验等任务的界面展示 -->
+
+<!-- 任务状态卡片 -->
+<div class="task-card" id="taskCard">
+    <div class="task-card-header">
+        <h5 class="task-title">{{ task_title|default:"任务执行" }}</h5>
+        <div class="task-meta">
+            {% if task_id %}
+            <span class="task-id">ID: {{ task_id }}</span>
+            {% endif %}
+            <span class="task-time" id="taskTime">{{ start_time|default:"--:--" }}</span>
+        </div>
+    </div>
+    
+    <div class="task-card-body">
+        <!-- 任务状态显示区域 -->
+        <div id="taskStatusContainer"></div>
+        
+        <!-- 任务参数显示（可选） -->
+        {% if show_params %}
+        <div class="task-params">
+            <h6>任务参数</h6>
+            <div class="params-grid">
+                {% for param in task_params %}
+                <div class="param-item">
+                    <span class="param-label">{{ param.label }}:</span>
+                    <span class="param-value">{{ param.value }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        
+        <!-- 任务结果显示（可选） -->
+        {% if show_results %}
+        <div class="task-results task-hidden" id="taskResults">
+            <h6>执行结果</h6>
+            <div id="taskResultContent"></div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- 任务日志模态框 -->
+<div class="modal fade" id="taskLogModal" tabindex="-1" aria-labelledby="taskLogModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="taskLogModalLabel">任务执行日志</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="taskLogViewer"></div>
+            </div>
+            <div class="modal-footer">
+                <div class="task-info-left">
+                    <span class="task-id-display">任务ID: <span id="modalTaskId">--</span></span>
+                </div>
+                <div class="task-info-right">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-danger" id="modalStopBtn" style="display: none;">停止任务</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 任务配置模态框模板 -->
+<div class="modal fade" id="taskConfigModal" tabindex="-1" aria-labelledby="taskConfigModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="taskConfigModalLabel">{{ config_title|default:"任务配置" }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="taskConfigForm">
+                    {% csrf_token %}
+                    
+                    <!-- 动态配置项容器 -->
+                    <div id="taskConfigContainer">
+                        <!-- 配置项将通过JavaScript动态添加 -->
+                    </div>
+                    
+                    <!-- 高级选项（可选） -->
+                    {% if show_advanced %}
+                    <div class="advanced-options">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="showAdvanced">
+                            <label class="form-check-label" for="showAdvanced">
+                                显示高级选项
+                            </label>
+                        </div>
+                        
+                        <div class="advanced-content task-hidden" id="advancedContent">
+                            <!-- 高级配置项 -->
+                        </div>
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="startTaskBtn">开始执行</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 任务列表组件 -->
+<div class="task-list" id="taskList">
+    <div class="task-list-header">
+        <h6>任务列表</h6>
+        <div class="task-list-controls">
+            <button class="task-btn btn-outline-secondary btn-sm" id="refreshTasksBtn">
+                <i class="fas fa-sync-alt"></i> 刷新
+            </button>
+            <button class="task-btn btn-outline-secondary btn-sm" id="clearCompletedBtn">
+                <i class="fas fa-trash"></i> 清理已完成
+            </button>
+        </div>
+    </div>
+    
+    <div class="task-list-body" id="taskListBody">
+        <!-- 任务项将通过JavaScript动态添加 -->
+        <div class="task-list-empty" id="taskListEmpty">
+            <i class="fas fa-tasks"></i>
+            <p>暂无任务</p>
+        </div>
+    </div>
+</div>
+
+<!-- 任务项模板 -->
+<template id="taskItemTemplate">
+    <div class="task-item" data-task-id="">
+        <div class="task-item-header">
+            <div class="task-item-info">
+                <span class="task-item-title"></span>
+                <span class="task-status-badge"></span>
+            </div>
+            <div class="task-item-actions">
+                <button class="task-btn btn-outline-primary btn-sm view-task-btn">
+                    <i class="fas fa-eye"></i>
+                </button>
+                <button class="task-btn btn-outline-secondary btn-sm log-task-btn">
+                    <i class="fas fa-file-alt"></i>
+                </button>
+                <button class="task-btn btn-danger btn-sm stop-task-btn" style="display: none;">
+                    <i class="fas fa-stop"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="task-item-body">
+            <div class="task-progress-container">
+                <div class="task-progress-bar">
+                    <div class="task-progress-fill"></div>
+                </div>
+                <span class="task-progress-text">0%</span>
+            </div>
+            
+            <div class="task-item-meta">
+                <span class="task-start-time"></span>
+                <span class="task-duration"></span>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- 配置项模板 -->
+<template id="configItemTemplate">
+    <div class="config-item">
+        <label class="config-label"></label>
+        <div class="config-input-container">
+            <!-- 输入控件将根据类型动态生成 -->
+        </div>
+        <small class="config-help"></small>
+    </div>
+</template>
+
+<!-- 通用脚本 -->
+<script>
+// 任务组件初始化脚本
+document.addEventListener('DOMContentLoaded', function() {
+    // 初始化任务状态管理器
+    if (document.getElementById('taskStatusContainer')) {
+        window.taskStatusManager = new TaskStatusManager('taskStatusContainer', {
+            autoRefresh: true,
+            refreshInterval: 2000,
+            showProgress: true,
+            showLogs: true
+        });
+    }
+    
+    // 初始化任务日志查看器
+    if (document.getElementById('taskLogViewer')) {
+        window.taskLogViewer = new TaskLogViewer('taskLogViewer', {
+            maxLines: 1000,
+            autoScroll: true,
+            showTimestamp: true,
+            showLevel: true
+        });
+    }
+    
+    // 绑定模态框事件
+    const taskLogModal = document.getElementById('taskLogModal');
+    if (taskLogModal) {
+        taskLogModal.addEventListener('show.bs.modal', function(event) {
+            const button = event.relatedTarget;
+            const taskId = button.getAttribute('data-task-id');
+            const taskTitle = button.getAttribute('data-task-title') || '任务';
+            
+            document.getElementById('taskLogModalLabel').textContent = `${taskTitle} - 执行日志`;
+            document.getElementById('modalTaskId').textContent = taskId;
+            
+            // 加载任务日志
+            if (window.taskLogViewer && taskId) {
+                loadTaskLogs(taskId);
+            }
+        });
+    }
+    
+    // 绑定配置模态框事件
+    const taskConfigModal = document.getElementById('taskConfigModal');
+    if (taskConfigModal) {
+        // 高级选项切换
+        const showAdvancedCheck = document.getElementById('showAdvanced');
+        const advancedContent = document.getElementById('advancedContent');
+        
+        if (showAdvancedCheck && advancedContent) {
+            showAdvancedCheck.addEventListener('change', function() {
+                if (this.checked) {
+                    advancedContent.classList.remove('task-hidden');
+                } else {
+                    advancedContent.classList.add('task-hidden');
+                }
+            });
+        }
+        
+        // 开始任务按钮
+        const startTaskBtn = document.getElementById('startTaskBtn');
+        if (startTaskBtn) {
+            startTaskBtn.addEventListener('click', function() {
+                const form = document.getElementById('taskConfigForm');
+                if (form && validateTaskConfig(form)) {
+                    submitTaskConfig(form);
+                }
+            });
+        }
+    }
+    
+    // 任务列表功能
+    initTaskList();
+});
+
+/**
+ * 加载任务日志
+ */
+function loadTaskLogs(taskId) {
+    fetch(`/video/task-logs/?task_id=${taskId}`)
+    .then(response => response.json())
+    .then(data => {
+        if (data.success && window.taskLogViewer) {
+            window.taskLogViewer.clearLogs();
+            data.logs.forEach(log => {
+                window.taskLogViewer.addLog(log.level, log.message, log.timestamp);
+            });
+        }
+    })
+    .catch(error => {
+        console.error('加载任务日志失败:', error);
+        TaskUtils.showNotification('加载任务日志失败', 'error');
+    });
+}
+
+/**
+ * 验证任务配置
+ */
+function validateTaskConfig(form) {
+    const formData = new FormData(form);
+    let isValid = true;
+    
+    // 清除之前的错误提示
+    form.querySelectorAll('.is-invalid').forEach(el => {
+        el.classList.remove('is-invalid');
+    });
+    
+    form.querySelectorAll('.invalid-feedback').forEach(el => {
+        el.remove();
+    });
+    
+    // 验证必填字段
+    form.querySelectorAll('[required]').forEach(field => {
+        if (!field.value.trim()) {
+            field.classList.add('is-invalid');
+            const feedback = document.createElement('div');
+            feedback.className = 'invalid-feedback';
+            feedback.textContent = '此字段为必填项';
+            field.parentNode.appendChild(feedback);
+            isValid = false;
+        }
+    });
+    
+    return isValid;
+}
+
+/**
+ * 提交任务配置
+ */
+function submitTaskConfig(form) {
+    const formData = new FormData(form);
+    const submitBtn = document.getElementById('startTaskBtn');
+    
+    // 禁用提交按钮
+    submitBtn.disabled = true;
+    submitBtn.textContent = '正在启动...';
+    
+    fetch(form.action || '/video/start-task/', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // 关闭配置模态框
+            const modal = bootstrap.Modal.getInstance(document.getElementById('taskConfigModal'));
+            modal.hide();
+            
+            // 启动任务状态监控
+            if (window.taskStatusManager) {
+                window.taskStatusManager.startTask(data.task_id, data.task_name);
+            }
+            
+            TaskUtils.showNotification('任务已成功启动', 'success');
+        } else {
+            TaskUtils.showNotification(`启动任务失败: ${data.message}`, 'error');
+        }
+    })
+    .catch(error => {
+        console.error('启动任务失败:', error);
+        TaskUtils.showNotification('启动任务失败', 'error');
+    })
+    .finally(() => {
+        // 恢复提交按钮
+        submitBtn.disabled = false;
+        submitBtn.textContent = '开始执行';
+    });
+}
+
+/**
+ * 初始化任务列表
+ */
+function initTaskList() {
+    const taskList = document.getElementById('taskList');
+    if (!taskList) return;
+    
+    // 刷新任务列表
+    const refreshBtn = document.getElementById('refreshTasksBtn');
+    if (refreshBtn) {
+        refreshBtn.addEventListener('click', refreshTaskList);
+    }
+    
+    // 清理已完成任务
+    const clearBtn = document.getElementById('clearCompletedBtn');
+    if (clearBtn) {
+        clearBtn.addEventListener('click', clearCompletedTasks);
+    }
+    
+    // 初始加载
+    refreshTaskList();
+}
+
+/**
+ * 刷新任务列表
+ */
+function refreshTaskList() {
+    fetch('/video/task-list/')
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            renderTaskList(data.tasks);
+        }
+    })
+    .catch(error => {
+        console.error('刷新任务列表失败:', error);
+    });
+}
+
+/**
+ * 渲染任务列表
+ */
+function renderTaskList(tasks) {
+    const taskListBody = document.getElementById('taskListBody');
+    const taskListEmpty = document.getElementById('taskListEmpty');
+    const template = document.getElementById('taskItemTemplate');
+    
+    if (!taskListBody || !template) return;
+    
+    // 清空现有任务项
+    taskListBody.querySelectorAll('.task-item').forEach(item => item.remove());
+    
+    if (tasks.length === 0) {
+        taskListEmpty.style.display = 'block';
+        return;
+    }
+    
+    taskListEmpty.style.display = 'none';
+    
+    tasks.forEach(task => {
+        const taskItem = template.content.cloneNode(true);
+        
+        // 设置任务信息
+        taskItem.querySelector('.task-item').setAttribute('data-task-id', task.id);
+        taskItem.querySelector('.task-item-title').textContent = task.name;
+        taskItem.querySelector('.task-status-badge').textContent = TaskUtils.getStatusText(task.status);
+        taskItem.querySelector('.task-status-badge').className = `task-status-badge status-${task.status}`;
+        taskItem.querySelector('.task-progress-fill').style.width = `${task.progress || 0}%`;
+        taskItem.querySelector('.task-progress-text').textContent = `${task.progress || 0}%`;
+        taskItem.querySelector('.task-start-time').textContent = TaskUtils.formatTime(task.start_time);
+        
+        if (task.duration) {
+            taskItem.querySelector('.task-duration').textContent = TaskUtils.formatDuration(task.duration);
+        }
+        
+        // 绑定按钮事件
+        const viewBtn = taskItem.querySelector('.view-task-btn');
+        const logBtn = taskItem.querySelector('.log-task-btn');
+        const stopBtn = taskItem.querySelector('.stop-task-btn');
+        
+        viewBtn.addEventListener('click', () => viewTaskDetails(task.id));
+        logBtn.addEventListener('click', () => showTaskLogs(task.id, task.name));
+        
+        if (task.status === 'running') {
+            stopBtn.style.display = 'inline-flex';
+            stopBtn.addEventListener('click', () => stopTask(task.id));
+        }
+        
+        taskListBody.appendChild(taskItem);
+    });
+}
+
+/**
+ * 查看任务详情
+ */
+function viewTaskDetails(taskId) {
+    // 实现任务详情查看逻辑
+    window.location.href = `/video/task-detail/${taskId}/`;
+}
+
+/**
+ * 显示任务日志
+ */
+function showTaskLogs(taskId, taskName) {
+    const modal = new bootstrap.Modal(document.getElementById('taskLogModal'));
+    const logBtn = document.querySelector(`[data-task-id="${taskId}"] .log-task-btn`);
+    
+    logBtn.setAttribute('data-task-id', taskId);
+    logBtn.setAttribute('data-task-title', taskName);
+    
+    modal.show();
+}
+
+/**
+ * 停止任务
+ */
+function stopTask(taskId) {
+    if (confirm('确定要停止此任务吗？')) {
+        fetch('/video/stop-task/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+            },
+            body: JSON.stringify({ task_id: taskId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                TaskUtils.showNotification('任务已停止', 'success');
+                refreshTaskList();
+            } else {
+                TaskUtils.showNotification(`停止任务失败: ${data.message}`, 'error');
+            }
+        })
+        .catch(error => {
+            console.error('停止任务失败:', error);
+            TaskUtils.showNotification('停止任务失败', 'error');
+        });
+    }
+}
+
+/**
+ * 清理已完成任务
+ */
+function clearCompletedTasks() {
+    if (confirm('确定要清理所有已完成的任务吗？')) {
+        fetch('/video/clear-completed-tasks/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                TaskUtils.showNotification('已完成任务已清理', 'success');
+                refreshTaskList();
+            } else {
+                TaskUtils.showNotification(`清理失败: ${data.message}`, 'error');
+            }
+        })
+        .catch(error => {
+            console.error('清理任务失败:', error);
+            TaskUtils.showNotification('清理任务失败', 'error');
+        });
+    }
+}
+</script>

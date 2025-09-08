@@ -1,0 +1,470 @@
+{% extends 'video/base.html' %}
+{% load static %}
+
+{% block title %}任务日志监控{% endblock %}
+
+{% block extra_css %}
+<style>
+.log-container {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Courier New', monospace;
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 500px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.log-entry {
+    margin-bottom: 5px;
+    padding: 2px 0;
+    border-left: 3px solid transparent;
+}
+
+.log-entry.info {
+    border-left-color: #007acc;
+}
+
+.log-entry.warning {
+    border-left-color: #ff9800;
+    color: #ffcc02;
+}
+
+.log-entry.error {
+    border-left-color: #f44336;
+    color: #ff6b6b;
+}
+
+.log-entry.debug {
+    border-left-color: #9c27b0;
+    color: #ce93d8;
+}
+
+.log-timestamp {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.log-level {
+    font-weight: bold;
+    margin: 0 10px;
+    min-width: 60px;
+    display: inline-block;
+}
+
+.log-message {
+    word-wrap: break-word;
+}
+
+.task-status {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.task-status.pending {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+}
+
+.task-status.progress {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+}
+
+.task-status.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.task-status.failure {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+.control-buttons {
+    margin-bottom: 20px;
+}
+
+.control-buttons button {
+    margin-right: 10px;
+}
+
+.auto-scroll {
+    margin-left: 10px;
+}
+
+.connection-status {
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+.connection-status.connected {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.connection-status.disconnected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.log-filter {
+    margin-bottom: 15px;
+}
+
+.log-filter select {
+    margin-right: 10px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2>任务日志监控</h2>
+            
+            <!-- 任务状态显示 -->
+            <div id="task-status" class="task-status pending">
+                <h5>任务状态: <span id="status-text">等待中</span></h5>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+                </div>
+                <p id="status-message">正在获取任务状态...</p>
+                <div class="progress-details" id="progress-details" style="margin-top: 10px; font-size: 14px; color: #666;"></div>
+            </div>
+            
+            <!-- 控制按钮 -->
+            <div class="control-buttons">
+                <button id="start-monitoring" class="btn btn-primary">开始监控</button>
+                <button id="stop-monitoring" class="btn btn-secondary" disabled>停止监控</button>
+                <button id="clear-logs" class="btn btn-warning">清空日志</button>
+                <button id="refresh-status" class="btn btn-info">刷新状态</button>
+                
+                <label class="auto-scroll">
+                    <input type="checkbox" id="auto-scroll" checked> 自动滚动
+                </label>
+                
+                <span id="connection-status" class="connection-status disconnected">未连接</span>
+            </div>
+            
+            <!-- 日志过滤 -->
+            <div class="log-filter">
+                <label>日志级别过滤:</label>
+                <select id="log-level-filter">
+                    <option value="all">全部</option>
+                    <option value="DEBUG">DEBUG</option>
+                    <option value="INFO">INFO</option>
+                    <option value="WARNING">WARNING</option>
+                    <option value="ERROR">ERROR</option>
+                </select>
+                
+                <label>搜索:</label>
+                <input type="text" id="log-search" placeholder="搜索日志内容..." class="form-control" style="width: 300px; display: inline-block;">
+            </div>
+            
+            <!-- 日志显示区域 -->
+            <div id="log-container" class="log-container">
+                <div class="log-entry info">
+                    <span class="log-timestamp">{{ current_time }}</span>
+                    <span class="log-level">INFO</span>
+                    <span class="log-message">日志监控系统已准备就绪</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+class TaskLogMonitor {
+    constructor(taskId) {
+        this.taskId = taskId;
+        this.eventSource = null;
+        this.isMonitoring = false;
+        this.autoScroll = true;
+        this.logFilter = 'all';
+        this.searchTerm = '';
+        
+        this.initializeElements();
+        this.bindEvents();
+    }
+    
+    initializeElements() {
+        this.logContainer = document.getElementById('log-container');
+        this.statusElement = document.getElementById('task-status');
+        this.statusText = document.getElementById('status-text');
+        this.statusMessage = document.getElementById('status-message');
+        this.progressFill = document.getElementById('progress-fill');
+        this.connectionStatus = document.getElementById('connection-status');
+        
+        this.startBtn = document.getElementById('start-monitoring');
+        this.stopBtn = document.getElementById('stop-monitoring');
+        this.clearBtn = document.getElementById('clear-logs');
+        this.refreshBtn = document.getElementById('refresh-status');
+        this.autoScrollCheckbox = document.getElementById('auto-scroll');
+        this.logLevelFilter = document.getElementById('log-level-filter');
+        this.logSearch = document.getElementById('log-search');
+    }
+    
+    bindEvents() {
+        this.startBtn.addEventListener('click', () => this.startMonitoring());
+        this.stopBtn.addEventListener('click', () => this.stopMonitoring());
+        this.clearBtn.addEventListener('click', () => this.clearLogs());
+        this.refreshBtn.addEventListener('click', () => this.refreshStatus());
+        
+        this.autoScrollCheckbox.addEventListener('change', (e) => {
+            this.autoScroll = e.target.checked;
+        });
+        
+        this.logLevelFilter.addEventListener('change', (e) => {
+            this.logFilter = e.target.value;
+            this.filterLogs();
+        });
+        
+        this.logSearch.addEventListener('input', (e) => {
+            this.searchTerm = e.target.value.toLowerCase();
+            this.filterLogs();
+        });
+    }
+    
+    startMonitoring() {
+        if (this.isMonitoring) return;
+        
+        this.isMonitoring = true;
+        this.startBtn.disabled = true;
+        this.stopBtn.disabled = false;
+        
+        // 建立SSE连接
+        const streamUrl = `/video/api/task/${this.taskId}/logs/stream/`;
+        this.eventSource = new EventSource(streamUrl);
+        
+        this.eventSource.onopen = () => {
+            this.updateConnectionStatus(true);
+            this.addLogEntry('INFO', '已连接到日志流');
+        };
+        
+        this.eventSource.onmessage = (event) => {
+            try {
+                const data = JSON.parse(event.data);
+                this.handleLogData(data);
+            } catch (e) {
+                console.error('解析日志数据失败:', e);
+            }
+        };
+        
+        this.eventSource.onerror = () => {
+            this.updateConnectionStatus(false);
+            this.addLogEntry('ERROR', '日志流连接出错');
+        };
+    }
+    
+    stopMonitoring() {
+        if (!this.isMonitoring) return;
+        
+        this.isMonitoring = false;
+        this.startBtn.disabled = false;
+        this.stopBtn.disabled = true;
+        
+        if (this.eventSource) {
+            this.eventSource.close();
+            this.eventSource = null;
+        }
+        
+        this.updateConnectionStatus(false);
+        this.addLogEntry('INFO', '已停止监控');
+    }
+    
+    handleLogData(data) {
+        switch (data.type) {
+            case 'log':
+                this.addLogEntry(
+                    data.data.level,
+                    data.data.message,
+                    data.data.timestamp
+                );
+                break;
+                
+            case 'status':
+                this.updateTaskStatus(data.data);
+                break;
+                
+            case 'complete':
+                this.handleTaskComplete(data.data);
+                break;
+                
+            case 'error':
+                this.addLogEntry('ERROR', `监控错误: ${data.data.message}`);
+                break;
+        }
+    }
+    
+    addLogEntry(level, message, timestamp = null) {
+        const now = timestamp || new Date().toISOString();
+        const timeStr = new Date(now).toLocaleTimeString();
+        
+        const logEntry = document.createElement('div');
+        logEntry.className = `log-entry ${level.toLowerCase()}`;
+        logEntry.innerHTML = `
+            <span class="log-timestamp">${timeStr}</span>
+            <span class="log-level">${level}</span>
+            <span class="log-message">${this.escapeHtml(message)}</span>
+        `;
+        
+        this.logContainer.appendChild(logEntry);
+        
+        // 应用过滤
+        this.applyLogFilter(logEntry, level, message);
+        
+        // 自动滚动
+        if (this.autoScroll) {
+            this.logContainer.scrollTop = this.logContainer.scrollHeight;
+        }
+    }
+    
+    updateTaskStatus(statusData) {
+        this.statusText.textContent = statusData.state;
+        
+        if (statusData.info && statusData.info.status) {
+            this.statusMessage.textContent = statusData.info.status;
+        }
+        
+        if (statusData.info && statusData.info.current && statusData.info.total) {
+            const progress = (statusData.info.current / statusData.info.total) * 100;
+            this.progressFill.style.width = `${progress}%`;
+        }
+        
+        // 显示详细进度信息
+        this.updateProgress(statusData.info || {});
+        
+        // 更新状态样式
+        this.statusElement.className = `task-status ${statusData.state.toLowerCase()}`;
+    }
+    
+    updateProgress(data) {
+        const progressDetails = document.getElementById('progress-details');
+        
+        // 显示详细进度信息
+        if (progressDetails) {
+            let detailsHtml = '';
+            if (data.step) {
+                detailsHtml += `<strong>当前步骤:</strong> ${data.step}`;
+            }
+            if (data.chapter_progress) {
+                detailsHtml += ` | <strong>章节进度:</strong> ${data.chapter_progress}`;
+            }
+            if (data.last_output && data.last_output.length > 0) {
+                detailsHtml += `<br><strong>最新输出:</strong> <code>${this.escapeHtml(data.last_output)}</code>`;
+            }
+            progressDetails.innerHTML = detailsHtml;
+        }
+    }
+    
+    handleTaskComplete(completeData) {
+        this.stopMonitoring();
+        
+        if (completeData.successful) {
+            this.addLogEntry('INFO', '任务执行成功完成');
+            this.statusElement.className = 'task-status success';
+        } else {
+            this.addLogEntry('ERROR', `任务执行失败: ${completeData.error}`);
+            this.statusElement.className = 'task-status failure';
+        }
+    }
+    
+    refreshStatus() {
+        fetch(`/video/api/task/${this.taskId}/logs/`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    this.updateTaskStatus(data.task_info);
+                    
+                    // 添加最近的日志
+                    data.logs.forEach(log => {
+                        this.addLogEntry(log.level, log.message, log.timestamp);
+                    });
+                }
+            })
+            .catch(error => {
+                this.addLogEntry('ERROR', `刷新状态失败: ${error.message}`);
+            });
+    }
+    
+    clearLogs() {
+        this.logContainer.innerHTML = '';
+        this.addLogEntry('INFO', '日志已清空');
+    }
+    
+    updateConnectionStatus(connected) {
+        this.connectionStatus.textContent = connected ? '已连接' : '未连接';
+        this.connectionStatus.className = `connection-status ${connected ? 'connected' : 'disconnected'}`;
+    }
+    
+    applyLogFilter(logEntry, level, message) {
+        const levelMatch = this.logFilter === 'all' || level === this.logFilter;
+        const searchMatch = this.searchTerm === '' || message.toLowerCase().includes(this.searchTerm);
+        
+        logEntry.style.display = (levelMatch && searchMatch) ? 'block' : 'none';
+    }
+    
+    filterLogs() {
+        const logEntries = this.logContainer.querySelectorAll('.log-entry');
+        logEntries.forEach(entry => {
+            const level = entry.querySelector('.log-level').textContent;
+            const message = entry.querySelector('.log-message').textContent;
+            this.applyLogFilter(entry, level, message);
+        });
+    }
+    
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+}
+
+// 初始化监控器
+document.addEventListener('DOMContentLoaded', function() {
+    // 从URL获取任务ID
+    const urlParams = new URLSearchParams(window.location.search);
+    const taskId = urlParams.get('task_id');
+    
+    if (taskId) {
+        window.taskMonitor = new TaskLogMonitor(taskId);
+        
+        // 自动开始监控
+        window.taskMonitor.refreshStatus();
+        setTimeout(() => {
+            window.taskMonitor.startMonitoring();
+        }, 1000);
+    } else {
+        document.getElementById('log-container').innerHTML = 
+            '<div class="log-entry error"><span class="log-message">错误: 未提供任务ID</span></div>';
+    }
+});
+</script>
+{% endblock %}

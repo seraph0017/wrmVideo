@@ -1,0 +1,524 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}角色列表 | {{ block.super }}{% endblock %}
+
+<!-- 引入批量生成模态框 -->
+{% include 'video/batch_generate_modal.html' %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function() {
+    // 加载所有角色的缩略图
+    loadAllThumbnails();
+    
+    // 全选功能
+    $('#selectAll, #selectAllHeader').change(function() {
+        const isChecked = $(this).prop('checked');
+        $('.character-checkbox').prop('checked', isChecked);
+        $('#selectAll, #selectAllHeader').prop('checked', isChecked);
+        updateBatchButton();
+    });
+    
+    // 单个复选框变化
+    $('.character-checkbox').change(function() {
+        updateSelectAllState();
+        updateBatchButton();
+    });
+    
+    // 批量生成按钮点击
+    $('#batchGenerateBtn').click(function() {
+        const selectedIds = getSelectedCharacterIds();
+        if (selectedIds.length === 0) {
+            alert('请选择要生成图片的角色');
+            return;
+        }
+        showBatchGenerateModal(selectedIds);
+    });
+});
+
+/**
+ * 加载所有角色的缩略图
+ */
+function loadAllThumbnails() {
+    $('.character-thumbnail').each(function() {
+        const characterId = $(this).data('character-id');
+        const imgElement = $(this).find('img');
+        
+        // 发送请求获取缩略图
+        $.get(`/video/api/character/${characterId}/thumbnail/`)
+            .done(function(response) {
+                if (response.success) {
+                    if (response.has_image) {
+                        // 使用生成的图片
+                        imgElement.attr('src', response.image_path);
+                        imgElement.attr('title', `任务ID: ${response.task_id}`);
+                    } else {
+                        // 使用默认图片
+                        imgElement.attr('src', response.default_image);
+                        
+                        // 构建角色信息提示
+                        let titleText = '暂无生成图片';
+                        if (response.character_info) {
+                            const info = response.character_info;
+                            titleText = `${info.name} (${info.gender}性${info.age_group}) - 暂无生成图片`;
+                        }
+                        imgElement.attr('title', titleText);
+                    }
+                }
+            })
+            .fail(function() {
+                console.log(`加载角色 ${characterId} 缩略图失败`);
+            });
+    });
+}
+
+/**
+ * 更新全选状态
+ */
+function updateSelectAllState() {
+    const totalCheckboxes = $('.character-checkbox').length;
+    const checkedCheckboxes = $('.character-checkbox:checked').length;
+    
+    if (checkedCheckboxes === 0) {
+        $('#selectAll, #selectAllHeader').prop('checked', false).prop('indeterminate', false);
+    } else if (checkedCheckboxes === totalCheckboxes) {
+        $('#selectAll, #selectAllHeader').prop('checked', true).prop('indeterminate', false);
+    } else {
+        $('#selectAll, #selectAllHeader').prop('checked', false).prop('indeterminate', true);
+    }
+}
+
+/**
+ * 更新批量操作按钮状态
+ */
+function updateBatchButton() {
+    const selectedCount = $('.character-checkbox:checked').length;
+    $('#batchGenerateBtn').prop('disabled', selectedCount === 0);
+    
+    if (selectedCount > 0) {
+        $('#batchGenerateBtn').text(`批量生成图片 (${selectedCount})`);
+    } else {
+        $('#batchGenerateBtn').text('批量生成图片');
+    }
+}
+
+/**
+ * 获取选中的角色ID列表
+ */
+function getSelectedCharacterIds() {
+    const selectedIds = [];
+    $('.character-checkbox:checked').each(function() {
+        selectedIds.push(parseInt($(this).val()));
+    });
+    return selectedIds;
+}
+
+/**
+ * 显示批量生成模态框
+ */
+function showBatchGenerateModal(characterIds) {
+    // 创建模态框HTML
+    const modalHtml = `
+        <div class="modal fade" id="batchGenerateModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">批量生成角色图片</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="batchGenerateForm">
+                            <div class="mb-3">
+                                <label for="chapterId" class="form-label">选择章节</label>
+                                <select class="form-select" id="chapterId" required>
+                                    <option value="">请选择章节</option>
+                                    {% for chapter in chapters %}
+                                    <option value="{{ chapter.id }}">{{ chapter.title }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="imageStyle" class="form-label">图片风格</label>
+                                <select class="form-select" id="imageStyle">
+                                    <option value="realistic">写实风格</option>
+                                    <option value="anime">动漫风格</option>
+                                    <option value="cartoon">卡通风格</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="imageQuality" class="form-label">图片质量</label>
+                                <select class="form-select" id="imageQuality">
+                                    <option value="standard">标准</option>
+                                    <option value="high">高质量</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="imageCount" class="form-label">生成数量</label>
+                                <input type="number" class="form-control" id="imageCount" value="1" min="1" max="4">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customPrompt" class="form-label">自定义提示词（可选）</label>
+                                <textarea class="form-control" id="customPrompt" rows="3" placeholder="输入额外的描述信息..."></textarea>
+                            </div>
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle"></i>
+                                将为 <strong>${characterIds.length}</strong> 个角色生成图片
+                                <div id="selectedCharacters" class="mt-2"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" id="confirmBatchGenerate">
+                            <i class="fas fa-play"></i> 开始生成
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // 移除已存在的模态框
+    $('#batchGenerateModal').remove();
+    
+    // 添加新模态框
+    $('body').append(modalHtml);
+    
+    // 显示选中的角色信息
+    const selectedCharacters = [];
+    characterIds.forEach(id => {
+        const row = $(`.character-checkbox[value="${id}"]`).closest('tr');
+        const name = row.find('td:nth-child(4)').text().trim(); // 角色姓名列
+        selectedCharacters.push(`${name} (ID: ${id})`);
+    });
+    $('#selectedCharacters').html(selectedCharacters.join('<br>'));
+    
+    // 绑定确认按钮事件
+    $('#confirmBatchGenerate').click(function() {
+        submitBatchGenerate(characterIds);
+    });
+    
+    // 显示模态框
+    $('#batchGenerateModal').modal('show');
+}
+
+/**
+ * 提交批量生成请求
+ */
+function submitBatchGenerate(characterIds) {
+    const formData = {
+        character_ids: characterIds,
+        chapter_id: $('#chapterId').val(),
+        image_style: $('#imageStyle').val(),
+        image_quality: $('#imageQuality').val(),
+        image_count: parseInt($('#imageCount').val()),
+        custom_prompt: $('#customPrompt').val()
+    };
+    
+    // 验证必填字段
+    if (!formData.chapter_id) {
+        alert('请选择章节');
+        return;
+    }
+    
+    // 禁用按钮，显示加载状态
+    $('#confirmBatchGenerate').prop('disabled', true).html('<i class="fas fa-spinner fa-spin"></i> 提交中...');
+    
+    // 发送请求
+    $.ajax({
+        url: '/video/api/batch-generate-character-images/',
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(formData),
+        success: function(response) {
+            if (response.success) {
+                $('#batchGenerateModal').modal('hide');
+                
+                // 显示进度模态框
+                showProgressModal(response.task_ids, characterIds);
+                
+                // 清空选择
+                $('.character-checkbox').prop('checked', false);
+                $('#selectAll, #selectAllHeader').prop('checked', false);
+                updateBatchButton();
+            } else {
+                alert('提交失败: ' + response.error);
+            }
+        },
+        error: function(xhr) {
+            const response = xhr.responseJSON;
+            alert('提交失败: ' + (response ? response.error : '网络错误'));
+        },
+        complete: function() {
+            $('#confirmBatchGenerate').prop('disabled', false).html('<i class="fas fa-play"></i> 开始生成');
+        }
+    });
+}
+
+/**
+ * 显示进度模态框
+ */
+function showProgressModal(taskIds, characterIds) {
+    const progressModalHtml = `
+        <div class="modal fade" id="batchProgressModal" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">批量生成进度</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>总体进度</span>
+                                <span id="progressText">0/${taskIds.length}</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" id="progressBar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div id="generationStatus"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="closeProgressModal" data-bs-dismiss="modal" disabled>
+                            完成
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // 移除已存在的进度模态框
+    $('#batchProgressModal').remove();
+    
+    // 添加新进度模态框
+    $('body').append(progressModalHtml);
+    
+    // 显示模态框
+    $('#batchProgressModal').modal('show');
+    
+    // 初始化进度
+    let completedTasks = 0;
+    updateProgress(completedTasks, taskIds.length);
+    
+    // 监控任务进度
+    const checkInterval = setInterval(() => {
+        checkTasksProgress(taskIds, characterIds, (completed, total) => {
+            completedTasks = completed;
+            updateProgress(completed, total);
+            
+            if (completed >= total) {
+                clearInterval(checkInterval);
+                $('#closeProgressModal').prop('disabled', false);
+                // 刷新缩略图
+                setTimeout(() => {
+                    loadAllThumbnails();
+                }, 1000);
+            }
+        });
+    }, 2000);
+}
+
+/**
+ * 更新进度显示
+ */
+function updateProgress(completed, total) {
+    const percentage = total > 0 ? (completed / total) * 100 : 0;
+    $('#progressBar').css('width', percentage + '%');
+    $('#progressText').text(`${completed}/${total}`);
+}
+
+/**
+ * 检查任务进度
+ */
+function checkTasksProgress(taskIds, characterIds, callback) {
+    const statusContainer = $('#generationStatus');
+    let completedCount = 0;
+    
+    taskIds.forEach((taskId, index) => {
+        $.get(`/video/api/check-task-status/?task_id=${taskId}`)
+        .done(function(data) {
+            const characterId = characterIds[index];
+            const characterName = $(`.character-checkbox[value="${characterId}"]`).closest('tr').find('td:nth-child(4)').text().trim();
+            
+            let statusHtml = `<div class="mb-1"><strong>${characterName}:</strong> `;
+            
+            if (data.status === 'SUCCESS') {
+                statusHtml += '<span class="text-success">生成完成</span>';
+                completedCount++;
+            } else if (data.status === 'FAILURE') {
+                statusHtml += '<span class="text-danger">生成失败</span>';
+                completedCount++;
+            } else {
+                statusHtml += '<span class="text-info">生成中...</span>';
+            }
+            
+            statusHtml += '</div>';
+            
+            // 更新或添加状态信息
+            const existingStatus = statusContainer.find(`[data-character-id="${characterId}"]`);
+            if (existingStatus.length) {
+                existingStatus.html(statusHtml);
+            } else {
+                const statusDiv = $(`<div data-character-id="${characterId}">${statusHtml}</div>`);
+                statusContainer.append(statusDiv);
+            }
+        })
+        .fail(function() {
+            console.error('Error checking task status for task:', taskId);
+        });
+    });
+    
+    // 延迟调用回调，确保所有请求都有机会完成
+    setTimeout(() => {
+        callback(completedCount, taskIds.length);
+    }, 500);
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">角色列表</h5>
+                <a href="{% url 'video:character_create' %}" class="btn btn-light btn-sm">
+                    <i class="fas fa-plus"></i> 添加角色
+                </a>
+            </div>
+            <div class="card-body">
+                <!-- 搜索表单 -->
+                {% if form %}
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <form method="get" class="d-flex">
+                            <input type="text" name="search" class="form-control me-2" 
+                                   placeholder="搜索角色名称、性别或年龄组..." 
+                                   value="{{ request.GET.search }}">
+                            <button type="submit" class="btn btn-outline-primary">
+                                <i class="fas fa-search"></i> 搜索
+                            </button>
+                            {% if request.GET.search %}
+                                <a href="{% url 'video:character_list' %}" class="btn btn-outline-secondary ms-2">
+                                    <i class="fas fa-times"></i> 清除
+                                </a>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+                {% endif %}
+                {% if characters %}
+                <div class="table-responsive">
+                    <!-- 批量操作工具栏 -->
+                    <div class="mb-3">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="selectAll">
+                                    <label class="form-check-label" for="selectAll">
+                                        全选
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-end">
+                                <button type="button" class="btn btn-primary" id="batchGenerateBtn" disabled>
+                                    <i class="fas fa-images"></i> 批量生成图片
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th width="50">
+                                    <input type="checkbox" id="selectAllHeader" class="form-check-input">
+                                </th>
+                                <th width="80">缩略图</th>
+                                <th>ID</th>
+                                <th>姓名</th>
+                                <th>性别</th>
+                                <th>年龄段</th>
+                                <th>出场章节数</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for character in characters %}
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="form-check-input character-checkbox" value="{{ character.id }}">
+                                </td>
+                                <td>
+                                    <div class="character-thumbnail" data-character-id="{{ character.id }}">
+                                        <img src="/static/images/default_character.svg" 
+                                             alt="{{ character.name }}" 
+                                             class="img-thumbnail" 
+                                             style="width: 60px; height: 60px; object-fit: cover;">
+                                    </div>
+                                </td>
+                                <td>{{ character.id }}</td>
+                                <td>{{ character.name }}</td>
+                                <td>{{ character.gender }}</td>
+                                <td>{{ character.age_group }}</td>
+                                <td>{% if character.chapter %}{{ character.chapter.title }}{% else %}未分配{% endif %}</td>
+                                <td>
+                                    <a href="{% url 'video:character_detail' character.id %}" class="btn btn-sm btn-outline-primary">查看</a>
+                                    <a href="{% url 'video:character_update' character.id %}" class="btn btn-sm btn-outline-secondary">编辑</a>
+                                    <a href="{% url 'video:character_delete' character.id %}" class="btn btn-sm btn-outline-danger">删除</a>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="8" class="text-center text-muted">暂无角色数据</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="alert alert-info">暂无角色数据</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page=1">&laquo; 首页</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">上一页</a>
+        </li>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+        <li class="page-item active">
+            <span class="page-link">{{ num }}</span>
+        </li>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">下一页</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">末页 &raquo;</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+{% endblock %}

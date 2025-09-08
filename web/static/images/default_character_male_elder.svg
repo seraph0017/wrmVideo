@@ -1,0 +1,22 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆 -->
+  <circle cx="100" cy="100" r="100" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  
+  <!-- 头部 -->
+  <circle cx="100" cy="75" r="25" fill="#9c27b0"/>
+  
+  <!-- 胡须装饰 -->
+  <ellipse cx="100" cy="90" rx="15" ry="8" fill="#6a1b9a"/>
+  
+  <!-- 白发装饰 -->
+  <path d="M 80 60 Q 100 55 120 60 Q 120 65 100 70 Q 80 65 80 60" fill="#e1bee7"/>
+  
+  <!-- 身体 -->
+  <ellipse cx="100" cy="140" rx="35" ry="45" fill="#9c27b0"/>
+  
+  <!-- 长袍装饰 -->
+  <rect x="85" y="120" width="30" height="40" fill="#6a1b9a" rx="5"/>
+  
+  <!-- 文字 -->
+  <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6a1b9a">男性长者</text>
+</svg>

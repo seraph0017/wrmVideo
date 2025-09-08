@@ -1,0 +1,14 @@
+[Script Info]
+Title: Auto-generated Subtitle
+ScriptType: v4.00+
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.31,Default,,0,0,0,,一抹黑色剑气斩出天地间光
+Dialogue: 0,0:00:02.31,0:00:04.68,Default,,0,0,0,,芒被吸收百鬼老人惊骇至极
+Dialogue: 0,0:00:04.68,0:00:07.10,Default,,0,0,0,,却动弹不得最终被剑气劈成
+Dialogue: 0,0:00:07.10,0:00:08.74,Default,,0,0,0,,两半邪修终食恶果

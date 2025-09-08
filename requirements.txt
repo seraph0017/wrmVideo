@@ -29,5 +29,15 @@ pytest-asyncio>=0.21.0
 aiofiles>=23.0.0
 # gevent>=23.0.0  # 已替换为标准库的concurrent.futures
 
+# Redis和消息队列
+redis>=4.5.0
+celery>=5.3.0
+django-celery-beat>=2.5.0
+django-celery-results>=2.5.0
+
+# WebSocket和实时通信
+channels>=4.0.0
+channels-redis>=4.1.0
+
 # 路径处理
 pathlib2>=2.3.7; python_version<'3.4'

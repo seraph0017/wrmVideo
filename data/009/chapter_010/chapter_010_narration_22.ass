@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_010 Narration 22 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}在小饭馆等到天黑
+Dialogue: 0,0:00:02.32,0:00:03.38,Default,,0,0,0,,未见{\c&H0000FFFF&\b1}东西{\c&H00FFFFFF&\b0}送来
+Dialogue: 0,0:00:03.71,0:00:04.52,Default,,0,0,0,,十分恼火
+Dialogue: 0,0:00:04.92,0:00:06.63,Default,,0,0,0,,从{\c&H0000FFFF&\b1}玄武{\c&H00FFFFFF&\b0}大街冲向皇宫
+Dialogue: 0,0:00:07.06,0:00:08.49,Default,,0,0,0,,途中推开挡路行人
+Dialogue: 0,0:00:08.76,0:00:09.56,Default,,0,0,0,,表情愤怒

@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_014 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.94,Default,,0,0,0,,捡漏王登场
+Dialogue: 0,0:00:01.43,0:00:04.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}从天而降砸入领域黑色
+Dialogue: 0,0:00:04.24,0:00:05.54,Default,,0,0,0,,剑气撕裂血河
+Dialogue: 0,0:00:06.07,0:00:07.53,Default,,0,0,0,,统子借金龙一用
+Dialogue: 0,0:00:07.97,0:00:10.60,Default,,0,0,0,,杀生剑嗡鸣作响剑光如瀑布
+Dialogue: 0,0:00:10.60,0:00:12.07,Default,,0,0,0,,倾泻霸气侧漏

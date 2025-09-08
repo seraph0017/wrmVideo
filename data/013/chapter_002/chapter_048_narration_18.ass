@@ -1,0 +1,14 @@
+[Script Info]
+Title: Auto-generated Subtitle
+ScriptType: v4.00+
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.36,Default,,0,0,0,,百里蝶拦路收过路费前明月
+Dialogue: 0,0:00:02.36,0:00:04.87,Default,,0,0,0,,阁峰主叛投海沙门如今刁难
+Dialogue: 0,0:00:04.87,0:00:07.11,Default,,0,0,0,,旧主明月阁弟子折损不起话
+Dialogue: 0,0:00:07.11,0:00:08.07,Default,,0,0,0,,语刻薄如刀
