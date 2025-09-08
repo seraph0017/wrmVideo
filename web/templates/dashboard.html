@@ -104,4 +104,299 @@
         </div>
     </div>
 </div>
+
+<!-- 音频生成和播放功能 -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                <h5 class="card-title mb-0">音频生成与播放</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>生成音频</h6>
+                        <form id="audioGenerationForm">
+                            <div class="mb-3">
+                                <label for="bookSelect" class="form-label">选择书籍</label>
+                                <select class="form-select" id="bookSelect" required>
+                                    <option value="">请选择书籍...</option>
+                                    <option value="001">书籍 001</option>
+                                    <option value="002">书籍 002</option>
+                                    <option value="003">书籍 003</option>
+                                    <option value="004">书籍 004</option>
+                                    <option value="005">书籍 005</option>
+                                    <option value="006">书籍 006</option>
+                                    <option value="007">书籍 007</option>
+                                    <option value="008">书籍 008</option>
+                                    <option value="009">书籍 009</option>
+                                    <option value="010">书籍 010</option>
+                                    <option value="013">书籍 013</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="chapterSelect" class="form-label">选择章节</label>
+                                <select class="form-select" id="chapterSelect" required>
+                                    <option value="">请先选择书籍...</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="generateAudioBtn">
+                                <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+                                生成音频
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>音频播放器</h6>
+                        <div id="audioPlayerContainer" class="d-none">
+                            <audio controls class="w-100 mb-3" id="audioPlayer">
+                                您的浏览器不支持音频播放。
+                            </audio>
+                            <div class="mb-3">
+                                <label for="subtitleDisplay" class="form-label">字幕显示</label>
+                                <div id="subtitleDisplay" class="border p-3 bg-light" style="height: 200px; overflow-y: auto;">
+                                    <p class="text-muted">字幕将在此显示...</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary btn-sm" id="downloadAudioBtn">下载音频</button>
+                            <button class="btn btn-secondary btn-sm" id="downloadSubtitleBtn">下载字幕</button>
+                        </div>
+                        <div id="audioPlaceholder" class="text-muted">
+                            <p>请先生成音频文件</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 任务状态显示 -->
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <div id="taskStatus" class="alert alert-info d-none" role="alert">
+                            <strong>任务状态：</strong><span id="taskStatusText">等待中...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// 音频生成和播放功能的JavaScript代码
+document.addEventListener('DOMContentLoaded', function() {
+    const bookSelect = document.getElementById('bookSelect');
+    const chapterSelect = document.getElementById('chapterSelect');
+    const audioForm = document.getElementById('audioGenerationForm');
+    const generateBtn = document.getElementById('generateAudioBtn');
+    const spinner = generateBtn.querySelector('.spinner-border');
+    const taskStatus = document.getElementById('taskStatus');
+    const taskStatusText = document.getElementById('taskStatusText');
+    const audioPlayerContainer = document.getElementById('audioPlayerContainer');
+    const audioPlaceholder = document.getElementById('audioPlaceholder');
+    const audioPlayer = document.getElementById('audioPlayer');
+    const subtitleDisplay = document.getElementById('subtitleDisplay');
+    const downloadAudioBtn = document.getElementById('downloadAudioBtn');
+    const downloadSubtitleBtn = document.getElementById('downloadSubtitleBtn');
+    
+    let currentTaskId = null;
+    let currentAudioPath = null;
+    let currentSubtitlePath = null;
+    
+    // 章节数据映射
+    const chapterData = {
+        '001': ['chapter_001', 'chapter_002', 'chapter_003'],
+        '002': ['chapter_001', 'chapter_002', 'chapter_003', 'chapter_004', 'chapter_005', 'chapter_006', 'chapter_007', 'chapter_008', 'chapter_009', 'chapter_010', 'chapter_011', 'chapter_012', 'chapter_013', 'chapter_014', 'chapter_015', 'chapter_016', 'chapter_017', 'chapter_018', 'chapter_019', 'chapter_020', 'chapter_021', 'chapter_022', 'chapter_023', 'chapter_024'],
+        '003': ['chapter_001', 'chapter_002', 'chapter_003', 'chapter_004', 'chapter_005', 'chapter_006', 'chapter_007', 'chapter_008', 'chapter_009', 'chapter_010'],
+        '004': ['chapter_001', 'chapter_002', 'chapter_003'],
+        '005': ['chapter_002'],
+        '006': ['chapter_001', 'chapter_003', 'chapter_004', 'chapter_005', 'chapter_006', 'chapter_007', 'chapter_008', 'chapter_009', 'chapter_010', 'chapter_012', 'chapter_013', 'chapter_014', 'chapter_015', 'chapter_016', 'chapter_017', 'chapter_018', 'chapter_019', 'chapter_021', 'chapter_022', 'chapter_023'],
+        '007': ['chapter_001', 'chapter_005'],
+        '008': ['chapter_001'],
+        '009': ['chapter_001', 'chapter_002', 'chapter_004', 'chapter_006', 'chapter_007', 'chapter_010', 'chapter_011', 'chapter_012', 'chapter_014', 'chapter_015', 'chapter_018', 'chapter_019'],
+        '010': ['chapter_001', 'chapter_002', 'chapter_003', 'chapter_004', 'chapter_005', 'chapter_006', 'chapter_007', 'chapter_009', 'chapter_010', 'chapter_012', 'chapter_013', 'chapter_015', 'chapter_016', 'chapter_017'],
+        '013': ['chapter_001', 'chapter_002']
+    };
+    
+    // 书籍选择变化时更新章节列表
+    bookSelect.addEventListener('change', function() {
+        const selectedBook = this.value;
+        chapterSelect.innerHTML = '<option value="">请选择章节...</option>';
+        
+        if (selectedBook && chapterData[selectedBook]) {
+            chapterData[selectedBook].forEach(chapter => {
+                const option = document.createElement('option');
+                option.value = chapter;
+                option.textContent = chapter.replace('_', ' ').toUpperCase();
+                chapterSelect.appendChild(option);
+            });
+        }
+    });
+    
+    // 音频生成表单提交
+    audioForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const book = bookSelect.value;
+        const chapter = chapterSelect.value;
+        
+        if (!book || !chapter) {
+            alert('请选择书籍和章节');
+            return;
+        }
+        
+        generateAudio(book, chapter);
+    });
+    
+    // 生成音频函数
+    function generateAudio(book, chapter) {
+        // 显示加载状态
+        generateBtn.disabled = true;
+        spinner.classList.remove('d-none');
+        taskStatus.classList.remove('d-none');
+        taskStatusText.textContent = '正在生成音频...';
+        
+        // 发送生成音频请求
+        fetch('/api/generate-audio/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+            },
+            body: JSON.stringify({
+                book: book,
+                chapter: chapter
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                currentTaskId = data.task_id;
+                taskStatusText.textContent = '音频生成任务已启动，任务ID: ' + currentTaskId;
+                
+                // 开始轮询任务状态
+                pollTaskStatus(currentTaskId);
+            } else {
+                throw new Error(data.error || '生成音频失败');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            taskStatusText.textContent = '错误: ' + error.message;
+            taskStatus.className = 'alert alert-danger';
+            resetGenerateButton();
+        });
+    }
+    
+    // 轮询任务状态
+    function pollTaskStatus(taskId) {
+        const pollInterval = setInterval(() => {
+            fetch(`/api/task-status/${taskId}/`)
+            .then(response => response.json())
+            .then(data => {
+                taskStatusText.textContent = `任务状态: ${data.status}`;
+                
+                if (data.status === 'SUCCESS') {
+                    clearInterval(pollInterval);
+                    taskStatus.className = 'alert alert-success';
+                    taskStatusText.textContent = '音频生成完成！';
+                    
+                    // 设置音频和字幕路径
+                    currentAudioPath = data.result.audio_path;
+                    currentSubtitlePath = data.result.subtitle_path;
+                    
+                    // 显示音频播放器
+                    showAudioPlayer(currentAudioPath, currentSubtitlePath);
+                    resetGenerateButton();
+                } else if (data.status === 'FAILURE') {
+                    clearInterval(pollInterval);
+                    taskStatus.className = 'alert alert-danger';
+                    taskStatusText.textContent = '音频生成失败: ' + (data.error || '未知错误');
+                    resetGenerateButton();
+                }
+            })
+            .catch(error => {
+                console.error('轮询错误:', error);
+                clearInterval(pollInterval);
+                taskStatus.className = 'alert alert-danger';
+                taskStatusText.textContent = '检查任务状态时出错';
+                resetGenerateButton();
+            });
+        }, 2000); // 每2秒检查一次
+    }
+    
+    // 显示音频播放器
+    function showAudioPlayer(audioPath, subtitlePath) {
+        audioPlaceholder.classList.add('d-none');
+        audioPlayerContainer.classList.remove('d-none');
+        
+        // 设置音频源
+        audioPlayer.src = audioPath;
+        
+        // 加载字幕
+        if (subtitlePath) {
+            loadSubtitles(subtitlePath);
+        }
+        
+        // 设置下载链接
+        downloadAudioBtn.onclick = () => downloadFile(audioPath, 'audio.mp3');
+        downloadSubtitleBtn.onclick = () => downloadFile(subtitlePath, 'subtitle.ass');
+    }
+    
+    // 加载字幕文件
+    function loadSubtitles(subtitlePath) {
+        fetch(subtitlePath)
+        .then(response => response.text())
+        .then(subtitleText => {
+            displaySubtitles(subtitleText);
+        })
+        .catch(error => {
+            console.error('加载字幕失败:', error);
+            subtitleDisplay.innerHTML = '<p class="text-danger">加载字幕失败</p>';
+        });
+    }
+    
+    // 显示字幕内容
+    function displaySubtitles(subtitleText) {
+        // 解析ASS字幕格式
+        const lines = subtitleText.split('\n');
+        const dialogueLines = lines.filter(line => line.startsWith('Dialogue:'));
+        
+        let subtitleHtml = '';
+        dialogueLines.forEach((line, index) => {
+            const parts = line.split(',');
+            if (parts.length >= 10) {
+                const startTime = parts[1];
+                const endTime = parts[2];
+                const text = parts.slice(9).join(',').replace(/\{[^}]*\}/g, ''); // 移除ASS标签
+                
+                subtitleHtml += `
+                    <div class="subtitle-line mb-2 p-2 border-bottom" data-start="${startTime}" data-end="${endTime}">
+                        <small class="text-muted">${startTime} - ${endTime}</small><br>
+                        <span>${text}</span>
+                    </div>
+                `;
+            }
+        });
+        
+        subtitleDisplay.innerHTML = subtitleHtml || '<p class="text-muted">无字幕内容</p>';
+    }
+    
+    // 下载文件
+    function downloadFile(url, filename) {
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+    
+    // 重置生成按钮状态
+    function resetGenerateButton() {
+        generateBtn.disabled = false;
+        spinner.classList.add('d-none');
+    }
+});
+</script>
 {% endblock %}
