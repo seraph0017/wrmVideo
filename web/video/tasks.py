@@ -1175,7 +1175,11 @@ def batch_generate_all_videos_async(self, novel_id, chapter_id):
                     continue
                 
                 # 执行脚本
-                cmd = ['python', script_path, data_dir]
+                if script_name == 'concat_finish_video.py':
+                    # 为concat_finish_video.py添加--chapter参数，只处理当前章节
+                    cmd = ['python', script_path, data_dir, '--chapter', f'{int(chapter_number):03d}']
+                else:
+                    cmd = ['python', script_path, data_dir]
                 logger.info(f"执行命令: {' '.join(cmd)}")
                 
                 # 设置超时时间（根据步骤调整）
@@ -1823,8 +1827,8 @@ def concat_narration_video_async(self, novel_id, chapter_id):
                 if os.path.exists(concat_finish_script):
                     logger.info(f"开始执行concat_finish_video.py脚本: 小说ID={novel_id}, 章节ID={chapter_id}")
                     
-                    # 执行concat_finish_video.py脚本
-                    finish_cmd = ['python', concat_finish_script, data_dir]
+                    # 执行concat_finish_video.py脚本，添加--chapter参数只处理当前章节
+                    finish_cmd = ['python', concat_finish_script, data_dir, '--chapter', f'{int(chapter_number):03d}']
                     
                     logger.info(f"执行命令: {' '.join(finish_cmd)}")
                     

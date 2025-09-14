@@ -10,7 +10,10 @@ concat_finish_video.py
 - 如果合并视频不存在，回退到收集单独的narration_01-03视频
 
 使用方法:
-    python concat_finish_video.py data/001
+    python concat_finish_video.py data/001                    # 处理所有章节
+    python concat_finish_video.py data/001 --chapter 001      # 处理指定章节
+    python concat_finish_video.py data/001 --chapter 001,002  # 处理多个章节
+    python concat_finish_video.py data/001 -c 001-005         # 处理章节范围
 """
 
 import os
@@ -18,6 +21,7 @@ import sys
 import subprocess
 import random
 import glob
+import argparse
 from pathlib import Path
 import ffmpeg
 
@@ -259,6 +263,44 @@ def get_audio_duration(audio_path):
     except Exception as e:
         print(f"获取音频时长失败: {e}")
         return 0
+
+def parse_chapter_args(chapter_arg):
+    """解析章节参数，支持多种格式
+    
+    支持的格式：
+    - "001" -> ["chapter_001"]
+    - "001,002,003" -> ["chapter_001", "chapter_002", "chapter_003"]
+    - "001-005" -> ["chapter_001", "chapter_002", "chapter_003", "chapter_004", "chapter_005"]
+    """
+    chapters = []
+    
+    if not chapter_arg:
+        return chapters
+    
+    # 处理逗号分隔的章节
+    parts = chapter_arg.split(',')
+    
+    for part in parts:
+        part = part.strip()
+        
+        # 处理范围格式 (如 "001-005")
+        if '-' in part:
+            start, end = part.split('-', 1)
+            start_num = int(start.strip())
+            end_num = int(end.strip())
+            
+            for i in range(start_num, end_num + 1):
+                chapter_name = f"chapter_{i:03d}"
+                if chapter_name not in chapters:
+                    chapters.append(chapter_name)
+        else:
+            # 处理单个章节
+            chapter_num = int(part)
+            chapter_name = f"chapter_{chapter_num:03d}"
+            if chapter_name not in chapters:
+                chapters.append(chapter_name)
+    
+    return sorted(chapters)
 
 def get_available_bgm_files():
     """获取可用的BGM文件列表"""
@@ -761,33 +803,85 @@ def process_single_chapter(data_dir, chapter_dir):
         return False
 
 def main():
-    if len(sys.argv) != 2:
-        print("使用方法: python concat_finish_video.py data/001")
+    # 设置命令行参数解析
+    parser = argparse.ArgumentParser(
+        description='拼接章节narration视频文件，配上BGM，生成完整视频',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""使用示例:
+  %(prog)s data/001                    # 处理所有章节
+  %(prog)s data/001 --chapter 001      # 处理指定章节
+  %(prog)s data/001 --chapter 001,002  # 处理多个章节
+  %(prog)s data/001 -c 001-005         # 处理章节范围
+        """
+    )
+    
+    parser.add_argument('data_dir', help='数据目录路径 (如: data/001)')
+    parser.add_argument(
+        '--chapter', '-c',
+        help='指定要处理的章节。支持格式: 001 | 001,002,003 | 001-005'
+    )
+    parser.add_argument(
+        '--list', '-l',
+        action='store_true',
+        help='列出数据目录中所有可用的章节'
+    )
+    
+    args = parser.parse_args()
+    
+    # 检查数据目录是否存在
+    if not os.path.exists(args.data_dir):
+        print(f"错误: 数据目录不存在: {args.data_dir}")
         sys.exit(1)
     
-    data_dir = sys.argv[1]
-    if not os.path.exists(data_dir):
-        print(f"错误: 数据目录不存在: {data_dir}")
-        sys.exit(1)
+    # 获取所有可用的chapter目录
+    all_chapter_dirs = sorted([d for d in os.listdir(args.data_dir) 
+                              if d.startswith('chapter_') and os.path.isdir(os.path.join(args.data_dir, d))])
     
-    print(f"开始处理数据目录: {data_dir}")
-    
-    # 获取所有chapter目录
-    chapter_dirs = sorted([d for d in os.listdir(data_dir) 
-                          if d.startswith('chapter_') and os.path.isdir(os.path.join(data_dir, d))])
-    
-    if not chapter_dirs:
+    if not all_chapter_dirs:
         print("错误: 没有找到任何chapter目录")
         sys.exit(1)
     
-    print(f"找到 {len(chapter_dirs)} 个章节目录: {chapter_dirs}")
+    # 如果用户要求列出章节
+    if args.list:
+        print(f"数据目录 {args.data_dir} 中的可用章节:")
+        for chapter_dir in all_chapter_dirs:
+            chapter_path = os.path.join(args.data_dir, chapter_dir)
+            video_files = collect_chapter_narration_videos(chapter_path, chapter_dir)
+            print(f"  {chapter_dir} ({len(video_files)} 个视频文件)")
+        return
+    
+    # 确定要处理的章节
+    if args.chapter:
+        try:
+            target_chapters = parse_chapter_args(args.chapter)
+            # 验证指定的章节是否存在
+            chapter_dirs = []
+            for chapter in target_chapters:
+                if chapter in all_chapter_dirs:
+                    chapter_dirs.append(chapter)
+                else:
+                    print(f"警告: 章节 {chapter} 不存在，跳过")
+            
+            if not chapter_dirs:
+                print("错误: 没有找到任何有效的章节")
+                sys.exit(1)
+        except ValueError as e:
+            print(f"错误: 章节参数格式不正确: {e}")
+            sys.exit(1)
+    else:
+        # 处理所有章节
+        chapter_dirs = all_chapter_dirs
+    
+    print(f"开始处理数据目录: {args.data_dir}")
+    print(f"找到 {len(all_chapter_dirs)} 个章节目录，将处理 {len(chapter_dirs)} 个章节")
+    print(f"要处理的章节: {', '.join(chapter_dirs)}")
     
     # 处理每个chapter
     success_count = 0
     failed_chapters = []
     
     for chapter_dir in chapter_dirs:
-        if process_single_chapter(data_dir, chapter_dir):
+        if process_single_chapter(args.data_dir, chapter_dir):
             success_count += 1
         else:
             failed_chapters.append(chapter_dir)
