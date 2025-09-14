@@ -10,9 +10,30 @@ import logging
 import os
 import subprocess
 import json
+import sys
+from pathlib import Path
 from django.conf import settings
 from django.utils import timezone
 from .models import CharacterImageTask, Character, Chapter
+from volcengine.visual.VisualService import VisualService
+
+# 添加项目根目录到Python路径，以便导入check_async_tasks模块
+project_root = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(project_root))
+
+try:
+    from check_async_tasks import (
+        process_all_data_directories,
+        process_chapter_async_tasks,
+        get_all_task_files,
+        check_all_tasks
+    )
+except ImportError as e:
+    logger.warning(f"无法导入check_async_tasks模块: {e}")
+    process_all_data_directories = None
+    process_chapter_async_tasks = None
+    get_all_task_files = None
+    check_all_tasks = None
 
 logger = logging.getLogger(__name__)
 
@@ -62,8 +83,6 @@ def generate_video_async(novel_id, chapter_id):
             'chapter_id': chapter_id,
             'message': '视频生成完成'
         }
-        
-        logger.info(f"视频生成完成: {result}")
         return result
         
     except Exception as e:
@@ -310,15 +329,12 @@ def generate_script_async(self, novel_id, script_params=None):
                             if char_info.get('name'):
                                 character, char_created = Character.objects.get_or_create(
                                     name=char_info['name'],
+                                    chapter=chapter,
                                     defaults={
                                         'gender': char_info.get('gender', '其他'),
                                         'age_group': char_info.get('age_group', '青年')
                                     }
                                 )
-                                
-                                # 关联角色到章节
-                                character.chapter = chapter
-                                character.save()
                         
                         # 清除该章节的旧解说记录
                         Narration.objects.filter(chapter=chapter).delete()
@@ -763,7 +779,7 @@ def generate_character_image_async(self, task_id, character_id, chapter_id, imag
             'CUSTOM_PROMPT': custom_prompt,
             'TASK_ID': task_id,
             'CHAPTER_PATH': chapter_dir,
-            'NOVEL_ID': str(novel_id),
+            'NOVEL_ID': f'{novel_id:03d}',
             'CHAPTER_ID': f'chapter_{chapter_num:03d}'
         }
         
@@ -898,6 +914,1379 @@ def generate_character_image_async(self, task_id, character_id, chapter_id, imag
 
 
 @shared_task(bind=True)
+def batch_generate_all_videos_async(self, novel_id, chapter_id):
+    """
+    批量生成全部视频的异步任务 - 包含完整的视频制作流程
+    
+    这个任务会执行以下步骤：
+    1. 生成音频 (gen_audio.py)
+    2. 生成字幕 (gen_ass.py)
+    3. 生成分镜图片 (gen_image_async.py)
+    4. 校验分镜图片 (llm_narration_image.py)
+    5. 生成分镜视频 (gen_video.py)
+    6. 生成完整视频 (concat_finish_video.py)
+    
+    Args:
+        novel_id (int): 小说ID
+        chapter_id (int): 章节ID
+        
+    Returns:
+        dict: 处理结果
+    """
+    logger.info(f"开始批量生成全部视频: 小说ID={novel_id}, 章节ID={chapter_id}")
+    
+    try:
+        # 获取章节对象
+        from .models import Chapter
+        chapter = Chapter.objects.get(id=chapter_id)
+        
+        # 使用工具函数获取文件系统中的章节编号
+        from .utils import get_chapter_number_from_filesystem
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        
+        if not chapter_number:
+            raise Exception(f'无法在文件系统中找到章节 {chapter.title} 的目录')
+        
+        # 构建数据目录路径
+        data_dir = f'data/{novel_id:03d}'
+        
+        # 检查数据目录是否存在
+        project_root = settings.BASE_DIR.parent
+        full_data_path = os.path.join(project_root, data_dir)
+        
+        if not os.path.exists(full_data_path):
+            raise Exception(f'数据目录不存在: {full_data_path}')
+        
+        # 切换到项目根目录执行
+        logger.info(f"执行目录: {project_root}")
+        
+        # 执行步骤列表 - 只执行最后一个步骤
+        steps = [
+            ('生成完整视频', 'concat_finish_video.py')
+        ]
+        
+        results = []
+        
+        for step_name, script_name in steps:
+            try:
+                logger.info(f"执行步骤: {step_name} ({script_name})")
+                
+                # 构建脚本路径
+                script_path = os.path.join(project_root, script_name)
+                
+                if not os.path.exists(script_path):
+                    logger.warning(f"脚本文件不存在，跳过: {script_path}")
+                    results.append({
+                        'step': step_name,
+                        'script': script_name,
+                        'status': 'skipped',
+                        'message': '脚本文件不存在'
+                    })
+                    continue
+                
+                # 执行脚本
+                cmd = ['python', script_path, data_dir]
+                logger.info(f"执行命令: {' '.join(cmd)}")
+                
+                # 设置超时时间（根据步骤调整）
+                timeout = 3600  # 默认1小时
+                if script_name in ['gen_image_async.py', 'gen_video.py', 'concat_finish_video.py']:
+                    timeout = 7200  # 2小时
+                
+                result = subprocess.run(
+                    cmd,
+                    cwd=str(project_root),
+                    capture_output=True,
+                    text=True,
+                    timeout=timeout
+                )
+                
+                if result.returncode == 0:
+                    logger.info(f"步骤完成: {step_name}")
+                    results.append({
+                        'step': step_name,
+                        'script': script_name,
+                        'status': 'success',
+                        'message': '执行成功',
+                        'output': result.stdout[:500] if result.stdout else ''  # 限制输出长度
+                    })
+                else:
+                    logger.error(f"步骤失败: {step_name} - {result.stderr}")
+                    results.append({
+                        'step': step_name,
+                        'script': script_name,
+                        'status': 'error',
+                        'message': f'执行失败: {result.stderr[:500]}',
+                        'output': result.stdout[:500] if result.stdout else ''
+                    })
+                    
+                    # 如果是关键步骤失败，可以选择继续或停止
+                    if script_name in ['gen_audio.py', 'gen_ass.py']:
+                        logger.warning(f"关键步骤失败，但继续执行后续步骤: {step_name}")
+                    
+            except subprocess.TimeoutExpired:
+                logger.error(f"步骤超时: {step_name}")
+                results.append({
+                    'step': step_name,
+                    'script': script_name,
+                    'status': 'timeout',
+                    'message': f'执行超时 (>{timeout}秒)'
+                })
+                
+            except Exception as e:
+                logger.error(f"步骤异常: {step_name} - {str(e)}")
+                results.append({
+                    'step': step_name,
+                    'script': script_name,
+                    'status': 'exception',
+                    'message': f'执行异常: {str(e)}'
+                })
+        
+        # 统计结果
+        success_count = sum(1 for r in results if r['status'] == 'success')
+        total_count = len(results)
+        
+        logger.info(f"批量生成全部视频完成: 小说ID={novel_id}, 章节ID={chapter_id}, 成功步骤: {success_count}/{total_count}")
+        
+        return {
+            'status': 'completed',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'chapter_number': chapter_number,
+            'message': f'批量生成全部视频完成，成功步骤: {success_count}/{total_count}',
+            'results': results,
+            'success_count': success_count,
+            'total_count': total_count
+        }
+        
+    except Chapter.DoesNotExist:
+        logger.error(f"章节不存在: chapter_id={chapter_id}")
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'message': f'章节不存在: {chapter_id}'
+        }
+        
+    except Exception as e:
+        logger.error(f"批量生成全部视频失败: {str(e)}")
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'message': f'批量生成全部视频失败: {str(e)}'
+        }
+
+
+@shared_task(bind=True)
+def generate_first_video_async(self, novel_id, chapter_id):
+    """
+    异步执行gen_first_video_async.py脚本生成首视频
+    
+    Args:
+        novel_id (int): 小说ID
+        chapter_id (int): 章节ID
+        
+    Returns:
+        dict: 处理结果
+    """
+    logger.info(f"开始异步生成首视频: 小说ID={novel_id}, 章节ID={chapter_id}")
+    
+    try:
+        # 获取章节对象
+        from .models import Chapter
+        chapter = Chapter.objects.get(id=chapter_id)
+        
+        # 使用工具函数获取文件系统中的章节编号
+        from .utils import get_chapter_number_from_filesystem
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        
+        if not chapter_number:
+            raise Exception(f'无法在文件系统中找到章节 {chapter.title} 的目录')
+        
+        # 构建数据目录路径（不包含章节）
+        data_dir = f'data/{novel_id:03d}'
+        chapter_name = f'chapter_{chapter_number}'
+        
+        # 检查数据目录是否存在
+        project_root = settings.BASE_DIR.parent
+        full_data_path = os.path.join(project_root, data_dir)
+        full_chapter_path = os.path.join(full_data_path, chapter_name)
+        
+        if not os.path.exists(full_data_path):
+            raise Exception(f'数据目录不存在: {full_data_path}')
+            
+        if not os.path.exists(full_chapter_path):
+            raise Exception(f'章节目录不存在: {full_chapter_path}')
+        
+        # 构建脚本路径
+        script_path = os.path.join(settings.BASE_DIR.parent, 'gen_first_video_async.py')
+        
+        if not os.path.exists(script_path):
+            raise Exception(f'脚本文件不存在: {script_path}')
+        
+        # 执行gen_first_video_async.py脚本，针对特定章节
+        # 传递数据目录和章节名称
+        cmd = ['python', script_path, data_dir, '--chapter', chapter_name]
+        
+        logger.info(f"执行命令: {' '.join(cmd)}")
+        
+        # 切换到项目根目录执行
+        project_root = settings.BASE_DIR.parent
+        
+        logger.info(f"执行目录: {project_root}")
+        logger.info(f"完整命令: {' '.join(cmd)}")
+        
+        result = subprocess.run(
+            cmd,
+            cwd=str(project_root),  # 确保路径是字符串
+            capture_output=True,
+            text=True,
+            timeout=3600  # 1小时超时
+        )
+        
+        if result.returncode == 0:
+            logger.info(f"首视频生成完成: 小说ID={novel_id}, 章节ID={chapter_id}")
+            return {
+                'status': 'success',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'message': '首视频生成成功',
+                'output': result.stdout
+            }
+        else:
+            error_msg = f"首视频生成失败: {result.stderr}"
+            logger.error(error_msg)
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'error': error_msg,
+                'output': result.stdout
+            }
+            
+    except subprocess.TimeoutExpired:
+        error_msg = f"首视频生成超时: 小说ID={novel_id}, 章节ID={chapter_id}"
+        logger.error(error_msg)
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'error': error_msg
+        }
+        
+    except Exception as e:
+        error_msg = f"首视频生成异常: {str(e)}"
+        logger.error(f"首视频生成异常: 小说ID={novel_id}, 章节ID={chapter_id}, 错误: {error_msg}")
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'error': error_msg
+        }
+
+
+@shared_task(bind=True)
+def scan_and_process_async_tasks(self, data_dir='data'):
+    """
+    定时扫描和处理所有异步任务
+    
+    这是一个Celery Beat定时任务，用于：
+    1. 扫描所有数据目录下的异步任务文件
+    2. 检查任务状态并下载完成的图片/视频
+    3. 移动已完成的任务到done_tasks目录
+    4. 记录处理统计信息
+    
+    Args:
+        data_dir (str): 数据根目录路径，默认为'data'
+        
+    Returns:
+        dict: 处理结果统计
+    """
+    logger.info(f"开始执行定时异步任务扫描: 数据目录={data_dir}")
+    
+    try:
+        # 检查是否成功导入了check_async_tasks模块
+        if process_all_data_directories is None:
+            error_msg = "check_async_tasks模块未正确导入，无法执行定时任务"
+            logger.error(error_msg)
+            return {
+                'success': False,
+                'error': error_msg,
+                'stats': {}
+            }
+        
+        # 切换到项目根目录
+        original_cwd = os.getcwd()
+        os.chdir(project_root)
+        
+        try:
+            # 调用check_async_tasks的主要处理函数
+            stats = process_all_data_directories(data_dir)
+            
+            logger.info(f"异步任务扫描完成: {stats}")
+            
+            return {
+                'success': True,
+                'message': '异步任务扫描处理完成',
+                'stats': stats,
+                'data_dir': data_dir,
+                'processed_at': timezone.now().isoformat()
+            }
+            
+        finally:
+            # 恢复原始工作目录
+            os.chdir(original_cwd)
+            
+    except Exception as e:
+        error_msg = f"定时异步任务扫描失败: {str(e)}"
+        logger.error(error_msg, exc_info=True)
+        return {
+            'success': False,
+            'error': error_msg,
+            'stats': {},
+            'data_dir': data_dir,
+            'processed_at': timezone.now().isoformat()
+        }
+
+
+@shared_task(bind=True)
+def scan_specific_async_tasks(self, tasks_dir='async_tasks'):
+    """
+    扫描指定目录的异步任务
+    
+    这是一个Celery任务，用于扫描指定的async_tasks目录：
+    1. 检查所有任务文件的状态
+    2. 下载完成的图片/视频
+    3. 移动已完成的任务
+    
+    Args:
+        tasks_dir (str): 任务目录路径，默认为'async_tasks'
+        
+    Returns:
+        dict: 处理结果统计
+    """
+    logger.info(f"开始扫描指定异步任务目录: {tasks_dir}")
+    
+    try:
+        # 检查是否成功导入了check_async_tasks模块
+        if check_all_tasks is None:
+            error_msg = "check_async_tasks模块未正确导入，无法执行任务"
+            logger.error(error_msg)
+            return {
+                'success': False,
+                'error': error_msg,
+                'stats': {}
+            }
+        
+        # 切换到项目根目录
+        original_cwd = os.getcwd()
+        os.chdir(project_root)
+        
+        try:
+            # 检查任务目录是否存在
+            if not os.path.exists(tasks_dir):
+                logger.warning(f"任务目录不存在: {tasks_dir}")
+                return {
+                    'success': True,
+                    'message': f'任务目录不存在: {tasks_dir}',
+                    'stats': {
+                        'total': 0,
+                        'completed': 0,
+                        'processing': 0,
+                        'pending': 0,
+                        'failed': 0
+                    }
+                }
+            
+            # 调用check_async_tasks的检查函数
+            stats = check_all_tasks(tasks_dir)
+            
+            logger.info(f"异步任务目录扫描完成: {stats}")
+            
+            return {
+                'success': True,
+                'message': '异步任务目录扫描完成',
+                'stats': stats,
+                'tasks_dir': tasks_dir,
+                'processed_at': timezone.now().isoformat()
+            }
+            
+        finally:
+            # 恢复原始工作目录
+            os.chdir(original_cwd)
+            
+    except Exception as e:
+        error_msg = f"异步任务目录扫描失败: {str(e)}"
+        logger.error(error_msg, exc_info=True)
+        return {
+            'success': False,
+            'error': error_msg,
+            'stats': {},
+            'tasks_dir': tasks_dir,
+            'processed_at': timezone.now().isoformat()
+        }
+
+
+@shared_task(bind=True)
+def rename_images_async(self, novel_id, chapter_id):
+    """
+    异步执行rename_images.py脚本重命名图片
+    
+    Args:
+        novel_id (int): 小说ID
+        chapter_id (int): 章节ID
+        
+    Returns:
+        dict: 处理结果
+    """
+    logger.info(f"开始异步重命名图片: 小说ID={novel_id}, 章节ID={chapter_id}")
+    
+    try:
+        # 获取章节对象
+        from .models import Chapter
+        chapter = Chapter.objects.get(id=chapter_id)
+        
+        # 使用工具函数获取文件系统中的章节编号
+        from .utils import get_chapter_number_from_filesystem
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        
+        if not chapter_number:
+            raise Exception(f'无法在文件系统中找到章节 {chapter.title} 的目录')
+        
+        # 构建章节目录路径
+        chapter_dir = f'data/{novel_id:03d}/chapter_{chapter_number}'
+        
+        # 检查章节目录是否存在
+        project_root = settings.BASE_DIR.parent
+        full_chapter_path = os.path.join(project_root, chapter_dir)
+        
+        if not os.path.exists(full_chapter_path):
+            raise Exception(f'章节目录不存在: {full_chapter_path}')
+        
+        # 构建rename_images.py脚本路径
+        script_path = os.path.join(settings.BASE_DIR.parent, 'rename_images.py')
+        
+        if not os.path.exists(script_path):
+            raise Exception(f'rename_images.py脚本不存在: {script_path}')
+        
+        # 构建命令 (不使用--no-db-update参数，默认更新数据库)
+        cmd = [
+            'python',
+            script_path,
+            chapter_dir
+        ]
+        
+        logger.info(f"执行命令: {' '.join(cmd)}")
+        
+        # 执行脚本
+        result = subprocess.run(
+            cmd,
+            cwd=project_root,
+            capture_output=True,
+            text=True,
+            timeout=300  # 5分钟超时
+        )
+        
+        if result.returncode == 0:
+            logger.info(f"图片重命名成功: {result.stdout}")
+            return {
+                'status': 'success',
+                'message': f'图片重命名完成，章节: {chapter.title}',
+                'stdout': result.stdout,
+                'novel_id': novel_id,
+                'chapter_id': chapter_id
+            }
+        else:
+            error_msg = f'图片重命名失败: {result.stderr}'
+            logger.error(error_msg)
+            return {
+                'status': 'error',
+                'message': error_msg,
+                'stderr': result.stderr,
+                'novel_id': novel_id,
+                'chapter_id': chapter_id
+            }
+            
+    except subprocess.TimeoutExpired:
+        error_msg = '图片重命名超时（超过5分钟）'
+        logger.error(error_msg)
+        return {
+            'status': 'error',
+            'message': error_msg,
+            'novel_id': novel_id,
+            'chapter_id': chapter_id
+        }
+        
+    except Exception as e:
+        error_msg = f'图片重命名异常: {str(e)}'
+        logger.error(error_msg)
+        return {
+            'status': 'error',
+            'message': error_msg,
+            'novel_id': novel_id,
+            'chapter_id': chapter_id
+        }
+
+
+@shared_task(bind=True)
+def validate_narration_images_async(self, novel_id, chapter_id):
+    """
+    异步执行llm_narration_image.py脚本校验分镜图片
+    
+    Args:
+        novel_id (int): 小说ID
+        chapter_id (int): 章节ID
+        
+    Returns:
+        dict: 处理结果
+    """
+    logger.info(f"开始异步校验分镜图片: 小说ID={novel_id}, 章节ID={chapter_id}")
+    
+    try:
+        # 获取章节对象
+        from .models import Chapter
+        chapter = Chapter.objects.get(id=chapter_id)
+        
+        # 使用工具函数获取文件系统中的章节编号
+        from .utils import get_chapter_number_from_filesystem
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        
+        if not chapter_number:
+            raise Exception(f'无法在文件系统中找到章节 {chapter.title} 的目录')
+        
+        # 构建章节目录路径
+        chapter_dir = f'data/{novel_id:03d}/chapter_{chapter_number}'
+        
+        # 检查章节目录是否存在
+        project_root = settings.BASE_DIR.parent
+        full_chapter_path = os.path.join(project_root, chapter_dir)
+        
+        if not os.path.exists(full_chapter_path):
+            raise Exception(f'章节目录不存在: {full_chapter_path}')
+        
+        # 构建脚本路径
+        script_path = os.path.join(settings.BASE_DIR.parent, 'llm_narration_image.py')
+        
+        if not os.path.exists(script_path):
+            raise Exception(f'脚本文件不存在: {script_path}')
+        
+        # 执行llm_narration_image.py脚本，针对特定章节
+        cmd = ['python', script_path, chapter_dir, '--auto-regenerate']
+        
+        logger.info(f"执行命令: {' '.join(cmd)}")
+        
+        # 切换到项目根目录执行
+        project_root = settings.BASE_DIR.parent
+        
+        result = subprocess.run(
+            cmd,
+            cwd=project_root,
+            capture_output=True,
+            text=True,
+            timeout=3600  # 1小时超时
+        )
+        
+        if result.returncode == 0:
+            logger.info(f"分镜图片校验成功: {result.stdout}")
+            return {
+                'success': True,
+                'message': '分镜图片校验完成',
+                'output': result.stdout,
+                'novel_id': novel_id,
+                'chapter_id': chapter_id
+            }
+        else:
+            logger.error(f"分镜图片校验失败: {result.stderr}")
+            return {
+                'success': False,
+                'error': f'脚本执行失败: {result.stderr}',
+                'output': result.stdout,
+                'novel_id': novel_id,
+                'chapter_id': chapter_id
+            }
+            
+    except subprocess.TimeoutExpired:
+        logger.error(f"分镜图片校验超时: 小说ID={novel_id}, 章节ID={chapter_id}")
+        return {
+            'success': False,
+            'error': '脚本执行超时（超过1小时）',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id
+        }
+    except Exception as e:
+        logger.error(f"分镜图片校验失败: {str(e)}")
+        return {
+            'success': False,
+            'error': str(e),
+            'novel_id': novel_id,
+            'chapter_id': chapter_id
+        }
+
+
+@shared_task(bind=True)
+def concat_narration_video_async(self, novel_id, chapter_id):
+    """
+    异步执行concat_narration_video.py脚本生成主视频
+    
+    Args:
+        novel_id (int): 小说ID
+        chapter_id (int): 章节ID
+        
+    Returns:
+        dict: 处理结果
+    """
+    logger.info(f"开始异步生成主视频: 小说ID={novel_id}, 章节ID={chapter_id}")
+    
+    try:
+        # 获取章节对象
+        from .models import Chapter
+        chapter = Chapter.objects.get(id=chapter_id)
+        
+        # 使用工具函数获取文件系统中的章节编号
+        from .utils import get_chapter_number_from_filesystem
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        
+        if not chapter_number:
+            raise Exception(f'无法在文件系统中找到章节 {chapter.title} 的目录')
+        
+        # 构建数据目录路径
+        data_dir = f'data/{novel_id:03d}'
+        
+        # 构建脚本路径
+        script_path = os.path.join(settings.BASE_DIR.parent, 'concat_narration_video.py')
+        
+        if not os.path.exists(script_path):
+            raise Exception(f'脚本文件不存在: {script_path}')
+        
+        # 执行concat_narration_video.py脚本
+        cmd = ['python', script_path, data_dir]
+        
+        logger.info(f"执行命令: {' '.join(cmd)}")
+        
+        # 切换到项目根目录执行
+        project_root = settings.BASE_DIR.parent
+        
+        result = subprocess.run(
+            cmd,
+            cwd=project_root,
+            capture_output=True,
+            text=True,
+            timeout=3600  # 1小时超时
+        )
+        
+        if result.returncode == 0:
+            logger.info(f"主视频生成成功: {result.stdout}")
+            
+            # 主视频生成成功后，自动执行concat_finish_video.py脚本
+            try:
+                concat_finish_script = os.path.join(settings.BASE_DIR.parent, 'concat_finish_video.py')
+                
+                if os.path.exists(concat_finish_script):
+                    logger.info(f"开始执行concat_finish_video.py脚本: 小说ID={novel_id}, 章节ID={chapter_id}")
+                    
+                    # 执行concat_finish_video.py脚本
+                    finish_cmd = ['python', concat_finish_script, data_dir]
+                    
+                    logger.info(f"执行命令: {' '.join(finish_cmd)}")
+                    
+                    finish_result = subprocess.run(
+                        finish_cmd,
+                        cwd=project_root,
+                        capture_output=True,
+                        text=True,
+                        timeout=1800  # 30分钟超时
+                    )
+                    
+                    if finish_result.returncode == 0:
+                        logger.info(f"完整视频生成成功: {finish_result.stdout}")
+                        return {
+                            'status': 'success',
+                            'novel_id': novel_id,
+                            'chapter_id': chapter_id,
+                            'chapter_number': chapter_number,
+                            'message': '完整视频生成完成（包含片尾）',
+                            'output': result.stdout + '\n\n--- concat_finish_video.py 输出 ---\n' + finish_result.stdout
+                        }
+                    else:
+                        logger.error(f"完整视频生成失败: {finish_result.stderr}")
+                        return {
+                            'status': 'partial_success',
+                            'novel_id': novel_id,
+                            'chapter_id': chapter_id,
+                            'chapter_number': chapter_number,
+                            'message': '主视频生成完成，但片尾视频生成失败',
+                            'output': result.stdout,
+                            'finish_error': finish_result.stderr
+                        }
+                else:
+                    logger.warning(f"concat_finish_video.py脚本不存在: {concat_finish_script}")
+                    return {
+                        'status': 'partial_success',
+                        'novel_id': novel_id,
+                        'chapter_id': chapter_id,
+                        'chapter_number': chapter_number,
+                        'message': '主视频生成完成，但concat_finish_video.py脚本不存在',
+                        'output': result.stdout
+                    }
+                    
+            except subprocess.TimeoutExpired:
+                logger.error(f"完整视频生成超时: 小说ID={novel_id}, 章节ID={chapter_id}")
+                return {
+                    'status': 'partial_success',
+                    'novel_id': novel_id,
+                    'chapter_id': chapter_id,
+                    'chapter_number': chapter_number,
+                    'message': '主视频生成完成，但片尾视频生成超时',
+                    'output': result.stdout
+                }
+            except Exception as e:
+                logger.error(f"执行concat_finish_video.py失败: {str(e)}")
+                return {
+                    'status': 'partial_success',
+                    'novel_id': novel_id,
+                    'chapter_id': chapter_id,
+                    'chapter_number': chapter_number,
+                    'message': f'主视频生成完成，但片尾视频生成失败: {str(e)}',
+                    'output': result.stdout
+                }
+        else:
+            logger.error(f"主视频生成失败: {result.stderr}")
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'message': f'主视频生成失败: {result.stderr}',
+                'output': result.stdout
+            }
+        
+    except subprocess.TimeoutExpired:
+        logger.error(f"主视频生成超时: 小说ID={novel_id}, 章节ID={chapter_id}")
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'message': '主视频生成超时（超过1小时）'
+        }
+    except Exception as e:
+        logger.error(f"主视频生成失败: {str(e)}")
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'message': f'主视频生成失败: {str(e)}'
+        }
+
+
+@shared_task(bind=True)
+def generate_narration_images_async(self, narration_id):
+    """
+    异步生成解说分镜图片任务 - 参考generate_character_image_async的实现模式
+    使用火山引擎同步转异步API，包含完整的状态管理和进度跟踪
+    
+    Args:
+        narration_id (int): 解说ID
+        
+    Returns:
+        dict: 处理结果
+    """
+    from .models import Narration
+    from django.utils import timezone
+    import sys
+    import os
+    
+    logger.info(f"开始执行解说分镜图片生成任务: {narration_id}")
+    
+    try:
+        # 获取解说对象
+        narration = Narration.objects.get(id=narration_id)
+        chapter = narration.chapter
+        
+        # 更新任务状态为进行中
+        narration.image_task_status = 'processing'
+        narration.image_task_progress = 10
+        narration.image_task_message = '正在准备生成解说分镜图片...'
+        narration.image_task_started_at = timezone.now()
+        narration.celery_task_id = self.request.id
+        narration.save()
+        
+        logger.info(f"开始为解说 {narration.scene_number} 生成分镜图片")
+        
+        # 导入配置文件 - 添加项目根目录到路径
+        project_root = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+        if project_root not in sys.path:
+            sys.path.insert(0, project_root)
+        
+        try:
+            from config.config import IMAGE_TWO_CONFIG, build_scene_prompt
+        except ImportError:
+            error_msg = "无法导入 IMAGE_TWO_CONFIG 配置文件"
+            logger.error(error_msg)
+            
+            # 更新任务状态为失败
+            narration.image_task_status = 'failed'
+            narration.image_task_progress = 100
+            narration.image_task_error = error_msg
+            narration.image_task_message = f'配置文件导入失败: {error_msg}'
+            narration.save()
+            
+            return {
+                'status': 'error',
+                'narration_id': narration_id,
+                'error': error_msg
+            }
+        
+        # 更新进度
+        narration.image_task_progress = 30
+        narration.image_task_message = f'正在为解说 "{narration.scene_number}" 生成分镜图片...'
+        narration.save()
+        
+        # 初始化火山引擎视觉服务
+        visual_service = VisualService()
+        
+        # 使用配置文件中的AK和SK
+        visual_service.set_ak(IMAGE_TWO_CONFIG['access_key'])
+        visual_service.set_sk(IMAGE_TWO_CONFIG['secret_key'])
+        
+        # 构建完整的prompt - 使用配置文件中的函数
+        full_prompt = build_scene_prompt(narration.narration)
+        
+        logger.info(f"构建的完整prompt: {full_prompt[:100]}...")
+        
+        # 更新进度
+        narration.image_task_progress = 50
+        narration.image_task_message = '正在提交火山引擎图片生成任务...'
+        narration.save()
+        
+        # 构建请求参数 - 使用与gen_image_async.py完全相同的配置
+        form = {
+            "req_key": "high_aes_ip_v20",  # 使用与gen_image_async.py相同的req_key
+            "prompt": full_prompt,
+            "llm_seed": -1,
+            "seed": 10,
+            "scale": 3.5,
+            "ddim_steps": IMAGE_TWO_CONFIG['ddim_steps'],
+            "width": IMAGE_TWO_CONFIG['default_width'],
+            "height": IMAGE_TWO_CONFIG['default_height'],
+            "use_pre_llm": IMAGE_TWO_CONFIG['use_pre_llm'],
+            "use_sr": IMAGE_TWO_CONFIG['use_sr'],
+            "return_url": IMAGE_TWO_CONFIG['return_url'],
+            "negative_prompt": IMAGE_TWO_CONFIG['negative_prompt'],
+            "ref_ip_weight": 0,
+            "ref_id_weight": 0.6,
+            "logo_info": {
+                "add_logo": False,
+                "position": 0,
+                "language": 0,
+                "opacity": 0.3,
+                "logo_text_content": "这里是明水印内容"
+            }
+        }
+        
+        logger.info(f"提交火山引擎图片生成任务，解说内容: {narration.narration[:50]}...")
+        
+        # 调用同步转异步提交任务接口
+        resp = visual_service.cv_sync2async_submit_task(form)
+        
+        # 添加详细的响应日志
+        logger.info(f"火山引擎API响应: {resp}")
+        
+        if resp.get('ResponseMetadata', {}).get('Error'):
+            error_msg = f"火山引擎API调用失败: {resp['ResponseMetadata']['Error']}"
+            logger.error(error_msg)
+            
+            # 更新任务状态为失败
+            narration.image_task_status = 'failed'
+            narration.image_task_progress = 100
+            narration.image_task_error = error_msg
+            narration.image_task_message = f'火山引擎API调用失败: {error_msg}'
+            narration.save()
+            
+            return {
+                'status': 'error',
+                'narration_id': narration_id,
+                'error': error_msg
+            }
+        
+        # 获取任务ID - 修复响应结构解析
+        task_id = resp.get('data', {}).get('task_id') or resp.get('Result', {}).get('task_id')
+        
+        if not task_id:
+            error_msg = f"未获取到火山引擎任务ID，响应结构: {resp}"
+            logger.error(error_msg)
+            
+            # 更新任务状态为失败
+            narration.image_task_status = 'failed'
+            narration.image_task_progress = 100
+            narration.image_task_error = error_msg
+            narration.image_task_message = f'未获取到火山引擎任务ID'
+            narration.save()
+            
+            return {
+                'status': 'error',
+                'narration_id': narration_id,
+                'error': error_msg,
+                'response': resp
+            }
+        
+        # 更新进度和火山引擎任务ID
+        narration.image_task_progress = 80
+        narration.image_task_message = '火山引擎任务已提交，正在启动监控任务...'
+        narration.volcengine_task_id = task_id
+        narration.save()
+        
+        logger.info(f"解说 {narration.scene_number} 图片生成任务已提交，任务ID: {task_id}")
+        
+        # 自动启动监控和下载任务
+        logger.info(f"启动解说 {narration.scene_number} 的监控和下载任务")
+        monitor_task = monitor_and_download_narration_images.delay(
+            narration_id=narration_id,
+            volcengine_task_id=task_id,
+            max_retries=30,  # 最多重试30次（30分钟）
+            retry_interval=60  # 每60秒重试一次
+        )
+        
+        # 更新任务状态为等待监控
+        narration.image_task_status = 'pending'
+        narration.image_task_progress = 100
+        narration.image_task_message = f'解说 {narration.scene_number} 分镜图片生成任务已提交到火山引擎，监控任务已启动'
+        narration.save()
+        
+        return {
+            'status': 'success',
+            'narration_id': narration_id,
+            'task_id': task_id,
+            'celery_task_id': monitor_task.id,
+            'message': f'解说 {narration.scene_number} 分镜图片生成任务已提交到火山引擎，监控任务已启动',
+            'volcengine_response': resp
+        }
+            
+    except Exception as e:
+        error_msg = f"解说 {narration_id} 分镜图片生成异常: {str(e)}"
+        logger.error(error_msg)
+        
+        # 更新任务状态为失败
+        try:
+            narration = Narration.objects.get(id=narration_id)
+            narration.image_task_status = 'failed'
+            narration.image_task_progress = 100
+            narration.image_task_error = error_msg
+            narration.image_task_message = f'任务执行异常: {str(e)}'
+            narration.save()
+        except:
+            pass
+        
+        return {
+            'status': 'error',
+            'narration_id': narration_id,
+            'error': error_msg
+        }
+
+
+@shared_task(bind=True)
+def get_volcengine_image_result(self, narration_id, volcengine_task_id):
+    """
+    查询火山引擎图片生成任务结果
+    
+    Args:
+        narration_id (int): 解说ID
+        volcengine_task_id (str): 火山引擎任务ID
+        
+    Returns:
+        dict: 处理结果
+    """
+    from .models import Narration
+    
+    try:
+        # 获取解说对象
+        narration = Narration.objects.get(id=narration_id)
+        
+        logger.info(f"查询解说 {narration.scene_number} 的火山引擎图片生成结果，任务ID: {volcengine_task_id}")
+        
+        # 初始化火山引擎视觉服务
+        visual_service = VisualService()
+        
+        # 设置AK和SK
+        ak = getattr(settings, 'VOLCENGINE_ACCESS_KEY', '')
+        sk = getattr(settings, 'VOLCENGINE_SECRET_KEY', '')
+        
+        if not ak or not sk:
+            error_msg = "火山引擎AK或SK未配置"
+            logger.error(error_msg)
+            # 更新任务状态为失败
+            narration.image_task_status = 'failed'
+            narration.image_task_error = error_msg
+            narration.image_task_message = error_msg
+            narration.save()
+            return {
+                'status': 'error',
+                'narration_id': narration_id,
+                'error': error_msg
+            }
+        
+        visual_service.set_ak(ak)
+        visual_service.set_sk(sk)
+        
+        # 构建查询请求参数
+        form = {
+            "req_key": "img2img_anime",
+            "task_id": volcengine_task_id,
+            "req_json": "{}"
+        }
+        
+        # 调用同步转异步查询结果接口
+        resp = visual_service.cv_sync2async_get_result(form)
+        
+        if resp.get('ResponseMetadata', {}).get('Error'):
+            error_msg = f"火山引擎查询API调用失败: {resp['ResponseMetadata']['Error']}"
+            logger.error(error_msg)
+            return {
+                'status': 'error',
+                'narration_id': narration_id,
+                'error': error_msg
+            }
+        
+        # 检查任务状态
+        result = resp.get('Result', {})
+        task_status = result.get('status')
+        
+        if task_status == 'done':
+            # 任务完成，获取图片URL
+            data = result.get('data', {})
+            image_urls = data.get('image_urls', [])
+            
+            if image_urls:
+                logger.info(f"解说 {narration.scene_number} 图片生成完成，获取到 {len(image_urls)} 张图片")
+                return {
+                    'status': 'completed',
+                    'narration_id': narration_id,
+                    'image_urls': image_urls,
+                    'message': f'解说 {narration.scene_number} 分镜图片生成完成',
+                    'volcengine_response': resp
+                }
+            else:
+                error_msg = "任务完成但未获取到图片URL"
+                logger.error(error_msg)
+                return {
+                    'status': 'error',
+                    'narration_id': narration_id,
+                    'error': error_msg,
+                    'volcengine_response': resp
+                }
+        elif task_status == 'running':
+            logger.info(f"解说 {narration.scene_number} 图片生成任务仍在进行中")
+            return {
+                'status': 'running',
+                'narration_id': narration_id,
+                'message': f'解说 {narration.scene_number} 分镜图片生成中...',
+                'volcengine_response': resp
+            }
+        elif task_status == 'failed':
+            error_msg = f"火山引擎任务失败: {result.get('message', '未知错误')}"
+            logger.error(error_msg)
+            return {
+                'status': 'failed',
+                'narration_id': narration_id,
+                'error': error_msg,
+                'volcengine_response': resp
+            }
+        else:
+            error_msg = f"未知任务状态: {task_status}"
+            logger.error(error_msg)
+            return {
+                'status': 'error',
+                'narration_id': narration_id,
+                'error': error_msg,
+                'volcengine_response': resp
+            }
+            
+    except Exception as e:
+        error_msg = f"查询解说 {narration_id} 图片生成结果异常: {str(e)}"
+        logger.error(error_msg)
+        return {
+            'status': 'error',
+            'narration_id': narration_id,
+            'error': error_msg
+        }
+
+
+@shared_task(bind=True)
+def monitor_and_download_narration_images(self, narration_id, volcengine_task_id, max_retries=30, retry_interval=60):
+    """
+    监控火山引擎图片生成任务并自动下载完成的图片
+    参考 check_async_tasks.py 的监控机制
+    
+    Args:
+        narration_id (int): 解说ID
+        volcengine_task_id (str): 火山引擎任务ID
+        max_retries (int): 最大重试次数，默认30次（30分钟）
+        retry_interval (int): 重试间隔（秒），默认60秒
+        
+    Returns:
+        dict: 处理结果
+    """
+    import base64
+    import urllib.request
+    from .models import Narration
+    
+    try:
+        # 获取解说对象
+        narration = Narration.objects.get(id=narration_id)
+        
+        # 更新监控任务状态为运行中
+        narration.image_task_status = 'running'
+        narration.image_task_progress = 10  # 开始监控
+        narration.image_task_message = f"开始监控火山引擎任务 {volcengine_task_id}"
+        narration.save()
+        
+        logger.info(f"开始监控解说 {narration.scene_number} 的火山引擎图片生成任务，任务ID: {volcengine_task_id}")
+        
+        # 如果是第一次执行，等待30秒让火山引擎任务初始化
+        if self.request.retries == 0:
+            logger.info(f"首次监控，等待30秒让火山引擎任务初始化...")
+            time.sleep(30)
+        
+        # 初始化火山引擎视觉服务
+        visual_service = VisualService()
+        
+        # 设置AK和SK
+        ak = getattr(settings, 'VOLCENGINE_ACCESS_KEY', '')
+        sk = getattr(settings, 'VOLCENGINE_SECRET_KEY', '')
+        
+        if not ak or not sk:
+            error_msg = "火山引擎AK或SK未配置"
+            logger.error(error_msg)
+            return {
+                'status': 'error',
+                'narration_id': narration_id,
+                'error': error_msg
+            }
+        
+        visual_service.set_ak(ak)
+        visual_service.set_sk(sk)
+        
+        # 构建查询请求参数
+        form = {
+            "req_key": "high_aes_ip_v20",  # 使用与生成任务一致的req_key
+            "task_id": volcengine_task_id
+        }
+        
+        # 查询任务状态
+        resp = visual_service.cv_sync2async_get_result(form)
+        
+        if resp.get('ResponseMetadata', {}).get('Error'):
+            error_msg = f"火山引擎查询API调用失败: {resp['ResponseMetadata']['Error']}"
+            logger.error(error_msg)
+            
+            # 如果还有重试次数，延迟重试
+            if self.request.retries < max_retries:
+                # 更新重试状态
+                narration.image_task_progress = 20 + (self.request.retries * 5)  # 递增进度
+                narration.image_task_message = f"查询失败，{retry_interval}秒后重试 (第{self.request.retries + 1}/{max_retries}次)"
+                narration.save()
+                logger.info(f"查询失败，{retry_interval}秒后重试 (第{self.request.retries + 1}/{max_retries}次)")
+                raise self.retry(countdown=retry_interval, max_retries=max_retries)
+            
+            # 最终失败
+            narration.image_task_status = 'failed'
+            narration.image_task_error = error_msg
+            narration.image_task_message = error_msg
+            narration.save()
+            return {
+                'status': 'error',
+                'narration_id': narration_id,
+                'error': error_msg
+            }
+        
+        # 检查任务状态
+        result = resp.get('data', {})  # 使用data字段而不是Result
+        task_status = result.get('status')
+        
+        logger.info(f"解说 {narration.scene_number} 任务状态: {task_status}")
+        
+        if task_status == 'done':
+            # 任务完成，下载图片
+            binary_data_base64_list = result.get('binary_data_base64', [])
+            
+            if binary_data_base64_list:
+                logger.info(f"解说 {narration.scene_number} 图片生成完成，开始下载 {len(binary_data_base64_list)} 张图片")
+                
+                # 创建输出目录
+                chapter = narration.chapter
+                novel = chapter.novel
+                output_dir = os.path.join(settings.MEDIA_ROOT, 'novels', str(novel.id), f'chapter_{chapter.chapter_number:03d}', 'narration_images')
+                os.makedirs(output_dir, exist_ok=True)
+                
+                downloaded_images = []
+                
+                # 下载每张图片
+                for i, image_data_base64 in enumerate(binary_data_base64_list):
+                    try:
+                        # 解码base64图片数据
+                        image_data = base64.b64decode(image_data_base64)
+                        
+                        # 生成文件名
+                        filename = f"narration_{narration.scene_number}_{i+1}.png"
+                        output_path = os.path.join(output_dir, filename)
+                        
+                        # 保存图片
+                        with open(output_path, 'wb') as f:
+                            f.write(image_data)
+                        
+                        downloaded_images.append({
+                            'filename': filename,
+                            'path': output_path,
+                            'relative_path': os.path.relpath(output_path, settings.MEDIA_ROOT)
+                        })
+                        
+                        logger.info(f"图片已保存: {output_path}")
+                        
+                    except Exception as e:
+                        logger.error(f"下载第{i+1}张图片失败: {str(e)}")
+                        continue
+                
+                if downloaded_images:
+                    # 更新解说对象的图片路径和任务状态
+                    narration.image_task_status = 'completed'
+                    narration.image_task_progress = 100
+                    narration.image_task_message = f'解说 {narration.scene_number} 分镜图片生成并下载完成，共{len(downloaded_images)}张图片'
+                    narration.image_task_completed_at = timezone.now()
+                    # 如果模型有图片路径字段，可以保存第一张图片的路径
+                    # narration.image_path = downloaded_images[0]['relative_path']
+                    narration.save()
+                    
+                    return {
+                        'status': 'completed',
+                        'narration_id': narration_id,
+                        'downloaded_images': downloaded_images,
+                        'message': f'解说 {narration.scene_number} 分镜图片生成并下载完成',
+                        'volcengine_response': resp
+                    }
+                else:
+                    error_msg = "所有图片下载失败"
+                    logger.error(error_msg)
+                    # 更新任务状态为失败
+                    narration.image_task_status = 'failed'
+                    narration.image_task_error = error_msg
+                    narration.image_task_message = error_msg
+                    narration.save()
+                    return {
+                        'status': 'error',
+                        'narration_id': narration_id,
+                        'error': error_msg,
+                        'volcengine_response': resp
+                    }
+            else:
+                error_msg = "任务完成但未获取到图片数据"
+                logger.error(error_msg)
+                # 更新任务状态为失败
+                narration.image_task_status = 'failed'
+                narration.image_task_error = error_msg
+                narration.image_task_message = error_msg
+                narration.save()
+                return {
+                    'status': 'error',
+                    'narration_id': narration_id,
+                    'error': error_msg,
+                    'volcengine_response': resp
+                }
+                
+        elif task_status in ['pending', 'running']:
+            # 任务仍在进行中，继续等待
+            logger.info(f"解说 {narration.scene_number} 图片生成任务仍在进行中，{retry_interval}秒后重试")
+            
+            # 如果还有重试次数，延迟重试
+            if self.request.retries < max_retries:
+                # 更新进度状态
+                progress = 30 + min(self.request.retries * 2, 50)  # 30-80%的进度
+                narration.image_task_progress = progress
+                narration.image_task_message = f"图片生成任务进行中，状态: {task_status}，第{self.request.retries + 1}次检查"
+                narration.save()
+                raise self.retry(countdown=retry_interval, max_retries=max_retries)
+            else:
+                error_msg = f"任务超时，已重试{max_retries}次"
+                logger.error(error_msg)
+                # 更新任务状态为超时
+                narration.image_task_status = 'failed'
+                narration.image_task_error = error_msg
+                narration.image_task_message = error_msg
+                narration.save()
+                return {
+                    'status': 'timeout',
+                    'narration_id': narration_id,
+                    'error': error_msg,
+                    'volcengine_response': resp
+                }
+                
+        elif task_status == 'failed':
+            error_msg = f"火山引擎任务失败: {result.get('reason', '未知错误')}"
+            logger.error(error_msg)
+            # 更新任务状态为失败
+            narration.image_task_status = 'failed'
+            narration.image_task_error = error_msg
+            narration.image_task_message = error_msg
+            narration.save()
+            return {
+                'status': 'failed',
+                'narration_id': narration_id,
+                'error': error_msg,
+                'volcengine_response': resp
+            }
+        else:
+            error_msg = f"未知任务状态: {task_status}"
+            logger.error(error_msg)
+            
+            # 如果是未知状态，也尝试重试
+            if self.request.retries < max_retries:
+                # 更新重试状态
+                narration.image_task_message = f"未知状态 {task_status}，{retry_interval}秒后重试 (第{self.request.retries + 1}/{max_retries}次)"
+                narration.save()
+                logger.info(f"未知状态，{retry_interval}秒后重试 (第{self.request.retries + 1}/{max_retries}次)")
+                raise self.retry(countdown=retry_interval, max_retries=max_retries)
+            
+            # 最终失败
+            narration.image_task_status = 'failed'
+            narration.image_task_error = error_msg
+            narration.image_task_message = error_msg
+            narration.save()
+            return {
+                'status': 'error',
+                'narration_id': narration_id,
+                'error': error_msg,
+                'volcengine_response': resp
+            }
+            
+    except Exception as e:
+        error_msg = f"监控解说 {narration_id} 图片生成任务异常: {str(e)}"
+        logger.error(error_msg)
+        
+        try:
+            # 尝试获取解说对象并更新状态
+            narration = Narration.objects.get(id=narration_id)
+            
+            # 如果是网络错误等可重试的异常，尝试重试
+            if self.request.retries < max_retries and "网络" in str(e):
+                narration.image_task_message = f"网络异常，{retry_interval}秒后重试 (第{self.request.retries + 1}/{max_retries}次)"
+                narration.save()
+                logger.info(f"网络异常，{retry_interval}秒后重试 (第{self.request.retries + 1}/{max_retries}次)")
+                raise self.retry(countdown=retry_interval, max_retries=max_retries)
+            
+            # 最终异常失败
+            narration.image_task_status = 'failed'
+            narration.image_task_error = error_msg
+            narration.image_task_message = error_msg
+            narration.save()
+        except Exception as save_error:
+            logger.error(f"保存异常状态失败: {str(save_error)}")
+        
+        return {
+            'status': 'error',
+            'narration_id': narration_id,
+            'error': error_msg
+        }
+
+
+@shared_task(bind=True)
 def generate_audio_async(self, novel_id, chapter_id):
     """
     异步生成音频任务
@@ -945,17 +2334,16 @@ def generate_audio_async(self, novel_id, chapter_id):
             audio_task.log_message = '重新开始音频生成任务'
             audio_task.save()
         
-        # 从章节标题中提取章节编号（如"第2章" -> "002"）
-        import re
-        chapter_match = re.search(r'第(\d+)章', chapter.title)
-        if chapter_match:
-            chapter_number = chapter_match.group(1).zfill(3)
-        else:
-            # 如果无法从标题提取，使用章节ID
-            chapter_number = str(chapter_id).zfill(3)
+        # 使用工具函数获取文件系统中的章节编号
+        from .utils import get_chapter_number_from_filesystem, get_chapter_directory_path
+        
+        # 获取文件系统中实际的章节编号
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        if not chapter_number:
+            raise Exception(f"无法在文件系统中找到章节 {chapter.title} 的目录")
         
         # 构建数据目录路径
-        data_dir = os.path.join(settings.BASE_DIR, '..', 'data', f'{novel_id:03d}', f'chapter_{chapter_number}')
+        data_dir = get_chapter_directory_path(novel_id, chapter_number)
         
         if not os.path.exists(data_dir):
             raise Exception(f"章节数据目录不存在: {data_dir}")
@@ -1066,7 +2454,7 @@ def generate_audio_async(self, novel_id, chapter_id):
                     continue
                 
                 # 生成音频文件路径
-                chapter_name = f'chapter_{chapter_id:03d}'
+                chapter_name = f'chapter_{chapter_number}'
                 audio_path = os.path.join(data_dir, f"{chapter_name}_narration_{i:02d}.mp3")
                 timestamp_path = os.path.join(data_dir, f"{chapter_name}_narration_{i:02d}_timestamps.json")
                 
@@ -1158,7 +2546,7 @@ def generate_audio_async(self, novel_id, chapter_id):
             # 查找所有时间戳文件
             timestamp_files = []
             for i in range(1, len(narration_contents) + 1):
-                chapter_name = f'chapter_{chapter_id:03d}'
+                chapter_name = f'chapter_{chapter_number}'
                 timestamp_path = os.path.join(data_dir, f"{chapter_name}_narration_{i:02d}_timestamps.json")
                 if os.path.exists(timestamp_path):
                     timestamp_files.append(timestamp_path)
@@ -1208,7 +2596,7 @@ def generate_audio_async(self, novel_id, chapter_id):
         
         # 收集所有存在的音频文件（包括新生成的和已存在的）
         all_audio_files = []
-        chapter_name = f'chapter_{chapter_id:03d}'
+        chapter_name = f'chapter_{chapter_number}'
         for i in range(len(narrations)):
             # 音频文件索引从1开始，不是从0开始
             audio_path = os.path.join(data_dir, f"{chapter_name}_narration_{i+1:02d}.mp3")
@@ -1267,9 +2655,99 @@ def generate_audio_async(self, novel_id, chapter_id):
         }
 
 
+@shared_task(bind=True)
+def validate_narration_images_llm_async(self, novel_id, chapter_id):
+    """
+    异步执行llm_narration_image.py脚本校验旁白图片
+    
+    Args:
+        novel_id (int): 小说ID
+        chapter_id (int): 章节ID
+        
+    Returns:
+        dict: 处理结果
+    """
+    logger.info(f"开始异步校验旁白图片(LLM): 小说ID={novel_id}, 章节ID={chapter_id}")
+    
+    try:
+        # 获取章节对象
+        from .models import Chapter
+        chapter = Chapter.objects.get(id=chapter_id)
+        
+        # 使用工具函数获取文件系统中的章节编号
+        from .utils import get_chapter_number_from_filesystem
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        
+        if not chapter_number:
+            raise Exception(f'无法在文件系统中找到章节 {chapter.title} 的目录')
+        
+        # 构建章节目录路径
+        chapter_dir = f'data/{novel_id:03d}/chapter_{chapter_number}'
+        
+        # 检查章节目录是否存在
+        project_root = settings.BASE_DIR.parent
+        full_chapter_path = os.path.join(project_root, chapter_dir)
+        
+        if not os.path.exists(full_chapter_path):
+            raise Exception(f'章节目录不存在: {full_chapter_path}')
+        
+        # 构建脚本路径
+        script_path = os.path.join(settings.BASE_DIR.parent, 'llm_narration_image.py')
+        
+        if not os.path.exists(script_path):
+            raise Exception(f'脚本文件不存在: {script_path}')
+        
+        # 执行llm_narration_image.py脚本，针对特定章节
+        cmd = ['python', script_path, chapter_dir, '--auto-regenerate']
+        
+        logger.info(f"执行命令: {' '.join(cmd)}")
+        
+        # 切换到项目根目录执行
+        project_root = settings.BASE_DIR.parent
+        
+        result = subprocess.run(
+            cmd,
+            cwd=project_root,
+            capture_output=True,
+            text=True,
+            timeout=3600  # 1小时超时
+        )
+        
+        if result.returncode == 0:
+            logger.info(f"旁白图片校验(LLM)完成: 小说ID={novel_id}, 章节ID={chapter_id}")
+            
+            return {
+                'status': 'success',
+                'message': '旁白图片校验(LLM)完成',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'output': result.stdout
+            }
+        else:
+            logger.error(f"旁白图片校验(LLM)失败: {result.stderr}")
+            return {
+                'status': 'error',
+                'message': f'旁白图片校验(LLM)失败: {result.stderr}',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'output': result.stdout,
+                'error': result.stderr
+            }
+            
+    except Exception as e:
+        logger.error(f"旁白图片校验(LLM)异常: {str(e)}")
+        return {
+            'status': 'error',
+            'message': f'旁白图片校验(LLM)异常: {str(e)}',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id
+        }
+
+
 def generate_ass_subtitle(timestamp_file_path, output_path):
     """
     根据时间戳文件生成ASS字幕
+    使用gen_ass.py脚本进行高质量的字幕生成
     
     Args:
         timestamp_file_path (str): 时间戳文件路径
@@ -1279,146 +2757,56 @@ def generate_ass_subtitle(timestamp_file_path, output_path):
         bool: 是否成功
     """
     try:
-        import re
+        # 获取章节目录路径（timestamp文件的父目录）
+        chapter_dir = os.path.dirname(timestamp_file_path)
         
-        # 读取时间戳文件
-        with open(timestamp_file_path, 'r', encoding='utf-8') as f:
-            timestamp_data = json.load(f)
+        # 获取项目根目录路径
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+        gen_ass_script = os.path.join(project_root, 'gen_ass.py')
         
-        text = timestamp_data.get('text', '')
-        character_timestamps = timestamp_data.get('character_timestamps', [])
-        
-        if not text or not character_timestamps:
-            logger.error(f"时间戳数据无效: {timestamp_file_path}")
+        # 检查gen_ass.py脚本是否存在
+        if not os.path.exists(gen_ass_script):
+            logger.error(f"gen_ass.py脚本不存在: {gen_ass_script}")
             return False
         
-        # ASS字幕格式化函数
-        def format_time_for_ass(seconds):
-            hours = int(seconds // 3600)
-            minutes = int((seconds % 3600) // 60)
-            secs = seconds % 60
-            return f"{hours}:{minutes:02d}:{secs:05.2f}"
+        # 检查时间戳文件是否存在
+        if not os.path.exists(timestamp_file_path):
+            logger.error(f"时间戳文件不存在: {timestamp_file_path}")
+            return False
         
-        # 清理字幕文本
-        def clean_subtitle_text(text):
-            text = re.sub(r'[，。；：、！？""''（）【】《》〈〉「」『』〔〕\[\]｛｝｜～·…—–,.;:!?"\':{}|~\n]', '', text)
-            text = re.sub(r'\s+', '', text)
-            return text
+        # 调用gen_ass.py脚本处理单个章节
+        import subprocess
         
-        # 文本分割函数
-        def split_text_naturally(text, max_length=12):
-            if len(clean_subtitle_text(text)) <= max_length:
-                return [text]
-            
-            # 简单按长度分割
-            segments = []
-            current_segment = ""
-            clean_text = clean_subtitle_text(text)
-            
-            for char in clean_text:
-                if len(current_segment) < max_length:
-                    current_segment += char
-                else:
-                    if current_segment:
-                        segments.append(current_segment)
-                    current_segment = char
-            
-            if current_segment:
-                segments.append(current_segment)
-            
-            return segments
+        cmd = ['python', gen_ass_script, '--chapter', chapter_dir]
+        logger.info(f"执行命令: {' '.join(cmd)}")
         
-        # 计算段落时间戳
-        def calculate_segment_timestamps(segments, character_timestamps, original_text):
-            segment_timestamps = []
-            current_char_index = 0
-            
-            for segment in segments:
-                clean_segment = clean_subtitle_text(segment)
-                
-                # 查找段落在原文中的位置
-                segment_start_index = -1
-                segment_end_index = -1
-                
-                clean_original = clean_subtitle_text(original_text)
-                for start_pos in range(current_char_index, len(clean_original)):
-                    if start_pos + len(clean_segment) <= len(clean_original):
-                        if clean_original[start_pos:start_pos + len(clean_segment)] == clean_segment:
-                            segment_start_index = start_pos
-                            segment_end_index = start_pos + len(clean_segment) - 1
-                            break
-                
-                if segment_start_index != -1 and segment_end_index != -1:
-                    if (segment_start_index < len(character_timestamps) and 
-                        segment_end_index < len(character_timestamps)):
-                        start_time = character_timestamps[segment_start_index]['start_time']
-                        end_time = character_timestamps[segment_end_index]['end_time']
-                        current_char_index = segment_end_index + 1
-                    else:
-                        # 使用估算时间
-                        if segment_timestamps:
-                            start_time = segment_timestamps[-1]['end_time'] + 0.1
-                        else:
-                            start_time = 0
-                        end_time = start_time + len(clean_segment) * 0.3
-                else:
-                    # 使用估算时间
-                    if segment_timestamps:
-                        start_time = segment_timestamps[-1]['end_time'] + 0.1
-                    else:
-                        start_time = 0
-                    end_time = start_time + len(clean_segment) * 0.3
-                
-                # 检查并修正重叠
-                if segment_timestamps:
-                    prev_end_time = segment_timestamps[-1]['end_time']
-                    if start_time < prev_end_time:
-                        start_time = prev_end_time + 0.1
-                        if start_time >= end_time:
-                            end_time = start_time + len(clean_segment) * 0.3
-                
-                segment_timestamps.append({
-                    'text': segment,
-                    'start_time': start_time,
-                    'end_time': end_time
-                })
-            
-            return segment_timestamps
+        result = subprocess.run(
+            cmd,
+            cwd=project_root,
+            capture_output=True,
+            text=True,
+            timeout=300  # 5分钟超时
+        )
         
-        # 分割文本
-        segments = split_text_naturally(text)
+        if result.returncode == 0:
+            # 检查输出文件是否生成
+            if os.path.exists(output_path):
+                logger.info(f"ASS字幕文件生成成功: {output_path}")
+                return True
+            else:
+                logger.error(f"gen_ass.py执行成功但输出文件不存在: {output_path}")
+                logger.error(f"stdout: {result.stdout}")
+                logger.error(f"stderr: {result.stderr}")
+                return False
+        else:
+            logger.error(f"gen_ass.py执行失败，返回码: {result.returncode}")
+            logger.error(f"stdout: {result.stdout}")
+            logger.error(f"stderr: {result.stderr}")
+            return False
         
-        # 计算段落时间戳
-        segment_timestamps = calculate_segment_timestamps(segments, character_timestamps, text)
-        
-        # 生成ASS文件内容
-        ass_content = """[Script Info]
-Title: Auto-generated Subtitle
-ScriptType: v4.00+
-
-[V4+ Styles]
-Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
-
-[Events]
-Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-"""
-        
-        # 添加字幕事件
-        for segment_data in segment_timestamps:
-            start_time = format_time_for_ass(segment_data['start_time'])
-            end_time = format_time_for_ass(segment_data['end_time'])
-            text = segment_data['text']
-            
-            ass_content += f"Dialogue: 0,{start_time},{end_time},Default,,0,0,0,,{text}\n"
-        
-        # 写入ASS文件
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(ass_content)
-        
-        logger.info(f"ASS字幕文件生成成功: {output_path}")
-        return True
-        
+    except subprocess.TimeoutExpired:
+        logger.error(f"gen_ass.py执行超时: {timestamp_file_path}")
+        return False
     except Exception as e:
         logger.error(f"生成ASS字幕失败: {str(e)}")
         return False

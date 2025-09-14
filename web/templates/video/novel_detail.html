@@ -14,7 +14,12 @@
 {% endblock %}
 
 {% block extra_js %}
+{{ novel.id|json_script:"novel-id" }}
 <script>
+// 设置全局变量
+const novelIdElement = document.getElementById('novel-id');
+window.novelId = JSON.parse(novelIdElement.textContent);
+
 // AI操作相关JavaScript函数
 
 /**
@@ -30,14 +35,68 @@ function showAIStatus(type, message) {
     
     // 显示对应的状态提示
     if (type === 'loading') {
-        document.getElementById('ai-status-text').textContent = message;
-        document.getElementById('ai-status').classList.remove('d-none');
+        const statusTextElement = document.getElementById('ai-status-text');
+        if (statusTextElement) {
+            statusTextElement.textContent = message;
+        }
+        const statusElement = document.getElementById('ai-status');
+        if (statusElement) {
+            statusElement.classList.remove('d-none');
+        }
     } else if (type === 'success') {
-        document.getElementById('ai-success-text').textContent = message;
-        document.getElementById('ai-success').classList.remove('d-none');
+        const successTextElement = document.getElementById('ai-success-text');
+        if (successTextElement) {
+            successTextElement.textContent = message;
+        }
+        const successElement = document.getElementById('ai-success');
+        if (successElement) {
+            successElement.classList.remove('d-none');
+        }
     } else if (type === 'error') {
-        document.getElementById('ai-error-text').textContent = message;
-        document.getElementById('ai-error').classList.remove('d-none');
+        const errorTextElement = document.getElementById('ai-error-text');
+        if (errorTextElement) {
+            errorTextElement.textContent = message;
+        }
+        const errorElement = document.getElementById('ai-error');
+        if (errorElement) {
+            errorElement.classList.remove('d-none');
+        }
+    }
+}
+
+/**
+ * 关闭模态窗口的通用函数
+ */
+function closeScriptParametersModal() {
+    const modal = document.getElementById('scriptParametersModal');
+    if (!modal) return;
+    
+    try {
+        // 尝试使用jQuery方式
+        if (typeof $ !== 'undefined' && $.fn.modal) {
+            $(modal).modal('hide');
+        }
+        // 尝试使用Bootstrap 5方式
+        else if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+            const bootstrapModal = bootstrap.Modal.getInstance(modal);
+            if (bootstrapModal) {
+                bootstrapModal.hide();
+            }
+        }
+        // 备用方案：直接操作CSS类
+        else {
+            modal.classList.remove('show');
+            modal.style.display = 'none';
+            document.body.classList.remove('modal-open');
+            
+            // 移除背景遮罩
+            const backdrop = document.getElementById('modal-backdrop-temp');
+            if (backdrop) {
+                backdrop.remove();
+            }
+        }
+    } catch (error) {
+        console.error('关闭模态窗口时出错:', error);
     }
 }
 
@@ -45,6 +104,10 @@ function showAIStatus(type, message) {
  * AI生成解说文案功能
  */
 function generateScript() {
+    console.log('generateScript 函数被调用');
+    console.log('jQuery版本:', typeof $ !== 'undefined' ? $.fn.jquery : '未加载');
+    console.log('Bootstrap是否可用:', typeof bootstrap !== 'undefined');
+    console.log('document.readyState:', document.readyState);
     // 显示参数配置模态框
     showScriptParametersModal();
 }
@@ -115,7 +178,10 @@ function executeAIValidation() {
     .then(data => {
         if (data.success) {
             currentValidationTaskId = data.task_id;
-            document.getElementById('currentValidationTaskId').textContent = currentValidationTaskId;
+            const validationTaskIdElement = document.getElementById('currentValidationTaskId');
+            if (validationTaskIdElement) {
+                validationTaskIdElement.textContent = currentValidationTaskId;
+            }
             
             // 更新统一任务组件
             if (unifiedComponent) {
@@ -311,7 +377,10 @@ function showValidationResult(result) {
         resultHtml += '</ul></div>';
     }
     
-    document.getElementById('validationResultContent').innerHTML = resultHtml;
+    const validationResultContentElement = document.getElementById('validationResultContent');
+    if (validationResultContentElement) {
+        validationResultContentElement.innerHTML = resultHtml;
+    }
 }
 
 /**
@@ -338,12 +407,15 @@ function showValidationLogModal() {
     const modal = new bootstrap.Modal(document.getElementById('taskLogModal'));
     modal.show();
     
-    // 设置任务类型
-    document.getElementById('currentTaskType').textContent = 'AI智能校验';
+    // 设置任务类型（如果元素存在）
+    const taskTypeElement = document.getElementById('currentTaskType');
+    if (taskTypeElement) {
+        taskTypeElement.textContent = 'AI智能校验';
+    }
     
     // 获取统一任务组件
     const taskLogViewer = document.getElementById('taskLogViewer');
-    if (!taskLogViewer.querySelector('.unified-task-component')) {
+    if (taskLogViewer && !taskLogViewer.querySelector('.unified-task-component')) {
         // 如果还没有初始化统一组件，创建一个
         taskLogViewer.innerHTML = `
             <div class="unified-task-component">
@@ -381,15 +453,27 @@ function showValidationLogModal() {
         `;
     } else {
         // 重置现有组件的状态
-        document.getElementById('validationLogContent').innerHTML = '<div class="log-line text-muted">正在检查校验任务状态...</div>';
-        document.getElementById('validationCurrentTaskId').textContent = currentValidationTaskId || '-';
+        const validationLogContentElement = document.getElementById('validationLogContent');
+        if (validationLogContentElement) {
+            validationLogContentElement.innerHTML = '<div class="log-line text-muted">正在检查校验任务状态...</div>';
+        }
+        const validationCurrentTaskIdElement = document.getElementById('validationCurrentTaskId');
+        if (validationCurrentTaskIdElement) {
+            validationCurrentTaskIdElement.textContent = currentValidationTaskId || '-';
+        }
         updateValidationTaskStatus('检查中', 'bg-secondary');
-        document.getElementById('validationTaskProgress').textContent = '0%';
+        const validationTaskProgressElement = document.getElementById('validationTaskProgress');
+        if (validationTaskProgressElement) {
+            validationTaskProgressElement.textContent = '0%';
+        }
     }
     
     // 如果有当前校验任务，显示其状态
     if (currentValidationTaskId) {
-        document.getElementById('validationCurrentTaskId').textContent = currentValidationTaskId;
+        const validationCurrentTaskIdElement2 = document.getElementById('validationCurrentTaskId');
+        if (validationCurrentTaskIdElement2) {
+            validationCurrentTaskIdElement2.textContent = currentValidationTaskId;
+        }
         addValidationLogLine('发现活跃校验任务，任务ID: ' + currentValidationTaskId);
         if (!isValidationPaused) {
             startValidationLogPolling();
@@ -436,9 +520,46 @@ function stopValidationTask() {
  * 显示解说文案生成参数配置模态框
  */
 function showScriptParametersModal() {
+    console.log('showScriptParametersModal 函数被调用');
     const modal = document.getElementById('scriptParametersModal');
-    const bootstrapModal = new bootstrap.Modal(modal);
-    bootstrapModal.show();
+    console.log('模态窗口元素:', modal);
+    
+    if (!modal) {
+        console.error('找不到 scriptParametersModal 元素');
+        alert('错误：找不到模态窗口元素');
+        return;
+    }
+    
+    try {
+        // 尝试使用jQuery方式（Bootstrap 4兼容）
+        if (typeof $ !== 'undefined' && $.fn.modal) {
+            console.log('使用jQuery方式显示模态窗口');
+            $(modal).modal('show');
+        }
+        // 尝试使用Bootstrap 5方式
+        else if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+            console.log('使用Bootstrap 5方式显示模态窗口');
+            const bootstrapModal = new bootstrap.Modal(modal);
+            bootstrapModal.show();
+        }
+        // 备用方案：直接操作CSS类
+        else {
+            console.log('使用备用方案显示模态窗口');
+            modal.classList.add('show');
+            modal.style.display = 'block';
+            document.body.classList.add('modal-open');
+            
+            // 添加背景遮罩
+            const backdrop = document.createElement('div');
+            backdrop.className = 'modal-backdrop fade show';
+            backdrop.id = 'modal-backdrop-temp';
+            document.body.appendChild(backdrop);
+        }
+        console.log('模态窗口显示命令已执行');
+    } catch (error) {
+        console.error('创建或显示模态窗口时出错:', error);
+        alert('错误：' + error.message);
+    }
 }
 
 // 校验日志模态框事件处理
@@ -512,7 +633,10 @@ function executeScriptGeneration() {
     .then(data => {
         if (data.success) {
             currentTaskId = data.task_id;
-            document.getElementById('currentTaskId').textContent = currentTaskId;
+            const taskIdElement = document.getElementById('currentTaskId');
+            if (taskIdElement) {
+                taskIdElement.textContent = currentTaskId;
+            }
             
             // 更新统一任务组件
             if (unifiedComponent) {
@@ -561,12 +685,15 @@ function showRealTimeLogModal() {
     const modal = new bootstrap.Modal(document.getElementById('taskLogModal'));
     modal.show();
     
-    // 设置任务类型
-    document.getElementById('currentTaskType').textContent = '解说文案生成';
+    // 设置任务类型（如果元素存在）
+    const taskTypeElement = document.getElementById('currentTaskType');
+    if (taskTypeElement) {
+        taskTypeElement.textContent = '解说文案生成';
+    }
     
     // 获取统一任务组件
     const taskLogViewer = document.getElementById('taskLogViewer');
-    if (!taskLogViewer.querySelector('.unified-task-component')) {
+    if (taskLogViewer && !taskLogViewer.querySelector('.unified-task-component')) {
         // 如果还没有初始化统一组件，创建一个
         taskLogViewer.innerHTML = `
             <div class="unified-task-component">
@@ -604,10 +731,19 @@ function showRealTimeLogModal() {
         `;
     } else {
         // 重置现有组件的状态
-        document.getElementById('scriptLogContent').innerHTML = '<div class="log-line text-muted">正在启动任务...</div>';
-        document.getElementById('scriptCurrentTaskId').textContent = '-';
+        const scriptLogContentElement = document.getElementById('scriptLogContent');
+        if (scriptLogContentElement) {
+            scriptLogContentElement.innerHTML = '<div class="log-line text-muted">正在启动任务...</div>';
+        }
+        const scriptCurrentTaskIdElement = document.getElementById('scriptCurrentTaskId');
+        if (scriptCurrentTaskIdElement) {
+            scriptCurrentTaskIdElement.textContent = '-';
+        }
         updateScriptTaskStatus('准备中', 'bg-info');
-        document.getElementById('scriptTaskProgress').textContent = '0%';
+        const scriptTaskProgressElement = document.getElementById('scriptTaskProgress');
+        if (scriptTaskProgressElement) {
+            scriptTaskProgressElement.textContent = '0%';
+        }
     }
 }
 
@@ -620,11 +756,14 @@ function showTaskLogModal() {
     modal.show();
     
     // 设置任务类型
-    document.getElementById('currentTaskType').textContent = '解说文案生成';
+    const currentTaskTypeElement = document.getElementById('currentTaskType');
+    if (currentTaskTypeElement) {
+        currentTaskTypeElement.textContent = '解说文案生成';
+    }
     
     // 获取统一任务组件
     const taskLogViewer = document.getElementById('taskLogViewer');
-    if (!taskLogViewer.querySelector('.unified-task-component')) {
+    if (taskLogViewer && !taskLogViewer.querySelector('.unified-task-component')) {
         // 如果还没有初始化统一组件，创建一个
         taskLogViewer.innerHTML = `
             <div class="unified-task-component">
@@ -674,14 +813,23 @@ function showTaskLogModal() {
         if (data.current_task_id) {
             // 有活跃任务，显示实时日志
             currentTaskId = data.current_task_id;
-            document.getElementById('scriptCurrentTaskId').textContent = currentTaskId;
+            const scriptCurrentTaskIdElement2 = document.getElementById('scriptCurrentTaskId');
+            if (scriptCurrentTaskIdElement2) {
+                scriptCurrentTaskIdElement2.textContent = currentTaskId;
+            }
             updateScriptTaskStatus('运行中', 'bg-primary');
             addScriptLogLine('发现活跃任务，任务ID: ' + currentTaskId);
             startScriptLogPolling();
         } else {
             // 没有活跃任务，显示最近的任务状态
-            document.getElementById('scriptLogContent').innerHTML = '<div class="log-line text-muted">当前没有活跃任务</div>';
-            document.getElementById('scriptCurrentTaskId').textContent = '无';
+            const scriptLogContentElement2 = document.getElementById('scriptLogContent');
+            if (scriptLogContentElement2) {
+                scriptLogContentElement2.innerHTML = '<div class="log-line text-muted">当前没有活跃任务</div>';
+            }
+            const scriptCurrentTaskIdElement3 = document.getElementById('scriptCurrentTaskId');
+            if (scriptCurrentTaskIdElement3) {
+                scriptCurrentTaskIdElement3.textContent = '无';
+            }
             
             if (data.task_status === 'script_completed') {
                 updateScriptTaskStatus('已完成', 'bg-success');
@@ -697,7 +845,10 @@ function showTaskLogModal() {
     })
     .catch(error => {
         console.error('获取任务状态失败:', error);
-        document.getElementById('scriptLogContent').innerHTML = '<div class="log-line text-danger">获取任务状态失败</div>';
+        const scriptLogContentElement3 = document.getElementById('scriptLogContent');
+            if (scriptLogContentElement3) {
+                scriptLogContentElement3.innerHTML = '<div class="log-line text-danger">获取任务状态失败</div>';
+            }
         updateScriptTaskStatus('错误', 'bg-danger');
     });
 }
@@ -707,8 +858,10 @@ function showTaskLogModal() {
  */
 function updateTaskStatus(status, badgeClass) {
     const statusElement = document.getElementById('taskStatus');
-    statusElement.textContent = status;
-    statusElement.className = 'badge me-2 ' + badgeClass;
+    if (statusElement) {
+        statusElement.textContent = status;
+        statusElement.className = 'badge me-2 ' + badgeClass;
+    }
 }
 
 /**
@@ -797,7 +950,10 @@ function startScriptLogPolling() {
             }
             
             if (data.progress !== undefined) {
-                document.getElementById('scriptTaskProgress').textContent = data.progress + '%';
+                const scriptTaskProgressElement = document.getElementById('scriptTaskProgress');
+                if (scriptTaskProgressElement) {
+                    scriptTaskProgressElement.textContent = data.progress + '%';
+                }
             }
             
             if (data.status) {
@@ -1141,7 +1297,10 @@ function fetchTaskLog() {
                 
                 // 更新进度
                 if (data.progress !== undefined) {
-                    document.getElementById('taskProgress').textContent = data.progress + '%';
+                    const taskProgressElement = document.getElementById('taskProgress');
+                    if (taskProgressElement) {
+                        taskProgressElement.textContent = data.progress + '%';
+                    }
                 }
                 
                 // 如果任务完成或失败，停止轮询
@@ -1429,7 +1588,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (clearLogBtn) {
         clearLogBtn.addEventListener('click', function() {
-            document.getElementById('logContent').innerHTML = '<div class="log-line text-muted">日志已清空</div>';
+            const logContentElement = document.getElementById('logContent');
+            if (logContentElement) {
+                logContentElement.innerHTML = '<div class="log-line text-muted">日志已清空</div>';
+            }
         });
     }
     
@@ -1693,7 +1855,7 @@ function getCookie(name) {
                 <h5 class="modal-title" id="aiValidationModalLabel">
                     <i class="fas fa-cogs me-2"></i>AI智能校验 - {{ novel.name }}
                 </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" onclick="closeScriptParametersModal()" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form id="aiValidationForm">
@@ -1898,7 +2060,7 @@ function getCookie(name) {
                         <small class="text-muted">任务ID: <span id="currentScriptTaskId">-</span></small>
                     </div>
                     <div>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-secondary" onclick="closeScriptParametersModal()">取消</button>
                         <button type="button" class="btn btn-primary" id="startScriptGenerationBtn" onclick="executeScriptGeneration()">
                             <i class="fas fa-play me-2"></i>开始生成
                         </button>

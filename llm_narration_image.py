@@ -231,9 +231,10 @@ def encode_image_to_base64(image_path: str) -> Optional[str]:
 def find_narration_images_in_chapters(data_directory: str) -> List[str]:
     """
     查找指定数据目录下所有chapter文件夹中的旁白图片（chapter_xxx_image_xx.jpeg格式）
+    如果输入的是chapter目录，则直接在该目录下查找图片文件
     
     Args:
-        data_directory: 数据目录路径 (如: data/004)
+        data_directory: 数据目录路径 (如: data/004) 或 chapter目录路径 (如: data/004/chapter_001)
         
     Returns:
         旁白图片文件路径列表
@@ -242,24 +243,29 @@ def find_narration_images_in_chapters(data_directory: str) -> List[str]:
     data_path = Path(data_directory)
     
     if not data_path.exists():
-        print(f"数据目录不存在: {data_directory}")
+        print(f"目录不存在: {data_directory}")
         return narration_images
     
-    # 查找所有chapter文件夹
-    chapter_dirs = [d for d in data_path.iterdir() if d.is_dir() and d.name.startswith('chapter')]
-    
-    if not chapter_dirs:
-        print(f"在 {data_directory} 中未找到任何chapter文件夹")
-        return narration_images
-    
-    print(f"找到 {len(chapter_dirs)} 个chapter文件夹")
+    # 检查输入路径是否是chapter目录
+    if data_path.name.startswith('chapter'):
+        print(f"检测到chapter目录，直接在目录下查找图片: {data_directory}")
+        chapter_dirs = [data_path]
+    else:
+        # 查找所有chapter文件夹
+        chapter_dirs = [d for d in data_path.iterdir() if d.is_dir() and d.name.startswith('chapter')]
+        
+        if not chapter_dirs:
+            print(f"在 {data_directory} 中未找到任何chapter文件夹")
+            return narration_images
+        
+        print(f"找到 {len(chapter_dirs)} 个chapter文件夹")
     
     # 遍历每个chapter文件夹
     for chapter_dir in sorted(chapter_dirs):
         print(f"正在扫描: {chapter_dir}")
         
-        # 查找该chapter目录下的所有图片文件
-        for file_path in chapter_dir.rglob('*'):
+        # 直接在chapter目录下查找图片文件（不使用rglob递归查找）
+        for file_path in chapter_dir.iterdir():
             if file_path.is_file() and file_path.suffix.lower() in SUPPORTED_FORMATS:
                 # 检查是否为旁白图片（匹配chapter_xxx_image_xx.jpeg格式）
                 if NARRATION_IMAGE_PATTERN.match(file_path.name):

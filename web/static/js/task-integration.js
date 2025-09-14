@@ -269,15 +269,14 @@ function executeScriptGeneration() {
     };
     
     // 发送生成请求
-    fetch('/api/script-generation/', {
+    fetch(`/video/novels/${window.novelId}/generate-script/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
         },
         body: JSON.stringify({
-            novel_id: window.novelId,
-            params: generationParams
+            parameters: generationParams
         })
     })
     .then(response => response.json())

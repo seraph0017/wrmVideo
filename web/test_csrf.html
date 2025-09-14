@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF Token Test</title>
+</head>
+<body>
+    <h1>CSRF Token Test</h1>
+    
+    <form id="testForm">
+        <input type="hidden" name="csrfmiddlewaretoken" value="test-token-123">
+        <button type="button" onclick="testCsrfToken()">Test CSRF Token</button>
+    </form>
+    
+    <div id="result"></div>
+    
+    <script>
+    function testCsrfToken() {
+        const token = document.querySelector('[name=csrfmiddlewaretoken]');
+        const result = document.getElementById('result');
+        
+        if (token) {
+            result.innerHTML = `<p>CSRF Token found: ${token.value}</p>`;
+            
+            // Test fetch request
+            fetch('/video/novels/1/generate-script/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': token.value
+                },
+                body: JSON.stringify({
+                    parameters: {
+                        chapters: 5,
+                        workers: 1
+                    }
+                })
+            })
+            .then(response => {
+                result.innerHTML += `<p>Response status: ${response.status}</p>`;
+                return response.text();
+            })
+            .then(data => {
+                result.innerHTML += `<p>Response: ${data.substring(0, 200)}...</p>`;
+            })
+            .catch(error => {
+                result.innerHTML += `<p>Error: ${error}</p>`;
+            });
+        } else {
+            result.innerHTML = '<p>CSRF Token not found!</p>';
+        }
+    }
+    </script>
+</body>
+</html>

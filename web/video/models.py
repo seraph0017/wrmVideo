@@ -101,6 +101,15 @@ class Narration(models.Model):
     """
     解说模型
     """
+    TASK_STATUS_CHOICES = (
+        ('idle', '空闲'),
+        ('pending', '等待中'),
+        ('processing', '处理中'),
+        ('success', '成功'),
+        ('failed', '失败'),
+        ('cancelled', '已取消'),
+    )
+    
     id = models.AutoField(primary_key=True, verbose_name='ID')
     scene_number = models.CharField(max_length=20, verbose_name='分镜序号')
     featured_character = models.CharField(max_length=100, verbose_name='特写人物')
@@ -111,6 +120,21 @@ class Narration(models.Model):
     tts_response = models.TextField(blank=True, null=True, verbose_name='tts response')
     subtitle_content = models.TextField(blank=True, null=True, verbose_name='字幕文件内容')
     narration_mp4_path = models.CharField(max_length=255, blank=True, null=True, verbose_name='解说mp4路径')
+    
+    # 图片生成任务状态管理字段
+    image_task_status = models.CharField(max_length=20, choices=TASK_STATUS_CHOICES, default='idle', verbose_name='图片任务状态')
+    image_task_progress = models.IntegerField(default=0, verbose_name='图片任务进度百分比')
+    image_task_message = models.TextField(blank=True, null=True, verbose_name='图片任务日志信息')
+    image_task_error = models.TextField(blank=True, null=True, verbose_name='图片任务错误信息')
+    volcengine_task_id = models.CharField(max_length=100, blank=True, null=True, verbose_name='火山引擎任务ID')
+    celery_task_id = models.CharField(max_length=100, blank=True, null=True, verbose_name='Celery任务ID')
+    generated_images = models.JSONField(default=list, blank=True, verbose_name='生成的图片路径列表')
+    
+    # 时间戳字段
+    image_task_started_at = models.DateTimeField(blank=True, null=True, verbose_name='图片任务开始时间')
+    image_task_completed_at = models.DateTimeField(blank=True, null=True, verbose_name='图片任务完成时间')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+    updated_at = models.DateTimeField(auto_now=True, verbose_name='更新时间')
     
     def __str__(self):
         return f"{self.chapter.title} - 解说{self.scene_number}"

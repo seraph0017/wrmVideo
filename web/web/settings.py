@@ -16,7 +16,9 @@ import os
 # Load environment variables from .env file
 try:
     from dotenv import load_dotenv
-    load_dotenv()
+    # 加载项目根目录的.env文件
+    env_path = Path(__file__).resolve().parent.parent.parent / '.env'
+    load_dotenv(env_path)
 except ImportError:
     # python-dotenv not installed, skip loading .env file
     pass
@@ -165,6 +167,10 @@ TOS_CONFIG = {
     'bucket': 'rm-tos-002'
 }
 
+# 火山引擎配置 - 从环境变量读取原始密钥（无需解码）
+VOLCENGINE_ACCESS_KEY = os.environ.get('VOLCENGINE_ACCESS_KEY', '')
+VOLCENGINE_SECRET_KEY = os.environ.get('VOLCENGINE_SECRET_KEY', '')
+
 # Redis配置
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
@@ -190,6 +196,36 @@ CELERY_WORKER_LOG_FORMAT = '[%(asctime)s: %(levelname)s/%(processName)s] %(messa
 CELERY_WORKER_TASK_LOG_FORMAT = '[%(asctime)s: %(levelname)s/%(processName)s][%(task_name)s(%(task_id)s)] %(message)s'
 CELERY_WORKER_LOGFILE = str(BASE_DIR / 'logs' / 'celery.log')
 CELERY_WORKER_LOGLEVEL = 'INFO'
+
+# Celery Beat定时任务配置
+from celery.schedules import crontab
+
+CELERY_BEAT_SCHEDULE = {
+    # 每15秒扫描一次所有数据目录的异步任务
+    'scan-all-async-tasks': {
+        'task': 'video.tasks.scan_and_process_async_tasks',
+        'schedule': 15.0,  # 每15秒执行一次
+        'args': ('data',),  # 数据目录参数
+        'options': {
+            'queue': 'celery',
+            'routing_key': 'celery',
+        }
+    },
+    # 每15秒扫描一次async_tasks目录
+    'scan-specific-async-tasks': {
+        'task': 'video.tasks.scan_specific_async_tasks',
+        'schedule': 15.0,  # 每15秒执行一次
+        'args': ('async_tasks',),  # 任务目录参数
+        'options': {
+            'queue': 'celery',
+            'routing_key': 'celery',
+        }
+    },
+}
+
+# Celery Beat调度器配置
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+CELERY_BEAT_MAX_LOOP_INTERVAL = 60  # 最大循环间隔（秒）
 
 # 日志配置
 LOGGING = {

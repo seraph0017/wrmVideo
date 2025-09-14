@@ -9,19 +9,21 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.18,Default,,0,0,0,,学堂路上{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}蹦蹦跳跳
-Dialogue: 0,0:00:02.55,0:00:04.74,Default,,0,0,0,,向{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}讲述家族星图的传说
-Dialogue: 0,0:00:05.27,0:00:07.69,Default,,0,0,0,,听说天级星图能开启九重灵窍
-Dialogue: 0,0:00:08.13,0:00:10.21,Default,,0,0,0,,修炼速度是{\c&H0000FFFF&\b1}普通{\c&H00FFFFFF&\b0}星图的九倍呢
-Dialogue: 0,0:00:10.51,0:00:11.78,Default,,0,0,0,,她眼中闪烁向往
-Dialogue: 0,0:00:12.09,0:00:14.27,Default,,0,0,0,,圆领绿裙在晨光中格外鲜亮
+Dialogue: 0,0:00:00.02,0:00:02.73,Default,,0,0,0,,学堂路上{\c&H0000FFFF&\b1}赵鸾{\c&H00FFFFFF&\b0}蹦蹦跳跳向
+Dialogue: 0,0:00:02.73,0:00:04.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}讲述家族星图的传说
+Dialogue: 0,0:00:05.27,0:00:07.26,Default,,0,0,0,,听说天级星图能开启九重
+Dialogue: 0,0:00:07.26,0:00:09.71,Default,,0,0,0,,灵窍修炼速度是{\c&H0000FFFF&\b1}普通{\c&H00FFFFFF&\b0}星图的
+Dialogue: 0,0:00:09.71,0:00:10.21,Default,,0,0,0,,九倍呢
+Dialogue: 0,0:00:10.51,0:00:12.85,Default,,0,0,0,,她眼中闪烁向往圆领绿裙在
+Dialogue: 0,0:00:12.85,0:00:14.27,Default,,0,0,0,,晨光中格外鲜亮
 Dialogue: 0,0:00:14.50,0:00:16.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}听着握紧拳头
-Dialogue: 0,0:00:16.58,0:00:18.34,Default,,0,0,0,,他想起穿越前的{\c&H0000FFFF&\b1}超新星{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:18.78,0:00:21.34,Default,,0,0,0,,想起那神秘巨人心中燃起变强的
-Dialogue: 0,0:00:21.34,0:00:23.22,Default,,0,0,0,,决心路边野花盛开
-Dialogue: 0,0:00:23.43,0:00:26.07,Default,,0,0,0,,蝴蝶飞舞仿佛预示着新的开始
+Dialogue: 0,0:00:16.58,0:00:17.74,Default,,0,0,0,,他想起穿越前的
+Dialogue: 0,0:00:17.74,0:00:20.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}超新星{\c&H00FFFFFF&\b0}想起那神秘巨人心中
+Dialogue: 0,0:00:20.66,0:00:21.80,Default,,0,0,0,,燃起变强的决心
+Dialogue: 0,0:00:22.29,0:00:24.93,Default,,0,0,0,,路边野花盛开蝴蝶飞舞仿佛
+Dialogue: 0,0:00:24.93,0:00:26.07,Default,,0,0,0,,预示着新的开始

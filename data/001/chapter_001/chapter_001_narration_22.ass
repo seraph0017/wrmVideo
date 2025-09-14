@@ -1,0 +1,20 @@
+[Script Info]
+Title: chapter_001 Narration 22 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.79,Default,,0,0,0,,御医{\c&H0000FFFF&\b1}甄权{\c&H00FFFFFF&\b0}走出后殿沉声禀报
+Dialogue: 0,0:00:03.18,0:00:05.43,Default,,0,0,0,,陛下怒急攻心需静养十天
+Dialogue: 0,0:00:05.43,0:00:06.56,Default,,0,0,0,,半月方能{\c&H0000FFFF&\b1}苏醒{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.79,0:00:08.74,Default,,0,0,0,,此言一出群臣哗然

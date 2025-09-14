@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_002 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}李承乾{\c&H00FFFFFF&\b0}望着李泰背影
+Dialogue: 0,0:00:01.89,0:00:02.69,Default,,0,0,0,,仰天大笑
+Dialogue: 0,0:00:03.01,0:00:04.99,Default,,0,0,0,,好弟弟随时欢迎再来
+Dialogue: 0,0:00:05.28,0:00:07.56,Default,,0,0,0,,他转身回府心中再无遗憾
+Dialogue: 0,0:00:08.02,0:00:09.43,Default,,0,0,0,,只待明日远走大漠

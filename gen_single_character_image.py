@@ -33,7 +33,9 @@ def copy_image_to_chapter_images(image_path, novel_id, chapter_id):
             return None
             
         # 构建目标images目录路径
-        chapter_images_dir = f"data/{novel_id}/{chapter_id}/images"
+        # 确保novel_id是3位数格式
+        novel_id_formatted = f"{int(novel_id):03d}" if novel_id.isdigit() else novel_id
+        chapter_images_dir = f"data/{novel_id_formatted}/{chapter_id}/images"
         
         # 确保images目录存在
         os.makedirs(chapter_images_dir, exist_ok=True)

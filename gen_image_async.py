@@ -359,20 +359,25 @@ def find_character_image(chapter_path, character_name, era_background=None):
         if os.path.exists(images_dir):
             print(f"在 images 目录中查找角色图片: {images_dir}")
             
-            # 优先查找带时代后缀的图片（新格式：角色名_时代.jpeg）
+            # 支持的图片格式
+            image_extensions = ['.jpeg', '.jpg', '.png', '.webp']
+            
+            # 优先查找带时代后缀的图片（新格式：角色名_时代.扩展名）
             if era_suffix:
-                target_filename = f"{safe_character_name}{era_suffix}.jpeg"
+                for ext in image_extensions:
+                    target_filename = f"{safe_character_name}{era_suffix}{ext}"
+                    image_path = os.path.join(images_dir, target_filename)
+                    if os.path.exists(image_path):
+                        print(f"找到时代背景角色图片（新格式）: {image_path}")
+                        return image_path
+            
+            # 查找通用角色图片（新格式：角色名.扩展名）
+            for ext in image_extensions:
+                target_filename = f"{safe_character_name}{ext}"
                 image_path = os.path.join(images_dir, target_filename)
                 if os.path.exists(image_path):
-                    print(f"找到时代背景角色图片（新格式）: {image_path}")
+                    print(f"找到通用角色图片（新格式）: {image_path}")
                     return image_path
-            
-            # 查找通用角色图片（新格式：角色名.jpeg）
-            target_filename = f"{safe_character_name}.jpeg"
-            image_path = os.path.join(images_dir, target_filename)
-            if os.path.exists(image_path):
-                print(f"找到通用角色图片（新格式）: {image_path}")
-                return image_path
             
             print(f"在 images 目录中未找到角色 {character_name} 的图片")
         

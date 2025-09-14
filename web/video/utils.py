@@ -468,3 +468,81 @@ def parse_narration_file(narration_content):
             'characters': [],
             'narrations': []
         }
+
+
+def get_chapter_number_from_filesystem(novel_id, chapter):
+    """
+    从文件系统中查找实际的章节编号
+    
+    Args:
+        novel_id: 小说ID
+        chapter: 章节对象
+        
+    Returns:
+        str: 章节编号（如"001"），如果未找到返回None
+    """
+    import re
+    from django.conf import settings
+    
+    # 首先尝试从章节标题中提取章节编号
+    chapter_title = getattr(chapter, 'title', '') or ''
+    chapter_match = None
+    if chapter_title:
+        chapter_match = re.search(r'第(\d+)章', chapter_title)
+        if chapter_match:
+            chapter_number_from_title = chapter_match.group(1).zfill(3)
+            
+            # 检查对应的目录是否存在
+            data_dir = os.path.join(settings.BASE_DIR, '..', 'data', f'{novel_id:03d}')
+            chapter_dir = os.path.join(data_dir, f'chapter_{chapter_number_from_title}')
+            
+            if os.path.exists(chapter_dir):
+                return chapter_number_from_title
+    
+    # 如果从标题提取失败或目录不存在，扫描data目录查找匹配的章节
+    data_dir = os.path.join(settings.BASE_DIR, '..', 'data', f'{novel_id:03d}')
+    
+    if not os.path.exists(data_dir):
+        return None
+    
+    # 列出所有chapter_xxx目录
+    chapter_dirs = []
+    for item in os.listdir(data_dir):
+        if os.path.isdir(os.path.join(data_dir, item)) and item.startswith('chapter_'):
+            chapter_dirs.append(item)
+    
+    # 按章节编号排序
+    chapter_dirs.sort()
+    
+    # 如果只有一个章节目录，直接返回
+    if len(chapter_dirs) == 1:
+        match = re.search(r'chapter_(\d+)', chapter_dirs[0])
+        if match:
+            return match.group(1)
+    
+    # 如果有多个章节目录，尝试根据标题匹配
+    if chapter_match:
+        target_number = int(chapter_match.group(1))
+        # 查找第target_number个章节目录
+        if target_number <= len(chapter_dirs):
+            match = re.search(r'chapter_(\d+)', chapter_dirs[target_number - 1])
+            if match:
+                return match.group(1)
+    
+    return None
+
+
+def get_chapter_directory_path(novel_id, chapter_number):
+    """
+    获取章节目录的完整路径
+    
+    Args:
+        novel_id: 小说ID
+        chapter_number: 章节编号（如"001"）
+        
+    Returns:
+        str: 章节目录路径
+    """
+    from django.conf import settings
+    
+    return os.path.join(settings.BASE_DIR, '..', 'data', f'{novel_id:03d}', f'chapter_{chapter_number}')

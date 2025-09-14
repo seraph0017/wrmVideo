@@ -19,6 +19,9 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 # 自动发现任务
 app.autodiscover_tasks()
 
+# 配置Beat调度器
+app.conf.beat_scheduler = 'django_celery_beat.schedulers:DatabaseScheduler'
+
 
 @app.task(bind=True)
 def debug_task(self):

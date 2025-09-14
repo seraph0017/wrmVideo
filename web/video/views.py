@@ -9,7 +9,7 @@ from django.views.decorators.http import require_http_methods
 from django.core.paginator import Paginator
 from .forms import TaskForm, NovelForm, ChapterForm, CharacterForm, NarrationForm, SearchForm
 from .models import Novel, Chapter, Character, Narration, CharacterImageTask
-from .utils import handle_uploaded_file, save_uploaded_file, upload_novel_to_tos
+from .utils import handle_uploaded_file, save_uploaded_file, upload_novel_to_tos, get_chapter_number_from_filesystem, get_chapter_directory_path
 from .tasks import generate_script_async, validate_narration_async, generate_audio_async
 from celery import current_app
 from datetime import datetime
@@ -128,6 +128,12 @@ def find_character_image_in_chapter(chapter_path, character_name):
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
+
+def test_modal(request):
+    """
+    测试模态窗口功能的视图
+    """
+    return render(request, 'test_modal.html')
 
 
 def dashboard(request):
@@ -502,6 +508,14 @@ class ChapterDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['narrations'] = self.object.narrations.all()
         context['characters'] = self.object.characters.all()
+        
+        # 提取视频文件名用于显示
+        if self.object.video_path:
+            import os
+            context['video_filename'] = os.path.basename(self.object.video_path)
+        else:
+            context['video_filename'] = '未设置'
+            
         return context
 
 
@@ -1640,6 +1654,572 @@ def validation_status(request, pk, task_id):
 
 
 @csrf_exempt
+@require_http_methods(["GET"])
+def serve_chapter_video(request, chapter_id):
+    """
+    提供章节视频文件服务
+    
+    Args:
+        request: HTTP请求对象
+        chapter_id: 章节ID
+    
+    Returns:
+        HttpResponse: 视频文件响应或错误信息
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        
+        # 检查是否有视频路径
+        if not chapter.video_path:
+            return JsonResponse({
+                'success': False,
+                'message': '该章节还没有生成视频'
+            }, status=404)
+        
+        # 检查视频文件是否存在
+        if not os.path.exists(chapter.video_path):
+            return JsonResponse({
+                'success': False,
+                'message': '视频文件不存在'
+            }, status=404)
+        
+        # 获取文件大小
+        file_size = os.path.getsize(chapter.video_path)
+        
+        # 处理Range请求（用于视频流播放）
+        range_header = request.META.get('HTTP_RANGE')
+        if range_header:
+            # 解析Range头
+            range_match = range_header.replace('bytes=', '').split('-')
+            start = int(range_match[0]) if range_match[0] else 0
+            end = int(range_match[1]) if range_match[1] else file_size - 1
+            
+            # 确保范围有效
+            if start >= file_size:
+                return HttpResponse(status=416)  # Range Not Satisfiable
+            
+            if end >= file_size:
+                end = file_size - 1
+            
+            # 读取指定范围的文件内容
+            with open(chapter.video_path, 'rb') as video_file:
+                video_file.seek(start)
+                chunk_size = end - start + 1
+                video_data = video_file.read(chunk_size)
+            
+            # 创建部分内容响应
+            response = HttpResponse(
+                video_data,
+                content_type='video/mp4',
+                status=206  # Partial Content
+            )
+            response['Content-Range'] = f'bytes {start}-{end}/{file_size}'
+            response['Accept-Ranges'] = 'bytes'
+            response['Content-Length'] = str(chunk_size)
+            
+        else:
+            # 完整文件响应
+            with open(chapter.video_path, 'rb') as video_file:
+                video_data = video_file.read()
+            
+            response = HttpResponse(
+                video_data,
+                content_type='video/mp4'
+            )
+            response['Content-Length'] = str(file_size)
+            response['Accept-Ranges'] = 'bytes'
+        
+        # 设置缓存头
+        response['Cache-Control'] = 'public, max-age=3600'
+        response['Content-Disposition'] = f'inline; filename="{os.path.basename(chapter.video_path)}"'
+        
+        return response
+        
+    except Exception as e:
+        logger.error(f"提供视频文件时出错: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'message': f'服务器错误: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def validate_narration_images(request, chapter_id):
+    """
+    更新图片命名API - 执行rename_images.py脚本
+    
+    Args:
+        request: HTTP请求对象
+        chapter_id: 章节ID
+        
+    Returns:
+        JsonResponse: 处理结果
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        novel_id = chapter.novel.id
+        
+        logger.info(f"开始更新图片命名: 小说ID={novel_id}, 章节ID={chapter_id}")
+        
+        # 导入Celery任务
+        from .tasks import rename_images_async
+        
+        # 启动异步任务
+        task = rename_images_async.delay(novel_id, chapter_id)
+        
+        logger.info(f"图片重命名任务已启动: task_id={task.id}")
+        
+        return JsonResponse({
+            'success': True,
+            'message': '图片重命名任务已启动',
+            'task_id': task.id,
+            'novel_id': novel_id,
+            'chapter_id': chapter_id
+        })
+        
+    except Chapter.DoesNotExist:
+        logger.error(f"章节不存在: chapter_id={chapter_id}")
+        return JsonResponse({
+            'success': False,
+            'error': f'章节不存在: {chapter_id}'
+        }, status=404)
+        
+    except Exception as e:
+        logger.error(f"图片重命名失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'error': f'图片重命名失败: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def validate_narration_images_llm(request, chapter_id):
+    """
+    校验旁白图片API (使用LLM)
+    
+    Args:
+        request: HTTP请求对象
+        chapter_id: 章节ID
+        
+    Returns:
+        JsonResponse: 处理结果
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        novel_id = chapter.novel.id
+        
+        logger.info(f"开始校验旁白图片(LLM): 小说ID={novel_id}, 章节ID={chapter_id}")
+        
+        # 导入Celery任务
+        from .tasks import validate_narration_images_llm_async
+        
+        # 启动异步任务
+        task = validate_narration_images_llm_async.delay(novel_id, chapter_id)
+        
+        logger.info(f"校验旁白图片(LLM)任务已启动: task_id={task.id}")
+        
+        return JsonResponse({
+            'success': True,
+            'message': '校验旁白图片(LLM)任务已启动',
+            'task_id': task.id,
+            'novel_id': novel_id,
+            'chapter_id': chapter_id
+        })
+        
+    except Chapter.DoesNotExist:
+        logger.error(f"章节不存在: chapter_id={chapter_id}")
+        return JsonResponse({
+            'success': False,
+            'error': f'章节不存在: {chapter_id}'
+        }, status=404)
+        
+    except Exception as e:
+        logger.error(f"校验旁白图片(LLM)失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'error': f'校验旁白图片(LLM)失败: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def batch_generate_videos(request, chapter_id):
+    """
+    批量生成视频API
+    
+    Args:
+        request: HTTP请求对象
+        chapter_id: 章节ID
+        
+    Returns:
+        JsonResponse: 处理结果
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        novel_id = chapter.novel.id
+        
+        logger.info(f"开始批量生成视频: 小说ID={novel_id}, 章节ID={chapter_id}")
+        
+        # 导入Celery任务
+        from .tasks import concat_narration_video_async
+        
+        # 启动异步任务
+        task = concat_narration_video_async.delay(novel_id, chapter_id)
+        
+        logger.info(f"批量生成视频任务已启动: task_id={task.id}")
+        
+        return JsonResponse({
+            'success': True,
+            'message': '批量生成视频任务已启动',
+            'task_id': task.id,
+            'novel_id': novel_id,
+            'chapter_id': chapter_id
+        })
+        
+    except Chapter.DoesNotExist:
+        logger.error(f"章节不存在: chapter_id={chapter_id}")
+        return JsonResponse({
+            'success': False,
+            'error': f'章节不存在: {chapter_id}'
+        }, status=404)
+        
+    except Exception as e:
+        logger.error(f"批量生成视频失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'error': f'批量生成视频失败: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def generate_first_video(request, chapter_id):
+    """
+    生成首视频API
+    
+    Args:
+        request: HTTP请求对象
+        chapter_id: 章节ID
+        
+    Returns:
+        JsonResponse: 处理结果
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        novel_id = chapter.novel.id
+        
+        logger.info(f"开始生成首视频: 小说ID={novel_id}, 章节ID={chapter_id}")
+        
+        # 导入Celery任务
+        from .tasks import generate_first_video_async
+        
+        # 启动异步任务
+        task = generate_first_video_async.delay(novel_id, chapter_id)
+        
+        logger.info(f"生成首视频任务已启动: task_id={task.id}")
+        
+        return JsonResponse({
+            'success': True,
+            'message': '生成首视频任务已启动',
+            'task_id': task.id,
+            'novel_id': novel_id,
+            'chapter_id': chapter_id
+        })
+        
+    except Chapter.DoesNotExist:
+        logger.error(f"章节不存在: chapter_id={chapter_id}")
+        return JsonResponse({
+            'success': False,
+            'error': f'章节不存在: {chapter_id}'
+        }, status=404)
+        
+    except Exception as e:
+        logger.error(f"生成首视频失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'error': f'生成首视频失败: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def get_image_generation_result(request, narration_id):
+    """
+    查询火山引擎图片生成任务结果
+    
+    Args:
+        request: HTTP请求对象
+        narration_id (int): 解说ID
+        
+    Returns:
+        JsonResponse: 任务结果
+    """
+    from .tasks import get_volcengine_image_result
+    
+    try:
+        # 从请求中获取火山引擎任务ID
+        data = json.loads(request.body)
+        volcengine_task_id = data.get('task_id')
+        
+        if not volcengine_task_id:
+            return JsonResponse({
+                'status': 'error',
+                'message': '缺少task_id参数'
+            }, status=400)
+        
+        logger.info(f"查询解说 {narration_id} 的火山引擎图片生成结果，任务ID: {volcengine_task_id}")
+        
+        # 启动查询任务
+        task = get_volcengine_image_result.delay(narration_id, volcengine_task_id)
+        
+        return JsonResponse({
+            'status': 'success',
+            'task_id': task.id,
+            'message': f'开始查询解说 {narration_id} 的图片生成结果'
+        })
+        
+    except json.JSONDecodeError:
+        return JsonResponse({
+            'status': 'error',
+            'message': '请求数据格式错误'
+        }, status=400)
+    except Exception as e:
+        logger.error(f"查询解说 {narration_id} 图片生成结果异常: {str(e)}")
+        return JsonResponse({
+            'status': 'error',
+            'message': f'查询图片生成结果失败: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def batch_generate_images(request, chapter_id):
+    """
+    批量生成章节所有解说的分镜图片API
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        
+        # 获取章节下的所有解说
+        narrations = chapter.narrations.all()
+        
+        if not narrations.exists():
+            return JsonResponse({
+                'success': False,
+                'error': '该章节没有解说内容'
+            }, status=400)
+        
+        # 导入异步任务
+        from .tasks import generate_narration_images_async
+        
+        # 为每个解说启动异步任务
+        task_results = []
+        for narration in narrations:
+            task = generate_narration_images_async.delay(narration.id)
+            task_results.append({
+                'narration_id': narration.id,
+                'scene_number': narration.scene_number,
+                'celery_task_id': task.id,
+                'status': 'submitted'
+            })
+        
+        return JsonResponse({
+            'success': True,
+            'message': f'正在为章节 {chapter.title} 的 {len(task_results)} 个解说生成分镜图片...',
+            'tasks': task_results,
+            'note': '任务已提交到火山引擎，请使用celery_task_id查询任务状态获取volcengine_task_id，然后使用volcengine_task_id查询最终结果'
+        })
+        
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': str(e)
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def batch_generate_all_videos(request, chapter_id):
+    """
+    批量生成全部视频API - 包含完整的视频制作流程
+    
+    Args:
+        request: HTTP请求对象
+        chapter_id: 章节ID
+        
+    Returns:
+        JsonResponse: 处理结果
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        novel_id = chapter.novel.id
+        
+        # 获取章节下的所有解说
+        narrations = chapter.narrations.all()
+        
+        if not narrations.exists():
+            return JsonResponse({
+                'success': False,
+                'error': '该章节没有解说内容'
+            }, status=400)
+        
+        logger.info(f"开始批量生成全部视频: 小说ID={novel_id}, 章节ID={chapter_id}, 解说数量={narrations.count()}")
+        
+        # 导入Celery任务
+        from .tasks import batch_generate_all_videos_async
+        
+        # 启动异步任务
+        task = batch_generate_all_videos_async.delay(novel_id, chapter_id)
+        
+        logger.info(f"批量生成全部视频任务已启动: task_id={task.id}")
+        
+        return JsonResponse({
+            'success': True,
+            'message': '批量生成全部视频任务已启动',
+            'task_id': task.id,
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'count': narrations.count()
+        })
+        
+    except Chapter.DoesNotExist:
+        logger.error(f"章节不存在: chapter_id={chapter_id}")
+        return JsonResponse({
+            'success': False,
+            'error': f'章节不存在: {chapter_id}'
+        }, status=404)
+        
+    except Exception as e:
+        logger.error(f"批量生成全部视频失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'error': f'批量生成全部视频失败: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["GET"])
+def get_chapter_character_images(request, chapter_id):
+    """
+    获取章节角色图片列表API
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        novel_id = chapter.novel.id
+        
+        # 获取文件系统中的章节编号
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        if chapter_number is None:
+            return JsonResponse({
+                'success': False,
+                'error': f'找不到章节 {chapter.title} 对应的文件系统目录'
+            }, status=404)
+        
+        # 构建角色图片目录路径
+        images_dir = os.path.join(
+            settings.BASE_DIR.parent,  # 回到项目根目录
+            'data',
+            f'{novel_id:03d}',
+            f'chapter_{chapter_number}',
+            'images'
+        )
+        
+        images = []
+        
+        if os.path.exists(images_dir):
+            # 获取图片文件列表
+            image_extensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp']
+            for filename in sorted(os.listdir(images_dir)):
+                if any(filename.lower().endswith(ext) for ext in image_extensions):
+                    # 提取角色名称（去掉文件扩展名）
+                    character_name = os.path.splitext(filename)[0]
+                    
+                    # 构建图片URL
+                    image_url = f'/api/chapters/{chapter_id}/character-images/{filename}/'
+                    images.append({
+                        'filename': filename,
+                        'character_name': character_name,
+                        'url': image_url
+                    })
+        
+        return JsonResponse({
+            'success': True,
+            'images': images
+        })
+        
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': str(e)
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["GET"])
+def serve_character_image(request, chapter_id, filename):
+    """
+    提供章节角色图片文件服务API
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        novel_id = chapter.novel.id
+        
+        # 获取文件系统中的章节编号
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        if chapter_number is None:
+            return JsonResponse({
+                'success': False,
+                'error': f'找不到章节对应的文件系统目录'
+            }, status=404)
+        
+        # 构建图片文件路径
+        image_path = os.path.join(
+            settings.BASE_DIR.parent,  # 回到项目根目录
+            'data',
+            f'{novel_id:03d}',
+            f'chapter_{chapter_number}',
+            'images',
+            filename
+        )
+        
+        # 检查文件是否存在
+        if not os.path.exists(image_path):
+            return JsonResponse({
+                'success': False,
+                'error': f'图片文件不存在: {filename}'
+            }, status=404)
+        
+        # 确定MIME类型
+        import mimetypes
+        content_type, _ = mimetypes.guess_type(image_path)
+        if content_type is None:
+            content_type = 'application/octet-stream'
+        
+        # 返回图片文件
+        with open(image_path, 'rb') as f:
+            response = HttpResponse(f.read(), content_type=content_type)
+            response['Content-Disposition'] = f'inline; filename="{filename}"'
+            return response
+        
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': str(e)
+        }, status=500)
+
+
+@csrf_exempt
 @require_http_methods(["POST"])
 def generate_character_image(request):
     """
@@ -1831,8 +2411,11 @@ def get_character_thumbnail(request, character_id):
         # 第一优先级：检查角色数据库中的image_path字段
         if character.image_path and character.image_path.strip():
             print(f"DEBUG: 使用数据库中的image_path: {character.image_path}")
-            # 如果image_path不是以/开头，添加/static/前缀
-            if not character.image_path.startswith('/'):
+            # 数据库中的image_path格式为 data/001/chapter_001/images/角色名.png
+            # 需要转换为正确的URL路径
+            if character.image_path.startswith('data/'):
+                image_path = f'/{character.image_path}'
+            elif not character.image_path.startswith('/'):
                 image_path = f'/static/{character.image_path}'
             else:
                 image_path = character.image_path
@@ -1853,21 +2436,20 @@ def get_character_thumbnail(request, character_id):
         # 第二优先级：如果提供了章节信息，从章节images目录查找
         if novel_id and chapter_id:
             print(f"DEBUG: 开始从章节目录查找图片")
-            # 获取章节对象以获取正确的章节编号
+            # 使用新的工具函数获取章节路径
+            from .utils import get_chapter_number_from_filesystem
+            
             try:
                 chapter = Chapter.objects.get(id=chapter_id)
-                # 从章节标题中提取章节编号（如"第2章" -> "002"）
-                import re
-                chapter_match = re.search(r'第(\d+)章', chapter.title)
-                if chapter_match:
-                    chapter_number = chapter_match.group(1).zfill(3)
+                chapter_number = get_chapter_number_from_filesystem(int(novel_id), chapter.title)
+                if chapter_number:
+                    chapter_path = f"data/{novel_id.zfill(3)}/chapter_{chapter_number}"
+                    print(f"DEBUG: 章节标题: {chapter.title}, 章节编号: {chapter_number}")
+                    print(f"DEBUG: 章节路径: {chapter_path}")
                 else:
-                    # 如果无法从标题提取，使用章节ID
-                    chapter_number = chapter_id.zfill(3)
-                
-                chapter_path = f"data/{novel_id.zfill(3)}/chapter_{chapter_number}"
-                print(f"DEBUG: 章节标题: {chapter.title}, 章节编号: {chapter_number}")
-                print(f"DEBUG: 章节路径: {chapter_path}")
+                    # 如果无法获取章节编号，使用默认路径
+                    chapter_path = f"data/{novel_id.zfill(3)}/chapter_{chapter_id.zfill(3)}"
+                    print(f"DEBUG: 无法获取章节编号，使用默认路径: {chapter_path}")
             except Chapter.DoesNotExist:
                 # 如果章节不存在，使用原来的逻辑
                 chapter_path = f"data/{novel_id.zfill(3)}/chapter_{chapter_id.zfill(3)}"
@@ -2016,16 +2598,15 @@ def generate_audio(request, novel_id, chapter_id):
             }, status=404)
         
         # 检查narration.txt文件是否存在
-        # 从章节标题中提取章节编号（如"第2章" -> "002"）
-        import re
-        chapter_match = re.search(r'第(\d+)章', chapter.title)
-        if chapter_match:
-            chapter_number = chapter_match.group(1).zfill(3)
-        else:
-            # 如果无法从标题提取，使用章节ID
-            chapter_number = str(chapter_id).zfill(3)
+        # 使用工具函数获取文件系统中的章节编号
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        if not chapter_number:
+            return JsonResponse({
+                'success': False,
+                'error': f'无法在文件系统中找到章节 {chapter.title} 的目录'
+            }, status=400)
         
-        data_dir = os.path.join(settings.BASE_DIR, '..', 'data', f'{novel_id:03d}', f'chapter_{chapter_number}')
+        data_dir = get_chapter_directory_path(novel_id, chapter_number)
         narration_file = os.path.join(data_dir, 'narration.txt')
         
         if not os.path.exists(narration_file):
@@ -2150,17 +2731,18 @@ def get_chapter_audio_files(request, novel_id, chapter_id):
                 'error': '章节不存在'
             }, status=404)
         
-        # 构建数据目录路径
-        # 从章节标题中提取章节编号（如"第2章" -> "002"）
-        import re
-        chapter_match = re.search(r'第(\d+)章', chapter.title)
-        if chapter_match:
-            chapter_number = chapter_match.group(1).zfill(3)
-        else:
-            # 如果无法从标题提取，使用章节ID
-            chapter_number = str(chapter_id).zfill(3)
+        # 使用工具函数获取文件系统中的章节编号
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        if not chapter_number:
+            return JsonResponse({
+                'success': False,
+                'error': f'无法在文件系统中找到章节 {chapter.title} 的目录'
+            }, status=400)
         
-        data_dir = os.path.join(settings.BASE_DIR, '..', 'data', f'{novel_id:03d}', f'chapter_{chapter_number}')
+        # 使用新的工具函数获取章节目录路径
+        from .utils import get_chapter_directory_path
+        
+        data_dir = get_chapter_directory_path(novel_id, chapter_number)
         
         if not os.path.exists(data_dir):
             return JsonResponse({
@@ -2263,16 +2845,9 @@ def serve_audio_file(request, novel_id, chapter_id, filename):
             }, status=404)
         
         # 构建文件路径
-        # 从章节标题中提取章节编号（如"第2章" -> "002"）
-        import re
-        chapter_match = re.search(r'第(\d+)章', chapter.title)
-        if chapter_match:
-            chapter_number = chapter_match.group(1).zfill(3)
-        else:
-            # 如果无法从标题提取，使用章节ID
-            chapter_number = str(chapter_id).zfill(3)
-        
-        data_dir = os.path.join(settings.BASE_DIR, '..', 'data', f'{novel_id:03d}', f'chapter_{chapter_number}')
+        # 使用工具函数获取文件系统中的实际章节编号
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        data_dir = get_chapter_directory_path(novel_id, chapter_number)
         file_path = os.path.join(data_dir, filename)
         
         # 安全检查：确保文件在预期目录内
@@ -2319,4 +2894,447 @@ def serve_audio_file(request, novel_id, chapter_id, filename):
         return JsonResponse({
             'success': False,
             'error': f'文件服务失败: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["GET"])
+def get_narration_subtitle(request, narration_id):
+    """
+    获取解说的字幕内容API
+    """
+    try:
+        # 获取解说对象
+        narration = get_object_or_404(Narration, id=narration_id)
+        
+        # 构建ASS文件路径
+        # 根据实际文件系统结构，文件存储在 data/{novel_id}/chapter_xxx/ 目录下
+        # 文件名格式: chapter_{chapter_number:03d}_narration_{scene_number:02d}.ass
+        novel_id = narration.chapter.novel.id
+        chapter = narration.chapter
+        scene_number = narration.scene_number
+        
+        # 获取文件系统中的章节编号
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        if chapter_number is None:
+            return JsonResponse({
+                'success': False,
+                'error': f'找不到章节 {chapter.title} 对应的文件系统目录'
+            }, status=404)
+        
+        # 尝试解析scene_number中的数字部分
+        try:
+            # 如果scene_number是"1-1"格式，取最后一个数字
+            if '-' in scene_number:
+                scene_num = int(scene_number.split('-')[-1])
+            else:
+                scene_num = int(scene_number)
+        except (ValueError, IndexError):
+            scene_num = 1
+        
+        # 使用文件系统中的章节编号构建路径
+        ass_file_path = os.path.join(
+            settings.BASE_DIR.parent,  # 回到项目根目录
+            'data',
+            f'{novel_id:03d}',
+            f'chapter_{chapter_number}',
+            f'chapter_{chapter_number}_narration_{scene_num:02d}.ass'
+        )
+        
+        # 检查文件是否存在
+        if not os.path.exists(ass_file_path):
+            return JsonResponse({
+                'success': False,
+                'error': f'字幕文件不存在: {ass_file_path}'
+            }, status=404)
+        
+        # 读取ASS文件内容
+        try:
+            with open(ass_file_path, 'r', encoding='utf-8') as f:
+                subtitle_content = f.read()
+        except UnicodeDecodeError:
+            # 如果UTF-8解码失败，尝试其他编码
+            try:
+                with open(ass_file_path, 'r', encoding='gbk') as f:
+                    subtitle_content = f.read()
+            except UnicodeDecodeError:
+                with open(ass_file_path, 'r', encoding='latin-1') as f:
+                    subtitle_content = f.read()
+        
+        # 返回字幕内容
+        return HttpResponse(
+            subtitle_content,
+            content_type='text/plain; charset=utf-8'
+        )
+        
+    except Exception as e:
+        logger.error(f"获取解说字幕失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'error': f'获取字幕失败: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def generate_ass_subtitles(request, novel_id, chapter_id):
+    """
+    生成ASS字幕文件API
+    """
+    try:
+        # 获取章节信息
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        
+        # 使用工具函数获取文件系统中的章节编号
+        from .utils import get_chapter_number_from_filesystem, get_chapter_directory_path
+        
+        # 获取文件系统中实际的章节编号
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        if not chapter_number:
+            return JsonResponse({
+                'success': False,
+                'error': f'无法在文件系统中找到章节 {chapter.title} 的目录'
+            }, status=404)
+        
+        # 构建数据目录路径
+        data_dir = get_chapter_directory_path(novel_id, chapter_number)
+        
+        if not os.path.exists(data_dir):
+            return JsonResponse({
+                'success': False,
+                'error': f'章节数据目录不存在: {data_dir}'
+            }, status=404)
+        
+        # 检查timestamps文件是否存在
+        import glob
+        timestamp_files = glob.glob(os.path.join(data_dir, '*_timestamps.json'))
+        
+        if not timestamp_files:
+            return JsonResponse({
+                'success': False,
+                'error': f'未找到timestamps文件，请先生成音频文件'
+            }, status=404)
+        
+        # 执行gen_ass.py脚本
+        import subprocess
+        project_root = settings.BASE_DIR.parent
+        gen_ass_script = os.path.join(project_root, 'gen_ass.py')
+        
+        if not os.path.exists(gen_ass_script):
+            return JsonResponse({
+                'success': False,
+                'error': f'gen_ass.py脚本不存在: {gen_ass_script}'
+            }, status=500)
+        
+        # 运行gen_ass.py脚本
+        try:
+            result = subprocess.run(
+                ['python', gen_ass_script, data_dir],
+                cwd=project_root,
+                capture_output=True,
+                text=True,
+                timeout=300  # 5分钟超时
+            )
+            
+            if result.returncode != 0:
+                logger.error(f"gen_ass.py执行失败: {result.stderr}")
+                return JsonResponse({
+                    'success': False,
+                    'error': f'ASS文件生成失败: {result.stderr}'
+                }, status=500)
+            
+            # 检查生成的ASS文件
+            ass_files = glob.glob(os.path.join(data_dir, '*.ass'))
+            
+            if not ass_files:
+                return JsonResponse({
+                    'success': False,
+                    'error': 'ASS文件生成失败，未找到生成的文件'
+                }, status=500)
+            
+            # 更新数据库记录（可选：记录ASS文件生成时间）
+            from django.utils import timezone
+            chapter.updated_at = timezone.now()
+            chapter.save()
+            
+            logger.info(f"成功生成ASS字幕文件: 小说ID={novel_id}, 章节ID={chapter_id}, 生成文件数={len(ass_files)}")
+            
+            return JsonResponse({
+                'success': True,
+                'message': f'成功生成 {len(ass_files)} 个ASS字幕文件',
+                'files_generated': len(ass_files),
+                'chapter_directory': data_dir,
+                'output': result.stdout
+            })
+            
+        except subprocess.TimeoutExpired:
+            return JsonResponse({
+                'success': False,
+                'error': 'ASS文件生成超时（超过5分钟）'
+            }, status=500)
+        except Exception as e:
+            logger.error(f"执行gen_ass.py脚本失败: {str(e)}")
+            return JsonResponse({
+                'success': False,
+                'error': f'脚本执行失败: {str(e)}'
+            }, status=500)
+        
+    except Exception as e:
+        logger.error(f"生成ASS字幕失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'error': f'生成ASS字幕失败: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["GET"])
+def get_narration_images_status(request, narration_id):
+    """
+    检查解说分镜图片状态API
+    """
+    try:
+        # 获取解说对象
+        narration = get_object_or_404(Narration, id=narration_id)
+        
+        # 构建图片目录路径
+        novel_id = narration.chapter.novel.id
+        chapter = narration.chapter
+        scene_number = narration.scene_number
+        
+        # 获取文件系统中的章节编号
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        if chapter_number is None:
+            return JsonResponse({
+                'success': False,
+                'error': f'找不到章节 {chapter.title} 对应的文件系统目录'
+            }, status=404)
+        
+        # 尝试解析scene_number中的数字部分
+        try:
+            if '-' in scene_number:
+                scene_num = int(scene_number.split('-')[-1])
+            else:
+                scene_num = int(scene_number)
+            print(f"DEBUG: get_narration_images - 原始scene_number: {scene_number}, 解析后: {scene_num}")
+        except (ValueError, IndexError):
+            scene_num = 1
+            print(f"DEBUG: get_narration_images - scene_number解析失败，使用默认值: {scene_num}")
+        
+        # 构建章节目录路径
+        chapter_dir = os.path.join(
+            settings.BASE_DIR.parent,  # 回到项目根目录
+            'data',
+            f'{novel_id:03d}',
+            f'chapter_{chapter_number}'
+        )
+        
+        # 检查章节目录是否存在并统计分镜图片数量
+        has_images = False
+        image_count = 0
+        
+        if os.path.exists(chapter_dir):
+            # 构建分镜图片文件名模式：chapter_XXX_image_YY_*.jpeg
+            image_pattern = f'chapter_{chapter_number}_image_{scene_num:02d}_'
+            image_extensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp']
+            
+            for filename in os.listdir(chapter_dir):
+                # 检查文件名是否匹配分镜图片模式
+                if (filename.startswith(image_pattern) and 
+                    any(filename.lower().endswith(ext) for ext in image_extensions)):
+                    image_count += 1
+            
+            has_images = image_count > 0
+        
+        return JsonResponse({
+            'success': True,
+            'has_images': has_images,
+            'image_count': image_count,
+            'chapter_dir': chapter_dir
+        })
+        
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': str(e)
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def generate_narration_images(request, narration_id):
+    """
+    生成解说分镜图片API
+    """
+    try:
+        # 获取解说对象
+        narration = get_object_or_404(Narration, id=narration_id)
+        
+        # 导入异步任务
+        from .tasks import generate_narration_images_async
+        
+        # 启动异步任务
+        task = generate_narration_images_async.delay(narration_id)
+        
+        return JsonResponse({
+            'success': True,
+            'message': f'正在为解说 {narration.scene_number} 生成分镜图片...',
+            'task_id': task.id
+        })
+        
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': str(e)
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["GET"])
+def get_narration_images(request, narration_id):
+    """
+    获取解说分镜图片列表API
+    """
+    try:
+        # 获取解说对象
+        narration = get_object_or_404(Narration, id=narration_id)
+        
+        # 构建图片目录路径
+        novel_id = narration.chapter.novel.id
+        chapter = narration.chapter
+        scene_number = narration.scene_number
+        
+        # 获取文件系统中的章节编号
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        if chapter_number is None:
+            return JsonResponse({
+                'success': False,
+                'error': f'找不到章节 {chapter.title} 对应的文件系统目录'
+            }, status=404)
+        
+        # 尝试解析scene_number中的数字部分
+        try:
+            if '-' in scene_number:
+                scene_num = int(scene_number.split('-')[-1])
+            else:
+                scene_num = int(scene_number)
+        except (ValueError, IndexError):
+            scene_num = 1
+        
+        # 构建章节目录路径
+        chapter_dir = os.path.join(
+            settings.BASE_DIR.parent,  # 回到项目根目录
+            'data',
+            f'{novel_id:03d}',
+            f'chapter_{chapter_number}'
+        )
+        
+        images = []
+        
+        print(f"DEBUG: get_narration_images - 章节目录: {chapter_dir}")
+        print(f"DEBUG: get_narration_images - 目录是否存在: {os.path.exists(chapter_dir)}")
+        
+        if os.path.exists(chapter_dir):
+            # 构建分镜图片文件名模式：chapter_XXX_image_YY 或 chapter_XXX_image_YY_Z
+            image_pattern_base = f'chapter_{chapter_number}_image_{scene_num:02d}'
+            image_extensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp']
+            
+            print(f"DEBUG: get_narration_images - 查找图片模式: {image_pattern_base}")
+            
+            all_files = sorted(os.listdir(chapter_dir))
+            print(f"DEBUG: get_narration_images - 目录中的所有文件: {all_files[:10]}...")  # 只显示前10个文件
+            
+            for filename in all_files:
+                # 检查文件名是否匹配分镜图片模式
+                # 支持格式：chapter_001_image_02.jpeg 或 chapter_001_image_02_1.jpeg
+                if filename.startswith(image_pattern_base):
+                    # 检查是否是有效的图片文件
+                    if any(filename.lower().endswith(ext) for ext in image_extensions):
+                        # 进一步验证文件名格式
+                        name_without_ext = filename.rsplit('.', 1)[0]
+                        if (name_without_ext == image_pattern_base or 
+                            (name_without_ext.startswith(image_pattern_base + '_') and 
+                             name_without_ext[len(image_pattern_base)+1:].isdigit())):
+                            print(f"DEBUG: get_narration_images - 找到匹配文件: {filename}")
+                            # 构建图片URL
+                            image_url = f'/video/api/novels/{novel_id}/chapters/{chapter.id}/narrations/{narration_id}/images/{filename}/'
+                            images.append({
+                                'filename': filename,
+                                'url': image_url
+                            })
+        else:
+            print(f"DEBUG: get_narration_images - 章节目录不存在: {chapter_dir}")
+        
+        return JsonResponse({
+            'success': True,
+            'images': images
+        })
+        
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': str(e)
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["GET"])
+def serve_narration_image(request, novel_id, chapter_id, narration_id, filename):
+    """
+    提供解说分镜图片文件服务API
+    """
+    try:
+        # 获取解说对象
+        narration = get_object_or_404(Narration, id=narration_id, chapter_id=chapter_id, chapter__novel_id=novel_id)
+        
+        # 获取文件系统中的章节编号
+        chapter_number = get_chapter_number_from_filesystem(novel_id, narration.chapter)
+        if chapter_number is None:
+            return JsonResponse({
+                'success': False,
+                'error': f'找不到章节对应的文件系统目录'
+            }, status=404)
+        
+        # 尝试解析scene_number中的数字部分
+        scene_number = narration.scene_number
+        try:
+            if '-' in scene_number:
+                scene_num = int(scene_number.split('-')[-1])
+            else:
+                scene_num = int(scene_number)
+        except (ValueError, IndexError):
+            scene_num = 1
+        
+        # 构建图片文件路径
+        image_path = os.path.join(
+            settings.BASE_DIR.parent,  # 回到项目根目录
+            'data',
+            f'{novel_id:03d}',
+            f'chapter_{chapter_number}',
+            filename
+        )
+        
+        # 检查文件是否存在
+        if not os.path.exists(image_path):
+            return JsonResponse({
+                'success': False,
+                'error': f'图片文件不存在: {filename}'
+            }, status=404)
+        
+        # 确定MIME类型
+        import mimetypes
+        content_type, _ = mimetypes.guess_type(image_path)
+        if content_type is None:
+            content_type = 'application/octet-stream'
+        
+        # 返回图片文件
+        with open(image_path, 'rb') as f:
+            response = HttpResponse(f.read(), content_type=content_type)
+            response['Content-Disposition'] = f'inline; filename="{filename}"'
+            return response
+        
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': str(e)
         }, status=500)

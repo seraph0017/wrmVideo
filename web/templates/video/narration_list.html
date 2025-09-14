@@ -55,17 +55,17 @@
                                 <td>{{ narration.id }}</td>
                                 <td><a href="{% url 'video:chapter_detail' narration.chapter.id %}">{{ narration.chapter.title }}</a></td>
                                 <td>{{ narration.scene_number }}</td>
-                                <td>{{ narration.main_character.name|default:"未设置" }}</td>
-                                <td>{{ narration.narration_content|truncatechars:50 }}</td>
+                                <td>{{ narration.featured_character|default:"未设置" }}</td>
+                                <td>{{ narration.narration|truncatechars:50 }}</td>
                                 <td>
-                                    {% if narration.tts_response %}
+                                    {% if narration.narration_mp3_path %}
                                     <span class="badge bg-success">已生成</span>
                                     {% else %}
                                     <span class="badge bg-warning">未生成</span>
                                     {% endif %}
                                 </td>
                                 <td>
-                                    {% if narration.mp4_response %}
+                                    {% if narration.narration_mp4_path %}
                                     <span class="badge bg-success">已生成</span>
                                     {% else %}
                                     <span class="badge bg-warning">未生成</span>
@@ -78,6 +78,11 @@
                                     <a href="{% url 'video:narration_update' narration.id %}" class="btn btn-warning btn-sm">
                                         <i class="fas fa-edit"></i> 编辑
                                     </a>
+                                    {% if narration.subtitle_content %}
+                                    <button class="btn btn-outline-info btn-sm" onclick="showNarrationSubtitle('{{ narration.id }}', '{{ narration.scene_number }}')" title="查看字幕">
+                                        <i class="fas fa-closed-captioning"></i> 字幕
+                                    </button>
+                                    {% endif %}
                                     <a href="{% url 'video:narration_delete' narration.id %}" class="btn btn-danger btn-sm">
                                         <i class="fas fa-trash"></i> 删除
                                     </a>
@@ -130,4 +135,184 @@
     </ul>
 </nav>
 {% endif %}
+
+<!-- 解说字幕查看模态框 -->
+<div class="modal fade" id="narrationSubtitleModal" tabindex="-1" aria-labelledby="narrationSubtitleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="narrationSubtitleModalLabel">解说字幕</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="narrationSubtitleContent" style="max-height: 500px; overflow-y: auto;"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="downloadNarrationAssBtn">
+                    <i class="fas fa-download"></i> 下载ASS文件
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.text-truncate {
+    max-width: 200px;
+}
+
+/* 字幕显示样式 */
+.subtitle-section {
+    font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+}
+
+.subtitle-item {
+    transition: all 0.2s ease;
+    border: 1px solid #e9ecef !important;
+}
+
+.subtitle-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-color: #007bff !important;
+}
+
+.subtitle-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 500;
+}
+
+.subtitle-item .text-muted {
+    font-size: 12px;
+    font-family: 'Courier New', monospace;
+}
+
+.subtitle-item .fas {
+    margin-right: 4px;
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// 解析ASS字幕格式并美化显示
+function parseAndFormatASS(assContent) {
+    const lines = assContent.split('\n');
+    let formattedHtml = '';
+    let inDialogueSection = false;
+    
+    // 查找对话部分
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        
+        if (line === '[Events]') {
+            inDialogueSection = true;
+            formattedHtml += '<div class="subtitle-section"><h6 class="text-primary mb-3">字幕内容</h6>';
+            continue;
+        }
+        
+        if (inDialogueSection && line.startsWith('Dialogue:')) {
+            const parts = line.split(',');
+            if (parts.length >= 10) {
+                const startTime = parts[1];
+                const endTime = parts[2];
+                const text = parts.slice(9).join(',').replace(/\{[^}]*\}/g, ''); // 移除ASS标签
+                
+                formattedHtml += `
+                    <div class="subtitle-item mb-3 p-3 border rounded bg-light">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock"></i> ${startTime} - ${endTime}
+                                </small>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="subtitle-text">${text}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+        
+        // 如果遇到新的section，结束对话部分
+        if (inDialogueSection && line.startsWith('[') && line !== '[Events]') {
+            formattedHtml += '</div>';
+            break;
+        }
+    }
+    
+    if (inDialogueSection) {
+        formattedHtml += '</div>';
+    }
+    
+    // 如果没有找到对话内容，显示原始内容
+    if (!formattedHtml) {
+        formattedHtml = `<div class="alert alert-info"><h6>原始ASS文件内容：</h6><pre class="mb-0">${assContent}</pre></div>`;
+    }
+    
+    return formattedHtml;
+}
+
+// 显示解说字幕
+function showNarrationSubtitle(narrationId, sceneNumber) {
+    // 直接使用数据库中的字幕内容
+    fetch(`/video/api/narrations/${narrationId}/subtitle/`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('字幕文件不存在');
+        }
+        return response.text();
+    })
+    .then(content => {
+        const modal = new bootstrap.Modal(document.getElementById('narrationSubtitleModal'));
+        const contentElement = document.getElementById('narrationSubtitleContent');
+        const downloadBtn = document.getElementById('downloadNarrationAssBtn');
+        const titleElement = document.getElementById('narrationSubtitleModalLabel');
+        
+        if (titleElement) {
+            titleElement.textContent = `第${sceneNumber}段解说字幕`;
+        }
+        
+        if (contentElement) {
+            // 解析ASS字幕格式并美化显示
+            const formattedContent = parseAndFormatASS(content);
+            contentElement.innerHTML = formattedContent;
+        }
+        
+        if (downloadBtn) {
+            downloadBtn.onclick = function() {
+                const blob = new Blob([content], { type: 'text/plain' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `narration_${sceneNumber}_subtitle.ass`;
+                a.click();
+                window.URL.revokeObjectURL(url);
+            };
+        }
+        
+        modal.show();
+    })
+    .catch(error => {
+        console.error('Error loading subtitle:', error);
+        alert('加载字幕文件失败');
+    });
+}
+</script>
 {% endblock %}

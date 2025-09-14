@@ -64,36 +64,6 @@
                                     {% endif %}
                                 </td>
                             </tr>
-                            {% if narration.narration_mp3_path %}
-                            <tr>
-                                <th>音频路径</th>
-                                <td>{{ narration.narration_mp3_path }}</td>
-                            </tr>
-                            <tr>
-                                <th>音频预览</th>
-                                <td>
-                                    <audio controls>
-                                        <source src="{{ narration.narration_mp3_path }}" type="audio/mpeg">
-                                        您的浏览器不支持音频元素。
-                                    </audio>
-                                </td>
-                            </tr>
-                            {% endif %}
-                            {% if narration.narration_mp4_path %}
-                            <tr>
-                                <th>视频路径</th>
-                                <td>{{ narration.narration_mp4_path }}</td>
-                            </tr>
-                            <tr>
-                                <th>视频预览</th>
-                                <td>
-                                    <video width="320" height="240" controls>
-                                        <source src="{{ narration.narration_mp4_path }}" type="video/mp4">
-                                        您的浏览器不支持视频元素。
-                                    </video>
-                                </td>
-                            </tr>
-                            {% endif %}
                         </table>
                     </div>
                 </div>
@@ -112,23 +82,47 @@
             <div class="card-body">
                 <div class="mb-4">
                     <h5>解说文本</h5>
-                    <div class="p-3 bg-light rounded">
-                        {{ narration.narration|linebreaks }}
+                    <div class="p-3 bg-light rounded" style="max-height: 150px; overflow-y: auto;">
+                        {{ narration.narration|truncatechars:300|linebreaks }}
+                    </div>
+                    <button class="btn btn-sm btn-outline-primary mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#fullNarration" aria-expanded="false">
+                        展开/收起完整内容
+                    </button>
+                    <div class="collapse mt-2" id="fullNarration">
+                        <div class="p-3 bg-light rounded">
+                            {{ narration.narration|linebreaks }}
+                        </div>
                     </div>
                 </div>
                 
                 <div class="mb-4">
                     <h5>图片提示词</h5>
-                    <div class="p-3 bg-light rounded">
-                        {{ narration.image_prompt|linebreaks }}
+                    <div class="p-3 bg-light rounded" style="max-height: 100px; overflow-y: auto;">
+                        {{ narration.image_prompt|truncatechars:200|linebreaks }}
+                    </div>
+                    <button class="btn btn-sm btn-outline-primary mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#fullPrompt" aria-expanded="false">
+                        展开/收起完整提示词
+                    </button>
+                    <div class="collapse mt-2" id="fullPrompt">
+                        <div class="p-3 bg-light rounded">
+                            {{ narration.image_prompt|linebreaks }}
+                        </div>
                     </div>
                 </div>
                 
                 {% if narration.subtitle_content %}
                 <div class="mb-4">
                     <h5>字幕内容</h5>
-                    <div class="p-3 bg-light rounded">
-                        <pre>{{ narration.subtitle_content }}</pre>
+                    <div class="p-3 bg-light rounded" style="max-height: 100px; overflow-y: auto;">
+                        <pre>{{ narration.subtitle_content|truncatechars:200 }}</pre>
+                    </div>
+                    <button class="btn btn-sm btn-outline-primary mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#fullSubtitle" aria-expanded="false">
+                        展开/收起完整字幕
+                    </button>
+                    <div class="collapse mt-2" id="fullSubtitle">
+                        <div class="p-3 bg-light rounded">
+                            <pre>{{ narration.subtitle_content }}</pre>
+                        </div>
                     </div>
                 </div>
                 {% endif %}
@@ -136,8 +130,16 @@
                 {% if narration.tts_response %}
                 <div>
                     <h5>TTS响应</h5>
-                    <div class="p-3 bg-light rounded">
-                        <pre>{{ narration.tts_response }}</pre>
+                    <div class="p-3 bg-light rounded" style="max-height: 100px; overflow-y: auto;">
+                        <pre>{{ narration.tts_response|truncatechars:200 }}</pre>
+                    </div>
+                    <button class="btn btn-sm btn-outline-primary mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#fullTTS" aria-expanded="false">
+                        展开/收起完整TTS响应
+                    </button>
+                    <div class="collapse mt-2" id="fullTTS">
+                        <div class="p-3 bg-light rounded">
+                            <pre>{{ narration.tts_response }}</pre>
+                        </div>
                     </div>
                 </div>
                 {% endif %}

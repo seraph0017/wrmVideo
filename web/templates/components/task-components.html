@@ -379,11 +379,14 @@
 </style>
 
 <!-- 统一任务组件JavaScript -->
-<script src="{% static 'js/progress-indicator.js' %}"></script>
+<!-- progress-indicator.js 已通过 progress-indicator.html 组件引入，避免重复引入 -->
 <script>
 /**
  * 统一任务组件管理器
  */
+// 检查是否已经定义了UnifiedTaskComponent类，避免重复声明
+if (typeof UnifiedTaskComponent === 'undefined') {
+
 class UnifiedTaskComponent {
     constructor(container, options = {}) {
         this.container = typeof container === 'string' ? document.querySelector(container) : container;
@@ -999,4 +1002,6 @@ class UnifiedTaskComponent {
 if (typeof window !== 'undefined') {
     window.UnifiedTaskComponent = UnifiedTaskComponent;
 }
+
+} // 结束 UnifiedTaskComponent 未定义检查
 </script>

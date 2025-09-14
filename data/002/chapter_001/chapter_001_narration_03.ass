@@ -9,18 +9,20 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:02.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青蝉{\c&H00FFFFFF&\b0}走近赵硕发间清香萦绕
-Dialogue: 0,0:00:02.98,0:00:04.40,Default,,0,0,0,,她双手轻搭在他肩上
-Dialogue: 0,0:00:04.97,0:00:06.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}感到后背贴上温软
-Dialogue: 0,0:00:07.03,0:00:08.98,Default,,0,0,0,,心跳加速我们认识五年了
-Dialogue: 0,0:00:08.98,0:00:12.29,Default,,0,0,0,,你都没碰过我她声音幽幽
-Dialogue: 0,0:00:11.34,0:00:13.34,Default,,0,0,0,,带着委屈{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}喉结滚动
-Dialogue: 0,0:00:13.56,0:00:15.69,Default,,0,0,0,,正欲开口她已踮脚吻上他唇
-Dialogue: 0,0:00:16.15,0:00:18.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}天文台{\c&H00FFFFFF&\b0}内静极只有山风穿过窗棂
-Dialogue: 0,0:00:18.83,0:00:21.48,Default,,0,0,0,,的轻响远处星光仿佛也屏住了呼
-Dialogue: 0,0:00:21.48,0:00:21.77,Default,,0,0,0,,吸
+Dialogue: 0,0:00:00.01,0:00:02.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青蝉{\c&H00FFFFFF&\b0}走近赵硕发间清香
+Dialogue: 0,0:00:02.35,0:00:02.73,Default,,0,0,0,,萦绕
+Dialogue: 0,0:00:02.98,0:00:05.42,Default,,0,0,0,,她双手轻搭在他肩上{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.42,0:00:07.79,Default,,0,0,0,,感到后背贴上温软心跳加速
+Dialogue: 0,0:00:08.04,0:00:08.98,Default,,0,0,0,,我们认识五年了
+Dialogue: 0,0:00:09.08,0:00:12.68,Default,,0,0,0,,你都没碰过我她声音幽幽带
+Dialogue: 0,0:00:12.78,0:00:13.68,Default,,0,0,0,,着委屈
+Dialogue: 0,0:00:13.78,0:00:14.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}喉结滚动正欲开口她已
+Dialogue: 0,0:00:14.81,0:00:16.30,Default,,0,0,0,,踮脚吻上他唇
+Dialogue: 0,0:00:16.30,0:00:18.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}天文台{\c&H00FFFFFF&\b0}内静极只有山风穿过
+Dialogue: 0,0:00:18.70,0:00:21.11,Default,,0,0,0,,窗棂的轻响远处星光仿佛也
+Dialogue: 0,0:00:21.21,0:00:22.71,Default,,0,0,0,,屏住了呼吸

@@ -9,19 +9,20 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:03.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青蝉{\c&H00FFFFFF&\b0}悄然走近圆领素白襦裙随
-Dialogue: 0,0:00:03.06,0:00:05.44,Default,,0,0,0,,着山风轻摆她停在{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}身后
-Dialogue: 0,0:00:05.77,0:00:07.19,Default,,0,0,0,,青丝束成简单发髻
-Dialogue: 0,0:00:07.51,0:00:08.96,Default,,0,0,0,,背影纤细{\c&H0000FFFF&\b1}阿硕{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:09.27,0:00:11.10,Default,,0,0,0,,你看我今天穿的新裙子好看吗
+Dialogue: 0,0:00:00.01,0:00:02.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏青蝉{\c&H00FFFFFF&\b0}悄然走近圆领素白襦
+Dialogue: 0,0:00:02.58,0:00:03.90,Default,,0,0,0,,裙随着山风轻摆
+Dialogue: 0,0:00:04.29,0:00:06.45,Default,,0,0,0,,她停在{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}身后青丝束成
+Dialogue: 0,0:00:06.45,0:00:08.25,Default,,0,0,0,,简单发髻背影纤细
+Dialogue: 0,0:00:08.59,0:00:10.14,Default,,0,0,0,,阿硕你看我今天穿的
+Dialogue: 0,0:00:10.14,0:00:11.10,Default,,0,0,0,,新裙子好看吗
 Dialogue: 0,0:00:11.39,0:00:13.62,Default,,0,0,0,,她声音轻柔带着少女的娇憨
-Dialogue: 0,0:00:13.79,0:00:15.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}回头脸颊微红
-Dialogue: 0,0:00:15.91,0:00:17.49,Default,,0,0,0,,目光落在她素净的面容上
-Dialogue: 0,0:00:17.49,0:00:20.19,Default,,0,0,0,,讷讷道漂亮山风拂过
-Dialogue: 0,0:00:20.68,0:00:23.20,Default,,0,0,0,,裙摆贴在她身上勾勒出玲珑曲线
-Dialogue: 0,0:00:23.56,0:00:25.40,Default,,0,0,0,,远处星河倒映在她眼中
+Dialogue: 0,0:00:13.79,0:00:16.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵硕{\c&H00FFFFFF&\b0}回头脸颊微红目光落在
+Dialogue: 0,0:00:16.45,0:00:18.33,Default,,0,0,0,,她素净的面容上讷讷道
+Dialogue: 0,0:00:18.43,0:00:21.73,Default,,0,0,0,,漂亮山风拂过裙摆贴在她
+Dialogue: 0,0:00:21.83,0:00:24.11,Default,,0,0,0,,身上勾勒出玲珑曲线远处
+Dialogue: 0,0:00:24.21,0:00:26.61,Default,,0,0,0,,星河倒映在她眼中

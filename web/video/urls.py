@@ -9,6 +9,7 @@ app_name = 'video'
 urlpatterns = [
     path("", RedirectView.as_view(url='dashboard/', permanent=True), name="index"),
     path("dashboard/", views.dashboard, name="dashboard"),
+    path("test-modal/", views.test_modal, name="test_modal"),
     
     # 小说URL
     path("novels/", views.NovelListView.as_view(), name="novel_list"),
@@ -66,9 +67,35 @@ urlpatterns = [
     path('api/novels/<int:novel_id>/chapters/<int:chapter_id>/audio-files/', views.get_chapter_audio_files, name='get_chapter_audio_files'),
     path('api/novels/<int:novel_id>/chapters/<int:chapter_id>/files/<str:filename>/', views.serve_audio_file, name='serve_audio_file'),
     
-    # 日志查看相关URL
+    # 解说字幕API
+    path('api/narrations/<int:narration_id>/subtitle/', views.get_narration_subtitle, name='get_narration_subtitle'),
+    path('api/novels/<int:novel_id>/chapters/<int:chapter_id>/generate-ass/', views.generate_ass_subtitles, name='generate_ass_subtitles'),
+    
+    # 解说分镜图片API
+    path('api/narrations/<int:narration_id>/images/status/', views.get_narration_images_status, name='get_narration_images_status'),
+    path('api/narrations/<int:narration_id>/generate-images/', views.generate_narration_images, name='generate_narration_images'),
+    path('api/narrations/<int:narration_id>/images/', views.get_narration_images, name='get_narration_images'),
+    path('api/novels/<int:novel_id>/chapters/<int:chapter_id>/narrations/<int:narration_id>/images/<str:filename>/', views.serve_narration_image, name='serve_narration_image'),
+    
+    # 章节角色图片API
+    path('api/chapters/<int:chapter_id>/character-images/', views.get_chapter_character_images, name='get_chapter_character_images'),
+    path('api/chapters/<int:chapter_id>/character-images/<str:filename>/', views.serve_character_image, name='serve_character_image'),
+    
+    # 批量生成分镜图片
+    path('api/chapters/<int:chapter_id>/batch-generate-images/', views.batch_generate_images, name='batch_generate_images'),
+    path('api/chapters/<int:chapter_id>/validate-narration-images/', views.validate_narration_images, name='validate_narration_images'),
+    path('api/chapters/<int:chapter_id>/validate-narration-images-llm/', views.validate_narration_images_llm, name='validate_narration_images_llm'),
+    path('api/chapters/<int:chapter_id>/generate-first-video/', views.generate_first_video, name='generate_first_video'),
+    path('api/chapters/<int:chapter_id>/batch-generate-videos/', views.batch_generate_videos, name='batch_generate_videos'),
+    path('api/chapters/<int:chapter_id>/batch-generate-all-videos/', views.batch_generate_all_videos, name='batch_generate_all_videos'),
+    path('api/narrations/<int:narration_id>/get-image-result/', views.get_image_generation_result, name='get_image_generation_result'),
+    
+    # 任务日志
     path('task-logs/', views.task_logs_view, name='task_logs_view'),
     path('api/task/<str:task_id>/logs/', log_views.get_task_logs, name='task_logs_api'),
     path('api/task/<str:task_id>/logs/stream/', log_views.stream_task_logs, name='task_logs_stream'),
     path('api/tasks/active/', log_views.get_all_active_tasks, name='active_tasks_api'),
+    
+    # 视频预览URL
+    path('api/chapters/<int:chapter_id>/video/', views.serve_chapter_video, name='serve_chapter_video'),
 ]

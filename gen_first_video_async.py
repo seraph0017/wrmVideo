@@ -628,6 +628,52 @@ def generate_videos_for_chapter(chapter_dir):
         print(f"处理章节 {chapter_dir} 时发生错误: {e}")
         return False
 
+def process_single_chapter(data_dir, chapter_name):
+    """
+    处理单个章节目录，为指定章节生成视频
+    
+    Args:
+        data_dir: 数据目录路径
+        chapter_name: 章节名称，例如 'chapter001'
+    
+    Returns:
+        bool: 处理是否成功
+    """
+    try:
+        if not os.path.exists(data_dir):
+            print(f"错误: 数据目录不存在: {data_dir}")
+            return False
+        
+        # 构建章节目录路径
+        chapter_dir = os.path.join(data_dir, chapter_name)
+        
+        if not os.path.exists(chapter_dir):
+            print(f"错误: 章节目录不存在: {chapter_dir}")
+            return False
+        
+        if not os.path.isdir(chapter_dir):
+            print(f"错误: {chapter_dir} 不是一个目录")
+            return False
+        
+        print(f"开始处理章节: {chapter_name}")
+        
+        # 处理指定章节
+        success = generate_videos_for_chapter(chapter_dir)
+        
+        if success:
+            print(f"\n=== 章节 {chapter_name} 处理完成 ===")
+            print(f"预计生成视频任务: 2 个")
+            print(f"\n请运行以下命令监控任务状态:")
+            print(f"python check_async_tasks.py --monitor")
+        else:
+            print(f"\n=== 章节 {chapter_name} 处理失败 ===")
+        
+        return success
+        
+    except Exception as e:
+        print(f"处理章节 {chapter_name} 时发生错误: {e}")
+        return False
+
 def process_chapters(data_dir):
     """
     处理所有章节目录，为每个章节生成视频
@@ -683,13 +729,17 @@ def main():
     parser = argparse.ArgumentParser(description='异步视频生成工具')
     parser.add_argument('data_dir', help='数据目录路径，例如: data/001')
     parser.add_argument('--tasks-dir', default='async_tasks', help='异步任务目录路径')
+    parser.add_argument('--chapter', help='指定处理单个章节，例如: chapter001')
     
     args = parser.parse_args()
     
     data_dir = args.data_dir
     async_tasks_dir = args.tasks_dir
+    chapter_name = args.chapter
     
     print(f"开始异步处理数据目录: {data_dir}")
+    if chapter_name:
+        print(f"指定处理章节: {chapter_name}")
     print("注意: 请确保已正确配置 ARK_CONFIG 中的 api_key")
     
     if not os.path.exists(data_dir):
@@ -699,12 +749,23 @@ def main():
     # 确保async_tasks目录存在
     os.makedirs(async_tasks_dir, exist_ok=True)
     
-    # 处理所有章节
-    process_chapters(data_dir)
-    
-    print("\n=== 异步视频生成任务提交完成 ===")
-    print("请使用 check_async_tasks.py 监控任务状态并下载完成的视频")
-    print("例如: python check_async_tasks.py --monitor")
+    # 根据参数决定处理方式
+    if chapter_name:
+        # 处理单个章节
+        success = process_single_chapter(data_dir, chapter_name)
+        if success:
+            print("\n=== 异步视频生成任务提交完成 ===")
+            print("请使用 check_async_tasks.py 监控任务状态并下载完成的视频")
+            print("例如: python check_async_tasks.py --monitor")
+        else:
+            print("\n=== 任务提交失败 ===")
+            sys.exit(1)
+    else:
+        # 处理所有章节
+        process_chapters(data_dir)
+        print("\n=== 异步视频生成任务提交完成 ===")
+        print("请使用 check_async_tasks.py 监控任务状态并下载完成的视频")
+        print("例如: python check_async_tasks.py --monitor")
 
 if __name__ == "__main__":
     main()
