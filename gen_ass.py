@@ -651,11 +651,26 @@ def main():
     parser = argparse.ArgumentParser(description='生成ASS字幕文件')
     parser.add_argument('path', help='数据目录路径或单个章节目录路径')
     parser.add_argument('--max-length', type=int, default=12, help='每段最大字符数（默认12）')
+    parser.add_argument('--chapter', help='指定要处理的章节名称（如：chapter_001）')
     
     args = parser.parse_args()
     
     if not os.path.exists(args.path):
         print(f"❌ 路径不存在: {args.path}")
+        return
+    
+    # 如果指定了--chapter参数，只处理指定的章节
+    if args.chapter:
+        chapter_path = os.path.join(args.path, args.chapter)
+        if not os.path.exists(chapter_path):
+            print(f"❌ 指定的章节目录不存在: {chapter_path}")
+            return
+        
+        print(f"处理指定章节: {args.chapter}")
+        if process_chapter(chapter_path, args.max_length):
+            print("✓ 章节处理成功！")
+        else:
+            print("❌ 章节处理失败")
         return
     
     # 判断是单个章节目录还是数据目录

@@ -44,12 +44,30 @@ class Chapter(models.Model):
     """
     章节模型
     """
+    BATCH_IMAGE_STATUS_CHOICES = (
+        ('idle', '空闲'),
+        ('pending', '等待中'),
+        ('processing', '处理中'),
+        ('success', '成功'),
+        ('failed', '失败'),
+        ('cancelled', '已取消'),
+    )
+    
     id = models.AutoField(primary_key=True, verbose_name='ID')
     title = models.CharField(max_length=200, verbose_name='章节名')
     word_count = models.IntegerField(default=0, verbose_name='字数')
     format = models.CharField(max_length=50, verbose_name='章节风格')
     novel = models.ForeignKey(Novel, on_delete=models.CASCADE, related_name='chapters', verbose_name='对应小说')
     video_path = models.CharField(max_length=255, blank=True, null=True, verbose_name='视频路径')
+    
+    # 批量图片生成任务状态字段
+    batch_image_status = models.CharField(max_length=20, choices=BATCH_IMAGE_STATUS_CHOICES, default='idle', verbose_name='批量图片生成状态')
+    batch_image_task_id = models.CharField(max_length=100, blank=True, null=True, verbose_name='批量图片生成任务ID')
+    batch_image_progress = models.IntegerField(default=0, verbose_name='批量图片生成进度百分比')
+    batch_image_message = models.TextField(blank=True, null=True, verbose_name='批量图片生成日志信息')
+    batch_image_error = models.TextField(blank=True, null=True, verbose_name='批量图片生成错误信息')
+    batch_image_started_at = models.DateTimeField(blank=True, null=True, verbose_name='批量图片生成开始时间')
+    batch_image_completed_at = models.DateTimeField(blank=True, null=True, verbose_name='批量图片生成完成时间')
     
     def __str__(self):
         return f"{self.novel.name} - {self.title}"

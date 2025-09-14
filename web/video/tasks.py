@@ -35,6 +35,13 @@ except ImportError as e:
     get_all_task_files = None
     check_all_tasks = None
 
+# 导入Celery任务扫描器
+try:
+    from .celery_task_scanner import scan_all_celery_tasks
+except ImportError as e:
+    logger.warning(f"无法导入celery_task_scanner模块: {e}")
+    scan_all_celery_tasks = None
+
 logger = logging.getLogger(__name__)
 
 
@@ -914,6 +921,189 @@ def generate_character_image_async(self, task_id, character_id, chapter_id, imag
 
 
 @shared_task(bind=True)
+def batch_generate_chapter_images_async(self, novel_id, chapter_id):
+    """
+    批量生成章节分镜图片的Celery任务
+    按章节生成30张分镜图片（10个分镜，每个分镜3张图片）
+    
+    Args:
+        novel_id (int): 小说ID
+        chapter_id (int): 章节ID
+        
+    Returns:
+        dict: 处理结果
+    """
+    from .models import Chapter, Novel
+    from django.utils import timezone
+    import sys
+    import os
+    from pathlib import Path
+    
+    logger.info(f"开始执行章节分镜图片批量生成任务: novel_id={novel_id}, chapter_id={chapter_id}")
+    
+    try:
+        # 获取章节对象
+        chapter = Chapter.objects.get(id=chapter_id, novel_id=novel_id)
+        novel = chapter.novel
+        
+        # 更新章节状态
+        chapter.batch_image_status = 'processing'
+        chapter.batch_image_task_id = self.request.id
+        chapter.batch_image_progress = 10
+        chapter.batch_image_message = '正在准备批量生成分镜图片...'
+        chapter.batch_image_started_at = timezone.now()
+        chapter.save()
+        
+        logger.info(f"开始为章节 {chapter.id} 批量生成分镜图片")
+        
+        # 导入gen_image_async模块 - 添加项目根目录到路径
+        project_root = Path(__file__).resolve().parent.parent.parent
+        if str(project_root) not in sys.path:
+            sys.path.insert(0, str(project_root))
+        
+        try:
+            from gen_image_async import generate_images_for_chapter
+        except ImportError as e:
+            error_msg = f"无法导入gen_image_async模块: {e}"
+            logger.error(error_msg)
+            
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = '导入模块失败'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'error': error_msg
+            }
+        
+        # 使用工具函数获取正确的章节编号
+        from .utils import get_chapter_number_from_filesystem, get_chapter_directory_path
+        
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        if not chapter_number:
+            error_msg = f"无法在文件系统中找到章节 {chapter.title} 的目录"
+            logger.error(error_msg)
+            
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = '无法找到章节目录'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'error': error_msg
+            }
+        
+        # 构建章节目录路径
+        chapter_dir = get_chapter_directory_path(novel_id, chapter_number)
+        
+        if not os.path.exists(chapter_dir):
+            error_msg = f"章节目录不存在: {chapter_dir}"
+            logger.error(error_msg)
+            
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = '章节目录不存在'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'error': error_msg
+            }
+        
+        # 更新进度
+        chapter.batch_image_progress = 30
+        chapter.batch_image_message = '正在生成分镜图片...'
+        chapter.save()
+        
+        logger.info(f"章节目录: {chapter_dir}")
+        
+        # 调用gen_image_async的generate_images_for_chapter函数
+        success = generate_images_for_chapter(chapter_dir)
+        
+        if success:
+            # 生成成功
+            chapter.batch_image_status = 'success'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_message = '分镜图片生成完成'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+            
+            logger.info(f"章节 {chapter.id} 分镜图片生成成功")
+            
+            return {
+                'status': 'success',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'message': '分镜图片生成完成',
+                'chapter_dir': chapter_dir
+            }
+        else:
+            # 生成失败
+            error_msg = "分镜图片生成失败"
+            
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = '分镜图片生成失败'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+            
+            logger.error(f"章节 {chapter.id} 分镜图片生成失败")
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'error': error_msg
+            }
+            
+    except Chapter.DoesNotExist:
+        error_msg = f"章节不存在: novel_id={novel_id}, chapter_id={chapter_id}"
+        logger.error(error_msg)
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'error': error_msg
+        }
+    except Exception as e:
+        error_msg = f"批量生成章节分镜图片时发生错误: {str(e)}"
+        logger.error(error_msg)
+        
+        try:
+            chapter = Chapter.objects.get(id=chapter_id, novel_id=novel_id)
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = '任务执行异常'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+        except:
+            pass
+        
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'error': error_msg
+        }
+
+
+@shared_task(bind=True)
 def batch_generate_all_videos_async(self, novel_id, chapter_id):
     """
     批量生成全部视频的异步任务 - 包含完整的视频制作流程
@@ -1417,15 +1607,63 @@ def rename_images_async(self, novel_id, chapter_id):
             'novel_id': novel_id,
             'chapter_id': chapter_id
         }
-        
+            
     except Exception as e:
         error_msg = f'图片重命名异常: {str(e)}'
-        logger.error(error_msg)
+        logger.error(error_msg, exc_info=True)
         return {
             'status': 'error',
             'message': error_msg,
             'novel_id': novel_id,
             'chapter_id': chapter_id
+        }
+
+
+@shared_task(bind=True)
+def scan_database_celery_tasks(self):
+    """
+    扫描数据库中保存的Celery任务ID并更新任务状态
+    
+    这是一个Celery Beat定时任务，用于：
+    1. 扫描Chapter表中的batch_image_task_id字段
+    2. 扫描CharacterImageTask表中的任务
+    3. 扫描Narration表中的celery_task_id字段
+    4. 检查这些Celery任务的状态并更新数据库
+    
+    Returns:
+        dict: 扫描结果统计
+    """
+    logger.info("开始执行数据库Celery任务扫描")
+    
+    try:
+        # 检查是否成功导入了celery_task_scanner模块
+        if scan_all_celery_tasks is None:
+            error_msg = "celery_task_scanner模块未正确导入，无法执行任务扫描"
+            logger.error(error_msg)
+            return {
+                'success': False,
+                'error': error_msg,
+                'stats': {}
+            }
+        
+        # 执行扫描
+        stats = scan_all_celery_tasks()
+        
+        logger.info(f"数据库Celery任务扫描完成: {stats}")
+        
+        return {
+            'success': True,
+            'message': '数据库Celery任务扫描完成',
+            'stats': stats,
+            'total_updated': stats.get('total_updated', 0)
+        }
+        
+    except Exception as e:
+        logger.error(f"数据库Celery任务扫描失败: {str(e)}")
+        return {
+            'success': False,
+            'error': str(e),
+            'stats': {}
         }
 
 
@@ -1678,7 +1916,7 @@ def concat_narration_video_async(self, novel_id, chapter_id):
         }
 
 
-@shared_task(bind=True)
+@shared_task(bind=True, rate_limit='2/s')
 def generate_narration_images_async(self, narration_id):
     """
     异步生成解说分镜图片任务 - 参考generate_character_image_async的实现模式
@@ -1794,6 +2032,18 @@ def generate_narration_images_async(self, narration_id):
         if resp.get('ResponseMetadata', {}).get('Error'):
             error_msg = f"火山引擎API调用失败: {resp['ResponseMetadata']['Error']}"
             logger.error(error_msg)
+            
+            # 检查是否是API限制错误(50429)，如果是则重试
+            if '50429' in str(resp) or 'API Limit' in str(resp):
+                if self.request.retries < 3:  # 最多重试3次
+                    retry_delay = (self.request.retries + 1) * 30  # 递增延迟：30s, 60s, 90s
+                    logger.info(f"遇到API限制错误，{retry_delay}秒后重试 (第{self.request.retries + 1}/3次)")
+                    
+                    # 更新重试状态
+                    narration.image_task_message = f'遇到API限制，{retry_delay}秒后重试 (第{self.request.retries + 1}/3次)'
+                    narration.save()
+                    
+                    raise self.retry(countdown=retry_delay, max_retries=3)
             
             # 更新任务状态为失败
             narration.image_task_status = 'failed'
@@ -2078,6 +2328,19 @@ def monitor_and_download_narration_images(self, narration_id, volcengine_task_id
             error_msg = f"火山引擎查询API调用失败: {resp['ResponseMetadata']['Error']}"
             logger.error(error_msg)
             
+            # 检查是否是API限制错误(50429)，如果是则使用更短的重试间隔
+            if '50429' in str(resp) or 'API Limit' in str(resp):
+                if self.request.retries < 5:  # API限制错误最多重试5次
+                    api_retry_delay = (self.request.retries + 1) * 30  # 30s, 60s, 90s, 120s, 150s
+                    logger.info(f"遇到API限制错误，{api_retry_delay}秒后重试 (第{self.request.retries + 1}/5次)")
+                    
+                    # 更新重试状态
+                    narration.image_task_progress = 20 + (self.request.retries * 5)
+                    narration.image_task_message = f'遇到API限制，{api_retry_delay}秒后重试 (第{self.request.retries + 1}/5次)'
+                    narration.save()
+                    
+                    raise self.retry(countdown=api_retry_delay, max_retries=5)
+            
             # 如果还有重试次数，延迟重试
             if self.request.retries < max_retries:
                 # 更新重试状态
@@ -2114,7 +2377,7 @@ def monitor_and_download_narration_images(self, narration_id, volcengine_task_id
                 # 创建输出目录
                 chapter = narration.chapter
                 novel = chapter.novel
-                output_dir = os.path.join(settings.MEDIA_ROOT, 'novels', str(novel.id), f'chapter_{chapter.chapter_number:03d}', 'narration_images')
+                output_dir = os.path.join(settings.MEDIA_ROOT, 'novels', str(novel.id), f'chapter_{chapter.id:03d}', 'narration_images')
                 os.makedirs(output_dir, exist_ok=True)
                 
                 downloaded_images = []
@@ -2777,7 +3040,12 @@ def generate_ass_subtitle(timestamp_file_path, output_path):
         # 调用gen_ass.py脚本处理单个章节
         import subprocess
         
-        cmd = ['python', gen_ass_script, '--chapter', chapter_dir]
+        # 获取数据目录路径（章节目录的父目录）
+        data_dir = os.path.dirname(chapter_dir)
+        # 获取章节名称
+        chapter_name = os.path.basename(chapter_dir)
+        
+        cmd = ['python', gen_ass_script, data_dir, '--chapter', chapter_name]
         logger.info(f"执行命令: {' '.join(cmd)}")
         
         result = subprocess.run(

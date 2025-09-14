@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_002 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.87,Default,,0,0,0,,朱允熥不解
+Dialogue: 0,0:00:01.22,0:00:03.67,Default,,0,0,0,,皇爷爷{\c&H0000FFFF&\b1}蓝玉{\c&H00FFFFFF&\b0}大捷为何不赏
+Dialogue: 0,0:00:04.16,0:00:05.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}朱元璋{\c&H00FFFFFF&\b0}冷笑
+Dialogue: 0,0:00:05.67,0:00:08.29,Default,,0,0,0,,国家名爵非儿戏等{\c&H0000FFFF&\b1}班师回朝{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.29,0:00:08.65,Default,,0,0,0,,再议
+Dialogue: 0,0:00:09.06,0:00:11.48,Default,,0,0,0,,恩出于{\c&H0000FFFF&\b1}上太易{\c&H00FFFFFF&\b0}得到不会珍惜

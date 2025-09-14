@@ -83,6 +83,9 @@ urlpatterns = [
     
     # 批量生成分镜图片
     path('api/chapters/<int:chapter_id>/batch-generate-images/', views.batch_generate_images, name='batch_generate_images'),
+    path('api/chapters/<int:chapter_id>/batch-generate-chapter-images/', views.batch_generate_chapter_images, name='batch_generate_chapter_images'),
+    path('api/chapters/<int:chapter_id>/batch-image-status/', views.get_chapter_batch_image_status, name='get_chapter_batch_image_status'),
+    path('api/chapters/<int:chapter_id>/batch-generate-audio/', views.batch_generate_audio, name='batch_generate_audio'),
     path('api/chapters/<int:chapter_id>/validate-narration-images/', views.validate_narration_images, name='validate_narration_images'),
     path('api/chapters/<int:chapter_id>/validate-narration-images-llm/', views.validate_narration_images_llm, name='validate_narration_images_llm'),
     path('api/chapters/<int:chapter_id>/generate-first-video/', views.generate_first_video, name='generate_first_video'),

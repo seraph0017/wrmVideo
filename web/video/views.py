@@ -1654,6 +1654,67 @@ def validation_status(request, pk, task_id):
 
 
 @csrf_exempt
+@require_http_methods(["POST"])
+def batch_generate_audio(request, chapter_id):
+    """
+    批量生成章节所有解说的音频API
+    
+    Args:
+        request: HTTP请求对象
+        chapter_id: 章节ID
+        
+    Returns:
+        JsonResponse: 处理结果
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        novel_id = chapter.novel.id
+        
+        # 获取章节下的所有解说
+        narrations = chapter.narrations.all()
+        
+        if not narrations.exists():
+            return JsonResponse({
+                'success': False,
+                'error': '该章节没有解说内容'
+            }, status=400)
+        
+        logger.info(f"开始批量生成音频: 小说ID={novel_id}, 章节ID={chapter_id}, 解说数量={narrations.count()}")
+        
+        # 导入Celery任务
+        from .tasks import generate_audio_async
+        
+        # 启动异步任务
+        task = generate_audio_async.delay(novel_id, chapter_id)
+        
+        logger.info(f"批量生成音频任务已启动: task_id={task.id}")
+        
+        return JsonResponse({
+            'success': True,
+            'message': '批量生成音频任务已启动',
+            'task_id': task.id,
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'count': narrations.count()
+        })
+        
+    except Chapter.DoesNotExist:
+        logger.error(f"章节不存在: chapter_id={chapter_id}")
+        return JsonResponse({
+            'success': False,
+            'error': f'章节不存在: {chapter_id}'
+        }, status=404)
+        
+    except Exception as e:
+        logger.error(f"批量生成音频失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'error': f'批量生成音频失败: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
 @require_http_methods(["GET"])
 def serve_chapter_video(request, chapter_id):
     """
@@ -2020,9 +2081,10 @@ def batch_generate_images(request, chapter_id):
         # 导入异步任务
         from .tasks import generate_narration_images_async
         
-        # 为每个解说启动异步任务
+        # 为每个解说启动异步任务，添加1秒间隔控制
+        import time
         task_results = []
-        for narration in narrations:
+        for i, narration in enumerate(narrations):
             task = generate_narration_images_async.delay(narration.id)
             task_results.append({
                 'narration_id': narration.id,
@@ -2030,6 +2092,9 @@ def batch_generate_images(request, chapter_id):
                 'celery_task_id': task.id,
                 'status': 'submitted'
             })
+            # 除了最后一个任务，其他任务之间间隔1秒
+            if i < len(narrations) - 1:
+                time.sleep(1)
         
         return JsonResponse({
             'success': True,
@@ -2039,6 +2104,96 @@ def batch_generate_images(request, chapter_id):
         })
         
     except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': str(e)
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def batch_generate_chapter_images(request, chapter_id):
+    """
+    批量生成章节分镜图片API - 直接关联gen_image_async.py
+    按章节调用gen_image_async的generate_images_for_chapter函数
+    
+    Args:
+        request: HTTP请求对象
+        chapter_id: 章节ID
+        
+    Returns:
+        JsonResponse: 任务提交结果
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        
+        # 检查是否已有任务在运行
+        if chapter.batch_image_status == 'processing':
+            return JsonResponse({
+                'success': False,
+                'error': f'章节 {chapter.title} 的分镜图片生成任务正在进行中，请等待完成后再试',
+                'current_status': chapter.batch_image_status,
+                'current_progress': chapter.batch_image_progress,
+                'task_id': chapter.batch_image_task_id
+            }, status=400)
+        
+        # 导入批量生成任务
+        from .tasks import batch_generate_chapter_images_async
+        
+        # 启动异步任务
+        task = batch_generate_chapter_images_async.delay(chapter.novel.id, chapter.id)
+        
+        return JsonResponse({
+            'success': True,
+            'message': f'已启动章节 {chapter.title} 的分镜图片批量生成任务',
+            'task_id': task.id,
+            'chapter_id': chapter.id,
+            'chapter_title': chapter.title,
+            'novel_id': chapter.novel.id,
+            'status': 'submitted'
+        })
+        
+    except Exception as e:
+        logger.error(f"启动批量生成章节分镜图片任务失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'error': str(e)
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["GET"])
+def get_chapter_batch_image_status(request, chapter_id):
+    """
+    获取章节批量图片生成状态API
+    
+    Args:
+        request: HTTP请求对象
+        chapter_id: 章节ID
+        
+    Returns:
+        JsonResponse: 任务状态信息
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        
+        return JsonResponse({
+            'success': True,
+            'chapter_id': chapter.id,
+            'chapter_title': chapter.title,
+            'status': chapter.batch_image_status,
+            'progress': chapter.batch_image_progress,
+            'message': chapter.batch_image_message,
+            'error': chapter.batch_image_error,
+            'task_id': chapter.batch_image_task_id,
+            'started_at': chapter.batch_image_started_at.isoformat() if chapter.batch_image_started_at else None,
+            'completed_at': chapter.batch_image_completed_at.isoformat() if chapter.batch_image_completed_at else None
+        })
+        
+    except Exception as e:
+        logger.error(f"获取章节批量图片生成状态失败: {str(e)}")
         return JsonResponse({
             'success': False,
             'error': str(e)
@@ -3026,10 +3181,16 @@ def generate_ass_subtitles(request, novel_id, chapter_id):
                 'error': f'gen_ass.py脚本不存在: {gen_ass_script}'
             }, status=500)
         
+        # 获取章节名称
+        chapter_name = os.path.basename(data_dir)
+        
+        # 获取数据目录的父目录（小说目录）
+        novel_data_dir = os.path.dirname(data_dir)
+        
         # 运行gen_ass.py脚本
         try:
             result = subprocess.run(
-                ['python', gen_ass_script, data_dir],
+                ['python', gen_ass_script, novel_data_dir, '--chapter', chapter_name],
                 cwd=project_root,
                 capture_output=True,
                 text=True,

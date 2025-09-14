@@ -98,8 +98,8 @@ def update_narration_image_paths(chapter_path, total_images):
         total_images: 重命名后的图片总数
     """
     try:
-        from web.video.models import Chapter, Narration
-        from web.video.utils import get_chapter_number_from_filesystem
+        from video.models import Chapter, Narration
+        from video.utils import get_chapter_number_from_filesystem
     except ImportError as e:
         print(f"❌ 无法导入Django模型: {e}")
         print("请确保在正确的环境中运行此脚本")

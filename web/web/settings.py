@@ -191,6 +191,16 @@ CELERY_TASK_ROUTES = {
     'video.tasks.*': {'queue': 'celery'},
 }
 
+# Celery任务注解配置 - 启用rate_limit功能
+CELERY_TASK_ANNOTATIONS = {
+    '*': {
+        'rate_limit': None,  # 默认无限制
+    },
+    'video.tasks.generate_narration_images_async': {
+        'rate_limit': '2/s',  # 每秒最多2个任务
+    },
+}
+
 # Celery日志配置
 CELERY_WORKER_LOG_FORMAT = '[%(asctime)s: %(levelname)s/%(processName)s] %(message)s'
 CELERY_WORKER_TASK_LOG_FORMAT = '[%(asctime)s: %(levelname)s/%(processName)s][%(task_name)s(%(task_id)s)] %(message)s'
@@ -201,7 +211,7 @@ CELERY_WORKER_LOGLEVEL = 'INFO'
 from celery.schedules import crontab
 
 CELERY_BEAT_SCHEDULE = {
-    # 每15秒扫描一次所有数据目录的异步任务
+    # 每15秒扫描一次data目录
     'scan-all-async-tasks': {
         'task': 'video.tasks.scan_and_process_async_tasks',
         'schedule': 15.0,  # 每15秒执行一次
@@ -216,6 +226,15 @@ CELERY_BEAT_SCHEDULE = {
         'task': 'video.tasks.scan_specific_async_tasks',
         'schedule': 15.0,  # 每15秒执行一次
         'args': ('async_tasks',),  # 任务目录参数
+        'options': {
+            'queue': 'celery',
+            'routing_key': 'celery',
+        }
+    },
+    # 每30秒扫描一次数据库中的Celery任务状态
+    'scan-database-celery-tasks': {
+        'task': 'video.tasks.scan_database_celery_tasks',
+        'schedule': 30.0,  # 每30秒执行一次
         'options': {
             'queue': 'celery',
             'routing_key': 'celery',
