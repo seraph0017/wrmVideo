@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}文生视频管理系统{% endblock %}</title>
     {% bootstrap_css %}
+    <!-- Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- jQuery库 - 必须在Bootstrap之前加载 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     {% bootstrap_javascript %}
@@ -124,7 +126,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/video/dashboard/' %}active{% endif %}" href="{% url 'video:dashboard' %}" style="transition: all 0.3s ease; border-radius: 8px; margin: 0 4px; padding: 8px 16px;">控制面板</a>
                     </li>
@@ -141,6 +143,26 @@
                         <a class="nav-link {% if '/narrations/' in request.path %}active{% endif %}" href="{% url 'video:narration_list' %}" style="transition: all 0.3s ease; border-radius: 8px; margin: 0 4px; padding: 8px 16px;">解说管理</a>
                     </li>
                 </ul>
+                
+                <!-- 用户信息和登出 -->
+                {% if user.is_authenticated %}
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="transition: all 0.3s ease; border-radius: 8px; margin: 0 4px; padding: 8px 16px;">
+                            <i class="fas fa-user me-1"></i>{{ user.username }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid rgba(102, 126, 234, 0.1);">
+                            <li><h6 class="dropdown-header">用户：{{ user.username }}</h6></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'video:logout' %}" style="color: #dc3545; transition: all 0.3s ease;">
+                                    <i class="fas fa-sign-out-alt me-2"></i>退出登录
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                {% endif %}
             </div>
         </div>
     </nav>

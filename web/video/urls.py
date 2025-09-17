@@ -8,6 +8,8 @@ app_name = 'video'
 
 urlpatterns = [
     path("", RedirectView.as_view(url='dashboard/', permanent=True), name="index"),
+    path("login/", views.user_login, name="login"),
+    path("logout/", views.user_logout, name="logout"),
     path("dashboard/", views.dashboard, name="dashboard"),
     path("test-modal/", views.test_modal, name="test_modal"),
     

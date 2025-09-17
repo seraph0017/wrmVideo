@@ -1,4 +1,6 @@
 from django import forms
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import authenticate
 from .models import Novel, Chapter, Character, Narration
 
 
@@ -149,3 +151,51 @@ class SearchForm(forms.Form):
         }),
         label='搜索'
     )
+
+
+class CustomLoginForm(AuthenticationForm):
+    """
+    自定义登录表单
+    """
+    username = forms.CharField(
+        widget=forms.TextInput(attrs={
+            'class': 'form-control border-start-0',
+            'placeholder': '请输入用户名',
+            'autocomplete': 'username',
+            'required': True
+        })
+    )
+    password = forms.CharField(
+        widget=forms.PasswordInput(attrs={
+            'class': 'form-control border-start-0 border-end-0',
+            'placeholder': '请输入密码',
+            'autocomplete': 'current-password',
+            'required': True
+        })
+    )
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # 移除默认的帮助文本
+        for field in self.fields.values():
+            field.help_text = None
+    
+    def clean(self):
+        username = self.cleaned_data.get('username')
+        password = self.cleaned_data.get('password')
+        
+        if username and password:
+            self.user_cache = authenticate(
+                self.request, 
+                username=username, 
+                password=password
+            )
+            if self.user_cache is None:
+                raise forms.ValidationError(
+                    "用户名或密码错误，请重新输入。",
+                    code='invalid_login'
+                )
+            else:
+                self.confirm_login_allowed(self.user_cache)
+        
+        return self.cleaned_data

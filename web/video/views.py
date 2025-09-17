@@ -3,11 +3,14 @@ from django.http import HttpResponse, JsonResponse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib import messages
+from django.contrib.auth import login, logout
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from django.core.paginator import Paginator
-from .forms import TaskForm, NovelForm, ChapterForm, CharacterForm, NarrationForm, SearchForm
+from .forms import TaskForm, NovelForm, ChapterForm, CharacterForm, NarrationForm, SearchForm, CustomLoginForm
 from .models import Novel, Chapter, Character, Narration, CharacterImageTask
 from .utils import handle_uploaded_file, save_uploaded_file, upload_novel_to_tos, get_chapter_number_from_filesystem, get_chapter_directory_path
 from .tasks import generate_script_async, validate_narration_async, generate_audio_async
@@ -126,6 +129,41 @@ def find_character_image_in_chapter(chapter_path, character_name):
         return None
 
 
+def user_login(request):
+    """
+    用户登录视图
+    """
+    if request.user.is_authenticated:
+        return redirect('video:dashboard')
+    
+    if request.method == 'POST':
+        form = CustomLoginForm(request, data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            messages.success(request, f'欢迎回来，{user.username}！')
+            # 获取next参数，如果没有则重定向到dashboard
+            next_url = request.GET.get('next', 'video:dashboard')
+            return redirect(next_url)
+        else:
+            messages.error(request, '登录失败，请检查用户名和密码。')
+    else:
+        form = CustomLoginForm()
+    
+    return render(request, 'video/login.html', {'form': form})
+
+
+def user_logout(request):
+    """
+    用户登出视图
+    """
+    if request.user.is_authenticated:
+        username = request.user.username
+        logout(request)
+        messages.success(request, f'再见，{username}！您已成功登出。')
+    return redirect('video:login')
+
+
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
@@ -136,6 +174,7 @@ def test_modal(request):
     return render(request, 'test_modal.html')
 
 
+@login_required
 def dashboard(request):
     """
     显示系统控制面板
@@ -165,7 +204,7 @@ def dashboard(request):
 
 
 # 小说视图
-class NovelListView(ListView):
+class NovelListView(LoginRequiredMixin, ListView):
     """
     小说列表视图
     """
@@ -198,7 +237,7 @@ class NovelListView(ListView):
         return context
 
 
-class NovelDetailView(DetailView):
+class NovelDetailView(LoginRequiredMixin, DetailView):
     """
     小说详情视图
     """
@@ -213,7 +252,7 @@ class NovelDetailView(DetailView):
         return context
 
 
-class NovelCreateView(CreateView):
+class NovelCreateView(LoginRequiredMixin, CreateView):
     """
     小说创建视图
     """
@@ -333,7 +372,7 @@ class NovelCreateView(CreateView):
             return super().form_invalid(form)
 
 
-class NovelUpdateView(UpdateView):
+class NovelUpdateView(LoginRequiredMixin, UpdateView):
     """
     小说更新视图
     """
@@ -450,7 +489,7 @@ class NovelUpdateView(UpdateView):
             return self.form_invalid(form)
 
 
-class NovelDeleteView(DeleteView):
+class NovelDeleteView(LoginRequiredMixin, DeleteView):
     """
     小说删除视图
     """
@@ -464,7 +503,7 @@ class NovelDeleteView(DeleteView):
 
 
 # 章节视图
-class ChapterListView(ListView):
+class ChapterListView(LoginRequiredMixin, ListView):
     """
     章节列表视图
     """
@@ -496,7 +535,7 @@ class ChapterListView(ListView):
         return context
 
 
-class ChapterDetailView(DetailView):
+class ChapterDetailView(LoginRequiredMixin, DetailView):
     """
     章节详情视图
     """
@@ -519,7 +558,7 @@ class ChapterDetailView(DetailView):
         return context
 
 
-class ChapterCreateView(CreateView):
+class ChapterCreateView(LoginRequiredMixin, CreateView):
     """
     章节创建视图
     """
@@ -533,7 +572,7 @@ class ChapterCreateView(CreateView):
         return super().form_valid(form)
 
 
-class ChapterUpdateView(UpdateView):
+class ChapterUpdateView(LoginRequiredMixin, UpdateView):
     """
     章节更新视图
     """
@@ -547,7 +586,7 @@ class ChapterUpdateView(UpdateView):
         return super().form_valid(form)
 
 
-class ChapterDeleteView(DeleteView):
+class ChapterDeleteView(LoginRequiredMixin, DeleteView):
     """
     章节删除视图
     """
@@ -561,7 +600,7 @@ class ChapterDeleteView(DeleteView):
 
 
 # 角色视图
-class CharacterListView(ListView):
+class CharacterListView(LoginRequiredMixin, ListView):
     """
     角色列表视图
     """
@@ -593,7 +632,7 @@ class CharacterListView(ListView):
         return context
 
 
-class CharacterDetailView(DetailView):
+class CharacterDetailView(LoginRequiredMixin, DetailView):
     """
     角色详情视图
     """
@@ -607,7 +646,7 @@ class CharacterDetailView(DetailView):
         return context
 
 
-class CharacterCreateView(CreateView):
+class CharacterCreateView(LoginRequiredMixin, CreateView):
     """
     角色创建视图
     """
@@ -621,7 +660,7 @@ class CharacterCreateView(CreateView):
         return super().form_valid(form)
 
 
-class CharacterUpdateView(UpdateView):
+class CharacterUpdateView(LoginRequiredMixin, UpdateView):
     """
     角色更新视图
     """
@@ -635,7 +674,7 @@ class CharacterUpdateView(UpdateView):
         return super().form_valid(form)
 
 
-class CharacterDeleteView(DeleteView):
+class CharacterDeleteView(LoginRequiredMixin, DeleteView):
     """
     角色删除视图
     """
@@ -649,7 +688,7 @@ class CharacterDeleteView(DeleteView):
 
 
 # 解说视图
-class NarrationListView(ListView):
+class NarrationListView(LoginRequiredMixin, ListView):
     """
     解说列表视图
     """
@@ -682,7 +721,7 @@ class NarrationListView(ListView):
         return context
 
 
-class NarrationDetailView(DetailView):
+class NarrationDetailView(LoginRequiredMixin, DetailView):
     """
     解说详情视图
     """
@@ -696,7 +735,7 @@ class NarrationDetailView(DetailView):
         return context
 
 
-class NarrationCreateView(CreateView):
+class NarrationCreateView(LoginRequiredMixin, CreateView):
     """
     解说创建视图
     """
@@ -710,7 +749,7 @@ class NarrationCreateView(CreateView):
         return super().form_valid(form)
 
 
-class NarrationUpdateView(UpdateView):
+class NarrationUpdateView(LoginRequiredMixin, UpdateView):
     """
     解说更新视图
     """
@@ -724,7 +763,7 @@ class NarrationUpdateView(UpdateView):
         return super().form_valid(form)
 
 
-class NarrationDeleteView(DeleteView):
+class NarrationDeleteView(LoginRequiredMixin, DeleteView):
     """
     解说删除视图
     """
@@ -737,6 +776,7 @@ class NarrationDeleteView(DeleteView):
         return super().delete(request, *args, **kwargs)
 
 
+@login_required
 def novel_ai_process(request, pk):
     """
     小说AI处理视图
@@ -850,6 +890,7 @@ def novel_ai_process(request, pk):
         })
 
 
+@login_required
 def novel_ai_generate(request, pk):
     """
     小说AI生成视图
@@ -961,6 +1002,7 @@ def novel_ai_generate(request, pk):
         })
 
 
+@login_required
 def novel_ai_validate(request, pk):
     """
     小说AI校验视图
@@ -1096,6 +1138,7 @@ def novel_ai_validate(request, pk):
         })
 
 
+@login_required
 def novel_generate_script(request, pk):
     """
     生成解说文案 - 对应 gen_script_v2.py 的操作
@@ -1163,6 +1206,7 @@ def novel_generate_script(request, pk):
         })
 
 
+@login_required
 def novel_task_status(request, pk):
     """
     获取小说任务状态

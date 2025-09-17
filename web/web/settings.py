@@ -313,3 +313,8 @@ CHANNEL_LAYERS = {
         },
     },
 }
+
+# 登录相关配置
+LOGIN_URL = '/video/login/'
+LOGIN_REDIRECT_URL = '/video/dashboard/'
+LOGOUT_REDIRECT_URL = '/video/login/'
