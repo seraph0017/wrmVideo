@@ -251,7 +251,7 @@ class ImagePromptBuilder:
         """初始化prompt构建器"""
         # 国风漫画风格描述
         self.style_prompt = (
-            "强调强烈线条、鲜明对比和现代感造型，色彩饱和，"
+            "画面风格是强调强烈线条、鲜明对比和现代感造型，色彩饱和，"
             "带有动态夸张与都市叙事视觉冲击力的国风漫画风格"
         )
     
@@ -559,42 +559,74 @@ def process_chapter(chapter_dir: str, delay_between_requests: float = 2.0) -> in
         return 0
 
 
+def is_chapter_directory(path: str) -> bool:
+    """
+    判断给定路径是否为章节目录
+    
+    Args:
+        path: 目录路径
+        
+    Returns:
+        bool: 如果是章节目录返回True，否则返回False
+    """
+    if not os.path.isdir(path):
+        return False
+    
+    # 检查目录名是否以chapter_开头
+    dir_name = os.path.basename(path)
+    if not dir_name.startswith('chapter_'):
+        return False
+    
+    # 检查是否包含narration.txt文件
+    narration_file = os.path.join(path, 'narration.txt')
+    return os.path.exists(narration_file)
+
+
 def main():
     """主函数"""
     if len(sys.argv) != 2:
-        print("使用方法: python gen_image_async_v2.py data/xxx")
+        print("使用方法:")
+        print("  处理整个数据目录: python gen_image_async_v2.py data/xxx")
+        print("  处理单个章节目录: python gen_image_async_v2.py data/xxx/chapter_01")
         sys.exit(1)
     
-    data_path = sys.argv[1]
-    if not os.path.exists(data_path):
-        logger.error(f"数据目录不存在: {data_path}")
+    input_path = sys.argv[1]
+    if not os.path.exists(input_path):
+        logger.error(f"路径不存在: {input_path}")
         sys.exit(1)
     
-    logger.info(f"开始处理数据目录: {data_path}")
-    
-    # 查找所有章节目录
-    chapter_dirs = []
-    for item in os.listdir(data_path):
-        item_path = os.path.join(data_path, item)
-        if os.path.isdir(item_path) and item.startswith('chapter_'):
-            chapter_dirs.append(item_path)
-    
-    if not chapter_dirs:
-        logger.error(f"在 {data_path} 中没有找到章节目录")
-        sys.exit(1)
-    
-    # 按章节编号排序
-    chapter_dirs.sort()
-    
-    # 处理每个章节
-    total_chapters = len(chapter_dirs)
-    total_tasks = 0
-    
-    for chapter_dir in chapter_dirs:
-        task_count = process_chapter(chapter_dir)
-        total_tasks += task_count
-    
-    logger.info(f"处理完成，总共提交 {total_tasks} 个图片生成任务")
+    # 判断输入路径是章节目录还是数据目录
+    if is_chapter_directory(input_path):
+        # 处理单个章节目录
+        logger.info(f"开始处理单个章节目录: {input_path}")
+        task_count = process_chapter(input_path)
+        logger.info(f"处理完成，提交 {task_count} 个图片生成任务")
+    else:
+        # 处理数据目录（原有逻辑）
+        logger.info(f"开始处理数据目录: {input_path}")
+        
+        # 查找所有章节目录
+        chapter_dirs = []
+        for item in os.listdir(input_path):
+            item_path = os.path.join(input_path, item)
+            if is_chapter_directory(item_path):
+                chapter_dirs.append(item_path)
+        
+        if not chapter_dirs:
+            logger.error(f"在 {input_path} 中没有找到章节目录")
+            sys.exit(1)
+        
+        # 按章节编号排序
+        chapter_dirs.sort()
+        
+        # 处理每个章节
+        total_tasks = 0
+        
+        for chapter_dir in chapter_dirs:
+            task_count = process_chapter(chapter_dir)
+            total_tasks += task_count
+        
+        logger.info(f"处理完成，总共提交 {total_tasks} 个图片生成任务")
 
 
 if __name__ == "__main__":
