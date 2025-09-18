@@ -78,6 +78,7 @@ urlpatterns = [
     path('api/narrations/<int:narration_id>/generate-images/', views.generate_narration_images, name='generate_narration_images'),
     path('api/narrations/<int:narration_id>/images/', views.get_narration_images, name='get_narration_images'),
     path('api/novels/<int:novel_id>/chapters/<int:chapter_id>/narrations/<int:narration_id>/images/<str:filename>/', views.serve_narration_image, name='serve_narration_image'),
+    path('api/novels/<int:novel_id>/chapters/<int:chapter_id>/narrations/<int:narration_id>/regenerate-image/', views.regenerate_narration_image, name='regenerate_narration_image'),
     
     # 章节角色图片API
     path('api/chapters/<int:chapter_id>/character-images/', views.get_chapter_character_images, name='get_chapter_character_images'),

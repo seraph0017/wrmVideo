@@ -20,6 +20,7 @@ import json
 import logging
 import redis
 import os
+import subprocess
 from django.conf import settings
 from datetime import datetime
 
@@ -542,6 +543,9 @@ class ChapterDetailView(LoginRequiredMixin, DetailView):
     model = Chapter
     template_name = 'video/chapter_detail.html'
     context_object_name = 'chapter'
+    
+    def get_queryset(self):
+        return Chapter.objects.select_related('novel')
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -2156,6 +2160,148 @@ def batch_generate_images(request, chapter_id):
 
 @csrf_exempt
 @require_http_methods(["POST"])
+def regenerate_narration_image(request, novel_id, chapter_id, narration_id):
+    """
+    重新生成解说分镜图片API
+    
+    Args:
+        novel_id: 小说ID
+        chapter_id: 章节ID  
+        narration_id: 解说ID
+        
+    POST参数:
+        custom_prompt: 自定义提示词
+        
+    Returns:
+        JSON响应包含操作结果
+    """
+    try:
+        # 获取解说对象
+        narration = get_object_or_404(Narration, id=narration_id, chapter_id=chapter_id, chapter__novel_id=novel_id)
+        
+        # 获取POST参数
+        data = json.loads(request.body)
+        custom_prompt = data.get('custom_prompt', '').strip()
+        
+        if not custom_prompt:
+            return JsonResponse({
+                'success': False,
+                'error': '请输入自定义提示词'
+            }, status=400)
+        
+        # 获取文件系统中的章节编号
+        chapter_number = get_chapter_number_from_filesystem(novel_id, narration.chapter)
+        if chapter_number is None:
+            return JsonResponse({
+                'success': False,
+                'error': f'找不到章节对应的文件系统目录'
+            }, status=404)
+        
+        # 解析scene_number获取图片编号
+        scene_number = narration.scene_number
+        try:
+            if '-' in scene_number:
+                # 解析"段-分镜"格式，转换为连续编号
+                parts = scene_number.split('-')
+                segment = int(parts[0])
+                scene = int(parts[1])
+                # 计算连续编号：(段-1)*3 + 分镜
+                image_number = (segment - 1) * 3 + scene
+            else:
+                image_number = int(scene_number)
+        except (ValueError, IndexError):
+            image_number = 1
+        
+        # 构建图片文件路径
+        image_filename = f'chapter_{chapter_number}_image_{image_number:02d}.jpeg'
+        image_path = os.path.join(
+            settings.BASE_DIR.parent,  # 回到项目根目录
+            'data',
+            f'{novel_id:03d}',
+            f'chapter_{chapter_number}',
+            image_filename
+        )
+        
+        # 检查图片文件是否存在
+        if not os.path.exists(image_path):
+            return JsonResponse({
+                'success': False,
+                'error': f'图片文件不存在: {image_filename}'
+            }, status=404)
+        
+        # 构建llm_narration_image.py脚本路径
+        script_path = os.path.join(settings.BASE_DIR.parent, 'llm_narration_image.py')
+        
+        # 检查脚本是否存在
+        if not os.path.exists(script_path):
+            return JsonResponse({
+                'success': False,
+                'error': 'llm_narration_image.py脚本不存在'
+            }, status=404)
+        
+        # 构建命令参数
+        cmd = [
+            'python',
+            script_path,
+            image_path,
+            '--auto-regenerate',
+            '--custom-prompt', custom_prompt,
+            '--skip-analysis'
+        ]
+        
+        # 执行命令
+        try:
+            # 设置工作目录为项目根目录
+            cwd = settings.BASE_DIR.parent
+            
+            # 执行命令，捕获输出
+            result = subprocess.run(
+                cmd,
+                cwd=cwd,
+                capture_output=True,
+                text=True,
+                timeout=300  # 5分钟超时
+            )
+            
+            if result.returncode == 0:
+                return JsonResponse({
+                    'success': True,
+                    'message': '图片重新生成成功',
+                    'output': result.stdout,
+                    'image_path': image_filename
+                })
+            else:
+                return JsonResponse({
+                    'success': False,
+                    'error': f'脚本执行失败: {result.stderr}',
+                    'output': result.stdout
+                }, status=500)
+                
+        except subprocess.TimeoutExpired:
+            return JsonResponse({
+                'success': False,
+                'error': '脚本执行超时（超过5分钟）'
+            }, status=500)
+        except Exception as e:
+            return JsonResponse({
+                'success': False,
+                'error': f'执行脚本时发生错误: {str(e)}'
+            }, status=500)
+        
+    except json.JSONDecodeError:
+        return JsonResponse({
+            'success': False,
+            'error': '无效的JSON数据'
+        }, status=400)
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': str(e)
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
 def batch_generate_chapter_images(request, chapter_id):
     """
     批量生成章节分镜图片API - 直接关联gen_image_async.py
@@ -3122,10 +3268,18 @@ def get_narration_subtitle(request, narration_id):
             }, status=404)
         
         # 尝试解析scene_number中的数字部分
+        # 对于"段-分镜"格式，需要转换为连续的图片编号
         try:
-            # 如果scene_number是"1-1"格式，取最后一个数字
             if '-' in scene_number:
-                scene_num = int(scene_number.split('-')[-1])
+                # 解析"段-分镜"格式，如"2-1"
+                parts = scene_number.split('-')
+                if len(parts) == 2:
+                    segment = int(parts[0])
+                    shot = int(parts[1])
+                    # 计算连续编号：前面段数*3 + 当前分镜编号
+                    scene_num = (segment - 1) * 3 + shot
+                else:
+                    scene_num = int(scene_number.split('-')[-1])
             else:
                 scene_num = int(scene_number)
         except (ValueError, IndexError):
@@ -3316,9 +3470,18 @@ def get_narration_images_status(request, narration_id):
             }, status=404)
         
         # 尝试解析scene_number中的数字部分
+        # 对于"段-分镜"格式，需要转换为连续的图片编号
         try:
             if '-' in scene_number:
-                scene_num = int(scene_number.split('-')[-1])
+                # 解析"段-分镜"格式，如"2-1"
+                parts = scene_number.split('-')
+                if len(parts) == 2:
+                    segment = int(parts[0])
+                    shot = int(parts[1])
+                    # 计算连续编号：前面段数*3 + 当前分镜编号
+                    scene_num = (segment - 1) * 3 + shot
+                else:
+                    scene_num = int(scene_number.split('-')[-1])
             else:
                 scene_num = int(scene_number)
             print(f"DEBUG: get_narration_images - 原始scene_number: {scene_number}, 解析后: {scene_num}")
@@ -3339,15 +3502,21 @@ def get_narration_images_status(request, narration_id):
         image_count = 0
         
         if os.path.exists(chapter_dir):
-            # 构建分镜图片文件名模式：chapter_XXX_image_YY_*.jpeg
-            image_pattern = f'chapter_{chapter_number}_image_{scene_num:02d}_'
+            # 构建分镜图片文件名模式：chapter_XXX_image_YY.jpeg（修复：去掉末尾下划线）
+            image_pattern_base = f'chapter_{chapter_number}_image_{scene_num:02d}'
             image_extensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp']
             
             for filename in os.listdir(chapter_dir):
                 # 检查文件名是否匹配分镜图片模式
-                if (filename.startswith(image_pattern) and 
-                    any(filename.lower().endswith(ext) for ext in image_extensions)):
-                    image_count += 1
+                # 支持两种格式：chapter_XXX_image_YY.ext 和 chapter_XXX_image_YY_N.ext
+                if filename.startswith(image_pattern_base):
+                    # 检查是否是有效的图片文件
+                    if any(filename.lower().endswith(ext) for ext in image_extensions):
+                        # 验证文件名格式：确保是精确匹配或带序号的格式
+                        name_without_ext = filename.rsplit('.', 1)[0]
+                        if (name_without_ext == image_pattern_base or 
+                            name_without_ext.startswith(image_pattern_base + '_')):
+                            image_count += 1
             
             has_images = image_count > 0
         
@@ -3418,9 +3587,18 @@ def get_narration_images(request, narration_id):
             }, status=404)
         
         # 尝试解析scene_number中的数字部分
+        # 对于"段-分镜"格式，需要转换为连续的图片编号
         try:
             if '-' in scene_number:
-                scene_num = int(scene_number.split('-')[-1])
+                # 解析"段-分镜"格式，如"2-1"
+                parts = scene_number.split('-')
+                if len(parts) == 2:
+                    segment = int(parts[0])
+                    shot = int(parts[1])
+                    # 计算连续编号：前面段数*3 + 当前分镜编号
+                    scene_num = (segment - 1) * 3 + shot
+                else:
+                    scene_num = int(scene_number.split('-')[-1])
             else:
                 scene_num = int(scene_number)
         except (ValueError, IndexError):
@@ -3440,7 +3618,7 @@ def get_narration_images(request, narration_id):
         print(f"DEBUG: get_narration_images - 目录是否存在: {os.path.exists(chapter_dir)}")
         
         if os.path.exists(chapter_dir):
-            # 构建分镜图片文件名模式：chapter_XXX_image_YY 或 chapter_XXX_image_YY_Z
+            # 构建分镜图片文件名模式：chapter_XXX_image_YY（重命名后的新格式）
             image_pattern_base = f'chapter_{chapter_number}_image_{scene_num:02d}'
             image_extensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp']
             
@@ -3451,15 +3629,13 @@ def get_narration_images(request, narration_id):
             
             for filename in all_files:
                 # 检查文件名是否匹配分镜图片模式
-                # 支持格式：chapter_001_image_02.jpeg 或 chapter_001_image_02_1.jpeg
+                # 新格式：chapter_001_image_02.jpeg（重命名后的格式）
                 if filename.startswith(image_pattern_base):
                     # 检查是否是有效的图片文件
                     if any(filename.lower().endswith(ext) for ext in image_extensions):
-                        # 进一步验证文件名格式
+                        # 验证文件名格式：确保是精确匹配 chapter_XXX_image_YY.ext
                         name_without_ext = filename.rsplit('.', 1)[0]
-                        if (name_without_ext == image_pattern_base or 
-                            (name_without_ext.startswith(image_pattern_base + '_') and 
-                             name_without_ext[len(image_pattern_base)+1:].isdigit())):
+                        if name_without_ext == image_pattern_base:
                             print(f"DEBUG: get_narration_images - 找到匹配文件: {filename}")
                             # 构建图片URL
                             image_url = f'/video/api/novels/{novel_id}/chapters/{chapter.id}/narrations/{narration_id}/images/{filename}/'
@@ -3504,7 +3680,12 @@ def serve_narration_image(request, novel_id, chapter_id, narration_id, filename)
         scene_number = narration.scene_number
         try:
             if '-' in scene_number:
-                scene_num = int(scene_number.split('-')[-1])
+                # 解析"段-分镜"格式，转换为连续编号
+                parts = scene_number.split('-')
+                segment = int(parts[0])
+                scene = int(parts[1])
+                # 计算连续编号：(段-1)*3 + 分镜
+                scene_num = (segment - 1) * 3 + scene
             else:
                 scene_num = int(scene_number)
         except (ValueError, IndexError):

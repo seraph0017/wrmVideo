@@ -2063,7 +2063,7 @@ function showNarrationImages(narrationId, sceneNumber) {
     .then(data => {
         if (data.images && data.images.length > 0) {
             // 创建图片展示模态框
-            showImageModal(data.images, sceneNumber);
+            showImageModal(data.images, sceneNumber, narrationId);
         } else {
             alert('暂无分镜图片');
         }
@@ -2074,26 +2074,46 @@ function showNarrationImages(narrationId, sceneNumber) {
     });
 }
 
+// 将scene_number转换为图片编号
+function sceneNumberToImageNumber(sceneNumber) {
+    console.log('DEBUG: sceneNumberToImageNumber - 输入sceneNumber:', sceneNumber);
+    
+    if (!sceneNumber.includes('-')) {
+        // 如果不包含'-'，直接返回数字
+        const result = parseInt(sceneNumber);
+        console.log('DEBUG: sceneNumberToImageNumber - 简单格式，返回:', result);
+        return result;
+    }
+    
+    // 解析"段-分镜"格式，如"2-1"表示第2段第1个分镜
+    const parts = sceneNumber.split('-');
+    const segment = parseInt(parts[0]); // 段号
+    const scene = parseInt(parts[1]);   // 分镜号
+    
+    // 计算图片编号：每段有3个分镜，所以图片编号 = (段号-1) * 3 + 分镜号
+    const imageNumber = (segment - 1) * 3 + scene;
+    
+    console.log(`DEBUG: sceneNumberToImageNumber - 段号: ${segment}, 分镜号: ${scene}, 计算出图片编号: ${imageNumber}`);
+    return imageNumber;
+}
+
 // 显示图片模态框
-function showImageModal(images, sceneNumber) {
+function showImageModal(images, sceneNumber, narrationId) {
     // 根据场景编号筛选对应的图片
     console.log('DEBUG: showImageModal - 原始sceneNumber:', sceneNumber);
+    console.log('DEBUG: showImageModal - 接收到的narrationId:', narrationId);
     console.log('DEBUG: showImageModal - 接收到的images:', images);
+    
+    // 计算正确的图片编号
+    const targetImageNumber = sceneNumberToImageNumber(sceneNumber);
     
     const sceneImages = images.filter(img => {
         // 从文件名中提取场景编号，匹配格式如: chapter_001_image_02.jpeg 或 chapter_001_image_02_1.jpeg
         const match = img.filename.match(/chapter_\d+_image_(\d+)(?:_\d+)?\.(jpeg|jpg|png|gif)$/);
         if (match) {
             const imageSceneNumber = parseInt(match[1]);
-            // 解析传入的sceneNumber，如果包含'-'则取最后一部分
-            let parsedSceneNumber;
-            if (sceneNumber.includes('-')) {
-                parsedSceneNumber = parseInt(sceneNumber.split('-').pop());
-            } else {
-                parsedSceneNumber = parseInt(sceneNumber);
-            }
-            console.log(`DEBUG: 文件 ${img.filename} - 图片场景号: ${imageSceneNumber}, 解析后场景号: ${parsedSceneNumber}, 匹配: ${imageSceneNumber === parsedSceneNumber}`);
-            return imageSceneNumber === parsedSceneNumber;
+            console.log(`DEBUG: 文件 ${img.filename} - 图片编号: ${imageSceneNumber}, 目标编号: ${targetImageNumber}, 匹配: ${imageSceneNumber === targetImageNumber}`);
+            return imageSceneNumber === targetImageNumber;
         }
         return false;
     });
@@ -2107,6 +2127,10 @@ function showImageModal(images, sceneNumber) {
     
     // 只显示第一张匹配的图片
     const firstImage = sceneImages[0];
+    
+    console.log('DEBUG: 准备生成模态框HTML，narrationId:', narrationId);
+    console.log('DEBUG: 准备生成模态框HTML，sceneNumber:', sceneNumber);
+    console.log('DEBUG: 准备生成模态框HTML，firstImage.filename:', firstImage.filename);
     
     // 创建模态框HTML，只显示第一张图片
     const modalHtml = `
@@ -2122,6 +2146,25 @@ function showImageModal(images, sceneNumber) {
                             <div class="col-md-8 mb-3">
                                 <img src="${firstImage.url}" class="img-fluid" alt="分镜图片" style="max-width: 100%; height: auto;">
                                 <p class="text-center mt-2">${firstImage.filename}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h6 class="mb-0">重新生成图片</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label for="customPrompt" class="form-label">自定义提示词（可选）</label>
+                                            <textarea class="form-control" id="customPrompt" rows="3" placeholder="例如：去掉中央那个人的眼镜"></textarea>
+                                            <div class="form-text">输入您希望修改的内容，留空则使用默认提示词重新生成</div>
+                                        </div>
+                                        <button type="button" class="btn btn-warning" onclick="regenerateImage('${firstImage.filename}', '${sceneNumber}', '${narrationId}')">
+                                            <i class="fas fa-redo"></i> 重新生成图片
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2232,6 +2275,72 @@ function openVideoModal(chapterId) {
         video.pause();
         video.currentTime = 0;
     });
+}
+
+/**
+ * 重新生成图片
+ * @param {string} filename - 图片文件名
+ * @param {string} sceneNumber - 场景编号
+ */
+function regenerateImage(filename, sceneNumber, narrationId) {
+    const customPrompt = document.getElementById('customPrompt').value.trim();
+    
+    // 从文件名中提取图片编号（用于验证）
+    const match = filename.match(/chapter_\d+_image_(\d+)(?:_\d+)?\.(jpeg|jpg|png|gif)$/);
+    if (!match) {
+        alert('无法解析图片文件名');
+        return;
+    }
+    
+    const imageNumber = parseInt(match[1]);
+    console.log('DEBUG: regenerateImage - 图片编号:', imageNumber, '使用传入的narrationId:', narrationId);
+    
+    if (confirm(`确定要重新生成第${sceneNumber}段的分镜图片吗？${customPrompt ? '\n自定义提示词：' + customPrompt : ''}`)) {
+        const regenerateBtn = event.target;
+        const originalText = regenerateBtn.innerHTML;
+        
+        // 更新按钮状态
+        regenerateBtn.disabled = true;
+        regenerateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 重新生成中...';
+        
+        // 构建请求数据
+        const requestData = {
+            custom_prompt: customPrompt || '重新生成图片'  // 如果没有自定义提示词，使用默认值
+        };
+        
+        fetch(`/video/api/novels/{{ chapter.novel.id }}/chapters/{{ chapter.id }}/narrations/${narrationId}/regenerate-image/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+            },
+            body: JSON.stringify(requestData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('图片重新生成成功！页面将刷新以显示新图片。');
+                // 关闭模态框并刷新页面
+                const modal = bootstrap.Modal.getInstance(document.getElementById('imageModal'));
+                if (modal) {
+                    modal.hide();
+                }
+                setTimeout(() => {
+                    location.reload();
+                }, 1000);
+            } else {
+                alert('重新生成失败: ' + (data.error || '未知错误'));
+            }
+        })
+        .catch(error => {
+            console.error('Error regenerating image:', error);
+            alert('重新生成失败: ' + error.message);
+        })
+        .finally(() => {
+            regenerateBtn.disabled = false;
+            regenerateBtn.innerHTML = originalText;
+        });
+    }
 }
 
 
