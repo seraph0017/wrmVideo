@@ -824,7 +824,7 @@ def generate_image_with_character_async(prompt, output_path, character_images=No
                 #     }
                 # ],
                 "ref_ip_weight": 0,
-                "ref_id_weight": 0.6,
+                "ref_id_weight": 1,
                 "logo_info": {
                     "add_logo": False,
                     "position": 0,

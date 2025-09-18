@@ -192,6 +192,10 @@ sound/
 # Log files
 *.log
 
+# Keep logs directory structure but ignore log files
+logs/*.log
+!logs/.gitkeep
+
 # Unignore specific media files
 !src/bgm/wn1.mp3
 !src/bgm/wn2.mp3
