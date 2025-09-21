@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_005 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.07,Default,,0,0,0,,道衍{\c&H0000FFFF&\b1}和尚{\c&H00FFFFFF&\b0}身着灰色僧袍
+Dialogue: 0,0:00:02.55,0:00:02.96,Default,,0,0,0,,光头
+Dialogue: 0,0:00:03.22,0:00:04.07,Default,,0,0,0,,正坐在桌前
+Dialogue: 0,0:00:04.40,0:00:05.05,Default,,0,0,0,,大口吃肉
+Dialogue: 0,0:00:05.36,0:00:06.20,Default,,0,0,0,,表情坦然
+Dialogue: 0,0:00:06.54,0:00:08.04,Default,,0,0,0,,与周围环境显得有些
+Dialogue: 0,0:00:08.04,0:00:08.76,Default,,0,0,0,,格格不入
