@@ -4,6 +4,7 @@
 {% block title %}{{ chapter.title }} | {{ block.super }}{% endblock %}
 
 {% block content %}
+{% csrf_token %}
 <div class="row mb-4">
     <div class="col-md-12">
         <div class="card">
@@ -83,124 +84,7 @@
     </div>
 </div>
 
-<!-- 角色列表 -->
-<div class="row mb-4">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                <h5 class="card-title mb-0">出场角色</h5>
-                {% if characters %}
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-light btn-sm" onclick="toggleSelectAll()">全选/反选</button>
-                    <button type="button" class="btn btn-warning btn-sm" onclick="batchGenerateImages()" id="batchGenerateBtn" disabled>批量生成图片</button>
-                </div>
-                {% endif %}
-            </div>
-            <div class="card-body">
-                {% if characters %}
-                <div class="row g-4">
-                    {% for character in characters %}
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card character-card h-100 shadow-sm border-0" data-character-id="{{ character.id }}" style="transition: all 0.3s ease; border-radius: 12px;">
-                            <!-- 卡片头部 -->
-                            <div class="card-header text-white border-0 d-flex align-items-center justify-content-between" style="border-radius: var(--border-radius) var(--border-radius) 0 0;">
-                                <div class="d-flex align-items-center">
-                                    <input type="checkbox" class="form-check-input character-checkbox me-3" 
-                                           value="{{ character.id }}" onchange="updateBatchButton()">
-                                    <h5 class="card-title mb-0 fw-bold">{{ character.name }}</h5>
-                                </div>
-                                <div class="character-status">
-                                    <i class="fas fa-user-circle" style="font-size: 1.2em; opacity: 0.8;"></i>
-                                </div>
-                            </div>
-                            
-                            <div class="card-body p-4">
-                                <div class="row g-3">
-                                    <!-- 左侧：角色信息和操作 -->
-                                    <div class="col-md-7">
-                                        <!-- 角色信息 -->
-                                        <div class="character-info mb-4">
-                                            <div class="row g-2 mb-3">
-                                                <div class="col-6">
-                                                    <div class="info-item p-3 rounded" style="border-left: 4px solid var(--primary-light);">
-                                                        <small class="text-muted d-block mb-1">性别</small>
-                                                        <span class="fw-bold fs-6">{{ character.gender }}</span>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="info-item p-3 rounded" style="border-left: 4px solid var(--primary-dark);">
-                                                        <small class="text-muted d-block mb-1">年龄段</small>
-                                                        <span class="fw-bold fs-6">{{ character.age_group }}</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            {% if character.face_features %}
-                                            <div class="face-features">
-                                                <div class="info-item p-3 rounded" style="border-left: 4px solid var(--success-color);">
-                                                    <small class="text-muted d-block mb-2">面部特征</small>
-                                                    <p class="mb-0" style="line-height: 1.5; color: var(--text-secondary); font-size: 0.9rem;">{{ character.face_features|truncatechars:120 }}</p>
-                                                </div>
-                                            </div>
-                                            {% endif %}
-                                        </div>
-                                        
-                                        <!-- 操作按钮 -->
-                                        <div class="character-actions">
-                                            <div class="d-grid gap-2">
-                                                <a href="{% url 'video:character_detail' character.id %}" class="btn btn-outline-primary">
-                                                    <i class="fas fa-eye me-2"></i>查看详细信息
-                                                </a>
-                                                <button type="button" class="btn btn-primary generate-image-btn" 
-                                                        data-character-id="{{ character.id }}" 
-                                                        data-character-name="{{ character.name|escapejs }}" 
-                                                        onclick="openGenerateImageModal(this.dataset.characterId, this.dataset.characterName)"
-                                                        style="background: var(--primary-gradient); border: none;">
-                                                    <span class="btn-text">
-                                                        <i class="fas fa-magic me-2"></i>生成角色图片
-                                                    </span>
-                                                    <span class="btn-loading d-none">
-                                                        <i class="fas fa-spinner fa-spin me-2"></i>生成中...
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- 右侧：角色图片 -->
-                                    <div class="col-md-5">
-                                        <div class="character-thumbnail-container position-relative h-100 d-flex align-items-center justify-content-center">
-                                            <div class="character-thumbnail" style="width: 200px; height: 200px; border-radius: var(--border-radius-lg); display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer;" onclick="openImageModal('thumbnail-{{ character.id }}', '{{ character.name|escapejs }}')">
-                                                <img id="thumbnail-{{ character.id }}" src="/static/images/default_character.svg" alt="{{ character.name }}" 
-                                                     style="width: 100%; height: 100%; object-fit: cover; border-radius: calc(var(--border-radius-lg) - 4px); transition: transform 0.3s ease;"
-                                                     onerror="this.src='/static/images/default_character.svg'"
-                                                     title="{{ character.name }} - 点击放大查看"
-                                                     onmouseover="this.style.transform='scale(1.05)'"
-                                                     onmouseout="this.style.transform='scale(1)'">
-                                            </div>
-                                            <!-- 状态指示器 -->
-                                            <div class="position-absolute top-0 end-0" style="transform: translate(25%, -25%);">
-                                                <span class="badge bg-success rounded-pill d-flex align-items-center justify-content-center" style="width: 24px; height: 24px;">
-                                                    <i class="fas fa-check" style="font-size: 0.8em;"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
 
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-                {% else %}
-                <div class="alert alert-info">该章节暂无角色数据</div>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- 批量操作栏 -->
 <div class="row mb-3">
@@ -216,9 +100,6 @@
                     </button>
                     <button class="btn btn-success btn-sm px-3 py-2" onclick="batchGenerateImages()" id="batchImageBtn">
                         <i class="fas fa-magic me-1"></i> 批量生成分镜图片
-                    </button>
-                    <button class="btn btn-info btn-sm px-3 py-2" onclick="validateNarrationImages()" id="validateImageBtn">
-                        <i class="fas fa-edit me-1"></i> 更新图片命名
                     </button>
                     <button class="btn btn-secondary btn-sm px-3 py-2" onclick="validateNarrationImagesLLM()" id="validateImageLLMBtn">
                         <i class="fas fa-robot me-1"></i> LLM校验分镜图片
@@ -423,94 +304,11 @@
     </div>
 </div>
 
-<!-- 生成角色图片模态框 -->
-<div class="modal fade" id="generateImageModal" tabindex="-1" aria-labelledby="generateImageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="generateImageModalLabel">生成角色图片</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="generateImageForm">
-                    {% csrf_token %}
-                    <input type="hidden" id="characterId" name="character_id">
-                    <input type="hidden" id="chapterId" name="chapter_id" value="{{ chapter.id }}">
-                    
-                    <div class="mb-3">
-                        <label for="characterName" class="form-label">角色名称</label>
-                        <input type="text" class="form-control" id="characterName" name="character_name" readonly>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="imageStyle" class="form-label">图片风格</label>
-                        <select class="form-select" id="imageStyle" name="image_style">
-                            <option value="realistic">写实风格</option>
-                            <option value="anime">动漫风格</option>
-                            <option value="cartoon">卡通风格</option>
-                            <option value="oil_painting">油画风格</option>
-                        </select>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="imageQuality" class="form-label">图片质量</label>
-                        <select class="form-select" id="imageQuality" name="image_quality">
-                            <option value="standard">标准</option>
-                            <option value="hd">高清</option>
-                            <option value="ultra">超高清</option>
-                        </select>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="imageCount" class="form-label">生成数量</label>
-                        <input type="number" class="form-control" id="imageCount" name="image_count" value="1" min="1" max="10">
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="customPrompt" class="form-label">自定义提示词（可选）</label>
-                        <textarea class="form-control" id="customPrompt" name="custom_prompt" rows="3" placeholder="输入额外的描述信息..."></textarea>
-                    </div>
-                </form>
-                
-                <!-- 任务状态显示 -->
-                <div id="taskStatus" class="mt-3" style="display: none;">
-                    <div class="alert alert-info">
-                        <div class="d-flex align-items-center">
-                            <div class="spinner-border spinner-border-sm me-2" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div>
-                            <div>
-                                <strong>任务状态：</strong><span id="taskStatusText">正在生成角色图片...</span>
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 0%" id="taskProgress"></div>
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <small class="text-muted" id="taskLog">初始化任务...</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary" id="generateImageBtn" onclick="generateCharacterImage()">开始生成</button>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <script>
-let currentTaskId = null;
-let currentCharacterId = null;
-let statusCheckInterval = null;
-let batchTaskIds = []; // 存储批量任务的所有角色ID
-
-// 页面加载完成后加载所有角色缩略图和设置音频URL
+// 页面加载完成后设置音频URL
 document.addEventListener('DOMContentLoaded', function() {
-    loadAllCharacterThumbnails();
     setupAudioUrls();
 });
 
@@ -542,368 +340,7 @@ function setupAudioUrls() {
     });
 }
 
-// 加载所有角色缩略图
-function loadAllCharacterThumbnails() {
-    const characterCards = document.querySelectorAll('.character-card');
-    characterCards.forEach(card => {
-        const characterId = card.dataset.characterId;
-        const thumbnailImg = document.getElementById(`thumbnail-${characterId}`);
-        if (thumbnailImg) {
-            loadCharacterThumbnail(characterId, thumbnailImg);
-        }
-    });
-}
 
-// 加载单个角色缩略图
-function loadCharacterThumbnail(characterId, imgElement) {
-    const url = `/video/api/character/${characterId}/thumbnail/?novel_id={{ chapter.novel.id }}&chapter_id={{ chapter.id }}`;
-    
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                if (data.has_image) {
-                    // 使用生成的图片
-                    imgElement.src = data.image_path;
-                    imgElement.title = `任务ID: ${data.task_id}`;
-                } else {
-                    // 使用默认图片
-                    imgElement.src = data.default_image;
-                    
-                    // 构建角色信息提示
-                    let titleText = '暂无生成图片';
-                    if (data.character_info) {
-                        const info = data.character_info;
-                        titleText = `${info.name} (${info.gender}性${info.age_group}) - 暂无生成图片`;
-                    }
-                    imgElement.title = titleText;
-                }
-            }
-        })
-        .catch(error => {
-            console.error('Error loading thumbnail for character', characterId, ':', error);
-        });
-}
-
-// 打开生成图片模态框
-function openGenerateImageModal(characterId, characterName) {
-    document.getElementById('characterId').value = characterId;
-    document.getElementById('characterName').value = characterName;
-    document.getElementById('taskStatus').style.display = 'none';
-    document.getElementById('generateImageBtn').disabled = false;
-    
-    // 重置表单
-    document.getElementById('generateImageForm').reset();
-    document.getElementById('characterId').value = characterId;
-    document.getElementById('characterName').value = characterName;
-    document.getElementById('chapterId').value = '{{ chapter.id }}';
-    
-    // 重置模态框按钮状态
-    resetModalButtonState();
-    
-    const modal = new bootstrap.Modal(document.getElementById('generateImageModal'));
-    modal.show();
-}
-
-// 重置模态框按钮状态
-function resetModalButtonState() {
-    const btn = document.getElementById('generateImageBtn');
-    btn.disabled = false;
-    btn.innerHTML = '开始生成';
-}
-
-// 设置按钮加载状态
-function setButtonLoadingState(buttonId, loadingText = '处理中...') {
-    const btn = document.getElementById(buttonId);
-    btn.disabled = true;
-    btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${loadingText}`;
-}
-
-// 设置角色卡片按钮状态
-function setCharacterButtonState(characterId, isLoading) {
-    const characterCard = document.querySelector(`[data-character-id="${characterId}"]`);
-    if (characterCard) {
-        const btn = characterCard.querySelector('.generate-image-btn');
-        if (btn) {
-            const textSpan = btn.querySelector('.btn-text');
-            const loadingSpan = btn.querySelector('.btn-loading');
-            
-            if (isLoading) {
-                btn.disabled = true;
-                textSpan.classList.add('d-none');
-                loadingSpan.classList.remove('d-none');
-            } else {
-                btn.disabled = false;
-                textSpan.classList.remove('d-none');
-                loadingSpan.classList.add('d-none');
-            }
-        }
-    }
-}
-
-// 生成角色图片
-function generateCharacterImage() {
-    const form = document.getElementById('generateImageForm');
-    const formData = new FormData(form);
-    const characterId = formData.get('character_id');
-    
-    // 显示任务状态
-    document.getElementById('taskStatus').style.display = 'block';
-    setButtonLoadingState('generateImageBtn', '提交中...');
-    document.getElementById('taskStatusText').textContent = '正在提交任务...';
-    document.getElementById('taskProgress').style.width = '10%';
-    document.getElementById('taskLog').textContent = '准备生成角色图片...';
-    
-    // 设置角色卡片按钮为加载状态
-    setCharacterButtonState(characterId, true);
-    
-    // 发送AJAX请求
-    fetch('{% url "video:generate_character_image" %}', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            currentTaskId = data.task_id;
-            currentCharacterId = characterId;
-            setButtonLoadingState('generateImageBtn', '生成中...');
-            document.getElementById('taskStatusText').textContent = '任务已提交，正在处理...';
-            document.getElementById('taskProgress').style.width = '20%';
-            document.getElementById('taskLog').textContent = '任务ID: ' + data.task_id;
-            
-            // 开始检查任务状态
-            startStatusCheck();
-        } else {
-            document.getElementById('taskStatusText').textContent = '任务提交失败';
-            document.getElementById('taskLog').textContent = data.error || '未知错误';
-            resetModalButtonState();
-            setCharacterButtonState(characterId, false);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        document.getElementById('taskStatusText').textContent = '网络错误';
-        document.getElementById('taskLog').textContent = error.message;
-        resetModalButtonState();
-        setCharacterButtonState(characterId, false);
-    });
-}
-
-// 开始检查任务状态
-function startStatusCheck() {
-    if (statusCheckInterval) {
-        clearInterval(statusCheckInterval);
-    }
-    
-    statusCheckInterval = setInterval(() => {
-        checkTaskStatus();
-    }, 2000); // 每2秒检查一次
-}
-
-// 检查任务状态
-function checkTaskStatus() {
-    if (!currentTaskId) return;
-    
-    fetch(`{% url "video:check_task_status" %}?task_id=${currentTaskId}`)
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            const status = data.status;
-            const progress = data.progress || 0;
-            const log = data.log || '';
-            
-            document.getElementById('taskProgress').style.width = progress + '%';
-            document.getElementById('taskLog').textContent = log;
-            
-            if (status === 'success') {
-                document.getElementById('taskStatusText').textContent = '角色图片生成完成！';
-                document.getElementById('taskProgress').style.width = '100%';
-                document.getElementById('taskProgress').classList.add('bg-success');
-                clearInterval(statusCheckInterval);
-                
-                // 显示生成的图片信息
-                if (data.generated_images && data.generated_images.length > 0) {
-                    document.getElementById('taskLog').textContent = '成功生成 ' + data.generated_images.length + ' 张图片';
-                }
-                
-                // 恢复按钮状态
-                resetModalButtonState();
-                
-                // 更新缩略图
-                if (batchTaskIds.length > 0) {
-                    // 批量任务：更新所有相关角色的缩略图
-                    batchTaskIds.forEach(characterId => {
-                        const thumbnailImg = document.getElementById(`thumbnail-${characterId}`);
-                        if (thumbnailImg) {
-                            loadCharacterThumbnail(characterId, thumbnailImg);
-                        }
-                    });
-                    // 清空批量任务ID
-                    batchTaskIds = [];
-                    // 恢复批量按钮状态
-                    document.getElementById('batchGenerateBtn').disabled = false;
-                } else if (currentCharacterId) {
-                    // 单个任务：更新对应角色的缩略图
-                    setCharacterButtonState(currentCharacterId, false);
-                    const thumbnailImg = document.getElementById(`thumbnail-${currentCharacterId}`);
-                    if (thumbnailImg) {
-                        loadCharacterThumbnail(currentCharacterId, thumbnailImg);
-                    }
-                }
-                
-                // 3秒后关闭模态框
-                setTimeout(() => {
-                    const modal = bootstrap.Modal.getInstance(document.getElementById('generateImageModal'));
-                    modal.hide();
-                }, 3000);
-            } else if (status === 'failed') {
-                document.getElementById('taskStatusText').textContent = '角色图片生成失败';
-                document.getElementById('taskProgress').classList.add('bg-danger');
-                document.getElementById('taskLog').textContent = data.error || '生成失败';
-                clearInterval(statusCheckInterval);
-                resetModalButtonState();
-                
-                // 恢复按钮状态
-                if (batchTaskIds.length > 0) {
-                    document.getElementById('batchGenerateBtn').disabled = false;
-                    batchTaskIds = [];
-                }
-                if (currentCharacterId) {
-                    setCharacterButtonState(currentCharacterId, false);
-                }
-            } else if (status === 'running') {
-                document.getElementById('taskStatusText').textContent = '正在生成角色图片...';
-            } else if (status === 'pending') {
-                document.getElementById('taskStatusText').textContent = '任务排队中...';
-            } else {
-                document.getElementById('taskStatusText').textContent = '任务状态: ' + status;
-            }
-        }
-    })
-    .catch(error => {
-        console.error('Status check error:', error);
-    });
-}
-
-// 清理定时器
-window.addEventListener('beforeunload', () => {
-    if (statusCheckInterval) {
-        clearInterval(statusCheckInterval);
-    }
-});
-
-// 批量操作相关函数
-
-// 全选/反选功能
-function toggleSelectAll() {
-    const checkboxes = document.querySelectorAll('.character-checkbox');
-    const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-    
-    checkboxes.forEach(checkbox => {
-        checkbox.checked = !allChecked;
-    });
-    
-    updateBatchButton();
-}
-
-// 更新批量生成按钮状态
-function updateBatchButton() {
-    const checkedBoxes = document.querySelectorAll('.character-checkbox:checked');
-    const batchBtn = document.getElementById('batchGenerateBtn');
-    
-    if (checkedBoxes.length > 0) {
-        batchBtn.disabled = false;
-        batchBtn.textContent = `批量生成图片 (${checkedBoxes.length})`;
-    } else {
-        batchBtn.disabled = true;
-        batchBtn.textContent = '批量生成图片';
-    }
-}
-
-// 批量生成角色图片
-function batchGenerateImages() {
-    const checkedBoxes = document.querySelectorAll('.character-checkbox:checked');
-    
-    if (checkedBoxes.length === 0) {
-        alert('请先选择要生成图片的角色');
-        return;
-    }
-    
-    const characterIds = Array.from(checkedBoxes).map(cb => cb.value);
-    const characterNames = Array.from(checkedBoxes).map(cb => {
-        const card = cb.closest('.character-card');
-        return card.querySelector('.card-title').textContent.trim();
-    });
-    
-    // 确认对话框
-    if (!confirm(`确定要为以下 ${characterIds.length} 个角色生成图片吗？\n\n${characterNames.join(', ')}`)) {
-        return;
-    }
-    
-    // 准备JSON数据
-    const requestData = {
-        chapter_id: '{{ chapter.id }}',
-        character_ids: characterIds,
-        image_style: 'realistic',
-        image_quality: 'standard',
-        image_count: 1
-    };
-    
-    // 显示任务状态
-    document.getElementById('taskStatus').style.display = 'block';
-    document.getElementById('generateImageBtn').disabled = true;
-    document.getElementById('batchGenerateBtn').disabled = true;
-    document.getElementById('taskStatusText').textContent = '正在提交批量生成任务...';
-    document.getElementById('taskProgress').style.width = '10%';
-    document.getElementById('taskLog').textContent = `准备为 ${characterIds.length} 个角色生成图片...`;
-    
-    // 发送AJAX请求
-    fetch('{% url "video:batch_generate_character_images" %}', {
-        method: 'POST',
-        body: JSON.stringify(requestData),
-        headers: {
-            'Content-Type': 'application/json',
-            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            // 批量任务返回多个task_id，我们使用第一个作为主要跟踪ID
-            if (data.tasks && data.tasks.length > 0) {
-                currentTaskId = data.tasks[0].task_id;
-                batchTaskIds = characterIds; // 保存批量任务的角色ID
-                document.getElementById('taskStatusText').textContent = `批量任务已提交，正在处理 ${data.tasks.length} 个角色...`;
-                document.getElementById('taskProgress').style.width = '20%';
-                document.getElementById('taskLog').textContent = `已提交 ${data.tasks.length} 个任务: ${data.tasks.map(t => t.character_name).join(', ')}`;
-                
-                // 开始检查任务状态
-                startStatusCheck();
-            } else {
-                document.getElementById('taskStatusText').textContent = '批量任务提交失败';
-                document.getElementById('taskLog').textContent = '未返回有效的任务信息';
-                document.getElementById('generateImageBtn').disabled = false;
-                document.getElementById('batchGenerateBtn').disabled = false;
-            }
-        } else {
-            document.getElementById('taskStatusText').textContent = '批量任务提交失败';
-            document.getElementById('taskLog').textContent = data.error || '未知错误';
-            document.getElementById('generateImageBtn').disabled = false;
-            document.getElementById('batchGenerateBtn').disabled = false;
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        document.getElementById('taskStatusText').textContent = '网络错误';
-        document.getElementById('taskLog').textContent = error.message;
-        document.getElementById('generateImageBtn').disabled = false;
-        document.getElementById('batchGenerateBtn').disabled = false;
-    });
-}
 </script>
 
 <!-- 使用统一的任务组件 -->
@@ -940,29 +377,7 @@ function batchGenerateImages() {
     --border-radius-lg: 20px;
 }
 
-/* 角色卡片样式增强 */
-.character-card {
-    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-    border: 1px solid rgba(102, 126, 234, 0.1);
-    box-shadow: var(--shadow-light);
-}
 
-.character-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: var(--shadow-heavy);
-    border-color: rgba(102, 126, 234, 0.3);
-}
-
-.character-thumbnail {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border: 3px solid rgba(102, 126, 234, 0.2);
-}
-
-.character-thumbnail:hover {
-    transform: scale(1.08) rotate(1deg);
-    border-color: rgba(102, 126, 234, 0.4);
-    box-shadow: var(--shadow-medium);
-}
 
 .info-item {
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
@@ -1004,11 +419,7 @@ function batchGenerateImages() {
     box-shadow: var(--shadow-light);
 }
 
-/* 状态指示器动画 */
-.character-status i {
-    animation: pulse 3s ease-in-out infinite;
-    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
-}
+
 
 @keyframes pulse {
     0%, 100% { opacity: 0.7; transform: scale(1); }
@@ -1017,12 +428,6 @@ function batchGenerateImages() {
 
 /* 响应式优化 */
 @media (max-width: 768px) {
-    .character-thumbnail {
-        width: 150px !important;
-        height: 150px !important;
-        border-width: 2px;
-    }
-    
     .card-body {
         padding: 1.5rem !important;
     }
@@ -1030,97 +435,11 @@ function batchGenerateImages() {
     .info-item {
         padding: 0.75rem !important;
     }
-    
-    /* 移动端改为上下布局 */
-    .character-info {
-        margin-bottom: 2rem !important;
-    }
-    
-    .character-actions {
-        margin-bottom: 2rem !important;
-    }
-    
-    .character-card:hover {
-        transform: translateY(-4px) scale(1.01);
-    }
 }
 
-/* 图片容器增强 */
-.character-thumbnail-container {
-    min-height: 220px;
-    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
-    border-radius: var(--border-radius-lg);
-}
 
-.character-thumbnail {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
 
-.character-thumbnail::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--primary-gradient);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1;
-}
 
-.character-thumbnail:hover::before {
-    opacity: 0.1;
-}
-
-.character-thumbnail img {
-    position: relative;
-    z-index: 2;
-}
-
-/* 操作按钮增强 */
-.character-actions .btn {
-    padding: 14px 24px;
-    font-weight: 600;
-    border-radius: var(--border-radius);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.character-actions .btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
-}
-
-.character-actions .btn:hover::before {
-    left: 100%;
-}
-
-.character-actions .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-medium);
-}
-
-.character-actions .btn-outline-primary {
-    border: 2px solid var(--primary-light);
-    color: var(--primary-dark);
-}
-
-.character-actions .btn-outline-primary:hover {
-    background: var(--primary-gradient);
-    border-color: transparent;
-    color: white;
-}
 
 /* 加载状态样式 */
 .btn-loading {
@@ -1132,74 +451,9 @@ function batchGenerateImages() {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* 复选框样式增强 */
-.character-checkbox {
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    accent-color: var(--primary-light);
-    width: 18px;
-    height: 18px;
-}
 
-.character-checkbox:hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 6px rgba(102, 126, 234, 0.4));
-}
 
-.character-checkbox:checked {
-    filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.6));
-}
 
-/* 卡片阴影层次和光效 */
-.character-card {
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-}
-
-.character-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--primary-gradient);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.character-card:hover::before {
-    opacity: 0.03;
-}
-
-.character-card::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.6s ease;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.character-card:hover::after {
-    opacity: 1;
-}
-
-/* 确保内容在覆盖层之上 */
-.character-card .card-header,
-.character-card .card-body,
-.character-card .card-footer {
-    position: relative;
-    z-index: 2;
-}
 
 /* 状态徽章样式统一 */
 .badge {
@@ -1352,72 +606,18 @@ function batchGenerateImages() {
 }
 </style>
 
-<!-- 图片放大模态框 -->
-<div id="imageModal" class="image-modal" onclick="closeImageModal(event)">
-    <div class="image-modal-content">
-        <span class="modal-close" onclick="closeImageModal()">&times;</span>
-        <div class="image-modal-header">
-            <h3 id="modalImageTitle">角色图片</h3>
-        </div>
-        <img id="modalImage" class="modal-image" src="" alt="">
-        <div class="image-modal-footer">
-            <p>点击图片外区域或右上角 × 关闭</p>
-        </div>
-    </div>
-</div>
+
 
 <script>
-// 打开图片模态框
-function openImageModal(imageId, characterName) {
-    const img = document.getElementById(imageId);
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    const modalTitle = document.getElementById('modalImageTitle');
-    
-    if (img && modal && modalImg && modalTitle) {
-        modalImg.src = img.src;
-        modalImg.alt = img.alt;
-        modalTitle.textContent = characterName + ' - 角色图片';
-        modal.classList.add('show');
-        
-        // 防止页面滚动
-        document.body.style.overflow = 'hidden';
-    }
+
+// 安全获取CSRF Token的函数
+function getCSRFToken() {
+    const token = document.querySelector('[name=csrfmiddlewaretoken]');
+    return token ? token.value : '';
 }
 
-// 关闭图片模态框
-function closeImageModal(event) {
-    const modal = document.getElementById('imageModal');
-    
-    // 如果点击的是图片本身，不关闭模态框
-    if (event && event.target.classList.contains('modal-image')) {
-        return;
-    }
-    
-    if (modal) {
-        modal.classList.remove('show');
-        
-        // 恢复页面滚动
-        document.body.style.overflow = 'auto';
-    }
-}
-
-// 键盘事件监听
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        closeImageModal();
-    }
-});
-
-// 防止模态框内容区域点击时关闭
+// 页面加载完成后初始化功能
 document.addEventListener('DOMContentLoaded', function() {
-    const modalContent = document.querySelector('.image-modal-content');
-    if (modalContent) {
-        modalContent.addEventListener('click', function(event) {
-            event.stopPropagation();
-        });
-    }
-    
     // 初始化音频功能
     initAudioFunctions();
     loadAudioFiles();
@@ -1443,7 +643,7 @@ function generateAudio() {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+            'X-CSRFToken': getCSRFToken()
         }
     })
     .then(response => response.json())
@@ -1730,7 +930,7 @@ function generateNarrationImage(narrationId, sceneNumber) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                'X-CSRFToken': getCSRFToken()
             }
         })
         .then(response => response.json())
@@ -1767,7 +967,7 @@ function generateNarrationVideo(narrationId, sceneNumber) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                'X-CSRFToken': getCSRFToken()
             }
         })
         .then(response => response.json())
@@ -1806,7 +1006,7 @@ function batchGenerateImages() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                'X-CSRFToken': getCSRFToken()
             }
         })
         .then(response => response.json())
@@ -1845,7 +1045,7 @@ function batchGenerateVideos() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                'X-CSRFToken': getCSRFToken()
             }
         })
         .then(response => response.json())
@@ -1871,42 +1071,7 @@ function batchGenerateVideos() {
     }
 }
 
-// 更新图片命名
-function validateNarrationImages() {
-    if (confirm('确定要执行图片重命名操作吗？这将使用rename_images.py脚本重新整理图片命名。')) {
-        const btn = document.getElementById('validateImageBtn');
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 重命名中...';
-        
-        fetch(`/video/api/chapters/{{ chapter.id }}/validate-narration-images/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert(`图片重命名任务已启动！任务ID: ${data.task_id}`);
-                // 刷新页面以更新状态
-                setTimeout(() => {
-                    location.reload();
-                }, 2000);
-            } else {
-                alert('重命名失败: ' + (data.error || '未知错误'));
-            }
-        })
-        .catch(error => {
-            console.error('Error renaming images:', error);
-            alert('重命名失败: ' + error.message);
-        })
-        .finally(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-edit"></i> 更新图片命名';
-        });
-    }
-}
+
 
 // LLM校验分镜图片
 function validateNarrationImagesLLM() {
@@ -1919,7 +1084,7 @@ function validateNarrationImagesLLM() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                'X-CSRFToken': getCSRFToken()
             }
         })
         .then(response => response.json())
@@ -1956,7 +1121,7 @@ function generateFirstVideo() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                'X-CSRFToken': getCSRFToken()
             }
         })
         .then(response => response.json())
@@ -1993,7 +1158,7 @@ function batchGenerateAudio() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                'X-CSRFToken': getCSRFToken()
             }
         })
         .then(response => response.json())
@@ -2030,7 +1195,7 @@ function batchGenerateAllVideos() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                'X-CSRFToken': getCSRFToken()
             }
         })
         .then(response => response.json())
@@ -2312,7 +1477,7 @@ function regenerateImage(filename, sceneNumber, narrationId) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                'X-CSRFToken': getCSRFToken()
             },
             body: JSON.stringify(requestData)
         })

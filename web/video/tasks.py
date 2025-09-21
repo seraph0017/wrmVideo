@@ -921,6 +921,219 @@ def generate_character_image_async(self, task_id, character_id, chapter_id, imag
 
 
 @shared_task(bind=True)
+def gen_image_async_v2_task(self, novel_id, chapter_id):
+    """
+    使用gen_image_async_v2.py脚本为指定章节生成分镜图片
+    
+    Args:
+        novel_id: 小说ID
+        chapter_id: 章节ID
+        
+    Returns:
+        dict: 任务执行结果
+    """
+    try:
+        # 获取章节对象
+        from .models import Chapter
+        chapter = Chapter.objects.get(id=chapter_id)
+        
+        # 更新章节状态
+        chapter.batch_image_status = 'processing'
+        chapter.batch_image_task_id = self.request.id
+        chapter.batch_image_progress = 10
+        chapter.batch_image_message = '正在使用gen_image_async_v2生成分镜图片...'
+        chapter.batch_image_started_at = timezone.now()
+        chapter.save()
+        
+        logger.info(f"开始为章节 {chapter.id} 使用gen_image_async_v2生成分镜图片")
+        
+        # 使用工具函数获取正确的章节编号和路径
+        from .utils import get_chapter_number_from_filesystem, get_chapter_directory_path
+        
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        if not chapter_number:
+            error_msg = f"无法在文件系统中找到章节 {chapter.title} 的目录"
+            logger.error(error_msg)
+            
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = '无法找到章节目录'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'error': error_msg
+            }
+        
+        # 获取章节目录路径
+        chapter_dir = get_chapter_directory_path(novel_id, chapter_number)
+        if not chapter_dir or not os.path.exists(chapter_dir):
+            error_msg = f"章节目录不存在: {chapter_dir}"
+            logger.error(error_msg)
+            
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = '章节目录不存在'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'error': error_msg
+            }
+        
+        # 检查gen_image_async_v2.py脚本是否存在
+        gen_image_script = os.path.join(project_root, 'gen_image_async_v2.py')
+        if not os.path.exists(gen_image_script):
+            error_msg = f"gen_image_async_v2.py脚本不存在: {gen_image_script}"
+            logger.error(error_msg)
+            
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = 'gen_image_async_v2.py脚本不存在'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'error': error_msg
+            }
+        
+        # 更新进度
+        chapter.batch_image_progress = 30
+        chapter.batch_image_message = '正在执行gen_image_async_v2.py脚本...'
+        chapter.save()
+        
+        # 执行gen_image_async_v2.py脚本，传入章节目录路径
+        cmd = ['python', gen_image_script, chapter_dir]
+        logger.info(f"执行命令: {' '.join(cmd)}")
+        
+        result = subprocess.run(
+            cmd,
+            cwd=project_root,
+            capture_output=True,
+            text=True,
+            timeout=1800  # 30分钟超时
+        )
+        
+        # 更新进度
+        chapter.batch_image_progress = 80
+        chapter.batch_image_message = '正在检查生成结果...'
+        chapter.save()
+        
+        if result.returncode == 0:
+            logger.info(f"gen_image_async_v2.py执行成功")
+            logger.info(f"stdout: {result.stdout}")
+            
+            # 检查是否有图片生成
+            images_dir = os.path.join(chapter_dir, 'images')
+            if os.path.exists(images_dir):
+                image_files = [f for f in os.listdir(images_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+                image_count = len(image_files)
+                
+                chapter.batch_image_status = 'completed'
+                chapter.batch_image_progress = 100
+                chapter.batch_image_message = f'成功生成 {image_count} 张分镜图片'
+                chapter.batch_image_completed_at = timezone.now()
+                chapter.save()
+                
+                logger.info(f"章节 {chapter.id} 分镜图片生成完成，共生成 {image_count} 张图片")
+                
+                return {
+                    'status': 'success',
+                    'novel_id': novel_id,
+                    'chapter_id': chapter_id,
+                    'message': f'成功生成 {image_count} 张分镜图片',
+                    'image_count': image_count
+                }
+            else:
+                error_msg = "gen_image_async_v2.py执行成功但未找到生成的图片目录"
+                logger.warning(error_msg)
+                
+                chapter.batch_image_status = 'completed'
+                chapter.batch_image_progress = 100
+                chapter.batch_image_message = '脚本执行完成，但未找到生成的图片'
+                chapter.batch_image_completed_at = timezone.now()
+                chapter.save()
+                
+                return {
+                    'status': 'warning',
+                    'novel_id': novel_id,
+                    'chapter_id': chapter_id,
+                    'message': error_msg
+                }
+        else:
+            error_msg = f"gen_image_async_v2.py执行失败，返回码: {result.returncode}"
+            logger.error(error_msg)
+            logger.error(f"stdout: {result.stdout}")
+            logger.error(f"stderr: {result.stderr}")
+            
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = f"{error_msg}\nstderr: {result.stderr}"
+            chapter.batch_image_message = 'gen_image_async_v2.py执行失败'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'error': error_msg,
+                'stderr': result.stderr
+            }
+            
+    except subprocess.TimeoutExpired:
+        error_msg = "gen_image_async_v2.py执行超时"
+        logger.error(error_msg)
+        
+        chapter.batch_image_status = 'failed'
+        chapter.batch_image_progress = 100
+        chapter.batch_image_error = error_msg
+        chapter.batch_image_message = '脚本执行超时'
+        chapter.batch_image_completed_at = timezone.now()
+        chapter.save()
+        
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'error': error_msg
+        }
+        
+    except Exception as e:
+        error_msg = f"gen_image_async_v2任务执行异常: {str(e)}"
+        logger.error(error_msg)
+        
+        try:
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = '任务执行异常'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+        except Exception as save_error:
+            logger.error(f"保存章节状态失败: {save_error}")
+        
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'error': error_msg
+        }
+
+
+@shared_task(bind=True)
 def batch_generate_chapter_images_async(self, novel_id, chapter_id):
     """
     批量生成章节分镜图片的Celery任务
@@ -1522,106 +1735,6 @@ def scan_specific_async_tasks(self, tasks_dir='async_tasks'):
         }
 
 
-@shared_task(bind=True)
-def rename_images_async(self, novel_id, chapter_id):
-    """
-    异步执行rename_images.py脚本重命名图片
-    
-    Args:
-        novel_id (int): 小说ID
-        chapter_id (int): 章节ID
-        
-    Returns:
-        dict: 处理结果
-    """
-    logger.info(f"开始异步重命名图片: 小说ID={novel_id}, 章节ID={chapter_id}")
-    
-    try:
-        # 获取章节对象
-        from .models import Chapter
-        chapter = Chapter.objects.get(id=chapter_id)
-        
-        # 使用工具函数获取文件系统中的章节编号
-        from .utils import get_chapter_number_from_filesystem
-        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
-        
-        if not chapter_number:
-            raise Exception(f'无法在文件系统中找到章节 {chapter.title} 的目录')
-        
-        # 构建章节目录路径
-        chapter_dir = f'data/{novel_id:03d}/chapter_{chapter_number}'
-        
-        # 检查章节目录是否存在
-        project_root = settings.BASE_DIR.parent
-        full_chapter_path = os.path.join(project_root, chapter_dir)
-        
-        if not os.path.exists(full_chapter_path):
-            raise Exception(f'章节目录不存在: {full_chapter_path}')
-        
-        # 构建rename_images.py脚本路径
-        script_path = os.path.join(settings.BASE_DIR.parent, 'rename_images.py')
-        
-        if not os.path.exists(script_path):
-            raise Exception(f'rename_images.py脚本不存在: {script_path}')
-        
-        # 构建命令 (不使用--no-db-update参数，默认更新数据库)
-        cmd = [
-            'python',
-            script_path,
-            chapter_dir
-        ]
-        
-        logger.info(f"执行命令: {' '.join(cmd)}")
-        
-        # 执行脚本
-        result = subprocess.run(
-            cmd,
-            cwd=project_root,
-            capture_output=True,
-            text=True,
-            timeout=300  # 5分钟超时
-        )
-        
-        if result.returncode == 0:
-            logger.info(f"图片重命名成功: {result.stdout}")
-            return {
-                'status': 'success',
-                'message': f'图片重命名完成，章节: {chapter.title}',
-                'stdout': result.stdout,
-                'novel_id': novel_id,
-                'chapter_id': chapter_id
-            }
-        else:
-            error_msg = f'图片重命名失败: {result.stderr}'
-            logger.error(error_msg)
-            return {
-                'status': 'error',
-                'message': error_msg,
-                'stderr': result.stderr,
-                'novel_id': novel_id,
-                'chapter_id': chapter_id
-            }
-            
-    except subprocess.TimeoutExpired:
-        error_msg = '图片重命名超时（超过5分钟）'
-        logger.error(error_msg)
-        return {
-            'status': 'error',
-            'message': error_msg,
-            'novel_id': novel_id,
-            'chapter_id': chapter_id
-        }
-            
-    except Exception as e:
-        error_msg = f'图片重命名异常: {str(e)}'
-        logger.error(error_msg, exc_info=True)
-        return {
-            'status': 'error',
-            'message': error_msg,
-            'novel_id': novel_id,
-            'chapter_id': chapter_id
-        }
-
 
 @shared_task(bind=True)
 def scan_database_celery_tasks(self):
@@ -1670,100 +1783,6 @@ def scan_database_celery_tasks(self):
             'stats': {}
         }
 
-
-@shared_task(bind=True)
-def validate_narration_images_async(self, novel_id, chapter_id):
-    """
-    异步执行llm_narration_image.py脚本校验分镜图片
-    
-    Args:
-        novel_id (int): 小说ID
-        chapter_id (int): 章节ID
-        
-    Returns:
-        dict: 处理结果
-    """
-    logger.info(f"开始异步校验分镜图片: 小说ID={novel_id}, 章节ID={chapter_id}")
-    
-    try:
-        # 获取章节对象
-        from .models import Chapter
-        chapter = Chapter.objects.get(id=chapter_id)
-        
-        # 使用工具函数获取文件系统中的章节编号
-        from .utils import get_chapter_number_from_filesystem
-        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
-        
-        if not chapter_number:
-            raise Exception(f'无法在文件系统中找到章节 {chapter.title} 的目录')
-        
-        # 构建章节目录路径
-        chapter_dir = f'data/{novel_id:03d}/chapter_{chapter_number}'
-        
-        # 检查章节目录是否存在
-        project_root = settings.BASE_DIR.parent
-        full_chapter_path = os.path.join(project_root, chapter_dir)
-        
-        if not os.path.exists(full_chapter_path):
-            raise Exception(f'章节目录不存在: {full_chapter_path}')
-        
-        # 构建脚本路径
-        script_path = os.path.join(settings.BASE_DIR.parent, 'llm_narration_image.py')
-        
-        if not os.path.exists(script_path):
-            raise Exception(f'脚本文件不存在: {script_path}')
-        
-        # 执行llm_narration_image.py脚本，针对特定章节
-        cmd = ['python', script_path, chapter_dir, '--auto-regenerate']
-        
-        logger.info(f"执行命令: {' '.join(cmd)}")
-        
-        # 切换到项目根目录执行
-        project_root = settings.BASE_DIR.parent
-        
-        result = subprocess.run(
-            cmd,
-            cwd=project_root,
-            capture_output=True,
-            text=True,
-            timeout=3600  # 1小时超时
-        )
-        
-        if result.returncode == 0:
-            logger.info(f"分镜图片校验成功: {result.stdout}")
-            return {
-                'success': True,
-                'message': '分镜图片校验完成',
-                'output': result.stdout,
-                'novel_id': novel_id,
-                'chapter_id': chapter_id
-            }
-        else:
-            logger.error(f"分镜图片校验失败: {result.stderr}")
-            return {
-                'success': False,
-                'error': f'脚本执行失败: {result.stderr}',
-                'output': result.stdout,
-                'novel_id': novel_id,
-                'chapter_id': chapter_id
-            }
-            
-    except subprocess.TimeoutExpired:
-        logger.error(f"分镜图片校验超时: 小说ID={novel_id}, 章节ID={chapter_id}")
-        return {
-            'success': False,
-            'error': '脚本执行超时（超过1小时）',
-            'novel_id': novel_id,
-            'chapter_id': chapter_id
-        }
-    except Exception as e:
-        logger.error(f"分镜图片校验失败: {str(e)}")
-        return {
-            'success': False,
-            'error': str(e),
-            'novel_id': novel_id,
-            'chapter_id': chapter_id
-        }
 
 
 @shared_task(bind=True)

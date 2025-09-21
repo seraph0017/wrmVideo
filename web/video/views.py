@@ -550,7 +550,6 @@ class ChapterDetailView(LoginRequiredMixin, DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['narrations'] = self.object.narrations.all()
-        context['characters'] = self.object.characters.all()
         
         # 提取视频文件名用于显示
         if self.object.video_path:
@@ -1855,55 +1854,6 @@ def serve_chapter_video(request, chapter_id):
 
 @csrf_exempt
 @require_http_methods(["POST"])
-def validate_narration_images(request, chapter_id):
-    """
-    更新图片命名API - 执行rename_images.py脚本
-    
-    Args:
-        request: HTTP请求对象
-        chapter_id: 章节ID
-        
-    Returns:
-        JsonResponse: 处理结果
-    """
-    try:
-        # 获取章节对象
-        chapter = get_object_or_404(Chapter, id=chapter_id)
-        novel_id = chapter.novel.id
-        
-        logger.info(f"开始更新图片命名: 小说ID={novel_id}, 章节ID={chapter_id}")
-        
-        # 导入Celery任务
-        from .tasks import rename_images_async
-        
-        # 启动异步任务
-        task = rename_images_async.delay(novel_id, chapter_id)
-        
-        logger.info(f"图片重命名任务已启动: task_id={task.id}")
-        
-        return JsonResponse({
-            'success': True,
-            'message': '图片重命名任务已启动',
-            'task_id': task.id,
-            'novel_id': novel_id,
-            'chapter_id': chapter_id
-        })
-        
-    except Chapter.DoesNotExist:
-        logger.error(f"章节不存在: chapter_id={chapter_id}")
-        return JsonResponse({
-            'success': False,
-            'error': f'章节不存在: {chapter_id}'
-        }, status=404)
-        
-    except Exception as e:
-        logger.error(f"图片重命名失败: {str(e)}")
-        return JsonResponse({
-            'success': False,
-            'error': f'图片重命名失败: {str(e)}'
-        }, status=500)
-
-
 @csrf_exempt
 @require_http_methods(["POST"])
 def validate_narration_images_llm(request, chapter_id):
@@ -2111,44 +2061,40 @@ def get_image_generation_result(request, narration_id):
 @require_http_methods(["POST"])
 def batch_generate_images(request, chapter_id):
     """
-    批量生成章节所有解说的分镜图片API
+    使用gen_image_async_v2.py脚本批量生成章节分镜图片API
     """
     try:
         # 获取章节对象
         chapter = get_object_or_404(Chapter, id=chapter_id)
         
-        # 获取章节下的所有解说
+        # 检查章节是否有解说内容（可选检查）
         narrations = chapter.narrations.all()
-        
         if not narrations.exists():
             return JsonResponse({
                 'success': False,
                 'error': '该章节没有解说内容'
             }, status=400)
         
-        # 导入异步任务
-        from .tasks import generate_narration_images_async
+        # 检查是否已有任务在运行
+        if hasattr(chapter, 'batch_image_status') and chapter.batch_image_status == 'processing':
+            return JsonResponse({
+                'success': False,
+                'error': '该章节已有分镜图片生成任务在运行中'
+            }, status=400)
         
-        # 为每个解说启动异步任务，添加1秒间隔控制
-        import time
-        task_results = []
-        for i, narration in enumerate(narrations):
-            task = generate_narration_images_async.delay(narration.id)
-            task_results.append({
-                'narration_id': narration.id,
-                'scene_number': narration.scene_number,
-                'celery_task_id': task.id,
-                'status': 'submitted'
-            })
-            # 除了最后一个任务，其他任务之间间隔1秒
-            if i < len(narrations) - 1:
-                time.sleep(1)
+        # 导入新的异步任务
+        from .tasks import gen_image_async_v2_task
+        
+        # 启动gen_image_async_v2异步任务
+        task = gen_image_async_v2_task.delay(chapter.novel.id, chapter.id)
         
         return JsonResponse({
             'success': True,
-            'message': f'正在为章节 {chapter.title} 的 {len(task_results)} 个解说生成分镜图片...',
-            'tasks': task_results,
-            'note': '任务已提交到火山引擎，请使用celery_task_id查询任务状态获取volcengine_task_id，然后使用volcengine_task_id查询最终结果'
+            'message': f'正在使用gen_image_async_v2为章节 {chapter.title} 生成分镜图片...',
+            'task_id': task.id,
+            'chapter_id': chapter.id,
+            'novel_id': chapter.novel.id,
+            'note': '任务已提交，使用gen_image_async_v2.py脚本按章节生成分镜图片'
         })
         
     except Exception as e:
