@@ -4,6 +4,16 @@
 
 ## ✨ 最新更新
 
+- 🚀 **方舟SDK图片生成v3版本**: 新增基于方舟SDK的图片生成脚本gen_image_async_v3.py：
+  - **方舟SDK集成**: 使用volcengine-python-sdk[ark]替换原有的VisualService API
+  - **API Key配置**: 使用config.py中的t2i_v3配置作为方舟SDK的API密钥
+  - **国风漫画风格**: 专门优化的国风漫画风格prompt构建，提升图片质量
+  - **使用方式一致**: 保持与gen_image_async_v2.py完全相同的命令行接口和参数
+  - **智能解析**: 支持角色信息解析、场景描述构建和图片下载保存
+  - **错误处理**: 完善的异常处理机制，包括API调用失败、网络错误等情况
+  - **日志记录**: 详细的执行日志，便于调试和监控图片生成过程
+  - **测试验证**: 包含完整的测试脚本，验证SDK连接、配置读取和图片生成功能
+
 - 🎥 **视频预览功能**: 新增章节视频在线预览功能，提升用户体验：
   - **在线播放**: 支持在Web界面直接播放生成的视频文件
   - **模态框播放器**: 使用Bootstrap模态框实现优雅的视频播放界面
@@ -619,6 +629,7 @@ wrmVideo/
 │   │   │   ├── chapter01_script.txt  # 章节脚本
 │   │   │   ├── *.mp3       # 生成的音频文件
 │   │   │   ├── *.jpeg      # 生成的图片文件
+│   │   │   ├── *.prompt.json # 图片对应的prompt信息文件（v3新增）
 │   │   │   ├── *.mp4       # 生成的视频片段
 │   │   │   └── chapter01_complete.mp4  # 完整章节视频
 │   │   └── final_complete_video.mp4    # 最终合并视频
@@ -646,6 +657,8 @@ wrmVideo/
 ├── generate.py             # 主程序入口
 ├── gen_image.py            # 同步图片生成脚本
 ├── gen_image_async.py      # 异步图片生成脚本（支持统计、重试和失败任务处理）
+├── gen_image_async_v2.py   # v2版本异步图片生成脚本（原有API）
+├── gen_image_async_v3.py   # v3版本异步图片生成脚本（方舟SDK，国风漫画风格）
 ├── check_and_retry_images.py  # 图片任务检查和重试脚本
 ├── check_async_tasks.py    # 异步任务状态查询和下载脚本
 ├── generate_all_images.py  # 完整图片生成流程脚本
@@ -666,6 +679,20 @@ wrmVideo/
 #### 图片生成相关
 
 - **`gen_image.py`**: 同步图片生成，适合小批量处理
+- **`gen_image_async_v3.py`**: 方舟SDK版本异步图片生成脚本（推荐），特色功能：
+  - 使用方舟SDK (volcengine-python-sdk[ark]) 替换原有API
+  - 专门优化的国风漫画风格prompt构建
+  - 使用config.py中的t2i_v3配置作为API密钥
+  - **新增参数支持**：
+    - `response_format="b64_json"`：返回base64格式图片数据，避免URL过期问题
+    - `watermark=False`：生成无水印图片
+  - **Prompt保存功能**：
+    - 自动保存每张图片对应的prompt信息到`.prompt.json`文件
+    - 包含完整的生成参数、时间戳、场景编号等信息
+    - 便于后续重新生成或调试图片质量问题
+  - 保持与v2版本完全相同的使用方式和文件保存格式
+  - 完善的错误处理和日志记录
+  - 支持角色信息解析和场景描述构建
 - **`gen_image_async.py`**: 异步图片生成脚本，新增功能：
   - 自动统计所有narration文件中的图片特写数量
   - 逐一发起请求并存储响应到async_tasks目录
@@ -945,7 +972,13 @@ python gen_script_v2.py novel.txt --output data/001 --validate-only --regenerate
 python gen_script_v2.py novel.txt --output data/001 --min-length 1000 --max-length 1800 --max-retries 5
 
 # 2. 生成图片（推荐使用异步模式）
-# 推荐方式 - 异步生成（每个章节固定30张图片：10个分镜×3张图片）
+# 推荐方式 - 方舟SDK v3版本（国风漫画风格，质量更高）
+python gen_image_async_v3.py data/001
+
+# 单个章节生成
+python gen_image_async_v3.py data/001/chapter_001
+
+# 备选方式 - v2版本（原有API）
 python gen_image_async.py data/001
 
 # 单个章节生成
@@ -1091,6 +1124,29 @@ python test/generate_missing_images_report.py
   - `XXX`：章节编号（如001）
   - `YY`：分镜编号（01-10）
   - `Z`：该分镜下的图片编号（1-3）
+
+#### Prompt信息保存（v3新增功能）
+
+使用`gen_image_async_v3.py`生成图片时，系统会自动保存每张图片对应的prompt信息到`.prompt.json`文件：
+
+```json
+{
+  "image_file": "chapter_002_image_01.jpeg",
+  "prompt": "画面风格是强调强烈线条、鲜明对比和现代感造型...",
+  "timestamp": "2025-09-22T15:00:46.635108",
+  "scene_number": 1,
+  "model": "doubao-seedream-3-0-t2i-250415",
+  "generation_params": {
+    "response_format": "b64_json",
+    "watermark": false
+  }
+}
+```
+
+**文件命名规则**：`chapter_XXX_image_YY.prompt.json`
+- 与对应图片文件同目录存放
+- 包含完整的生成参数和时间戳
+- 便于后续重新生成或调试图片质量问题
 
 ### 4. 图片生成模式选择
 
@@ -1564,6 +1620,10 @@ python cleanup_regenerated_files.py --all --execute         # 删除所有文件
 - 👥 **角色图片系统**: 完整的五层属性分类系统
 - ⚡ **性能优化**: 异步处理和资源复用
 - 🎯 **智能字幕**: 改进的断句和显示算法
+- 🖼️ **图片生成增强**: gen_image_async_v3.py新增参数支持
+  - `response_format="b64_json"`: 返回base64格式，避免URL过期
+  - `watermark=False`: 生成无水印图片
+  - **Prompt保存功能**: 自动保存每张图片对应的prompt信息到`.prompt.json`文件，便于后续重新生成
 
 ### v2.0.0
 - ✨ 智能断句功能
