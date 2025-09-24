@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_019 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.57,Default,,0,0,0,,危急时刻{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄携火光而
+Dialogue: 0,0:00:02.57,0:00:05.43,Default,,0,0,0,,至{\c&H0000FFFF&\b1}九玄真{\c&H00FFFFFF&\b0}火斩劈开冥水潮汐
+Dialogue: 0,0:00:05.78,0:00:06.57,Default,,0,0,0,,声如惊雷
+Dialogue: 0,0:00:07.06,0:00:08.93,Default,,0,0,0,,这么多年还是杀人找借口
+Dialogue: 0,0:00:09.23,0:00:10.09,Default,,0,0,0,,你们才该死

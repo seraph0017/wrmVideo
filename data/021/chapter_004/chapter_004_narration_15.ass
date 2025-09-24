@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_004 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.52,Default,,0,0,0,,吴战黑色圆领劲装
+Dialogue: 0,0:00:01.79,0:00:02.63,Default,,0,0,0,,见{\c&H0000FFFF&\b1}吴毅{\c&H00FFFFFF&\b0}被废
+Dialogue: 0,0:00:02.93,0:00:03.82,Default,,0,0,0,,面色{\c&H0000FFFF&\b1}铁青{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.29,0:00:05.56,Default,,0,0,0,,一脚将{\c&H0000FFFF&\b1}吴毅{\c&H00FFFFFF&\b0}踢开
+Dialogue: 0,0:00:05.95,0:00:06.74,Default,,0,0,0,,怒喝废物
+Dialogue: 0,0:00:07.04,0:00:07.91,Default,,0,0,0,,亲自上前
+Dialogue: 0,0:00:08.27,0:00:09.37,Default,,0,0,0,,周身火焰缭绕
+Dialogue: 0,0:00:09.70,0:00:11.55,Default,,0,0,0,,施展陨星掌攻向{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}

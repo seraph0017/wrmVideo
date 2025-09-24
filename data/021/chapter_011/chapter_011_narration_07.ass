@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_011 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.98,Default,,0,0,0,,火牛与店铺伙计发生激烈
+Dialogue: 0,0:00:01.98,0:00:02.35,Default,,0,0,0,,冲突
+Dialogue: 0,0:00:02.75,0:00:03.59,Default,,0,0,0,,他身材高大
+Dialogue: 0,0:00:03.85,0:00:04.64,Default,,0,0,0,,力量惊人
+Dialogue: 0,0:00:04.95,0:00:06.52,Default,,0,0,0,,几下就将对方打倒在地
+Dialogue: 0,0:00:06.86,0:00:08.45,Default,,0,0,0,,周围人群议论纷纷

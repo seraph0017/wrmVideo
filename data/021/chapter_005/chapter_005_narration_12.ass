@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_005 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈玉峰{\c&H00FFFFFF&\b0}色眯眯盯着江蜜儿
+Dialogue: 0,0:00:02.12,0:00:02.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}言语{\c&H00FFFFFF&\b0}轻佻
+Dialogue: 0,0:00:03.20,0:00:05.07,Default,,0,0,0,,被{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}之前废掉一只手后
+Dialogue: 0,0:00:05.07,0:00:05.92,Default,,0,0,0,,怀恨在心
+Dialogue: 0,0:00:06.41,0:00:07.83,Default,,0,0,0,,此刻欲对{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}不利

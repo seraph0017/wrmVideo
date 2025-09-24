@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_005 Narration 30 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}伏兵{\c&H00FFFFFF&\b0}四起
+Dialogue: 0,0:00:01.15,0:00:03.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}沈冷{\c&H00FFFFFF&\b0}冲向山包聂垣紧追不舍
+Dialogue: 0,0:00:04.25,0:00:05.59,Default,,0,0,0,,铁羽箭{\c&H0000FFFF&\b1}连珠{\c&H00FFFFFF&\b0}射来
+Dialogue: 0,0:00:05.97,0:00:08.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}沈冷{\c&H00FFFFFF&\b0}借力荡开大喊
+Dialogue: 0,0:00:08.45,0:00:08.81,Default,,0,0,0,,动手
+Dialogue: 0,0:00:09.24,0:00:11.79,Default,,0,0,0,,山林中{\c&H0000FFFF&\b1}伏兵{\c&H00FFFFFF&\b0}齐出水匪大乱

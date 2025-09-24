@@ -1,0 +1,20 @@
+[Script Info]
+Title: chapter_026 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵猛{\c&H00FFFFFF&\b0}不为所动神情更加严肃
+Dialogue: 0,0:00:03.04,0:00:05.01,Default,,0,0,0,,他按照{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}的吩咐启动了
+Dialogue: 0,0:00:05.01,0:00:07.03,Default,,0,0,0,,周围的阵法将卜一峰牢牢
+Dialogue: 0,0:00:07.03,0:00:08.78,Default,,0,0,0,,困住防止他耍花样

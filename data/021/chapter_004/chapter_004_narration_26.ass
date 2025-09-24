@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_004 Narration 26 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}青色圆领短衫
+Dialogue: 0,0:00:02.08,0:00:04.13,Default,,0,0,0,,左臂被刀{\c&H0000FFFF&\b1}猴王{\c&H00FFFFFF&\b0}爪划出血痕
+Dialogue: 0,0:00:04.61,0:00:05.22,Default,,0,0,0,,不顾伤痛
+Dialogue: 0,0:00:05.61,0:00:06.54,Default,,0,0,0,,九玄手变幻
+Dialogue: 0,0:00:06.84,0:00:08.24,Default,,0,0,0,,一掌击中{\c&H0000FFFF&\b1}陈五{\c&H00FFFFFF&\b0}断臂
+Dialogue: 0,0:00:08.65,0:00:10.59,Default,,0,0,0,,骨骼碎裂声清晰可闻

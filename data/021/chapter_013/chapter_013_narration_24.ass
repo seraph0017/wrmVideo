@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_013 Narration 24 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.86,Default,,0,0,0,,连续战斗后
+Dialogue: 0,0:00:01.12,0:00:02.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}萧叔{\c&H00FFFFFF&\b0}身心俱疲
+Dialogue: 0,0:00:02.61,0:00:03.39,Default,,0,0,0,,伤势加重
+Dialogue: 0,0:00:03.76,0:00:05.04,Default,,0,0,0,,眼神中闪过恐惧
+Dialogue: 0,0:00:05.52,0:00:07.44,Default,,0,0,0,,意识到自己已不是{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}对手
+Dialogue: 0,0:00:07.73,0:00:08.51,Default,,0,0,0,,萌生退意
+Dialogue: 0,0:00:08.87,0:00:10.62,Default,,0,0,0,,开始悄悄向反方向移动

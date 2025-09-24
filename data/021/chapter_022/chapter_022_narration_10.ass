@@ -1,0 +1,20 @@
+[Script Info]
+Title: chapter_022 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.32,Default,,0,0,0,,狂鲨暴怒显本体
+Dialogue: 0,0:00:01.76,0:00:04.12,Default,,0,0,0,,巨大银鲨{\c&H0000FFFF&\b1}张口{\c&H00FFFFFF&\b0}咬向吴双却
+Dialogue: 0,0:00:04.12,0:00:06.75,Default,,0,0,0,,见天空一道火红剑光落下如
+Dialogue: 0,0:00:06.75,0:00:09.17,Default,,0,0,0,,天外流星直刺{\c&H0000FFFF&\b1}银鲨{\c&H00FFFFFF&\b0}巨口

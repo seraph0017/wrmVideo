@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_026 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}看到郑毅的
+Dialogue: 0,0:00:00.97,0:00:03.33,Default,,0,0,0,,反应嘴角露出一丝不易察觉
+Dialogue: 0,0:00:03.33,0:00:03.72,Default,,0,0,0,,的微笑
+Dialogue: 0,0:00:04.21,0:00:05.70,Default,,0,0,0,,他知道自己的猜测得到了
+Dialogue: 0,0:00:05.70,0:00:07.06,Default,,0,0,0,,证实这个所谓的
+Dialogue: 0,0:00:07.06,0:00:08.76,Default,,0,0,0,,盗中至尊果然有问题

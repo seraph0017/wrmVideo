@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_011 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}一边在街上行走
+Dialogue: 0,0:00:01.95,0:00:02.99,Default,,0,0,0,,一边吸收周围的
+Dialogue: 0,0:00:02.99,0:00:04.92,Default,,0,0,0,,先天{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之气恢复伤势
+Dialogue: 0,0:00:05.43,0:00:06.85,Default,,0,0,0,,同时观察周围环境
+Dialogue: 0,0:00:07.15,0:00:08.61,Default,,0,0,0,,了解这个陌生的地方

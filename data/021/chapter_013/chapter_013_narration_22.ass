@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_013 Narration 22 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}萧叔{\c&H00FFFFFF&\b0}见手下被杀
+Dialogue: 0,0:00:01.67,0:00:02.42,Default,,0,0,0,,面露惊怒
+Dialogue: 0,0:00:02.87,0:00:04.90,Default,,0,0,0,,不敢置信{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}实力提升如此
+Dialogue: 0,0:00:04.90,0:00:05.22,Default,,0,0,0,,之快
+Dialogue: 0,0:00:05.67,0:00:06.40,Default,,0,0,0,,握紧长剑
+Dialogue: 0,0:00:06.71,0:00:07.42,Default,,0,0,0,,剑气凝聚
+Dialogue: 0,0:00:07.74,0:00:10.15,Default,,0,0,0,,准备施展元{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}术潇潇剑雨

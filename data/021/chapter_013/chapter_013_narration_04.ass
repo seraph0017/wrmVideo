@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_013 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}来到贱鸟身旁
+Dialogue: 0,0:00:01.73,0:00:02.78,Default,,0,0,0,,看到它装死模样
+Dialogue: 0,0:00:03.19,0:00:04.46,Default,,0,0,0,,嘴角勾起一抹笑意
+Dialogue: 0,0:00:04.90,0:00:06.45,Default,,0,0,0,,缓缓取出神象长枪
+Dialogue: 0,0:00:06.84,0:00:08.42,Default,,0,0,0,,做出要刺穿贱鸟的动作
+Dialogue: 0,0:00:08.76,0:00:09.95,Default,,0,0,0,,眼神带着调侃

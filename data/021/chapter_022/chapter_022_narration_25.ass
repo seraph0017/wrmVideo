@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_022 Narration 25 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.10,Default,,0,0,0,,云海{\c&H0000FFFF&\b1}宗三{\c&H00FFFFFF&\b0}宗主海风驾临
+Dialogue: 0,0:00:02.54,0:00:05.08,Default,,0,0,0,,碧眼{\c&H0000FFFF&\b1}金鳞兽{\c&H00FFFFFF&\b0}四蹄踏雷一指
+Dialogue: 0,0:00:05.08,0:00:06.01,Default,,0,0,0,,击杀九头蛟
+Dialogue: 0,0:00:06.31,0:00:07.75,Default,,0,0,0,,龙{\c&H0000FFFF&\b1}须道人{\c&H00FFFFFF&\b0}惊恐跪地
+Dialogue: 0,0:00:08.17,0:00:08.99,Default,,0,0,0,,拜见尊者

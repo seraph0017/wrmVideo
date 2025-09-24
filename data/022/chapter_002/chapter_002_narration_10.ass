@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_002 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}水师营{\c&H00FFFFFF&\b0}地江边沐筱风洗马时
+Dialogue: 0,0:00:02.51,0:00:03.18,Default,,0,0,0,,偶遇{\c&H0000FFFF&\b1}沈冷{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.73,0:00:05.41,Default,,0,0,0,,他身为大学士之子却
+Dialogue: 0,0:00:05.41,0:00:07.58,Default,,0,0,0,,因{\c&H0000FFFF&\b1}沈茶颜{\c&H00FFFFFF&\b0}一句水师废物而
+Dialogue: 0,0:00:07.58,0:00:10.23,Default,,0,0,0,,怒火中烧眼神阴鸷如毒蛇
+Dialogue: 0,0:00:10.46,0:00:11.42,Default,,0,0,0,,杀机暗藏

@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_019 Narration 28 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}率先抢攻
+Dialogue: 0,0:00:01.70,0:00:03.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}九玄真{\c&H00FFFFFF&\b0}火斩如暴雨倾泻
+Dialogue: 0,0:00:04.10,0:00:06.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈俊{\c&H00FFFFFF&\b0}冰魄玄冰剑挥出百米
+Dialogue: 0,0:00:06.25,0:00:06.65,Default,,0,0,0,,剑气
+Dialogue: 0,0:00:07.12,0:00:08.89,Default,,0,0,0,,火焰与{\c&H0000FFFF&\b1}寒冰{\c&H00FFFFFF&\b0}碰撞爆炸
+Dialogue: 0,0:00:09.24,0:00:10.64,Default,,0,0,0,,气浪掀翻围观者

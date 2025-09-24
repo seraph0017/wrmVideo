@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_021 Narration 26 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.67,Default,,0,0,0,,忍辱负重
+Dialogue: 0,0:00:01.02,0:00:03.42,Default,,0,0,0,,龙{\c&H0000FFFF&\b1}须道人{\c&H00FFFFFF&\b0}青衣道袍八根胡须
+Dialogue: 0,0:00:03.42,0:00:06.24,Default,,0,0,0,,下垂暗中捏碎{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}晶石原来
+Dialogue: 0,0:00:06.24,0:00:08.60,Default,,0,0,0,,早已布下后手一旦{\c&H0000FFFF&\b1}龙门{\c&H00FFFFFF&\b0}失守
+Dialogue: 0,0:00:08.60,0:00:10.44,Default,,0,0,0,,便引爆阵法同归于尽

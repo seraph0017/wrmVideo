@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_030 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.21,Default,,0,0,0,,孟{\c&H0000FFFF&\b1}长安{\c&H00FFFFFF&\b0}如一把尖刀插入敌军
+Dialogue: 0,0:00:02.21,0:00:02.55,Default,,0,0,0,,阵中
+Dialogue: 0,0:00:02.98,0:00:03.92,Default,,0,0,0,,他奋勇杀敌
+Dialogue: 0,0:00:04.36,0:00:05.06,Default,,0,0,0,,毫不畏惧
+Dialogue: 0,0:00:05.42,0:00:07.11,Default,,0,0,0,,战兵们在他的带领下突破
+Dialogue: 0,0:00:07.11,0:00:07.91,Default,,0,0,0,,敌军防线

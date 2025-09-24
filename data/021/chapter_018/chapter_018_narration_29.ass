@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_018 Narration 29 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.16,Default,,0,0,0,,陈天南看着{\c&H0000FFFF&\b1}陈俊{\c&H00FFFFFF&\b0}修炼满意
+Dialogue: 0,0:00:02.16,0:00:02.59,Default,,0,0,0,,点头
+Dialogue: 0,0:00:03.00,0:00:05.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴家{\c&H00FFFFFF&\b0}不足为惧吴双能否回来
+Dialogue: 0,0:00:05.36,0:00:07.16,Default,,0,0,0,,参加{\c&H0000FFFF&\b1}王族{\c&H00FFFFFF&\b0}争霸都是未知数
+Dialogue: 0,0:00:07.43,0:00:09.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}未来注定由我们陈家
+Dialogue: 0,0:00:09.47,0:00:09.87,Default,,0,0,0,,掌控

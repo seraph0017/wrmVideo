@@ -411,7 +411,8 @@ class ArkImageGenerator:
                     model=self.model,
                     prompt=prompt,
                     response_format="b64_json",  # 返回base64格式
-                    watermark=False  # 不添加水印
+                    watermark=False,  # 不添加水印
+                    size="720x1280",  # 图片尺寸
                 )
                 
                 # 检查响应

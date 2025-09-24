@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_019 Narration 16 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.53,Default,,0,0,0,,求立水师旗舰{\c&H0000FFFF&\b1}龙牙{\c&H00FFFFFF&\b0}号阮青锋
+Dialogue: 0,0:00:02.53,0:00:05.32,Default,,0,0,0,,下令登陆{\c&H0000FFFF&\b1}牙城{\c&H00FFFFFF&\b0}数千士兵如蚁
+Dialogue: 0,0:00:05.32,0:00:07.46,Default,,0,0,0,,群般涌上{\c&H0000FFFF&\b1}沙滩{\c&H00FFFFFF&\b0}他冷笑道
+Dialogue: 0,0:00:07.96,0:00:10.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}沈冷{\c&H00FFFFFF&\b0}小儿今日让你尝尝灭城
+Dialogue: 0,0:00:10.74,0:00:11.02,Default,,0,0,0,,之痛

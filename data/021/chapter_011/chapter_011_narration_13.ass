@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_011 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}指出丹药并非废丹
+Dialogue: 0,0:00:02.25,0:00:03.91,Default,,0,0,0,,而是因为特殊原因压制了
+Dialogue: 0,0:00:03.91,0:00:04.31,Default,,0,0,0,,属性
+Dialogue: 0,0:00:04.85,0:00:06.83,Default,,0,0,0,,他请求火牛将丹药给自己
+Dialogue: 0,0:00:06.83,0:00:07.22,Default,,0,0,0,,查看
+Dialogue: 0,0:00:07.62,0:00:08.74,Default,,0,0,0,,众人都不以为然
