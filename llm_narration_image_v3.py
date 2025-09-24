@@ -254,7 +254,7 @@ def regenerate_image_with_ark(image_path: str, custom_prompt: Optional[str] = No
         api_key = os.environ.get("ARK_API_KEY")
         if not api_key:
             # 尝试从配置文件获取
-            api_key = ARK_CONFIG.get("api_key")
+            api_key = ARK_CONFIG.get("t2i_v3")
             if not api_key:
                 print("错误: 未找到ARK_API_KEY，请在环境变量或配置文件中设置")
                 return False
@@ -555,10 +555,10 @@ def process_narration_images(
 请逐项检查并给出明确的"通过"或"失败"结论，如果发现任何问题请详细说明。"""
     
     # 从配置文件获取API密钥
-    api_key = ARK_CONFIG.get("api_key")
+    api_key = ARK_CONFIG.get("t2i_v3")
     if not api_key:
         print("错误: 未在配置文件中找到ARK API密钥")
-        print("请在 config/config.py 中设置 ARK_CONFIG['api_key']")
+        print("请在 config/config.py 中设置 ARK_CONFIG['t2i_v3']")
         return
     
     # 初始化Ark客户端
