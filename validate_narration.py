@@ -260,11 +260,17 @@ def extract_character_names(content):
         set: 出镜人物的姓名集合
     """
     character_names = set()
-    # 查找所有角色姓名
+    # 查找所有角色姓名（支持嵌套的<角色姓名>标签）
     name_pattern = r'<姓名>(.*?)</姓名>'
-    names = re.findall(name_pattern, content)
+    names = re.findall(name_pattern, content, re.DOTALL)
     for name in names:
-        character_names.add(name.strip())
+        name_content = name.strip()
+        # 检查是否有嵌套的<角色姓名>标签
+        role_name_match = re.search(r'<角色姓名>([^<]+)</角色姓名>', name_content)
+        if role_name_match:
+            character_names.add(role_name_match.group(1).strip())
+        else:
+            character_names.add(name_content)
     return character_names
 
 def extract_closeup_characters(content):

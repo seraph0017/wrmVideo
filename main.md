@@ -88,7 +88,7 @@ python gen_ass.py data/001 用来生成字幕带时间戳文件
 python gen_image_async_v3.py data/001 用来根据解说文案和角色生成图片
 python check_async_tasks.py --monitor
 <!-- python rename_images.py data/001 重命名图片 -->
-python llm_narration_image.py data/001 --auto-regenerate 用来检测图片是否符合要求并替换
+python llm_narration_image_v3.py data/001 --auto-regenerate 用来检测图片是否符合要求并替换
 python gen_first_video_async.py data/001 用来异步生成第一个narration的视频
 python check_async_tasks.py --monitor
 python gen_video.py data/001 生成整个视频

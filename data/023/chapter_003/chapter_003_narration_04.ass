@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_003 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴星凡{\c&H00FFFFFF&\b0}当众宣布废除原有
+Dialogue: 0,0:00:02.03,0:00:02.81,Default,,0,0,0,,分级名册
+Dialogue: 0,0:00:03.23,0:00:03.91,Default,,0,0,0,,将其烧毁
+Dialogue: 0,0:00:04.25,0:00:06.12,Default,,0,0,0,,并宣布一个月后进入{\c&H0000FFFF&\b1}龙隐湖{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.12,0:00:08.20,Default,,0,0,0,,森林的训练将作为最终评定
+Dialogue: 0,0:00:08.20,0:00:08.57,Default,,0,0,0,,标准
+Dialogue: 0,0:00:09.07,0:00:11.02,Default,,0,0,0,,承诺增加资源培养弟子

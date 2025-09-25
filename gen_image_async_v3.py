@@ -99,10 +99,16 @@ class NarrationParser:
         try:
             character_info = {}
             
-            # 提取姓名
-            name_match = re.search(r'<姓名>(.*?)</姓名>', character_text)
+            # 提取姓名 - 支持嵌套的<角色姓名>标签
+            name_match = re.search(r'<姓名>(.*?)</姓名>', character_text, re.DOTALL)
             if name_match:
-                character_info['name'] = name_match.group(1).strip()
+                name_content = name_match.group(1).strip()
+                # 检查是否有嵌套的<角色姓名>标签
+                nested_name_match = re.search(r'<角色姓名>(.*?)</角色姓名>', name_content)
+                if nested_name_match:
+                    character_info['name'] = nested_name_match.group(1).strip()
+                else:
+                    character_info['name'] = name_content
             
             # 提取性别
             gender_match = re.search(r'<性别>(.*?)</性别>', character_text)
