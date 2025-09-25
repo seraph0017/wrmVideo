@@ -291,7 +291,7 @@ def regenerate_image_with_ark(image_path: str, custom_prompt: Optional[str] = No
         if custom_prompt:
             prompt = f"基于原图进行改进，{custom_prompt}，同时确保：领口必须是立领或高领，绝对不能是V领、交领、衽领、y字型领或其他露出脖子以下皮肤的领型，脖子必须完全被服装遮盖不能有任何暴露，角色只能有两只手，不能有三只手或更多手臂，画面清晰，细节丰富"
         else:
-            prompt = "改成爱心形状的泡泡，同时确保：领口必须是立领或高领，绝对不能是V领、交领、衽领、y字型领或其他露出脖子以下皮肤的领型，脖子必须完全被服装遮盖不能有任何暴露，角色只能有两只手，不能有三只手或更多手臂，画面清晰，细节丰富"
+            prompt = "基于原图进行改进，同时确保：领口必须是立领或高领，绝对不能是V领、交领、衽领、y字型领或其他露出脖子以下皮肤的领型，脖子必须完全被服装遮盖不能有任何暴露，角色只能有两只手，不能有三只手或更多手臂，画面清晰，细节丰富"
         
         print(f"正在重新生成图片: {os.path.basename(image_path)}")
         print(f"生成提示词: {prompt}")
@@ -300,7 +300,7 @@ def regenerate_image_with_ark(image_path: str, custom_prompt: Optional[str] = No
         imagesResponse = client.images.generate(
             model=model_id,  # 使用配置文件中的t2i_v3模型ID
             prompt=prompt,
-            image=image_base64,  # 使用base64编码的本地图片，不要用url链接的模式
+            image=f"data:image/jpeg;base64,{image_base64}",  # 使用data URL格式的base64编码图片
             seed=123,
             guidance_scale=5.5,
             size="adaptive",
