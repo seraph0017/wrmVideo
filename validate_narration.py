@@ -3,7 +3,7 @@
 """
 解说内容字数验证和自动改写脚本
 用于检查指定数据目录下所有章节的narration.txt文件中分镜1的第一个和第二个图片特写的解说内容字数
-确保字数控制在30-32字，并检查总解说内容字数在1200-1700字之间，自动调用模型API改写不符合要求的内容
+确保字数控制在30-32字，并检查总解说内容字数在850-1200字之间，自动调用模型API改写不符合要求的内容
 
 使用方法:
 python validate_narration.py data/xxx
@@ -165,7 +165,7 @@ def extract_all_narration_content(content):
 
 def rewrite_entire_narration_with_llm(client, all_narrations, max_retries=3):
     """
-    使用LLM重写整个narration文件的解说内容，将总字数控制在1300-1700字之间
+    使用LLM重写整个narration文件的解说内容，将总字数控制在900-1200字之间
     
     Args:
         client: Ark客户端实例
@@ -183,11 +183,11 @@ def rewrite_entire_narration_with_llm(client, all_narrations, max_retries=3):
     
     for attempt in range(max_retries):
         if attempt == 0:
-            emphasis = "总字数必须控制在1300-1700字之间"
+            emphasis = "总字数必须控制在900-1200字之间"
         elif attempt == 1:
-            emphasis = "总字数必须严格控制在1300-1700字之间，这是硬性要求"
+            emphasis = "总字数必须严格控制在900-1200字之间，这是硬性要求"
         else:
-            emphasis = f"总字数必须在1300-1700字之间，当前是第{attempt+1}次尝试，请务必满足字数要求"
+            emphasis = f"总字数必须在900-1200字之间，当前是第{attempt+1}次尝试，请务必满足字数要求"
             
         prompt = f"""请重写以下解说内容，要求：
 1. {emphasis}（中文字符）
@@ -235,11 +235,11 @@ def rewrite_entire_narration_with_llm(client, all_narrations, max_retries=3):
                 total_chars = sum(count_chinese_characters(narration) for narration in rewritten_narrations)
                 print(f"  第{attempt+1}次尝试: {total_chars}字")
                 
-                if 1300 <= total_chars <= 1700:
-                    print(f"  重写成功: 满足1300-1700字要求")
+                if 900 <= total_chars <= 1200:
+                    print(f"  重写成功: 满足900-1200字要求")
                     return rewritten_narrations
                 else:
-                    print(f"  字数不符合要求({total_chars}字)，需要在1300-1700字之间，继续重试...")
+                    print(f"  字数不符合要求({total_chars}字)，需要在900-1200字之间，继续重试...")
             else:
                 print(f"  解说数量不匹配(原{len(all_narrations)}个，重写后{len(rewritten_narrations)}个)，继续重试...")
                 
@@ -730,12 +730,12 @@ def validate_narration_file(narration_file_path, client=None, auto_rewrite=False
         # 检查总解说内容字数
         all_narrations = extract_all_narration_content(updated_content)
         total_char_count = sum(count_chinese_characters(narration) for narration in all_narrations)
-        total_valid = 1200 <= total_char_count <= 1700
+        total_valid = 850 <= total_char_count <= 1200
         total_rewritten = False
         
         # 如果总字数不符合要求且启用自动改写
         if not total_valid and auto_rewrite and client:
-            print(f"  总解说内容字数不符合要求({total_char_count}字)，需要在1200-1700字之间，正在重写...")
+            print(f"  总解说内容字数不符合要求({total_char_count}字)，需要在850-1200字之间，正在重写...")
             rewritten_narrations = rewrite_entire_narration_with_llm(client, all_narrations)
             
             if rewritten_narrations != all_narrations:
@@ -749,7 +749,7 @@ def validate_narration_file(narration_file_path, client=None, auto_rewrite=False
                 updated_content = temp_content
                 content_updated = True
                 total_char_count = sum(count_chinese_characters(narration) for narration in rewritten_narrations)
-                total_valid = 1200 <= total_char_count <= 1700
+                total_valid = 850 <= total_char_count <= 1200
         
         results['total_narration'] = {
             'total_char_count': total_char_count,
@@ -870,7 +870,7 @@ def validate_data_directory(data_dir, auto_rewrite=False, auto_fix_characters=Fa
         total_narration = results['total_narration']
         total_status = "✓" if total_narration['valid'] else "✗"
         total_rewrite_info = " (已重写)" if total_narration['rewritten'] else ""
-        print(f"总解说字数: {total_status} {total_narration['total_char_count']}字{total_rewrite_info} (要求: 1300-1700字)")
+        print(f"总解说字数: {total_status} {total_narration['total_char_count']}字{total_rewrite_info} (要求: 850-1200字)")
         if total_narration['rewritten']:
             rewritten_count += 1
         if not total_narration['valid']:
@@ -922,11 +922,11 @@ def validate_data_directory(data_dir, auto_rewrite=False, auto_fix_characters=Fa
         if auto_rewrite:
             print("\n建议: ")
             print("  - 分镜1的第一个和第二个特写解说字数应精准控制在30-32字之间")
-            print("  - 总解说内容字数应控制在1300-1700字之间")
+            print("  - 总解说内容字数应控制在850-1200字之间")
         else:
             print("\n建议: ")
             print("  - 分镜1的第一个和第二个特写解说字数应精准控制在30-32字之间")
-            print("  - 总解说内容字数应控制在1300-1700字之间")
+            print("  - 总解说内容字数应控制在850-1200字之间")
             print("提示: 使用 --auto-rewrite 参数可自动改写不符合要求的内容")
     else:
         print("\n所有章节的解说内容字数都符合要求！")

@@ -600,15 +600,15 @@ def get_random_character_image():
         print("    警告: Character_Images目录中未找到任何图片文件")
         return None
 
-def ensure_30_images_per_chapter(chapter_dir):
+def ensure_21_images_per_chapter(chapter_dir):
     """
-    确保每个章节有固定的30张图片，不足的从Character_Images目录复制补足
+    确保每个章节有固定的21张图片，不足的从Character_Images目录复制补足
     
     Args:
         chapter_dir: 章节目录路径
     
     Returns:
-        bool: 是否成功确保30张图片
+        bool: 是否成功确保21张图片
     """
     try:
         chapter_name = os.path.basename(chapter_dir)
@@ -623,12 +623,12 @@ def ensure_30_images_per_chapter(chapter_dir):
         existing_count = len(existing_images)
         print(f"现有图片数量: {existing_count}")
         
-        if existing_count >= 30:
-            print(f"✓ 图片数量已满足要求 (>= 30张)")
+        if existing_count >= 21:
+            print(f"✓ 图片数量已满足要求 (>= 21张)")
             return True
         
         # 需要补足的图片数量
-        needed_count = 30 - existing_count
+        needed_count = 21 - existing_count
         print(f"需要补足 {needed_count} 张图片")
         
         # 从Character_Images目录复制图片来补足
@@ -674,10 +674,10 @@ def ensure_30_images_per_chapter(chapter_dir):
         final_count = len(final_images)
         print(f"最终图片数量: {final_count}")
         
-        return final_count >= 30
+        return final_count >= 21
         
     except Exception as e:
-        print(f"确保30张图片时发生错误: {e}")
+        print(f"确保21张图片时发生错误: {e}")
         return False
 
 def encode_image_to_base64(image_path):
@@ -956,7 +956,7 @@ def generate_image_with_character(prompt, output_path, character_images=None, st
 
 def generate_images_for_chapter(chapter_dir):
     """
-    为单个章节生成图片 - 按照10个分镜每个分镜3张图片的规则生成30张图片
+    为单个章节生成图片 - 按照7个分镜每个分镜3张图片的规则生成21张图片
     先尝试API生成，失败后从Character_Images目录复制
     
     Args:
@@ -969,7 +969,7 @@ def generate_images_for_chapter(chapter_dir):
         chapter_name = os.path.basename(chapter_dir)
         print(f"=== 开始为章节 {chapter_name} 生成图片 ===")
         print(f"章节目录: {chapter_dir}")
-        print(f"生成规则: 10个分镜，每个分镜3张图片，共30张")
+        print(f"生成规则: 7个分镜，每个分镜3张图片，共21张")
         
         if not os.path.exists(chapter_dir):
             print(f"错误: 章节目录不存在 {chapter_dir}")
@@ -996,9 +996,9 @@ def generate_images_for_chapter(chapter_dir):
         
         success_count = 0
         
-        # 按照10个分镜每个分镜3张图片的规则生成30张图片
-        for scene_num in range(1, 11):  # 10个分镜
-            print(f"\n  处理第 {scene_num}/10 个分镜")
+        # 按照7个分镜每个分镜3张图片的规则生成21张图片
+        for scene_num in range(1, 8):  # 7个分镜
+            print(f"\n  处理第 {scene_num}/7 个分镜")
             
             # 每个分镜生成3张图片
             for image_num in range(1, 4):  # 每个分镜3张图片
@@ -1089,7 +1089,7 @@ def generate_images_for_chapter(chapter_dir):
                     else:
                         print(f"    ✗ 无法找到源图片进行复制")
         
-        print(f"\n章节 {chapter_name} 处理完成，成功生成/复制 {success_count}/30 张图片")
+        print(f"\n章节 {chapter_name} 处理完成，成功生成/复制 {success_count}/21 张图片")
         
         return success_count >= 30
         
@@ -1099,7 +1099,7 @@ def generate_images_for_chapter(chapter_dir):
 
 def generate_images_from_scripts(data_dir):
     """
-    遍历数据目录，为每个章节生成图片 - 按照10个分镜每个分镜3张图片的规则
+    遍历数据目录，为每个章节生成图片 - 按照7个分镜每个分镜3张图片的规则
     
     Args:
         data_dir: 数据目录路径
@@ -1110,7 +1110,7 @@ def generate_images_from_scripts(data_dir):
     try:
         print(f"=== 开始批量生成图片 ===")
         print(f"数据目录: {data_dir}")
-        print(f"生成规则: 每个章节10个分镜，每个分镜3张图片，共30张")
+        print(f"生成规则: 每个章节7个分镜，每个分镜3张图片，共21张")
         
         if not os.path.exists(data_dir):
             print(f"错误: 数据目录不存在 {data_dir}")

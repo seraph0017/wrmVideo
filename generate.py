@@ -1018,7 +1018,7 @@ def split_novel_into_chapters(novel_content, target_chapters=50):
 
 def generate_chapter_narration(chapter_content, chapter_num, total_chapters):
     """
-    为单个章节生成1200字解说文案
+    为单个章节生成850字解说文案
     
     Args:
         chapter_content: 章节内容
@@ -1095,7 +1095,7 @@ def generate_chapter_narration(chapter_content, chapter_num, total_chapters):
 
 def generate_script_from_novel_new(novel_file, output_dir, target_chapters=50):
     """
-    新的小说脚本生成函数，支持章节分割和1200字解说生成
+    新的小说脚本生成函数，支持章节分割和850字解说生成
     
     Args:
         novel_file: 小说文件路径
@@ -1150,7 +1150,7 @@ def generate_script_from_novel_new(novel_file, output_dir, target_chapters=50):
             with open(chapter_file, 'w', encoding='utf-8') as f:
                 f.write(chapter_content)
             
-            # 生成1200字解说文案
+            # 生成850字解说文案
             narration = generate_chapter_narration(chapter_content, i, len(chapters))
             
             if narration:

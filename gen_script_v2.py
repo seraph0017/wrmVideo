@@ -457,8 +457,8 @@ class ScriptGeneratorV2:
         total_explanation_text = ''.join(explanation_matches)
         explanation_length = len(total_explanation_text.strip())
         
-        # 验证特写数量（10个分镜各3个特写=30个解说内容）
-        expected_explanations = 30
+        # 验证特写数量（7个分镜各3个特写=21个解说内容）
+        expected_explanations = 21
         if len(explanation_matches) != expected_explanations:
             print(f"警告：解说内容数量不正确，期望{expected_explanations}个，实际{len(explanation_matches)}个")
         

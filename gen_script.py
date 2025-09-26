@@ -1080,7 +1080,7 @@ class ScriptGenerator:
     
     def generate_chapter_narration(self, chapter_content: str, chapter_num: int, total_chapters: int) -> str:
         """
-        为单个章节生成1200字解说文案
+        为单个章节生成850字解说文案
         
         Args:
             chapter_content: 章节内容
@@ -1127,7 +1127,7 @@ class ScriptGenerator:
     
     def generate_script_from_novel_new(self, novel_file: str, output_dir: str, target_chapters: int = 50, max_workers: int = 5) -> bool:
         """
-        新的小说脚本生成函数，支持章节分割和1200字解说生成
+        新的小说脚本生成函数，支持章节分割和850字解说生成
         
         Args:
             novel_file: 小说文件路径
@@ -1183,7 +1183,7 @@ class ScriptGenerator:
                 with open(chapter_file, 'w', encoding='utf-8') as f:
                     f.write(chapter_content)
                 
-                # 生成1200字解说文案（带重试机制）
+                # 生成850字解说文案（带重试机制）
                 narration = self.generate_chapter_narration_with_retry(chapter_content, i, len(chapters))
                 
                 if narration:

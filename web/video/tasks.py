@@ -1137,7 +1137,7 @@ def gen_image_async_v2_task(self, novel_id, chapter_id):
 def batch_generate_chapter_images_async(self, novel_id, chapter_id):
     """
     批量生成章节分镜图片的Celery任务
-    按章节生成30张分镜图片（10个分镜，每个分镜3张图片）
+    按章节生成21张分镜图片（7个分镜，每个分镜3张图片）
     
     Args:
         novel_id (int): 小说ID
