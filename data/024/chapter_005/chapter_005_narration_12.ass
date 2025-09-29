@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_005 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.29,Default,,0,0,0,,神象洞府大殿内
+Dialogue: 0,0:00:01.81,0:00:03.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}抱着半米高的
+Dialogue: 0,0:00:03.07,0:00:03.88,Default,,0,0,0,,不规则神蛋
+Dialogue: 0,0:00:04.34,0:00:06.21,Default,,0,0,0,,蛋壳上有若隐若现的文字
+Dialogue: 0,0:00:06.72,0:00:07.61,Default,,0,0,0,,他每向前一步
+Dialogue: 0,0:00:07.97,0:00:09.61,Default,,0,0,0,,周围空气都仿佛凝固
+Dialogue: 0,0:00:09.99,0:00:11.53,Default,,0,0,0,,神象遗骸散发出的
+Dialogue: 0,0:00:11.53,0:00:13.55,Default,,0,0,0,,威压让他身体微微颤抖

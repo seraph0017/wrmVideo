@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_018 Narration 16 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.03,Default,,0,0,0,,两人穿过多层光罩进入主殿
+Dialogue: 0,0:00:02.50,0:00:03.73,Default,,0,0,0,,殿内{\c&H0000FFFF&\b1}火海{\c&H00FFFFFF&\b0}翻腾
+Dialogue: 0,0:00:04.17,0:00:05.45,Default,,0,0,0,,地火被引入其中
+Dialogue: 0,0:00:05.88,0:00:08.10,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}发现火海中有三个平台
+Dialogue: 0,0:00:08.62,0:00:09.91,Default,,0,0,0,,平台上神光闪烁
+Dialogue: 0,0:00:10.34,0:00:11.99,Default,,0,0,0,,隐约可见半成品{\c&H0000FFFF&\b1}神丹{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.28,0:00:13.36,Default,,0,0,0,,神器和符箓

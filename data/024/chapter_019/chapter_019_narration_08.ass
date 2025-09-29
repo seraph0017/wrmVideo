@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_019 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:03.24,Default,,0,0,0,,火光骤现{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄身穿剑甲如
+Dialogue: 0,0:00:03.24,0:00:05.88,Default,,0,0,0,,流星般撞破冥水潮汐声音
+Dialogue: 0,0:00:05.88,0:00:06.59,Default,,0,0,0,,震彻百里
+Dialogue: 0,0:00:07.05,0:00:08.93,Default,,0,0,0,,这么多年过去你们还是杀人
+Dialogue: 0,0:00:08.93,0:00:09.91,Default,,0,0,0,,找借口的德性
+Dialogue: 0,0:00:10.31,0:00:13.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}九玄真{\c&H00FFFFFF&\b0}火斩劈开冰封为吴双
+Dialogue: 0,0:00:13.00,0:00:13.75,Default,,0,0,0,,开出通路

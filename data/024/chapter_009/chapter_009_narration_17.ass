@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_009 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.07,Default,,0,0,0,,离开凉亭{\c&H0000FFFF&\b1}后江{\c&H00FFFFFF&\b0}蜜儿仍然
+Dialogue: 0,0:00:02.07,0:00:04.63,Default,,0,0,0,,怒气冲冲抱怨{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}没有教训
+Dialogue: 0,0:00:04.63,0:00:05.39,Default,,0,0,0,,朗屠{\c&H0000FFFF&\b1}王子{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.92,0:00:08.55,Default,,0,0,0,,她蓝色圆领袍飘动双手叉腰
+Dialogue: 0,0:00:08.92,0:00:11.29,Default,,0,0,0,,杏眼圆睁脚步轻快与
+Dialogue: 0,0:00:11.29,0:00:13.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}并肩走在集市街道上
+Dialogue: 0,0:00:13.62,0:00:15.14,Default,,0,0,0,,周围行人纷纷避让

@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_014 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.21,Default,,0,0,0,,作为{\c&H0000FFFF&\b1}吴家{\c&H00FFFFFF&\b0}现任家主吴星凡
+Dialogue: 0,0:00:02.21,0:00:03.05,Default,,0,0,0,,深感自责
+Dialogue: 0,0:00:03.54,0:00:05.52,Default,,0,0,0,,如果当初强行将{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}送往
+Dialogue: 0,0:00:05.52,0:00:07.42,Default,,0,0,0,,祖地就不会有现在的局面
+Dialogue: 0,0:00:07.94,0:00:09.90,Default,,0,0,0,,他不断请求祖地延长开启
+Dialogue: 0,0:00:09.90,0:00:11.29,Default,,0,0,0,,时间已是极限

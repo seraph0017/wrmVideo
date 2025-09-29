@@ -1,0 +1,27 @@
+[Script Info]
+Title: chapter_020 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}从密室走出
+Dialogue: 0,0:00:01.64,0:00:02.41,Default,,0,0,0,,神清气爽
+Dialogue: 0,0:00:02.77,0:00:03.49,Default,,0,0,0,,眼神明亮
+Dialogue: 0,0:00:04.02,0:00:05.96,Default,,0,0,0,,刚刚突破到{\c&H0000FFFF&\b1}六海{\c&H00FFFFFF&\b0}境第五海
+Dialogue: 0,0:00:05.96,0:00:06.35,Default,,0,0,0,,后期
+Dialogue: 0,0:00:06.83,0:00:07.94,Default,,0,0,0,,身体强度大增
+Dialogue: 0,0:00:08.43,0:00:09.27,Default,,0,0,0,,他伸了个懒腰
+Dialogue: 0,0:00:09.82,0:00:10.89,Default,,0,0,0,,骨骼发出脆响
+Dialogue: 0,0:00:11.42,0:00:12.50,Default,,0,0,0,,正欲开口说话
+Dialogue: 0,0:00:12.95,0:00:15.12,Default,,0,0,0,,却见{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄与吴昊轩同时
+Dialogue: 0,0:00:15.12,0:00:15.50,Default,,0,0,0,,看来

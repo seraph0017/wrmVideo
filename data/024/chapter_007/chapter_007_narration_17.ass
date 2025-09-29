@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_007 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}老唐{\c&H00FFFFFF&\b0}被吴双拳罡震得连连
+Dialogue: 0,0:00:01.80,0:00:04.93,Default,,0,0,0,,后退胸口剧痛难忍一口鲜血
+Dialogue: 0,0:00:04.93,0:00:07.38,Default,,0,0,0,,喷出染红衣襟他眼神惊骇
+Dialogue: 0,0:00:07.48,0:00:10.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}三泉{\c&H00FFFFFF&\b0}境怎可能声音颤抖带
+Dialogue: 0,0:00:10.88,0:00:12.08,Default,,0,0,0,,难以置信

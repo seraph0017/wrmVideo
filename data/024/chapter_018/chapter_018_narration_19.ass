@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_018 Narration 19 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}加速炼制神丹
+Dialogue: 0,0:00:01.92,0:00:03.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}神丹{\c&H00FFFFFF&\b0}凝聚成形光芒大放
+Dialogue: 0,0:00:04.32,0:00:06.13,Default,,0,0,0,,他一把将{\c&H0000FFFF&\b1}神丹{\c&H00FFFFFF&\b0}收入葫芦
+Dialogue: 0,0:00:06.64,0:00:08.60,Default,,0,0,0,,同时发现{\c&H0000FFFF&\b1}火海{\c&H00FFFFFF&\b0}深处有金
+Dialogue: 0,0:00:08.60,0:00:09.51,Default,,0,0,0,,精元魄流动
+Dialogue: 0,0:00:09.97,0:00:11.41,Default,,0,0,0,,伸手抓住那团{\c&H0000FFFF&\b1}金光{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.74,0:00:13.99,Default,,0,0,0,,身体被火焰灼烧仍不放手

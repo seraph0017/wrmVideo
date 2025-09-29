@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_013 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}在神丹府修炼密室中
+Dialogue: 0,0:00:01.90,0:00:03.38,Default,,0,0,0,,突破开辟{\c&H0000FFFF&\b1}木海{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.89,0:00:04.89,Default,,0,0,0,,他吸收树叶中的
+Dialogue: 0,0:00:04.89,0:00:07.22,Default,,0,0,0,,木系力量身体强度提升到
+Dialogue: 0,0:00:07.22,0:00:09.92,Default,,0,0,0,,第四海雷电武魂也随之增强
+Dialogue: 0,0:00:10.28,0:00:12.86,Default,,0,0,0,,修炼过程{\c&H0000FFFF&\b1}中北{\c&H00FFFFFF&\b0}冥雪潜入密室

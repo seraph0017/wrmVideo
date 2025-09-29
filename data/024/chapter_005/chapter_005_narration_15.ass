@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_005 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵牧{\c&H00FFFFFF&\b0}带人冲入洞府看到
+Dialogue: 0,0:00:01.91,0:00:03.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}江浩身旁的
+Dialogue: 0,0:00:03.50,0:00:06.30,Default,,0,0,0,,药材堆紫色袍袖一挥{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}道
+Dialogue: 0,0:00:06.70,0:00:08.19,Default,,0,0,0,,死到临头还捡药材
+Dialogue: 0,0:00:08.58,0:00:10.41,Default,,0,0,0,,正好都给我收拾好省得我
+Dialogue: 0,0:00:10.41,0:00:10.79,Default,,0,0,0,,费事
+Dialogue: 0,0:00:11.14,0:00:12.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}们立刻上前抢夺

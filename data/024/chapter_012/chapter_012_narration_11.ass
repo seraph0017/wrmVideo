@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_012 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}萧叔{\c&H00FFFFFF&\b0}在百里外怒砸巨石
+Dialogue: 0,0:00:02.31,0:00:04.63,Default,,0,0,0,,通过法宝观战时况见{\c&H0000FFFF&\b1}武雷{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.63,0:00:06.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}老祖{\c&H00FFFFFF&\b0}失利怒骂
+Dialogue: 0,0:00:06.44,0:00:06.82,Default,,0,0,0,,废物
+Dialogue: 0,0:00:07.11,0:00:09.72,Default,,0,0,0,,又闻{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}冲出眼中闪过狠厉
+Dialogue: 0,0:00:10.12,0:00:10.70,Default,,0,0,0,,机会来了
+Dialogue: 0,0:00:11.07,0:00:12.52,Default,,0,0,0,,立刻下令手下暗杀

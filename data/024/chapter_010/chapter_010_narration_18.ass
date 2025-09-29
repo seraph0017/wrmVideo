@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_010 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}找到突破关键
+Dialogue: 0,0:00:01.85,0:00:04.35,Default,,0,0,0,,他融合雷电武魂创出极电步
+Dialogue: 0,0:00:04.68,0:00:06.44,Default,,0,0,0,,护体{\c&H0000FFFF&\b1}元罡{\c&H00FFFFFF&\b0}叠加海浪之力
+Dialogue: 0,0:00:06.81,0:00:07.65,Default,,0,0,0,,信心十足
+Dialogue: 0,0:00:08.06,0:00:09.62,Default,,0,0,0,,这次定要战胜你
+Dialogue: 0,0:00:10.08,0:00:12.72,Default,,0,0,0,,周身气势陡然提升准备再战

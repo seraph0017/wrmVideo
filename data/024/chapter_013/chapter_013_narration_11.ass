@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_013 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}从高空坠落发现巨大
+Dialogue: 0,0:00:02.45,0:00:05.00,Default,,0,0,0,,树枝控制护体{\c&H0000FFFF&\b1}元罡{\c&H00FFFFFF&\b0}落到上面
+Dialogue: 0,0:00:05.46,0:00:06.82,Default,,0,0,0,,他抱怨金色漩涡的
+Dialogue: 0,0:00:06.82,0:00:09.21,Default,,0,0,0,,危险发现自己身处一棵通天
+Dialogue: 0,0:00:09.21,0:00:11.78,Default,,0,0,0,,巨树上树枝粗壮如柱树叶
+Dialogue: 0,0:00:11.78,0:00:12.63,Default,,0,0,0,,巨大如扇

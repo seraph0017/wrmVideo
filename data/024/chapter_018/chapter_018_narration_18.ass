@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_018 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.98,Default,,0,0,0,,弓{\c&H0000FFFF&\b1}青云{\c&H00FFFFFF&\b0}带人轰穿光罩冲入
+Dialogue: 0,0:00:01.98,0:00:04.12,Default,,0,0,0,,主殿看到{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}炼丹怒吼
+Dialogue: 0,0:00:04.63,0:00:05.00,Default,,0,0,0,,住手
+Dialogue: 0,0:00:05.28,0:00:07.63,Default,,0,0,0,,火牛立刻挡在丹炉前双拳
+Dialogue: 0,0:00:07.63,0:00:09.79,Default,,0,0,0,,紧握周身火焰升腾与
+Dialogue: 0,0:00:09.79,0:00:11.31,Default,,0,0,0,,弓{\c&H0000FFFF&\b1}青云{\c&H00FFFFFF&\b0}带来的人对峙

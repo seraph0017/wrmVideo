@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_009 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.67,Default,,0,0,0,,朗屠{\c&H0000FFFF&\b1}王子{\c&H00FFFFFF&\b0}怒吼一声施展出天
+Dialogue: 0,0:00:02.67,0:00:05.14,Default,,0,0,0,,狼爪武技双爪带着{\c&H0000FFFF&\b1}凌厉{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:05.14,0:00:06.32,Default,,0,0,0,,风声扑向{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.74,0:00:09.38,Default,,0,0,0,,他灰色圆领袍鼓胀肌肉贲张
+Dialogue: 0,0:00:09.84,0:00:11.05,Default,,0,0,0,,狼头纹身闪烁着
+Dialogue: 0,0:00:11.05,0:00:13.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}红光{\c&H00FFFFFF&\b0}气势骇人周围的
+Dialogue: 0,0:00:13.57,0:00:15.24,Default,,0,0,0,,空气仿佛都凝固了

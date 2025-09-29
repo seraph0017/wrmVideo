@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_013 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}连续击杀两名手下与
+Dialogue: 0,0:00:02.28,0:00:03.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}萧叔{\c&H00FFFFFF&\b0}正面交锋
+Dialogue: 0,0:00:03.89,0:00:06.66,Default,,0,0,0,,他速度极快力量惊人拳罡
+Dialogue: 0,0:00:06.66,0:00:08.29,Default,,0,0,0,,轰碎{\c&H0000FFFF&\b1}萧叔护{\c&H00FFFFFF&\b0}体元罡
+Dialogue: 0,0:00:08.78,0:00:10.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}萧叔{\c&H00FFFFFF&\b0}震惊于吴双的
+Dialogue: 0,0:00:10.09,0:00:11.79,Default,,0,0,0,,成长不敢{\c&H0000FFFF&\b1}置信{\c&H00FFFFFF&\b0}地看着
+Dialogue: 0,0:00:11.79,0:00:13.92,Default,,0,0,0,,他准备施展元{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}术

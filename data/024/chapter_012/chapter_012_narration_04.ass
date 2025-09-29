@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_012 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}武雷{\c&H00FFFFFF&\b0}国境内武雷老祖立于
+Dialogue: 0,0:00:02.18,0:00:02.63,Default,,0,0,0,,高台
+Dialogue: 0,0:00:03.05,0:00:05.65,Default,,0,0,0,,黑袍在狂风中鼓荡双手结印
+Dialogue: 0,0:00:05.65,0:00:08.69,Default,,0,0,0,,催动大阵天空{\c&H0000FFFF&\b1}雷云{\c&H00FFFFFF&\b0}翻滚雷电
+Dialogue: 0,0:00:08.69,0:00:10.96,Default,,0,0,0,,如银蛇狂舞誓要将飞禽上
+Dialogue: 0,0:00:10.96,0:00:12.17,Default,,0,0,0,,众人困杀于此

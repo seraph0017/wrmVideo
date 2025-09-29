@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_020 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}强忍剧痛
+Dialogue: 0,0:00:01.37,0:00:02.66,Default,,0,0,0,,一步步走向高台
+Dialogue: 0,0:00:02.97,0:00:05.15,Default,,0,0,0,,每走一步伤口便撕裂般疼痛
+Dialogue: 0,0:00:05.65,0:00:06.71,Default,,0,0,0,,额头汗珠滚落
+Dialogue: 0,0:00:07.01,0:00:08.36,Default,,0,0,0,,却依旧坚持前行
+Dialogue: 0,0:00:08.70,0:00:10.67,Default,,0,0,0,,他要亲自将胜利果实交予
+Dialogue: 0,0:00:10.67,0:00:11.06,Default,,0,0,0,,家主
+Dialogue: 0,0:00:11.30,0:00:13.54,Default,,0,0,0,,让众人{\c&H0000FFFF&\b1}明白{\c&H00FFFFFF&\b0}吴家真正的核心

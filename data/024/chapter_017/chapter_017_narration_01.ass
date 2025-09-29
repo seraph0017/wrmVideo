@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_017 Narration 01 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.02,Default,,0,0,0,,第六峰边缘
+Dialogue: 0,0:00:01.30,0:00:02.13,Default,,0,0,0,,晨光熹微
+Dialogue: 0,0:00:02.50,0:00:03.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双坐{\c&H00FFFFFF&\b0}岩
+Dialogue: 0,0:00:03.56,0:00:04.32,Default,,0,0,0,,淡金晕绕
+Dialogue: 0,0:00:04.72,0:00:05.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}元罡{\c&H00FFFFFF&\b0}震残魂
+Dialogue: 0,0:00:06.14,0:00:07.28,Default,,0,0,0,,借先天速愈

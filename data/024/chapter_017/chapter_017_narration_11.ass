@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_017 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈翔{\c&H00FFFFFF&\b0}察觉危险强行扭转身体
+Dialogue: 0,0:00:03.19,0:00:05.45,Default,,0,0,0,,却为时已晚黑色刀光从他
+Dialogue: 0,0:00:05.45,0:00:07.75,Default,,0,0,0,,前胸划过鲜血喷涌而
+Dialogue: 0,0:00:07.75,0:00:10.31,Default,,0,0,0,,出他瞪大双眼不敢{\c&H0000FFFF&\b1}置信{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.41,0:00:13.11,Default,,0,0,0,,你你怎会有如此力量

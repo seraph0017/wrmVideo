@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_012 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.22,Default,,0,0,0,,百里外{\c&H0000FFFF&\b1}山林{\c&H00FFFFFF&\b0}中贱鸟探出
+Dialogue: 0,0:00:02.44,0:00:03.27,Default,,0,0,0,,黑漆漆的头
+Dialogue: 0,0:00:03.64,0:00:06.67,Default,,0,0,0,,使劲嗅了嗅发现目标气息缩
+Dialogue: 0,0:00:06.67,0:00:07.28,Default,,0,0,0,,回头嘟囔
+Dialogue: 0,0:00:07.78,0:00:09.41,Default,,0,0,0,,本鸟出马还能找不到
+Dialogue: 0,0:00:09.87,0:00:12.29,Default,,0,0,0,,那家伙藏得倒深随后悄声
+Dialogue: 0,0:00:12.29,0:00:12.58,Default,,0,0,0,,溜走

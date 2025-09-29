@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_005 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.15,Default,,0,0,0,,洞穴通道{\c&H0000FFFF&\b1}内江{\c&H00FFFFFF&\b0}浩眉头紧锁
+Dialogue: 0,0:00:02.65,0:00:04.76,Default,,0,0,0,,看着{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}不断轰击洞壁导致
+Dialogue: 0,0:00:04.76,0:00:05.93,Default,,0,0,0,,坍塌急道
+Dialogue: 0,0:00:06.25,0:00:06.75,Default,,0,0,0,,往里冲
+Dialogue: 0,0:00:07.10,0:00:07.93,Default,,0,0,0,,还自断后路
+Dialogue: 0,0:00:08.37,0:00:09.81,Default,,0,0,0,,你这是救人还是玩人
+Dialogue: 0,0:00:10.07,0:00:12.27,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}却拉着他向洞内跑去
+Dialogue: 0,0:00:12.51,0:00:13.30,Default,,0,0,0,,听他的没错

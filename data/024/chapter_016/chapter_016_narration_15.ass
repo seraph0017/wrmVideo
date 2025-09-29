@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_016 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵智{\c&H00FFFFFF&\b0}接到家主消息得知
+Dialogue: 0,0:00:01.83,0:00:04.37,Default,,0,0,0,,六族盟出大事盟主{\c&H0000FFFF&\b1}司马{\c&H00FFFFFF&\b0}鹏川
+Dialogue: 0,0:00:04.37,0:00:06.63,Default,,0,0,0,,被杀六族{\c&H0000FFFF&\b1}王司马{\c&H00FFFFFF&\b0}长空受创
+Dialogue: 0,0:00:07.05,0:00:07.98,Default,,0,0,0,,他意识到{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:07.98,0:00:10.33,Default,,0,0,0,,重要性决定不阻止{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}突破
+Dialogue: 0,0:00:10.68,0:00:12.12,Default,,0,0,0,,为{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}保留人才

@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_018 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.34,Default,,0,0,0,,引神阵光芒{\c&H0000FFFF&\b1}大盛{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.75,0:00:02.90,Default,,0,0,0,,虚空通道开启
+Dialogue: 0,0:00:03.44,0:00:05.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}驾驭百变魔云飞入其中
+Dialogue: 0,0:00:06.02,0:00:07.73,Default,,0,0,0,,通道另一端是连绵{\c&H0000FFFF&\b1}山脉{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.16,0:00:10.29,Default,,0,0,0,,空气中先天{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之气更加
+Dialogue: 0,0:00:10.29,0:00:10.64,Default,,0,0,0,,浓郁
+Dialogue: 0,0:00:11.02,0:00:12.35,Default,,0,0,0,,他好奇观察四周

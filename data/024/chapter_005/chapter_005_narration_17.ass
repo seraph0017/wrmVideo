@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_005 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.74,Default,,0,0,0,,大殿屋顶破洞处{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}悬浮于
+Dialogue: 0,0:00:02.74,0:00:05.83,Default,,0,0,0,,铁棍之上双目紧闭体内{\c&H0000FFFF&\b1}天泉{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.83,0:00:08.85,Default,,0,0,0,,初{\c&H0000FFFF&\b1}成元灵{\c&H00FFFFFF&\b0}之气澎湃如潮眉心
+Dialogue: 0,0:00:08.85,0:00:11.47,Default,,0,0,0,,迸射{\c&H0000FFFF&\b1}红光{\c&H00FFFFFF&\b0}一声爆喝滚
+Dialogue: 0,0:00:11.94,0:00:14.20,Default,,0,0,0,,音浪震得周围{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}七窍流血
+Dialogue: 0,0:00:14.20,0:00:14.54,Default,,0,0,0,,坠落
