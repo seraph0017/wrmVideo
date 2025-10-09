@@ -503,6 +503,426 @@ def validate_and_fix_xml_tags(content):
     
     return fixed_content, has_fixes, errors
 
+
+def extract_scene_closeup_numbers(scene_content):
+    """
+    提取场景内容中的场景编号和特写编号
+    
+    Args:
+        scene_content (str): 场景内容
+        
+    Returns:
+        tuple: (场景编号, 特写编号列表)
+    """
+    # 提取场景编号
+    scene_pattern = r'<scene_(\d+)>'
+    scene_match = re.search(scene_pattern, scene_content)
+    scene_number = int(scene_match.group(1)) if scene_match else None
+    
+    # 提取特写编号
+    closeup_pattern = r'<closeup_(\d+)>'
+    closeup_matches = re.findall(closeup_pattern, scene_content)
+    closeup_numbers = [int(num) for num in closeup_matches]
+    
+    return scene_number, closeup_numbers
+
+
+def validate_xml_structure_integrity(content):
+    """
+    检测XML结构的完整性，包括中文标签的场景和特写的编号连续性
+    
+    Args:
+        content (str): narration.txt文件的完整内容
+        
+    Returns:
+        list: 问题列表，每个问题是一个字典，包含scene_number, issue_type, details等字段
+    """
+    issues = []
+    
+    # 提取所有分镜（中文标签）
+    scene_pattern = r'<分镜(\d+)>(.*?)(?=</分镜\1>|<分镜\d+>|$)'
+    scene_matches = re.findall(scene_pattern, content, re.DOTALL)
+    
+    if not scene_matches:
+        issues.append({
+            'scene_number': None,
+            'issue_type': 'no_scenes',
+            'details': ['未找到任何分镜标签']
+        })
+        return issues
+    
+    # 检查分镜编号连续性
+    scene_numbers = [int(num) for num, _ in scene_matches]
+    expected_scene_numbers = list(range(1, len(scene_numbers) + 1))
+    
+    if scene_numbers != expected_scene_numbers:
+        issues.append({
+            'scene_number': None,
+            'issue_type': 'discontinuous_scenes',
+            'details': [f"分镜编号不连续: 期望 {expected_scene_numbers}, 实际 {scene_numbers}"]
+        })
+    
+    # 检查每个分镜内的图片特写编号连续性和结构完整性
+    for scene_num, scene_content in scene_matches:
+        scene_num = int(scene_num)
+        
+        # 提取图片特写编号
+        closeup_pattern = r'<图片特写(\d+)>'
+        closeup_numbers = [int(num) for num in re.findall(closeup_pattern, scene_content)]
+        
+        if not closeup_numbers:
+            issues.append({
+                'scene_number': scene_num,
+                'issue_type': 'no_closeups',
+                'details': [f"分镜{scene_num}: 未找到任何图片特写"]
+            })
+            continue
+        
+        # 检查特写编号是否从1开始连续
+        expected_closeup_numbers = list(range(1, len(closeup_numbers) + 1))
+        
+        if closeup_numbers != expected_closeup_numbers:
+            issues.append({
+                'scene_number': scene_num,
+                'issue_type': 'discontinuous_closeups',
+                'details': [f"分镜{scene_num}: 图片特写编号不连续，期望 {expected_closeup_numbers}, 实际 {closeup_numbers}"]
+            })
+        
+        # 检查每个图片特写的结构完整性
+        for closeup_num in closeup_numbers:
+            # 检查是否有对应的结束标签
+            closeup_start_pattern = f'<图片特写{closeup_num}>'
+            closeup_end_pattern = f'</图片特写{closeup_num}>'
+            
+            start_matches = len(re.findall(closeup_start_pattern, scene_content))
+            end_matches = len(re.findall(closeup_end_pattern, scene_content))
+            
+            if start_matches != end_matches:
+                issues.append({
+                    'scene_number': scene_num,
+                    'issue_type': 'unmatched_tags',
+                    'details': [f"分镜{scene_num}图片特写{closeup_num}: 开始标签({start_matches})和结束标签({end_matches})数量不匹配"]
+                })
+            
+            # 检查图片特写内容的完整性
+            closeup_content_pattern = f'<图片特写{closeup_num}>(.*?)(?=</图片特写{closeup_num}>|<图片特写\d+>|</分镜{scene_num}>|$)'
+            closeup_match = re.search(closeup_content_pattern, scene_content, re.DOTALL)
+            
+            if closeup_match:
+                closeup_content = closeup_match.group(1)
+                required_tags = ['<特写人物>', '<解说内容>', '<图片prompt>']
+                missing_tags = []
+                
+                for tag in required_tags:
+                    if tag not in closeup_content:
+                        missing_tags.append(tag)
+                
+                if missing_tags:
+                    issues.append({
+                        'scene_number': scene_num,
+                        'issue_type': 'missing_tags',
+                        'details': [f"分镜{scene_num}图片特写{closeup_num}: 缺少必要标签 {missing_tags}"]
+                    })
+    
+    return issues
+
+
+def fix_scene_structure_with_llm(client, scene_content, scene_number, issue_info, max_retries=3):
+    """
+    使用LLM修复分镜的XML结构问题
+    
+    Args:
+        client: Ark客户端实例
+        scene_content (str): 有问题的分镜内容
+        scene_number (int): 分镜编号
+        issue_info (dict): 问题信息，包含issue_type和details
+        max_retries (int): 最大重试次数
+        
+    Returns:
+        str: 修复后的内容（如果修复失败则返回原内容）
+    """
+    issue_type = issue_info.get('issue_type', 'unknown')
+    details = issue_info.get('details', '')
+    
+    # 构建问题描述
+    if issue_type == 'discontinuous_closeups':
+        problem_desc = f"特写编号不连续: {details}"
+    elif issue_type == 'no_closeups':
+        problem_desc = "缺少特写内容"
+    elif issue_type == 'missing_tags':
+        problem_desc = f"缺少必要的XML标签: {details}"
+    else:
+        problem_desc = f"XML结构问题: {details}"
+    
+    for attempt in range(max_retries):
+        prompt = f"""请修复以下分镜{scene_number}的XML结构问题。
+
+问题描述: {problem_desc}
+
+要求:
+1. 确保图片特写编号从1开始连续递增（<图片特写1>, <图片特写2>, <图片特写3>...）
+2. 每个图片特写必须包含以下标签：
+   - <特写人物>（包含<角色姓名>）
+   - <解说内容>
+   - <图片prompt>
+3. 保持原有内容的语义和风格
+4. 确保XML标签正确闭合
+5. 只返回修复后的分镜内容，不要包含<分镜{scene_number}>和</分镜{scene_number}>标签
+
+原始分镜内容:
+{scene_content}
+
+修复后的分镜内容:"""
+
+        try:
+            resp = client.chat.completions.create(
+                model="doubao-seed-1-6-flash-250715",
+                messages=[
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+                temperature=0.3,
+                max_tokens=4000
+            )
+            
+            fixed_content = resp.choices[0].message.content.strip()
+            
+            # 验证修复后的内容
+            test_content = f"<分镜{scene_number}>\n{fixed_content}\n</分镜{scene_number}>"
+            test_issues = validate_xml_structure_integrity(test_content)
+            
+            if len(test_issues) == 0:
+                print(f"  ✓ 场景{scene_number}结构修复成功（第{attempt+1}次尝试）")
+                return fixed_content
+            else:
+                print(f"  ⚠ 场景{scene_number}修复后仍有{len(test_issues)}个问题（第{attempt+1}次尝试）")
+                if attempt == max_retries - 1:
+                    print(f"  ✗ 场景{scene_number}修复失败，已达到最大重试次数")
+                    
+        except Exception as e:
+            print(f"  ✗ 场景{scene_number}修复时发生错误（第{attempt+1}次尝试）: {str(e)}")
+            if attempt == max_retries - 1:
+                print(f"  ✗ 场景{scene_number}修复失败，已达到最大重试次数")
+    
+    return scene_content
+
+def clean_duplicate_tags(content):
+    """
+    清理重复的XML结束标签
+    """
+    import re
+    
+    # 清理重复的结束标签，使用更简单直接的方法
+    # 匹配连续的相同结束标签
+    pattern = r'(</[^>]+>)\1+'
+    
+    def replace_duplicates(match):
+        return match.group(1)  # 只保留第一个标签
+    
+    # 重复执行直到没有更多重复标签
+    prev_content = ""
+    iterations = 0
+    max_iterations = 10  # 防止无限循环
+    
+    while prev_content != content and iterations < max_iterations:
+        prev_content = content
+        content = re.sub(pattern, replace_duplicates, content)
+        iterations += 1
+        
+        # 调试信息
+        if iterations > 1:
+            print(f"  清理重复标签第{iterations}轮")
+    
+    return content
+
+
+def fix_closeup_structure_with_llm(client, closeup_content, scene_number, closeup_number, max_retries=3):
+    """
+    使用LLM修复单个图片特写的结构问题
+    
+    Args:
+        client: LLM客户端
+        closeup_content: 图片特写的原始内容
+        scene_number: 分镜编号
+        closeup_number: 图片特写编号
+        max_retries: 最大重试次数
+    
+    Returns:
+        修复后的图片特写内容
+    """
+    if not client:
+        print(f"    警告: 未提供LLM客户端，跳过分镜{scene_number}图片特写{closeup_number}的修复")
+        return closeup_content
+    
+    print(f"    使用LLM修复分镜{scene_number}图片特写{closeup_number}的结构问题...")
+    
+    prompt = f"""请修复以下图片特写的XML结构，确保包含所有必要的标签。
+
+要求：
+1. 必须包含以下标签结构：
+   <图片特写{closeup_number}>
+   <特写人物>
+   <角色姓名>角色的姓名</角色姓名>
+   <时代背景>现代/古代</时代背景>
+   <角色形象>现代形象/古代形象</角色形象>
+   </特写人物>
+   <解说内容>约50字左右的解说内容</解说内容>
+   <图片prompt>详细的图片描述</图片prompt>
+   </图片特写{closeup_number}>
+
+2. 保持原有内容的语义不变
+3. 如果缺少某些信息，请根据上下文合理推断
+4. 确保XML标签正确闭合
+5. 只返回修复后的图片特写内容，不要任何解释
+
+原始内容：
+{closeup_content}
+
+修复后的内容："""
+
+    for attempt in range(max_retries):
+        try:
+            resp = client.chat.completions.create(
+                model="doubao-seed-1-6-flash-250715",
+                messages=[
+                    {
+                        "content": prompt,
+                        "role": "user"
+                    }
+                ],
+            )
+            
+            fixed_content = resp.choices[0].message.content.strip()
+            
+            # 后处理：清理重复的结束标签
+            fixed_content = clean_duplicate_tags(fixed_content)
+            
+            # 验证修复后的内容是否包含必要标签
+            required_tags = [
+                f'<图片特写{closeup_number}>',
+                f'</图片特写{closeup_number}>',
+                '<特写人物>',
+                '</特写人物>',
+                '<角色姓名>',
+                '</角色姓名>',
+                '<解说内容>',
+                '</解说内容>',
+                '<图片prompt>',
+                '</图片prompt>'
+            ]
+            
+            missing_tags = [tag for tag in required_tags if tag not in fixed_content]
+            
+            if not missing_tags:
+                print(f"    分镜{scene_number}图片特写{closeup_number}修复成功")
+                return fixed_content
+            else:
+                print(f"    第{attempt+1}次尝试失败，缺少标签: {missing_tags}")
+                
+        except Exception as e:
+            print(f"    第{attempt+1}次LLM调用失败: {str(e)}")
+    
+    print(f"    分镜{scene_number}图片特写{closeup_number}修复失败，返回原内容")
+    return closeup_content
+
+
+def fix_all_closeups_with_llm(content, client):
+    """
+    逐个修复所有分镜中的图片特写结构问题
+    
+    Args:
+        content: narration.txt的完整内容
+        client: LLM客户端
+    
+    Returns:
+        修复后的完整内容
+    """
+    if not client:
+        print("警告: 未提供LLM客户端，跳过图片特写修复")
+        return content
+    
+    print("开始逐个修复所有图片特写的结构问题...")
+    
+    # 首先检测所有XML结构问题
+    issues = validate_xml_structure_integrity(content)
+    if not issues:
+        print("未发现XML结构问题，无需修复")
+        return content
+    
+    modified_content = content
+    
+    # 按分镜编号分组处理问题
+    scene_issues = {}
+    for issue in issues:
+        scene_num = issue['scene_number']
+        if scene_num not in scene_issues:
+            scene_issues[scene_num] = []
+        scene_issues[scene_num].append(issue)
+    
+    # 逐个分镜处理
+    for scene_num in sorted(scene_issues.keys()):
+        print(f"\n处理分镜{scene_num}的问题...")
+        
+        # 提取分镜内容
+        scene_pattern = f'<分镜{scene_num}>(.*?)</分镜{scene_num}>'
+        scene_match = re.search(scene_pattern, modified_content, re.DOTALL)
+        
+        if not scene_match:
+            print(f"  未找到分镜{scene_num}的内容，跳过")
+            continue
+        
+        scene_content = scene_match.group(1)
+        original_scene_full = scene_match.group(0)
+        
+        # 提取所有图片特写
+        closeup_pattern = r'<图片特写(\d+)>(.*?)(?=</图片特写\1>|<图片特写\d+>|</分镜\d+>|$)'
+        closeup_matches = re.finditer(closeup_pattern, scene_content, re.DOTALL)
+        
+        modified_scene_content = scene_content
+        
+        # 逐个修复图片特写
+        for closeup_match in closeup_matches:
+            closeup_num = int(closeup_match.group(1))
+            closeup_content = closeup_match.group(2)
+            original_closeup = f"<图片特写{closeup_num}>{closeup_content}"
+            
+            # 检查这个图片特写是否有问题
+            has_issues = any(
+                f"图片特写{closeup_num}" in str(issue.get('details', []))
+                for issue in scene_issues[scene_num]
+            )
+            
+            if has_issues:
+                print(f"  修复图片特写{closeup_num}...")
+                
+                # 使用LLM修复单个图片特写
+                fixed_closeup = fix_closeup_structure_with_llm(
+                    client, original_closeup, scene_num, closeup_num
+                )
+                
+                # 替换修复后的内容
+                if fixed_closeup != original_closeup:
+                    # 确保修复后的内容以正确的结束标签结尾
+                    if not fixed_closeup.endswith(f"</图片特写{closeup_num}>"):
+                        fixed_closeup += f"</图片特写{closeup_num}>"
+                    
+                    modified_scene_content = modified_scene_content.replace(
+                        original_closeup, fixed_closeup
+                    )
+                    print(f"  图片特写{closeup_num}修复完成")
+                else:
+                    print(f"  图片特写{closeup_num}修复失败")
+        
+        # 替换整个分镜的内容
+        modified_scene_full = f"<分镜{scene_num}>{modified_scene_content}</分镜{scene_num}>"
+        modified_content = modified_content.replace(original_scene_full, modified_scene_full)
+    
+    print("\n所有图片特写修复完成")
+    return modified_content
+
+
 def find_scene_closeups(content):
     """
     查找分镜1下面的第一个和第二个图片特写的解说内容
@@ -536,7 +956,7 @@ def find_scene_closeups(content):
     
     return first_closeup, second_closeup
 
-def validate_narration_file(narration_file_path, client=None, auto_rewrite=False, auto_fix_characters=False, auto_fix_tags=False):
+def validate_narration_file(narration_file_path, client=None, auto_rewrite=False, auto_fix_characters=False, auto_fix_tags=False, auto_fix_structure=False):
     """
     验证单个narration.txt文件中分镜1的第一个和第二个图片特写的解说内容字数，以及总解说内容字数
     
@@ -616,6 +1036,42 @@ def validate_narration_file(narration_file_path, client=None, auto_rewrite=False
             'invalid_characters': list(set(invalid_characters)),  # 去重
             'missing_characters': list(set(invalid_characters))   # 这里和invalid_characters相同
         }
+        
+        # XML结构完整性验证
+        structure_issues = validate_xml_structure_integrity(updated_content)
+        structure_validation_valid = len(structure_issues) == 0
+        results['structure_validation'] = {
+            'valid': structure_validation_valid,
+            'issues': structure_issues
+        }
+        
+        # 如果启用自动修复结构且存在结构问题
+        if auto_fix_structure and not structure_validation_valid and client:
+            print(f"  检测到{len(structure_issues)}个XML结构问题，正在使用LLM逐个修复图片特写...")
+            
+            # 使用新的修复函数修复所有图片特写
+            fixed_content = fix_all_closeups_with_llm(updated_content, client)
+            
+            if fixed_content and fixed_content != updated_content:
+                updated_content = fixed_content
+                content_updated = True
+                
+                # 重新验证结构
+                new_structure_issues = validate_xml_structure_integrity(updated_content)
+                results['structure_validation'] = {
+                    'valid': len(new_structure_issues) == 0,
+                    'issues': new_structure_issues
+                }
+                if len(new_structure_issues) == 0:
+                    print(f"  XML结构修复完成")
+                else:
+                    print(f"  XML结构修复后仍存在{len(new_structure_issues)}个问题")
+            else:
+                print(f"  XML结构修复失败或无需修复")
+        elif len(structure_issues) > 0 and not auto_fix_structure:
+            print(f"  检测到{len(structure_issues)}个XML结构问题（使用--auto-fix-structure可自动修复）:")
+            for issue in structure_issues:
+                print(f"    场景{issue['scene_number']}: {issue['issue_type']} - {issue['details']}")
         
         # 如果启用自动修复角色且存在缺失角色
         if auto_fix_characters and invalid_characters:
@@ -770,7 +1226,241 @@ def validate_narration_file(narration_file_path, client=None, auto_rewrite=False
     
     return results
 
-def validate_data_directory(data_dir, auto_rewrite=False, auto_fix_characters=False, auto_fix_tags=False):
+def extract_character_descriptions(content):
+    """
+    从narration.txt内容中提取所有人物的详细描述
+    
+    Args:
+        content (str): narration.txt文件的完整内容
+        
+    Returns:
+        dict: 人物名称到描述的映射，格式为 {人物名称: 详细描述}
+    """
+    character_descriptions = {}
+    
+    # 匹配角色定义部分 - 修正为实际的XML标签格式
+    character_pattern = r'<角色\d+>(.*?)</角色\d+>'
+    character_matches = re.findall(character_pattern, content, re.DOTALL)
+    
+    for character_block in character_matches:
+        # 提取人物名称 - 修正为实际的XML标签格式
+        name_match = re.search(r'<角色姓名>(.*?)</角色姓名>', character_block)
+        if not name_match:
+            continue
+        
+        character_name = name_match.group(1).strip()
+        
+        # 提取各个描述字段
+        description_parts = []
+        
+        # 性别
+        gender_match = re.search(r'<性别>(.*?)</性别>', character_block)
+        if gender_match:
+            gender_text = gender_match.group(1).strip()
+            # 转换英文性别为中文
+            if gender_text.lower() == 'male':
+                description_parts.append("性别：男")
+            elif gender_text.lower() == 'female':
+                description_parts.append("性别：女")
+            else:
+                description_parts.append(f"性别：{gender_text}")
+        
+        # 年龄段
+        age_match = re.search(r'<年龄段>(.*?)</年龄段>', character_block)
+        if age_match:
+            age_text = age_match.group(1).strip()
+            # 解析年龄段格式，如 "16-30_Young"
+            if '_' in age_text:
+                age_range = age_text.split('_')[0]
+                description_parts.append(f"年龄：{age_range}岁")
+            else:
+                description_parts.append(f"年龄：{age_text}")
+        
+        # 外貌特征
+        appearance_match = re.search(r'<外貌特征>(.*?)</外貌特征>', character_block, re.DOTALL)
+        if appearance_match:
+            appearance_text = appearance_match.group(1).strip()
+            
+            # 发型和发色
+            hair_style_match = re.search(r'<发型>(.*?)</发型>', appearance_text)
+            hair_color_match = re.search(r'<发色>(.*?)</发色>', appearance_text)
+            if hair_style_match and hair_color_match:
+                hair_style = hair_style_match.group(1).strip()
+                hair_color = hair_color_match.group(1).strip()
+                description_parts.append(f"头发：{hair_color}{hair_style}")
+            elif hair_style_match:
+                description_parts.append(f"发型：{hair_style_match.group(1).strip()}")
+            
+            # 面部特征
+            face_match = re.search(r'<面部特征>(.*?)</面部特征>', appearance_text)
+            if face_match:
+                description_parts.append(f"面部：{face_match.group(1).strip()}")
+            
+            # 身材特征
+            body_match = re.search(r'<身材特征>(.*?)</身材特征>', appearance_text)
+            if body_match:
+                description_parts.append(f"身材：{body_match.group(1).strip()}")
+        
+        # 服装风格
+        clothing_match = re.search(r'<服装风格>(.*?)</服装风格>', character_block, re.DOTALL)
+        if clothing_match:
+            clothing_text = clothing_match.group(1).strip()
+            
+            # 上衣
+            top_match = re.search(r'<上衣>(.*?)</上衣>', clothing_text)
+            if top_match:
+                description_parts.append(f"上衣：{top_match.group(1).strip()}")
+            
+            # 下装
+            bottom_match = re.search(r'<下装>(.*?)</下装>', clothing_text)
+            if bottom_match:
+                description_parts.append(f"下装：{bottom_match.group(1).strip()}")
+        
+        # 组合完整描述
+        if description_parts:
+            character_descriptions[character_name] = "，".join(description_parts)
+    
+    return character_descriptions
+
+
+def merge_character_description_to_prompt(prompt, character_name, character_descriptions):
+    """
+    将人物描述融合到图片prompt中
+    
+    Args:
+        prompt (str): 原始图片prompt
+        character_name (str): 人物名称
+        character_descriptions (dict): 人物描述字典
+        
+    Returns:
+        str: 融合了人物描述的新prompt
+    """
+    if character_name not in character_descriptions:
+        return prompt
+    
+    character_desc = character_descriptions[character_name]
+    
+    # 如果prompt中已经包含了人物名称，则在其后添加描述
+    if character_name in prompt:
+        # 替换人物名称为"人物名称（描述）"的格式
+        enhanced_prompt = prompt.replace(character_name, f"{character_name}（{character_desc}）")
+    else:
+        # 如果prompt中没有人物名称，则在开头添加人物描述
+        enhanced_prompt = f"{character_name}（{character_desc}），{prompt}"
+    
+    return enhanced_prompt
+
+
+def split_narration_by_closeups(narration_file_path, output_dir=None):
+    """
+    按人物特写拆分narration.txt文件，并融合人物描述到图片prompt中
+    
+    Args:
+        narration_file_path (str): narration.txt文件路径
+        output_dir (str): 输出目录，默认为narration.txt所在目录
+        
+    Returns:
+        dict: 拆分结果统计信息
+    """
+    if output_dir is None:
+        output_dir = os.path.dirname(narration_file_path)
+    
+    try:
+        with open(narration_file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+    except Exception as e:
+        return {"success": False, "error": f"读取文件失败: {str(e)}"}
+    
+    # 提取人物描述
+    character_descriptions = extract_character_descriptions(content)
+    
+    # 提取所有分镜 - 修正为实际的XML标签格式
+    scene_pattern = r'<分镜\d+>(.*?)</分镜\d+>'
+    scene_matches = re.findall(scene_pattern, content, re.DOTALL)
+    
+    split_results = {
+        "success": True,
+        "total_scenes": len(scene_matches),
+        "total_closeups": 0,
+        "files_created": [],
+        "character_descriptions_found": len(character_descriptions)
+    }
+    
+    closeup_counter = 1
+    
+    for scene_idx, scene_content in enumerate(scene_matches, 1):
+        # 提取该分镜中的所有图片特写 - 修正为实际的XML标签格式
+        closeup_pattern = r'<图片特写\d+>(.*?)</图片特写\d+>'
+        closeup_matches = re.findall(closeup_pattern, scene_content, re.DOTALL)
+        
+        for closeup_idx, closeup_content in enumerate(closeup_matches, 1):
+            # 提取特写人物信息 - 修正为实际的XML标签格式
+            character_match = re.search(r'<特写人物>(.*?)</特写人物>', closeup_content, re.DOTALL)
+            if not character_match:
+                continue
+            
+            character_info = character_match.group(1)
+            
+            # 提取角色姓名
+            name_match = re.search(r'<角色姓名>(.*?)</角色姓名>', character_info)
+            if not name_match:
+                continue
+            character_name = name_match.group(1).strip()
+            
+            # 提取时代背景（如果存在）
+            era_match = re.search(r'<时代背景>(.*?)</时代背景>', character_info)
+            era_background = era_match.group(1).strip() if era_match else ""
+            
+            # 提取角色形象（如果存在）
+            image_match = re.search(r'<角色形象>(.*?)</角色形象>', character_info)
+            character_image = image_match.group(1).strip() if image_match else ""
+            
+            # 提取解说内容
+            narration_match = re.search(r'<解说内容>(.*?)</解说内容>', closeup_content)
+            narration_content = narration_match.group(1).strip() if narration_match else ""
+            
+            # 提取图片prompt
+            prompt_match = re.search(r'<图片prompt>(.*?)</图片prompt>', closeup_content)
+            original_prompt = prompt_match.group(1).strip() if prompt_match else ""
+            
+            # 融合人物描述到prompt中
+            enhanced_prompt = merge_character_description_to_prompt(
+                original_prompt, character_name, character_descriptions
+            )
+            
+            # 生成输出文件名 - 按照新的命名格式：scene_X_closeup_Y_角色名.txt
+            filename = f"scene_{scene_idx}_closeup_{closeup_idx}_{character_name}.txt"
+            output_file_path = os.path.join(output_dir, filename)
+            
+            # 生成输出内容
+            output_content = f"""角色姓名: {character_name}
+时代背景: {era_background}
+角色形象: {character_image}
+解说内容: {narration_content}
+原始图片prompt: {original_prompt}
+增强图片prompt: {enhanced_prompt}
+分镜编号: {scene_idx}
+特写编号: {closeup_idx}
+"""
+            
+            # 写入文件
+            try:
+                with open(output_file_path, 'w', encoding='utf-8') as f:
+                    f.write(output_content)
+                
+                split_results["files_created"].append(filename)
+                split_results["total_closeups"] += 1
+                closeup_counter += 1
+                
+            except Exception as e:
+                split_results["success"] = False
+                split_results["error"] = f"写入文件 {filename} 失败: {str(e)}"
+                return split_results
+    
+    return split_results
+
+
+def validate_data_directory(data_dir, auto_rewrite=False, auto_fix_characters=False, auto_fix_tags=False, auto_fix_structure=False):
     """
     验证数据目录下所有章节的narration.txt文件
     
@@ -779,6 +1469,7 @@ def validate_data_directory(data_dir, auto_rewrite=False, auto_fix_characters=Fa
         auto_rewrite (bool): 是否自动改写超长内容
         auto_fix_characters (bool): 是否自动修复缺失的角色定义
         auto_fix_tags (bool): 是否自动修复XML标签闭合问题
+        auto_fix_structure (bool): 是否自动修复XML结构问题
     """
     data_path = Path(data_dir)
     
@@ -827,7 +1518,7 @@ def validate_data_directory(data_dir, auto_rewrite=False, auto_fix_characters=Fa
             continue
         
         total_chapters += 1
-        results = validate_narration_file(str(narration_file), client, auto_rewrite, auto_fix_characters, auto_fix_tags)
+        results = validate_narration_file(str(narration_file), client, auto_rewrite, auto_fix_characters, auto_fix_tags, auto_fix_structure)
         
         print(f"\n章节: {chapter_dir.name}")
         print(f"文件: {narration_file}")
@@ -903,6 +1594,20 @@ def validate_data_directory(data_dir, auto_rewrite=False, auto_fix_characters=Fa
         else:
             print(" (所有XML标签正确闭合)")
         
+        # 检查XML结构验证
+        if 'structure_validation' in results:
+            structure_validation = results['structure_validation']
+            structure_status = "✓" if structure_validation['valid'] else "✗"
+            print(f"XML结构验证: {structure_status}", end="")
+            if not structure_validation['valid']:
+                issue_count = len(structure_validation['issues'])
+                print(f" (发现{issue_count}个结构问题)")
+                if not auto_fix_structure:
+                    chapter_valid = False
+                    issues_found.append(f"{chapter_dir.name} XML结构验证: {issue_count}个结构问题")
+            else:
+                print(" (XML结构完整正确)")
+        
         if chapter_valid:
             valid_chapters += 1
     
@@ -930,6 +1635,55 @@ def validate_data_directory(data_dir, auto_rewrite=False, auto_fix_characters=Fa
             print("提示: 使用 --auto-rewrite 参数可自动改写不符合要求的内容")
     else:
         print("\n所有章节的解说内容字数都符合要求！")
+    
+    # 执行人物特写拆分
+    print("\n" + "=" * 80)
+    print("开始按人物特写拆分narration.txt文件...")
+    
+    split_summary = {
+        "total_chapters_processed": 0,
+        "total_files_created": 0,
+        "total_closeups": 0,
+        "chapters_with_errors": []
+    }
+    
+    for chapter_dir in chapter_dirs:
+        narration_file = chapter_dir / 'narration.txt'
+        
+        if not narration_file.exists():
+            continue
+        
+        print(f"\n处理章节: {chapter_dir.name}")
+        split_results = split_narration_by_closeups(str(narration_file))
+        
+        if split_results["success"]:
+            split_summary["total_chapters_processed"] += 1
+            split_summary["total_files_created"] += len(split_results["files_created"])
+            split_summary["total_closeups"] += split_results["total_closeups"]
+            
+            print(f"  ✓ 成功拆分 {split_results['total_closeups']} 个人物特写")
+            print(f"  ✓ 发现 {split_results['character_descriptions_found']} 个人物描述")
+            print(f"  ✓ 创建文件: {', '.join(split_results['files_created'])}")
+        else:
+            split_summary["chapters_with_errors"].append({
+                "chapter": chapter_dir.name,
+                "error": split_results.get("error", "未知错误")
+            })
+            print(f"  ✗ 拆分失败: {split_results.get('error', '未知错误')}")
+    
+    # 输出拆分总结
+    print("\n" + "=" * 80)
+    print("拆分完成!")
+    print(f"处理章节数: {split_summary['total_chapters_processed']}")
+    print(f"创建文件数: {split_summary['total_files_created']}")
+    print(f"总特写数量: {split_summary['total_closeups']}")
+    
+    if split_summary["chapters_with_errors"]:
+        print(f"拆分失败章节: {len(split_summary['chapters_with_errors'])}")
+        for error_info in split_summary["chapters_with_errors"]:
+            print(f"  - {error_info['chapter']}: {error_info['error']}")
+    else:
+        print("所有章节都成功完成拆分！")
 
 def main():
     """
@@ -948,14 +1702,18 @@ def main():
                        help='启用自动修复角色功能（已合并到--auto-fix中，保留用于兼容性）')
     parser.add_argument('--auto-fix-tags', action='store_true',
                        help='启用自动修复XML标签功能（已合并到--auto-fix中，保留用于兼容性）')
+    parser.add_argument('--auto-fix-structure', action='store_true',
+                       help='启用自动修复XML结构功能（已合并到--auto-fix中，保留用于兼容性）')
     
     # 兼容旧的命令行格式
     if len(sys.argv) == 2 and not sys.argv[1].startswith('-'):
-        # 旧格式: python validate_narration.py data/xxx
+        # 旧格式: python validate_narration.py data/xxx - 默认启用auto-fix功能
         data_dir = sys.argv[1]
-        auto_rewrite = False
-        auto_fix_characters = False
-        auto_fix_tags = False
+        auto_rewrite = True  # 默认启用
+        auto_fix_characters = True  # 默认启用
+        auto_fix_tags = True  # 默认启用
+        auto_fix_structure = True  # 默认启用
+        print("提示: 已默认启用自动修复功能（包括改写、角色修复、标签修复、结构修复）")
     else:
         # 新格式: python validate_narration.py data/xxx --auto-fix
         args = parser.parse_args()
@@ -965,13 +1723,14 @@ def main():
         auto_rewrite = args.auto_fix or args.auto_rewrite
         auto_fix_characters = args.auto_fix or args.auto_fix_characters
         auto_fix_tags = args.auto_fix or args.auto_fix_tags  # XML标签修复功能集成到--auto-fix中
+        auto_fix_structure = args.auto_fix or args.auto_fix_structure  # XML结构修复功能集成到--auto-fix中
         
         # 如果使用了旧参数，给出提示
-        if args.auto_rewrite or args.auto_fix_characters or args.auto_fix_tags:
-            print("提示: --auto-rewrite、--auto-fix-characters 和 --auto-fix-tags 参数已合并为 --auto-fix")
+        if args.auto_rewrite or args.auto_fix_characters or args.auto_fix_tags or args.auto_fix_structure:
+            print("提示: --auto-rewrite、--auto-fix-characters、--auto-fix-tags 和 --auto-fix-structure 参数已合并为 --auto-fix")
             print("建议使用: python validate_narration.py data/xxx --auto-fix")
     
-    validate_data_directory(data_dir, auto_rewrite, auto_fix_characters, auto_fix_tags)
+    validate_data_directory(data_dir, auto_rewrite, auto_fix_characters, auto_fix_tags, auto_fix_structure)
 
 if __name__ == "__main__":
     main()
