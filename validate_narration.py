@@ -1073,6 +1073,18 @@ def validate_narration_file(narration_file_path, client=None, auto_rewrite=False
             for issue in structure_issues:
                 print(f"    场景{issue['scene_number']}: {issue['issue_type']} - {issue['details']}")
         
+        # 图片特写完整性检查和修复
+        if auto_fix_structure and client:
+            print(f"  检查图片特写完整性...")
+            fixed_content, has_closeup_fixes = fix_incomplete_closeups_by_scene(client, updated_content)
+            
+            if has_closeup_fixes:
+                updated_content = fixed_content
+                content_updated = True
+                print(f"  图片特写完整性修复完成")
+            else:
+                print(f"  所有图片特写都完整，无需修复")
+        
         # 如果启用自动修复角色且存在缺失角色
         if auto_fix_characters and invalid_characters:
             print(f"  检测到缺失角色: {invalid_characters}，正在自动添加...")
@@ -1731,6 +1743,107 @@ def main():
             print("建议使用: python validate_narration.py data/xxx --auto-fix")
     
     validate_data_directory(data_dir, auto_rewrite, auto_fix_characters, auto_fix_tags, auto_fix_structure)
+
+def fix_incomplete_closeups_by_scene(client, content):
+    """
+    按分镜修复不完整的图片特写，使用LLM根据模板补全缺失的标签
+    
+    Args:
+        client: Ark客户端实例
+        content (str): narration.txt文件的完整内容
+        
+    Returns:
+        tuple: (修复后的内容, 是否有修复)
+    """
+    has_fixes = False
+    fixed_content = content
+    
+    # 模板参考
+    template = """<图片特写X>
+<特写人物>
+<角色姓名>角色名</角色姓名>
+</特写人物>
+<解说内容>约50字的解说内容...</解说内容>
+<图片prompt>详细的图片描述...</图片prompt>
+</图片特写X>"""
+    
+    # 提取所有分镜
+    scene_pattern = r'(<分镜\d+>)(.*?)(</分镜\d+>)'
+    scenes = re.finditer(scene_pattern, content, re.DOTALL)
+    
+    for scene_match in scenes:
+        scene_start_tag = scene_match.group(1)
+        scene_content = scene_match.group(2)
+        scene_end_tag = scene_match.group(3)
+        scene_number = re.search(r'分镜(\d+)', scene_start_tag).group(1)
+        
+        print(f"检查{scene_start_tag}...")
+        
+        # 检查这个分镜中的图片特写是否完整
+        closeup_pattern = r'<图片特写(\d+)>(.*?)</图片特写\1>'
+        closeups = list(re.finditer(closeup_pattern, scene_content, re.DOTALL))
+        
+        scene_needs_fix = False
+        for closeup_match in closeups:
+            closeup_content = closeup_match.group(2)
+            closeup_number = closeup_match.group(1)
+            
+            # 检查是否缺少必需标签
+            has_character = '<特写人物>' in closeup_content and '</特写人物>' in closeup_content
+            has_narration = '<解说内容>' in closeup_content and '</解说内容>' in closeup_content
+            has_prompt = '<图片prompt>' in closeup_content and '</图片prompt>' in closeup_content
+            
+            if not (has_character and has_narration and has_prompt):
+                print(f"  发现<图片特写{closeup_number}>不完整: 特写人物={has_character}, 解说内容={has_narration}, 图片prompt={has_prompt}")
+                scene_needs_fix = True
+                break
+        
+        # 如果分镜需要修复，使用LLM修复整个分镜
+        if scene_needs_fix:
+            print(f"  使用LLM修复{scene_start_tag}...")
+            
+            prompt = f"""请修复以下分镜内容，确保每个<图片特写X>都包含完整的三个标签：<特写人物>、<解说内容>、<图片prompt>
+
+参考模板格式：
+{template}
+
+要求：
+1. 保持原有的图片特写数量和编号
+2. 如果缺少<特写人物>，根据<图片prompt>中的角色信息补充
+3. 如果缺少<解说内容>，根据<图片prompt>生成约50字的解说
+4. 保持原有内容不变，只补充缺失的标签
+5. 只返回修复后的分镜内容，不要解释
+
+原分镜内容：
+{scene_start_tag}
+{scene_content}
+{scene_end_tag}
+
+修复后："""
+            
+            try:
+                resp = client.chat.completions.create(
+                    model="doubao-seed-1-6-flash-250715",
+                    messages=[
+                        {
+                            "content": prompt,
+                            "role": "user"
+                        }
+                    ],
+                )
+                
+                fixed_scene = resp.choices[0].message.content.strip()
+                
+                # 替换原分镜内容
+                original_scene = scene_match.group(0)
+                fixed_content = fixed_content.replace(original_scene, fixed_scene)
+                has_fixes = True
+                print(f"  {scene_start_tag}修复完成")
+                
+            except Exception as e:
+                print(f"  {scene_start_tag}修复失败: {e}")
+    
+    return fixed_content, has_fixes
 
 if __name__ == "__main__":
     main()
