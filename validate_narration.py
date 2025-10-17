@@ -1441,7 +1441,9 @@ def split_narration_by_closeups(narration_file_path, output_dir=None):
             )
             
             # 生成输出文件名 - 按照新的命名格式：scene_X_closeup_Y_角色名.txt
-            filename = f"scene_{scene_idx}_closeup_{closeup_idx}_{character_name}.txt"
+            # 处理文件名中的特殊字符
+            safe_character_name = character_name.replace("/", "_").replace("\\", "_").replace(":", "_").replace("*", "_").replace("?", "_").replace("\"", "_").replace("<", "_").replace(">", "_").replace("|", "_")
+            filename = f"scene_{scene_idx}_closeup_{closeup_idx}_{safe_character_name}.txt"
             output_file_path = os.path.join(output_dir, filename)
             
             # 生成输出内容
