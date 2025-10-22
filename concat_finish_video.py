@@ -475,6 +475,12 @@ def concat_videos_with_bgm(video_files, bgm_audio_path, output_path):
             "-b:a", "128k"
         ])
         
+        # 统一视频分辨率并居中内容，避免左右偏移与尺寸不一致
+        cmd.extend([
+            "-vf",
+            f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=decrease,pad={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:(ow-iw)/2:(oh-ih)/2:black,setsar=1"
+        ])
+        
         # 添加GPU特定的编码参数
         # 只有非VideoToolbox编码器才添加preset参数
         if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):

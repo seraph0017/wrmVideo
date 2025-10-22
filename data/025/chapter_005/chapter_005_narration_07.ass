@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_005 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,吴战小队被凶兽群暴动阻拦
+Dialogue: 0,0:00:02.45,0:00:04.04,Default,,0,0,0,,一个月仅前进两百里
+Dialogue: 0,0:00:04.37,0:00:05.74,Default,,0,0,0,,吴战气得猛砸树干
+Dialogue: 0,0:00:06.05,0:00:06.78,Default,,0,0,0,,树皮炸裂
+Dialogue: 0,0:00:07.06,0:00:08.58,Default,,0,0,0,,怒吼声在林间回荡

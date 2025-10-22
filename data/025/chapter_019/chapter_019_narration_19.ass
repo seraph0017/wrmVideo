@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_019 Narration 19 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.79,Default,,0,0,0,,陈家{\c&H0000FFFF&\b1}王族{\c&H00FFFFFF&\b0}驻地飞出两人
+Dialogue: 0,0:00:02.20,0:00:04.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈霞{\c&H00FFFFFF&\b0}满头银发满脸褶皱
+Dialogue: 0,0:00:04.75,0:00:05.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈娜{\c&H00FFFFFF&\b0}美艳丰满
+Dialogue: 0,0:00:06.27,0:00:07.67,Default,,0,0,0,,姐妹二人踏冰而出
+Dialogue: 0,0:00:08.07,0:00:09.78,Default,,0,0,0,,周围十几里凝结{\c&H0000FFFF&\b1}浮冰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.10,0:00:11.11,Default,,0,0,0,,气势骇人

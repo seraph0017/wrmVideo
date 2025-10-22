@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_009 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄坐在台下
+Dialogue: 0,0:00:01.64,0:00:02.46,Default,,0,0,0,,面色平静
+Dialogue: 0,0:00:02.82,0:00:03.89,Default,,0,0,0,,手中紧握{\c&H0000FFFF&\b1}巨剑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.32,0:00:06.14,Default,,0,0,0,,目光始终锁定台上{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.62,0:00:08.17,Default,,0,0,0,,当朗屠催动战甲时
+Dialogue: 0,0:00:08.57,0:00:09.36,Default,,0,0,0,,他手指微动
+Dialogue: 0,0:00:09.81,0:00:11.87,Default,,0,0,0,,周身散发出连环境强者的
+Dialogue: 0,0:00:11.87,0:00:12.20,Default,,0,0,0,,威压
+Dialogue: 0,0:00:12.54,0:00:13.63,Default,,0,0,0,,随时准备出手

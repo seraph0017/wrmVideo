@@ -1,0 +1,20 @@
+[Script Info]
+Title: chapter_008 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴星凡{\c&H00FFFFFF&\b0}感叹吴双的成长
+Dialogue: 0,0:00:02.15,0:00:03.83,Default,,0,0,0,,决定全力支持年轻一代的
+Dialogue: 0,0:00:03.83,0:00:04.19,Default,,0,0,0,,发展
+Dialogue: 0,0:00:04.47,0:00:05.31,Default,,0,0,0,,表情欣慰

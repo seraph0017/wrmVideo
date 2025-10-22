@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_019 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈禹坤{\c&H00FFFFFF&\b0}见是吴江雄
+Dialogue: 0,0:00:01.80,0:00:03.79,Default,,0,0,0,,脸色剧变想起当年阴影
+Dialogue: 0,0:00:04.24,0:00:06.31,Default,,0,0,0,,仓促间闪避仍被削断左臂
+Dialogue: 0,0:00:06.75,0:00:07.60,Default,,0,0,0,,鲜血喷涌
+Dialogue: 0,0:00:07.98,0:00:09.52,Default,,0,0,0,,惊恐中转身欲逃

@@ -1,0 +1,20 @@
+[Script Info]
+Title: chapter_019 Narration 20 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双随{\c&H00FFFFFF&\b0}父亲赶到见到陈霞
+Dialogue: 0,0:00:02.33,0:00:03.58,Default,,0,0,0,,姐妹忍不住调侃
+Dialogue: 0,0:00:04.04,0:00:05.76,Default,,0,0,0,,你们确认你们{\c&H0000FFFF&\b1}老爹{\c&H00FFFFFF&\b0}是一个人
+Dialogue: 0,0:00:06.13,0:00:07.50,Default,,0,0,0,,气得{\c&H0000FFFF&\b1}陈霞{\c&H00FFFFFF&\b0}脂粉掉落

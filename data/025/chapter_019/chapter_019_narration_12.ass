@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_019 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈禹{\c&H00FFFFFF&\b0}坤面色阴沉
+Dialogue: 0,0:00:01.92,0:00:04.30,Default,,0,0,0,,不顾族规直接施展冥水潮汐
+Dialogue: 0,0:00:04.81,0:00:06.31,Default,,0,0,0,,周围十几里温度骤降
+Dialogue: 0,0:00:06.73,0:00:07.57,Default,,0,0,0,,寒气逼人
+Dialogue: 0,0:00:07.95,0:00:10.45,Default,,0,0,0,,四面八方涌起滔天巨浪{\c&H0000FFFF&\b1}封锁{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.45,0:00:11.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}退路

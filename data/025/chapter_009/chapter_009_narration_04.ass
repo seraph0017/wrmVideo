@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_009 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.14,Default,,0,0,0,,就在{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}纠结是否动手时
+Dialogue: 0,0:00:02.63,0:00:04.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}声音如炸雷般响起
+Dialogue: 0,0:00:04.96,0:00:06.27,Default,,0,0,0,,他从远处迈步而来
+Dialogue: 0,0:00:06.73,0:00:08.87,Default,,0,0,0,,看似缓慢却几步便至近前
+Dialogue: 0,0:00:09.25,0:00:10.44,Default,,0,0,0,,挡在{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}身前
+Dialogue: 0,0:00:10.73,0:00:12.43,Default,,0,0,0,,目光{\c&H0000FFFF&\b1}冷冽{\c&H00FFFFFF&\b0}盯着陈言彬

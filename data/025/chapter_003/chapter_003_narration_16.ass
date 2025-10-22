@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_003 Narration 16 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.80,Default,,0,0,0,,酒馆三楼
+Dialogue: 0,0:00:01.21,0:00:02.27,Default,,0,0,0,,吴双破窗而入
+Dialogue: 0,0:00:02.71,0:00:04.55,Default,,0,0,0,,青色圆领袍被罡气鼓荡
+Dialogue: 0,0:00:04.97,0:00:06.09,Default,,0,0,0,,他落在圆桌中央
+Dialogue: 0,0:00:06.48,0:00:07.58,Default,,0,0,0,,桌面瞬间炸裂
+Dialogue: 0,0:00:07.98,0:00:08.79,Default,,0,0,0,,碎石飞溅
+Dialogue: 0,0:00:09.06,0:00:10.70,Default,,0,0,0,,周围子弟惨叫着倒地

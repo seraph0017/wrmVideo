@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_009 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.09,Default,,0,0,0,,朗{\c&H0000FFFF&\b1}屠见江{\c&H00FFFFFF&\b0}蜜儿与吴双亲近
+Dialogue: 0,0:00:02.44,0:00:03.18,Default,,0,0,0,,顿时暴怒
+Dialogue: 0,0:00:03.47,0:00:04.89,Default,,0,0,0,,猛地起身震飞桌椅
+Dialogue: 0,0:00:05.33,0:00:06.93,Default,,0,0,0,,浑身散发血腥杀气
+Dialogue: 0,0:00:07.37,0:00:09.12,Default,,0,0,0,,肩狼头纹身似要活过来
+Dialogue: 0,0:00:09.35,0:00:10.74,Default,,0,0,0,,吓得周围孩童哭闹
+Dialogue: 0,0:00:11.06,0:00:11.95,Default,,0,0,0,,人群后退

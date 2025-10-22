@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_016 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈子清{\c&H00FFFFFF&\b0}站在陈家水峰观望台
+Dialogue: 0,0:00:02.50,0:00:03.48,Default,,0,0,0,,望着赵家土峰
+Dialogue: 0,0:00:03.81,0:00:04.63,Default,,0,0,0,,眉头紧锁
+Dialogue: 0,0:00:05.03,0:00:07.08,Default,,0,0,0,,自言自语{\c&H0000FFFF&\b1}赵智{\c&H00FFFFFF&\b0}为何不回消息
+Dialogue: 0,0:00:07.53,0:00:09.18,Default,,0,0,0,,身后长老们面面相觑
+Dialogue: 0,0:00:09.53,0:00:10.59,Default,,0,0,0,,不知如何回答

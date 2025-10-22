@@ -12,6 +12,89 @@ import subprocess
 from pathlib import Path
 import glob
 
+def standardize_segments(data_path, target_width=720, target_height=1280, fps=30):
+    """将每个章节目录下 temp_narration_videos 内的 segment_*.mp4 标准化为 720x1280。
+    - 使用 scale=force_original_aspect_ratio=increase + 居中 crop，避免拉伸
+    - 设置 setsar=1，确保像素宽高比正确
+    - 保持或可选混入原音频（若有）
+    """
+    print(f"\n=== 标准化 segment 视频到 {target_width}x{target_height} ===")
+    changed = 0
+    chapter_dirs = sorted([d for d in glob.glob(os.path.join(data_path, "chapter_*"))
+                           if os.path.isdir(d)])
+
+    for chapter_dir in chapter_dirs:
+        temp_dir = os.path.join(chapter_dir, "temp_narration_videos")
+        if not os.path.isdir(temp_dir):
+            continue
+
+        segment_files = sorted(glob.glob(os.path.join(temp_dir, "segment_*.mp4")))
+        if not segment_files:
+            continue
+
+        print(f"{os.path.basename(chapter_dir)}: 找到 {len(segment_files)} 段")
+        for seg in segment_files:
+            try:
+                probe = subprocess.run(
+                    [
+                        "ffprobe", "-v", "error",
+                        "-select_streams", "v:0",
+                        "-show_entries", "stream=width,height",
+                        "-of", "csv=p=0:s=x",
+                        seg,
+                    ],
+                    capture_output=True,
+                    text=True,
+                )
+                if probe.returncode != 0:
+                    print(f"  ❌ ffprobe 失败: {os.path.basename(seg)}")
+                    continue
+
+                res = probe.stdout.strip()
+                w, h = (0, 0)
+                if "x" in res:
+                    try:
+                        w, h = map(int, res.split("x"))
+                    except Exception:
+                        pass
+
+                if w == target_width and h == target_height:
+                    print(f"  ✓ 已是 {target_width}x{target_height}: {os.path.basename(seg)}")
+                    continue
+
+                tmp_out = seg + ".std.mp4"
+                vf = (
+                    f"scale={target_width}:{target_height}:force_original_aspect_ratio=increase,"
+                    f"crop={target_width}:{target_height}:(in_w-{target_width})/2:(in_h-{target_height})/2,"
+                    "setsar=1"
+                )
+                cmd = [
+                    "ffmpeg", "-y", "-i", seg,
+                    "-map", "0:v:0", "-map", "0:a?",
+                    "-vf", vf,
+                    "-r", str(fps),
+                    "-c:v", "libx264", "-crf", "20", "-preset", "medium",
+                    "-pix_fmt", "yuv420p",
+                    "-c:a", "aac", "-b:a", "160k",
+                    "-movflags", "+faststart",
+                    tmp_out,
+                ]
+
+                proc = subprocess.run(cmd, capture_output=True, text=True)
+                if proc.returncode == 0 and os.path.exists(tmp_out):
+                    os.replace(tmp_out, seg)
+                    print(f"  ✓ 已标准化: {os.path.basename(seg)} -> {target_width}x{target_height}")
+                    changed += 1
+                else:
+                    print(f"  ❌ 标准化失败: {os.path.basename(seg)}")
+            except Exception as e:
+                print(f"  ❌ 处理失败 {os.path.basename(seg)}: {e}")
+
+    if changed == 0:
+        print("没有需要标准化的段或全部已标准化")
+    else:
+        print(f"共标准化 {changed} 段")
+
 def run_script(script_name, data_path):
     """
     运行指定的脚本
@@ -92,7 +175,13 @@ def process_data_directory(data_path):
         return False
     
     print(f"找到 {len(chapter_dirs)} 个章节目录")
-    
+
+    # 预标准化：若章节下已有 segment_*.mp4（例如前置流程生成），先统一到 720x1280
+    try:
+        standardize_segments(data_path)
+    except Exception as e:
+        print(f"❌ 预标准化阶段发生异常: {e}")
+
     # 按顺序执行两个脚本
     scripts = [
         "concat_narration_video.py", 
@@ -104,6 +193,12 @@ def process_data_directory(data_path):
     for script in scripts:
         if run_script(script, data_path):
             success_count += 1
+            # 在生成旁白主视频后，统一所有 segment 段到 720x1280，避免后续拼接拉伸/偏移
+            if script == "concat_narration_video.py":
+                try:
+                    standardize_segments(data_path)
+                except Exception as e:
+                    print(f"❌ 标准化阶段发生异常: {e}")
         else:
             print(f"❌ {script} 执行失败，停止后续处理")
             break

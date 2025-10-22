@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_002 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.32,Default,,0,0,0,,吴双手指人才组第一眼神
+Dialogue: 0,0:00:02.32,0:00:05.01,Default,,0,0,0,,轻蔑深蓝色圆领袍随风微动
+Dialogue: 0,0:00:05.48,0:00:06.26,Default,,0,0,0,,高声挑战
+Dialogue: 0,0:00:06.61,0:00:07.90,Default,,0,0,0,,你就是人才组第一
+Dialogue: 0,0:00:08.24,0:00:09.47,Default,,0,0,0,,敢不敢接我一拳
