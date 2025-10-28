@@ -1,11 +1,7 @@
 {
   "image_file": "chapter_001_image_03.jpeg",
   "prompt": "画面风格是强调强烈线条、鲜明对比和现代感造型，色彩饱和，带有动态夸张与都市叙事视觉冲击力的国风漫画风格。一位男性，面容威武，眼神坚毅，黑色束发，中等身材，体态端正，身着宋朝圆领袍，深色，丝质，领口高立, 同色系长裤，束脚, 腰带，无其他饰品。玄幻修真风格，宋朝庭院一角，中年下人束发，黑色发色，面容恭敬，身穿灰色圆领袍，长袖，不露脖子，正躬身行礼，头部微低，眼神看向地面，周围有其他侍卫站立，背景有宋朝风格回廊，光影自然，单人特写，近景",
-  "timestamp": "2025-10-20T09:52:33.555687",
-  "scene_number": 3,
-  "model": "doubao-seedream-3-0-t2i-250415",
-  "generation_params": {
-    "response_format": "b64_json",
-    "watermark": false
-  }
+  "timestamp": "2025-10-27T22:00:34.705548",
+  "workflow": "image_compact.json",
+  "scene_number": 3
 }

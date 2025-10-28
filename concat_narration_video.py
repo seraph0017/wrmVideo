@@ -737,15 +737,13 @@ def create_image_video_with_effects(image_path, output_path, duration, width=720
     print(f"创建图片视频: {image_path} -> {output_path}, 时长: {duration}s")
     
     try:
-        # 定义多种Ken Burns动态效果（更丝滑的移动）
+        # 定义Ken Burns动态效果（仅上下或左右移动，不含旋转/斜线）
         total_frames = int(duration * fps)
         effects = [
             # 缓慢放大 + 丝滑左右移动
             f"zoompan=z='min(1.0+on*0.0008,1.3)':x='iw/2-(iw/zoom/2)+sin(on*0.02)*40':y='ih/2-(ih/zoom/2)':d={total_frames}:s={width}x{height}:fps={fps}",
             # 缓慢缩小 + 丝滑上下移动
             f"zoompan=z='max(1.3-on*0.0008,1.0)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)+cos(on*0.025)*35':d={total_frames}:s={width}x{height}:fps={fps}",
-            # 固定缩放1.15 + 丝滑对角线移动
-            f"zoompan=z='1.15':x='iw/2-(iw/zoom/2)+sin(on*0.018)*45':y='ih/2-(ih/zoom/2)+cos(on*0.018)*45':d={total_frames}:s={width}x{height}:fps={fps}",
             # 固定缩放1.2 + 丝滑左移
             f"zoompan=z='1.2':x='iw/2-(iw/zoom/2)+sin(on*0.015)*50':y='ih/2-(ih/zoom/2)':d={total_frames}:s={width}x{height}:fps={fps}",
             # 固定缩放1.1 + 丝滑右移
@@ -753,13 +751,7 @@ def create_image_video_with_effects(image_path, output_path, duration, width=720
             # 固定缩放1.25 + 丝滑上移
             f"zoompan=z='1.25':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)+cos(on*0.022)*38':d={total_frames}:s={width}x{height}:fps={fps}",
             # 固定缩放1.18 + 丝滑下移
-            f"zoompan=z='1.18':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)-cos(on*0.019)*42':d={total_frames}:s={width}x{height}:fps={fps}",
-            # 固定缩放1.3 + 丝滑圆形移动
-            f"zoompan=z='1.3':x='iw/2-(iw/zoom/2)+sin(on*0.016)*48':y='ih/2-(ih/zoom/2)+cos(on*0.016)*48':d={total_frames}:s={width}x{height}:fps={fps}",
-            # 缓慢放大 + 丝滑螺旋移动
-            f"zoompan=z='min(1.0+on*0.0006,1.4)':x='iw/2-(iw/zoom/2)+sin(on*0.014)*on*0.3':y='ih/2-(ih/zoom/2)+cos(on*0.014)*on*0.3':d={total_frames}:s={width}x{height}:fps={fps}",
-            # 固定缩放1.22 + 丝滑波浪移动
-            f"zoompan=z='1.22':x='iw/2-(iw/zoom/2)+sin(on*0.017)*sin(on*0.003)*45':y='ih/2-(ih/zoom/2)+cos(on*0.021)*30':d={total_frames}:s={width}x{height}:fps={fps}"
+            f"zoompan=z='1.18':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)-cos(on*0.019)*42':d={total_frames}:s={width}x{height}:fps={fps}"
         ]
         
         # 随机选择一种效果
