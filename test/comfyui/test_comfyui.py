@@ -280,31 +280,34 @@ class ComfyUIClient:
     
     def submit_workflow(self, workflow_payload: Dict[str, Any]) -> Tuple[bool, Optional[Dict[str, Any]], Optional[str]]:
         """
-        提交工作流到ComfyUI
-        
-        Args:
-            workflow_payload: 工作流配置字典
-            
-        Returns:
-            Tuple[bool, Optional[Dict], Optional[str]]: (成功标志, 响应数据, 错误信息)
+        提交工作流到ComfyUI，自动处理端点归一化和 404/405 回退到 `/prompt`。
+        返回三元组: (是否成功, 响应JSON或None, 错误文本或None)
         """
-        # ComfyUI API需要特定的格式
-        api_payload = {
-            "prompt": workflow_payload,
-            "client_id": "python_client"
-        }
-        
+        api_payload = {"prompt": workflow_payload, "client_id": "python_client"}
+
+        # 内联端点归一化，兼容 base、/api、/api/prompt、/prompt
+        def _normalize_prompt_url(url: str) -> str:
+            base = (url or '').strip().rstrip('/')
+            if not base:
+                base = 'http://127.0.0.1:8188'
+            if base.endswith('/api/prompt') or '/api/prompt' in base:
+                return base
+            if base.endswith('/prompt') or ('/prompt' in base and '/api' not in base):
+                return base
+            if base.endswith('/api'):
+                return base + '/prompt'
+            if '/api' in base:
+                return base.split('/api')[0].rstrip('/') + '/api/prompt'
+            return base + '/api/prompt'
+
+        primary = _normalize_prompt_url(self.config.api_url)
+        root = primary.split('/api/prompt')[0] if '/api/prompt' in primary else primary.split('/prompt')[0]
+        fallback = root.rstrip('/') + '/prompt'
+
         for attempt in range(self.config.max_retries):
             try:
                 logger.info(f"提交工作流到ComfyUI (尝试 {attempt + 1}/{self.config.max_retries})")
-                
-                response = self.session.post(
-                    self.config.api_url,
-                    json=api_payload,
-                    timeout=self.config.timeout
-                )
-                
-                # 检查HTTP状态码
+                response = self.session.post(primary, json=api_payload, timeout=self.config.timeout)
                 if response.status_code == 200:
                     try:
                         result = response.json()
@@ -315,48 +318,72 @@ class ComfyUIClient:
                         logger.error(error_msg)
                         return False, None, error_msg
                 else:
+                    if response.status_code in (404, 405):
+                        logger.warning(f"主端点 {primary} 返回 {response.status_code}，尝试回退 {fallback}")
+                        r2 = self.session.post(fallback, json=api_payload, timeout=self.config.timeout)
+                        if r2.status_code == 200:
+                            try:
+                                result2 = r2.json()
+                                logger.info("回退端点提交成功")
+                                return True, result2, None
+                            except json.JSONDecodeError as e:
+                                error_msg = f"回退端点 JSON解析失败: {str(e)}"
+                                logger.error(error_msg)
+                                return False, None, error_msg
+                        else:
+                            err_fb = f"HTTP错误(回退): {r2.status_code} - {r2.text}"
+                            logger.error(err_fb)
+                            if attempt < self.config.max_retries - 1:
+                                logger.info(f"等待 {self.config.retry_delay} 秒后重试...")
+                                time.sleep(self.config.retry_delay)
+                                continue
+                            return False, None, err_fb
                     error_msg = f"HTTP错误: {response.status_code} - {response.text}"
                     logger.error(error_msg)
-                    
                     if attempt < self.config.max_retries - 1:
                         logger.info(f"等待 {self.config.retry_delay} 秒后重试...")
                         time.sleep(self.config.retry_delay)
                         continue
-                    
                     return False, None, error_msg
-                    
+
             except requests.exceptions.Timeout:
                 error_msg = f"请求超时 (超过 {self.config.timeout} 秒)"
                 logger.error(error_msg)
-                
                 if attempt < self.config.max_retries - 1:
                     logger.info(f"等待 {self.config.retry_delay} 秒后重试...")
                     time.sleep(self.config.retry_delay)
                     continue
-                
                 return False, None, error_msg
-                
+
             except requests.exceptions.ConnectionError:
                 error_msg = "连接错误：无法连接到ComfyUI服务器"
                 logger.error(error_msg)
-                
                 if attempt < self.config.max_retries - 1:
                     logger.info(f"等待 {self.config.retry_delay} 秒后重试...")
                     time.sleep(self.config.retry_delay)
                     continue
-                
                 return False, None, error_msg
-                
+
             except Exception as e:
                 error_msg = f"未知错误: {str(e)}"
                 logger.error(error_msg)
                 return False, None, error_msg
-        
+
         return False, None, "所有重试尝试都失败了"
         
     def _api_base(self) -> str:
-        # 返回 ComfyUI 基础 API 地址 (以 /api 结尾)
-        root = self.config.api_url.split('/api')[0]
+        """
+        返回 ComfyUI 基础 API 地址 (以 `/api` 结尾)，兼容 `/api/prompt` 与 `/prompt` 配置。
+        """
+        url = (self.config.api_url or '').strip().rstrip('/')
+        if '/api/prompt' in url:
+            root = url.split('/api/prompt')[0]
+        elif '/prompt' in url:
+            root = url.split('/prompt')[0]
+        elif '/api' in url:
+            root = url.split('/api')[0]
+        else:
+            root = url
         return f"{root}/api"
     
     def wait_for_output_filename(self, prompt_id: str, poll_interval: float = 1.0, max_wait: int = 300):

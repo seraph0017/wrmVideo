@@ -230,7 +230,48 @@ class ComfyUIClient:
     """ComfyUI API 客户端（参考 test_image_compact.py）"""
 
     def __init__(self, api_url: str, timeout: int = 30, max_retries: int = 3, retry_delay: int = 1):
-        self.api_url = api_url
+        """
+        初始化客户端并规范化工作流提交端点。
+
+        端点兼容策略：
+        - 支持传入以下形式：
+          1) `http://host:port` → 归一到 `http://host:port/api/prompt`
+          2) `http://host:port/api` → 归一到 `http://host:port/api/prompt`
+          3) `http://host:port/api/prompt` → 原样使用
+          4) `http://host:port/prompt` → 原样使用（部分部署只暴露 /prompt）
+          5) 其他包含 `/api/...` 的路径 → 回到根并使用 `/api/prompt`
+
+        同时准备一个备用端点 `/prompt`，在提交返回 404/405 时自动回退。
+        """
+        def normalize_prompt_url(url: str) -> str:
+            base = (url or '').strip().rstrip('/')
+            if not base:
+                base = 'http://127.0.0.1:8188'
+            # 已是标准 /api/prompt
+            if base.endswith('/api/prompt') or '/api/prompt' in base:
+                return base
+            # 明确传入了 /prompt（不带 /api）
+            if base.endswith('/prompt') or ('/prompt' in base and '/api' not in base):
+                return base
+            # 以 /api 结尾，补齐 /prompt
+            if base.endswith('/api'):
+                return base + '/prompt'
+            # 包含 /api/... 的其他形式，回到根并统一到 /api/prompt
+            if '/api' in base:
+                return base.split('/api')[0].rstrip('/') + '/api/prompt'
+            # 纯主机:端口形式，默认 /api/prompt
+            return base + '/api/prompt'
+
+        self.api_url = normalize_prompt_url(api_url)
+        # 备用端点用于 404/405 回退：优先从根组装 /prompt
+        root = self.api_url.rstrip('/')
+        if '/api/prompt' in root:
+            self._root = root.split('/api/prompt')[0]
+        elif '/prompt' in root:
+            self._root = root.split('/prompt')[0]
+        else:
+            self._root = root.split('/api')[0]
+        self._fallback_prompt_url = self._root.rstrip('/') + '/prompt'
         self.timeout = timeout
         self.max_retries = max_retries
         self.retry_delay = retry_delay
@@ -238,26 +279,59 @@ class ComfyUIClient:
         self.session.headers.update({"Content-Type": "application/json"})
 
     def _api_base(self) -> str:
-        root = self.api_url.split('/api')[0]
+        """返回以 `/api` 结尾的基础 API 前缀，用于 history/view/upload。
+
+        兼容：当提交端点为 `/prompt` 时，history/view 仍使用 `/api/...` 路径。
+        """
+        url = self.api_url.rstrip('/')
+        if '/api/prompt' in url:
+            root = url.split('/api/prompt')[0]
+        elif '/prompt' in url:
+            root = url.split('/prompt')[0]
+        else:
+            root = url.split('/api')[0]
         return f"{root}/api"
 
     def submit_workflow(self, workflow_payload: Dict[str, any]) -> Tuple[bool, Optional[Dict], Optional[str]]:
+        """提交工作流，自动处理端点 405/404 的回退。
+
+        返回: (ok, result_json, error_text)
+        """
         payload = {"prompt": workflow_payload, "client_id": "python_client"}
         for attempt in range(self.max_retries):
             try:
-                resp = self.session.post(self.api_url, json=payload, timeout=self.timeout)
+                # 首选归一端点
+                url_primary = self.api_url
+                resp = self.session.post(url_primary, json=payload, timeout=self.timeout)
                 if resp.status_code == 200:
                     try:
                         return True, resp.json(), None
                     except json.JSONDecodeError:
                         return True, {"raw": resp.text}, None
-                else:
-                    err = f"HTTP错误: {resp.status_code} - {resp.text}"
-                    logger.error(err)
-                    if attempt < self.max_retries - 1:
-                        time.sleep(self.retry_delay)
-                        continue
-                    return False, None, err
+                # 在 404/405 时尝试备用 /prompt
+                if resp.status_code in (404, 405):
+                    url_fallback = self._fallback_prompt_url
+                    logger.warning(f"提交端点返回 {resp.status_code}，尝试回退到 {url_fallback}")
+                    resp2 = self.session.post(url_fallback, json=payload, timeout=self.timeout)
+                    if resp2.status_code == 200:
+                        try:
+                            return True, resp2.json(), None
+                        except json.JSONDecodeError:
+                            return True, {"raw": resp2.text}, None
+                    else:
+                        err_fb = f"HTTP错误(回退): {resp2.status_code} - {resp2.text}"
+                        logger.error(err_fb)
+                        if attempt < self.max_retries - 1:
+                            time.sleep(self.retry_delay)
+                            continue
+                        return False, None, err_fb
+                # 其他非 200 的情况
+                err = f"HTTP错误: {resp.status_code} - {resp.text}"
+                logger.error(err)
+                if attempt < self.max_retries - 1:
+                    time.sleep(self.retry_delay)
+                    continue
+                return False, None, err
             except requests.exceptions.Timeout:
                 err = f"请求超时 (超过 {self.timeout} 秒)"
                 logger.error(err)

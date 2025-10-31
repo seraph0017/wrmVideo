@@ -9,23 +9,11 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.75,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}追受惊贵女时
-Dialogue: 0,0:00:02.13,0:00:04.54,Default,,0,0,0,,其马发狂他果断杀马救{\c&H0000FFFF&\b1}贵女{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:04.88,0:00:05.76,Default,,0,0,0,,发现马被{\c&H0000FFFF&\b1}下药{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:06.12,0:00:07.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落指认凶手
-Dialogue: 0,0:00:07.67,0:00:09.04,Default,,0,0,0,,夜晚在{\c&H0000FFFF&\b1}义庄{\c&H00FFFFFF&\b0}辨认尸体
-Dialogue: 0,0:00:09.33,0:00:11.01,Default,,0,0,0,,谢厌臣出现调侃{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落
-Dialogue: 0,0:00:11.26,0:00:12.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是义庄
-Dialogue: 0,0:00:12.38,0:00:14.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}惨白时间为夜晚
-Dialogue: 0,0:00:14.65,0:00:16.70,Default,,0,0,0,,义庄内布置简陋氛围{\c&H0000FFFF&\b1}阴森{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:16.99,0:00:19.08,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}身着绯色圆领箭袖
-Dialogue: 0,0:00:19.50,0:00:20.40,Default,,0,0,0,,杀马救{\c&H0000FFFF&\b1}贵女{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:20.70,0:00:22.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落身着圆领呕吐
-Dialogue: 0,0:00:22.95,0:00:24.97,Default,,0,0,0,,谢厌臣身着雪白{\c&H0000FFFF&\b1}圆领{\c&H00FFFFFF&\b0}锦袍
-Dialogue: 0,0:00:25.29,0:00:26.75,Default,,0,0,0,,优雅调侃{\c&H0000FFFF&\b1}尸体{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:27.02,0:00:28.48,Default,,0,0,0,,无衣着环境{\c&H0000FFFF&\b1}阴森{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:02.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}无视威压径直走向天才
+Dialogue: 0,0:00:02.63,0:00:05.12,Default,,0,0,0,,组手指{\c&H0000FFFF&\b1}吴毅{\c&H00FFFFFF&\b0}当众挑战
+Dialogue: 0,0:00:05.49,0:00:07.68,Default,,0,0,0,,天才组前十出来受死

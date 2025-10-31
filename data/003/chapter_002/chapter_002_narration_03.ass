@@ -9,32 +9,13 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:01.26,Default,,0,0,0,,闻如雷指责{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落
-Dialogue: 0,0:00:01.70,0:00:02.92,Default,,0,0,0,,谢拾安{\c&H0000FFFF&\b1}火气{\c&H00FFFFFF&\b0}很大
-Dialogue: 0,0:00:03.37,0:00:04.98,Default,,0,0,0,,上前将闻{\c&H0000FFFF&\b1}如雷{\c&H00FFFFFF&\b0}踹翻在地
-Dialogue: 0,0:00:05.49,0:00:06.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}花容失色
-Dialogue: 0,0:00:07.07,0:00:08.27,Default,,0,0,0,,连忙{\c&H0000FFFF&\b1}扶起{\c&H00FFFFFF&\b0}闻如雷
-Dialogue: 0,0:00:08.55,0:00:10.32,Default,,0,0,0,,闻如雷{\c&H0000FFFF&\b1}质问{\c&H00FFFFFF&\b0}谢拾安敢打人
-Dialogue: 0,0:00:10.69,0:00:12.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}则指责闻星落不帮忙
-Dialogue: 0,0:00:12.76,0:00:14.56,Default,,0,0,0,,闻如雷还{\c&H0000FFFF&\b1}扬言{\c&H00FFFFFF&\b0}不要闻星落这
-Dialogue: 0,0:00:14.56,0:00:15.04,Default,,0,0,0,,个{\c&H0000FFFF&\b1}妹妹{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:15.54,0:00:17.30,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落平静表示不会再回
-Dialogue: 0,0:00:17.30,0:00:17.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻家{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:18.02,0:00:18.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}此时{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:18.89,0:00:21.05,Default,,0,0,0,,谢观澜在楼上{\c&H0000FFFF&\b1}扶栏{\c&H00FFFFFF&\b0}边冷眼睨
-Dialogue: 0,0:00:21.05,0:00:21.80,Default,,0,0,0,,着楼下{\c&H0000FFFF&\b1}动静{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:22.16,0:00:23.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是珠宝铺子外
-Dialogue: 0,0:00:23.84,0:00:26.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}充足时间为白天
-Dialogue: 0,0:00:26.27,0:00:28.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}开阔氛围紧张
-Dialogue: 0,0:00:28.60,0:00:30.49,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}身着深色圆领袍
-Dialogue: 0,0:00:30.83,0:00:33.01,Default,,0,0,0,,负手而立{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落面色平静
-Dialogue: 0,0:00:33.41,0:00:35.63,Default,,0,0,0,,身着杏{\c&H0000FFFF&\b1}粉色{\c&H00FFFFFF&\b0}圆领齐胸襦裙
-Dialogue: 0,0:00:35.98,0:00:37.25,Default,,0,0,0,,闻{\c&H0000FFFF&\b1}如雷{\c&H00FFFFFF&\b0}痛苦捂胸
-Dialogue: 0,0:00:37.52,0:00:38.84,Default,,0,0,0,,身着{\c&H0000FFFF&\b1}深色{\c&H00FFFFFF&\b0}圆领衣
-Dialogue: 0,0:00:39.23,0:00:40.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}焦急扶人
-Dialogue: 0,0:00:40.75,0:00:42.53,Default,,0,0,0,,身着{\c&H0000FFFF&\b1}浅色系{\c&H00FFFFFF&\b0}圆领服饰
+Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}突然爆发突破
+Dialogue: 0,0:00:01.92,0:00:03.69,Default,,0,0,0,,力量暴涨至地泉境中期
+Dialogue: 0,0:00:04.14,0:00:05.45,Default,,0,0,0,,一拳轰向黑袍人
+Dialogue: 0,0:00:05.75,0:00:07.39,Default,,0,0,0,,黑袍人猝不及防被击退
+Dialogue: 0,0:00:07.74,0:00:09.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}首次占据上风

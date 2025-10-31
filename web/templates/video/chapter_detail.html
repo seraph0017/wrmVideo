@@ -101,6 +101,9 @@
                     <button class="btn btn-success btn-sm px-3 py-2" onclick="batchGenerateImages()" id="batchImageBtn">
                         <i class="fas fa-magic me-1"></i> 批量生成分镜图片
                     </button>
+                    <button class="btn btn-info btn-sm px-3 py-2" onclick="batchGenerateImagesV4()" id="batchImageV4Btn">
+                        <i class="fas fa-magic me-1"></i> 批量生成分镜图片(ComfyUI)
+                    </button>
                     <button class="btn btn-secondary btn-sm px-3 py-2" onclick="validateNarrationImagesLLM()" id="validateImageLLMBtn">
                         <i class="fas fa-robot me-1"></i> LLM校验分镜图片
                     </button>
@@ -993,7 +996,7 @@ function generateNarrationVideo(narrationId, sceneNumber) {
     }
 }
 
-// 批量生成分镜图片
+// 批量生成分镜图片（默认走 v4 ComfyUI）
 function batchGenerateImages() {
     const btn = document.getElementById('batchImageBtn');
     
@@ -1002,7 +1005,8 @@ function batchGenerateImages() {
         btn.disabled = true;
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 批量生成中...';
         
-        fetch(`/video/api/chapters/{{ chapter.id }}/batch-generate-images/`, {
+        // 改为调用 v4 端点（服务端有默认 ComfyUI 配置）
+        fetch(`/video/api/chapters/{{ chapter.id }}/batch-generate-images-v4/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -1012,7 +1016,8 @@ function batchGenerateImages() {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert(`批量生成分镜图片任务已启动！共${data.count}个解说段落。`);
+                const tid = data.task_id ? `任务ID: ${data.task_id}` : '';
+                alert(`ComfyUI批量生成分镜图片任务已启动！\n${tid}`);
                 // 刷新页面以更新状态
                 setTimeout(() => {
                     location.reload();
@@ -1022,12 +1027,62 @@ function batchGenerateImages() {
             }
         })
         .catch(error => {
-            console.error('Error batch generating images:', error);
+            console.error('Error batch generating images (v4):', error);
             alert('批量生成失败: ' + error.message);
         })
         .finally(() => {
             btn.disabled = false;
             btn.innerHTML = '<i class="fas fa-magic"></i> 批量生成分镜图片';
+        });
+    }
+}
+
+// 批量生成分镜图片 (ComfyUI版本)
+function batchGenerateImagesV4() {
+    const btn = document.getElementById('batchImageV4Btn');
+    
+    // 获取用户输入的ComfyUI配置
+    const apiUrl = prompt('请输入ComfyUI API地址 (默认: http://127.0.0.1:8188):', 'http://127.0.0.1:8188');
+    if (apiUrl === null) return; // 用户取消
+    
+    const workflowJson = prompt('请输入工作流JSON文件路径 (默认: test/comfyui/image_compact.json):', 'test/comfyui/image_compact.json');
+    if (workflowJson === null) return; // 用户取消
+    
+    if (confirm('确定要使用ComfyUI为所有解说段落批量生成分镜图片吗？这可能需要较长时间。')) {
+        // 更新按钮状态
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ComfyUI生成中...';
+        
+        fetch(`/video/api/chapters/{{ chapter.id }}/batch-generate-images-v4/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCSRFToken()
+            },
+            body: JSON.stringify({
+                api_url: apiUrl,
+                workflow_json: workflowJson
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert(`ComfyUI批量生成分镜图片任务已启动！\n任务ID: ${data.task_id}\nAPI地址: ${data.api_url}\n工作流: ${data.workflow_json}`);
+                // 刷新页面以更新状态
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
+            } else {
+                alert('ComfyUI批量生成失败: ' + (data.error || '未知错误'));
+            }
+        })
+        .catch(error => {
+            console.error('Error batch generating images with ComfyUI:', error);
+            alert('ComfyUI批量生成失败: ' + error.message);
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fas fa-magic"></i> 批量生成分镜图片(ComfyUI)';
         });
     }
 }

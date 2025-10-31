@@ -4,6 +4,24 @@
 
 ## ✨ 最新更新
 
+- 🎨 **ComfyUI批量生成分镜图片**: 新增基于ComfyUI的批量分镜图片生成功能，提供更高质量的图像生成：
+  - **ComfyUI集成**: 集成gen_image_async_v4.py脚本，支持通过ComfyUI API生成高质量分镜图片
+  - **新增API端点**: 添加`/video/api/chapters/{chapter_id}/batch-generate-images-v4/`端点
+  - **异步任务支持**: 新增`gen_image_async_v4_task` Celery异步任务，支持后台批量处理
+  - **灵活配置**: 支持自定义ComfyUI API地址和工作流JSON文件路径
+  - **前端界面**: 在章节详情页面添加"批量生成分镜图片(ComfyUI)"按钮，支持用户交互配置
+  - **智能提示**: 前端提供API地址和工作流文件的输入提示，默认值为`http://127.0.0.1:8188/api/prompt`和`test/comfyui/image_compact.json`
+  - **状态管理**: 完善的任务状态跟踪和错误处理机制
+  - **向下兼容**: 保持原有批量生成功能不变，新增ComfyUI版本作为补充选项
+   - **使用方式**: 在章节详情页面点击ComfyUI按钮，配置API地址和工作流文件即可启动批量生成
+
+  - **默认按钮切换**: 为统一体验，章节详情页绿色“批量生成分镜图片”按钮已改为默认调用 v4 接口（ComfyUI），无需额外配置也可使用默认参数运行。
+  - **端点说明**: 前端默认调用 `video/api/chapters/{chapter_id}/batch-generate-images-v4/`；如需旧版本，可自行调用 `batch-generate-images/` 端点。
+  - **目录解析修复**: v4 任务已修复章节目录构建逻辑，按文件系统真实章节编号定位目录，示例：`data/003/chapter_002`（正确），不再使用章节数据库 ID 拼路径如 `data/003/27`（错误）。实现位于 `web/video/tasks.py::gen_image_async_v4_task`，复用 `get_chapter_number_from_filesystem` 与 `get_chapter_directory_path`。
+  - **文件匹配修复**: 修复图片统计的文件匹配模式，避免 Path.glob 报错 `Invalid pattern: '**' can only be an entire path component`。原模式 `narration_*{ext}` 组合会生成非法的 `narration_**.png`，现统一改为合法模式：`narration_*.png`、`narration_*.jpg`、`narration_*.jpeg`。
+  - **API路径修正**: v4 默认 API 地址改为 `http://127.0.0.1:8188/api/prompt`，并在后端自动补全用户传入的基础地址（如 `http://host:8188` 或 `http://host:8188/api`）到正确的 `/api/prompt` 路径，避免 `405 Method Not Allowed`。
+  - **端点归一化与回退**: 支持基础地址、`/api`、`/api/prompt`、`/prompt` 四种形式；当主端点返回 404/405 时自动回退到 `/prompt`（用于部分部署仅暴露 `/prompt` 的场景）。测试脚本与 v4 客户端均已实现该逻辑。
+
 - 🛠️ **分镜结构自动修复**: 新增强大的分镜XML结构自动修复功能，解决各种标签结构问题：
   - **智能检测**: 自动检测孤立标签、重复标签、标签不匹配等XML结构问题
   - **代码逻辑修复**: 使用正则表达式和字符串处理直接修复结构问题，不依赖LLM，确保修复准确性

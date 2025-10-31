@@ -9,30 +9,13 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.01,0:00:01.83,Default,,0,0,0,,闻星落提到{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}买去白
-Dialogue: 0,0:00:01.83,0:00:02.77,Default,,0,0,0,,鹤{\c&H0000FFFF&\b1}书院{\c&H00FFFFFF&\b0}的用品
-Dialogue: 0,0:00:03.21,0:00:05.20,Default,,0,0,0,,闻月{\c&H0000FFFF&\b1}引称{\c&H00FFFFFF&\b0}是闻如雷攒钱所买
-Dialogue: 0,0:00:05.67,0:00:07.38,Default,,0,0,0,,闻星落提议{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}把名额让
-Dialogue: 0,0:00:07.38,0:00:08.00,Default,,0,0,0,,给闻{\c&H0000FFFF&\b1}如雷{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:08.30,0:00:10.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}则将银钗插到闻
-Dialogue: 0,0:00:10.03,0:00:10.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}星落{\c&H00FFFFFF&\b0}发髻上
-Dialogue: 0,0:00:11.15,0:00:11.79,Default,,0,0,0,,夸赞{\c&H0000FFFF&\b1}好看{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:12.05,0:00:13.29,Default,,0,0,0,,而后谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}出现
-Dialogue: 0,0:00:13.62,0:00:15.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}拒绝{\c&H00FFFFFF&\b0}借钱给谢拾安并讽刺闻
-Dialogue: 0,0:00:15.51,0:00:15.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}星落{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:16.23,0:00:17.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是珠宝铺子外
-Dialogue: 0,0:00:17.85,0:00:19.95,Default,,0,0,0,,光线{\c&H0000FFFF&\b1}持续时间{\c&H00FFFFFF&\b0}为白天
-Dialogue: 0,0:00:20.12,0:00:20.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}环境{\c&H00FFFFFF&\b0}如常
-Dialogue: 0,0:00:21.21,0:00:23.21,Default,,0,0,0,,谢拾安身着鹅黄{\c&H0000FFFF&\b1}圆领{\c&H00FFFFFF&\b0}锦袍
-Dialogue: 0,0:00:23.52,0:00:24.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}开心{\c&H00FFFFFF&\b0}插钗
-Dialogue: 0,0:00:24.66,0:00:26.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落身着杏粉色圆领齐
-Dialogue: 0,0:00:26.66,0:00:27.27,Default,,0,0,0,,胸襦裙
-Dialogue: 0,0:00:27.68,0:00:28.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}面露{\c&H00FFFFFF&\b0}担忧
-Dialogue: 0,0:00:28.74,0:00:31.42,Default,,0,0,0,,谢{\c&H0000FFFF&\b1}观澜{\c&H00FFFFFF&\b0}身着深色圆领袍冷淡
-Dialogue: 0,0:00:31.89,0:00:34.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻月引{\c&H00FFFFFF&\b0}身着浅色系圆领服饰
-Dialogue: 0,0:00:34.40,0:00:34.98,Default,,0,0,0,,抱{\c&H0000FFFF&\b1}文具{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:01.63,Default,,0,0,0,,这是一张现代人物{\c&H0000FFFF&\b1}李华{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:01.63,0:00:02.40,Default,,0,0,0,,特写照片
+Dialogue: 0,0:00:02.93,0:00:03.85,Default,,0,0,0,,展现了他专注的
+Dialogue: 0,0:00:03.85,0:00:05.39,Default,,0,0,0,,神情和时尚的穿着
+Dialogue: 0,0:00:05.65,0:00:06.56,Default,,0,0,0,,细节清晰

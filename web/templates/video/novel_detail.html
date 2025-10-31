@@ -219,10 +219,15 @@ function updateValidationTaskStatus(status, badgeClass) {
 /**
  * 更新校验进度
  */
-function updateValidationProgress(percentage, statusText) {
-    const progressText = document.getElementById('validationTaskProgress');
-    progressText.textContent = percentage + '% - ' + statusText;
-}
+    function updateValidationProgress(percentage, statusText) {
+        const progressText = document.getElementById('validationTaskProgress');
+        // 兜底防护：元素尚未渲染时不抛错
+        if (!progressText) {
+            console.debug('[AI Validation] 未找到进度文本元素：validationTaskProgress', { percentage, statusText });
+            return;
+        }
+        progressText.textContent = percentage + '% - ' + statusText;
+    }
 
 /**
  * 添加校验日志行
@@ -270,25 +275,39 @@ function stopValidationLogPolling() {
  */
 function fetchValidationTaskLog() {
     if (!currentValidationTaskId) return;
-    
-    fetch(`/video/get-task-log/${currentValidationTaskId}/`)
+    const url = `/video/novels/{{ novel.id }}/task-log/?task_id=${encodeURIComponent(currentValidationTaskId)}`;
+    fetch(url)
         .then(response => response.json())
         .then(data => {
-            if (data.success && data.logs) {
-                // 更新日志显示
+            if (data && data.logs && Array.isArray(data.logs)) {
                 const logContent = document.getElementById('validationLogContent');
-                logContent.innerHTML = '';
-                
-                data.logs.forEach(log => {
-                    const logLine = document.createElement('div');
-                    logLine.className = 'log-line';
-                    logLine.innerHTML = log;
-                    logContent.appendChild(logLine);
-                });
-                
-                // 自动滚动到底部
-                const logContainer = logContent.parentElement;
-                logContainer.scrollTop = logContainer.scrollHeight;
+                if (logContent) {
+                    logContent.innerHTML = '';
+                    data.logs.forEach(entry => {
+                        const logLine = document.createElement('div');
+                        logLine.className = 'log-line';
+                        const ts = entry.timestamp || new Date().toLocaleTimeString();
+                        const msg = entry.message || '';
+                        logLine.innerHTML = `<span class="text-info">[${ts}]</span> ${msg}`;
+                        logContent.appendChild(logLine);
+                    });
+                    const logContainer = logContent.parentElement;
+                    if (logContainer) {
+                        logContainer.scrollTop = logContainer.scrollHeight;
+                    }
+                }
+                if (typeof data.progress === 'number') {
+                    const statusMap = {
+                        'PENDING': { text: '准备中', cls: 'bg-secondary' },
+                        'STARTED': { text: '运行中', cls: 'bg-primary' },
+                        'PROGRESS': { text: '运行中', cls: 'bg-primary' },
+                        'SUCCESS': { text: '已完成', cls: 'bg-success' },
+                        'FAILURE': { text: '失败', cls: 'bg-danger' }
+                    };
+                    const mapped = statusMap[data.status] || { text: '运行中', cls: 'bg-primary' };
+                    updateValidationTaskStatus(mapped.text, mapped.cls);
+                    updateValidationProgress(data.progress, mapped.text);
+                }
             }
         })
         .catch(error => {
@@ -440,7 +459,7 @@ function showValidationLogModal() {
                             <button class="btn btn-outline-primary btn-sm me-1" id="validationPauseResumeBtn" onclick="toggleValidationLogPolling()">
                                 <i class="fas fa-pause me-1"></i>暂停
                             </button>
-                            <button class="btn btn-outline-danger btn-sm" onclick="stopValidationTask()">
+                            <button class="btn btn-outline-danger btn-sm" id="validationStopBtn" onclick="stopValidationTask()">
                                 <i class="fas fa-stop me-1"></i>停止
                             </button>
                         </div>
@@ -488,12 +507,13 @@ function showValidationLogModal() {
  */
 function stopValidationTask() {
     if (!currentValidationTaskId) return;
-    
-    fetch(`/video/stop-task/${currentValidationTaskId}/`, {
+    fetch(`/video/novels/{{ novel.id }}/stop-task/`, {
         method: 'POST',
         headers: {
+            'Content-Type': 'application/json',
             'X-CSRFToken': getCookie('csrftoken')
-        }
+        },
+        body: JSON.stringify({ task_id: currentValidationTaskId })
     })
     .then(response => response.json())
     .then(data => {
@@ -507,7 +527,7 @@ function stopValidationTask() {
             if (stopBtn) stopBtn.style.display = 'none';
             currentValidationTaskId = null;
         } else {
-            addValidationLogLine('停止任务失败: ' + data.message);
+            addValidationLogLine('停止任务失败: ' + (data.message || '未知错误'));
         }
     })
     .catch(error => {
@@ -1146,18 +1166,19 @@ function stopValidationTask() {
         alert('没有正在运行的校验任务');
         return;
     }
-    
-    fetch(`/api/stop_validation_task/${currentValidationTaskId}`, {
+    fetch(`/video/novels/{{ novel.id }}/stop-task/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-        }
+            'X-CSRFToken': getCookie('csrftoken')
+        },
+        body: JSON.stringify({ task_id: currentValidationTaskId })
     })
     .then(response => response.json())
     .then(data => {
         if (data.success) {
             addValidationLogLine('任务已停止', 'info');
-            updateValidationTaskStatus('已停止', 'badge-secondary');
+            updateValidationTaskStatus('已停止', 'bg-warning');
             stopValidationLogPolling();
             
             // 更新按钮状态
@@ -1181,21 +1202,23 @@ function stopValidationTask() {
  * 获取校验任务日志
  */
 function fetchValidationTaskLog(taskId) {
-    fetch(`/api/get_validation_task_log/${taskId}`)
+    const url = `/video/novels/{{ novel.id }}/task-log/?task_id=${encodeURIComponent(taskId)}`;
+    fetch(url)
         .then(response => response.json())
         .then(data => {
-            if (data.success) {
-                // 更新任务状态
+            if (data && data.success) {
+                // 映射任务状态到中文与样式
+                const statusMap = {
+                    'PENDING': { text: '准备中', cls: 'bg-secondary' },
+                    'STARTED': { text: '运行中', cls: 'bg-primary' },
+                    'PROGRESS': { text: '运行中', cls: 'bg-primary' },
+                    'SUCCESS': { text: '已完成', cls: 'bg-success' },
+                    'FAILURE': { text: '失败', cls: 'bg-danger' }
+                };
                 if (data.status) {
-                    let badgeClass = 'badge-primary';
-                    if (data.status === '已完成') badgeClass = 'badge-success';
-                    else if (data.status === '失败') badgeClass = 'badge-danger';
-                    else if (data.status === '已停止') badgeClass = 'badge-secondary';
-                    
-                    updateValidationTaskStatus(data.status, badgeClass);
-                    
-                    // 如果任务完成或失败，停止轮询
-                    if (data.status === '已完成' || data.status === '失败' || data.status === '已停止') {
+                    const mapped = statusMap[data.status] || { text: data.status, cls: 'bg-secondary' };
+                    updateValidationTaskStatus(mapped.text, mapped.cls);
+                    if (mapped.text === '已完成' || mapped.text === '失败') {
                         stopValidationLogPolling();
                         const stopBtn = document.getElementById('validationStopBtn');
                         if (stopBtn) {
@@ -1203,20 +1226,28 @@ function fetchValidationTaskLog(taskId) {
                         }
                     }
                 }
-                
+                if (typeof data.progress === 'number') {
+                    updateValidationProgress(data.progress, statusMap[data.status]?.text || '运行中');
+                }
                 // 更新日志内容
                 if (data.logs && data.logs.length > 0) {
                     const logContent = document.getElementById('validationLogContent');
                     if (logContent) {
                         // 清空现有日志
                         logContent.innerHTML = '';
-                        
                         // 添加新日志
                         data.logs.forEach(log => {
-                            const logType = log.level === 'ERROR' ? 'error' : 
-                                          log.level === 'SUCCESS' ? 'success' : 'info';
-                            addValidationLogLine(log.message, logType);
+                            const logLine = document.createElement('div');
+                            logLine.className = 'log-line';
+                            const ts = log.timestamp || new Date().toLocaleTimeString();
+                            const msg = log.message || '';
+                            logLine.innerHTML = `<span class=\"text-info\">[${ts}]</span> ${msg}`;
+                            logContent.appendChild(logLine);
                         });
+                        const logContainer = logContent.parentElement;
+                        if (logContainer) {
+                            logContainer.scrollTop = logContainer.scrollHeight;
+                        }
                     }
                 }
             }
@@ -1855,7 +1886,7 @@ function getCookie(name) {
                 <h5 class="modal-title" id="aiValidationModalLabel">
                     <i class="fas fa-cogs me-2"></i>AI智能校验 - {{ novel.name }}
                 </h5>
-                <button type="button" class="btn-close" onclick="closeScriptParametersModal()" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form id="aiValidationForm">

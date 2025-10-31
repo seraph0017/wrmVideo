@@ -193,24 +193,23 @@ function executeAIValidation() {
     const formData = new FormData(form);
     
     // 获取校验选项
-    const validationOptions = {
-        check_narration_length: formData.get('check_narration_length') === 'on',
-        check_total_length: formData.get('check_total_length') === 'on',
-        auto_rewrite: formData.get('auto_rewrite') === 'on',
-        auto_fix_characters: formData.get('auto_fix_characters') === 'on',
-        auto_fix_xml: formData.get('auto_fix_xml') === 'on'
+    const validationParameters = {
+        // 页面需求：映射到 python validate_narration.py data/XXX --auto-fix
+        auto_fix: true,
+        // 其他可选校验项（后端目前默认脚本已包含字数校验）
+        check_closeup_length: formData.get('check_narration_length') === 'on',
+        check_total_length: formData.get('check_total_length') === 'on'
     };
     
     // 发送校验请求
-    fetch('/api/ai-validation/', {
+    fetch(`/video/novels/${window.novelId}/ai-validation/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
         },
         body: JSON.stringify({
-            novel_id: window.novelId,
-            options: validationOptions
+            parameters: validationParameters
         })
     })
     .then(response => response.json())

@@ -48,18 +48,45 @@ class ComfyUIClient:
         self.session = requests.Session()
         self.session.headers.update({"Content-Type": "application/json"})
 
+    def _normalize_prompt_url(self, url: str) -> str:
+        """
+        归一化工作流提交端点，兼容 /api/prompt 与 /prompt。
+        """
+        base = (url or '').strip().rstrip('/')
+        if not base:
+            base = 'http://127.0.0.1:8188'
+        if base.endswith('/api/prompt') or '/api/prompt' in base:
+            return base
+        if base.endswith('/prompt') or ('/prompt' in base and '/api' not in base):
+            return base
+        if base.endswith('/api'):
+            return base + '/prompt'
+        if '/api' in base:
+            return base.split('/api')[0].rstrip('/') + '/api/prompt'
+        return base + '/api/prompt'
+
     def _api_base(self) -> str:
-        root = self.config.api_url.split('/api')[0]
+        """返回以 /api 结尾的基础 API 前缀。"""
+        url = self._normalize_prompt_url(self.config.api_url)
+        if '/api/prompt' in url:
+            root = url.split('/api/prompt')[0]
+        elif '/prompt' in url:
+            root = url.split('/prompt')[0]
+        else:
+            root = url.split('/api')[0]
         return f"{root}/api"
 
     def submit_workflow(self, workflow_payload: Dict[str, Any]) -> Tuple[bool, Optional[Dict[str, Any]], Optional[str]]:
         """提交工作流到 ComfyUI"""
         api_payload = {"prompt": workflow_payload, "client_id": "python_client"}
+        primary = self._normalize_prompt_url(self.config.api_url)
+        root = primary.split('/api/prompt')[0] if '/api/prompt' in primary else primary.split('/prompt')[0]
+        fallback = root.rstrip('/') + '/prompt'
 
         for attempt in range(self.config.max_retries):
             try:
                 logger.info(f"提交工作流到 ComfyUI (尝试 {attempt + 1}/{self.config.max_retries})")
-                resp = self.session.post(self.config.api_url, json=api_payload, timeout=self.config.timeout)
+                resp = self.session.post(primary, json=api_payload, timeout=self.config.timeout)
                 if resp.status_code == 200:
                     try:
                         data = resp.json()
@@ -68,6 +95,23 @@ class ComfyUIClient:
                     logger.info("工作流提交成功")
                     return True, data, None
                 else:
+                    if resp.status_code in (404, 405):
+                        logger.warning(f"主端点 {primary} 返回 {resp.status_code}，尝试回退 {fallback}")
+                        resp2 = self.session.post(fallback, json=api_payload, timeout=self.config.timeout)
+                        if resp2.status_code == 200:
+                            try:
+                                data2 = resp2.json()
+                            except json.JSONDecodeError:
+                                data2 = {"raw": resp2.text}
+                            logger.info("回退端点提交成功")
+                            return True, data2, None
+                        else:
+                            err2 = f"HTTP错误(回退): {resp2.status_code} - {resp2.text}"
+                            logger.error(err2)
+                            if attempt < self.config.max_retries - 1:
+                                time.sleep(self.config.retry_delay)
+                                continue
+                            return False, None, err2
                     err = f"HTTP错误: {resp.status_code} - {resp.text}"
                     logger.error(err)
                     if attempt < self.config.max_retries - 1:

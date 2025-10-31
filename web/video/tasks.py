@@ -452,11 +452,13 @@ def validate_narration_async(self, novel_id, validation_params=None):
             }
         )
         
-        # 构建数据目录路径
+        # 构建数据目录路径（使用项目根目录确保路径正确）
         data_dir = f"data/{novel_id:03d}"
+        project_root = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+        full_data_dir = os.path.join(project_root, data_dir)
         
-        # 确保数据目录存在
-        if not os.path.exists(data_dir):
+        # 确保数据目录存在（检查绝对路径，避免工作目录差异导致误报）
+        if not os.path.exists(full_data_dir):
             raise Exception(f"数据目录 {data_dir} 不存在")
         
         # 更新任务状态
@@ -469,17 +471,26 @@ def validate_narration_async(self, novel_id, validation_params=None):
             }
         )
         
-        # 构建命令行参数
-        project_root = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+        # 构建命令行参数（在项目根目录执行，传递相对路径 data_dir）
         cmd = ['python', 'validate_narration.py', data_dir]
-        
-        # 根据参数添加选项
-        if validation_params.get('auto_rewrite', False):
-            cmd.append('--auto-rewrite')
-        if validation_params.get('auto_fix_characters', False):
-            cmd.append('--auto-fix-characters')
-        if validation_params.get('auto_fix_tags', False):
-            cmd.append('--auto-fix-tags')
+
+        # 优先采用统一的 --auto-fix 开关，以满足页面映射到命令的需求
+        # 如果前端未显式传入，默认启用 --auto-fix（更贴近用户期望的行为）
+        auto_fix = validation_params.get('auto_fix', True)
+        if auto_fix:
+            cmd.append('--auto-fix')
+        else:
+            # 兼容旧参数：如果未启用统一开关，则根据旧参数分别添加
+            if validation_params.get('auto_rewrite', False):
+                cmd.append('--auto-rewrite')
+            if validation_params.get('auto_fix_characters', False):
+                cmd.append('--auto-fix-characters')
+            if validation_params.get('auto_fix_tags', False):
+                cmd.append('--auto-fix-tags')
+            if validation_params.get('auto_fix_structure', False):
+                cmd.append('--auto-fix-structure')
+
+        logger.info(f"[VALIDATION CMD] 运行命令: {' '.join(cmd)} (cwd={project_root})")
         
         # 更新任务状态
         self.update_state(
@@ -3101,22 +3112,258 @@ def generate_ass_subtitle(timestamp_file_path, output_path):
     except Exception as e:
         logger.error(f"生成ASS字幕失败: {str(e)}")
         return False
+
+
+@shared_task(bind=True)
+def gen_image_async_v4_task(self, novel_id, chapter_id, api_url='http://127.0.0.1:8188/api/prompt', workflow_json='test/comfyui/image_compact.json'):
+    """
+    使用 gen_image_async_v4.py 生成章节分镜图片的 Celery 任务。
+
+    函数级说明：
+    - 目录解析：不再直接用章节 ID 作为目录名，而是通过文件系统真实的章节编号
+      构建路径，例如 `data/{novel_id:03d}/chapter_{chapter_number}`。
+    - 任务流程：更新章节批量图片状态 → 执行外部脚本 → 汇总结果并写回状态。
+
+    Args:
+        novel_id (int): 小说 ID
+        chapter_id (int): 章节 ID（数据库 ID）
+        api_url (str): ComfyUI API 地址，默认本地 `http://127.0.0.1:8188`
+        workflow_json (str): 工作流 JSON 文件路径或标识
+
+    Returns:
+        dict: 任务执行结果，包含状态、提示信息等
+    """
+    try:
+        # 获取章节对象
+        from .models import Chapter
+        chapter = Chapter.objects.get(id=chapter_id, novel_id=novel_id)
         
-    except Exception as e:
-        error_msg = str(e)
-        logger.error(f"角色图片生成异常: {task_id}, 错误: {error_msg}")
+        # 更新章节状态
+        chapter.batch_image_status = 'processing'
+        chapter.batch_image_progress = 0
+        chapter.batch_image_error = ''
+        chapter.batch_image_message = '开始生成分镜图片(v4)...'
+        chapter.batch_image_started_at = timezone.now()
+        chapter.save()
         
-        try:
-            task.status = 'failed'
-            task.progress = 100
-            task.error_message = error_msg
-            task.log_message = f'任务执行异常: {error_msg}'
-            task.save()
-        except Exception as save_error:
-            logger.error(f"保存任务状态失败: {save_error}")
+        # 使用工具函数解析文件系统章节编号并构建正确的章节目录路径
+        from .utils import get_chapter_number_from_filesystem, get_chapter_directory_path
+
+        chapter_number = get_chapter_number_from_filesystem(novel_id, chapter)
+        if not chapter_number:
+            error_msg = f"无法在文件系统中找到章节 {chapter.title} 的目录"
+            logger.error(error_msg)
+
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = '无法找到章节目录'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'error': error_msg
+            }
+
+        chapter_dir = get_chapter_directory_path(novel_id, chapter_number)
+        
+        # 检查章节目录是否存在
+        if not os.path.exists(chapter_dir):
+            error_msg = f"章节目录不存在: {chapter_dir}"
+            logger.error(error_msg)
+            
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = '章节目录不存在'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'error': error_msg
+            }
+        
+        # 获取项目根目录路径
+        project_root = settings.BASE_DIR.parent
+        gen_image_script = os.path.join(project_root, 'gen_image_async_v4.py')
+        
+        # 检查gen_image_async_v4.py脚本是否存在
+        if not os.path.exists(gen_image_script):
+            error_msg = f"gen_image_async_v4.py脚本不存在: {gen_image_script}"
+            logger.error(error_msg)
+            
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = 'gen_image_async_v4.py脚本不存在'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'error': error_msg
+            }
+        
+        # 更新进度
+        chapter.batch_image_progress = 10
+        chapter.batch_image_message = '准备执行gen_image_async_v4.py...'
+        chapter.save()
+        
+        # 规范化 api_url，确保包含 /api/prompt
+        normalized_api_url = api_url.rstrip('/')
+        if '/api/prompt' not in normalized_api_url:
+            if normalized_api_url.endswith('/api'):
+                normalized_api_url = normalized_api_url + '/prompt'
+            else:
+                normalized_api_url = normalized_api_url + '/api/prompt'
+
+        # 构建命令
+        cmd = [
+            'python', gen_image_script,
+            chapter_dir,
+            '--api_url', normalized_api_url,
+            '--workflow_json', workflow_json,
+            '--poll_interval', '5',
+            '--max_wait', '300'
+        ]
+        
+        logger.info(f"执行命令: {' '.join(cmd)}")
+        
+        # 更新进度
+        chapter.batch_image_progress = 20
+        chapter.batch_image_message = '正在生成分镜图片...'
+        chapter.save()
+        
+        # 执行脚本
+        result = subprocess.run(
+            cmd,
+            cwd=project_root,
+            capture_output=True,
+            text=True,
+            timeout=1800  # 30分钟超时
+        )
+        
+        if result.returncode == 0:
+            logger.info(f"gen_image_async_v4.py执行成功: 小说ID={novel_id}, 章节ID={chapter_id}")
+            
+            # 检查生成的图片文件
+            # 收集生成的图片文件
+            # 注意：Path.glob 中 '**' 只能作为单独的路径组件；
+            # 原逻辑使用 f"narration_*{ext}" 会变成 'narration_**.png' 触发异常。
+            # 这里改为使用后缀列表，构造合法模式 'narration_*.png' 等。
+            image_files = []
+            for suffix in ['png', 'jpg', 'jpeg']:
+                image_files.extend(Path(chapter_dir).glob(f'narration_*.{suffix}'))
+            
+            chapter.batch_image_status = 'completed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = ''
+            chapter.batch_image_message = f'分镜图片生成完成，共生成{len(image_files)}张图片'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+            
+            return {
+                'status': 'success',
+                'novel_id': novel_id,
+                'chapter_id': chapter_id,
+                'message': f'分镜图片生成完成，共生成{len(image_files)}张图片',
+                'image_count': len(image_files),
+                'output': result.stdout
+            }
+        else:
+            # 检查是否有部分成功的情况
+            image_files = []
+            for ext in ['*.png', '*.jpg', '*.jpeg']:
+                image_files.extend(Path(chapter_dir).glob(f'narration_*{ext}'))
+            
+            if len(image_files) > 0:
+                # 部分成功
+                error_msg = f"gen_image_async_v4.py部分成功，返回码: {result.returncode}，已生成{len(image_files)}张图片"
+                logger.warning(error_msg)
+                logger.warning(f"stdout: {result.stdout}")
+                logger.warning(f"stderr: {result.stderr}")
+                
+                chapter.batch_image_status = 'completed'
+                chapter.batch_image_progress = 100
+                chapter.batch_image_error = f"部分成功: {result.stderr}"
+                chapter.batch_image_message = f'部分图片生成成功，共生成{len(image_files)}张图片'
+                chapter.batch_image_completed_at = timezone.now()
+                chapter.save()
+                
+                return {
+                    'status': 'warning',
+                    'novel_id': novel_id,
+                    'chapter_id': chapter_id,
+                    'message': error_msg,
+                    'image_count': len(image_files),
+                    'output': result.stdout,
+                    'stderr': result.stderr
+                }
+            else:
+                # 完全失败
+                error_msg = f"gen_image_async_v4.py执行失败，返回码: {result.returncode}"
+                logger.error(error_msg)
+                logger.error(f"stdout: {result.stdout}")
+                logger.error(f"stderr: {result.stderr}")
+                
+                chapter.batch_image_status = 'failed'
+                chapter.batch_image_progress = 100
+                chapter.batch_image_error = f"{error_msg}\nstderr: {result.stderr}"
+                chapter.batch_image_message = 'gen_image_async_v4.py执行失败'
+                chapter.batch_image_completed_at = timezone.now()
+                chapter.save()
+                
+                return {
+                    'status': 'error',
+                    'novel_id': novel_id,
+                    'chapter_id': chapter_id,
+                    'error': error_msg,
+                    'stderr': result.stderr
+                }
+                
+    except subprocess.TimeoutExpired:
+        error_msg = "gen_image_async_v4.py执行超时"
+        logger.error(error_msg)
+        
+        chapter.batch_image_status = 'failed'
+        chapter.batch_image_progress = 100
+        chapter.batch_image_error = error_msg
+        chapter.batch_image_message = '脚本执行超时'
+        chapter.batch_image_completed_at = timezone.now()
+        chapter.save()
         
         return {
             'status': 'error',
-            'task_id': task_id,
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
+            'error': error_msg
+        }
+        
+    except Exception as e:
+        error_msg = f"gen_image_async_v4任务执行异常: {str(e)}"
+        logger.error(error_msg)
+        
+        try:
+            chapter.batch_image_status = 'failed'
+            chapter.batch_image_progress = 100
+            chapter.batch_image_error = error_msg
+            chapter.batch_image_message = '任务执行异常'
+            chapter.batch_image_completed_at = timezone.now()
+            chapter.save()
+        except Exception as save_error:
+            logger.error(f"保存章节状态失败: {save_error}")
+        
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'chapter_id': chapter_id,
             'error': error_msg
         }

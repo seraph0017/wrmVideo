@@ -9,27 +9,12 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Microsoft YaHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
-Style: Highlight,Microsoft YaHei,48,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,360,1
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落蜷着手指
-Dialogue: 0,0:00:01.63,0:00:03.83,Default,,0,0,0,,愁眉不展她{\c&H0000FFFF&\b1}手头{\c&H00FFFFFF&\b0}现银不多
-Dialogue: 0,0:00:04.32,0:00:05.53,Default,,0,0,0,,难以购置{\c&H0000FFFF&\b1}贵重{\c&H00FFFFFF&\b0}礼物
-Dialogue: 0,0:00:05.90,0:00:07.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}也面露烦恼
-Dialogue: 0,0:00:07.60,0:00:08.84,Default,,0,0,0,,称父王{\c&H0000FFFF&\b1}克扣{\c&H00FFFFFF&\b0}月钱
-Dialogue: 0,0:00:09.30,0:00:10.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}礼物{\c&H00FFFFFF&\b0}难比兄长们
-Dialogue: 0,0:00:10.73,0:00:12.39,Default,,0,0,0,,二人{\c&H0000FFFF&\b1}约定{\c&H00FFFFFF&\b0}次日巳时在门
-Dialogue: 0,0:00:12.39,0:00:13.02,Default,,0,0,0,,口{\c&H0000FFFF&\b1}汇合{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:13.30,0:00:14.56,Default,,0,0,0,,同去{\c&H0000FFFF&\b1}锦里街{\c&H00FFFFFF&\b0}挑礼物
-Dialogue: 0,0:00:14.82,0:00:15.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}场景{\c&H00FFFFFF&\b0}是室内
-Dialogue: 0,0:00:16.02,0:00:18.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}光线{\c&H00FFFFFF&\b0}柔和时间为白天
-Dialogue: 0,0:00:18.36,0:00:19.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}背景{\c&H00FFFFFF&\b0}布置简洁
-Dialogue: 0,0:00:19.85,0:00:21.19,Default,,0,0,0,,尽显室内{\c&H0000FFFF&\b1}温馨{\c&H00FFFFFF&\b0}氛围
-Dialogue: 0,0:00:21.48,0:00:23.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}闻星{\c&H00FFFFFF&\b0}落身着杏粉色百蝶穿
-Dialogue: 0,0:00:23.29,0:00:24.24,Default,,0,0,0,,花{\c&H0000FFFF&\b1}齐胸{\c&H00FFFFFF&\b0}襦裙
-Dialogue: 0,0:00:24.65,0:00:25.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}面色{\c&H00FFFFFF&\b0}略带愁容
-Dialogue: 0,0:00:26.04,0:00:27.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}谢拾安{\c&H00FFFFFF&\b0}发束嵌宝紫金冠
-Dialogue: 0,0:00:28.32,0:00:30.63,Default,,0,0,0,,身着{\c&H0000FFFF&\b1}瑞鹊{\c&H00FFFFFF&\b0}团花鹅黄箭袖锦袍
-Dialogue: 0,0:00:30.93,0:00:31.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}面露{\c&H00FFFFFF&\b0}烦恼之色
+Dialogue: 0,0:00:00.02,0:00:01.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}在雨夜的演武场中
+Dialogue: 0,0:00:01.71,0:00:02.42,Default,,0,0,0,,严阵以待
+Dialogue: 0,0:00:02.90,0:00:04.22,Default,,0,0,0,,黑袍人再次来袭
+Dialogue: 0,0:00:04.52,0:00:06.14,Default,,0,0,0,,一场激战即将开始

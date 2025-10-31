@@ -1312,11 +1312,13 @@ def novel_ai_validation(request, pk):
             
             # 获取校验参数
             validation_params = {
+                'auto_fix': parameters.get('auto_fix', True),
                 'check_closeup_length': parameters.get('check_closeup_length', False),
                 'check_total_length': parameters.get('check_total_length', False),
                 'auto_rewrite': parameters.get('auto_rewrite', False),
                 'auto_fix_characters': parameters.get('auto_fix_characters', False),
                 'auto_fix_tags': parameters.get('auto_fix_tags', False),
+                'auto_fix_structure': parameters.get('auto_fix_structure', False),
             }
             
             # 启动异步校验任务
@@ -2095,6 +2097,86 @@ def batch_generate_images(request, chapter_id):
             'chapter_id': chapter.id,
             'novel_id': chapter.novel.id,
             'note': '任务已提交，使用gen_image_async_v2.py脚本按章节生成分镜图片'
+        })
+        
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': str(e)
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def batch_generate_images_v4(request, chapter_id):
+    """
+    使用gen_image_async_v4.py脚本批量生成章节分镜图片API (ComfyUI版本)
+    
+    POST参数:
+        api_url (可选): ComfyUI API地址，默认为 http://127.0.0.1:8188
+        workflow_json (可选): 工作流JSON文件路径，默认为 test/comfyui/image_compact.json
+    """
+    try:
+        # 获取章节对象
+        chapter = get_object_or_404(Chapter, id=chapter_id)
+        
+        # 检查章节是否有解说内容（可选检查）
+        narrations = chapter.narrations.all()
+        if not narrations.exists():
+            return JsonResponse({
+                'success': False,
+                'error': '该章节没有解说内容'
+            }, status=400)
+        
+        # 检查是否已有任务在运行
+        if hasattr(chapter, 'batch_image_status') and chapter.batch_image_status == 'processing':
+            return JsonResponse({
+                'success': False,
+                'error': '该章节已有分镜图片生成任务在运行中'
+            }, status=400)
+        
+        # 获取POST参数
+        try:
+            data = json.loads(request.body) if request.body else {}
+        except json.JSONDecodeError:
+            data = {}
+        
+        api_url = data.get('api_url', 'http://127.0.0.1:8188/api/prompt')
+        # 兼容传入基础地址的情况：自动补全到 /api/prompt
+        try:
+            if isinstance(api_url, str):
+                base = api_url.rstrip('/')
+                if '/api/prompt' not in base:
+                    # 若仅包含 /api 则追加 /prompt；若不包含，则追加 /api/prompt
+                    if base.endswith('/api'):
+                        api_url = base + '/prompt'
+                    else:
+                        api_url = base + '/api/prompt'
+        except Exception:
+            # 保底，不影响请求流程
+            pass
+        workflow_json = data.get('workflow_json', 'test/comfyui/image_compact.json')
+        
+        # 导入新的异步任务
+        from .tasks import gen_image_async_v4_task
+        
+        # 启动gen_image_async_v4异步任务
+        task = gen_image_async_v4_task.delay(
+            chapter.novel.id, 
+            chapter.id,
+            api_url=api_url,
+            workflow_json=workflow_json
+        )
+        
+        return JsonResponse({
+            'success': True,
+            'message': f'正在使用gen_image_async_v4为章节 {chapter.title} 生成分镜图片...',
+            'task_id': task.id,
+            'chapter_id': chapter.id,
+            'novel_id': chapter.novel.id,
+            'api_url': api_url,
+            'workflow_json': workflow_json,
+            'note': '任务已提交，使用gen_image_async_v4.py脚本通过ComfyUI生成分镜图片'
         })
         
     except Exception as e:
