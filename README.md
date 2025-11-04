@@ -20,7 +20,24 @@
   - **目录解析修复**: v4 任务已修复章节目录构建逻辑，按文件系统真实章节编号定位目录，示例：`data/003/chapter_002`（正确），不再使用章节数据库 ID 拼路径如 `data/003/27`（错误）。实现位于 `web/video/tasks.py::gen_image_async_v4_task`，复用 `get_chapter_number_from_filesystem` 与 `get_chapter_directory_path`。
   - **文件匹配修复**: 修复图片统计的文件匹配模式，避免 Path.glob 报错 `Invalid pattern: '**' can only be an entire path component`。原模式 `narration_*{ext}` 组合会生成非法的 `narration_**.png`，现统一改为合法模式：`narration_*.png`、`narration_*.jpg`、`narration_*.jpeg`。
   - **API路径修正**: v4 默认 API 地址改为 `http://127.0.0.1:8188/api/prompt`，并在后端自动补全用户传入的基础地址（如 `http://host:8188` 或 `http://host:8188/api`）到正确的 `/api/prompt` 路径，避免 `405 Method Not Allowed`。
-  - **端点归一化与回退**: 支持基础地址、`/api`、`/api/prompt`、`/prompt` 四种形式；当主端点返回 404/405 时自动回退到 `/prompt`（用于部分部署仅暴露 `/prompt` 的场景）。测试脚本与 v4 客户端均已实现该逻辑。
+- **端点归一化与回退**: 支持基础地址、`/api`、`/api/prompt`、`/prompt` 四种形式；当主端点返回 404/405 时自动回退到 `/prompt`（用于部分部署仅暴露 `/prompt` 的场景）。测试脚本与 v4 客户端均已实现该逻辑。
+
+#### 常量化主机配置（gen_image_async_v4.py）
+- 新增常量：`COMFYUI_DEFAULT_HOST`（默认值：`115.190.188.138:8188`）与 `DEFAULT_COMFYUI_PROMPT_URL = "http://{COMFYUI_DEFAULT_HOST}/api/prompt"`。
+- 覆盖方式：
+  - 环境变量：设置 `COMFYUI_HOST=127.0.0.1:8188` 可覆盖默认主机。
+  - CLI 参数优先：显式传入 `--api_url http://HOST:PORT/api/prompt` 会覆盖常量与环境变量。
+- 说明：前端页面的默认 API 地址为 `http://127.0.0.1:8188/api/prompt`；脚本侧默认由 `COMFYUI_DEFAULT_HOST` 控制，按需调整以适配部署环境。
+
+#### 请求附加 image 参数（v4）
+- 为便于 HAProxy 等基于 URL 参数的路由与调试，`gen_image_async_v4.py` 会在以下请求中自动附加 `image=<chapter_xxx_image_xx.jpeg>` 查询参数（仅用于路由标识，不影响接口语义）：
+  - `POST /api/prompt?image=<chapter_xxx_image_xx.jpeg>`（工作流提交）
+  - `GET /api/history/<prompt_id>?image=<chapter_xxx_image_xx.jpeg>`（任务历史轮询）
+- 该 `image` 值与脚本计划保存的最终文件名一致，例如 `chapter_001_image_01.jpeg`，可在负载均衡层使用 `urlp(image)` 做后端选择与审计。
+
+- 下载视图请求同样携带路由标识参数且不影响实际文件名解析：
+  - `GET /api/view?filename=<ComfyUI_XXXX.png>&type=output&subfolder=<...>&image=<chapter_xxx_image_xx.jpeg>`
+  - 说明：`image` 仅用于路由/调试（例如在 HAProxy 日志中标记目标输出名），不会覆盖 `view` 接口用于定位真实文件的 `filename=<ComfyUI_XXXX.png>` 参数。
 
 - 🛠️ **分镜结构自动修复**: 新增强大的分镜XML结构自动修复功能，解决各种标签结构问题：
   - **智能检测**: 自动检测孤立标签、重复标签、标签不匹配等XML结构问题

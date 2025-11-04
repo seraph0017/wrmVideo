@@ -97,3 +97,26 @@ python upload_tos.py data/001 上传视频到tos
 
 
 python llm_narration_image.py data/006/chapter_003/chapter_003_image_08.jpeg --auto-regenerate --custom-prompt "去掉中央那个人的眼镜" --skip-analysis
+
+
+
+
+
+python gen_script_v2.py data/001 用来根据文本生成解说文案，带检查
+python validate_narration.py data/001 --auto-fix 用来验证解说文案字数
+
+python gen_audio.py data/001 用来根据解说文案生成旁白
+python gen_ass.py data/001 用来生成字幕带时间戳文件
+
+python gen_image_async_v4.py data/001 用来根据解说文案和角色生成图片
+
+
+
+python gen_first_video_async_v2.py data/001 用来异步生成第一个narration的视频
+python check_async_tasks.py --monitor
+python gen_video.py data/001 生成整个视频
+python upload_tos.py data/001 上传视频到tos
+
+
+
+python llm_narration_image.py data/006/chapter_003/chapter_003_image_08.jpeg --auto-regenerate --custom-prompt "去掉中央那个人的眼镜" --skip-analysis

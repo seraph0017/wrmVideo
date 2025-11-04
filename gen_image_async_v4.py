@@ -11,7 +11,7 @@ gen_image_async_v4.py - 根据narration.txt解析角色与场景，使用ComfyUI
 
 用法：
 python gen_image_async_v4.py data/001 \
-  --api_url http://115.190.188.138:8188/api/prompt \
+  --api_url http://<HOST:PORT>/api/prompt \
   --workflow_json test/comfyui/image_compact.json \
   --poll_interval 1.0 --max_wait 300
 """
@@ -25,6 +25,10 @@ import logging
 from typing import Dict, List, Optional, Tuple
 
 import requests
+
+# ComfyUI 默认主机常量，可通过环境变量 COMFYUI_HOST 覆盖
+COMFYUI_DEFAULT_HOST = os.getenv("COMFYUI_HOST", "115.190.186.199:8188")
+DEFAULT_COMFYUI_PROMPT_URL = f"http://{COMFYUI_DEFAULT_HOST}/api/prompt"
 
 
 # 日志配置
@@ -292,16 +296,71 @@ class ComfyUIClient:
             root = url.split('/api')[0]
         return f"{root}/api"
 
-    def submit_workflow(self, workflow_payload: Dict[str, any]) -> Tuple[bool, Optional[Dict], Optional[str]]:
+    def _append_filename_query(self, url: str, filename: Optional[str]) -> str:
+        """
+        为URL追加 `image` 查询参数，用于 HAProxy/路由调试（不影响接口实际语义）。
+
+        Args:
+            url: 原始URL
+            filename: 要追加的路由标识值（例如 `chapter_001_image_01.jpeg`）。若为空则返回原URL。
+
+        Returns:
+            str: 追加查询参数后的URL。
+        """
+        if not filename:
+            return url
+        try:
+            from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
+            parsed = urlparse(url)
+            qs = parse_qs(parsed.query)
+            # 使用 image 作为路由标识参数键
+            qs['image'] = [filename]
+            new_query = urlencode(qs, doseq=True)
+            return urlunparse(parsed._replace(query=new_query))
+        except Exception:
+            sep = '&' if '?' in url else '?'
+            return f"{url}{sep}image={filename}"
+
+    def _append_query_param(self, url: str, key: str, value: Optional[str]) -> str:
+        """
+        为URL追加任意查询参数键值对，不改变已有参数，用于路由/调试。
+
+        Args:
+            url: 原始URL
+            key: 要追加的查询参数键名
+            value: 要追加的查询参数值；为空则返回原URL
+
+        Returns:
+            str: 追加查询参数后的URL
+        """
+        if not value:
+            return url
+        try:
+            from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
+            parsed = urlparse(url)
+            qs = parse_qs(parsed.query)
+            qs[key] = [value]
+            new_query = urlencode(qs, doseq=True)
+            return urlunparse(parsed._replace(query=new_query))
+        except Exception:
+            sep = '&' if '?' in url else '?'
+            return f"{url}{sep}{key}={value}"
+
+    def submit_workflow(self, workflow_payload: Dict[str, any], filename_param: Optional[str] = None) -> Tuple[bool, Optional[Dict], Optional[str]]:
         """提交工作流，自动处理端点 405/404 的回退。
 
-        返回: (ok, result_json, error_text)
+        Args:
+            workflow_payload: ComfyUI 工作流 JSON（将作为 `prompt` 字段提交）。
+            filename_param: 可选，附加到提交端点的查询参数 `image`，用于后端路由标识。
+
+        Returns:
+            Tuple[bool, Optional[Dict], Optional[str]]: (提交是否成功, 响应JSON或文本, 错误信息)
         """
         payload = {"prompt": workflow_payload, "client_id": "python_client"}
         for attempt in range(self.max_retries):
             try:
                 # 首选归一端点
-                url_primary = self.api_url
+                url_primary = self._append_filename_query(self.api_url, filename_param)
                 resp = self.session.post(url_primary, json=payload, timeout=self.timeout)
                 if resp.status_code == 200:
                     try:
@@ -310,7 +369,7 @@ class ComfyUIClient:
                         return True, {"raw": resp.text}, None
                 # 在 404/405 时尝试备用 /prompt
                 if resp.status_code in (404, 405):
-                    url_fallback = self._fallback_prompt_url
+                    url_fallback = self._append_filename_query(self._fallback_prompt_url, filename_param)
                     logger.warning(f"提交端点返回 {resp.status_code}，尝试回退到 {url_fallback}")
                     resp2 = self.session.post(url_fallback, json=payload, timeout=self.timeout)
                     if resp2.status_code == 200:
@@ -352,9 +411,11 @@ class ComfyUIClient:
                 return False, None, err
         return False, None, "所有重试尝试都失败了"
 
-    def wait_for_output_filename(self, prompt_id: str, poll_interval: float = 1.0, max_wait: int = 300):
+    def wait_for_output_filename(self, prompt_id: str, poll_interval: float = 1.0, max_wait: int = 300, filename_param: Optional[str] = None):
         base_api = self._api_base()
         url = f"{base_api}/history/{prompt_id}"
+        if filename_param:
+            url = self._append_filename_query(url, filename_param)
         end_ts = time.time() + max_wait
         while time.time() < end_ts:
             try:
@@ -389,10 +450,30 @@ class ComfyUIClient:
         logger.error("轮询等待超时，未获取到输出文件名")
         return None, None, None
 
-    def download_view_file_as(self, filename: str, subfolder: str, type_: str, save_dir: str, save_as: str) -> Optional[str]:
+    def download_view_file_as(self, filename: str, subfolder: str, type_: str, save_dir: str, save_as: str, filename_param: Optional[str] = None) -> Optional[str]:
+        """
+        从 /api/view 下载指定文件，并保存为给定文件名。
+
+        功能描述：
+        - 构造 `/api/view` 下载 URL，包含实际文件定位所需的 `filename`、`type`、`subfolder` 参数。
+        - 追加路由/调试用途的查询参数 `image=<chapter_xxx_image_xx.jpeg>`，用于在代理层标识目标输出名，不影响真实文件下载。
+
+        参数说明：
+        - filename: ComfyUI 生成的真实文件名（如 `ComfyUI_00067_.png`）。
+        - subfolder: 子目录名称（空字符串表示根目录）。
+        - type_: 文件类型（通常为 `output`）。
+        - save_dir: 本地保存目录路径。
+        - save_as: 本地保存的目标文件名（如 `chapter_002_image_01.jpeg`）。
+        - filename_param: 路由标识值，将以 `image` 参数附加到下载 URL。
+
+        返回值：
+        - 成功返回本地保存的完整路径；失败返回 None。
+        """
         base_api = self._api_base()
         params = f"filename={filename}&type={type_}" + (f"&subfolder={subfolder}" if subfolder else "")
         url = f"{base_api}/view?{params}"
+        # 追加用于路由/调试的请求级标识，不影响真实 filename
+        url = self._append_query_param(url, 'image', filename_param)
         try:
             resp = self.session.get(url, stream=True, timeout=self.timeout)
             if resp.status_code == 200:
@@ -530,7 +611,8 @@ def process_chapter_with_comfyui(chapter_dir: str, client: ComfyUIClient, workfl
             wf = set_positive_prompt(workflow_template, complete_prompt)
 
             # 提交工作流
-            ok, res, err = client.submit_workflow(wf)
+            # 提交工作流，附带 filename 查询参数用于路由
+            ok, res, err = client.submit_workflow(wf, filename_param=output_filename)
             if not ok:
                 logger.error(f"工作流提交失败: {err}")
                 continue
@@ -545,13 +627,20 @@ def process_chapter_with_comfyui(chapter_dir: str, client: ComfyUIClient, workfl
             logger.info(f"prompt_id: {prompt_id}")
 
             # 轮询输出文件名
-            filename, subfolder, type_ = client.wait_for_output_filename(prompt_id, poll_interval=poll_interval, max_wait=max_wait)
+            filename, subfolder, type_ = client.wait_for_output_filename(prompt_id, poll_interval=poll_interval, max_wait=max_wait, filename_param=output_filename)
             if not filename:
                 logger.error(f"场景 {i} 未获取到输出文件")
                 continue
 
             # 下载并重命名到章节目录
-            saved = client.download_view_file_as(filename, subfolder or '', type_ or 'output', save_dir=chapter_dir, save_as=output_filename)
+            saved = client.download_view_file_as(
+                filename,
+                subfolder or '',
+                type_ or 'output',
+                save_dir=chapter_dir,
+                save_as=output_filename,
+                filename_param=output_filename
+            )
             if not saved:
                 logger.error(f"场景 {i} 下载失败")
                 continue
@@ -575,7 +664,7 @@ def main():
     import argparse
     parser = argparse.ArgumentParser(description="使用ComfyUI生成章节图片（v4）")
     parser.add_argument('input_path', help='数据目录(如 data/001) 或单个章节目录(如 data/001/chapter_001)')
-    parser.add_argument('--api_url', default='http://115.190.188.138:8188/api/prompt', help='ComfyUI api/prompt 地址')
+    parser.add_argument('--api_url', default=DEFAULT_COMFYUI_PROMPT_URL, help='ComfyUI api/prompt 地址')
     parser.add_argument('--workflow_json', default=os.path.join('test', 'comfyui', 'image_compact.json'), help='工作流JSON模板路径')
     parser.add_argument('--timeout', type=int, default=30, help='请求超时(秒)')
     parser.add_argument('--max_retries', type=int, default=3, help='提交重试次数')
