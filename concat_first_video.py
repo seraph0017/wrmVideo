@@ -243,6 +243,7 @@ def get_ffmpeg_gpu_params():
 PROJECT_ROOT = Path(__file__).resolve().parent
 BANNER_DIR = PROJECT_ROOT / "src" / "banner"
 FUCENG_PATH = BANNER_DIR / "fuceng1.mov"
+RMXS_PATH = BANNER_DIR / "rmxs.png"
 
 # 若 gen_video.py 修改了标准，只需同步此处即可
 VIDEO_STANDARDS = {
@@ -268,7 +269,7 @@ def run_cmd(cmd: List[str]) -> None:
 
 
 def generate_overlay_video(video2: Path, temp_dir: Path) -> Path:
-    """在 video2 上叠加 fuceng1.mov 转场特效，返回处理后的视频路径。"""
+    """在 video2 上叠加 fuceng1.mov 转场特效和 rmxs.png 角标，返回处理后的视频路径。"""
     output_path = temp_dir / f"{video2.stem}_overlay.mp4"
     width, height, fps = (
         VIDEO_STANDARDS["width"],
@@ -276,21 +277,58 @@ def generate_overlay_video(video2: Path, temp_dir: Path) -> Path:
         VIDEO_STANDARDS["fps"],
     )
 
-    if not FUCENG_PATH.exists():
-        print("⚠️ 未找到 fuceng1.mov，直接返回原 video2")
+    # 检查是否有转场特效和角标
+    has_fuceng = FUCENG_PATH.exists()
+    has_rmxs = RMXS_PATH.exists()
+    
+    if not has_fuceng and not has_rmxs:
+        print("⚠️ 未找到 fuceng1.mov 和 rmxs.png，直接返回原 video2")
         return video2
 
     # 获取GPU优化参数
     gpu_params = get_ffmpeg_gpu_params()
 
-    # 先统一分辨率，并在前 5 秒（或 fuceng 时长更短者）叠加转场
-    # 由于无法提前获取 fuceng 时长，直接在前 5 秒启用 enable between(t,0,5)
-    filter_complex = (
-        f"[0:v]scale={width}:{height}:force_original_aspect_ratio=increase,"  # 调整分辨率
-        f"crop={width}:{height},setsar=1[v0];"
-        f"[1:v]scale={width}:{height},format=rgba,colorkey=0x000000:0.3:0.0,setsar=1[fg];"
-        f"[v0][fg]overlay=(W-w)/2:(H-h)/2:enable='between(t,0,5)'[v]"
+    # 构建 filter_complex
+    # 输入: [0:v] = video2, [1:v] = fuceng1.mov (如果存在), [2:v] = rmxs.png (如果存在)
+    filter_parts = []
+    input_idx = 0
+    
+    # 第一步：缩放 video2
+    filter_parts.append(
+        f"[0:v]scale={width}:{height}:force_original_aspect_ratio=increase,"
+        f"crop={width}:{height},setsar=1[v0]"
     )
+    current_video = "[v0]"
+    input_idx = 1
+    
+    # 第二步：如果有转场特效，叠加 fuceng1.mov（前5秒）
+    if has_fuceng:
+        filter_parts.append(
+            f"[{input_idx}:v]scale={width}:{height},format=rgba,colorkey=0x000000:0.3:0.0,setsar=1[fg]"
+        )
+        filter_parts.append(
+            f"{current_video}[fg]overlay=(W-w)/2:(H-h)/2:enable='between(t,0,5)'[v1]"
+        )
+        current_video = "[v1]"
+        input_idx += 1
+    
+    # 第三步：如果有角标，叠加 rmxs.png（全程显示）
+    # 缩放到视频尺寸并右上角对齐
+    if has_rmxs:
+        filter_parts.append(
+            f"[{input_idx}:v]scale={width}:{height}[watermark]"
+        )
+        filter_parts.append(
+            f"{current_video}[watermark]overlay=W-w:0[v]"  # 右上角对齐
+        )
+        current_video = "[v]"
+    else:
+        # 如果没有角标，重命名最后的输出为 [v]
+        if has_fuceng:
+            filter_parts[-1] = filter_parts[-1].replace("[v1]", "[v]")
+            current_video = "[v]"
+    
+    filter_complex = ";".join(filter_parts)
 
     cmd = ["ffmpeg", "-y"]
     
@@ -300,9 +338,14 @@ def generate_overlay_video(video2: Path, temp_dir: Path) -> Path:
     if 'hwaccel_output_format' in gpu_params:
         cmd.extend(["-hwaccel_output_format", gpu_params['hwaccel_output_format']])
     
+    # 添加输入文件
+    cmd.extend(["-i", str(video2)])
+    if has_fuceng:
+        cmd.extend(["-i", str(FUCENG_PATH)])
+    if has_rmxs:
+        cmd.extend(["-i", str(RMXS_PATH)])
+    
     cmd.extend([
-        "-i", str(video2),
-        "-i", str(FUCENG_PATH),
         "-filter_complex", filter_complex,
         "-map", "[v]",
         "-map", "0:a?",  # 若存在音轨则保留

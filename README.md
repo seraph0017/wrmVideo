@@ -4,6 +4,14 @@
 
 ## ✨ 最新更新
 
+- 🎯 **角标位置对齐修复**: 修复视频角标（rmxs.png）在不同视频段中位置不一致的问题：
+  - **全屏覆盖**: 角标缩放到视频完整尺寸（720x1280）
+  - **右上角对齐**: 所有视频段的角标统一使用 `overlay=W-w:0` 实现右上角对齐
+  - **涉及文件**: 
+    - `concat_first_video.py`: 修复前两段视频（video_1和video_2）的角标叠加逻辑
+    - `concat_narration_video.py`: 修复解说视频的角标叠加逻辑
+  - **效果**: 确保整个完整视频中角标位置完全一致，右上角精准对齐
+
 - 🎨 **ComfyUI批量生成分镜图片**: 新增基于ComfyUI的批量分镜图片生成功能，提供更高质量的图像生成：
   - **ComfyUI集成**: 集成gen_image_async_v4.py脚本，支持通过ComfyUI API生成高质量分镜图片
   - **新增API端点**: 添加`/video/api/chapters/{chapter_id}/batch-generate-images-v4/`端点

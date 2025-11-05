@@ -1559,13 +1559,13 @@ def add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir
                 current_video = '[v1]'
         
         # 添加水印（rmxs.png）
+        # 缩放到视频尺寸并右上角对齐
         if watermark_path and watermark_input_idx is not None:
-            # 缩放水印到视频完整尺寸，覆盖四个角
             filter_complex.append(
                 f'[{watermark_input_idx}:v]scale=720:1280[watermark_scaled]'
             )
             filter_complex.append(
-                f'{current_video}[watermark_scaled]overlay=0:0[v2]'
+                f'{current_video}[watermark_scaled]overlay=W-w:0[v2]'  # 右上角对齐
             )
             current_video = '[v2]'
         
