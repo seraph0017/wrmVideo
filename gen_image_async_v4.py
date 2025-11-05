@@ -26,8 +26,12 @@ from typing import Dict, List, Optional, Tuple
 
 import requests
 
+# 导入配置
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from config.config import COMFYUI_CONFIG
+
 # ComfyUI 默认主机常量，可通过环境变量 COMFYUI_HOST 覆盖
-COMFYUI_DEFAULT_HOST = os.getenv("COMFYUI_HOST", "115.190.186.199:8188")
+COMFYUI_DEFAULT_HOST = os.getenv("COMFYUI_HOST", COMFYUI_CONFIG["default_host"])
 DEFAULT_COMFYUI_PROMPT_URL = f"http://{COMFYUI_DEFAULT_HOST}/api/prompt"
 
 

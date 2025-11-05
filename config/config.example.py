@@ -20,6 +20,13 @@ IMAGE_TO_VIDEO_CONFIG = {
     "model": "doubao-seedance-1-0-lite-i2v-250428"
 }
 
+# ComfyUI 配置
+COMFYUI_CONFIG = {
+    "default_host": "your_comfyui_host:port",  # 例如: "192.168.1.100:8188"
+    "timeout": 300,  # 默认超时时间（秒）
+    "poll_interval": 1.0  # 轮询间隔（秒）
+}
+
 # 火山引擎视觉服务配置（用于T2P图片生成）
 IMAGE_TWO_CONFIG = {
     "access_key": "ak",  # 请替换为您的实际access_key

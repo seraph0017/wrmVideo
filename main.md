@@ -112,7 +112,7 @@ python gen_image_async_v4.py data/001 用来根据解说文案和角色生成图
 
 
 
-python gen_first_video_async_v2.py data/001 用来异步生成第一个narration的视频
+python gen_first_video_async.py data/001 用来异步生成第一个narration的视频
 python check_async_tasks.py --monitor
 python gen_video.py data/001 生成整个视频
 python upload_tos.py data/001 上传视频到tos

@@ -1401,17 +1401,41 @@ def split_narration_by_closeups(narration_file_path, output_dir=None):
     closeup_counter = 1
     
     for scene_idx, scene_content in enumerate(scene_matches, 1):
-        # 提取该分镜中的所有图片特写 - 修正为实际的XML标签格式
-        closeup_pattern = r'<图片特写\d+>(.*?)</图片特写\d+>'
-        closeup_matches = re.findall(closeup_pattern, scene_content, re.DOTALL)
+        # 策略1: 提取所有有 <图片特写X> 开始标签的内容
+        closeup_pattern = r'<图片特写(\d+)>(.*?)(?=<图片特写\d+>|</图片特写\d+>|$)'
+        tagged_closeups = re.findall(closeup_pattern, scene_content, re.DOTALL)
         
-        for closeup_idx, closeup_content in enumerate(closeup_matches, 1):
-            # 提取特写人物信息 - 修正为实际的XML标签格式
+        # 策略2: 查找孤立的特写人物内容（在 </图片特写X> 之后，但不在 <图片特写X> 内）
+        # 使用 finditer 来匹配所有孤立内容，而不是只匹配第一个
+        orphan_pattern = r'</图片特写\d+>\s*(<特写人物>.*?<图片prompt>.*?)(?=<图片特写\d+>|</图片特写\d+>|</分镜\d+>|$)'
+        orphan_closeups = []
+        for match in re.finditer(orphan_pattern, scene_content, re.DOTALL):
+            orphan_closeups.append(match.group(1))
+        
+        # 合并两种匹配结果
+        all_closeups = []
+        
+        # 添加有标签的特写
+        for closeup_num, closeup_content in tagged_closeups:
+            all_closeups.append((closeup_num, closeup_content, 'tagged'))
+        
+        # 添加孤立的特写（给它们分配虚拟编号）
+        for orphan_idx, orphan_content in enumerate(orphan_closeups, 1):
+            # 使用 999x 作为孤立内容的虚拟编号，以区分正常编号
+            virtual_num = f"999{orphan_idx}"
+            all_closeups.append((virtual_num, orphan_content, 'orphan'))
+        
+        for closeup_idx, (closeup_num, closeup_content, source_type) in enumerate(all_closeups, 1):
+            # 提取特写人物信息 - 兼容两种情况：
+            # 1. 标准格式: <特写人物><角色姓名>XXX</角色姓名></特写人物>
+            # 2. 非标准格式: <角色姓名>XXX</角色姓名></特写人物> (缺少开始标签)
             character_match = re.search(r'<特写人物>(.*?)</特写人物>', closeup_content, re.DOTALL)
-            if not character_match:
-                continue
             
-            character_info = character_match.group(1)
+            if character_match:
+                character_info = character_match.group(1)
+            else:
+                # 如果没有完整的特写人物标签，直接从closeup_content中查找
+                character_info = closeup_content
             
             # 提取角色姓名
             name_match = re.search(r'<角色姓名>(.*?)</角色姓名>', character_info)

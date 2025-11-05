@@ -23,11 +23,15 @@
 - **端点归一化与回退**: 支持基础地址、`/api`、`/api/prompt`、`/prompt` 四种形式；当主端点返回 404/405 时自动回退到 `/prompt`（用于部分部署仅暴露 `/prompt` 的场景）。测试脚本与 v4 客户端均已实现该逻辑。
 
 #### 常量化主机配置（gen_image_async_v4.py）
-- 新增常量：`COMFYUI_DEFAULT_HOST`（默认值：`115.190.188.138:8188`）与 `DEFAULT_COMFYUI_PROMPT_URL = "http://{COMFYUI_DEFAULT_HOST}/api/prompt"`。
+- 配置位置：`config/config.py` 中的 `COMFYUI_CONFIG`。
+- 配置项：
+  - `default_host`：默认值为 `115.190.186.199:8188`（可在配置文件中修改）
+  - `timeout`：默认超时时间 300 秒
+  - `poll_interval`：轮询间隔 1.0 秒
 - 覆盖方式：
-  - 环境变量：设置 `COMFYUI_HOST=127.0.0.1:8188` 可覆盖默认主机。
-  - CLI 参数优先：显式传入 `--api_url http://HOST:PORT/api/prompt` 会覆盖常量与环境变量。
-- 说明：前端页面的默认 API 地址为 `http://127.0.0.1:8188/api/prompt`；脚本侧默认由 `COMFYUI_DEFAULT_HOST` 控制，按需调整以适配部署环境。
+  - 环境变量：设置 `COMFYUI_HOST=127.0.0.1:8188` 可覆盖配置文件中的默认主机。
+  - CLI 参数优先：显式传入 `--api_url http://HOST:PORT/api/prompt` 会覆盖配置文件与环境变量。
+- 说明：前端页面的默认 API 地址为 `http://127.0.0.1:8188/api/prompt`；脚本侧默认由 `COMFYUI_CONFIG["default_host"]` 控制，可在 `config/config.py` 中统一管理。
 
 #### 请求附加 image 参数（v4）
 - 为便于 HAProxy 等基于 URL 参数的路由与调试，`gen_image_async_v4.py` 会在以下请求中自动附加 `image=<chapter_xxx_image_xx.jpeg>` 查询参数（仅用于路由标识，不影响接口语义）：
