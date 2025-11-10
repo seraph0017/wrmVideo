@@ -1,0 +1,20 @@
+[Script Info]
+Title: chapter_009 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}听后恍然大悟脸上
+Dialogue: 0,0:00:02.45,0:00:03.17,Default,,0,0,0,,露出笑容
+Dialogue: 0,0:00:03.64,0:00:05.06,Default,,0,0,0,,她知道{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}不会让自己
+Dialogue: 0,0:00:05.06,0:00:07.77,Default,,0,0,0,,受委屈心中的怒气渐渐消散

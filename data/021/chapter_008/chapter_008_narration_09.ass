@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴星凡{\c&H00FFFFFF&\b0}与吴江雄站在远处
-Dialogue: 0,0:00:02.12,0:00:04.28,Default,,0,0,0,,屋顶看着下方十万子弟
-Dialogue: 0,0:00:04.28,0:00:06.90,Default,,0,0,0,,聚精会神听{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}讲解吴星凡
-Dialogue: 0,0:00:06.90,0:00:07.27,Default,,0,0,0,,惊叹
-Dialogue: 0,0:00:07.67,0:00:09.82,Default,,0,0,0,,三千年未有之盛况这小子
-Dialogue: 0,0:00:09.82,0:00:11.19,Default,,0,0,0,,竟有如此号召力
+Dialogue: 0,0:00:00.02,0:00:01.70,Default,,0,0,0,,演武场灯火彻夜通明
+Dialogue: 0,0:00:02.12,0:00:04.08,Default,,0,0,0,,十万子弟与族中长辈围坐
+Dialogue: 0,0:00:04.08,0:00:04.39,Default,,0,0,0,,论道
+Dialogue: 0,0:00:04.84,0:00:06.68,Default,,0,0,0,,从淬体{\c&H0000FFFF&\b1}法门{\c&H00FFFFFF&\b0}到灵脉运转
+Dialogue: 0,0:00:07.02,0:00:09.37,Default,,0,0,0,,修炼难题在交流中一一化解

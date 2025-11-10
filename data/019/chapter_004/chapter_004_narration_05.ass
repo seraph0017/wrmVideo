@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_004 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}北平{\c&H00FFFFFF&\b0}军营阁楼之上
+Dialogue: 0,0:00:01.68,0:00:02.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}铁铉{\c&H00FFFFFF&\b0}凭栏远眺
+Dialogue: 0,0:00:03.23,0:00:04.59,Default,,0,0,0,,见{\c&H0000FFFF&\b1}燕军{\c&H00FFFFFF&\b0}号令森严
+Dialogue: 0,0:00:05.06,0:00:07.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}胡人{\c&H00FFFFFF&\b0}士卒与汉兵并肩列阵
+Dialogue: 0,0:00:07.59,0:00:10.23,Default,,0,0,0,,心中暗自警惕此军战力惊人
+Dialogue: 0,0:00:10.59,0:00:11.67,Default,,0,0,0,,绝非易与之辈

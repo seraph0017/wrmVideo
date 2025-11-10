@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}落地后
-Dialogue: 0,0:00:01.17,0:00:02.29,Default,,0,0,0,,立刻召唤魔云
-Dialogue: 0,0:00:02.62,0:00:03.79,Default,,0,0,0,,魔云出现在脚下
-Dialogue: 0,0:00:04.12,0:00:06.08,Default,,0,0,0,,带着{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}冲向藏宝图所示的
-Dialogue: 0,0:00:06.08,0:00:06.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝藏{\c&H00FFFFFF&\b0}方向
-Dialogue: 0,0:00:07.09,0:00:07.91,Default,,0,0,0,,速度极快
+Dialogue: 0,0:00:00.02,0:00:02.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双引{\c&H00FFFFFF&\b0}青狼眼冲入宝藏腹地
+Dialogue: 0,0:00:02.75,0:00:04.16,Default,,0,0,0,,周围褐色焦土遍布
+Dialogue: 0,0:00:04.58,0:00:06.52,Default,,0,0,0,,空中乱流如黑色{\c&H0000FFFF&\b1}小龙{\c&H00FFFFFF&\b0}卷
+Dialogue: 0,0:00:06.96,0:00:08.45,Default,,0,0,0,,空间裂缝闪烁不定

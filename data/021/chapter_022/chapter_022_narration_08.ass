@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,冰块爆炸形成幻阵
-Dialogue: 0,0:00:01.90,0:00:04.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}金龙{\c&H00FFFFFF&\b0}在远处皱眉神识探查
-Dialogue: 0,0:00:04.29,0:00:07.15,Default,,0,0,0,,受阻他握紧{\c&H0000FFFF&\b1}金鳞剑{\c&H00FFFFFF&\b0}剑上鳞片
-Dialogue: 0,0:00:07.15,0:00:09.29,Default,,0,0,0,,颤动心中警铃大作
+Dialogue: 0,0:00:00.02,0:00:01.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄剑甲显威
+Dialogue: 0,0:00:01.91,0:00:03.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}巨剑{\c&H00FFFFFF&\b0}如天外流星
+Dialogue: 0,0:00:03.84,0:00:05.06,Default,,0,0,0,,撕裂{\c&H0000FFFF&\b1}银鲨{\c&H00FFFFFF&\b0}巨口
+Dialogue: 0,0:00:05.39,0:00:06.54,Default,,0,0,0,,内部轰然炸响
+Dialogue: 0,0:00:06.82,0:00:08.48,Default,,0,0,0,,曾经王者之境的狂鲨
+Dialogue: 0,0:00:08.71,0:00:09.81,Default,,0,0,0,,竟无还手之力

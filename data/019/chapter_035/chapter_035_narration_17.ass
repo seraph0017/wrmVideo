@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_035 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}朱高炽{\c&H00FFFFFF&\b0}正妻张氏站在徐氏
+Dialogue: 0,0:00:01.87,0:00:04.52,Default,,0,0,0,,身边望着几个孩子眼神幽怨
+Dialogue: 0,0:00:04.52,0:00:06.99,Default,,0,0,0,,地瞪{\c&H0000FFFF&\b1}朱高炽{\c&H00FFFFFF&\b0}那眼神分明在说
+Dialogue: 0,0:00:07.35,0:00:08.12,Default,,0,0,0,,晚上得使劲
+Dialogue: 0,0:00:08.47,0:00:10.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}朱高炽{\c&H00FFFFFF&\b0}顿时毛骨悚然

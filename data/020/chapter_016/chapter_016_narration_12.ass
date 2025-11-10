@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_016 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.07,Default,,0,0,0,,银色符纸燃烧
+Dialogue: 0,0:00:01.46,0:00:04.13,Default,,0,0,0,,神秘男子捏碎符纸血色花火
+Dialogue: 0,0:00:04.13,0:00:06.49,Default,,0,0,0,,绽放黑色大手从时间{\c&H0000FFFF&\b1}长河{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.49,0:00:08.37,Default,,0,0,0,,伸出抓着他急速后退
+Dialogue: 0,0:00:08.74,0:00:09.39,Default,,0,0,0,,父亲救我
+Dialogue: 0,0:00:09.80,0:00:12.26,Default,,0,0,0,,声音凄厉身影消失在{\c&H0000FFFF&\b1}长河{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:12.26,0:00:12.76,Default,,0,0,0,,涟漪中

@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_016 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.61,Default,,0,0,0,,第六峰外围{\c&H0000FFFF&\b1}司马{\c&H00FFFFFF&\b0}刀如疯似魔
+Dialogue: 0,0:00:03.10,0:00:05.47,Default,,0,0,0,,他嘶吼着冲向深处{\c&H0000FFFF&\b1}金刚{\c&H00FFFFFF&\b0}战神
+Dialogue: 0,0:00:05.47,0:00:07.89,Default,,0,0,0,,元{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}术光芒闪烁不断将
+Dialogue: 0,0:00:07.89,0:00:10.61,Default,,0,0,0,,残魂轰碎但眼神中充满痛苦
+Dialogue: 0,0:00:10.96,0:00:13.22,Default,,0,0,0,,显然得知父亲死讯后心神
+Dialogue: 0,0:00:13.22,0:00:13.57,Default,,0,0,0,,大乱

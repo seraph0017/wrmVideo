@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.82,Default,,0,0,0,,吴双顶着神象威压前行
-Dialogue: 0,0:00:02.22,0:00:03.26,Default,,0,0,0,,身体接近极限
-Dialogue: 0,0:00:03.70,0:00:05.08,Default,,0,0,0,,每一步都异常艰难
-Dialogue: 0,0:00:05.60,0:00:07.64,Default,,0,0,0,,但他凭借坚韧意志缓慢移动
-Dialogue: 0,0:00:08.08,0:00:09.54,Default,,0,0,0,,距离神象{\c&H0000FFFF&\b1}越来越近{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:01.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}杀意凛然
+Dialogue: 0,0:00:01.62,0:00:04.27,Default,,0,0,0,,他身形如电冲向战场九玄手
+Dialogue: 0,0:00:04.27,0:00:06.82,Default,,0,0,0,,初显威罡气外放撕裂空气
+Dialogue: 0,0:00:07.31,0:00:09.52,Default,,0,0,0,,今日定要让这群宵小付出血
+Dialogue: 0,0:00:09.52,0:00:09.95,Default,,0,0,0,,的代价

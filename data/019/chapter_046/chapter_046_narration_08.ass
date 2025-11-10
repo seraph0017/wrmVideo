@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_046 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.77,Default,,0,0,0,,朴无用端着一碗热气腾腾的
+Dialogue: 0,0:00:01.77,0:00:03.45,Default,,0,0,0,,汤面走近轻声道
+Dialogue: 0,0:00:03.94,0:00:06.41,Default,,0,0,0,,将军起风了趁热用膳吧
+Dialogue: 0,0:00:06.94,0:00:08.39,Default,,0,0,0,,汤面的热气氤氲了他的
+Dialogue: 0,0:00:08.39,0:00:09.78,Default,,0,0,0,,眉眼带着暖意

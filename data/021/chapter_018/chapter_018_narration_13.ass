@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.90,Default,,0,0,0,,神山{\c&H0000FFFF&\b1}宫殿{\c&H00FFFFFF&\b0}外
-Dialogue: 0,0:00:01.28,0:00:03.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}凝视着透明防御大阵
-Dialogue: 0,0:00:03.52,0:00:05.48,Default,,0,0,0,,阵天图在脑海中飞速运转
-Dialogue: 0,0:00:05.81,0:00:08.08,Default,,0,0,0,,很快发现层层阵法中隐藏的
-Dialogue: 0,0:00:08.08,0:00:08.46,Default,,0,0,0,,生门
-Dialogue: 0,0:00:08.75,0:00:10.20,Default,,0,0,0,,嘴角露出了然笑容
+Dialogue: 0,0:00:00.02,0:00:01.42,Default,,0,0,0,,火牛被火白送入遗迹
+Dialogue: 0,0:00:01.90,0:00:03.80,Default,,0,0,0,,得知{\c&H0000FFFF&\b1}老祖宗{\c&H00FFFFFF&\b0}是在配合演戏
+Dialogue: 0,0:00:04.18,0:00:05.27,Default,,0,0,0,,顿时恍然大悟
+Dialogue: 0,0:00:05.58,0:00:06.89,Default,,0,0,0,,对{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}的敬佩更甚
+Dialogue: 0,0:00:07.30,0:00:08.69,Default,,0,0,0,,当即决定跟随保护

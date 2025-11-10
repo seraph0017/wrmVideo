@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_031 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.15,Default,,0,0,0,,血色阵图中央
+Dialogue: 0,0:00:01.47,0:00:02.90,Default,,0,0,0,,未来身影缓缓凝聚
+Dialogue: 0,0:00:03.35,0:00:04.67,Default,,0,0,0,,银白色{\c&H0000FFFF&\b1}长发{\c&H00FFFFFF&\b0}飘动
+Dialogue: 0,0:00:05.09,0:00:06.78,Default,,0,0,0,,白色圆领袍泛着流光
+Dialogue: 0,0:00:07.33,0:00:09.14,Default,,0,0,0,,周身时间光晕扭曲空间
+Dialogue: 0,0:00:09.54,0:00:10.15,Default,,0,0,0,,他伸出手
+Dialogue: 0,0:00:10.68,0:00:12.56,Default,,0,0,0,,掌心托着一颗明亮光球
+Dialogue: 0,0:00:12.82,0:00:13.45,Default,,0,0,0,,时之珠

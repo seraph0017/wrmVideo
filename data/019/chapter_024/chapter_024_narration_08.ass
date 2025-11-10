@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_024 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}徐妙锦{\c&H00FFFFFF&\b0}立于女眷中
+Dialogue: 0,0:00:01.92,0:00:03.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}丁香{\c&H00FFFFFF&\b0}色圆领袍衬得她鹅蛋脸
+Dialogue: 0,0:00:03.96,0:00:04.73,Default,,0,0,0,,愈发清丽
+Dialogue: 0,0:00:05.26,0:00:06.64,Default,,0,0,0,,朱允熥目光扫过
+Dialogue: 0,0:00:07.06,0:00:08.90,Default,,0,0,0,,见她沉静中带淡淡哀愁
+Dialogue: 0,0:00:09.22,0:00:10.22,Default,,0,0,0,,不禁心中一动

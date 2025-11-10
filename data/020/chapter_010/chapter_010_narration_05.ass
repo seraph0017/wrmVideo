@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_010 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}嗤笑一声
+Dialogue: 0,0:00:01.55,0:00:02.86,Default,,0,0,0,,挑眉看向{\c&H0000FFFF&\b1}曹云岚{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.31,0:00:04.61,Default,,0,0,0,,嘴角上扬带嘲讽
+Dialogue: 0,0:00:04.95,0:00:06.01,Default,,0,0,0,,左手端起酒杯
+Dialogue: 0,0:00:06.35,0:00:07.92,Default,,0,0,0,,右手把玩着腰间剑柄
+Dialogue: 0,0:00:08.23,0:00:09.49,Default,,0,0,0,,语气不屑拒绝

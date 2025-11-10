@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_017 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.42,Default,,0,0,0,,交易前萧玲玲虽害怕却坚定
+Dialogue: 0,0:00:02.73,0:00:04.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}阿妈{\c&H00FFFFFF&\b0}年老我不能再怯懦
+Dialogue: 0,0:00:05.07,0:00:07.42,Default,,0,0,0,,她握紧拳头迎向{\c&H0000FFFF&\b1}关兴{\c&H00FFFFFF&\b0}尧贪婪
+Dialogue: 0,0:00:07.42,0:00:08.90,Default,,0,0,0,,目光眼神中多了
+Dialogue: 0,0:00:08.90,0:00:10.56,Default,,0,0,0,,几分勇敢不再退缩

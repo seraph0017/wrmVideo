@@ -1,173 +1,158 @@
 {
-  "text": "桌下异动，盗中至尊化黑雾现身，目贪婪盯吴双腰青藤宝葫，指微动出手。",
-  "audio_file": "data/021/chapter_025/chapter_025_narration_02.mp3",
-  "duration": 6.566,
+  "text": "赵猛站吴双身后，紧张盯台上，不时转头看吴双，似忧价高难承受。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_025/chapter_025_narration_02.mp3",
+  "duration": 6.008,
   "character_timestamps": [
     {
-      "character": "桌",
+      "character": "赵",
       "start_time": 0.016,
-      "end_time": 0.158
+      "end_time": 0.191
     },
     {
-      "character": "下",
-      "start_time": 0.158,
-      "end_time": 0.316
+      "character": "猛",
+      "start_time": 0.191,
+      "end_time": 0.433
     },
     {
-      "character": "异",
-      "start_time": 0.316,
-      "end_time": 0.441
-    },
-    {
-      "character": "动",
-      "start_time": 0.441,
-      "end_time": 0.595
-    },
-    {
-      "character": "，",
-      "start_time": 0.595,
-      "end_time": 1.02
-    },
-    {
-      "character": "盗",
-      "start_time": 1.02,
-      "end_time": 1.174
-    },
-    {
-      "character": "中",
-      "start_time": 1.174,
-      "end_time": 1.32
-    },
-    {
-      "character": "至",
-      "start_time": 1.32,
-      "end_time": 1.483
-    },
-    {
-      "character": "尊",
-      "start_time": 1.483,
-      "end_time": 1.687
-    },
-    {
-      "character": "化",
-      "start_time": 1.687,
-      "end_time": 1.97
-    },
-    {
-      "character": "黑",
-      "start_time": 1.97,
-      "end_time": 2.149
-    },
-    {
-      "character": "雾",
-      "start_time": 2.149,
-      "end_time": 2.279
-    },
-    {
-      "character": "现",
-      "start_time": 2.279,
-      "end_time": 2.466
-    },
-    {
-      "character": "身",
-      "start_time": 2.466,
-      "end_time": 2.658
-    },
-    {
-      "character": "，",
-      "start_time": 2.658,
-      "end_time": 3.116
-    },
-    {
-      "character": "目",
-      "start_time": 3.116,
-      "end_time": 3.27
-    },
-    {
-      "character": "贪",
-      "start_time": 3.27,
-      "end_time": 3.424
-    },
-    {
-      "character": "婪",
-      "start_time": 3.424,
-      "end_time": 3.616
-    },
-    {
-      "character": "盯",
-      "start_time": 3.616,
-      "end_time": 3.849
+      "character": "站",
+      "start_time": 0.433,
+      "end_time": 0.67
     },
     {
       "character": "吴",
-      "start_time": 3.849,
-      "end_time": 3.966
+      "start_time": 0.67,
+      "end_time": 0.804
     },
     {
       "character": "双",
-      "start_time": 3.966,
-      "end_time": 4.137
+      "start_time": 0.804,
+      "end_time": 0.974
     },
     {
-      "character": "腰",
-      "start_time": 4.137,
-      "end_time": 4.283
+      "character": "身",
+      "start_time": 0.974,
+      "end_time": 1.141
     },
     {
-      "character": "青",
-      "start_time": 4.283,
-      "end_time": 4.549
-    },
-    {
-      "character": "藤",
-      "start_time": 4.549,
-      "end_time": 4.729
-    },
-    {
-      "character": "宝",
-      "start_time": 4.729,
-      "end_time": 4.933
-    },
-    {
-      "character": "葫",
-      "start_time": 4.933,
-      "end_time": 5.199
+      "character": "后",
+      "start_time": 1.141,
+      "end_time": 1.304
     },
     {
       "character": "，",
-      "start_time": 5.199,
-      "end_time": 5.483
+      "start_time": 1.304,
+      "end_time": 1.62
     },
     {
-      "character": "指",
-      "start_time": 5.483,
-      "end_time": 5.758
+      "character": "紧",
+      "start_time": 1.62,
+      "end_time": 1.82
     },
     {
-      "character": "微",
-      "start_time": 5.758,
-      "end_time": 5.916
+      "character": "张",
+      "start_time": 1.82,
+      "end_time": 1.987
     },
     {
-      "character": "动",
-      "start_time": 5.916,
-      "end_time": 6.108
+      "character": "盯",
+      "start_time": 1.987,
+      "end_time": 2.183
     },
     {
-      "character": "出",
-      "start_time": 6.108,
-      "end_time": 6.274
+      "character": "台",
+      "start_time": 2.183,
+      "end_time": 2.37
     },
     {
-      "character": "手",
-      "start_time": 6.274,
-      "end_time": 6.404
+      "character": "上",
+      "start_time": 2.37,
+      "end_time": 2.52
+    },
+    {
+      "character": "，",
+      "start_time": 2.52,
+      "end_time": 2.912
+    },
+    {
+      "character": "不",
+      "start_time": 2.912,
+      "end_time": 3.008
+    },
+    {
+      "character": "时",
+      "start_time": 3.008,
+      "end_time": 3.179
+    },
+    {
+      "character": "转",
+      "start_time": 3.179,
+      "end_time": 3.42
+    },
+    {
+      "character": "头",
+      "start_time": 3.42,
+      "end_time": 3.604
+    },
+    {
+      "character": "看",
+      "start_time": 3.604,
+      "end_time": 3.824
+    },
+    {
+      "character": "吴",
+      "start_time": 3.824,
+      "end_time": 3.949
+    },
+    {
+      "character": "双",
+      "start_time": 3.949,
+      "end_time": 4.149
+    },
+    {
+      "character": "，",
+      "start_time": 4.149,
+      "end_time": 4.52
+    },
+    {
+      "character": "似",
+      "start_time": 4.52,
+      "end_time": 4.741
+    },
+    {
+      "character": "忧",
+      "start_time": 4.741,
+      "end_time": 4.908
+    },
+    {
+      "character": "价",
+      "start_time": 4.908,
+      "end_time": 5.158
+    },
+    {
+      "character": "高",
+      "start_time": 5.158,
+      "end_time": 5.333
+    },
+    {
+      "character": "难",
+      "start_time": 5.333,
+      "end_time": 5.499
+    },
+    {
+      "character": "承",
+      "start_time": 5.499,
+      "end_time": 5.695
+    },
+    {
+      "character": "受",
+      "start_time": 5.695,
+      "end_time": 5.845
     },
     {
       "character": "。",
-      "start_time": 6.404,
-      "end_time": 6.562
+      "start_time": 5.845,
+      "end_time": 6.004
     }
   ],
-  "generated_at": "2025-09-23T08:25:22.960365"
+  "generated_at": "2025-11-07T23:16:49.011105"
 }

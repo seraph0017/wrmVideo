@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_031 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.49,Default,,0,0,0,,刑灵均靠石壁而坐
+Dialogue: 0,0:00:01.86,0:00:03.06,Default,,0,0,0,,曲火灯笼光罩下
+Dialogue: 0,0:00:03.54,0:00:04.36,Default,,0,0,0,,他额头渗汗
+Dialogue: 0,0:00:04.79,0:00:07.04,Default,,0,0,0,,紧咬{\c&H0000FFFF&\b1}牙关{\c&H00FFFFFF&\b0}抵抗眼魇精神冲击
+Dialogue: 0,0:00:07.46,0:00:08.58,Default,,0,0,0,,作为主位面强者
+Dialogue: 0,0:00:09.03,0:00:09.87,Default,,0,0,0,,他虽未昏迷
+Dialogue: 0,0:00:10.15,0:00:11.70,Default,,0,0,0,,却也被这诡异提问搅得
+Dialogue: 0,0:00:11.70,0:00:12.48,Default,,0,0,0,,心神不宁
+Dialogue: 0,0:00:12.90,0:00:13.79,Default,,0,0,0,,双拳紧握

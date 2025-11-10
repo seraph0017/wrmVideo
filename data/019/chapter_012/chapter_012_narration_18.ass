@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_012 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}李景隆{\c&H00FFFFFF&\b0}正式接管傅友德的
+Dialogue: 0,0:00:01.75,0:00:02.02,Default,,0,0,0,,部众
+Dialogue: 0,0:00:02.50,0:00:04.15,Default,,0,0,0,,他雷厉风行地整肃军纪
+Dialogue: 0,0:00:04.60,0:00:05.69,Default,,0,0,0,,昔日纨绔子弟的
+Dialogue: 0,0:00:05.69,0:00:06.97,Default,,0,0,0,,形象渐渐褪去
+Dialogue: 0,0:00:07.34,0:00:09.70,Default,,0,0,0,,展露出血肉铮铮的大将之风

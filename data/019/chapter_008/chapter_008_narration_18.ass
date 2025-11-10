@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_008 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}燕王{\c&H00FFFFFF&\b0}朱棣率精锐骑兵从侧翼
+Dialogue: 0,0:00:02.35,0:00:02.77,Default,,0,0,0,,突袭
+Dialogue: 0,0:00:03.19,0:00:04.36,Default,,0,0,0,,燕字大旗{\c&H0000FFFF&\b1}高扬{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.70,0:00:06.18,Default,,0,0,0,,骑士高呼{\c&H0000FFFF&\b1}天佑{\c&H00FFFFFF&\b0}大明
+Dialogue: 0,0:00:06.66,0:00:08.67,Default,,0,0,0,,重骑兵为先锋如移动堡垒
+Dialogue: 0,0:00:09.17,0:00:10.26,Default,,0,0,0,,轻骑两侧射箭
+Dialogue: 0,0:00:10.61,0:00:12.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}高丽{\c&H00FFFFFF&\b0}骑兵阵脚大乱

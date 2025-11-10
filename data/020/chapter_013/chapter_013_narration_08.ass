@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_013 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}叶顾城{\c&H00FFFFFF&\b0}率人冲上
+Dialogue: 0,0:00:01.54,0:00:02.35,Default,,0,0,0,,小师父撑住
+Dialogue: 0,0:00:02.63,0:00:04.87,Default,,0,0,0,,他墨袍翻飞长剑出鞘与
+Dialogue: 0,0:00:04.87,0:00:07.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}周玉{\c&H00FFFFFF&\b0}天池夫妻合力顶山
+Dialogue: 0,0:00:07.19,0:00:09.29,Default,,0,0,0,,这重量超出想象
+Dialogue: 0,0:00:09.39,0:00:11.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}周玉{\c&H00FFFFFF&\b0}脸色煞白嘶吼

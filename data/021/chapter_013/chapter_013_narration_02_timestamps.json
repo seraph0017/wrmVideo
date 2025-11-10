@@ -1,168 +1,158 @@
 {
-  "text": "吴双发现手中空，急忙探查四周，不见挡剑云彩，面露焦急，四处寻找。",
-  "audio_file": "data/021/chapter_013/chapter_013_narration_02.mp3",
-  "duration": 6.516,
+  "text": "探乾坤袋无果，吴双内视人泉金涡，缩小云彩赌气躲，又气又无奈。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_013/chapter_013_narration_02.mp3",
+  "duration": 5.883,
   "character_timestamps": [
     {
+      "character": "探",
+      "start_time": 0.02,
+      "end_time": 0.208
+    },
+    {
+      "character": "乾",
+      "start_time": 0.208,
+      "end_time": 0.399
+    },
+    {
+      "character": "坤",
+      "start_time": 0.399,
+      "end_time": 0.558
+    },
+    {
+      "character": "袋",
+      "start_time": 0.558,
+      "end_time": 0.699
+    },
+    {
+      "character": "无",
+      "start_time": 0.699,
+      "end_time": 0.841
+    },
+    {
+      "character": "果",
+      "start_time": 0.841,
+      "end_time": 1.008
+    },
+    {
+      "character": "，",
+      "start_time": 1.008,
+      "end_time": 1.516
+    },
+    {
       "character": "吴",
-      "start_time": 0.016,
-      "end_time": 0.183
+      "start_time": 1.516,
+      "end_time": 1.674
     },
     {
       "character": "双",
-      "start_time": 0.183,
-      "end_time": 0.383
+      "start_time": 1.674,
+      "end_time": 1.845
     },
     {
-      "character": "发",
-      "start_time": 0.383,
-      "end_time": 0.554
+      "character": "内",
+      "start_time": 1.845,
+      "end_time": 1.97
     },
     {
-      "character": "现",
-      "start_time": 0.554,
-      "end_time": 0.708
+      "character": "视",
+      "start_time": 1.97,
+      "end_time": 2.091
     },
     {
-      "character": "手",
-      "start_time": 0.708,
-      "end_time": 0.899
+      "character": "人",
+      "start_time": 2.091,
+      "end_time": 2.266
     },
     {
-      "character": "中",
-      "start_time": 0.899,
-      "end_time": 1.054
+      "character": "泉",
+      "start_time": 2.266,
+      "end_time": 2.466
     },
     {
-      "character": "空",
-      "start_time": 1.054,
-      "end_time": 1.254
+      "character": "金",
+      "start_time": 2.466,
+      "end_time": 2.674
     },
     {
-      "character": "，",
-      "start_time": 1.254,
-      "end_time": 1.579
-    },
-    {
-      "character": "急",
-      "start_time": 1.579,
-      "end_time": 1.737
-    },
-    {
-      "character": "忙",
-      "start_time": 1.737,
-      "end_time": 1.912
-    },
-    {
-      "character": "探",
-      "start_time": 1.912,
-      "end_time": 2.17
-    },
-    {
-      "character": "查",
-      "start_time": 2.17,
-      "end_time": 2.362
-    },
-    {
-      "character": "四",
-      "start_time": 2.362,
-      "end_time": 2.52
-    },
-    {
-      "character": "周",
-      "start_time": 2.52,
-      "end_time": 2.695
+      "character": "涡",
+      "start_time": 2.674,
+      "end_time": 2.824
     },
     {
       "character": "，",
-      "start_time": 2.695,
-      "end_time": 3.008
+      "start_time": 2.824,
+      "end_time": 3.22
     },
     {
-      "character": "不",
-      "start_time": 3.008,
-      "end_time": 3.124
+      "character": "缩",
+      "start_time": 3.22,
+      "end_time": 3.441
     },
     {
-      "character": "见",
-      "start_time": 3.124,
-      "end_time": 3.308
-    },
-    {
-      "character": "挡",
-      "start_time": 3.308,
-      "end_time": 3.52
-    },
-    {
-      "character": "剑",
-      "start_time": 3.52,
-      "end_time": 3.691
+      "character": "小",
+      "start_time": 3.441,
+      "end_time": 3.624
     },
     {
       "character": "云",
-      "start_time": 3.691,
-      "end_time": 3.879
+      "start_time": 3.624,
+      "end_time": 3.77
     },
     {
       "character": "彩",
-      "start_time": 3.879,
-      "end_time": 4.062
+      "start_time": 3.77,
+      "end_time": 3.945
+    },
+    {
+      "character": "赌",
+      "start_time": 3.945,
+      "end_time": 4.145
+    },
+    {
+      "character": "气",
+      "start_time": 4.145,
+      "end_time": 4.308
+    },
+    {
+      "character": "躲",
+      "start_time": 4.308,
+      "end_time": 4.516
     },
     {
       "character": "，",
-      "start_time": 4.062,
-      "end_time": 4.362
+      "start_time": 4.516,
+      "end_time": 4.799
     },
     {
-      "character": "面",
-      "start_time": 4.362,
-      "end_time": 4.583
+      "character": "又",
+      "start_time": 4.799,
+      "end_time": 5.054
     },
     {
-      "character": "露",
-      "start_time": 4.583,
-      "end_time": 4.762
+      "character": "气",
+      "start_time": 5.054,
+      "end_time": 5.291
     },
     {
-      "character": "焦",
-      "start_time": 4.762,
-      "end_time": 4.979
+      "character": "又",
+      "start_time": 5.291,
+      "end_time": 5.424
     },
     {
-      "character": "急",
-      "start_time": 4.979,
-      "end_time": 5.208
+      "character": "无",
+      "start_time": 5.424,
+      "end_time": 5.583
     },
     {
-      "character": "，",
-      "start_time": 5.208,
-      "end_time": 5.524
-    },
-    {
-      "character": "四",
-      "start_time": 5.524,
-      "end_time": 5.804
-    },
-    {
-      "character": "处",
-      "start_time": 5.804,
-      "end_time": 5.999
-    },
-    {
-      "character": "寻",
-      "start_time": 5.999,
-      "end_time": 6.229
-    },
-    {
-      "character": "找",
-      "start_time": 6.229,
-      "end_time": 6.358
+      "character": "奈",
+      "start_time": 5.583,
+      "end_time": 5.724
     },
     {
       "character": "。",
-      "start_time": 6.358,
-      "end_time": 6.517
+      "start_time": 5.724,
+      "end_time": 5.883
     }
   ],
-  "generated_at": "2025-09-23T08:20:49.171249"
+  "generated_at": "2025-11-07T23:11:01.507525"
 }

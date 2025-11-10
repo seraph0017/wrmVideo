@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_039 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}沙焚天{\c&H00FFFFFF&\b0}破空而至
+Dialogue: 0,0:00:01.72,0:00:02.44,Default,,0,0,0,,灰发飞舞
+Dialogue: 0,0:00:02.79,0:00:04.39,Default,,0,0,0,,棕色圆领袍猎猎作响
+Dialogue: 0,0:00:04.90,0:00:06.04,Default,,0,0,0,,周身极火翻腾
+Dialogue: 0,0:00:06.46,0:00:07.57,Default,,0,0,0,,威压笼罩全场
+Dialogue: 0,0:00:07.90,0:00:09.45,Default,,0,0,0,,眼神如电锁定{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.92,0:00:11.42,Default,,0,0,0,,声音带着千年{\c&H0000FFFF&\b1}沧桑{\c&H00FFFFFF&\b0}

@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_033 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.77,Default,,0,0,0,,幽冥海边
+Dialogue: 0,0:00:01.20,0:00:02.50,Default,,0,0,0,,李观棋被数人围攻
+Dialogue: 0,0:00:02.82,0:00:04.01,Default,,0,0,0,,胸口受伤流血
+Dialogue: 0,0:00:04.45,0:00:06.62,Default,,0,0,0,,青色长剑插在地面支撑身体
+Dialogue: 0,0:00:07.04,0:00:09.28,Default,,0,0,0,,面色苍白仍打着手语解释

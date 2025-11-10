@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_013 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.44,Default,,0,0,0,,枯荣大师佛光{\c&H0000FFFF&\b1}普照{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.83,0:00:02.71,Default,,0,0,0,,为天地除害
+Dialogue: 0,0:00:03.12,0:00:05.14,Default,,0,0,0,,黄袍鼓胀{\c&H0000FFFF&\b1}佛珠{\c&H00FFFFFF&\b0}飞旋
+Dialogue: 0,0:00:05.49,0:00:06.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}冷笑
+Dialogue: 0,0:00:06.82,0:00:07.21,Default,,0,0,0,,起尸
+Dialogue: 0,0:00:07.55,0:00:10.22,Default,,0,0,0,,万米巨蟒骸骨破土绿光缠绕
+Dialogue: 0,0:00:10.52,0:00:11.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}张口{\c&H00FFFFFF&\b0}吞向三人

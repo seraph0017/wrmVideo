@@ -35,38 +35,104 @@
                 </div>
                 {% endif %}
                 {% if novels %}
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <input type="checkbox" id="selectAll" class="form-check-input me-2">
+                            <label for="selectAll" class="form-check-label">全选</label>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary btn-sm me-2" id="batchGenScriptBtn" disabled>
+                                <i class="fas fa-file-alt"></i> 批量生成脚本
+                            </button>
+                            <button class="btn btn-success btn-sm me-2" id="batchValidateScriptBtn" disabled>
+                                <i class="fas fa-check-circle"></i> 批量校验脚本
+                            </button>
+                            <button class="btn btn-info btn-sm me-2" id="batchGenAudioBtn" disabled>
+                                <i class="fas fa-volume-up"></i> 批量生成旁白
+                            </button>
+                            <button class="btn btn-warning btn-sm me-2" id="batchGenAssBtn" disabled>
+                                <i class="fas fa-closed-captioning"></i> 批量生成字幕
+                            </button>
+                            <button class="btn btn-secondary btn-sm" id="batchGenImageBtn" disabled>
+                                <i class="fas fa-image"></i> 批量生成图片
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <div class="table-responsive">
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
+                                <th width="50">
+                                    <input type="checkbox" id="selectAllHeader" class="form-check-input">
+                                </th>
                                 <th>ID</th>
                                 <th>名称</th>
-                                <th>字数</th>
-                                <th>类型</th>
-                                <th>章节数</th>
                                 <th>创建时间</th>
-                                <th>更新时间</th>
-                                <th>AI处理</th>
+                                <th style="min-width: 400px;">AI处理</th>
                                 <th>操作</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for novel in novels %}
                             <tr>
+                                <td>
+                                    <input type="checkbox" class="form-check-input novel-checkbox" value="{{ novel.id }}" data-novel-name="{{ novel.name|escapejs }}">
+                                </td>
                                 <td>{{ novel.id }}</td>
                                 <td><a href="{% url 'video:novel_detail' novel.id %}" class="text-decoration-none">{{ novel.name }}</a></td>
-                                <td>{{ novel.word_count }}</td>
-                                <td>{{ novel.type }}</td>
-                                <td>{{ novel.chapters.count }}</td>
                                 <td>{{ novel.upload_date|date:"Y-m-d H:i" }}</td>
-                                <td>{{ novel.last_modified|date:"Y-m-d H:i" }}</td>
                                 <td>
-                                    <button class="btn btn-primary btn-sm me-1" data-novel-id="{{ novel.id }}" data-novel-name="{{ novel.name|escapejs }}" onclick="generateWithAI(this.dataset.novelId, this.dataset.novelName)">
-                                        <i class="fas fa-magic"></i> 生成
+                                    {% if novel.task_status == 'generating_script' %}
+                                    <button class="btn btn-primary btn-sm me-1 mb-1" disabled title="生成解说文案中...">
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> 处理中...
                                     </button>
-                                    <button class="btn btn-success btn-sm" data-novel-id="{{ novel.id }}" data-novel-name="{{ novel.name|escapejs }}" onclick="validateWithAI(this.dataset.novelId, this.dataset.novelName)">
+                                    {% else %}
+                                    <button class="btn btn-primary btn-sm me-1 mb-1" data-novel-id="{{ novel.id }}" data-novel-name="{{ novel.name|escapejs }}" onclick="genScript(this.dataset.novelId, this.dataset.novelName)" title="生成解说文案">
+                                        <i class="fas fa-file-alt"></i> 脚本
+                                    </button>
+                                    {% endif %}
+                                    
+                                    {% if novel.task_status == 'validating_script' %}
+                                    <button class="btn btn-success btn-sm me-1 mb-1" disabled title="校验解说文案中...">
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> 处理中...
+                                    </button>
+                                    {% else %}
+                                    <button class="btn btn-success btn-sm me-1 mb-1" data-novel-id="{{ novel.id }}" data-novel-name="{{ novel.name|escapejs }}" onclick="validateScript(this.dataset.novelId, this.dataset.novelName)" title="校验解说文案">
                                         <i class="fas fa-check-circle"></i> 校验
                                     </button>
+                                    {% endif %}
+                                    
+                                    {% if novel.task_status == 'generating_audio' %}
+                                    <button class="btn btn-info btn-sm me-1 mb-1" disabled title="生成旁白音频中...">
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> 处理中...
+                                    </button>
+                                    {% else %}
+                                    <button class="btn btn-info btn-sm me-1 mb-1" data-novel-id="{{ novel.id }}" data-novel-name="{{ novel.name|escapejs }}" onclick="genAudio(this.dataset.novelId, this.dataset.novelName)" title="生成旁白音频">
+                                        <i class="fas fa-volume-up"></i> 旁白
+                                    </button>
+                                    {% endif %}
+                                    
+                                    {% if novel.task_status == 'generating_ass' %}
+                                    <button class="btn btn-warning btn-sm me-1 mb-1" disabled title="生成字幕时间戳文件中...">
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> 处理中...
+                                    </button>
+                                    {% else %}
+                                    <button class="btn btn-warning btn-sm me-1 mb-1" data-novel-id="{{ novel.id }}" data-novel-name="{{ novel.name|escapejs }}" onclick="genAss(this.dataset.novelId, this.dataset.novelName)" title="生成字幕时间戳文件">
+                                        <i class="fas fa-closed-captioning"></i> 字幕
+                                    </button>
+                                    {% endif %}
+                                    
+                                    {% if novel.task_status == 'generating_image' %}
+                                    <button class="btn btn-secondary btn-sm mb-1" disabled title="生成图片中...">
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> 处理中...
+                                    </button>
+                                    {% else %}
+                                    <button class="btn btn-secondary btn-sm mb-1" data-novel-id="{{ novel.id }}" data-novel-name="{{ novel.name|escapejs }}" onclick="genImage(this.dataset.novelId, this.dataset.novelName)" title="生成图片">
+                                        <i class="fas fa-image"></i> 图片
+                                    </button>
+                                    {% endif %}
                                 </td>
                                 <td>
                                     <a href="{% url 'video:novel_detail' novel.id %}" class="btn btn-info btn-sm">
@@ -127,7 +193,7 @@
 
 <!-- 创建小说模态窗口 -->
 <div class="modal fade" id="createNovelModal" tabindex="-1" aria-labelledby="createNovelModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="createNovelModalLabel">添加小说</h5>
@@ -137,12 +203,25 @@
                 <div class="modal-body">
                     {% csrf_token %}
                     <div class="mb-3">
-                        <label for="id_original_file" class="form-label">上传文件</label>
-                        <input type="file" class="form-control" id="id_original_file" name="original_file" accept=".txt,.doc,.docx,.pdf" required>
-                        <div class="form-text">支持上传 .txt, .doc, .docx, .pdf 格式的文件，系统将自动提取内容、计算字数并从文件名获取小说名称</div>
+                        <label for="id_original_files" class="form-label">上传文件</label>
+                        <input type="file" class="form-control" id="id_original_files" name="original_files" accept=".txt,.doc,.docx,.pdf" multiple required>
+                        <div class="form-text">支持批量上传 .txt, .doc, .docx, .pdf 格式的文件，系统将自动提取内容、计算字数并从文件名获取小说名称</div>
                     </div>
-                    <div id="uploadProgress" class="progress" style="display: none;">
-                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    
+                    <!-- 文件列表显示 -->
+                    <div id="fileListContainer" class="mb-3" style="display: none;">
+                        <label class="form-label">已选择的文件：</label>
+                        <div id="fileList" class="list-group">
+                            <!-- 文件列表将通过JavaScript动态生成 -->
+                        </div>
+                    </div>
+                    
+                    <!-- 上传进度显示 -->
+                    <div id="uploadProgressContainer" style="display: none;">
+                        <label class="form-label">上传进度：</label>
+                        <div id="uploadProgressList">
+                            <!-- 每个文件的进度条将通过JavaScript动态生成 -->
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -155,170 +234,444 @@
 </div>
 
 <script>
-// 处理表单提交
+// 文件选择监听器 - 显示已选择的文件列表
+document.getElementById('id_original_files').addEventListener('change', function(e) {
+    const files = e.target.files;
+    const fileListContainer = document.getElementById('fileListContainer');
+    const fileList = document.getElementById('fileList');
+    
+    if (files.length > 0) {
+        fileListContainer.style.display = 'block';
+        fileList.innerHTML = '';
+        
+        Array.from(files).forEach((file, index) => {
+            const fileItem = document.createElement('div');
+            fileItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+            fileItem.innerHTML = `
+                <div>
+                    <i class="fas fa-file-alt me-2"></i>
+                    <span>${file.name}</span>
+                    <small class="text-muted ms-2">(${formatFileSize(file.size)})</small>
+                </div>
+                <button type="button" class="btn btn-sm btn-danger" onclick="removeFile(${index})">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+            fileList.appendChild(fileItem);
+        });
+    } else {
+        fileListContainer.style.display = 'none';
+    }
+});
+
+// 格式化文件大小
+function formatFileSize(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+}
+
+// 移除文件（需要重新创建FileList，因为FileList是只读的）
+function removeFile(indexToRemove) {
+    const input = document.getElementById('id_original_files');
+    const dt = new DataTransfer();
+    const files = input.files;
+    
+    Array.from(files).forEach((file, index) => {
+        if (index !== indexToRemove) {
+            dt.items.add(file);
+        }
+    });
+    
+    input.files = dt.files;
+    // 触发change事件更新显示
+    input.dispatchEvent(new Event('change'));
+}
+
+// 处理表单提交 - 批量上传多个文件
 document.getElementById('createNovelForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    const formData = new FormData(this);
+    const fileInput = document.getElementById('id_original_files');
+    const files = fileInput.files;
+    
+    if (files.length === 0) {
+        alert('请至少选择一个文件');
+        return;
+    }
+    
     const submitBtn = document.getElementById('submitBtn');
-    const progressDiv = document.getElementById('uploadProgress');
-    const progressBar = progressDiv.querySelector('.progress-bar');
+    const uploadProgressContainer = document.getElementById('uploadProgressContainer');
+    const uploadProgressList = document.getElementById('uploadProgressList');
     
-    // 显示进度条
-    progressDiv.style.display = 'block';
+    // 显示进度容器
+    uploadProgressContainer.style.display = 'block';
+    uploadProgressList.innerHTML = '';
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> 创建中...';
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> 上传中...';
     
-    // 模拟进度
-    let progress = 0;
-    const progressInterval = setInterval(() => {
-        progress += 10;
-        progressBar.style.width = progress + '%';
-        progressBar.setAttribute('aria-valuenow', progress);
-        if (progress >= 90) {
-            clearInterval(progressInterval);
-        }
-    }, 200);
-    
-    fetch(this.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'X-Requested-With': 'XMLHttpRequest'
-        }
-    })
-    .then(response => {
-        clearInterval(progressInterval);
-        progressBar.style.width = '100%';
-        progressBar.setAttribute('aria-valuenow', 100);
-        
-        if (response.ok) {
-            return response.json().then(data => {
-                if (data.success) {
-                    // 成功后刷新页面
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 500);
-                } else {
-                    throw new Error(data.message || '创建失败');
-                }
-            });
-        } else {
-            return response.text().then(text => {
-                throw new Error('创建失败: ' + response.status);
-            });
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('创建失败，请重试');
-        
-        // 重置按钮和进度条
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '创建';
-        progressDiv.style.display = 'none';
-        progressBar.style.width = '0%';
-        progressBar.setAttribute('aria-valuenow', 0);
+    // 为每个文件创建进度条
+    const progressBars = {};
+    Array.from(files).forEach((file, index) => {
+        const progressItem = document.createElement('div');
+        progressItem.className = 'mb-3';
+        progressItem.innerHTML = `
+            <div class="d-flex justify-content-between mb-1">
+                <small>${file.name}</small>
+                <small class="text-muted" id="status-${index}">等待上传...</small>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" id="progress-${index}" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        `;
+        uploadProgressList.appendChild(progressItem);
+        progressBars[index] = {
+            bar: progressItem.querySelector(`#progress-${index}`),
+            status: progressItem.querySelector(`#status-${index}`)
+        };
     });
+    
+    // 依次上传每个文件
+    let successCount = 0;
+    let failCount = 0;
+    const results = [];
+    
+    async function uploadFiles() {
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const formData = new FormData();
+            formData.append('original_file', file);
+            formData.append('csrfmiddlewaretoken', document.querySelector('[name=csrfmiddlewaretoken]').value);
+            
+            progressBars[i].status.textContent = '上传中...';
+            progressBars[i].bar.style.width = '50%';
+            progressBars[i].bar.classList.add('progress-bar-animated');
+            
+            try {
+                const response = await fetch('{% url "video:novel_create" %}', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    progressBars[i].bar.style.width = '100%';
+                    progressBars[i].bar.classList.remove('progress-bar-animated');
+                    progressBars[i].bar.classList.add('bg-success');
+                    progressBars[i].status.textContent = '上传成功';
+                    progressBars[i].status.classList.add('text-success');
+                    successCount++;
+                    results.push({
+                        filename: file.name,
+                        success: true,
+                        message: data.message,
+                        novel_id: data.novel_id
+                    });
+                } else {
+                    throw new Error(data.message || '上传失败');
+                }
+            } catch (error) {
+                progressBars[i].bar.style.width = '100%';
+                progressBars[i].bar.classList.remove('progress-bar-animated');
+                progressBars[i].bar.classList.add('bg-danger');
+                progressBars[i].status.textContent = '上传失败: ' + error.message;
+                progressBars[i].status.classList.add('text-danger');
+                failCount++;
+                results.push({
+                    filename: file.name,
+                    success: false,
+                    message: error.message
+                });
+            }
+        }
+        
+        // 所有文件上传完成
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '完成';
+        
+        // 显示结果摘要
+        let summaryMessage = `上传完成！\n成功: ${successCount} 个\n失败: ${failCount} 个`;
+        
+        if (failCount > 0) {
+            summaryMessage += '\n\n失败的文件：\n';
+            results.filter(r => !r.success).forEach(r => {
+                summaryMessage += `- ${r.filename}: ${r.message}\n`;
+            });
+        }
+        
+        alert(summaryMessage);
+        
+        // 如果有成功的，刷新页面
+        if (successCount > 0) {
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
+        }
+    }
+    
+    uploadFiles();
 });
 
 // 重置表单当模态窗口关闭时
 document.getElementById('createNovelModal').addEventListener('hidden.bs.modal', function () {
     const form = document.getElementById('createNovelForm');
     const submitBtn = document.getElementById('submitBtn');
-    const progressDiv = document.getElementById('uploadProgress');
-    const progressBar = progressDiv.querySelector('.progress-bar');
+    const fileListContainer = document.getElementById('fileListContainer');
+    const uploadProgressContainer = document.getElementById('uploadProgressContainer');
     
     form.reset();
     submitBtn.disabled = false;
     submitBtn.innerHTML = '创建';
-    progressDiv.style.display = 'none';
-    progressBar.style.width = '0%';
-    progressBar.setAttribute('aria-valuenow', 0);
+    fileListContainer.style.display = 'none';
+    uploadProgressContainer.style.display = 'none';
 });
 
-// AI生成函数
-function generateWithAI(novelId, novelName) {
-    if (confirm(`确定要对小说「${novelName}」进行AI生成吗？\n\n此操作将：\n1. 自动分析小说内容\n2. 生成章节分割\n3. 提取角色信息\n4. 创建解说文案\n\n处理过程可能需要较长时间，请耐心等待。`)) {
-        // 显示处理中状态
-        const button = event.target.closest('button');
-        const originalContent = button.innerHTML;
-        button.disabled = true;
-        button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> 生成中...';
+// 全选功能
+document.getElementById('selectAll').addEventListener('change', function(e) {
+    const checkboxes = document.querySelectorAll('.novel-checkbox');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = e.target.checked;
+    });
+    updateBatchButtons();
+});
+
+document.getElementById('selectAllHeader').addEventListener('change', function(e) {
+    const checkboxes = document.querySelectorAll('.novel-checkbox');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = e.target.checked;
+    });
+    document.getElementById('selectAll').checked = e.target.checked;
+    updateBatchButtons();
+});
+
+// 监听单个复选框变化
+document.querySelectorAll('.novel-checkbox').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        const allCheckboxes = document.querySelectorAll('.novel-checkbox');
+        const checkedCheckboxes = document.querySelectorAll('.novel-checkbox:checked');
         
-        // 发送AI生成请求
-        fetch(`/video/novels/${novelId}/ai-generate/`, {
-            method: 'POST',
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert(`AI生成完成！\n\n${data.message}`);
-                // 刷新页面以显示更新后的数据
-                window.location.reload();
-            } else {
-                alert(`AI生成失败：${data.message}`);
-                // 恢复按钮状态
-                button.disabled = false;
-                button.innerHTML = originalContent;
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('AI生成过程中发生错误，请重试');
-            // 恢复按钮状态
-            button.disabled = false;
-            button.innerHTML = originalContent;
-        });
+        // 更新全选状态
+        document.getElementById('selectAll').checked = allCheckboxes.length === checkedCheckboxes.length;
+        document.getElementById('selectAllHeader').checked = allCheckboxes.length === checkedCheckboxes.length;
+        
+        updateBatchButtons();
+    });
+});
+
+// 更新批量操作按钮状态
+function updateBatchButtons() {
+    const checkedCheckboxes = document.querySelectorAll('.novel-checkbox:checked');
+    const batchGenScriptBtn = document.getElementById('batchGenScriptBtn');
+    const batchValidateScriptBtn = document.getElementById('batchValidateScriptBtn');
+    const batchGenAudioBtn = document.getElementById('batchGenAudioBtn');
+    const batchGenAssBtn = document.getElementById('batchGenAssBtn');
+    const batchGenImageBtn = document.getElementById('batchGenImageBtn');
+    
+    const hasSelection = checkedCheckboxes.length > 0;
+    batchGenScriptBtn.disabled = !hasSelection;
+    batchValidateScriptBtn.disabled = !hasSelection;
+    batchGenAudioBtn.disabled = !hasSelection;
+    batchGenAssBtn.disabled = !hasSelection;
+    batchGenImageBtn.disabled = !hasSelection;
+}
+
+// 批量生成脚本
+document.getElementById('batchGenScriptBtn').addEventListener('click', function() {
+    batchProcess('gen_script', '生成脚本', '生成解说文案（gen_script_v2.py）');
+});
+
+// 批量校验脚本
+document.getElementById('batchValidateScriptBtn').addEventListener('click', function() {
+    batchProcess('validate_script', '校验脚本', '校验解说文案（validate_narration.py --auto-fix）');
+});
+
+// 批量生成旁白
+document.getElementById('batchGenAudioBtn').addEventListener('click', function() {
+    batchProcess('gen_audio', '生成旁白', '生成旁白音频（gen_audio.py）');
+});
+
+// 批量生成字幕
+document.getElementById('batchGenAssBtn').addEventListener('click', function() {
+    batchProcess('gen_ass', '生成字幕', '生成字幕时间戳文件（gen_ass.py）');
+});
+
+// 批量生成图片
+document.getElementById('batchGenImageBtn').addEventListener('click', function() {
+    batchProcess('gen_image', '生成图片', '生成图片（gen_image_async_v4.py）');
+});
+
+// 通用批量处理函数
+function batchProcess(action, actionName, description) {
+    const checkedCheckboxes = document.querySelectorAll('.novel-checkbox:checked');
+    const novels = Array.from(checkedCheckboxes).map(cb => ({
+        id: cb.value,
+        name: cb.dataset.novelName
+    }));
+    
+    if (novels.length === 0) {
+        alert('请至少选择一个小说');
+        return;
+    }
+    
+    const novelNames = novels.map(n => n.name).join('、');
+    if (confirm(`确定要对以下${novels.length}个小说进行${actionName}吗？\n\n${novelNames}\n\n此操作将执行：${description}\n\n处理过程可能需要较长时间，请耐心等待。`)) {
+        batchProcessNovels(novels, action, actionName);
     }
 }
 
-// AI校验函数
-function validateWithAI(novelId, novelName) {
-    if (confirm(`确定要对小说「${novelName}」进行AI校验吗？\n\n此操作将：\n1. 检查章节完整性\n2. 验证角色一致性\n3. 校验解说文案质量\n4. 生成校验报告\n\n校验过程可能需要一些时间。`)) {
-        // 显示处理中状态
-        const button = event.target.closest('button');
-        const originalContent = button.innerHTML;
-        button.disabled = true;
-        button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> 校验中...';
+// 批量处理小说
+async function batchProcessNovels(novels, action, actionName) {
+    let successCount = 0;
+    let failCount = 0;
+    const results = [];
+    
+    // 禁用所有批量按钮
+    document.getElementById('batchGenScriptBtn').disabled = true;
+    document.getElementById('batchValidateScriptBtn').disabled = true;
+    document.getElementById('batchGenAudioBtn').disabled = true;
+    document.getElementById('batchGenAssBtn').disabled = true;
+    document.getElementById('batchGenImageBtn').disabled = true;
+    
+    for (let i = 0; i < novels.length; i++) {
+        const novel = novels[i];
+        console.log(`正在${actionName} ${i + 1}/${novels.length}: ${novel.name}`);
         
-        // 发送AI校验请求
-        fetch(`/video/novels/${novelId}/ai-validate/`, {
-            method: 'POST',
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
+        try {
+            const response = await fetch(`/video/api/novels/${novel.id}/${action}/`, {
+                method: 'POST',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                }
+            });
+            
+            const data = await response.json();
+            
             if (data.success) {
-                alert(`AI校验完成！\n\n${data.message}`);
-                // 刷新页面以显示更新后的数据
-                window.location.reload();
+                successCount++;
+                results.push({
+                    name: novel.name,
+                    success: true,
+                    message: data.message || '处理成功'
+                });
             } else {
-                alert(`AI校验失败：${data.message}`);
-                // 恢复按钮状态
-                button.disabled = false;
-                button.innerHTML = originalContent;
+                failCount++;
+                results.push({
+                    name: novel.name,
+                    success: false,
+                    message: data.message || '处理失败'
+                });
             }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('AI校验过程中发生错误，请重试');
-            // 恢复按钮状态
-            button.disabled = false;
-            button.innerHTML = originalContent;
+        } catch (error) {
+            failCount++;
+            results.push({
+                name: novel.name,
+                success: false,
+                message: error.message
+            });
+        }
+    }
+    
+    // 不显示结果摘要，直接刷新页面
+    console.log(`批量${actionName}完成！成功: ${successCount} 个，失败: ${failCount} 个`);
+    
+    if (failCount > 0) {
+        results.filter(r => !r.success).forEach(r => {
+            console.error(`- ${r.name}: ${r.message}`);
         });
     }
+    
+    // 直接刷新页面，不显示alert
+    window.location.reload();
 }
+
+// 单个小说操作函数
+function genScript(novelId, novelName) {
+    processNovel(novelId, novelName, 'gen_script', '生成脚本', '生成解说文案（gen_script_v2.py）');
+}
+
+function validateScript(novelId, novelName) {
+    processNovel(novelId, novelName, 'validate_script', '校验脚本', '校验解说文案（validate_narration.py --auto-fix）');
+}
+
+function genAudio(novelId, novelName) {
+    processNovel(novelId, novelName, 'gen_audio', '生成旁白', '生成旁白音频（gen_audio.py）');
+}
+
+function genAss(novelId, novelName) {
+    processNovel(novelId, novelName, 'gen_ass', '生成字幕', '生成字幕时间戳文件（gen_ass.py）');
+}
+
+function genImage(novelId, novelName) {
+    processNovel(novelId, novelName, 'gen_image', '生成图片', '生成图片（gen_image_async_v4.py）');
+}
+
+// 通用单个小说处理函数
+function processNovel(novelId, novelName, action, actionName, description) {
+    // 直接执行，不需要确认框
+    const button = event.target.closest('button');
+    const originalContent = button.innerHTML;
+    button.disabled = true;
+    button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> 处理中...';
+    
+    fetch(`/video/api/novels/${novelId}/${action}/`, {
+        method: 'POST',
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // 不使用alert，直接刷新页面显示处理中状态
+            window.location.reload();
+        } else {
+            // 失败时也不使用alert，直接刷新页面
+            console.error(`${actionName}失败：${data.message || '处理失败'}`);
+            window.location.reload();
+        }
+    })
+    .catch(error => {
+        // 错误时也不使用alert，直接刷新页面
+        console.error('Error:', error);
+        window.location.reload();
+    });
+}
+
+// 自动轮询：检查是否有处理中的任务，如果有则定时刷新页面
+function checkProcessingTasks() {
+    // 检查页面中是否有"处理中"的按钮
+    const processingButtons = document.querySelectorAll('button[disabled]:not([id^="batch"])');
+    let hasProcessing = false;
+    
+    processingButtons.forEach(btn => {
+        if (btn.innerHTML.includes('处理中') || btn.innerHTML.includes('spinner-border')) {
+            hasProcessing = true;
+        }
+    });
+    
+    // 如果有处理中的任务，5秒后自动刷新页面
+    if (hasProcessing) {
+        console.log('检测到处理中的任务，5秒后自动刷新页面...');
+        setTimeout(() => {
+            window.location.reload();
+        }, 5000);
+    } else {
+        console.log('没有处理中的任务');
+    }
+}
+
+// 页面加载完成后开始检查
+document.addEventListener('DOMContentLoaded', function() {
+    checkProcessingTasks();
+});
 </script>
-
-<!-- 使用统一的任务组件 -->
-{% include 'components/task-components.html' %}
 
 {% endblock %}

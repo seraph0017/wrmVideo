@@ -14,6 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}江家{\c&H00FFFFFF&\b0}大堂江子昂怒视刚进门
-Dialogue: 0,0:00:02.12,0:00:04.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}胡颤玉如意重重敲桌
-Dialogue: 0,0:00:04.37,0:00:05.67,Default,,0,0,0,,质问插手吴家事
+Dialogue: 0,0:00:00.02,0:00:00.80,Default,,0,0,0,,{\c&H0000FFFF&\b1}江家{\c&H00FFFFFF&\b0}大堂
+Dialogue: 0,0:00:01.09,0:00:02.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}江子昂{\c&H00FFFFFF&\b0}端坐主位
+Dialogue: 0,0:00:02.65,0:00:03.76,Default,,0,0,0,,胡须因怒轻颤
+Dialogue: 0,0:00:04.06,0:00:05.14,Default,,0,0,0,,怒目瞪向门口
+Dialogue: 0,0:00:05.45,0:00:06.25,Default,,0,0,0,,威严尽显

@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_005 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}眼神毫无波动盯着
+Dialogue: 0,0:00:01.72,0:00:03.06,Default,,0,0,0,,城主一字一句
+Dialogue: 0,0:00:03.32,0:00:04.97,Default,,0,0,0,,就四百万能不能谈
+Dialogue: 0,0:00:05.28,0:00:07.44,Default,,0,0,0,,气势{\c&H0000FFFF&\b1}如山{\c&H00FFFFFF&\b0}压得城主灵魂颤抖
+Dialogue: 0,0:00:07.89,0:00:10.44,Default,,0,0,0,,最终无奈点头派人准备船只

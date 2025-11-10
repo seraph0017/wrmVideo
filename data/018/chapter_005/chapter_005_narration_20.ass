@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}看到吴双突破
-Dialogue: 0,0:00:01.82,0:00:02.52,Default,,0,0,0,,心中激动
-Dialogue: 0,0:00:02.99,0:00:04.45,Default,,0,0,0,,同时警惕周围敌人
-Dialogue: 0,0:00:04.78,0:00:06.17,Default,,0,0,0,,保护{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}不受干扰
+Dialogue: 0,0:00:00.02,0:00:01.05,Default,,0,0,0,,借助神象遗骸的
+Dialogue: 0,0:00:01.05,0:00:02.21,Default,,0,0,0,,威压和洞府中的
+Dialogue: 0,0:00:02.21,0:00:05.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之气吴双开始冲击天泉境
+Dialogue: 0,0:00:05.49,0:00:07.96,Default,,0,0,0,,他盘膝而坐运转九转真火
+Dialogue: 0,0:00:07.96,0:00:10.73,Default,,0,0,0,,功法体内力量澎湃地泉中的
+Dialogue: 0,0:00:10.73,0:00:13.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之气不断压缩冲击瓶颈

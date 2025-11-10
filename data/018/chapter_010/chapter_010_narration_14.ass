@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_010 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}听闻陈天南狂言
+Dialogue: 0,0:00:02.09,0:00:02.82,Default,,0,0,0,,面露不屑
+Dialogue: 0,0:00:03.32,0:00:04.04,Default,,0,0,0,,眉头微皱
+Dialogue: 0,0:00:04.58,0:00:06.25,Default,,0,0,0,,他低声吐槽太嚣张了
+Dialogue: 0,0:00:06.79,0:00:08.05,Default,,0,0,0,,眼神中带着嘲讽
+Dialogue: 0,0:00:08.56,0:00:09.67,Default,,0,0,0,,显然对陈{\c&H0000FFFF&\b1}天南{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:09.67,0:00:10.88,Default,,0,0,0,,狂妄极为不齿

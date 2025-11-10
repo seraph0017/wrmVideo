@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_029 Narration 16 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}深海{\c&H00FFFFFF&\b0}水晶宫内
+Dialogue: 0,0:00:01.54,0:00:02.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}沙绵海{\c&H00FFFFFF&\b0}背手而立
+Dialogue: 0,0:00:03.29,0:00:05.35,Default,,0,0,0,,深灰色圆领袍在水中微微
+Dialogue: 0,0:00:05.35,0:00:05.74,Default,,0,0,0,,摆动
+Dialogue: 0,0:00:06.23,0:00:07.08,Default,,0,0,0,,他眼窝深陷
+Dialogue: 0,0:00:07.54,0:00:08.33,Default,,0,0,0,,眼神阴鸷
+Dialogue: 0,0:00:08.86,0:00:10.03,Default,,0,0,0,,听着{\c&H0000FFFF&\b1}马叶露{\c&H00FFFFFF&\b0}的汇报
+Dialogue: 0,0:00:10.54,0:00:12.12,Default,,0,0,0,,指尖无意识敲击掌心
+Dialogue: 0,0:00:12.60,0:00:14.88,Default,,0,0,0,,心中盘算着如何除掉{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}

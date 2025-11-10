@@ -1,7 +1,7 @@
 {
-  "text": "吴双领悟丹道总纲，身体发生蜕变，地泉境巅峰冲击天泉境，力量暴涨。",
-  "audio_file": "/Users/xunan/Projects/wrmVideo/web/../data/018/chapter_005/chapter_005_narration_19.mp3",
-  "duration": 6.625,
+  "text": "吴双在洞府中发现一具巨大的神象遗骸，高达七八十米，背后还有一对翅膀。这只神象散发着恐怖威压，即使死后依旧让人感到窒息，显然生前是极其强大的存在。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/018/chapter_005/chapter_005_narration_19.mp3",
+  "duration": 13.683,
   "character_timestamps": [
     {
       "character": "吴",
@@ -11,158 +11,358 @@
     {
       "character": "双",
       "start_time": 0.179,
-      "end_time": 0.391
+      "end_time": 0.366
     },
     {
-      "character": "领",
-      "start_time": 0.391,
-      "end_time": 0.616
+      "character": "在",
+      "start_time": 0.366,
+      "end_time": 0.504
     },
     {
-      "character": "悟",
-      "start_time": 0.616,
-      "end_time": 0.745
+      "character": "洞",
+      "start_time": 0.504,
+      "end_time": 0.712
     },
     {
-      "character": "丹",
-      "start_time": 0.745,
-      "end_time": 0.933
+      "character": "府",
+      "start_time": 0.712,
+      "end_time": 0.87
     },
     {
-      "character": "道",
-      "start_time": 0.933,
-      "end_time": 1.066
-    },
-    {
-      "character": "总",
-      "start_time": 1.066,
-      "end_time": 1.274
-    },
-    {
-      "character": "纲",
-      "start_time": 1.274,
-      "end_time": 1.479
-    },
-    {
-      "character": "，",
-      "start_time": 1.479,
-      "end_time": 1.899
-    },
-    {
-      "character": "身",
-      "start_time": 1.899,
-      "end_time": 2.12
-    },
-    {
-      "character": "体",
-      "start_time": 2.12,
-      "end_time": 2.299
+      "character": "中",
+      "start_time": 0.87,
+      "end_time": 1.091
     },
     {
       "character": "发",
-      "start_time": 2.299,
-      "end_time": 2.474
+      "start_time": 1.091,
+      "end_time": 1.308
+    },
+    {
+      "character": "现",
+      "start_time": 1.308,
+      "end_time": 1.454
+    },
+    {
+      "character": "一",
+      "start_time": 1.454,
+      "end_time": 1.549
+    },
+    {
+      "character": "具",
+      "start_time": 1.549,
+      "end_time": 1.683
+    },
+    {
+      "character": "巨",
+      "start_time": 1.683,
+      "end_time": 1.933
+    },
+    {
+      "character": "大",
+      "start_time": 1.933,
+      "end_time": 2.062
+    },
+    {
+      "character": "的",
+      "start_time": 2.062,
+      "end_time": 2.133
+    },
+    {
+      "character": "神",
+      "start_time": 2.133,
+      "end_time": 2.349
+    },
+    {
+      "character": "象",
+      "start_time": 2.349,
+      "end_time": 2.537
+    },
+    {
+      "character": "遗",
+      "start_time": 2.537,
+      "end_time": 2.654
+    },
+    {
+      "character": "骸",
+      "start_time": 2.654,
+      "end_time": 2.899
+    },
+    {
+      "character": "，",
+      "start_time": 2.899,
+      "end_time": 3.374
+    },
+    {
+      "character": "高",
+      "start_time": 3.374,
+      "end_time": 3.558
+    },
+    {
+      "character": "达",
+      "start_time": 3.558,
+      "end_time": 3.716
+    },
+    {
+      "character": "七",
+      "start_time": 3.716,
+      "end_time": 3.916
+    },
+    {
+      "character": "八",
+      "start_time": 3.916,
+      "end_time": 4.07
+    },
+    {
+      "character": "十",
+      "start_time": 4.07,
+      "end_time": 4.22
+    },
+    {
+      "character": "米",
+      "start_time": 4.22,
+      "end_time": 4.374
+    },
+    {
+      "character": "，",
+      "start_time": 4.374,
+      "end_time": 4.787
+    },
+    {
+      "character": "背",
+      "start_time": 4.787,
+      "end_time": 4.937
+    },
+    {
+      "character": "后",
+      "start_time": 4.937,
+      "end_time": 5.087
+    },
+    {
+      "character": "还",
+      "start_time": 5.087,
+      "end_time": 5.216
+    },
+    {
+      "character": "有",
+      "start_time": 5.216,
+      "end_time": 5.304
+    },
+    {
+      "character": "一",
+      "start_time": 5.304,
+      "end_time": 5.395
+    },
+    {
+      "character": "对",
+      "start_time": 5.395,
+      "end_time": 5.512
+    },
+    {
+      "character": "翅",
+      "start_time": 5.512,
+      "end_time": 5.741
+    },
+    {
+      "character": "膀",
+      "start_time": 5.741,
+      "end_time": 5.899
+    },
+    {
+      "character": "，",
+      "start_time": 5.899,
+      "end_time": 6.383
+    },
+    {
+      "character": "这",
+      "start_time": 6.383,
+      "end_time": 6.47
+    },
+    {
+      "character": "只",
+      "start_time": 6.47,
+      "end_time": 6.579
+    },
+    {
+      "character": "神",
+      "start_time": 6.579,
+      "end_time": 6.791
+    },
+    {
+      "character": "象",
+      "start_time": 6.791,
+      "end_time": 6.987
+    },
+    {
+      "character": "散",
+      "start_time": 6.987,
+      "end_time": 7.224
+    },
+    {
+      "character": "发",
+      "start_time": 7.224,
+      "end_time": 7.358
+    },
+    {
+      "character": "着",
+      "start_time": 7.358,
+      "end_time": 7.445
+    },
+    {
+      "character": "恐",
+      "start_time": 7.445,
+      "end_time": 7.77
+    },
+    {
+      "character": "怖",
+      "start_time": 7.77,
+      "end_time": 7.966
+    },
+    {
+      "character": "威",
+      "start_time": 7.966,
+      "end_time": 8.099
+    },
+    {
+      "character": "压",
+      "start_time": 8.099,
+      "end_time": 8.279
+    },
+    {
+      "character": "，",
+      "start_time": 8.279,
+      "end_time": 8.799
+    },
+    {
+      "character": "即",
+      "start_time": 8.799,
+      "end_time": 8.962
+    },
+    {
+      "character": "使",
+      "start_time": 8.962,
+      "end_time": 9.091
+    },
+    {
+      "character": "死",
+      "start_time": 9.091,
+      "end_time": 9.291
+    },
+    {
+      "character": "后",
+      "start_time": 9.291,
+      "end_time": 9.512
+    },
+    {
+      "character": "依",
+      "start_time": 9.512,
+      "end_time": 9.708
+    },
+    {
+      "character": "旧",
+      "start_time": 9.708,
+      "end_time": 9.837
+    },
+    {
+      "character": "让",
+      "start_time": 9.837,
+      "end_time": 9.958
+    },
+    {
+      "character": "人",
+      "start_time": 9.958,
+      "end_time": 10.091
+    },
+    {
+      "character": "感",
+      "start_time": 10.091,
+      "end_time": 10.299
+    },
+    {
+      "character": "到",
+      "start_time": 10.299,
+      "end_time": 10.437
+    },
+    {
+      "character": "窒",
+      "start_time": 10.437,
+      "end_time": 10.624
+    },
+    {
+      "character": "息",
+      "start_time": 10.624,
+      "end_time": 10.854
+    },
+    {
+      "character": "，",
+      "start_time": 10.854,
+      "end_time": 11.279
+    },
+    {
+      "character": "显",
+      "start_time": 11.279,
+      "end_time": 11.487
+    },
+    {
+      "character": "然",
+      "start_time": 11.487,
+      "end_time": 11.724
     },
     {
       "character": "生",
-      "start_time": 2.474,
-      "end_time": 2.624
+      "start_time": 11.724,
+      "end_time": 11.983
     },
     {
-      "character": "蜕",
-      "start_time": 2.624,
-      "end_time": 2.799
+      "character": "前",
+      "start_time": 11.983,
+      "end_time": 12.141
     },
     {
-      "character": "变",
-      "start_time": 2.799,
-      "end_time": 2.958
+      "character": "是",
+      "start_time": 12.141,
+      "end_time": 12.258
     },
     {
-      "character": "，",
-      "start_time": 2.958,
-      "end_time": 3.445
+      "character": "极",
+      "start_time": 12.258,
+      "end_time": 12.495
     },
     {
-      "character": "地",
-      "start_time": 3.445,
-      "end_time": 3.608
+      "character": "其",
+      "start_time": 12.495,
+      "end_time": 12.658
     },
     {
-      "character": "泉",
-      "start_time": 3.608,
-      "end_time": 3.808
+      "character": "强",
+      "start_time": 12.658,
+      "end_time": 12.962
     },
     {
-      "character": "境",
-      "start_time": 3.808,
-      "end_time": 3.97
+      "character": "大",
+      "start_time": 12.962,
+      "end_time": 13.095
     },
     {
-      "character": "巅",
-      "start_time": 3.97,
-      "end_time": 4.204
+      "character": "的",
+      "start_time": 13.095,
+      "end_time": 13.17
     },
     {
-      "character": "峰",
-      "start_time": 4.204,
-      "end_time": 4.383
+      "character": "存",
+      "start_time": 13.17,
+      "end_time": 13.383
     },
     {
-      "character": "冲",
-      "start_time": 4.383,
-      "end_time": 4.604
-    },
-    {
-      "character": "击",
-      "start_time": 4.604,
-      "end_time": 4.754
-    },
-    {
-      "character": "天",
-      "start_time": 4.754,
-      "end_time": 4.991
-    },
-    {
-      "character": "泉",
-      "start_time": 4.991,
-      "end_time": 5.187
-    },
-    {
-      "character": "境",
-      "start_time": 5.187,
-      "end_time": 5.349
-    },
-    {
-      "character": "，",
-      "start_time": 5.349,
-      "end_time": 5.637
-    },
-    {
-      "character": "力",
-      "start_time": 5.637,
-      "end_time": 5.904
-    },
-    {
-      "character": "量",
-      "start_time": 5.904,
-      "end_time": 6.095
-    },
-    {
-      "character": "暴",
-      "start_time": 6.095,
-      "end_time": 6.308
-    },
-    {
-      "character": "涨",
-      "start_time": 6.308,
-      "end_time": 6.462
+      "character": "在",
+      "start_time": 13.383,
+      "end_time": 13.524
     },
     {
       "character": "。",
-      "start_time": 6.462,
-      "end_time": 6.621
+      "start_time": 13.524,
+      "end_time": 13.683
     }
   ],
-  "generated_at": "2025-11-04T23:55:33.621131"
+  "generated_at": "2025-11-07T23:08:11.263965"
 }

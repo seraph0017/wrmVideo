@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_019 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}王族{\c&H00FFFFFF&\b0}驻地冰雾弥漫陈霞银发
+Dialogue: 0,0:00:02.69,0:00:05.99,Default,,0,0,0,,飞舞拐杖点地悬空{\c&H0000FFFF&\b1}浮冰{\c&H00FFFFFF&\b0}瞬间
+Dialogue: 0,0:00:05.99,0:00:08.15,Default,,0,0,0,,覆盖广场上空她尖声
+Dialogue: 0,0:00:08.63,0:00:09.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}老东西{\c&H00FFFFFF&\b0}找死
+Dialogue: 0,0:00:09.92,0:00:11.19,Default,,0,0,0,,寒气冻裂{\c&H0000FFFF&\b1}石柱{\c&H00FFFFFF&\b0}

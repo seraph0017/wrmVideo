@@ -14,7 +14,12 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.10,Default,,0,0,0,,贱鸟大显神威
-Dialogue: 0,0:00:01.40,0:00:03.66,Default,,0,0,0,,突然从暗处冲出以头撞击
-Dialogue: 0,0:00:03.66,0:00:06.59,Default,,0,0,0,,敌人将其撞飞出去得意地贱笑
-Dialogue: 0,0:00:06.88,0:00:08.20,Default,,0,0,0,,看本鸟绝命一击
+Dialogue: 0,0:00:00.02,0:00:01.33,Default,,0,0,0,,贱鸟再次偷袭成功
+Dialogue: 0,0:00:01.79,0:00:03.77,Default,,0,0,0,,它撞飞最后一名死士得意
+Dialogue: 0,0:00:03.77,0:00:04.52,Default,,0,0,0,,地冲{\c&H0000FFFF&\b1}吴双喊{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.97,0:00:05.34,Default,,0,0,0,,三个
+Dialogue: 0,0:00:05.72,0:00:06.70,Default,,0,0,0,,本鸟杀了三个
+Dialogue: 0,0:00:07.11,0:00:07.76,Default,,0,0,0,,比你多一个
+Dialogue: 0,0:00:08.16,0:00:09.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}无奈摇头却
+Dialogue: 0,0:00:09.63,0:00:11.39,Default,,0,0,0,,也暗自庆幸有这得力帮手
+Dialogue: 0,0:00:11.67,0:00:13.48,Default,,0,0,0,,追杀之路总算有了转机

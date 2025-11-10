@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_042 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.31,Default,,0,0,0,,海风神魂遭重创
+Dialogue: 0,0:00:01.74,0:00:02.99,Default,,0,0,0,,周身被坚冰覆盖
+Dialogue: 0,0:00:03.44,0:00:04.20,Default,,0,0,0,,失去知觉
+Dialogue: 0,0:00:04.52,0:00:06.66,Default,,0,0,0,,眼中却满是不甘与难以置信
+Dialogue: 0,0:00:07.08,0:00:08.24,Default,,0,0,0,,最终无力倒下

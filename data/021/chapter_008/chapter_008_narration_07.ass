@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}引领数万子弟聚于演武
-Dialogue: 0,0:00:01.96,0:00:03.72,Default,,0,0,0,,场站在擂台上笑道
-Dialogue: 0,0:00:04.23,0:00:06.29,Default,,0,0,0,,既然大家不好意思开口我就
-Dialogue: 0,0:00:06.29,0:00:07.93,Default,,0,0,0,,先说几个{\c&H0000FFFF&\b1}龙隐湖{\c&H00FFFFFF&\b0}森林的
-Dialogue: 0,0:00:07.93,0:00:08.39,Default,,0,0,0,,趣事吧
-Dialogue: 0,0:00:08.79,0:00:09.94,Default,,0,0,0,,台下鸦雀无声
+Dialogue: 0,0:00:00.02,0:00:00.86,Default,,0,0,0,,演武场之上
+Dialogue: 0,0:00:01.32,0:00:03.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}立于丈高擂台中央
+Dialogue: 0,0:00:03.66,0:00:05.05,Default,,0,0,0,,召集万余子弟围听
+Dialogue: 0,0:00:05.48,0:00:07.41,Default,,0,0,0,,正以{\c&H0000FFFF&\b1}龙隐湖{\c&H00FFFFFF&\b0}森林历险为例
+Dialogue: 0,0:00:07.86,0:00:10.28,Default,,0,0,0,,讲述凶兽横行中的生死搏杀

@@ -1,228 +1,238 @@
 {
-  "text": "陈子清在陈家水峰观望，三角眼紧盯吴双身影，面色阴沉，冷哼吴双不知天高地厚，等着看其出丑",
-  "audio_file": "data/021/chapter_015/chapter_015_narration_08.mp3",
-  "duration": 8.433,
+  "text": "吴双在第六峰深处，遭遇连环境残魂，对方施展九玄真火斩，巨大火环袭来，吴双表情凝重，准备迎击",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_015/chapter_015_narration_08.mp3",
+  "duration": 9.866,
   "character_timestamps": [
     {
-      "character": "陈",
+      "character": "吴",
       "start_time": 0.016,
-      "end_time": 0.191
+      "end_time": 0.174
     },
     {
-      "character": "子",
-      "start_time": 0.191,
-      "end_time": 0.324
-    },
-    {
-      "character": "清",
-      "start_time": 0.324,
-      "end_time": 0.491
+      "character": "双",
+      "start_time": 0.174,
+      "end_time": 0.445
     },
     {
       "character": "在",
-      "start_time": 0.491,
-      "end_time": 0.612
+      "start_time": 0.445,
+      "end_time": 0.608
     },
     {
-      "character": "陈",
-      "start_time": 0.612,
-      "end_time": 0.82
+      "character": "第",
+      "start_time": 0.608,
+      "end_time": 0.774
     },
     {
-      "character": "家",
-      "start_time": 0.82,
-      "end_time": 0.979
-    },
-    {
-      "character": "水",
-      "start_time": 0.979,
-      "end_time": 1.195
+      "character": "六",
+      "start_time": 0.774,
+      "end_time": 0.937
     },
     {
       "character": "峰",
-      "start_time": 1.195,
-      "end_time": 1.37
+      "start_time": 0.937,
+      "end_time": 1.108
     },
     {
-      "character": "观",
-      "start_time": 1.37,
-      "end_time": 1.574
+      "character": "深",
+      "start_time": 1.108,
+      "end_time": 1.304
     },
     {
-      "character": "望",
-      "start_time": 1.574,
-      "end_time": 1.691
+      "character": "处",
+      "start_time": 1.304,
+      "end_time": 1.47
     },
     {
       "character": "，",
-      "start_time": 1.691,
-      "end_time": 2.174
+      "start_time": 1.47,
+      "end_time": 1.983
     },
     {
-      "character": "三",
-      "start_time": 2.174,
-      "end_time": 2.387
+      "character": "遭",
+      "start_time": 1.983,
+      "end_time": 2.199
     },
     {
-      "character": "角",
-      "start_time": 2.387,
-      "end_time": 2.549
+      "character": "遇",
+      "start_time": 2.199,
+      "end_time": 2.349
     },
     {
-      "character": "眼",
-      "start_time": 2.549,
-      "end_time": 2.712
+      "character": "连",
+      "start_time": 2.349,
+      "end_time": 2.512
     },
     {
-      "character": "紧",
-      "start_time": 2.712,
-      "end_time": 2.962
+      "character": "环",
+      "start_time": 2.512,
+      "end_time": 2.77
     },
     {
-      "character": "盯",
-      "start_time": 2.962,
-      "end_time": 3.145
+      "character": "境",
+      "start_time": 2.77,
+      "end_time": 2.937
+    },
+    {
+      "character": "残",
+      "start_time": 2.937,
+      "end_time": 3.17
+    },
+    {
+      "character": "魂",
+      "start_time": 3.17,
+      "end_time": 3.391
+    },
+    {
+      "character": "，",
+      "start_time": 3.391,
+      "end_time": 3.891
+    },
+    {
+      "character": "对",
+      "start_time": 3.891,
+      "end_time": 4.024
+    },
+    {
+      "character": "方",
+      "start_time": 4.024,
+      "end_time": 4.17
+    },
+    {
+      "character": "施",
+      "start_time": 4.17,
+      "end_time": 4.362
+    },
+    {
+      "character": "展",
+      "start_time": 4.362,
+      "end_time": 4.591
+    },
+    {
+      "character": "九",
+      "start_time": 4.591,
+      "end_time": 4.862
+    },
+    {
+      "character": "玄",
+      "start_time": 4.862,
+      "end_time": 5.062
+    },
+    {
+      "character": "真",
+      "start_time": 5.062,
+      "end_time": 5.283
+    },
+    {
+      "character": "火",
+      "start_time": 5.283,
+      "end_time": 5.454
+    },
+    {
+      "character": "斩",
+      "start_time": 5.454,
+      "end_time": 5.612
+    },
+    {
+      "character": "，",
+      "start_time": 5.612,
+      "end_time": 6.095
+    },
+    {
+      "character": "巨",
+      "start_time": 6.095,
+      "end_time": 6.287
+    },
+    {
+      "character": "大",
+      "start_time": 6.287,
+      "end_time": 6.449
+    },
+    {
+      "character": "火",
+      "start_time": 6.449,
+      "end_time": 6.658
+    },
+    {
+      "character": "环",
+      "start_time": 6.658,
+      "end_time": 6.812
+    },
+    {
+      "character": "袭",
+      "start_time": 6.812,
+      "end_time": 6.966
+    },
+    {
+      "character": "来",
+      "start_time": 6.966,
+      "end_time": 7.174
+    },
+    {
+      "character": "，",
+      "start_time": 7.174,
+      "end_time": 7.445
     },
     {
       "character": "吴",
-      "start_time": 3.145,
-      "end_time": 3.329
+      "start_time": 7.445,
+      "end_time": 7.624
     },
     {
       "character": "双",
-      "start_time": 3.329,
-      "end_time": 3.508
+      "start_time": 7.624,
+      "end_time": 7.841
     },
     {
-      "character": "身",
-      "start_time": 3.508,
-      "end_time": 3.695
+      "character": "表",
+      "start_time": 7.841,
+      "end_time": 8.079
     },
     {
-      "character": "影",
-      "start_time": 3.695,
-      "end_time": 3.866
+      "character": "情",
+      "start_time": 8.079,
+      "end_time": 8.262
     },
     {
-      "character": "，",
-      "start_time": 3.866,
-      "end_time": 4.087
+      "character": "凝",
+      "start_time": 8.262,
+      "end_time": 8.445
     },
     {
-      "character": "面",
-      "start_time": 4.087,
-      "end_time": 4.304
-    },
-    {
-      "character": "色",
-      "start_time": 4.304,
-      "end_time": 4.474
-    },
-    {
-      "character": "阴",
-      "start_time": 4.474,
-      "end_time": 4.658
-    },
-    {
-      "character": "沉",
-      "start_time": 4.658,
-      "end_time": 4.887
+      "character": "重",
+      "start_time": 8.445,
+      "end_time": 8.587
     },
     {
       "character": "，",
-      "start_time": 4.887,
-      "end_time": 5.32
+      "start_time": 8.587,
+      "end_time": 8.92
     },
     {
-      "character": "冷",
-      "start_time": 5.32,
-      "end_time": 5.512
+      "character": "准",
+      "start_time": 8.92,
+      "end_time": 9.137
     },
     {
-      "character": "哼",
-      "start_time": 5.512,
-      "end_time": 5.704
+      "character": "备",
+      "start_time": 9.137,
+      "end_time": 9.283
     },
     {
-      "character": "吴",
-      "start_time": 5.704,
-      "end_time": 5.82
+      "character": "迎",
+      "start_time": 9.283,
+      "end_time": 9.512
     },
     {
-      "character": "双",
-      "start_time": 5.82,
-      "end_time": 6.016
-    },
-    {
-      "character": "不",
-      "start_time": 6.016,
-      "end_time": 6.154
-    },
-    {
-      "character": "知",
-      "start_time": 6.154,
-      "end_time": 6.283
-    },
-    {
-      "character": "天",
-      "start_time": 6.283,
-      "end_time": 6.57
-    },
-    {
-      "character": "高",
-      "start_time": 6.57,
-      "end_time": 6.729
-    },
-    {
-      "character": "地",
-      "start_time": 6.729,
-      "end_time": 6.854
-    },
-    {
-      "character": "厚",
-      "start_time": 6.854,
-      "end_time": 7.016
-    },
-    {
-      "character": "，",
-      "start_time": 7.016,
-      "end_time": 7.299
-    },
-    {
-      "character": "等",
-      "start_time": 7.299,
-      "end_time": 7.441
-    },
-    {
-      "character": "着",
-      "start_time": 7.441,
-      "end_time": 7.533
-    },
-    {
-      "character": "看",
-      "start_time": 7.533,
-      "end_time": 7.787
-    },
-    {
-      "character": "其",
-      "start_time": 7.787,
-      "end_time": 7.958
-    },
-    {
-      "character": "出",
-      "start_time": 7.958,
-      "end_time": 8.129
-    },
-    {
-      "character": "丑",
-      "start_time": 8.129,
-      "end_time": 8.274
+      "character": "击",
+      "start_time": 9.512,
+      "end_time": 9.708
     },
     {
       "character": "。",
-      "start_time": 8.274,
-      "end_time": 8.433
+      "start_time": 9.708,
+      "end_time": 9.867
     }
   ],
-  "generated_at": "2025-09-23T08:21:21.687852"
+  "generated_at": "2025-11-07T23:11:48.134393"
 }

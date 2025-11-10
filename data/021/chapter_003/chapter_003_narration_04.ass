@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴战{\c&H00FFFFFF&\b0}在广场边缘气急败坏
-Dialogue: 0,0:00:02.33,0:00:04.31,Default,,0,0,0,,五长老被押走让他失去靠山
-Dialogue: 0,0:00:04.63,0:00:06.85,Default,,0,0,0,,仍执迷于向{\c&H0000FFFF&\b1}秦玉仙{\c&H00FFFFFF&\b0}证明自己
-Dialogue: 0,0:00:07.28,0:00:08.95,Default,,0,0,0,,心智全然被嫉妒蒙蔽
+Dialogue: 0,0:00:00.02,0:00:00.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}密室中
+Dialogue: 0,0:00:01.27,0:00:03.05,Default,,0,0,0,,火焰树散发灼热气息
+Dialogue: 0,0:00:03.59,0:00:05.31,Default,,0,0,0,,他伸手触碰即将脱落的
+Dialogue: 0,0:00:05.31,0:00:05.94,Default,,0,0,0,,火焰果
+Dialogue: 0,0:00:06.35,0:00:07.16,Default,,0,0,0,,眉头紧锁
+Dialogue: 0,0:00:07.49,0:00:09.38,Default,,0,0,0,,圆领袍袖口沾上火灰

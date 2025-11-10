@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_019 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈娜{\c&H00FFFFFF&\b0}身形婀娜凌空而
+Dialogue: 0,0:00:02.02,0:00:04.40,Default,,0,0,0,,立声音轻灵却杀意凛然
+Dialogue: 0,0:00:04.98,0:00:07.14,Default,,0,0,0,,姐姐何必与将死之人废话
+Dialogue: 0,0:00:07.51,0:00:08.01,Default,,0,0,0,,冻碎他
+Dialogue: 0,0:00:08.47,0:00:11.15,Default,,0,0,0,,周身寒气更盛地面凝结{\c&H0000FFFF&\b1}薄冰{\c&H00FFFFFF&\b0}

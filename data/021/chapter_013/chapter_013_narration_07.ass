@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}与贱鸟交换眼神
-Dialogue: 0,0:00:01.99,0:00:03.29,Default,,0,0,0,,决定按老规矩行动
-Dialogue: 0,0:00:03.76,0:00:04.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}先行离开
-Dialogue: 0,0:00:05.21,0:00:07.55,Default,,0,0,0,,贱鸟留下模仿痕迹引开追兵
-Dialogue: 0,0:00:07.91,0:00:09.11,Default,,0,0,0,,两人配合默契
+Dialogue: 0,0:00:00.02,0:00:01.55,Default,,0,0,0,,交代贱鸟引开敌人
+Dialogue: 0,0:00:02.02,0:00:03.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}叮嘱需离开一个时辰
+Dialogue: 0,0:00:03.87,0:00:04.15,Default,,0,0,0,,以上
+Dialogue: 0,0:00:04.63,0:00:06.47,Default,,0,0,0,,贱鸟虽不满却{\c&H0000FFFF&\b1}迅速行动{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.84,0:00:09.15,Default,,0,0,0,,模仿{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}的痕迹向远处飞去

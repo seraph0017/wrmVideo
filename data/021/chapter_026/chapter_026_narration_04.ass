@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}郑毅{\c&H00FFFFFF&\b0}落在海面上随手更换了
-Dialogue: 0,0:00:02.44,0:00:04.24,Default,,0,0,0,,一件干净的衣服虽然
-Dialogue: 0,0:00:04.24,0:00:06.87,Default,,0,0,0,,面带笑容但眼神中透着警惕
-Dialogue: 0,0:00:07.26,0:00:09.37,Default,,0,0,0,,他看着{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}似乎在评估着
-Dialogue: 0,0:00:09.37,0:00:09.61,Default,,0,0,0,,什么
+Dialogue: 0,0:00:00.02,0:00:01.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}反应极快
+Dialogue: 0,0:00:01.54,0:00:02.97,Default,,0,0,0,,雷电武魂瞬间催动
+Dialogue: 0,0:00:03.37,0:00:04.12,Default,,0,0,0,,极电步施展
+Dialogue: 0,0:00:04.59,0:00:06.66,Default,,0,0,0,,身影化作一道残影冲向侧面
+Dialogue: 0,0:00:06.66,0:00:07.00,Default,,0,0,0,,山谷
+Dialogue: 0,0:00:07.37,0:00:08.87,Default,,0,0,0,,同时厉声提醒郑毅

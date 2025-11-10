@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_029 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}撤去掌心剑气山神玉
+Dialogue: 0,0:00:02.42,0:00:03.46,Default,,0,0,0,,突然融入眉心
+Dialogue: 0,0:00:03.91,0:00:05.87,Default,,0,0,0,,绿色菱形印记悄然浮现
+Dialogue: 0,0:00:06.25,0:00:08.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}绿雁南{\c&H00FFFFFF&\b0}当场单膝跪地山鬼
+Dialogue: 0,0:00:08.85,0:00:10.02,Default,,0,0,0,,少年激动大喊
+Dialogue: 0,0:00:10.34,0:00:11.64,Default,,0,0,0,,参见山神大人

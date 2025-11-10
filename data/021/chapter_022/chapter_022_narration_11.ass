@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄剑甲合一
-Dialogue: 0,0:00:01.83,0:00:04.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}巨剑{\c&H00FFFFFF&\b0}撕裂银鲨防御从腹部穿出
-Dialogue: 0,0:00:04.81,0:00:07.35,Default,,0,0,0,,狂鲨爆发出凄厉惨叫身体
-Dialogue: 0,0:00:07.35,0:00:09.89,Default,,0,0,0,,轰然炸裂鲜血染红湖面
+Dialogue: 0,0:00:00.02,0:00:01.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄现身与吴双汇合
+Dialogue: 0,0:00:02.45,0:00:04.56,Default,,0,0,0,,听闻{\c&H0000FFFF&\b1}九龙{\c&H00FFFFFF&\b0}吸水局比吴家祖
+Dialogue: 0,0:00:04.56,0:00:05.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}山护山{\c&H00FFFFFF&\b0}大阵更强
+Dialogue: 0,0:00:06.28,0:00:07.04,Default,,0,0,0,,震惊不已
+Dialogue: 0,0:00:07.29,0:00:08.47,Default,,0,0,0,,父子商议布局

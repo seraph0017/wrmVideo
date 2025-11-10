@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.74,Default,,0,0,0,,神象长枪如银蛇{\c&H0000FFFF&\b1}吐信{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:02.21,0:00:04.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}冲出包围圈一枪刺
-Dialogue: 0,0:00:04.19,0:00:06.54,Default,,0,0,0,,穿{\c&H0000FFFF&\b1}六海{\c&H00FFFFFF&\b0}境巅峰敌人胸口动作
-Dialogue: 0,0:00:06.54,0:00:09.02,Default,,0,0,0,,快如闪电敌人至死不敢相信
+Dialogue: 0,0:00:00.02,0:00:01.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}冲入敌群
+Dialogue: 0,0:00:01.49,0:00:03.09,Default,,0,0,0,,冰火两重天攻势爆发
+Dialogue: 0,0:00:03.43,0:00:04.91,Default,,0,0,0,,冰面幻阵困住敌人
+Dialogue: 0,0:00:05.20,0:00:06.07,Default,,0,0,0,,惨叫声中
+Dialogue: 0,0:00:06.35,0:00:08.02,Default,,0,0,0,,群战之王本色尽显

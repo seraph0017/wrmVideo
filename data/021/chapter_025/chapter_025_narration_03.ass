@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双早{\c&H00FFFFFF&\b0}有察觉
-Dialogue: 0,0:00:01.68,0:00:03.45,Default,,0,0,0,,反手扣住盗中至尊手腕
-Dialogue: 0,0:00:03.88,0:00:05.77,Default,,0,0,0,,雷电武魂之力瞬间爆发
-Dialogue: 0,0:00:06.11,0:00:07.17,Default,,0,0,0,,老者痛呼出声
-Dialogue: 0,0:00:07.46,0:00:09.10,Default,,0,0,0,,黑雾散去显露真身
-Dialogue: 0,0:00:09.39,0:00:10.25,Default,,0,0,0,,一脸惊愕
+Dialogue: 0,0:00:00.02,0:00:01.57,Default,,0,0,0,,桌下突然出现一团黑影
+Dialogue: 0,0:00:01.98,0:00:04.02,Default,,0,0,0,,盗中至尊正鬼鬼祟祟地躲在
+Dialogue: 0,0:00:04.02,0:00:04.27,Default,,0,0,0,,那里
+Dialogue: 0,0:00:04.76,0:00:06.40,Default,,0,0,0,,眼神狡黠地观察着周围
+Dialogue: 0,0:00:06.64,0:00:08.22,Default,,0,0,0,,似乎在寻找下手的机会

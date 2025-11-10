@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_039 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.46,Default,,0,0,0,,角落中{\c&H0000FFFF&\b1}刘观{\c&H00FFFFFF&\b0}缩着
+Dialogue: 0,0:00:01.46,0:00:03.60,Default,,0,0,0,,身子蓝色官袍皱巴巴的
+Dialogue: 0,0:00:03.99,0:00:05.78,Default,,0,0,0,,眼神躲闪着不敢与他对视
+Dialogue: 0,0:00:06.25,0:00:08.71,Default,,0,0,0,,双手死死攥成拳指节泛白
+Dialogue: 0,0:00:09.06,0:00:11.09,Default,,0,0,0,,显然是在拼命掩饰内心的
+Dialogue: 0,0:00:11.09,0:00:11.47,Default,,0,0,0,,慌张

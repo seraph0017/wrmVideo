@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵牧见{\c&H00FFFFFF&\b0}吴双抱着神蛋
-Dialogue: 0,0:00:01.92,0:00:02.85,Default,,0,0,0,,认定是宝物
-Dialogue: 0,0:00:03.20,0:00:04.25,Default,,0,0,0,,不顾手下劝阻
-Dialogue: 0,0:00:04.53,0:00:05.76,Default,,0,0,0,,亲自冲向{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:06.06,0:00:07.14,Default,,0,0,0,,欲抢夺神蛋
+Dialogue: 0,0:00:00.02,0:00:02.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}手持夜明珠照亮前方
+Dialogue: 0,0:00:02.51,0:00:03.84,Default,,0,0,0,,带领{\c&H0000FFFF&\b1}哥哥{\c&H00FFFFFF&\b0}快速前进
+Dialogue: 0,0:00:04.28,0:00:05.17,Default,,0,0,0,,她虽然对{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:05.17,0:00:06.86,Default,,0,0,0,,做法有些疑惑但
+Dialogue: 0,0:00:06.86,0:00:09.17,Default,,0,0,0,,还是选择相信他脚步不停
+Dialogue: 0,0:00:09.42,0:00:10.85,Default,,0,0,0,,朝着洞穴深处走去

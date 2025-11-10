@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}首次来到自由交易区
-Dialogue: 0,0:00:02.37,0:00:03.59,Default,,0,0,0,,被热闹景象吸引
-Dialogue: 0,0:00:04.16,0:00:05.74,Default,,0,0,0,,好奇地看着街边表演与
-Dialogue: 0,0:00:05.74,0:00:06.58,Default,,0,0,0,,特色小吃
-Dialogue: 0,0:00:06.89,0:00:07.98,Default,,0,0,0,,眼睛瞪得溜圆
-Dialogue: 0,0:00:08.21,0:00:09.07,Default,,0,0,0,,满脸兴奋
+Dialogue: 0,0:00:00.02,0:00:02.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}在院内听闻将战帖扔入
+Dialogue: 0,0:00:02.39,0:00:03.80,Default,,0,0,0,,垃圾桶{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.07,0:00:05.99,Default,,0,0,0,,幼稚把戏{\c&H0000FFFF&\b1}本少爷{\c&H00FFFFFF&\b0}没空
+Dialogue: 0,0:00:06.29,0:00:08.60,Default,,0,0,0,,全力备战考核尔等自便

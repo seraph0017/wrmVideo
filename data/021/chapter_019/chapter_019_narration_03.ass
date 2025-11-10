@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}瞬间起身
-Dialogue: 0,0:00:01.61,0:00:03.27,Default,,0,0,0,,双臂挥动斩出数百道
-Dialogue: 0,0:00:03.27,0:00:04.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}九玄真{\c&H00FFFFFF&\b0}火斩
-Dialogue: 0,0:00:04.73,0:00:06.21,Default,,0,0,0,,火焰洪流撞击黑网
-Dialogue: 0,0:00:06.49,0:00:07.30,Default,,0,0,0,,趁网势一缓
-Dialogue: 0,0:00:07.64,0:00:09.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}百变{\c&H00FFFFFF&\b0}魔云加速冲出包围
+Dialogue: 0,0:00:00.02,0:00:02.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双神{\c&H00FFFFFF&\b0}象长枪在手九玄真火
+Dialogue: 0,0:00:02.70,0:00:04.32,Default,,0,0,0,,斩如火焰洪流爆发
+Dialogue: 0,0:00:04.76,0:00:07.00,Default,,0,0,0,,黑毒网应声碎裂他乘百变
+Dialogue: 0,0:00:07.00,0:00:09.63,Default,,0,0,0,,魔云突围眼神坚定直视{\c&H0000FFFF&\b1}赵流{\c&H00FFFFFF&\b0}

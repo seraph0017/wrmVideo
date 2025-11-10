@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_019 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.61,Default,,0,0,0,,皇帝朱允熥在{\c&H0000FFFF&\b1}灵堂{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.90,0:00:02.78,Default,,0,0,0,,身着孝服
+Dialogue: 0,0:00:03.04,0:00:03.80,Default,,0,0,0,,面色悲伤
+Dialogue: 0,0:00:04.02,0:00:04.84,Default,,0,0,0,,手持香烛
+Dialogue: 0,0:00:05.18,0:00:06.29,Default,,0,0,0,,似在祭奠先祖
+Dialogue: 0,0:00:06.63,0:00:08.12,Default,,0,0,0,,背景为灵位和祭品

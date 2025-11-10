@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}神色淡定低声吩咐赵猛
-Dialogue: 0,0:00:02.54,0:00:03.27,Default,,0,0,0,,继续出价
-Dialogue: 0,0:00:03.72,0:00:05.97,Default,,0,0,0,,他指尖凝聚{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之力暗中
-Dialogue: 0,0:00:05.97,0:00:08.47,Default,,0,0,0,,提防盗中至尊同时关注台上
-Dialogue: 0,0:00:08.47,0:00:09.24,Default,,0,0,0,,竞价情况
+Dialogue: 0,0:00:00.02,0:00:01.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵猛{\c&H00FFFFFF&\b0}听到卜一峰的话
+Dialogue: 0,0:00:01.77,0:00:02.91,Default,,0,0,0,,顿时怒火中烧
+Dialogue: 0,0:00:03.27,0:00:04.08,Default,,0,0,0,,双拳紧握
+Dialogue: 0,0:00:04.44,0:00:05.62,Default,,0,0,0,,身体微微颤抖
+Dialogue: 0,0:00:06.03,0:00:08.00,Default,,0,0,0,,恨不得立刻冲上去理论一番

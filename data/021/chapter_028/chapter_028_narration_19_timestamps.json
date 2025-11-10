@@ -1,238 +1,303 @@
 {
-  "text": "房间内，吴双头顶金色漩涡加速旋转，吸收周围神辉，身体逐渐变得透明，房间阵法因能量冲击而崩溃。",
-  "audio_file": "data/021/chapter_028/chapter_028_narration_19.mp3",
-  "duration": 9.375,
+  "text": "荒芜之地，沙利御剑而来。他看到吴双与女皇宗弟子交谈，突然出手袭击同门，将一名女弟子打成重伤，表情凶狠，眼神中充满戾气。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_028/chapter_028_narration_19.mp3",
+  "duration": 12.291,
   "character_timestamps": [
     {
-      "character": "房",
-      "start_time": 0.02,
-      "end_time": 0.187
+      "character": "荒",
+      "start_time": 0.016,
+      "end_time": 0.274
     },
     {
-      "character": "间",
-      "start_time": 0.187,
-      "end_time": 0.329
+      "character": "芜",
+      "start_time": 0.274,
+      "end_time": 0.416
     },
     {
-      "character": "内",
-      "start_time": 0.329,
-      "end_time": 0.499
+      "character": "之",
+      "start_time": 0.416,
+      "end_time": 0.549
+    },
+    {
+      "character": "地",
+      "start_time": 0.549,
+      "end_time": 0.695
     },
     {
       "character": "，",
-      "start_time": 0.499,
-      "end_time": 0.891
+      "start_time": 0.695,
+      "end_time": 1.17
     },
     {
-      "character": "吴",
-      "start_time": 0.891,
-      "end_time": 1.045
+      "character": "沙",
+      "start_time": 1.17,
+      "end_time": 1.458
     },
     {
-      "character": "双",
-      "start_time": 1.045,
-      "end_time": 1.229
+      "character": "利",
+      "start_time": 1.458,
+      "end_time": 1.633
     },
     {
-      "character": "头",
-      "start_time": 1.229,
-      "end_time": 1.404
-    },
-    {
-      "character": "顶",
-      "start_time": 1.404,
-      "end_time": 1.57
-    },
-    {
-      "character": "金",
-      "start_time": 1.57,
+      "character": "御",
+      "start_time": 1.633,
       "end_time": 1.799
     },
     {
-      "character": "色",
+      "character": "剑",
       "start_time": 1.799,
-      "end_time": 1.962
-    },
-    {
-      "character": "漩",
-      "start_time": 1.962,
-      "end_time": 2.204
-    },
-    {
-      "character": "涡",
-      "start_time": 2.204,
-      "end_time": 2.345
-    },
-    {
-      "character": "加",
-      "start_time": 2.345,
-      "end_time": 2.604
-    },
-    {
-      "character": "速",
-      "start_time": 2.604,
-      "end_time": 2.77
-    },
-    {
-      "character": "旋",
-      "start_time": 2.77,
-      "end_time": 3.004
-    },
-    {
-      "character": "转",
-      "start_time": 3.004,
-      "end_time": 3.162
-    },
-    {
-      "character": "，",
-      "start_time": 3.162,
-      "end_time": 3.558
-    },
-    {
-      "character": "吸",
-      "start_time": 3.558,
-      "end_time": 3.783
-    },
-    {
-      "character": "收",
-      "start_time": 3.783,
-      "end_time": 3.962
-    },
-    {
-      "character": "周",
-      "start_time": 3.962,
-      "end_time": 4.166
-    },
-    {
-      "character": "围",
-      "start_time": 4.166,
-      "end_time": 4.279
-    },
-    {
-      "character": "神",
-      "start_time": 4.279,
-      "end_time": 4.499
-    },
-    {
-      "character": "辉",
-      "start_time": 4.499,
-      "end_time": 4.699
-    },
-    {
-      "character": "，",
-      "start_time": 4.699,
-      "end_time": 5.062
-    },
-    {
-      "character": "身",
-      "start_time": 5.062,
-      "end_time": 5.27
-    },
-    {
-      "character": "体",
-      "start_time": 5.27,
-      "end_time": 5.445
-    },
-    {
-      "character": "逐",
-      "start_time": 5.445,
-      "end_time": 5.683
-    },
-    {
-      "character": "渐",
-      "start_time": 5.683,
-      "end_time": 5.874
-    },
-    {
-      "character": "变",
-      "start_time": 5.874,
-      "end_time": 6.029
-    },
-    {
-      "character": "得",
-      "start_time": 6.029,
-      "end_time": 6.108
-    },
-    {
-      "character": "透",
-      "start_time": 6.108,
-      "end_time": 6.32
-    },
-    {
-      "character": "明",
-      "start_time": 6.32,
-      "end_time": 6.566
-    },
-    {
-      "character": "，",
-      "start_time": 6.566,
-      "end_time": 7.008
-    },
-    {
-      "character": "房",
-      "start_time": 7.008,
-      "end_time": 7.191
-    },
-    {
-      "character": "间",
-      "start_time": 7.191,
-      "end_time": 7.37
-    },
-    {
-      "character": "阵",
-      "start_time": 7.37,
-      "end_time": 7.549
-    },
-    {
-      "character": "法",
-      "start_time": 7.549,
-      "end_time": 7.72
-    },
-    {
-      "character": "因",
-      "start_time": 7.72,
-      "end_time": 7.933
-    },
-    {
-      "character": "能",
-      "start_time": 7.933,
-      "end_time": 8.074
-    },
-    {
-      "character": "量",
-      "start_time": 8.074,
-      "end_time": 8.249
-    },
-    {
-      "character": "冲",
-      "start_time": 8.249,
-      "end_time": 8.541
-    },
-    {
-      "character": "击",
-      "start_time": 8.541,
-      "end_time": 8.708
+      "end_time": 1.983
     },
     {
       "character": "而",
-      "start_time": 8.708,
-      "end_time": 8.829
+      "start_time": 1.983,
+      "end_time": 2.099
     },
     {
-      "character": "崩",
-      "start_time": 8.829,
-      "end_time": 9.037
+      "character": "来",
+      "start_time": 2.099,
+      "end_time": 2.32
     },
     {
-      "character": "溃",
-      "start_time": 9.037,
-      "end_time": 9.216
+      "character": "，",
+      "start_time": 2.32,
+      "end_time": 2.741
+    },
+    {
+      "character": "他",
+      "start_time": 2.741,
+      "end_time": 2.829
+    },
+    {
+      "character": "看",
+      "start_time": 2.829,
+      "end_time": 3.029
+    },
+    {
+      "character": "到",
+      "start_time": 3.029,
+      "end_time": 3.158
+    },
+    {
+      "character": "吴",
+      "start_time": 3.158,
+      "end_time": 3.299
+    },
+    {
+      "character": "双",
+      "start_time": 3.299,
+      "end_time": 3.541
+    },
+    {
+      "character": "与",
+      "start_time": 3.541,
+      "end_time": 3.687
+    },
+    {
+      "character": "女",
+      "start_time": 3.687,
+      "end_time": 3.887
+    },
+    {
+      "character": "皇",
+      "start_time": 3.887,
+      "end_time": 4.087
+    },
+    {
+      "character": "宗",
+      "start_time": 4.087,
+      "end_time": 4.254
+    },
+    {
+      "character": "弟",
+      "start_time": 4.254,
+      "end_time": 4.424
+    },
+    {
+      "character": "子",
+      "start_time": 4.424,
+      "end_time": 4.574
+    },
+    {
+      "character": "交",
+      "start_time": 4.574,
+      "end_time": 4.791
+    },
+    {
+      "character": "谈",
+      "start_time": 4.791,
+      "end_time": 5.041
+    },
+    {
+      "character": "，",
+      "start_time": 5.041,
+      "end_time": 5.558
+    },
+    {
+      "character": "突",
+      "start_time": 5.558,
+      "end_time": 5.72
+    },
+    {
+      "character": "然",
+      "start_time": 5.72,
+      "end_time": 5.879
+    },
+    {
+      "character": "出",
+      "start_time": 5.879,
+      "end_time": 6.083
+    },
+    {
+      "character": "手",
+      "start_time": 6.083,
+      "end_time": 6.258
+    },
+    {
+      "character": "袭",
+      "start_time": 6.258,
+      "end_time": 6.541
+    },
+    {
+      "character": "击",
+      "start_time": 6.541,
+      "end_time": 6.679
+    },
+    {
+      "character": "同",
+      "start_time": 6.679,
+      "end_time": 6.849
+    },
+    {
+      "character": "门",
+      "start_time": 6.849,
+      "end_time": 7.054
+    },
+    {
+      "character": "，",
+      "start_time": 7.054,
+      "end_time": 7.433
+    },
+    {
+      "character": "将",
+      "start_time": 7.433,
+      "end_time": 7.574
+    },
+    {
+      "character": "一",
+      "start_time": 7.574,
+      "end_time": 7.67
+    },
+    {
+      "character": "名",
+      "start_time": 7.67,
+      "end_time": 7.816
+    },
+    {
+      "character": "女",
+      "start_time": 7.816,
+      "end_time": 7.974
+    },
+    {
+      "character": "弟",
+      "start_time": 7.974,
+      "end_time": 8.141
+    },
+    {
+      "character": "子",
+      "start_time": 8.141,
+      "end_time": 8.291
+    },
+    {
+      "character": "打",
+      "start_time": 8.291,
+      "end_time": 8.47
+    },
+    {
+      "character": "成",
+      "start_time": 8.47,
+      "end_time": 8.654
+    },
+    {
+      "character": "重",
+      "start_time": 8.654,
+      "end_time": 8.82
+    },
+    {
+      "character": "伤",
+      "start_time": 8.82,
+      "end_time": 9.029
+    },
+    {
+      "character": "，",
+      "start_time": 9.029,
+      "end_time": 9.391
+    },
+    {
+      "character": "表",
+      "start_time": 9.391,
+      "end_time": 9.587
+    },
+    {
+      "character": "情",
+      "start_time": 9.587,
+      "end_time": 9.787
+    },
+    {
+      "character": "凶",
+      "start_time": 9.787,
+      "end_time": 10.037
+    },
+    {
+      "character": "狠",
+      "start_time": 10.037,
+      "end_time": 10.22
+    },
+    {
+      "character": "，",
+      "start_time": 10.22,
+      "end_time": 10.654
+    },
+    {
+      "character": "眼",
+      "start_time": 10.654,
+      "end_time": 10.87
+    },
+    {
+      "character": "神",
+      "start_time": 10.87,
+      "end_time": 11.054
+    },
+    {
+      "character": "中",
+      "start_time": 11.054,
+      "end_time": 11.229
+    },
+    {
+      "character": "充",
+      "start_time": 11.229,
+      "end_time": 11.545
+    },
+    {
+      "character": "满",
+      "start_time": 11.545,
+      "end_time": 11.749
+    },
+    {
+      "character": "戾",
+      "start_time": 11.749,
+      "end_time": 11.937
+    },
+    {
+      "character": "气",
+      "start_time": 11.937,
+      "end_time": 12.133
     },
     {
       "character": "。",
-      "start_time": 9.216,
-      "end_time": 9.375
+      "start_time": 12.133,
+      "end_time": 12.292
     }
   ],
-  "generated_at": "2025-09-23T08:26:53.586960"
+  "generated_at": "2025-11-07T23:18:15.379229"
 }

@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_010 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}夏刚{\c&H00FFFFFF&\b0}趁乱从陈家人群中冲出
+Dialogue: 0,0:00:02.63,0:00:03.35,Default,,0,0,0,,速度极快
+Dialogue: 0,0:00:03.65,0:00:05.58,Default,,0,0,0,,一把抓向万年{\c&H0000FFFF&\b1}玄冰树{\c&H00FFFFFF&\b0}最后
+Dialogue: 0,0:00:05.58,0:00:06.72,Default,,0,0,0,,留下的冰晶冰珠
+Dialogue: 0,0:00:07.23,0:00:07.92,Default,,0,0,0,,他动作迅猛
+Dialogue: 0,0:00:08.40,0:00:09.67,Default,,0,0,0,,眼神中带着贪婪
+Dialogue: 0,0:00:09.93,0:00:11.20,Default,,0,0,0,,显然早有预谋

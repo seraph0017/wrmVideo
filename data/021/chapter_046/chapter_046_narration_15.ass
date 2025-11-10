@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_046 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.32,Default,,0,0,0,,龙蜥见{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}消失
+Dialogue: 0,0:00:01.67,0:00:02.50,Default,,0,0,0,,面色{\c&H0000FFFF&\b1}铁青{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.92,0:00:04.43,Default,,0,0,0,,左手紧握兽骨令牌
+Dialogue: 0,0:00:04.79,0:00:05.96,Default,,0,0,0,,怒吼着下令追杀
+Dialogue: 0,0:00:06.31,0:00:07.69,Default,,0,0,0,,却不知裂空树已带着
+Dialogue: 0,0:00:07.69,0:00:08.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}遁入虚空
+Dialogue: 0,0:00:09.18,0:00:09.97,Default,,0,0,0,,逃离战场

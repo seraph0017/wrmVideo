@@ -1,0 +1,20 @@
+[Script Info]
+Title: chapter_045 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.25,Default,,0,0,0,,曹睿在家中坐立难安下人
+Dialogue: 0,0:00:02.25,0:00:04.21,Default,,0,0,0,,匆匆来报{\c&H0000FFFF&\b1}王大人{\c&H00FFFFFF&\b0}似要送小姐
+Dialogue: 0,0:00:04.21,0:00:06.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}离京{\c&H00FFFFFF&\b0}他心头一紧当即决定
+Dialogue: 0,0:00:07.26,0:00:09.46,Default,,0,0,0,,不能再拖我要向父亲坦白

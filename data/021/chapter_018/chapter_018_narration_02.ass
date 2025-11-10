@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.07,Default,,0,0,0,,弓{\c&H0000FFFF&\b1}青云{\c&H00FFFFFF&\b0}半空立
-Dialogue: 0,0:00:01.52,0:00:02.09,Default,,0,0,0,,单手抓
-Dialogue: 0,0:00:02.38,0:00:03.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}元灵凝{\c&H00FFFFFF&\b0}几十丈巨掌
-Dialogue: 0,0:00:04.15,0:00:06.14,Default,,0,0,0,,嘴角露傲笑视吴双囊物
+Dialogue: 0,0:00:00.02,0:00:01.53,Default,,0,0,0,,天际突然破开一道光
+Dialogue: 0,0:00:01.99,0:00:03.47,Default,,0,0,0,,弓青云与{\c&H0000FFFF&\b1}梅丽丹{\c&H00FFFFFF&\b0}现身
+Dialogue: 0,0:00:03.99,0:00:05.79,Default,,0,0,0,,瞥见吴双手中的百变魔云
+Dialogue: 0,0:00:06.13,0:00:07.27,Default,,0,0,0,,眼中闪过贪婪
+Dialogue: 0,0:00:07.65,0:00:09.22,Default,,0,0,0,,当即联手出手抢夺

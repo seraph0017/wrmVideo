@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}北冥雪{\c&H00FFFFFF&\b0}追上吴双
-Dialogue: 0,0:00:01.57,0:00:02.40,Default,,0,0,0,,激动{\c&H0000FFFF&\b1}地大喊{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:02.68,0:00:03.82,Default,,0,0,0,,要求{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}停下
-Dialogue: 0,0:00:04.09,0:00:04.82,Default,,0,0,0,,表情兴奋
-Dialogue: 0,0:00:05.11,0:00:05.81,Default,,0,0,0,,动作急切
-Dialogue: 0,0:00:06.12,0:00:07.60,Default,,0,0,0,,完全不顾周围危险
+Dialogue: 0,0:00:00.02,0:00:01.52,Default,,0,0,0,,天{\c&H0000FFFF&\b1}宝宝{\c&H00FFFFFF&\b0}从怀中掏纽扣
+Dialogue: 0,0:00:01.93,0:00:03.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}哥哥{\c&H00FFFFFF&\b0}我只有这个啦
+Dialogue: 0,0:00:03.56,0:00:05.63,Default,,0,0,0,,商人接过一看是上品灵器
+Dialogue: 0,0:00:06.02,0:00:07.28,Default,,0,0,0,,顿时目瞪口呆

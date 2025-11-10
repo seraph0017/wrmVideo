@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_044 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.24,Default,,0,0,0,,校长震惊拍桌
+Dialogue: 0,0:00:01.71,0:00:03.86,Default,,0,0,0,,周日坐于书案后灰色圆领
+Dialogue: 0,0:00:03.86,0:00:06.72,Default,,0,0,0,,官袍手中茶杯倾倒一巴掌
+Dialogue: 0,0:00:06.72,0:00:07.54,Default,,0,0,0,,按死刁越
+Dialogue: 0,0:00:07.91,0:00:09.81,Default,,0,0,0,,眼睛瞪大满脸难以置信

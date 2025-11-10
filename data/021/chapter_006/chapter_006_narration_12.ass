@@ -14,8 +14,6 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}与神鸟扭打在一起
-Dialogue: 0,0:00:02.09,0:00:04.70,Default,,0,0,0,,他运转五层护体{\c&H0000FFFF&\b1}元罡{\c&H00FFFFFF&\b0}拳头如
-Dialogue: 0,0:00:04.70,0:00:06.28,Default,,0,0,0,,雨点砸下神鸟则
-Dialogue: 0,0:00:06.28,0:00:08.93,Default,,0,0,0,,用翅膀爪子反击周围碎石
-Dialogue: 0,0:00:08.93,0:00:09.85,Default,,0,0,0,,纷纷震碎
+Dialogue: 0,0:00:00.02,0:00:02.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}取出千斤铁棍砸向贱鸟
+Dialogue: 0,0:00:02.75,0:00:05.22,Default,,0,0,0,,贱鸟被打晕倒地嘟囔你耍赖
+Dialogue: 0,0:00:05.32,0:00:06.82,Default,,0,0,0,,太他妈坏了

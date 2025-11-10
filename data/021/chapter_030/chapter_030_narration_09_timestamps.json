@@ -1,248 +1,283 @@
 {
-  "text": "吴双将令牌扔还汪笑天，耸肩道：“拿着令牌还被攻击，看来这东西不好使。”语气轻松，眼神却带着一丝认真。",
-  "audio_file": "data/021/chapter_030/chapter_030_narration_09.mp3",
-  "duration": 9.266,
+  "text": "吴双感受到苏一鸣的威压，心中了然对方的实力，表面却依旧平静，站在原地不动，等待对方的反应，眼神中带着一丝玩味。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_030/chapter_030_narration_09.mp3",
+  "duration": 10.575,
   "character_timestamps": [
     {
       "character": "吴",
       "start_time": 0.016,
-      "end_time": 0.174
+      "end_time": 0.166
     },
     {
       "character": "双",
-      "start_time": 0.174,
-      "end_time": 0.374
+      "start_time": 0.166,
+      "end_time": 0.387
     },
     {
-      "character": "将",
-      "start_time": 0.374,
-      "end_time": 0.533
+      "character": "感",
+      "start_time": 0.387,
+      "end_time": 0.612
     },
     {
-      "character": "令",
-      "start_time": 0.533,
-      "end_time": 0.704
+      "character": "受",
+      "start_time": 0.612,
+      "end_time": 0.749
     },
     {
-      "character": "牌",
-      "start_time": 0.704,
-      "end_time": 0.908
+      "character": "到",
+      "start_time": 0.749,
+      "end_time": 0.87
     },
     {
-      "character": "扔",
-      "start_time": 0.908,
-      "end_time": 1.12
-    },
-    {
-      "character": "还",
-      "start_time": 1.12,
-      "end_time": 1.341
-    },
-    {
-      "character": "汪",
-      "start_time": 1.341,
-      "end_time": 1.487
-    },
-    {
-      "character": "笑",
-      "start_time": 1.487,
-      "end_time": 1.658
-    },
-    {
-      "character": "天",
-      "start_time": 1.658,
-      "end_time": 1.879
-    },
-    {
-      "character": "，",
-      "start_time": 1.879,
-      "end_time": 2.391
-    },
-    {
-      "character": "耸",
-      "start_time": 2.391,
-      "end_time": 2.595
-    },
-    {
-      "character": "肩",
-      "start_time": 2.595,
-      "end_time": 2.774
-    },
-    {
-      "character": "道",
-      "start_time": 2.774,
-      "end_time": 2.908
-    },
-    {
-      "character": "：",
-      "start_time": 2.908,
-      "end_time": 3.154
-    },
-    {
-      "character": "拿",
-      "start_time": 3.154,
-      "end_time": 3.312
-    },
-    {
-      "character": "着",
-      "start_time": 3.312,
-      "end_time": 3.404
-    },
-    {
-      "character": "令",
-      "start_time": 3.404,
-      "end_time": 3.579
-    },
-    {
-      "character": "牌",
-      "start_time": 3.579,
-      "end_time": 3.833
-    },
-    {
-      "character": "还",
-      "start_time": 3.833,
-      "end_time": 4.095
-    },
-    {
-      "character": "被",
-      "start_time": 4.095,
-      "end_time": 4.229
-    },
-    {
-      "character": "攻",
-      "start_time": 4.229,
-      "end_time": 4.429
-    },
-    {
-      "character": "击",
-      "start_time": 4.429,
-      "end_time": 4.608
-    },
-    {
-      "character": "，",
-      "start_time": 4.608,
-      "end_time": 5.149
-    },
-    {
-      "character": "看",
-      "start_time": 5.149,
-      "end_time": 5.274
-    },
-    {
-      "character": "来",
-      "start_time": 5.274,
-      "end_time": 5.383
-    },
-    {
-      "character": "这",
-      "start_time": 5.383,
-      "end_time": 5.483
-    },
-    {
-      "character": "东",
-      "start_time": 5.483,
-      "end_time": 5.654
-    },
-    {
-      "character": "西",
-      "start_time": 5.654,
-      "end_time": 5.783
-    },
-    {
-      "character": "不",
-      "start_time": 5.783,
-      "end_time": 5.887
-    },
-    {
-      "character": "好",
-      "start_time": 5.887,
-      "end_time": 6.066
-    },
-    {
-      "character": "使",
-      "start_time": 6.066,
-      "end_time": 6.312
-    },
-    {
-      "character": "，",
-      "start_time": 6.312,
-      "end_time": 6.574
-    },
-    {
-      "character": "语",
-      "start_time": 6.574,
-      "end_time": 6.762
-    },
-    {
-      "character": "气",
-      "start_time": 6.762,
-      "end_time": 6.945
-    },
-    {
-      "character": "轻",
-      "start_time": 6.945,
-      "end_time": 7.145
-    },
-    {
-      "character": "松",
-      "start_time": 7.145,
-      "end_time": 7.333
-    },
-    {
-      "character": "，",
-      "start_time": 7.333,
-      "end_time": 7.687
-    },
-    {
-      "character": "眼",
-      "start_time": 7.687,
-      "end_time": 7.904
-    },
-    {
-      "character": "神",
-      "start_time": 7.904,
-      "end_time": 8.091
-    },
-    {
-      "character": "却",
-      "start_time": 8.091,
-      "end_time": 8.224
-    },
-    {
-      "character": "带",
-      "start_time": 8.224,
-      "end_time": 8.379
-    },
-    {
-      "character": "着",
-      "start_time": 8.379,
-      "end_time": 8.474
+      "character": "苏",
+      "start_time": 0.87,
+      "end_time": 1.087
     },
     {
       "character": "一",
-      "start_time": 8.474,
-      "end_time": 8.604
+      "start_time": 1.087,
+      "end_time": 1.199
+    },
+    {
+      "character": "鸣",
+      "start_time": 1.199,
+      "end_time": 1.354
+    },
+    {
+      "character": "的",
+      "start_time": 1.354,
+      "end_time": 1.466
+    },
+    {
+      "character": "威",
+      "start_time": 1.466,
+      "end_time": 1.637
+    },
+    {
+      "character": "压",
+      "start_time": 1.637,
+      "end_time": 1.816
+    },
+    {
+      "character": "，",
+      "start_time": 1.816,
+      "end_time": 2.299
+    },
+    {
+      "character": "心",
+      "start_time": 2.299,
+      "end_time": 2.504
+    },
+    {
+      "character": "中",
+      "start_time": 2.504,
+      "end_time": 2.658
+    },
+    {
+      "character": "了",
+      "start_time": 2.658,
+      "end_time": 2.87
+    },
+    {
+      "character": "然",
+      "start_time": 2.87,
+      "end_time": 3.049
+    },
+    {
+      "character": "对",
+      "start_time": 3.049,
+      "end_time": 3.249
+    },
+    {
+      "character": "方",
+      "start_time": 3.249,
+      "end_time": 3.399
+    },
+    {
+      "character": "的",
+      "start_time": 3.399,
+      "end_time": 3.458
+    },
+    {
+      "character": "实",
+      "start_time": 3.458,
+      "end_time": 3.666
+    },
+    {
+      "character": "力",
+      "start_time": 3.666,
+      "end_time": 3.774
+    },
+    {
+      "character": "，",
+      "start_time": 3.774,
+      "end_time": 4.179
+    },
+    {
+      "character": "表",
+      "start_time": 4.179,
+      "end_time": 4.358
+    },
+    {
+      "character": "面",
+      "start_time": 4.358,
+      "end_time": 4.583
+    },
+    {
+      "character": "却",
+      "start_time": 4.583,
+      "end_time": 4.787
+    },
+    {
+      "character": "依",
+      "start_time": 4.787,
+      "end_time": 5.02
+    },
+    {
+      "character": "旧",
+      "start_time": 5.02,
+      "end_time": 5.179
+    },
+    {
+      "character": "平",
+      "start_time": 5.179,
+      "end_time": 5.462
+    },
+    {
+      "character": "静",
+      "start_time": 5.462,
+      "end_time": 5.62
+    },
+    {
+      "character": "，",
+      "start_time": 5.62,
+      "end_time": 6.099
+    },
+    {
+      "character": "站",
+      "start_time": 6.099,
+      "end_time": 6.229
+    },
+    {
+      "character": "在",
+      "start_time": 6.229,
+      "end_time": 6.366
+    },
+    {
+      "character": "原",
+      "start_time": 6.366,
+      "end_time": 6.624
+    },
+    {
+      "character": "地",
+      "start_time": 6.624,
+      "end_time": 6.766
+    },
+    {
+      "character": "不",
+      "start_time": 6.766,
+      "end_time": 6.879
+    },
+    {
+      "character": "动",
+      "start_time": 6.879,
+      "end_time": 7.029
+    },
+    {
+      "character": "，",
+      "start_time": 7.029,
+      "end_time": 7.383
+    },
+    {
+      "character": "等",
+      "start_time": 7.383,
+      "end_time": 7.57
+    },
+    {
+      "character": "待",
+      "start_time": 7.57,
+      "end_time": 7.72
+    },
+    {
+      "character": "对",
+      "start_time": 7.72,
+      "end_time": 7.908
+    },
+    {
+      "character": "方",
+      "start_time": 7.908,
+      "end_time": 8.054
+    },
+    {
+      "character": "的",
+      "start_time": 8.054,
+      "end_time": 8.116
+    },
+    {
+      "character": "反",
+      "start_time": 8.116,
+      "end_time": 8.349
+    },
+    {
+      "character": "应",
+      "start_time": 8.349,
+      "end_time": 8.495
+    },
+    {
+      "character": "，",
+      "start_time": 8.495,
+      "end_time": 8.862
+    },
+    {
+      "character": "眼",
+      "start_time": 8.862,
+      "end_time": 9.07
+    },
+    {
+      "character": "神",
+      "start_time": 9.07,
+      "end_time": 9.245
+    },
+    {
+      "character": "中",
+      "start_time": 9.245,
+      "end_time": 9.424
+    },
+    {
+      "character": "带",
+      "start_time": 9.424,
+      "end_time": 9.658
+    },
+    {
+      "character": "着",
+      "start_time": 9.658,
+      "end_time": 9.749
+    },
+    {
+      "character": "一",
+      "start_time": 9.749,
+      "end_time": 9.866
     },
     {
       "character": "丝",
-      "start_time": 8.604,
-      "end_time": 8.745
+      "start_time": 9.866,
+      "end_time": 10.07
     },
     {
-      "character": "认",
-      "start_time": 8.745,
-      "end_time": 8.912
+      "character": "玩",
+      "start_time": 10.07,
+      "end_time": 10.308
     },
     {
-      "character": "真",
-      "start_time": 8.912,
-      "end_time": 9.104
+      "character": "味",
+      "start_time": 10.308,
+      "end_time": 10.416
     },
     {
       "character": "。",
-      "start_time": 9.104,
-      "end_time": 9.262
+      "start_time": 10.416,
+      "end_time": 10.575
     }
   ],
-  "generated_at": "2025-09-23T08:27:36.971941"
+  "generated_at": "2025-11-07T23:19:02.378092"
 }

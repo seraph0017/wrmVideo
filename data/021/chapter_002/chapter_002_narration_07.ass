@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_002 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.38,Default,,0,0,0,,吴战接过{\c&H0000FFFF&\b1}毛巾{\c&H00FFFFFF&\b0}擦脸
+Dialogue: 0,0:00:01.82,0:00:03.50,Default,,0,0,0,,紫色圆领袍已换干净
+Dialogue: 0,0:00:03.94,0:00:05.23,Default,,0,0,0,,嘴角上扬显不屑
+Dialogue: 0,0:00:05.70,0:00:07.51,Default,,0,0,0,,对{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}冷道中级凶兽没
+Dialogue: 0,0:00:07.51,0:00:08.04,Default,,0,0,0,,挑战性
+Dialogue: 0,0:00:08.41,0:00:10.07,Default,,0,0,0,,周身散发倨傲气息

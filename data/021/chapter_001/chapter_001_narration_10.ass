@@ -14,7 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.20,Default,,0,0,0,,假山上的凉亭中{\c&H0000FFFF&\b1}吴毅{\c&H00FFFFFF&\b0}长脸
-Dialogue: 0,0:00:02.20,0:00:04.84,Default,,0,0,0,,阴沉如{\c&H0000FFFF&\b1}铁三角{\c&H00FFFFFF&\b0}眼寒光闪烁
-Dialogue: 0,0:00:05.29,0:00:07.79,Default,,0,0,0,,看着下方混乱场景低声骂道
-Dialogue: 0,0:00:08.21,0:00:08.63,Default,,0,0,0,,废物
+Dialogue: 0,0:00:00.02,0:00:02.08,Default,,0,0,0,,假山上的凉亭中{\c&H0000FFFF&\b1}吴毅{\c&H00FFFFFF&\b0}脸色
+Dialogue: 0,0:00:02.08,0:00:02.82,Default,,0,0,0,,阴沉如铁
+Dialogue: 0,0:00:03.34,0:00:05.21,Default,,0,0,0,,他本想看{\c&H0000FFFF&\b1}吴晨{\c&H00FFFFFF&\b0}教训吴双
+Dialogue: 0,0:00:05.65,0:00:07.65,Default,,0,0,0,,没想到这废物连人都拦不住
+Dialogue: 0,0:00:08.01,0:00:08.40,Default,,0,0,0,,废物
+Dialogue: 0,0:00:08.70,0:00:11.08,Default,,0,0,0,,他低骂一声身形突然弹射
+Dialogue: 0,0:00:11.08,0:00:11.41,Default,,0,0,0,,而出

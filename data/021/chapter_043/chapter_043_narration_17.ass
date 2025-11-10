@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_043 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.09,Default,,0,0,0,,吴双击杀{\c&H0000FFFF&\b1}万庆{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.41,0:00:02.86,Default,,0,0,0,,收起三十余块求学令
+Dialogue: 0,0:00:03.24,0:00:04.89,Default,,0,0,0,,在{\c&H0000FFFF&\b1}藏书阁{\c&H00FFFFFF&\b0}中快速穿梭
+Dialogue: 0,0:00:05.24,0:00:07.27,Default,,0,0,0,,将五系先天元{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}术神魂
+Dialogue: 0,0:00:07.27,0:00:09.29,Default,,0,0,0,,修炼要诀等光球收入怀中
+Dialogue: 0,0:00:09.61,0:00:10.32,Default,,0,0,0,,准备离开

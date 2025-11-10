@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_019 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.54,Default,,0,0,0,,下一刻
+Dialogue: 0,0:00:00.96,0:00:03.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}脑海中突然浮现出黑暗
+Dialogue: 0,0:00:03.08,0:00:03.84,Default,,0,0,0,,星云的画面
+Dialogue: 0,0:00:04.30,0:00:06.59,Default,,0,0,0,,无数星辰碎片如利刃般切割
+Dialogue: 0,0:00:06.59,0:00:07.19,Default,,0,0,0,,着他的意识
+Dialogue: 0,0:00:07.70,0:00:09.41,Default,,0,0,0,,他正与画面中那只巨大的
+Dialogue: 0,0:00:09.41,0:00:11.02,Default,,0,0,0,,眸子进行精神对抗
+Dialogue: 0,0:00:11.44,0:00:12.60,Default,,0,0,0,,额角青筋微跳
+Dialogue: 0,0:00:12.97,0:00:13.89,Default,,0,0,0,,冷汗涔涔

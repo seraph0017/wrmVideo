@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_036 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.60,Default,,0,0,0,,不动城抵达清秋城昔日辉煌
+Dialogue: 0,0:00:02.60,0:00:03.96,Default,,0,0,0,,丹药{\c&H0000FFFF&\b1}大城{\c&H00FFFFFF&\b0}已成废墟
+Dialogue: 0,0:00:04.38,0:00:06.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}朱雀{\c&H00FFFFFF&\b0}星踏过焦黑瓦砾眉头
+Dialogue: 0,0:00:06.65,0:00:07.07,Default,,0,0,0,,紧锁
+Dialogue: 0,0:00:07.39,0:00:09.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}天阳{\c&H00FFFFFF&\b0}火余温已散城池被毁
+Dialogue: 0,0:00:09.59,0:00:10.28,Default,,0,0,0,,至少一月
+Dialogue: 0,0:00:10.38,0:00:13.98,Default,,0,0,0,,外宇生物怎会突破防线至此

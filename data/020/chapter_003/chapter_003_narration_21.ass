@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_003 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.99,Default,,0,0,0,,{\c&H0000FFFF&\b1}阿福{\c&H00FFFFFF&\b0}再次出现
+Dialogue: 0,0:00:01.46,0:00:03.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}挥手水剑杀尽天龙门等人
+Dialogue: 0,0:00:04.36,0:00:06.14,Default,,0,0,0,,指挥水剑带三师妹离开
+Dialogue: 0,0:00:06.76,0:00:08.87,Default,,0,0,0,,红叶真人提醒别在秘境逗留
+Dialogue: 0,0:00:09.17,0:00:10.52,Default,,0,0,0,,被{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}一巴掌扇飞
+Dialogue: 0,0:00:10.93,0:00:12.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}带师妹们继续寻人

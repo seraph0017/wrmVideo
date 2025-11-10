@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_040 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.79,Default,,0,0,0,,放弃思考
+Dialogue: 0,0:00:01.17,0:00:03.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}释放红色阵图杀戮欲望
+Dialogue: 0,0:00:03.67,0:00:06.45,Default,,0,0,0,,猩红风暴席卷罪域背后诡异
+Dialogue: 0,0:00:06.45,0:00:07.80,Default,,0,0,0,,神灵虚影一闪而
+Dialogue: 0,0:00:07.80,0:00:10.04,Default,,0,0,0,,逝力量暴涨至全新境界

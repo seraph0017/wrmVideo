@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_047 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}石强{\c&H00FFFFFF&\b0}警惕四周发现神器碎片
+Dialogue: 0,0:00:02.90,0:00:05.22,Default,,0,0,0,,他捡起一块残破铠甲其上有
+Dialogue: 0,0:00:05.22,0:00:07.93,Default,,0,0,0,,神光闪烁面色兴奋对{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.93,0:00:08.32,Default,,0,0,0,,喊道
+Dialogue: 0,0:00:08.66,0:00:10.35,Default,,0,0,0,,大少这里有好{\c&H0000FFFF&\b1}东西{\c&H00FFFFFF&\b0}

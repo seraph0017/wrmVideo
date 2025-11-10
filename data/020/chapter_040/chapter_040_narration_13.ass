@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_040 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.21,Default,,0,0,0,,摩罗与载命者在坍塌星空中
+Dialogue: 0,0:00:02.21,0:00:02.61,Default,,0,0,0,,逃窜
+Dialogue: 0,0:00:03.01,0:00:05.31,Default,,0,0,0,,空间规则紊乱载命者突然
+Dialogue: 0,0:00:05.31,0:00:07.53,Default,,0,0,0,,出手插入摩罗后心摩罗惊
+Dialogue: 0,0:00:07.53,0:00:07.91,Default,,0,0,0,,怒吼
+Dialogue: 0,0:00:08.23,0:00:09.28,Default,,0,0,0,,畜牲为何

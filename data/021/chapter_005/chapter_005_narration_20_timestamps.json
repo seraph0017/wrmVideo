@@ -1,218 +1,248 @@
 {
-  "text": "江蜜儿在殿外休息，看到吴双竟然能在神象威压下前行五十多步，远超自己和哥哥，惊讶不已！",
-  "audio_file": "data/021/chapter_005/chapter_005_narration_20.mp3",
-  "duration": 7.941,
+  "text": "赵牧脸色剧变！他不敢置信吴双竟达天泉境，且力量远超自己，紧握天恒剑的手微微颤抖，第一次感到恐惧！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_005/chapter_005_narration_20.mp3",
+  "duration": 9.216,
   "character_timestamps": [
     {
-      "character": "江",
+      "character": "赵",
       "start_time": 0.016,
-      "end_time": 0.149
+      "end_time": 0.187
     },
     {
-      "character": "蜜",
-      "start_time": 0.149,
-      "end_time": 0.333
+      "character": "牧",
+      "start_time": 0.187,
+      "end_time": 0.341
     },
     {
-      "character": "儿",
-      "start_time": 0.333,
-      "end_time": 0.441
+      "character": "脸",
+      "start_time": 0.341,
+      "end_time": 0.558
     },
     {
-      "character": "在",
-      "start_time": 0.441,
-      "end_time": 0.574
+      "character": "色",
+      "start_time": 0.558,
+      "end_time": 0.712
     },
     {
-      "character": "殿",
-      "start_time": 0.574,
-      "end_time": 0.741
+      "character": "剧",
+      "start_time": 0.712,
+      "end_time": 0.899
     },
     {
-      "character": "外",
-      "start_time": 0.741,
-      "end_time": 0.841
-    },
-    {
-      "character": "休",
-      "start_time": 0.841,
-      "end_time": 1.054
-    },
-    {
-      "character": "息",
-      "start_time": 1.054,
-      "end_time": 1.199
+      "character": "变",
+      "start_time": 0.899,
+      "end_time": 1.07
     },
     {
       "character": "，",
-      "start_time": 1.199,
-      "end_time": 1.67
+      "start_time": 1.07,
+      "end_time": 1.479
     },
     {
-      "character": "看",
-      "start_time": 1.67,
-      "end_time": 1.82
-    },
-    {
-      "character": "到",
-      "start_time": 1.82,
-      "end_time": 1.954
-    },
-    {
-      "character": "吴",
-      "start_time": 1.954,
-      "end_time": 2.095
-    },
-    {
-      "character": "双",
-      "start_time": 2.095,
-      "end_time": 2.345
-    },
-    {
-      "character": "竟",
-      "start_time": 2.345,
-      "end_time": 2.537
-    },
-    {
-      "character": "然",
-      "start_time": 2.537,
-      "end_time": 2.649
-    },
-    {
-      "character": "能",
-      "start_time": 2.649,
-      "end_time": 2.766
-    },
-    {
-      "character": "在",
-      "start_time": 2.766,
-      "end_time": 2.895
-    },
-    {
-      "character": "神",
-      "start_time": 2.895,
-      "end_time": 3.129
-    },
-    {
-      "character": "象",
-      "start_time": 3.129,
-      "end_time": 3.345
-    },
-    {
-      "character": "威",
-      "start_time": 3.345,
-      "end_time": 3.499
-    },
-    {
-      "character": "压",
-      "start_time": 3.499,
-      "end_time": 3.645
-    },
-    {
-      "character": "下",
-      "start_time": 3.645,
-      "end_time": 3.829
-    },
-    {
-      "character": "前",
-      "start_time": 3.829,
-      "end_time": 4.141
-    },
-    {
-      "character": "行",
-      "start_time": 4.141,
-      "end_time": 4.345
-    },
-    {
-      "character": "五",
-      "start_time": 4.345,
-      "end_time": 4.52
-    },
-    {
-      "character": "十",
-      "start_time": 4.52,
-      "end_time": 4.666
-    },
-    {
-      "character": "多",
-      "start_time": 4.666,
-      "end_time": 4.82
-    },
-    {
-      "character": "步",
-      "start_time": 4.82,
-      "end_time": 4.962
-    },
-    {
-      "character": "，",
-      "start_time": 4.962,
-      "end_time": 5.358
-    },
-    {
-      "character": "远",
-      "start_time": 5.358,
-      "end_time": 5.612
-    },
-    {
-      "character": "超",
-      "start_time": 5.612,
-      "end_time": 5.833
-    },
-    {
-      "character": "自",
-      "start_time": 5.833,
-      "end_time": 5.983
-    },
-    {
-      "character": "己",
-      "start_time": 5.983,
-      "end_time": 6.112
-    },
-    {
-      "character": "和",
-      "start_time": 6.112,
-      "end_time": 6.266
-    },
-    {
-      "character": "哥",
-      "start_time": 6.266,
-      "end_time": 6.533
-    },
-    {
-      "character": "哥",
-      "start_time": 6.533,
-      "end_time": 6.674
-    },
-    {
-      "character": "，",
-      "start_time": 6.674,
-      "end_time": 7.079
-    },
-    {
-      "character": "惊",
-      "start_time": 7.079,
-      "end_time": 7.349
-    },
-    {
-      "character": "讶",
-      "start_time": 7.349,
-      "end_time": 7.508
+      "character": "他",
+      "start_time": 1.479,
+      "end_time": 1.574
     },
     {
       "character": "不",
-      "start_time": 7.508,
-      "end_time": 7.624
+      "start_time": 1.574,
+      "end_time": 1.691
     },
     {
-      "character": "已",
-      "start_time": 7.624,
-      "end_time": 7.779
+      "character": "敢",
+      "start_time": 1.691,
+      "end_time": 1.845
+    },
+    {
+      "character": "置",
+      "start_time": 1.845,
+      "end_time": 1.966
+    },
+    {
+      "character": "信",
+      "start_time": 1.966,
+      "end_time": 2.179
+    },
+    {
+      "character": "吴",
+      "start_time": 2.179,
+      "end_time": 2.399
+    },
+    {
+      "character": "双",
+      "start_time": 2.399,
+      "end_time": 2.604
+    },
+    {
+      "character": "竟",
+      "start_time": 2.604,
+      "end_time": 2.779
+    },
+    {
+      "character": "达",
+      "start_time": 2.779,
+      "end_time": 2.924
+    },
+    {
+      "character": "天",
+      "start_time": 2.924,
+      "end_time": 3.158
+    },
+    {
+      "character": "泉",
+      "start_time": 3.158,
+      "end_time": 3.345
+    },
+    {
+      "character": "境",
+      "start_time": 3.345,
+      "end_time": 3.504
+    },
+    {
+      "character": "，",
+      "start_time": 3.504,
+      "end_time": 3.845
+    },
+    {
+      "character": "且",
+      "start_time": 3.845,
+      "end_time": 4.033
+    },
+    {
+      "character": "力",
+      "start_time": 4.033,
+      "end_time": 4.199
+    },
+    {
+      "character": "量",
+      "start_time": 4.199,
+      "end_time": 4.379
+    },
+    {
+      "character": "远",
+      "start_time": 4.379,
+      "end_time": 4.637
+    },
+    {
+      "character": "超",
+      "start_time": 4.637,
+      "end_time": 4.837
+    },
+    {
+      "character": "自",
+      "start_time": 4.837,
+      "end_time": 4.979
+    },
+    {
+      "character": "己",
+      "start_time": 4.979,
+      "end_time": 5.187
+    },
+    {
+      "character": "，",
+      "start_time": 5.187,
+      "end_time": 5.474
+    },
+    {
+      "character": "紧",
+      "start_time": 5.474,
+      "end_time": 5.695
+    },
+    {
+      "character": "握",
+      "start_time": 5.695,
+      "end_time": 5.829
+    },
+    {
+      "character": "天",
+      "start_time": 5.829,
+      "end_time": 6.07
+    },
+    {
+      "character": "恒",
+      "start_time": 6.07,
+      "end_time": 6.249
+    },
+    {
+      "character": "剑",
+      "start_time": 6.249,
+      "end_time": 6.395
+    },
+    {
+      "character": "的",
+      "start_time": 6.395,
+      "end_time": 6.462
+    },
+    {
+      "character": "手",
+      "start_time": 6.462,
+      "end_time": 6.787
+    },
+    {
+      "character": "微",
+      "start_time": 6.787,
+      "end_time": 7.008
+    },
+    {
+      "character": "微",
+      "start_time": 7.008,
+      "end_time": 7.141
+    },
+    {
+      "character": "颤",
+      "start_time": 7.141,
+      "end_time": 7.383
+    },
+    {
+      "character": "抖",
+      "start_time": 7.383,
+      "end_time": 7.574
+    },
+    {
+      "character": "，",
+      "start_time": 7.574,
+      "end_time": 7.829
+    },
+    {
+      "character": "第",
+      "start_time": 7.829,
+      "end_time": 7.954
+    },
+    {
+      "character": "一",
+      "start_time": 7.954,
+      "end_time": 8.095
+    },
+    {
+      "character": "次",
+      "start_time": 8.095,
+      "end_time": 8.254
+    },
+    {
+      "character": "感",
+      "start_time": 8.254,
+      "end_time": 8.449
+    },
+    {
+      "character": "到",
+      "start_time": 8.449,
+      "end_time": 8.579
+    },
+    {
+      "character": "恐",
+      "start_time": 8.579,
+      "end_time": 8.883
+    },
+    {
+      "character": "惧",
+      "start_time": 8.883,
+      "end_time": 9.058
     },
     {
       "character": "！",
-      "start_time": 7.779,
-      "end_time": 7.937
+      "start_time": 9.058,
+      "end_time": 9.217
     }
   ],
-  "generated_at": "2025-09-23T08:18:58.283569"
+  "generated_at": "2025-11-07T23:07:59.479996"
 }

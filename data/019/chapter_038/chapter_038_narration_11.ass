@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_038 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.09,Default,,0,0,0,,朱允熥起身走到{\c&H0000FFFF&\b1}李景隆{\c&H00FFFFFF&\b0}身边
+Dialogue: 0,0:00:02.41,0:00:03.09,Default,,0,0,0,,拍肩安慰
+Dialogue: 0,0:00:03.50,0:00:04.94,Default,,0,0,0,,君臣二人多年情谊
+Dialogue: 0,0:00:05.51,0:00:06.70,Default,,0,0,0,,他怎会轻易舍弃
+Dialogue: 0,0:00:07.11,0:00:08.01,Default,,0,0,0,,只是{\c&H0000FFFF&\b1}帝王{\c&H00FFFFFF&\b0}之术
+Dialogue: 0,0:00:08.35,0:00:09.62,Default,,0,0,0,,不得不权衡利弊

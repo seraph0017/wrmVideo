@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_039 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}李至刚{\c&H00FFFFFF&\b0}猛地转身面向窗外
+Dialogue: 0,0:00:02.35,0:00:04.94,Default,,0,0,0,,背影挺拔如松深紫色官袍被
+Dialogue: 0,0:00:04.94,0:00:06.24,Default,,0,0,0,,穿堂风微微吹动
+Dialogue: 0,0:00:06.73,0:00:07.98,Default,,0,0,0,,他语气沉稳却带着
+Dialogue: 0,0:00:07.98,0:00:09.37,Default,,0,0,0,,不容置疑的坚定
+Dialogue: 0,0:00:09.70,0:00:11.71,Default,,0,0,0,,严查到底不论涉及谁
+Dialogue: 0,0:00:11.98,0:00:14.28,Default,,0,0,0,,字字如{\c&H0000FFFF&\b1}金石{\c&H00FFFFFF&\b0}落地掷地有声

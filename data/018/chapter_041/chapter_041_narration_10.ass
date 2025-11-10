@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_041 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙隐湖{\c&H00FFFFFF&\b0}上空
+Dialogue: 0,0:00:01.30,0:00:03.25,Default,,0,0,0,,银剑宗宗主{\c&H0000FFFF&\b1}卜凡{\c&H00FFFFFF&\b0}立于水阵
+Dialogue: 0,0:00:03.25,0:00:03.60,Default,,0,0,0,,中央
+Dialogue: 0,0:00:04.04,0:00:05.89,Default,,0,0,0,,银色长袍被水汽浸透
+Dialogue: 0,0:00:06.33,0:00:08.83,Default,,0,0,0,,眼角疤痕在水光反射下如
+Dialogue: 0,0:00:08.83,0:00:09.62,Default,,0,0,0,,毒蛇{\c&H0000FFFF&\b1}吐信{\c&H00FFFFFF&\b0}

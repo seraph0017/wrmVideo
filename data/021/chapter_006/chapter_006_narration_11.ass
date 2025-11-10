@@ -14,8 +14,6 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}被神鸟喷火烧中衣角
-Dialogue: 0,0:00:02.37,0:00:04.20,Default,,0,0,0,,他急中生智震开地面塌陷
-Dialogue: 0,0:00:04.20,0:00:05.84,Default,,0,0,0,,躲避随即怒道
-Dialogue: 0,0:00:06.29,0:00:07.63,Default,,0,0,0,,你这忘恩负义的死鸟
-Dialogue: 0,0:00:07.95,0:00:09.29,Default,,0,0,0,,没有我你能孵化
+Dialogue: 0,0:00:00.02,0:00:01.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}在地面焦急观望
+Dialogue: 0,0:00:02.20,0:00:04.10,Default,,0,0,0,,听到底下打斗声却不敢靠近
+Dialogue: 0,0:00:04.50,0:00:06.17,Default,,0,0,0,,眉头紧锁满脸担忧

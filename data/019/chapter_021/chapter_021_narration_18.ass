@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_021 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.38,Default,,0,0,0,,朱允熥听完禀报面色稍缓
+Dialogue: 0,0:00:02.80,0:00:05.20,Default,,0,0,0,,他示意众人退下独自留在殿中
+Dialogue: 0,0:00:05.64,0:00:08.32,Default,,0,0,0,,窗外风雪渐停一缕{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}透过
+Dialogue: 0,0:00:08.32,0:00:10.44,Default,,0,0,0,,窗棂照进殿内映照在他
+Dialogue: 0,0:00:10.44,0:00:12.58,Default,,0,0,0,,杏黄色的袍服上仿佛给他
+Dialogue: 0,0:00:12.58,0:00:13.67,Default,,0,0,0,,镀上一层金边

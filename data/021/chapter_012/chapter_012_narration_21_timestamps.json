@@ -1,218 +1,378 @@
 {
-  "text": "吴双与敌死战！面对六名死士围攻，毫不畏惧，神象长枪舞动如飞，以伤换命，接连击杀敌人！",
-  "audio_file": "data/021/chapter_012/chapter_012_narration_21.mp3",
-  "duration": 8.775,
+  "text": "洪水席卷山坡！萧叔被大水冲飞，本命飞剑被白云吞噬，气得吐血怒吼！吴双趁机被水流卷走，消失在下游。这场追杀以吴双的险胜告终，但更大的危机还在等待着他！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_012/chapter_012_narration_21.mp3",
+  "duration": 15.425,
   "character_timestamps": [
     {
-      "character": "吴",
+      "character": "洪",
       "start_time": 0.016,
-      "end_time": 0.195
+      "end_time": 0.216
     },
     {
-      "character": "双",
-      "start_time": 0.195,
-      "end_time": 0.412
+      "character": "水",
+      "start_time": 0.216,
+      "end_time": 0.395
     },
     {
-      "character": "与",
-      "start_time": 0.412,
-      "end_time": 0.533
+      "character": "席",
+      "start_time": 0.395,
+      "end_time": 0.633
     },
     {
-      "character": "敌",
-      "start_time": 0.533,
-      "end_time": 0.687
+      "character": "卷",
+      "start_time": 0.633,
+      "end_time": 0.816
     },
     {
-      "character": "死",
-      "start_time": 0.687,
-      "end_time": 0.874
+      "character": "山",
+      "start_time": 0.816,
+      "end_time": 1.029
     },
     {
-      "character": "战",
-      "start_time": 0.874,
-      "end_time": 1.041
-    },
-    {
-      "character": "，",
-      "start_time": 1.041,
-      "end_time": 1.412
-    },
-    {
-      "character": "面",
-      "start_time": 1.412,
-      "end_time": 1.587
-    },
-    {
-      "character": "对",
-      "start_time": 1.587,
-      "end_time": 1.712
-    },
-    {
-      "character": "六",
-      "start_time": 1.712,
-      "end_time": 1.929
-    },
-    {
-      "character": "名",
-      "start_time": 1.929,
-      "end_time": 2.133
-    },
-    {
-      "character": "死",
-      "start_time": 2.133,
-      "end_time": 2.404
-    },
-    {
-      "character": "士",
-      "start_time": 2.404,
-      "end_time": 2.583
-    },
-    {
-      "character": "围",
-      "start_time": 2.583,
-      "end_time": 2.72
-    },
-    {
-      "character": "攻",
-      "start_time": 2.72,
-      "end_time": 2.908
+      "character": "坡",
+      "start_time": 1.029,
+      "end_time": 1.241
     },
     {
       "character": "，",
-      "start_time": 2.908,
-      "end_time": 3.183
+      "start_time": 1.241,
+      "end_time": 1.67
     },
     {
-      "character": "毫",
-      "start_time": 3.183,
-      "end_time": 3.437
+      "character": "萧",
+      "start_time": 1.67,
+      "end_time": 1.908
     },
     {
-      "character": "不",
-      "start_time": 3.437,
-      "end_time": 3.595
+      "character": "叔",
+      "start_time": 1.908,
+      "end_time": 2.083
     },
     {
-      "character": "畏",
-      "start_time": 3.595,
-      "end_time": 3.729
+      "character": "被",
+      "start_time": 2.083,
+      "end_time": 2.212
     },
     {
-      "character": "惧",
-      "start_time": 3.729,
-      "end_time": 3.912
+      "character": "大",
+      "start_time": 2.212,
+      "end_time": 2.424
     },
     {
-      "character": "，",
-      "start_time": 3.912,
-      "end_time": 4.287
+      "character": "水",
+      "start_time": 2.424,
+      "end_time": 2.604
     },
     {
-      "character": "神",
-      "start_time": 4.287,
-      "end_time": 4.504
-    },
-    {
-      "character": "象",
-      "start_time": 4.504,
-      "end_time": 4.699
-    },
-    {
-      "character": "长",
-      "start_time": 4.699,
-      "end_time": 4.941
-    },
-    {
-      "character": "枪",
-      "start_time": 4.941,
-      "end_time": 5.154
-    },
-    {
-      "character": "舞",
-      "start_time": 5.154,
-      "end_time": 5.37
-    },
-    {
-      "character": "动",
-      "start_time": 5.37,
-      "end_time": 5.52
-    },
-    {
-      "character": "如",
-      "start_time": 5.52,
-      "end_time": 5.662
+      "character": "冲",
+      "start_time": 2.604,
+      "end_time": 2.812
     },
     {
       "character": "飞",
-      "start_time": 5.662,
-      "end_time": 5.849
+      "start_time": 2.812,
+      "end_time": 2.991
     },
     {
       "character": "，",
-      "start_time": 5.849,
-      "end_time": 6.27
+      "start_time": 2.991,
+      "end_time": 3.462
     },
     {
-      "character": "以",
-      "start_time": 6.27,
-      "end_time": 6.449
-    },
-    {
-      "character": "伤",
-      "start_time": 6.449,
-      "end_time": 6.641
-    },
-    {
-      "character": "换",
-      "start_time": 6.641,
-      "end_time": 6.808
+      "character": "本",
+      "start_time": 3.462,
+      "end_time": 3.558
     },
     {
       "character": "命",
-      "start_time": 6.808,
-      "end_time": 6.991
+      "start_time": 3.558,
+      "end_time": 3.787
+    },
+    {
+      "character": "飞",
+      "start_time": 3.787,
+      "end_time": 3.987
+    },
+    {
+      "character": "剑",
+      "start_time": 3.987,
+      "end_time": 4.187
+    },
+    {
+      "character": "被",
+      "start_time": 4.187,
+      "end_time": 4.37
+    },
+    {
+      "character": "白",
+      "start_time": 4.37,
+      "end_time": 4.608
+    },
+    {
+      "character": "云",
+      "start_time": 4.608,
+      "end_time": 4.766
+    },
+    {
+      "character": "吞",
+      "start_time": 4.766,
+      "end_time": 4.991
+    },
+    {
+      "character": "噬",
+      "start_time": 4.991,
+      "end_time": 5.162
     },
     {
       "character": "，",
-      "start_time": 6.991,
-      "end_time": 7.391
+      "start_time": 5.162,
+      "end_time": 5.608
     },
     {
-      "character": "接",
-      "start_time": 7.391,
-      "end_time": 7.579
+      "character": "气",
+      "start_time": 5.608,
+      "end_time": 5.804
     },
     {
-      "character": "连",
-      "start_time": 7.579,
-      "end_time": 7.774
+      "character": "得",
+      "start_time": 5.804,
+      "end_time": 5.895
     },
     {
-      "character": "击",
-      "start_time": 7.774,
-      "end_time": 8.041
+      "character": "吐",
+      "start_time": 5.895,
+      "end_time": 6.104
+    },
+    {
+      "character": "血",
+      "start_time": 6.104,
+      "end_time": 6.274
+    },
+    {
+      "character": "怒",
+      "start_time": 6.274,
+      "end_time": 6.458
+    },
+    {
+      "character": "吼",
+      "start_time": 6.458,
+      "end_time": 6.674
+    },
+    {
+      "character": "，",
+      "start_time": 6.674,
+      "end_time": 7.187
+    },
+    {
+      "character": "吴",
+      "start_time": 7.187,
+      "end_time": 7.316
+    },
+    {
+      "character": "双",
+      "start_time": 7.316,
+      "end_time": 7.52
+    },
+    {
+      "character": "趁",
+      "start_time": 7.52,
+      "end_time": 7.799
+    },
+    {
+      "character": "机",
+      "start_time": 7.799,
+      "end_time": 7.937
+    },
+    {
+      "character": "被",
+      "start_time": 7.937,
+      "end_time": 8.058
+    },
+    {
+      "character": "水",
+      "start_time": 8.058,
+      "end_time": 8.287
+    },
+    {
+      "character": "流",
+      "start_time": 8.287,
+      "end_time": 8.433
+    },
+    {
+      "character": "卷",
+      "start_time": 8.433,
+      "end_time": 8.666
+    },
+    {
+      "character": "走",
+      "start_time": 8.666,
+      "end_time": 8.845
+    },
+    {
+      "character": "，",
+      "start_time": 8.845,
+      "end_time": 9.191
+    },
+    {
+      "character": "消",
+      "start_time": 9.191,
+      "end_time": 9.42
+    },
+    {
+      "character": "失",
+      "start_time": 9.42,
+      "end_time": 9.554
+    },
+    {
+      "character": "在",
+      "start_time": 9.554,
+      "end_time": 9.687
+    },
+    {
+      "character": "下",
+      "start_time": 9.687,
+      "end_time": 9.924
+    },
+    {
+      "character": "游",
+      "start_time": 9.924,
+      "end_time": 10.133
+    },
+    {
+      "character": "，",
+      "start_time": 10.133,
+      "end_time": 10.616
+    },
+    {
+      "character": "这",
+      "start_time": 10.616,
+      "end_time": 10.712
+    },
+    {
+      "character": "场",
+      "start_time": 10.712,
+      "end_time": 10.874
+    },
+    {
+      "character": "追",
+      "start_time": 10.874,
+      "end_time": 11.074
     },
     {
       "character": "杀",
-      "start_time": 8.041,
-      "end_time": 8.241
+      "start_time": 11.074,
+      "end_time": 11.262
     },
     {
-      "character": "敌",
-      "start_time": 8.241,
-      "end_time": 8.412
+      "character": "以",
+      "start_time": 11.262,
+      "end_time": 11.395
     },
     {
-      "character": "人",
-      "start_time": 8.412,
-      "end_time": 8.612
+      "character": "吴",
+      "start_time": 11.395,
+      "end_time": 11.595
+    },
+    {
+      "character": "双",
+      "start_time": 11.595,
+      "end_time": 11.766
+    },
+    {
+      "character": "的",
+      "start_time": 11.766,
+      "end_time": 11.837
+    },
+    {
+      "character": "险",
+      "start_time": 11.837,
+      "end_time": 12.099
+    },
+    {
+      "character": "胜",
+      "start_time": 12.099,
+      "end_time": 12.283
+    },
+    {
+      "character": "告",
+      "start_time": 12.283,
+      "end_time": 12.466
+    },
+    {
+      "character": "终",
+      "start_time": 12.466,
+      "end_time": 12.654
+    },
+    {
+      "character": "，",
+      "start_time": 12.654,
+      "end_time": 12.949
+    },
+    {
+      "character": "但",
+      "start_time": 12.949,
+      "end_time": 13.104
+    },
+    {
+      "character": "更",
+      "start_time": 13.104,
+      "end_time": 13.358
+    },
+    {
+      "character": "大",
+      "start_time": 13.358,
+      "end_time": 13.512
+    },
+    {
+      "character": "的",
+      "start_time": 13.512,
+      "end_time": 13.637
+    },
+    {
+      "character": "危",
+      "start_time": 13.637,
+      "end_time": 13.808
+    },
+    {
+      "character": "机",
+      "start_time": 13.808,
+      "end_time": 14.12
+    },
+    {
+      "character": "还",
+      "start_time": 14.12,
+      "end_time": 14.333
+    },
+    {
+      "character": "在",
+      "start_time": 14.333,
+      "end_time": 14.474
+    },
+    {
+      "character": "等",
+      "start_time": 14.474,
+      "end_time": 14.766
+    },
+    {
+      "character": "待",
+      "start_time": 14.766,
+      "end_time": 14.941
+    },
+    {
+      "character": "着",
+      "start_time": 14.941,
+      "end_time": 15.037
+    },
+    {
+      "character": "他",
+      "start_time": 15.037,
+      "end_time": 15.262
     },
     {
       "character": "！",
-      "start_time": 8.612,
-      "end_time": 8.771
+      "start_time": 15.262,
+      "end_time": 15.421
     }
   ],
-  "generated_at": "2025-09-23T08:20:40.770006"
+  "generated_at": "2025-11-07T23:11:00.088010"
 }

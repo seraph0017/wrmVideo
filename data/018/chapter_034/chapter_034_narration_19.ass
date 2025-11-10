@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_034 Narration 19 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}北冥雪{\c&H00FFFFFF&\b0}在复杂的阵法中穿梭
+Dialogue: 0,0:00:02.66,0:00:04.90,Default,,0,0,0,,手中记忆{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}晶石发出柔和
+Dialogue: 0,0:00:04.90,0:00:05.29,Default,,0,0,0,,光芒
+Dialogue: 0,0:00:05.70,0:00:07.64,Default,,0,0,0,,正记录着{\c&H0000FFFF&\b1}云海{\c&H00FFFFFF&\b0}宗阵法的脉络
+Dialogue: 0,0:00:07.98,0:00:08.76,Default,,0,0,0,,眼神专注
+Dialogue: 0,0:00:09.09,0:00:10.21,Default,,0,0,0,,动作敏捷利落

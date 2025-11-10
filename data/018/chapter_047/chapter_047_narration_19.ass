@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_047 Narration 19 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}金龙{\c&H00FFFFFF&\b0}被吴双带至上古战场
+Dialogue: 0,0:00:01.95,0:00:02.25,Default,,0,0,0,,遗迹
+Dialogue: 0,0:00:02.76,0:00:05.30,Default,,0,0,0,,他手持龙形令牌感应到强烈
+Dialogue: 0,0:00:05.30,0:00:07.89,Default,,0,0,0,,波动金色圆领袍在风中飘动
+Dialogue: 0,0:00:08.31,0:00:10.29,Default,,0,0,0,,眼神中充满好奇与警惕

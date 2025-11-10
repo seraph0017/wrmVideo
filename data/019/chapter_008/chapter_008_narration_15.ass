@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_008 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}高丽{\c&H00FFFFFF&\b0}骑兵先锋崔出水见
+Dialogue: 0,0:00:01.77,0:00:03.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}明军阵{\c&H00FFFFFF&\b0}中露出铁炮
+Dialogue: 0,0:00:03.71,0:00:04.41,Default,,0,0,0,,大惊失色
+Dialogue: 0,0:00:04.79,0:00:06.29,Default,,0,0,0,,却已来不及调整阵型
+Dialogue: 0,0:00:06.78,0:00:08.29,Default,,0,0,0,,骑兵速度已至极致
+Dialogue: 0,0:00:08.64,0:00:10.02,Default,,0,0,0,,只能硬着头皮冲锋

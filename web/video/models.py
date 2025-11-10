@@ -60,6 +60,12 @@ class Chapter(models.Model):
     novel = models.ForeignKey(Novel, on_delete=models.CASCADE, related_name='chapters', verbose_name='对应小说')
     video_path = models.CharField(max_length=255, blank=True, null=True, verbose_name='视频路径')
     
+    # 章节统计字段
+    script_count = models.IntegerField(default=0, verbose_name='脚本数量')
+    audio_count = models.IntegerField(default=0, verbose_name='旁白数量')
+    subtitle_count = models.IntegerField(default=0, verbose_name='字幕数量')
+    image_count = models.IntegerField(default=0, verbose_name='图片数量')
+    
     # 批量图片生成任务状态字段
     batch_image_status = models.CharField(max_length=20, choices=BATCH_IMAGE_STATUS_CHOICES, default='idle', verbose_name='批量图片生成状态')
     batch_image_task_id = models.CharField(max_length=100, blank=True, null=True, verbose_name='批量图片生成任务ID')

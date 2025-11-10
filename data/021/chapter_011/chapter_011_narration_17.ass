@@ -14,9 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.01,Default,,0,0,0,,丹药突然爆发出强烈的光芒
-Dialogue: 0,0:00:02.45,0:00:03.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}表情凝重
-Dialogue: 0,0:00:04.04,0:00:05.04,Default,,0,0,0,,全力控制丹药
-Dialogue: 0,0:00:05.55,0:00:07.83,Default,,0,0,0,,周围先天{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之气疯狂涌入
-Dialogue: 0,0:00:07.83,0:00:08.16,Default,,0,0,0,,其中
-Dialogue: 0,0:00:08.49,0:00:09.74,Default,,0,0,0,,场面十分壮观
+Dialogue: 0,0:00:00.02,0:00:00.65,Default,,0,0,0,,父子相认
+Dialogue: 0,0:00:01.11,0:00:03.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄感受到儿子突破气息
+Dialogue: 0,0:00:03.58,0:00:05.54,Default,,0,0,0,,冲入房间胡须颤抖
+Dialogue: 0,0:00:05.93,0:00:06.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}六海{\c&H00FFFFFF&\b0}境
+Dialogue: 0,0:00:07.04,0:00:08.31,Default,,0,0,0,,刚刚那神识是你
+Dialogue: 0,0:00:08.59,0:00:09.84,Default,,0,0,0,,激动得语无伦次

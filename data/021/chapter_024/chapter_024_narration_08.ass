@@ -14,8 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.33,Default,,0,0,0,,她微微低头{\c&H0000FFFF&\b1}长发{\c&H00FFFFFF&\b0}垂落遮住
-Dialogue: 0,0:00:02.33,0:00:02.72,Default,,0,0,0,,侧脸
-Dialogue: 0,0:00:03.12,0:00:05.75,Default,,0,0,0,,浅青色裙摆轻扫{\c&H0000FFFF&\b1}石阶{\c&H00FFFFFF&\b0}口中
-Dialogue: 0,0:00:05.75,0:00:08.20,Default,,0,0,0,,低声嘟囔似在给自己打气又
-Dialogue: 0,0:00:08.20,0:00:09.72,Default,,0,0,0,,似在担忧远方之人
+Dialogue: 0,0:00:00.02,0:00:01.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}寻宝{\c&H00FFFFFF&\b0}店伙计站在店铺门口
+Dialogue: 0,0:00:02.26,0:00:04.44,Default,,0,0,0,,灰色圆领袍胸前绣有{\c&H0000FFFF&\b1}寻宝{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.44,0:00:06.07,Default,,0,0,0,,字样正接待{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.51,0:00:08.51,Default,,0,0,0,,当听到{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}询问去云海宗的
+Dialogue: 0,0:00:08.51,0:00:11.58,Default,,0,0,0,,地图时他瞪大双眼面露震惊
+Dialogue: 0,0:00:12.02,0:00:13.38,Default,,0,0,0,,仿佛听到了不可思议的
+Dialogue: 0,0:00:13.38,0:00:15.65,Default,,0,0,0,,事情周围{\c&H0000FFFF&\b1}顾客{\c&H00FFFFFF&\b0}也纷纷侧目

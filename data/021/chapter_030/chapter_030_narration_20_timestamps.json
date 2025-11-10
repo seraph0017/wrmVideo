@@ -1,268 +1,298 @@
 {
-  "text": "吴双无视苏一鸣炼丹，径直走向药库：“你先炼着，我看看药材。”手指向药库深处：“那里，有我需要的东西！”眼神发亮。",
-  "audio_file": "data/021/chapter_030/chapter_030_narration_20.mp3",
-  "duration": 9.816,
+  "text": "苏一鸣见吴双发现自己，不再隐藏，手持晶石冲上前去，大声呼喊着吴双是神界第一骗，试图阻止吴双离开，脸上露出疯狂的表情。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_030/chapter_030_narration_20.mp3",
+  "duration": 11.391,
   "character_timestamps": [
     {
-      "character": "吴",
-      "start_time": 0.02,
-      "end_time": 0.174
-    },
-    {
-      "character": "双",
-      "start_time": 0.174,
-      "end_time": 0.383
-    },
-    {
-      "character": "无",
-      "start_time": 0.383,
-      "end_time": 0.541
-    },
-    {
-      "character": "视",
-      "start_time": 0.541,
-      "end_time": 0.704
-    },
-    {
       "character": "苏",
-      "start_time": 0.704,
-      "end_time": 0.883
+      "start_time": 0.016,
+      "end_time": 0.191
     },
     {
       "character": "一",
-      "start_time": 0.883,
-      "end_time": 0.983
+      "start_time": 0.191,
+      "end_time": 0.287
     },
     {
       "character": "鸣",
-      "start_time": 0.983,
-      "end_time": 1.145
+      "start_time": 0.287,
+      "end_time": 0.454
     },
     {
-      "character": "炼",
-      "start_time": 1.145,
-      "end_time": 1.32
+      "character": "见",
+      "start_time": 0.454,
+      "end_time": 0.658
     },
     {
-      "character": "丹",
-      "start_time": 1.32,
-      "end_time": 1.512
+      "character": "吴",
+      "start_time": 0.658,
+      "end_time": 0.766
     },
     {
-      "character": "，",
-      "start_time": 1.512,
-      "end_time": 1.912
-    },
-    {
-      "character": "径",
-      "start_time": 1.912,
-      "end_time": 2.116
-    },
-    {
-      "character": "直",
-      "start_time": 2.116,
-      "end_time": 2.266
-    },
-    {
-      "character": "走",
-      "start_time": 2.266,
-      "end_time": 2.454
-    },
-    {
-      "character": "向",
-      "start_time": 2.454,
-      "end_time": 2.616
-    },
-    {
-      "character": "药",
-      "start_time": 2.616,
-      "end_time": 2.795
-    },
-    {
-      "character": "库",
-      "start_time": 2.795,
-      "end_time": 2.987
-    },
-    {
-      "character": "：",
-      "start_time": 2.987,
-      "end_time": 3.308
-    },
-    {
-      "character": "你",
-      "start_time": 3.308,
-      "end_time": 3.433
-    },
-    {
-      "character": "先",
-      "start_time": 3.433,
-      "end_time": 3.599
-    },
-    {
-      "character": "炼",
-      "start_time": 3.599,
-      "end_time": 3.812
-    },
-    {
-      "character": "着",
-      "start_time": 3.812,
-      "end_time": 3.92
-    },
-    {
-      "character": "，",
-      "start_time": 3.92,
-      "end_time": 4.304
-    },
-    {
-      "character": "我",
-      "start_time": 4.304,
-      "end_time": 4.408
-    },
-    {
-      "character": "看",
-      "start_time": 4.408,
-      "end_time": 4.595
-    },
-    {
-      "character": "看",
-      "start_time": 4.595,
-      "end_time": 4.724
-    },
-    {
-      "character": "药",
-      "start_time": 4.724,
-      "end_time": 4.845
-    },
-    {
-      "character": "材",
-      "start_time": 4.845,
-      "end_time": 5.12
-    },
-    {
-      "character": "，",
-      "start_time": 5.12,
-      "end_time": 5.42
-    },
-    {
-      "character": "手",
-      "start_time": 5.42,
-      "end_time": 5.633
-    },
-    {
-      "character": "指",
-      "start_time": 5.633,
-      "end_time": 5.762
-    },
-    {
-      "character": "向",
-      "start_time": 5.762,
-      "end_time": 5.899
-    },
-    {
-      "character": "药",
-      "start_time": 5.899,
-      "end_time": 5.995
-    },
-    {
-      "character": "库",
-      "start_time": 5.995,
-      "end_time": 6.174
-    },
-    {
-      "character": "深",
-      "start_time": 6.174,
-      "end_time": 6.391
-    },
-    {
-      "character": "处",
-      "start_time": 6.391,
-      "end_time": 6.541
-    },
-    {
-      "character": "：",
-      "start_time": 6.541,
-      "end_time": 6.866
-    },
-    {
-      "character": "那",
-      "start_time": 6.866,
-      "end_time": 7.029
-    },
-    {
-      "character": "里",
-      "start_time": 7.029,
-      "end_time": 7.224
-    },
-    {
-      "character": "，",
-      "start_time": 7.224,
-      "end_time": 7.516
-    },
-    {
-      "character": "有",
-      "start_time": 7.516,
-      "end_time": 7.67
-    },
-    {
-      "character": "我",
-      "start_time": 7.67,
-      "end_time": 7.799
-    },
-    {
-      "character": "需",
-      "start_time": 7.799,
-      "end_time": 7.97
-    },
-    {
-      "character": "要",
-      "start_time": 7.97,
-      "end_time": 8.083
-    },
-    {
-      "character": "的",
-      "start_time": 8.083,
-      "end_time": 8.162
-    },
-    {
-      "character": "东",
-      "start_time": 8.162,
-      "end_time": 8.324
-    },
-    {
-      "character": "西",
-      "start_time": 8.324,
-      "end_time": 8.524
-    },
-    {
-      "character": "，",
-      "start_time": 8.524,
-      "end_time": 8.804
-    },
-    {
-      "character": "眼",
-      "start_time": 8.804,
-      "end_time": 9.095
-    },
-    {
-      "character": "神",
-      "start_time": 9.095,
-      "end_time": 9.312
+      "character": "双",
+      "start_time": 0.766,
+      "end_time": 0.941
     },
     {
       "character": "发",
-      "start_time": 9.312,
-      "end_time": 9.537
+      "start_time": 0.941,
+      "end_time": 1.112
     },
     {
-      "character": "亮",
-      "start_time": 9.537,
-      "end_time": 9.658
+      "character": "现",
+      "start_time": 1.112,
+      "end_time": 1.262
+    },
+    {
+      "character": "自",
+      "start_time": 1.262,
+      "end_time": 1.395
+    },
+    {
+      "character": "己",
+      "start_time": 1.395,
+      "end_time": 1.583
+    },
+    {
+      "character": "，",
+      "start_time": 1.583,
+      "end_time": 1.933
+    },
+    {
+      "character": "不",
+      "start_time": 1.933,
+      "end_time": 2.012
+    },
+    {
+      "character": "再",
+      "start_time": 2.012,
+      "end_time": 2.154
+    },
+    {
+      "character": "隐",
+      "start_time": 2.154,
+      "end_time": 2.329
+    },
+    {
+      "character": "藏",
+      "start_time": 2.329,
+      "end_time": 2.595
+    },
+    {
+      "character": "，",
+      "start_time": 2.595,
+      "end_time": 2.999
+    },
+    {
+      "character": "手",
+      "start_time": 2.999,
+      "end_time": 3.199
+    },
+    {
+      "character": "持",
+      "start_time": 3.199,
+      "end_time": 3.349
+    },
+    {
+      "character": "晶",
+      "start_time": 3.349,
+      "end_time": 3.562
+    },
+    {
+      "character": "石",
+      "start_time": 3.562,
+      "end_time": 3.774
+    },
+    {
+      "character": "冲",
+      "start_time": 3.774,
+      "end_time": 3.987
+    },
+    {
+      "character": "上",
+      "start_time": 3.987,
+      "end_time": 4.145
+    },
+    {
+      "character": "前",
+      "start_time": 4.145,
+      "end_time": 4.362
+    },
+    {
+      "character": "去",
+      "start_time": 4.362,
+      "end_time": 4.516
+    },
+    {
+      "character": "，",
+      "start_time": 4.516,
+      "end_time": 5.016
+    },
+    {
+      "character": "大",
+      "start_time": 5.016,
+      "end_time": 5.187
+    },
+    {
+      "character": "声",
+      "start_time": 5.187,
+      "end_time": 5.362
+    },
+    {
+      "character": "呼",
+      "start_time": 5.362,
+      "end_time": 5.533
+    },
+    {
+      "character": "喊",
+      "start_time": 5.533,
+      "end_time": 5.708
+    },
+    {
+      "character": "着",
+      "start_time": 5.708,
+      "end_time": 5.879
+    },
+    {
+      "character": "吴",
+      "start_time": 5.879,
+      "end_time": 6.037
+    },
+    {
+      "character": "双",
+      "start_time": 6.037,
+      "end_time": 6.304
+    },
+    {
+      "character": "是",
+      "start_time": 6.304,
+      "end_time": 6.483
+    },
+    {
+      "character": "神",
+      "start_time": 6.483,
+      "end_time": 6.737
+    },
+    {
+      "character": "界",
+      "start_time": 6.737,
+      "end_time": 6.895
+    },
+    {
+      "character": "第",
+      "start_time": 6.895,
+      "end_time": 7.054
+    },
+    {
+      "character": "一",
+      "start_time": 7.054,
+      "end_time": 7.166
+    },
+    {
+      "character": "骗",
+      "start_time": 7.166,
+      "end_time": 7.341
+    },
+    {
+      "character": "，",
+      "start_time": 7.341,
+      "end_time": 7.77
+    },
+    {
+      "character": "试",
+      "start_time": 7.77,
+      "end_time": 7.941
+    },
+    {
+      "character": "图",
+      "start_time": 7.941,
+      "end_time": 8.087
+    },
+    {
+      "character": "阻",
+      "start_time": 8.087,
+      "end_time": 8.32
+    },
+    {
+      "character": "止",
+      "start_time": 8.32,
+      "end_time": 8.495
+    },
+    {
+      "character": "吴",
+      "start_time": 8.495,
+      "end_time": 8.624
+    },
+    {
+      "character": "双",
+      "start_time": 8.624,
+      "end_time": 8.824
+    },
+    {
+      "character": "离",
+      "start_time": 8.824,
+      "end_time": 9.008
+    },
+    {
+      "character": "开",
+      "start_time": 9.008,
+      "end_time": 9.216
+    },
+    {
+      "character": "，",
+      "start_time": 9.216,
+      "end_time": 9.541
+    },
+    {
+      "character": "脸",
+      "start_time": 9.541,
+      "end_time": 9.745
+    },
+    {
+      "character": "上",
+      "start_time": 9.745,
+      "end_time": 9.912
+    },
+    {
+      "character": "露",
+      "start_time": 9.912,
+      "end_time": 10.045
+    },
+    {
+      "character": "出",
+      "start_time": 10.045,
+      "end_time": 10.204
+    },
+    {
+      "character": "疯",
+      "start_time": 10.204,
+      "end_time": 10.508
+    },
+    {
+      "character": "狂",
+      "start_time": 10.508,
+      "end_time": 10.695
+    },
+    {
+      "character": "的",
+      "start_time": 10.695,
+      "end_time": 10.762
+    },
+    {
+      "character": "表",
+      "start_time": 10.762,
+      "end_time": 10.974
+    },
+    {
+      "character": "情",
+      "start_time": 10.974,
+      "end_time": 11.229
     },
     {
       "character": "。",
-      "start_time": 9.658,
-      "end_time": 9.817
+      "start_time": 11.229,
+      "end_time": 11.387
     }
   ],
-  "generated_at": "2025-09-23T08:27:48.014728"
+  "generated_at": "2025-11-07T23:19:21.941984"
 }

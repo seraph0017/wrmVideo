@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_047 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.32,Default,,0,0,0,,裂空树彻底震撼
+Dialogue: 0,0:00:01.79,0:00:03.33,Default,,0,0,0,,苍老面容满是惊骇
+Dialogue: 0,0:00:03.76,0:00:04.19,Default,,0,0,0,,不可能
+Dialogue: 0,0:00:04.72,0:00:06.44,Default,,0,0,0,,几万年岁月从未见过
+Dialogue: 0,0:00:06.44,0:00:07.82,Default,,0,0,0,,有人能在其内部空间
+Dialogue: 0,0:00:07.82,0:00:11.14,Default,,0,0,0,,来去自如光芒剧烈闪烁细线
+Dialogue: 0,0:00:11.14,0:00:13.08,Default,,0,0,0,,乱颤活久见的震惊

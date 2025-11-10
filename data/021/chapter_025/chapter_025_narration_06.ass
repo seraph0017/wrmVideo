@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}贵宾{\c&H00FFFFFF&\b0}包间内卜一峰发现有人
-Dialogue: 0,0:00:02.32,0:00:03.55,Default,,0,0,0,,竞价怒不可遏
-Dialogue: 0,0:00:03.86,0:00:06.30,Default,,0,0,0,,他解除阵法站起身折扇直指
-Dialogue: 0,0:00:06.30,0:00:08.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵猛{\c&H00FFFFFF&\b0}下令手下将其抓来
+Dialogue: 0,0:00:00.02,0:00:01.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}却显得异常冷静
+Dialogue: 0,0:00:01.92,0:00:03.73,Default,,0,0,0,,端起茶杯轻轻抿了一口
+Dialogue: 0,0:00:04.25,0:00:05.73,Default,,0,0,0,,眼神中闪过一丝不屑
+Dialogue: 0,0:00:06.15,0:00:08.22,Default,,0,0,0,,似乎早已料到卜一峰会有此
+Dialogue: 0,0:00:08.22,0:00:08.56,Default,,0,0,0,,举动

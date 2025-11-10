@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_037 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.84,Default,,0,0,0,,盗中至尊{\c&H0000FFFF&\b1}郑器{\c&H00FFFFFF&\b0}黑袍猎猎
+Dialogue: 0,0:00:02.27,0:00:03.22,Default,,0,0,0,,立于万丈之外
+Dialogue: 0,0:00:03.65,0:00:05.21,Default,,0,0,0,,虽面对{\c&H0000FFFF&\b1}三星{\c&H00FFFFFF&\b0}境威压却
+Dialogue: 0,0:00:05.21,0:00:05.91,Default,,0,0,0,,谈笑自若
+Dialogue: 0,0:00:06.42,0:00:07.72,Default,,0,0,0,,指尖把玩一枚{\c&H0000FFFF&\b1}玉简{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.12,0:00:09.79,Default,,0,0,0,,目光扫向{\c&H0000FFFF&\b1}云海{\c&H00FFFFFF&\b0}宗深处
+Dialogue: 0,0:00:10.04,0:00:11.49,Default,,0,0,0,,似在探寻{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}踪迹

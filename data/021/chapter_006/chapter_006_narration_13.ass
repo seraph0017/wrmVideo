@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}抓起千斤铁棍重重砸向
-Dialogue: 0,0:00:02.70,0:00:03.42,Default,,0,0,0,,神鸟头部
-Dialogue: 0,0:00:03.74,0:00:06.29,Default,,0,0,0,,神鸟眼睛一翻倒地嘴里嘟囔
-Dialogue: 0,0:00:06.78,0:00:07.29,Default,,0,0,0,,你耍赖
-Dialogue: 0,0:00:07.39,0:00:08.89,Default,,0,0,0,,太他妈坏了
+Dialogue: 0,0:00:00.02,0:00:01.06,Default,,0,0,0,,贱鸟晕死在地
+Dialogue: 0,0:00:01.44,0:00:02.43,Default,,0,0,0,,黑色羽毛凌乱
+Dialogue: 0,0:00:02.71,0:00:03.17,Default,,0,0,0,,喙微张
+Dialogue: 0,0:00:03.61,0:00:04.37,Default,,0,0,0,,似在说梦话
+Dialogue: 0,0:00:04.64,0:00:06.21,Default,,0,0,0,,身体蜷缩如烤鸡

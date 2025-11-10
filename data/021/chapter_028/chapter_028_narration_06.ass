@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}梅丽丹{\c&H00FFFFFF&\b0}躬身进入密室双手
-Dialogue: 0,0:00:02.28,0:00:04.28,Default,,0,0,0,,交叠于腹前低声禀报
-Dialogue: 0,0:00:04.61,0:00:06.84,Default,,0,0,0,,少主九{\c&H0000FFFF&\b1}宫城{\c&H00FFFFFF&\b0}发现可疑人物
-Dialogue: 0,0:00:07.14,0:00:08.64,Default,,0,0,0,,疑似神藏遗迹那人
+Dialogue: 0,0:00:00.02,0:00:02.51,Default,,0,0,0,,弓{\c&H0000FFFF&\b1}青云{\c&H00FFFFFF&\b0}融合成功后气势大增
+Dialogue: 0,0:00:02.99,0:00:05.14,Default,,0,0,0,,他站起身眼中闪烁着野心
+Dialogue: 0,0:00:05.51,0:00:07.71,Default,,0,0,0,,得知{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}的消息他决定亲自
+Dialogue: 0,0:00:07.71,0:00:09.30,Default,,0,0,0,,前往一雪前耻
+Dialogue: 0,0:00:09.65,0:00:10.96,Default,,0,0,0,,周身散发出强大的
+Dialogue: 0,0:00:10.96,0:00:13.36,Default,,0,0,0,,气息密室的石壁微微震动

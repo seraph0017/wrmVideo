@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.73,Default,,0,0,0,,借刀杀人
-Dialogue: 0,0:00:01.16,0:00:03.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}金龙{\c&H00FFFFFF&\b0}冷笑挑衅狂鲨你敢杀
-Dialogue: 0,0:00:03.23,0:00:05.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}小子吗狂鲨果然暴怒
-Dialogue: 0,0:00:06.21,0:00:08.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}扬言{\c&H00FFFFFF&\b0}让你见识厉害带着
-Dialogue: 0,0:00:08.12,0:00:09.85,Default,,0,0,0,,手下冲向{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}所在地
+Dialogue: 0,0:00:00.02,0:00:02.44,Default,,0,0,0,,龙门崖上空{\c&H0000FFFF&\b1}金龙{\c&H00FFFFFF&\b0}折扇轻摇
+Dialogue: 0,0:00:02.74,0:00:04.63,Default,,0,0,0,,俯视{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}嘴角带笑
+Dialogue: 0,0:00:05.02,0:00:06.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}的妖孽
+Dialogue: 0,0:00:06.29,0:00:09.15,Default,,0,0,0,,果然有趣狂鲨这蠢货要遭殃了

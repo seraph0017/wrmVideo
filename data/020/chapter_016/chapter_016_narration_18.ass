@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_016 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.53,Default,,0,0,0,,破衣烂衫的烽火三月
+Dialogue: 0,0:00:02.07,0:00:04.37,Default,,0,0,0,,灰色圆领袍多处破损头发
+Dialogue: 0,0:00:04.37,0:00:06.75,Default,,0,0,0,,烧焦一半脸上带伤却拍着
+Dialogue: 0,0:00:06.75,0:00:07.21,Default,,0,0,0,,胸脯
+Dialogue: 0,0:00:07.61,0:00:08.71,Default,,0,0,0,,天乱大陆我熟
+Dialogue: 0,0:00:09.15,0:00:11.24,Default,,0,0,0,,谁敢对{\c&H0000FFFF&\b1}小美人{\c&H00FFFFFF&\b0}无礼我劈了
+Dialogue: 0,0:00:11.24,0:00:11.49,Default,,0,0,0,,他们
+Dialogue: 0,0:00:11.77,0:00:12.56,Default,,0,0,0,,语气嚣张

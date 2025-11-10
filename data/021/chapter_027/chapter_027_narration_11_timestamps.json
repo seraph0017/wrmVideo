@@ -1,193 +1,228 @@
 {
-  "text": "青狼眼暴怒，独眼怒视吴双，身体周围掀起气浪，全速追击，表情狰狞，气势汹汹。",
-  "audio_file": "data/021/chapter_027/chapter_027_narration_11.mp3",
-  "duration": 8.0,
+  "text": "沙利催动剑阵，六合印凝聚成型，与青狼眼青狼虚影碰撞，爆炸声中天地震动，下方出现巨大深坑",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_027/chapter_027_narration_11.mp3",
+  "duration": 8.866,
   "character_timestamps": [
     {
-      "character": "青",
+      "character": "沙",
       "start_time": 0.02,
-      "end_time": 0.208
+      "end_time": 0.287
+    },
+    {
+      "character": "利",
+      "start_time": 0.287,
+      "end_time": 0.429
+    },
+    {
+      "character": "催",
+      "start_time": 0.429,
+      "end_time": 0.666
+    },
+    {
+      "character": "动",
+      "start_time": 0.666,
+      "end_time": 0.82
+    },
+    {
+      "character": "剑",
+      "start_time": 0.82,
+      "end_time": 1.012
+    },
+    {
+      "character": "阵",
+      "start_time": 1.012,
+      "end_time": 1.162
+    },
+    {
+      "character": "，",
+      "start_time": 1.162,
+      "end_time": 1.508
+    },
+    {
+      "character": "六",
+      "start_time": 1.508,
+      "end_time": 1.712
+    },
+    {
+      "character": "合",
+      "start_time": 1.712,
+      "end_time": 1.854
+    },
+    {
+      "character": "印",
+      "start_time": 1.854,
+      "end_time": 1.979
+    },
+    {
+      "character": "凝",
+      "start_time": 1.979,
+      "end_time": 2.212
+    },
+    {
+      "character": "聚",
+      "start_time": 2.212,
+      "end_time": 2.362
+    },
+    {
+      "character": "成",
+      "start_time": 2.362,
+      "end_time": 2.554
+    },
+    {
+      "character": "型",
+      "start_time": 2.554,
+      "end_time": 2.804
+    },
+    {
+      "character": "，",
+      "start_time": 2.804,
+      "end_time": 3.254
+    },
+    {
+      "character": "与",
+      "start_time": 3.254,
+      "end_time": 3.379
+    },
+    {
+      "character": "青",
+      "start_time": 3.379,
+      "end_time": 3.616
     },
     {
       "character": "狼",
-      "start_time": 0.208,
-      "end_time": 0.349
+      "start_time": 3.616,
+      "end_time": 3.779
     },
     {
       "character": "眼",
-      "start_time": 0.349,
-      "end_time": 0.504
+      "start_time": 3.779,
+      "end_time": 3.974
     },
     {
-      "character": "暴",
-      "start_time": 0.504,
-      "end_time": 0.708
+      "character": "青",
+      "start_time": 3.974,
+      "end_time": 4.241
     },
     {
-      "character": "怒",
-      "start_time": 0.708,
-      "end_time": 0.858
+      "character": "狼",
+      "start_time": 4.241,
+      "end_time": 4.416
     },
     {
-      "character": "，",
-      "start_time": 0.858,
-      "end_time": 1.249
+      "character": "虚",
+      "start_time": 4.416,
+      "end_time": 4.587
     },
     {
-      "character": "独",
-      "start_time": 1.249,
-      "end_time": 1.412
+      "character": "影",
+      "start_time": 4.587,
+      "end_time": 4.729
     },
     {
-      "character": "眼",
-      "start_time": 1.412,
-      "end_time": 1.549
+      "character": "碰",
+      "start_time": 4.729,
+      "end_time": 4.941
     },
     {
-      "character": "怒",
-      "start_time": 1.549,
-      "end_time": 1.787
-    },
-    {
-      "character": "视",
-      "start_time": 1.787,
-      "end_time": 1.958
-    },
-    {
-      "character": "吴",
-      "start_time": 1.958,
-      "end_time": 2.091
-    },
-    {
-      "character": "双",
-      "start_time": 2.091,
-      "end_time": 2.291
+      "character": "撞",
+      "start_time": 4.941,
+      "end_time": 5.087
     },
     {
       "character": "，",
-      "start_time": 2.291,
-      "end_time": 2.699
+      "start_time": 5.087,
+      "end_time": 5.441
     },
     {
-      "character": "身",
-      "start_time": 2.699,
-      "end_time": 2.908
+      "character": "爆",
+      "start_time": 5.441,
+      "end_time": 5.595
     },
     {
-      "character": "体",
-      "start_time": 2.908,
-      "end_time": 3.041
+      "character": "炸",
+      "start_time": 5.595,
+      "end_time": 5.737
     },
     {
-      "character": "周",
-      "start_time": 3.041,
-      "end_time": 3.229
+      "character": "声",
+      "start_time": 5.737,
+      "end_time": 5.904
     },
     {
-      "character": "围",
-      "start_time": 3.229,
-      "end_time": 3.416
+      "character": "中",
+      "start_time": 5.904,
+      "end_time": 6.07
     },
     {
-      "character": "掀",
-      "start_time": 3.416,
-      "end_time": 3.729
+      "character": "天",
+      "start_time": 6.07,
+      "end_time": 6.362
     },
     {
-      "character": "起",
-      "start_time": 3.729,
-      "end_time": 3.895
+      "character": "地",
+      "start_time": 6.362,
+      "end_time": 6.499
     },
     {
-      "character": "气",
-      "start_time": 3.895,
-      "end_time": 4.095
+      "character": "震",
+      "start_time": 6.499,
+      "end_time": 6.674
     },
     {
-      "character": "浪",
-      "start_time": 4.095,
-      "end_time": 4.233
-    },
-    {
-      "character": "，",
-      "start_time": 4.233,
-      "end_time": 4.658
-    },
-    {
-      "character": "全",
-      "start_time": 4.658,
-      "end_time": 4.924
-    },
-    {
-      "character": "速",
-      "start_time": 4.924,
-      "end_time": 5.112
-    },
-    {
-      "character": "追",
-      "start_time": 5.112,
-      "end_time": 5.295
-    },
-    {
-      "character": "击",
-      "start_time": 5.295,
-      "end_time": 5.495
+      "character": "动",
+      "start_time": 6.674,
+      "end_time": 6.816
     },
     {
       "character": "，",
-      "start_time": 5.495,
-      "end_time": 5.799
+      "start_time": 6.816,
+      "end_time": 7.199
     },
     {
-      "character": "表",
-      "start_time": 5.799,
-      "end_time": 5.995
+      "character": "下",
+      "start_time": 7.199,
+      "end_time": 7.395
     },
     {
-      "character": "情",
-      "start_time": 5.995,
-      "end_time": 6.199
+      "character": "方",
+      "start_time": 7.395,
+      "end_time": 7.566
     },
     {
-      "character": "狰",
-      "start_time": 6.199,
-      "end_time": 6.387
+      "character": "出",
+      "start_time": 7.566,
+      "end_time": 7.712
     },
     {
-      "character": "狞",
-      "start_time": 6.387,
-      "end_time": 6.624
+      "character": "现",
+      "start_time": 7.712,
+      "end_time": 7.891
     },
     {
-      "character": "，",
-      "start_time": 6.624,
-      "end_time": 6.908
+      "character": "巨",
+      "start_time": 7.891,
+      "end_time": 8.162
     },
     {
-      "character": "气",
-      "start_time": 6.908,
-      "end_time": 7.229
+      "character": "大",
+      "start_time": 8.162,
+      "end_time": 8.324
     },
     {
-      "character": "势",
-      "start_time": 7.229,
-      "end_time": 7.433
+      "character": "深",
+      "start_time": 8.324,
+      "end_time": 8.52
     },
     {
-      "character": "汹",
-      "start_time": 7.433,
-      "end_time": 7.654
-    },
-    {
-      "character": "汹",
-      "start_time": 7.654,
-      "end_time": 7.841
+      "character": "坑",
+      "start_time": 8.52,
+      "end_time": 8.708
     },
     {
       "character": "。",
-      "start_time": 7.841,
-      "end_time": 8.0
+      "start_time": 8.708,
+      "end_time": 8.867
     }
   ],
-  "generated_at": "2025-09-23T08:26:22.248498"
+  "generated_at": "2025-11-07T23:17:40.792763"
 }

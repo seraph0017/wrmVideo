@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.94,Default,,0,0,0,,海风乘坐碧眼{\c&H0000FFFF&\b1}金鳞兽{\c&H00FFFFFF&\b0}出现在
-Dialogue: 0,0:00:01.94,0:00:02.31,Default,,0,0,0,,空中
-Dialogue: 0,0:00:02.66,0:00:03.41,Default,,0,0,0,,白衣胜雪
-Dialogue: 0,0:00:03.74,0:00:04.52,Default,,0,0,0,,气质威严
-Dialogue: 0,0:00:04.92,0:00:06.76,Default,,0,0,0,,神盘境的威压笼罩四周
-Dialogue: 0,0:00:07.11,0:00:08.67,Default,,0,0,0,,让湖面都泛起涟漪
+Dialogue: 0,0:00:00.02,0:00:01.46,Default,,0,0,0,,碧眼{\c&H0000FFFF&\b1}金鳞兽{\c&H00FFFFFF&\b0}加速百里
+Dialogue: 0,0:00:01.94,0:00:04.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}立于兽背承受恐怖风压
+Dialogue: 0,0:00:04.43,0:00:06.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}六海{\c&H00FFFFFF&\b0}之力运转至极限衣衫
+Dialogue: 0,0:00:06.69,0:00:08.90,Default,,0,0,0,,猎猎作响却趁机{\c&H0000FFFF&\b1}淬炼{\c&H00FFFFFF&\b0}身体
+Dialogue: 0,0:00:09.27,0:00:11.67,Default,,0,0,0,,第六海中期悄然突破至后期

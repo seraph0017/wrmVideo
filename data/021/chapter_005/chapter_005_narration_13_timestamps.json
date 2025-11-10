@@ -1,223 +1,238 @@
 {
-  "text": "吴双突然出现，大喊吸引赵牧等人注意，同时推下准备好的巨石，引发小型山崩，阻断敌人视线！",
-  "audio_file": "data/021/chapter_005/chapter_005_narration_13.mp3",
-  "duration": 8.441,
+  "text": "丹道总纲洗礼！吴双现学现用，解析体内力量本质，梳理杂乱元灵之气，地泉压缩速度暴涨，突破在即！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_005/chapter_005_narration_13.mp3",
+  "duration": 8.808,
   "character_timestamps": [
     {
+      "character": "丹",
+      "start_time": 0.02,
+      "end_time": 0.166
+    },
+    {
+      "character": "道",
+      "start_time": 0.166,
+      "end_time": 0.295
+    },
+    {
+      "character": "总",
+      "start_time": 0.295,
+      "end_time": 0.516
+    },
+    {
+      "character": "纲",
+      "start_time": 0.516,
+      "end_time": 0.683
+    },
+    {
+      "character": "洗",
+      "start_time": 0.683,
+      "end_time": 0.879
+    },
+    {
+      "character": "礼",
+      "start_time": 0.879,
+      "end_time": 1.024
+    },
+    {
+      "character": "，",
+      "start_time": 1.024,
+      "end_time": 1.454
+    },
+    {
       "character": "吴",
-      "start_time": 0.016,
-      "end_time": 0.179
+      "start_time": 1.454,
+      "end_time": 1.616
     },
     {
       "character": "双",
-      "start_time": 0.179,
-      "end_time": 0.387
-    },
-    {
-      "character": "突",
-      "start_time": 0.387,
-      "end_time": 0.591
-    },
-    {
-      "character": "然",
-      "start_time": 0.591,
-      "end_time": 0.745
-    },
-    {
-      "character": "出",
-      "start_time": 0.745,
-      "end_time": 0.899
+      "start_time": 1.616,
+      "end_time": 1.795
     },
     {
       "character": "现",
-      "start_time": 0.899,
-      "end_time": 1.074
+      "start_time": 1.795,
+      "end_time": 1.999
+    },
+    {
+      "character": "学",
+      "start_time": 1.999,
+      "end_time": 2.154
+    },
+    {
+      "character": "现",
+      "start_time": 2.154,
+      "end_time": 2.341
+    },
+    {
+      "character": "用",
+      "start_time": 2.341,
+      "end_time": 2.47
     },
     {
       "character": "，",
-      "start_time": 1.074,
-      "end_time": 1.516
+      "start_time": 2.47,
+      "end_time": 2.754
     },
     {
-      "character": "大",
-      "start_time": 1.516,
-      "end_time": 1.674
+      "character": "解",
+      "start_time": 2.754,
+      "end_time": 2.908
     },
     {
-      "character": "喊",
-      "start_time": 1.674,
-      "end_time": 1.949
+      "character": "析",
+      "start_time": 2.908,
+      "end_time": 3.062
     },
     {
-      "character": "吸",
-      "start_time": 1.949,
-      "end_time": 2.141
+      "character": "体",
+      "start_time": 3.062,
+      "end_time": 3.237
     },
     {
-      "character": "引",
-      "start_time": 2.141,
-      "end_time": 2.279
+      "character": "内",
+      "start_time": 3.237,
+      "end_time": 3.379
     },
     {
-      "character": "赵",
-      "start_time": 2.279,
-      "end_time": 2.512
+      "character": "力",
+      "start_time": 3.379,
+      "end_time": 3.562
     },
     {
-      "character": "牧",
-      "start_time": 2.512,
-      "end_time": 2.637
+      "character": "量",
+      "start_time": 3.562,
+      "end_time": 3.733
     },
     {
-      "character": "等",
-      "start_time": 2.637,
-      "end_time": 2.791
+      "character": "本",
+      "start_time": 3.733,
+      "end_time": 3.954
     },
     {
-      "character": "人",
-      "start_time": 2.791,
-      "end_time": 2.933
-    },
-    {
-      "character": "注",
-      "start_time": 2.933,
-      "end_time": 3.091
-    },
-    {
-      "character": "意",
-      "start_time": 3.091,
-      "end_time": 3.224
+      "character": "质",
+      "start_time": 3.954,
+      "end_time": 4.124
     },
     {
       "character": "，",
-      "start_time": 3.224,
-      "end_time": 3.695
+      "start_time": 4.124,
+      "end_time": 4.47
     },
     {
-      "character": "同",
-      "start_time": 3.695,
-      "end_time": 3.891
+      "character": "梳",
+      "start_time": 4.47,
+      "end_time": 4.662
     },
     {
-      "character": "时",
-      "start_time": 3.891,
-      "end_time": 4.049
+      "character": "理",
+      "start_time": 4.662,
+      "end_time": 4.779
     },
     {
-      "character": "推",
-      "start_time": 4.049,
-      "end_time": 4.233
+      "character": "杂",
+      "start_time": 4.779,
+      "end_time": 4.966
     },
     {
-      "character": "下",
-      "start_time": 4.233,
-      "end_time": 4.379
+      "character": "乱",
+      "start_time": 4.966,
+      "end_time": 5.124
     },
     {
-      "character": "准",
-      "start_time": 4.379,
-      "end_time": 4.558
+      "character": "元",
+      "start_time": 5.124,
+      "end_time": 5.308
     },
     {
-      "character": "备",
-      "start_time": 4.558,
-      "end_time": 4.683
+      "character": "灵",
+      "start_time": 5.308,
+      "end_time": 5.479
     },
     {
-      "character": "好",
-      "start_time": 4.683,
-      "end_time": 4.937
+      "character": "之",
+      "start_time": 5.479,
+      "end_time": 5.604
     },
     {
-      "character": "的",
-      "start_time": 4.937,
-      "end_time": 5.016
-    },
-    {
-      "character": "巨",
-      "start_time": 5.016,
-      "end_time": 5.195
-    },
-    {
-      "character": "石",
-      "start_time": 5.195,
-      "end_time": 5.454
+      "character": "气",
+      "start_time": 5.604,
+      "end_time": 5.77
     },
     {
       "character": "，",
-      "start_time": 5.454,
-      "end_time": 5.749
+      "start_time": 5.77,
+      "end_time": 6.133
     },
     {
-      "character": "引",
-      "start_time": 5.749,
-      "end_time": 5.924
+      "character": "地",
+      "start_time": 6.133,
+      "end_time": 6.274
     },
     {
-      "character": "发",
-      "start_time": 5.924,
-      "end_time": 6.091
+      "character": "泉",
+      "start_time": 6.274,
+      "end_time": 6.474
     },
     {
-      "character": "小",
-      "start_time": 6.091,
-      "end_time": 6.337
+      "character": "压",
+      "start_time": 6.474,
+      "end_time": 6.633
     },
     {
-      "character": "型",
-      "start_time": 6.337,
-      "end_time": 6.499
+      "character": "缩",
+      "start_time": 6.633,
+      "end_time": 6.791
     },
     {
-      "character": "山",
-      "start_time": 6.499,
-      "end_time": 6.679
+      "character": "速",
+      "start_time": 6.791,
+      "end_time": 7.016
     },
     {
-      "character": "崩",
-      "start_time": 6.679,
-      "end_time": 6.849
+      "character": "度",
+      "start_time": 7.016,
+      "end_time": 7.141
+    },
+    {
+      "character": "暴",
+      "start_time": 7.141,
+      "end_time": 7.337
+    },
+    {
+      "character": "涨",
+      "start_time": 7.337,
+      "end_time": 7.549
     },
     {
       "character": "，",
-      "start_time": 6.849,
-      "end_time": 7.204
+      "start_time": 7.549,
+      "end_time": 7.824
     },
     {
-      "character": "阻",
-      "start_time": 7.204,
-      "end_time": 7.433
+      "character": "突",
+      "start_time": 7.824,
+      "end_time": 8.045
     },
     {
-      "character": "断",
-      "start_time": 7.433,
-      "end_time": 7.624
+      "character": "破",
+      "start_time": 8.045,
+      "end_time": 8.216
     },
     {
-      "character": "敌",
-      "start_time": 7.624,
-      "end_time": 7.787
+      "character": "在",
+      "start_time": 8.216,
+      "end_time": 8.387
     },
     {
-      "character": "人",
-      "start_time": 7.787,
-      "end_time": 7.912
-    },
-    {
-      "character": "视",
-      "start_time": 7.912,
-      "end_time": 8.112
-    },
-    {
-      "character": "线",
-      "start_time": 8.112,
-      "end_time": 8.279
+      "character": "即",
+      "start_time": 8.387,
+      "end_time": 8.649
     },
     {
       "character": "！",
-      "start_time": 8.279,
-      "end_time": 8.437
+      "start_time": 8.649,
+      "end_time": 8.808
     }
   ],
-  "generated_at": "2025-09-23T08:18:52.605799"
+  "generated_at": "2025-11-07T23:07:51.694530"
 }

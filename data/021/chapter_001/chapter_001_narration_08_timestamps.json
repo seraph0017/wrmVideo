@@ -1,218 +1,328 @@
 {
-  "text": "吴晨惨叫一声，口鼻喷血，身体如断线风筝般向后飞出，鼻梁骨碎裂的剧痛让他瞬间泪流满面。",
-  "audio_file": "data/021/chapter_001/chapter_001_narration_08.mp3",
-  "duration": 8.233,
+  "text": "\"啊——！\"吴晨惨叫着向后飞出，口鼻喷血，鼻梁塌陷，重重摔在三米外的花丛中！他做梦也没想到，吴双竟敢在三人包围下主动出手，而且如此果断！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_001/chapter_001_narration_08.mp3",
+  "duration": 12.833,
   "character_timestamps": [
     {
+      "character": "啊",
+      "start_time": 0.016,
+      "end_time": 0.266
+    },
+    {
+      "character": "，",
+      "start_time": 0.266,
+      "end_time": 0.662
+    },
+    {
       "character": "吴",
-      "start_time": 0.02,
-      "end_time": 0.174
+      "start_time": 0.662,
+      "end_time": 0.791
     },
     {
       "character": "晨",
-      "start_time": 0.174,
-      "end_time": 0.374
+      "start_time": 0.791,
+      "end_time": 0.974
     },
     {
       "character": "惨",
-      "start_time": 0.374,
-      "end_time": 0.654
+      "start_time": 0.974,
+      "end_time": 1.208
     },
     {
       "character": "叫",
-      "start_time": 0.654,
-      "end_time": 0.837
+      "start_time": 1.208,
+      "end_time": 1.383
     },
     {
-      "character": "一",
-      "start_time": 0.837,
-      "end_time": 0.929
-    },
-    {
-      "character": "声",
-      "start_time": 0.929,
-      "end_time": 1.112
-    },
-    {
-      "character": "，",
-      "start_time": 1.112,
-      "end_time": 1.479
-    },
-    {
-      "character": "口",
-      "start_time": 1.479,
-      "end_time": 1.691
-    },
-    {
-      "character": "鼻",
-      "start_time": 1.691,
-      "end_time": 1.829
-    },
-    {
-      "character": "喷",
-      "start_time": 1.829,
-      "end_time": 2.033
-    },
-    {
-      "character": "血",
-      "start_time": 2.033,
-      "end_time": 2.274
-    },
-    {
-      "character": "，",
-      "start_time": 2.274,
-      "end_time": 2.599
-    },
-    {
-      "character": "身",
-      "start_time": 2.599,
-      "end_time": 2.816
-    },
-    {
-      "character": "体",
-      "start_time": 2.816,
-      "end_time": 2.954
-    },
-    {
-      "character": "如",
-      "start_time": 2.954,
-      "end_time": 3.091
-    },
-    {
-      "character": "断",
-      "start_time": 3.091,
-      "end_time": 3.291
-    },
-    {
-      "character": "线",
-      "start_time": 3.291,
-      "end_time": 3.466
-    },
-    {
-      "character": "风",
-      "start_time": 3.466,
-      "end_time": 3.658
-    },
-    {
-      "character": "筝",
-      "start_time": 3.658,
-      "end_time": 3.783
-    },
-    {
-      "character": "般",
-      "start_time": 3.783,
-      "end_time": 3.974
+      "character": "着",
+      "start_time": 1.383,
+      "end_time": 1.566
     },
     {
       "character": "向",
-      "start_time": 3.974,
-      "end_time": 4.258
+      "start_time": 1.566,
+      "end_time": 1.808
     },
     {
       "character": "后",
-      "start_time": 4.258,
-      "end_time": 4.416
+      "start_time": 1.808,
+      "end_time": 1.958
     },
     {
       "character": "飞",
-      "start_time": 4.416,
-      "end_time": 4.591
+      "start_time": 1.958,
+      "end_time": 2.124
     },
     {
       "character": "出",
-      "start_time": 4.591,
-      "end_time": 4.774
+      "start_time": 2.124,
+      "end_time": 2.316
     },
     {
       "character": "，",
-      "start_time": 4.774,
-      "end_time": 5.124
+      "start_time": 2.316,
+      "end_time": 2.72
+    },
+    {
+      "character": "口",
+      "start_time": 2.72,
+      "end_time": 2.933
     },
     {
       "character": "鼻",
-      "start_time": 5.124,
-      "end_time": 5.258
+      "start_time": 2.933,
+      "end_time": 3.066
+    },
+    {
+      "character": "喷",
+      "start_time": 3.066,
+      "end_time": 3.274
+    },
+    {
+      "character": "血",
+      "start_time": 3.274,
+      "end_time": 3.499
+    },
+    {
+      "character": "，",
+      "start_time": 3.499,
+      "end_time": 3.908
+    },
+    {
+      "character": "鼻",
+      "start_time": 3.908,
+      "end_time": 4.049
     },
     {
       "character": "梁",
-      "start_time": 5.258,
-      "end_time": 5.441
+      "start_time": 4.049,
+      "end_time": 4.212
     },
     {
-      "character": "骨",
-      "start_time": 5.441,
-      "end_time": 5.599
+      "character": "塌",
+      "start_time": 4.212,
+      "end_time": 4.345
     },
     {
-      "character": "碎",
-      "start_time": 5.599,
-      "end_time": 5.854
+      "character": "陷",
+      "start_time": 4.345,
+      "end_time": 4.52
     },
     {
-      "character": "裂",
-      "start_time": 5.854,
-      "end_time": 5.979
+      "character": "，",
+      "start_time": 4.52,
+      "end_time": 4.908
+    },
+    {
+      "character": "重",
+      "start_time": 4.908,
+      "end_time": 5.083
+    },
+    {
+      "character": "重",
+      "start_time": 5.083,
+      "end_time": 5.237
+    },
+    {
+      "character": "摔",
+      "start_time": 5.237,
+      "end_time": 5.429
+    },
+    {
+      "character": "在",
+      "start_time": 5.429,
+      "end_time": 5.562
+    },
+    {
+      "character": "三",
+      "start_time": 5.562,
+      "end_time": 5.754
+    },
+    {
+      "character": "米",
+      "start_time": 5.754,
+      "end_time": 5.974
+    },
+    {
+      "character": "外",
+      "start_time": 5.974,
+      "end_time": 6.079
     },
     {
       "character": "的",
-      "start_time": 5.979,
-      "end_time": 6.058
+      "start_time": 6.079,
+      "end_time": 6.145
     },
     {
-      "character": "剧",
-      "start_time": 6.058,
-      "end_time": 6.229
+      "character": "花",
+      "start_time": 6.145,
+      "end_time": 6.329
     },
     {
-      "character": "痛",
-      "start_time": 6.229,
-      "end_time": 6.462
+      "character": "丛",
+      "start_time": 6.329,
+      "end_time": 6.508
     },
     {
-      "character": "让",
-      "start_time": 6.462,
-      "end_time": 6.67
+      "character": "中",
+      "start_time": 6.508,
+      "end_time": 6.679
+    },
+    {
+      "character": "，",
+      "start_time": 6.679,
+      "end_time": 7.091
     },
     {
       "character": "他",
-      "start_time": 6.67,
-      "end_time": 6.787
+      "start_time": 7.091,
+      "end_time": 7.179
     },
     {
-      "character": "瞬",
-      "start_time": 6.787,
-      "end_time": 7.087
+      "character": "做",
+      "start_time": 7.179,
+      "end_time": 7.374
     },
     {
-      "character": "间",
-      "start_time": 7.087,
-      "end_time": 7.27
+      "character": "梦",
+      "start_time": 7.374,
+      "end_time": 7.599
     },
     {
-      "character": "泪",
-      "start_time": 7.27,
-      "end_time": 7.562
+      "character": "也",
+      "start_time": 7.599,
+      "end_time": 7.758
     },
     {
-      "character": "流",
-      "start_time": 7.562,
-      "end_time": 7.737
+      "character": "没",
+      "start_time": 7.758,
+      "end_time": 7.908
     },
     {
-      "character": "满",
-      "start_time": 7.737,
-      "end_time": 7.887
+      "character": "想",
+      "start_time": 7.908,
+      "end_time": 8.095
     },
     {
-      "character": "面",
-      "start_time": 7.887,
-      "end_time": 8.07
+      "character": "到",
+      "start_time": 8.095,
+      "end_time": 8.237
     },
     {
-      "character": "。",
-      "start_time": 8.07,
-      "end_time": 8.229
+      "character": "，",
+      "start_time": 8.237,
+      "end_time": 8.72
+    },
+    {
+      "character": "吴",
+      "start_time": 8.72,
+      "end_time": 8.858
+    },
+    {
+      "character": "双",
+      "start_time": 8.858,
+      "end_time": 9.099
+    },
+    {
+      "character": "竟",
+      "start_time": 9.099,
+      "end_time": 9.32
+    },
+    {
+      "character": "敢",
+      "start_time": 9.32,
+      "end_time": 9.47
+    },
+    {
+      "character": "在",
+      "start_time": 9.47,
+      "end_time": 9.604
+    },
+    {
+      "character": "三",
+      "start_time": 9.604,
+      "end_time": 9.774
+    },
+    {
+      "character": "人",
+      "start_time": 9.774,
+      "end_time": 9.924
+    },
+    {
+      "character": "包",
+      "start_time": 9.924,
+      "end_time": 10.137
+    },
+    {
+      "character": "围",
+      "start_time": 10.137,
+      "end_time": 10.245
+    },
+    {
+      "character": "下",
+      "start_time": 10.245,
+      "end_time": 10.458
+    },
+    {
+      "character": "主",
+      "start_time": 10.458,
+      "end_time": 10.754
+    },
+    {
+      "character": "动",
+      "start_time": 10.754,
+      "end_time": 10.92
+    },
+    {
+      "character": "出",
+      "start_time": 10.92,
+      "end_time": 11.079
+    },
+    {
+      "character": "手",
+      "start_time": 11.079,
+      "end_time": 11.258
+    },
+    {
+      "character": "，",
+      "start_time": 11.258,
+      "end_time": 11.604
+    },
+    {
+      "character": "而",
+      "start_time": 11.604,
+      "end_time": 11.729
+    },
+    {
+      "character": "且",
+      "start_time": 11.729,
+      "end_time": 11.883
+    },
+    {
+      "character": "如",
+      "start_time": 11.883,
+      "end_time": 12.133
+    },
+    {
+      "character": "此",
+      "start_time": 12.133,
+      "end_time": 12.304
+    },
+    {
+      "character": "果",
+      "start_time": 12.304,
+      "end_time": 12.504
+    },
+    {
+      "character": "断",
+      "start_time": 12.504,
+      "end_time": 12.674
+    },
+    {
+      "character": "！",
+      "start_time": 12.674,
+      "end_time": 12.833
     }
   ],
-  "generated_at": "2025-09-23T08:17:24.912544"
+  "generated_at": "2025-11-07T23:06:10.205314"
 }

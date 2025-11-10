@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_033 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.95,Default,,0,0,0,,阵法宗师何瞎子拄杖而来
+Dialogue: 0,0:00:02.38,0:00:04.20,Default,,0,0,0,,双眼泛白却感知敏锐
+Dialogue: 0,0:00:04.68,0:00:06.27,Default,,0,0,0,,察觉到{\c&H0000FFFF&\b1}吴双护{\c&H00FFFFFF&\b0}体元罡上的
+Dialogue: 0,0:00:06.27,0:00:06.97,Default,,0,0,0,,阵法波动
+Dialogue: 0,0:00:07.32,0:00:08.21,Default,,0,0,0,,面露惊奇

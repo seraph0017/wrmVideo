@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_040 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.06,Default,,0,0,0,,摩罗想切断力量来源被识破
+Dialogue: 0,0:00:02.62,0:00:06.18,Default,,0,0,0,,amp猩红{\c&H0000FFFF&\b1}侯爵{\c&H00FFFFFF&\b0}amp嘲讽
+Dialogue: 0,0:00:06.18,0:00:08.35,Default,,0,0,0,,一笑突然捏碎棺材中升起的
+Dialogue: 0,0:00:08.45,0:00:12.05,Default,,0,0,0,,湮灭奇点黑色光芒瞬间吞噬
+Dialogue: 0,0:00:12.15,0:00:12.75,Default,,0,0,0,,星空

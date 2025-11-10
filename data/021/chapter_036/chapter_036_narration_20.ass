@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_036 Narration 20 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}双眸骤亮
+Dialogue: 0,0:00:01.48,0:00:02.90,Default,,0,0,0,,主殿阵法轰然逆转
+Dialogue: 0,0:00:03.18,0:00:05.37,Default,,0,0,0,,青紫色雷电沿地面纹路蔓延
+Dialogue: 0,0:00:05.88,0:00:08.40,Default,,0,0,0,,高台禁制瞬间破裂他身形
+Dialogue: 0,0:00:08.40,0:00:09.59,Default,,0,0,0,,如电射向{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.94,0:00:11.04,Default,,0,0,0,,蜜儿走

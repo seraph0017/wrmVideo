@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.40,Default,,0,0,0,,空中
-Dialogue: 0,0:00:00.85,0:00:01.95,Default,,0,0,0,,郑毅浑身伤痕
-Dialogue: 0,0:00:02.28,0:00:03.04,Default,,0,0,0,,衣衫破损
-Dialogue: 0,0:00:03.47,0:00:04.21,Default,,0,0,0,,激战神鸟
-Dialogue: 0,0:00:04.54,0:00:05.73,Default,,0,0,0,,灵活闪避攻击
-Dialogue: 0,0:00:06.04,0:00:07.00,Default,,0,0,0,,伺机反击
+Dialogue: 0,0:00:00.02,0:00:01.05,Default,,0,0,0,,郑毅紧随其后
+Dialogue: 0,0:00:01.39,0:00:02.72,Default,,0,0,0,,持{\c&H0000FFFF&\b1}藏宝图{\c&H00FFFFFF&\b0}皱眉察
+Dialogue: 0,0:00:03.10,0:00:04.15,Default,,0,0,0,,神皮甲下不解
+Dialogue: 0,0:00:04.51,0:00:06.14,Default,,0,0,0,,嘟囔此地无{\c&H0000FFFF&\b1}宝藏{\c&H00FFFFFF&\b0}影子

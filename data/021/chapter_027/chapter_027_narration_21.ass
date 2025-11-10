@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}无奈
-Dialogue: 0,0:00:01.03,0:00:02.12,Default,,0,0,0,,一边躲避攻击
-Dialogue: 0,0:00:02.47,0:00:03.91,Default,,0,0,0,,一边与{\c&H0000FFFF&\b1}北冥雪{\c&H00FFFFFF&\b0}周旋
-Dialogue: 0,0:00:04.20,0:00:04.95,Default,,0,0,0,,表情头疼
-Dialogue: 0,0:00:05.35,0:00:07.33,Default,,0,0,0,,正在思考如何摆脱{\c&H0000FFFF&\b1}北冥雪{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:07.70,0:00:08.43,Default,,0,0,0,,动作灵活
+Dialogue: 0,0:00:00.02,0:00:02.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}将商人货物分类冷笑
+Dialogue: 0,0:00:02.80,0:00:03.89,Default,,0,0,0,,以你们的换你们的
+Dialogue: 0,0:00:04.25,0:00:06.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}九宫{\c&H00FFFFFF&\b0}神罚队现身商人
+Dialogue: 0,0:00:06.13,0:00:08.16,Default,,0,0,0,,敢怒不敢言乖乖交易

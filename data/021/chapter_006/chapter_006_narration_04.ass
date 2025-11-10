@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵牧见{\c&H00FFFFFF&\b0}吴双救走江蜜儿气得
-Dialogue: 0,0:00:02.19,0:00:02.94,Default,,0,0,0,,咬牙切齿
-Dialogue: 0,0:00:03.43,0:00:05.72,Default,,0,0,0,,他手持{\c&H0000FFFF&\b1}天恒剑{\c&H00FFFFFF&\b0}指挥二十多人
-Dialogue: 0,0:00:05.72,0:00:07.65,Default,,0,0,0,,围攻却不知{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}已准备好
-Dialogue: 0,0:00:07.65,0:00:08.08,Default,,0,0,0,,反击
+Dialogue: 0,0:00:00.02,0:00:01.81,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}护住江蜜儿与江浩
+Dialogue: 0,0:00:02.15,0:00:03.29,Default,,0,0,0,,面对{\c&H0000FFFF&\b1}赵牧{\c&H00FFFFFF&\b0}威胁
+Dialogue: 0,0:00:03.78,0:00:06.02,Default,,0,0,0,,冷声说出心肠歹毒不能留你
+Dialogue: 0,0:00:06.32,0:00:07.25,Default,,0,0,0,,气势凛然

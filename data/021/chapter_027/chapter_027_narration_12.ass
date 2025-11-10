@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双站{\c&H00FFFFFF&\b0}在魔云上
-Dialogue: 0,0:00:01.65,0:00:03.88,Default,,0,0,0,,指挥魔云在混乱气流中穿梭
-Dialogue: 0,0:00:04.28,0:00:05.67,Default,,0,0,0,,躲避青狼眼的攻击
-Dialogue: 0,0:00:06.12,0:00:06.88,Default,,0,0,0,,动作灵活
-Dialogue: 0,0:00:07.19,0:00:07.97,Default,,0,0,0,,表情专注
+Dialogue: 0,0:00:00.02,0:00:02.26,Default,,0,0,0,,{\c&H0000FFFF&\b1}北冥雪{\c&H00FFFFFF&\b0}突然转头看到吴双
+Dialogue: 0,0:00:02.26,0:00:04.77,Default,,0,0,0,,背影眼神骤亮不顾{\c&H0000FFFF&\b1}沙利{\c&H00FFFFFF&\b0}呼喊
+Dialogue: 0,0:00:05.05,0:00:05.84,Default,,0,0,0,,御剑疾追
+Dialogue: 0,0:00:06.12,0:00:06.60,Default,,0,0,0,,小贼
+Dialogue: 0,0:00:06.94,0:00:07.30,Default,,0,0,0,,站住

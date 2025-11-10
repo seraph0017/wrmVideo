@@ -1,253 +1,318 @@
 {
-  "text": "吴江雄坐在巨剑上喘息，剑甲解除后露出疲惫面容，嘴角带着血迹，汗水不断滴落，眼中却闪烁着胜利的光芒。",
-  "audio_file": "data/021/chapter_023/chapter_023_narration_03.mp3",
-  "duration": 9.633,
+  "text": "贱鸟抓神象长枪从蛟尸中钻出，羽毛沾满血污却兴奋尖叫，嚷嚷着蛟肉烹饪之法，将长枪掷向吴双，黑羽在阳光下闪着油光，尽显贪财本性。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_023/chapter_023_narration_03.mp3",
+  "duration": 12.8,
   "character_timestamps": [
     {
-      "character": "吴",
-      "start_time": 0.016,
-      "end_time": 0.166
+      "character": "贱",
+      "start_time": 0.02,
+      "end_time": 0.17
     },
     {
-      "character": "江",
-      "start_time": 0.166,
-      "end_time": 0.329
+      "character": "鸟",
+      "start_time": 0.17,
+      "end_time": 0.337
     },
     {
-      "character": "雄",
-      "start_time": 0.329,
+      "character": "抓",
+      "start_time": 0.337,
       "end_time": 0.524
     },
     {
-      "character": "坐",
+      "character": "神",
       "start_time": 0.524,
-      "end_time": 0.658
+      "end_time": 0.683
     },
     {
-      "character": "在",
-      "start_time": 0.658,
-      "end_time": 0.787
+      "character": "象",
+      "start_time": 0.683,
+      "end_time": 0.845
     },
     {
-      "character": "巨",
-      "start_time": 0.787,
-      "end_time": 0.941
+      "character": "长",
+      "start_time": 0.845,
+      "end_time": 1.049
     },
     {
-      "character": "剑",
-      "start_time": 0.941,
-      "end_time": 1.074
+      "character": "枪",
+      "start_time": 1.049,
+      "end_time": 1.27
     },
     {
-      "character": "上",
-      "start_time": 1.074,
-      "end_time": 1.22
+      "character": "从",
+      "start_time": 1.27,
+      "end_time": 1.487
     },
     {
-      "character": "喘",
-      "start_time": 1.22,
-      "end_time": 1.454
+      "character": "蛟",
+      "start_time": 1.487,
+      "end_time": 1.708
     },
     {
-      "character": "息",
-      "start_time": 1.454,
-      "end_time": 1.691
-    },
-    {
-      "character": "，",
-      "start_time": 1.691,
-      "end_time": 2.216
-    },
-    {
-      "character": "剑",
-      "start_time": 2.216,
-      "end_time": 2.424
-    },
-    {
-      "character": "甲",
-      "start_time": 2.424,
-      "end_time": 2.608
-    },
-    {
-      "character": "解",
-      "start_time": 2.608,
-      "end_time": 2.766
-    },
-    {
-      "character": "除",
-      "start_time": 2.766,
-      "end_time": 2.899
-    },
-    {
-      "character": "后",
-      "start_time": 2.899,
-      "end_time": 3.087
-    },
-    {
-      "character": "露",
-      "start_time": 3.087,
-      "end_time": 3.283
-    },
-    {
-      "character": "出",
-      "start_time": 3.283,
-      "end_time": 3.433
-    },
-    {
-      "character": "疲",
-      "start_time": 3.433,
-      "end_time": 3.691
-    },
-    {
-      "character": "惫",
-      "start_time": 3.691,
-      "end_time": 3.829
-    },
-    {
-      "character": "面",
-      "start_time": 3.829,
-      "end_time": 4.004
-    },
-    {
-      "character": "容",
-      "start_time": 4.004,
-      "end_time": 4.249
-    },
-    {
-      "character": "，",
-      "start_time": 4.249,
-      "end_time": 4.629
-    },
-    {
-      "character": "嘴",
-      "start_time": 4.629,
-      "end_time": 4.829
-    },
-    {
-      "character": "角",
-      "start_time": 4.829,
-      "end_time": 5.016
-    },
-    {
-      "character": "带",
-      "start_time": 5.016,
-      "end_time": 5.162
-    },
-    {
-      "character": "着",
-      "start_time": 5.162,
-      "end_time": 5.245
-    },
-    {
-      "character": "血",
-      "start_time": 5.245,
-      "end_time": 5.483
-    },
-    {
-      "character": "迹",
-      "start_time": 5.483,
-      "end_time": 5.666
-    },
-    {
-      "character": "，",
-      "start_time": 5.666,
-      "end_time": 6.024
-    },
-    {
-      "character": "汗",
-      "start_time": 6.024,
-      "end_time": 6.262
-    },
-    {
-      "character": "水",
-      "start_time": 6.262,
-      "end_time": 6.466
-    },
-    {
-      "character": "不",
-      "start_time": 6.466,
-      "end_time": 6.658
-    },
-    {
-      "character": "断",
-      "start_time": 6.658,
-      "end_time": 6.829
-    },
-    {
-      "character": "滴",
-      "start_time": 6.829,
-      "end_time": 7.008
-    },
-    {
-      "character": "落",
-      "start_time": 7.008,
-      "end_time": 7.149
-    },
-    {
-      "character": "，",
-      "start_time": 7.149,
-      "end_time": 7.479
-    },
-    {
-      "character": "眼",
-      "start_time": 7.479,
-      "end_time": 7.708
+      "character": "尸",
+      "start_time": 1.708,
+      "end_time": 1.862
     },
     {
       "character": "中",
-      "start_time": 7.708,
-      "end_time": 7.862
+      "start_time": 1.862,
+      "end_time": 2.008
+    },
+    {
+      "character": "钻",
+      "start_time": 2.008,
+      "end_time": 2.191
+    },
+    {
+      "character": "出",
+      "start_time": 2.191,
+      "end_time": 2.383
+    },
+    {
+      "character": "，",
+      "start_time": 2.383,
+      "end_time": 2.824
+    },
+    {
+      "character": "羽",
+      "start_time": 2.824,
+      "end_time": 2.97
+    },
+    {
+      "character": "毛",
+      "start_time": 2.97,
+      "end_time": 3.133
+    },
+    {
+      "character": "沾",
+      "start_time": 3.133,
+      "end_time": 3.308
+    },
+    {
+      "character": "满",
+      "start_time": 3.308,
+      "end_time": 3.508
+    },
+    {
+      "character": "血",
+      "start_time": 3.508,
+      "end_time": 3.741
+    },
+    {
+      "character": "污",
+      "start_time": 3.741,
+      "end_time": 3.949
     },
     {
       "character": "却",
-      "start_time": 7.862,
-      "end_time": 7.991
+      "start_time": 3.949,
+      "end_time": 4.129
     },
     {
-      "character": "闪",
-      "start_time": 7.991,
-      "end_time": 8.245
+      "character": "兴",
+      "start_time": 4.129,
+      "end_time": 4.408
     },
     {
-      "character": "烁",
-      "start_time": 8.245,
-      "end_time": 8.391
+      "character": "奋",
+      "start_time": 4.408,
+      "end_time": 4.583
+    },
+    {
+      "character": "尖",
+      "start_time": 4.583,
+      "end_time": 4.799
+    },
+    {
+      "character": "叫",
+      "start_time": 4.799,
+      "end_time": 4.945
+    },
+    {
+      "character": "，",
+      "start_time": 4.945,
+      "end_time": 5.391
+    },
+    {
+      "character": "嚷",
+      "start_time": 5.391,
+      "end_time": 5.562
+    },
+    {
+      "character": "嚷",
+      "start_time": 5.562,
+      "end_time": 5.695
     },
     {
       "character": "着",
-      "start_time": 8.391,
-      "end_time": 8.495
+      "start_time": 5.695,
+      "end_time": 5.779
     },
     {
-      "character": "胜",
-      "start_time": 8.495,
-      "end_time": 8.816
+      "character": "蛟",
+      "start_time": 5.779,
+      "end_time": 5.979
     },
     {
-      "character": "利",
-      "start_time": 8.816,
-      "end_time": 8.949
+      "character": "肉",
+      "start_time": 5.979,
+      "end_time": 6.133
     },
     {
-      "character": "的",
-      "start_time": 8.949,
-      "end_time": 9.037
+      "character": "烹",
+      "start_time": 6.133,
+      "end_time": 6.399
+    },
+    {
+      "character": "饪",
+      "start_time": 6.399,
+      "end_time": 6.549
+    },
+    {
+      "character": "之",
+      "start_time": 6.549,
+      "end_time": 6.704
+    },
+    {
+      "character": "法",
+      "start_time": 6.704,
+      "end_time": 6.912
+    },
+    {
+      "character": "，",
+      "start_time": 6.912,
+      "end_time": 7.249
+    },
+    {
+      "character": "将",
+      "start_time": 7.249,
+      "end_time": 7.404
+    },
+    {
+      "character": "长",
+      "start_time": 7.404,
+      "end_time": 7.637
+    },
+    {
+      "character": "枪",
+      "start_time": 7.637,
+      "end_time": 7.849
+    },
+    {
+      "character": "掷",
+      "start_time": 7.849,
+      "end_time": 8.095
+    },
+    {
+      "character": "向",
+      "start_time": 8.095,
+      "end_time": 8.291
+    },
+    {
+      "character": "吴",
+      "start_time": 8.291,
+      "end_time": 8.429
+    },
+    {
+      "character": "双",
+      "start_time": 8.429,
+      "end_time": 8.624
+    },
+    {
+      "character": "，",
+      "start_time": 8.624,
+      "end_time": 9.079
+    },
+    {
+      "character": "黑",
+      "start_time": 9.079,
+      "end_time": 9.32
+    },
+    {
+      "character": "羽",
+      "start_time": 9.32,
+      "end_time": 9.566
+    },
+    {
+      "character": "在",
+      "start_time": 9.566,
+      "end_time": 9.758
+    },
+    {
+      "character": "阳",
+      "start_time": 9.758,
+      "end_time": 9.983
     },
     {
       "character": "光",
-      "start_time": 9.037,
-      "end_time": 9.258
+      "start_time": 9.983,
+      "end_time": 10.141
     },
     {
-      "character": "芒",
-      "start_time": 9.258,
-      "end_time": 9.474
+      "character": "下",
+      "start_time": 10.141,
+      "end_time": 10.304
+    },
+    {
+      "character": "闪",
+      "start_time": 10.304,
+      "end_time": 10.566
+    },
+    {
+      "character": "着",
+      "start_time": 10.566,
+      "end_time": 10.67
+    },
+    {
+      "character": "油",
+      "start_time": 10.67,
+      "end_time": 10.849
+    },
+    {
+      "character": "光",
+      "start_time": 10.849,
+      "end_time": 11.045
+    },
+    {
+      "character": "，",
+      "start_time": 11.045,
+      "end_time": 11.329
+    },
+    {
+      "character": "尽",
+      "start_time": 11.329,
+      "end_time": 11.529
+    },
+    {
+      "character": "显",
+      "start_time": 11.529,
+      "end_time": 11.754
+    },
+    {
+      "character": "贪",
+      "start_time": 11.754,
+      "end_time": 12.029
+    },
+    {
+      "character": "财",
+      "start_time": 12.029,
+      "end_time": 12.224
+    },
+    {
+      "character": "本",
+      "start_time": 12.224,
+      "end_time": 12.416
+    },
+    {
+      "character": "性",
+      "start_time": 12.416,
+      "end_time": 12.637
     },
     {
       "character": "。",
-      "start_time": 9.474,
-      "end_time": 9.633
+      "start_time": 12.637,
+      "end_time": 12.796
     }
   ],
-  "generated_at": "2025-09-23T08:24:28.842524"
+  "generated_at": "2025-11-07T23:15:52.531635"
 }

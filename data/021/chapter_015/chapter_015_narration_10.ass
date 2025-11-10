@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}进入第六峰
-Dialogue: 0,0:00:01.58,0:00:02.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}阴寒之{\c&H00FFFFFF&\b0}风刺骨
-Dialogue: 0,0:00:03.12,0:00:04.82,Default,,0,0,0,,神识遭残魂力量冲击
-Dialogue: 0,0:00:05.28,0:00:06.17,Default,,0,0,0,,却毫不退缩
-Dialogue: 0,0:00:06.50,0:00:07.66,Default,,0,0,0,,护体{\c&H0000FFFF&\b1}元罡{\c&H00FFFFFF&\b0}震荡
-Dialogue: 0,0:00:08.01,0:00:08.86,Default,,0,0,0,,震散幻象
+Dialogue: 0,0:00:00.02,0:00:02.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}施展极电步冲出第六峰
+Dialogue: 0,0:00:02.59,0:00:03.82,Default,,0,0,0,,通道口光芒闪烁
+Dialogue: 0,0:00:04.13,0:00:04.94,Default,,0,0,0,,身形踉跄
+Dialogue: 0,0:00:05.37,0:00:06.13,Default,,0,0,0,,衣衫破损
+Dialogue: 0,0:00:06.47,0:00:08.25,Default,,0,0,0,,表情疲惫但眼神坚毅

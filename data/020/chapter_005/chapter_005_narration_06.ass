@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_005 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.36,Default,,0,0,0,,领头修士话未说完
+Dialogue: 0,0:00:01.70,0:00:03.24,Default,,0,0,0,,红油已穿透其口腔
+Dialogue: 0,0:00:03.76,0:00:05.13,Default,,0,0,0,,后脑爆出{\c&H0000FFFF&\b1}红白{\c&H00FFFFFF&\b0}之物
+Dialogue: 0,0:00:05.52,0:00:07.29,Default,,0,0,0,,整个人从妖兽背上摔落
+Dialogue: 0,0:00:07.67,0:00:08.44,Default,,0,0,0,,瞳孔涣散
+Dialogue: 0,0:00:08.89,0:00:10.51,Default,,0,0,0,,死前眼中满是不解

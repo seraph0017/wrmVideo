@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_033 Narration 22 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.47,Default,,0,0,0,,宏市长临时主持工作
+Dialogue: 0,0:00:01.90,0:00:03.28,Default,,0,0,0,,表面强调依法行政
+Dialogue: 0,0:00:03.62,0:00:05.75,Default,,0,0,0,,实则暗中销毁与项目相关的
+Dialogue: 0,0:00:05.75,0:00:06.05,Default,,0,0,0,,文件
+Dialogue: 0,0:00:06.52,0:00:08.20,Default,,0,0,0,,他的虚伪笑容下隐藏着
+Dialogue: 0,0:00:08.20,0:00:10.04,Default,,0,0,0,,对权力的贪婪与恐惧

@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴星凡{\c&H00FFFFFF&\b0}主持大局
-Dialogue: 0,0:00:01.56,0:00:03.82,Default,,0,0,0,,火焰树之事对外宣称天降
-Dialogue: 0,0:00:03.82,0:00:04.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}祥瑞{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:04.60,0:00:07.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}修炼异象列为最高机密
+Dialogue: 0,0:00:00.02,0:00:01.32,Default,,0,0,0,,寒美艳被打飞出去
+Dialogue: 0,0:00:01.59,0:00:02.38,Default,,0,0,0,,口鼻喷血
+Dialogue: 0,0:00:02.75,0:00:04.52,Default,,0,0,0,,脸上五个指印清晰可见
+Dialogue: 0,0:00:04.95,0:00:06.85,Default,,0,0,0,,眼神充满不敢{\c&H0000FFFF&\b1}置信{\c&H00FFFFFF&\b0}与愤怒
+Dialogue: 0,0:00:07.29,0:00:09.01,Default,,0,0,0,,尖叫着命令手下攻击

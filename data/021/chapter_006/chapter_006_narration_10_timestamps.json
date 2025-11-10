@@ -1,238 +1,178 @@
 {
-  "text": "神鸟从废墟中钻出，浑身漆黑如烧过的公鸡！它吐着灰尘大骂：\"谁偷了我的丹道总纲？本神鸟饶不了你！\"",
-  "audio_file": "data/021/chapter_006/chapter_006_narration_10.mp3",
-  "duration": 8.766,
+  "text": "贱鸟黑漆漆的身体被打却毫发无损，嚣张地用喙啄吴双，大喊“还我丹道总纲”",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_006/chapter_006_narration_10.mp3",
+  "duration": 6.6,
   "character_timestamps": [
     {
-      "character": "神",
+      "character": "贱",
       "start_time": 0.016,
-      "end_time": 0.191
+      "end_time": 0.166
     },
     {
       "character": "鸟",
-      "start_time": 0.191,
-      "end_time": 0.379
-    },
-    {
-      "character": "从",
-      "start_time": 0.379,
-      "end_time": 0.554
-    },
-    {
-      "character": "废",
-      "start_time": 0.554,
-      "end_time": 0.754
-    },
-    {
-      "character": "墟",
-      "start_time": 0.754,
-      "end_time": 0.912
-    },
-    {
-      "character": "中",
-      "start_time": 0.912,
-      "end_time": 1.054
-    },
-    {
-      "character": "钻",
-      "start_time": 1.054,
-      "end_time": 1.237
-    },
-    {
-      "character": "出",
-      "start_time": 1.237,
-      "end_time": 1.441
-    },
-    {
-      "character": "，",
-      "start_time": 1.441,
-      "end_time": 1.816
-    },
-    {
-      "character": "浑",
-      "start_time": 1.816,
-      "end_time": 2.033
-    },
-    {
-      "character": "身",
-      "start_time": 2.033,
-      "end_time": 2.212
-    },
-    {
-      "character": "漆",
-      "start_time": 2.212,
-      "end_time": 2.387
+      "start_time": 0.166,
+      "end_time": 0.333
     },
     {
       "character": "黑",
-      "start_time": 2.387,
-      "end_time": 2.533
+      "start_time": 0.333,
+      "end_time": 0.541
     },
     {
-      "character": "如",
-      "start_time": 2.533,
-      "end_time": 2.695
+      "character": "漆",
+      "start_time": 0.541,
+      "end_time": 0.687
     },
     {
-      "character": "烧",
-      "start_time": 2.695,
-      "end_time": 2.92
-    },
-    {
-      "character": "过",
-      "start_time": 2.92,
-      "end_time": 3.024
+      "character": "漆",
+      "start_time": 0.687,
+      "end_time": 0.808
     },
     {
       "character": "的",
-      "start_time": 3.024,
-      "end_time": 3.095
+      "start_time": 0.808,
+      "end_time": 0.887
     },
     {
-      "character": "公",
-      "start_time": 3.095,
-      "end_time": 3.279
+      "character": "身",
+      "start_time": 0.887,
+      "end_time": 1.079
     },
     {
-      "character": "鸡",
-      "start_time": 3.279,
-      "end_time": 3.454
+      "character": "体",
+      "start_time": 1.079,
+      "end_time": 1.245
+    },
+    {
+      "character": "被",
+      "start_time": 1.245,
+      "end_time": 1.387
+    },
+    {
+      "character": "打",
+      "start_time": 1.387,
+      "end_time": 1.641
+    },
+    {
+      "character": "却",
+      "start_time": 1.641,
+      "end_time": 1.82
+    },
+    {
+      "character": "毫",
+      "start_time": 1.82,
+      "end_time": 2.083
+    },
+    {
+      "character": "发",
+      "start_time": 2.083,
+      "end_time": 2.27
+    },
+    {
+      "character": "无",
+      "start_time": 2.27,
+      "end_time": 2.408
+    },
+    {
+      "character": "损",
+      "start_time": 2.408,
+      "end_time": 2.566
     },
     {
       "character": "，",
-      "start_time": 3.454,
-      "end_time": 4.016
+      "start_time": 2.566,
+      "end_time": 3.158
     },
     {
-      "character": "它",
-      "start_time": 4.016,
+      "character": "嚣",
+      "start_time": 3.158,
+      "end_time": 3.395
+    },
+    {
+      "character": "张",
+      "start_time": 3.395,
+      "end_time": 3.529
+    },
+    {
+      "character": "地",
+      "start_time": 3.529,
+      "end_time": 3.616
+    },
+    {
+      "character": "用",
+      "start_time": 3.616,
+      "end_time": 3.766
+    },
+    {
+      "character": "喙",
+      "start_time": 3.766,
+      "end_time": 3.933
+    },
+    {
+      "character": "啄",
+      "start_time": 3.933,
       "end_time": 4.124
     },
     {
-      "character": "吐",
+      "character": "吴",
       "start_time": 4.124,
-      "end_time": 4.304
+      "end_time": 4.233
     },
     {
-      "character": "着",
-      "start_time": 4.304,
-      "end_time": 4.391
-    },
-    {
-      "character": "灰",
-      "start_time": 4.391,
-      "end_time": 4.57
-    },
-    {
-      "character": "尘",
-      "start_time": 4.57,
-      "end_time": 4.741
-    },
-    {
-      "character": "大",
-      "start_time": 4.741,
-      "end_time": 4.916
-    },
-    {
-      "character": "骂",
-      "start_time": 4.916,
-      "end_time": 5.062
-    },
-    {
-      "character": "：",
-      "start_time": 5.062,
-      "end_time": 5.483
-    },
-    {
-      "character": "谁",
-      "start_time": 5.483,
-      "end_time": 5.724
-    },
-    {
-      "character": "偷",
-      "start_time": 5.724,
-      "end_time": 5.899
-    },
-    {
-      "character": "了",
-      "start_time": 5.899,
-      "end_time": 5.983
-    },
-    {
-      "character": "我",
-      "start_time": 5.983,
-      "end_time": 6.079
-    },
-    {
-      "character": "的",
-      "start_time": 6.079,
-      "end_time": 6.154
-    },
-    {
-      "character": "丹",
-      "start_time": 6.154,
-      "end_time": 6.383
-    },
-    {
-      "character": "道",
-      "start_time": 6.383,
-      "end_time": 6.537
-    },
-    {
-      "character": "总",
-      "start_time": 6.537,
-      "end_time": 6.741
-    },
-    {
-      "character": "纲",
-      "start_time": 6.741,
-      "end_time": 6.937
+      "character": "双",
+      "start_time": 4.233,
+      "end_time": 4.433
     },
     {
       "character": "，",
-      "start_time": 6.937,
-      "end_time": 7.42
+      "start_time": 4.433,
+      "end_time": 4.849
     },
     {
-      "character": "本",
-      "start_time": 7.42,
-      "end_time": 7.591
+      "character": "大",
+      "start_time": 4.849,
+      "end_time": 5.02
     },
     {
-      "character": "神",
-      "start_time": 7.591,
-      "end_time": 7.745
+      "character": "喊",
+      "start_time": 5.02,
+      "end_time": 5.279
     },
     {
-      "character": "鸟",
-      "start_time": 7.745,
-      "end_time": 7.966
+      "character": "还",
+      "start_time": 5.279,
+      "end_time": 5.533
     },
     {
-      "character": "饶",
-      "start_time": 7.966,
-      "end_time": 8.154
+      "character": "我",
+      "start_time": 5.533,
+      "end_time": 5.649
     },
     {
-      "character": "不",
-      "start_time": 8.154,
-      "end_time": 8.32
+      "character": "丹",
+      "start_time": 5.649,
+      "end_time": 5.87
     },
     {
-      "character": "了",
-      "start_time": 8.32,
-      "end_time": 8.499
+      "character": "道",
+      "start_time": 5.87,
+      "end_time": 6.02
     },
     {
-      "character": "你",
-      "start_time": 8.499,
-      "end_time": 8.608
+      "character": "总",
+      "start_time": 6.02,
+      "end_time": 6.216
     },
     {
-      "character": "！",
-      "start_time": 8.608,
-      "end_time": 8.767
+      "character": "纲",
+      "start_time": 6.216,
+      "end_time": 6.437
+    },
+    {
+      "character": "。",
+      "start_time": 6.437,
+      "end_time": 6.596
     }
   ],
-  "generated_at": "2025-09-23T08:19:15.515285"
+  "generated_at": "2025-11-07T23:08:10.485955"
 }

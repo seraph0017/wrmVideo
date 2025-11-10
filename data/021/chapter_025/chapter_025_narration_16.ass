@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}宋磊{\c&H00FFFFFF&\b0}接过晶石查看后
-Dialogue: 0,0:00:01.52,0:00:03.83,Default,,0,0,0,,大惊失色额头冷汗直流
-Dialogue: 0,0:00:04.30,0:00:06.14,Default,,0,0,0,,他急忙吩咐手下联系财神
-Dialogue: 0,0:00:06.14,0:00:08.64,Default,,0,0,0,,拍卖行同时恭敬地引导{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:08.64,0:00:09.64,Default,,0,0,0,,前往贵宾室
+Dialogue: 0,0:00:00.02,0:00:01.36,Default,,0,0,0,,卜一峰彻底被激怒
+Dialogue: 0,0:00:01.78,0:00:03.29,Default,,0,0,0,,下令手下动手抓人
+Dialogue: 0,0:00:03.69,0:00:06.06,Default,,0,0,0,,四名银{\c&H0000FFFF&\b1}剑宗{\c&H00FFFFFF&\b0}弟子立刻飞身而起
+Dialogue: 0,0:00:06.37,0:00:07.68,Default,,0,0,0,,从四个方向包围了
+Dialogue: 0,0:00:07.68,0:00:08.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}和赵猛

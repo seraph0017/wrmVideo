@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.34,Default,,0,0,0,,吴战低头不敢{\c&H0000FFFF&\b1}言语{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:01.75,0:00:04.02,Default,,0,0,0,,心中仍执念于向{\c&H0000FFFF&\b1}秦玉仙{\c&H00FFFFFF&\b0}证明
-Dialogue: 0,0:00:04.02,0:00:04.37,Default,,0,0,0,,自己
-Dialogue: 0,0:00:04.82,0:00:06.78,Default,,0,0,0,,对爷爷提及的{\c&H0000FFFF&\b1}家族{\c&H00FFFFFF&\b0}权力斗争
-Dialogue: 0,0:00:06.78,0:00:07.59,Default,,0,0,0,,全然不解
-Dialogue: 0,0:00:07.92,0:00:08.81,Default,,0,0,0,,神色茫然
+Dialogue: 0,0:00:00.02,0:00:01.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}小心翼翼摘下果子
+Dialogue: 0,0:00:02.30,0:00:03.53,Default,,0,0,0,,青色葫芦口对准
+Dialogue: 0,0:00:03.94,0:00:04.78,Default,,0,0,0,,轻声念诀
+Dialogue: 0,0:00:05.33,0:00:07.04,Default,,0,0,0,,果子化作{\c&H0000FFFF&\b1}红光{\c&H00FFFFFF&\b0}飞入葫芦
+Dialogue: 0,0:00:07.39,0:00:09.15,Default,,0,0,0,,他盖紧{\c&H0000FFFF&\b1}盖子{\c&H00FFFFFF&\b0}长舒一口气

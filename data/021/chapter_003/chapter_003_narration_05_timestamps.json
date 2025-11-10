@@ -1,223 +1,238 @@
 {
-  "text": "江蜜儿快步走向吴双，绿色襦衣裙摆飘动，她担忧吴双强行突破的传闻，语气中满是焦急与关切",
-  "audio_file": "data/021/chapter_003/chapter_003_narration_05.mp3",
-  "duration": 8.291,
+  "text": "江蜜儿赶到，浅绿色襦裙飘动，见火焰果惊呼：\"这果子竟能自行发光？快想办法保存，否则力量会消散！\"",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_003/chapter_003_narration_05.mp3",
+  "duration": 8.966,
   "character_timestamps": [
     {
       "character": "江",
-      "start_time": 0.016,
+      "start_time": 0.02,
       "end_time": 0.158
     },
     {
       "character": "蜜",
       "start_time": 0.158,
-      "end_time": 0.333
+      "end_time": 0.341
     },
     {
       "character": "儿",
-      "start_time": 0.333,
-      "end_time": 0.449
+      "start_time": 0.341,
+      "end_time": 0.445
     },
     {
-      "character": "快",
-      "start_time": 0.449,
-      "end_time": 0.699
+      "character": "赶",
+      "start_time": 0.445,
+      "end_time": 0.641
     },
     {
-      "character": "步",
-      "start_time": 0.699,
-      "end_time": 0.829
-    },
-    {
-      "character": "走",
-      "start_time": 0.829,
-      "end_time": 1.016
-    },
-    {
-      "character": "向",
-      "start_time": 1.016,
-      "end_time": 1.195
-    },
-    {
-      "character": "吴",
-      "start_time": 1.195,
-      "end_time": 1.324
-    },
-    {
-      "character": "双",
-      "start_time": 1.324,
-      "end_time": 1.537
+      "character": "到",
+      "start_time": 0.641,
+      "end_time": 0.787
     },
     {
       "character": "，",
-      "start_time": 1.537,
-      "end_time": 1.949
+      "start_time": 0.787,
+      "end_time": 1.291
+    },
+    {
+      "character": "浅",
+      "start_time": 1.291,
+      "end_time": 1.512
     },
     {
       "character": "绿",
-      "start_time": 1.949,
-      "end_time": 2.141
+      "start_time": 1.512,
+      "end_time": 1.637
     },
     {
       "character": "色",
-      "start_time": 2.141,
-      "end_time": 2.299
+      "start_time": 1.637,
+      "end_time": 1.762
     },
     {
       "character": "襦",
-      "start_time": 2.299,
-      "end_time": 2.441
-    },
-    {
-      "character": "衣",
-      "start_time": 2.441,
-      "end_time": 2.579
+      "start_time": 1.762,
+      "end_time": 1.933
     },
     {
       "character": "裙",
-      "start_time": 2.579,
-      "end_time": 2.866
-    },
-    {
-      "character": "摆",
-      "start_time": 2.866,
-      "end_time": 3.037
+      "start_time": 1.933,
+      "end_time": 2.104
     },
     {
       "character": "飘",
-      "start_time": 3.037,
-      "end_time": 3.274
+      "start_time": 2.104,
+      "end_time": 2.312
     },
     {
       "character": "动",
-      "start_time": 3.274,
-      "end_time": 3.408
+      "start_time": 2.312,
+      "end_time": 2.437
     },
     {
       "character": "，",
-      "start_time": 3.408,
-      "end_time": 3.87
+      "start_time": 2.437,
+      "end_time": 2.804
     },
     {
-      "character": "她",
-      "start_time": 3.87,
-      "end_time": 3.962
+      "character": "见",
+      "start_time": 2.804,
+      "end_time": 2.945
     },
     {
-      "character": "担",
-      "start_time": 3.962,
-      "end_time": 4.174
+      "character": "火",
+      "start_time": 2.945,
+      "end_time": 3.162
     },
     {
-      "character": "忧",
-      "start_time": 4.174,
-      "end_time": 4.329
+      "character": "焰",
+      "start_time": 3.162,
+      "end_time": 3.304
     },
     {
-      "character": "吴",
-      "start_time": 4.329,
-      "end_time": 4.462
+      "character": "果",
+      "start_time": 3.304,
+      "end_time": 3.437
     },
     {
-      "character": "双",
-      "start_time": 4.462,
-      "end_time": 4.67
+      "character": "惊",
+      "start_time": 3.437,
+      "end_time": 3.645
     },
     {
-      "character": "强",
-      "start_time": 4.67,
-      "end_time": 4.983
+      "character": "呼",
+      "start_time": 3.645,
+      "end_time": 3.833
+    },
+    {
+      "character": "：",
+      "start_time": 3.833,
+      "end_time": 4.279
+    },
+    {
+      "character": "这",
+      "start_time": 4.279,
+      "end_time": 4.387
+    },
+    {
+      "character": "果",
+      "start_time": 4.387,
+      "end_time": 4.574
+    },
+    {
+      "character": "子",
+      "start_time": 4.574,
+      "end_time": 4.674
+    },
+    {
+      "character": "竟",
+      "start_time": 4.674,
+      "end_time": 4.812
+    },
+    {
+      "character": "能",
+      "start_time": 4.812,
+      "end_time": 4.954
+    },
+    {
+      "character": "自",
+      "start_time": 4.954,
+      "end_time": 5.162
     },
     {
       "character": "行",
-      "start_time": 4.983,
-      "end_time": 5.179
+      "start_time": 5.162,
+      "end_time": 5.366
     },
     {
-      "character": "突",
-      "start_time": 5.179,
-      "end_time": 5.362
+      "character": "发",
+      "start_time": 5.366,
+      "end_time": 5.533
     },
     {
-      "character": "破",
-      "start_time": 5.362,
-      "end_time": 5.491
-    },
-    {
-      "character": "的",
-      "start_time": 5.491,
-      "end_time": 5.566
-    },
-    {
-      "character": "传",
-      "start_time": 5.566,
-      "end_time": 5.779
-    },
-    {
-      "character": "闻",
-      "start_time": 5.779,
-      "end_time": 5.962
+      "character": "光",
+      "start_time": 5.533,
+      "end_time": 5.716
     },
     {
       "character": "，",
-      "start_time": 5.962,
-      "end_time": 6.241
+      "start_time": 5.716,
+      "end_time": 5.987
     },
     {
-      "character": "语",
-      "start_time": 6.241,
-      "end_time": 6.383
+      "character": "快",
+      "start_time": 5.987,
+      "end_time": 6.212
     },
     {
-      "character": "气",
-      "start_time": 6.383,
-      "end_time": 6.52
+      "character": "想",
+      "start_time": 6.212,
+      "end_time": 6.408
     },
     {
-      "character": "中",
-      "start_time": 6.52,
-      "end_time": 6.708
+      "character": "办",
+      "start_time": 6.408,
+      "end_time": 6.599
     },
     {
-      "character": "满",
-      "start_time": 6.708,
-      "end_time": 6.991
+      "character": "法",
+      "start_time": 6.599,
+      "end_time": 6.749
     },
     {
-      "character": "是",
-      "start_time": 6.991,
-      "end_time": 7.145
+      "character": "保",
+      "start_time": 6.749,
+      "end_time": 6.929
     },
     {
-      "character": "焦",
-      "start_time": 7.145,
-      "end_time": 7.399
+      "character": "存",
+      "start_time": 6.929,
+      "end_time": 7.179
     },
     {
-      "character": "急",
-      "start_time": 7.399,
-      "end_time": 7.583
+      "character": "，",
+      "start_time": 7.179,
+      "end_time": 7.637
     },
     {
-      "character": "与",
-      "start_time": 7.583,
-      "end_time": 7.691
+      "character": "否",
+      "start_time": 7.637,
+      "end_time": 7.783
     },
     {
-      "character": "关",
-      "start_time": 7.691,
-      "end_time": 7.945
+      "character": "则",
+      "start_time": 7.783,
+      "end_time": 7.949
     },
     {
-      "character": "切",
-      "start_time": 7.945,
-      "end_time": 8.133
+      "character": "力",
+      "start_time": 7.949,
+      "end_time": 8.149
     },
     {
-      "character": "。",
-      "start_time": 8.133,
-      "end_time": 8.292
+      "character": "量",
+      "start_time": 8.149,
+      "end_time": 8.308
+    },
+    {
+      "character": "会",
+      "start_time": 8.308,
+      "end_time": 8.441
+    },
+    {
+      "character": "消",
+      "start_time": 8.441,
+      "end_time": 8.654
+    },
+    {
+      "character": "散",
+      "start_time": 8.654,
+      "end_time": 8.808
+    },
+    {
+      "character": "！",
+      "start_time": 8.808,
+      "end_time": 8.967
     }
   ],
-  "generated_at": "2025-09-23T08:17:51.197320"
+  "generated_at": "2025-11-07T23:06:55.355686"
 }

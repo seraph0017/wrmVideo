@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.32,Default,,0,0,0,,狂鲨暴怒显本体
-Dialogue: 0,0:00:01.76,0:00:04.12,Default,,0,0,0,,巨大银鲨{\c&H0000FFFF&\b1}张口{\c&H00FFFFFF&\b0}咬向吴双却
-Dialogue: 0,0:00:04.12,0:00:06.75,Default,,0,0,0,,见天空一道火红剑光落下如
-Dialogue: 0,0:00:06.75,0:00:09.17,Default,,0,0,0,,天外流星直刺{\c&H0000FFFF&\b1}银鲨{\c&H00FFFFFF&\b0}巨口
+Dialogue: 0,0:00:00.02,0:00:00.72,Default,,0,0,0,,战后疗伤
+Dialogue: 0,0:00:01.19,0:00:02.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}静坐百变魔云之上
+Dialogue: 0,0:00:03.09,0:00:04.58,Default,,0,0,0,,神识探查{\c&H0000FFFF&\b1}龙隐湖{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.90,0:00:07.50,Default,,0,0,0,,发现{\c&H0000FFFF&\b1}龙门{\c&H00FFFFFF&\b0}崖宝地九龙吸水局
+Dialogue: 0,0:00:07.83,0:00:09.13,Default,,0,0,0,,天地自然阵法

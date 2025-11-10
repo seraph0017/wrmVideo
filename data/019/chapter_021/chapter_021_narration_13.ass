@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_021 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}李景隆{\c&H00FFFFFF&\b0}跪在地上听到辛彦德
+Dialogue: 0,0:00:02.33,0:00:04.29,Default,,0,0,0,,的建议身体微微颤抖
+Dialogue: 0,0:00:04.82,0:00:07.04,Default,,0,0,0,,他深知{\c&H0000FFFF&\b1}周王{\c&H00FFFFFF&\b0}党羽众多一旦
+Dialogue: 0,0:00:07.04,0:00:09.69,Default,,0,0,0,,深究必将牵连甚广自己也
+Dialogue: 0,0:00:09.69,0:00:10.54,Default,,0,0,0,,难逃干系

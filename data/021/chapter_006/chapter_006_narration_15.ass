@@ -14,7 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.76,Default,,0,0,0,,江浩看着{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}与神鸟打斗的
-Dialogue: 0,0:00:01.76,0:00:03.02,Default,,0,0,0,,废墟感叹
-Dialogue: 0,0:00:03.43,0:00:04.42,Default,,0,0,0,,这到底是什么鸟
-Dialogue: 0,0:00:04.73,0:00:06.72,Default,,0,0,0,,刚孵化就能说话还这么能打
+Dialogue: 0,0:00:00.02,0:00:01.06,Default,,0,0,0,,吴双带{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.51,0:00:02.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}江浩{\c&H00FFFFFF&\b0}赶到留名崖
+Dialogue: 0,0:00:03.14,0:00:04.83,Default,,0,0,0,,发现周围埋伏众多敌人
+Dialogue: 0,0:00:05.07,0:00:06.50,Default,,0,0,0,,面色凝重准备应对

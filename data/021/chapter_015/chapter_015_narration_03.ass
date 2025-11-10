@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}简单演示完整版
-Dialogue: 0,0:00:01.67,0:00:02.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}九玄真{\c&H00FFFFFF&\b0}火斩
-Dialogue: 0,0:00:03.12,0:00:04.72,Default,,0,0,0,,火光凝聚成白色利刃
-Dialogue: 0,0:00:05.04,0:00:06.97,Default,,0,0,0,,吴魁瞬间领悟突破瓶颈
-Dialogue: 0,0:00:07.34,0:00:09.33,Default,,0,0,0,,从八连环{\c&H0000FFFF&\b1}晋升{\c&H00FFFFFF&\b0}九连环
+Dialogue: 0,0:00:00.02,0:00:01.40,Default,,0,0,0,,吴魁抓住{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}双臂
+Dialogue: 0,0:00:01.84,0:00:03.96,Default,,0,0,0,,眼神急切询问先祖传承
+Dialogue: 0,0:00:04.41,0:00:05.39,Default,,0,0,0,,火峰议事厅内
+Dialogue: 0,0:00:05.67,0:00:06.37,Default,,0,0,0,,石桌石凳
+Dialogue: 0,0:00:06.76,0:00:07.61,Default,,0,0,0,,火光跳动
+Dialogue: 0,0:00:07.97,0:00:08.93,Default,,0,0,0,,气氛紧张

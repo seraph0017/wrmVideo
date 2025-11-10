@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_020 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}从怀中抱出小九尾逗弄
+Dialogue: 0,0:00:02.53,0:00:03.89,Default,,0,0,0,,白堕见状转移话题
+Dialogue: 0,0:00:04.09,0:00:05.26,Default,,0,0,0,,我们想跟你做笔生意
+Dialogue: 0,0:00:05.55,0:00:06.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}眼睛一亮
+Dialogue: 0,0:00:06.99,0:00:07.46,Default,,0,0,0,,早说嘛
+Dialogue: 0,0:00:07.92,0:00:09.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}立马{\c&H00FFFFFF&\b0}拿出碗筷小九尾却
+Dialogue: 0,0:00:09.95,0:00:11.07,Default,,0,0,0,,嫌弃地扭过头

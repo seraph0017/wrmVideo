@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_007 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}蓝玉{\c&H00FFFFFF&\b0}望着朱棣背影
+Dialogue: 0,0:00:01.72,0:00:03.48,Default,,0,0,0,,灰色圆领袍显得{\c&H0000FFFF&\b1}朴素{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.85,0:00:04.64,Default,,0,0,0,,神情严肃
+Dialogue: 0,0:00:05.01,0:00:06.80,Default,,0,0,0,,对朱允熥低语{\c&H0000FFFF&\b1}朱棣{\c&H00FFFFFF&\b0}野心
+Dialogue: 0,0:00:07.20,0:00:08.04,Default,,0,0,0,,需多加提防
+Dialogue: 0,0:00:08.38,0:00:09.25,Default,,0,0,0,,眼神警惕

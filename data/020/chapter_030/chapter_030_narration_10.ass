@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_030 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}与眼魇玩起角色扮演
+Dialogue: 0,0:00:02.41,0:00:03.99,Default,,0,0,0,,被喊爸爸后差点喷血
+Dialogue: 0,0:00:04.42,0:00:06.30,Default,,0,0,0,,却继续调侃乖儿子让爸爸
+Dialogue: 0,0:00:06.30,0:00:06.62,Default,,0,0,0,,过去
+Dialogue: 0,0:00:07.02,0:00:08.10,Default,,0,0,0,,引来过不去的声浪
+Dialogue: 0,0:00:08.55,0:00:10.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}妙依{\c&H00FFFFFF&\b0}无奈解释眼魇特性

@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_037 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}北冥雪{\c&H00FFFFFF&\b0}月白圆领袍飘动
+Dialogue: 0,0:00:01.99,0:00:02.93,Default,,0,0,0,,立于通道{\c&H0000FFFF&\b1}入口{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.21,0:00:04.83,Default,,0,0,0,,空间武魂悄然展开
+Dialogue: 0,0:00:05.29,0:00:06.57,Default,,0,0,0,,指尖凝聚空间之力
+Dialogue: 0,0:00:06.86,0:00:08.06,Default,,0,0,0,,警惕探查四周
+Dialogue: 0,0:00:08.39,0:00:10.03,Default,,0,0,0,,防止地炎虎蜥突袭

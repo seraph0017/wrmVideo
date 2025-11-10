@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_010 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.59,Default,,0,0,0,,万年{\c&H0000FFFF&\b1}玄冰{\c&H00FFFFFF&\b0}树突现异象
+Dialogue: 0,0:00:02.15,0:00:04.30,Default,,0,0,0,,影像中冰晶树叶迅速枯萎
+Dialogue: 0,0:00:04.70,0:00:07.56,Default,,0,0,0,,树枝断裂地面裂开{\c&H0000FFFF&\b1}深沟{\c&H00FFFFFF&\b0}树根
+Dialogue: 0,0:00:07.56,0:00:10.09,Default,,0,0,0,,枯萎抽动陈{\c&H0000FFFF&\b1}天南{\c&H00FFFFFF&\b0}笑容僵在
+Dialogue: 0,0:00:10.09,0:00:12.73,Default,,0,0,0,,脸上眼神从得意转为震惊
+Dialogue: 0,0:00:13.06,0:00:13.70,Default,,0,0,0,,不敢{\c&H0000FFFF&\b1}置信{\c&H00FFFFFF&\b0}

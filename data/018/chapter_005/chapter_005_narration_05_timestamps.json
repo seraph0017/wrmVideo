@@ -1,188 +1,338 @@
 {
-  "text": "陈言彬观察洞府环境，眉头紧锁，发现药材堆，眼中闪过贪婪之色，正思考对策。",
-  "audio_file": "/Users/xunan/Projects/wrmVideo/web/../data/018/chapter_005/chapter_005_narration_05.mp3",
-  "duration": 7.241,
+  "text": "吴双当机立断，决定暂时放过赤眼白熊，前往探查元灵之气喷发之处。他身形如电，在森林中快速穿行，避开各种凶兽，朝着那股能量源头疾驰而去。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/018/chapter_005/chapter_005_narration_05.mp3",
+  "duration": 12.816,
   "character_timestamps": [
     {
-      "character": "陈",
+      "character": "吴",
       "start_time": 0.016,
-      "end_time": 0.183
+      "end_time": 0.158
     },
     {
-      "character": "言",
-      "start_time": 0.183,
-      "end_time": 0.337
+      "character": "双",
+      "start_time": 0.158,
+      "end_time": 0.349
     },
     {
-      "character": "彬",
-      "start_time": 0.337,
-      "end_time": 0.516
+      "character": "当",
+      "start_time": 0.349,
+      "end_time": 0.545
     },
     {
-      "character": "观",
-      "start_time": 0.516,
-      "end_time": 0.762
+      "character": "机",
+      "start_time": 0.545,
+      "end_time": 0.691
     },
     {
-      "character": "察",
-      "start_time": 0.762,
-      "end_time": 0.941
+      "character": "立",
+      "start_time": 0.691,
+      "end_time": 0.812
     },
     {
-      "character": "洞",
-      "start_time": 0.941,
-      "end_time": 1.137
-    },
-    {
-      "character": "府",
-      "start_time": 1.137,
-      "end_time": 1.291
-    },
-    {
-      "character": "环",
-      "start_time": 1.291,
-      "end_time": 1.52
-    },
-    {
-      "character": "境",
-      "start_time": 1.52,
-      "end_time": 1.67
+      "character": "断",
+      "start_time": 0.812,
+      "end_time": 0.974
     },
     {
       "character": "，",
-      "start_time": 1.67,
-      "end_time": 2.037
+      "start_time": 0.974,
+      "end_time": 1.254
     },
     {
-      "character": "眉",
-      "start_time": 2.037,
-      "end_time": 2.233
+      "character": "决",
+      "start_time": 1.254,
+      "end_time": 1.404
     },
     {
-      "character": "头",
-      "start_time": 2.233,
-      "end_time": 2.395
+      "character": "定",
+      "start_time": 1.404,
+      "end_time": 1.554
     },
     {
-      "character": "紧",
-      "start_time": 2.395,
-      "end_time": 2.612
+      "character": "暂",
+      "start_time": 1.554,
+      "end_time": 1.749
     },
     {
-      "character": "锁",
-      "start_time": 2.612,
-      "end_time": 2.804
+      "character": "时",
+      "start_time": 1.749,
+      "end_time": 1.899
     },
     {
-      "character": "，",
-      "start_time": 2.804,
-      "end_time": 3.216
-    },
-    {
-      "character": "发",
-      "start_time": 3.216,
-      "end_time": 3.345
-    },
-    {
-      "character": "现",
-      "start_time": 3.345,
-      "end_time": 3.508
-    },
-    {
-      "character": "药",
-      "start_time": 3.508,
-      "end_time": 3.658
-    },
-    {
-      "character": "材",
-      "start_time": 3.658,
-      "end_time": 3.829
-    },
-    {
-      "character": "堆",
-      "start_time": 3.829,
-      "end_time": 4.008
-    },
-    {
-      "character": "，",
-      "start_time": 4.008,
-      "end_time": 4.437
-    },
-    {
-      "character": "眼",
-      "start_time": 4.437,
-      "end_time": 4.616
-    },
-    {
-      "character": "中",
-      "start_time": 4.616,
-      "end_time": 4.754
-    },
-    {
-      "character": "闪",
-      "start_time": 4.754,
-      "end_time": 4.958
+      "character": "放",
+      "start_time": 1.899,
+      "end_time": 2.083
     },
     {
       "character": "过",
-      "start_time": 4.958,
-      "end_time": 5.062
+      "start_time": 2.083,
+      "end_time": 2.249
     },
     {
-      "character": "贪",
-      "start_time": 5.062,
-      "end_time": 5.287
+      "character": "赤",
+      "start_time": 2.249,
+      "end_time": 2.52
     },
     {
-      "character": "婪",
-      "start_time": 5.287,
-      "end_time": 5.47
+      "character": "眼",
+      "start_time": 2.52,
+      "end_time": 2.699
     },
     {
-      "character": "之",
-      "start_time": 5.47,
-      "end_time": 5.587
+      "character": "白",
+      "start_time": 2.699,
+      "end_time": 2.887
     },
     {
-      "character": "色",
-      "start_time": 5.587,
-      "end_time": 5.745
+      "character": "熊",
+      "start_time": 2.887,
+      "end_time": 3.137
     },
     {
       "character": "，",
-      "start_time": 5.745,
-      "end_time": 6.145
+      "start_time": 3.137,
+      "end_time": 3.608
     },
     {
-      "character": "正",
-      "start_time": 6.145,
-      "end_time": 6.295
+      "character": "前",
+      "start_time": 3.608,
+      "end_time": 3.808
     },
     {
-      "character": "思",
-      "start_time": 6.295,
-      "end_time": 6.524
+      "character": "往",
+      "start_time": 3.808,
+      "end_time": 3.933
     },
     {
-      "character": "考",
-      "start_time": 6.524,
-      "end_time": 6.733
+      "character": "探",
+      "start_time": 3.933,
+      "end_time": 4.112
     },
     {
-      "character": "对",
-      "start_time": 6.733,
-      "end_time": 6.891
+      "character": "查",
+      "start_time": 4.112,
+      "end_time": 4.341
     },
     {
-      "character": "策",
-      "start_time": 6.891,
-      "end_time": 7.079
+      "character": "元",
+      "start_time": 4.341,
+      "end_time": 4.533
+    },
+    {
+      "character": "灵",
+      "start_time": 4.533,
+      "end_time": 4.687
+    },
+    {
+      "character": "之",
+      "start_time": 4.687,
+      "end_time": 4.82
+    },
+    {
+      "character": "气",
+      "start_time": 4.82,
+      "end_time": 4.983
+    },
+    {
+      "character": "喷",
+      "start_time": 4.983,
+      "end_time": 5.233
+    },
+    {
+      "character": "发",
+      "start_time": 5.233,
+      "end_time": 5.404
+    },
+    {
+      "character": "之",
+      "start_time": 5.404,
+      "end_time": 5.529
+    },
+    {
+      "character": "处",
+      "start_time": 5.529,
+      "end_time": 5.691
+    },
+    {
+      "character": "，",
+      "start_time": 5.691,
+      "end_time": 6.154
+    },
+    {
+      "character": "他",
+      "start_time": 6.154,
+      "end_time": 6.237
+    },
+    {
+      "character": "身",
+      "start_time": 6.237,
+      "end_time": 6.47
+    },
+    {
+      "character": "形",
+      "start_time": 6.47,
+      "end_time": 6.649
+    },
+    {
+      "character": "如",
+      "start_time": 6.649,
+      "end_time": 6.791
+    },
+    {
+      "character": "电",
+      "start_time": 6.791,
+      "end_time": 6.945
+    },
+    {
+      "character": "，",
+      "start_time": 6.945,
+      "end_time": 7.387
+    },
+    {
+      "character": "在",
+      "start_time": 7.387,
+      "end_time": 7.512
+    },
+    {
+      "character": "森",
+      "start_time": 7.512,
+      "end_time": 7.72
+    },
+    {
+      "character": "林",
+      "start_time": 7.72,
+      "end_time": 7.862
+    },
+    {
+      "character": "中",
+      "start_time": 7.862,
+      "end_time": 8.037
+    },
+    {
+      "character": "快",
+      "start_time": 8.037,
+      "end_time": 8.287
+    },
+    {
+      "character": "速",
+      "start_time": 8.287,
+      "end_time": 8.437
+    },
+    {
+      "character": "穿",
+      "start_time": 8.437,
+      "end_time": 8.633
+    },
+    {
+      "character": "行",
+      "start_time": 8.633,
+      "end_time": 8.891
+    },
+    {
+      "character": "，",
+      "start_time": 8.891,
+      "end_time": 9.199
+    },
+    {
+      "character": "避",
+      "start_time": 9.199,
+      "end_time": 9.358
+    },
+    {
+      "character": "开",
+      "start_time": 9.358,
+      "end_time": 9.566
+    },
+    {
+      "character": "各",
+      "start_time": 9.566,
+      "end_time": 9.729
+    },
+    {
+      "character": "种",
+      "start_time": 9.729,
+      "end_time": 9.866
+    },
+    {
+      "character": "凶",
+      "start_time": 9.866,
+      "end_time": 10.066
+    },
+    {
+      "character": "兽",
+      "start_time": 10.066,
+      "end_time": 10.224
+    },
+    {
+      "character": "，",
+      "start_time": 10.224,
+      "end_time": 10.524
+    },
+    {
+      "character": "朝",
+      "start_time": 10.524,
+      "end_time": 10.72
+    },
+    {
+      "character": "着",
+      "start_time": 10.72,
+      "end_time": 10.808
+    },
+    {
+      "character": "那",
+      "start_time": 10.808,
+      "end_time": 10.916
+    },
+    {
+      "character": "股",
+      "start_time": 10.916,
+      "end_time": 11.062
+    },
+    {
+      "character": "能",
+      "start_time": 11.062,
+      "end_time": 11.262
+    },
+    {
+      "character": "量",
+      "start_time": 11.262,
+      "end_time": 11.424
+    },
+    {
+      "character": "源",
+      "start_time": 11.424,
+      "end_time": 11.612
+    },
+    {
+      "character": "头",
+      "start_time": 11.612,
+      "end_time": 11.845
+    },
+    {
+      "character": "疾",
+      "start_time": 11.845,
+      "end_time": 12.154
+    },
+    {
+      "character": "驰",
+      "start_time": 12.154,
+      "end_time": 12.362
+    },
+    {
+      "character": "而",
+      "start_time": 12.362,
+      "end_time": 12.491
+    },
+    {
+      "character": "去",
+      "start_time": 12.491,
+      "end_time": 12.658
     },
     {
       "character": "。",
-      "start_time": 7.079,
-      "end_time": 7.237
+      "start_time": 12.658,
+      "end_time": 12.817
     }
   ],
-  "generated_at": "2025-11-04T23:55:23.011725"
+  "generated_at": "2025-11-07T23:07:51.866781"
 }

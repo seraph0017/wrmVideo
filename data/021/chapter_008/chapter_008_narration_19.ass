@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}小丫{\c&H00FFFFFF&\b0}匆匆赶到吴双院子手中
-Dialogue: 0,0:00:02.41,0:00:04.70,Default,,0,0,0,,捧着丹药和请帖焦急喊道
-Dialogue: 0,0:00:05.09,0:00:05.50,Default,,0,0,0,,少爷
-Dialogue: 0,0:00:05.97,0:00:08.58,Default,,0,0,0,,陈家送来请帖整个{\c&H0000FFFF&\b1}吴家{\c&H00FFFFFF&\b0}只有
-Dialogue: 0,0:00:08.58,0:00:10.39,Default,,0,0,0,,四张您和老爷各一张
+Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,夜凉如水{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄望着
+Dialogue: 0,0:00:02.04,0:00:03.69,Default,,0,0,0,,窗外明月缓缓道
+Dialogue: 0,0:00:04.09,0:00:06.72,Default,,0,0,0,,王者之上非坦途当年我冲击
+Dialogue: 0,0:00:06.72,0:00:09.95,Default,,0,0,0,,破境时灵脉寸断险些身死

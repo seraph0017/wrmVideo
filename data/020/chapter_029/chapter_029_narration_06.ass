@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_029 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}阿福{\c&H00FFFFFF&\b0}怒斥小弟无知
+Dialogue: 0,0:00:01.99,0:00:04.57,Default,,0,0,0,,相思泪能打开{\c&H0000FFFF&\b1}神临{\c&H00FFFFFF&\b0}天国正是
+Dialogue: 0,0:00:04.57,0:00:06.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}获取武神传承的关键
+Dialogue: 0,0:00:06.82,0:00:09.38,Default,,0,0,0,,驴子眼神坚定命令必须拿下
+Dialogue: 0,0:00:09.71,0:00:11.36,Default,,0,0,0,,否则错失{\c&H0000FFFF&\b1}万古{\c&H00FFFFFF&\b0}机缘

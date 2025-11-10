@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_031 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.51,Default,,0,0,0,,六斤立于朱允熥身侧
+Dialogue: 0,0:00:02.04,0:00:03.37,Default,,0,0,0,,小脸上满是崇拜
+Dialogue: 0,0:00:03.74,0:00:05.39,Default,,0,0,0,,眼中闪烁着对武学的向往
+Dialogue: 0,0:00:05.69,0:00:07.24,Default,,0,0,0,,拉着朱允熥衣袖撒娇
+Dialogue: 0,0:00:07.55,0:00:08.91,Default,,0,0,0,,请求入武学读书

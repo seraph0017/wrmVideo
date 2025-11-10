@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_033 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}谭震{\c&H00FFFFFF&\b0}被暂停职务接受调查
+Dialogue: 0,0:00:02.42,0:00:03.85,Default,,0,0,0,,他坐在空荡荡的办公室
+Dialogue: 0,0:00:04.37,0:00:05.51,Default,,0,0,0,,看着{\c&H0000FFFF&\b1}司马越{\c&H00FFFFFF&\b0}的照片
+Dialogue: 0,0:00:05.86,0:00:07.84,Default,,0,0,0,,终于{\c&H0000FFFF&\b1}明白{\c&H00FFFFFF&\b0}自己只是权力游戏
+Dialogue: 0,0:00:07.84,0:00:08.42,Default,,0,0,0,,的牺牲品
+Dialogue: 0,0:00:08.80,0:00:10.04,Default,,0,0,0,,脸上写满悔恨

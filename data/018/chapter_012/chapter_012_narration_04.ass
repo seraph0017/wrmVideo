@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_012 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.28,Default,,0,0,0,,武雷国战败幕后黑手{\c&H0000FFFF&\b1}萧叔{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.28,0:00:02.65,Default,,0,0,0,,现身
+Dialogue: 0,0:00:03.05,0:00:05.41,Default,,0,0,0,,他藏身百里外见计划败露怒
+Dialogue: 0,0:00:05.41,0:00:07.68,Default,,0,0,0,,砸{\c&H0000FFFF&\b1}巨石{\c&H00FFFFFF&\b0}却不知贱鸟已悄悄
+Dialogue: 0,0:00:07.68,0:00:10.01,Default,,0,0,0,,盯上他这只黑鸟正躲在石后
+Dialogue: 0,0:00:10.30,0:00:11.80,Default,,0,0,0,,探头探脑标记位置

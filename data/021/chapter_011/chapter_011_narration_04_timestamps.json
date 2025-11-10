@@ -1,228 +1,263 @@
 {
-  "text": "吴双进入繁华城市，发现这里的人实力都很强，街上随处可见能够飞身而起的高手，让他十分震惊",
-  "audio_file": "data/021/chapter_011/chapter_011_narration_04.mp3",
-  "duration": 7.966,
+  "text": "暴怒出手！火牛因丹药被斥\"垃圾\"，一拳将神丹府伙计轰飞，两米高的魁梧身躯如铁塔般挡在店前，兽皮袍无风自动！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_011/chapter_011_narration_04.mp3",
+  "duration": 10.258,
   "character_timestamps": [
     {
-      "character": "吴",
-      "start_time": 0.02,
-      "end_time": 0.183
+      "character": "暴",
+      "start_time": 0.016,
+      "end_time": 0.212
     },
     {
-      "character": "双",
-      "start_time": 0.183,
-      "end_time": 0.379
+      "character": "怒",
+      "start_time": 0.212,
+      "end_time": 0.358
     },
     {
-      "character": "进",
-      "start_time": 0.379,
+      "character": "出",
+      "start_time": 0.358,
       "end_time": 0.512
     },
     {
-      "character": "入",
+      "character": "手",
       "start_time": 0.512,
-      "end_time": 0.624
-    },
-    {
-      "character": "繁",
-      "start_time": 0.624,
-      "end_time": 0.833
-    },
-    {
-      "character": "华",
-      "start_time": 0.833,
-      "end_time": 1.004
-    },
-    {
-      "character": "城",
-      "start_time": 1.004,
-      "end_time": 1.212
-    },
-    {
-      "character": "市",
-      "start_time": 1.212,
-      "end_time": 1.391
+      "end_time": 0.691
     },
     {
       "character": "，",
-      "start_time": 1.391,
-      "end_time": 1.783
+      "start_time": 0.691,
+      "end_time": 1.079
     },
     {
-      "character": "发",
-      "start_time": 1.783,
-      "end_time": 1.912
+      "character": "火",
+      "start_time": 1.079,
+      "end_time": 1.245
     },
     {
-      "character": "现",
-      "start_time": 1.912,
-      "end_time": 2.062
+      "character": "牛",
+      "start_time": 1.245,
+      "end_time": 1.408
     },
     {
-      "character": "这",
-      "start_time": 2.062,
-      "end_time": 2.166
+      "character": "因",
+      "start_time": 1.408,
+      "end_time": 1.604
     },
     {
-      "character": "里",
-      "start_time": 2.166,
-      "end_time": 2.258
+      "character": "丹",
+      "start_time": 1.604,
+      "end_time": 1.762
     },
     {
-      "character": "的",
-      "start_time": 2.258,
-      "end_time": 2.333
+      "character": "药",
+      "start_time": 1.762,
+      "end_time": 1.899
     },
     {
-      "character": "人",
-      "start_time": 2.333,
-      "end_time": 2.554
+      "character": "被",
+      "start_time": 1.899,
+      "end_time": 2.029
     },
     {
-      "character": "实",
-      "start_time": 2.554,
-      "end_time": 2.82
+      "character": "斥",
+      "start_time": 2.029,
+      "end_time": 2.154
     },
     {
-      "character": "力",
-      "start_time": 2.82,
-      "end_time": 2.937
+      "character": "垃",
+      "start_time": 2.154,
+      "end_time": 2.329
     },
     {
-      "character": "都",
-      "start_time": 2.937,
-      "end_time": 3.049
-    },
-    {
-      "character": "很",
-      "start_time": 3.049,
-      "end_time": 3.224
-    },
-    {
-      "character": "强",
-      "start_time": 3.224,
-      "end_time": 3.508
+      "character": "圾",
+      "start_time": 2.329,
+      "end_time": 2.512
     },
     {
       "character": "，",
-      "start_time": 3.508,
-      "end_time": 3.974
+      "start_time": 2.512,
+      "end_time": 2.983
     },
     {
-      "character": "街",
-      "start_time": 3.974,
-      "end_time": 4.116
+      "character": "一",
+      "start_time": 2.983,
+      "end_time": 3.154
     },
     {
-      "character": "上",
-      "start_time": 4.116,
-      "end_time": 4.266
+      "character": "拳",
+      "start_time": 3.154,
+      "end_time": 3.337
     },
     {
-      "character": "随",
-      "start_time": 4.266,
-      "end_time": 4.479
+      "character": "将",
+      "start_time": 3.337,
+      "end_time": 3.474
     },
     {
-      "character": "处",
-      "start_time": 4.479,
-      "end_time": 4.612
+      "character": "神",
+      "start_time": 3.474,
+      "end_time": 3.716
     },
     {
-      "character": "可",
-      "start_time": 4.612,
-      "end_time": 4.779
+      "character": "丹",
+      "start_time": 3.716,
+      "end_time": 3.883
     },
     {
-      "character": "见",
-      "start_time": 4.779,
-      "end_time": 4.979
+      "character": "府",
+      "start_time": 3.883,
+      "end_time": 4.045
     },
     {
-      "character": "能",
-      "start_time": 4.979,
-      "end_time": 5.204
+      "character": "伙",
+      "start_time": 4.045,
+      "end_time": 4.291
     },
     {
-      "character": "够",
-      "start_time": 5.204,
-      "end_time": 5.32
+      "character": "计",
+      "start_time": 4.291,
+      "end_time": 4.424
+    },
+    {
+      "character": "轰",
+      "start_time": 4.424,
+      "end_time": 4.599
     },
     {
       "character": "飞",
-      "start_time": 5.32,
-      "end_time": 5.549
-    },
-    {
-      "character": "身",
-      "start_time": 5.549,
-      "end_time": 5.716
-    },
-    {
-      "character": "而",
-      "start_time": 5.716,
-      "end_time": 5.841
-    },
-    {
-      "character": "起",
-      "start_time": 5.841,
-      "end_time": 5.979
-    },
-    {
-      "character": "的",
-      "start_time": 5.979,
-      "end_time": 6.058
-    },
-    {
-      "character": "高",
-      "start_time": 6.058,
-      "end_time": 6.254
-    },
-    {
-      "character": "手",
-      "start_time": 6.254,
-      "end_time": 6.462
+      "start_time": 4.599,
+      "end_time": 4.77
     },
     {
       "character": "，",
-      "start_time": 6.462,
-      "end_time": 6.691
+      "start_time": 4.77,
+      "end_time": 5.204
     },
     {
-      "character": "让",
-      "start_time": 6.691,
-      "end_time": 6.824
+      "character": "两",
+      "start_time": 5.204,
+      "end_time": 5.395
     },
     {
-      "character": "他",
-      "start_time": 6.824,
-      "end_time": 6.949
+      "character": "米",
+      "start_time": 5.395,
+      "end_time": 5.562
     },
     {
-      "character": "十",
-      "start_time": 6.949,
+      "character": "高",
+      "start_time": 5.562,
+      "end_time": 5.72
+    },
+    {
+      "character": "的",
+      "start_time": 5.72,
+      "end_time": 5.799
+    },
+    {
+      "character": "魁",
+      "start_time": 5.799,
+      "end_time": 5.991
+    },
+    {
+      "character": "梧",
+      "start_time": 5.991,
+      "end_time": 6.108
+    },
+    {
+      "character": "身",
+      "start_time": 6.108,
+      "end_time": 6.291
+    },
+    {
+      "character": "躯",
+      "start_time": 6.291,
+      "end_time": 6.57
+    },
+    {
+      "character": "如",
+      "start_time": 6.57,
+      "end_time": 6.808
+    },
+    {
+      "character": "铁",
+      "start_time": 6.808,
+      "end_time": 7.054
+    },
+    {
+      "character": "塔",
+      "start_time": 7.054,
       "end_time": 7.241
     },
     {
-      "character": "分",
+      "character": "般",
       "start_time": 7.241,
-      "end_time": 7.424
+      "end_time": 7.42
     },
     {
-      "character": "震",
-      "start_time": 7.424,
-      "end_time": 7.595
+      "character": "挡",
+      "start_time": 7.42,
+      "end_time": 7.629
     },
     {
-      "character": "惊",
-      "start_time": 7.595,
-      "end_time": 7.804
+      "character": "在",
+      "start_time": 7.629,
+      "end_time": 7.774
     },
     {
-      "character": "。",
-      "start_time": 7.804,
-      "end_time": 7.962
+      "character": "店",
+      "start_time": 7.774,
+      "end_time": 7.949
+    },
+    {
+      "character": "前",
+      "start_time": 7.949,
+      "end_time": 8.216
+    },
+    {
+      "character": "，",
+      "start_time": 8.216,
+      "end_time": 8.637
+    },
+    {
+      "character": "兽",
+      "start_time": 8.637,
+      "end_time": 8.866
+    },
+    {
+      "character": "皮",
+      "start_time": 8.866,
+      "end_time": 9.037
+    },
+    {
+      "character": "袍",
+      "start_time": 9.037,
+      "end_time": 9.408
+    },
+    {
+      "character": "无",
+      "start_time": 9.408,
+      "end_time": 9.608
+    },
+    {
+      "character": "风",
+      "start_time": 9.608,
+      "end_time": 9.804
+    },
+    {
+      "character": "自",
+      "start_time": 9.804,
+      "end_time": 9.962
+    },
+    {
+      "character": "动",
+      "start_time": 9.962,
+      "end_time": 10.099
+    },
+    {
+      "character": "！",
+      "start_time": 10.099,
+      "end_time": 10.258
     }
   ],
-  "generated_at": "2025-09-23T08:20:02.684402"
+  "generated_at": "2025-11-07T23:10:08.848030"
 }

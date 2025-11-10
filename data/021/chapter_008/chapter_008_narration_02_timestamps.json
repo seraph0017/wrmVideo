@@ -1,163 +1,263 @@
 {
-  "text": "吴永魁悬空，结印，臂闪幽光震场道：\"家法严明，长老会今日正法你！\"",
-  "audio_file": "data/021/chapter_008/chapter_008_narration_02.mp3",
-  "duration": 6.416,
+  "text": "吴永魁悬浮半空，双掌凝护臂聚力成淡金弧光，阴鸷目光如刀剜般俯视废墟中挣扎的吴江雄，致命杀招已蓄势待发",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_008/chapter_008_narration_02.mp3",
+  "duration": 10.358,
   "character_timestamps": [
     {
       "character": "吴",
       "start_time": 0.016,
-      "end_time": 0.204
+      "end_time": 0.183
     },
     {
       "character": "永",
-      "start_time": 0.204,
-      "end_time": 0.345
+      "start_time": 0.183,
+      "end_time": 0.329
     },
     {
       "character": "魁",
-      "start_time": 0.345,
-      "end_time": 0.52
+      "start_time": 0.329,
+      "end_time": 0.516
     },
     {
       "character": "悬",
-      "start_time": 0.52,
-      "end_time": 0.729
+      "start_time": 0.516,
+      "end_time": 0.77
+    },
+    {
+      "character": "浮",
+      "start_time": 0.77,
+      "end_time": 0.924
+    },
+    {
+      "character": "半",
+      "start_time": 0.924,
+      "end_time": 1.104
     },
     {
       "character": "空",
-      "start_time": 0.729,
-      "end_time": 0.929
+      "start_time": 1.104,
+      "end_time": 1.316
     },
     {
       "character": "，",
-      "start_time": 0.929,
-      "end_time": 1.254
+      "start_time": 1.316,
+      "end_time": 1.758
     },
     {
-      "character": "结",
-      "start_time": 1.254,
-      "end_time": 1.429
+      "character": "双",
+      "start_time": 1.758,
+      "end_time": 1.987
     },
     {
-      "character": "印",
-      "start_time": 1.429,
-      "end_time": 1.591
+      "character": "掌",
+      "start_time": 1.987,
+      "end_time": 2.233
     },
     {
-      "character": "，",
-      "start_time": 1.591,
-      "end_time": 2.054
+      "character": "凝",
+      "start_time": 2.233,
+      "end_time": 2.462
+    },
+    {
+      "character": "护",
+      "start_time": 2.462,
+      "end_time": 2.624
     },
     {
       "character": "臂",
-      "start_time": 2.054,
-      "end_time": 2.224
+      "start_time": 2.624,
+      "end_time": 2.766
     },
     {
-      "character": "闪",
-      "start_time": 2.224,
-      "end_time": 2.433
+      "character": "聚",
+      "start_time": 2.766,
+      "end_time": 2.949
     },
     {
-      "character": "幽",
-      "start_time": 2.433,
-      "end_time": 2.637
+      "character": "力",
+      "start_time": 2.949,
+      "end_time": 3.12
+    },
+    {
+      "character": "成",
+      "start_time": 3.12,
+      "end_time": 3.399
+    },
+    {
+      "character": "淡",
+      "start_time": 3.399,
+      "end_time": 3.591
+    },
+    {
+      "character": "金",
+      "start_time": 3.591,
+      "end_time": 3.762
+    },
+    {
+      "character": "弧",
+      "start_time": 3.762,
+      "end_time": 3.941
     },
     {
       "character": "光",
-      "start_time": 2.637,
-      "end_time": 2.824
-    },
-    {
-      "character": "震",
-      "start_time": 2.824,
-      "end_time": 2.995
-    },
-    {
-      "character": "场",
-      "start_time": 2.995,
-      "end_time": 3.216
-    },
-    {
-      "character": "道",
-      "start_time": 3.216,
-      "end_time": 3.354
-    },
-    {
-      "character": "：",
-      "start_time": 3.354,
-      "end_time": 3.633
-    },
-    {
-      "character": "家",
-      "start_time": 3.633,
-      "end_time": 3.837
-    },
-    {
-      "character": "法",
-      "start_time": 3.837,
-      "end_time": 3.991
-    },
-    {
-      "character": "严",
-      "start_time": 3.991,
-      "end_time": 4.145
-    },
-    {
-      "character": "明",
-      "start_time": 4.145,
-      "end_time": 4.374
+      "start_time": 3.941,
+      "end_time": 4.133
     },
     {
       "character": "，",
-      "start_time": 4.374,
-      "end_time": 4.783
+      "start_time": 4.133,
+      "end_time": 4.595
     },
     {
-      "character": "长",
-      "start_time": 4.783,
-      "end_time": 4.941
+      "character": "阴",
+      "start_time": 4.595,
+      "end_time": 4.804
     },
     {
-      "character": "老",
-      "start_time": 4.941,
-      "end_time": 5.091
+      "character": "鸷",
+      "start_time": 4.804,
+      "end_time": 4.924
     },
     {
-      "character": "会",
-      "start_time": 5.091,
-      "end_time": 5.249
+      "character": "目",
+      "start_time": 4.924,
+      "end_time": 5.079
     },
     {
-      "character": "今",
-      "start_time": 5.249,
-      "end_time": 5.574
+      "character": "光",
+      "start_time": 5.079,
+      "end_time": 5.349
     },
     {
-      "character": "日",
-      "start_time": 5.574,
-      "end_time": 5.741
+      "character": "如",
+      "start_time": 5.349,
+      "end_time": 5.562
     },
     {
-      "character": "正",
-      "start_time": 5.741,
-      "end_time": 5.958
+      "character": "刀",
+      "start_time": 5.562,
+      "end_time": 5.783
     },
     {
-      "character": "法",
-      "start_time": 5.958,
-      "end_time": 6.145
+      "character": "剜",
+      "start_time": 5.783,
+      "end_time": 5.949
     },
     {
-      "character": "你",
-      "start_time": 6.145,
-      "end_time": 6.254
+      "character": "般",
+      "start_time": 5.949,
+      "end_time": 6.116
     },
     {
-      "character": "！",
-      "start_time": 6.254,
-      "end_time": 6.412
+      "character": "俯",
+      "start_time": 6.116,
+      "end_time": 6.316
+    },
+    {
+      "character": "视",
+      "start_time": 6.316,
+      "end_time": 6.462
+    },
+    {
+      "character": "废",
+      "start_time": 6.462,
+      "end_time": 6.645
+    },
+    {
+      "character": "墟",
+      "start_time": 6.645,
+      "end_time": 6.812
+    },
+    {
+      "character": "中",
+      "start_time": 6.812,
+      "end_time": 6.991
+    },
+    {
+      "character": "挣",
+      "start_time": 6.991,
+      "end_time": 7.241
+    },
+    {
+      "character": "扎",
+      "start_time": 7.241,
+      "end_time": 7.391
+    },
+    {
+      "character": "的",
+      "start_time": 7.391,
+      "end_time": 7.487
+    },
+    {
+      "character": "吴",
+      "start_time": 7.487,
+      "end_time": 7.641
+    },
+    {
+      "character": "江",
+      "start_time": 7.641,
+      "end_time": 7.82
+    },
+    {
+      "character": "雄",
+      "start_time": 7.82,
+      "end_time": 8.087
+    },
+    {
+      "character": "，",
+      "start_time": 8.087,
+      "end_time": 8.462
+    },
+    {
+      "character": "致",
+      "start_time": 8.462,
+      "end_time": 8.595
+    },
+    {
+      "character": "命",
+      "start_time": 8.595,
+      "end_time": 8.737
+    },
+    {
+      "character": "杀",
+      "start_time": 8.737,
+      "end_time": 8.945
+    },
+    {
+      "character": "招",
+      "start_time": 8.945,
+      "end_time": 9.237
+    },
+    {
+      "character": "已",
+      "start_time": 9.237,
+      "end_time": 9.433
+    },
+    {
+      "character": "蓄",
+      "start_time": 9.433,
+      "end_time": 9.633
+    },
+    {
+      "character": "势",
+      "start_time": 9.633,
+      "end_time": 9.783
+    },
+    {
+      "character": "待",
+      "start_time": 9.783,
+      "end_time": 9.974
+    },
+    {
+      "character": "发",
+      "start_time": 9.974,
+      "end_time": 10.199
+    },
+    {
+      "character": "。",
+      "start_time": 10.199,
+      "end_time": 10.358
     }
   ],
-  "generated_at": "2025-09-23T08:19:33.460548"
+  "generated_at": "2025-11-07T23:08:50.455897"
 }

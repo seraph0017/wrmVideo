@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_030 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏一鸣{\c&H00FFFFFF&\b0}全力炼丹
+Dialogue: 0,0:00:01.67,0:00:03.77,Default,,0,0,0,,青色火焰中浮现麒麟虚影
+Dialogue: 0,0:00:04.24,0:00:05.80,Default,,0,0,0,,丹炉震动发出{\c&H0000FFFF&\b1}龙吟{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.11,0:00:06.89,Default,,0,0,0,,面容专注
+Dialogue: 0,0:00:07.25,0:00:08.42,Default,,0,0,0,,额头青筋暴起
+Dialogue: 0,0:00:08.86,0:00:10.70,Default,,0,0,0,,药库药材不断融入丹炉
+Dialogue: 0,0:00:10.99,0:00:11.95,Default,,0,0,0,,异象冲天

@@ -14,9 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.46,Default,,0,0,0,,吴双眼神锐利看出了{\c&H0000FFFF&\b1}郑毅{\c&H00FFFFFF&\b0}的
-Dialogue: 0,0:00:02.46,0:00:02.80,Default,,0,0,0,,破绽
-Dialogue: 0,0:00:03.27,0:00:04.82,Default,,0,0,0,,他没有继续追问而
-Dialogue: 0,0:00:04.82,0:00:06.87,Default,,0,0,0,,是突然使用特殊手段模仿了
-Dialogue: 0,0:00:06.87,0:00:09.09,Default,,0,0,0,,一个威严的声音测试{\c&H0000FFFF&\b1}郑毅{\c&H00FFFFFF&\b0}的
-Dialogue: 0,0:00:09.09,0:00:09.51,Default,,0,0,0,,反应
+Dialogue: 0,0:00:00.02,0:00:01.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}脚踏极电步在山谷中
+Dialogue: 0,0:00:01.96,0:00:02.37,Default,,0,0,0,,穿梭
+Dialogue: 0,0:00:02.94,0:00:04.79,Default,,0,0,0,,身形如鬼魅般避开坠落的
+Dialogue: 0,0:00:04.79,0:00:05.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}巨石{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.59,0:00:07.48,Default,,0,0,0,,雷电武魂加持下速度再提
+Dialogue: 0,0:00:07.48,0:00:07.85,Default,,0,0,0,,三分
+Dialogue: 0,0:00:08.16,0:00:10.08,Default,,0,0,0,,与{\c&H0000FFFF&\b1}青狼{\c&H00FFFFFF&\b0}眼距离逐渐拉开

@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_037 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.81,Default,,0,0,0,,特写镜头下
+Dialogue: 0,0:00:01.21,0:00:03.02,Default,,0,0,0,,现代青年游欢目光专注
+Dialogue: 0,0:00:03.47,0:00:04.63,Default,,0,0,0,,左手轻扶眼镜
+Dialogue: 0,0:00:05.08,0:00:06.88,Default,,0,0,0,,指尖在笔记本电脑键盘上
+Dialogue: 0,0:00:06.88,0:00:07.71,Default,,0,0,0,,快速敲击
+Dialogue: 0,0:00:08.17,0:00:09.43,Default,,0,0,0,,背景是明亮的书房
+Dialogue: 0,0:00:09.94,0:00:11.56,Default,,0,0,0,,桌上散落着几本书籍
+Dialogue: 0,0:00:12.08,0:00:13.64,Default,,0,0,0,,展现出他沉浸于工作的
+Dialogue: 0,0:00:13.64,0:00:14.37,Default,,0,0,0,,认真模样

@@ -1,228 +1,223 @@
 {
-  "text": "吴江雄王者之境力量彻底觉醒！一招击溃陈家两位王者陈霞、陈娜，为吴家夺下王族之位奠定根基！",
-  "audio_file": "data/021/chapter_020/chapter_020_narration_03.mp3",
-  "duration": 9.158,
+  "text": "赵震川目睹陈天南被杀，心沉谷底，闭眼再睁眼时面如死灰，深知陈家败局已定，吴家强势崛起。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_020/chapter_020_narration_03.mp3",
+  "duration": 9.166,
   "character_timestamps": [
     {
-      "character": "吴",
+      "character": "赵",
       "start_time": 0.016,
-      "end_time": 0.17
+      "end_time": 0.183
     },
     {
-      "character": "江",
-      "start_time": 0.17,
-      "end_time": 0.337
+      "character": "震",
+      "start_time": 0.183,
+      "end_time": 0.354
     },
     {
-      "character": "雄",
-      "start_time": 0.337,
-      "end_time": 0.641
+      "character": "川",
+      "start_time": 0.354,
+      "end_time": 0.558
     },
     {
-      "character": "王",
-      "start_time": 0.641,
-      "end_time": 0.816
+      "character": "目",
+      "start_time": 0.558,
+      "end_time": 0.874
     },
     {
-      "character": "者",
-      "start_time": 0.816,
-      "end_time": 0.949
+      "character": "睹",
+      "start_time": 0.874,
+      "end_time": 1.029
     },
     {
-      "character": "之",
-      "start_time": 0.949,
-      "end_time": 1.062
+      "character": "陈",
+      "start_time": 1.029,
+      "end_time": 1.266
     },
     {
-      "character": "境",
-      "start_time": 1.062,
-      "end_time": 1.258
+      "character": "天",
+      "start_time": 1.266,
+      "end_time": 1.416
     },
     {
-      "character": "力",
-      "start_time": 1.258,
-      "end_time": 1.504
+      "character": "南",
+      "start_time": 1.416,
+      "end_time": 1.616
     },
     {
-      "character": "量",
-      "start_time": 1.504,
-      "end_time": 1.674
+      "character": "被",
+      "start_time": 1.616,
+      "end_time": 1.783
     },
     {
-      "character": "彻",
-      "start_time": 1.674,
-      "end_time": 1.937
+      "character": "杀",
+      "start_time": 1.783,
+      "end_time": 2.004
+    },
+    {
+      "character": "，",
+      "start_time": 2.004,
+      "end_time": 2.341
+    },
+    {
+      "character": "心",
+      "start_time": 2.341,
+      "end_time": 2.579
+    },
+    {
+      "character": "沉",
+      "start_time": 2.579,
+      "end_time": 2.77
+    },
+    {
+      "character": "谷",
+      "start_time": 2.77,
+      "end_time": 2.962
     },
     {
       "character": "底",
-      "start_time": 1.937,
-      "end_time": 2.087
-    },
-    {
-      "character": "觉",
-      "start_time": 2.087,
-      "end_time": 2.274
-    },
-    {
-      "character": "醒",
-      "start_time": 2.274,
-      "end_time": 2.433
+      "start_time": 2.962,
+      "end_time": 3.137
     },
     {
       "character": "，",
-      "start_time": 2.433,
-      "end_time": 2.912
+      "start_time": 3.137,
+      "end_time": 3.537
     },
     {
-      "character": "一",
-      "start_time": 2.912,
-      "end_time": 3.062
+      "character": "闭",
+      "start_time": 3.537,
+      "end_time": 3.737
     },
     {
-      "character": "招",
-      "start_time": 3.062,
-      "end_time": 3.224
+      "character": "眼",
+      "start_time": 3.737,
+      "end_time": 3.866
     },
     {
-      "character": "击",
-      "start_time": 3.224,
-      "end_time": 3.395
+      "character": "再",
+      "start_time": 3.866,
+      "end_time": 3.999
     },
     {
-      "character": "溃",
-      "start_time": 3.395,
-      "end_time": 3.549
+      "character": "睁",
+      "start_time": 3.999,
+      "end_time": 4.208
+    },
+    {
+      "character": "眼",
+      "start_time": 4.208,
+      "end_time": 4.383
+    },
+    {
+      "character": "时",
+      "start_time": 4.383,
+      "end_time": 4.641
+    },
+    {
+      "character": "面",
+      "start_time": 4.641,
+      "end_time": 4.887
+    },
+    {
+      "character": "如",
+      "start_time": 4.887,
+      "end_time": 5.091
+    },
+    {
+      "character": "死",
+      "start_time": 5.091,
+      "end_time": 5.32
+    },
+    {
+      "character": "灰",
+      "start_time": 5.32,
+      "end_time": 5.524
+    },
+    {
+      "character": "，",
+      "start_time": 5.524,
+      "end_time": 5.924
+    },
+    {
+      "character": "深",
+      "start_time": 5.924,
+      "end_time": 6.137
+    },
+    {
+      "character": "知",
+      "start_time": 6.137,
+      "end_time": 6.287
     },
     {
       "character": "陈",
-      "start_time": 3.549,
-      "end_time": 3.774
+      "start_time": 6.287,
+      "end_time": 6.499
     },
     {
       "character": "家",
-      "start_time": 3.774,
-      "end_time": 3.929
+      "start_time": 6.499,
+      "end_time": 6.654
     },
     {
-      "character": "两",
-      "start_time": 3.929,
-      "end_time": 4.124
+      "character": "败",
+      "start_time": 6.654,
+      "end_time": 6.916
     },
     {
-      "character": "位",
-      "start_time": 4.124,
-      "end_time": 4.258
+      "character": "局",
+      "start_time": 6.916,
+      "end_time": 7.066
     },
     {
-      "character": "王",
-      "start_time": 4.258,
-      "end_time": 4.458
-    },
-    {
-      "character": "者",
-      "start_time": 4.458,
-      "end_time": 4.62
-    },
-    {
-      "character": "陈",
-      "start_time": 4.858,
-      "end_time": 5.054
-    },
-    {
-      "character": "霞",
-      "start_time": 5.054,
-      "end_time": 5.308
-    },
-    {
-      "character": "，",
-      "start_time": 5.308,
-      "end_time": 5.762
-    },
-    {
-      "character": "陈",
-      "start_time": 5.762,
-      "end_time": 5.941
-    },
-    {
-      "character": "娜",
-      "start_time": 5.941,
-      "end_time": 6.108
-    },
-    {
-      "character": "，",
-      "start_time": 6.108,
-      "end_time": 6.483
-    },
-    {
-      "character": "为",
-      "start_time": 6.483,
-      "end_time": 6.612
-    },
-    {
-      "character": "吴",
-      "start_time": 6.612,
-      "end_time": 6.799
-    },
-    {
-      "character": "家",
-      "start_time": 6.799,
-      "end_time": 6.995
-    },
-    {
-      "character": "夺",
-      "start_time": 6.995,
-      "end_time": 7.237
-    },
-    {
-      "character": "下",
-      "start_time": 7.237,
-      "end_time": 7.437
-    },
-    {
-      "character": "王",
-      "start_time": 7.437,
-      "end_time": 7.658
-    },
-    {
-      "character": "族",
-      "start_time": 7.658,
-      "end_time": 7.816
-    },
-    {
-      "character": "之",
-      "start_time": 7.816,
-      "end_time": 7.949
-    },
-    {
-      "character": "位",
-      "start_time": 7.949,
-      "end_time": 8.079
-    },
-    {
-      "character": "奠",
-      "start_time": 8.079,
-      "end_time": 8.387
+      "character": "已",
+      "start_time": 7.066,
+      "end_time": 7.22
     },
     {
       "character": "定",
-      "start_time": 8.387,
-      "end_time": 8.587
+      "start_time": 7.22,
+      "end_time": 7.391
     },
     {
-      "character": "根",
-      "start_time": 8.587,
-      "end_time": 8.799
+      "character": "，",
+      "start_time": 7.391,
+      "end_time": 7.77
     },
     {
-      "character": "基",
-      "start_time": 8.799,
-      "end_time": 8.999
+      "character": "吴",
+      "start_time": 7.77,
+      "end_time": 7.966
     },
     {
-      "character": "！",
-      "start_time": 8.999,
-      "end_time": 9.158
+      "character": "家",
+      "start_time": 7.966,
+      "end_time": 8.149
+    },
+    {
+      "character": "强",
+      "start_time": 8.149,
+      "end_time": 8.47
+    },
+    {
+      "character": "势",
+      "start_time": 8.47,
+      "end_time": 8.654
+    },
+    {
+      "character": "崛",
+      "start_time": 8.654,
+      "end_time": 8.854
+    },
+    {
+      "character": "起",
+      "start_time": 8.854,
+      "end_time": 9.004
+    },
+    {
+      "character": "。",
+      "start_time": 9.004,
+      "end_time": 9.162
     }
   ],
-  "generated_at": "2025-09-23T08:23:09.332863"
+  "generated_at": "2025-11-07T23:13:52.925109"
 }

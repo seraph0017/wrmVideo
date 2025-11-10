@@ -1,218 +1,253 @@
 {
-  "text": "吴双断后，不断轰击洞穴两侧，造成坍塌堵塞通道，阻止赵牧等人追击，为江家兄妹争取时间！",
-  "audio_file": "data/021/chapter_005/chapter_005_narration_15.mp3",
-  "duration": 7.85,
+  "text": "天泉境中期达成！吴双仅用两时辰跨越瓶颈，体内元灵之气澎湃如潮，九转真火功法运转周天，力量远超同阶！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_005/chapter_005_narration_15.mp3",
+  "duration": 10.233,
   "character_timestamps": [
     {
-      "character": "吴",
+      "character": "天",
       "start_time": 0.016,
-      "end_time": 0.158
+      "end_time": 0.224
     },
     {
-      "character": "双",
-      "start_time": 0.158,
-      "end_time": 0.333
+      "character": "泉",
+      "start_time": 0.224,
+      "end_time": 0.399
     },
     {
-      "character": "断",
-      "start_time": 0.333,
-      "end_time": 0.474
+      "character": "境",
+      "start_time": 0.399,
+      "end_time": 0.574
     },
     {
-      "character": "后",
-      "start_time": 0.474,
-      "end_time": 0.649
+      "character": "中",
+      "start_time": 0.574,
+      "end_time": 0.808
     },
     {
-      "character": "，",
-      "start_time": 0.649,
+      "character": "期",
+      "start_time": 0.808,
       "end_time": 0.966
     },
     {
-      "character": "不",
+      "character": "达",
       "start_time": 0.966,
-      "end_time": 1.079
-    },
-    {
-      "character": "断",
-      "start_time": 1.079,
-      "end_time": 1.241
-    },
-    {
-      "character": "轰",
-      "start_time": 1.241,
-      "end_time": 1.47
-    },
-    {
-      "character": "击",
-      "start_time": 1.47,
-      "end_time": 1.612
-    },
-    {
-      "character": "洞",
-      "start_time": 1.612,
-      "end_time": 1.783
-    },
-    {
-      "character": "穴",
-      "start_time": 1.783,
-      "end_time": 1.954
-    },
-    {
-      "character": "两",
-      "start_time": 1.954,
-      "end_time": 2.187
-    },
-    {
-      "character": "侧",
-      "start_time": 2.187,
-      "end_time": 2.379
-    },
-    {
-      "character": "，",
-      "start_time": 2.379,
-      "end_time": 2.812
-    },
-    {
-      "character": "造",
-      "start_time": 2.812,
-      "end_time": 2.962
+      "end_time": 1.124
     },
     {
       "character": "成",
-      "start_time": 2.962,
-      "end_time": 3.116
-    },
-    {
-      "character": "坍",
-      "start_time": 3.116,
-      "end_time": 3.279
-    },
-    {
-      "character": "塌",
-      "start_time": 3.279,
-      "end_time": 3.399
-    },
-    {
-      "character": "堵",
-      "start_time": 3.399,
-      "end_time": 3.616
-    },
-    {
-      "character": "塞",
-      "start_time": 3.616,
-      "end_time": 3.762
-    },
-    {
-      "character": "通",
-      "start_time": 3.762,
-      "end_time": 3.941
-    },
-    {
-      "character": "道",
-      "start_time": 3.941,
-      "end_time": 4.066
+      "start_time": 1.124,
+      "end_time": 1.37
     },
     {
       "character": "，",
-      "start_time": 4.066,
-      "end_time": 4.408
+      "start_time": 1.37,
+      "end_time": 1.695
     },
     {
-      "character": "阻",
-      "start_time": 4.408,
-      "end_time": 4.583
+      "character": "吴",
+      "start_time": 1.695,
+      "end_time": 1.845
     },
     {
-      "character": "止",
-      "start_time": 4.583,
-      "end_time": 4.745
+      "character": "双",
+      "start_time": 1.845,
+      "end_time": 2.045
     },
     {
-      "character": "赵",
-      "start_time": 4.745,
-      "end_time": 4.954
+      "character": "仅",
+      "start_time": 2.045,
+      "end_time": 2.258
     },
     {
-      "character": "牧",
-      "start_time": 4.954,
-      "end_time": 5.07
+      "character": "用",
+      "start_time": 2.258,
+      "end_time": 2.395
     },
     {
-      "character": "等",
-      "start_time": 5.07,
-      "end_time": 5.208
-    },
-    {
-      "character": "人",
-      "start_time": 5.208,
-      "end_time": 5.349
-    },
-    {
-      "character": "追",
-      "start_time": 5.349,
-      "end_time": 5.533
-    },
-    {
-      "character": "击",
-      "start_time": 5.533,
-      "end_time": 5.716
-    },
-    {
-      "character": "，",
-      "start_time": 5.716,
-      "end_time": 6.045
-    },
-    {
-      "character": "为",
-      "start_time": 6.045,
-      "end_time": 6.174
-    },
-    {
-      "character": "江",
-      "start_time": 6.174,
-      "end_time": 6.354
-    },
-    {
-      "character": "家",
-      "start_time": 6.354,
-      "end_time": 6.495
-    },
-    {
-      "character": "兄",
-      "start_time": 6.495,
-      "end_time": 6.708
-    },
-    {
-      "character": "妹",
-      "start_time": 6.708,
-      "end_time": 6.883
-    },
-    {
-      "character": "争",
-      "start_time": 6.883,
-      "end_time": 7.149
-    },
-    {
-      "character": "取",
-      "start_time": 7.149,
-      "end_time": 7.316
+      "character": "两",
+      "start_time": 2.395,
+      "end_time": 2.591
     },
     {
       "character": "时",
-      "start_time": 7.316,
-      "end_time": 7.504
+      "start_time": 2.591,
+      "end_time": 2.72
     },
     {
-      "character": "间",
-      "start_time": 7.504,
-      "end_time": 7.691
+      "character": "辰",
+      "start_time": 2.72,
+      "end_time": 2.895
+    },
+    {
+      "character": "跨",
+      "start_time": 2.895,
+      "end_time": 3.17
+    },
+    {
+      "character": "越",
+      "start_time": 3.17,
+      "end_time": 3.299
+    },
+    {
+      "character": "瓶",
+      "start_time": 3.299,
+      "end_time": 3.545
+    },
+    {
+      "character": "颈",
+      "start_time": 3.545,
+      "end_time": 3.683
+    },
+    {
+      "character": "，",
+      "start_time": 3.683,
+      "end_time": 4.229
+    },
+    {
+      "character": "体",
+      "start_time": 4.229,
+      "end_time": 4.358
+    },
+    {
+      "character": "内",
+      "start_time": 4.358,
+      "end_time": 4.479
+    },
+    {
+      "character": "元",
+      "start_time": 4.479,
+      "end_time": 4.662
+    },
+    {
+      "character": "灵",
+      "start_time": 4.662,
+      "end_time": 4.829
+    },
+    {
+      "character": "之",
+      "start_time": 4.829,
+      "end_time": 4.954
+    },
+    {
+      "character": "气",
+      "start_time": 4.954,
+      "end_time": 5.149
+    },
+    {
+      "character": "澎",
+      "start_time": 5.149,
+      "end_time": 5.458
+    },
+    {
+      "character": "湃",
+      "start_time": 5.458,
+      "end_time": 5.633
+    },
+    {
+      "character": "如",
+      "start_time": 5.633,
+      "end_time": 5.783
+    },
+    {
+      "character": "潮",
+      "start_time": 5.783,
+      "end_time": 6.037
+    },
+    {
+      "character": "，",
+      "start_time": 6.037,
+      "end_time": 6.345
+    },
+    {
+      "character": "九",
+      "start_time": 6.345,
+      "end_time": 6.533
+    },
+    {
+      "character": "转",
+      "start_time": 6.533,
+      "end_time": 6.699
+    },
+    {
+      "character": "真",
+      "start_time": 6.699,
+      "end_time": 6.916
+    },
+    {
+      "character": "火",
+      "start_time": 6.916,
+      "end_time": 7.124
+    },
+    {
+      "character": "功",
+      "start_time": 7.124,
+      "end_time": 7.366
+    },
+    {
+      "character": "法",
+      "start_time": 7.366,
+      "end_time": 7.57
+    },
+    {
+      "character": "运",
+      "start_time": 7.57,
+      "end_time": 7.77
+    },
+    {
+      "character": "转",
+      "start_time": 7.77,
+      "end_time": 7.97
+    },
+    {
+      "character": "周",
+      "start_time": 7.97,
+      "end_time": 8.149
+    },
+    {
+      "character": "天",
+      "start_time": 8.149,
+      "end_time": 8.366
+    },
+    {
+      "character": "，",
+      "start_time": 8.366,
+      "end_time": 8.699
+    },
+    {
+      "character": "力",
+      "start_time": 8.699,
+      "end_time": 8.929
+    },
+    {
+      "character": "量",
+      "start_time": 8.929,
+      "end_time": 9.133
+    },
+    {
+      "character": "远",
+      "start_time": 9.133,
+      "end_time": 9.424
+    },
+    {
+      "character": "超",
+      "start_time": 9.424,
+      "end_time": 9.666
+    },
+    {
+      "character": "同",
+      "start_time": 9.666,
+      "end_time": 9.862
+    },
+    {
+      "character": "阶",
+      "start_time": 9.862,
+      "end_time": 10.074
     },
     {
       "character": "！",
-      "start_time": 7.691,
-      "end_time": 7.85
+      "start_time": 10.074,
+      "end_time": 10.233
     }
   ],
-  "generated_at": "2025-09-23T08:18:53.944180"
+  "generated_at": "2025-11-07T23:07:53.899605"
 }

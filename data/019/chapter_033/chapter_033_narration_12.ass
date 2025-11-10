@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_033 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.29,Default,,0,0,0,,项目论证会现场
+Dialogue: 0,0:00:01.73,0:00:03.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}肖静宇{\c&H00FFFFFF&\b0}当众展示投资人圈地
+Dialogue: 0,0:00:03.90,0:00:04.62,Default,,0,0,0,,骗补证据
+Dialogue: 0,0:00:05.17,0:00:06.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}谭震{\c&H00FFFFFF&\b0}怒不可遏
+Dialogue: 0,0:00:06.67,0:00:07.95,Default,,0,0,0,,宏市长假意调解
+Dialogue: 0,0:00:08.28,0:00:09.70,Default,,0,0,0,,实则暗示{\c&H0000FFFF&\b1}肖静宇{\c&H00FFFFFF&\b0}不要
+Dialogue: 0,0:00:09.70,0:00:10.98,Default,,0,0,0,,敬酒不吃吃罚酒

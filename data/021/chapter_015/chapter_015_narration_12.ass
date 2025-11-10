@@ -14,9 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.62,Default,,0,0,0,,吴魁见{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}深入险境
-Dialogue: 0,0:00:02.07,0:00:03.89,Default,,0,0,0,,不顾祖地规矩冲入第六峰
-Dialogue: 0,0:00:03.89,0:00:04.18,Default,,0,0,0,,通道
-Dialogue: 0,0:00:04.65,0:00:05.74,Default,,0,0,0,,引发五峰震动
-Dialogue: 0,0:00:06.07,0:00:07.17,Default,,0,0,0,,残魂力量暴动
-Dialogue: 0,0:00:07.57,0:00:09.22,Default,,0,0,0,,众长老怒斥其疯魔
+Dialogue: 0,0:00:00.02,0:00:00.98,Default,,0,0,0,,吴魁在客房内
+Dialogue: 0,0:00:01.36,0:00:02.05,Default,,0,0,0,,手持丹药
+Dialogue: 0,0:00:02.35,0:00:03.10,Default,,0,0,0,,表情关切
+Dialogue: 0,0:00:03.51,0:00:05.14,Default,,0,0,0,,向{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}讲述秦家历史
+Dialogue: 0,0:00:05.53,0:00:06.28,Default,,0,0,0,,火峰客房
+Dialogue: 0,0:00:06.72,0:00:07.38,Default,,0,0,0,,石桌石凳
+Dialogue: 0,0:00:07.72,0:00:08.49,Default,,0,0,0,,气氛凝重

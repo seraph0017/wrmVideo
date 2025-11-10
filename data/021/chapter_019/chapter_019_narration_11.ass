@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵流{\c&H00FFFFFF&\b0}濒死呼救陈禹坤
-Dialogue: 0,0:00:02.13,0:00:04.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}山峰{\c&H00FFFFFF&\b0}后一道身影冲天而起
-Dialogue: 0,0:00:04.60,0:00:06.08,Default,,0,0,0,,速度快过百变魔云
-Dialogue: 0,0:00:06.37,0:00:07.15,Default,,0,0,0,,直追{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:07.47,0:00:09.25,Default,,0,0,0,,正是陈家八连环强者
+Dialogue: 0,0:00:00.02,0:00:01.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴昊轩{\c&H00FFFFFF&\b0}踏火而来
+Dialogue: 0,0:00:01.88,0:00:03.66,Default,,0,0,0,,他深蓝色长袍衣袂翻飞
+Dialogue: 0,0:00:04.08,0:00:06.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}九玄真{\c&H00FFFFFF&\b0}火斩劈开虚空裂痕
+Dialogue: 0,0:00:06.64,0:00:08.92,Default,,0,0,0,,怒目圆睁怒斥陈{\c&H0000FFFF&\b1}天南{\c&H00FFFFFF&\b0}违背
+Dialogue: 0,0:00:08.92,0:00:09.32,Default,,0,0,0,,祖制

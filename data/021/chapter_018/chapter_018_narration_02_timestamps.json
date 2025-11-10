@@ -1,163 +1,248 @@
 {
-  "text": "弓青云半空立，单手抓，元灵凝几十丈巨掌，嘴角露傲笑视吴双囊物！",
-  "audio_file": "data/021/chapter_018/chapter_018_narration_02.mp3",
-  "duration": 6.3,
+  "text": "天际突然破开一道光，弓青云与梅丽丹现身，瞥见吴双手中的百变魔云，眼中闪过贪婪，当即联手出手抢夺。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_018/chapter_018_narration_02.mp3",
+  "duration": 9.383,
   "character_timestamps": [
     {
-      "character": "弓",
+      "character": "天",
       "start_time": 0.016,
-      "end_time": 0.195
+      "end_time": 0.212
     },
     {
-      "character": "青",
-      "start_time": 0.195,
-      "end_time": 0.387
+      "character": "际",
+      "start_time": 0.212,
+      "end_time": 0.374
     },
     {
-      "character": "云",
-      "start_time": 0.387,
+      "character": "突",
+      "start_time": 0.374,
       "end_time": 0.545
     },
     {
-      "character": "半",
+      "character": "然",
       "start_time": 0.545,
-      "end_time": 0.749
+      "end_time": 0.695
     },
     {
-      "character": "空",
-      "start_time": 0.749,
-      "end_time": 0.958
+      "character": "破",
+      "start_time": 0.695,
+      "end_time": 0.933
     },
     {
-      "character": "立",
-      "start_time": 0.958,
-      "end_time": 1.07
+      "character": "开",
+      "start_time": 0.933,
+      "end_time": 1.112
     },
     {
-      "character": "，",
-      "start_time": 1.07,
-      "end_time": 1.516
+      "character": "一",
+      "start_time": 1.112,
+      "end_time": 1.204
     },
     {
-      "character": "单",
-      "start_time": 1.516,
-      "end_time": 1.708
+      "character": "道",
+      "start_time": 1.204,
+      "end_time": 1.333
     },
     {
-      "character": "手",
-      "start_time": 1.708,
-      "end_time": 1.891
-    },
-    {
-      "character": "抓",
-      "start_time": 1.891,
-      "end_time": 2.087
+      "character": "光",
+      "start_time": 1.333,
+      "end_time": 1.533
     },
     {
       "character": "，",
-      "start_time": 2.087,
-      "end_time": 2.383
+      "start_time": 1.533,
+      "end_time": 1.987
     },
     {
-      "character": "元",
-      "start_time": 2.383,
-      "end_time": 2.545
+      "character": "弓",
+      "start_time": 1.987,
+      "end_time": 2.158
     },
     {
-      "character": "灵",
-      "start_time": 2.545,
-      "end_time": 2.683
+      "character": "青",
+      "start_time": 2.158,
+      "end_time": 2.329
     },
     {
-      "character": "凝",
-      "start_time": 2.683,
-      "end_time": 2.849
+      "character": "云",
+      "start_time": 2.329,
+      "end_time": 2.474
     },
     {
-      "character": "几",
-      "start_time": 2.849,
+      "character": "与",
+      "start_time": 2.474,
+      "end_time": 2.591
+    },
+    {
+      "character": "梅",
+      "start_time": 2.591,
+      "end_time": 2.816
+    },
+    {
+      "character": "丽",
+      "start_time": 2.816,
+      "end_time": 2.954
+    },
+    {
+      "character": "丹",
+      "start_time": 2.954,
       "end_time": 3.099
     },
     {
-      "character": "十",
+      "character": "现",
       "start_time": 3.099,
-      "end_time": 3.258
+      "end_time": 3.283
     },
     {
-      "character": "丈",
-      "start_time": 3.258,
-      "end_time": 3.408
-    },
-    {
-      "character": "巨",
-      "start_time": 3.408,
-      "end_time": 3.574
-    },
-    {
-      "character": "掌",
-      "start_time": 3.574,
-      "end_time": 3.758
+      "character": "身",
+      "start_time": 3.283,
+      "end_time": 3.466
     },
     {
       "character": "，",
-      "start_time": 3.758,
-      "end_time": 4.149
+      "start_time": 3.466,
+      "end_time": 3.987
     },
     {
-      "character": "嘴",
-      "start_time": 4.149,
+      "character": "瞥",
+      "start_time": 3.987,
+      "end_time": 4.162
+    },
+    {
+      "character": "见",
+      "start_time": 4.162,
       "end_time": 4.337
     },
     {
-      "character": "角",
-      "start_time": 4.337,
-      "end_time": 4.512
-    },
-    {
-      "character": "露",
-      "start_time": 4.512,
-      "end_time": 4.724
-    },
-    {
-      "character": "傲",
-      "start_time": 4.724,
-      "end_time": 4.858
-    },
-    {
-      "character": "笑",
-      "start_time": 4.858,
-      "end_time": 5.17
-    },
-    {
-      "character": "视",
-      "start_time": 5.17,
-      "end_time": 5.391
-    },
-    {
       "character": "吴",
-      "start_time": 5.391,
-      "end_time": 5.599
+      "start_time": 4.337,
+      "end_time": 4.483
     },
     {
       "character": "双",
-      "start_time": 5.599,
-      "end_time": 5.804
+      "start_time": 4.483,
+      "end_time": 4.662
     },
     {
-      "character": "囊",
-      "start_time": 5.804,
-      "end_time": 6.008
+      "character": "手",
+      "start_time": 4.662,
+      "end_time": 4.854
     },
     {
-      "character": "物",
-      "start_time": 6.008,
-      "end_time": 6.137
+      "character": "中",
+      "start_time": 4.854,
+      "end_time": 4.97
     },
     {
-      "character": "！",
-      "start_time": 6.137,
-      "end_time": 6.296
+      "character": "的",
+      "start_time": 4.97,
+      "end_time": 5.041
+    },
+    {
+      "character": "百",
+      "start_time": 5.041,
+      "end_time": 5.249
+    },
+    {
+      "character": "变",
+      "start_time": 5.249,
+      "end_time": 5.383
+    },
+    {
+      "character": "魔",
+      "start_time": 5.383,
+      "end_time": 5.57
+    },
+    {
+      "character": "云",
+      "start_time": 5.57,
+      "end_time": 5.791
+    },
+    {
+      "character": "，",
+      "start_time": 5.791,
+      "end_time": 6.133
+    },
+    {
+      "character": "眼",
+      "start_time": 6.133,
+      "end_time": 6.337
+    },
+    {
+      "character": "中",
+      "start_time": 6.337,
+      "end_time": 6.487
+    },
+    {
+      "character": "闪",
+      "start_time": 6.487,
+      "end_time": 6.741
+    },
+    {
+      "character": "过",
+      "start_time": 6.741,
+      "end_time": 6.854
+    },
+    {
+      "character": "贪",
+      "start_time": 6.854,
+      "end_time": 7.029
+    },
+    {
+      "character": "婪",
+      "start_time": 7.029,
+      "end_time": 7.266
+    },
+    {
+      "character": "，",
+      "start_time": 7.266,
+      "end_time": 7.654
+    },
+    {
+      "character": "当",
+      "start_time": 7.654,
+      "end_time": 7.833
+    },
+    {
+      "character": "即",
+      "start_time": 7.833,
+      "end_time": 7.983
+    },
+    {
+      "character": "联",
+      "start_time": 7.983,
+      "end_time": 8.162
+    },
+    {
+      "character": "手",
+      "start_time": 8.162,
+      "end_time": 8.362
+    },
+    {
+      "character": "出",
+      "start_time": 8.362,
+      "end_time": 8.595
+    },
+    {
+      "character": "手",
+      "start_time": 8.595,
+      "end_time": 8.758
+    },
+    {
+      "character": "抢",
+      "start_time": 8.758,
+      "end_time": 8.991
+    },
+    {
+      "character": "夺",
+      "start_time": 8.991,
+      "end_time": 9.22
+    },
+    {
+      "character": "。",
+      "start_time": 9.22,
+      "end_time": 9.379
     }
   ],
-  "generated_at": "2025-09-23T08:22:09.917221"
+  "generated_at": "2025-11-07T23:12:55.533252"
 }

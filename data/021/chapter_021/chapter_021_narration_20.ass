@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.75,Default,,0,0,0,,侍女提醒
-Dialogue: 0,0:00:01.18,0:00:03.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}翠竹{\c&H00FFFFFF&\b0}翠绿躲在远处背部视角
-Dialogue: 0,0:00:03.60,0:00:06.16,Default,,0,0,0,,可见绿色襦裙低声提醒天子
-Dialogue: 0,0:00:06.16,0:00:08.69,Default,,0,0,0,,寒天来了原来两人早已逃离
-Dialogue: 0,0:00:08.69,0:00:10.51,Default,,0,0,0,,万炼神殿暗中关注
+Dialogue: 0,0:00:00.02,0:00:03.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}金龙{\c&H00FFFFFF&\b0}折扇轻摇转向狂鲨笑道
+Dialogue: 0,0:00:03.49,0:00:04.70,Default,,0,0,0,,狂鲨兄何必动怒
+Dialogue: 0,0:00:04.99,0:00:07.16,Default,,0,0,0,,有本事你先拿下这小子我就
+Dialogue: 0,0:00:07.16,0:00:07.57,Default,,0,0,0,,服你

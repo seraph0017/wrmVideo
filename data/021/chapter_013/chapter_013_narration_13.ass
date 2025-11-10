@@ -14,9 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.91,Default,,0,0,0,,修炼密室中
-Dialogue: 0,0:00:01.26,0:00:03.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}坐在巨大元宝形树叶上
-Dialogue: 0,0:00:03.87,0:00:04.98,Default,,0,0,0,,吸收木系力量
-Dialogue: 0,0:00:05.37,0:00:06.96,Default,,0,0,0,,树叶散发柔和绿光
-Dialogue: 0,0:00:07.43,0:00:08.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}表情专注
-Dialogue: 0,0:00:09.00,0:00:10.60,Default,,0,0,0,,周身气息不断提升
+Dialogue: 0,0:00:00.02,0:00:00.79,Default,,0,0,0,,落在树枝上
+Dialogue: 0,0:00:01.11,0:00:02.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}惊魂未定
+Dialogue: 0,0:00:02.57,0:00:04.12,Default,,0,0,0,,发现脚下树枝如{\c&H0000FFFF&\b1}巨梁{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.52,0:00:06.49,Default,,0,0,0,,抬头望去树干直插苍穹
+Dialogue: 0,0:00:06.93,0:00:08.94,Default,,0,0,0,,纵横交错的枝干望不到边际
+Dialogue: 0,0:00:09.27,0:00:10.37,Default,,0,0,0,,让他震撼不已

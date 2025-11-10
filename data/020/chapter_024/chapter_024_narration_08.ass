@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_024 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.32,Default,,0,0,0,,空明骑士守候多时见大道
+Dialogue: 0,0:00:02.32,0:00:05.10,Default,,0,0,0,,分身出现驾驭{\c&H0000FFFF&\b1}白马{\c&H00FFFFFF&\b0}踏星光而来
+Dialogue: 0,0:00:05.60,0:00:07.76,Default,,0,0,0,,他全身光明之力喷薄宛如
+Dialogue: 0,0:00:07.76,0:00:09.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}太阳{\c&H00FFFFFF&\b0}准备拦截这位不属于
+Dialogue: 0,0:00:09.94,0:00:11.28,Default,,0,0,0,,时代的力量化身

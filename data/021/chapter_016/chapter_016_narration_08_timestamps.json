@@ -1,258 +1,238 @@
 {
-  "text": "赵智查看吴双留下的阵法图，越看越震惊：\"吸收速度提升十倍，防御增强七倍！这小子对阵法的理解竟如此恐怖！\"",
-  "audio_file": "data/021/chapter_016/chapter_016_narration_08.mp3",
-  "duration": 9.341,
+  "text": "吴魁带吴双进入阵法总控，见吴双用神象长枪在石壁画阵图，他虽不懂阵法，却面露期待，笑道\"好东西？\"",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_016/chapter_016_narration_08.mp3",
+  "duration": 9.666,
   "character_timestamps": [
     {
-      "character": "赵",
+      "character": "吴",
       "start_time": 0.016,
-      "end_time": 0.145
+      "end_time": 0.195
     },
     {
-      "character": "智",
-      "start_time": 0.145,
-      "end_time": 0.258
+      "character": "魁",
+      "start_time": 0.195,
+      "end_time": 0.37
     },
     {
-      "character": "查",
-      "start_time": 0.258,
-      "end_time": 0.454
-    },
-    {
-      "character": "看",
-      "start_time": 0.454,
-      "end_time": 0.637
+      "character": "带",
+      "start_time": 0.37,
+      "end_time": 0.516
     },
     {
       "character": "吴",
-      "start_time": 0.637,
-      "end_time": 0.774
+      "start_time": 0.516,
+      "end_time": 0.641
     },
     {
       "character": "双",
-      "start_time": 0.774,
-      "end_time": 0.958
+      "start_time": 0.641,
+      "end_time": 0.908
     },
     {
-      "character": "留",
-      "start_time": 0.958,
-      "end_time": 1.124
+      "character": "进",
+      "start_time": 0.908,
+      "end_time": 1.108
     },
     {
-      "character": "下",
-      "start_time": 1.124,
-      "end_time": 1.249
-    },
-    {
-      "character": "的",
-      "start_time": 1.249,
-      "end_time": 1.32
+      "character": "入",
+      "start_time": 1.108,
+      "end_time": 1.229
     },
     {
       "character": "阵",
-      "start_time": 1.32,
-      "end_time": 1.499
+      "start_time": 1.229,
+      "end_time": 1.458
     },
     {
       "character": "法",
-      "start_time": 1.499,
-      "end_time": 1.687
+      "start_time": 1.458,
+      "end_time": 1.641
+    },
+    {
+      "character": "总",
+      "start_time": 1.641,
+      "end_time": 1.874
+    },
+    {
+      "character": "控",
+      "start_time": 1.874,
+      "end_time": 2.074
+    },
+    {
+      "character": "，",
+      "start_time": 2.074,
+      "end_time": 2.595
+    },
+    {
+      "character": "见",
+      "start_time": 2.595,
+      "end_time": 2.783
+    },
+    {
+      "character": "吴",
+      "start_time": 2.783,
+      "end_time": 2.945
+    },
+    {
+      "character": "双",
+      "start_time": 2.945,
+      "end_time": 3.129
+    },
+    {
+      "character": "用",
+      "start_time": 3.129,
+      "end_time": 3.258
+    },
+    {
+      "character": "神",
+      "start_time": 3.258,
+      "end_time": 3.487
+    },
+    {
+      "character": "象",
+      "start_time": 3.487,
+      "end_time": 3.67
+    },
+    {
+      "character": "长",
+      "start_time": 3.67,
+      "end_time": 3.899
+    },
+    {
+      "character": "枪",
+      "start_time": 3.899,
+      "end_time": 4.158
+    },
+    {
+      "character": "在",
+      "start_time": 4.158,
+      "end_time": 4.366
+    },
+    {
+      "character": "石",
+      "start_time": 4.366,
+      "end_time": 4.649
+    },
+    {
+      "character": "壁",
+      "start_time": 4.649,
+      "end_time": 4.791
+    },
+    {
+      "character": "画",
+      "start_time": 4.791,
+      "end_time": 4.958
+    },
+    {
+      "character": "阵",
+      "start_time": 4.958,
+      "end_time": 5.129
     },
     {
       "character": "图",
-      "start_time": 1.687,
-      "end_time": 1.941
+      "start_time": 5.129,
+      "end_time": 5.366
     },
     {
       "character": "，",
-      "start_time": 1.941,
-      "end_time": 2.308
+      "start_time": 5.366,
+      "end_time": 5.887
     },
     {
-      "character": "越",
-      "start_time": 2.308,
-      "end_time": 2.529
+      "character": "他",
+      "start_time": 5.887,
+      "end_time": 5.979
     },
     {
-      "character": "看",
-      "start_time": 2.529,
-      "end_time": 2.745
+      "character": "虽",
+      "start_time": 5.979,
+      "end_time": 6.216
     },
     {
-      "character": "越",
-      "start_time": 2.745,
-      "end_time": 2.879
+      "character": "不",
+      "start_time": 6.216,
+      "end_time": 6.316
     },
     {
-      "character": "震",
-      "start_time": 2.879,
-      "end_time": 3.033
-    },
-    {
-      "character": "惊",
-      "start_time": 3.033,
-      "end_time": 3.22
-    },
-    {
-      "character": "：",
-      "start_time": 3.22,
-      "end_time": 3.579
-    },
-    {
-      "character": "吸",
-      "start_time": 3.579,
-      "end_time": 3.77
-    },
-    {
-      "character": "收",
-      "start_time": 3.77,
-      "end_time": 3.954
-    },
-    {
-      "character": "速",
-      "start_time": 3.954,
-      "end_time": 4.183
-    },
-    {
-      "character": "度",
-      "start_time": 4.183,
-      "end_time": 4.324
-    },
-    {
-      "character": "提",
-      "start_time": 4.324,
-      "end_time": 4.52
-    },
-    {
-      "character": "升",
-      "start_time": 4.52,
-      "end_time": 4.679
-    },
-    {
-      "character": "十",
-      "start_time": 4.679,
-      "end_time": 4.841
-    },
-    {
-      "character": "倍",
-      "start_time": 4.841,
-      "end_time": 4.974
-    },
-    {
-      "character": "，",
-      "start_time": 4.974,
-      "end_time": 5.254
-    },
-    {
-      "character": "防",
-      "start_time": 5.254,
-      "end_time": 5.458
-    },
-    {
-      "character": "御",
-      "start_time": 5.458,
-      "end_time": 5.608
-    },
-    {
-      "character": "增",
-      "start_time": 5.608,
-      "end_time": 5.829
-    },
-    {
-      "character": "强",
-      "start_time": 5.829,
-      "end_time": 6.029
-    },
-    {
-      "character": "七",
-      "start_time": 6.029,
-      "end_time": 6.208
-    },
-    {
-      "character": "倍",
-      "start_time": 6.208,
-      "end_time": 6.329
-    },
-    {
-      "character": "，",
-      "start_time": 6.329,
-      "end_time": 6.662
-    },
-    {
-      "character": "这",
-      "start_time": 6.662,
-      "end_time": 6.754
-    },
-    {
-      "character": "小",
-      "start_time": 6.754,
-      "end_time": 6.949
-    },
-    {
-      "character": "子",
-      "start_time": 6.949,
-      "end_time": 7.045
-    },
-    {
-      "character": "对",
-      "start_time": 7.045,
-      "end_time": 7.174
+      "character": "懂",
+      "start_time": 6.316,
+      "end_time": 6.474
     },
     {
       "character": "阵",
-      "start_time": 7.174,
-      "end_time": 7.366
+      "start_time": 6.474,
+      "end_time": 6.666
     },
     {
       "character": "法",
-      "start_time": 7.366,
-      "end_time": 7.533
+      "start_time": 6.666,
+      "end_time": 6.891
     },
     {
-      "character": "的",
-      "start_time": 7.533,
-      "end_time": 7.624
+      "character": "，",
+      "start_time": 6.891,
+      "end_time": 7.229
     },
     {
-      "character": "理",
-      "start_time": 7.624,
-      "end_time": 7.824
+      "character": "却",
+      "start_time": 7.229,
+      "end_time": 7.354
     },
     {
-      "character": "解",
-      "start_time": 7.824,
-      "end_time": 8.054
+      "character": "面",
+      "start_time": 7.354,
+      "end_time": 7.579
     },
     {
-      "character": "竟",
-      "start_time": 8.054,
-      "end_time": 8.249
+      "character": "露",
+      "start_time": 7.579,
+      "end_time": 7.741
     },
     {
-      "character": "如",
-      "start_time": 8.249,
-      "end_time": 8.558
+      "character": "期",
+      "start_time": 7.741,
+      "end_time": 7.945
     },
     {
-      "character": "此",
-      "start_time": 8.558,
-      "end_time": 8.729
+      "character": "待",
+      "start_time": 7.945,
+      "end_time": 8.079
     },
     {
-      "character": "恐",
-      "start_time": 8.729,
-      "end_time": 9.016
+      "character": "，",
+      "start_time": 8.079,
+      "end_time": 8.429
     },
     {
-      "character": "怖",
-      "start_time": 9.016,
-      "end_time": 9.183
+      "character": "笑",
+      "start_time": 8.429,
+      "end_time": 8.649
     },
     {
-      "character": "！",
-      "start_time": 9.183,
-      "end_time": 9.342
+      "character": "道",
+      "start_time": 8.649,
+      "end_time": 8.791
+    },
+    {
+      "character": "好",
+      "start_time": 8.791,
+      "end_time": 9.149
+    },
+    {
+      "character": "东",
+      "start_time": 9.149,
+      "end_time": 9.337
+    },
+    {
+      "character": "西",
+      "start_time": 9.337,
+      "end_time": 9.504
+    },
+    {
+      "character": "？",
+      "start_time": 9.504,
+      "end_time": 9.662
     }
   ],
-  "generated_at": "2025-09-23T08:21:48.833201"
+  "generated_at": "2025-11-07T23:12:06.864809"
 }

@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_013 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.38,Default,,0,0,0,,烽火三月立于城楼蓝袍被
+Dialogue: 0,0:00:02.38,0:00:03.49,Default,,0,0,0,,剑气{\c&H0000FFFF&\b1}余波{\c&H00FFFFFF&\b0}吹动
+Dialogue: 0,0:00:03.97,0:00:05.32,Default,,0,0,0,,他望着天空中{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:05.32,0:00:06.85,Default,,0,0,0,,身影{\c&H0000FFFF&\b1}银牙{\c&H00FFFFFF&\b0}紧咬
+Dialogue: 0,0:00:07.26,0:00:08.31,Default,,0,0,0,,这疯子竟用剑八
+Dialogue: 0,0:00:08.85,0:00:10.90,Default,,0,0,0,,当年他说此生绝不碰这招

@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}金鳞蛟{\c&H00FFFFFF&\b0}王率领众人冲入陷阱
-Dialogue: 0,0:00:02.74,0:00:04.97,Default,,0,0,0,,水浪螺催动滔天{\c&H0000FFFF&\b1}巨浪{\c&H00FFFFFF&\b0}却
-Dialogue: 0,0:00:04.97,0:00:07.88,Default,,0,0,0,,见前方{\c&H0000FFFF&\b1}水龙卷{\c&H00FFFFFF&\b0}形成阵势雷电
-Dialogue: 0,0:00:07.88,0:00:09.51,Default,,0,0,0,,轰鸣天地变色
+Dialogue: 0,0:00:00.02,0:00:01.42,Default,,0,0,0,,贱鸟驾驭{\c&H0000FFFF&\b1}百变{\c&H00FFFFFF&\b0}魔云
+Dialogue: 0,0:00:01.68,0:00:02.79,Default,,0,0,0,,手持神象长枪
+Dialogue: 0,0:00:03.10,0:00:04.82,Default,,0,0,0,,冲入{\c&H0000FFFF&\b1}金鳞蛟{\c&H00FFFFFF&\b0}王血遁光罩
+Dialogue: 0,0:00:05.15,0:00:06.20,Default,,0,0,0,,破坏血遁节点
+Dialogue: 0,0:00:06.71,0:00:08.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}金鳞蛟{\c&H00FFFFFF&\b0}王速度骤降
+Dialogue: 0,0:00:08.39,0:00:09.14,Default,,0,0,0,,绝望回望

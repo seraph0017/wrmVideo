@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵流{\c&H00FFFFFF&\b0}催动黑毒网化天罗地网
-Dialogue: 0,0:00:02.53,0:00:03.91,Default,,0,0,0,,万毒针从网眼暴射
-Dialogue: 0,0:00:04.23,0:00:06.33,Default,,0,0,0,,却被吴双百层护体{\c&H0000FFFF&\b1}元罡{\c&H00FFFFFF&\b0}阻挡
-Dialogue: 0,0:00:06.74,0:00:08.18,Default,,0,0,0,,毒针半数断裂落地
+Dialogue: 0,0:00:00.02,0:00:01.58,Default,,0,0,0,,火光撕裂冥水潮汐
+Dialogue: 0,0:00:02.00,0:00:04.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄身穿银色剑甲一拳
+Dialogue: 0,0:00:04.62,0:00:06.59,Default,,0,0,0,,轰出{\c&H0000FFFF&\b1}陈禹{\c&H00FFFFFF&\b0}坤身体炸裂
+Dialogue: 0,0:00:06.92,0:00:09.47,Default,,0,0,0,,他眼神冰冷如刀护在{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.47,0:00:09.93,Default,,0,0,0,,身前

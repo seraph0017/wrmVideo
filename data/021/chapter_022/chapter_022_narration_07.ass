@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}战意盎然手持神象长枪
-Dialogue: 0,0:00:02.60,0:00:03.37,Default,,0,0,0,,冲向湖边
-Dialogue: 0,0:00:03.83,0:00:05.97,Default,,0,0,0,,水海波动带着冰{\c&H0000FFFF&\b1}神圣{\c&H00FFFFFF&\b0}果寒气
-Dialogue: 0,0:00:06.39,0:00:09.01,Default,,0,0,0,,湖水瞬间凝结{\c&H0000FFFF&\b1}成冰{\c&H00FFFFFF&\b0}阵法启动
+Dialogue: 0,0:00:00.02,0:00:01.52,Default,,0,0,0,,狂鲨暴怒显化本体
+Dialogue: 0,0:00:02.00,0:00:03.92,Default,,0,0,0,,巨大银鲨{\c&H0000FFFF&\b1}张开{\c&H00FFFFFF&\b0}血盆大口
+Dialogue: 0,0:00:04.47,0:00:05.20,Default,,0,0,0,,欲吞{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.46,0:00:07.74,Default,,0,0,0,,却见天空一道火红剑光轰然
+Dialogue: 0,0:00:07.74,0:00:08.09,Default,,0,0,0,,落下

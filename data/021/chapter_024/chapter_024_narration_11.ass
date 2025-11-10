@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双站{\c&H00FFFFFF&\b0}在赵猛身侧指尖凝聚
-Dialogue: 0,0:00:02.49,0:00:02.92,Default,,0,0,0,,火光
-Dialogue: 0,0:00:03.40,0:00:05.80,Default,,0,0,0,,他深色短衫袖口卷起露出
-Dialogue: 0,0:00:05.80,0:00:08.82,Default,,0,0,0,,小臂神情专注正以神识传授
-Dialogue: 0,0:00:08.82,0:00:10.04,Default,,0,0,0,,搬山神力精要
+Dialogue: 0,0:00:00.02,0:00:01.95,Default,,0,0,0,,一名六连环散修冲向{\c&H0000FFFF&\b1}赵猛{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.49,0:00:04.59,Default,,0,0,0,,棕色圆领袍下黑色雾气弥漫
+Dialogue: 0,0:00:05.00,0:00:06.19,Default,,0,0,0,,双手闪烁毒光
+Dialogue: 0,0:00:06.64,0:00:09.14,Default,,0,0,0,,他面露狞笑以为能轻松击败
+Dialogue: 0,0:00:09.14,0:00:11.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵猛{\c&H00FFFFFF&\b0}却不知赵猛已今非昔比
+Dialogue: 0,0:00:12.18,0:00:13.84,Default,,0,0,0,,即将被搬山神力重创

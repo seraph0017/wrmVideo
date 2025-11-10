@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_047 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.22,Default,,0,0,0,,小丫鬟躲在柱子后
+Dialogue: 0,0:00:01.62,0:00:03.84,Default,,0,0,0,,浅绿色圆领袍袖口遮住半张脸
+Dialogue: 0,0:00:04.39,0:00:06.06,Default,,0,0,0,,双丫髻上的粉丝带颤抖
+Dialogue: 0,0:00:06.60,0:00:08.40,Default,,0,0,0,,她偷偷挪动脚步想溜出去
+Dialogue: 0,0:00:08.40,0:00:08.74,Default,,0,0,0,,报信
+Dialogue: 0,0:00:09.21,0:00:11.06,Default,,0,0,0,,眼神紧张地瞟着卫风背影

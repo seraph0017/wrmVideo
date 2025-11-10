@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_042 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}江子昂{\c&H00FFFFFF&\b0}听闻江蜜儿遭遇
+Dialogue: 0,0:00:02.00,0:00:02.67,Default,,0,0,0,,拍案而起
+Dialogue: 0,0:00:03.04,0:00:04.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}云海{\c&H00FFFFFF&\b0}宗竟敢如此
+Dialogue: 0,0:00:04.71,0:00:07.15,Default,,0,0,0,,待我突破神盘定要讨还公道
+Dialogue: 0,0:00:07.52,0:00:09.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}众人义愤填膺

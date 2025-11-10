@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}正在重新炼制丹药
-Dialogue: 0,0:00:02.12,0:00:03.86,Default,,0,0,0,,突然感觉到丹药中蕴含的
-Dialogue: 0,0:00:03.86,0:00:05.04,Default,,0,0,0,,并非阴风煞气
-Dialogue: 0,0:00:05.33,0:00:07.04,Default,,0,0,0,,而是一种特殊的火阴煞气
-Dialogue: 0,0:00:07.49,0:00:09.27,Default,,0,0,0,,这是火焰即将异变的征兆
+Dialogue: 0,0:00:00.02,0:00:00.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}六海{\c&H00FFFFFF&\b0}境突破
+Dialogue: 0,0:00:01.34,0:00:04.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}在密室中冲击瓶颈三泉
+Dialogue: 0,0:00:04.00,0:00:06.25,Default,,0,0,0,,之力压缩成柱轰然贯穿内
+Dialogue: 0,0:00:06.25,0:00:09.49,Default,,0,0,0,,天地识海瞬间开辟神识扩散
+Dialogue: 0,0:00:09.49,0:00:09.82,Default,,0,0,0,,百米

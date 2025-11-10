@@ -1,0 +1,28 @@
+[Script Info]
+Title: chapter_027 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.09,Default,,0,0,0,,俞{\c&H0000FFFF&\b1}红莲{\c&H00FFFFFF&\b0}站在巨剑之上指着
+Dialogue: 0,0:00:02.09,0:00:03.95,Default,,0,0,0,,前方兴奋大喊就是那个方向
+Dialogue: 0,0:00:04.44,0:00:06.68,Default,,0,0,0,,身后{\c&H0000FFFF&\b1}俞罡{\c&H00FFFFFF&\b0}目光如炬快速
+Dialogue: 0,0:00:06.68,0:00:07.36,Default,,0,0,0,,追赶而来
+Dialogue: 0,0:00:07.81,0:00:10.00,Default,,0,0,0,,剑宗太上长老{\c&H0000FFFF&\b1}俞罡{\c&H00FFFFFF&\b0}听闻盗中
+Dialogue: 0,0:00:10.00,0:00:13.00,Default,,0,0,0,,至尊名号神情一变眉头紧锁
+Dialogue: 0,0:00:13.36,0:00:15.23,Default,,0,0,0,,心中暗道难道是那位前辈
+Dialogue: 0,0:00:15.55,0:00:16.58,Default,,0,0,0,,加快追击速度
+Dialogue: 0,0:00:16.96,0:00:19.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}三星{\c&H00FFFFFF&\b0}境强者盗中至尊现身
+Dialogue: 0,0:00:19.42,0:00:21.97,Default,,0,0,0,,单手操控空间轻松拦下{\c&H0000FFFF&\b1}俞罡{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:21.97,0:00:24.62,Default,,0,0,0,,的巨剑目光如电扫视下方
+Dialogue: 0,0:00:24.62,0:00:24.99,Default,,0,0,0,,众人

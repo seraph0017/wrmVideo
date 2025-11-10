@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_010 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}坐在门口
+Dialogue: 0,0:00:01.35,0:00:02.36,Default,,0,0,0,,吃饱后打哈欠
+Dialogue: 0,0:00:02.73,0:00:04.11,Default,,0,0,0,,眯眼看向门外细雨
+Dialogue: 0,0:00:04.42,0:00:05.10,Default,,0,0,0,,表情慵懒
+Dialogue: 0,0:00:05.54,0:00:06.57,Default,,0,0,0,,双脚搭在凳上
+Dialogue: 0,0:00:06.93,0:00:08.98,Default,,0,0,0,,深蓝色衣袍沾着些许酒渍

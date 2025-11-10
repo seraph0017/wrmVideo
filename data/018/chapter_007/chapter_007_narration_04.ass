@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_007 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}金鳞蛟{\c&H00FFFFFF&\b0}王在云雾中现身
+Dialogue: 0,0:00:02.31,0:00:03.43,Default,,0,0,0,,巨大的头颅探出
+Dialogue: 0,0:00:03.88,0:00:05.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}张口{\c&H00FFFFFF&\b0}喷出金色光芒
+Dialogue: 0,0:00:05.70,0:00:06.84,Default,,0,0,0,,形成{\c&H0000FFFF&\b1}金珠{\c&H00FFFFFF&\b0}箭雨
+Dialogue: 0,0:00:07.15,0:00:08.39,Default,,0,0,0,,覆盖周围几十里
+Dialogue: 0,0:00:08.76,0:00:09.56,Default,,0,0,0,,威势惊人

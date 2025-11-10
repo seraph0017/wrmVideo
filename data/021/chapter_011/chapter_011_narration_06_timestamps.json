@@ -1,223 +1,258 @@
 {
-  "text": "前方突然传来争吵声，火牛愤怒地将一名店铺伙计扔出店外，原来对方嘲笑他带来的丹药是废品",
-  "audio_file": "data/021/chapter_011/chapter_011_narration_06.mp3",
-  "duration": 8.1,
+  "text": "憨直反击！火牛掏出十几颗神丹却只递一粒，怒吼\"怕你不认账\"，浓眉倒竖，手中神丹闪烁神光，引得围观者哄笑！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_011/chapter_011_narration_06.mp3",
+  "duration": 10.458,
   "character_timestamps": [
     {
-      "character": "前",
+      "character": "憨",
       "start_time": 0.016,
-      "end_time": 0.237
+      "end_time": 0.241
     },
     {
-      "character": "方",
-      "start_time": 0.237,
-      "end_time": 0.416
+      "character": "直",
+      "start_time": 0.241,
+      "end_time": 0.395
     },
     {
-      "character": "突",
-      "start_time": 0.416,
-      "end_time": 0.595
+      "character": "反",
+      "start_time": 0.395,
+      "end_time": 0.604
     },
     {
-      "character": "然",
-      "start_time": 0.595,
-      "end_time": 0.733
-    },
-    {
-      "character": "传",
-      "start_time": 0.733,
-      "end_time": 0.874
-    },
-    {
-      "character": "来",
-      "start_time": 0.874,
-      "end_time": 0.999
-    },
-    {
-      "character": "争",
-      "start_time": 0.999,
-      "end_time": 1.183
-    },
-    {
-      "character": "吵",
-      "start_time": 1.183,
-      "end_time": 1.362
-    },
-    {
-      "character": "声",
-      "start_time": 1.362,
-      "end_time": 1.57
+      "character": "击",
+      "start_time": 0.604,
+      "end_time": 0.829
     },
     {
       "character": "，",
-      "start_time": 1.57,
-      "end_time": 2.016
+      "start_time": 0.829,
+      "end_time": 1.274
     },
     {
       "character": "火",
-      "start_time": 2.016,
-      "end_time": 2.191
+      "start_time": 1.274,
+      "end_time": 1.42
     },
     {
       "character": "牛",
-      "start_time": 2.191,
-      "end_time": 2.349
+      "start_time": 1.42,
+      "end_time": 1.57
     },
     {
-      "character": "愤",
-      "start_time": 2.349,
-      "end_time": 2.554
-    },
-    {
-      "character": "怒",
-      "start_time": 2.554,
-      "end_time": 2.741
-    },
-    {
-      "character": "地",
-      "start_time": 2.741,
-      "end_time": 2.912
-    },
-    {
-      "character": "将",
-      "start_time": 2.912,
-      "end_time": 3.112
-    },
-    {
-      "character": "一",
-      "start_time": 3.112,
-      "end_time": 3.191
-    },
-    {
-      "character": "名",
-      "start_time": 3.191,
-      "end_time": 3.337
-    },
-    {
-      "character": "店",
-      "start_time": 3.337,
-      "end_time": 3.566
-    },
-    {
-      "character": "铺",
-      "start_time": 3.566,
-      "end_time": 3.716
-    },
-    {
-      "character": "伙",
-      "start_time": 3.716,
-      "end_time": 3.92
-    },
-    {
-      "character": "计",
-      "start_time": 3.92,
-      "end_time": 4.17
-    },
-    {
-      "character": "扔",
-      "start_time": 4.17,
-      "end_time": 4.412
+      "character": "掏",
+      "start_time": 1.57,
+      "end_time": 1.762
     },
     {
       "character": "出",
-      "start_time": 4.412,
-      "end_time": 4.566
+      "start_time": 1.762,
+      "end_time": 1.899
     },
     {
-      "character": "店",
-      "start_time": 4.566,
-      "end_time": 4.749
+      "character": "十",
+      "start_time": 1.899,
+      "end_time": 2.158
     },
     {
-      "character": "外",
-      "start_time": 4.749,
-      "end_time": 4.866
+      "character": "几",
+      "start_time": 2.158,
+      "end_time": 2.295
     },
     {
-      "character": "，",
-      "start_time": 4.866,
-      "end_time": 5.391
+      "character": "颗",
+      "start_time": 2.295,
+      "end_time": 2.437
     },
     {
-      "character": "原",
-      "start_time": 5.391,
-      "end_time": 5.512
-    },
-    {
-      "character": "来",
-      "start_time": 5.512,
-      "end_time": 5.654
-    },
-    {
-      "character": "对",
-      "start_time": 5.654,
-      "end_time": 5.799
-    },
-    {
-      "character": "方",
-      "start_time": 5.799,
-      "end_time": 5.954
-    },
-    {
-      "character": "嘲",
-      "start_time": 5.954,
-      "end_time": 6.191
-    },
-    {
-      "character": "笑",
-      "start_time": 6.191,
-      "end_time": 6.345
-    },
-    {
-      "character": "他",
-      "start_time": 6.345,
-      "end_time": 6.516
-    },
-    {
-      "character": "带",
-      "start_time": 6.516,
-      "end_time": 6.766
-    },
-    {
-      "character": "来",
-      "start_time": 6.766,
-      "end_time": 6.874
-    },
-    {
-      "character": "的",
-      "start_time": 6.874,
-      "end_time": 6.954
+      "character": "神",
+      "start_time": 2.437,
+      "end_time": 2.666
     },
     {
       "character": "丹",
-      "start_time": 6.954,
-      "end_time": 7.174
+      "start_time": 2.666,
+      "end_time": 2.866
     },
     {
-      "character": "药",
-      "start_time": 7.174,
-      "end_time": 7.374
+      "character": "却",
+      "start_time": 2.866,
+      "end_time": 3.049
     },
     {
-      "character": "是",
-      "start_time": 7.374,
-      "end_time": 7.533
+      "character": "只",
+      "start_time": 3.049,
+      "end_time": 3.299
     },
     {
-      "character": "废",
-      "start_time": 7.533,
-      "end_time": 7.762
+      "character": "递",
+      "start_time": 3.299,
+      "end_time": 3.474
     },
     {
-      "character": "品",
-      "start_time": 7.762,
-      "end_time": 7.941
+      "character": "一",
+      "start_time": 3.474,
+      "end_time": 3.612
     },
     {
-      "character": "。",
-      "start_time": 7.941,
-      "end_time": 8.1
+      "character": "粒",
+      "start_time": 3.612,
+      "end_time": 3.729
+    },
+    {
+      "character": "，",
+      "start_time": 3.729,
+      "end_time": 4.229
+    },
+    {
+      "character": "怒",
+      "start_time": 4.229,
+      "end_time": 4.416
+    },
+    {
+      "character": "吼",
+      "start_time": 4.416,
+      "end_time": 4.612
+    },
+    {
+      "character": "怕",
+      "start_time": 4.612,
+      "end_time": 4.837
+    },
+    {
+      "character": "你",
+      "start_time": 4.837,
+      "end_time": 4.941
+    },
+    {
+      "character": "不",
+      "start_time": 4.941,
+      "end_time": 5.062
+    },
+    {
+      "character": "认",
+      "start_time": 5.062,
+      "end_time": 5.229
+    },
+    {
+      "character": "账",
+      "start_time": 5.229,
+      "end_time": 5.387
+    },
+    {
+      "character": "，",
+      "start_time": 5.387,
+      "end_time": 5.845
+    },
+    {
+      "character": "浓",
+      "start_time": 5.845,
+      "end_time": 6.074
+    },
+    {
+      "character": "眉",
+      "start_time": 6.074,
+      "end_time": 6.237
+    },
+    {
+      "character": "倒",
+      "start_time": 6.237,
+      "end_time": 6.412
+    },
+    {
+      "character": "竖",
+      "start_time": 6.412,
+      "end_time": 6.604
+    },
+    {
+      "character": "，",
+      "start_time": 6.604,
+      "end_time": 6.987
+    },
+    {
+      "character": "手",
+      "start_time": 6.987,
+      "end_time": 7.199
+    },
+    {
+      "character": "中",
+      "start_time": 7.199,
+      "end_time": 7.333
+    },
+    {
+      "character": "神",
+      "start_time": 7.333,
+      "end_time": 7.545
+    },
+    {
+      "character": "丹",
+      "start_time": 7.545,
+      "end_time": 7.745
+    },
+    {
+      "character": "闪",
+      "start_time": 7.745,
+      "end_time": 8.099
+    },
+    {
+      "character": "烁",
+      "start_time": 8.099,
+      "end_time": 8.283
+    },
+    {
+      "character": "神",
+      "start_time": 8.283,
+      "end_time": 8.487
+    },
+    {
+      "character": "光",
+      "start_time": 8.487,
+      "end_time": 8.679
+    },
+    {
+      "character": "，",
+      "start_time": 8.679,
+      "end_time": 8.954
+    },
+    {
+      "character": "引",
+      "start_time": 8.954,
+      "end_time": 9.137
+    },
+    {
+      "character": "得",
+      "start_time": 9.137,
+      "end_time": 9.337
+    },
+    {
+      "character": "围",
+      "start_time": 9.337,
+      "end_time": 9.529
+    },
+    {
+      "character": "观",
+      "start_time": 9.529,
+      "end_time": 9.745
+    },
+    {
+      "character": "者",
+      "start_time": 9.745,
+      "end_time": 9.92
+    },
+    {
+      "character": "哄",
+      "start_time": 9.92,
+      "end_time": 10.141
+    },
+    {
+      "character": "笑",
+      "start_time": 10.141,
+      "end_time": 10.299
+    },
+    {
+      "character": "！",
+      "start_time": 10.299,
+      "end_time": 10.458
     }
   ],
-  "generated_at": "2025-09-23T08:20:04.312100"
+  "generated_at": "2025-11-07T23:10:12.711824"
 }

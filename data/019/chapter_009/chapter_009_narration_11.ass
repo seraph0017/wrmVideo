@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_009 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.18,Default,,0,0,0,,朱允熥接过细看
+Dialogue: 0,0:00:01.61,0:00:02.65,Default,,0,0,0,,告示上确有承诺
+Dialogue: 0,0:00:03.14,0:00:04.36,Default,,0,0,0,,按人头工期核算
+Dialogue: 0,0:00:04.76,0:00:06.49,Default,,0,0,0,,陈家村应得八百多亩地
+Dialogue: 0,0:00:06.78,0:00:07.62,Default,,0,0,0,,面色凝重

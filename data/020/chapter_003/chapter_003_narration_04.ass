@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_003 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.85,Default,,0,0,0,,飞雪谷{\c&H0000FFFF&\b1}入口{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.29,0:00:02.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}寒冬腊月{\c&H00FFFFFF&\b0}天气
+Dialogue: 0,0:00:02.79,0:00:04.00,Default,,0,0,0,,林小小在此等候
+Dialogue: 0,0:00:04.29,0:00:05.33,Default,,0,0,0,,见到{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}到来
+Dialogue: 0,0:00:05.62,0:00:06.76,Default,,0,0,0,,脆生生喊前辈
+Dialogue: 0,0:00:07.13,0:00:08.69,Default,,0,0,0,,告知其他弟子正赶来
+Dialogue: 0,0:00:08.92,0:00:10.21,Default,,0,0,0,,最快{\c&H0000FFFF&\b1}天黑{\c&H00FFFFFF&\b0}到达

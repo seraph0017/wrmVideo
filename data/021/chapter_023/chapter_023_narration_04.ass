@@ -14,9 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双踏冰{\c&H00FFFFFF&\b0}而行
-Dialogue: 0,0:00:01.52,0:00:03.40,Default,,0,0,0,,每一步踏出都在水面凝结
-Dialogue: 0,0:00:03.40,0:00:03.92,Default,,0,0,0,,出寒冰
-Dialogue: 0,0:00:04.41,0:00:06.00,Default,,0,0,0,,快速向战场中心靠近
-Dialogue: 0,0:00:06.44,0:00:08.24,Default,,0,0,0,,青色长袍在风中飘动
-Dialogue: 0,0:00:08.54,0:00:10.07,Default,,0,0,0,,眼神警惕而坚定
+Dialogue: 0,0:00:00.02,0:00:01.94,Default,,0,0,0,,神盘境尊者海风驾碧眼
+Dialogue: 0,0:00:01.94,0:00:02.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}金鳞兽{\c&H00FFFFFF&\b0}降临
+Dialogue: 0,0:00:03.34,0:00:05.85,Default,,0,0,0,,青色圆领袍无风自动神盘
+Dialogue: 0,0:00:05.85,0:00:08.35,Default,,0,0,0,,虚影在身后若隐若现俯瞰
+Dialogue: 0,0:00:08.35,0:00:10.41,Default,,0,0,0,,湖面战场目光扫过
+Dialogue: 0,0:00:10.41,0:00:12.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}父子语气淡漠却
+Dialogue: 0,0:00:12.55,0:00:13.43,Default,,0,0,0,,暗藏惊讶

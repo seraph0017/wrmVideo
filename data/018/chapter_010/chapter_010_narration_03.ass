@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_010 Narration 03 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.18,Default,,0,0,0,,陈天南听{\c&H0000FFFF&\b1}赵震川{\c&H00FFFFFF&\b0}言及拿吴双
+Dialogue: 0,0:00:02.18,0:00:03.44,Default,,0,0,0,,父子性命谈好处
+Dialogue: 0,0:00:03.79,0:00:04.57,Default,,0,0,0,,面色稍缓
+Dialogue: 0,0:00:05.02,0:00:06.60,Default,,0,0,0,,阴沉面容渐露喜色
+Dialogue: 0,0:00:07.07,0:00:08.49,Default,,0,0,0,,眼神中闪过狠厉
+Dialogue: 0,0:00:08.95,0:00:10.26,Default,,0,0,0,,显然已被此计打动
+Dialogue: 0,0:00:10.56,0:00:11.34,Default,,0,0,0,,准备采纳

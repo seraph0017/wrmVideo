@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈玉峰{\c&H00FFFFFF&\b0}吓得躲在侍卫身后
-Dialogue: 0,0:00:02.15,0:00:03.79,Default,,0,0,0,,他看着{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}如入无人之境
-Dialogue: 0,0:00:04.20,0:00:06.20,Default,,0,0,0,,一拳轰飞地泉境巅峰{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:06.49,0:00:08.97,Default,,0,0,0,,护体{\c&H0000FFFF&\b1}元罡{\c&H00FFFFFF&\b0}如纸般破碎顿时
-Dialogue: 0,0:00:08.97,0:00:09.83,Default,,0,0,0,,魂飞魄散
+Dialogue: 0,0:00:00.02,0:00:01.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}被吴双救下后站稳
+Dialogue: 0,0:00:01.89,0:00:02.24,Default,,0,0,0,,身体
+Dialogue: 0,0:00:02.75,0:00:04.44,Default,,0,0,0,,虽受惊吓却眼神坚定
+Dialogue: 0,0:00:04.86,0:00:06.32,Default,,0,0,0,,握紧拳头准备战斗

@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_029 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}进入院落开始修炼
+Dialogue: 0,0:00:02.09,0:00:03.89,Default,,0,0,0,,他需要尽快消化战斗所得
+Dialogue: 0,0:00:04.28,0:00:05.22,Default,,0,0,0,,同时稳固境界
+Dialogue: 0,0:00:05.57,0:00:07.50,Default,,0,0,0,,为即将到来的云海{\c&H0000FFFF&\b1}宗之行{\c&H00FFFFFF&\b0}做
+Dialogue: 0,0:00:07.50,0:00:07.80,Default,,0,0,0,,准备
+Dialogue: 0,0:00:08.19,0:00:09.59,Default,,0,0,0,,院落阵法自行运转
+Dialogue: 0,0:00:09.91,0:00:10.97,Default,,0,0,0,,隔绝外界干扰

@@ -1,288 +1,408 @@
 {
-  "text": "弯月岛港口，吴双望着巨大弯月形岛屿。他深色短衫被海风吹起，眼神中透着震撼，远处岛屿如弯月横卧海面，港口船只密布。",
-  "audio_file": "data/021/chapter_024/chapter_024_narration_16.mp3",
-  "duration": 11.316,
+  "text": "吴双与赵猛来到绝品拍卖行，深蓝色圆领袍整洁，正坐在后排桌前。他环顾四周，拍卖行内灯火通明，上下五层包间环绕中央拍卖台，人声鼎沸，他正思考如何拍到女皇绝地的地图。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_024/chapter_024_narration_16.mp3",
+  "duration": 16.241,
   "character_timestamps": [
     {
-      "character": "弯",
-      "start_time": 0.016,
-      "end_time": 0.195
-    },
-    {
-      "character": "月",
-      "start_time": 0.195,
-      "end_time": 0.341
-    },
-    {
-      "character": "岛",
-      "start_time": 0.341,
-      "end_time": 0.479
-    },
-    {
-      "character": "港",
-      "start_time": 0.479,
-      "end_time": 0.679
-    },
-    {
-      "character": "口",
-      "start_time": 0.679,
-      "end_time": 0.887
-    },
-    {
-      "character": "，",
-      "start_time": 0.887,
-      "end_time": 1.304
-    },
-    {
       "character": "吴",
-      "start_time": 1.304,
-      "end_time": 1.445
+      "start_time": 0.016,
+      "end_time": 0.162
     },
     {
       "character": "双",
+      "start_time": 0.162,
+      "end_time": 0.345
+    },
+    {
+      "character": "与",
+      "start_time": 0.345,
+      "end_time": 0.441
+    },
+    {
+      "character": "赵",
+      "start_time": 0.441,
+      "end_time": 0.629
+    },
+    {
+      "character": "猛",
+      "start_time": 0.629,
+      "end_time": 0.912
+    },
+    {
+      "character": "来",
+      "start_time": 0.912,
+      "end_time": 1.083
+    },
+    {
+      "character": "到",
+      "start_time": 1.083,
+      "end_time": 1.208
+    },
+    {
+      "character": "绝",
+      "start_time": 1.208,
+      "end_time": 1.445
+    },
+    {
+      "character": "品",
       "start_time": 1.445,
-      "end_time": 1.645
+      "end_time": 1.633
     },
     {
-      "character": "望",
-      "start_time": 1.645,
-      "end_time": 1.774
+      "character": "拍",
+      "start_time": 1.633,
+      "end_time": 1.812
     },
     {
-      "character": "着",
-      "start_time": 1.774,
-      "end_time": 1.858
+      "character": "卖",
+      "start_time": 1.812,
+      "end_time": 1.945
     },
     {
-      "character": "巨",
-      "start_time": 1.858,
-      "end_time": 2.045
-    },
-    {
-      "character": "大",
-      "start_time": 2.045,
-      "end_time": 2.241
-    },
-    {
-      "character": "弯",
-      "start_time": 2.241,
-      "end_time": 2.416
-    },
-    {
-      "character": "月",
-      "start_time": 2.416,
-      "end_time": 2.549
-    },
-    {
-      "character": "形",
-      "start_time": 2.549,
-      "end_time": 2.733
-    },
-    {
-      "character": "岛",
-      "start_time": 2.733,
-      "end_time": 2.933
-    },
-    {
-      "character": "屿",
-      "start_time": 2.933,
-      "end_time": 3.079
+      "character": "行",
+      "start_time": 1.945,
+      "end_time": 2.191
     },
     {
       "character": "，",
-      "start_time": 3.079,
-      "end_time": 3.604
-    },
-    {
-      "character": "他",
-      "start_time": 3.604,
-      "end_time": 3.691
+      "start_time": 2.191,
+      "end_time": 2.654
     },
     {
       "character": "深",
-      "start_time": 3.691,
-      "end_time": 3.933
+      "start_time": 2.654,
+      "end_time": 2.849
+    },
+    {
+      "character": "蓝",
+      "start_time": 2.849,
+      "end_time": 2.987
     },
     {
       "character": "色",
-      "start_time": 3.933,
-      "end_time": 4.095
+      "start_time": 2.987,
+      "end_time": 3.158
     },
     {
-      "character": "短",
-      "start_time": 4.095,
-      "end_time": 4.32
+      "character": "圆",
+      "start_time": 3.158,
+      "end_time": 3.308
     },
     {
-      "character": "衫",
-      "start_time": 4.32,
-      "end_time": 4.537
+      "character": "领",
+      "start_time": 3.308,
+      "end_time": 3.449
     },
     {
-      "character": "被",
-      "start_time": 4.537,
-      "end_time": 4.708
+      "character": "袍",
+      "start_time": 3.449,
+      "end_time": 3.662
     },
     {
-      "character": "海",
-      "start_time": 4.708,
-      "end_time": 4.979
+      "character": "整",
+      "start_time": 3.662,
+      "end_time": 3.891
     },
     {
-      "character": "风",
-      "start_time": 4.979,
-      "end_time": 5.154
-    },
-    {
-      "character": "吹",
-      "start_time": 5.154,
-      "end_time": 5.333
-    },
-    {
-      "character": "起",
-      "start_time": 5.333,
-      "end_time": 5.516
+      "character": "洁",
+      "start_time": 3.891,
+      "end_time": 4.154
     },
     {
       "character": "，",
-      "start_time": 5.516,
-      "end_time": 5.954
+      "start_time": 4.154,
+      "end_time": 4.604
     },
     {
-      "character": "眼",
-      "start_time": 5.954,
-      "end_time": 6.149
+      "character": "正",
+      "start_time": 4.604,
+      "end_time": 4.758
     },
     {
-      "character": "神",
-      "start_time": 6.149,
-      "end_time": 6.329
+      "character": "坐",
+      "start_time": 4.758,
+      "end_time": 4.895
+    },
+    {
+      "character": "在",
+      "start_time": 4.895,
+      "end_time": 5.024
+    },
+    {
+      "character": "后",
+      "start_time": 5.024,
+      "end_time": 5.229
+    },
+    {
+      "character": "排",
+      "start_time": 5.229,
+      "end_time": 5.399
+    },
+    {
+      "character": "桌",
+      "start_time": 5.399,
+      "end_time": 5.537
+    },
+    {
+      "character": "前",
+      "start_time": 5.537,
+      "end_time": 5.799
+    },
+    {
+      "character": "，",
+      "start_time": 5.799,
+      "end_time": 6.224
+    },
+    {
+      "character": "他",
+      "start_time": 6.224,
+      "end_time": 6.32
+    },
+    {
+      "character": "环",
+      "start_time": 6.32,
+      "end_time": 6.591
+    },
+    {
+      "character": "顾",
+      "start_time": 6.591,
+      "end_time": 6.733
+    },
+    {
+      "character": "四",
+      "start_time": 6.733,
+      "end_time": 6.883
+    },
+    {
+      "character": "周",
+      "start_time": 6.883,
+      "end_time": 7.049
+    },
+    {
+      "character": "，",
+      "start_time": 7.049,
+      "end_time": 7.47
+    },
+    {
+      "character": "拍",
+      "start_time": 7.47,
+      "end_time": 7.616
+    },
+    {
+      "character": "卖",
+      "start_time": 7.616,
+      "end_time": 7.754
+    },
+    {
+      "character": "行",
+      "start_time": 7.754,
+      "end_time": 7.912
+    },
+    {
+      "character": "内",
+      "start_time": 7.912,
+      "end_time": 8.054
+    },
+    {
+      "character": "灯",
+      "start_time": 8.054,
+      "end_time": 8.308
+    },
+    {
+      "character": "火",
+      "start_time": 8.308,
+      "end_time": 8.474
+    },
+    {
+      "character": "通",
+      "start_time": 8.474,
+      "end_time": 8.666
+    },
+    {
+      "character": "明",
+      "start_time": 8.666,
+      "end_time": 8.895
+    },
+    {
+      "character": "，",
+      "start_time": 8.895,
+      "end_time": 9.383
+    },
+    {
+      "character": "上",
+      "start_time": 9.383,
+      "end_time": 9.604
+    },
+    {
+      "character": "下",
+      "start_time": 9.604,
+      "end_time": 9.787
+    },
+    {
+      "character": "五",
+      "start_time": 9.787,
+      "end_time": 9.937
+    },
+    {
+      "character": "层",
+      "start_time": 9.937,
+      "end_time": 10.12
+    },
+    {
+      "character": "包",
+      "start_time": 10.12,
+      "end_time": 10.299
+    },
+    {
+      "character": "间",
+      "start_time": 10.299,
+      "end_time": 10.499
+    },
+    {
+      "character": "环",
+      "start_time": 10.499,
+      "end_time": 10.749
+    },
+    {
+      "character": "绕",
+      "start_time": 10.749,
+      "end_time": 10.929
     },
     {
       "character": "中",
-      "start_time": 6.329,
-      "end_time": 6.516
+      "start_time": 10.929,
+      "end_time": 11.145
     },
     {
-      "character": "透",
-      "start_time": 6.516,
-      "end_time": 6.754
+      "character": "央",
+      "start_time": 11.145,
+      "end_time": 11.304
     },
     {
-      "character": "着",
-      "start_time": 6.754,
-      "end_time": 6.841
+      "character": "拍",
+      "start_time": 11.304,
+      "end_time": 11.458
     },
     {
-      "character": "震",
-      "start_time": 6.841,
-      "end_time": 7.02
+      "character": "卖",
+      "start_time": 11.458,
+      "end_time": 11.587
     },
     {
-      "character": "撼",
-      "start_time": 7.02,
-      "end_time": 7.199
+      "character": "台",
+      "start_time": 11.587,
+      "end_time": 11.849
     },
     {
       "character": "，",
-      "start_time": 7.199,
-      "end_time": 7.516
+      "start_time": 11.849,
+      "end_time": 12.241
     },
     {
-      "character": "远",
-      "start_time": 7.516,
-      "end_time": 7.758
+      "character": "人",
+      "start_time": 12.241,
+      "end_time": 12.479
     },
     {
-      "character": "处",
-      "start_time": 7.758,
-      "end_time": 7.92
+      "character": "声",
+      "start_time": 12.479,
+      "end_time": 12.683
     },
     {
-      "character": "岛",
-      "start_time": 7.92,
-      "end_time": 8.129
+      "character": "鼎",
+      "start_time": 12.683,
+      "end_time": 12.883
     },
     {
-      "character": "屿",
-      "start_time": 8.129,
-      "end_time": 8.354
+      "character": "沸",
+      "start_time": 12.883,
+      "end_time": 13.054
+    },
+    {
+      "character": "，",
+      "start_time": 13.054,
+      "end_time": 13.474
+    },
+    {
+      "character": "他",
+      "start_time": 13.474,
+      "end_time": 13.562
+    },
+    {
+      "character": "正",
+      "start_time": 13.562,
+      "end_time": 13.758
+    },
+    {
+      "character": "思",
+      "start_time": 13.758,
+      "end_time": 13.949
+    },
+    {
+      "character": "考",
+      "start_time": 13.949,
+      "end_time": 14.129
     },
     {
       "character": "如",
-      "start_time": 8.354,
-      "end_time": 8.599
+      "start_time": 14.129,
+      "end_time": 14.354
     },
     {
-      "character": "弯",
-      "start_time": 8.599,
-      "end_time": 8.774
+      "character": "何",
+      "start_time": 14.354,
+      "end_time": 14.504
     },
     {
-      "character": "月",
-      "start_time": 8.774,
-      "end_time": 8.916
+      "character": "拍",
+      "start_time": 14.504,
+      "end_time": 14.691
     },
     {
-      "character": "横",
-      "start_time": 8.916,
-      "end_time": 9.166
+      "character": "到",
+      "start_time": 14.691,
+      "end_time": 14.812
     },
     {
-      "character": "卧",
-      "start_time": 9.166,
-      "end_time": 9.274
+      "character": "女",
+      "start_time": 14.812,
+      "end_time": 15.008
     },
     {
-      "character": "海",
-      "start_time": 9.274,
-      "end_time": 9.491
+      "character": "皇",
+      "start_time": 15.008,
+      "end_time": 15.216
     },
     {
-      "character": "面",
-      "start_time": 9.491,
-      "end_time": 9.658
+      "character": "绝",
+      "start_time": 15.216,
+      "end_time": 15.47
     },
     {
-      "character": "，",
-      "start_time": 9.658,
-      "end_time": 9.983
+      "character": "地",
+      "start_time": 15.47,
+      "end_time": 15.608
     },
     {
-      "character": "港",
-      "start_time": 9.983,
-      "end_time": 10.191
+      "character": "的",
+      "start_time": 15.608,
+      "end_time": 15.695
     },
     {
-      "character": "口",
-      "start_time": 10.191,
-      "end_time": 10.387
+      "character": "地",
+      "start_time": 15.695,
+      "end_time": 15.837
     },
     {
-      "character": "船",
-      "start_time": 10.387,
-      "end_time": 10.674
-    },
-    {
-      "character": "只",
-      "start_time": 10.674,
-      "end_time": 10.841
-    },
-    {
-      "character": "密",
-      "start_time": 10.841,
-      "end_time": 11.004
-    },
-    {
-      "character": "布",
-      "start_time": 11.004,
-      "end_time": 11.158
+      "character": "图",
+      "start_time": 15.837,
+      "end_time": 16.083
     },
     {
       "character": "。",
-      "start_time": 11.158,
-      "end_time": 11.317
+      "start_time": 16.083,
+      "end_time": 16.242
     }
   ],
-  "generated_at": "2025-09-23T08:25:06.817484"
+  "generated_at": "2025-11-07T23:16:40.757808"
 }

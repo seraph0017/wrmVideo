@@ -14,10 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.20,Default,,0,0,0,,贱鸟越打越起劲
-Dialogue: 0,0:00:01.62,0:00:03.47,Default,,0,0,0,,它用爪子抓起石头砸{\c&H0000FFFF&\b1}向卜{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:03.47,0:00:03.77,Default,,0,0,0,,一峰
-Dialogue: 0,0:00:04.14,0:00:05.22,Default,,0,0,0,,又用翅膀拍打
-Dialogue: 0,0:00:05.46,0:00:06.50,Default,,0,0,0,,显得非常兴奋
-Dialogue: 0,0:00:06.79,0:00:07.47,Default,,0,0,0,,叫声不断
-Dialogue: 0,0:00:07.79,0:00:08.54,Default,,0,0,0,,充满得意
+Dialogue: 0,0:00:00.02,0:00:01.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}青狼{\c&H00FFFFFF&\b0}眼冲出通道
+Dialogue: 0,0:00:01.62,0:00:02.59,Default,,0,0,0,,见二人已逃远
+Dialogue: 0,0:00:03.07,0:00:04.68,Default,,0,0,0,,青眼欲裂怒吼连连
+Dialogue: 0,0:00:05.06,0:00:06.79,Default,,0,0,0,,却因燃烧{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}无力再追
+Dialogue: 0,0:00:07.32,0:00:08.35,Default,,0,0,0,,只能眼睁睁看着
+Dialogue: 0,0:00:08.35,0:00:10.22,Default,,0,0,0,,二人消失在{\c&H0000FFFF&\b1}平原{\c&H00FFFFFF&\b0}尽头

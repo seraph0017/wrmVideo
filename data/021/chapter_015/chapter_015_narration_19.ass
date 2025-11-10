@@ -14,8 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}司马{\c&H00FFFFFF&\b0}刀在第六峰遇到吴双
-Dialogue: 0,0:00:02.12,0:00:03.18,Default,,0,0,0,,见其轻松深入
-Dialogue: 0,0:00:03.53,0:00:04.66,Default,,0,0,0,,内心不甘怒吼
-Dialogue: 0,0:00:04.89,0:00:06.50,Default,,0,0,0,,挥舞大刀击退残魂
-Dialogue: 0,0:00:06.83,0:00:08.19,Default,,0,0,0,,眼神中充满战意
+Dialogue: 0,0:00:00.02,0:00:02.08,Default,,0,0,0,,天{\c&H0000FFFF&\b1}宝宝{\c&H00FFFFFF&\b0}接过吴双木偶玩具
+Dialogue: 0,0:00:02.50,0:00:03.28,Default,,0,0,0,,表情开心
+Dialogue: 0,0:00:03.74,0:00:04.86,Default,,0,0,0,,双手捧着木偶
+Dialogue: 0,0:00:05.27,0:00:06.03,Default,,0,0,0,,万花阵中
+Dialogue: 0,0:00:06.36,0:00:07.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}花海{\c&H00FFFFFF&\b0}绚烂
+Dialogue: 0,0:00:07.54,0:00:08.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}照射
+Dialogue: 0,0:00:08.63,0:00:09.51,Default,,0,0,0,,气氛轻松

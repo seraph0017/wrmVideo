@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_046 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.97,Default,,0,0,0,,突然山林中跳出几名{\c&H0000FFFF&\b1}蓬莱{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.97,0:00:03.60,Default,,0,0,0,,修士嚣张大喊
+Dialogue: 0,0:00:04.08,0:00:05.21,Default,,0,0,0,,擅闯{\c&H0000FFFF&\b1}蓬莱{\c&H00FFFFFF&\b0}秘境
+Dialogue: 0,0:00:05.45,0:00:07.68,Default,,0,0,0,,完全不知宗门已灭李观棋
+Dialogue: 0,0:00:07.68,0:00:09.88,Default,,0,0,0,,秀气的眉头皱起这些人太
+Dialogue: 0,0:00:09.88,0:00:10.66,Default,,0,0,0,,目中无人了

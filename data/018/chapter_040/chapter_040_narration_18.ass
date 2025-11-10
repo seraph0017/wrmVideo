@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_040 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴静{\c&H00FFFFFF&\b0}带领子弟紧随吴双
+Dialogue: 0,0:00:02.21,0:00:04.02,Default,,0,0,0,,压低身形穿过混乱人群
+Dialogue: 0,0:00:04.43,0:00:05.75,Default,,0,0,0,,见前方{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}盘查
+Dialogue: 0,0:00:06.09,0:00:07.49,Default,,0,0,0,,她眼神示意众人蹲下
+Dialogue: 0,0:00:07.80,0:00:08.97,Default,,0,0,0,,屏息等待时机

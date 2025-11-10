@@ -3367,3 +3367,537 @@ def gen_image_async_v4_task(self, novel_id, chapter_id, api_url='http://127.0.0.
             'chapter_id': chapter_id,
             'error': error_msg
         }
+
+@shared_task(bind=True)
+def gen_script_task(self, novel_id):
+    """
+    生成小说脚本任务
+    对应脚本：gen_script_v2.py
+    
+    注意：gen_script_v2.py 需要传入小说txt文件路径，输出目录自动为 data/{novel_id:03d}
+    """
+    import subprocess
+    import os
+    from django.conf import settings
+    from .models import Novel
+    
+    logger.info(f"[gen_script_task] 开始生成脚本，小说ID: {novel_id}")
+    
+    try:
+        # 获取小说对象
+        novel = Novel.objects.get(pk=novel_id)
+        
+        # 状态已经在视图函数中设置了，这里不需要再设置
+        # 只需要更新任务ID（如果视图函数没有设置的话）
+        if not novel.current_task_id:
+            novel.current_task_id = self.request.id
+            novel.save()
+        
+        # 检查小说文件是否存在
+        if not novel.original_file:
+            error_msg = f"小说ID {novel_id} 没有上传文件"
+            logger.error(f"[gen_script_task] {error_msg}")
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'message': '脚本生成失败',
+                'error': error_msg
+            }
+        
+        # 获取小说文件的绝对路径
+        novel_file_path = novel.original_file.path
+        
+        # 检查文件是否存在
+        if not os.path.exists(novel_file_path):
+            error_msg = f"小说文件不存在: {novel_file_path}"
+            logger.error(f"[gen_script_task] {error_msg}")
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'message': '脚本生成失败',
+                'error': error_msg
+            }
+        
+        logger.info(f"[gen_script_task] 找到小说文件: {novel_file_path}")
+        
+        # 构建输出目录路径
+        output_dir = os.path.join(settings.BASE_DIR.parent, 'data', f'{novel_id:03d}')
+        
+        # 确保输出目录存在
+        os.makedirs(output_dir, exist_ok=True)
+        logger.info(f"[gen_script_task] 输出目录: {output_dir}")
+        
+        # 构建命令
+        script_path = os.path.join(settings.BASE_DIR.parent, 'gen_script_v2.py')
+        cmd = ['python', script_path, novel_file_path, '--output', output_dir]
+        
+        logger.info(f"[gen_script_task] 执行命令: {' '.join(cmd)}")
+        
+        # 执行脚本
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            cwd=settings.BASE_DIR.parent
+        )
+        
+        if result.returncode == 0:
+            logger.info(f"[gen_script_task] 脚本生成成功，小说ID: {novel_id}")
+            
+            # 更新任务状态为"空闲"
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = '脚本生成成功'
+            novel.save()
+            
+            return {
+                'status': 'success',
+                'novel_id': novel_id,
+                'message': '脚本生成成功',
+                'output': result.stdout
+            }
+        else:
+            error_msg = result.stderr or result.stdout
+            logger.error(f"[gen_script_task] 脚本生成失败: {error_msg}")
+            
+            # 更新任务状态为"空闲"（失败也要清除状态）
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = f'脚本生成失败: {error_msg}'
+            novel.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'message': '脚本生成失败',
+                'error': error_msg
+            }
+            
+    except Novel.DoesNotExist:
+        error_msg = f"小说ID {novel_id} 不存在"
+        logger.error(f"[gen_script_task] {error_msg}")
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'message': '任务执行异常',
+            'error': error_msg
+        }
+    except Exception as e:
+        logger.error(f"[gen_script_task] 任务执行异常: {str(e)}")
+        
+        # 异常时也要清除任务状态
+        try:
+            novel = Novel.objects.get(pk=novel_id)
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = f'任务执行异常: {str(e)}'
+            novel.save()
+        except:
+            pass
+        
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'message': '任务执行异常',
+            'error': str(e)
+        }
+
+
+@shared_task(bind=True)
+def validate_script_task(self, novel_id):
+    """
+    校验小说脚本任务
+    对应脚本：validate_narration.py --auto-fix
+    """
+    import subprocess
+    import os
+    from django.conf import settings
+    
+    logger.info(f"[validate_script_task] 开始校验脚本，小说ID: {novel_id}")
+    
+    try:
+        from .models import Novel
+        
+        # 获取小说对象
+        novel = Novel.objects.get(pk=novel_id)
+        
+        # 状态已经在视图函数中设置了，这里不需要再设置
+        # 只需要更新任务ID（如果视图函数没有设置的话）
+        if not novel.current_task_id:
+            novel.current_task_id = self.request.id
+            novel.save()
+        
+        # 构建数据目录路径
+        data_dir = os.path.join(settings.BASE_DIR.parent, 'data', f'{novel_id:03d}')
+        
+        # 构建命令
+        script_path = os.path.join(settings.BASE_DIR.parent, 'validate_narration.py')
+        cmd = ['python', script_path, data_dir, '--auto-fix']
+        
+        logger.info(f"[validate_script_task] 执行命令: {' '.join(cmd)}")
+        
+        # 执行脚本
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            cwd=settings.BASE_DIR.parent
+        )
+        
+        if result.returncode == 0:
+            logger.info(f"[validate_script_task] 脚本校验成功，小说ID: {novel_id}")
+            
+            # 更新任务状态为"空闲"
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = '脚本校验成功'
+            novel.save()
+            
+            return {
+                'status': 'success',
+                'novel_id': novel_id,
+                'message': '脚本校验成功',
+                'output': result.stdout
+            }
+        else:
+            error_msg = result.stderr or result.stdout
+            logger.error(f"[validate_script_task] 脚本校验失败: {error_msg}")
+            
+            # 更新任务状态为"空闲"（失败也要清除状态）
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = f'脚本校验失败: {error_msg}'
+            novel.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'message': '脚本校验失败',
+                'error': error_msg
+            }
+            
+    except Exception as e:
+        logger.error(f"[validate_script_task] 任务执行异常: {str(e)}")
+        
+        # 异常时也要清除任务状态
+        try:
+            from .models import Novel
+            novel = Novel.objects.get(pk=novel_id)
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = f'任务执行异常: {str(e)}'
+            novel.save()
+        except:
+            pass
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'message': '任务执行异常',
+            'error': str(e)
+        }
+
+
+@shared_task(bind=True)
+def gen_audio_task(self, novel_id):
+    """
+    生成小说旁白音频任务
+    对应脚本：gen_audio.py
+    """
+    import subprocess
+    import os
+    from django.conf import settings
+    from .models import Novel
+    
+    logger.info(f"[gen_audio_task] 开始生成旁白，小说ID: {novel_id}")
+    
+    try:
+        # 获取小说对象
+        novel = Novel.objects.get(pk=novel_id)
+        
+        # 状态已经在视图函数中设置了，这里不需要再设置
+        # 只需要更新任务ID（如果视图函数没有设置的话）
+        if not novel.current_task_id:
+            novel.current_task_id = self.request.id
+            novel.save()
+        
+        # 构建数据目录路径
+        data_dir = os.path.join(settings.BASE_DIR.parent, 'data', f'{novel_id:03d}')
+        
+        # 构建命令
+        script_path = os.path.join(settings.BASE_DIR.parent, 'gen_audio.py')
+        cmd = ['python', script_path, data_dir]
+        
+        logger.info(f"[gen_audio_task] 执行命令: {' '.join(cmd)}")
+        
+        # 执行脚本
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            cwd=settings.BASE_DIR.parent
+        )
+        
+        if result.returncode == 0:
+            logger.info(f"[gen_audio_task] 旁白生成成功，小说ID: {novel_id}")
+            
+            # 更新任务状态为"空闲"
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = '旁白生成成功'
+            novel.save()
+            
+            return {
+                'status': 'success',
+                'novel_id': novel_id,
+                'message': '旁白生成成功',
+                'output': result.stdout
+            }
+        else:
+            error_msg = result.stderr or result.stdout
+            logger.error(f"[gen_audio_task] 旁白生成失败: {error_msg}")
+            
+            # 更新任务状态为"空闲"（失败也要清除状态）
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = f'旁白生成失败: {error_msg}'
+            novel.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'message': '旁白生成失败',
+                'error': error_msg
+            }
+            
+    except Novel.DoesNotExist:
+        error_msg = f"小说ID {novel_id} 不存在"
+        logger.error(f"[gen_audio_task] {error_msg}")
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'message': '任务执行异常',
+            'error': error_msg
+        }
+    except Exception as e:
+        logger.error(f"[gen_audio_task] 任务执行异常: {str(e)}")
+        
+        # 异常时也要清除任务状态
+        try:
+            novel = Novel.objects.get(pk=novel_id)
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = f'任务执行异常: {str(e)}'
+            novel.save()
+        except:
+            pass
+        
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'message': '任务执行异常',
+            'error': str(e)
+        }
+
+
+@shared_task(bind=True)
+def gen_ass_task(self, novel_id):
+    """
+    生成小说字幕时间戳文件任务
+    对应脚本：gen_ass.py
+    """
+    import subprocess
+    import os
+    from django.conf import settings
+    from .models import Novel
+    
+    logger.info(f"[gen_ass_task] 开始生成字幕，小说ID: {novel_id}")
+    
+    try:
+        # 获取小说对象
+        novel = Novel.objects.get(pk=novel_id)
+        
+        # 状态已经在视图函数中设置了，这里不需要再设置
+        # 只需要更新任务ID（如果视图函数没有设置的话）
+        if not novel.current_task_id:
+            novel.current_task_id = self.request.id
+            novel.save()
+        
+        # 构建数据目录路径
+        data_dir = os.path.join(settings.BASE_DIR.parent, 'data', f'{novel_id:03d}')
+        
+        # 构建命令
+        script_path = os.path.join(settings.BASE_DIR.parent, 'gen_ass.py')
+        cmd = ['python', script_path, data_dir]
+        
+        logger.info(f"[gen_ass_task] 执行命令: {' '.join(cmd)}")
+        
+        # 执行脚本
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            cwd=settings.BASE_DIR.parent
+        )
+        
+        if result.returncode == 0:
+            logger.info(f"[gen_ass_task] 字幕生成成功，小说ID: {novel_id}")
+            
+            # 更新任务状态为"空闲"
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = '字幕生成成功'
+            novel.save()
+            
+            return {
+                'status': 'success',
+                'novel_id': novel_id,
+                'message': '字幕生成成功',
+                'output': result.stdout
+            }
+        else:
+            error_msg = result.stderr or result.stdout
+            logger.error(f"[gen_ass_task] 字幕生成失败: {error_msg}")
+            
+            # 更新任务状态为"空闲"（失败也要清除状态）
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = f'字幕生成失败: {error_msg}'
+            novel.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'message': '字幕生成失败',
+                'error': error_msg
+            }
+            
+    except Novel.DoesNotExist:
+        error_msg = f"小说ID {novel_id} 不存在"
+        logger.error(f"[gen_ass_task] {error_msg}")
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'message': '任务执行异常',
+            'error': error_msg
+        }
+    except Exception as e:
+        logger.error(f"[gen_ass_task] 任务执行异常: {str(e)}")
+        
+        # 异常时也要清除任务状态
+        try:
+            novel = Novel.objects.get(pk=novel_id)
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = f'任务执行异常: {str(e)}'
+            novel.save()
+        except:
+            pass
+        
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'message': '任务执行异常',
+            'error': str(e)
+        }
+
+
+@shared_task(bind=True)
+def gen_image_task(self, novel_id):
+    """
+    生成小说分镜图片任务
+    对应脚本：gen_image_async_v4.py
+    """
+    import subprocess
+    import os
+    from django.conf import settings
+    from .models import Novel
+    
+    logger.info(f"[gen_image_task] 开始生成图片，小说ID: {novel_id}")
+    
+    try:
+        # 获取小说对象
+        novel = Novel.objects.get(pk=novel_id)
+        
+        # 状态已经在视图函数中设置了，这里不需要再设置
+        # 只需要更新任务ID（如果视图函数没有设置的话）
+        if not novel.current_task_id:
+            novel.current_task_id = self.request.id
+            novel.save()
+        
+        # 构建数据目录路径
+        data_dir = os.path.join(settings.BASE_DIR.parent, 'data', f'{novel_id:03d}')
+        
+        # 构建命令
+        script_path = os.path.join(settings.BASE_DIR.parent, 'gen_image_async_v4.py')
+        cmd = ['python', script_path, data_dir]
+        
+        logger.info(f"[gen_image_task] 执行命令: {' '.join(cmd)}")
+        
+        # 执行脚本
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            cwd=settings.BASE_DIR.parent
+        )
+        
+        if result.returncode == 0:
+            logger.info(f"[gen_image_task] 图片生成成功，小说ID: {novel_id}")
+            
+            # 更新任务状态为"空闲"
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = '图片生成成功'
+            novel.save()
+            
+            return {
+                'status': 'success',
+                'novel_id': novel_id,
+                'message': '图片生成成功',
+                'output': result.stdout
+            }
+        else:
+            error_msg = result.stderr or result.stdout
+            logger.error(f"[gen_image_task] 图片生成失败: {error_msg}")
+            
+            # 更新任务状态为"空闲"（失败也要清除状态）
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = f'图片生成失败: {error_msg}'
+            novel.save()
+            
+            return {
+                'status': 'error',
+                'novel_id': novel_id,
+                'message': '图片生成失败',
+                'error': error_msg
+            }
+            
+    except Novel.DoesNotExist:
+        error_msg = f"小说ID {novel_id} 不存在"
+        logger.error(f"[gen_image_task] {error_msg}")
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'message': '任务执行异常',
+            'error': error_msg
+        }
+    except Exception as e:
+        logger.error(f"[gen_image_task] 任务执行异常: {str(e)}")
+        
+        # 异常时也要清除任务状态
+        try:
+            novel = Novel.objects.get(pk=novel_id)
+            novel.task_status = 'idle'
+            novel.current_task_id = None
+            novel.task_message = f'任务执行异常: {str(e)}'
+            novel.save()
+        except:
+            pass
+        
+        return {
+            'status': 'error',
+            'novel_id': novel_id,
+            'message': '任务执行异常',
+            'error': str(e)
+        }

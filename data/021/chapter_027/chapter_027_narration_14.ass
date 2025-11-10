@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}俞罡{\c&H00FFFFFF&\b0}双手背负
-Dialogue: 0,0:00:01.53,0:00:02.33,Default,,0,0,0,,站在巨剑上
-Dialogue: 0,0:00:02.62,0:00:03.30,Default,,0,0,0,,目光如剑
-Dialogue: 0,0:00:03.60,0:00:04.32,Default,,0,0,0,,表情严肃
-Dialogue: 0,0:00:04.68,0:00:06.42,Default,,0,0,0,,正在快速接近{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}等人
-Dialogue: 0,0:00:06.69,0:00:07.57,Default,,0,0,0,,气势沉稳
+Dialogue: 0,0:00:00.02,0:00:02.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}怒吼中催动金色漩涡
+Dialogue: 0,0:00:02.51,0:00:03.71,Default,,0,0,0,,漩涡光芒爆发
+Dialogue: 0,0:00:04.11,0:00:05.39,Default,,0,0,0,,将空间束缚撕裂
+Dialogue: 0,0:00:05.92,0:00:07.67,Default,,0,0,0,,一道身影刚冲出即被九
+Dialogue: 0,0:00:07.67,0:00:09.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄真火{\c&H00FFFFFF&\b0}斩劈为两半

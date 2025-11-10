@@ -1,243 +1,208 @@
 {
-  "text": "幻阵中惨叫连连！吴双操控百变魔云穿梭，神象长枪不断收割敌人，所过之处，敌人非死即伤，无人能挡！",
-  "audio_file": "data/021/chapter_022/chapter_022_narration_09.mp3",
-  "duration": 9.941,
+  "text": "金龙被爆炸震飞，捂着胸口震惊观望，狂鲨陨落，龙隐湖血色弥漫，他眼中闪过复杂光芒！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_022/chapter_022_narration_09.mp3",
+  "duration": 8.075,
   "character_timestamps": [
     {
-      "character": "幻",
+      "character": "金",
       "start_time": 0.016,
-      "end_time": 0.195
+      "end_time": 0.179
     },
     {
-      "character": "阵",
-      "start_time": 0.195,
-      "end_time": 0.358
+      "character": "龙",
+      "start_time": 0.179,
+      "end_time": 0.345
+    },
+    {
+      "character": "被",
+      "start_time": 0.345,
+      "end_time": 0.474
+    },
+    {
+      "character": "爆",
+      "start_time": 0.474,
+      "end_time": 0.67
+    },
+    {
+      "character": "炸",
+      "start_time": 0.67,
+      "end_time": 0.804
+    },
+    {
+      "character": "震",
+      "start_time": 0.804,
+      "end_time": 0.974
+    },
+    {
+      "character": "飞",
+      "start_time": 0.974,
+      "end_time": 1.191
+    },
+    {
+      "character": "，",
+      "start_time": 1.191,
+      "end_time": 1.587
+    },
+    {
+      "character": "捂",
+      "start_time": 1.587,
+      "end_time": 1.724
+    },
+    {
+      "character": "着",
+      "start_time": 1.724,
+      "end_time": 1.808
+    },
+    {
+      "character": "胸",
+      "start_time": 1.808,
+      "end_time": 1.995
+    },
+    {
+      "character": "口",
+      "start_time": 1.995,
+      "end_time": 2.191
+    },
+    {
+      "character": "震",
+      "start_time": 2.191,
+      "end_time": 2.458
+    },
+    {
+      "character": "惊",
+      "start_time": 2.458,
+      "end_time": 2.654
+    },
+    {
+      "character": "观",
+      "start_time": 2.654,
+      "end_time": 2.887
+    },
+    {
+      "character": "望",
+      "start_time": 2.887,
+      "end_time": 3.008
+    },
+    {
+      "character": "，",
+      "start_time": 3.008,
+      "end_time": 3.541
+    },
+    {
+      "character": "狂",
+      "start_time": 3.541,
+      "end_time": 3.749
+    },
+    {
+      "character": "鲨",
+      "start_time": 3.749,
+      "end_time": 3.929
+    },
+    {
+      "character": "陨",
+      "start_time": 3.929,
+      "end_time": 4.095
+    },
+    {
+      "character": "落",
+      "start_time": 4.095,
+      "end_time": 4.312
+    },
+    {
+      "character": "，",
+      "start_time": 4.312,
+      "end_time": 4.629
+    },
+    {
+      "character": "龙",
+      "start_time": 4.629,
+      "end_time": 4.854
+    },
+    {
+      "character": "隐",
+      "start_time": 4.854,
+      "end_time": 5.004
+    },
+    {
+      "character": "湖",
+      "start_time": 5.004,
+      "end_time": 5.166
+    },
+    {
+      "character": "血",
+      "start_time": 5.166,
+      "end_time": 5.466
+    },
+    {
+      "character": "色",
+      "start_time": 5.466,
+      "end_time": 5.633
+    },
+    {
+      "character": "弥",
+      "start_time": 5.633,
+      "end_time": 5.816
+    },
+    {
+      "character": "漫",
+      "start_time": 5.816,
+      "end_time": 5.945
+    },
+    {
+      "character": "，",
+      "start_time": 5.945,
+      "end_time": 6.241
+    },
+    {
+      "character": "他",
+      "start_time": 6.241,
+      "end_time": 6.349
+    },
+    {
+      "character": "眼",
+      "start_time": 6.349,
+      "end_time": 6.549
     },
     {
       "character": "中",
-      "start_time": 0.358,
-      "end_time": 0.583
+      "start_time": 6.549,
+      "end_time": 6.691
     },
     {
-      "character": "惨",
-      "start_time": 0.583,
-      "end_time": 0.891
-    },
-    {
-      "character": "叫",
-      "start_time": 0.891,
-      "end_time": 1.066
-    },
-    {
-      "character": "连",
-      "start_time": 1.066,
-      "end_time": 1.208
-    },
-    {
-      "character": "连",
-      "start_time": 1.208,
-      "end_time": 1.449
-    },
-    {
-      "character": "，",
-      "start_time": 1.449,
-      "end_time": 1.879
-    },
-    {
-      "character": "吴",
-      "start_time": 1.879,
-      "end_time": 2.054
-    },
-    {
-      "character": "双",
-      "start_time": 2.054,
-      "end_time": 2.237
-    },
-    {
-      "character": "操",
-      "start_time": 2.237,
-      "end_time": 2.445
-    },
-    {
-      "character": "控",
-      "start_time": 2.445,
-      "end_time": 2.633
-    },
-    {
-      "character": "百",
-      "start_time": 2.633,
-      "end_time": 2.858
-    },
-    {
-      "character": "变",
-      "start_time": 2.858,
-      "end_time": 3.004
-    },
-    {
-      "character": "魔",
-      "start_time": 3.004,
-      "end_time": 3.233
-    },
-    {
-      "character": "云",
-      "start_time": 3.233,
-      "end_time": 3.391
-    },
-    {
-      "character": "穿",
-      "start_time": 3.391,
-      "end_time": 3.591
-    },
-    {
-      "character": "梭",
-      "start_time": 3.591,
-      "end_time": 3.787
-    },
-    {
-      "character": "，",
-      "start_time": 3.787,
-      "end_time": 4.304
-    },
-    {
-      "character": "神",
-      "start_time": 4.304,
-      "end_time": 4.524
-    },
-    {
-      "character": "象",
-      "start_time": 4.524,
-      "end_time": 4.704
-    },
-    {
-      "character": "长",
-      "start_time": 4.704,
-      "end_time": 4.908
-    },
-    {
-      "character": "枪",
-      "start_time": 4.908,
-      "end_time": 5.112
-    },
-    {
-      "character": "不",
-      "start_time": 5.112,
-      "end_time": 5.312
-    },
-    {
-      "character": "断",
-      "start_time": 5.312,
-      "end_time": 5.47
-    },
-    {
-      "character": "收",
-      "start_time": 5.47,
-      "end_time": 5.704
-    },
-    {
-      "character": "割",
-      "start_time": 5.704,
-      "end_time": 5.858
-    },
-    {
-      "character": "敌",
-      "start_time": 5.858,
-      "end_time": 6.02
-    },
-    {
-      "character": "人",
-      "start_time": 6.02,
-      "end_time": 6.224
-    },
-    {
-      "character": "，",
-      "start_time": 6.224,
-      "end_time": 6.641
-    },
-    {
-      "character": "所",
-      "start_time": 6.641,
-      "end_time": 6.87
+      "character": "闪",
+      "start_time": 6.691,
+      "end_time": 6.929
     },
     {
       "character": "过",
-      "start_time": 6.87,
-      "end_time": 6.995
+      "start_time": 6.929,
+      "end_time": 7.062
     },
     {
-      "character": "之",
-      "start_time": 6.995,
-      "end_time": 7.133
+      "character": "复",
+      "start_time": 7.062,
+      "end_time": 7.308
     },
     {
-      "character": "处",
-      "start_time": 7.133,
-      "end_time": 7.304
+      "character": "杂",
+      "start_time": 7.308,
+      "end_time": 7.499
     },
     {
-      "character": "，",
-      "start_time": 7.304,
-      "end_time": 7.674
+      "character": "光",
+      "start_time": 7.499,
+      "end_time": 7.695
     },
     {
-      "character": "敌",
-      "start_time": 7.674,
-      "end_time": 7.787
-    },
-    {
-      "character": "人",
-      "start_time": 7.787,
-      "end_time": 7.941
-    },
-    {
-      "character": "非",
-      "start_time": 7.941,
-      "end_time": 8.233
-    },
-    {
-      "character": "死",
-      "start_time": 8.233,
-      "end_time": 8.429
-    },
-    {
-      "character": "即",
-      "start_time": 8.429,
-      "end_time": 8.604
-    },
-    {
-      "character": "伤",
-      "start_time": 8.604,
-      "end_time": 8.808
-    },
-    {
-      "character": "，",
-      "start_time": 8.808,
-      "end_time": 9.074
-    },
-    {
-      "character": "无",
-      "start_time": 9.074,
-      "end_time": 9.329
-    },
-    {
-      "character": "人",
-      "start_time": 9.329,
-      "end_time": 9.487
-    },
-    {
-      "character": "能",
-      "start_time": 9.487,
-      "end_time": 9.649
-    },
-    {
-      "character": "挡",
-      "start_time": 9.649,
-      "end_time": 9.779
+      "character": "芒",
+      "start_time": 7.695,
+      "end_time": 7.916
     },
     {
       "character": "！",
-      "start_time": 9.779,
-      "end_time": 9.937
+      "start_time": 7.916,
+      "end_time": 8.075
     }
   ],
-  "generated_at": "2025-09-23T08:24:07.103424"
+  "generated_at": "2025-11-07T23:15:22.363907"
 }

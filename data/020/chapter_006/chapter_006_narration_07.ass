@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_006 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.07,Default,,0,0,0,,黑色海域深夜
+Dialogue: 0,0:00:01.48,0:00:02.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}王守月{\c&H00FFFFFF&\b0}手持罗盘
+Dialogue: 0,0:00:03.16,0:00:03.82,Default,,0,0,0,,望着星空
+Dialogue: 0,0:00:04.09,0:00:04.90,Default,,0,0,0,,神情专注
+Dialogue: 0,0:00:05.20,0:00:06.84,Default,,0,0,0,,开始定位七十二神仙洞的
+Dialogue: 0,0:00:06.84,0:00:07.16,Default,,0,0,0,,位置
+Dialogue: 0,0:00:07.52,0:00:08.87,Default,,0,0,0,,四兄妹准备合力

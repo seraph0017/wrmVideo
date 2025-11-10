@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_040 Narration 20 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.14,Default,,0,0,0,,熊概站在案旁
+Dialogue: 0,0:00:01.55,0:00:02.67,Default,,0,0,0,,浅蓝色圆领袍
+Dialogue: 0,0:00:02.99,0:00:04.39,Default,,0,0,0,,低声{\c&H0000FFFF&\b1}汇报{\c&H00FFFFFF&\b0}各司情况
+Dialogue: 0,0:00:04.75,0:00:05.46,Default,,0,0,0,,表情谨慎
+Dialogue: 0,0:00:05.92,0:00:06.99,Default,,0,0,0,,不敢打扰{\c&H0000FFFF&\b1}李至刚{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.24,0:00:08.57,Default,,0,0,0,,身体微微前倾

@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}突然出现
-Dialogue: 0,0:00:01.52,0:00:03.22,Default,,0,0,0,,大喊吸引{\c&H0000FFFF&\b1}赵牧{\c&H00FFFFFF&\b0}等人注意
-Dialogue: 0,0:00:03.69,0:00:05.45,Default,,0,0,0,,同时推下准备好的{\c&H0000FFFF&\b1}巨石{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:05.75,0:00:06.85,Default,,0,0,0,,引发小型山崩
-Dialogue: 0,0:00:07.20,0:00:08.28,Default,,0,0,0,,阻断敌人视线
+Dialogue: 0,0:00:00.02,0:00:01.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}丹道{\c&H00FFFFFF&\b0}总纲洗礼
+Dialogue: 0,0:00:01.45,0:00:03.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}现学现用解析体内力量
+Dialogue: 0,0:00:03.73,0:00:06.47,Default,,0,0,0,,本质梳理杂乱{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之气地泉
+Dialogue: 0,0:00:06.47,0:00:08.65,Default,,0,0,0,,压缩速度暴涨突破在即

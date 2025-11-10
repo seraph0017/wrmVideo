@@ -1,258 +1,173 @@
 {
-  "text": "吴双与神鸟扭打在一起！他运转五层护体元罡，拳头如雨点砸下，神鸟则用翅膀、爪子反击，周围碎石纷纷震碎！",
-  "audio_file": "data/021/chapter_006/chapter_006_narration_12.mp3",
-  "duration": 10.016,
+  "text": "吴双取出千斤铁棍砸向贱鸟，贱鸟被打晕倒地，嘟囔“你耍赖……太他妈坏了”",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_006/chapter_006_narration_12.mp3",
+  "duration": 6.533,
   "character_timestamps": [
     {
       "character": "吴",
       "start_time": 0.016,
-      "end_time": 0.195
+      "end_time": 0.17
     },
     {
       "character": "双",
-      "start_time": 0.195,
-      "end_time": 0.399
+      "start_time": 0.17,
+      "end_time": 0.358
     },
     {
-      "character": "与",
-      "start_time": 0.399,
-      "end_time": 0.499
+      "character": "取",
+      "start_time": 0.358,
+      "end_time": 0.533
     },
     {
-      "character": "神",
-      "start_time": 0.499,
-      "end_time": 0.645
+      "character": "出",
+      "start_time": 0.533,
+      "end_time": 0.674
     },
     {
-      "character": "鸟",
-      "start_time": 0.645,
-      "end_time": 0.833
+      "character": "千",
+      "start_time": 0.674,
+      "end_time": 0.912
     },
     {
-      "character": "扭",
-      "start_time": 0.833,
-      "end_time": 1.045
+      "character": "斤",
+      "start_time": 0.912,
+      "end_time": 1.074
     },
     {
-      "character": "打",
-      "start_time": 1.045,
-      "end_time": 1.183
+      "character": "铁",
+      "start_time": 1.074,
+      "end_time": 1.266
     },
     {
-      "character": "在",
-      "start_time": 1.183,
-      "end_time": 1.32
-    },
-    {
-      "character": "一",
-      "start_time": 1.32,
-      "end_time": 1.433
-    },
-    {
-      "character": "起",
-      "start_time": 1.433,
-      "end_time": 1.633
-    },
-    {
-      "character": "，",
-      "start_time": 1.633,
-      "end_time": 2.091
-    },
-    {
-      "character": "他",
-      "start_time": 2.091,
-      "end_time": 2.204
-    },
-    {
-      "character": "运",
-      "start_time": 2.204,
-      "end_time": 2.412
-    },
-    {
-      "character": "转",
-      "start_time": 2.412,
-      "end_time": 2.599
-    },
-    {
-      "character": "五",
-      "start_time": 2.599,
-      "end_time": 2.737
-    },
-    {
-      "character": "层",
-      "start_time": 2.737,
-      "end_time": 2.933
-    },
-    {
-      "character": "护",
-      "start_time": 2.933,
-      "end_time": 3.17
-    },
-    {
-      "character": "体",
-      "start_time": 3.17,
-      "end_time": 3.349
-    },
-    {
-      "character": "元",
-      "start_time": 3.349,
-      "end_time": 3.537
-    },
-    {
-      "character": "罡",
-      "start_time": 3.537,
-      "end_time": 3.72
-    },
-    {
-      "character": "，",
-      "start_time": 3.72,
-      "end_time": 4.108
-    },
-    {
-      "character": "拳",
-      "start_time": 4.108,
-      "end_time": 4.329
-    },
-    {
-      "character": "头",
-      "start_time": 4.329,
-      "end_time": 4.479
-    },
-    {
-      "character": "如",
-      "start_time": 4.479,
-      "end_time": 4.704
-    },
-    {
-      "character": "雨",
-      "start_time": 4.704,
-      "end_time": 4.824
-    },
-    {
-      "character": "点",
-      "start_time": 4.824,
-      "end_time": 5.004
+      "character": "棍",
+      "start_time": 1.266,
+      "end_time": 1.499
     },
     {
       "character": "砸",
-      "start_time": 5.004,
-      "end_time": 5.224
+      "start_time": 1.499,
+      "end_time": 1.795
     },
     {
-      "character": "下",
-      "start_time": 5.224,
-      "end_time": 5.383
+      "character": "向",
+      "start_time": 1.795,
+      "end_time": 1.962
     },
     {
-      "character": "，",
-      "start_time": 5.383,
-      "end_time": 5.745
-    },
-    {
-      "character": "神",
-      "start_time": 5.745,
-      "end_time": 5.92
+      "character": "贱",
+      "start_time": 1.962,
+      "end_time": 2.116
     },
     {
       "character": "鸟",
-      "start_time": 5.92,
-      "end_time": 6.149
-    },
-    {
-      "character": "则",
-      "start_time": 6.149,
-      "end_time": 6.279
-    },
-    {
-      "character": "用",
-      "start_time": 6.279,
-      "end_time": 6.399
-    },
-    {
-      "character": "翅",
-      "start_time": 6.399,
-      "end_time": 6.604
-    },
-    {
-      "character": "膀",
-      "start_time": 6.604,
-      "end_time": 6.799
+      "start_time": 2.116,
+      "end_time": 2.312
     },
     {
       "character": "，",
-      "start_time": 6.799,
-      "end_time": 7.07
+      "start_time": 2.312,
+      "end_time": 2.754
     },
     {
-      "character": "爪",
-      "start_time": 7.07,
-      "end_time": 7.262
+      "character": "贱",
+      "start_time": 2.754,
+      "end_time": 2.912
     },
     {
-      "character": "子",
-      "start_time": 7.262,
-      "end_time": 7.358
+      "character": "鸟",
+      "start_time": 2.912,
+      "end_time": 3.095
     },
     {
-      "character": "反",
-      "start_time": 7.358,
-      "end_time": 7.541
+      "character": "被",
+      "start_time": 3.095,
+      "end_time": 3.224
     },
     {
-      "character": "击",
-      "start_time": 7.541,
-      "end_time": 7.758
+      "character": "打",
+      "start_time": 3.224,
+      "end_time": 3.445
+    },
+    {
+      "character": "晕",
+      "start_time": 3.445,
+      "end_time": 3.595
+    },
+    {
+      "character": "倒",
+      "start_time": 3.595,
+      "end_time": 3.787
+    },
+    {
+      "character": "地",
+      "start_time": 3.787,
+      "end_time": 3.933
     },
     {
       "character": "，",
-      "start_time": 7.758,
-      "end_time": 8.104
+      "start_time": 3.933,
+      "end_time": 4.337
     },
     {
-      "character": "周",
-      "start_time": 8.104,
-      "end_time": 8.308
+      "character": "嘟",
+      "start_time": 4.337,
+      "end_time": 4.483
     },
     {
-      "character": "围",
-      "start_time": 8.308,
-      "end_time": 8.437
+      "character": "囔",
+      "start_time": 4.483,
+      "end_time": 4.704
     },
     {
-      "character": "碎",
-      "start_time": 8.437,
-      "end_time": 8.654
+      "character": "你",
+      "start_time": 4.704,
+      "end_time": 4.833
     },
     {
-      "character": "石",
-      "start_time": 8.654,
-      "end_time": 8.933
+      "character": "耍",
+      "start_time": 4.833,
+      "end_time": 5.062
     },
     {
-      "character": "纷",
-      "start_time": 8.933,
-      "end_time": 9.283
+      "character": "赖",
+      "start_time": 5.062,
+      "end_time": 5.224
     },
     {
-      "character": "纷",
-      "start_time": 9.283,
-      "end_time": 9.479
+      "character": "sp",
+      "start_time": 5.224,
+      "end_time": 5.537
     },
     {
-      "character": "震",
-      "start_time": 9.479,
-      "end_time": 9.666
+      "character": "太",
+      "start_time": 5.537,
+      "end_time": 5.737
     },
     {
-      "character": "碎",
-      "start_time": 9.666,
-      "end_time": 9.854
+      "character": "他",
+      "start_time": 5.737,
+      "end_time": 5.866
     },
     {
-      "character": "！",
-      "start_time": 9.854,
-      "end_time": 10.012
+      "character": "妈",
+      "start_time": 5.866,
+      "end_time": 6.012
+    },
+    {
+      "character": "坏",
+      "start_time": 6.012,
+      "end_time": 6.291
+    },
+    {
+      "character": "了",
+      "start_time": 6.291,
+      "end_time": 6.374
+    },
+    {
+      "character": "。",
+      "start_time": 6.374,
+      "end_time": 6.533
     }
   ],
-  "generated_at": "2025-09-23T08:19:17.346498"
+  "generated_at": "2025-11-07T23:08:12.340031"
 }

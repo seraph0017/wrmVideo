@@ -14,7 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.62,Default,,0,0,0,,狂鲨三分力显威势环境巅峰
-Dialogue: 0,0:00:02.62,0:00:03.26,Default,,0,0,0,,一击不如
-Dialogue: 0,0:00:03.77,0:00:06.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}金鳞蛟{\c&H00FFFFFF&\b0}王冷眼旁观金瞳闪过
-Dialogue: 0,0:00:06.38,0:00:06.70,Default,,0,0,0,,不屑
+Dialogue: 0,0:00:00.02,0:00:01.44,Default,,0,0,0,,狂鲨三分力怒鲨震
+Dialogue: 0,0:00:01.81,0:00:02.89,Default,,0,0,0,,冲击波卷湖面
+Dialogue: 0,0:00:03.27,0:00:04.43,Default,,0,0,0,,王者威势惊人
+Dialogue: 0,0:00:04.75,0:00:06.11,Default,,0,0,0,,环境巅峰亦难挡

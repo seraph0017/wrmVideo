@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_002 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴昊轩{\c&H00FFFFFF&\b0}见吴双姿势猛然瞪大
+Dialogue: 0,0:00:02.40,0:00:04.19,Default,,0,0,0,,双眼心中掀起{\c&H0000FFFF&\b1}巨浪{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.61,0:00:05.37,Default,,0,0,0,,元{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}术
+Dialogue: 0,0:00:05.80,0:00:08.02,Default,,0,0,0,,他死死盯着吴双手势呼吸
+Dialogue: 0,0:00:08.02,0:00:10.13,Default,,0,0,0,,急促震惊于这等秘法竟出现
+Dialogue: 0,0:00:10.13,0:00:11.08,Default,,0,0,0,,在小辈身上

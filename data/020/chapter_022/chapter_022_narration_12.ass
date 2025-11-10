@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_022 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}在旁炒着排骨汤看魔佛
+Dialogue: 0,0:00:02.47,0:00:03.21,Default,,0,0,0,,操作吐槽
+Dialogue: 0,0:00:03.54,0:00:04.27,Default,,0,0,0,,玩这么变态
+Dialogue: 0,0:00:04.66,0:00:06.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}阿福{\c&H00FFFFFF&\b0}与害舌打架汤勺指着
+Dialogue: 0,0:00:06.82,0:00:07.95,Default,,0,0,0,,魔佛让他远点

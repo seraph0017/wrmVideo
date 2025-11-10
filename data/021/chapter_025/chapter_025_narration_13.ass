@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}淡淡一笑直接加价至
-Dialogue: 0,0:00:02.44,0:00:02.99,Default,,0,0,0,,两百万
-Dialogue: 0,0:00:03.33,0:00:06.03,Default,,0,0,0,,全场死寂连呼吸声都能听见
-Dialogue: 0,0:00:06.41,0:00:09.05,Default,,0,0,0,,拍卖师颤抖着敲响木槌三次
-Dialogue: 0,0:00:09.05,0:00:10.28,Default,,0,0,0,,询问无人竞价
+Dialogue: 0,0:00:00.02,0:00:01.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}宋磊{\c&H00FFFFFF&\b0}很快返回
+Dialogue: 0,0:00:01.53,0:00:03.25,Default,,0,0,0,,脸上带着难以置信的表情
+Dialogue: 0,0:00:03.66,0:00:04.84,Default,,0,0,0,,高声宣布{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:04.84,0:00:06.09,Default,,0,0,0,,抵押品价值足够
+Dialogue: 0,0:00:06.45,0:00:07.85,Default,,0,0,0,,拍卖可以继续进行

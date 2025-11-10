@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_035 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.36,Default,,0,0,0,,丹药起效少女睁眼泪水在大
+Dialogue: 0,0:00:02.36,0:00:03.10,Default,,0,0,0,,眼睛里打转
+Dialogue: 0,0:00:03.60,0:00:05.06,Default,,0,0,0,,刚想挣扎后退却
+Dialogue: 0,0:00:05.06,0:00:07.61,Default,,0,0,0,,被小{\c&H0000FFFF&\b1}九尾{\c&H00FFFFFF&\b0}按住肩膀陌生善意
+Dialogue: 0,0:00:07.61,0:00:09.62,Default,,0,0,0,,让她喉咙发出困惑呼噜声
+Dialogue: 0,0:00:09.97,0:00:11.23,Default,,0,0,0,,尾巴不自觉摇摆

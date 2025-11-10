@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.06,Default,,0,0,0,,贱鸟模仿{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}的
-Dialogue: 0,0:00:01.06,0:00:02.23,Default,,0,0,0,,足迹向前奔跑
-Dialogue: 0,0:00:02.75,0:00:03.92,Default,,0,0,0,,小短腿快速移动
-Dialogue: 0,0:00:04.24,0:00:05.05,Default,,0,0,0,,不时回头{\c&H0000FFFF&\b1}张望{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:05.36,0:00:07.25,Default,,0,0,0,,确保追兵被引向正确方向
-Dialogue: 0,0:00:07.60,0:00:08.86,Default,,0,0,0,,表情严肃认真
+Dialogue: 0,0:00:00.02,0:00:01.46,Default,,0,0,0,,贱鸟拍打光秃的翅膀
+Dialogue: 0,0:00:01.84,0:00:03.05,Default,,0,0,0,,歪头看了{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}一眼
+Dialogue: 0,0:00:03.54,0:00:04.72,Default,,0,0,0,,转身加速飞行
+Dialogue: 0,0:00:04.99,0:00:06.94,Default,,0,0,0,,留下与{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}相似的气息痕迹
+Dialogue: 0,0:00:07.26,0:00:08.55,Default,,0,0,0,,引向森林另一侧

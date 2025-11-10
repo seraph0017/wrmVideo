@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_010 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.53,Default,,0,0,0,,夜市中
+Dialogue: 0,0:00:00.82,0:00:02.24,Default,,0,0,0,,白菜看向皇宫方向
+Dialogue: 0,0:00:02.57,0:00:03.26,Default,,0,0,0,,表情惊讶
+Dialogue: 0,0:00:03.69,0:00:05.71,Default,,0,0,0,,灰色圆领袍衬得肤色{\c&H0000FFFF&\b1}白皙{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.23,0:00:07.85,Default,,0,0,0,,身旁{\c&H0000FFFF&\b1}周玉{\c&H00FFFFFF&\b0}手持羊肉串
+Dialogue: 0,0:00:08.17,0:00:08.98,Default,,0,0,0,,笑容玩味

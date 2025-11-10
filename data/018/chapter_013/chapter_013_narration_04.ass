@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_013 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.80,Default,,0,0,0,,贱鸟装死
+Dialogue: 0,0:00:01.19,0:00:03.57,Default,,0,0,0,,躺在地上一动不动翅膀折断
+Dialogue: 0,0:00:03.57,0:00:05.91,Default,,0,0,0,,般垂落见{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}靠近立刻
+Dialogue: 0,0:00:05.91,0:00:08.02,Default,,0,0,0,,哼哼唧唧装作奄奄一息
+Dialogue: 0,0:00:08.45,0:00:10.68,Default,,0,0,0,,殊不知{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}早已看穿其气息
+Dialogue: 0,0:00:10.68,0:00:11.11,Default,,0,0,0,,强弱

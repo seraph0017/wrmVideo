@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_008 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.11,Default,,0,0,0,,码头{\c&H0000FFFF&\b1}长桥{\c&H00FFFFFF&\b0}尽头
+Dialogue: 0,0:00:01.46,0:00:03.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}撑着下巴出神望海
+Dialogue: 0,0:00:03.66,0:00:05.67,Default,,0,0,0,,对天空道一境{\c&H0000FFFF&\b1}大战{\c&H00FFFFFF&\b0}毫无兴趣
+Dialogue: 0,0:00:06.10,0:00:07.62,Default,,0,0,0,,腰间{\c&H0000FFFF&\b1}双剑{\c&H00FFFFFF&\b0}静静悬挂
+Dialogue: 0,0:00:08.04,0:00:10.00,Default,,0,0,0,,黑色长袍在海风下轻摆
+Dialogue: 0,0:00:10.39,0:00:12.47,Default,,0,0,0,,仿佛这世间纷扰皆与他无关

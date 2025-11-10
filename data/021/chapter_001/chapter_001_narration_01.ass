@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}吴家主宅
-Dialogue: 0,0:00:01.74,0:00:03.49,Default,,0,0,0,,十三岁{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}低头疾行
-Dialogue: 0,0:00:03.74,0:00:04.60,Default,,0,0,0,,紧盯{\c&H0000FFFF&\b1}丹田{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:05.02,0:00:06.83,Default,,0,0,0,,俊眉紧锁心事重重
+Dialogue: 0,0:00:00.02,0:00:01.07,Default,,0,0,0,,清晨吴家主院
+Dialogue: 0,0:00:01.46,0:00:02.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}低头疾走
+Dialogue: 0,0:00:02.92,0:00:03.90,Default,,0,0,0,,劲装穿回廊
+Dialogue: 0,0:00:04.28,0:00:04.86,Default,,0,0,0,,盯{\c&H0000FFFF&\b1}丹田{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.23,0:00:06.48,Default,,0,0,0,,金漩涡缓缓旋
+Dialogue: 0,0:00:06.79,0:00:07.58,Default,,0,0,0,,风雷隐约

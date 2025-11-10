@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.02,Default,,0,0,0,,江浩拦住{\c&H0000FFFF&\b1}赵牧{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:01.34,0:00:02.04,Default,,0,0,0,,拼死战斗
-Dialogue: 0,0:00:02.39,0:00:03.63,Default,,0,0,0,,虽实力差距悬殊
-Dialogue: 0,0:00:04.09,0:00:05.05,Default,,0,0,0,,但仍坚持不退
-Dialogue: 0,0:00:05.37,0:00:06.68,Default,,0,0,0,,为{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}争取时间
+Dialogue: 0,0:00:00.02,0:00:01.15,Default,,0,0,0,,三人穿过长长的
+Dialogue: 0,0:00:01.15,0:00:02.95,Default,,0,0,0,,通道眼前豁然开朗
+Dialogue: 0,0:00:03.35,0:00:05.34,Default,,0,0,0,,一个巨大的洞府出现在眼前
+Dialogue: 0,0:00:05.75,0:00:07.87,Default,,0,0,0,,高达百米中央有一座{\c&H0000FFFF&\b1}宫殿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:08.32,0:00:10.49,Default,,0,0,0,,周围散落着一些房屋空气中
+Dialogue: 0,0:00:10.49,0:00:12.16,Default,,0,0,0,,弥漫着浓郁的元灵之气

@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.78,Default,,0,0,0,,火白权杖上火光暴涨引神阵
-Dialogue: 0,0:00:02.78,0:00:05.50,Default,,0,0,0,,怪石同时发光虚空通道缓缓
-Dialogue: 0,0:00:05.50,0:00:07.00,Default,,0,0,0,,打开他沉声道
-Dialogue: 0,0:00:07.34,0:00:09.92,Default,,0,0,0,,神藏开启尔等速进六个时辰
-Dialogue: 0,0:00:09.92,0:00:11.03,Default,,0,0,0,,后必须返回
+Dialogue: 0,0:00:00.02,0:00:02.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}梅丽丹{\c&H00FFFFFF&\b0}冷哼一声冻结空间
+Dialogue: 0,0:00:02.63,0:00:04.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}被死死定住难以前行
+Dialogue: 0,0:00:05.27,0:00:06.37,Default,,0,0,0,,火白及时出手
+Dialogue: 0,0:00:06.60,0:00:08.74,Default,,0,0,0,,以白色火焰融化冻结的空间
+Dialogue: 0,0:00:09.20,0:00:11.28,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}趁机飞向火白身旁

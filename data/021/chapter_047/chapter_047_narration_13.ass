@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_047 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.97,Default,,0,0,0,,吴双带着{\c&H0000FFFF&\b1}石强{\c&H00FFFFFF&\b0}金龙前往神藏
+Dialogue: 0,0:00:02.97,0:00:03.27,Default,,0,0,0,,遗迹
+Dialogue: 0,0:00:03.56,0:00:06.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}百变{\c&H00FFFFFF&\b0}魔云速度飙升穿透水层
+Dialogue: 0,0:00:06.52,0:00:09.40,Default,,0,0,0,,远处空间裂缝闪烁神器气息
+Dialogue: 0,0:00:09.40,0:00:11.87,Default,,0,0,0,,弥漫各方势力{\c&H0000FFFF&\b1}齐聚{\c&H00FFFFFF&\b0}大战
+Dialogue: 0,0:00:11.87,0:00:12.70,Default,,0,0,0,,一触即发

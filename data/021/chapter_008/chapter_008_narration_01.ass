@@ -14,6 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.81,Default,,0,0,0,,惊天对决
-Dialogue: 0,0:00:01.17,0:00:03.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄被轰入地数尺口血
-Dialogue: 0,0:00:03.53,0:00:06.76,Default,,0,0,0,,狂笑握{\c&H0000FFFF&\b1}巨剑{\c&H00FFFFFF&\b0}撑坠身地裂如网
+Dialogue: 0,0:00:00.02,0:00:01.79,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄遭吴永魁重创
+Dialogue: 0,0:00:02.20,0:00:02.96,Default,,0,0,0,,嘴角渗血
+Dialogue: 0,0:00:03.32,0:00:04.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄铁巨剑{\c&H00FFFFFF&\b0}斜横身前
+Dialogue: 0,0:00:05.24,0:00:06.97,Default,,0,0,0,,一身杀气如{\c&H0000FFFF&\b1}渊渟岳峙{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.32,0:00:08.74,Default,,0,0,0,,独立断壁残垣间

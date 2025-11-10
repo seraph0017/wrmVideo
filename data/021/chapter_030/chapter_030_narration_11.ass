@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_030 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:03.90,Default,,0,0,0,,amp{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}amp见amp
+Dialogue: 0,0:00:04.14,0:00:05.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}苏一鸣{\c&H00FFFFFF&\b0}amp出手
+Dialogue: 0,0:00:05.71,0:00:06.35,Default,,0,0,0,,不闪不避
+Dialogue: 0,0:00:06.35,0:00:08.71,Default,,0,0,0,,反而冷静地观察对方的攻击
+Dialogue: 0,0:00:09.03,0:00:10.82,Default,,0,0,0,,同时右手悄然准备
+Dialogue: 0,0:00:10.92,0:00:12.12,Default,,0,0,0,,随时应对
+Dialogue: 0,0:00:12.22,0:00:14.32,Default,,0,0,0,,眼神中充满警惕

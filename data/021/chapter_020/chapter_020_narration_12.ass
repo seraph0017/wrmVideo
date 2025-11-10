@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.24,Default,,0,0,0,,云海宗圣女{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}遥感应援
-Dialogue: 0,0:00:02.62,0:00:03.62,Default,,0,0,0,,跪求宗门出手
-Dialogue: 0,0:00:03.88,0:00:06.12,Default,,0,0,0,,请护我家族助我{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:06.12,0:00:06.96,Default,,0,0,0,,渡过难关
+Dialogue: 0,0:00:00.02,0:00:02.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}身体突破连环境强度
+Dialogue: 0,0:00:02.47,0:00:03.65,Default,,0,0,0,,达到一连环后期
+Dialogue: 0,0:00:04.10,0:00:05.55,Default,,0,0,0,,站起身时骨头炸响
+Dialogue: 0,0:00:05.97,0:00:06.78,Default,,0,0,0,,神清气爽
+Dialogue: 0,0:00:07.13,0:00:07.90,Default,,0,0,0,,眼神明亮
+Dialogue: 0,0:00:08.26,0:00:09.74,Default,,0,0,0,,气息沉稳而强大

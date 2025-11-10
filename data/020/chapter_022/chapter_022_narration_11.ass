@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_022 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.90,Default,,0,0,0,,搜魂术发动
+Dialogue: 0,0:00:01.27,0:00:02.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}任留芝{\c&H00FFFFFF&\b0}剧痛中惊醒
+Dialogue: 0,0:00:03.04,0:00:04.29,Default,,0,0,0,,身体蜷缩如虾米
+Dialogue: 0,0:00:04.62,0:00:05.76,Default,,0,0,0,,眼泪鼻涕直流
+Dialogue: 0,0:00:06.12,0:00:07.41,Default,,0,0,0,,魔佛异色双瞳却
+Dialogue: 0,0:00:07.41,0:00:08.69,Default,,0,0,0,,亮起兴奋光芒

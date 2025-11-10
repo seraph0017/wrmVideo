@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_018 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}秦王{\c&H00FFFFFF&\b0}朱尚烈盘腿坐于软榻
+Dialogue: 0,0:00:02.42,0:00:04.97,Default,,0,0,0,,紫色袍角垂落手中茶盏轻晃
+Dialogue: 0,0:00:05.32,0:00:07.08,Default,,0,0,0,,对何{\c&H0000FFFF&\b1}广义{\c&H00FFFFFF&\b0}的汇报满脸不耐
+Dialogue: 0,0:00:07.65,0:00:09.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}白莲教{\c&H00FFFFFF&\b0}妖人一个没抓还敢提
+Dialogue: 0,0:00:09.82,0:00:10.58,Default,,0,0,0,,通风报信
+Dialogue: 0,0:00:10.95,0:00:12.48,Default,,0,0,0,,语气中带着{\c&H0000FFFF&\b1}王族{\c&H00FFFFFF&\b0}的傲慢

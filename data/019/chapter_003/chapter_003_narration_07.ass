@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_003 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.22,Default,,0,0,0,,平安立于凉亭一侧看着
+Dialogue: 0,0:00:02.22,0:00:05.01,Default,,0,0,0,,朱棣与{\c&H0000FFFF&\b1}朱权{\c&H00FFFFFF&\b0}谈笑风生眉头微蹙
+Dialogue: 0,0:00:05.56,0:00:08.01,Default,,0,0,0,,他身着黑色盔甲手按腰间
+Dialogue: 0,0:00:08.01,0:00:09.55,Default,,0,0,0,,战刀心中暗忖
+Dialogue: 0,0:00:10.07,0:00:12.55,Default,,0,0,0,,{\c&H0000FFFF&\b1}燕王{\c&H00FFFFFF&\b0}外柔内刚宁王锋芒毕露
+Dialogue: 0,0:00:12.90,0:00:15.20,Default,,0,0,0,,没一个省油的灯{\c&H0000FFFF&\b1}吴王{\c&H00FFFFFF&\b0}怕是镇
+Dialogue: 0,0:00:15.20,0:00:16.08,Default,,0,0,0,,不住这些叔叔

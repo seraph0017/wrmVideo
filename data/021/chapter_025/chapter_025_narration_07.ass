@@ -14,7 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.85,Default,,0,0,0,,四名银{\c&H0000FFFF&\b1}剑宗{\c&H00FFFFFF&\b0}弟子飞身而
-Dialogue: 0,0:00:01.85,0:00:03.88,Default,,0,0,0,,下气势汹汹扑向{\c&H0000FFFF&\b1}赵猛{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:04.43,0:00:07.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵猛{\c&H00FFFFFF&\b0}怒喝一声站起身双拳
-Dialogue: 0,0:00:07.11,0:00:09.57,Default,,0,0,0,,紧握催动{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之力准备迎战
+Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}宋磊{\c&H00FFFFFF&\b0}急忙上前调解
+Dialogue: 0,0:00:01.89,0:00:03.44,Default,,0,0,0,,面带难色地劝说双方
+Dialogue: 0,0:00:03.85,0:00:05.19,Default,,0,0,0,,试图平息这场冲突
+Dialogue: 0,0:00:05.52,0:00:06.88,Default,,0,0,0,,维持拍卖行的秩序

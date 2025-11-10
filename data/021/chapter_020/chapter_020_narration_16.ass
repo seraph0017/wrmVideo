@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}寒冰{\c&H00FFFFFF&\b0}蜕变
-Dialogue: 0,0:00:01.20,0:00:03.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈俊{\c&H00FFFFFF&\b0}拒任陈家新家主寒气
-Dialogue: 0,0:00:03.57,0:00:05.12,Default,,0,0,0,,缠身走出陈家大门
-Dialogue: 0,0:00:05.47,0:00:07.09,Default,,0,0,0,,我要做{\c&H0000FFFF&\b1}家族{\c&H00FFFFFF&\b0}永远做不到的
-Dialogue: 0,0:00:07.09,0:00:08.33,Default,,0,0,0,,事打败{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:01.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈俊{\c&H00FFFFFF&\b0}被陈家长老拦住
+Dialogue: 0,0:00:02.05,0:00:03.42,Default,,0,0,0,,宣布他为新任家主
+Dialogue: 0,0:00:03.92,0:00:05.36,Default,,0,0,0,,他却声音冰冷拒绝
+Dialogue: 0,0:00:05.77,0:00:07.07,Default,,0,0,0,,眼神如万年{\c&H0000FFFF&\b1}玄冰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.44,0:00:09.04,Default,,0,0,0,,周身散发冰寒气息

@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_033 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}肖静宇{\c&H00FFFFFF&\b0}回到办公室
+Dialogue: 0,0:00:01.83,0:00:03.39,Default,,0,0,0,,面对镜州市财政报告和
+Dialogue: 0,0:00:03.39,0:00:03.98,Default,,0,0,0,,项目资料
+Dialogue: 0,0:00:04.36,0:00:05.12,Default,,0,0,0,,眉头紧锁
+Dialogue: 0,0:00:05.58,0:00:07.35,Default,,0,0,0,,桌上堆满投资人背景调查
+Dialogue: 0,0:00:07.35,0:00:07.66,Default,,0,0,0,,文件
+Dialogue: 0,0:00:07.95,0:00:08.91,Default,,0,0,0,,显示{\c&H0000FFFF&\b1}冯强志{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.28,0:00:10.99,Default,,0,0,0,,于华过往项目多有烂尾

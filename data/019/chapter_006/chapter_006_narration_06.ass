@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_006 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}蓝玉{\c&H00FFFFFF&\b0}年轻的脸上写满愤慨
+Dialogue: 0,0:00:02.46,0:00:03.64,Default,,0,0,0,,眼神锐利如刀
+Dialogue: 0,0:00:03.98,0:00:04.74,Default,,0,0,0,,拳头紧握
+Dialogue: 0,0:00:05.23,0:00:06.90,Default,,0,0,0,,仿佛随时准备冲出去与
+Dialogue: 0,0:00:06.90,0:00:07.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}郭天旭{\c&H00FFFFFF&\b0}理论
+Dialogue: 0,0:00:08.14,0:00:09.37,Default,,0,0,0,,满腔热血激荡

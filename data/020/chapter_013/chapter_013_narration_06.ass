@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_013 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}皱眉看虫群啃噬金光
+Dialogue: 0,0:00:02.47,0:00:03.02,Default,,0,0,0,,少废话
+Dialogue: 0,0:00:03.40,0:00:05.91,Default,,0,0,0,,他拔出杀生剑挥砍剑气竟被
+Dialogue: 0,0:00:05.91,0:00:06.64,Default,,0,0,0,,虫群无视
+Dialogue: 0,0:00:06.98,0:00:07.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}阿福{\c&H00FFFFFF&\b0}冷笑
+Dialogue: 0,0:00:08.12,0:00:10.55,Default,,0,0,0,,等它们吃透{\c&H0000FFFF&\b1}神临{\c&H00FFFFFF&\b0}这世界无人
+Dialogue: 0,0:00:10.55,0:00:10.84,Default,,0,0,0,,能挡

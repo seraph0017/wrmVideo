@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_014 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.02,Default,,0,0,0,,老爷子哈哈大笑
+Dialogue: 0,0:00:01.49,0:00:02.09,Default,,0,0,0,,这才对嘛
+Dialogue: 0,0:00:02.63,0:00:04.52,Default,,0,0,0,,咱大明朝的律法就是要让
+Dialogue: 0,0:00:04.52,0:00:05.37,Default,,0,0,0,,恶人有恶报
+Dialogue: 0,0:00:05.70,0:00:06.97,Default,,0,0,0,,他拍着朱允熥的肩膀
+Dialogue: 0,0:00:07.45,0:00:10.42,Default,,0,0,0,,走咱再去瞅瞅看那奸夫抓着没

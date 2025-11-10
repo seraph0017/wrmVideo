@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.97,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵流{\c&H00FFFFFF&\b0}未料吴双敢正面强攻
-Dialogue: 0,0:00:02.50,0:00:03.98,Default,,0,0,0,,匆忙间凝聚防御却
-Dialogue: 0,0:00:03.98,0:00:04.75,Default,,0,0,0,,未动用{\c&H0000FFFF&\b1}法宝{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:05.19,0:00:07.12,Default,,0,0,0,,神象长枪破开护{\c&H0000FFFF&\b1}体元罡{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:07.44,0:00:08.90,Default,,0,0,0,,从其胸膛洞穿而过
+Dialogue: 0,0:00:00.02,0:00:02.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}王族{\c&H00FFFFFF&\b0}之争广场陈天南猛拍案几
+Dialogue: 0,0:00:03.39,0:00:06.07,Default,,0,0,0,,他紫色长袍飘动怒斥{\c&H0000FFFF&\b1}吴星凡{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.07,0:00:08.57,Default,,0,0,0,,拖延时间嘴角带得意{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.00,0:00:10.96,Default,,0,0,0,,眼神扫过下方百万观众

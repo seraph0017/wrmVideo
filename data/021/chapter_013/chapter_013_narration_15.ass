@@ -14,10 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}察觉有人靠近
-Dialogue: 0,0:00:01.62,0:00:02.38,Default,,0,0,0,,猛然睁眼
-Dialogue: 0,0:00:02.84,0:00:04.57,Default,,0,0,0,,看到{\c&H0000FFFF&\b1}北冥雪{\c&H00FFFFFF&\b0}抢夺树叶
-Dialogue: 0,0:00:04.92,0:00:06.54,Default,,0,0,0,,瞬间爆发雷电武魂
-Dialogue: 0,0:00:06.82,0:00:07.62,Default,,0,0,0,,一拳轰出
-Dialogue: 0,0:00:07.96,0:00:08.73,Default,,0,0,0,,电光闪烁
-Dialogue: 0,0:00:09.06,0:00:10.23,Default,,0,0,0,,直击对方眉心
+Dialogue: 0,0:00:00.02,0:00:01.31,Default,,0,0,0,,百{\c&H0000FFFF&\b1}山城{\c&H00FFFFFF&\b0}神丹府前
+Dialogue: 0,0:00:01.69,0:00:03.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}取出汪大掌柜令牌
+Dialogue: 0,0:00:03.79,0:00:04.94,Default,,0,0,0,,伙计见令牌大惊
+Dialogue: 0,0:00:05.44,0:00:06.69,Default,,0,0,0,,急忙请出{\c&H0000FFFF&\b1}罗大{\c&H00FFFFFF&\b0}掌柜
+Dialogue: 0,0:00:07.17,0:00:09.17,Default,,0,0,0,,他需借修炼密室突破{\c&H0000FFFF&\b1}木海{\c&H00FFFFFF&\b0}

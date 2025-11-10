@@ -1,218 +1,333 @@
 {
-  "text": "满脸是血的吴晨踉跄追来，含糊喊道：\"别跑...我不弄死你...\"却被吴毅反手一巴掌抽得原地转圈。",
-  "audio_file": "data/021/chapter_001/chapter_001_narration_17.mp3",
-  "duration": 8.175,
+  "text": "吴毅转向门内，高声道：\"吴双，今日只是警告！玉仙姑娘不是你能染指的，若不自行了断，下次定不轻饶！\"说罢一甩袖子，\"走！\"带着众人悻悻离去。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_001/chapter_001_narration_17.mp3",
+  "duration": 13.141,
   "character_timestamps": [
     {
-      "character": "满",
-      "start_time": 0.016,
-      "end_time": 0.22
-    },
-    {
-      "character": "脸",
-      "start_time": 0.22,
-      "end_time": 0.395
-    },
-    {
-      "character": "是",
-      "start_time": 0.395,
-      "end_time": 0.52
-    },
-    {
-      "character": "血",
-      "start_time": 0.52,
-      "end_time": 0.704
-    },
-    {
-      "character": "的",
-      "start_time": 0.704,
-      "end_time": 0.795
-    },
-    {
       "character": "吴",
-      "start_time": 0.795,
-      "end_time": 0.937
-    },
-    {
-      "character": "晨",
-      "start_time": 0.937,
-      "end_time": 1.208
-    },
-    {
-      "character": "踉",
-      "start_time": 1.208,
-      "end_time": 1.487
-    },
-    {
-      "character": "跄",
-      "start_time": 1.487,
-      "end_time": 1.704
-    },
-    {
-      "character": "追",
-      "start_time": 1.704,
-      "end_time": 1.887
-    },
-    {
-      "character": "来",
-      "start_time": 1.887,
-      "end_time": 2.066
-    },
-    {
-      "character": "，",
-      "start_time": 2.066,
-      "end_time": 2.487
-    },
-    {
-      "character": "含",
-      "start_time": 2.487,
-      "end_time": 2.708
-    },
-    {
-      "character": "糊",
-      "start_time": 2.708,
-      "end_time": 2.824
-    },
-    {
-      "character": "喊",
-      "start_time": 2.824,
-      "end_time": 3.008
-    },
-    {
-      "character": "道",
-      "start_time": 3.008,
-      "end_time": 3.141
-    },
-    {
-      "character": "：",
-      "start_time": 3.141,
-      "end_time": 3.587
-    },
-    {
-      "character": "别",
-      "start_time": 3.587,
-      "end_time": 3.737
-    },
-    {
-      "character": "跑",
-      "start_time": 3.737,
-      "end_time": 3.937
-    },
-    {
-      "character": "sp",
-      "start_time": 3.937,
-      "end_time": 4.287
-    },
-    {
-      "character": "我",
-      "start_time": 4.287,
-      "end_time": 4.42
-    },
-    {
-      "character": "不",
-      "start_time": 4.42,
-      "end_time": 4.541
-    },
-    {
-      "character": "弄",
-      "start_time": 4.541,
-      "end_time": 4.724
-    },
-    {
-      "character": "死",
-      "start_time": 4.724,
-      "end_time": 4.862
-    },
-    {
-      "character": "你",
-      "start_time": 4.862,
-      "end_time": 5.008
-    },
-    {
-      "character": "sp",
-      "start_time": 5.008,
-      "end_time": 5.233
-    },
-    {
-      "character": "却",
-      "start_time": 5.233,
-      "end_time": 5.362
-    },
-    {
-      "character": "被",
-      "start_time": 5.362,
-      "end_time": 5.479
-    },
-    {
-      "character": "吴",
-      "start_time": 5.479,
-      "end_time": 5.641
+      "start_time": 0.02,
+      "end_time": 0.17
     },
     {
       "character": "毅",
-      "start_time": 5.641,
-      "end_time": 5.829
-    },
-    {
-      "character": "反",
-      "start_time": 5.829,
-      "end_time": 6.158
-    },
-    {
-      "character": "手",
-      "start_time": 6.158,
-      "end_time": 6.345
-    },
-    {
-      "character": "一",
-      "start_time": 6.345,
-      "end_time": 6.487
-    },
-    {
-      "character": "巴",
-      "start_time": 6.487,
-      "end_time": 6.674
-    },
-    {
-      "character": "掌",
-      "start_time": 6.674,
-      "end_time": 6.824
-    },
-    {
-      "character": "抽",
-      "start_time": 6.824,
-      "end_time": 7.062
-    },
-    {
-      "character": "得",
-      "start_time": 7.062,
-      "end_time": 7.17
-    },
-    {
-      "character": "原",
-      "start_time": 7.17,
-      "end_time": 7.437
-    },
-    {
-      "character": "地",
-      "start_time": 7.437,
-      "end_time": 7.591
+      "start_time": 0.17,
+      "end_time": 0.304
     },
     {
       "character": "转",
-      "start_time": 7.591,
-      "end_time": 7.799
+      "start_time": 0.304,
+      "end_time": 0.504
     },
     {
-      "character": "圈",
-      "start_time": 7.799,
-      "end_time": 8.016
+      "character": "向",
+      "start_time": 0.504,
+      "end_time": 0.649
+    },
+    {
+      "character": "门",
+      "start_time": 0.649,
+      "end_time": 0.812
+    },
+    {
+      "character": "内",
+      "start_time": 0.812,
+      "end_time": 0.958
+    },
+    {
+      "character": "，",
+      "start_time": 0.958,
+      "end_time": 1.316
+    },
+    {
+      "character": "高",
+      "start_time": 1.316,
+      "end_time": 1.495
+    },
+    {
+      "character": "声",
+      "start_time": 1.495,
+      "end_time": 1.674
+    },
+    {
+      "character": "道",
+      "start_time": 1.674,
+      "end_time": 1.791
+    },
+    {
+      "character": "：",
+      "start_time": 1.791,
+      "end_time": 2.258
+    },
+    {
+      "character": "吴",
+      "start_time": 2.258,
+      "end_time": 2.374
+    },
+    {
+      "character": "双",
+      "start_time": 2.374,
+      "end_time": 2.604
+    },
+    {
+      "character": "，",
+      "start_time": 2.604,
+      "end_time": 2.979
+    },
+    {
+      "character": "今",
+      "start_time": 2.979,
+      "end_time": 3.154
+    },
+    {
+      "character": "日",
+      "start_time": 3.154,
+      "end_time": 3.299
+    },
+    {
+      "character": "只",
+      "start_time": 3.299,
+      "end_time": 3.404
+    },
+    {
+      "character": "是",
+      "start_time": 3.404,
+      "end_time": 3.52
+    },
+    {
+      "character": "警",
+      "start_time": 3.52,
+      "end_time": 3.741
+    },
+    {
+      "character": "告",
+      "start_time": 3.741,
+      "end_time": 3.933
+    },
+    {
+      "character": "，",
+      "start_time": 3.933,
+      "end_time": 4.349
+    },
+    {
+      "character": "玉",
+      "start_time": 4.349,
+      "end_time": 4.529
+    },
+    {
+      "character": "仙",
+      "start_time": 4.529,
+      "end_time": 4.729
+    },
+    {
+      "character": "姑",
+      "start_time": 4.729,
+      "end_time": 4.879
+    },
+    {
+      "character": "娘",
+      "start_time": 4.879,
+      "end_time": 5.058
+    },
+    {
+      "character": "不",
+      "start_time": 5.058,
+      "end_time": 5.204
+    },
+    {
+      "character": "是",
+      "start_time": 5.204,
+      "end_time": 5.324
+    },
+    {
+      "character": "你",
+      "start_time": 5.324,
+      "end_time": 5.533
+    },
+    {
+      "character": "能",
+      "start_time": 5.533,
+      "end_time": 5.666
+    },
+    {
+      "character": "染",
+      "start_time": 5.666,
+      "end_time": 5.854
+    },
+    {
+      "character": "指",
+      "start_time": 5.854,
+      "end_time": 6.024
+    },
+    {
+      "character": "的",
+      "start_time": 6.024,
+      "end_time": 6.162
+    },
+    {
+      "character": "，",
+      "start_time": 6.162,
+      "end_time": 6.583
+    },
+    {
+      "character": "若",
+      "start_time": 6.583,
+      "end_time": 6.762
+    },
+    {
+      "character": "不",
+      "start_time": 6.762,
+      "end_time": 6.87
+    },
+    {
+      "character": "自",
+      "start_time": 6.87,
+      "end_time": 7.008
+    },
+    {
+      "character": "行",
+      "start_time": 7.008,
+      "end_time": 7.158
+    },
+    {
+      "character": "了",
+      "start_time": 7.158,
+      "end_time": 7.349
+    },
+    {
+      "character": "断",
+      "start_time": 7.349,
+      "end_time": 7.508
+    },
+    {
+      "character": "，",
+      "start_time": 7.508,
+      "end_time": 7.954
+    },
+    {
+      "character": "下",
+      "start_time": 7.954,
+      "end_time": 8.174
+    },
+    {
+      "character": "次",
+      "start_time": 8.174,
+      "end_time": 8.312
+    },
+    {
+      "character": "定",
+      "start_time": 8.312,
+      "end_time": 8.512
+    },
+    {
+      "character": "不",
+      "start_time": 8.512,
+      "end_time": 8.616
+    },
+    {
+      "character": "轻",
+      "start_time": 8.616,
+      "end_time": 8.824
+    },
+    {
+      "character": "饶",
+      "start_time": 8.824,
+      "end_time": 9.033
+    },
+    {
+      "character": "，",
+      "start_time": 9.033,
+      "end_time": 9.458
+    },
+    {
+      "character": "说",
+      "start_time": 9.458,
+      "end_time": 9.654
+    },
+    {
+      "character": "罢",
+      "start_time": 9.654,
+      "end_time": 9.937
+    },
+    {
+      "character": "一",
+      "start_time": 9.937,
+      "end_time": 10.124
+    },
+    {
+      "character": "甩",
+      "start_time": 10.124,
+      "end_time": 10.329
+    },
+    {
+      "character": "袖",
+      "start_time": 10.329,
+      "end_time": 10.545
+    },
+    {
+      "character": "子",
+      "start_time": 10.545,
+      "end_time": 10.666
+    },
+    {
+      "character": "，",
+      "start_time": 10.666,
+      "end_time": 11.045
+    },
+    {
+      "character": "走",
+      "start_time": 11.045,
+      "end_time": 11.237
+    },
+    {
+      "character": "，",
+      "start_time": 11.237,
+      "end_time": 11.687
+    },
+    {
+      "character": "带",
+      "start_time": 11.687,
+      "end_time": 11.795
+    },
+    {
+      "character": "着",
+      "start_time": 11.795,
+      "end_time": 11.887
+    },
+    {
+      "character": "众",
+      "start_time": 11.887,
+      "end_time": 12.049
+    },
+    {
+      "character": "人",
+      "start_time": 12.049,
+      "end_time": 12.22
+    },
+    {
+      "character": "悻",
+      "start_time": 12.22,
+      "end_time": 12.491
+    },
+    {
+      "character": "悻",
+      "start_time": 12.491,
+      "end_time": 12.695
+    },
+    {
+      "character": "离",
+      "start_time": 12.695,
+      "end_time": 12.824
+    },
+    {
+      "character": "去",
+      "start_time": 12.824,
+      "end_time": 12.979
     },
     {
       "character": "。",
-      "start_time": 8.016,
-      "end_time": 8.175
+      "start_time": 12.979,
+      "end_time": 13.137
     }
   ],
-  "generated_at": "2025-09-23T08:17:32.977901"
+  "generated_at": "2025-11-07T23:06:23.853634"
 }

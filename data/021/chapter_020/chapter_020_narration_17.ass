@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.76,Default,,0,0,0,,神界奇遇
-Dialogue: 0,0:00:01.25,0:00:03.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}借金色漩涡穿梭两界
-Dialogue: 0,0:00:03.75,0:00:05.54,Default,,0,0,0,,踏入万炼神殿这里的
-Dialogue: 0,0:00:05.54,0:00:07.67,Default,,0,0,0,,阵法竟与{\c&H0000FFFF&\b1}吴家九{\c&H00FFFFFF&\b0}玄真火斩
-Dialogue: 0,0:00:07.67,0:00:08.57,Default,,0,0,0,,隐隐共鸣
+Dialogue: 0,0:00:00.02,0:00:02.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈俊{\c&H00FFFFFF&\b0}表示要去做留在家族
+Dialogue: 0,0:00:02.06,0:00:03.62,Default,,0,0,0,,永远不可能做到的事情
+Dialogue: 0,0:00:04.06,0:00:05.26,Default,,0,0,0,,眼神锁定远方
+Dialogue: 0,0:00:05.70,0:00:06.39,Default,,0,0,0,,语气坚定
+Dialogue: 0,0:00:06.84,0:00:08.41,Default,,0,0,0,,周身冰寒气息爆发
+Dialogue: 0,0:00:08.79,0:00:09.46,Default,,0,0,0,,逼退长老

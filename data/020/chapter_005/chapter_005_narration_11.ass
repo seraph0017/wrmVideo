@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_005 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}南宫{\c&H00FFFFFF&\b0}初雪紧紧抱着
+Dialogue: 0,0:00:01.57,0:00:02.94,Default,,0,0,0,,林小小冰冷的身体
+Dialogue: 0,0:00:03.40,0:00:04.47,Default,,0,0,0,,眼泪大颗滴落
+Dialogue: 0,0:00:04.92,0:00:06.38,Default,,0,0,0,,颤抖着捡起储物戒
+Dialogue: 0,0:00:06.83,0:00:08.42,Default,,0,0,0,,声音哽咽却强撑着
+Dialogue: 0,0:00:08.42,0:00:09.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}安抚{\c&H00FFFFFF&\b0}周围啜泣的弟子

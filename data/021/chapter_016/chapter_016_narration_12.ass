@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}赶到救下司马刀怒斥
-Dialogue: 0,0:00:02.82,0:00:05.03,Default,,0,0,0,,你父亲是{\c&H0000FFFF&\b1}英雄{\c&H00FFFFFF&\b0}你这样死是
-Dialogue: 0,0:00:05.03,0:00:05.45,Default,,0,0,0,,狗熊
-Dialogue: 0,0:00:05.92,0:00:07.19,Default,,0,0,0,,像个男人一样活着
-Dialogue: 0,0:00:07.51,0:00:09.72,Default,,0,0,0,,报仇需靠实力不是送死
+Dialogue: 0,0:00:00.02,0:00:01.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈翔{\c&H00FFFFFF&\b0}悬浮空中
+Dialogue: 0,0:00:01.54,0:00:02.77,Default,,0,0,0,,灰白色头发飞舞
+Dialogue: 0,0:00:03.10,0:00:04.36,Default,,0,0,0,,面部疤痕狰狞
+Dialogue: 0,0:00:04.68,0:00:05.47,Default,,0,0,0,,怒视{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.88,0:00:07.57,Default,,0,0,0,,嘶吼{\c&H0000FFFF&\b1}老夫{\c&H00FFFFFF&\b0}乃连环境
+Dialogue: 0,0:00:07.95,0:00:08.97,Default,,0,0,0,,你怎敢挡我

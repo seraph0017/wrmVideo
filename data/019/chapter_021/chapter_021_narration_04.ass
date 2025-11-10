@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_021 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}曹国公{\c&H00FFFFFF&\b0}李景隆跪在地上面色
+Dialogue: 0,0:00:02.44,0:00:03.94,Default,,0,0,0,,蜡黄眼神躲闪
+Dialogue: 0,0:00:04.29,0:00:06.67,Default,,0,0,0,,他刚从凤阳赶回一路{\c&H0000FFFF&\b1}劳顿{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.14,0:00:08.96,Default,,0,0,0,,身上的深蓝色圆领袍沾满
+Dialogue: 0,0:00:08.96,0:00:10.79,Default,,0,0,0,,尘土显得狼狈不堪

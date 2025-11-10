@@ -1,273 +1,263 @@
 {
-  "text": "深夜森林，陈五灰色圆领短衫，立于树上，警惕地看向刀猴群方向，听到猴王怒吼，对身旁陈九道“好像爆了”，眼神凝重。",
-  "audio_file": "data/021/chapter_004/chapter_004_narration_19.mp3",
-  "duration": 11.333,
+  "text": "陈九被刀猴围攻，灰色圆领袍破损，手臂被抓伤流血，正怒吼挥剑砍杀，却没注意吴双从侧面袭来，一拳轰向面门。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_004/chapter_004_narration_19.mp3",
+  "duration": 10.483,
   "character_timestamps": [
     {
-      "character": "深",
-      "start_time": 0.016,
-      "end_time": 0.258
-    },
-    {
-      "character": "夜",
-      "start_time": 0.258,
-      "end_time": 0.408
-    },
-    {
-      "character": "森",
-      "start_time": 0.408,
-      "end_time": 0.595
-    },
-    {
-      "character": "林",
-      "start_time": 0.595,
-      "end_time": 0.824
-    },
-    {
-      "character": "，",
-      "start_time": 0.824,
-      "end_time": 1.32
-    },
-    {
       "character": "陈",
-      "start_time": 1.32,
-      "end_time": 1.545
-    },
-    {
-      "character": "五",
-      "start_time": 1.545,
-      "end_time": 1.679
-    },
-    {
-      "character": "灰",
-      "start_time": 1.679,
-      "end_time": 1.895
-    },
-    {
-      "character": "色",
-      "start_time": 1.895,
-      "end_time": 2.079
-    },
-    {
-      "character": "圆",
-      "start_time": 2.079,
-      "end_time": 2.258
-    },
-    {
-      "character": "领",
-      "start_time": 2.258,
-      "end_time": 2.42
-    },
-    {
-      "character": "短",
-      "start_time": 2.42,
-      "end_time": 2.629
-    },
-    {
-      "character": "衫",
-      "start_time": 2.629,
-      "end_time": 2.845
-    },
-    {
-      "character": "，",
-      "start_time": 2.845,
-      "end_time": 3.358
-    },
-    {
-      "character": "立",
-      "start_time": 3.358,
-      "end_time": 3.529
-    },
-    {
-      "character": "于",
-      "start_time": 3.529,
-      "end_time": 3.629
-    },
-    {
-      "character": "树",
-      "start_time": 3.629,
-      "end_time": 3.82
-    },
-    {
-      "character": "上",
-      "start_time": 3.82,
-      "end_time": 3.999
-    },
-    {
-      "character": "，",
-      "start_time": 3.999,
-      "end_time": 4.27
-    },
-    {
-      "character": "警",
-      "start_time": 4.27,
-      "end_time": 4.499
-    },
-    {
-      "character": "惕",
-      "start_time": 4.499,
-      "end_time": 4.658
-    },
-    {
-      "character": "地",
-      "start_time": 4.658,
-      "end_time": 4.741
-    },
-    {
-      "character": "看",
-      "start_time": 4.741,
-      "end_time": 4.954
-    },
-    {
-      "character": "向",
-      "start_time": 4.954,
-      "end_time": 5.141
-    },
-    {
-      "character": "刀",
-      "start_time": 5.141,
-      "end_time": 5.32
-    },
-    {
-      "character": "猴",
-      "start_time": 5.32,
-      "end_time": 5.516
-    },
-    {
-      "character": "群",
-      "start_time": 5.516,
-      "end_time": 5.691
-    },
-    {
-      "character": "方",
-      "start_time": 5.691,
-      "end_time": 5.854
-    },
-    {
-      "character": "向",
-      "start_time": 5.854,
-      "end_time": 6.012
-    },
-    {
-      "character": "，",
-      "start_time": 6.012,
-      "end_time": 6.57
-    },
-    {
-      "character": "听",
-      "start_time": 6.57,
-      "end_time": 6.708
-    },
-    {
-      "character": "到",
-      "start_time": 6.708,
-      "end_time": 6.829
-    },
-    {
-      "character": "猴",
-      "start_time": 6.829,
-      "end_time": 7.066
-    },
-    {
-      "character": "王",
-      "start_time": 7.066,
-      "end_time": 7.199
-    },
-    {
-      "character": "怒",
-      "start_time": 7.199,
-      "end_time": 7.387
-    },
-    {
-      "character": "吼",
-      "start_time": 7.387,
-      "end_time": 7.583
-    },
-    {
-      "character": "，",
-      "start_time": 7.583,
-      "end_time": 8.049
-    },
-    {
-      "character": "对",
-      "start_time": 8.049,
-      "end_time": 8.162
-    },
-    {
-      "character": "身",
-      "start_time": 8.162,
-      "end_time": 8.362
-    },
-    {
-      "character": "旁",
-      "start_time": 8.362,
-      "end_time": 8.537
-    },
-    {
-      "character": "陈",
-      "start_time": 8.537,
-      "end_time": 8.766
+      "start_time": 0.02,
+      "end_time": 0.233
     },
     {
       "character": "九",
-      "start_time": 8.766,
-      "end_time": 8.924
+      "start_time": 0.233,
+      "end_time": 0.404
     },
     {
-      "character": "道",
-      "start_time": 8.924,
-      "end_time": 9.079
+      "character": "被",
+      "start_time": 0.404,
+      "end_time": 0.533
     },
     {
-      "character": "好",
-      "start_time": 9.079,
-      "end_time": 9.416
+      "character": "刀",
+      "start_time": 0.533,
+      "end_time": 0.749
     },
     {
-      "character": "像",
-      "start_time": 9.416,
-      "end_time": 9.612
+      "character": "猴",
+      "start_time": 0.749,
+      "end_time": 0.941
     },
     {
-      "character": "爆",
-      "start_time": 9.612,
-      "end_time": 9.854
+      "character": "围",
+      "start_time": 0.941,
+      "end_time": 1.07
     },
     {
-      "character": "了",
-      "start_time": 9.854,
-      "end_time": 9.945
+      "character": "攻",
+      "start_time": 1.07,
+      "end_time": 1.254
     },
     {
       "character": "，",
-      "start_time": 9.945,
+      "start_time": 1.254,
+      "end_time": 1.654
+    },
+    {
+      "character": "灰",
+      "start_time": 1.654,
+      "end_time": 1.849
+    },
+    {
+      "character": "色",
+      "start_time": 1.849,
+      "end_time": 2.008
+    },
+    {
+      "character": "圆",
+      "start_time": 2.008,
+      "end_time": 2.174
+    },
+    {
+      "character": "领",
+      "start_time": 2.174,
+      "end_time": 2.32
+    },
+    {
+      "character": "袍",
+      "start_time": 2.32,
+      "end_time": 2.499
+    },
+    {
+      "character": "破",
+      "start_time": 2.499,
+      "end_time": 2.708
+    },
+    {
+      "character": "损",
+      "start_time": 2.708,
+      "end_time": 2.899
+    },
+    {
+      "character": "，",
+      "start_time": 2.899,
+      "end_time": 3.341
+    },
+    {
+      "character": "手",
+      "start_time": 3.341,
+      "end_time": 3.562
+    },
+    {
+      "character": "臂",
+      "start_time": 3.562,
+      "end_time": 3.704
+    },
+    {
+      "character": "被",
+      "start_time": 3.704,
+      "end_time": 3.833
+    },
+    {
+      "character": "抓",
+      "start_time": 3.833,
+      "end_time": 4.045
+    },
+    {
+      "character": "伤",
+      "start_time": 4.045,
+      "end_time": 4.212
+    },
+    {
+      "character": "流",
+      "start_time": 4.212,
+      "end_time": 4.387
+    },
+    {
+      "character": "血",
+      "start_time": 4.387,
+      "end_time": 4.558
+    },
+    {
+      "character": "，",
+      "start_time": 4.558,
+      "end_time": 5.012
+    },
+    {
+      "character": "正",
+      "start_time": 5.012,
+      "end_time": 5.166
+    },
+    {
+      "character": "怒",
+      "start_time": 5.166,
+      "end_time": 5.337
+    },
+    {
+      "character": "吼",
+      "start_time": 5.337,
+      "end_time": 5.558
+    },
+    {
+      "character": "挥",
+      "start_time": 5.558,
+      "end_time": 5.829
+    },
+    {
+      "character": "剑",
+      "start_time": 5.829,
+      "end_time": 6.008
+    },
+    {
+      "character": "砍",
+      "start_time": 6.008,
+      "end_time": 6.229
+    },
+    {
+      "character": "杀",
+      "start_time": 6.229,
+      "end_time": 6.454
+    },
+    {
+      "character": "，",
+      "start_time": 6.454,
+      "end_time": 6.716
+    },
+    {
+      "character": "却",
+      "start_time": 6.716,
+      "end_time": 6.845
+    },
+    {
+      "character": "没",
+      "start_time": 6.845,
+      "end_time": 6.999
+    },
+    {
+      "character": "注",
+      "start_time": 6.999,
+      "end_time": 7.174
+    },
+    {
+      "character": "意",
+      "start_time": 7.174,
+      "end_time": 7.395
+    },
+    {
+      "character": "吴",
+      "start_time": 7.395,
+      "end_time": 7.574
+    },
+    {
+      "character": "双",
+      "start_time": 7.574,
+      "end_time": 7.762
+    },
+    {
+      "character": "从",
+      "start_time": 7.762,
+      "end_time": 7.924
+    },
+    {
+      "character": "侧",
+      "start_time": 7.924,
+      "end_time": 8.158
+    },
+    {
+      "character": "面",
+      "start_time": 8.158,
+      "end_time": 8.32
+    },
+    {
+      "character": "袭",
+      "start_time": 8.32,
+      "end_time": 8.495
+    },
+    {
+      "character": "来",
+      "start_time": 8.495,
+      "end_time": 8.704
+    },
+    {
+      "character": "，",
+      "start_time": 8.704,
+      "end_time": 9.029
+    },
+    {
+      "character": "一",
+      "start_time": 9.029,
+      "end_time": 9.229
+    },
+    {
+      "character": "拳",
+      "start_time": 9.229,
+      "end_time": 9.479
+    },
+    {
+      "character": "轰",
+      "start_time": 9.479,
+      "end_time": 9.741
+    },
+    {
+      "character": "向",
+      "start_time": 9.741,
+      "end_time": 9.924
+    },
+    {
+      "character": "面",
+      "start_time": 9.924,
+      "end_time": 10.083
+    },
+    {
+      "character": "门",
+      "start_time": 10.083,
       "end_time": 10.324
     },
     {
-      "character": "眼",
-      "start_time": 10.324,
-      "end_time": 10.583
-    },
-    {
-      "character": "神",
-      "start_time": 10.583,
-      "end_time": 10.758
-    },
-    {
-      "character": "凝",
-      "start_time": 10.758,
-      "end_time": 11.037
-    },
-    {
-      "character": "重",
-      "start_time": 11.037,
-      "end_time": 11.174
-    },
-    {
       "character": "。",
-      "start_time": 11.174,
-      "end_time": 11.333
+      "start_time": 10.324,
+      "end_time": 10.483
     }
   ],
-  "generated_at": "2025-09-23T08:18:31.267070"
+  "generated_at": "2025-11-07T23:07:36.159265"
 }

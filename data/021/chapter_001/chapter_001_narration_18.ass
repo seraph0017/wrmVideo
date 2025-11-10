@@ -14,8 +14,11 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴毅{\c&H00FFFFFF&\b0}盯着禁门内冷声道
-Dialogue: 0,0:00:02.43,0:00:04.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}今日只是警告
-Dialogue: 0,0:00:04.34,0:00:06.69,Default,,0,0,0,,下次再敢染指{\c&H0000FFFF&\b1}玉仙{\c&H00FFFFFF&\b0}姑娘定让
-Dialogue: 0,0:00:06.69,0:00:07.21,Default,,0,0,0,,你后悔
-Dialogue: 0,0:00:07.58,0:00:09.06,Default,,0,0,0,,说罢带人转身离去
+Dialogue: 0,0:00:00.02,0:00:02.50,Default,,0,0,0,,禁地{\c&H0000FFFF&\b1}内吴{\c&H00FFFFFF&\b0}双靠在火红树干上
+Dialogue: 0,0:00:02.97,0:00:03.60,Default,,0,0,0,,看着左臂
+Dialogue: 0,0:00:03.97,0:00:05.53,Default,,0,0,0,,骨头虽裂却不算严重
+Dialogue: 0,0:00:06.11,0:00:06.93,Default,,0,0,0,,他冷哼一声
+Dialogue: 0,0:00:07.39,0:00:07.82,Default,,0,0,0,,傻逼
+Dialogue: 0,0:00:08.15,0:00:11.02,Default,,0,0,0,,心中却暗记这笔账{\c&H0000FFFF&\b1}吴晨{\c&H00FFFFFF&\b0}吴毅
+Dialogue: 0,0:00:11.33,0:00:12.22,Default,,0,0,0,,还有那个惹事的
+Dialogue: 0,0:00:12.22,0:00:14.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}秦玉仙{\c&H00FFFFFF&\b0}迟早要算清楚

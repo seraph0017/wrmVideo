@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_006 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.73,Default,,0,0,0,,山谷之中
+Dialogue: 0,0:00:01.18,0:00:02.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}蓝玉{\c&H00FFFFFF&\b0}手持铁骨朵
+Dialogue: 0,0:00:02.95,0:00:04.22,Default,,0,0,0,,疯狂锤击{\c&H0000FFFF&\b1}郭天旭{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.64,0:00:05.86,Default,,0,0,0,,脸上溅满鲜血
+Dialogue: 0,0:00:06.28,0:00:08.15,Default,,0,0,0,,眼神中充满狠厉与兴奋
+Dialogue: 0,0:00:08.62,0:00:10.34,Default,,0,0,0,,仿佛在发泄心中的怒火

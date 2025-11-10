@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_009 Narration 20 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.00,Default,,0,0,0,,朗屠施展元{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}术天狼裂
+Dialogue: 0,0:00:02.00,0:00:02.36,Default,,0,0,0,,空爪
+Dialogue: 0,0:00:02.85,0:00:05.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}六海{\c&H00FFFFFF&\b0}境力量爆发狼爪虚影
+Dialogue: 0,0:00:05.34,0:00:07.70,Default,,0,0,0,,撕裂空气却被{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}以螺旋
+Dialogue: 0,0:00:07.70,0:00:08.89,Default,,0,0,0,,枪罡连连震碎
+Dialogue: 0,0:00:09.31,0:00:11.27,Default,,0,0,0,,他自信能碾压{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}却
+Dialogue: 0,0:00:11.27,0:00:13.19,Default,,0,0,0,,不知{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}身体早已达到
+Dialogue: 0,0:00:13.19,0:00:14.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}六海{\c&H00FFFFFF&\b0}境程度

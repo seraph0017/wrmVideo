@@ -1,313 +1,238 @@
 {
-  "text": "听到模仿的声音，郑毅脸色大变，惊慌失措，四处张望，手中瞬间捏着一件法宝，准备随时逃走。他身体颤抖，显然对这个声音极为恐惧。",
-  "audio_file": "data/021/chapter_026/chapter_026_narration_08.mp3",
-  "duration": 11.883,
+  "text": "郑毅被吴双拎在半空左右摇摆，神皮战甲不断碰撞岩壁发出闷响，哀嚎\"轻点！老夫这战甲可是上古神物\"",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_026/chapter_026_narration_08.mp3",
+  "duration": 9.575,
   "character_timestamps": [
     {
-      "character": "听",
-      "start_time": 0.016,
-      "end_time": 0.179
-    },
-    {
-      "character": "到",
-      "start_time": 0.179,
-      "end_time": 0.299
-    },
-    {
-      "character": "模",
-      "start_time": 0.299,
-      "end_time": 0.495
-    },
-    {
-      "character": "仿",
-      "start_time": 0.495,
-      "end_time": 0.649
-    },
-    {
-      "character": "的",
-      "start_time": 0.649,
-      "end_time": 0.716
-    },
-    {
-      "character": "声",
-      "start_time": 0.716,
-      "end_time": 0.887
-    },
-    {
-      "character": "音",
-      "start_time": 0.887,
-      "end_time": 1.058
-    },
-    {
-      "character": "，",
-      "start_time": 1.058,
-      "end_time": 1.495
-    },
-    {
       "character": "郑",
-      "start_time": 1.495,
-      "end_time": 1.662
+      "start_time": 0.016,
+      "end_time": 0.187
     },
     {
       "character": "毅",
-      "start_time": 1.662,
-      "end_time": 1.808
+      "start_time": 0.187,
+      "end_time": 0.329
     },
     {
-      "character": "脸",
-      "start_time": 1.808,
-      "end_time": 2.041
+      "character": "被",
+      "start_time": 0.329,
+      "end_time": 0.462
     },
     {
-      "character": "色",
-      "start_time": 2.041,
-      "end_time": 2.204
+      "character": "吴",
+      "start_time": 0.462,
+      "end_time": 0.629
     },
     {
-      "character": "大",
-      "start_time": 2.204,
-      "end_time": 2.383
+      "character": "双",
+      "start_time": 0.629,
+      "end_time": 0.887
     },
     {
-      "character": "变",
-      "start_time": 2.383,
-      "end_time": 2.558
+      "character": "拎",
+      "start_time": 0.887,
+      "end_time": 1.112
+    },
+    {
+      "character": "在",
+      "start_time": 1.112,
+      "end_time": 1.274
+    },
+    {
+      "character": "半",
+      "start_time": 1.274,
+      "end_time": 1.479
+    },
+    {
+      "character": "空",
+      "start_time": 1.479,
+      "end_time": 1.724
+    },
+    {
+      "character": "左",
+      "start_time": 1.724,
+      "end_time": 1.995
+    },
+    {
+      "character": "右",
+      "start_time": 1.995,
+      "end_time": 2.129
+    },
+    {
+      "character": "摇",
+      "start_time": 2.129,
+      "end_time": 2.304
+    },
+    {
+      "character": "摆",
+      "start_time": 2.304,
+      "end_time": 2.454
     },
     {
       "character": "，",
-      "start_time": 2.558,
-      "end_time": 2.908
+      "start_time": 2.454,
+      "end_time": 3.041
     },
     {
-      "character": "惊",
-      "start_time": 2.908,
-      "end_time": 3.129
+      "character": "神",
+      "start_time": 3.041,
+      "end_time": 3.262
     },
     {
-      "character": "慌",
-      "start_time": 3.129,
-      "end_time": 3.304
-    },
-    {
-      "character": "失",
-      "start_time": 3.304,
+      "character": "皮",
+      "start_time": 3.262,
       "end_time": 3.437
     },
     {
-      "character": "措",
+      "character": "战",
       "start_time": 3.437,
-      "end_time": 3.604
+      "end_time": 3.629
+    },
+    {
+      "character": "甲",
+      "start_time": 3.629,
+      "end_time": 3.816
+    },
+    {
+      "character": "不",
+      "start_time": 3.816,
+      "end_time": 3.962
+    },
+    {
+      "character": "断",
+      "start_time": 3.962,
+      "end_time": 4.12
+    },
+    {
+      "character": "碰",
+      "start_time": 4.12,
+      "end_time": 4.366
+    },
+    {
+      "character": "撞",
+      "start_time": 4.366,
+      "end_time": 4.52
+    },
+    {
+      "character": "岩",
+      "start_time": 4.52,
+      "end_time": 4.724
+    },
+    {
+      "character": "壁",
+      "start_time": 4.724,
+      "end_time": 4.916
+    },
+    {
+      "character": "发",
+      "start_time": 4.916,
+      "end_time": 5.17
+    },
+    {
+      "character": "出",
+      "start_time": 5.17,
+      "end_time": 5.312
+    },
+    {
+      "character": "闷",
+      "start_time": 5.312,
+      "end_time": 5.479
+    },
+    {
+      "character": "响",
+      "start_time": 5.479,
+      "end_time": 5.662
     },
     {
       "character": "，",
-      "start_time": 3.604,
-      "end_time": 3.895
+      "start_time": 5.662,
+      "end_time": 6.108
     },
     {
-      "character": "四",
-      "start_time": 3.895,
-      "end_time": 4.133
+      "character": "哀",
+      "start_time": 6.108,
+      "end_time": 6.291
     },
     {
-      "character": "处",
-      "start_time": 4.133,
-      "end_time": 4.291
+      "character": "嚎",
+      "start_time": 6.291,
+      "end_time": 6.474
     },
     {
-      "character": "张",
-      "start_time": 4.291,
-      "end_time": 4.487
+      "character": "轻",
+      "start_time": 6.474,
+      "end_time": 6.687
     },
     {
-      "character": "望",
-      "start_time": 4.487,
-      "end_time": 4.604
-    },
-    {
-      "character": "，",
-      "start_time": 4.604,
-      "end_time": 5.062
-    },
-    {
-      "character": "手",
-      "start_time": 5.062,
-      "end_time": 5.249
-    },
-    {
-      "character": "中",
-      "start_time": 5.249,
-      "end_time": 5.387
-    },
-    {
-      "character": "瞬",
-      "start_time": 5.387,
-      "end_time": 5.645
-    },
-    {
-      "character": "间",
-      "start_time": 5.645,
-      "end_time": 5.799
-    },
-    {
-      "character": "捏",
-      "start_time": 5.799,
-      "end_time": 5.987
-    },
-    {
-      "character": "着",
-      "start_time": 5.987,
-      "end_time": 6.07
-    },
-    {
-      "character": "一",
-      "start_time": 6.07,
-      "end_time": 6.158
-    },
-    {
-      "character": "件",
-      "start_time": 6.158,
-      "end_time": 6.308
-    },
-    {
-      "character": "法",
-      "start_time": 6.308,
-      "end_time": 6.508
-    },
-    {
-      "character": "宝",
-      "start_time": 6.508,
-      "end_time": 6.691
+      "character": "点",
+      "start_time": 6.687,
+      "end_time": 6.883
     },
     {
       "character": "，",
-      "start_time": 6.691,
-      "end_time": 7.108
+      "start_time": 6.883,
+      "end_time": 7.287
     },
     {
-      "character": "准",
-      "start_time": 7.108,
-      "end_time": 7.233
+      "character": "老",
+      "start_time": 7.287,
+      "end_time": 7.487
     },
     {
-      "character": "备",
-      "start_time": 7.233,
-      "end_time": 7.345
-    },
-    {
-      "character": "随",
-      "start_time": 7.345,
-      "end_time": 7.57
-    },
-    {
-      "character": "时",
-      "start_time": 7.57,
-      "end_time": 7.716
-    },
-    {
-      "character": "逃",
-      "start_time": 7.716,
-      "end_time": 7.916
-    },
-    {
-      "character": "走",
-      "start_time": 7.916,
-      "end_time": 8.12
-    },
-    {
-      "character": "，",
-      "start_time": 8.12,
-      "end_time": 8.499
-    },
-    {
-      "character": "他",
-      "start_time": 8.499,
-      "end_time": 8.579
-    },
-    {
-      "character": "身",
-      "start_time": 8.579,
-      "end_time": 8.808
-    },
-    {
-      "character": "体",
-      "start_time": 8.808,
-      "end_time": 8.962
-    },
-    {
-      "character": "颤",
-      "start_time": 8.962,
-      "end_time": 9.204
-    },
-    {
-      "character": "抖",
-      "start_time": 9.204,
-      "end_time": 9.379
-    },
-    {
-      "character": "，",
-      "start_time": 9.379,
-      "end_time": 9.762
-    },
-    {
-      "character": "显",
-      "start_time": 9.762,
-      "end_time": 9.97
-    },
-    {
-      "character": "然",
-      "start_time": 9.97,
-      "end_time": 10.158
-    },
-    {
-      "character": "对",
-      "start_time": 10.158,
-      "end_time": 10.312
+      "character": "夫",
+      "start_time": 7.487,
+      "end_time": 7.629
     },
     {
       "character": "这",
-      "start_time": 10.312,
-      "end_time": 10.42
+      "start_time": 7.629,
+      "end_time": 7.724
     },
     {
-      "character": "个",
-      "start_time": 10.42,
-      "end_time": 10.499
+      "character": "战",
+      "start_time": 7.724,
+      "end_time": 7.941
     },
     {
-      "character": "声",
-      "start_time": 10.499,
-      "end_time": 10.679
+      "character": "甲",
+      "start_time": 7.941,
+      "end_time": 8.183
     },
     {
-      "character": "音",
-      "start_time": 10.679,
-      "end_time": 10.845
+      "character": "可",
+      "start_time": 8.183,
+      "end_time": 8.354
     },
     {
-      "character": "极",
-      "start_time": 10.845,
-      "end_time": 11.154
+      "character": "是",
+      "start_time": 8.354,
+      "end_time": 8.474
     },
     {
-      "character": "为",
-      "start_time": 11.154,
-      "end_time": 11.279
+      "character": "上",
+      "start_time": 8.474,
+      "end_time": 8.795
     },
     {
-      "character": "恐",
-      "start_time": 11.279,
-      "end_time": 11.566
+      "character": "古",
+      "start_time": 8.795,
+      "end_time": 8.987
     },
     {
-      "character": "惧",
-      "start_time": 11.566,
-      "end_time": 11.724
+      "character": "神",
+      "start_time": 8.987,
+      "end_time": 9.291
+    },
+    {
+      "character": "物",
+      "start_time": 9.291,
+      "end_time": 9.416
     },
     {
       "character": "。",
-      "start_time": 11.724,
-      "end_time": 11.883
+      "start_time": 9.416,
+      "end_time": 9.575
     }
   ],
-  "generated_at": "2025-09-23T08:25:55.401646"
+  "generated_at": "2025-11-07T23:17:15.762510"
 }

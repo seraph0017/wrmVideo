@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_034 Narration 20 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.17,Default,,0,0,0,,朱允熥承认身份
+Dialogue: 0,0:00:01.56,0:00:02.75,Default,,0,0,0,,徐平安激动落泪
+Dialogue: 0,0:00:03.10,0:00:03.82,Default,,0,0,0,,跪地叩谢
+Dialogue: 0,0:00:04.31,0:00:06.39,Default,,0,0,0,,朱允熥命何{\c&H0000FFFF&\b1}广义{\c&H00FFFFFF&\b0}彻查湖广
+Dialogue: 0,0:00:06.39,0:00:06.77,Default,,0,0,0,,贪腐
+Dialogue: 0,0:00:07.16,0:00:07.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}常森{\c&H00FFFFFF&\b0}坐镇
+Dialogue: 0,0:00:08.16,0:00:08.92,Default,,0,0,0,,百姓欢呼
+Dialogue: 0,0:00:09.32,0:00:10.96,Default,,0,0,0,,徐家姐弟重获希望

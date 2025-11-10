@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}百变{\c&H00FFFFFF&\b0}魔云化作孩童模样
-Dialogue: 0,0:00:02.17,0:00:03.69,Default,,0,0,0,,委屈地飘到{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}面前
-Dialogue: 0,0:00:04.14,0:00:05.99,Default,,0,0,0,,云雾组成的脸上带着泪痕
-Dialogue: 0,0:00:06.32,0:00:07.69,Default,,0,0,0,,仿佛受了{\c&H0000FFFF&\b1}莫大{\c&H00FFFFFF&\b0}委屈
+Dialogue: 0,0:00:00.02,0:00:02.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}接记忆元灵晶石神识
+Dialogue: 0,0:00:02.38,0:00:03.94,Default,,0,0,0,,探入瞬间面露喜色
+Dialogue: 0,0:00:04.45,0:00:06.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}影像浮现虽知其平安
+Dialogue: 0,0:00:06.87,0:00:09.60,Default,,0,0,0,,却更添思念握紧晶石决定随
+Dialogue: 0,0:00:09.60,0:00:12.12,Default,,0,0,0,,海风前往{\c&H0000FFFF&\b1}云海{\c&H00FFFFFF&\b0}宗眼神坚定
+Dialogue: 0,0:00:12.12,0:00:12.47,Default,,0,0,0,,如铁

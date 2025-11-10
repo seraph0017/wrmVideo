@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_019 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴昊轩{\c&H00FFFFFF&\b0}踏火而来王者威压
+Dialogue: 0,0:00:02.50,0:00:05.04,Default,,0,0,0,,席卷全场他指着陈{\c&H0000FFFF&\b1}天南{\c&H00FFFFFF&\b0}怒斥
+Dialogue: 0,0:00:05.46,0:00:08.20,Default,,0,0,0,,陈家主德行败坏{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}脸都
+Dialogue: 0,0:00:08.20,0:00:08.80,Default,,0,0,0,,被你丢尽
+Dialogue: 0,0:00:09.22,0:00:10.69,Default,,0,0,0,,声音震得地面颤抖

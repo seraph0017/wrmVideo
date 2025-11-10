@@ -1,238 +1,248 @@
 {
-  "text": "吴双随吴魁进入吴家阵法总控室，无视守护长老阻拦，用神象长枪在石壁上画阵图，惊得众人目瞪口呆！",
-  "audio_file": "data/021/chapter_016/chapter_016_narration_16.mp3",
-  "duration": 9.108,
+  "text": "吴家阵法总控，吴魁拦住欲阻止吴双的长老，怒喝\"谁敢动手！吴双所做之事，功在吴家万代\"，周身红光爆发",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_016/chapter_016_narration_16.mp3",
+  "duration": 9.933,
   "character_timestamps": [
     {
       "character": "吴",
       "start_time": 0.016,
-      "end_time": 0.174
-    },
-    {
-      "character": "双",
-      "start_time": 0.174,
-      "end_time": 0.37
-    },
-    {
-      "character": "随",
-      "start_time": 0.37,
-      "end_time": 0.558
-    },
-    {
-      "character": "吴",
-      "start_time": 0.558,
-      "end_time": 0.699
-    },
-    {
-      "character": "魁",
-      "start_time": 0.699,
-      "end_time": 0.983
-    },
-    {
-      "character": "进",
-      "start_time": 0.983,
-      "end_time": 1.166
-    },
-    {
-      "character": "入",
-      "start_time": 1.166,
-      "end_time": 1.304
-    },
-    {
-      "character": "吴",
-      "start_time": 1.304,
-      "end_time": 1.479
+      "end_time": 0.183
     },
     {
       "character": "家",
-      "start_time": 1.479,
-      "end_time": 1.641
+      "start_time": 0.183,
+      "end_time": 0.374
     },
     {
       "character": "阵",
-      "start_time": 1.641,
-      "end_time": 1.841
+      "start_time": 0.374,
+      "end_time": 0.587
     },
     {
       "character": "法",
-      "start_time": 1.841,
-      "end_time": 2.008
+      "start_time": 0.587,
+      "end_time": 0.758
     },
     {
       "character": "总",
-      "start_time": 2.008,
-      "end_time": 2.245
+      "start_time": 0.758,
+      "end_time": 0.979
     },
     {
       "character": "控",
-      "start_time": 2.245,
-      "end_time": 2.437
-    },
-    {
-      "character": "室",
-      "start_time": 2.437,
-      "end_time": 2.599
+      "start_time": 0.979,
+      "end_time": 1.174
     },
     {
       "character": "，",
-      "start_time": 2.599,
-      "end_time": 3.116
+      "start_time": 1.174,
+      "end_time": 1.608
     },
     {
-      "character": "无",
-      "start_time": 3.116,
-      "end_time": 3.287
+      "character": "吴",
+      "start_time": 1.608,
+      "end_time": 1.779
     },
     {
-      "character": "视",
-      "start_time": 3.287,
-      "end_time": 3.433
-    },
-    {
-      "character": "守",
-      "start_time": 3.433,
-      "end_time": 3.629
-    },
-    {
-      "character": "护",
-      "start_time": 3.629,
-      "end_time": 3.758
-    },
-    {
-      "character": "长",
-      "start_time": 3.758,
-      "end_time": 3.904
-    },
-    {
-      "character": "老",
-      "start_time": 3.904,
-      "end_time": 4.037
-    },
-    {
-      "character": "阻",
-      "start_time": 4.037,
-      "end_time": 4.187
+      "character": "魁",
+      "start_time": 1.779,
+      "end_time": 1.945
     },
     {
       "character": "拦",
-      "start_time": 4.187,
-      "end_time": 4.412
+      "start_time": 1.945,
+      "end_time": 2.116
     },
     {
-      "character": "，",
-      "start_time": 4.412,
-      "end_time": 4.799
+      "character": "住",
+      "start_time": 2.116,
+      "end_time": 2.258
     },
     {
-      "character": "用",
-      "start_time": 4.799,
-      "end_time": 4.937
+      "character": "欲",
+      "start_time": 2.258,
+      "end_time": 2.387
     },
     {
-      "character": "神",
-      "start_time": 4.937,
-      "end_time": 5.154
+      "character": "阻",
+      "start_time": 2.387,
+      "end_time": 2.599
     },
     {
-      "character": "象",
-      "start_time": 5.154,
-      "end_time": 5.324
+      "character": "止",
+      "start_time": 2.599,
+      "end_time": 2.77
+    },
+    {
+      "character": "吴",
+      "start_time": 2.77,
+      "end_time": 2.933
+    },
+    {
+      "character": "双",
+      "start_time": 2.933,
+      "end_time": 3.108
+    },
+    {
+      "character": "的",
+      "start_time": 3.108,
+      "end_time": 3.183
     },
     {
       "character": "长",
-      "start_time": 5.324,
-      "end_time": 5.524
+      "start_time": 3.183,
+      "end_time": 3.37
     },
     {
-      "character": "枪",
-      "start_time": 5.524,
-      "end_time": 5.762
+      "character": "老",
+      "start_time": 3.37,
+      "end_time": 3.508
     },
     {
-      "character": "在",
-      "start_time": 5.762,
-      "end_time": 5.987
+      "character": "，",
+      "start_time": 3.508,
+      "end_time": 3.979
     },
     {
-      "character": "石",
-      "start_time": 5.987,
+      "character": "怒",
+      "start_time": 3.979,
+      "end_time": 4.204
+    },
+    {
+      "character": "喝",
+      "start_time": 4.204,
+      "end_time": 4.479
+    },
+    {
+      "character": "谁",
+      "start_time": 4.479,
+      "end_time": 4.754
+    },
+    {
+      "character": "敢",
+      "start_time": 4.754,
+      "end_time": 4.929
+    },
+    {
+      "character": "动",
+      "start_time": 4.929,
+      "end_time": 5.099
+    },
+    {
+      "character": "手",
+      "start_time": 5.099,
+      "end_time": 5.266
+    },
+    {
+      "character": "，",
+      "start_time": 5.266,
+      "end_time": 5.695
+    },
+    {
+      "character": "吴",
+      "start_time": 5.695,
+      "end_time": 5.87
+    },
+    {
+      "character": "双",
+      "start_time": 5.87,
+      "end_time": 6.066
+    },
+    {
+      "character": "所",
+      "start_time": 6.066,
       "end_time": 6.241
     },
     {
-      "character": "壁",
+      "character": "做",
       "start_time": 6.241,
       "end_time": 6.374
     },
     {
-      "character": "上",
+      "character": "之",
       "start_time": 6.374,
-      "end_time": 6.524
+      "end_time": 6.499
     },
     {
-      "character": "画",
-      "start_time": 6.524,
-      "end_time": 6.712
-    },
-    {
-      "character": "阵",
-      "start_time": 6.712,
-      "end_time": 6.879
-    },
-    {
-      "character": "图",
-      "start_time": 6.879,
-      "end_time": 7.116
+      "character": "事",
+      "start_time": 6.499,
+      "end_time": 6.704
     },
     {
       "character": "，",
-      "start_time": 7.116,
-      "end_time": 7.374
+      "start_time": 6.704,
+      "end_time": 7.045
     },
     {
-      "character": "惊",
-      "start_time": 7.374,
-      "end_time": 7.545
+      "character": "功",
+      "start_time": 7.045,
+      "end_time": 7.229
     },
     {
-      "character": "得",
-      "start_time": 7.545,
-      "end_time": 7.624
+      "character": "在",
+      "start_time": 7.229,
+      "end_time": 7.408
     },
     {
-      "character": "众",
-      "start_time": 7.624,
-      "end_time": 7.774
+      "character": "吴",
+      "start_time": 7.408,
+      "end_time": 7.608
     },
     {
-      "character": "人",
-      "start_time": 7.774,
-      "end_time": 7.983
+      "character": "家",
+      "start_time": 7.608,
+      "end_time": 7.804
     },
     {
-      "character": "目",
-      "start_time": 7.983,
-      "end_time": 8.345
+      "character": "万",
+      "start_time": 7.804,
+      "end_time": 7.966
     },
     {
-      "character": "瞪",
-      "start_time": 8.345,
-      "end_time": 8.533
+      "character": "代",
+      "start_time": 7.966,
+      "end_time": 8.129
     },
     {
-      "character": "口",
-      "start_time": 8.533,
-      "end_time": 8.754
+      "character": "，",
+      "start_time": 8.129,
+      "end_time": 8.479
     },
     {
-      "character": "呆",
-      "start_time": 8.754,
-      "end_time": 8.945
+      "character": "周",
+      "start_time": 8.479,
+      "end_time": 8.649
     },
     {
-      "character": "！",
-      "start_time": 8.945,
-      "end_time": 9.104
+      "character": "身",
+      "start_time": 8.649,
+      "end_time": 8.849
+    },
+    {
+      "character": "红",
+      "start_time": 8.849,
+      "end_time": 9.162
+    },
+    {
+      "character": "光",
+      "start_time": 9.162,
+      "end_time": 9.379
+    },
+    {
+      "character": "爆",
+      "start_time": 9.379,
+      "end_time": 9.554
+    },
+    {
+      "character": "发",
+      "start_time": 9.554,
+      "end_time": 9.774
+    },
+    {
+      "character": "。",
+      "start_time": 9.774,
+      "end_time": 9.933
     }
   ],
-  "generated_at": "2025-09-23T08:21:55.917130"
+  "generated_at": "2025-11-07T23:12:21.491201"
 }

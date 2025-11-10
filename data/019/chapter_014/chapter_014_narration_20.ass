@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_014 Narration 20 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.26,Default,,0,0,0,,老板娘收拾起摊位
+Dialogue: 0,0:00:01.69,0:00:02.82,Default,,0,0,0,,准备去衙门接堂弟
+Dialogue: 0,0:00:03.20,0:00:05.55,Default,,0,0,0,,脚步轻快了许多她终于{\c&H0000FFFF&\b1}明白{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.96,0:00:07.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}大明{\c&H00FFFFFF&\b0}律不会让老实人白
+Dialogue: 0,0:00:07.50,0:00:08.03,Default,,0,0,0,,受委屈
+Dialogue: 0,0:00:08.33,0:00:09.46,Default,,0,0,0,,正义虽迟但到

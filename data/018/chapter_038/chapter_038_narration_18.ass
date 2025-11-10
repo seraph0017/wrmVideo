@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_038 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.44,Default,,0,0,0,,传送阵光芒闪烁{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}消失
+Dialogue: 0,0:00:02.44,0:00:02.75,Default,,0,0,0,,其中
+Dialogue: 0,0:00:03.16,0:00:05.56,Default,,0,0,0,,云在天冲到阵前双手轰击
+Dialogue: 0,0:00:05.56,0:00:06.35,Default,,0,0,0,,地面不
+Dialogue: 0,0:00:06.53,0:00:07.32,Default,,0,0,0,,又让他跑了
+Dialogue: 0,0:00:07.87,0:00:10.03,Default,,0,0,0,,狂暴力量炸碎地面他眼神
+Dialogue: 0,0:00:10.03,0:00:12.41,Default,,0,0,0,,绝望怒吼声响彻偏殿

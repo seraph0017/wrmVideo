@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_006 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.80,Default,,0,0,0,,他闭目喘息手攥床单
+Dialogue: 0,0:00:02.15,0:00:03.28,Default,,0,0,0,,脑现梦中场景
+Dialogue: 0,0:00:03.67,0:00:04.27,Default,,0,0,0,,熟面孔
+Dialogue: 0,0:00:04.69,0:00:05.80,Default,,0,0,0,,激昂呐喊耳边
+Dialogue: 0,0:00:06.15,0:00:06.67,Default,,0,0,0,,难平

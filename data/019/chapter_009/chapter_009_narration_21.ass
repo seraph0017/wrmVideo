@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_009 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.34,Default,,0,0,0,,老爷子谈及{\c&H0000FFFF&\b1}治国{\c&H00FFFFFF&\b0}之道
+Dialogue: 0,0:00:01.73,0:00:03.36,Default,,0,0,0,,需让百姓有申诉之权
+Dialogue: 0,0:00:03.67,0:00:04.48,Default,,0,0,0,,朱允熥领悟
+Dialogue: 0,0:00:04.89,0:00:06.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}祖孙二人{\c&H00FFFFFF&\b0}共进早餐
+Dialogue: 0,0:00:06.73,0:00:07.91,Default,,0,0,0,,气氛{\c&H0000FFFF&\b1}温馨{\c&H00FFFFFF&\b0}和睦

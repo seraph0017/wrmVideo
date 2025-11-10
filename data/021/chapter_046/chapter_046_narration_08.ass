@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_046 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.21,Default,,0,0,0,,{\c&H0000FFFF&\b1}石强{\c&H00FFFFFF&\b0}狮王变催动
+Dialogue: 0,0:00:01.55,0:00:02.33,Default,,0,0,0,,身形暴涨
+Dialogue: 0,0:00:02.78,0:00:04.76,Default,,0,0,0,,双拳轰飞两只幼年裂空獒
+Dialogue: 0,0:00:05.04,0:00:06.38,Default,,0,0,0,,深蓝色长袍紧绷
+Dialogue: 0,0:00:06.84,0:00:07.61,Default,,0,0,0,,肌肉虬结
+Dialogue: 0,0:00:08.04,0:00:10.07,Default,,0,0,0,,右眉浅疤因发力而扭曲
+Dialogue: 0,0:00:10.49,0:00:12.38,Default,,0,0,0,,奋力向另一颗圣果冲去

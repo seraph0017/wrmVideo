@@ -14,6 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.82,Default,,0,0,0,,吴永魁悬空结印臂闪幽光
-Dialogue: 0,0:00:02.82,0:00:03.35,Default,,0,0,0,,震场道
-Dialogue: 0,0:00:03.63,0:00:06.25,Default,,0,0,0,,家法严明长老会今日正法你
+Dialogue: 0,0:00:00.02,0:00:01.32,Default,,0,0,0,,吴永魁悬浮半空
+Dialogue: 0,0:00:01.76,0:00:04.13,Default,,0,0,0,,{\c&H0000FFFF&\b1}双掌凝{\c&H00FFFFFF&\b0}护臂聚力成淡金弧光
+Dialogue: 0,0:00:04.59,0:00:06.81,Default,,0,0,0,,阴鸷目光如刀剜般俯视废墟
+Dialogue: 0,0:00:06.81,0:00:08.09,Default,,0,0,0,,中挣扎的{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄
+Dialogue: 0,0:00:08.46,0:00:10.20,Default,,0,0,0,,致命杀招已蓄势待发

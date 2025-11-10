@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.97,Default,,0,0,0,,远处天际出现{\c&H0000FFFF&\b1}七彩{\c&H00FFFFFF&\b0}光芒
-Dialogue: 0,0:00:02.40,0:00:04.62,Default,,0,0,0,,强大的能量波动让空间震颤
-Dialogue: 0,0:00:05.13,0:00:07.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}警惕地望向光芒来源
-Dialogue: 0,0:00:07.52,0:00:09.64,Default,,0,0,0,,感受到前所未有的恐怖气息
+Dialogue: 0,0:00:00.02,0:00:02.14,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵猛{\c&H00FFFFFF&\b0}挠头憨笑道出拜入
+Dialogue: 0,0:00:02.14,0:00:03.34,Default,,0,0,0,,御剑门却遭排挤
+Dialogue: 0,0:00:03.84,0:00:06.26,Default,,0,0,0,,土系功法难以御剑被大{\c&H0000FFFF&\b1}师兄{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:06.26,0:00:08.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}孙剑雨{\c&H00FFFFFF&\b0}打压至荒岛谈及师门
+Dialogue: 0,0:00:08.89,0:00:11.80,Default,,0,0,0,,满脸尴尬两米壮汉尽显委屈

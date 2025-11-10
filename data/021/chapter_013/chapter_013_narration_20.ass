@@ -14,10 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}及时赶回
-Dialogue: 0,0:00:01.64,0:00:02.77,Default,,0,0,0,,看到贱鸟被围攻
-Dialogue: 0,0:00:03.12,0:00:03.80,Default,,0,0,0,,怒喝一声
-Dialogue: 0,0:00:04.08,0:00:04.93,Default,,0,0,0,,极电步爆发
-Dialogue: 0,0:00:05.42,0:00:06.89,Default,,0,0,0,,瞬间出现在追兵身后
-Dialogue: 0,0:00:07.23,0:00:09.22,Default,,0,0,0,,神象长枪洞穿敌人胸口
-Dialogue: 0,0:00:09.58,0:00:10.72,Default,,0,0,0,,动作快如闪电
+Dialogue: 0,0:00:00.02,0:00:01.88,Default,,0,0,0,,{\c&H0000FFFF&\b1}萧叔{\c&H00FFFFFF&\b0}带着最后一名手下赶到
+Dialogue: 0,0:00:02.41,0:00:03.61,Default,,0,0,0,,见{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}实力暴涨
+Dialogue: 0,0:00:04.00,0:00:04.69,Default,,0,0,0,,又惊又怒
+Dialogue: 0,0:00:05.09,0:00:06.31,Default,,0,0,0,,他没想到短短时间
+Dialogue: 0,0:00:06.72,0:00:07.97,Default,,0,0,0,,这个{\c&H0000FFFF&\b1}六海{\c&H00FFFFFF&\b0}境第一海的
+Dialogue: 0,0:00:07.97,0:00:09.67,Default,,0,0,0,,少年竟变得如此可怕

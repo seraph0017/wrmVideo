@@ -1,188 +1,163 @@
 {
-  "text": "江蜜儿背身粉圆领襦裙，双丫髻丝带飘，不服辩解秦玉仙坑吴双，自仅帮忙出气。",
-  "audio_file": "data/021/chapter_004/chapter_004_narration_02.mp3",
-  "duration": 6.925,
+  "text": "江蜜儿入大堂，粉圆领袍裙晃，背手歪头望子昂，嘴角带笑无认错意。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_004/chapter_004_narration_02.mp3",
+  "duration": 5.983,
   "character_timestamps": [
     {
       "character": "江",
       "start_time": 0.016,
-      "end_time": 0.158
+      "end_time": 0.154
     },
     {
       "character": "蜜",
-      "start_time": 0.158,
-      "end_time": 0.329
+      "start_time": 0.154,
+      "end_time": 0.366
     },
     {
       "character": "儿",
-      "start_time": 0.329,
-      "end_time": 0.437
+      "start_time": 0.366,
+      "end_time": 0.479
     },
     {
-      "character": "背",
-      "start_time": 0.437,
-      "end_time": 0.629
+      "character": "入",
+      "start_time": 0.479,
+      "end_time": 0.641
     },
     {
-      "character": "身",
-      "start_time": 0.629,
-      "end_time": 0.804
+      "character": "大",
+      "start_time": 0.641,
+      "end_time": 0.795
+    },
+    {
+      "character": "堂",
+      "start_time": 0.795,
+      "end_time": 1.058
+    },
+    {
+      "character": "，",
+      "start_time": 1.058,
+      "end_time": 1.395
     },
     {
       "character": "粉",
-      "start_time": 0.804,
-      "end_time": 0.991
+      "start_time": 1.395,
+      "end_time": 1.587
     },
     {
       "character": "圆",
-      "start_time": 0.991,
-      "end_time": 1.154
+      "start_time": 1.587,
+      "end_time": 1.758
     },
     {
       "character": "领",
-      "start_time": 1.154,
-      "end_time": 1.291
+      "start_time": 1.758,
+      "end_time": 1.904
     },
     {
-      "character": "襦",
-      "start_time": 1.291,
-      "end_time": 1.424
+      "character": "袍",
+      "start_time": 1.904,
+      "end_time": 2.149
     },
     {
       "character": "裙",
-      "start_time": 1.424,
-      "end_time": 1.687
+      "start_time": 2.149,
+      "end_time": 2.345
+    },
+    {
+      "character": "晃",
+      "start_time": 2.345,
+      "end_time": 2.508
     },
     {
       "character": "，",
-      "start_time": 1.687,
-      "end_time": 2.024
+      "start_time": 2.508,
+      "end_time": 2.783
     },
     {
-      "character": "双",
-      "start_time": 2.024,
-      "end_time": 2.266
+      "character": "背",
+      "start_time": 2.783,
+      "end_time": 2.933
     },
     {
-      "character": "丫",
-      "start_time": 2.266,
-      "end_time": 2.441
+      "character": "手",
+      "start_time": 2.933,
+      "end_time": 3.145
     },
     {
-      "character": "髻",
-      "start_time": 2.441,
-      "end_time": 2.583
+      "character": "歪",
+      "start_time": 3.145,
+      "end_time": 3.299
     },
     {
-      "character": "丝",
-      "start_time": 2.583,
-      "end_time": 2.754
+      "character": "头",
+      "start_time": 3.299,
+      "end_time": 3.495
+    },
+    {
+      "character": "望",
+      "start_time": 3.495,
+      "end_time": 3.633
+    },
+    {
+      "character": "子",
+      "start_time": 3.633,
+      "end_time": 3.824
+    },
+    {
+      "character": "昂",
+      "start_time": 3.824,
+      "end_time": 4.016
+    },
+    {
+      "character": "，",
+      "start_time": 4.016,
+      "end_time": 4.358
+    },
+    {
+      "character": "嘴",
+      "start_time": 4.358,
+      "end_time": 4.558
+    },
+    {
+      "character": "角",
+      "start_time": 4.558,
+      "end_time": 4.729
     },
     {
       "character": "带",
-      "start_time": 2.754,
-      "end_time": 2.895
+      "start_time": 4.729,
+      "end_time": 4.899
     },
     {
-      "character": "飘",
-      "start_time": 2.895,
-      "end_time": 3.129
+      "character": "笑",
+      "start_time": 4.899,
+      "end_time": 5.137
     },
     {
-      "character": "，",
-      "start_time": 3.129,
-      "end_time": 3.483
+      "character": "无",
+      "start_time": 5.137,
+      "end_time": 5.299
     },
     {
-      "character": "不",
-      "start_time": 3.483,
-      "end_time": 3.591
+      "character": "认",
+      "start_time": 5.299,
+      "end_time": 5.491
     },
     {
-      "character": "服",
-      "start_time": 3.591,
-      "end_time": 3.716
+      "character": "错",
+      "start_time": 5.491,
+      "end_time": 5.691
     },
     {
-      "character": "辩",
-      "start_time": 3.716,
-      "end_time": 3.912
-    },
-    {
-      "character": "解",
-      "start_time": 3.912,
-      "end_time": 4.116
-    },
-    {
-      "character": "秦",
-      "start_time": 4.116,
-      "end_time": 4.412
-    },
-    {
-      "character": "玉",
-      "start_time": 4.412,
-      "end_time": 4.562
-    },
-    {
-      "character": "仙",
-      "start_time": 4.562,
-      "end_time": 4.77
-    },
-    {
-      "character": "坑",
-      "start_time": 4.77,
-      "end_time": 5.008
-    },
-    {
-      "character": "吴",
-      "start_time": 5.008,
-      "end_time": 5.124
-    },
-    {
-      "character": "双",
-      "start_time": 5.124,
-      "end_time": 5.329
-    },
-    {
-      "character": "，",
-      "start_time": 5.329,
-      "end_time": 5.645
-    },
-    {
-      "character": "自",
-      "start_time": 5.645,
-      "end_time": 5.816
-    },
-    {
-      "character": "仅",
-      "start_time": 5.816,
-      "end_time": 6.016
-    },
-    {
-      "character": "帮",
-      "start_time": 6.016,
-      "end_time": 6.237
-    },
-    {
-      "character": "忙",
-      "start_time": 6.237,
-      "end_time": 6.429
-    },
-    {
-      "character": "出",
-      "start_time": 6.429,
-      "end_time": 6.595
-    },
-    {
-      "character": "气",
-      "start_time": 6.595,
-      "end_time": 6.762
+      "character": "意",
+      "start_time": 5.691,
+      "end_time": 5.824
     },
     {
       "character": "。",
-      "start_time": 6.762,
-      "end_time": 6.921
+      "start_time": 5.824,
+      "end_time": 5.983
     }
   ],
-  "generated_at": "2025-09-23T08:18:15.336607"
+  "generated_at": "2025-11-07T23:07:14.852975"
 }

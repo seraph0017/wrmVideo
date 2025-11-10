@@ -1,173 +1,253 @@
 {
-  "text": "吴江雄决定：\"暂缓突破神盘境！先杀金鳞蛟王，开通航道，探知秦家虚实！\"",
-  "audio_file": "data/021/chapter_020/chapter_020_narration_18.mp3",
-  "duration": 6.7,
+  "text": "陈俊催动寒气，长老们不自觉让开道路，他一步步走出陈家大院，背影孤傲，周身冰寒气息如实质，目标明确。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_020/chapter_020_narration_18.mp3",
+  "duration": 10.191,
   "character_timestamps": [
     {
-      "character": "吴",
+      "character": "陈",
       "start_time": 0.016,
-      "end_time": 0.17
+      "end_time": 0.241
     },
     {
-      "character": "江",
-      "start_time": 0.17,
-      "end_time": 0.337
+      "character": "俊",
+      "start_time": 0.241,
+      "end_time": 0.433
     },
     {
-      "character": "雄",
-      "start_time": 0.337,
-      "end_time": 0.504
+      "character": "催",
+      "start_time": 0.433,
+      "end_time": 0.649
     },
     {
-      "character": "决",
-      "start_time": 0.504,
-      "end_time": 0.658
+      "character": "动",
+      "start_time": 0.649,
+      "end_time": 0.783
     },
     {
-      "character": "定",
-      "start_time": 0.658,
-      "end_time": 0.808
+      "character": "寒",
+      "start_time": 0.783,
+      "end_time": 1.016
     },
     {
-      "character": "：",
-      "start_time": 0.808,
-      "end_time": 1.137
-    },
-    {
-      "character": "暂",
-      "start_time": 1.137,
-      "end_time": 1.354
-    },
-    {
-      "character": "缓",
-      "start_time": 1.354,
-      "end_time": 1.57
-    },
-    {
-      "character": "突",
-      "start_time": 1.57,
-      "end_time": 1.754
-    },
-    {
-      "character": "破",
-      "start_time": 1.754,
-      "end_time": 1.908
-    },
-    {
-      "character": "神",
-      "start_time": 1.908,
-      "end_time": 2.099
-    },
-    {
-      "character": "盘",
-      "start_time": 2.099,
-      "end_time": 2.295
-    },
-    {
-      "character": "境",
-      "start_time": 2.295,
-      "end_time": 2.445
+      "character": "气",
+      "start_time": 1.016,
+      "end_time": 1.195
     },
     {
       "character": "，",
-      "start_time": 2.445,
-      "end_time": 2.774
+      "start_time": 1.195,
+      "end_time": 1.662
     },
     {
-      "character": "先",
-      "start_time": 2.774,
-      "end_time": 3.033
+      "character": "长",
+      "start_time": 1.662,
+      "end_time": 1.812
     },
     {
-      "character": "杀",
-      "start_time": 3.033,
-      "end_time": 3.224
+      "character": "老",
+      "start_time": 1.812,
+      "end_time": 1.945
     },
     {
-      "character": "金",
-      "start_time": 3.224,
-      "end_time": 3.374
+      "character": "们",
+      "start_time": 1.945,
+      "end_time": 2.066
     },
     {
-      "character": "鳞",
-      "start_time": 3.374,
-      "end_time": 3.508
+      "character": "不",
+      "start_time": 2.066,
+      "end_time": 2.216
     },
     {
-      "character": "蛟",
-      "start_time": 3.508,
-      "end_time": 3.712
+      "character": "自",
+      "start_time": 2.216,
+      "end_time": 2.391
     },
     {
-      "character": "王",
-      "start_time": 3.712,
-      "end_time": 3.904
+      "character": "觉",
+      "start_time": 2.391,
+      "end_time": 2.566
     },
     {
-      "character": "，",
-      "start_time": 3.904,
-      "end_time": 4.191
+      "character": "让",
+      "start_time": 2.566,
+      "end_time": 2.758
     },
     {
       "character": "开",
-      "start_time": 4.191,
-      "end_time": 4.391
-    },
-    {
-      "character": "通",
-      "start_time": 4.391,
-      "end_time": 4.545
-    },
-    {
-      "character": "航",
-      "start_time": 4.545,
-      "end_time": 4.745
+      "start_time": 2.758,
+      "end_time": 2.954
     },
     {
       "character": "道",
-      "start_time": 4.745,
-      "end_time": 4.874
+      "start_time": 2.954,
+      "end_time": 3.133
+    },
+    {
+      "character": "路",
+      "start_time": 3.133,
+      "end_time": 3.274
     },
     {
       "character": "，",
-      "start_time": 4.874,
-      "end_time": 5.199
+      "start_time": 3.274,
+      "end_time": 3.666
     },
     {
-      "character": "探",
-      "start_time": 5.199,
-      "end_time": 5.424
+      "character": "他",
+      "start_time": 3.666,
+      "end_time": 3.77
     },
     {
-      "character": "知",
-      "start_time": 5.424,
-      "end_time": 5.574
+      "character": "一",
+      "start_time": 3.77,
+      "end_time": 3.974
     },
     {
-      "character": "秦",
-      "start_time": 5.574,
-      "end_time": 5.883
+      "character": "步",
+      "start_time": 3.974,
+      "end_time": 4.145
+    },
+    {
+      "character": "步",
+      "start_time": 4.145,
+      "end_time": 4.299
+    },
+    {
+      "character": "走",
+      "start_time": 4.299,
+      "end_time": 4.474
+    },
+    {
+      "character": "出",
+      "start_time": 4.474,
+      "end_time": 4.608
+    },
+    {
+      "character": "陈",
+      "start_time": 4.608,
+      "end_time": 4.887
     },
     {
       "character": "家",
-      "start_time": 5.883,
-      "end_time": 6.074
+      "start_time": 4.887,
+      "end_time": 5.062
     },
     {
-      "character": "虚",
-      "start_time": 6.074,
-      "end_time": 6.266
+      "character": "大",
+      "start_time": 5.062,
+      "end_time": 5.241
+    },
+    {
+      "character": "院",
+      "start_time": 5.241,
+      "end_time": 5.395
+    },
+    {
+      "character": "，",
+      "start_time": 5.395,
+      "end_time": 5.895
+    },
+    {
+      "character": "背",
+      "start_time": 5.895,
+      "end_time": 6.024
+    },
+    {
+      "character": "影",
+      "start_time": 6.024,
+      "end_time": 6.237
+    },
+    {
+      "character": "孤",
+      "start_time": 6.237,
+      "end_time": 6.466
+    },
+    {
+      "character": "傲",
+      "start_time": 6.466,
+      "end_time": 6.574
+    },
+    {
+      "character": "，",
+      "start_time": 6.574,
+      "end_time": 7.024
+    },
+    {
+      "character": "周",
+      "start_time": 7.024,
+      "end_time": 7.166
+    },
+    {
+      "character": "身",
+      "start_time": 7.166,
+      "end_time": 7.354
+    },
+    {
+      "character": "冰",
+      "start_time": 7.354,
+      "end_time": 7.604
+    },
+    {
+      "character": "寒",
+      "start_time": 7.604,
+      "end_time": 7.808
+    },
+    {
+      "character": "气",
+      "start_time": 7.808,
+      "end_time": 8.033
+    },
+    {
+      "character": "息",
+      "start_time": 8.033,
+      "end_time": 8.199
+    },
+    {
+      "character": "如",
+      "start_time": 8.199,
+      "end_time": 8.374
     },
     {
       "character": "实",
-      "start_time": 6.266,
-      "end_time": 6.541
+      "start_time": 8.374,
+      "end_time": 8.624
     },
     {
-      "character": "！",
-      "start_time": 6.541,
-      "end_time": 6.7
+      "character": "质",
+      "start_time": 8.624,
+      "end_time": 8.783
+    },
+    {
+      "character": "，",
+      "start_time": 8.783,
+      "end_time": 9.149
+    },
+    {
+      "character": "目",
+      "start_time": 9.149,
+      "end_time": 9.387
+    },
+    {
+      "character": "标",
+      "start_time": 9.387,
+      "end_time": 9.604
+    },
+    {
+      "character": "明",
+      "start_time": 9.604,
+      "end_time": 9.845
+    },
+    {
+      "character": "确",
+      "start_time": 9.845,
+      "end_time": 10.029
+    },
+    {
+      "character": "。",
+      "start_time": 10.029,
+      "end_time": 10.187
     }
   ],
-  "generated_at": "2025-09-23T08:23:21.844413"
+  "generated_at": "2025-11-07T23:14:22.659243"
 }

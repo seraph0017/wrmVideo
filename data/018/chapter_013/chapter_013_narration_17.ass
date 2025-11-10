@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_013 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.12,Default,,0,0,0,,金色漩涡再吸
+Dialogue: 0,0:00:01.54,0:00:03.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}与北冥雪争夺树叶时
+Dialogue: 0,0:00:03.86,0:00:06.41,Default,,0,0,0,,天空漩涡扩大强大吸力爆发
+Dialogue: 0,0:00:06.83,0:00:09.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}被强行吸入北冥雪因
+Dialogue: 0,0:00:09.23,0:00:11.72,Default,,0,0,0,,抓住树叶也被卷入两人一同
+Dialogue: 0,0:00:11.72,0:00:12.17,Default,,0,0,0,,消失

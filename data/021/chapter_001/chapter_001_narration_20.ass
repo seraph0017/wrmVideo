@@ -14,8 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.37,Default,,0,0,0,,想起{\c&H0000FFFF&\b1}秦玉仙{\c&H00FFFFFF&\b0}散布的
-Dialogue: 0,0:00:01.37,0:00:02.82,Default,,0,0,0,,谣言{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}皱眉
-Dialogue: 0,0:00:03.07,0:00:04.91,Default,,0,0,0,,四处卖弄却说喜欢我
-Dialogue: 0,0:00:05.15,0:00:07.38,Default,,0,0,0,,害得吴战那{\c&H0000FFFF&\b1}白痴{\c&H00FFFFFF&\b0}当真连累我
-Dialogue: 0,0:00:07.38,0:00:08.77,Default,,0,0,0,,被这群蠢货找麻烦
+Dialogue: 0,0:00:00.02,0:00:02.50,Default,,0,0,0,,穿过火{\c&H0000FFFF&\b1}红树林{\c&H00FFFFFF&\b0}前方出现一栋
+Dialogue: 0,0:00:02.50,0:00:04.97,Default,,0,0,0,,红木房屋两名亲随{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}拦住
+Dialogue: 0,0:00:04.97,0:00:05.26,Default,,0,0,0,,去路
+Dialogue: 0,0:00:05.66,0:00:06.57,Default,,0,0,0,,请出示令牌
+Dialogue: 0,0:00:07.05,0:00:08.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}想起父亲留下的
+Dialogue: 0,0:00:08.38,0:00:11.21,Default,,0,0,0,,印记令牌忙从怀中取出这是
+Dialogue: 0,0:00:11.21,0:00:12.27,Default,,0,0,0,,他唯一的希望了

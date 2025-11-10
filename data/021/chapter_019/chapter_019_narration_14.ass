@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.57,Default,,0,0,0,,危急时刻{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄携火光而
-Dialogue: 0,0:00:02.57,0:00:05.43,Default,,0,0,0,,至{\c&H0000FFFF&\b1}九玄真{\c&H00FFFFFF&\b0}火斩劈开冥水潮汐
-Dialogue: 0,0:00:05.78,0:00:06.57,Default,,0,0,0,,声如惊雷
-Dialogue: 0,0:00:07.06,0:00:08.93,Default,,0,0,0,,这么多年还是杀人找借口
-Dialogue: 0,0:00:09.23,0:00:10.09,Default,,0,0,0,,你们才该死
+Dialogue: 0,0:00:00.02,0:00:02.19,Default,,0,0,0,,吴双落在陈{\c&H0000FFFF&\b1}天南{\c&H00FFFFFF&\b0}面前百变
+Dialogue: 0,0:00:02.19,0:00:03.57,Default,,0,0,0,,魔云托着他悬浮
+Dialogue: 0,0:00:04.03,0:00:05.64,Default,,0,0,0,,他嘴角带笑指陈{\c&H0000FFFF&\b1}天南{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.97,0:00:07.47,Default,,0,0,0,,继续主持{\c&H0000FFFF&\b1}王族{\c&H00FFFFFF&\b0}之争啊
+Dialogue: 0,0:00:07.99,0:00:09.26,Default,,0,0,0,,刚刚不是很威风吗

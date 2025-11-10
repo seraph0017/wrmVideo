@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_003 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.01,Default,,0,0,0,,林小小被{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}杀伐果断吓到
+Dialogue: 0,0:00:02.40,0:00:03.15,Default,,0,0,0,,结巴指方向
+Dialogue: 0,0:00:03.25,0:00:06.84,Default,,0,0,0,,那那边一千二百里{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}笑着
+Dialogue: 0,0:00:06.94,0:00:09.17,Default,,0,0,0,,摇头指挥{\c&H0000FFFF&\b1}水剑飞{\c&H00FFFFFF&\b0}向新方向
+Dialogue: 0,0:00:09.27,0:00:11.07,Default,,0,0,0,,准备继续救人

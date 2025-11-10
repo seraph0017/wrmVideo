@@ -14,9 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.53,Default,,0,0,0,,{\c&H0000FFFF&\b1}六族城{\c&H00FFFFFF&\b0}自由交易区
-Dialogue: 0,0:00:02.01,0:00:04.02,Default,,0,0,0,,吴双带着{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}穿梭于摊贩
-Dialogue: 0,0:00:04.02,0:00:04.31,Default,,0,0,0,,之间
-Dialogue: 0,0:00:04.78,0:00:06.51,Default,,0,0,0,,熟门熟路地与商贩打招呼
-Dialogue: 0,0:00:06.99,0:00:08.66,Default,,0,0,0,,这里是他从小最爱逛的
-Dialogue: 0,0:00:08.66,0:00:09.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}淘宝{\c&H00FFFFFF&\b0}之地
+Dialogue: 0,0:00:00.02,0:00:02.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}司马{\c&H00FFFFFF&\b0}刀立于吴家门外金色
+Dialogue: 0,0:00:02.38,0:00:04.09,Default,,0,0,0,,长袍耀眼怒喝
+Dialogue: 0,0:00:04.37,0:00:05.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}何在
+Dialogue: 0,0:00:05.52,0:00:07.42,Default,,0,0,0,,敢伤我盟友可敢出来与
+Dialogue: 0,0:00:07.42,0:00:07.85,Default,,0,0,0,,我一战
+Dialogue: 0,0:00:08.15,0:00:09.00,Default,,0,0,0,,声震街道

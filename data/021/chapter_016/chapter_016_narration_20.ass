@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.39,Default,,0,0,0,,听闻有人闯陈家三关{\c&H0000FFFF&\b1}陈子清{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:02.39,0:00:02.77,Default,,0,0,0,,{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:03.05,0:00:04.20,Default,,0,0,0,,定是{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}那小子
-Dialogue: 0,0:00:04.60,0:00:06.95,Default,,0,0,0,,正好让{\c&H0000FFFF&\b1}陈翔{\c&H00FFFFFF&\b0}教训他让他知道
-Dialogue: 0,0:00:06.95,0:00:08.11,Default,,0,0,0,,陈家不是赵家
+Dialogue: 0,0:00:00.02,0:00:02.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}疗伤完毕站起身伸懒腰
+Dialogue: 0,0:00:02.98,0:00:05.30,Default,,0,0,0,,对陈家方向{\c&H0000FFFF&\b1}扬声{\c&H00FFFFFF&\b0}道陈家想玩
+Dialogue: 0,0:00:05.76,0:00:08.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}本少爷{\c&H00FFFFFF&\b0}奉陪到底声音传遍
+Dialogue: 0,0:00:08.46,0:00:08.87,Default,,0,0,0,,各峰

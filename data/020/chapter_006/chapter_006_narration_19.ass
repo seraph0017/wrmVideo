@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_006 Narration 19 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.69,Default,,0,0,0,,晴雪谷中
+Dialogue: 0,0:00:01.06,0:00:03.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}将人头整齐码放在墓碑前
+Dialogue: 0,0:00:03.68,0:00:05.07,Default,,0,0,0,,用剑气削去血肉
+Dialogue: 0,0:00:05.41,0:00:06.20,Default,,0,0,0,,制成骷髅
+Dialogue: 0,0:00:06.52,0:00:07.27,Default,,0,0,0,,神情肃穆
+Dialogue: 0,0:00:07.64,0:00:09.44,Default,,0,0,0,,低声与{\c&H0000FFFF&\b1}长眠{\c&H00FFFFFF&\b0}的女孩们说话

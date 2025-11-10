@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_005 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}挥手令邪修围成圆圈
+Dialogue: 0,0:00:02.63,0:00:05.05,Default,,0,0,0,,树枝落入河心一声令下可以
+Dialogue: 0,0:00:05.05,0:00:05.59,Default,,0,0,0,,去死了
+Dialogue: 0,0:00:06.10,0:00:08.48,Default,,0,0,0,,上百邪修同时自爆黑色
+Dialogue: 0,0:00:08.48,0:00:11.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}蘑菇云{\c&H00FFFFFF&\b0}冲天而起冲击波掀翻
+Dialogue: 0,0:00:11.24,0:00:11.97,Default,,0,0,0,,十里草木

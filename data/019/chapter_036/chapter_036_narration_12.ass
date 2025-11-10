@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_036 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.03,Default,,0,0,0,,六斤拉着莲心闯入范家后院
+Dialogue: 0,0:00:02.51,0:00:03.96,Default,,0,0,0,,见其家人正煮卤肘子
+Dialogue: 0,0:00:04.26,0:00:06.29,Default,,0,0,0,,他夺过碗递与莲心吃
+Dialogue: 0,0:00:06.80,0:00:07.66,Default,,0,0,0,,以后我护着你
+Dialogue: 0,0:00:07.92,0:00:10.50,Default,,0,0,0,,莲心狼吞虎咽他笑得灿烂金
+Dialogue: 0,0:00:10.50,0:00:11.31,Default,,0,0,0,,项圈闪耀

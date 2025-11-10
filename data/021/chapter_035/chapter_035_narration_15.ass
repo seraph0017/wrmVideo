@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_035 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}郑器{\c&H00FFFFFF&\b0}怒斥滚
+Dialogue: 0,0:00:01.37,0:00:04.15,Default,,0,0,0,,口中黑色光芒爆发瞬间洞穿
+Dialogue: 0,0:00:04.15,0:00:06.61,Default,,0,0,0,,{\c&H0000FFFF&\b1}沙利{\c&H00FFFFFF&\b0}手下两人身体枯萎化为
+Dialogue: 0,0:00:06.61,0:00:09.68,Default,,0,0,0,,干尸他负手而立眼神冰冷扫
+Dialogue: 0,0:00:09.68,0:00:11.36,Default,,0,0,0,,过全场无人敢言

@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}广场
-Dialogue: 0,0:00:01.34,0:00:02.57,Default,,0,0,0,,陈{\c&H0000FFFF&\b1}天南{\c&H00FFFFFF&\b0}怒拍桌案
-Dialogue: 0,0:00:03.05,0:00:04.71,Default,,0,0,0,,斥责{\c&H0000FFFF&\b1}吴星凡{\c&H00FFFFFF&\b0}拖延时间
-Dialogue: 0,0:00:05.06,0:00:06.45,Default,,0,0,0,,宣布{\c&H0000FFFF&\b1}王族{\c&H00FFFFFF&\b0}之争从简
-Dialogue: 0,0:00:06.82,0:00:09.24,Default,,0,0,0,,要求其他{\c&H0000FFFF&\b1}家族{\c&H00FFFFFF&\b0}交出王者证明
+Dialogue: 0,0:00:00.02,0:00:01.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}引动天雷
+Dialogue: 0,0:00:01.69,0:00:04.23,Default,,0,0,0,,雷电武魂完全爆发他手持
+Dialogue: 0,0:00:04.23,0:00:07.07,Default,,0,0,0,,神象长枪逆冲冥水潮汐枪尖
+Dialogue: 0,0:00:07.07,0:00:09.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}雷光{\c&H00FFFFFF&\b0}与火光交织如逆龙冲天

@@ -1,238 +1,218 @@
 {
-  "text": "吴双得知秦家拥有武魂传承，联想到自身雷电武魂，眼神闪烁，询问秦帝是否存活，吴魁面色凝重摇头",
-  "audio_file": "data/021/chapter_015/chapter_015_narration_17.mp3",
-  "duration": 9.8,
+  "text": "吴双在赵家祖山宝库，举起千斤巨石，学习搬山神力，表情专注，背景为石制宝库，众多巨石",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_015/chapter_015_narration_17.mp3",
+  "duration": 8.491,
   "character_timestamps": [
     {
       "character": "吴",
       "start_time": 0.016,
-      "end_time": 0.179
+      "end_time": 0.17
     },
     {
       "character": "双",
-      "start_time": 0.179,
-      "end_time": 0.391
+      "start_time": 0.17,
+      "end_time": 0.37
     },
     {
-      "character": "得",
-      "start_time": 0.391,
-      "end_time": 0.554
+      "character": "在",
+      "start_time": 0.37,
+      "end_time": 0.504
     },
     {
-      "character": "知",
-      "start_time": 0.554,
+      "character": "赵",
+      "start_time": 0.504,
       "end_time": 0.691
     },
     {
-      "character": "秦",
-      "start_time": 0.691,
-      "end_time": 0.912
-    },
-    {
       "character": "家",
-      "start_time": 0.912,
-      "end_time": 1.245
+      "start_time": 0.691,
+      "end_time": 0.858
     },
     {
-      "character": "拥",
-      "start_time": 1.245,
+      "character": "祖",
+      "start_time": 0.858,
+      "end_time": 1.041
+    },
+    {
+      "character": "山",
+      "start_time": 1.041,
+      "end_time": 1.22
+    },
+    {
+      "character": "宝",
+      "start_time": 1.22,
       "end_time": 1.404
     },
     {
-      "character": "有",
+      "character": "库",
       "start_time": 1.404,
-      "end_time": 1.533
-    },
-    {
-      "character": "武",
-      "start_time": 1.533,
-      "end_time": 1.758
-    },
-    {
-      "character": "魂",
-      "start_time": 1.758,
-      "end_time": 1.924
-    },
-    {
-      "character": "传",
-      "start_time": 1.924,
-      "end_time": 2.124
-    },
-    {
-      "character": "承",
-      "start_time": 2.124,
-      "end_time": 2.37
+      "end_time": 1.591
     },
     {
       "character": "，",
-      "start_time": 2.37,
-      "end_time": 2.849
+      "start_time": 1.591,
+      "end_time": 1.991
     },
     {
-      "character": "联",
-      "start_time": 2.849,
-      "end_time": 3.054
+      "character": "举",
+      "start_time": 1.991,
+      "end_time": 2.141
     },
     {
-      "character": "想",
-      "start_time": 3.054,
-      "end_time": 3.224
+      "character": "起",
+      "start_time": 2.141,
+      "end_time": 2.295
     },
     {
-      "character": "到",
-      "start_time": 3.224,
-      "end_time": 3.345
+      "character": "千",
+      "start_time": 2.295,
+      "end_time": 2.574
     },
     {
-      "character": "自",
-      "start_time": 3.345,
-      "end_time": 3.541
+      "character": "斤",
+      "start_time": 2.574,
+      "end_time": 2.745
     },
     {
-      "character": "身",
-      "start_time": 3.541,
-      "end_time": 3.695
+      "character": "巨",
+      "start_time": 2.745,
+      "end_time": 2.908
     },
     {
-      "character": "雷",
-      "start_time": 3.695,
-      "end_time": 3.933
-    },
-    {
-      "character": "电",
-      "start_time": 3.933,
-      "end_time": 4.104
-    },
-    {
-      "character": "武",
-      "start_time": 4.104,
-      "end_time": 4.27
-    },
-    {
-      "character": "魂",
-      "start_time": 4.27,
-      "end_time": 4.52
+      "character": "石",
+      "start_time": 2.908,
+      "end_time": 3.183
     },
     {
       "character": "，",
-      "start_time": 4.52,
-      "end_time": 4.845
+      "start_time": 3.183,
+      "end_time": 3.42
     },
     {
-      "character": "眼",
-      "start_time": 4.845,
-      "end_time": 5.066
+      "character": "学",
+      "start_time": 3.42,
+      "end_time": 3.608
+    },
+    {
+      "character": "习",
+      "start_time": 3.608,
+      "end_time": 3.758
+    },
+    {
+      "character": "搬",
+      "start_time": 3.758,
+      "end_time": 3.979
+    },
+    {
+      "character": "山",
+      "start_time": 3.979,
+      "end_time": 4.149
     },
     {
       "character": "神",
-      "start_time": 5.066,
-      "end_time": 5.245
+      "start_time": 4.149,
+      "end_time": 4.362
     },
     {
-      "character": "闪",
-      "start_time": 5.245,
-      "end_time": 5.47
-    },
-    {
-      "character": "烁",
-      "start_time": 5.47,
-      "end_time": 5.662
+      "character": "力",
+      "start_time": 4.362,
+      "end_time": 4.479
     },
     {
       "character": "，",
-      "start_time": 5.662,
-      "end_time": 6.124
+      "start_time": 4.479,
+      "end_time": 4.804
     },
     {
-      "character": "询",
-      "start_time": 6.124,
-      "end_time": 6.341
+      "character": "表",
+      "start_time": 4.804,
+      "end_time": 4.999
     },
     {
-      "character": "问",
-      "start_time": 6.341,
-      "end_time": 6.466
+      "character": "情",
+      "start_time": 4.999,
+      "end_time": 5.187
     },
     {
-      "character": "秦",
-      "start_time": 6.466,
-      "end_time": 6.712
+      "character": "专",
+      "start_time": 5.187,
+      "end_time": 5.383
     },
     {
-      "character": "帝",
-      "start_time": 6.712,
-      "end_time": 6.849
-    },
-    {
-      "character": "是",
-      "start_time": 6.849,
-      "end_time": 7.041
-    },
-    {
-      "character": "否",
-      "start_time": 7.041,
-      "end_time": 7.191
-    },
-    {
-      "character": "存",
-      "start_time": 7.191,
-      "end_time": 7.412
-    },
-    {
-      "character": "活",
-      "start_time": 7.412,
-      "end_time": 7.645
+      "character": "注",
+      "start_time": 5.383,
+      "end_time": 5.529
     },
     {
       "character": "，",
-      "start_time": 7.645,
-      "end_time": 7.966
+      "start_time": 5.529,
+      "end_time": 5.912
     },
     {
-      "character": "吴",
-      "start_time": 7.966,
-      "end_time": 8.154
+      "character": "背",
+      "start_time": 5.912,
+      "end_time": 6.074
     },
     {
-      "character": "魁",
-      "start_time": 8.154,
-      "end_time": 8.337
+      "character": "景",
+      "start_time": 6.074,
+      "end_time": 6.258
     },
     {
-      "character": "面",
-      "start_time": 8.337,
-      "end_time": 8.587
+      "character": "为",
+      "start_time": 6.258,
+      "end_time": 6.374
     },
     {
-      "character": "色",
-      "start_time": 8.587,
-      "end_time": 8.766
+      "character": "石",
+      "start_time": 6.374,
+      "end_time": 6.608
     },
     {
-      "character": "凝",
-      "start_time": 8.766,
-      "end_time": 9.029
+      "character": "制",
+      "start_time": 6.608,
+      "end_time": 6.729
     },
     {
-      "character": "重",
-      "start_time": 9.029,
-      "end_time": 9.216
+      "character": "宝",
+      "start_time": 6.729,
+      "end_time": 6.912
     },
     {
-      "character": "摇",
-      "start_time": 9.216,
-      "end_time": 9.395
+      "character": "库",
+      "start_time": 6.912,
+      "end_time": 7.112
     },
     {
-      "character": "头",
-      "start_time": 9.395,
-      "end_time": 9.641
+      "character": "，",
+      "start_time": 7.112,
+      "end_time": 7.445
+    },
+    {
+      "character": "众",
+      "start_time": 7.445,
+      "end_time": 7.683
+    },
+    {
+      "character": "多",
+      "start_time": 7.683,
+      "end_time": 7.887
+    },
+    {
+      "character": "巨",
+      "start_time": 7.887,
+      "end_time": 8.07
+    },
+    {
+      "character": "石",
+      "start_time": 8.07,
+      "end_time": 8.333
     },
     {
       "character": "。",
-      "start_time": 9.641,
-      "end_time": 9.8
+      "start_time": 8.333,
+      "end_time": 8.492
     }
   ],
-  "generated_at": "2025-09-23T08:21:29.485613"
+  "generated_at": "2025-11-07T23:11:56.491246"
 }

@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_020 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.75,Default,,0,0,0,,吴双眼神一冷暗中催动阵法
+Dialogue: 0,0:00:03.19,0:00:05.63,Default,,0,0,0,,万炼神殿大阵突然启动寒
+Dialogue: 0,0:00:05.63,0:00:08.12,Default,,0,0,0,,美艳被空间波动弹回狼狈
+Dialogue: 0,0:00:08.12,0:00:10.46,Default,,0,0,0,,摔倒他嘴角勾起一抹{\c&H0000FFFF&\b1}冷笑{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:10.90,0:00:11.22,Default,,0,0,0,,公主
+Dialogue: 0,0:00:11.72,0:00:13.98,Default,,0,0,0,,在这你说了不算周身阵法
+Dialogue: 0,0:00:13.98,0:00:14.78,Default,,0,0,0,,光芒闪烁

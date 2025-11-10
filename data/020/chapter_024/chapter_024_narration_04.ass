@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_024 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}季青临{\c&H00FFFFFF&\b0}见奇点脸色惨白立刻
+Dialogue: 0,0:00:02.90,0:00:04.72,Default,,0,0,0,,跪伏在地恭敬行礼
+Dialogue: 0,0:00:04.97,0:00:07.34,Default,,0,0,0,,圣裁殿右护法{\c&H0000FFFF&\b1}季青临{\c&H00FFFFFF&\b0}见过
+Dialogue: 0,0:00:07.34,0:00:08.14,Default,,0,0,0,,空明大人
+Dialogue: 0,0:00:08.67,0:00:10.91,Default,,0,0,0,,她深知来者身份不敢有丝毫
+Dialogue: 0,0:00:10.91,0:00:11.22,Default,,0,0,0,,怠慢

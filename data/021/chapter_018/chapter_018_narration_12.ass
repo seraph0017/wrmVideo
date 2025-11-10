@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.36,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}突然听到火牛提及神界
-Dialogue: 0,0:00:02.36,0:00:04.74,Default,,0,0,0,,第一骗脚步一个踉跄差点
-Dialogue: 0,0:00:04.74,0:00:06.35,Default,,0,0,0,,摔倒心中暗惊
-Dialogue: 0,0:00:06.83,0:00:08.99,Default,,0,0,0,,天{\c&H0000FFFF&\b1}宝宝{\c&H00FFFFFF&\b0}之事竟已天下皆知
-Dialogue: 0,0:00:09.46,0:00:11.20,Default,,0,0,0,,以后进城需更加小心
+Dialogue: 0,0:00:00.02,0:00:01.42,Default,,0,0,0,,神藏遗迹正式开启
+Dialogue: 0,0:00:01.93,0:00:03.36,Default,,0,0,0,,虚空通道骤然显现
+Dialogue: 0,0:00:03.80,0:00:05.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双随{\c&H00FFFFFF&\b0}众人涌入
+Dialogue: 0,0:00:05.52,0:00:07.26,Default,,0,0,0,,通道另一端是连绵起伏的
+Dialogue: 0,0:00:07.26,0:00:09.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}山脉{\c&H00FFFFFF&\b0}与云雾缭绕的飘渺神山

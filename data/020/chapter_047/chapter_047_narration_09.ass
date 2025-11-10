@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_047 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.36,Default,,0,0,0,,老头看着混乱场面突然站直
+Dialogue: 0,0:00:02.36,0:00:05.03,Default,,0,0,0,,身体浅灰色圆领袍下摆垂落
+Dialogue: 0,0:00:05.38,0:00:06.12,Default,,0,0,0,,深深鞠躬
+Dialogue: 0,0:00:06.50,0:00:08.87,Default,,0,0,0,,请您重新{\c&H0000FFFF&\b1}封印{\c&H00FFFFFF&\b0}盘古秘境让
+Dialogue: 0,0:00:08.87,0:00:10.44,Default,,0,0,0,,这里再也不要出现在世人
+Dialogue: 0,0:00:10.44,0:00:10.79,Default,,0,0,0,,眼中
+Dialogue: 0,0:00:11.09,0:00:13.27,Default,,0,0,0,,语气诚恳眼神带着恳求

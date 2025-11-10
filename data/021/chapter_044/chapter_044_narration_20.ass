@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_044 Narration 20 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.92,Default,,0,0,0,,金龙身后金{\c&H0000FFFF&\b1}龙虚影{\c&H00FFFFFF&\b0}浮现
+Dialogue: 0,0:00:02.52,0:00:04.93,Default,,0,0,0,,他怒吼着展现血脉力量龙气
+Dialogue: 0,0:00:04.93,0:00:07.61,Default,,0,0,0,,引动{\c&H0000FFFF&\b1}镇族{\c&H00FFFFFF&\b0}神器共鸣年轻子弟
+Dialogue: 0,0:00:07.61,0:00:10.52,Default,,0,0,0,,纷纷响应声援{\c&H0000FFFF&\b1}金龙{\c&H00FFFFFF&\b0}争夺圣子
+Dialogue: 0,0:00:10.52,0:00:10.79,Default,,0,0,0,,之位

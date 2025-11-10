@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.08,Default,,0,0,0,,大地突然震颤
-Dialogue: 0,0:00:01.56,0:00:04.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之气如火山喷发般冲天
-Dialogue: 0,0:00:04.07,0:00:04.38,Default,,0,0,0,,而起
-Dialogue: 0,0:00:04.84,0:00:06.08,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}感知到异常
-Dialogue: 0,0:00:06.35,0:00:08.31,Default,,0,0,0,,决定暂时放过赤眼{\c&H0000FFFF&\b1}白熊{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:08.54,0:00:09.47,Default,,0,0,0,,前往探查
+Dialogue: 0,0:00:00.02,0:00:01.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}断后轰塌洞穴
+Dialogue: 0,0:00:02.00,0:00:04.35,Default,,0,0,0,,单手轰击岩壁碎石堵塞通道
+Dialogue: 0,0:00:04.74,0:00:06.97,Default,,0,0,0,,为{\c&H0000FFFF&\b1}江家{\c&H00FFFFFF&\b0}兄妹争取时间自己则
+Dialogue: 0,0:00:06.97,0:00:08.53,Default,,0,0,0,,紧随其后冲入{\c&H0000FFFF&\b1}宝洞{\c&H00FFFFFF&\b0}

@@ -1,218 +1,198 @@
 {
-  "text": "吴双发现北冥雪，一阵头大，加速向前冲去，同时回头给了北冥雪一个鄙视的手势，表情无奈。",
-  "audio_file": "data/021/chapter_027/chapter_027_narration_18.mp3",
-  "duration": 7.8,
+  "text": "天宝宝指向吴双方向，商人纷纷让开道路，她跳下石雕扑向吴双：\"哥哥终于找到你了！\"",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_027/chapter_027_narration_18.mp3",
+  "duration": 7.433,
   "character_timestamps": [
     {
-      "character": "吴",
+      "character": "天",
       "start_time": 0.016,
-      "end_time": 0.17
+      "end_time": 0.229
     },
     {
-      "character": "双",
-      "start_time": 0.17,
-      "end_time": 0.366
+      "character": "宝",
+      "start_time": 0.229,
+      "end_time": 0.387
     },
     {
-      "character": "发",
-      "start_time": 0.366,
-      "end_time": 0.533
+      "character": "宝",
+      "start_time": 0.387,
+      "end_time": 0.654
     },
     {
-      "character": "现",
-      "start_time": 0.533,
-      "end_time": 0.695
-    },
-    {
-      "character": "北",
-      "start_time": 0.695,
-      "end_time": 0.837
-    },
-    {
-      "character": "冥",
-      "start_time": 0.837,
-      "end_time": 1.012
-    },
-    {
-      "character": "雪",
-      "start_time": 1.012,
-      "end_time": 1.199
-    },
-    {
-      "character": "，",
-      "start_time": 1.199,
-      "end_time": 1.67
-    },
-    {
-      "character": "一",
-      "start_time": 1.67,
-      "end_time": 1.824
-    },
-    {
-      "character": "阵",
-      "start_time": 1.824,
-      "end_time": 1.983
-    },
-    {
-      "character": "头",
-      "start_time": 1.983,
-      "end_time": 2.174
-    },
-    {
-      "character": "大",
-      "start_time": 2.174,
-      "end_time": 2.316
-    },
-    {
-      "character": "，",
-      "start_time": 2.316,
-      "end_time": 2.687
-    },
-    {
-      "character": "加",
-      "start_time": 2.687,
-      "end_time": 2.87
-    },
-    {
-      "character": "速",
-      "start_time": 2.87,
-      "end_time": 3.004
+      "character": "指",
+      "start_time": 0.654,
+      "end_time": 0.854
     },
     {
       "character": "向",
-      "start_time": 3.004,
-      "end_time": 3.166
+      "start_time": 0.854,
+      "end_time": 1.037
     },
     {
-      "character": "前",
-      "start_time": 3.166,
-      "end_time": 3.333
+      "character": "吴",
+      "start_time": 1.037,
+      "end_time": 1.179
     },
     {
-      "character": "冲",
-      "start_time": 3.333,
-      "end_time": 3.52
+      "character": "双",
+      "start_time": 1.179,
+      "end_time": 1.354
     },
     {
-      "character": "去",
-      "start_time": 3.52,
-      "end_time": 3.683
+      "character": "方",
+      "start_time": 1.354,
+      "end_time": 1.52
+    },
+    {
+      "character": "向",
+      "start_time": 1.52,
+      "end_time": 1.674
     },
     {
       "character": "，",
-      "start_time": 3.683,
-      "end_time": 4.037
+      "start_time": 1.674,
+      "end_time": 2.133
     },
     {
-      "character": "同",
-      "start_time": 4.037,
-      "end_time": 4.22
+      "character": "商",
+      "start_time": 2.133,
+      "end_time": 2.32
     },
     {
-      "character": "时",
-      "start_time": 4.22,
-      "end_time": 4.37
+      "character": "人",
+      "start_time": 2.32,
+      "end_time": 2.479
     },
     {
-      "character": "回",
-      "start_time": 4.37,
-      "end_time": 4.52
+      "character": "纷",
+      "start_time": 2.479,
+      "end_time": 2.699
     },
     {
-      "character": "头",
-      "start_time": 4.52,
-      "end_time": 4.708
+      "character": "纷",
+      "start_time": 2.699,
+      "end_time": 2.849
     },
     {
-      "character": "给",
-      "start_time": 4.708,
-      "end_time": 4.87
+      "character": "让",
+      "start_time": 2.849,
+      "end_time": 3.033
+    },
+    {
+      "character": "开",
+      "start_time": 3.033,
+      "end_time": 3.204
+    },
+    {
+      "character": "道",
+      "start_time": 3.204,
+      "end_time": 3.362
+    },
+    {
+      "character": "路",
+      "start_time": 3.362,
+      "end_time": 3.491
+    },
+    {
+      "character": "，",
+      "start_time": 3.491,
+      "end_time": 3.954
+    },
+    {
+      "character": "她",
+      "start_time": 3.954,
+      "end_time": 4.033
+    },
+    {
+      "character": "跳",
+      "start_time": 4.033,
+      "end_time": 4.266
+    },
+    {
+      "character": "下",
+      "start_time": 4.266,
+      "end_time": 4.408
+    },
+    {
+      "character": "石",
+      "start_time": 4.408,
+      "end_time": 4.579
+    },
+    {
+      "character": "雕",
+      "start_time": 4.579,
+      "end_time": 4.774
+    },
+    {
+      "character": "扑",
+      "start_time": 4.774,
+      "end_time": 5.02
+    },
+    {
+      "character": "向",
+      "start_time": 5.02,
+      "end_time": 5.208
+    },
+    {
+      "character": "吴",
+      "start_time": 5.208,
+      "end_time": 5.337
+    },
+    {
+      "character": "双",
+      "start_time": 5.337,
+      "end_time": 5.524
+    },
+    {
+      "character": "：",
+      "start_time": 5.524,
+      "end_time": 5.895
+    },
+    {
+      "character": "哥",
+      "start_time": 5.895,
+      "end_time": 6.062
+    },
+    {
+      "character": "哥",
+      "start_time": 6.062,
+      "end_time": 6.187
+    },
+    {
+      "character": "终",
+      "start_time": 6.187,
+      "end_time": 6.454
+    },
+    {
+      "character": "于",
+      "start_time": 6.454,
+      "end_time": 6.624
+    },
+    {
+      "character": "找",
+      "start_time": 6.624,
+      "end_time": 6.854
+    },
+    {
+      "character": "到",
+      "start_time": 6.854,
+      "end_time": 6.991
+    },
+    {
+      "character": "你",
+      "start_time": 6.991,
+      "end_time": 7.145
     },
     {
       "character": "了",
-      "start_time": 4.87,
-      "end_time": 4.954
+      "start_time": 7.145,
+      "end_time": 7.27
     },
     {
-      "character": "北",
-      "start_time": 4.954,
-      "end_time": 5.12
-    },
-    {
-      "character": "冥",
-      "start_time": 5.12,
-      "end_time": 5.299
-    },
-    {
-      "character": "雪",
-      "start_time": 5.299,
-      "end_time": 5.516
-    },
-    {
-      "character": "一",
-      "start_time": 5.516,
-      "end_time": 5.679
-    },
-    {
-      "character": "个",
-      "start_time": 5.679,
-      "end_time": 5.804
-    },
-    {
-      "character": "鄙",
-      "start_time": 5.804,
-      "end_time": 6.037
-    },
-    {
-      "character": "视",
-      "start_time": 6.037,
-      "end_time": 6.166
-    },
-    {
-      "character": "的",
-      "start_time": 6.166,
-      "end_time": 6.241
-    },
-    {
-      "character": "手",
-      "start_time": 6.241,
-      "end_time": 6.429
-    },
-    {
-      "character": "势",
-      "start_time": 6.429,
-      "end_time": 6.608
-    },
-    {
-      "character": "，",
-      "start_time": 6.608,
-      "end_time": 6.962
-    },
-    {
-      "character": "表",
-      "start_time": 6.962,
-      "end_time": 7.179
-    },
-    {
-      "character": "情",
-      "start_time": 7.179,
-      "end_time": 7.404
-    },
-    {
-      "character": "无",
-      "start_time": 7.404,
-      "end_time": 7.499
-    },
-    {
-      "character": "奈",
-      "start_time": 7.499,
-      "end_time": 7.637
-    },
-    {
-      "character": "。",
-      "start_time": 7.637,
-      "end_time": 7.796
+      "character": "！",
+      "start_time": 7.27,
+      "end_time": 7.429
     }
   ],
-  "generated_at": "2025-09-23T08:26:27.696210"
+  "generated_at": "2025-11-07T23:17:46.953121"
 }

@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_029 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.84,Default,,0,0,0,,飘雪谷内院
+Dialogue: 0,0:00:01.35,0:00:03.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双躺{\c&H00FFFFFF&\b0}在床榻上陷入沉睡
+Dialogue: 0,0:00:03.98,0:00:06.13,Default,,0,0,0,,深蓝色圆领袍随意搭在身侧
+Dialogue: 0,0:00:06.48,0:00:07.37,Default,,0,0,0,,他面容平静
+Dialogue: 0,0:00:07.82,0:00:08.62,Default,,0,0,0,,呼吸悠长
+Dialogue: 0,0:00:09.09,0:00:10.21,Default,,0,0,0,,周身气息平稳
+Dialogue: 0,0:00:10.48,0:00:12.39,Default,,0,0,0,,进入罕见的先天胎息状态
+Dialogue: 0,0:00:12.69,0:00:13.96,Default,,0,0,0,,周身有微光流转

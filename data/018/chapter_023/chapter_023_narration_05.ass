@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_023 Narration 05 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.09,Default,,0,0,0,,吃货本性暴露
+Dialogue: 0,0:00:01.62,0:00:03.85,Default,,0,0,0,,贱鸟无视父子对话盯着
+Dialogue: 0,0:00:03.85,0:00:04.89,Default,,0,0,0,,蛟尸流口水
+Dialogue: 0,0:00:05.19,0:00:06.14,Default,,0,0,0,,哪块烤着好吃
+Dialogue: 0,0:00:06.50,0:00:07.53,Default,,0,0,0,,哪块适合下酒
+Dialogue: 0,0:00:07.82,0:00:09.92,Default,,0,0,0,,翅膀比划着切割动作逗趣
+Dialogue: 0,0:00:09.92,0:00:10.37,Default,,0,0,0,,十足

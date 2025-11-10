@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_045 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,狂狮石强突然感觉一股温和
+Dialogue: 0,0:00:02.04,0:00:03.44,Default,,0,0,0,,雷电之力涌入体内
+Dialogue: 0,0:00:03.97,0:00:05.70,Default,,0,0,0,,形成护罩隔断电链伤害
+Dialogue: 0,0:00:06.15,0:00:07.40,Default,,0,0,0,,神魂剧痛减轻
+Dialogue: 0,0:00:07.76,0:00:08.52,Default,,0,0,0,,猛然睁眼
+Dialogue: 0,0:00:08.93,0:00:10.95,Default,,0,0,0,,金色眼瞳中闪过一丝疑惑
+Dialogue: 0,0:00:11.29,0:00:12.45,Default,,0,0,0,,随即化为{\c&H0000FFFF&\b1}明悟{\c&H00FFFFFF&\b0}

@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_010 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.16,Default,,0,0,0,,神秘{\c&H0000FFFF&\b1}夏刚{\c&H00FFFFFF&\b0}登场
+Dialogue: 0,0:00:01.63,0:00:04.06,Default,,0,0,0,,黑色披风遮头蔽面仅露下颌
+Dialogue: 0,0:00:04.06,0:00:07.05,Default,,0,0,0,,线条缓步走出内堂周身气息
+Dialogue: 0,0:00:07.05,0:00:09.47,Default,,0,0,0,,内敛无人能看清容貌却
+Dialogue: 0,0:00:09.47,0:00:11.46,Default,,0,0,0,,自带炼丹大师的桀骜气场

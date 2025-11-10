@@ -1,253 +1,263 @@
 {
-  "text": "贱鸟突然出现，用翅膀拍打卜一峰，阻止他继续说话。它动作敏捷，不断在卜一峰周围飞舞，发出尖锐的叫声。",
-  "audio_file": "data/021/chapter_026/chapter_026_narration_19.mp3",
-  "duration": 8.991,
+  "text": "吴双终于冲出通道，前方是开阔的黑色平原，雷电武魂与海浪叠加防御同时催动，转身对郑毅道\"抓紧了！全速前进\"",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_026/chapter_026_narration_19.mp3",
+  "duration": 9.983,
   "character_timestamps": [
     {
-      "character": "贱",
+      "character": "吴",
       "start_time": 0.016,
-      "end_time": 0.154
+      "end_time": 0.17
     },
     {
-      "character": "鸟",
-      "start_time": 0.154,
-      "end_time": 0.345
+      "character": "双",
+      "start_time": 0.17,
+      "end_time": 0.37
     },
     {
-      "character": "突",
-      "start_time": 0.345,
-      "end_time": 0.516
+      "character": "终",
+      "start_time": 0.37,
+      "end_time": 0.587
     },
     {
-      "character": "然",
-      "start_time": 0.516,
-      "end_time": 0.654
+      "character": "于",
+      "start_time": 0.587,
+      "end_time": 0.741
     },
     {
-      "character": "出",
-      "start_time": 0.654,
-      "end_time": 0.795
-    },
-    {
-      "character": "现",
-      "start_time": 0.795,
-      "end_time": 0.962
-    },
-    {
-      "character": "，",
-      "start_time": 0.962,
-      "end_time": 1.362
-    },
-    {
-      "character": "用",
-      "start_time": 1.362,
-      "end_time": 1.508
-    },
-    {
-      "character": "翅",
-      "start_time": 1.508,
-      "end_time": 1.737
-    },
-    {
-      "character": "膀",
-      "start_time": 1.737,
-      "end_time": 1.916
-    },
-    {
-      "character": "拍",
-      "start_time": 1.916,
-      "end_time": 2.129
-    },
-    {
-      "character": "打",
-      "start_time": 2.129,
-      "end_time": 2.258
-    },
-    {
-      "character": "卜",
-      "start_time": 2.258,
-      "end_time": 2.408
-    },
-    {
-      "character": "一",
-      "start_time": 2.408,
-      "end_time": 2.529
-    },
-    {
-      "character": "峰",
-      "start_time": 2.529,
-      "end_time": 2.704
-    },
-    {
-      "character": "，",
-      "start_time": 2.704,
-      "end_time": 3.187
-    },
-    {
-      "character": "阻",
-      "start_time": 3.187,
-      "end_time": 3.358
-    },
-    {
-      "character": "止",
-      "start_time": 3.358,
-      "end_time": 3.47
-    },
-    {
-      "character": "他",
-      "start_time": 3.47,
-      "end_time": 3.612
-    },
-    {
-      "character": "继",
-      "start_time": 3.612,
-      "end_time": 3.808
-    },
-    {
-      "character": "续",
-      "start_time": 3.808,
-      "end_time": 3.941
-    },
-    {
-      "character": "说",
-      "start_time": 3.941,
-      "end_time": 4.104
-    },
-    {
-      "character": "话",
-      "start_time": 4.104,
-      "end_time": 4.258
-    },
-    {
-      "character": "，",
-      "start_time": 4.258,
-      "end_time": 4.599
-    },
-    {
-      "character": "它",
-      "start_time": 4.599,
-      "end_time": 4.687
-    },
-    {
-      "character": "动",
-      "start_time": 4.687,
-      "end_time": 4.891
-    },
-    {
-      "character": "作",
-      "start_time": 4.891,
-      "end_time": 5.02
-    },
-    {
-      "character": "敏",
-      "start_time": 5.02,
-      "end_time": 5.212
-    },
-    {
-      "character": "捷",
-      "start_time": 5.212,
-      "end_time": 5.466
-    },
-    {
-      "character": "，",
-      "start_time": 5.466,
-      "end_time": 5.762
-    },
-    {
-      "character": "不",
-      "start_time": 5.762,
-      "end_time": 5.899
-    },
-    {
-      "character": "断",
-      "start_time": 5.899,
-      "end_time": 6.045
-    },
-    {
-      "character": "在",
-      "start_time": 6.045,
-      "end_time": 6.166
-    },
-    {
-      "character": "卜",
-      "start_time": 6.166,
-      "end_time": 6.354
-    },
-    {
-      "character": "一",
-      "start_time": 6.354,
-      "end_time": 6.462
-    },
-    {
-      "character": "峰",
-      "start_time": 6.462,
-      "end_time": 6.637
-    },
-    {
-      "character": "周",
-      "start_time": 6.637,
-      "end_time": 6.862
-    },
-    {
-      "character": "围",
-      "start_time": 6.862,
-      "end_time": 6.97
-    },
-    {
-      "character": "飞",
-      "start_time": 6.97,
-      "end_time": 7.162
-    },
-    {
-      "character": "舞",
-      "start_time": 7.162,
-      "end_time": 7.358
-    },
-    {
-      "character": "，",
-      "start_time": 7.358,
-      "end_time": 7.62
-    },
-    {
-      "character": "发",
-      "start_time": 7.62,
-      "end_time": 7.745
+      "character": "冲",
+      "start_time": 0.741,
+      "end_time": 0.97
     },
     {
       "character": "出",
-      "start_time": 7.745,
-      "end_time": 7.908
+      "start_time": 0.97,
+      "end_time": 1.104
     },
     {
-      "character": "尖",
-      "start_time": 7.908,
-      "end_time": 8.208
+      "character": "通",
+      "start_time": 1.104,
+      "end_time": 1.283
     },
     {
-      "character": "锐",
-      "start_time": 8.208,
-      "end_time": 8.37
+      "character": "道",
+      "start_time": 1.283,
+      "end_time": 1.399
+    },
+    {
+      "character": "，",
+      "start_time": 1.399,
+      "end_time": 1.887
+    },
+    {
+      "character": "前",
+      "start_time": 1.887,
+      "end_time": 2.116
+    },
+    {
+      "character": "方",
+      "start_time": 2.116,
+      "end_time": 2.262
+    },
+    {
+      "character": "是",
+      "start_time": 2.262,
+      "end_time": 2.374
+    },
+    {
+      "character": "开",
+      "start_time": 2.374,
+      "end_time": 2.591
+    },
+    {
+      "character": "阔",
+      "start_time": 2.591,
+      "end_time": 2.72
     },
     {
       "character": "的",
-      "start_time": 8.37,
-      "end_time": 8.454
+      "start_time": 2.72,
+      "end_time": 2.791
     },
     {
-      "character": "叫",
-      "start_time": 8.454,
-      "end_time": 8.641
+      "character": "黑",
+      "start_time": 2.791,
+      "end_time": 3.008
     },
     {
-      "character": "声",
-      "start_time": 8.641,
-      "end_time": 8.829
+      "character": "色",
+      "start_time": 3.008,
+      "end_time": 3.166
+    },
+    {
+      "character": "平",
+      "start_time": 3.166,
+      "end_time": 3.395
+    },
+    {
+      "character": "原",
+      "start_time": 3.395,
+      "end_time": 3.608
+    },
+    {
+      "character": "，",
+      "start_time": 3.608,
+      "end_time": 4.087
+    },
+    {
+      "character": "雷",
+      "start_time": 4.087,
+      "end_time": 4.262
+    },
+    {
+      "character": "电",
+      "start_time": 4.262,
+      "end_time": 4.437
+    },
+    {
+      "character": "武",
+      "start_time": 4.437,
+      "end_time": 4.595
+    },
+    {
+      "character": "魂",
+      "start_time": 4.595,
+      "end_time": 4.754
+    },
+    {
+      "character": "与",
+      "start_time": 4.754,
+      "end_time": 4.845
+    },
+    {
+      "character": "海",
+      "start_time": 4.845,
+      "end_time": 5.079
+    },
+    {
+      "character": "浪",
+      "start_time": 5.079,
+      "end_time": 5.241
+    },
+    {
+      "character": "叠",
+      "start_time": 5.241,
+      "end_time": 5.429
+    },
+    {
+      "character": "加",
+      "start_time": 5.429,
+      "end_time": 5.587
+    },
+    {
+      "character": "防",
+      "start_time": 5.587,
+      "end_time": 5.808
+    },
+    {
+      "character": "御",
+      "start_time": 5.808,
+      "end_time": 5.954
+    },
+    {
+      "character": "同",
+      "start_time": 5.954,
+      "end_time": 6.254
+    },
+    {
+      "character": "时",
+      "start_time": 6.254,
+      "end_time": 6.42
+    },
+    {
+      "character": "催",
+      "start_time": 6.42,
+      "end_time": 6.62
+    },
+    {
+      "character": "动",
+      "start_time": 6.62,
+      "end_time": 6.745
+    },
+    {
+      "character": "，",
+      "start_time": 6.745,
+      "end_time": 7.154
+    },
+    {
+      "character": "转",
+      "start_time": 7.154,
+      "end_time": 7.366
+    },
+    {
+      "character": "身",
+      "start_time": 7.366,
+      "end_time": 7.533
+    },
+    {
+      "character": "对",
+      "start_time": 7.533,
+      "end_time": 7.662
+    },
+    {
+      "character": "郑",
+      "start_time": 7.662,
+      "end_time": 7.849
+    },
+    {
+      "character": "毅",
+      "start_time": 7.849,
+      "end_time": 7.954
+    },
+    {
+      "character": "道",
+      "start_time": 7.954,
+      "end_time": 8.087
+    },
+    {
+      "character": "抓",
+      "start_time": 8.087,
+      "end_time": 8.291
+    },
+    {
+      "character": "紧",
+      "start_time": 8.291,
+      "end_time": 8.445
+    },
+    {
+      "character": "了",
+      "start_time": 8.445,
+      "end_time": 8.612
+    },
+    {
+      "character": "，",
+      "start_time": 8.612,
+      "end_time": 8.937
+    },
+    {
+      "character": "全",
+      "start_time": 8.937,
+      "end_time": 9.212
+    },
+    {
+      "character": "速",
+      "start_time": 9.212,
+      "end_time": 9.404
+    },
+    {
+      "character": "前",
+      "start_time": 9.404,
+      "end_time": 9.674
+    },
+    {
+      "character": "进",
+      "start_time": 9.674,
+      "end_time": 9.824
     },
     {
       "character": "。",
-      "start_time": 8.829,
-      "end_time": 8.987
+      "start_time": 9.824,
+      "end_time": 9.983
     }
   ],
-  "generated_at": "2025-09-23T08:26:05.033317"
+  "generated_at": "2025-11-07T23:17:27.752975"
 }

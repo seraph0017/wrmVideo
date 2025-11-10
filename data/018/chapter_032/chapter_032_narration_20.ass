@@ -1,0 +1,20 @@
+[Script Info]
+Title: chapter_032 Narration 20 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}北冥雪{\c&H00FFFFFF&\b0}空间武魂感知到周围
+Dialogue: 0,0:00:02.04,0:00:04.00,Default,,0,0,0,,有埋伏低声对{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}说
+Dialogue: 0,0:00:04.42,0:00:07.15,Default,,0,0,0,,小心附近有强者气息至少
+Dialogue: 0,0:00:07.15,0:00:08.44,Default,,0,0,0,,有神盘境后期

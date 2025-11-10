@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_027 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.87,Default,,0,0,0,,乾清宫门口
+Dialogue: 0,0:00:01.25,0:00:03.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}侍卫{\c&H00FFFFFF&\b0}统领邓平穿麒麟服侧身
+Dialogue: 0,0:00:03.29,0:00:03.60,Default,,0,0,0,,让路
+Dialogue: 0,0:00:03.92,0:00:05.07,Default,,0,0,0,,对傅让客气微笑
+Dialogue: 0,0:00:05.49,0:00:06.70,Default,,0,0,0,,眼神中带着审视
+Dialogue: 0,0:00:07.02,0:00:09.02,Default,,0,0,0,,暗忖傅让此次{\c&H0000FFFF&\b1}回京{\c&H00FFFFFF&\b0}不简单

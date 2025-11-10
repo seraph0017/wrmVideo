@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_009 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.37,Default,,0,0,0,,朗屠看到{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}与
+Dialogue: 0,0:00:01.37,0:00:03.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双站{\c&H00FFFFFF&\b0}在一起顿时暴怒
+Dialogue: 0,0:00:04.12,0:00:06.33,Default,,0,0,0,,他猛地起身震飞周围物品
+Dialogue: 0,0:00:06.82,0:00:08.20,Default,,0,0,0,,浑身散发出浓烈的
+Dialogue: 0,0:00:08.20,0:00:10.76,Default,,0,0,0,,血腥杀气狼头纹身仿佛要
+Dialogue: 0,0:00:10.76,0:00:11.58,Default,,0,0,0,,活过来一般

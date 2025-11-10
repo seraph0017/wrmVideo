@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_012 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.57,Default,,0,0,0,,贱鸟强忍伤势飞至山顶水库
+Dialogue: 0,0:00:02.90,0:00:04.75,Default,,0,0,0,,用头拼命撞击挡水{\c&H0000FFFF&\b1}巨石{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.24,0:00:07.99,Default,,0,0,0,,石头裂缝扩大水流渗出它每
+Dialogue: 0,0:00:07.99,0:00:10.52,Default,,0,0,0,,撞一下就{\c&H0000FFFF&\b1}吐口{\c&H00FFFFFF&\b0}血却咬牙坚持
+Dialogue: 0,0:00:10.81,0:00:12.13,Default,,0,0,0,,为了小贼拼了

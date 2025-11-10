@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.51,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}无视吴战挑衅
-Dialogue: 0,0:00:02.02,0:00:03.54,Default,,0,0,0,,拉着{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}转身离开
-Dialogue: 0,0:00:03.98,0:00:05.98,Default,,0,0,0,,他已将目光投向即将到来的
-Dialogue: 0,0:00:05.98,0:00:07.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙隐湖{\c&H00FFFFFF&\b0}森林考核
-Dialogue: 0,0:00:07.82,0:00:09.78,Default,,0,0,0,,一场更大的风暴正在酝酿
+Dialogue: 0,0:00:00.02,0:00:01.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}急中生智
+Dialogue: 0,0:00:01.36,0:00:02.61,Default,,0,0,0,,取出青色小葫芦
+Dialogue: 0,0:00:03.13,0:00:04.92,Default,,0,0,0,,小心翼翼将火焰果装入
+Dialogue: 0,0:00:05.29,0:00:07.18,Default,,0,0,0,,葫芦口瞬间迸发{\c&H0000FFFF&\b1}红光{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.56,0:00:08.31,Default,,0,0,0,,随即稳定
+Dialogue: 0,0:00:08.72,0:00:09.75,Default,,0,0,0,,他长舒一口气

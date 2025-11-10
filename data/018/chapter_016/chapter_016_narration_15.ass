@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_016 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴魁拉{\c&H00FFFFFF&\b0}住吴双急切道
+Dialogue: 0,0:00:02.27,0:00:02.61,Default,,0,0,0,,快说
+Dialogue: 0,0:00:03.07,0:00:04.31,Default,,0,0,0,,赵家那边发生了什么
+Dialogue: 0,0:00:04.64,0:00:05.27,Default,,0,0,0,,你突破了
+Dialogue: 0,0:00:05.78,0:00:08.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}点头将赵家经历简略
+Dialogue: 0,0:00:08.03,0:00:10.67,Default,,0,0,0,,说出吴魁听得连连点头眼神
+Dialogue: 0,0:00:10.67,0:00:11.71,Default,,0,0,0,,中充满赞叹

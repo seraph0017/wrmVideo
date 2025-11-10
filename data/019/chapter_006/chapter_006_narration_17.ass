@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_006 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.84,Default,,0,0,0,,老年{\c&H0000FFFF&\b1}朱元璋{\c&H00FFFFFF&\b0}眼神突然变得
+Dialogue: 0,0:00:01.84,0:00:02.20,Default,,0,0,0,,锐利
+Dialogue: 0,0:00:02.57,0:00:03.91,Default,,0,0,0,,下令召蒋瓛进宫
+Dialogue: 0,0:00:04.29,0:00:06.11,Default,,0,0,0,,语气中带着不容置疑的威严
+Dialogue: 0,0:00:06.39,0:00:08.34,Default,,0,0,0,,仿佛又变回那个掌控一切的
+Dialogue: 0,0:00:08.34,0:00:08.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}帝王{\c&H00FFFFFF&\b0}

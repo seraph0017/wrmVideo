@@ -14,7 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.57,Default,,0,0,0,,进入禁地{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}靠在门后喘息
-Dialogue: 0,0:00:03.07,0:00:05.12,Default,,0,0,0,,看向左臂骨头虽断却
-Dialogue: 0,0:00:05.12,0:00:06.85,Default,,0,0,0,,不算严重心中暗恨
-Dialogue: 0,0:00:06.95,0:00:09.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴毅{\c&H00FFFFFF&\b0}吴晨这笔账记下了
+Dialogue: 0,0:00:00.02,0:00:02.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双深{\c&H00FFFFFF&\b0}吸一口气禁地的
+Dialogue: 0,0:00:02.02,0:00:04.02,Default,,0,0,0,,空气竟让他感到通体{\c&H0000FFFF&\b1}舒泰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.56,0:00:06.97,Default,,0,0,0,,他想起{\c&H0000FFFF&\b1}丹田{\c&H00FFFFFF&\b0}的金色漩涡想起
+Dialogue: 0,0:00:06.97,0:00:09.34,Default,,0,0,0,,{\c&H0000FFFF&\b1}老祖宗{\c&H00FFFFFF&\b0}或许能解开谜团便忍
+Dialogue: 0,0:00:09.34,0:00:12.37,Default,,0,0,0,,着伤痛向禁地深处走去那里
+Dialogue: 0,0:00:12.80,0:00:14.80,Default,,0,0,0,,住着{\c&H0000FFFF&\b1}吴家活{\c&H00FFFFFF&\b0}了一百八十岁的
+Dialogue: 0,0:00:14.80,0:00:16.03,Default,,0,0,0,,{\c&H0000FFFF&\b1}老祖宗{\c&H00FFFFFF&\b0}吴昊轩

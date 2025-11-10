@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.58,Default,,0,0,0,,{\c&H0000FFFF&\b1}老祖宗{\c&H00FFFFFF&\b0}吴昊轩暗中点头吴家
-Dialogue: 0,0:00:02.58,0:00:03.38,Default,,0,0,0,,三代同心
-Dialogue: 0,0:00:03.72,0:00:05.67,Default,,0,0,0,,从隐忍蛰伏到扬眉吐气
-Dialogue: 0,0:00:06.17,0:00:08.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}格局即将彻底改写
+Dialogue: 0,0:00:00.02,0:00:01.78,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}拒绝吴江雄搀扶
+Dialogue: 0,0:00:02.20,0:00:03.52,Default,,0,0,0,,艰难笑道{\c&H0000FFFF&\b1}小意思{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.00,0:00:05.52,Default,,0,0,0,,坚持要{\c&H0000FFFF&\b1}上台{\c&H00FFFFFF&\b0}说几句话
+Dialogue: 0,0:00:05.95,0:00:07.81,Default,,0,0,0,,每说一字都疼得肌肉颤抖
+Dialogue: 0,0:00:08.21,0:00:09.02,Default,,0,0,0,,却不肯停下

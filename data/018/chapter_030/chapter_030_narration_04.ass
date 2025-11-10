@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_030 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}神丹{\c&H00FFFFFF&\b0}府考核广场
+Dialogue: 0,0:00:01.80,0:00:02.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}猛然落地
+Dialogue: 0,0:00:03.32,0:00:04.91,Default,,0,0,0,,巨大震动让地面龟裂
+Dialogue: 0,0:00:05.38,0:00:07.34,Default,,0,0,0,,周围数十个丹炉轰然翻倒
+Dialogue: 0,0:00:07.62,0:00:09.69,Default,,0,0,0,,火气充盈的广场瞬间陷入
+Dialogue: 0,0:00:09.69,0:00:10.07,Default,,0,0,0,,混乱

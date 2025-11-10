@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_045 Narration 04 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.97,Default,,0,0,0,,特写镜头聚焦于现代女性
+Dialogue: 0,0:00:01.97,0:00:02.31,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.66,0:00:03.48,Default,,0,0,0,,她眼神明亮
+Dialogue: 0,0:00:03.78,0:00:04.48,Default,,0,0,0,,嘴角带笑
+Dialogue: 0,0:00:04.83,0:00:05.59,Default,,0,0,0,,发梢微卷
+Dialogue: 0,0:00:06.01,0:00:07.14,Default,,0,0,0,,身着简约服饰
+Dialogue: 0,0:00:07.43,0:00:09.70,Default,,0,0,0,,展现出自信从容的现代形象

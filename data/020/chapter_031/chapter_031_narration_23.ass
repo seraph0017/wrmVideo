@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_031 Narration 23 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.25,Default,,0,0,0,,复制体持剑追来剑招{\c&H0000FFFF&\b1}凌厉{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.75,0:00:05.35,Default,,0,0,0,,剑气冲垮裂缝顶端色彩斑斓
+Dialogue: 0,0:00:05.35,0:00:07.20,Default,,0,0,0,,的混乱之力如{\c&H0000FFFF&\b1}天河{\c&H00FFFFFF&\b0}倒灌
+Dialogue: 0,0:00:07.71,0:00:10.18,Default,,0,0,0,,他紧闭双眼周身剑气汇聚
+Dialogue: 0,0:00:10.18,0:00:12.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}成柱剑{\c&H00FFFFFF&\b0}十一大灭即将发动

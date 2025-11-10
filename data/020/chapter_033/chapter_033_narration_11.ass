@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_033 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.15,Default,,0,0,0,,受伤女子突然用匕首刺向李
+Dialogue: 0,0:00:02.15,0:00:02.86,Default,,0,0,0,,观棋右胸
+Dialogue: 0,0:00:03.39,0:00:04.94,Default,,0,0,0,,他难以置信地瞪大双眼
+Dialogue: 0,0:00:05.23,0:00:06.79,Default,,0,0,0,,鲜血染红胸前衣襟
+Dialogue: 0,0:00:07.07,0:00:08.15,Default,,0,0,0,,身体开始僵硬

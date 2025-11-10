@@ -1,163 +1,168 @@
 {
-  "text": "天宝宝蹲旁，看摊上琉璃珠，小脸好奇，伸手捡颗对光看，笑出脆声。",
-  "audio_file": "data/021/chapter_028/chapter_028_narration_02.mp3",
-  "duration": 6.258,
+  "text": "天宝宝好奇望桌，拿木雕玩，笑天真；商人怒不敢作，眼睁睁看交易成。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_028/chapter_028_narration_02.mp3",
+  "duration": 6.458,
   "character_timestamps": [
     {
       "character": "天",
-      "start_time": 0.016,
+      "start_time": 0.02,
       "end_time": 0.237
     },
     {
       "character": "宝",
       "start_time": 0.237,
-      "end_time": 0.391
+      "end_time": 0.399
     },
     {
       "character": "宝",
-      "start_time": 0.391,
-      "end_time": 0.524
-    },
-    {
-      "character": "蹲",
-      "start_time": 0.524,
-      "end_time": 0.687
-    },
-    {
-      "character": "旁",
-      "start_time": 0.687,
-      "end_time": 0.92
-    },
-    {
-      "character": "，",
-      "start_time": 0.92,
-      "end_time": 1.295
-    },
-    {
-      "character": "看",
-      "start_time": 1.295,
-      "end_time": 1.487
-    },
-    {
-      "character": "摊",
-      "start_time": 1.487,
-      "end_time": 1.649
-    },
-    {
-      "character": "上",
-      "start_time": 1.649,
-      "end_time": 1.791
-    },
-    {
-      "character": "琉",
-      "start_time": 1.791,
-      "end_time": 1.912
-    },
-    {
-      "character": "璃",
-      "start_time": 1.912,
-      "end_time": 2.02
-    },
-    {
-      "character": "珠",
-      "start_time": 2.02,
-      "end_time": 2.183
-    },
-    {
-      "character": "，",
-      "start_time": 2.183,
-      "end_time": 2.545
-    },
-    {
-      "character": "小",
-      "start_time": 2.545,
-      "end_time": 2.779
-    },
-    {
-      "character": "脸",
-      "start_time": 2.779,
-      "end_time": 2.937
+      "start_time": 0.399,
+      "end_time": 0.529
     },
     {
       "character": "好",
-      "start_time": 2.937,
-      "end_time": 3.137
+      "start_time": 0.529,
+      "end_time": 0.758
     },
     {
       "character": "奇",
-      "start_time": 3.137,
-      "end_time": 3.391
+      "start_time": 0.758,
+      "end_time": 0.941
+    },
+    {
+      "character": "望",
+      "start_time": 0.941,
+      "end_time": 1.095
+    },
+    {
+      "character": "桌",
+      "start_time": 1.095,
+      "end_time": 1.287
     },
     {
       "character": "，",
-      "start_time": 3.391,
-      "end_time": 3.766
+      "start_time": 1.287,
+      "end_time": 1.645
     },
     {
-      "character": "伸",
-      "start_time": 3.766,
-      "end_time": 3.966
+      "character": "拿",
+      "start_time": 1.645,
+      "end_time": 1.816
     },
     {
-      "character": "手",
-      "start_time": 3.966,
-      "end_time": 4.133
+      "character": "木",
+      "start_time": 1.816,
+      "end_time": 1.974
     },
     {
-      "character": "捡",
-      "start_time": 4.133,
-      "end_time": 4.408
+      "character": "雕",
+      "start_time": 1.974,
+      "end_time": 2.149
     },
     {
-      "character": "颗",
-      "start_time": 4.408,
-      "end_time": 4.566
-    },
-    {
-      "character": "对",
-      "start_time": 4.566,
-      "end_time": 4.687
-    },
-    {
-      "character": "光",
-      "start_time": 4.687,
-      "end_time": 4.874
-    },
-    {
-      "character": "看",
-      "start_time": 4.874,
-      "end_time": 5.058
+      "character": "玩",
+      "start_time": 2.149,
+      "end_time": 2.333
     },
     {
       "character": "，",
-      "start_time": 5.058,
-      "end_time": 5.374
+      "start_time": 2.333,
+      "end_time": 2.599
     },
     {
       "character": "笑",
-      "start_time": 5.374,
-      "end_time": 5.612
+      "start_time": 2.599,
+      "end_time": 2.849
     },
     {
-      "character": "出",
-      "start_time": 5.612,
-      "end_time": 5.766
+      "character": "天",
+      "start_time": 2.849,
+      "end_time": 3.054
     },
     {
-      "character": "脆",
-      "start_time": 5.766,
-      "end_time": 5.92
+      "character": "真",
+      "start_time": 3.054,
+      "end_time": 3.216
     },
     {
-      "character": "声",
-      "start_time": 5.92,
-      "end_time": 6.099
+      "character": "，",
+      "start_time": 3.216,
+      "end_time": 3.641
+    },
+    {
+      "character": "商",
+      "start_time": 3.641,
+      "end_time": 3.82
+    },
+    {
+      "character": "人",
+      "start_time": 3.82,
+      "end_time": 3.941
+    },
+    {
+      "character": "怒",
+      "start_time": 3.941,
+      "end_time": 4.183
+    },
+    {
+      "character": "不",
+      "start_time": 4.183,
+      "end_time": 4.295
+    },
+    {
+      "character": "敢",
+      "start_time": 4.295,
+      "end_time": 4.454
+    },
+    {
+      "character": "作",
+      "start_time": 4.454,
+      "end_time": 4.629
+    },
+    {
+      "character": "，",
+      "start_time": 4.629,
+      "end_time": 4.904
+    },
+    {
+      "character": "眼",
+      "start_time": 4.904,
+      "end_time": 5.12
+    },
+    {
+      "character": "睁",
+      "start_time": 5.12,
+      "end_time": 5.279
+    },
+    {
+      "character": "睁",
+      "start_time": 5.279,
+      "end_time": 5.445
+    },
+    {
+      "character": "看",
+      "start_time": 5.445,
+      "end_time": 5.749
+    },
+    {
+      "character": "交",
+      "start_time": 5.749,
+      "end_time": 5.941
+    },
+    {
+      "character": "易",
+      "start_time": 5.941,
+      "end_time": 6.045
+    },
+    {
+      "character": "成",
+      "start_time": 6.045,
+      "end_time": 6.299
     },
     {
       "character": "。",
-      "start_time": 6.099,
-      "end_time": 6.258
+      "start_time": 6.299,
+      "end_time": 6.458
     }
   ],
-  "generated_at": "2025-09-23T08:26:39.025401"
+  "generated_at": "2025-11-07T23:17:52.089338"
 }

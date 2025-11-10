@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_029 Narration 07 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.24,Default,,0,0,0,,黑暗笼罩拍卖场{\c&H0000FFFF&\b1}妙依{\c&H00FFFFFF&\b0}声音
+Dialogue: 0,0:00:02.24,0:00:02.95,Default,,0,0,0,,穿透黑暗
+Dialogue: 0,0:00:03.40,0:00:05.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}九阴{\c&H00FFFFFF&\b0}之体竟是幌子这场拍卖
+Dialogue: 0,0:00:05.89,0:00:07.07,Default,,0,0,0,,根本是场抢劫
+Dialogue: 0,0:00:07.51,0:00:08.59,Default,,0,0,0,,女子轻笑宣布
+Dialogue: 0,0:00:08.89,0:00:10.96,Default,,0,0,0,,拍卖场将坠入星域大崩坏

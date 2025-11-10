@@ -1,233 +1,248 @@
 {
-  "text": "金鳞蛟王率领众人冲入陷阱！水浪螺催动滔天巨浪，却见前方水龙卷形成阵势，雷电轰鸣，天地变色！",
-  "audio_file": "data/021/chapter_022/chapter_022_narration_21.mp3",
-  "duration": 9.675,
+  "text": "贱鸟驾驭百变魔云，手持神象长枪，冲入金鳞蛟王血遁光罩，破坏血遁节点，金鳞蛟王速度骤降，绝望回望！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_022/chapter_022_narration_21.mp3",
+  "duration": 9.3,
   "character_timestamps": [
     {
-      "character": "金",
+      "character": "贱",
       "start_time": 0.016,
       "end_time": 0.174
     },
     {
-      "character": "鳞",
+      "character": "鸟",
       "start_time": 0.174,
-      "end_time": 0.329
+      "end_time": 0.354
     },
     {
-      "character": "蛟",
-      "start_time": 0.329,
-      "end_time": 0.524
+      "character": "驾",
+      "start_time": 0.354,
+      "end_time": 0.549
     },
     {
-      "character": "王",
-      "start_time": 0.524,
-      "end_time": 0.762
+      "character": "驭",
+      "start_time": 0.549,
+      "end_time": 0.674
     },
     {
-      "character": "率",
-      "start_time": 0.762,
-      "end_time": 0.991
-    },
-    {
-      "character": "领",
-      "start_time": 0.991,
-      "end_time": 1.137
-    },
-    {
-      "character": "众",
-      "start_time": 1.137,
-      "end_time": 1.299
-    },
-    {
-      "character": "人",
-      "start_time": 1.299,
-      "end_time": 1.487
-    },
-    {
-      "character": "冲",
-      "start_time": 1.487,
-      "end_time": 1.733
-    },
-    {
-      "character": "入",
-      "start_time": 1.733,
-      "end_time": 1.837
-    },
-    {
-      "character": "陷",
-      "start_time": 1.837,
-      "end_time": 2.058
-    },
-    {
-      "character": "阱",
-      "start_time": 2.058,
-      "end_time": 2.224
-    },
-    {
-      "character": "，",
-      "start_time": 2.224,
-      "end_time": 2.737
-    },
-    {
-      "character": "水",
-      "start_time": 2.737,
-      "end_time": 2.945
-    },
-    {
-      "character": "浪",
-      "start_time": 2.945,
-      "end_time": 3.099
-    },
-    {
-      "character": "螺",
-      "start_time": 3.099,
-      "end_time": 3.299
-    },
-    {
-      "character": "催",
-      "start_time": 3.299,
-      "end_time": 3.524
-    },
-    {
-      "character": "动",
-      "start_time": 3.524,
-      "end_time": 3.674
-    },
-    {
-      "character": "滔",
-      "start_time": 3.674,
-      "end_time": 3.933
-    },
-    {
-      "character": "天",
-      "start_time": 3.933,
-      "end_time": 4.124
-    },
-    {
-      "character": "巨",
-      "start_time": 4.124,
-      "end_time": 4.291
-    },
-    {
-      "character": "浪",
-      "start_time": 4.291,
-      "end_time": 4.445
-    },
-    {
-      "character": "，",
-      "start_time": 4.445,
-      "end_time": 4.849
-    },
-    {
-      "character": "却",
-      "start_time": 4.849,
-      "end_time": 4.974
-    },
-    {
-      "character": "见",
-      "start_time": 4.974,
-      "end_time": 5.124
-    },
-    {
-      "character": "前",
-      "start_time": 5.124,
-      "end_time": 5.387
-    },
-    {
-      "character": "方",
-      "start_time": 5.387,
-      "end_time": 5.554
-    },
-    {
-      "character": "水",
-      "start_time": 5.554,
-      "end_time": 5.749
-    },
-    {
-      "character": "龙",
-      "start_time": 5.749,
-      "end_time": 5.908
-    },
-    {
-      "character": "卷",
-      "start_time": 5.908,
-      "end_time": 6.149
-    },
-    {
-      "character": "形",
-      "start_time": 6.149,
-      "end_time": 6.429
-    },
-    {
-      "character": "成",
-      "start_time": 6.429,
-      "end_time": 6.608
-    },
-    {
-      "character": "阵",
-      "start_time": 6.608,
-      "end_time": 6.783
-    },
-    {
-      "character": "势",
-      "start_time": 6.783,
-      "end_time": 6.958
-    },
-    {
-      "character": "，",
-      "start_time": 6.958,
-      "end_time": 7.437
-    },
-    {
-      "character": "雷",
-      "start_time": 7.437,
-      "end_time": 7.687
-    },
-    {
-      "character": "电",
-      "start_time": 7.687,
-      "end_time": 7.883
-    },
-    {
-      "character": "轰",
-      "start_time": 7.883,
-      "end_time": 8.104
-    },
-    {
-      "character": "鸣",
-      "start_time": 8.104,
-      "end_time": 8.337
-    },
-    {
-      "character": "，",
-      "start_time": 8.337,
-      "end_time": 8.679
-    },
-    {
-      "character": "天",
-      "start_time": 8.679,
-      "end_time": 8.962
-    },
-    {
-      "character": "地",
-      "start_time": 8.962,
-      "end_time": 9.129
+      "character": "百",
+      "start_time": 0.674,
+      "end_time": 0.891
     },
     {
       "character": "变",
-      "start_time": 9.129,
-      "end_time": 9.329
+      "start_time": 0.891,
+      "end_time": 1.024
     },
     {
-      "character": "色",
-      "start_time": 9.329,
-      "end_time": 9.512
+      "character": "魔",
+      "start_time": 1.024,
+      "end_time": 1.212
+    },
+    {
+      "character": "云",
+      "start_time": 1.212,
+      "end_time": 1.424
+    },
+    {
+      "character": "，",
+      "start_time": 1.424,
+      "end_time": 1.683
+    },
+    {
+      "character": "手",
+      "start_time": 1.683,
+      "end_time": 1.887
+    },
+    {
+      "character": "持",
+      "start_time": 1.887,
+      "end_time": 2.045
+    },
+    {
+      "character": "神",
+      "start_time": 2.045,
+      "end_time": 2.241
+    },
+    {
+      "character": "象",
+      "start_time": 2.241,
+      "end_time": 2.408
+    },
+    {
+      "character": "长",
+      "start_time": 2.408,
+      "end_time": 2.608
+    },
+    {
+      "character": "枪",
+      "start_time": 2.608,
+      "end_time": 2.795
+    },
+    {
+      "character": "，",
+      "start_time": 2.795,
+      "end_time": 3.095
+    },
+    {
+      "character": "冲",
+      "start_time": 3.095,
+      "end_time": 3.287
+    },
+    {
+      "character": "入",
+      "start_time": 3.287,
+      "end_time": 3.42
+    },
+    {
+      "character": "金",
+      "start_time": 3.42,
+      "end_time": 3.57
+    },
+    {
+      "character": "鳞",
+      "start_time": 3.57,
+      "end_time": 3.716
+    },
+    {
+      "character": "蛟",
+      "start_time": 3.716,
+      "end_time": 3.924
+    },
+    {
+      "character": "王",
+      "start_time": 3.924,
+      "end_time": 4.07
+    },
+    {
+      "character": "血",
+      "start_time": 4.07,
+      "end_time": 4.32
+    },
+    {
+      "character": "遁",
+      "start_time": 4.32,
+      "end_time": 4.483
+    },
+    {
+      "character": "光",
+      "start_time": 4.483,
+      "end_time": 4.679
+    },
+    {
+      "character": "罩",
+      "start_time": 4.679,
+      "end_time": 4.816
+    },
+    {
+      "character": "，",
+      "start_time": 4.816,
+      "end_time": 5.154
+    },
+    {
+      "character": "破",
+      "start_time": 5.154,
+      "end_time": 5.358
+    },
+    {
+      "character": "坏",
+      "start_time": 5.358,
+      "end_time": 5.529
+    },
+    {
+      "character": "血",
+      "start_time": 5.529,
+      "end_time": 5.729
+    },
+    {
+      "character": "遁",
+      "start_time": 5.729,
+      "end_time": 5.874
+    },
+    {
+      "character": "节",
+      "start_time": 5.874,
+      "end_time": 6.054
+    },
+    {
+      "character": "点",
+      "start_time": 6.054,
+      "end_time": 6.204
+    },
+    {
+      "character": "，",
+      "start_time": 6.204,
+      "end_time": 6.712
+    },
+    {
+      "character": "金",
+      "start_time": 6.712,
+      "end_time": 6.87
+    },
+    {
+      "character": "鳞",
+      "start_time": 6.87,
+      "end_time": 7.016
+    },
+    {
+      "character": "蛟",
+      "start_time": 7.016,
+      "end_time": 7.212
+    },
+    {
+      "character": "王",
+      "start_time": 7.212,
+      "end_time": 7.354
+    },
+    {
+      "character": "速",
+      "start_time": 7.354,
+      "end_time": 7.579
+    },
+    {
+      "character": "度",
+      "start_time": 7.579,
+      "end_time": 7.704
+    },
+    {
+      "character": "骤",
+      "start_time": 7.704,
+      "end_time": 7.874
+    },
+    {
+      "character": "降",
+      "start_time": 7.874,
+      "end_time": 8.041
+    },
+    {
+      "character": "，",
+      "start_time": 8.041,
+      "end_time": 8.387
+    },
+    {
+      "character": "绝",
+      "start_time": 8.387,
+      "end_time": 8.629
+    },
+    {
+      "character": "望",
+      "start_time": 8.629,
+      "end_time": 8.812
+    },
+    {
+      "character": "回",
+      "start_time": 8.812,
+      "end_time": 9.024
+    },
+    {
+      "character": "望",
+      "start_time": 9.024,
+      "end_time": 9.137
     },
     {
       "character": "！",
-      "start_time": 9.512,
-      "end_time": 9.671
+      "start_time": 9.137,
+      "end_time": 9.296
     }
   ],
-  "generated_at": "2025-09-23T08:24:18.107956"
+  "generated_at": "2025-11-07T23:15:46.649241"
 }

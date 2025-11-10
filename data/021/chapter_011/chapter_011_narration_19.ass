@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.09,Default,,0,0,0,,丹药成功{\c&H0000FFFF&\b1}晋升{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:01.56,0:00:02.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双长舒{\c&H00FFFFFF&\b0}一口气
-Dialogue: 0,0:00:03.12,0:00:04.45,Default,,0,0,0,,将丹药交给火牛
-Dialogue: 0,0:00:04.90,0:00:06.70,Default,,0,0,0,,周围人群爆发出惊叹声
-Dialogue: 0,0:00:07.17,0:00:08.99,Default,,0,0,0,,纷纷议论这不可思议的一幕
+Dialogue: 0,0:00:00.02,0:00:00.82,Default,,0,0,0,,贱鸟认怂
+Dialogue: 0,0:00:01.19,0:00:03.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}乾坤袋{\c&H00FFFFFF&\b0}内贱鸟缩在角落不敢
+Dialogue: 0,0:00:03.57,0:00:05.09,Default,,0,0,0,,吱声原本属于它的
+Dialogue: 0,0:00:05.09,0:00:07.54,Default,,0,0,0,,地盘被{\c&H0000FFFF&\b1}白云{\c&H00FFFFFF&\b0}占据这朵神秘
+Dialogue: 0,0:00:07.54,0:00:09.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}云彩{\c&H00FFFFFF&\b0}到底有何来历

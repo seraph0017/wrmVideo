@@ -14,7 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}神藏引神{\c&H00FFFFFF&\b0}阵
-Dialogue: 0,0:00:01.34,0:00:02.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双御{\c&H00FFFFFF&\b0}百变魔云逃窜
-Dialogue: 0,0:00:03.37,0:00:04.87,Default,,0,0,0,,身后{\c&H0000FFFF&\b1}巨掌{\c&H00FFFFFF&\b0}雷霆抓来
-Dialogue: 0,0:00:05.15,0:00:06.30,Default,,0,0,0,,危机一触即发
+Dialogue: 0,0:00:00.02,0:00:00.75,Default,,0,0,0,,怪石中心
+Dialogue: 0,0:00:01.16,0:00:03.60,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}驾驭百变魔云谨慎飞行
+Dialogue: 0,0:00:04.04,0:00:05.81,Default,,0,0,0,,周遭先天{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}波动异常
+Dialogue: 0,0:00:06.15,0:00:07.01,Default,,0,0,0,,危机四伏

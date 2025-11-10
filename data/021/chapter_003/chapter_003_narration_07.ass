@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.09,Default,,0,0,0,,江影小筑林间
-Dialogue: 0,0:00:01.54,0:00:02.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}小丫{\c&H00FFFFFF&\b0}腾跃而来
-Dialogue: 0,0:00:03.07,0:00:04.56,Default,,0,0,0,,兴奋地向禹月影禀报
-Dialogue: 0,0:00:04.56,0:00:06.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双大{\c&H00FFFFFF&\b0}闹考核大典的消息
-Dialogue: 0,0:00:06.75,0:00:08.02,Default,,0,0,0,,林间花草因她的
-Dialogue: 0,0:00:08.02,0:00:09.27,Default,,0,0,0,,动作轻轻摇曳
+Dialogue: 0,0:00:00.02,0:00:02.44,Default,,0,0,0,,六族城自由交易区{\c&H0000FFFF&\b1}小老头{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.44,0:00:05.35,Default,,0,0,0,,突然拦住吴双灰袍破旧咧嘴笑
+Dialogue: 0,0:00:05.93,0:00:08.33,Default,,0,0,0,,小哥我这有{\c&H0000FFFF&\b1}宝贝{\c&H00FFFFFF&\b0}保准你
+Dialogue: 0,0:00:08.33,0:00:09.61,Default,,0,0,0,,用得上缘分呐

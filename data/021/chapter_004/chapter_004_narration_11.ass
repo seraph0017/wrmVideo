@@ -14,8 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴毅{\c&H00FFFFFF&\b0}身着灰色短衫
-Dialogue: 0,0:00:01.84,0:00:02.65,Default,,0,0,0,,面容狰狞
-Dialogue: 0,0:00:03.11,0:00:04.78,Default,,0,0,0,,恨声道吴双害他重伤
-Dialogue: 0,0:00:05.20,0:00:06.66,Default,,0,0,0,,请求吴战立刻追杀
-Dialogue: 0,0:00:06.98,0:00:07.94,Default,,0,0,0,,眼神怨毒
+Dialogue: 0,0:00:00.02,0:00:01.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}立于枯树下
+Dialogue: 0,0:00:01.67,0:00:03.42,Default,,0,0,0,,青色圆领袍袖口卷起
+Dialogue: 0,0:00:03.92,0:00:04.89,Default,,0,0,0,,手中搓着树叶
+Dialogue: 0,0:00:05.26,0:00:06.25,Default,,0,0,0,,抬头看向吴战
+Dialogue: 0,0:00:06.73,0:00:07.49,Default,,0,0,0,,嘴角带笑
+Dialogue: 0,0:00:07.92,0:00:09.08,Default,,0,0,0,,语气轻松调侃
+Dialogue: 0,0:00:09.38,0:00:10.20,Default,,0,0,0,,毫无惧色

@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_027 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.95,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}打响指
+Dialogue: 0,0:00:01.37,0:00:02.93,Default,,0,0,0,,找个{\c&H0000FFFF&\b1}安静{\c&H00FFFFFF&\b0}房间吃饭睡觉
+Dialogue: 0,0:00:03.24,0:00:04.75,Default,,0,0,0,,老鸨接过{\c&H0000FFFF&\b1}巨无霸{\c&H00FFFFFF&\b0}小弟的
+Dialogue: 0,0:00:04.75,0:00:06.14,Default,,0,0,0,,袋子眉开眼笑
+Dialogue: 0,0:00:06.44,0:00:08.56,Default,,0,0,0,,天心居空着{\c&H0000FFFF&\b1}妙依{\c&H00FFFFFF&\b0}仙子不在

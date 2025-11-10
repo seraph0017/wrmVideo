@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.66,Default,,0,0,0,,{\c&H0000FFFF&\b1}金龙{\c&H00FFFFFF&\b0}面露怒容金色胡须颤动
-Dialogue: 0,0:00:03.15,0:00:04.37,Default,,0,0,0,,声浪冲击狂鲨
-Dialogue: 0,0:00:04.86,0:00:07.36,Default,,0,0,0,,他手持金色长剑{\c&H0000FFFF&\b1}金鳞{\c&H00FFFFFF&\b0}光芒
-Dialogue: 0,0:00:07.36,0:00:10.02,Default,,0,0,0,,闪烁却被震飞数百米嘴角
-Dialogue: 0,0:00:10.02,0:00:10.39,Default,,0,0,0,,溢血
+Dialogue: 0,0:00:00.02,0:00:01.66,Default,,0,0,0,,旁观的金龙面露怒容
+Dialogue: 0,0:00:02.11,0:00:03.76,Default,,0,0,0,,金色声浪砸开冲击波
+Dialogue: 0,0:00:04.23,0:00:06.22,Default,,0,0,0,,手持{\c&H0000FFFF&\b1}金鳞剑{\c&H00FFFFFF&\b0}斩出金鳞光芒
+Dialogue: 0,0:00:06.54,0:00:07.34,Default,,0,0,0,,却仍被震飞
+Dialogue: 0,0:00:07.73,0:00:08.52,Default,,0,0,0,,嘴角溢血

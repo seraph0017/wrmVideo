@@ -14,10 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}背对着镜头
-Dialogue: 0,0:00:01.65,0:00:02.75,Default,,0,0,0,,粉色圆领襦裙
-Dialogue: 0,0:00:03.01,0:00:04.40,Default,,0,0,0,,双丫髻丝带飘动
-Dialogue: 0,0:00:04.78,0:00:05.69,Default,,0,0,0,,见{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}鼓掌
-Dialogue: 0,0:00:06.01,0:00:06.80,Default,,0,0,0,,亦跟着拍手
-Dialogue: 0,0:00:07.11,0:00:07.90,Default,,0,0,0,,声音清脆
-Dialogue: 0,0:00:08.20,0:00:09.36,Default,,0,0,0,,带动周围气氛
+Dialogue: 0,0:00:00.02,0:00:01.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}司马{\c&H00FFFFFF&\b0}鹏川听到掌声
+Dialogue: 0,0:00:01.83,0:00:03.23,Default,,0,0,0,,转头看向吴双方向
+Dialogue: 0,0:00:03.63,0:00:05.51,Default,,0,0,0,,金色战甲在{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}下耀眼
+Dialogue: 0,0:00:05.91,0:00:07.53,Default,,0,0,0,,表情从严肃转为惊讶
+Dialogue: 0,0:00:07.89,0:00:09.18,Default,,0,0,0,,随即恢复威严

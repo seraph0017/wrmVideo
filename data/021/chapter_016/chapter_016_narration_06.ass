@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.29,Default,,0,0,0,,权衡利弊后赵智决定暂不
-Dialogue: 0,0:00:02.29,0:00:04.85,Default,,0,0,0,,阻止{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}对身后长老沉声道
-Dialogue: 0,0:00:05.24,0:00:07.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}正值危难需团结力量
-Dialogue: 0,0:00:08.25,0:00:09.44,Default,,0,0,0,,此事暂缓处理
+Dialogue: 0,0:00:00.02,0:00:01.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}司马{\c&H00FFFFFF&\b0}刀被吴双震飞
+Dialogue: 0,0:00:01.68,0:00:02.37,Default,,0,0,0,,摔在地上
+Dialogue: 0,0:00:02.82,0:00:03.52,Default,,0,0,0,,长刀脱手
+Dialogue: 0,0:00:04.01,0:00:05.22,Default,,0,0,0,,他抬头怒视{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.64,0:00:07.57,Default,,0,0,0,,眼神从疯狂渐转清明
+Dialogue: 0,0:00:07.96,0:00:09.66,Default,,0,0,0,,嘴唇颤抖却发不出声

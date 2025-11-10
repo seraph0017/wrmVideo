@@ -14,9 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.69,Default,,0,0,0,,拍卖台上
-Dialogue: 0,0:00:01.11,0:00:03.25,Default,,0,0,0,,女皇绝地{\c&H0000FFFF&\b1}藏宝图{\c&H00FFFFFF&\b0}价格飙升至
-Dialogue: 0,0:00:03.25,0:00:05.08,Default,,0,0,0,,十三万上品{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}晶石
-Dialogue: 0,0:00:05.51,0:00:06.64,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵猛{\c&H00FFFFFF&\b0}心急如焚
-Dialogue: 0,0:00:07.01,0:00:08.23,Default,,0,0,0,,转头看向{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:08.57,0:00:09.83,Default,,0,0,0,,眼神充满询问
+Dialogue: 0,0:00:00.02,0:00:00.49,Default,,0,0,0,,包间内
+Dialogue: 0,0:00:00.85,0:00:02.24,Default,,0,0,0,,卜一峰嚣张地站在那里
+Dialogue: 0,0:00:02.56,0:00:03.58,Default,,0,0,0,,折扇一指台下
+Dialogue: 0,0:00:03.89,0:00:04.62,Default,,0,0,0,,高声叫价
+Dialogue: 0,0:00:04.92,0:00:05.73,Default,,0,0,0,,神情傲慢
+Dialogue: 0,0:00:06.17,0:00:07.83,Default,,0,0,0,,完全不把其他竞拍者
+Dialogue: 0,0:00:07.83,0:00:08.53,Default,,0,0,0,,放在眼里

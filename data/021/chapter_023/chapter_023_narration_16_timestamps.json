@@ -1,213 +1,308 @@
 {
-  "text": "吴双被爆炸余波震飞，坠入龙隐湖，身体重伤昏迷，青色长袍破损，漂浮在水面上随波逐流。",
-  "audio_file": "data/021/chapter_023/chapter_023_narration_16.mp3",
-  "duration": 8.533,
+  "text": "孙剑雨本命飞剑被冰封！白色圆领袍下身形颤抖，小眼睛满是不敢置信，看着冰封坠落的飞剑，嘴角溢血，第一次显露恐惧，色厉内荏。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_023/chapter_023_narration_16.mp3",
+  "duration": 11.933,
   "character_timestamps": [
     {
-      "character": "吴",
-      "start_time": 0.02,
-      "end_time": 0.191
+      "character": "孙",
+      "start_time": 0.016,
+      "end_time": 0.212
     },
     {
-      "character": "双",
-      "start_time": 0.191,
-      "end_time": 0.412
+      "character": "剑",
+      "start_time": 0.212,
+      "end_time": 0.374
     },
     {
-      "character": "被",
-      "start_time": 0.412,
-      "end_time": 0.554
+      "character": "雨",
+      "start_time": 0.374,
+      "end_time": 0.491
     },
     {
-      "character": "爆",
-      "start_time": 0.554,
-      "end_time": 0.754
+      "character": "本",
+      "start_time": 0.491,
+      "end_time": 0.633
     },
     {
-      "character": "炸",
-      "start_time": 0.754,
-      "end_time": 0.924
-    },
-    {
-      "character": "余",
-      "start_time": 0.924,
-      "end_time": 1.083
-    },
-    {
-      "character": "波",
-      "start_time": 1.083,
-      "end_time": 1.249
-    },
-    {
-      "character": "震",
-      "start_time": 1.249,
-      "end_time": 1.42
+      "character": "命",
+      "start_time": 0.633,
+      "end_time": 0.845
     },
     {
       "character": "飞",
-      "start_time": 1.42,
-      "end_time": 1.629
+      "start_time": 0.845,
+      "end_time": 1.058
+    },
+    {
+      "character": "剑",
+      "start_time": 1.058,
+      "end_time": 1.224
+    },
+    {
+      "character": "被",
+      "start_time": 1.224,
+      "end_time": 1.341
+    },
+    {
+      "character": "冰",
+      "start_time": 1.341,
+      "end_time": 1.541
+    },
+    {
+      "character": "封",
+      "start_time": 1.541,
+      "end_time": 1.724
     },
     {
       "character": "，",
-      "start_time": 1.629,
-      "end_time": 2.066
+      "start_time": 1.724,
+      "end_time": 2.229
     },
     {
-      "character": "坠",
-      "start_time": 2.066,
-      "end_time": 2.208
-    },
-    {
-      "character": "入",
-      "start_time": 2.208,
-      "end_time": 2.341
-    },
-    {
-      "character": "龙",
-      "start_time": 2.341,
-      "end_time": 2.545
-    },
-    {
-      "character": "隐",
-      "start_time": 2.545,
-      "end_time": 2.704
-    },
-    {
-      "character": "湖",
-      "start_time": 2.704,
-      "end_time": 2.962
-    },
-    {
-      "character": "，",
-      "start_time": 2.962,
-      "end_time": 3.174
-    },
-    {
-      "character": "身",
-      "start_time": 3.174,
-      "end_time": 3.395
-    },
-    {
-      "character": "体",
-      "start_time": 3.395,
-      "end_time": 3.587
-    },
-    {
-      "character": "重",
-      "start_time": 3.587,
-      "end_time": 3.82
-    },
-    {
-      "character": "伤",
-      "start_time": 3.82,
-      "end_time": 4.012
-    },
-    {
-      "character": "昏",
-      "start_time": 4.012,
-      "end_time": 4.166
-    },
-    {
-      "character": "迷",
-      "start_time": 4.166,
-      "end_time": 4.416
-    },
-    {
-      "character": "，",
-      "start_time": 4.416,
-      "end_time": 4.77
-    },
-    {
-      "character": "青",
-      "start_time": 4.77,
-      "end_time": 5.02
+      "character": "白",
+      "start_time": 2.229,
+      "end_time": 2.395
     },
     {
       "character": "色",
-      "start_time": 5.02,
-      "end_time": 5.187
+      "start_time": 2.395,
+      "end_time": 2.558
     },
     {
-      "character": "长",
-      "start_time": 5.187,
-      "end_time": 5.445
+      "character": "圆",
+      "start_time": 2.558,
+      "end_time": 2.695
+    },
+    {
+      "character": "领",
+      "start_time": 2.695,
+      "end_time": 2.837
     },
     {
       "character": "袍",
-      "start_time": 5.445,
-      "end_time": 5.629
+      "start_time": 2.837,
+      "end_time": 3.02
     },
     {
-      "character": "破",
-      "start_time": 5.629,
-      "end_time": 5.833
+      "character": "下",
+      "start_time": 3.02,
+      "end_time": 3.233
     },
     {
-      "character": "损",
-      "start_time": 5.833,
-      "end_time": 6.058
+      "character": "身",
+      "start_time": 3.233,
+      "end_time": 3.508
+    },
+    {
+      "character": "形",
+      "start_time": 3.508,
+      "end_time": 3.695
+    },
+    {
+      "character": "颤",
+      "start_time": 3.695,
+      "end_time": 3.92
+    },
+    {
+      "character": "抖",
+      "start_time": 3.92,
+      "end_time": 4.091
     },
     {
       "character": "，",
-      "start_time": 6.058,
-      "end_time": 6.37
+      "start_time": 4.091,
+      "end_time": 4.483
     },
     {
-      "character": "漂",
-      "start_time": 6.37,
-      "end_time": 6.591
+      "character": "小",
+      "start_time": 4.483,
+      "end_time": 4.666
     },
     {
-      "character": "浮",
-      "start_time": 6.591,
-      "end_time": 6.716
+      "character": "眼",
+      "start_time": 4.666,
+      "end_time": 4.824
     },
     {
-      "character": "在",
-      "start_time": 6.716,
-      "end_time": 6.849
+      "character": "睛",
+      "start_time": 4.824,
+      "end_time": 5.008
     },
     {
-      "character": "水",
-      "start_time": 6.849,
-      "end_time": 7.083
+      "character": "满",
+      "start_time": 5.008,
+      "end_time": 5.299
     },
     {
-      "character": "面",
-      "start_time": 7.083,
-      "end_time": 7.241
+      "character": "是",
+      "start_time": 5.299,
+      "end_time": 5.437
     },
     {
-      "character": "上",
-      "start_time": 7.241,
-      "end_time": 7.454
+      "character": "不",
+      "start_time": 5.437,
+      "end_time": 5.558
     },
     {
-      "character": "随",
-      "start_time": 7.454,
-      "end_time": 7.816
+      "character": "敢",
+      "start_time": 5.558,
+      "end_time": 5.729
     },
     {
-      "character": "波",
-      "start_time": 7.816,
-      "end_time": 8.012
+      "character": "置",
+      "start_time": 5.729,
+      "end_time": 5.854
     },
     {
-      "character": "逐",
-      "start_time": 8.012,
-      "end_time": 8.158
+      "character": "信",
+      "start_time": 5.854,
+      "end_time": 6.024
     },
     {
-      "character": "流",
-      "start_time": 8.158,
-      "end_time": 8.37
+      "character": "，",
+      "start_time": 6.024,
+      "end_time": 6.549
+    },
+    {
+      "character": "看",
+      "start_time": 6.549,
+      "end_time": 6.741
+    },
+    {
+      "character": "着",
+      "start_time": 6.741,
+      "end_time": 6.829
+    },
+    {
+      "character": "冰",
+      "start_time": 6.829,
+      "end_time": 7.045
+    },
+    {
+      "character": "封",
+      "start_time": 7.045,
+      "end_time": 7.229
+    },
+    {
+      "character": "坠",
+      "start_time": 7.229,
+      "end_time": 7.441
+    },
+    {
+      "character": "落",
+      "start_time": 7.441,
+      "end_time": 7.57
+    },
+    {
+      "character": "的",
+      "start_time": 7.57,
+      "end_time": 7.649
+    },
+    {
+      "character": "飞",
+      "start_time": 7.649,
+      "end_time": 7.845
+    },
+    {
+      "character": "剑",
+      "start_time": 7.845,
+      "end_time": 8.008
+    },
+    {
+      "character": "，",
+      "start_time": 8.008,
+      "end_time": 8.358
+    },
+    {
+      "character": "嘴",
+      "start_time": 8.358,
+      "end_time": 8.57
+    },
+    {
+      "character": "角",
+      "start_time": 8.57,
+      "end_time": 8.749
+    },
+    {
+      "character": "溢",
+      "start_time": 8.749,
+      "end_time": 8.883
+    },
+    {
+      "character": "血",
+      "start_time": 8.883,
+      "end_time": 9.079
+    },
+    {
+      "character": "，",
+      "start_time": 9.079,
+      "end_time": 9.429
+    },
+    {
+      "character": "第",
+      "start_time": 9.429,
+      "end_time": 9.57
+    },
+    {
+      "character": "一",
+      "start_time": 9.57,
+      "end_time": 9.712
+    },
+    {
+      "character": "次",
+      "start_time": 9.712,
+      "end_time": 9.866
+    },
+    {
+      "character": "显",
+      "start_time": 9.866,
+      "end_time": 10.133
+    },
+    {
+      "character": "露",
+      "start_time": 10.133,
+      "end_time": 10.291
+    },
+    {
+      "character": "恐",
+      "start_time": 10.291,
+      "end_time": 10.549
+    },
+    {
+      "character": "惧",
+      "start_time": 10.549,
+      "end_time": 10.737
+    },
+    {
+      "character": "，",
+      "start_time": 10.737,
+      "end_time": 11.054
+    },
+    {
+      "character": "色",
+      "start_time": 11.054,
+      "end_time": 11.354
+    },
+    {
+      "character": "厉",
+      "start_time": 11.354,
+      "end_time": 11.487
+    },
+    {
+      "character": "内",
+      "start_time": 11.487,
+      "end_time": 11.633
+    },
+    {
+      "character": "荏",
+      "start_time": 11.633,
+      "end_time": 11.77
     },
     {
       "character": "。",
-      "start_time": 8.37,
-      "end_time": 8.529
+      "start_time": 11.77,
+      "end_time": 11.929
     }
   ],
-  "generated_at": "2025-09-23T08:24:40.272062"
+  "generated_at": "2025-11-07T23:16:14.037012"
 }

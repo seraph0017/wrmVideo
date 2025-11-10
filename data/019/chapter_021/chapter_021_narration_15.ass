@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_021 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.15,Default,,0,0,0,,朱允熥沉思片刻最终
+Dialogue: 0,0:00:02.15,0:00:02.88,Default,,0,0,0,,下定决心
+Dialogue: 0,0:00:03.30,0:00:05.72,Default,,0,0,0,,他回到龙椅坐下杏黄色袍袖
+Dialogue: 0,0:00:05.72,0:00:08.45,Default,,0,0,0,,一摆下令严惩{\c&H0000FFFF&\b1}周王{\c&H00FFFFFF&\b0}党羽同时
+Dialogue: 0,0:00:08.45,0:00:10.56,Default,,0,0,0,,{\c&H0000FFFF&\b1}安抚{\c&H00FFFFFF&\b0}李景隆让他无需过
+Dialogue: 0,0:00:10.56,0:00:11.04,Default,,0,0,0,,度担忧

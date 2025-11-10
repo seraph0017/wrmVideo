@@ -1,278 +1,273 @@
 {
-  "text": "萧叔带着手下围追堵截，脸上露出得意笑容，认为贱鸟已是囊中之物，手中长剑挥动，剑气纵横，不断轰击贱鸟周围地面。",
-  "audio_file": "data/021/chapter_013/chapter_013_narration_19.mp3",
-  "duration": 10.425,
+  "text": "电光一闪，吴双一枪洞穿敌人胸口，将其钉在树上，随后转身查看贱鸟，见其只是昏迷，松了口气，眼神瞬间变得冰冷。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_013/chapter_013_narration_19.mp3",
+  "duration": 10.675,
   "character_timestamps": [
     {
-      "character": "萧",
+      "character": "电",
       "start_time": 0.02,
-      "end_time": 0.254
+      "end_time": 0.216
     },
     {
-      "character": "叔",
-      "start_time": 0.254,
-      "end_time": 0.437
+      "character": "光",
+      "start_time": 0.216,
+      "end_time": 0.391
     },
     {
-      "character": "带",
-      "start_time": 0.437,
-      "end_time": 0.574
+      "character": "一",
+      "start_time": 0.391,
+      "end_time": 0.504
     },
     {
-      "character": "着",
-      "start_time": 0.574,
-      "end_time": 0.654
-    },
-    {
-      "character": "手",
-      "start_time": 0.654,
-      "end_time": 0.841
-    },
-    {
-      "character": "下",
-      "start_time": 0.841,
-      "end_time": 1.029
-    },
-    {
-      "character": "围",
-      "start_time": 1.029,
-      "end_time": 1.199
-    },
-    {
-      "character": "追",
-      "start_time": 1.199,
-      "end_time": 1.362
-    },
-    {
-      "character": "堵",
-      "start_time": 1.362,
-      "end_time": 1.537
-    },
-    {
-      "character": "截",
-      "start_time": 1.537,
-      "end_time": 1.804
+      "character": "闪",
+      "start_time": 0.504,
+      "end_time": 0.749
     },
     {
       "character": "，",
-      "start_time": 1.804,
-      "end_time": 2.208
+      "start_time": 0.749,
+      "end_time": 1.141
     },
     {
-      "character": "脸",
-      "start_time": 2.208,
-      "end_time": 2.408
+      "character": "吴",
+      "start_time": 1.141,
+      "end_time": 1.308
+    },
+    {
+      "character": "双",
+      "start_time": 1.308,
+      "end_time": 1.491
+    },
+    {
+      "character": "一",
+      "start_time": 1.491,
+      "end_time": 1.595
+    },
+    {
+      "character": "枪",
+      "start_time": 1.595,
+      "end_time": 1.791
+    },
+    {
+      "character": "洞",
+      "start_time": 1.791,
+      "end_time": 2.016
+    },
+    {
+      "character": "穿",
+      "start_time": 2.016,
+      "end_time": 2.22
+    },
+    {
+      "character": "敌",
+      "start_time": 2.22,
+      "end_time": 2.387
+    },
+    {
+      "character": "人",
+      "start_time": 2.387,
+      "end_time": 2.508
+    },
+    {
+      "character": "胸",
+      "start_time": 2.508,
+      "end_time": 2.729
+    },
+    {
+      "character": "口",
+      "start_time": 2.729,
+      "end_time": 2.92
+    },
+    {
+      "character": "，",
+      "start_time": 2.92,
+      "end_time": 3.249
+    },
+    {
+      "character": "将",
+      "start_time": 3.249,
+      "end_time": 3.404
+    },
+    {
+      "character": "其",
+      "start_time": 3.404,
+      "end_time": 3.558
+    },
+    {
+      "character": "钉",
+      "start_time": 3.558,
+      "end_time": 3.779
+    },
+    {
+      "character": "在",
+      "start_time": 3.779,
+      "end_time": 3.929
+    },
+    {
+      "character": "树",
+      "start_time": 3.929,
+      "end_time": 4.129
     },
     {
       "character": "上",
-      "start_time": 2.408,
-      "end_time": 2.566
-    },
-    {
-      "character": "露",
-      "start_time": 2.566,
-      "end_time": 2.704
-    },
-    {
-      "character": "出",
-      "start_time": 2.704,
-      "end_time": 2.845
-    },
-    {
-      "character": "得",
-      "start_time": 2.845,
-      "end_time": 3.074
-    },
-    {
-      "character": "意",
-      "start_time": 3.074,
-      "end_time": 3.195
-    },
-    {
-      "character": "笑",
-      "start_time": 3.195,
-      "end_time": 3.424
-    },
-    {
-      "character": "容",
-      "start_time": 3.424,
-      "end_time": 3.629
+      "start_time": 4.129,
+      "end_time": 4.291
     },
     {
       "character": "，",
-      "start_time": 3.629,
-      "end_time": 4.079
+      "start_time": 4.291,
+      "end_time": 4.616
     },
     {
-      "character": "认",
-      "start_time": 4.079,
-      "end_time": 4.216
-    },
-    {
-      "character": "为",
-      "start_time": 4.216,
-      "end_time": 4.32
-    },
-    {
-      "character": "贱",
-      "start_time": 4.32,
-      "end_time": 4.512
-    },
-    {
-      "character": "鸟",
-      "start_time": 4.512,
-      "end_time": 4.699
-    },
-    {
-      "character": "已",
-      "start_time": 4.699,
+      "character": "随",
+      "start_time": 4.616,
       "end_time": 4.804
     },
     {
-      "character": "是",
+      "character": "后",
       "start_time": 4.804,
-      "end_time": 4.916
+      "end_time": 4.958
     },
     {
-      "character": "囊",
-      "start_time": 4.916,
-      "end_time": 5.137
+      "character": "转",
+      "start_time": 4.958,
+      "end_time": 5.191
     },
     {
-      "character": "中",
-      "start_time": 5.137,
-      "end_time": 5.291
+      "character": "身",
+      "start_time": 5.191,
+      "end_time": 5.383
     },
     {
-      "character": "之",
-      "start_time": 5.291,
-      "end_time": 5.445
+      "character": "查",
+      "start_time": 5.383,
+      "end_time": 5.616
     },
     {
-      "character": "物",
-      "start_time": 5.445,
-      "end_time": 5.591
-    },
-    {
-      "character": "，",
-      "start_time": 5.591,
-      "end_time": 5.899
-    },
-    {
-      "character": "手",
-      "start_time": 5.899,
-      "end_time": 6.108
-    },
-    {
-      "character": "中",
-      "start_time": 6.108,
-      "end_time": 6.249
-    },
-    {
-      "character": "长",
-      "start_time": 6.249,
-      "end_time": 6.487
-    },
-    {
-      "character": "剑",
-      "start_time": 6.487,
-      "end_time": 6.645
-    },
-    {
-      "character": "挥",
-      "start_time": 6.645,
-      "end_time": 6.841
-    },
-    {
-      "character": "动",
-      "start_time": 6.841,
-      "end_time": 6.979
-    },
-    {
-      "character": "，",
-      "start_time": 6.979,
-      "end_time": 7.27
-    },
-    {
-      "character": "剑",
-      "start_time": 7.27,
-      "end_time": 7.495
-    },
-    {
-      "character": "气",
-      "start_time": 7.495,
-      "end_time": 7.654
-    },
-    {
-      "character": "纵",
-      "start_time": 7.654,
-      "end_time": 7.841
-    },
-    {
-      "character": "横",
-      "start_time": 7.841,
-      "end_time": 8.108
-    },
-    {
-      "character": "，",
-      "start_time": 8.108,
-      "end_time": 8.487
-    },
-    {
-      "character": "不",
-      "start_time": 8.487,
-      "end_time": 8.608
-    },
-    {
-      "character": "断",
-      "start_time": 8.608,
-      "end_time": 8.774
-    },
-    {
-      "character": "轰",
-      "start_time": 8.774,
-      "end_time": 9.045
-    },
-    {
-      "character": "击",
-      "start_time": 9.045,
-      "end_time": 9.195
+      "character": "看",
+      "start_time": 5.616,
+      "end_time": 5.783
     },
     {
       "character": "贱",
-      "start_time": 9.195,
-      "end_time": 9.341
+      "start_time": 5.783,
+      "end_time": 5.924
     },
     {
       "character": "鸟",
-      "start_time": 9.341,
-      "end_time": 9.545
+      "start_time": 5.924,
+      "end_time": 6.158
     },
     {
-      "character": "周",
-      "start_time": 9.545,
-      "end_time": 9.787
+      "character": "，",
+      "start_time": 6.158,
+      "end_time": 6.595
     },
     {
-      "character": "围",
-      "start_time": 9.787,
-      "end_time": 9.916
+      "character": "见",
+      "start_time": 6.595,
+      "end_time": 6.787
     },
     {
-      "character": "地",
-      "start_time": 9.916,
-      "end_time": 10.104
+      "character": "其",
+      "start_time": 6.787,
+      "end_time": 6.949
     },
     {
-      "character": "面",
-      "start_time": 10.104,
-      "end_time": 10.262
+      "character": "只",
+      "start_time": 6.949,
+      "end_time": 7.087
+    },
+    {
+      "character": "是",
+      "start_time": 7.087,
+      "end_time": 7.208
+    },
+    {
+      "character": "昏",
+      "start_time": 7.208,
+      "end_time": 7.379
+    },
+    {
+      "character": "迷",
+      "start_time": 7.379,
+      "end_time": 7.641
+    },
+    {
+      "character": "，",
+      "start_time": 7.641,
+      "end_time": 7.999
+    },
+    {
+      "character": "松",
+      "start_time": 7.999,
+      "end_time": 8.237
+    },
+    {
+      "character": "了",
+      "start_time": 8.237,
+      "end_time": 8.308
+    },
+    {
+      "character": "口",
+      "start_time": 8.308,
+      "end_time": 8.474
+    },
+    {
+      "character": "气",
+      "start_time": 8.474,
+      "end_time": 8.662
+    },
+    {
+      "character": "，",
+      "start_time": 8.662,
+      "end_time": 8.97
+    },
+    {
+      "character": "眼",
+      "start_time": 8.97,
+      "end_time": 9.174
+    },
+    {
+      "character": "神",
+      "start_time": 9.174,
+      "end_time": 9.379
+    },
+    {
+      "character": "瞬",
+      "start_time": 9.379,
+      "end_time": 9.683
+    },
+    {
+      "character": "间",
+      "start_time": 9.683,
+      "end_time": 9.904
+    },
+    {
+      "character": "变",
+      "start_time": 9.904,
+      "end_time": 10.079
+    },
+    {
+      "character": "得",
+      "start_time": 10.079,
+      "end_time": 10.162
+    },
+    {
+      "character": "冰",
+      "start_time": 10.162,
+      "end_time": 10.416
+    },
+    {
+      "character": "冷",
+      "start_time": 10.416,
+      "end_time": 10.512
     },
     {
       "character": "。",
-      "start_time": 10.262,
-      "end_time": 10.421
+      "start_time": 10.512,
+      "end_time": 10.671
     }
   ],
-  "generated_at": "2025-09-23T08:21:05.049841"
+  "generated_at": "2025-11-07T23:11:19.589491"
 }

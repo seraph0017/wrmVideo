@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_005 Narration 16 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}杭州{\c&H00FFFFFF&\b0}城内
+Dialogue: 0,0:00:01.12,0:00:02.34,Default,,0,0,0,,孙效忠坐在轿中
+Dialogue: 0,0:00:02.81,0:00:04.68,Default,,0,0,0,,得知官差在应天府被捕
+Dialogue: 0,0:00:05.04,0:00:05.90,Default,,0,0,0,,面色阴沉
+Dialogue: 0,0:00:06.24,0:00:07.07,Default,,0,0,0,,心生不安

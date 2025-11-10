@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}被青狼眼力量震飞
-Dialogue: 0,0:00:02.15,0:00:03.24,Default,,0,0,0,,手臂骨头碎裂
-Dialogue: 0,0:00:03.61,0:00:04.42,Default,,0,0,0,,口吐鲜血
-Dialogue: 0,0:00:04.86,0:00:05.97,Default,,0,0,0,,但仍强忍着疼痛
-Dialogue: 0,0:00:06.27,0:00:07.29,Default,,0,0,0,,准备继续战斗
-Dialogue: 0,0:00:07.61,0:00:08.43,Default,,0,0,0,,表情坚毅
+Dialogue: 0,0:00:00.02,0:00:02.60,Default,,0,0,0,,盗中至尊虚空漫步指尖火花
+Dialogue: 0,0:00:02.60,0:00:04.99,Default,,0,0,0,,滋滋扩散{\c&H0000FFFF&\b1}俞罡{\c&H00FFFFFF&\b0}躬身行礼不敢
+Dialogue: 0,0:00:04.99,0:00:07.02,Default,,0,0,0,,直视俞{\c&H0000FFFF&\b1}红莲{\c&H00FFFFFF&\b0}神识呼喊
+Dialogue: 0,0:00:07.38,0:00:07.87,Default,,0,0,0,,就是他

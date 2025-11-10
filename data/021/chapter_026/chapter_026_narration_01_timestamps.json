@@ -1,163 +1,168 @@
 {
-  "text": "海面波涛汹涌，吴双立礁石望远处激战。天阴，风啸，浪拍礁溅白浪。",
-  "audio_file": "data/021/chapter_026/chapter_026_narration_01.mp3",
-  "duration": 6.583,
+  "text": "女皇绝地深处，血石山巅，吴双望前乱空，神识感险息，脚步微顿欲绕。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_026/chapter_026_narration_01.mp3",
+  "duration": 6.85,
   "character_timestamps": [
     {
-      "character": "海",
-      "start_time": 0.02,
-      "end_time": 0.212
+      "character": "女",
+      "start_time": 0.016,
+      "end_time": 0.191
     },
     {
-      "character": "面",
-      "start_time": 0.212,
-      "end_time": 0.391
+      "character": "皇",
+      "start_time": 0.191,
+      "end_time": 0.395
     },
     {
-      "character": "波",
-      "start_time": 0.391,
+      "character": "绝",
+      "start_time": 0.395,
       "end_time": 0.57
     },
     {
-      "character": "涛",
+      "character": "地",
       "start_time": 0.57,
-      "end_time": 0.729
+      "end_time": 0.695
     },
     {
-      "character": "汹",
-      "start_time": 0.729,
-      "end_time": 0.937
-    },
-    {
-      "character": "涌",
-      "start_time": 0.937,
-      "end_time": 1.095
-    },
-    {
-      "character": "，",
-      "start_time": 1.095,
-      "end_time": 1.591
-    },
-    {
-      "character": "吴",
-      "start_time": 1.591,
-      "end_time": 1.745
-    },
-    {
-      "character": "双",
-      "start_time": 1.745,
-      "end_time": 1.924
-    },
-    {
-      "character": "立",
-      "start_time": 1.924,
-      "end_time": 2.054
-    },
-    {
-      "character": "礁",
-      "start_time": 2.054,
-      "end_time": 2.254
-    },
-    {
-      "character": "石",
-      "start_time": 2.254,
-      "end_time": 2.445
-    },
-    {
-      "character": "望",
-      "start_time": 2.445,
-      "end_time": 2.612
-    },
-    {
-      "character": "远",
-      "start_time": 2.612,
-      "end_time": 2.808
+      "character": "深",
+      "start_time": 0.695,
+      "end_time": 0.908
     },
     {
       "character": "处",
-      "start_time": 2.808,
-      "end_time": 2.962
-    },
-    {
-      "character": "激",
-      "start_time": 2.962,
-      "end_time": 3.137
-    },
-    {
-      "character": "战",
-      "start_time": 3.137,
-      "end_time": 3.274
+      "start_time": 0.908,
+      "end_time": 1.083
     },
     {
       "character": "，",
-      "start_time": 3.274,
-      "end_time": 3.741
+      "start_time": 1.083,
+      "end_time": 1.391
     },
     {
-      "character": "天",
-      "start_time": 3.741,
-      "end_time": 3.945
+      "character": "血",
+      "start_time": 1.391,
+      "end_time": 1.674
     },
     {
-      "character": "阴",
-      "start_time": 3.945,
-      "end_time": 4.149
+      "character": "石",
+      "start_time": 1.674,
+      "end_time": 1.849
     },
     {
-      "character": "，",
-      "start_time": 4.149,
-      "end_time": 4.491
+      "character": "山",
+      "start_time": 1.849,
+      "end_time": 2.058
     },
     {
-      "character": "风",
-      "start_time": 4.491,
-      "end_time": 4.666
-    },
-    {
-      "character": "啸",
-      "start_time": 4.666,
-      "end_time": 4.849
+      "character": "巅",
+      "start_time": 2.058,
+      "end_time": 2.254
     },
     {
       "character": "，",
-      "start_time": 4.849,
-      "end_time": 5.124
+      "start_time": 2.254,
+      "end_time": 2.679
     },
     {
-      "character": "浪",
-      "start_time": 5.124,
-      "end_time": 5.366
+      "character": "吴",
+      "start_time": 2.679,
+      "end_time": 2.854
     },
     {
-      "character": "拍",
-      "start_time": 5.366,
-      "end_time": 5.591
+      "character": "双",
+      "start_time": 2.854,
+      "end_time": 3.07
     },
     {
-      "character": "礁",
-      "start_time": 5.591,
-      "end_time": 5.791
+      "character": "望",
+      "start_time": 3.07,
+      "end_time": 3.216
     },
     {
-      "character": "溅",
-      "start_time": 5.791,
-      "end_time": 6.062
+      "character": "前",
+      "start_time": 3.216,
+      "end_time": 3.379
     },
     {
-      "character": "白",
-      "start_time": 6.062,
-      "end_time": 6.291
+      "character": "乱",
+      "start_time": 3.379,
+      "end_time": 3.579
     },
     {
-      "character": "浪",
-      "start_time": 6.291,
-      "end_time": 6.42
+      "character": "空",
+      "start_time": 3.579,
+      "end_time": 3.787
+    },
+    {
+      "character": "，",
+      "start_time": 3.787,
+      "end_time": 4.124
+    },
+    {
+      "character": "神",
+      "start_time": 4.124,
+      "end_time": 4.387
+    },
+    {
+      "character": "识",
+      "start_time": 4.387,
+      "end_time": 4.566
+    },
+    {
+      "character": "感",
+      "start_time": 4.566,
+      "end_time": 4.724
+    },
+    {
+      "character": "险",
+      "start_time": 4.724,
+      "end_time": 4.929
+    },
+    {
+      "character": "息",
+      "start_time": 4.929,
+      "end_time": 5.162
+    },
+    {
+      "character": "，",
+      "start_time": 5.162,
+      "end_time": 5.529
+    },
+    {
+      "character": "脚",
+      "start_time": 5.529,
+      "end_time": 5.766
+    },
+    {
+      "character": "步",
+      "start_time": 5.766,
+      "end_time": 6.008
+    },
+    {
+      "character": "微",
+      "start_time": 6.008,
+      "end_time": 6.195
+    },
+    {
+      "character": "顿",
+      "start_time": 6.195,
+      "end_time": 6.366
+    },
+    {
+      "character": "欲",
+      "start_time": 6.366,
+      "end_time": 6.524
+    },
+    {
+      "character": "绕",
+      "start_time": 6.524,
+      "end_time": 6.687
     },
     {
       "character": "。",
-      "start_time": 6.42,
-      "end_time": 6.579
+      "start_time": 6.687,
+      "end_time": 6.846
     }
   ],
-  "generated_at": "2025-09-23T08:25:49.223048"
+  "generated_at": "2025-11-07T23:17:09.048456"
 }

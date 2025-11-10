@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈子清{\c&H00FFFFFF&\b0}在陈家水峰观望
-Dialogue: 0,0:00:02.17,0:00:03.87,Default,,0,0,0,,三角眼紧盯{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}身影
-Dialogue: 0,0:00:04.09,0:00:04.89,Default,,0,0,0,,面色阴沉
-Dialogue: 0,0:00:05.32,0:00:07.02,Default,,0,0,0,,冷哼{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}不知天高地厚
-Dialogue: 0,0:00:07.30,0:00:08.27,Default,,0,0,0,,等着看其出丑
+Dialogue: 0,0:00:00.02,0:00:01.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}在第六峰深处
+Dialogue: 0,0:00:01.98,0:00:03.39,Default,,0,0,0,,遭遇连环境残魂
+Dialogue: 0,0:00:03.89,0:00:05.61,Default,,0,0,0,,对方施展{\c&H0000FFFF&\b1}九玄真{\c&H00FFFFFF&\b0}火斩
+Dialogue: 0,0:00:06.09,0:00:07.17,Default,,0,0,0,,巨大火环袭来
+Dialogue: 0,0:00:07.45,0:00:08.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}表情凝重
+Dialogue: 0,0:00:08.92,0:00:09.71,Default,,0,0,0,,准备迎击

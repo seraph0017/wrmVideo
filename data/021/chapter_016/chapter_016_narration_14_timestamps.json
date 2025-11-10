@@ -1,238 +1,208 @@
 {
-  "text": "吴魁听闻吴双要离开祖山，面露难色：\"祖山需五大家族联手才能暂停虚空航行，陈家绝不会同意你离开！\"",
-  "audio_file": "data/021/chapter_016/chapter_016_narration_14.mp3",
-  "duration": 8.783,
+  "text": "陈子清在远处观望，见吴双速度远超陈翔，面色铁青，羽扇紧握变形，低吼\"废物！用法器！\"",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_016/chapter_016_narration_14.mp3",
+  "duration": 8.858,
   "character_timestamps": [
     {
-      "character": "吴",
+      "character": "陈",
       "start_time": 0.016,
-      "end_time": 0.17
+      "end_time": 0.212
     },
     {
-      "character": "魁",
-      "start_time": 0.17,
-      "end_time": 0.337
+      "character": "子",
+      "start_time": 0.212,
+      "end_time": 0.354
     },
     {
-      "character": "听",
-      "start_time": 0.337,
-      "end_time": 0.508
+      "character": "清",
+      "start_time": 0.354,
+      "end_time": 0.52
     },
     {
-      "character": "闻",
-      "start_time": 0.508,
-      "end_time": 0.629
+      "character": "在",
+      "start_time": 0.52,
+      "end_time": 0.662
+    },
+    {
+      "character": "远",
+      "start_time": 0.662,
+      "end_time": 0.899
+    },
+    {
+      "character": "处",
+      "start_time": 0.899,
+      "end_time": 1.066
+    },
+    {
+      "character": "观",
+      "start_time": 1.066,
+      "end_time": 1.279
+    },
+    {
+      "character": "望",
+      "start_time": 1.279,
+      "end_time": 1.404
+    },
+    {
+      "character": "，",
+      "start_time": 1.404,
+      "end_time": 1.837
+    },
+    {
+      "character": "见",
+      "start_time": 1.837,
+      "end_time": 2.016
     },
     {
       "character": "吴",
-      "start_time": 0.629,
-      "end_time": 0.774
+      "start_time": 2.016,
+      "end_time": 2.158
     },
     {
       "character": "双",
-      "start_time": 0.774,
-      "end_time": 0.954
+      "start_time": 2.158,
+      "end_time": 2.354
     },
     {
-      "character": "要",
-      "start_time": 0.954,
-      "end_time": 1.083
+      "character": "速",
+      "start_time": 2.354,
+      "end_time": 2.587
     },
     {
-      "character": "离",
-      "start_time": 1.083,
-      "end_time": 1.254
+      "character": "度",
+      "start_time": 2.587,
+      "end_time": 2.733
     },
     {
-      "character": "开",
-      "start_time": 1.254,
-      "end_time": 1.441
+      "character": "远",
+      "start_time": 2.733,
+      "end_time": 2.97
     },
     {
-      "character": "祖",
-      "start_time": 1.441,
-      "end_time": 1.599
-    },
-    {
-      "character": "山",
-      "start_time": 1.599,
-      "end_time": 1.799
-    },
-    {
-      "character": "，",
-      "start_time": 1.799,
-      "end_time": 2.124
-    },
-    {
-      "character": "面",
-      "start_time": 2.124,
-      "end_time": 2.341
-    },
-    {
-      "character": "露",
-      "start_time": 2.341,
-      "end_time": 2.504
-    },
-    {
-      "character": "难",
-      "start_time": 2.504,
-      "end_time": 2.695
-    },
-    {
-      "character": "色",
-      "start_time": 2.695,
-      "end_time": 2.862
-    },
-    {
-      "character": "：",
-      "start_time": 2.862,
-      "end_time": 3.341
-    },
-    {
-      "character": "祖",
-      "start_time": 3.341,
-      "end_time": 3.512
-    },
-    {
-      "character": "山",
-      "start_time": 3.512,
-      "end_time": 3.695
-    },
-    {
-      "character": "需",
-      "start_time": 3.695,
-      "end_time": 3.908
-    },
-    {
-      "character": "五",
-      "start_time": 3.908,
-      "end_time": 4.029
-    },
-    {
-      "character": "大",
-      "start_time": 4.029,
-      "end_time": 4.166
-    },
-    {
-      "character": "家",
-      "start_time": 4.166,
-      "end_time": 4.333
-    },
-    {
-      "character": "族",
-      "start_time": 4.333,
-      "end_time": 4.458
-    },
-    {
-      "character": "联",
-      "start_time": 4.458,
-      "end_time": 4.649
-    },
-    {
-      "character": "手",
-      "start_time": 4.649,
-      "end_time": 4.895
-    },
-    {
-      "character": "才",
-      "start_time": 4.895,
-      "end_time": 5.074
-    },
-    {
-      "character": "能",
-      "start_time": 5.074,
-      "end_time": 5.187
-    },
-    {
-      "character": "暂",
-      "start_time": 5.187,
-      "end_time": 5.408
-    },
-    {
-      "character": "停",
-      "start_time": 5.408,
-      "end_time": 5.612
-    },
-    {
-      "character": "虚",
-      "start_time": 5.612,
-      "end_time": 5.879
-    },
-    {
-      "character": "空",
-      "start_time": 5.879,
-      "end_time": 6.058
-    },
-    {
-      "character": "航",
-      "start_time": 6.058,
-      "end_time": 6.254
-    },
-    {
-      "character": "行",
-      "start_time": 6.254,
-      "end_time": 6.491
-    },
-    {
-      "character": "，",
-      "start_time": 6.491,
-      "end_time": 6.866
+      "character": "超",
+      "start_time": 2.97,
+      "end_time": 3.17
     },
     {
       "character": "陈",
-      "start_time": 6.866,
-      "end_time": 7.066
+      "start_time": 3.17,
+      "end_time": 3.366
     },
     {
-      "character": "家",
-      "start_time": 7.066,
-      "end_time": 7.229
+      "character": "翔",
+      "start_time": 3.366,
+      "end_time": 3.612
     },
     {
-      "character": "绝",
-      "start_time": 7.229,
-      "end_time": 7.462
+      "character": "，",
+      "start_time": 3.612,
+      "end_time": 3.966
     },
     {
-      "character": "不",
-      "start_time": 7.462,
-      "end_time": 7.574
+      "character": "面",
+      "start_time": 3.966,
+      "end_time": 4.199
     },
     {
-      "character": "会",
-      "start_time": 7.574,
-      "end_time": 7.695
+      "character": "色",
+      "start_time": 4.199,
+      "end_time": 4.387
     },
     {
-      "character": "同",
-      "start_time": 7.695,
-      "end_time": 7.974
+      "character": "铁",
+      "start_time": 4.387,
+      "end_time": 4.612
     },
     {
-      "character": "意",
-      "start_time": 7.974,
-      "end_time": 8.104
+      "character": "青",
+      "start_time": 4.612,
+      "end_time": 4.833
     },
     {
-      "character": "你",
-      "start_time": 8.104,
-      "end_time": 8.254
+      "character": "，",
+      "start_time": 4.833,
+      "end_time": 5.254
     },
     {
-      "character": "离",
-      "start_time": 8.254,
-      "end_time": 8.408
+      "character": "羽",
+      "start_time": 5.254,
+      "end_time": 5.412
     },
     {
-      "character": "开",
-      "start_time": 8.408,
-      "end_time": 8.624
+      "character": "扇",
+      "start_time": 5.412,
+      "end_time": 5.62
+    },
+    {
+      "character": "紧",
+      "start_time": 5.62,
+      "end_time": 5.887
+    },
+    {
+      "character": "握",
+      "start_time": 5.887,
+      "end_time": 6.024
+    },
+    {
+      "character": "变",
+      "start_time": 6.024,
+      "end_time": 6.195
+    },
+    {
+      "character": "形",
+      "start_time": 6.195,
+      "end_time": 6.458
+    },
+    {
+      "character": "，",
+      "start_time": 6.458,
+      "end_time": 6.829
+    },
+    {
+      "character": "低",
+      "start_time": 6.829,
+      "end_time": 7.016
+    },
+    {
+      "character": "吼",
+      "start_time": 7.016,
+      "end_time": 7.224
+    },
+    {
+      "character": "废",
+      "start_time": 7.224,
+      "end_time": 7.474
+    },
+    {
+      "character": "物",
+      "start_time": 7.474,
+      "end_time": 7.62
+    },
+    {
+      "character": "，",
+      "start_time": 7.62,
+      "end_time": 7.995
+    },
+    {
+      "character": "用",
+      "start_time": 7.995,
+      "end_time": 8.237
+    },
+    {
+      "character": "法",
+      "start_time": 8.237,
+      "end_time": 8.499
+    },
+    {
+      "character": "器",
+      "start_time": 8.499,
+      "end_time": 8.695
     },
     {
       "character": "！",
-      "start_time": 8.624,
-      "end_time": 8.783
+      "start_time": 8.695,
+      "end_time": 8.854
     }
   ],
-  "generated_at": "2025-09-23T08:21:54.268204"
+  "generated_at": "2025-11-07T23:12:18.528337"
 }

@@ -14,7 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.74,Default,,0,0,0,,吴魁在通道口接住{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:02.17,0:00:03.95,Default,,0,0,0,,见其重伤急忙带回疗伤
-Dialogue: 0,0:00:04.47,0:00:05.81,Default,,0,0,0,,途中不断询问状况
-Dialogue: 0,0:00:06.21,0:00:08.10,Default,,0,0,0,,眼神中充满担忧与后怕
+Dialogue: 0,0:00:00.02,0:00:01.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}司马{\c&H00FFFFFF&\b0}刀在第六峰外围
+Dialogue: 0,0:00:01.75,0:00:02.47,Default,,0,0,0,,手持长刀
+Dialogue: 0,0:00:02.72,0:00:03.50,Default,,0,0,0,,对抗残魂
+Dialogue: 0,0:00:03.75,0:00:04.46,Default,,0,0,0,,表情不甘
+Dialogue: 0,0:00:04.72,0:00:05.52,Default,,0,0,0,,眼神复杂
+Dialogue: 0,0:00:05.81,0:00:07.09,Default,,0,0,0,,背景为黑暗空间
+Dialogue: 0,0:00:07.44,0:00:08.26,Default,,0,0,0,,阴风吹过

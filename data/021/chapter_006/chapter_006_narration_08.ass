@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}停下追击看着
-Dialogue: 0,0:00:01.69,0:00:03.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈言{\c&H00FFFFFF&\b0}彬逃走方向皱眉
-Dialogue: 0,0:00:03.85,0:00:06.21,Default,,0,0,0,,他转身走向{\c&H0000FFFF&\b1}江浩{\c&H00FFFFFF&\b0}兄妹腹部
-Dialogue: 0,0:00:06.21,0:00:08.58,Default,,0,0,0,,伤口已恢复五六分{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:08.58,0:00:11.02,Default,,0,0,0,,惊讶发现他伤势竟好得如此
-Dialogue: 0,0:00:11.02,0:00:11.37,Default,,0,0,0,,之快
+Dialogue: 0,0:00:00.02,0:00:01.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵牧{\c&H00FFFFFF&\b0}被泥土冲击
+Dialogue: 0,0:00:01.62,0:00:03.35,Default,,0,0,0,,挥动{\c&H0000FFFF&\b1}天恒剑{\c&H00FFFFFF&\b0}斩碎石块
+Dialogue: 0,0:00:03.70,0:00:04.55,Default,,0,0,0,,却难掩慌乱
+Dialogue: 0,0:00:04.86,0:00:06.53,Default,,0,0,0,,怒吼着让手下反击

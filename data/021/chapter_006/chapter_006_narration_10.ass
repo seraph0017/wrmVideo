@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.53,Default,,0,0,0,,神鸟从废墟中钻出浑身漆黑
-Dialogue: 0,0:00:02.53,0:00:03.45,Default,,0,0,0,,如烧过的公鸡
-Dialogue: 0,0:00:04.02,0:00:05.06,Default,,0,0,0,,它吐着灰尘大骂
-Dialogue: 0,0:00:05.48,0:00:06.94,Default,,0,0,0,,谁偷了我的丹道总纲
-Dialogue: 0,0:00:07.42,0:00:08.61,Default,,0,0,0,,本神鸟饶不了你
+Dialogue: 0,0:00:00.02,0:00:01.82,Default,,0,0,0,,贱鸟黑漆漆的身体被打却
+Dialogue: 0,0:00:01.82,0:00:02.57,Default,,0,0,0,,毫发无损
+Dialogue: 0,0:00:03.16,0:00:04.43,Default,,0,0,0,,嚣张地用喙啄{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.85,0:00:06.44,Default,,0,0,0,,大喊还我{\c&H0000FFFF&\b1}丹道{\c&H00FFFFFF&\b0}总纲

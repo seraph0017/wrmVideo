@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_012 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.72,Default,,0,0,0,,洪流{\c&H0000FFFF&\b1}中吴{\c&H00FFFFFF&\b0}双被卷至下游虽
+Dialogue: 0,0:00:02.72,0:00:04.42,Default,,0,0,0,,重伤昏迷却呼吸平稳
+Dialogue: 0,0:00:04.99,0:00:06.64,Default,,0,0,0,,体内先天{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之气和
+Dialogue: 0,0:00:06.64,0:00:08.88,Default,,0,0,0,,中品{\c&H0000FFFF&\b1}神丹{\c&H00FFFFFF&\b0}药力自动修复伤势
+Dialogue: 0,0:00:09.27,0:00:11.53,Default,,0,0,0,,识海中期力量隐隐有突破
+Dialogue: 0,0:00:11.53,0:00:11.89,Default,,0,0,0,,迹象

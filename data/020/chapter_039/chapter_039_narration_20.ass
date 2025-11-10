@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_039 Narration 20 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.08,Default,,0,0,0,,摩罗青甲爆闪
+Dialogue: 0,0:00:01.55,0:00:03.71,Default,,0,0,0,,作为魔通海军团长他一眼
+Dialogue: 0,0:00:03.71,0:00:05.47,Default,,0,0,0,,认出{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}就是情报中的
+Dialogue: 0,0:00:05.47,0:00:08.17,Default,,0,0,0,,人族修士单手一挥青灰色
+Dialogue: 0,0:00:08.17,0:00:10.84,Default,,0,0,0,,能量瞬间笼罩四周杀意毕露

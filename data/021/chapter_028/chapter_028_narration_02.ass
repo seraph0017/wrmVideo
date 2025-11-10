@@ -14,8 +14,6 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.92,Default,,0,0,0,,天{\c&H0000FFFF&\b1}宝宝{\c&H00FFFFFF&\b0}蹲旁
-Dialogue: 0,0:00:01.29,0:00:02.18,Default,,0,0,0,,看摊上琉璃珠
-Dialogue: 0,0:00:02.54,0:00:03.39,Default,,0,0,0,,小脸好奇
-Dialogue: 0,0:00:03.77,0:00:05.06,Default,,0,0,0,,伸手捡颗对光看
-Dialogue: 0,0:00:05.37,0:00:06.10,Default,,0,0,0,,笑出脆声
+Dialogue: 0,0:00:00.02,0:00:02.85,Default,,0,0,0,,天{\c&H0000FFFF&\b1}宝宝{\c&H00FFFFFF&\b0}好奇望桌拿木雕玩笑
+Dialogue: 0,0:00:02.85,0:00:03.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}天真{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.64,0:00:06.30,Default,,0,0,0,,商人怒不敢作眼睁睁看交易成

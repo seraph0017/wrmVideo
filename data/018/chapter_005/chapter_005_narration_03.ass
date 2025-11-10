@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵牧{\c&H00FFFFFF&\b0}带领手下轰击洞口
-Dialogue: 0,0:00:02.03,0:00:02.75,Default,,0,0,0,,面色愤怒
-Dialogue: 0,0:00:03.18,0:00:04.83,Default,,0,0,0,,手中长剑闪烁光芒
-Dialogue: 0,0:00:05.17,0:00:06.54,Default,,0,0,0,,正全力破开通道
+Dialogue: 0,0:00:00.02,0:00:02.43,Default,,0,0,0,,经过三天苦战{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}终于突破
+Dialogue: 0,0:00:02.43,0:00:04.47,Default,,0,0,0,,瓶颈达到地泉境巅峰
+Dialogue: 0,0:00:04.92,0:00:06.82,Default,,0,0,0,,他的护体{\c&H0000FFFF&\b1}元罡{\c&H00FFFFFF&\b0}变得更加凝练
+Dialogue: 0,0:00:07.24,0:00:09.81,Default,,0,0,0,,力量也大幅提升{\c&H0000FFFF&\b1}连赤{\c&H00FFFFFF&\b0}眼白熊
+Dialogue: 0,0:00:09.81,0:00:11.58,Default,,0,0,0,,的全力一击都能硬接下来
+Dialogue: 0,0:00:11.87,0:00:13.97,Default,,0,0,0,,脚下地面被震出半米{\c&H0000FFFF&\b1}深坑{\c&H00FFFFFF&\b0}

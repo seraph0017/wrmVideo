@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_009 Narration 18 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.33,Default,,0,0,0,,{\c&H0000FFFF&\b1}周玉{\c&H00FFFFFF&\b0}笑容温和眼神深邃
+Dialogue: 0,0:00:02.83,0:00:05.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}秋鸿{\c&H00FFFFFF&\b0}酒馆会再动手白斜镇是
+Dialogue: 0,0:00:05.17,0:00:05.84,Default,,0,0,0,,必经之路
+Dialogue: 0,0:00:06.20,0:00:07.49,Default,,0,0,0,,背景是逐渐暗下的
+Dialogue: 0,0:00:07.49,0:00:09.05,Default,,0,0,0,,天色和远方的海面

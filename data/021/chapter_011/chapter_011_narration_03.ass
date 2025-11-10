@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.94,Default,,0,0,0,,眼看就要坠地
-Dialogue: 0,0:00:01.41,0:00:03.29,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}急中生智将白云收入
-Dialogue: 0,0:00:03.29,0:00:03.84,Default,,0,0,0,,{\c&H0000FFFF&\b1}乾坤袋{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:04.29,0:00:05.73,Default,,0,0,0,,随后双拳轰击地面
-Dialogue: 0,0:00:05.97,0:00:06.89,Default,,0,0,0,,减缓冲击力
-Dialogue: 0,0:00:07.25,0:00:08.32,Default,,0,0,0,,重重落在地上
+Dialogue: 0,0:00:00.02,0:00:00.77,Default,,0,0,0,,绝境求生
+Dialogue: 0,0:00:01.12,0:00:03.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}发现建筑物有阵法保护
+Dialogue: 0,0:00:03.63,0:00:06.08,Default,,0,0,0,,果断将{\c&H0000FFFF&\b1}白云{\c&H00FFFFFF&\b0}收入乾坤袋双拳
+Dialogue: 0,0:00:06.08,0:00:08.43,Default,,0,0,0,,轰地缓冲冲击惊险落地却
+Dialogue: 0,0:00:08.43,0:00:09.31,Default,,0,0,0,,疼得直咧嘴

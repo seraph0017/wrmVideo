@@ -1,278 +1,383 @@
 {
-  "text": "云海宗大殿外，江蜜儿背对着镜头，浅青色弟子服随风微动。她手握宗门典籍，指节因用力而发白，站在石阶上久久不动。",
-  "audio_file": "data/021/chapter_024/chapter_024_narration_07.mp3",
-  "duration": 10.483,
+  "text": "吴双与赵猛来到弯月岛外，远处巨大的弯月城映入眼帘。吴双身着深蓝色圆领袍，抬头观察城池轮廓，城墙上有阵法光芒流动，入口处人流涌动，他正思考如何进入城中。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_024/chapter_024_narration_07.mp3",
+  "duration": 15.525,
   "character_timestamps": [
     {
-      "character": "云",
-      "start_time": 0.02,
-      "end_time": 0.208
+      "character": "吴",
+      "start_time": 0.016,
+      "end_time": 0.174
     },
     {
-      "character": "海",
-      "start_time": 0.208,
-      "end_time": 0.399
+      "character": "双",
+      "start_time": 0.174,
+      "end_time": 0.362
     },
     {
-      "character": "宗",
-      "start_time": 0.399,
-      "end_time": 0.566
+      "character": "与",
+      "start_time": 0.362,
+      "end_time": 0.458
     },
     {
-      "character": "大",
-      "start_time": 0.566,
-      "end_time": 0.72
+      "character": "赵",
+      "start_time": 0.458,
+      "end_time": 0.649
     },
     {
-      "character": "殿",
-      "start_time": 0.72,
-      "end_time": 0.887
+      "character": "猛",
+      "start_time": 0.649,
+      "end_time": 0.933
+    },
+    {
+      "character": "来",
+      "start_time": 0.933,
+      "end_time": 1.108
+    },
+    {
+      "character": "到",
+      "start_time": 1.108,
+      "end_time": 1.245
+    },
+    {
+      "character": "弯",
+      "start_time": 1.245,
+      "end_time": 1.416
+    },
+    {
+      "character": "月",
+      "start_time": 1.416,
+      "end_time": 1.554
+    },
+    {
+      "character": "岛",
+      "start_time": 1.554,
+      "end_time": 1.774
     },
     {
       "character": "外",
-      "start_time": 0.887,
-      "end_time": 1.004
+      "start_time": 1.774,
+      "end_time": 1.916
     },
     {
       "character": "，",
-      "start_time": 1.004,
-      "end_time": 1.483
+      "start_time": 1.916,
+      "end_time": 2.416
     },
     {
-      "character": "江",
-      "start_time": 1.483,
-      "end_time": 1.62
+      "character": "远",
+      "start_time": 2.416,
+      "end_time": 2.629
     },
     {
-      "character": "蜜",
-      "start_time": 1.62,
-      "end_time": 1.833
+      "character": "处",
+      "start_time": 2.629,
+      "end_time": 2.787
     },
     {
-      "character": "儿",
-      "start_time": 1.833,
-      "end_time": 1.958
+      "character": "巨",
+      "start_time": 2.787,
+      "end_time": 3.012
     },
     {
-      "character": "背",
-      "start_time": 1.958,
-      "end_time": 2.149
+      "character": "大",
+      "start_time": 3.012,
+      "end_time": 3.145
     },
     {
-      "character": "对",
-      "start_time": 2.149,
-      "end_time": 2.287
+      "character": "的",
+      "start_time": 3.145,
+      "end_time": 3.266
     },
     {
-      "character": "着",
-      "start_time": 2.287,
-      "end_time": 2.366
+      "character": "弯",
+      "start_time": 3.266,
+      "end_time": 3.424
     },
     {
-      "character": "镜",
-      "start_time": 2.366,
-      "end_time": 2.549
+      "character": "月",
+      "start_time": 3.424,
+      "end_time": 3.562
     },
     {
-      "character": "头",
-      "start_time": 2.549,
-      "end_time": 2.795
-    },
-    {
-      "character": "，",
-      "start_time": 2.795,
-      "end_time": 3.183
-    },
-    {
-      "character": "浅",
-      "start_time": 3.183,
-      "end_time": 3.42
-    },
-    {
-      "character": "青",
-      "start_time": 3.42,
-      "end_time": 3.583
-    },
-    {
-      "character": "色",
-      "start_time": 3.583,
-      "end_time": 3.712
-    },
-    {
-      "character": "弟",
-      "start_time": 3.712,
+      "character": "城",
+      "start_time": 3.562,
       "end_time": 3.829
     },
     {
-      "character": "子",
+      "character": "映",
       "start_time": 3.829,
-      "end_time": 3.966
+      "end_time": 4.049
     },
     {
-      "character": "服",
-      "start_time": 3.966,
-      "end_time": 4.204
+      "character": "入",
+      "start_time": 4.049,
+      "end_time": 4.179
     },
     {
-      "character": "随",
-      "start_time": 4.204,
-      "end_time": 4.524
+      "character": "眼",
+      "start_time": 4.179,
+      "end_time": 4.354
     },
     {
-      "character": "风",
-      "start_time": 4.524,
-      "end_time": 4.72
-    },
-    {
-      "character": "微",
-      "start_time": 4.72,
-      "end_time": 4.858
-    },
-    {
-      "character": "动",
-      "start_time": 4.858,
-      "end_time": 4.995
+      "character": "帘",
+      "start_time": 4.354,
+      "end_time": 4.616
     },
     {
       "character": "，",
-      "start_time": 4.995,
-      "end_time": 5.479
+      "start_time": 4.616,
+      "end_time": 5.199
     },
     {
-      "character": "她",
-      "start_time": 5.479,
-      "end_time": 5.558
+      "character": "吴",
+      "start_time": 5.199,
+      "end_time": 5.358
     },
     {
-      "character": "手",
-      "start_time": 5.558,
-      "end_time": 5.816
+      "character": "双",
+      "start_time": 5.358,
+      "end_time": 5.587
     },
     {
-      "character": "握",
-      "start_time": 5.816,
-      "end_time": 5.949
+      "character": "身",
+      "start_time": 5.587,
+      "end_time": 5.808
     },
     {
-      "character": "宗",
-      "start_time": 5.949,
-      "end_time": 6.166
+      "character": "着",
+      "start_time": 5.808,
+      "end_time": 5.954
     },
     {
-      "character": "门",
-      "start_time": 6.166,
-      "end_time": 6.316
+      "character": "深",
+      "start_time": 5.954,
+      "end_time": 6.158
     },
     {
-      "character": "典",
-      "start_time": 6.316,
-      "end_time": 6.529
+      "character": "蓝",
+      "start_time": 6.158,
+      "end_time": 6.32
     },
     {
-      "character": "籍",
-      "start_time": 6.529,
-      "end_time": 6.774
+      "character": "色",
+      "start_time": 6.32,
+      "end_time": 6.499
     },
     {
-      "character": "，",
-      "start_time": 6.774,
-      "end_time": 7.183
+      "character": "圆",
+      "start_time": 6.499,
+      "end_time": 6.645
     },
     {
-      "character": "指",
-      "start_time": 7.183,
-      "end_time": 7.304
+      "character": "领",
+      "start_time": 6.645,
+      "end_time": 6.791
     },
     {
-      "character": "节",
-      "start_time": 7.304,
-      "end_time": 7.466
-    },
-    {
-      "character": "因",
-      "start_time": 7.466,
-      "end_time": 7.716
-    },
-    {
-      "character": "用",
-      "start_time": 7.716,
-      "end_time": 7.87
-    },
-    {
-      "character": "力",
-      "start_time": 7.87,
-      "end_time": 7.999
-    },
-    {
-      "character": "而",
-      "start_time": 7.999,
-      "end_time": 8.124
-    },
-    {
-      "character": "发",
-      "start_time": 8.124,
-      "end_time": 8.316
-    },
-    {
-      "character": "白",
-      "start_time": 8.316,
-      "end_time": 8.549
+      "character": "袍",
+      "start_time": 6.791,
+      "end_time": 7.049
     },
     {
       "character": "，",
-      "start_time": 8.549,
-      "end_time": 8.812
+      "start_time": 7.049,
+      "end_time": 7.574
     },
     {
-      "character": "站",
-      "start_time": 8.812,
-      "end_time": 8.949
+      "character": "抬",
+      "start_time": 7.574,
+      "end_time": 7.745
     },
     {
-      "character": "在",
-      "start_time": 8.949,
-      "end_time": 9.091
+      "character": "头",
+      "start_time": 7.745,
+      "end_time": 7.912
     },
     {
-      "character": "石",
-      "start_time": 9.091,
-      "end_time": 9.316
+      "character": "观",
+      "start_time": 7.912,
+      "end_time": 8.116
     },
     {
-      "character": "阶",
-      "start_time": 9.316,
-      "end_time": 9.441
+      "character": "察",
+      "start_time": 8.116,
+      "end_time": 8.295
+    },
+    {
+      "character": "城",
+      "start_time": 8.295,
+      "end_time": 8.529
+    },
+    {
+      "character": "池",
+      "start_time": 8.529,
+      "end_time": 8.674
+    },
+    {
+      "character": "轮",
+      "start_time": 8.674,
+      "end_time": 8.841
+    },
+    {
+      "character": "廓",
+      "start_time": 8.841,
+      "end_time": 9.02
+    },
+    {
+      "character": "，",
+      "start_time": 9.02,
+      "end_time": 9.458
+    },
+    {
+      "character": "城",
+      "start_time": 9.458,
+      "end_time": 9.645
+    },
+    {
+      "character": "墙",
+      "start_time": 9.645,
+      "end_time": 9.82
     },
     {
       "character": "上",
-      "start_time": 9.441,
-      "end_time": 9.608
+      "start_time": 9.82,
+      "end_time": 10.033
     },
     {
-      "character": "久",
-      "start_time": 9.608,
-      "end_time": 9.891
+      "character": "有",
+      "start_time": 10.033,
+      "end_time": 10.191
     },
     {
-      "character": "久",
-      "start_time": 9.891,
-      "end_time": 10.058
+      "character": "阵",
+      "start_time": 10.191,
+      "end_time": 10.437
     },
     {
-      "character": "不",
-      "start_time": 10.058,
-      "end_time": 10.187
+      "character": "法",
+      "start_time": 10.437,
+      "end_time": 10.633
+    },
+    {
+      "character": "光",
+      "start_time": 10.633,
+      "end_time": 10.866
+    },
+    {
+      "character": "芒",
+      "start_time": 10.866,
+      "end_time": 11.041
+    },
+    {
+      "character": "流",
+      "start_time": 11.041,
+      "end_time": 11.22
     },
     {
       "character": "动",
-      "start_time": 10.187,
-      "end_time": 10.324
+      "start_time": 11.22,
+      "end_time": 11.349
+    },
+    {
+      "character": "，",
+      "start_time": 11.349,
+      "end_time": 11.749
+    },
+    {
+      "character": "入",
+      "start_time": 11.749,
+      "end_time": 11.916
+    },
+    {
+      "character": "口",
+      "start_time": 11.916,
+      "end_time": 12.095
+    },
+    {
+      "character": "处",
+      "start_time": 12.095,
+      "end_time": 12.362
+    },
+    {
+      "character": "人",
+      "start_time": 12.362,
+      "end_time": 12.608
+    },
+    {
+      "character": "流",
+      "start_time": 12.608,
+      "end_time": 12.779
+    },
+    {
+      "character": "涌",
+      "start_time": 12.779,
+      "end_time": 13.016
+    },
+    {
+      "character": "动",
+      "start_time": 13.016,
+      "end_time": 13.191
+    },
+    {
+      "character": "，",
+      "start_time": 13.191,
+      "end_time": 13.591
+    },
+    {
+      "character": "他",
+      "start_time": 13.591,
+      "end_time": 13.691
+    },
+    {
+      "character": "正",
+      "start_time": 13.691,
+      "end_time": 13.891
+    },
+    {
+      "character": "思",
+      "start_time": 13.891,
+      "end_time": 14.07
+    },
+    {
+      "character": "考",
+      "start_time": 14.07,
+      "end_time": 14.249
+    },
+    {
+      "character": "如",
+      "start_time": 14.249,
+      "end_time": 14.499
+    },
+    {
+      "character": "何",
+      "start_time": 14.499,
+      "end_time": 14.679
+    },
+    {
+      "character": "进",
+      "start_time": 14.679,
+      "end_time": 14.841
+    },
+    {
+      "character": "入",
+      "start_time": 14.841,
+      "end_time": 14.966
+    },
+    {
+      "character": "城",
+      "start_time": 14.966,
+      "end_time": 15.195
+    },
+    {
+      "character": "中",
+      "start_time": 15.195,
+      "end_time": 15.366
     },
     {
       "character": "。",
-      "start_time": 10.324,
-      "end_time": 10.483
+      "start_time": 15.366,
+      "end_time": 15.525
     }
   ],
-  "generated_at": "2025-09-23T08:24:58.311292"
+  "generated_at": "2025-11-07T23:16:27.851516"
 }

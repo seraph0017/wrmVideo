@@ -14,8 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄坐在巨剑上喘息
-Dialogue: 0,0:00:02.22,0:00:04.25,Default,,0,0,0,,剑甲解除后露出疲惫面容
-Dialogue: 0,0:00:04.63,0:00:05.67,Default,,0,0,0,,嘴角带着血迹
-Dialogue: 0,0:00:06.02,0:00:07.15,Default,,0,0,0,,汗水不断滴落
-Dialogue: 0,0:00:07.48,0:00:09.47,Default,,0,0,0,,眼中却闪烁着胜利的光芒
+Dialogue: 0,0:00:00.02,0:00:02.01,Default,,0,0,0,,贱鸟抓神象长枪从蛟尸中
+Dialogue: 0,0:00:02.01,0:00:02.38,Default,,0,0,0,,钻出
+Dialogue: 0,0:00:02.82,0:00:04.95,Default,,0,0,0,,羽毛沾满血污却兴奋尖叫
+Dialogue: 0,0:00:05.39,0:00:06.91,Default,,0,0,0,,嚷嚷着蛟肉烹饪之法
+Dialogue: 0,0:00:07.25,0:00:08.62,Default,,0,0,0,,将长枪掷向{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:09.08,0:00:11.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}黑羽{\c&H00FFFFFF&\b0}在阳光下闪着油光
+Dialogue: 0,0:00:11.33,0:00:12.64,Default,,0,0,0,,尽显贪财本性

@@ -1,253 +1,223 @@
 {
-  "text": "金龙面露怒容，金色胡须颤动，声浪冲击狂鲨！他手持金色长剑，金鳞光芒闪烁，却被震飞数百米，嘴角溢血！",
-  "audio_file": "data/021/chapter_022/chapter_022_narration_03.mp3",
-  "duration": 10.55,
+  "text": "旁观的金龙面露怒容，金色声浪砸开冲击波，手持金鳞剑斩出金鳞光芒，却仍被震飞，嘴角溢血！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_022/chapter_022_narration_03.mp3",
+  "duration": 8.683,
   "character_timestamps": [
     {
-      "character": "金",
+      "character": "旁",
       "start_time": 0.016,
-      "end_time": 0.199
+      "end_time": 0.224
+    },
+    {
+      "character": "观",
+      "start_time": 0.224,
+      "end_time": 0.362
+    },
+    {
+      "character": "的",
+      "start_time": 0.362,
+      "end_time": 0.437
+    },
+    {
+      "character": "金",
+      "start_time": 0.437,
+      "end_time": 0.616
     },
     {
       "character": "龙",
-      "start_time": 0.199,
-      "end_time": 0.354
+      "start_time": 0.616,
+      "end_time": 0.829
     },
     {
       "character": "面",
-      "start_time": 0.354,
-      "end_time": 0.574
+      "start_time": 0.829,
+      "end_time": 1.079
     },
     {
       "character": "露",
-      "start_time": 0.574,
-      "end_time": 0.724
+      "start_time": 1.079,
+      "end_time": 1.241
     },
     {
       "character": "怒",
-      "start_time": 0.724,
-      "end_time": 0.92
+      "start_time": 1.241,
+      "end_time": 1.429
     },
     {
       "character": "容",
-      "start_time": 0.92,
-      "end_time": 1.154
+      "start_time": 1.429,
+      "end_time": 1.662
     },
     {
       "character": "，",
-      "start_time": 1.154,
-      "end_time": 1.508
+      "start_time": 1.662,
+      "end_time": 2.112
     },
     {
       "character": "金",
-      "start_time": 1.508,
-      "end_time": 1.729
+      "start_time": 2.112,
+      "end_time": 2.308
     },
     {
       "character": "色",
-      "start_time": 1.729,
-      "end_time": 1.908
-    },
-    {
-      "character": "胡",
-      "start_time": 1.908,
-      "end_time": 2.133
-    },
-    {
-      "character": "须",
-      "start_time": 2.133,
-      "end_time": 2.283
-    },
-    {
-      "character": "颤",
-      "start_time": 2.283,
-      "end_time": 2.499
-    },
-    {
-      "character": "动",
-      "start_time": 2.499,
-      "end_time": 2.658
-    },
-    {
-      "character": "，",
-      "start_time": 2.658,
-      "end_time": 3.145
+      "start_time": 2.308,
+      "end_time": 2.454
     },
     {
       "character": "声",
-      "start_time": 3.145,
-      "end_time": 3.391
+      "start_time": 2.454,
+      "end_time": 2.612
     },
     {
       "character": "浪",
-      "start_time": 3.391,
-      "end_time": 3.57
+      "start_time": 2.612,
+      "end_time": 2.795
+    },
+    {
+      "character": "砸",
+      "start_time": 2.795,
+      "end_time": 3.091
+    },
+    {
+      "character": "开",
+      "start_time": 3.091,
+      "end_time": 3.27
     },
     {
       "character": "冲",
-      "start_time": 3.57,
-      "end_time": 3.82
+      "start_time": 3.27,
+      "end_time": 3.449
     },
     {
       "character": "击",
-      "start_time": 3.82,
-      "end_time": 3.958
+      "start_time": 3.449,
+      "end_time": 3.579
     },
     {
-      "character": "狂",
-      "start_time": 3.958,
-      "end_time": 4.179
-    },
-    {
-      "character": "鲨",
-      "start_time": 4.179,
-      "end_time": 4.374
+      "character": "波",
+      "start_time": 3.579,
+      "end_time": 3.758
     },
     {
       "character": "，",
-      "start_time": 4.374,
-      "end_time": 4.858
-    },
-    {
-      "character": "他",
-      "start_time": 4.858,
-      "end_time": 4.941
+      "start_time": 3.758,
+      "end_time": 4.229
     },
     {
       "character": "手",
-      "start_time": 4.941,
-      "end_time": 5.162
+      "start_time": 4.229,
+      "end_time": 4.437
     },
     {
       "character": "持",
-      "start_time": 5.162,
-      "end_time": 5.354
+      "start_time": 4.437,
+      "end_time": 4.604
     },
     {
       "character": "金",
-      "start_time": 5.354,
-      "end_time": 5.633
-    },
-    {
-      "character": "色",
-      "start_time": 5.633,
-      "end_time": 5.804
-    },
-    {
-      "character": "长",
-      "start_time": 5.804,
-      "end_time": 6.037
-    },
-    {
-      "character": "剑",
-      "start_time": 6.037,
-      "end_time": 6.187
-    },
-    {
-      "character": "，",
-      "start_time": 6.187,
-      "end_time": 6.649
-    },
-    {
-      "character": "金",
-      "start_time": 6.649,
-      "end_time": 6.808
+      "start_time": 4.604,
+      "end_time": 4.758
     },
     {
       "character": "鳞",
-      "start_time": 6.808,
-      "end_time": 6.962
+      "start_time": 4.758,
+      "end_time": 4.891
+    },
+    {
+      "character": "剑",
+      "start_time": 4.891,
+      "end_time": 5.074
+    },
+    {
+      "character": "斩",
+      "start_time": 5.074,
+      "end_time": 5.32
+    },
+    {
+      "character": "出",
+      "start_time": 5.32,
+      "end_time": 5.466
+    },
+    {
+      "character": "金",
+      "start_time": 5.466,
+      "end_time": 5.67
+    },
+    {
+      "character": "鳞",
+      "start_time": 5.67,
+      "end_time": 5.812
     },
     {
       "character": "光",
-      "start_time": 6.962,
-      "end_time": 7.187
+      "start_time": 5.812,
+      "end_time": 5.999
     },
     {
       "character": "芒",
-      "start_time": 7.187,
-      "end_time": 7.358
-    },
-    {
-      "character": "闪",
-      "start_time": 7.358,
-      "end_time": 7.558
-    },
-    {
-      "character": "烁",
-      "start_time": 7.558,
-      "end_time": 7.754
+      "start_time": 5.999,
+      "end_time": 6.22
     },
     {
       "character": "，",
-      "start_time": 7.754,
-      "end_time": 7.995
+      "start_time": 6.22,
+      "end_time": 6.541
     },
     {
       "character": "却",
-      "start_time": 7.995,
-      "end_time": 8.116
+      "start_time": 6.541,
+      "end_time": 6.683
+    },
+    {
+      "character": "仍",
+      "start_time": 6.683,
+      "end_time": 6.82
     },
     {
       "character": "被",
-      "start_time": 8.116,
-      "end_time": 8.229
+      "start_time": 6.82,
+      "end_time": 6.937
     },
     {
       "character": "震",
-      "start_time": 8.229,
-      "end_time": 8.445
+      "start_time": 6.937,
+      "end_time": 7.124
     },
     {
       "character": "飞",
-      "start_time": 8.445,
-      "end_time": 8.62
-    },
-    {
-      "character": "数",
-      "start_time": 8.62,
-      "end_time": 8.904
-    },
-    {
-      "character": "百",
-      "start_time": 8.904,
-      "end_time": 9.095
-    },
-    {
-      "character": "米",
-      "start_time": 9.095,
-      "end_time": 9.266
+      "start_time": 7.124,
+      "end_time": 7.341
     },
     {
       "character": "，",
-      "start_time": 9.266,
-      "end_time": 9.566
+      "start_time": 7.341,
+      "end_time": 7.729
     },
     {
       "character": "嘴",
-      "start_time": 9.566,
-      "end_time": 9.812
+      "start_time": 7.729,
+      "end_time": 7.966
     },
     {
       "character": "角",
-      "start_time": 9.812,
-      "end_time": 10.024
+      "start_time": 7.966,
+      "end_time": 8.179
     },
     {
       "character": "溢",
-      "start_time": 10.024,
-      "end_time": 10.187
+      "start_time": 8.179,
+      "end_time": 8.333
     },
     {
       "character": "血",
-      "start_time": 10.187,
-      "end_time": 10.387
+      "start_time": 8.333,
+      "end_time": 8.524
     },
     {
       "character": "！",
-      "start_time": 10.387,
-      "end_time": 10.546
+      "start_time": 8.524,
+      "end_time": 8.683
     }
   ],
-  "generated_at": "2025-09-23T08:24:01.888611"
+  "generated_at": "2025-11-07T23:15:09.633425"
 }

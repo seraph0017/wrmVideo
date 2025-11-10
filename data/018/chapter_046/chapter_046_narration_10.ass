@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_046 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.74,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}抓住裂空圣果瞬间突然
+Dialogue: 0,0:00:02.74,0:00:05.27,Default,,0,0,0,,感觉圣树传来微弱意识仿佛
+Dialogue: 0,0:00:05.27,0:00:06.11,Default,,0,0,0,,在观察自己
+Dialogue: 0,0:00:06.67,0:00:07.92,Default,,0,0,0,,他立刻躬身行礼
+Dialogue: 0,0:00:08.19,0:00:11.09,Default,,0,0,0,,借圣果一用他日若有所成定
+Dialogue: 0,0:00:11.09,0:00:11.63,Default,,0,0,0,,当回报
+Dialogue: 0,0:00:11.99,0:00:14.25,Default,,0,0,0,,圣树枝{\c&H0000FFFF&\b1}叶微{\c&H00FFFFFF&\b0}颤似是默认

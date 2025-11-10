@@ -1,1568 +1,179 @@
 {% extends 'base.html' %}
 {% load django_bootstrap5 %}
+{% load static %}
 
-{% block title %}{{ chapter.title }} | {{ block.super }}{% endblock %}
+{% block title %}{{ chapter.title }} - Narration列表 | {{ block.super }}{% endblock %}
 
 {% block content %}
-{% csrf_token %}
-<div class="row mb-4">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                <h5 class="card-title mb-0">章节详情</h5>
+<div class="container-fluid">
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3>
+                    <i class="fas fa-book me-2"></i>{{ chapter.novel.name }} - {{ chapter.title }}
+                </h3>
                 <div>
-                    <a href="{% url 'video:chapter_list' %}" class="btn btn-light btn-sm">返回列表</a>
-                    <a href="{% url 'admin:video_chapter_change' chapter.id %}" class="btn btn-warning btn-sm">编辑</a>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4>基本信息</h4>
-                        <table class="table">
-                            <tr>
-                                <th style="width: 150px;">ID</th>
-                                <td>{{ chapter.id }}</td>
-                            </tr>
-                            <tr>
-                                <th>章节名</th>
-                                <td>{{ chapter.title }}</td>
-                            </tr>
-                            <tr>
-                                <th>所属小说</th>
-                                <td><a href="{% url 'video:novel_detail' chapter.novel.id %}">{{ chapter.novel.name }}</a></td>
-                            </tr>
-                            <tr>
-                                <th>字数</th>
-                                <td>{{ chapter.word_count }}</td>
-                            </tr>
-                            <tr>
-                                <th>风格</th>
-                                <td>{{ chapter.format }}</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col-md-6">
-                        <h4>视频信息</h4>
-                        <table class="table">
-                            <tr>
-                                <th style="width: 150px;">视频状态</th>
-                                <td>
-                                    {% if chapter.video_path %}
-                                    <span class="badge bg-success">已生成</span>
-                                    {% else %}
-                                    <span class="badge bg-warning">未生成</span>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                            {% if chapter.video_path %}
-                            {% comment %}
-                            <tr>
-                                <th>视频文件</th>
-                                <td>
-                                    <div class="mb-1">
-                                        <small class="text-muted">{{ chapter.video_path|slice:":50" }}{% if chapter.video_path|length > 50 %}...{% endif %}</small>
-                                    </div>
-                                    <div>
-                                        <strong class="text-primary">{{ video_filename }}</strong>
-                                    </div>
-                                </td>
-                            </tr>
-                            {% endcomment %}
-                            <tr>
-                                <th>视频预览</th>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-sm" onclick="openVideoModal('{{ chapter.id }}')">查看视频</button>
-                                </td>
-                            </tr>
-                            {% endif %}
-                        </table>
-                    </div>
+                    <a href="{% url 'video:novel_detail' chapter.novel.id %}" class="btn btn-secondary btn-sm">
+                        <i class="fas fa-arrow-left me-1"></i>返回章节列表
+                    </a>
+                    <a href="{% url 'admin:video_chapter_change' chapter.id %}" class="btn btn-warning btn-sm">
+                        <i class="fas fa-edit me-1"></i>编辑章节
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-
-
-<!-- 批量操作栏 -->
-<div class="row mb-3">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header bg-success text-white">
-                <h6 class="card-title mb-0">批量生成操作</h6>
-            </div>
-            <div class="card-body">
-                <div class="d-flex flex-wrap gap-2 align-items-center">
-                    <button class="btn btn-warning btn-sm px-3 py-2" onclick="batchGenerateAudio()" id="batchAudioBtn">
-                        <i class="fas fa-volume-up me-1"></i> 批量生成音频
-                    </button>
-                    <button class="btn btn-success btn-sm px-3 py-2" onclick="batchGenerateImages()" id="batchImageBtn">
-                        <i class="fas fa-magic me-1"></i> 批量生成分镜图片
-                    </button>
-                    <button class="btn btn-info btn-sm px-3 py-2" onclick="batchGenerateImagesV4()" id="batchImageV4Btn">
-                        <i class="fas fa-magic me-1"></i> 批量生成分镜图片(ComfyUI)
-                    </button>
-                    <button class="btn btn-secondary btn-sm px-3 py-2" onclick="validateNarrationImagesLLM()" id="validateImageLLMBtn">
-                        <i class="fas fa-robot me-1"></i> LLM校验分镜图片
-                    </button>
-                    <button class="btn btn-primary btn-sm px-3 py-2" onclick="generateFirstVideo()" id="generateFirstVideoBtn">
-                        <i class="fas fa-play-circle me-1"></i> 生成首视频
-                    </button>
-                    <button class="btn btn-dark btn-sm px-3 py-2" onclick="batchGenerateVideos()" id="batchVideoBtn">
-                        <i class="fas fa-video me-1"></i> 批量生成分镜视频
-                    </button>
-                    <button class="btn btn-danger btn-sm px-3 py-2" onclick="batchGenerateAllVideos()" id="batchAllVideoBtn">
-                        <i class="fas fa-film me-1"></i> 批量生成全部视频
-                    </button>
-                    <div class="text-muted">
-                        <small>注意：批量操作将对所有解说段落执行生成任务</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 解说列表 -->
-<div class="row">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                <h5 class="card-title mb-0">解说列表</h5>
-                <a href="{% url 'admin:video_narration_add' %}" class="btn btn-light btn-sm">添加解说</a>
-            </div>
-            <div class="card-body">
-                {% if narrations %}
-                <div class="table-responsive">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>分镜序号</th>
-                                <th>特写人物</th>
-                                <th>解说内容</th>
-                                <th>音频播放</th>
-                                <th>字幕文件</th>
-                                <th>分镜图片</th>
-                                <th>视频状态</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for narration in narrations %}
-                            <tr>
-                                <td>{{ narration.id }}</td>
-                                <td>{{ narration.scene_number }}</td>
-                                <td>{{ narration.featured_character }}</td>
-                                <td>
-                                    <button class="btn btn-outline-secondary btn-sm" onclick="showNarrationContent('{{ narration.id }}', '{{ narration.narration|escapejs }}')"
-                                            title="查看完整解说内容">
-                                        <i class="fas fa-file-text"></i> 查看内容
-                                    </button>
-                                </td>
-                                <td>
-                                    {% if narration.narration_mp3_path %}
-                                    <div class="audio-player-container">
-                                        <audio controls class="narration-audio" style="width: 200px; height: 30px;" data-audio-path="{{ narration.narration_mp3_path }}">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    {% if file_narrations %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th style="width: 80px;">序号</th>
+                                    <th style="width: 200px;">音频</th>
+                                    <th style="width: 120px;">字幕</th>
+                                    <th style="width: 120px;">图片</th>
+                                    <th>文件路径</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for narration in file_narrations %}
+                                <tr>
+                                    <td>
+                                        <span class="badge bg-primary">{{ narration.number|stringformat:"02d" }}</span>
+                                    </td>
+                                    <td>
+                                        {% if narration.audio_path %}
+                                        <audio controls style="width: 180px; height: 32px;">
+                                            <source src="{% url 'video:serve_data_file' file_path=narration.audio_path %}" type="audio/mpeg">
                                             您的浏览器不支持音频播放。
                                         </audio>
-                                        <div class="audio-info mt-1">
-                                            <small class="text-success">
-                                                <i class="fas fa-check-circle"></i> 已生成
-                                            </small>
-                                        </div>
-                                    </div>
-                                    {% else %}
-                                    <span class="badge bg-warning">
-                                        <i class="fas fa-clock"></i> 未生成
-                                    </span>
-                                    {% endif %}
-                                </td>
-                                <td>
-                                    {% if narration.narration_mp3_path %}
-                                    <button class="btn btn-outline-info btn-sm" onclick="showNarrationSubtitle('{{ narration.id }}', '{{ narration.scene_number }}')" title="查看字幕">
-                                        <i class="fas fa-closed-captioning"></i> 字幕
-                                    </button>
-                                    {% else %}
-                                    <span class="text-muted">-</span>
-                                    {% endif %}
-                                </td>
-                                <td>
-                                    <button class="btn btn-outline-primary btn-sm" onclick="checkNarrationImages('{{ narration.id }}', '{{ narration.scene_number }}')"
-                                            title="查看分镜图片" id="imageBtn_{{ narration.id }}">
-                                        <i class="fas fa-images"></i> <span id="imageStatus_{{ narration.id }}">检查图片</span>
-                                    </button>
-                                </td>
-                                <td>
-                                    {% if narration.narration_mp4_path %}
-                                    <span class="badge bg-success">
-                                        <i class="fas fa-video"></i> 已生成
-                                    </span>
-                                    {% else %}
-                                    <span class="badge bg-warning">
-                                        <i class="fas fa-clock"></i> 未生成
-                                    </span>
-                                    {% endif %}
-                                </td>
-                                <td>
-                                    <div class="btn-group btn-group-sm" role="group">
-                                        <a href="{% url 'video:narration_detail' narration.id %}" class="btn btn-info btn-sm" title="查看详情">
-                                            <i class="fas fa-eye"></i> 详情
-                                        </a>
-                                        <a href="{% url 'admin:video_narration_change' narration.id %}" class="btn btn-warning btn-sm" title="编辑">
-                                            <i class="fas fa-edit"></i> 编辑
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-                {% else %}
-                <div class="alert alert-info">该章节暂无解说数据</div>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 音频生成和播放 -->
-<div class="row mt-4">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
-                <h5 class="card-title mb-0">音频生成和播放</h5>
-                <button type="button" class="btn btn-light btn-sm" id="generateAudioBtn">
-                    <i class="fas fa-microphone"></i> 生成音频
-                </button>
-            </div>
-            <div class="card-body">
-                <!-- 音频生成状态 -->
-                <div id="audioGenerationStatus" class="alert alert-info" style="display: none;">
-                    <div class="d-flex align-items-center">
-                        <div class="spinner-border spinner-border-sm me-2" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                        <span id="audioStatusText">正在生成音频...</span>
-                    </div>
-                    <div class="progress mt-2">
-                        <div class="progress-bar" role="progressbar" style="width: 0%" id="audioProgressBar"></div>
-                    </div>
-                </div>
-                
-                <!-- 音频文件列表 -->
-                <div id="audioFilesList">
-                    <div class="row" id="audioFilesContainer">
-                        <!-- 音频文件将通过JavaScript动态加载 -->
-                    </div>
-                </div>
-                
-                <!-- 无音频文件提示 -->
-                <div id="noAudioFiles" class="alert alert-warning">
-                    <i class="fas fa-info-circle"></i> 该章节暂无音频文件，请点击"生成音频"按钮开始生成。
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ASS字幕查看模态框 -->
-<div class="modal fade" id="assSubtitleModal" tabindex="-1" aria-labelledby="assSubtitleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="assSubtitleModalLabel">ASS字幕文件</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <pre id="assSubtitleContent" class="bg-light p-3" style="max-height: 400px; overflow-y: auto; font-family: 'Courier New', monospace; font-size: 12px;"></pre>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary" id="downloadAssBtn">下载ASS文件</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Narration字幕查看模态框 -->
-<div class="modal fade" id="narrationSubtitleModal" tabindex="-1" aria-labelledby="narrationSubtitleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="narrationSubtitleModalLabel">解说字幕文件</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <pre id="narrationSubtitleContent" class="bg-light p-3" style="max-height: 400px; overflow-y: auto; font-family: 'Courier New', monospace; font-size: 12px;"></pre>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary" id="downloadNarrationAssBtn">下载字幕文件</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<script>
-// 页面加载完成后设置音频URL
-document.addEventListener('DOMContentLoaded', function() {
-    setupAudioUrls();
-});
-
-// 设置音频文件的正确URL
-function setupAudioUrls() {
-    const audioElements = document.querySelectorAll('.narration-audio');
-    audioElements.forEach(audio => {
-        const audioPath = audio.dataset.audioPath;
-        if (audioPath) {
-            // 从路径中提取文件名
-            const filename = audioPath.split('/').pop();
-            // 构建API URL
-            const audioUrl = `/video/api/novels/{{ chapter.novel.id }}/chapters/{{ chapter.id }}/files/${filename}/`;
-            
-            // 直接设置audio元素的src属性而不是source元素
-            audio.src = audioUrl;
-            audio.preload = 'none'; // 不预加载，避免同时加载太多文件
-            
-            // 添加错误处理
-            audio.addEventListener('error', function(e) {
-                console.log(`音频加载失败: ${filename}`, e);
-                // 可以在这里添加重试逻辑或显示错误信息
-            });
-            
-            audio.addEventListener('loadstart', function() {
-                console.log(`开始加载音频: ${filename}`);
-            });
-        }
-    });
-}
-
-
-</script>
-
-<!-- 使用统一的任务组件 -->
-{% include 'components/task-components.html' %}
-
-<style>
-/* 统一空间色系配置 */
-:root {
-    /* 主色调 - 深空蓝紫色系 */
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --primary-light: #8b9dc3;
-    --primary-dark: #5a67d8;
-    
-    /* 辅助色调 - 宇宙色系 */
-    --secondary-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-    --accent-color: #ff6b6b;
-    --success-color: #51cf66;
-    --warning-color: #ffd43b;
-    --info-color: #74c0fc;
-    
-    /* 中性色调 - 星空灰色系 */
-    --bg-primary: #f8f9fa;
-    --bg-secondary: #e9ecef;
-    --bg-tertiary: #dee2e6;
-    --text-primary: #212529;
-    --text-secondary: #6c757d;
-    --text-muted: #adb5bd;
-    
-    /* 阴影和边框 */
-    --shadow-light: 0 2px 8px rgba(102, 126, 234, 0.1);
-    --shadow-medium: 0 4px 16px rgba(102, 126, 234, 0.15);
-    --shadow-heavy: 0 8px 32px rgba(102, 126, 234, 0.2);
-    --border-radius: 12px;
-    --border-radius-lg: 20px;
-}
-
-
-
-.info-item {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    border: 1px solid rgba(102, 126, 234, 0.1);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.info-item:hover {
-    background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-light);
-    border-color: rgba(102, 126, 234, 0.2);
-}
-
-.btn-group .btn {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--shadow-light);
-}
-
-.btn-group .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-medium);
-}
-
-/* 渐变背景动画 */
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 100% 50%; }
-    50% { background-position: 100% 100%; }
-    75% { background-position: 0% 100%; }
-    100% { background-position: 0% 50%; }
-}
-
-.card-header {
-    background: var(--primary-gradient) !important;
-    background-size: 300% 300%;
-    animation: gradientShift 8s ease-in-out infinite;
-    border: none;
-    box-shadow: var(--shadow-light);
-}
-
-
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.7; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.1); }
-}
-
-/* 响应式优化 */
-@media (max-width: 768px) {
-    .card-body {
-        padding: 1.5rem !important;
-    }
-    
-    .info-item {
-        padding: 0.75rem !important;
-    }
-}
-
-
-
-
-
-/* 加载状态样式 */
-.btn-loading {
-    animation: fadeIn 0.4s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-
-
-
-
-/* 状态徽章样式统一 */
-.badge {
-    border-radius: 20px;
-    padding: 6px 12px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-}
-
-.badge.bg-success {
-    background: linear-gradient(135deg, var(--success-color) 0%, #40c057 100%) !important;
-    box-shadow: 0 2px 8px rgba(81, 207, 102, 0.3);
-}
-
-.badge.bg-warning {
-    background: linear-gradient(135deg, var(--warning-color) 0%, #fab005 100%) !important;
-    box-shadow: 0 2px 8px rgba(255, 212, 59, 0.3);
-    color: #495057 !important;
-}
-
-.badge.bg-info {
-    background: linear-gradient(135deg, var(--info-color) 0%, #339af0 100%) !important;
-    box-shadow: 0 2px 8px rgba(116, 192, 252, 0.3);
-}
-
-/* 表格样式优化 */
-.table {
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-light);
-}
-
-.table th {
-    background: var(--bg-secondary);
-    border: none;
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.table td {
-    border-color: rgba(102, 126, 234, 0.1);
-    vertical-align: middle;
-}
-
-.table-hover tbody tr:hover {
-    background-color: rgba(102, 126, 234, 0.05);
-}
-
-/* 图片模态框样式 */
-.image-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(5px);
-}
-
-.image-modal-content {
-    position: relative;
-    margin: auto;
-    padding: 20px;
-    width: 90%;
-    max-width: 800px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-image {
-    max-width: 100%;
-    max-height: 80vh;
-    object-fit: contain;
-    border-radius: var(--border-radius-lg);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.modal-image:hover {
-    transform: scale(1.02);
-}
-
-.image-modal-header {
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.image-modal-header h3 {
-    margin: 0;
-    font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.modal-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 10000;
-    transition: all 0.3s ease;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-}
-
-.modal-close:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
-.image-modal-footer {
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-    opacity: 0.8;
-}
-
-/* 动画效果 */
-.image-modal.show {
-    display: flex;
-    animation: fadeIn 0.3s ease;
-}
-
-.image-modal.show .modal-image {
-    animation: zoomIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes zoomIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-</style>
-
-
-
-<script>
-
-// 安全获取CSRF Token的函数
-function getCSRFToken() {
-    const token = document.querySelector('[name=csrfmiddlewaretoken]');
-    return token ? token.value : '';
-}
-
-// 页面加载完成后初始化功能
-document.addEventListener('DOMContentLoaded', function() {
-    // 初始化音频功能
-    initAudioFunctions();
-    loadAudioFiles();
-});
-
-// 音频相关功能
-function initAudioFunctions() {
-    const generateAudioBtn = document.getElementById('generateAudioBtn');
-    if (generateAudioBtn) {
-        generateAudioBtn.addEventListener('click', generateAudio);
-    }
-}
-
-// 生成音频
-function generateAudio() {
-    const novelId = '{{ chapter.novel.id }}';
-    const chapterId = '{{ chapter.id }}';
-    
-    // 显示生成状态
-    showAudioGenerationStatus();
-    
-    fetch(`/video/api/novels/${novelId}/chapters/${chapterId}/generate-audio/`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-CSRFToken': getCSRFToken()
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            // 开始轮询任务状态
-            pollAudioTaskStatus(data.task_id);
-        } else {
-            hideAudioGenerationStatus();
-            if (data.error && data.error.includes('解说文件不存在')) {
-                alert('无法生成音频：该章节还没有解说内容。请先在章节详情页面生成解说内容，然后再尝试生成音频。');
-            } else {
-                alert('音频生成失败: ' + (data.error || '未知错误'));
-            }
-        }
-    })
-    .catch(error => {
-        hideAudioGenerationStatus();
-        console.error('Error:', error);
-        alert('音频生成请求失败');
-    });
-}
-
-// 轮询任务状态
-function pollAudioTaskStatus(taskId) {
-    const pollInterval = setInterval(() => {
-        fetch(`/video/api/audio-task/${taskId}/status/`)
-        .then(response => response.json())
-        .then(data => {
-            updateAudioProgress(data.progress || 0, data.status_message || '正在处理...');
-            
-            if (data.status === 'SUCCESS') {
-                clearInterval(pollInterval);
-                hideAudioGenerationStatus();
-                loadAudioFiles();
-                alert('音频生成完成！');
-            } else if (data.status === 'FAILURE') {
-                clearInterval(pollInterval);
-                hideAudioGenerationStatus();
-                alert('音频生成失败: ' + (data.error || '未知错误'));
-            }
-        })
-        .catch(error => {
-            console.error('Error polling task status:', error);
-        });
-    }, 2000); // 每2秒轮询一次
-}
-
-// 显示音频生成状态
-function showAudioGenerationStatus() {
-    const statusDiv = document.getElementById('audioGenerationStatus');
-    const generateBtn = document.getElementById('generateAudioBtn');
-    
-    if (statusDiv) {
-        statusDiv.style.display = 'block';
-    }
-    if (generateBtn) {
-        generateBtn.disabled = true;
-        generateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 生成中...';
-    }
-}
-
-// 隐藏音频生成状态
-function hideAudioGenerationStatus() {
-    const statusDiv = document.getElementById('audioGenerationStatus');
-    const generateBtn = document.getElementById('generateAudioBtn');
-    
-    if (statusDiv) {
-        statusDiv.style.display = 'none';
-    }
-    if (generateBtn) {
-        generateBtn.disabled = false;
-        generateBtn.innerHTML = '<i class="fas fa-microphone"></i> 生成音频';
-    }
-}
-
-// 更新音频生成进度
-function updateAudioProgress(progress, message) {
-    const progressBar = document.getElementById('audioProgressBar');
-    const statusText = document.getElementById('audioStatusText');
-    
-    if (progressBar) {
-        progressBar.style.width = progress + '%';
-    }
-    if (statusText) {
-        statusText.textContent = message;
-    }
-}
-
-// 加载音频文件列表
-function loadAudioFiles() {
-    const novelId = '{{ chapter.novel.id }}';
-    const chapterId = '{{ chapter.id }}';
-    
-    fetch(`/video/api/novels/${novelId}/chapters/${chapterId}/audio-files/`)
-    .then(response => response.json())
-    .then(data => {
-        displayAudioFiles(data.files || []);
-    })
-    .catch(error => {
-        console.error('Error loading audio files:', error);
-    });
-}
-
-// 显示音频文件
-function displayAudioFiles(files) {
-    const container = document.getElementById('audioFilesContainer');
-    const noFilesDiv = document.getElementById('noAudioFiles');
-    
-    if (!container) return;
-    
-    container.innerHTML = '';
-    
-    if (files.length === 0) {
-        if (noFilesDiv) {
-            noFilesDiv.style.display = 'block';
-        }
-        return;
-    }
-    
-    if (noFilesDiv) {
-        noFilesDiv.style.display = 'none';
-    }
-    
-    files.forEach(file => {
-        const audioCard = createAudioCard(file);
-        container.appendChild(audioCard);
-    });
-}
-
-// 创建音频卡片
-function createAudioCard(file) {
-    const col = document.createElement('div');
-    col.className = 'col-md-6 col-lg-4 mb-3';
-    
-    const novelId = '{{ chapter.novel.id }}';
-    const chapterId = '{{ chapter.id }}';
-    const audioUrl = `/api/novels/${novelId}/chapters/${chapterId}/files/${file.filename}/`;
-    
-    col.innerHTML = `
-        <div class="card h-100">
-            <div class="card-body">
-                <h6 class="card-title">${file.display_name}</h6>
-                <p class="card-text text-muted small">文件大小: ${file.size}</p>
-                <audio controls class="w-100 mb-2">
-                    <source src="${audioUrl}" type="audio/mpeg">
-                    您的浏览器不支持音频播放。
-                </audio>
-                <div class="d-flex gap-2">
-                    <a href="${audioUrl}" class="btn btn-sm btn-outline-primary" download>
-                        <i class="fas fa-download"></i> 下载
-                    </a>
-                    ${file.ass_file ? `
-                        <button class="btn btn-sm btn-outline-info" onclick="showAssSubtitle('${file.ass_file}')">
-                            <i class="fas fa-closed-captioning"></i> 字幕
-                        </button>
-                    ` : ''}
-                </div>
-            </div>
-        </div>
-    `;
-    
-    return col;
-}
-
-// 显示ASS字幕
-function showAssSubtitle(assFilename) {
-    const novelId = '{{ chapter.novel.id }}';
-    const chapterId = '{{ chapter.id }}';
-    
-    fetch(`/api/novels/${novelId}/chapters/${chapterId}/files/${assFilename}/`)
-    .then(response => response.text())
-    .then(content => {
-        const modal = new bootstrap.Modal(document.getElementById('assSubtitleModal'));
-        const contentElement = document.getElementById('assSubtitleContent');
-        const downloadBtn = document.getElementById('downloadAssBtn');
-        
-        if (contentElement) {
-            contentElement.textContent = content;
-        }
-        
-        if (downloadBtn) {
-            downloadBtn.onclick = () => {
-                const url = `/video/api/narrations/${narrationId}/subtitle/`;
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = `narration_${sceneNumber}_subtitle.ass`;
-                a.click();
-            };
-        }
-        
-        modal.show();
-    })
-    .catch(error => {
-        console.error('Error loading ASS file:', error);
-        alert('加载字幕文件失败');
-    });
-}
-
-// 显示Narration字幕
-function showNarrationSubtitle(narrationId, sceneNumber) {
-    // 使用新的API端点直接获取字幕内容
-    fetch(`/video/api/narrations/${narrationId}/subtitle/`)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('字幕文件不存在');
-        }
-        return response.text();
-    })
-    .then(content => {
-        const modal = new bootstrap.Modal(document.getElementById('narrationSubtitleModal'));
-        const contentElement = document.getElementById('narrationSubtitleContent');
-        const downloadBtn = document.getElementById('downloadNarrationAssBtn');
-        const titleElement = document.getElementById('narrationSubtitleModalLabel');
-        
-        if (titleElement) {
-            titleElement.textContent = `第${sceneNumber}段解说字幕`;
-        }
-        
-        if (contentElement) {
-            contentElement.textContent = content;
-        }
-        
-        if (downloadBtn) {
-            downloadBtn.onclick = () => {
-                const url = `/api/novels/${novelId}/chapters/${chapterId}/files/${assFilename}/`;
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = assFilename;
-                a.click();
-            };
-        }
-        
-        modal.show();
-    })
-    .catch(error => {
-        console.error('Error loading narration ASS file:', error);
-        alert('加载字幕文件失败: ' + error.message);
-    });
-}
-
-// 检查分镜图片状态
-function checkNarrationImages(narrationId, sceneNumber) {
-    const btn = document.getElementById(`imageBtn_${narrationId}`);
-    const statusSpan = document.getElementById(`imageStatus_${narrationId}`);
-    
-    // 更新按钮状态
-    btn.disabled = true;
-    statusSpan.textContent = '检查中...';
-    
-    fetch(`/video/api/narrations/${narrationId}/images/status/`)
-    .then(response => response.json())
-    .then(data => {
-        if (data.has_images) {
-            statusSpan.textContent = '已生成';
-            btn.className = 'btn btn-success btn-sm';
-            // 可以添加查看图片的功能
-            btn.onclick = () => showNarrationImages(narrationId, sceneNumber);
-        } else {
-            statusSpan.textContent = '未生成';
-            btn.className = 'btn btn-outline-warning btn-sm';
-        }
-    })
-    .catch(error => {
-        console.error('Error checking images:', error);
-        statusSpan.textContent = '检查失败';
-        btn.className = 'btn btn-outline-danger btn-sm';
-    })
-    .finally(() => {
-        btn.disabled = false;
-    });
-}
-
-// 生成分镜图片
-function generateNarrationImage(narrationId, sceneNumber) {
-    const btn = document.getElementById(`generateImageBtn_${narrationId}`);
-    
-    if (confirm(`确定要为第${sceneNumber}段解说生成分镜图片吗？`)) {
-        // 更新按钮状态
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 生成中...';
-        
-        fetch(`/video/api/narrations/${narrationId}/generate-images/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': getCSRFToken()
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert(`第${sceneNumber}段解说的分镜图片生成任务已启动！`);
-                // 更新图片状态
-                checkNarrationImages(narrationId, sceneNumber);
-            } else {
-                alert('生成失败: ' + (data.error || '未知错误'));
-            }
-        })
-        .catch(error => {
-            console.error('Error generating images:', error);
-            alert('生成失败: ' + error.message);
-        })
-        .finally(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-magic"></i>';
-        });
-    }
-}
-
-// 生成分镜视频
-function generateNarrationVideo(narrationId, sceneNumber) {
-    const btn = document.getElementById(`generateVideoBtn_${narrationId}`);
-    
-    if (confirm(`确定要为第${sceneNumber}段解说生成分镜视频吗？`)) {
-        // 更新按钮状态
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 生成中...';
-        
-        fetch(`/video/api/narrations/${narrationId}/generate-video/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': getCSRFToken()
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert(`第${sceneNumber}段解说的分镜视频生成任务已启动！`);
-                // 可以添加刷新视频状态的逻辑
-                setTimeout(() => {
-                    location.reload();
-                }, 2000);
-            } else {
-                alert('生成失败: ' + (data.error || '未知错误'));
-            }
-        })
-        .catch(error => {
-            console.error('Error generating video:', error);
-            alert('生成失败: ' + error.message);
-        })
-        .finally(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-video"></i> 生成视频';
-        });
-    }
-}
-
-// 批量生成分镜图片（默认走 v4 ComfyUI）
-function batchGenerateImages() {
-    const btn = document.getElementById('batchImageBtn');
-    
-    if (confirm('确定要为所有解说段落批量生成分镜图片吗？这可能需要较长时间。')) {
-        // 更新按钮状态
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 批量生成中...';
-        
-        // 改为调用 v4 端点（服务端有默认 ComfyUI 配置）
-        fetch(`/video/api/chapters/{{ chapter.id }}/batch-generate-images-v4/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': getCSRFToken()
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                const tid = data.task_id ? `任务ID: ${data.task_id}` : '';
-                alert(`ComfyUI批量生成分镜图片任务已启动！\n${tid}`);
-                // 刷新页面以更新状态
-                setTimeout(() => {
-                    location.reload();
-                }, 2000);
-            } else {
-                alert('批量生成失败: ' + (data.error || '未知错误'));
-            }
-        })
-        .catch(error => {
-            console.error('Error batch generating images (v4):', error);
-            alert('批量生成失败: ' + error.message);
-        })
-        .finally(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-magic"></i> 批量生成分镜图片';
-        });
-    }
-}
-
-// 批量生成分镜图片 (ComfyUI版本)
-function batchGenerateImagesV4() {
-    const btn = document.getElementById('batchImageV4Btn');
-    
-    // 获取用户输入的ComfyUI配置
-    const apiUrl = prompt('请输入ComfyUI API地址 (默认: http://127.0.0.1:8188):', 'http://127.0.0.1:8188');
-    if (apiUrl === null) return; // 用户取消
-    
-    const workflowJson = prompt('请输入工作流JSON文件路径 (默认: test/comfyui/image_compact.json):', 'test/comfyui/image_compact.json');
-    if (workflowJson === null) return; // 用户取消
-    
-    if (confirm('确定要使用ComfyUI为所有解说段落批量生成分镜图片吗？这可能需要较长时间。')) {
-        // 更新按钮状态
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ComfyUI生成中...';
-        
-        fetch(`/video/api/chapters/{{ chapter.id }}/batch-generate-images-v4/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': getCSRFToken()
-            },
-            body: JSON.stringify({
-                api_url: apiUrl,
-                workflow_json: workflowJson
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert(`ComfyUI批量生成分镜图片任务已启动！\n任务ID: ${data.task_id}\nAPI地址: ${data.api_url}\n工作流: ${data.workflow_json}`);
-                // 刷新页面以更新状态
-                setTimeout(() => {
-                    location.reload();
-                }, 2000);
-            } else {
-                alert('ComfyUI批量生成失败: ' + (data.error || '未知错误'));
-            }
-        })
-        .catch(error => {
-            console.error('Error batch generating images with ComfyUI:', error);
-            alert('ComfyUI批量生成失败: ' + error.message);
-        })
-        .finally(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-magic"></i> 批量生成分镜图片(ComfyUI)';
-        });
-    }
-}
-
-// 批量生成分镜视频
-function batchGenerateVideos() {
-    const btn = document.getElementById('batchVideoBtn');
-    
-    if (confirm('确定要生成主视频吗？这将执行concat_narration_video.py脚本，可能需要很长时间。')) {
-        // 更新按钮状态
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 生成主视频中...';
-        
-        fetch(`/video/api/chapters/{{ chapter.id }}/batch-generate-videos/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': getCSRFToken()
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('主视频生成任务已启动！任务ID: ' + data.task_id);
-                // 刷新页面以更新状态
-                setTimeout(() => {
-                    location.reload();
-                }, 2000);
-            } else {
-                alert('主视频生成失败: ' + (data.error || '未知错误'));
-            }
-        })
-        .catch(error => {
-            console.error('Error generating main video:', error);
-            alert('主视频生成失败: ' + error.message);
-        })
-        .finally(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-video"></i> 批量生成分镜视频';
-        });
-    }
-}
-
-
-
-// LLM校验分镜图片
-function validateNarrationImagesLLM() {
-    if (confirm('确定要使用LLM校验分镜图片吗？这将使用llm_narration_image.py脚本进行智能检测和替换。')) {
-        const btn = document.getElementById('validateImageLLMBtn');
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> LLM校验中...';
-        
-        fetch(`/video/api/chapters/{{ chapter.id }}/validate-narration-images-llm/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': getCSRFToken()
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert(`LLM分镜图片校验任务已启动！任务ID: ${data.task_id}`);
-                // 刷新页面以更新状态
-                setTimeout(() => {
-                    location.reload();
-                }, 2000);
-            } else {
-                alert('LLM校验失败: ' + (data.error || '未知错误'));
-            }
-        })
-        .catch(error => {
-            console.error('Error validating narration images with LLM:', error);
-            alert('LLM校验失败: ' + error.message);
-        })
-        .finally(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-robot"></i> LLM校验分镜图片';
-        });
-    }
-}
-
-// 生成首视频
-function generateFirstVideo() {
-    if (confirm('确定要生成首视频吗？这将使用gen_first_video_async.py脚本为当前章节生成第一个narration的视频。')) {
-        const btn = document.getElementById('generateFirstVideoBtn');
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 生成中...';
-        
-        fetch(`/video/api/chapters/{{ chapter.id }}/generate-first-video/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': getCSRFToken()
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert(`首视频生成任务已启动！任务ID: ${data.task_id}`);
-                // 刷新页面以更新状态
-                setTimeout(() => {
-                    location.reload();
-                }, 2000);
-            } else {
-                alert('首视频生成失败: ' + (data.error || '未知错误'));
-            }
-        })
-        .catch(error => {
-            console.error('Error generating first video:', error);
-            alert('首视频生成失败: ' + error.message);
-        })
-        .finally(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-play-circle"></i> 生成首视频';
-        });
-    }
-}
-
-// 批量生成音频
-function batchGenerateAudio() {
-    if (confirm('确定要批量生成所有解说段落的音频吗？')) {
-        const btn = document.getElementById('batchAudioBtn');
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 批量生成中...';
-        
-        fetch(`/video/api/chapters/{{ chapter.id }}/batch-generate-audio/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': getCSRFToken()
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert(`批量生成音频任务已启动！共${data.count}个解说段落。`);
-                // 刷新页面以更新状态
-                setTimeout(() => {
-                    location.reload();
-                }, 2000);
-            } else {
-                alert('批量生成失败: ' + (data.error || '未知错误'));
-            }
-        })
-        .catch(error => {
-            console.error('Error batch generating audio:', error);
-            alert('批量生成失败: ' + error.message);
-        })
-        .finally(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-volume-up"></i> 批量生成音频';
-        });
-    }
-}
-
-// 批量生成全部视频
-function batchGenerateAllVideos() {
-    if (confirm('确定要批量生成所有解说段落的完整视频吗？这将包含音频、图片和视频的完整制作流程。')) {
-        const btn = document.getElementById('batchAllVideoBtn');
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 批量生成中...';
-        
-        fetch(`/video/api/chapters/{{ chapter.id }}/batch-generate-all-videos/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': getCSRFToken()
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert(`批量生成全部视频任务已启动！共${data.count}个解说段落。`);
-                // 刷新页面以更新状态
-                setTimeout(() => {
-                    location.reload();
-                }, 2000);
-            } else {
-                alert('批量生成失败: ' + (data.error || '未知错误'));
-            }
-        })
-        .catch(error => {
-            console.error('Error batch generating all videos:', error);
-            alert('批量生成失败: ' + error.message);
-        })
-        .finally(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-film"></i> 批量生成全部视频';
-        });
-    }
-}
-
-// 显示分镜图片
-function showNarrationImages(narrationId, sceneNumber) {
-    fetch(`/video/api/narrations/${narrationId}/images/`)
-    .then(response => response.json())
-    .then(data => {
-        if (data.images && data.images.length > 0) {
-            // 创建图片展示模态框
-            showImageModal(data.images, sceneNumber, narrationId);
-        } else {
-            alert('暂无分镜图片');
-        }
-    })
-    .catch(error => {
-        console.error('Error loading images:', error);
-        alert('加载图片失败');
-    });
-}
-
-// 将scene_number转换为图片编号
-function sceneNumberToImageNumber(sceneNumber) {
-    console.log('DEBUG: sceneNumberToImageNumber - 输入sceneNumber:', sceneNumber);
-    
-    if (!sceneNumber.includes('-')) {
-        // 如果不包含'-'，直接返回数字
-        const result = parseInt(sceneNumber);
-        console.log('DEBUG: sceneNumberToImageNumber - 简单格式，返回:', result);
-        return result;
-    }
-    
-    // 解析"段-分镜"格式，如"2-1"表示第2段第1个分镜
-    const parts = sceneNumber.split('-');
-    const segment = parseInt(parts[0]); // 段号
-    const scene = parseInt(parts[1]);   // 分镜号
-    
-    // 计算图片编号：每段有3个分镜，所以图片编号 = (段号-1) * 3 + 分镜号
-    const imageNumber = (segment - 1) * 3 + scene;
-    
-    console.log(`DEBUG: sceneNumberToImageNumber - 段号: ${segment}, 分镜号: ${scene}, 计算出图片编号: ${imageNumber}`);
-    return imageNumber;
-}
-
-// 显示图片模态框
-function showImageModal(images, sceneNumber, narrationId) {
-    // 根据场景编号筛选对应的图片
-    console.log('DEBUG: showImageModal - 原始sceneNumber:', sceneNumber);
-    console.log('DEBUG: showImageModal - 接收到的narrationId:', narrationId);
-    console.log('DEBUG: showImageModal - 接收到的images:', images);
-    
-    // 计算正确的图片编号
-    const targetImageNumber = sceneNumberToImageNumber(sceneNumber);
-    
-    const sceneImages = images.filter(img => {
-        // 从文件名中提取场景编号，匹配格式如: chapter_001_image_02.jpeg 或 chapter_001_image_02_1.jpeg
-        const match = img.filename.match(/chapter_\d+_image_(\d+)(?:_\d+)?\.(jpeg|jpg|png|gif)$/);
-        if (match) {
-            const imageSceneNumber = parseInt(match[1]);
-            console.log(`DEBUG: 文件 ${img.filename} - 图片编号: ${imageSceneNumber}, 目标编号: ${targetImageNumber}, 匹配: ${imageSceneNumber === targetImageNumber}`);
-            return imageSceneNumber === targetImageNumber;
-        }
-        return false;
-    });
-    
-    console.log('DEBUG: 筛选后的sceneImages:', sceneImages);
-    
-    if (!sceneImages || sceneImages.length === 0) {
-        alert(`第${sceneNumber}段暂无分镜图片`);
-        return;
-    }
-    
-    // 只显示第一张匹配的图片
-    const firstImage = sceneImages[0];
-    
-    console.log('DEBUG: 准备生成模态框HTML，narrationId:', narrationId);
-    console.log('DEBUG: 准备生成模态框HTML，sceneNumber:', sceneNumber);
-    console.log('DEBUG: 准备生成模态框HTML，firstImage.filename:', firstImage.filename);
-    
-    // 创建模态框HTML，只显示第一张图片
-    const modalHtml = `
-        <div class="modal fade" id="imageModal" tabindex="-1">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">第${sceneNumber}段解说分镜图片</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row justify-content-center">
-                            <div class="col-md-8 mb-3">
-                                <img src="${firstImage.url}" class="img-fluid" alt="分镜图片" style="max-width: 100%; height: auto;">
-                                <p class="text-center mt-2">${firstImage.filename}</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h6 class="mb-0">重新生成图片</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="mb-3">
-                                            <label for="customPrompt" class="form-label">自定义提示词（可选）</label>
-                                            <textarea class="form-control" id="customPrompt" rows="3" placeholder="例如：去掉中央那个人的眼镜"></textarea>
-                                            <div class="form-text">输入您希望修改的内容，留空则使用默认提示词重新生成</div>
-                                        </div>
-                                        <button type="button" class="btn btn-warning" onclick="regenerateImage('${firstImage.filename}', '${sceneNumber}', '${narrationId}')">
-                                            <i class="fas fa-redo"></i> 重新生成图片
+                                        {% else %}
+                                        <span class="badge bg-secondary">无</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if narration.subtitle_exists %}
+                                        <button class="btn btn-sm btn-info" onclick="viewSubtitle('{{ narration.subtitle_path }}', '{{ narration.number|stringformat:"02d" }}')">
+                                            <i class="fas fa-closed-captioning me-1"></i>查看
                                         </button>
-                                    </div>
-                                </div>
-                            </div>
+                                        {% else %}
+                                        <span class="badge bg-secondary">无</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if narration.image_exists %}
+                                        <button class="btn btn-sm btn-success" onclick="viewImage('{{ narration.image_path }}', '{{ narration.number|stringformat:"02d" }}')">
+                                            <i class="fas fa-image me-1"></i>查看
+                                        </button>
+                                        {% else %}
+                                        <span class="badge bg-secondary">无</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <small class="text-muted">
+                                            <i class="fas fa-folder me-1"></i>{{ narration.audio_name }}
+                                        </small>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>统计信息：</strong>
+                            共 {{ file_narrations|length }} 个narration，
+                            音频文件 {{ chapter.audio_count }} 个，
+                            字幕文件 {{ chapter.subtitle_count }} 个，
+                            图片文件 {{ chapter.image_count }} 个
                         </div>
                     </div>
+                    {% else %}
+                    <div class="alert alert-warning mb-0">
+                        <i class="fas fa-exclamation-triangle me-2"></i>该章节目录下暂无narration文件
+                        <br>
+                        <small class="text-muted">章节路径: data/{{ chapter.novel.id|stringformat:"03d" }}/{{ chapter.title }}/</small>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
-    `;
-    
-    // 移除已存在的模态框
-    const existingModal = document.getElementById('imageModal');
-    if (existingModal) {
-        existingModal.remove();
-    }
-    
-    // 添加新模态框
-    document.body.insertAdjacentHTML('beforeend', modalHtml);
-    
-    // 显示模态框
+    </div>
+</div>
+
+<!-- 字幕查看模态框 -->
+<div class="modal fade" id="subtitleModal" tabindex="-1" aria-labelledby="subtitleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="subtitleModalLabel">
+                    <i class="fas fa-closed-captioning me-2"></i>字幕文件
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <pre id="subtitleContent" style="max-height: 500px; overflow-y: auto; background-color: #f5f5f5; padding: 15px; border-radius: 5px;"></pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 图片查看模态框 -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">
+                    <i class="fas fa-image me-2"></i>分镜图片
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="narrationImage" src="" alt="分镜图片" style="max-width: 100%; height: auto;">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// 查看字幕文件
+function viewSubtitle(subtitlePath, number) {
+    fetch('/data/' + subtitlePath)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('subtitleContent').textContent = data;
+            document.getElementById('subtitleModalLabel').innerHTML = 
+                '<i class="fas fa-closed-captioning me-2"></i>字幕文件 - Narration ' + number;
+            const modal = new bootstrap.Modal(document.getElementById('subtitleModal'));
+            modal.show();
+        })
+        .catch(error => {
+            console.error('Error loading subtitle:', error);
+            alert('加载字幕文件失败: ' + error.message);
+        });
+}
+
+// 查看图片
+function viewImage(imagePath, number) {
+    document.getElementById('narrationImage').src = '/data/' + imagePath;
+    document.getElementById('imageModalLabel').innerHTML = 
+        '<i class="fas fa-image me-2"></i>分镜图片 - Narration ' + number;
     const modal = new bootstrap.Modal(document.getElementById('imageModal'));
     modal.show();
 }
-
-// 显示解说内容模态框
-function showNarrationContent(narrationId, content) {
-    const modalHtml = `
-        <div class="modal fade" id="narrationContentModal" tabindex="-1" aria-labelledby="narrationContentModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="narrationContentModalLabel">解说内容 - ID: ${narrationId}</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text" style="white-space: pre-wrap; line-height: 1.6;">${content}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    // 移除已存在的模态框
-    const existingModal = document.getElementById('narrationContentModal');
-    if (existingModal) {
-        existingModal.remove();
-    }
-    
-    // 添加新模态框
-    document.body.insertAdjacentHTML('beforeend', modalHtml);
-    
-    // 显示模态框
-    const modal = new bootstrap.Modal(document.getElementById('narrationContentModal'));
-    modal.show();
-}
-
-/**
- * 打开视频播放模态框
- * @param {number} chapterId - 章节ID
- */
-function openVideoModal(chapterId) {
-    const modalHtml = `
-        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="videoModalLabel">视频预览</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <video id="chapterVideo" controls style="width: 100%; max-height: 70vh;">
-                            <source src="" type="video/mp4">
-                            您的浏览器不支持视频播放。
-                        </video>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    // 移除已存在的视频模态框
-    const existingModal = document.getElementById('videoModal');
-    if (existingModal) {
-        existingModal.remove();
-    }
-    
-    // 添加新模态框
-    document.body.insertAdjacentHTML('beforeend', modalHtml);
-    
-    // 设置正确的视频源
-    const video = document.getElementById('chapterVideo');
-    video.src = `/video/api/chapters/${chapterId}/video/`;
-    
-    // 显示模态框
-    const modal = new bootstrap.Modal(document.getElementById('videoModal'));
-    modal.show();
-    
-    // 当模态框关闭时暂停视频
-    modal._element.addEventListener('hidden.bs.modal', function () {
-        video.pause();
-        video.currentTime = 0;
-    });
-}
-
-/**
- * 重新生成图片
- * @param {string} filename - 图片文件名
- * @param {string} sceneNumber - 场景编号
- */
-function regenerateImage(filename, sceneNumber, narrationId) {
-    const customPrompt = document.getElementById('customPrompt').value.trim();
-    
-    // 从文件名中提取图片编号（用于验证）
-    const match = filename.match(/chapter_\d+_image_(\d+)(?:_\d+)?\.(jpeg|jpg|png|gif)$/);
-    if (!match) {
-        alert('无法解析图片文件名');
-        return;
-    }
-    
-    const imageNumber = parseInt(match[1]);
-    console.log('DEBUG: regenerateImage - 图片编号:', imageNumber, '使用传入的narrationId:', narrationId);
-    
-    if (confirm(`确定要重新生成第${sceneNumber}段的分镜图片吗？${customPrompt ? '\n自定义提示词：' + customPrompt : ''}`)) {
-        const regenerateBtn = event.target;
-        const originalText = regenerateBtn.innerHTML;
-        
-        // 更新按钮状态
-        regenerateBtn.disabled = true;
-        regenerateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 重新生成中...';
-        
-        // 构建请求数据
-        const requestData = {
-            custom_prompt: customPrompt || '重新生成图片'  // 如果没有自定义提示词，使用默认值
-        };
-        
-        fetch(`/video/api/novels/{{ chapter.novel.id }}/chapters/{{ chapter.id }}/narrations/${narrationId}/regenerate-image/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': getCSRFToken()
-            },
-            body: JSON.stringify(requestData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('图片重新生成成功！页面将刷新以显示新图片。');
-                // 关闭模态框并刷新页面
-                const modal = bootstrap.Modal.getInstance(document.getElementById('imageModal'));
-                if (modal) {
-                    modal.hide();
-                }
-                setTimeout(() => {
-                    location.reload();
-                }, 1000);
-            } else {
-                alert('重新生成失败: ' + (data.error || '未知错误'));
-            }
-        })
-        .catch(error => {
-            console.error('Error regenerating image:', error);
-            alert('重新生成失败: ' + error.message);
-        })
-        .finally(() => {
-            regenerateBtn.disabled = false;
-            regenerateBtn.innerHTML = originalText;
-        });
-    }
-}
-
-
 </script>
+
 {% endblock %}

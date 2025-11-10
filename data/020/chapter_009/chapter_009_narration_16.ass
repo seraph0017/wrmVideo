@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_009 Narration 16 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.80,Default,,0,0,0,,码头边缘{\c&H0000FFFF&\b1}周玉{\c&H00FFFFFF&\b0}身着
+Dialogue: 0,0:00:01.80,0:00:04.01,Default,,0,0,0,,白色圆领长袍面容俊美
+Dialogue: 0,0:00:04.28,0:00:06.08,Default,,0,0,0,,唇若点朱对太子笑道
+Dialogue: 0,0:00:06.32,0:00:08.28,Default,,0,0,0,,五天路程足够动手了
+Dialogue: 0,0:00:08.79,0:00:10.32,Default,,0,0,0,,背景是阴影中的士兵

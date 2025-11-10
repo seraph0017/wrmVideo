@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.02,Default,,0,0,0,,火牛急得直跺脚
-Dialogue: 0,0:00:01.40,0:00:02.39,Default,,0,0,0,,双哥快动手啊
-Dialogue: 0,0:00:02.81,0:00:04.05,Default,,0,0,0,,他们都快破开大阵了
-Dialogue: 0,0:00:04.45,0:00:05.76,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}却按住他肩膀
-Dialogue: 0,0:00:06.17,0:00:09.17,Default,,0,0,0,,别急蛮力破阵是蠢货看我带
-Dialogue: 0,0:00:09.17,0:00:09.84,Default,,0,0,0,,你走捷径
+Dialogue: 0,0:00:00.02,0:00:02.06,Default,,0,0,0,,吴双向火牛询问神藏遗迹
+Dialogue: 0,0:00:02.06,0:00:02.53,Default,,0,0,0,,详情
+Dialogue: 0,0:00:02.94,0:00:04.74,Default,,0,0,0,,得知此地有灵兽祖兽与
+Dialogue: 0,0:00:04.74,0:00:05.97,Default,,0,0,0,,无数天才地宝
+Dialogue: 0,0:00:06.32,0:00:07.95,Default,,0,0,0,,众人皆是为{\c&H0000FFFF&\b1}寻宝{\c&H00FFFFFF&\b0}而来

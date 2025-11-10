@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_036 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.77,Default,,0,0,0,,十万修士{\c&H0000FFFF&\b1}闻听{\c&H00FFFFFF&\b0}后勤覆灭将领
+Dialogue: 0,0:00:02.77,0:00:04.52,Default,,0,0,0,,被困瞬间作鸟兽散
+Dialogue: 0,0:00:04.97,0:00:06.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}冷笑看着仅剩的
+Dialogue: 0,0:00:06.52,0:00:08.97,Default,,0,0,0,,千名修士却见他们{\c&H0000FFFF&\b1}齐声{\c&H00FFFFFF&\b0}怒吼
+Dialogue: 0,0:00:09.41,0:00:11.38,Default,,0,0,0,,愿往边荒生死不计
+Dialogue: 0,0:00:11.76,0:00:13.08,Default,,0,0,0,,少年挥袖转身
+Dialogue: 0,0:00:13.52,0:00:13.98,Default,,0,0,0,,启程

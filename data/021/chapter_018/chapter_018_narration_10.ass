@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.88,Default,,0,0,0,,神藏遗迹{\c&H0000FFFF&\b1}内吴{\c&H00FFFFFF&\b0}双与
-Dialogue: 0,0:00:01.88,0:00:04.38,Default,,0,0,0,,火牛并肩而立周围是灰蒙蒙
-Dialogue: 0,0:00:04.38,0:00:07.02,Default,,0,0,0,,的天空和枯萎植被他低声道
-Dialogue: 0,0:00:07.46,0:00:10.08,Default,,0,0,0,,你家{\c&H0000FFFF&\b1}老祖宗{\c&H00FFFFFF&\b0}只是演戏我自有
-Dialogue: 0,0:00:10.08,0:00:11.67,Default,,0,0,0,,脱身之法放心
+Dialogue: 0,0:00:00.02,0:00:01.97,Default,,0,0,0,,火白以神盘境之力护住{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.33,0:00:03.31,Default,,0,0,0,,与{\c&H0000FFFF&\b1}梅丽丹{\c&H00FFFFFF&\b0}对峙
+Dialogue: 0,0:00:03.78,0:00:05.49,Default,,0,0,0,,{\c&H0000FFFF&\b1}梅丽丹{\c&H00FFFFFF&\b0}神盘骤然显现
+Dialogue: 0,0:00:05.99,0:00:07.35,Default,,0,0,0,,如{\c&H0000FFFF&\b1}山岳{\c&H00FFFFFF&\b0}般压迫而来
+Dialogue: 0,0:00:07.65,0:00:09.87,Default,,0,0,0,,火白神盘同样展开{\c&H0000FFFF&\b1}抗衡{\c&H00FFFFFF&\b0}

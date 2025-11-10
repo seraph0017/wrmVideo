@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_045 Narration 02 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴铎{\c&H00FFFFFF&\b0}奉皇太孙朱遵锦之命
+Dialogue: 0,0:00:01.98,0:00:02.79,Default,,0,0,0,,暗中监视
+Dialogue: 0,0:00:03.31,0:00:04.56,Default,,0,0,0,,此刻正躲在暗处
+Dialogue: 0,0:00:04.84,0:00:06.22,Default,,0,0,0,,将曹睿与王家姐姐的
+Dialogue: 0,0:00:06.22,0:00:07.83,Default,,0,0,0,,亲密举动尽收眼底
+Dialogue: 0,0:00:08.22,0:00:09.76,Default,,0,0,0,,脸上难掩震惊之色

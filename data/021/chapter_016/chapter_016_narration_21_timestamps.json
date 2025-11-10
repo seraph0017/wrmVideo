@@ -1,253 +1,218 @@
 {
-  "text": "陈子清赶到闯关现场，见吴双轻松闯过前两关，对身后道：\"开启第三关，让陈翔出手，记住，废了他，留活口！\"",
-  "audio_file": "data/021/chapter_016/chapter_016_narration_21.mp3",
-  "duration": 9.733,
+  "text": "吴家火峰，吴魁收到江家、司马家消息，抚须笑道\"陈家要倒霉了！按吴双说的做，全力支持他\"",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_016/chapter_016_narration_21.mp3",
+  "duration": 8.4,
   "character_timestamps": [
     {
-      "character": "陈",
-      "start_time": 0.016,
-      "end_time": 0.212
+      "character": "吴",
+      "start_time": 0.02,
+      "end_time": 0.187
     },
     {
-      "character": "子",
-      "start_time": 0.212,
-      "end_time": 0.337
+      "character": "家",
+      "start_time": 0.187,
+      "end_time": 0.362
     },
     {
-      "character": "清",
-      "start_time": 0.337,
-      "end_time": 0.508
+      "character": "火",
+      "start_time": 0.362,
+      "end_time": 0.549
     },
     {
-      "character": "赶",
-      "start_time": 0.508,
-      "end_time": 0.67
-    },
-    {
-      "character": "到",
-      "start_time": 0.67,
-      "end_time": 0.779
-    },
-    {
-      "character": "闯",
-      "start_time": 0.779,
-      "end_time": 1.029
-    },
-    {
-      "character": "关",
-      "start_time": 1.029,
-      "end_time": 1.174
-    },
-    {
-      "character": "现",
-      "start_time": 1.174,
-      "end_time": 1.362
-    },
-    {
-      "character": "场",
-      "start_time": 1.362,
-      "end_time": 1.558
+      "character": "峰",
+      "start_time": 0.549,
+      "end_time": 0.766
     },
     {
       "character": "，",
-      "start_time": 1.558,
-      "end_time": 2.02
-    },
-    {
-      "character": "见",
-      "start_time": 2.02,
-      "end_time": 2.204
+      "start_time": 0.766,
+      "end_time": 1.116
     },
     {
       "character": "吴",
-      "start_time": 2.204,
-      "end_time": 2.329
+      "start_time": 1.116,
+      "end_time": 1.304
     },
     {
-      "character": "双",
-      "start_time": 2.329,
-      "end_time": 2.516
+      "character": "魁",
+      "start_time": 1.304,
+      "end_time": 1.487
     },
     {
-      "character": "轻",
-      "start_time": 2.516,
-      "end_time": 2.754
+      "character": "收",
+      "start_time": 1.487,
+      "end_time": 1.649
     },
     {
-      "character": "松",
-      "start_time": 2.754,
-      "end_time": 2.92
+      "character": "到",
+      "start_time": 1.649,
+      "end_time": 1.766
     },
     {
-      "character": "闯",
-      "start_time": 2.92,
-      "end_time": 3.154
+      "character": "江",
+      "start_time": 1.766,
+      "end_time": 1.979
     },
     {
-      "character": "过",
-      "start_time": 3.154,
-      "end_time": 3.262
-    },
-    {
-      "character": "前",
-      "start_time": 3.262,
-      "end_time": 3.437
-    },
-    {
-      "character": "两",
-      "start_time": 3.437,
-      "end_time": 3.591
-    },
-    {
-      "character": "关",
-      "start_time": 3.591,
-      "end_time": 3.791
+      "character": "家",
+      "start_time": 1.979,
+      "end_time": 2.179
     },
     {
       "character": "，",
-      "start_time": 3.791,
-      "end_time": 4.249
+      "start_time": 2.179,
+      "end_time": 2.512
     },
     {
-      "character": "对",
-      "start_time": 4.249,
-      "end_time": 4.366
+      "character": "司",
+      "start_time": 2.512,
+      "end_time": 2.699
     },
     {
-      "character": "身",
-      "start_time": 4.366,
-      "end_time": 4.562
+      "character": "马",
+      "start_time": 2.699,
+      "end_time": 2.837
     },
     {
-      "character": "后",
-      "start_time": 4.562,
-      "end_time": 4.733
+      "character": "家",
+      "start_time": 2.837,
+      "end_time": 2.97
+    },
+    {
+      "character": "消",
+      "start_time": 2.97,
+      "end_time": 3.183
+    },
+    {
+      "character": "息",
+      "start_time": 3.183,
+      "end_time": 3.354
+    },
+    {
+      "character": "，",
+      "start_time": 3.354,
+      "end_time": 3.629
+    },
+    {
+      "character": "抚",
+      "start_time": 3.629,
+      "end_time": 3.829
+    },
+    {
+      "character": "须",
+      "start_time": 3.829,
+      "end_time": 3.983
+    },
+    {
+      "character": "笑",
+      "start_time": 3.983,
+      "end_time": 4.145
     },
     {
       "character": "道",
-      "start_time": 4.733,
-      "end_time": 4.879
-    },
-    {
-      "character": "：",
-      "start_time": 4.879,
-      "end_time": 5.129
-    },
-    {
-      "character": "开",
-      "start_time": 5.129,
-      "end_time": 5.291
-    },
-    {
-      "character": "启",
-      "start_time": 5.291,
-      "end_time": 5.445
-    },
-    {
-      "character": "第",
-      "start_time": 5.445,
-      "end_time": 5.579
-    },
-    {
-      "character": "三",
-      "start_time": 5.579,
-      "end_time": 5.766
-    },
-    {
-      "character": "关",
-      "start_time": 5.766,
-      "end_time": 5.937
-    },
-    {
-      "character": "，",
-      "start_time": 5.937,
-      "end_time": 6.254
-    },
-    {
-      "character": "让",
-      "start_time": 6.254,
-      "end_time": 6.404
+      "start_time": 4.145,
+      "end_time": 4.283
     },
     {
       "character": "陈",
-      "start_time": 6.404,
-      "end_time": 6.683
+      "start_time": 4.283,
+      "end_time": 4.595
     },
     {
-      "character": "翔",
-      "start_time": 6.683,
-      "end_time": 6.87
+      "character": "家",
+      "start_time": 4.595,
+      "end_time": 4.758
     },
     {
-      "character": "出",
-      "start_time": 6.87,
-      "end_time": 7.016
+      "character": "要",
+      "start_time": 4.758,
+      "end_time": 4.874
     },
     {
-      "character": "手",
-      "start_time": 7.016,
-      "end_time": 7.191
+      "character": "倒",
+      "start_time": 4.874,
+      "end_time": 5.099
     },
     {
-      "character": "，",
-      "start_time": 7.191,
-      "end_time": 7.504
-    },
-    {
-      "character": "记",
-      "start_time": 7.504,
-      "end_time": 7.679
-    },
-    {
-      "character": "住",
-      "start_time": 7.679,
-      "end_time": 7.829
-    },
-    {
-      "character": "，",
-      "start_time": 7.829,
-      "end_time": 8.154
-    },
-    {
-      "character": "废",
-      "start_time": 8.154,
-      "end_time": 8.366
+      "character": "霉",
+      "start_time": 5.099,
+      "end_time": 5.308
     },
     {
       "character": "了",
-      "start_time": 8.366,
-      "end_time": 8.462
-    },
-    {
-      "character": "他",
-      "start_time": 8.462,
-      "end_time": 8.683
+      "start_time": 5.308,
+      "end_time": 5.408
     },
     {
       "character": "，",
-      "start_time": 8.683,
-      "end_time": 8.979
+      "start_time": 5.408,
+      "end_time": 5.912
     },
     {
-      "character": "留",
-      "start_time": 8.979,
-      "end_time": 9.22
+      "character": "按",
+      "start_time": 5.912,
+      "end_time": 6.099
     },
     {
-      "character": "活",
-      "start_time": 9.22,
-      "end_time": 9.412
+      "character": "吴",
+      "start_time": 6.099,
+      "end_time": 6.233
     },
     {
-      "character": "口",
-      "start_time": 9.412,
-      "end_time": 9.574
+      "character": "双",
+      "start_time": 6.233,
+      "end_time": 6.408
     },
     {
-      "character": "！",
-      "start_time": 9.574,
-      "end_time": 9.733
+      "character": "说",
+      "start_time": 6.408,
+      "end_time": 6.549
+    },
+    {
+      "character": "的",
+      "start_time": 6.549,
+      "end_time": 6.624
+    },
+    {
+      "character": "做",
+      "start_time": 6.624,
+      "end_time": 6.812
+    },
+    {
+      "character": "，",
+      "start_time": 6.812,
+      "end_time": 7.137
+    },
+    {
+      "character": "全",
+      "start_time": 7.137,
+      "end_time": 7.449
+    },
+    {
+      "character": "力",
+      "start_time": 7.449,
+      "end_time": 7.624
+    },
+    {
+      "character": "支",
+      "start_time": 7.624,
+      "end_time": 7.862
+    },
+    {
+      "character": "持",
+      "start_time": 7.862,
+      "end_time": 8.037
+    },
+    {
+      "character": "他",
+      "start_time": 8.037,
+      "end_time": 8.237
+    },
+    {
+      "character": "。",
+      "start_time": 8.237,
+      "end_time": 8.396
     }
   ],
-  "generated_at": "2025-09-23T08:22:00.501403"
+  "generated_at": "2025-11-07T23:12:26.710820"
 }

@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_038 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}抓住地炎虎蜥尾巴借力
+Dialogue: 0,0:00:02.37,0:00:03.55,Default,,0,0,0,,冲向空间漩涡
+Dialogue: 0,0:00:03.79,0:00:05.12,Default,,0,0,0,,再见了神兽
+Dialogue: 0,0:00:05.46,0:00:07.77,Default,,0,0,0,,他大笑声中身体被漩涡吸走
+Dialogue: 0,0:00:08.04,0:00:10.38,Default,,0,0,0,,留下暴怒的地炎虎蜥在原地
+Dialogue: 0,0:00:10.38,0:00:10.81,Default,,0,0,0,,咆哮

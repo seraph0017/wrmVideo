@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}断后
-Dialogue: 0,0:00:00.97,0:00:02.38,Default,,0,0,0,,不断轰击洞穴两侧
-Dialogue: 0,0:00:02.81,0:00:04.07,Default,,0,0,0,,造成坍塌堵塞通道
-Dialogue: 0,0:00:04.41,0:00:05.72,Default,,0,0,0,,阻止{\c&H0000FFFF&\b1}赵牧{\c&H00FFFFFF&\b0}等人追击
-Dialogue: 0,0:00:06.04,0:00:07.69,Default,,0,0,0,,为{\c&H0000FFFF&\b1}江家{\c&H00FFFFFF&\b0}兄妹争取时间
+Dialogue: 0,0:00:00.02,0:00:01.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}天泉{\c&H00FFFFFF&\b0}境中期达成
+Dialogue: 0,0:00:01.70,0:00:03.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}仅用两时辰跨越瓶颈
+Dialogue: 0,0:00:04.23,0:00:06.70,Default,,0,0,0,,体内{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之气澎湃如潮九转
+Dialogue: 0,0:00:06.70,0:00:09.67,Default,,0,0,0,,真火功法运转周天力量远超
+Dialogue: 0,0:00:09.67,0:00:10.07,Default,,0,0,0,,同阶

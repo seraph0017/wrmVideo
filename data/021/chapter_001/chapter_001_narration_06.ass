@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.49,Default,,0,0,0,,后方传来尖细嗓音{\c&H0000FFFF&\b1}吴晨{\c&H00FFFFFF&\b0}捂着
-Dialogue: 0,0:00:02.49,0:00:04.31,Default,,0,0,0,,受伤的右臂脸色狰狞
-Dialogue: 0,0:00:04.70,0:00:05.06,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:05.32,0:00:07.62,Default,,0,0,0,,敢打断我手臂今天定要你
-Dialogue: 0,0:00:07.62,0:00:08.52,Default,,0,0,0,,四肢全断
+Dialogue: 0,0:00:00.02,0:00:01.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}转身冷笑
+Dialogue: 0,0:00:01.54,0:00:04.00,Default,,0,0,0,,地泉境偷袭人泉境反被打断
+Dialogue: 0,0:00:04.00,0:00:06.21,Default,,0,0,0,,手臂如此丢脸还敢叫嚣
+Dialogue: 0,0:00:06.74,0:00:09.11,Default,,0,0,0,,他目光扫过四周发现距禁地
+Dialogue: 0,0:00:09.11,0:00:11.51,Default,,0,0,0,,仅百十米只要冲进{\c&H0000FFFF&\b1}老祖宗{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:11.51,0:00:13.53,Default,,0,0,0,,院子这些人便不敢动手

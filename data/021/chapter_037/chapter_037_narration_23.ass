@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_037 Narration 23 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.18,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}浅粉襦裙在通道气流
+Dialogue: 0,0:00:02.18,0:00:02.68,Default,,0,0,0,,中飘动
+Dialogue: 0,0:00:03.08,0:00:04.52,Default,,0,0,0,,发髻散落几缕发丝
+Dialogue: 0,0:00:04.97,0:00:06.46,Default,,0,0,0,,左手紧握{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}手腕
+Dialogue: 0,0:00:06.89,0:00:08.64,Default,,0,0,0,,右手按在胸前大帝令上
+Dialogue: 0,0:00:09.05,0:00:11.29,Default,,0,0,0,,脸上虽有疲惫却难掩重逢的
+Dialogue: 0,0:00:11.29,0:00:11.64,Default,,0,0,0,,安心

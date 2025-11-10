@@ -1,253 +1,223 @@
 {
-  "text": "赵猛得知御剑门危机，双拳紧握砸在桌上。他面色凝重请求吴双出手相助，眼中闪烁着坚定的光芒，语气诚恳。",
-  "audio_file": "data/021/chapter_025/chapter_025_narration_20.mp3",
-  "duration": 9.891,
+  "text": "赵猛也不甘示弱，大喝一声，双拳齐出，与另外两名银剑宗弟子战在一处，拳影翻飞，气势如虹。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_025/chapter_025_narration_20.mp3",
+  "duration": 8.466,
   "character_timestamps": [
     {
       "character": "赵",
       "start_time": 0.016,
-      "end_time": 0.174
+      "end_time": 0.195
     },
     {
       "character": "猛",
-      "start_time": 0.174,
-      "end_time": 0.354
+      "start_time": 0.195,
+      "end_time": 0.366
     },
     {
-      "character": "得",
-      "start_time": 0.354,
-      "end_time": 0.529
+      "character": "也",
+      "start_time": 0.366,
+      "end_time": 0.479
     },
     {
-      "character": "知",
-      "start_time": 0.529,
-      "end_time": 0.687
+      "character": "不",
+      "start_time": 0.479,
+      "end_time": 0.587
     },
     {
-      "character": "御",
-      "start_time": 0.687,
-      "end_time": 0.854
+      "character": "甘",
+      "start_time": 0.587,
+      "end_time": 0.729
     },
     {
-      "character": "剑",
-      "start_time": 0.854,
-      "end_time": 0.995
+      "character": "示",
+      "start_time": 0.729,
+      "end_time": 0.866
     },
     {
-      "character": "门",
-      "start_time": 0.995,
-      "end_time": 1.183
-    },
-    {
-      "character": "危",
-      "start_time": 1.183,
-      "end_time": 1.341
-    },
-    {
-      "character": "机",
-      "start_time": 1.341,
-      "end_time": 1.541
+      "character": "弱",
+      "start_time": 0.866,
+      "end_time": 1.045
     },
     {
       "character": "，",
-      "start_time": 1.541,
-      "end_time": 2.012
+      "start_time": 1.045,
+      "end_time": 1.449
+    },
+    {
+      "character": "大",
+      "start_time": 1.449,
+      "end_time": 1.654
+    },
+    {
+      "character": "喝",
+      "start_time": 1.654,
+      "end_time": 1.833
+    },
+    {
+      "character": "一",
+      "start_time": 1.833,
+      "end_time": 1.929
+    },
+    {
+      "character": "声",
+      "start_time": 1.929,
+      "end_time": 2.12
+    },
+    {
+      "character": "，",
+      "start_time": 2.12,
+      "end_time": 2.412
     },
     {
       "character": "双",
-      "start_time": 2.012,
-      "end_time": 2.233
+      "start_time": 2.412,
+      "end_time": 2.683
     },
     {
       "character": "拳",
-      "start_time": 2.233,
-      "end_time": 2.42
+      "start_time": 2.683,
+      "end_time": 2.887
     },
     {
-      "character": "紧",
-      "start_time": 2.42,
-      "end_time": 2.674
-    },
-    {
-      "character": "握",
-      "start_time": 2.674,
-      "end_time": 2.874
-    },
-    {
-      "character": "砸",
-      "start_time": 2.874,
-      "end_time": 3.166
-    },
-    {
-      "character": "在",
-      "start_time": 3.166,
-      "end_time": 3.312
-    },
-    {
-      "character": "桌",
-      "start_time": 3.312,
-      "end_time": 3.491
-    },
-    {
-      "character": "上",
-      "start_time": 3.491,
-      "end_time": 3.629
-    },
-    {
-      "character": "，",
-      "start_time": 3.629,
-      "end_time": 4.166
-    },
-    {
-      "character": "他",
-      "start_time": 4.166,
-      "end_time": 4.254
-    },
-    {
-      "character": "面",
-      "start_time": 4.254,
-      "end_time": 4.474
-    },
-    {
-      "character": "色",
-      "start_time": 4.474,
-      "end_time": 4.62
-    },
-    {
-      "character": "凝",
-      "start_time": 4.62,
-      "end_time": 4.833
-    },
-    {
-      "character": "重",
-      "start_time": 4.833,
-      "end_time": 4.995
-    },
-    {
-      "character": "请",
-      "start_time": 4.995,
-      "end_time": 5.22
-    },
-    {
-      "character": "求",
-      "start_time": 5.22,
-      "end_time": 5.416
-    },
-    {
-      "character": "吴",
-      "start_time": 5.416,
-      "end_time": 5.566
-    },
-    {
-      "character": "双",
-      "start_time": 5.566,
-      "end_time": 5.779
+      "character": "齐",
+      "start_time": 2.887,
+      "end_time": 3.054
     },
     {
       "character": "出",
-      "start_time": 5.779,
-      "end_time": 6.012
-    },
-    {
-      "character": "手",
-      "start_time": 6.012,
-      "end_time": 6.17
-    },
-    {
-      "character": "相",
-      "start_time": 6.17,
-      "end_time": 6.362
-    },
-    {
-      "character": "助",
-      "start_time": 6.362,
-      "end_time": 6.491
+      "start_time": 3.054,
+      "end_time": 3.237
     },
     {
       "character": "，",
-      "start_time": 6.491,
-      "end_time": 6.837
+      "start_time": 3.237,
+      "end_time": 3.541
     },
     {
-      "character": "眼",
-      "start_time": 6.837,
-      "end_time": 7.016
+      "character": "与",
+      "start_time": 3.541,
+      "end_time": 3.666
     },
     {
-      "character": "中",
-      "start_time": 7.016,
-      "end_time": 7.158
+      "character": "另",
+      "start_time": 3.666,
+      "end_time": 3.887
     },
     {
-      "character": "闪",
-      "start_time": 7.158,
-      "end_time": 7.408
+      "character": "外",
+      "start_time": 3.887,
+      "end_time": 4.016
     },
     {
-      "character": "烁",
-      "start_time": 7.408,
-      "end_time": 7.541
+      "character": "两",
+      "start_time": 4.016,
+      "end_time": 4.17
     },
     {
-      "character": "着",
-      "start_time": 7.541,
-      "end_time": 7.629
+      "character": "名",
+      "start_time": 4.17,
+      "end_time": 4.333
     },
     {
-      "character": "坚",
-      "start_time": 7.629,
-      "end_time": 7.899
+      "character": "银",
+      "start_time": 4.333,
+      "end_time": 4.541
     },
     {
-      "character": "定",
-      "start_time": 7.899,
-      "end_time": 8.049
+      "character": "剑",
+      "start_time": 4.541,
+      "end_time": 4.729
     },
     {
-      "character": "的",
-      "start_time": 8.049,
-      "end_time": 8.124
+      "character": "宗",
+      "start_time": 4.729,
+      "end_time": 4.891
     },
     {
-      "character": "光",
-      "start_time": 8.124,
-      "end_time": 8.324
+      "character": "弟",
+      "start_time": 4.891,
+      "end_time": 5.045
     },
     {
-      "character": "芒",
-      "start_time": 8.324,
-      "end_time": 8.545
+      "character": "子",
+      "start_time": 5.045,
+      "end_time": 5.274
+    },
+    {
+      "character": "战",
+      "start_time": 5.274,
+      "end_time": 5.495
+    },
+    {
+      "character": "在",
+      "start_time": 5.495,
+      "end_time": 5.633
+    },
+    {
+      "character": "一",
+      "start_time": 5.633,
+      "end_time": 5.774
+    },
+    {
+      "character": "处",
+      "start_time": 5.774,
+      "end_time": 5.941
     },
     {
       "character": "，",
-      "start_time": 8.545,
-      "end_time": 8.954
+      "start_time": 5.941,
+      "end_time": 6.266
     },
     {
-      "character": "语",
-      "start_time": 8.954,
-      "end_time": 9.154
+      "character": "拳",
+      "start_time": 6.266,
+      "end_time": 6.57
+    },
+    {
+      "character": "影",
+      "start_time": 6.57,
+      "end_time": 6.737
+    },
+    {
+      "character": "翻",
+      "start_time": 6.737,
+      "end_time": 6.929
+    },
+    {
+      "character": "飞",
+      "start_time": 6.929,
+      "end_time": 7.124
+    },
+    {
+      "character": "，",
+      "start_time": 7.124,
+      "end_time": 7.433
     },
     {
       "character": "气",
-      "start_time": 9.154,
-      "end_time": 9.345
+      "start_time": 7.433,
+      "end_time": 7.708
     },
     {
-      "character": "诚",
-      "start_time": 9.345,
-      "end_time": 9.574
+      "character": "势",
+      "start_time": 7.708,
+      "end_time": 7.862
     },
     {
-      "character": "恳",
-      "start_time": 9.574,
-      "end_time": 9.729
+      "character": "如",
+      "start_time": 7.862,
+      "end_time": 8.049
+    },
+    {
+      "character": "虹",
+      "start_time": 8.049,
+      "end_time": 8.308
     },
     {
       "character": "。",
-      "start_time": 9.729,
-      "end_time": 9.887
+      "start_time": 8.308,
+      "end_time": 8.467
     }
   ],
-  "generated_at": "2025-09-23T08:25:40.250901"
+  "generated_at": "2025-11-07T23:17:06.918360"
 }

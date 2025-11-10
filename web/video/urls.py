@@ -105,4 +105,14 @@ urlpatterns = [
     
     # 视频预览URL
     path('api/chapters/<int:chapter_id>/video/', views.serve_chapter_video, name='serve_chapter_video'),
+    
+    # 小说AI处理细化操作API
+    path('api/novels/<int:novel_id>/gen_script/', views.novel_gen_script, name='novel_gen_script'),
+    path('api/novels/<int:novel_id>/validate_script/', views.novel_validate_script, name='novel_validate_script'),
+    path('api/novels/<int:novel_id>/gen_audio/', views.novel_gen_audio, name='novel_gen_audio'),
+    path('api/novels/<int:novel_id>/gen_ass/', views.novel_gen_ass, name='novel_gen_ass'),
+    path('api/novels/<int:novel_id>/gen_image/', views.novel_gen_image, name='novel_gen_image'),
+    
+    # Data文件服务
+    path('data/<path:file_path>', views.serve_data_file, name='serve_data_file'),
 ]

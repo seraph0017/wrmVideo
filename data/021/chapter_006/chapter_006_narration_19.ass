@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}司马{\c&H00FFFFFF&\b0}刀在留名崖下等待战意
-Dialogue: 0,0:00:02.42,0:00:02.79,Default,,0,0,0,,澎湃
-Dialogue: 0,0:00:03.07,0:00:05.06,Default,,0,0,0,,他见{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}到来握紧战刀
-Dialogue: 0,0:00:05.39,0:00:07.16,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}还记得我的战帖吗
-Dialogue: 0,0:00:07.53,0:00:08.49,Default,,0,0,0,,今日分胜负
+Dialogue: 0,0:00:00.02,0:00:02.05,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}在地面感受空中大战
+Dialogue: 0,0:00:02.05,0:00:02.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}余威{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.78,0:00:04.83,Default,,0,0,0,,不顾危险冲向大船爆炸处
+Dialogue: 0,0:00:05.21,0:00:06.88,Default,,0,0,0,,要寻找父亲{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄

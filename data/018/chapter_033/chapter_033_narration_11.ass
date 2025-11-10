@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_033 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.22,Default,,0,0,0,,郑毅化身算命先生身着
+Dialogue: 0,0:00:02.22,0:00:04.52,Default,,0,0,0,,棕色圆领长袍鬼鬼祟祟地
+Dialogue: 0,0:00:04.52,0:00:05.25,Default,,0,0,0,,靠近{\c&H0000FFFF&\b1}沙利{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.81,0:00:08.62,Default,,0,0,0,,他面容狡黠眼神灵动假装
+Dialogue: 0,0:00:08.62,0:00:10.42,Default,,0,0,0,,偶遇准备施展骗术
+Dialogue: 0,0:00:10.89,0:00:12.28,Default,,0,0,0,,他看出{\c&H0000FFFF&\b1}沙利{\c&H00FFFFFF&\b0}自负的
+Dialogue: 0,0:00:12.28,0:00:14.88,Default,,0,0,0,,性格决定编造一个{\c&H0000FFFF&\b1}剑皇{\c&H00FFFFFF&\b0}传承
+Dialogue: 0,0:00:14.88,0:00:16.92,Default,,0,0,0,,的谎言骗取{\c&H0000FFFF&\b1}沙利{\c&H00FFFFFF&\b0}的宝物

@@ -14,9 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.62,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈九{\c&H00FFFFFF&\b0}棕色圆领短衫
-Dialogue: 0,0:00:01.91,0:00:02.68,Default,,0,0,0,,面色凶狠
-Dialogue: 0,0:00:03.23,0:00:05.02,Default,,0,0,0,,看到刀猴群追击一人而来
-Dialogue: 0,0:00:05.38,0:00:06.85,Default,,0,0,0,,对陈五道离这里不远
-Dialogue: 0,0:00:07.35,0:00:08.37,Default,,0,0,0,,两人决定暂避
-Dialogue: 0,0:00:08.72,0:00:09.66,Default,,0,0,0,,躲入大树后
+Dialogue: 0,0:00:00.02,0:00:01.25,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}近身陈九
+Dialogue: 0,0:00:01.75,0:00:03.06,Default,,0,0,0,,青色圆领袍鼓胀
+Dialogue: 0,0:00:03.51,0:00:04.43,Default,,0,0,0,,九玄手运转
+Dialogue: 0,0:00:04.79,0:00:05.52,Default,,0,0,0,,拳风{\c&H0000FFFF&\b1}凌厉{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:05.84,0:00:07.36,Default,,0,0,0,,重重轰中陈九面门
+Dialogue: 0,0:00:07.72,0:00:08.38,Default,,0,0,0,,将其击飞
+Dialogue: 0,0:00:08.70,0:00:10.57,Default,,0,0,0,,随即伸手{\c&H0000FFFF&\b1}卡住{\c&H00FFFFFF&\b0}其咽喉

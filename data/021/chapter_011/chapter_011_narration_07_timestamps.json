@@ -1,233 +1,263 @@
 {
-  "text": "火牛与店铺伙计发生激烈冲突，他身材高大，力量惊人，几下就将对方打倒在地，周围人群议论纷纷",
-  "audio_file": "data/021/chapter_011/chapter_011_narration_07.mp3",
-  "duration": 8.608,
+  "text": "丹道权威！汪大掌柜断言丹药被阴风煞气污染成废丹，掌心真火加热，丹内黑气流转，围观者纷纷附和\"果然是废丹\"！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_011/chapter_011_narration_07.mp3",
+  "duration": 10.3,
   "character_timestamps": [
     {
-      "character": "火",
+      "character": "丹",
       "start_time": 0.016,
-      "end_time": 0.17
+      "end_time": 0.166
     },
     {
-      "character": "牛",
-      "start_time": 0.17,
-      "end_time": 0.333
+      "character": "道",
+      "start_time": 0.166,
+      "end_time": 0.299
     },
     {
-      "character": "与",
-      "start_time": 0.333,
-      "end_time": 0.433
+      "character": "权",
+      "start_time": 0.299,
+      "end_time": 0.558
     },
     {
-      "character": "店",
-      "start_time": 0.433,
-      "end_time": 0.633
-    },
-    {
-      "character": "铺",
-      "start_time": 0.633,
-      "end_time": 0.774
-    },
-    {
-      "character": "伙",
-      "start_time": 0.774,
-      "end_time": 0.949
-    },
-    {
-      "character": "计",
-      "start_time": 0.949,
-      "end_time": 1.195
-    },
-    {
-      "character": "发",
-      "start_time": 1.195,
-      "end_time": 1.424
-    },
-    {
-      "character": "生",
-      "start_time": 1.424,
-      "end_time": 1.608
-    },
-    {
-      "character": "激",
-      "start_time": 1.608,
-      "end_time": 1.837
-    },
-    {
-      "character": "烈",
-      "start_time": 1.837,
-      "end_time": 1.979
-    },
-    {
-      "character": "冲",
-      "start_time": 1.979,
-      "end_time": 2.179
-    },
-    {
-      "character": "突",
-      "start_time": 2.179,
-      "end_time": 2.354
+      "character": "威",
+      "start_time": 0.558,
+      "end_time": 0.729
     },
     {
       "character": "，",
-      "start_time": 2.354,
-      "end_time": 2.754
+      "start_time": 0.729,
+      "end_time": 1.133
     },
     {
-      "character": "他",
-      "start_time": 2.754,
-      "end_time": 2.849
-    },
-    {
-      "character": "身",
-      "start_time": 2.849,
-      "end_time": 3.062
-    },
-    {
-      "character": "材",
-      "start_time": 3.062,
-      "end_time": 3.258
-    },
-    {
-      "character": "高",
-      "start_time": 3.258,
-      "end_time": 3.445
+      "character": "汪",
+      "start_time": 1.133,
+      "end_time": 1.308
     },
     {
       "character": "大",
-      "start_time": 3.445,
-      "end_time": 3.591
+      "start_time": 1.308,
+      "end_time": 1.449
+    },
+    {
+      "character": "掌",
+      "start_time": 1.449,
+      "end_time": 1.599
+    },
+    {
+      "character": "柜",
+      "start_time": 1.599,
+      "end_time": 1.737
+    },
+    {
+      "character": "断",
+      "start_time": 1.737,
+      "end_time": 1.937
+    },
+    {
+      "character": "言",
+      "start_time": 1.937,
+      "end_time": 2.112
+    },
+    {
+      "character": "丹",
+      "start_time": 2.112,
+      "end_time": 2.274
+    },
+    {
+      "character": "药",
+      "start_time": 2.274,
+      "end_time": 2.433
+    },
+    {
+      "character": "被",
+      "start_time": 2.433,
+      "end_time": 2.595
+    },
+    {
+      "character": "阴",
+      "start_time": 2.595,
+      "end_time": 2.829
+    },
+    {
+      "character": "风",
+      "start_time": 2.829,
+      "end_time": 2.999
+    },
+    {
+      "character": "煞",
+      "start_time": 2.999,
+      "end_time": 3.199
+    },
+    {
+      "character": "气",
+      "start_time": 3.199,
+      "end_time": 3.383
+    },
+    {
+      "character": "污",
+      "start_time": 3.383,
+      "end_time": 3.566
+    },
+    {
+      "character": "染",
+      "start_time": 3.566,
+      "end_time": 3.729
+    },
+    {
+      "character": "成",
+      "start_time": 3.729,
+      "end_time": 3.924
+    },
+    {
+      "character": "废",
+      "start_time": 3.924,
+      "end_time": 4.12
+    },
+    {
+      "character": "丹",
+      "start_time": 4.12,
+      "end_time": 4.312
     },
     {
       "character": "，",
-      "start_time": 3.591,
-      "end_time": 3.849
+      "start_time": 4.312,
+      "end_time": 4.845
     },
     {
-      "character": "力",
-      "start_time": 3.849,
-      "end_time": 4.07
+      "character": "掌",
+      "start_time": 4.845,
+      "end_time": 5.016
     },
     {
-      "character": "量",
-      "start_time": 4.07,
-      "end_time": 4.249
+      "character": "心",
+      "start_time": 5.016,
+      "end_time": 5.212
     },
     {
-      "character": "惊",
-      "start_time": 4.249,
-      "end_time": 4.429
+      "character": "真",
+      "start_time": 5.212,
+      "end_time": 5.433
     },
     {
-      "character": "人",
-      "start_time": 4.429,
-      "end_time": 4.637
+      "character": "火",
+      "start_time": 5.433,
+      "end_time": 5.612
     },
     {
-      "character": "，",
-      "start_time": 4.637,
-      "end_time": 4.945
+      "character": "加",
+      "start_time": 5.612,
+      "end_time": 5.837
     },
     {
-      "character": "几",
-      "start_time": 4.945,
-      "end_time": 5.104
-    },
-    {
-      "character": "下",
-      "start_time": 5.104,
-      "end_time": 5.262
-    },
-    {
-      "character": "就",
-      "start_time": 5.262,
-      "end_time": 5.362
-    },
-    {
-      "character": "将",
-      "start_time": 5.362,
-      "end_time": 5.499
-    },
-    {
-      "character": "对",
-      "start_time": 5.499,
-      "end_time": 5.645
-    },
-    {
-      "character": "方",
-      "start_time": 5.645,
-      "end_time": 5.824
-    },
-    {
-      "character": "打",
-      "start_time": 5.824,
-      "end_time": 6.058
-    },
-    {
-      "character": "倒",
-      "start_time": 6.058,
-      "end_time": 6.191
-    },
-    {
-      "character": "在",
-      "start_time": 6.191,
-      "end_time": 6.374
-    },
-    {
-      "character": "地",
-      "start_time": 6.374,
-      "end_time": 6.524
+      "character": "热",
+      "start_time": 5.837,
+      "end_time": 5.974
     },
     {
       "character": "，",
-      "start_time": 6.524,
-      "end_time": 6.858
+      "start_time": 5.974,
+      "end_time": 6.404
     },
     {
-      "character": "周",
-      "start_time": 6.858,
-      "end_time": 7.033
+      "character": "丹",
+      "start_time": 6.404,
+      "end_time": 6.499
+    },
+    {
+      "character": "内",
+      "start_time": 6.499,
+      "end_time": 6.645
+    },
+    {
+      "character": "黑",
+      "start_time": 6.645,
+      "end_time": 6.895
+    },
+    {
+      "character": "气",
+      "start_time": 6.895,
+      "end_time": 7.058
+    },
+    {
+      "character": "流",
+      "start_time": 7.058,
+      "end_time": 7.224
+    },
+    {
+      "character": "转",
+      "start_time": 7.224,
+      "end_time": 7.391
+    },
+    {
+      "character": "，",
+      "start_time": 7.391,
+      "end_time": 7.774
     },
     {
       "character": "围",
-      "start_time": 7.033,
-      "end_time": 7.149
+      "start_time": 7.774,
+      "end_time": 7.924
     },
     {
-      "character": "人",
-      "start_time": 7.149,
-      "end_time": 7.354
+      "character": "观",
+      "start_time": 7.924,
+      "end_time": 8.091
     },
     {
-      "character": "群",
-      "start_time": 7.354,
-      "end_time": 7.649
-    },
-    {
-      "character": "议",
-      "start_time": 7.649,
-      "end_time": 7.904
-    },
-    {
-      "character": "论",
-      "start_time": 7.904,
-      "end_time": 8.079
+      "character": "者",
+      "start_time": 8.091,
+      "end_time": 8.241
     },
     {
       "character": "纷",
-      "start_time": 8.079,
-      "end_time": 8.266
+      "start_time": 8.241,
+      "end_time": 8.462
     },
     {
       "character": "纷",
-      "start_time": 8.266,
-      "end_time": 8.445
+      "start_time": 8.462,
+      "end_time": 8.629
     },
     {
-      "character": "。",
-      "start_time": 8.445,
-      "end_time": 8.604
+      "character": "附",
+      "start_time": 8.629,
+      "end_time": 8.837
+    },
+    {
+      "character": "和",
+      "start_time": 8.837,
+      "end_time": 9.049
+    },
+    {
+      "character": "果",
+      "start_time": 9.049,
+      "end_time": 9.362
+    },
+    {
+      "character": "然",
+      "start_time": 9.362,
+      "end_time": 9.566
+    },
+    {
+      "character": "是",
+      "start_time": 9.566,
+      "end_time": 9.708
+    },
+    {
+      "character": "废",
+      "start_time": 9.708,
+      "end_time": 9.941
+    },
+    {
+      "character": "丹",
+      "start_time": 9.941,
+      "end_time": 10.141
+    },
+    {
+      "character": "！",
+      "start_time": 10.141,
+      "end_time": 10.3
     }
   ],
-  "generated_at": "2025-09-23T08:20:05.125187"
+  "generated_at": "2025-11-07T23:10:13.794416"
 }

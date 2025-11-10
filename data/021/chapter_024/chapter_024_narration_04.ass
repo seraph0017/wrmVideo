@@ -14,8 +14,11 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵猛{\c&H00FFFFFF&\b0}跪在御剑门广场额头
-Dialogue: 0,0:00:02.22,0:00:04.12,Default,,0,0,0,,触地重重磕了三个头
-Dialogue: 0,0:00:04.55,0:00:06.53,Default,,0,0,0,,他深色圆领短衫沾满尘土
-Dialogue: 0,0:00:06.97,0:00:08.58,Default,,0,0,0,,背影透着不舍却又带着
-Dialogue: 0,0:00:08.58,0:00:09.44,Default,,0,0,0,,解脱的轻松
+Dialogue: 0,0:00:00.02,0:00:01.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵猛{\c&H00FFFFFF&\b0}盘膝坐在小岛沙滩上
+Dialogue: 0,0:00:02.31,0:00:04.35,Default,,0,0,0,,深灰圆领袍因身体膨胀而
+Dialogue: 0,0:00:04.35,0:00:04.75,Default,,0,0,0,,紧绷
+Dialogue: 0,0:00:05.27,0:00:07.89,Default,,0,0,0,,他双目紧闭周身土黄色光芒
+Dialogue: 0,0:00:07.89,0:00:10.05,Default,,0,0,0,,环绕正在修炼{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}传授的
+Dialogue: 0,0:00:10.05,0:00:12.93,Default,,0,0,0,,搬山神力体内力量暴涨即将
+Dialogue: 0,0:00:12.93,0:00:15.20,Default,,0,0,0,,突破境界周围沙地因力量
+Dialogue: 0,0:00:15.20,0:00:16.42,Default,,0,0,0,,波动微微震动

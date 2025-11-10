@@ -1,208 +1,183 @@
 {
-  "text": "江浩看着吴双与神鸟打斗的废墟，感叹：\"这到底是什么鸟？刚孵化就能说话，还这么能打！\"",
-  "audio_file": "data/021/chapter_006/chapter_006_narration_15.mp3",
-  "duration": 6.883,
+  "text": "吴双带江蜜儿、江浩赶到留名崖，发现周围埋伏众多敌人，面色凝重准备应对",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_006/chapter_006_narration_15.mp3",
+  "duration": 6.666,
   "character_timestamps": [
     {
-      "character": "江",
-      "start_time": 0.02,
-      "end_time": 0.187
-    },
-    {
-      "character": "浩",
-      "start_time": 0.187,
-      "end_time": 0.354
-    },
-    {
-      "character": "看",
-      "start_time": 0.354,
-      "end_time": 0.524
-    },
-    {
-      "character": "着",
-      "start_time": 0.524,
-      "end_time": 0.616
-    },
-    {
       "character": "吴",
-      "start_time": 0.616,
-      "end_time": 0.762
+      "start_time": 0.016,
+      "end_time": 0.179
     },
     {
       "character": "双",
-      "start_time": 0.762,
-      "end_time": 0.954
+      "start_time": 0.179,
+      "end_time": 0.383
     },
     {
-      "character": "与",
-      "start_time": 0.954,
+      "character": "带",
+      "start_time": 0.383,
+      "end_time": 0.562
+    },
+    {
+      "character": "江",
+      "start_time": 0.562,
+      "end_time": 0.724
+    },
+    {
+      "character": "蜜",
+      "start_time": 0.724,
+      "end_time": 0.879
+    },
+    {
+      "character": "儿",
+      "start_time": 0.879,
       "end_time": 1.062
     },
     {
-      "character": "神",
+      "character": "，",
       "start_time": 1.062,
-      "end_time": 1.245
+      "end_time": 1.508
     },
     {
-      "character": "鸟",
-      "start_time": 1.245,
-      "end_time": 1.404
-    },
-    {
-      "character": "打",
-      "start_time": 1.404,
-      "end_time": 1.574
-    },
-    {
-      "character": "斗",
-      "start_time": 1.574,
+      "character": "江",
+      "start_time": 1.508,
       "end_time": 1.687
     },
     {
-      "character": "的",
+      "character": "浩",
       "start_time": 1.687,
-      "end_time": 1.758
+      "end_time": 1.879
     },
     {
-      "character": "废",
-      "start_time": 1.758,
-      "end_time": 1.929
-    },
-    {
-      "character": "墟",
-      "start_time": 1.929,
-      "end_time": 2.141
-    },
-    {
-      "character": "，",
-      "start_time": 2.141,
-      "end_time": 2.658
-    },
-    {
-      "character": "感",
-      "start_time": 2.658,
-      "end_time": 2.841
-    },
-    {
-      "character": "叹",
-      "start_time": 2.841,
-      "end_time": 3.02
-    },
-    {
-      "character": "：",
-      "start_time": 3.02,
-      "end_time": 3.433
-    },
-    {
-      "character": "这",
-      "start_time": 3.433,
-      "end_time": 3.504
+      "character": "赶",
+      "start_time": 1.879,
+      "end_time": 2.07
     },
     {
       "character": "到",
-      "start_time": 3.504,
-      "end_time": 3.704
+      "start_time": 2.07,
+      "end_time": 2.191
     },
     {
-      "character": "底",
-      "start_time": 3.704,
-      "end_time": 3.824
+      "character": "留",
+      "start_time": 2.191,
+      "end_time": 2.337
     },
     {
-      "character": "是",
-      "start_time": 3.824,
-      "end_time": 3.933
+      "character": "名",
+      "start_time": 2.337,
+      "end_time": 2.508
     },
     {
-      "character": "什",
-      "start_time": 3.933,
-      "end_time": 4.087
-    },
-    {
-      "character": "么",
-      "start_time": 4.087,
-      "end_time": 4.17
-    },
-    {
-      "character": "鸟",
-      "start_time": 4.17,
-      "end_time": 4.42
+      "character": "崖",
+      "start_time": 2.508,
+      "end_time": 2.729
     },
     {
       "character": "，",
-      "start_time": 4.42,
-      "end_time": 4.729
+      "start_time": 2.729,
+      "end_time": 3.137
     },
     {
-      "character": "刚",
-      "start_time": 4.729,
-      "end_time": 4.916
+      "character": "发",
+      "start_time": 3.137,
+      "end_time": 3.258
     },
     {
-      "character": "孵",
-      "start_time": 4.916,
-      "end_time": 5.07
+      "character": "现",
+      "start_time": 3.258,
+      "end_time": 3.429
     },
     {
-      "character": "化",
-      "start_time": 5.07,
-      "end_time": 5.208
+      "character": "周",
+      "start_time": 3.429,
+      "end_time": 3.612
     },
     {
-      "character": "就",
-      "start_time": 5.208,
-      "end_time": 5.32
+      "character": "围",
+      "start_time": 3.612,
+      "end_time": 3.724
     },
     {
-      "character": "能",
-      "start_time": 5.32,
-      "end_time": 5.416
+      "character": "埋",
+      "start_time": 3.724,
+      "end_time": 3.945
     },
     {
-      "character": "说",
-      "start_time": 5.416,
-      "end_time": 5.579
+      "character": "伏",
+      "start_time": 3.945,
+      "end_time": 4.108
     },
     {
-      "character": "话",
-      "start_time": 5.579,
-      "end_time": 5.737
+      "character": "众",
+      "start_time": 4.108,
+      "end_time": 4.316
+    },
+    {
+      "character": "多",
+      "start_time": 4.316,
+      "end_time": 4.462
+    },
+    {
+      "character": "敌",
+      "start_time": 4.462,
+      "end_time": 4.633
+    },
+    {
+      "character": "人",
+      "start_time": 4.633,
+      "end_time": 4.829
     },
     {
       "character": "，",
-      "start_time": 5.737,
-      "end_time": 6.045
+      "start_time": 4.829,
+      "end_time": 5.066
     },
     {
-      "character": "还",
-      "start_time": 6.045,
-      "end_time": 6.22
+      "character": "面",
+      "start_time": 5.066,
+      "end_time": 5.287
     },
     {
-      "character": "这",
-      "start_time": 6.22,
-      "end_time": 6.345
+      "character": "色",
+      "start_time": 5.287,
+      "end_time": 5.445
     },
     {
-      "character": "么",
-      "start_time": 6.345,
-      "end_time": 6.437
+      "character": "凝",
+      "start_time": 5.445,
+      "end_time": 5.679
     },
     {
-      "character": "能",
-      "start_time": 6.437,
-      "end_time": 6.574
+      "character": "重",
+      "start_time": 5.679,
+      "end_time": 5.849
     },
     {
-      "character": "打",
-      "start_time": 6.574,
-      "end_time": 6.724
+      "character": "准",
+      "start_time": 5.849,
+      "end_time": 6.037
     },
     {
-      "character": "！",
-      "start_time": 6.724,
-      "end_time": 6.883
+      "character": "备",
+      "start_time": 6.037,
+      "end_time": 6.166
+    },
+    {
+      "character": "应",
+      "start_time": 6.166,
+      "end_time": 6.358
+    },
+    {
+      "character": "对",
+      "start_time": 6.358,
+      "end_time": 6.504
+    },
+    {
+      "character": "。",
+      "start_time": 6.504,
+      "end_time": 6.662
     }
   ],
-  "generated_at": "2025-09-23T08:19:19.939621"
+  "generated_at": "2025-11-07T23:08:15.013756"
 }

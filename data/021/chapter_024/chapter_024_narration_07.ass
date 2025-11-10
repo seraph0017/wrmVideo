@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}云海{\c&H00FFFFFF&\b0}宗大殿外江蜜儿背对着
-Dialogue: 0,0:00:02.37,0:00:05.00,Default,,0,0,0,,镜头浅青色弟子服随风微动
-Dialogue: 0,0:00:05.48,0:00:08.00,Default,,0,0,0,,她手握宗门典籍指节因用力
-Dialogue: 0,0:00:08.00,0:00:10.32,Default,,0,0,0,,而发白站在{\c&H0000FFFF&\b1}石阶{\c&H00FFFFFF&\b0}上久久不动
+Dialogue: 0,0:00:00.02,0:00:01.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}与赵猛来到弯月岛外
+Dialogue: 0,0:00:02.42,0:00:04.62,Default,,0,0,0,,远处巨大的弯月城映入眼帘
+Dialogue: 0,0:00:05.20,0:00:07.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}身着深蓝色圆领袍抬头
+Dialogue: 0,0:00:07.91,0:00:10.63,Default,,0,0,0,,观察城池轮廓城墙上有阵法
+Dialogue: 0,0:00:10.63,0:00:13.69,Default,,0,0,0,,光芒流动入口处人流涌动他
+Dialogue: 0,0:00:13.69,0:00:15.37,Default,,0,0,0,,正思考如何进入城中

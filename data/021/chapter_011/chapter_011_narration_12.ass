@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.51,Default,,0,0,0,,听到丹药被判定为废丹
-Dialogue: 0,0:00:01.93,0:00:02.87,Default,,0,0,0,,火牛情绪激动
-Dialogue: 0,0:00:03.26,0:00:04.59,Default,,0,0,0,,竟要自断手臂赔罪
-Dialogue: 0,0:00:04.99,0:00:05.67,Default,,0,0,0,,就在此时
-Dialogue: 0,0:00:05.97,0:00:07.43,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}出声阻止了他
+Dialogue: 0,0:00:00.02,0:00:00.76,Default,,0,0,0,,憨直赠丹
+Dialogue: 0,0:00:01.22,0:00:02.22,Default,,0,0,0,,火牛将{\c&H0000FFFF&\b1}晋升{\c&H00FFFFFF&\b0}后的
+Dialogue: 0,0:00:02.22,0:00:03.57,Default,,0,0,0,,神丹硬塞给{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:04.12,0:00:05.19,Default,,0,0,0,,本来就是你炼的
+Dialogue: 0,0:00:05.61,0:00:08.31,Default,,0,0,0,,浓眉舒展眼神真诚引得
+Dialogue: 0,0:00:08.31,0:00:09.98,Default,,0,0,0,,围观者议论这傻小子

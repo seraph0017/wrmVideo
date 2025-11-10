@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}嘴角微扬再次加价至
-Dialogue: 0,0:00:02.52,0:00:03.08,Default,,0,0,0,,一百万
-Dialogue: 0,0:00:03.35,0:00:06.60,Default,,0,0,0,,全场哗然拍卖师目瞪口呆连
-Dialogue: 0,0:00:06.60,0:00:08.70,Default,,0,0,0,,{\c&H0000FFFF&\b1}宋磊{\c&H00FFFFFF&\b0}都惊得后退半步不敢
-Dialogue: 0,0:00:08.70,0:00:10.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}置信{\c&H00FFFFFF&\b0}望向这个年轻男子
+Dialogue: 0,0:00:00.02,0:00:01.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵猛{\c&H00FFFFFF&\b0}紧张地盯着台上
+Dialogue: 0,0:00:01.77,0:00:02.94,Default,,0,0,0,,双手紧握成拳
+Dialogue: 0,0:00:03.23,0:00:03.93,Default,,0,0,0,,指节发白
+Dialogue: 0,0:00:04.19,0:00:05.89,Default,,0,0,0,,生怕{\c&H0000FFFF&\b1}藏宝图{\c&H00FFFFFF&\b0}被别人拍走
+Dialogue: 0,0:00:06.12,0:00:07.50,Default,,0,0,0,,不时转头看向{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:07.78,0:00:09.37,Default,,0,0,0,,希望他能尽快做出决定

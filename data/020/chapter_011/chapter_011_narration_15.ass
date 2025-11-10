@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_011 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}孙怜雪{\c&H00FFFFFF&\b0}躲孙百莫身后
+Dialogue: 0,0:00:01.92,0:00:03.16,Default,,0,0,0,,怯生生偷看{\c&H0000FFFF&\b1}周玉{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:03.65,0:00:05.12,Default,,0,0,0,,双丫髻垂珠串轻晃
+Dialogue: 0,0:00:05.37,0:00:06.34,Default,,0,0,0,,浅粉圆领袍
+Dialogue: 0,0:00:06.60,0:00:08.09,Default,,0,0,0,,小手紧抓父亲衣角
+Dialogue: 0,0:00:08.42,0:00:09.79,Default,,0,0,0,,脸颊微红如苹果

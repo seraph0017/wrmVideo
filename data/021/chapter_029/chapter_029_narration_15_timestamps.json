@@ -1,183 +1,353 @@
 {
-  "text": "沙绵海决定利用宗门内部矛盾，借圣储之手除掉吴双，避免亲自出手引起麻烦。",
-  "audio_file": "data/021/chapter_029/chapter_029_narration_15.mp3",
-  "duration": 6.575,
+  "text": "吴双猛然惊醒，深蓝色圆领袍因动作而晃动，他眼神锐利，瞬间弹起避开攻击，手臂被刺穿却不顾疼痛，一脚踹飞白色羽装身影，周身气势暴涨，战意升腾。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_029/chapter_029_narration_15.mp3",
+  "duration": 14.266,
   "character_timestamps": [
     {
-      "character": "沙",
-      "start_time": 0.02,
-      "end_time": 0.229
-    },
-    {
-      "character": "绵",
-      "start_time": 0.229,
-      "end_time": 0.391
-    },
-    {
-      "character": "海",
-      "start_time": 0.391,
-      "end_time": 0.57
-    },
-    {
-      "character": "决",
-      "start_time": 0.57,
-      "end_time": 0.72
-    },
-    {
-      "character": "定",
-      "start_time": 0.72,
-      "end_time": 0.899
-    },
-    {
-      "character": "利",
-      "start_time": 0.899,
-      "end_time": 1.024
-    },
-    {
-      "character": "用",
-      "start_time": 1.024,
-      "end_time": 1.154
-    },
-    {
-      "character": "宗",
-      "start_time": 1.154,
-      "end_time": 1.354
-    },
-    {
-      "character": "门",
-      "start_time": 1.354,
-      "end_time": 1.508
-    },
-    {
-      "character": "内",
-      "start_time": 1.508,
-      "end_time": 1.658
-    },
-    {
-      "character": "部",
-      "start_time": 1.658,
-      "end_time": 1.783
-    },
-    {
-      "character": "矛",
-      "start_time": 1.783,
-      "end_time": 1.97
-    },
-    {
-      "character": "盾",
-      "start_time": 1.97,
-      "end_time": 2.095
-    },
-    {
-      "character": "，",
-      "start_time": 2.095,
-      "end_time": 2.47
-    },
-    {
-      "character": "借",
-      "start_time": 2.47,
-      "end_time": 2.624
-    },
-    {
-      "character": "圣",
-      "start_time": 2.624,
-      "end_time": 2.849
-    },
-    {
-      "character": "储",
-      "start_time": 2.849,
-      "end_time": 2.999
-    },
-    {
-      "character": "之",
-      "start_time": 2.999,
-      "end_time": 3.116
-    },
-    {
-      "character": "手",
-      "start_time": 3.116,
-      "end_time": 3.324
-    },
-    {
-      "character": "除",
-      "start_time": 3.324,
-      "end_time": 3.604
-    },
-    {
-      "character": "掉",
-      "start_time": 3.604,
-      "end_time": 3.77
-    },
-    {
       "character": "吴",
-      "start_time": 3.77,
-      "end_time": 3.904
+      "start_time": 0.016,
+      "end_time": 0.174
     },
     {
       "character": "双",
-      "start_time": 3.904,
-      "end_time": 4.108
+      "start_time": 0.174,
+      "end_time": 0.387
+    },
+    {
+      "character": "猛",
+      "start_time": 0.387,
+      "end_time": 0.599
+    },
+    {
+      "character": "然",
+      "start_time": 0.599,
+      "end_time": 0.774
+    },
+    {
+      "character": "惊",
+      "start_time": 0.774,
+      "end_time": 0.974
+    },
+    {
+      "character": "醒",
+      "start_time": 0.974,
+      "end_time": 1.166
     },
     {
       "character": "，",
-      "start_time": 4.108,
-      "end_time": 4.466
+      "start_time": 1.166,
+      "end_time": 1.658
     },
     {
-      "character": "避",
-      "start_time": 4.466,
-      "end_time": 4.616
+      "character": "深",
+      "start_time": 1.658,
+      "end_time": 1.858
     },
     {
-      "character": "免",
-      "start_time": 4.616,
-      "end_time": 4.799
+      "character": "蓝",
+      "start_time": 1.858,
+      "end_time": 2.004
     },
     {
-      "character": "亲",
-      "start_time": 4.799,
-      "end_time": 5.087
+      "character": "色",
+      "start_time": 2.004,
+      "end_time": 2.17
     },
     {
-      "character": "自",
-      "start_time": 5.087,
-      "end_time": 5.229
+      "character": "圆",
+      "start_time": 2.17,
+      "end_time": 2.329
     },
     {
-      "character": "出",
-      "start_time": 5.229,
-      "end_time": 5.395
+      "character": "领",
+      "start_time": 2.329,
+      "end_time": 2.474
     },
     {
-      "character": "手",
-      "start_time": 5.395,
-      "end_time": 5.62
+      "character": "袍",
+      "start_time": 2.474,
+      "end_time": 2.729
     },
     {
-      "character": "引",
-      "start_time": 5.62,
-      "end_time": 5.912
+      "character": "因",
+      "start_time": 2.729,
+      "end_time": 2.954
+    },
+    {
+      "character": "动",
+      "start_time": 2.954,
+      "end_time": 3.108
+    },
+    {
+      "character": "作",
+      "start_time": 3.108,
+      "end_time": 3.249
+    },
+    {
+      "character": "而",
+      "start_time": 3.249,
+      "end_time": 3.366
+    },
+    {
+      "character": "晃",
+      "start_time": 3.366,
+      "end_time": 3.587
+    },
+    {
+      "character": "动",
+      "start_time": 3.587,
+      "end_time": 3.724
+    },
+    {
+      "character": "，",
+      "start_time": 3.724,
+      "end_time": 4.233
+    },
+    {
+      "character": "他",
+      "start_time": 4.233,
+      "end_time": 4.333
+    },
+    {
+      "character": "眼",
+      "start_time": 4.333,
+      "end_time": 4.57
+    },
+    {
+      "character": "神",
+      "start_time": 4.57,
+      "end_time": 4.758
+    },
+    {
+      "character": "锐",
+      "start_time": 4.758,
+      "end_time": 4.954
+    },
+    {
+      "character": "利",
+      "start_time": 4.954,
+      "end_time": 5.083
+    },
+    {
+      "character": "，",
+      "start_time": 5.083,
+      "end_time": 5.429
+    },
+    {
+      "character": "瞬",
+      "start_time": 5.429,
+      "end_time": 5.658
+    },
+    {
+      "character": "间",
+      "start_time": 5.658,
+      "end_time": 5.833
+    },
+    {
+      "character": "弹",
+      "start_time": 5.833,
+      "end_time": 6.029
     },
     {
       "character": "起",
-      "start_time": 5.912,
-      "end_time": 6.07
+      "start_time": 6.029,
+      "end_time": 6.212
     },
     {
-      "character": "麻",
-      "start_time": 6.07,
-      "end_time": 6.283
+      "character": "避",
+      "start_time": 6.212,
+      "end_time": 6.445
     },
     {
-      "character": "烦",
-      "start_time": 6.283,
-      "end_time": 6.416
+      "character": "开",
+      "start_time": 6.445,
+      "end_time": 6.641
+    },
+    {
+      "character": "攻",
+      "start_time": 6.641,
+      "end_time": 6.829
+    },
+    {
+      "character": "击",
+      "start_time": 6.829,
+      "end_time": 7.004
+    },
+    {
+      "character": "，",
+      "start_time": 7.004,
+      "end_time": 7.47
+    },
+    {
+      "character": "手",
+      "start_time": 7.47,
+      "end_time": 7.687
+    },
+    {
+      "character": "臂",
+      "start_time": 7.687,
+      "end_time": 7.829
+    },
+    {
+      "character": "被",
+      "start_time": 7.829,
+      "end_time": 7.954
+    },
+    {
+      "character": "刺",
+      "start_time": 7.954,
+      "end_time": 8.158
+    },
+    {
+      "character": "穿",
+      "start_time": 8.158,
+      "end_time": 8.37
+    },
+    {
+      "character": "却",
+      "start_time": 8.37,
+      "end_time": 8.529
+    },
+    {
+      "character": "不",
+      "start_time": 8.529,
+      "end_time": 8.724
+    },
+    {
+      "character": "顾",
+      "start_time": 8.724,
+      "end_time": 8.849
+    },
+    {
+      "character": "疼",
+      "start_time": 8.849,
+      "end_time": 9.066
+    },
+    {
+      "character": "痛",
+      "start_time": 9.066,
+      "end_time": 9.224
+    },
+    {
+      "character": "，",
+      "start_time": 9.224,
+      "end_time": 9.641
+    },
+    {
+      "character": "一",
+      "start_time": 9.641,
+      "end_time": 9.808
+    },
+    {
+      "character": "脚",
+      "start_time": 9.808,
+      "end_time": 9.97
+    },
+    {
+      "character": "踹",
+      "start_time": 9.97,
+      "end_time": 10.187
+    },
+    {
+      "character": "飞",
+      "start_time": 10.187,
+      "end_time": 10.358
+    },
+    {
+      "character": "白",
+      "start_time": 10.358,
+      "end_time": 10.62
+    },
+    {
+      "character": "色",
+      "start_time": 10.62,
+      "end_time": 10.816
+    },
+    {
+      "character": "羽",
+      "start_time": 10.816,
+      "end_time": 10.933
+    },
+    {
+      "character": "装",
+      "start_time": 10.933,
+      "end_time": 11.087
+    },
+    {
+      "character": "身",
+      "start_time": 11.087,
+      "end_time": 11.291
+    },
+    {
+      "character": "影",
+      "start_time": 11.291,
+      "end_time": 11.462
+    },
+    {
+      "character": "，",
+      "start_time": 11.462,
+      "end_time": 11.87
+    },
+    {
+      "character": "周",
+      "start_time": 11.87,
+      "end_time": 12.012
+    },
+    {
+      "character": "身",
+      "start_time": 12.012,
+      "end_time": 12.199
+    },
+    {
+      "character": "气",
+      "start_time": 12.199,
+      "end_time": 12.441
+    },
+    {
+      "character": "势",
+      "start_time": 12.441,
+      "end_time": 12.574
+    },
+    {
+      "character": "暴",
+      "start_time": 12.574,
+      "end_time": 12.774
+    },
+    {
+      "character": "涨",
+      "start_time": 12.774,
+      "end_time": 12.962
+    },
+    {
+      "character": "，",
+      "start_time": 12.962,
+      "end_time": 13.316
+    },
+    {
+      "character": "战",
+      "start_time": 13.316,
+      "end_time": 13.533
+    },
+    {
+      "character": "意",
+      "start_time": 13.533,
+      "end_time": 13.674
+    },
+    {
+      "character": "升",
+      "start_time": 13.674,
+      "end_time": 13.887
+    },
+    {
+      "character": "腾",
+      "start_time": 13.887,
+      "end_time": 14.108
     },
     {
       "character": "。",
-      "start_time": 6.416,
-      "end_time": 6.575
+      "start_time": 14.108,
+      "end_time": 14.267
     }
   ],
-  "generated_at": "2025-09-23T08:27:13.702169"
+  "generated_at": "2025-11-07T23:18:38.468541"
 }

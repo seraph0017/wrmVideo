@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}突破后首次出手
-Dialogue: 0,0:00:02.24,0:00:03.74,Default,,0,0,0,,双指并拢发出剑气
-Dialogue: 0,0:00:04.16,0:00:05.95,Default,,0,0,0,,瞬间击杀一名{\c&H0000FFFF&\b1}赵牧{\c&H00FFFFFF&\b0}手下
-Dialogue: 0,0:00:06.32,0:00:07.17,Default,,0,0,0,,威势惊人
+Dialogue: 0,0:00:00.02,0:00:01.79,Default,,0,0,0,,就在{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}兄妹喘息之际
+Dialogue: 0,0:00:02.29,0:00:03.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵牧{\c&H00FFFFFF&\b0}带着陈家的
+Dialogue: 0,0:00:03.22,0:00:05.12,Default,,0,0,0,,陈言彬和{\c&H0000FFFF&\b1}陈玉峰{\c&H00FFFFFF&\b0}突然出现
+Dialogue: 0,0:00:05.52,0:00:07.62,Default,,0,0,0,,他们早已在此等候准备坐收
+Dialogue: 0,0:00:07.62,0:00:10.02,Default,,0,0,0,,渔翁之利夺取百足虫守护的
+Dialogue: 0,0:00:10.02,0:00:10.39,Default,,0,0,0,,{\c&H0000FFFF&\b1}宝藏{\c&H00FFFFFF&\b0}

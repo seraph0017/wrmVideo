@@ -1,223 +1,203 @@
 {
-  "text": "吴双被沙利与青狼眼的战斗波及，身体被冲击得摇晃，表情痛苦，正在全力稳定身形，动作艰难。",
-  "audio_file": "data/021/chapter_027/chapter_027_narration_19.mp3",
-  "duration": 8.525,
+  "text": "吴双站上石雕，环视商人冷笑：\"交易继续！以物换物，我们定价值！\"商人闻言眼睛放光",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_027/chapter_027_narration_19.mp3",
+  "duration": 7.808,
   "character_timestamps": [
     {
       "character": "吴",
       "start_time": 0.016,
-      "end_time": 0.183
+      "end_time": 0.17
     },
     {
       "character": "双",
-      "start_time": 0.183,
-      "end_time": 0.387
+      "start_time": 0.17,
+      "end_time": 0.37
     },
     {
-      "character": "被",
-      "start_time": 0.387,
-      "end_time": 0.512
+      "character": "站",
+      "start_time": 0.37,
+      "end_time": 0.541
     },
     {
-      "character": "沙",
-      "start_time": 0.512,
-      "end_time": 0.733
+      "character": "上",
+      "start_time": 0.541,
+      "end_time": 0.687
     },
     {
-      "character": "利",
-      "start_time": 0.733,
-      "end_time": 0.979
+      "character": "石",
+      "start_time": 0.687,
+      "end_time": 0.858
     },
     {
-      "character": "与",
-      "start_time": 0.979,
-      "end_time": 1.099
-    },
-    {
-      "character": "青",
-      "start_time": 1.099,
-      "end_time": 1.358
-    },
-    {
-      "character": "狼",
-      "start_time": 1.358,
-      "end_time": 1.524
-    },
-    {
-      "character": "眼",
-      "start_time": 1.524,
-      "end_time": 1.67
-    },
-    {
-      "character": "的",
-      "start_time": 1.67,
-      "end_time": 1.745
-    },
-    {
-      "character": "战",
-      "start_time": 1.745,
-      "end_time": 1.974
-    },
-    {
-      "character": "斗",
-      "start_time": 1.974,
-      "end_time": 2.116
-    },
-    {
-      "character": "波",
-      "start_time": 2.116,
-      "end_time": 2.308
-    },
-    {
-      "character": "及",
-      "start_time": 2.308,
-      "end_time": 2.554
+      "character": "雕",
+      "start_time": 0.858,
+      "end_time": 1.054
     },
     {
       "character": "，",
-      "start_time": 2.554,
-      "end_time": 2.941
+      "start_time": 1.054,
+      "end_time": 1.437
     },
     {
-      "character": "身",
-      "start_time": 2.941,
-      "end_time": 3.191
+      "character": "环",
+      "start_time": 1.437,
+      "end_time": 1.637
     },
     {
-      "character": "体",
-      "start_time": 3.191,
-      "end_time": 3.341
+      "character": "视",
+      "start_time": 1.637,
+      "end_time": 1.77
     },
     {
-      "character": "被",
-      "start_time": 3.341,
-      "end_time": 3.474
+      "character": "商",
+      "start_time": 1.77,
+      "end_time": 1.97
     },
     {
-      "character": "冲",
-      "start_time": 3.474,
-      "end_time": 3.733
+      "character": "人",
+      "start_time": 1.97,
+      "end_time": 2.091
     },
     {
-      "character": "击",
-      "start_time": 3.733,
-      "end_time": 3.858
+      "character": "冷",
+      "start_time": 2.091,
+      "end_time": 2.324
     },
     {
-      "character": "得",
-      "start_time": 3.858,
-      "end_time": 3.958
+      "character": "笑",
+      "start_time": 2.324,
+      "end_time": 2.516
     },
     {
-      "character": "摇",
-      "start_time": 3.958,
-      "end_time": 4.137
+      "character": "：",
+      "start_time": 2.516,
+      "end_time": 3.02
     },
     {
-      "character": "晃",
-      "start_time": 4.137,
-      "end_time": 4.304
+      "character": "交",
+      "start_time": 3.02,
+      "end_time": 3.241
     },
     {
-      "character": "，",
-      "start_time": 4.304,
-      "end_time": 4.654
+      "character": "易",
+      "start_time": 3.241,
+      "end_time": 3.379
     },
     {
-      "character": "表",
-      "start_time": 4.654,
-      "end_time": 4.849
+      "character": "继",
+      "start_time": 3.379,
+      "end_time": 3.541
     },
     {
-      "character": "情",
-      "start_time": 4.849,
-      "end_time": 5.045
-    },
-    {
-      "character": "痛",
-      "start_time": 5.045,
-      "end_time": 5.249
-    },
-    {
-      "character": "苦",
-      "start_time": 5.249,
-      "end_time": 5.445
+      "character": "续",
+      "start_time": 3.541,
+      "end_time": 3.724
     },
     {
       "character": "，",
-      "start_time": 5.445,
-      "end_time": 5.799
+      "start_time": 3.724,
+      "end_time": 4.004
     },
     {
-      "character": "正",
-      "start_time": 5.799,
-      "end_time": 5.904
+      "character": "以",
+      "start_time": 4.004,
+      "end_time": 4.191
     },
     {
-      "character": "在",
-      "start_time": 5.904,
-      "end_time": 6.033
+      "character": "物",
+      "start_time": 4.191,
+      "end_time": 4.362
     },
     {
-      "character": "全",
-      "start_time": 6.033,
-      "end_time": 6.283
+      "character": "换",
+      "start_time": 4.362,
+      "end_time": 4.591
     },
     {
-      "character": "力",
-      "start_time": 6.283,
-      "end_time": 6.458
+      "character": "物",
+      "start_time": 4.591,
+      "end_time": 4.741
     },
     {
-      "character": "稳",
-      "start_time": 6.458,
-      "end_time": 6.637
+      "character": "，",
+      "start_time": 4.741,
+      "end_time": 5.037
+    },
+    {
+      "character": "我",
+      "start_time": 5.037,
+      "end_time": 5.116
+    },
+    {
+      "character": "们",
+      "start_time": 5.116,
+      "end_time": 5.212
     },
     {
       "character": "定",
-      "start_time": 6.637,
-      "end_time": 6.791
+      "start_time": 5.212,
+      "end_time": 5.404
     },
     {
-      "character": "身",
-      "start_time": 6.791,
-      "end_time": 6.983
+      "character": "价",
+      "start_time": 5.404,
+      "end_time": 5.587
     },
     {
-      "character": "形",
-      "start_time": 6.983,
-      "end_time": 7.237
+      "character": "值",
+      "start_time": 5.587,
+      "end_time": 5.816
     },
     {
       "character": "，",
-      "start_time": 7.237,
-      "end_time": 7.591
+      "start_time": 5.816,
+      "end_time": 6.058
     },
     {
-      "character": "动",
-      "start_time": 7.591,
-      "end_time": 7.779
+      "character": "商",
+      "start_time": 6.058,
+      "end_time": 6.237
     },
     {
-      "character": "作",
-      "start_time": 7.779,
-      "end_time": 7.949
+      "character": "人",
+      "start_time": 6.237,
+      "end_time": 6.391
     },
     {
-      "character": "艰",
-      "start_time": 7.949,
-      "end_time": 8.145
+      "character": "闻",
+      "start_time": 6.391,
+      "end_time": 6.529
     },
     {
-      "character": "难",
-      "start_time": 8.145,
-      "end_time": 8.366
+      "character": "言",
+      "start_time": 6.529,
+      "end_time": 6.737
+    },
+    {
+      "character": "眼",
+      "start_time": 6.737,
+      "end_time": 7.004
+    },
+    {
+      "character": "睛",
+      "start_time": 7.004,
+      "end_time": 7.204
+    },
+    {
+      "character": "放",
+      "start_time": 7.204,
+      "end_time": 7.441
+    },
+    {
+      "character": "光",
+      "start_time": 7.441,
+      "end_time": 7.645
     },
     {
       "character": "。",
-      "start_time": 8.366,
-      "end_time": 8.525
+      "start_time": 7.645,
+      "end_time": 7.804
     }
   ],
-  "generated_at": "2025-09-23T08:26:28.411958"
+  "generated_at": "2025-11-07T23:17:48.012035"
 }

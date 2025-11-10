@@ -548,12 +548,64 @@ class ChapterDetailView(LoginRequiredMixin, DetailView):
         return Chapter.objects.select_related('novel')
     
     def get_context_data(self, **kwargs):
+        from pathlib import Path
+        import glob
+        import os
+        
         context = super().get_context_data(**kwargs)
+        
+        # 从数据库获取narrations
         context['narrations'] = self.object.narrations.all()
+        
+        # 从文件系统获取narration文件信息
+        project_root = settings.BASE_DIR.parent
+        novel_id = self.object.novel.id
+        chapter_title = self.object.title
+        
+        # 构建章节目录路径
+        chapter_dir = project_root / 'data' / f'{novel_id:03d}' / chapter_title
+        
+        # 读取文件系统中的narration信息
+        file_narrations = []
+        if chapter_dir.exists():
+            # 查找所有音频文件
+            audio_files = sorted(glob.glob(str(chapter_dir / '*.mp3')))
+            
+            for audio_file in audio_files:
+                audio_name = os.path.basename(audio_file)
+                # 提取编号，如 narration_01.mp3 -> 01
+                import re
+                match = re.search(r'narration_(\d+)', audio_name)
+                if match:
+                    number = int(match.group(1))
+                    
+                    # 查找对应的字幕文件
+                    subtitle_file = chapter_dir / f'narration_{number:02d}.ass'
+                    
+                    # 查找对应的图片文件
+                    image_pattern = str(chapter_dir / f'chapter_*_image_{number:02d}.*')
+                    image_files = glob.glob(image_pattern)
+                    
+                    # 构建相对于项目根目录的路径（data/xxx/...）
+                    audio_rel_path = os.path.relpath(audio_file, project_root)
+                    subtitle_rel_path = os.path.relpath(subtitle_file, project_root) if subtitle_file.exists() else None
+                    image_rel_path = os.path.relpath(image_files[0], project_root) if image_files else None
+                    
+                    file_narrations.append({
+                        'number': number,
+                        'audio_path': audio_rel_path,
+                        'audio_name': audio_name,
+                        'subtitle_path': subtitle_rel_path,
+                        'subtitle_exists': subtitle_file.exists(),
+                        'image_path': image_rel_path,
+                        'image_exists': len(image_files) > 0,
+                        'image_count': len(image_files)
+                    })
+        
+        context['file_narrations'] = file_narrations
         
         # 提取视频文件名用于显示
         if self.object.video_path:
-            import os
             context['video_filename'] = os.path.basename(self.object.video_path)
         else:
             context['video_filename'] = '未设置'
@@ -3752,3 +3804,216 @@ def serve_narration_image(request, novel_id, chapter_id, narration_id, filename)
             'success': False,
             'error': str(e)
         }, status=500)
+
+@login_required
+@require_http_methods(["POST"])
+def novel_gen_script(request, novel_id):
+    """
+    生成小说脚本（解说文案）
+    对应脚本：gen_script_v2.py
+    """
+    try:
+        novel = get_object_or_404(Novel, pk=novel_id)
+        
+        # 先更新状态为"处理中"
+        novel.task_status = 'generating_script'
+        novel.task_message = '正在生成解说文案...'
+        novel.save()
+        
+        # 调用Celery异步任务
+        from .tasks import gen_script_task
+        task = gen_script_task.delay(novel_id)
+        
+        # 保存任务ID
+        novel.current_task_id = task.id
+        novel.save()
+        
+        return JsonResponse({
+            'success': True,
+            'message': f'开始生成脚本，任务ID: {task.id}',
+            'task_id': task.id
+        })
+    except Exception as e:
+        logger.error(f"生成脚本失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'message': f'生成脚本失败: {str(e)}'
+        }, status=500)
+
+
+@login_required
+@require_http_methods(["POST"])
+def novel_validate_script(request, novel_id):
+    """
+    校验小说脚本（解说文案）
+    对应脚本：validate_narration.py --auto-fix
+    """
+    try:
+        novel = get_object_or_404(Novel, pk=novel_id)
+        
+        # 先更新状态为"处理中"
+        novel.task_status = 'validating_script'
+        novel.task_message = '正在校验解说文案...'
+        novel.save()
+        
+        # 调用Celery异步任务
+        from .tasks import validate_script_task
+        task = validate_script_task.delay(novel_id)
+        
+        # 保存任务ID
+        novel.current_task_id = task.id
+        novel.save()
+        
+        return JsonResponse({
+            'success': True,
+            'message': f'开始校验脚本，任务ID: {task.id}',
+            'task_id': task.id
+        })
+    except Exception as e:
+        logger.error(f"校验脚本失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'message': f'校验脚本失败: {str(e)}'
+        }, status=500)
+
+
+@login_required
+@require_http_methods(["POST"])
+def novel_gen_audio(request, novel_id):
+    """
+    生成小说旁白音频
+    对应脚本：gen_audio.py
+    """
+    try:
+        novel = get_object_or_404(Novel, pk=novel_id)
+        
+        # 先更新状态为"处理中"
+        novel.task_status = 'generating_audio'
+        novel.task_message = '正在生成旁白音频...'
+        novel.save()
+        
+        # 调用Celery异步任务
+        from .tasks import gen_audio_task
+        task = gen_audio_task.delay(novel_id)
+        
+        # 保存任务ID
+        novel.current_task_id = task.id
+        novel.save()
+        
+        return JsonResponse({
+            'success': True,
+            'message': f'开始生成旁白，任务ID: {task.id}',
+            'task_id': task.id
+        })
+    except Exception as e:
+        logger.error(f"生成旁白失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'message': f'生成旁白失败: {str(e)}'
+        }, status=500)
+
+
+@login_required
+@require_http_methods(["POST"])
+def novel_gen_ass(request, novel_id):
+    """
+    生成小说字幕时间戳文件
+    对应脚本：gen_ass.py
+    """
+    try:
+        novel = get_object_or_404(Novel, pk=novel_id)
+        
+        # 先更新状态为"处理中"
+        novel.task_status = 'generating_ass'
+        novel.task_message = '正在生成字幕文件...'
+        novel.save()
+        
+        # 调用Celery异步任务
+        from .tasks import gen_ass_task
+        task = gen_ass_task.delay(novel_id)
+        
+        # 保存任务ID
+        novel.current_task_id = task.id
+        novel.save()
+        
+        return JsonResponse({
+            'success': True,
+            'message': f'开始生成字幕，任务ID: {task.id}',
+            'task_id': task.id
+        })
+    except Exception as e:
+        logger.error(f"生成字幕失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'message': f'生成字幕失败: {str(e)}'
+        }, status=500)
+
+
+@login_required
+@require_http_methods(["POST"])
+def novel_gen_image(request, novel_id):
+    """
+    生成小说分镜图片
+    对应脚本：gen_image_async_v4.py
+    """
+    try:
+        novel = get_object_or_404(Novel, pk=novel_id)
+        
+        # 先更新状态为"处理中"
+        novel.task_status = 'generating_image'
+        novel.task_message = '正在生成分镜图片...'
+        novel.save()
+        
+        # 调用Celery异步任务
+        from .tasks import gen_image_task
+        task = gen_image_task.delay(novel_id)
+        
+        # 保存任务ID
+        novel.current_task_id = task.id
+        novel.save()
+        
+        return JsonResponse({
+            'success': True,
+            'message': f'开始生成图片，任务ID: {task.id}',
+            'task_id': task.id
+        })
+    except Exception as e:
+        logger.error(f"生成图片失败: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'message': f'生成图片失败: {str(e)}'
+        }, status=500)
+
+
+@login_required
+def serve_data_file(request, file_path):
+    """
+    提供data目录下文件的访问服务
+    用于访问音频、字幕、图片等文件
+    """
+    from django.http import FileResponse, Http404
+    from django.conf import settings
+    import os
+    import mimetypes
+    
+    # 构建完整文件路径
+    project_root = settings.BASE_DIR.parent
+    full_path = project_root / file_path
+    
+    # 安全检查：确保文件在data目录下
+    if not str(full_path).startswith(str(project_root / 'data')):
+        raise Http404("File not found")
+    
+    # 检查文件是否存在
+    if not os.path.exists(full_path):
+        raise Http404("File not found")
+    
+    # 获取文件MIME类型
+    content_type, _ = mimetypes.guess_type(str(full_path))
+    if content_type is None:
+        content_type = 'application/octet-stream'
+    
+    # 返回文件
+    response = FileResponse(open(full_path, 'rb'), content_type=content_type)
+    response['Content-Disposition'] = f'inline; filename="{os.path.basename(full_path)}"'
+    return response

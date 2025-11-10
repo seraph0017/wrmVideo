@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_040 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.72,Default,,0,0,0,,众人跟着{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}冲出太子府
+Dialogue: 0,0:00:01.72,0:00:04.19,Default,,0,0,0,,后门来到藏匿的豪华座驾旁
+Dialogue: 0,0:00:04.77,0:00:07.22,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴静{\c&H00FFFFFF&\b0}协助将尸体搬上车动作
+Dialogue: 0,0:00:07.22,0:00:09.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}麻利{\c&H00FFFFFF&\b0}眼神警惕地观察四周
+Dialogue: 0,0:00:09.71,0:00:10.85,Default,,0,0,0,,确保无人发现

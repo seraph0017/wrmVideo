@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}一边在街上行走
-Dialogue: 0,0:00:01.95,0:00:02.99,Default,,0,0,0,,一边吸收周围的
-Dialogue: 0,0:00:02.99,0:00:04.92,Default,,0,0,0,,先天{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之气恢复伤势
-Dialogue: 0,0:00:05.43,0:00:06.85,Default,,0,0,0,,同时观察周围环境
-Dialogue: 0,0:00:07.15,0:00:08.61,Default,,0,0,0,,了解这个陌生的地方
+Dialogue: 0,0:00:00.02,0:00:00.81,Default,,0,0,0,,强势登场
+Dialogue: 0,0:00:01.28,0:00:03.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}汪大{\c&H00FFFFFF&\b0}掌柜散发澎湃威势一道
+Dialogue: 0,0:00:03.96,0:00:06.67,Default,,0,0,0,,青光震开火牛{\c&H0000FFFF&\b1}山羊胡{\c&H00FFFFFF&\b0}微颤
+Dialogue: 0,0:00:07.16,0:00:08.32,Default,,0,0,0,,眼神锐利如刀
+Dialogue: 0,0:00:08.64,0:00:10.64,Default,,0,0,0,,当我{\c&H0000FFFF&\b1}神丹{\c&H00FFFFFF&\b0}府是放肆之地

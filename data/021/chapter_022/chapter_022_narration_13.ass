@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.91,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双躺{\c&H00FFFFFF&\b0}在百变魔云上疗伤
-Dialogue: 0,0:00:02.32,0:00:03.85,Default,,0,0,0,,全身伤口不断渗血
-Dialogue: 0,0:00:04.35,0:00:06.55,Default,,0,0,0,,他却笑了这场战斗检验了
-Dialogue: 0,0:00:06.55,0:00:08.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}六海{\c&H00FFFFFF&\b0}境极限值了
+Dialogue: 0,0:00:00.02,0:00:01.23,Default,,0,0,0,,{\c&H0000FFFF&\b1}金鳞蛟{\c&H00FFFFFF&\b0}王宴会上
+Dialogue: 0,0:00:01.62,0:00:03.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}金龙{\c&H00FFFFFF&\b0}通过传讯晶石传影
+Dialogue: 0,0:00:03.75,0:00:04.54,Default,,0,0,0,,浑身是血
+Dialogue: 0,0:00:04.98,0:00:06.20,Default,,0,0,0,,谎称狂鲨被杀
+Dialogue: 0,0:00:06.61,0:00:07.45,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙门{\c&H00FFFFFF&\b0}遇袭
+Dialogue: 0,0:00:07.84,0:00:09.06,Default,,0,0,0,,龙气遗迹现世

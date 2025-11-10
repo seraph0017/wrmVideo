@@ -14,7 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.38,Default,,0,0,0,,贱鸟立{\c&H0000FFFF&\b1}金鳞蛟{\c&H00FFFFFF&\b0}王尸
-Dialogue: 0,0:00:01.87,0:00:03.15,Default,,0,0,0,,握神象长枪欢呼
-Dialogue: 0,0:00:03.53,0:00:04.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}黑羽{\c&H00FFFFFF&\b0}染血浑不在意
-Dialogue: 0,0:00:05.26,0:00:06.53,Default,,0,0,0,,眼含{\c&H0000FFFF&\b1}寻宝{\c&H00FFFFFF&\b0}之光
+Dialogue: 0,0:00:00.02,0:00:00.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}解剑甲{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:01.04,0:00:01.93,Default,,0,0,0,,{\c&H0000FFFF&\b1}巨剑{\c&H00FFFFFF&\b0}化椅撑
+Dialogue: 0,0:00:02.23,0:00:02.95,Default,,0,0,0,,汗如雨下
+Dialogue: 0,0:00:03.28,0:00:04.44,Default,,0,0,0,,嘴角溢血大笑
+Dialogue: 0,0:00:04.73,0:00:05.67,Default,,0,0,0,,与{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}对视
+Dialogue: 0,0:00:05.97,0:00:06.72,Default,,0,0,0,,父子默契
+Dialogue: 0,0:00:07.05,0:00:07.99,Default,,0,0,0,,航道开通

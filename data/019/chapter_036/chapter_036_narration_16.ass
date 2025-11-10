@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_036 Narration 16 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.88,Default,,0,0,0,,定远县衙深夜胡濙翻查地契
+Dialogue: 0,0:00:02.88,0:00:03.27,Default,,0,0,0,,票根
+Dialogue: 0,0:00:03.76,0:00:04.82,Default,,0,0,0,,{\c&H0000FFFF&\b1}师爷{\c&H00FFFFFF&\b0}在旁催促
+Dialogue: 0,0:00:04.92,0:00:08.52,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙凤{\c&H00FFFFFF&\b0}四年地契无效可定其‘
+Dialogue: 0,0:00:08.62,0:00:10.12,Default,,0,0,0,,通伪’之罪
+Dialogue: 0,0:00:10.22,0:00:11.42,Default,,0,0,0,,胡濙犹豫
+Dialogue: 0,0:00:11.52,0:00:11.97,Default,,0,0,0,,李家三百余口迁之何去
+Dialogue: 0,0:00:12.33,0:00:13.13,Default,,0,0,0,,良心难安

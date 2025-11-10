@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_046 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}蝶音{\c&H00FFFFFF&\b0}鸟少主见状大怒双翅
+Dialogue: 0,0:00:02.47,0:00:05.04,Default,,0,0,0,,一振追向{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}尖声攻击如
+Dialogue: 0,0:00:05.04,0:00:06.27,Default,,0,0,0,,利刃射向其背后
+Dialogue: 0,0:00:06.69,0:00:08.04,Default,,0,0,0,,小贼敢抢我的圣果
+Dialogue: 0,0:00:08.39,0:00:10.54,Default,,0,0,0,,却见吴双护体神罡层层爆发
+Dialogue: 0,0:00:10.96,0:00:13.40,Default,,0,0,0,,竟将音波攻击化作推力速度
+Dialogue: 0,0:00:13.40,0:00:14.31,Default,,0,0,0,,更快三分

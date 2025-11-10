@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.71,Default,,0,0,0,,危在旦夕
-Dialogue: 0,0:00:01.12,0:00:03.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}跌落地面寒气侵入
-Dialogue: 0,0:00:03.19,0:00:05.85,Default,,0,0,0,,四肢百骸连{\c&H0000FFFF&\b1}本命{\c&H00FFFFFF&\b0}真火都似要
-Dialogue: 0,0:00:05.85,0:00:09.15,Default,,0,0,0,,熄灭鼻孔流血身体逐渐{\c&H0000FFFF&\b1}冰封{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:09.45,0:00:10.61,Default,,0,0,0,,生死一线间
+Dialogue: 0,0:00:00.02,0:00:02.53,Default,,0,0,0,,寒天手指微动座驾寒气暴涨
+Dialogue: 0,0:00:02.94,0:00:03.49,Default,,0,0,0,,冷声道
+Dialogue: 0,0:00:03.92,0:00:04.59,Default,,0,0,0,,不知死活
+Dialogue: 0,0:00:04.89,0:00:06.43,Default,,0,0,0,,给我破阵杀无赦

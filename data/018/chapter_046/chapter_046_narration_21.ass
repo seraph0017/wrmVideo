@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_046 Narration 21 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.68,Default,,0,0,0,,两千里外龙蜥浑身是伤躺在
+Dialogue: 0,0:00:02.68,0:00:05.27,Default,,0,0,0,,地上神识探查不到裂空圣树
+Dialogue: 0,0:00:05.27,0:00:06.86,Default,,0,0,0,,气息绝望嘶吼
+Dialogue: 0,0:00:06.96,0:00:10.56,Default,,0,0,0,,圣果我的圣果他不知{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}已
+Dialogue: 0,0:00:10.66,0:00:13.12,Default,,0,0,0,,带着圣树和圣果正朝{\c&H0000FFFF&\b1}深渊{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:13.22,0:00:14.42,Default,,0,0,0,,监狱而来

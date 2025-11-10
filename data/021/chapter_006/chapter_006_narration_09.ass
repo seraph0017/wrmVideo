@@ -14,8 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}江浩{\c&H00FFFFFF&\b0}看着满地敌人尸体震惊
-Dialogue: 0,0:00:02.44,0:00:03.05,Default,,0,0,0,,得说不出话
-Dialogue: 0,0:00:03.45,0:00:05.38,Default,,0,0,0,,他{\c&H0000FFFF&\b1}原以为{\c&H00FFFFFF&\b0}能保命已属万幸
-Dialogue: 0,0:00:05.89,0:00:07.69,Default,,0,0,0,,没想到{\c&H0000FFFF&\b1}吴双竟{\c&H00FFFFFF&\b0}击杀二十多
-Dialogue: 0,0:00:07.69,0:00:09.43,Default,,0,0,0,,人连{\c&H0000FFFF&\b1}赵牧{\c&H00FFFFFF&\b0}都已倒地
+Dialogue: 0,0:00:00.02,0:00:01.92,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}与贱鸟在地底纠缠
+Dialogue: 0,0:00:02.33,0:00:04.12,Default,,0,0,0,,拳头如雨点砸向贱鸟
+Dialogue: 0,0:00:04.42,0:00:05.70,Default,,0,0,0,,贱鸟尖叫反击
+Dialogue: 0,0:00:06.00,0:00:06.88,Default,,0,0,0,,羽毛纷飞

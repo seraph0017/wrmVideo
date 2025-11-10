@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.45,Default,,0,0,0,,散修站在店内角落灰色长袍
-Dialogue: 0,0:00:02.45,0:00:02.79,Default,,0,0,0,,破旧
-Dialogue: 0,0:00:03.20,0:00:05.57,Default,,0,0,0,,他望着{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}背影眼神贪婪
-Dialogue: 0,0:00:05.99,0:00:08.60,Default,,0,0,0,,双手不自觉握紧显然对{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:08.60,0:00:09.87,Default,,0,0,0,,的财富起了歹心
+Dialogue: 0,0:00:00.02,0:00:02.39,Default,,0,0,0,,拍卖师站在中央拍卖台紫色
+Dialogue: 0,0:00:02.39,0:00:04.44,Default,,0,0,0,,圆领袍{\c&H0000FFFF&\b1}华丽{\c&H00FFFFFF&\b0}手持木槌
+Dialogue: 0,0:00:04.77,0:00:06.85,Default,,0,0,0,,他高声介绍女皇绝地{\c&H0000FFFF&\b1}宝藏{\c&H00FFFFFF&\b0}图
+Dialogue: 0,0:00:07.23,0:00:10.15,Default,,0,0,0,,声音洪亮神情激昂台下竞价
+Dialogue: 0,0:00:10.15,0:00:12.98,Default,,0,0,0,,声此起彼伏气氛热烈拍卖师
+Dialogue: 0,0:00:12.98,0:00:14.31,Default,,0,0,0,,正准备落槌定音

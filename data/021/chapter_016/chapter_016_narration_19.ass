@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.38,Default,,0,0,0,,陈家水峰太上长老{\c&H0000FFFF&\b1}陈子清{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:02.38,0:00:05.30,Default,,0,0,0,,得知赵家土峰阵法突变先天
-Dialogue: 0,0:00:05.30,0:00:07.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之气暴涨冷哼道
-Dialogue: 0,0:00:07.43,0:00:09.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}赵智{\c&H00FFFFFF&\b0}这老顽固定是被吴双
-Dialogue: 0,0:00:09.42,0:00:10.46,Default,,0,0,0,,{\c&H0000FFFF&\b1}那小子{\c&H00FFFFFF&\b0}蛊惑了
+Dialogue: 0,0:00:00.02,0:00:00.82,Default,,0,0,0,,陈家通道外
+Dialogue: 0,0:00:01.17,0:00:03.02,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈子清{\c&H00FFFFFF&\b0}看着吴双在第六峰
+Dialogue: 0,0:00:03.02,0:00:03.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}入口{\c&H00FFFFFF&\b0}疗伤
+Dialogue: 0,0:00:04.15,0:00:05.40,Default,,0,0,0,,面色{\c&H0000FFFF&\b1}铁青{\c&H00FFFFFF&\b0}如猪肝
+Dialogue: 0,0:00:05.70,0:00:06.58,Default,,0,0,0,,羽扇被捏断
+Dialogue: 0,0:00:06.97,0:00:08.56,Default,,0,0,0,,低吼此子必须除

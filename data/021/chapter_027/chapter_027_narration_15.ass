@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.43,Default,,0,0,0,,盗中至尊{\c&H0000FFFF&\b1}凌空{\c&H00FFFFFF&\b0}而立
-Dialogue: 0,0:00:01.87,0:00:03.31,Default,,0,0,0,,身体周围光芒耀眼
-Dialogue: 0,0:00:03.67,0:00:04.47,Default,,0,0,0,,气势磅礴
-Dialogue: 0,0:00:04.80,0:00:06.23,Default,,0,0,0,,正在追踪{\c&H0000FFFF&\b1}郑毅{\c&H00FFFFFF&\b0}的气息
-Dialogue: 0,0:00:06.53,0:00:07.37,Default,,0,0,0,,表情淡然
-Dialogue: 0,0:00:07.72,0:00:08.55,Default,,0,0,0,,动作从容
+Dialogue: 0,0:00:00.02,0:00:02.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}北冥雪{\c&H00FFFFFF&\b0}被反冲力震飞吐血望
+Dialogue: 0,0:00:02.71,0:00:05.35,Default,,0,0,0,,着{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}被金色漩涡吸走眼中
+Dialogue: 0,0:00:05.35,0:00:07.57,Default,,0,0,0,,充满震惊与不解喃喃道
+Dialogue: 0,0:00:07.94,0:00:08.32,Default,,0,0,0,,怎么会

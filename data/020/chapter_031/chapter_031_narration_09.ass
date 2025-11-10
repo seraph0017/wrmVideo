@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_031 Narration 09 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.24,Default,,0,0,0,,裂缝入口传来脚步声{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:02.24,0:00:04.56,Default,,0,0,0,,打着{\c&H0000FFFF&\b1}哈欠{\c&H00FFFFFF&\b0}走进来深蓝色圆领
+Dialogue: 0,0:00:04.56,0:00:06.82,Default,,0,0,0,,袍下摆扫过地面他抽了
+Dialogue: 0,0:00:06.82,0:00:09.29,Default,,0,0,0,,抽鼻子将如梦似幻香气误认
+Dialogue: 0,0:00:09.29,0:00:10.81,Default,,0,0,0,,烧烤味喃喃道
+Dialogue: 0,0:00:11.11,0:00:12.83,Default,,0,0,0,,好香谁在吃烧烤

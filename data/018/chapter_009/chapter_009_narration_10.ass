@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_009 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}江蜜儿{\c&H00FFFFFF&\b0}被吴双拉着
+Dialogue: 0,0:00:01.19,0:00:03.85,Default,,0,0,0,,手气呼呼质问为何不揍朗屠
+Dialogue: 0,0:00:04.34,0:00:05.70,Default,,0,0,0,,她边走边抱怨却
+Dialogue: 0,0:00:05.70,0:00:07.78,Default,,0,0,0,,在{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}解释巡城将领在场
+Dialogue: 0,0:00:07.78,0:00:10.06,Default,,0,0,0,,不宜冲突时感觉手被拉住的
+Dialogue: 0,0:00:10.06,0:00:12.36,Default,,0,0,0,,地方微微发烫怒气渐消

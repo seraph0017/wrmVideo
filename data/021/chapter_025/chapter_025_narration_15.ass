@@ -14,7 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.57,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}起身走向后台途中将
-Dialogue: 0,0:00:02.57,0:00:04.68,Default,,0,0,0,,一枚记忆{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}晶石扔给宋磊
-Dialogue: 0,0:00:05.29,0:00:07.74,Default,,0,0,0,,他脚步沉稳神态自若腰间
-Dialogue: 0,0:00:07.74,0:00:10.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}青藤{\c&H00FFFFFF&\b0}宝葫随步伐轻轻晃动
+Dialogue: 0,0:00:00.02,0:00:02.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}嘴角微微上扬露出一丝
+Dialogue: 0,0:00:02.47,0:00:04.32,Default,,0,0,0,,不屑的笑容轻声说道
+Dialogue: 0,0:00:04.67,0:00:06.81,Default,,0,0,0,,玩不起就别玩何必在这里
+Dialogue: 0,0:00:06.81,0:00:07.56,Default,,0,0,0,,丢人现眼

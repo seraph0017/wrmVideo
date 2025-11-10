@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_003 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.03,Default,,0,0,0,,平安骑马跟随其后看着
+Dialogue: 0,0:00:02.03,0:00:03.68,Default,,0,0,0,,朱棣与{\c&H0000FFFF&\b1}朱权{\c&H00FFFFFF&\b0}亲密交谈的
+Dialogue: 0,0:00:03.68,0:00:05.19,Default,,0,0,0,,背影心中忧虑
+Dialogue: 0,0:00:05.72,0:00:08.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}燕王{\c&H00FFFFFF&\b0}看似温和实则城府极深
+Dialogue: 0,0:00:08.81,0:00:11.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}宁王{\c&H00FFFFFF&\b0}年少气盛两人各怀心思
+Dialogue: 0,0:00:11.86,0:00:13.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}京城{\c&H00FFFFFF&\b0}怕是要不太平了

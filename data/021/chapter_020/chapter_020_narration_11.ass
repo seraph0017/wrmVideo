@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.62,Default,,0,0,0,,临危不乱
-Dialogue: 0,0:00:01.02,0:00:02.85,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴星凡{\c&H00FFFFFF&\b0}第一时间封锁消息
-Dialogue: 0,0:00:03.28,0:00:03.65,Default,,0,0,0,,下令
-Dialogue: 0,0:00:03.95,0:00:06.06,Default,,0,0,0,,天降{\c&H0000FFFF&\b1}祥瑞{\c&H00FFFFFF&\b0}全面宣传
-Dialogue: 0,0:00:06.45,0:00:08.80,Default,,0,0,0,,核心机密违者以叛族论处
+Dialogue: 0,0:00:00.02,0:00:01.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}体内力量突破
+Dialogue: 0,0:00:01.84,0:00:03.54,Default,,0,0,0,,{\c&H0000FFFF&\b1}六海{\c&H00FFFFFF&\b0}境第五海后期稳固
+Dialogue: 0,0:00:04.07,0:00:05.57,Default,,0,0,0,,雷电武魂越发凝实
+Dialogue: 0,0:00:05.84,0:00:08.17,Default,,0,0,0,,身体在{\c&H0000FFFF&\b1}雷霆{\c&H00FFFFFF&\b0}淬炼下微微颤抖
+Dialogue: 0,0:00:08.49,0:00:09.31,Default,,0,0,0,,气息暴涨

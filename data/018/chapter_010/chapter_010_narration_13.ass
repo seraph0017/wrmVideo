@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_010 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈天{\c&H00FFFFFF&\b0}南站在台上
+Dialogue: 0,0:00:01.69,0:00:03.62,Default,,0,0,0,,声音洪亮宣布陈家比其他
+Dialogue: 0,0:00:03.62,0:00:05.15,Default,,0,0,0,,{\c&H0000FFFF&\b1}四大家族{\c&H00FFFFFF&\b0}加起来还强
+Dialogue: 0,0:00:05.64,0:00:06.86,Default,,0,0,0,,他眼神俯视众人
+Dialogue: 0,0:00:07.23,0:00:08.05,Default,,0,0,0,,面露傲然
+Dialogue: 0,0:00:08.48,0:00:10.62,Default,,0,0,0,,显然已被权力欲望冲昏头脑
+Dialogue: 0,0:00:11.01,0:00:12.14,Default,,0,0,0,,正享受掌控感

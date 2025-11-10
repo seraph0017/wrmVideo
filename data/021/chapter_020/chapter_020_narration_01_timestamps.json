@@ -1,173 +1,158 @@
 {
-  "text": "惊天逆转！吴双六海境击溃连境陈俊，浴血眼神坚定，成六族盟新晋传奇！",
-  "audio_file": "data/021/chapter_020/chapter_020_narration_01.mp3",
-  "duration": 6.891,
+  "text": "陈天南巨剑穿胸，力量骤散，目含不甘怒火，紧盯前方，身体渐僵。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_020/chapter_020_narration_01.mp3",
+  "duration": 6.683,
   "character_timestamps": [
     {
-      "character": "惊",
-      "start_time": 0.016,
-      "end_time": 0.216
+      "character": "陈",
+      "start_time": 0.02,
+      "end_time": 0.22
     },
     {
       "character": "天",
-      "start_time": 0.216,
-      "end_time": 0.374
+      "start_time": 0.22,
+      "end_time": 0.362
     },
     {
-      "character": "逆",
-      "start_time": 0.374,
-      "end_time": 0.533
+      "character": "南",
+      "start_time": 0.362,
+      "end_time": 0.604
     },
     {
-      "character": "转",
-      "start_time": 0.533,
-      "end_time": 0.758
+      "character": "巨",
+      "start_time": 0.604,
+      "end_time": 0.862
     },
     {
-      "character": "，",
-      "start_time": 0.758,
-      "end_time": 1.104
+      "character": "剑",
+      "start_time": 0.862,
+      "end_time": 1.054
     },
     {
-      "character": "吴",
-      "start_time": 1.104,
-      "end_time": 1.27
+      "character": "穿",
+      "start_time": 1.054,
+      "end_time": 1.254
     },
     {
-      "character": "双",
-      "start_time": 1.27,
-      "end_time": 1.458
-    },
-    {
-      "character": "六",
-      "start_time": 1.458,
-      "end_time": 1.587
-    },
-    {
-      "character": "海",
-      "start_time": 1.587,
-      "end_time": 1.787
-    },
-    {
-      "character": "境",
-      "start_time": 1.787,
-      "end_time": 1.966
-    },
-    {
-      "character": "击",
-      "start_time": 1.966,
-      "end_time": 2.237
-    },
-    {
-      "character": "溃",
-      "start_time": 2.237,
-      "end_time": 2.412
-    },
-    {
-      "character": "连",
-      "start_time": 2.412,
-      "end_time": 2.629
-    },
-    {
-      "character": "境",
-      "start_time": 2.629,
-      "end_time": 2.783
-    },
-    {
-      "character": "陈",
-      "start_time": 2.783,
-      "end_time": 2.999
-    },
-    {
-      "character": "俊",
-      "start_time": 2.999,
-      "end_time": 3.149
+      "character": "胸",
+      "start_time": 1.254,
+      "end_time": 1.437
     },
     {
       "character": "，",
-      "start_time": 3.149,
-      "end_time": 3.62
+      "start_time": 1.437,
+      "end_time": 1.812
     },
     {
-      "character": "浴",
-      "start_time": 3.62,
+      "character": "力",
+      "start_time": 1.812,
+      "end_time": 2.016
+    },
+    {
+      "character": "量",
+      "start_time": 2.016,
+      "end_time": 2.191
+    },
+    {
+      "character": "骤",
+      "start_time": 2.191,
+      "end_time": 2.366
+    },
+    {
+      "character": "散",
+      "start_time": 2.366,
+      "end_time": 2.537
+    },
+    {
+      "character": "，",
+      "start_time": 2.537,
+      "end_time": 2.937
+    },
+    {
+      "character": "目",
+      "start_time": 2.937,
+      "end_time": 3.141
+    },
+    {
+      "character": "含",
+      "start_time": 3.141,
+      "end_time": 3.341
+    },
+    {
+      "character": "不",
+      "start_time": 3.341,
+      "end_time": 3.47
+    },
+    {
+      "character": "甘",
+      "start_time": 3.47,
+      "end_time": 3.599
+    },
+    {
+      "character": "怒",
+      "start_time": 3.599,
       "end_time": 3.808
     },
     {
-      "character": "血",
+      "character": "火",
       "start_time": 3.808,
-      "end_time": 3.991
-    },
-    {
-      "character": "眼",
-      "start_time": 3.991,
-      "end_time": 4.224
-    },
-    {
-      "character": "神",
-      "start_time": 4.224,
-      "end_time": 4.416
-    },
-    {
-      "character": "坚",
-      "start_time": 4.416,
-      "end_time": 4.62
-    },
-    {
-      "character": "定",
-      "start_time": 4.62,
-      "end_time": 4.758
+      "end_time": 4.066
     },
     {
       "character": "，",
-      "start_time": 4.758,
-      "end_time": 5.024
+      "start_time": 4.066,
+      "end_time": 4.379
     },
     {
-      "character": "成",
-      "start_time": 5.024,
-      "end_time": 5.224
+      "character": "紧",
+      "start_time": 4.379,
+      "end_time": 4.62
     },
     {
-      "character": "六",
-      "start_time": 5.224,
-      "end_time": 5.424
+      "character": "盯",
+      "start_time": 4.62,
+      "end_time": 4.812
     },
     {
-      "character": "族",
-      "start_time": 5.424,
-      "end_time": 5.579
+      "character": "前",
+      "start_time": 4.812,
+      "end_time": 5.033
     },
     {
-      "character": "盟",
-      "start_time": 5.579,
-      "end_time": 5.745
+      "character": "方",
+      "start_time": 5.033,
+      "end_time": 5.229
     },
     {
-      "character": "新",
-      "start_time": 5.745,
-      "end_time": 6.074
+      "character": "，",
+      "start_time": 5.229,
+      "end_time": 5.529
     },
     {
-      "character": "晋",
-      "start_time": 6.074,
-      "end_time": 6.258
+      "character": "身",
+      "start_time": 5.529,
+      "end_time": 5.829
     },
     {
-      "character": "传",
-      "start_time": 6.258,
-      "end_time": 6.512
+      "character": "体",
+      "start_time": 5.829,
+      "end_time": 6.045
     },
     {
-      "character": "奇",
-      "start_time": 6.512,
-      "end_time": 6.733
+      "character": "渐",
+      "start_time": 6.045,
+      "end_time": 6.295
     },
     {
-      "character": "！",
-      "start_time": 6.733,
-      "end_time": 6.892
+      "character": "僵",
+      "start_time": 6.295,
+      "end_time": 6.52
+    },
+    {
+      "character": "。",
+      "start_time": 6.52,
+      "end_time": 6.679
     }
   ],
-  "generated_at": "2025-09-23T08:23:07.818221"
+  "generated_at": "2025-11-07T23:13:49.595259"
 }

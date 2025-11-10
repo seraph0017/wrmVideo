@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_020 Narration 14 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.78,Default,,0,0,0,,一声巨响
+Dialogue: 0,0:00:01.26,0:00:02.66,Default,,0,0,0,,吴双脚下地面裂开
+Dialogue: 0,0:00:03.08,0:00:04.34,Default,,0,0,0,,火焰树破土而出
+Dialogue: 0,0:00:04.76,0:00:05.94,Default,,0,0,0,,树干迅速暴涨
+Dialogue: 0,0:00:06.41,0:00:07.46,Default,,0,0,0,,枝叶向四周扩散
+Dialogue: 0,0:00:07.92,0:00:09.97,Default,,0,0,0,,江影小筑被托举到树杈之上
+Dialogue: 0,0:00:10.27,0:00:11.81,Default,,0,0,0,,他仰头看着冲天而起的
+Dialogue: 0,0:00:11.81,0:00:12.42,Default,,0,0,0,,火焰树
+Dialogue: 0,0:00:12.70,0:00:14.13,Default,,0,0,0,,眼神中满是激动

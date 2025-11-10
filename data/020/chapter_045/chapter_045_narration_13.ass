@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_045 Narration 13 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.48,Default,,0,0,0,,折鸦站在{\c&H0000FFFF&\b1}蓬莱{\c&H00FFFFFF&\b0}修士前
+Dialogue: 0,0:00:01.79,0:00:03.70,Default,,0,0,0,,拍着胸脯自我介绍老子叫
+Dialogue: 0,0:00:03.70,0:00:04.04,Default,,0,0,0,,折鸦
+Dialogue: 0,0:00:04.50,0:00:05.65,Default,,0,0,0,,受主公之命收账
+Dialogue: 0,0:00:06.03,0:00:06.93,Default,,0,0,0,,声音如炸雷
+Dialogue: 0,0:00:07.22,0:00:08.05,Default,,0,0,0,,气势骇人
+Dialogue: 0,0:00:08.31,0:00:09.24,Default,,0,0,0,,吓得众人发抖

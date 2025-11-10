@@ -14,8 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.77,Default,,0,0,0,,花园深处
-Dialogue: 0,0:00:01.22,0:00:03.22,Default,,0,0,0,,三道黑影突然从左右
-Dialogue: 0,0:00:03.55,0:00:04.29,Default,,0,0,0,,前方冲出
-Dialogue: 0,0:00:04.66,0:00:05.30,Default,,0,0,0,,动作迅猛
-Dialogue: 0,0:00:05.62,0:00:07.76,Default,,0,0,0,,瞬间将{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}去路完全封锁
+Dialogue: 0,0:00:00.02,0:00:03.46,Default,,0,0,0,,三道黑影突然从左右前三方
+Dialogue: 0,0:00:03.46,0:00:05.41,Default,,0,0,0,,冲出{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}猛地止步
+Dialogue: 0,0:00:05.75,0:00:07.96,Default,,0,0,0,,定睛一看竟是吴家长老院的
+Dialogue: 0,0:00:07.96,0:00:10.90,Default,,0,0,0,,三名子弟个个眼神不善手中
+Dialogue: 0,0:00:10.90,0:00:12.32,Default,,0,0,0,,隐隐有元光闪动

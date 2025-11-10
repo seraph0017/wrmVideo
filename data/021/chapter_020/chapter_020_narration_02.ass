@@ -14,9 +14,7 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}陈俊{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:00.80,0:00:01.86,Default,,0,0,0,,{\c&H0000FFFF&\b1}玄冰{\c&H00FFFFFF&\b0}传承者
-Dialogue: 0,0:00:02.15,0:00:02.91,Default,,0,0,0,,惨败倒地
-Dialogue: 0,0:00:03.31,0:00:04.27,Default,,0,0,0,,左臂寒气溢
-Dialogue: 0,0:00:04.60,0:00:05.43,Default,,0,0,0,,眼神不甘冷
-Dialogue: 0,0:00:05.79,0:00:07.03,Default,,0,0,0,,陈家千年业毁
+Dialogue: 0,0:00:00.02,0:00:02.41,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴江{\c&H00FFFFFF&\b0}雄趁势果断击杀陈天南
+Dialogue: 0,0:00:02.80,0:00:03.48,Default,,0,0,0,,动作干脆
+Dialogue: 0,0:00:03.92,0:00:04.77,Default,,0,0,0,,眼神冷峻
+Dialogue: 0,0:00:05.14,0:00:06.87,Default,,0,0,0,,抛尸陈家震慑全场

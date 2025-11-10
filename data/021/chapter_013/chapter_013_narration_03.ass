@@ -14,10 +14,11 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.89,Default,,0,0,0,,森林空地中
-Dialogue: 0,0:00:01.25,0:00:02.84,Default,,0,0,0,,贱鸟躺在地上一动不动
-Dialogue: 0,0:00:03.26,0:00:04.10,Default,,0,0,0,,翅膀蜷曲
-Dialogue: 0,0:00:04.58,0:00:05.72,Default,,0,0,0,,眼睛半睁半闭
-Dialogue: 0,0:00:06.04,0:00:07.06,Default,,0,0,0,,装作奄奄一息
-Dialogue: 0,0:00:07.50,0:00:08.51,Default,,0,0,0,,听到{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}靠近
-Dialogue: 0,0:00:08.78,0:00:10.58,Default,,0,0,0,,立刻发出微弱哼哼声
+Dialogue: 0,0:00:00.02,0:00:00.74,Default,,0,0,0,,森林深处
+Dialogue: 0,0:00:01.17,0:00:02.87,Default,,0,0,0,,贱鸟躺在地上一动不动
+Dialogue: 0,0:00:03.29,0:00:04.02,Default,,0,0,0,,翅膀耷拉
+Dialogue: 0,0:00:04.30,0:00:04.91,Default,,0,0,0,,羽毛凌乱
+Dialogue: 0,0:00:05.34,0:00:06.19,Default,,0,0,0,,见{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}靠近
+Dialogue: 0,0:00:06.52,0:00:07.66,Default,,0,0,0,,立刻双眼半睁
+Dialogue: 0,0:00:08.04,0:00:09.42,Default,,0,0,0,,发出虚弱的哼哼声
+Dialogue: 0,0:00:09.75,0:00:10.87,Default,,0,0,0,,装作奄奄一息

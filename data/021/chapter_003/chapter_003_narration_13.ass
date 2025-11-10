@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.75,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴家禁{\c&H00FFFFFF&\b0}室
-Dialogue: 0,0:00:01.07,0:00:02.32,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴永坤{\c&H00FFFFFF&\b0}怒视吴战
-Dialogue: 0,0:00:02.72,0:00:03.68,Default,,0,0,0,,斥责{\c&H0000FFFF&\b1}孙子{\c&H00FFFFFF&\b0}愚蠢
-Dialogue: 0,0:00:04.07,0:00:05.97,Default,,0,0,0,,未能察觉家主借机削权的
-Dialogue: 0,0:00:05.97,0:00:06.34,Default,,0,0,0,,意图
-Dialogue: 0,0:00:06.62,0:00:08.49,Default,,0,0,0,,禁室内气氛压抑如{\c&H0000FFFF&\b1}凝冰{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:01.52,Default,,0,0,0,,密室{\c&H0000FFFF&\b1}中江{\c&H00FFFFFF&\b0}蜜儿看着
+Dialogue: 0,0:00:01.52,0:00:03.82,Default,,0,0,0,,火焰树最后一颗果子急道
+Dialogue: 0,0:00:04.14,0:00:05.12,Default,,0,0,0,,快用葫芦装起来
+Dialogue: 0,0:00:05.45,0:00:06.54,Default,,0,0,0,,再晚就来不及了
+Dialogue: 0,0:00:06.87,0:00:08.42,Default,,0,0,0,,双手紧握显紧张

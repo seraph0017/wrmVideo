@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.90,Default,,0,0,0,,{\c&H0000FFFF&\b1}司马{\c&H00FFFFFF&\b0}刀遭遇连环境残魂
-Dialogue: 0,0:00:02.33,0:00:04.05,Default,,0,0,0,,护身符箓炸裂将其重伤
-Dialogue: 0,0:00:04.54,0:00:05.57,Default,,0,0,0,,但自身也断一臂
-Dialogue: 0,0:00:06.09,0:00:07.62,Default,,0,0,0,,单手持刀继续冲杀
-Dialogue: 0,0:00:07.97,0:00:08.87,Default,,0,0,0,,状若癫狂
+Dialogue: 0,0:00:00.02,0:00:00.69,Default,,0,0,0,,陈家通道
+Dialogue: 0,0:00:01.12,0:00:02.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}闯关至第三关
+Dialogue: 0,0:00:02.90,0:00:04.09,Default,,0,0,0,,见凉亭突然炸裂
+Dialogue: 0,0:00:04.54,0:00:06.18,Default,,0,0,0,,一道{\c&H0000FFFF&\b1}寒冰{\c&H00FFFFFF&\b0}指破空而来
+Dialogue: 0,0:00:06.61,0:00:07.52,Default,,0,0,0,,他瞳孔骤缩
+Dialogue: 0,0:00:07.80,0:00:09.69,Default,,0,0,0,,施展极电步瞬间闪避

@@ -14,10 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.19,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}立于枯树下
-Dialogue: 0,0:00:01.68,0:00:02.83,Default,,0,0,0,,青色圆领短衫
-Dialogue: 0,0:00:03.25,0:00:04.24,Default,,0,0,0,,手中搓着树叶
-Dialogue: 0,0:00:04.52,0:00:05.73,Default,,0,0,0,,见吴战带人围来
-Dialogue: 0,0:00:06.12,0:00:07.67,Default,,0,0,0,,笑着嘲讽{\c&H0000FFFF&\b1}吴战太{\c&H00FFFFFF&\b0}怂
-Dialogue: 0,0:00:08.01,0:00:08.80,Default,,0,0,0,,语气轻松
-Dialogue: 0,0:00:09.10,0:00:09.91,Default,,0,0,0,,毫无惧色
+Dialogue: 0,0:00:00.02,0:00:00.72,Default,,0,0,0,,森林夜晚
+Dialogue: 0,0:00:01.20,0:00:02.22,Default,,0,0,0,,吴双靠树休息
+Dialogue: 0,0:00:02.69,0:00:03.91,Default,,0,0,0,,青色圆领袍沾血
+Dialogue: 0,0:00:04.21,0:00:05.32,Default,,0,0,0,,胸口五道血痕
+Dialogue: 0,0:00:05.73,0:00:07.01,Default,,0,0,0,,正运转功法恢复
+Dialogue: 0,0:00:07.56,0:00:09.05,Default,,0,0,0,,突然听到树枝断裂声
+Dialogue: 0,0:00:09.38,0:00:10.19,Default,,0,0,0,,警觉睁眼

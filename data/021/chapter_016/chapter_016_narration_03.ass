@@ -14,9 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}快速移动巨石以阵天图
-Dialogue: 0,0:00:02.44,0:00:05.04,Default,,0,0,0,,知识布置简易阵法引动{\c&H0000FFFF&\b1}宝库{\c&H00FFFFFF&\b0}
-Dialogue: 0,0:00:05.04,0:00:06.19,Default,,0,0,0,,先天{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}之气
-Dialogue: 0,0:00:06.58,0:00:09.16,Default,,0,0,0,,洞口长老察觉动静惊呼出声
-Dialogue: 0,0:00:09.61,0:00:11.45,Default,,0,0,0,,发现消失的{\c&H0000FFFF&\b1}吴双竟{\c&H00FFFFFF&\b0}在内部
-Dialogue: 0,0:00:11.45,0:00:12.27,Default,,0,0,0,,改动阵法
+Dialogue: 0,0:00:00.02,0:00:01.09,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}突然爆吼
+Dialogue: 0,0:00:01.47,0:00:02.54,Default,,0,0,0,,身体重重坐下
+Dialogue: 0,0:00:03.03,0:00:04.91,Default,,0,0,0,,阵天图只记一半已达极限
+Dialogue: 0,0:00:05.40,0:00:06.35,Default,,0,0,0,,他大口喘气
+Dialogue: 0,0:00:06.73,0:00:08.02,Default,,0,0,0,,眼神却亮如星辰
+Dialogue: 0,0:00:08.39,0:00:09.90,Default,,0,0,0,,暗叹阵天图{\c&H0000FFFF&\b1}玄妙{\c&H00FFFFFF&\b0}

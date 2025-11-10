@@ -14,7 +14,11 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.04,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}与敌死战
-Dialogue: 0,0:00:01.41,0:00:03.91,Default,,0,0,0,,面对六名死士围攻毫不畏惧
-Dialogue: 0,0:00:04.29,0:00:06.99,Default,,0,0,0,,神象长枪舞动如飞以伤换命
-Dialogue: 0,0:00:07.39,0:00:08.61,Default,,0,0,0,,接连击杀敌人
+Dialogue: 0,0:00:00.02,0:00:01.24,Default,,0,0,0,,{\c&H0000FFFF&\b1}洪水{\c&H00FFFFFF&\b0}席卷山坡
+Dialogue: 0,0:00:01.67,0:00:04.37,Default,,0,0,0,,{\c&H0000FFFF&\b1}萧叔{\c&H00FFFFFF&\b0}被大水冲飞本命飞剑被
+Dialogue: 0,0:00:04.37,0:00:06.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}白云{\c&H00FFFFFF&\b0}吞噬气得吐血怒吼
+Dialogue: 0,0:00:07.19,0:00:09.69,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}趁机被水流卷走消失在
+Dialogue: 0,0:00:09.69,0:00:10.13,Default,,0,0,0,,下游
+Dialogue: 0,0:00:10.62,0:00:11.84,Default,,0,0,0,,这场追杀以{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}的
+Dialogue: 0,0:00:11.84,0:00:13.64,Default,,0,0,0,,险胜告终但更大的
+Dialogue: 0,0:00:13.64,0:00:15.26,Default,,0,0,0,,危机还在等待着他

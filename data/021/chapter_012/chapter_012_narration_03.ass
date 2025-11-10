@@ -14,7 +14,10 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.10,Default,,0,0,0,,雷电武魂共鸣
-Dialogue: 0,0:00:01.47,0:00:04.00,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}猛然睁眼识破雷电大阵
-Dialogue: 0,0:00:04.00,0:00:06.59,Default,,0,0,0,,玄机{\c&H0000FFFF&\b1}武雷国{\c&H00FFFFFF&\b0}埋伏暴露大战
-Dialogue: 0,0:00:06.59,0:00:07.34,Default,,0,0,0,,一触即发
+Dialogue: 0,0:00:00.02,0:00:01.42,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}起身关注雷电的
+Dialogue: 0,0:00:01.42,0:00:03.72,Default,,0,0,0,,举动让身旁两位太上长老
+Dialogue: 0,0:00:03.94,0:00:04.67,Default,,0,0,0,,震惊不已
+Dialogue: 0,0:00:05.26,0:00:07.64,Default,,0,0,0,,他们你看我我看你心中疑惑
+Dialogue: 0,0:00:07.64,0:00:09.88,Default,,0,0,0,,这少年天才为何对雷电如此
+Dialogue: 0,0:00:09.88,0:00:12.37,Default,,0,0,0,,关注却不知一场惊天大阵已
+Dialogue: 0,0:00:12.37,0:00:13.96,Default,,0,0,0,,悄然笼罩{\c&H0000FFFF&\b1}武雷国{\c&H00FFFFFF&\b0}

@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_035 Narration 22 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.86,Default,,0,0,0,,少女直面恐惧紧盯长老
+Dialogue: 0,0:00:02.31,0:00:04.67,Default,,0,0,0,,耳朵撕裂鲜血染红半脸却
+Dialogue: 0,0:00:04.67,0:00:07.00,Default,,0,0,0,,倔强地与三长老对视土黄色
+Dialogue: 0,0:00:07.00,0:00:09.57,Default,,0,0,0,,竖瞳渐退眼神从最初惊恐
+Dialogue: 0,0:00:09.57,0:00:12.09,Default,,0,0,0,,变为慢慢坚定{\c&H0000FFFF&\b1}小虎牙{\c&H00FFFFFF&\b0}紧咬

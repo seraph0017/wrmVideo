@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.98,Default,,0,0,0,,{\c&H0000FFFF&\b1}金鳞蛟{\c&H00FFFFFF&\b0}王身躯轰然坠湖面
-Dialogue: 0,0:00:02.46,0:00:03.21,Default,,0,0,0,,溅千层浪
-Dialogue: 0,0:00:03.43,0:00:04.49,Default,,0,0,0,,昔日霸气绝
-Dialogue: 0,0:00:04.74,0:00:06.25,Default,,0,0,0,,双目圆瞪满不甘
+Dialogue: 0,0:00:00.02,0:00:01.20,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙隐湖{\c&H00FFFFFF&\b0}激战落幕
+Dialogue: 0,0:00:01.67,0:00:02.50,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}踏冰立
+Dialogue: 0,0:00:02.84,0:00:04.07,Default,,0,0,0,,{\c&H0000FFFF&\b1}六海{\c&H00FFFFFF&\b0}力竭眼神锐
+Dialogue: 0,0:00:04.37,0:00:06.04,Default,,0,0,0,,冰{\c&H0000FFFF&\b1}神圣{\c&H00FFFFFF&\b0}果凝百丈冰道
+Dialogue: 0,0:00:06.39,0:00:07.35,Default,,0,0,0,,{\c&H0000FFFF&\b1}望蛟{\c&H00FFFFFF&\b0}王坠处

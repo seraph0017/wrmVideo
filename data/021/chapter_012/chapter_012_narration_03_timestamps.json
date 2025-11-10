@@ -1,198 +1,368 @@
 {
-  "text": "雷电武魂共鸣！吴双猛然睁眼，识破雷电大阵玄机，武雷国埋伏暴露，大战一触即发！",
-  "audio_file": "data/021/chapter_012/chapter_012_narration_03.mp3",
-  "duration": 7.508,
+  "text": "吴双起身关注雷电的举动，让身旁两位太上长老震惊不已！他们你看我我看你，心中疑惑这少年天才为何对雷电如此关注，却不知一场惊天大阵已悄然笼罩武雷国！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_012/chapter_012_narration_03.mp3",
+  "duration": 14.125,
   "character_timestamps": [
     {
-      "character": "雷",
-      "start_time": 0.016,
-      "end_time": 0.208
-    },
-    {
-      "character": "电",
-      "start_time": 0.208,
-      "end_time": 0.391
-    },
-    {
-      "character": "武",
-      "start_time": 0.391,
-      "end_time": 0.549
-    },
-    {
-      "character": "魂",
-      "start_time": 0.549,
-      "end_time": 0.704
-    },
-    {
-      "character": "共",
-      "start_time": 0.704,
-      "end_time": 0.854
-    },
-    {
-      "character": "鸣",
-      "start_time": 0.854,
-      "end_time": 1.099
-    },
-    {
-      "character": "，",
-      "start_time": 1.099,
-      "end_time": 1.474
-    },
-    {
       "character": "吴",
-      "start_time": 1.474,
-      "end_time": 1.633
+      "start_time": 0.016,
+      "end_time": 0.174
     },
     {
       "character": "双",
-      "start_time": 1.633,
-      "end_time": 1.837
+      "start_time": 0.174,
+      "end_time": 0.366
     },
     {
-      "character": "猛",
-      "start_time": 1.837,
-      "end_time": 2.07
+      "character": "起",
+      "start_time": 0.366,
+      "end_time": 0.533
     },
     {
-      "character": "然",
-      "start_time": 2.07,
-      "end_time": 2.249
+      "character": "身",
+      "start_time": 0.533,
+      "end_time": 0.699
     },
     {
-      "character": "睁",
-      "start_time": 2.249,
-      "end_time": 2.412
+      "character": "关",
+      "start_time": 0.699,
+      "end_time": 0.887
     },
     {
-      "character": "眼",
-      "start_time": 2.412,
-      "end_time": 2.591
-    },
-    {
-      "character": "，",
-      "start_time": 2.591,
-      "end_time": 2.933
-    },
-    {
-      "character": "识",
-      "start_time": 2.933,
-      "end_time": 3.137
-    },
-    {
-      "character": "破",
-      "start_time": 3.137,
-      "end_time": 3.283
+      "character": "注",
+      "start_time": 0.887,
+      "end_time": 1.008
     },
     {
       "character": "雷",
-      "start_time": 3.283,
-      "end_time": 3.458
+      "start_time": 1.008,
+      "end_time": 1.212
     },
     {
       "character": "电",
-      "start_time": 3.458,
-      "end_time": 3.62
+      "start_time": 1.212,
+      "end_time": 1.362
     },
     {
-      "character": "大",
-      "start_time": 3.62,
-      "end_time": 3.841
+      "character": "的",
+      "start_time": 1.362,
+      "end_time": 1.424
     },
     {
-      "character": "阵",
-      "start_time": 3.841,
-      "end_time": 3.995
+      "character": "举",
+      "start_time": 1.424,
+      "end_time": 1.604
     },
     {
-      "character": "玄",
-      "start_time": 3.995,
-      "end_time": 4.22
-    },
-    {
-      "character": "机",
-      "start_time": 4.22,
-      "end_time": 4.404
+      "character": "动",
+      "start_time": 1.604,
+      "end_time": 1.745
     },
     {
       "character": "，",
-      "start_time": 4.404,
-      "end_time": 4.695
+      "start_time": 1.745,
+      "end_time": 2.22
     },
     {
-      "character": "武",
-      "start_time": 4.695,
-      "end_time": 4.862
+      "character": "让",
+      "start_time": 2.22,
+      "end_time": 2.366
+    },
+    {
+      "character": "身",
+      "start_time": 2.366,
+      "end_time": 2.583
+    },
+    {
+      "character": "旁",
+      "start_time": 2.583,
+      "end_time": 2.754
+    },
+    {
+      "character": "两",
+      "start_time": 2.754,
+      "end_time": 2.895
+    },
+    {
+      "character": "位",
+      "start_time": 2.895,
+      "end_time": 2.991
+    },
+    {
+      "character": "太",
+      "start_time": 2.991,
+      "end_time": 3.224
+    },
+    {
+      "character": "上",
+      "start_time": 3.224,
+      "end_time": 3.395
+    },
+    {
+      "character": "长",
+      "start_time": 3.395,
+      "end_time": 3.541
+    },
+    {
+      "character": "老",
+      "start_time": 3.541,
+      "end_time": 3.72
+    },
+    {
+      "character": "震",
+      "start_time": 3.945,
+      "end_time": 4.154
+    },
+    {
+      "character": "惊",
+      "start_time": 4.154,
+      "end_time": 4.354
+    },
+    {
+      "character": "不",
+      "start_time": 4.354,
+      "end_time": 4.508
+    },
+    {
+      "character": "已",
+      "start_time": 4.508,
+      "end_time": 4.67
+    },
+    {
+      "character": "，",
+      "start_time": 4.67,
+      "end_time": 5.262
+    },
+    {
+      "character": "他",
+      "start_time": 5.262,
+      "end_time": 5.37
+    },
+    {
+      "character": "们",
+      "start_time": 5.37,
+      "end_time": 5.454
+    },
+    {
+      "character": "你",
+      "start_time": 5.454,
+      "end_time": 5.562
+    },
+    {
+      "character": "看",
+      "start_time": 5.562,
+      "end_time": 5.804
+    },
+    {
+      "character": "我",
+      "start_time": 5.804,
+      "end_time": 5.916
+    },
+    {
+      "character": "我",
+      "start_time": 5.916,
+      "end_time": 5.991
+    },
+    {
+      "character": "看",
+      "start_time": 5.991,
+      "end_time": 6.208
+    },
+    {
+      "character": "你",
+      "start_time": 6.208,
+      "end_time": 6.337
+    },
+    {
+      "character": "，",
+      "start_time": 6.337,
+      "end_time": 6.866
+    },
+    {
+      "character": "心",
+      "start_time": 6.866,
+      "end_time": 7.074
+    },
+    {
+      "character": "中",
+      "start_time": 7.074,
+      "end_time": 7.287
+    },
+    {
+      "character": "疑",
+      "start_time": 7.287,
+      "end_time": 7.487
+    },
+    {
+      "character": "惑",
+      "start_time": 7.487,
+      "end_time": 7.641
+    },
+    {
+      "character": "这",
+      "start_time": 7.641,
+      "end_time": 7.733
+    },
+    {
+      "character": "少",
+      "start_time": 7.733,
+      "end_time": 7.941
+    },
+    {
+      "character": "年",
+      "start_time": 7.941,
+      "end_time": 8.099
+    },
+    {
+      "character": "天",
+      "start_time": 8.099,
+      "end_time": 8.32
+    },
+    {
+      "character": "才",
+      "start_time": 8.32,
+      "end_time": 8.541
+    },
+    {
+      "character": "为",
+      "start_time": 8.541,
+      "end_time": 8.699
+    },
+    {
+      "character": "何",
+      "start_time": 8.699,
+      "end_time": 8.845
+    },
+    {
+      "character": "对",
+      "start_time": 8.845,
+      "end_time": 8.97
     },
     {
       "character": "雷",
-      "start_time": 4.862,
-      "end_time": 5.008
+      "start_time": 8.97,
+      "end_time": 9.149
     },
     {
-      "character": "国",
-      "start_time": 5.008,
-      "end_time": 5.183
+      "character": "电",
+      "start_time": 9.149,
+      "end_time": 9.374
     },
     {
-      "character": "埋",
-      "start_time": 5.183,
-      "end_time": 5.383
+      "character": "如",
+      "start_time": 9.374,
+      "end_time": 9.691
     },
     {
-      "character": "伏",
-      "start_time": 5.383,
-      "end_time": 5.545
+      "character": "此",
+      "start_time": 9.691,
+      "end_time": 9.883
     },
     {
-      "character": "暴",
-      "start_time": 5.545,
-      "end_time": 5.745
+      "character": "关",
+      "start_time": 9.883,
+      "end_time": 10.104
     },
     {
-      "character": "露",
-      "start_time": 5.745,
-      "end_time": 5.887
+      "character": "注",
+      "start_time": 10.104,
+      "end_time": 10.241
     },
     {
       "character": "，",
-      "start_time": 5.887,
-      "end_time": 6.199
+      "start_time": 10.241,
+      "end_time": 10.633
     },
     {
-      "character": "大",
-      "start_time": 6.199,
-      "end_time": 6.383
+      "character": "却",
+      "start_time": 10.633,
+      "end_time": 10.758
     },
     {
-      "character": "战",
-      "start_time": 6.383,
-      "end_time": 6.591
+      "character": "不",
+      "start_time": 10.758,
+      "end_time": 10.891
+    },
+    {
+      "character": "知",
+      "start_time": 10.891,
+      "end_time": 11.016
     },
     {
       "character": "一",
-      "start_time": 6.591,
-      "end_time": 6.787
+      "start_time": 11.016,
+      "end_time": 11.124
     },
     {
-      "character": "触",
-      "start_time": 6.787,
-      "end_time": 6.966
+      "character": "场",
+      "start_time": 11.124,
+      "end_time": 11.333
     },
     {
-      "character": "即",
-      "start_time": 6.966,
-      "end_time": 7.158
+      "character": "惊",
+      "start_time": 11.333,
+      "end_time": 11.595
     },
     {
-      "character": "发",
-      "start_time": 7.158,
-      "end_time": 7.345
+      "character": "天",
+      "start_time": 11.595,
+      "end_time": 11.791
+    },
+    {
+      "character": "大",
+      "start_time": 11.791,
+      "end_time": 11.945
+    },
+    {
+      "character": "阵",
+      "start_time": 11.945,
+      "end_time": 12.174
+    },
+    {
+      "character": "已",
+      "start_time": 12.174,
+      "end_time": 12.366
+    },
+    {
+      "character": "悄",
+      "start_time": 12.366,
+      "end_time": 12.699
+    },
+    {
+      "character": "然",
+      "start_time": 12.699,
+      "end_time": 12.883
+    },
+    {
+      "character": "笼",
+      "start_time": 12.883,
+      "end_time": 13.141
+    },
+    {
+      "character": "罩",
+      "start_time": 13.141,
+      "end_time": 13.333
+    },
+    {
+      "character": "武",
+      "start_time": 13.333,
+      "end_time": 13.579
+    },
+    {
+      "character": "雷",
+      "start_time": 13.579,
+      "end_time": 13.754
+    },
+    {
+      "character": "国",
+      "start_time": 13.754,
+      "end_time": 13.962
     },
     {
       "character": "！",
-      "start_time": 7.345,
-      "end_time": 7.504
+      "start_time": 13.962,
+      "end_time": 14.121
     }
   ],
-  "generated_at": "2025-09-23T08:20:26.639472"
+  "generated_at": "2025-11-07T23:10:34.931060"
 }

@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_012 Narration 12 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.67,Default,,0,0,0,,{\c&H0000FFFF&\b1}萧叔{\c&H00FFFFFF&\b0}见手下接连被杀
+Dialogue: 0,0:00:01.96,0:00:02.60,Default,,0,0,0,,怒不可遏
+Dialogue: 0,0:00:02.90,0:00:05.20,Default,,0,0,0,,他御剑升空锁定吴双方向
+Dialogue: 0,0:00:05.53,0:00:07.87,Default,,0,0,0,,怒吼今日必斩你手中长剑
+Dialogue: 0,0:00:07.87,0:00:10.77,Default,,0,0,0,,凝聚元{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}术剑气如雨点般
+Dialogue: 0,0:00:10.77,0:00:11.65,Default,,0,0,0,,向{\c&H0000FFFF&\b1}吴双射{\c&H00FFFFFF&\b0}去

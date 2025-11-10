@@ -14,8 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:02.44,Default,,0,0,0,,陈家密室陈{\c&H0000FFFF&\b1}天南{\c&H00FFFFFF&\b0}得意大笑
-Dialogue: 0,0:00:02.82,0:00:05.23,Default,,0,0,0,,万年{\c&H0000FFFF&\b1}玄冰树{\c&H00FFFFFF&\b0}即将结果我陈家
-Dialogue: 0,0:00:05.23,0:00:06.84,Default,,0,0,0,,子弟实力将提升一倍
-Dialogue: 0,0:00:07.21,0:00:09.45,Default,,0,0,0,,待举办盛会定让{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}知晓
-Dialogue: 0,0:00:09.45,0:00:10.41,Default,,0,0,0,,我陈家{\c&H0000FFFF&\b1}之威{\c&H00FFFFFF&\b0}
+Dialogue: 0,0:00:00.02,0:00:00.83,Default,,0,0,0,,{\c&H0000FFFF&\b1}后山{\c&H00FFFFFF&\b0}厨房
+Dialogue: 0,0:00:01.20,0:00:02.91,Default,,0,0,0,,贱鸟偷叼走油光锃亮的
+Dialogue: 0,0:00:02.91,0:00:03.65,Default,,0,0,0,,脆皮灵猪
+Dialogue: 0,0:00:04.05,0:00:06.31,Default,,0,0,0,,振翅飞至古松顶端大快朵颐
+Dialogue: 0,0:00:06.64,0:00:08.12,Default,,0,0,0,,被寻来的{\c&H0000FFFF&\b1}吴永坤{\c&H00FFFFFF&\b0}撞见
+Dialogue: 0,0:00:08.46,0:00:10.10,Default,,0,0,0,,顿时传来抓贼惊呼

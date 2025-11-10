@@ -1,233 +1,208 @@
 {
-  "text": "吴双战意盎然，手持神象长枪冲向湖边！水海波动带着冰神圣果寒气，湖水瞬间凝结成冰，阵法启动！",
-  "audio_file": "data/021/chapter_022/chapter_022_narration_07.mp3",
-  "duration": 9.175,
+  "text": "狂鲨暴怒显化本体，巨大银鲨张开血盆大口，欲吞吴双，却见天空一道火红剑光轰然落下！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_022/chapter_022_narration_07.mp3",
+  "duration": 8.25,
   "character_timestamps": [
     {
-      "character": "吴",
-      "start_time": 0.016,
-      "end_time": 0.191
+      "character": "狂",
+      "start_time": 0.02,
+      "end_time": 0.216
     },
     {
-      "character": "双",
-      "start_time": 0.191,
-      "end_time": 0.395
+      "character": "鲨",
+      "start_time": 0.216,
+      "end_time": 0.383
     },
     {
-      "character": "战",
-      "start_time": 0.395,
+      "character": "暴",
+      "start_time": 0.383,
       "end_time": 0.604
     },
     {
-      "character": "意",
+      "character": "怒",
       "start_time": 0.604,
-      "end_time": 0.749
+      "end_time": 0.733
     },
     {
-      "character": "盎",
-      "start_time": 0.749,
-      "end_time": 0.891
+      "character": "显",
+      "start_time": 0.733,
+      "end_time": 1.008
     },
     {
-      "character": "然",
-      "start_time": 0.891,
-      "end_time": 1.112
+      "character": "化",
+      "start_time": 1.008,
+      "end_time": 1.174
+    },
+    {
+      "character": "本",
+      "start_time": 1.174,
+      "end_time": 1.362
+    },
+    {
+      "character": "体",
+      "start_time": 1.362,
+      "end_time": 1.524
     },
     {
       "character": "，",
-      "start_time": 1.112,
-      "end_time": 1.416
-    },
-    {
-      "character": "手",
-      "start_time": 1.416,
-      "end_time": 1.629
-    },
-    {
-      "character": "持",
-      "start_time": 1.629,
-      "end_time": 1.795
-    },
-    {
-      "character": "神",
-      "start_time": 1.795,
+      "start_time": 1.524,
       "end_time": 1.995
     },
     {
-      "character": "象",
+      "character": "巨",
       "start_time": 1.995,
       "end_time": 2.17
     },
     {
-      "character": "长",
+      "character": "大",
       "start_time": 2.17,
-      "end_time": 2.395
+      "end_time": 2.32
     },
     {
-      "character": "枪",
-      "start_time": 2.395,
-      "end_time": 2.604
+      "character": "银",
+      "start_time": 2.32,
+      "end_time": 2.474
     },
     {
-      "character": "冲",
-      "start_time": 2.604,
-      "end_time": 2.849
+      "character": "鲨",
+      "start_time": 2.474,
+      "end_time": 2.666
     },
     {
-      "character": "向",
-      "start_time": 2.849,
-      "end_time": 3.016
+      "character": "张",
+      "start_time": 2.666,
+      "end_time": 2.904
     },
     {
-      "character": "湖",
-      "start_time": 3.016,
-      "end_time": 3.187
+      "character": "开",
+      "start_time": 2.904,
+      "end_time": 3.087
     },
     {
-      "character": "边",
-      "start_time": 3.187,
-      "end_time": 3.366
+      "character": "血",
+      "start_time": 3.087,
+      "end_time": 3.295
     },
     {
-      "character": "，",
-      "start_time": 3.366,
-      "end_time": 3.829
+      "character": "盆",
+      "start_time": 3.295,
+      "end_time": 3.483
     },
     {
-      "character": "水",
-      "start_time": 3.829,
-      "end_time": 4.045
+      "character": "大",
+      "start_time": 3.483,
+      "end_time": 3.666
     },
     {
-      "character": "海",
-      "start_time": 4.045,
-      "end_time": 4.204
-    },
-    {
-      "character": "波",
-      "start_time": 4.204,
-      "end_time": 4.374
-    },
-    {
-      "character": "动",
-      "start_time": 4.374,
-      "end_time": 4.558
-    },
-    {
-      "character": "带",
-      "start_time": 4.558,
-      "end_time": 4.745
-    },
-    {
-      "character": "着",
-      "start_time": 4.745,
-      "end_time": 4.82
-    },
-    {
-      "character": "冰",
-      "start_time": 4.82,
-      "end_time": 4.995
-    },
-    {
-      "character": "神",
-      "start_time": 4.995,
-      "end_time": 5.224
-    },
-    {
-      "character": "圣",
-      "start_time": 5.224,
-      "end_time": 5.399
-    },
-    {
-      "character": "果",
-      "start_time": 5.399,
-      "end_time": 5.541
-    },
-    {
-      "character": "寒",
-      "start_time": 5.541,
-      "end_time": 5.791
-    },
-    {
-      "character": "气",
-      "start_time": 5.791,
-      "end_time": 5.966
+      "character": "口",
+      "start_time": 3.666,
+      "end_time": 3.916
     },
     {
       "character": "，",
-      "start_time": 5.966,
-      "end_time": 6.395
+      "start_time": 3.916,
+      "end_time": 4.474
     },
     {
-      "character": "湖",
-      "start_time": 6.395,
-      "end_time": 6.579
+      "character": "欲",
+      "start_time": 4.474,
+      "end_time": 4.674
     },
     {
-      "character": "水",
-      "start_time": 6.579,
-      "end_time": 6.749
+      "character": "吞",
+      "start_time": 4.674,
+      "end_time": 4.866
     },
     {
-      "character": "瞬",
-      "start_time": 6.749,
-      "end_time": 6.999
+      "character": "吴",
+      "start_time": 4.866,
+      "end_time": 4.999
     },
     {
-      "character": "间",
-      "start_time": 6.999,
-      "end_time": 7.158
-    },
-    {
-      "character": "凝",
-      "start_time": 7.158,
-      "end_time": 7.358
-    },
-    {
-      "character": "结",
-      "start_time": 7.358,
-      "end_time": 7.499
-    },
-    {
-      "character": "成",
-      "start_time": 7.499,
-      "end_time": 7.708
-    },
-    {
-      "character": "冰",
-      "start_time": 7.708,
-      "end_time": 7.891
+      "character": "双",
+      "start_time": 4.999,
+      "end_time": 5.204
     },
     {
       "character": "，",
-      "start_time": 7.891,
-      "end_time": 8.224
+      "start_time": 5.204,
+      "end_time": 5.458
     },
     {
-      "character": "阵",
-      "start_time": 8.224,
-      "end_time": 8.449
+      "character": "却",
+      "start_time": 5.458,
+      "end_time": 5.57
     },
     {
-      "character": "法",
-      "start_time": 8.449,
-      "end_time": 8.679
+      "character": "见",
+      "start_time": 5.57,
+      "end_time": 5.716
     },
     {
-      "character": "启",
-      "start_time": 8.679,
-      "end_time": 8.87
+      "character": "天",
+      "start_time": 5.716,
+      "end_time": 5.949
     },
     {
-      "character": "动",
-      "start_time": 8.87,
-      "end_time": 9.012
+      "character": "空",
+      "start_time": 5.949,
+      "end_time": 6.129
+    },
+    {
+      "character": "一",
+      "start_time": 6.129,
+      "end_time": 6.22
+    },
+    {
+      "character": "道",
+      "start_time": 6.22,
+      "end_time": 6.349
+    },
+    {
+      "character": "火",
+      "start_time": 6.349,
+      "end_time": 6.608
+    },
+    {
+      "character": "红",
+      "start_time": 6.608,
+      "end_time": 6.791
+    },
+    {
+      "character": "剑",
+      "start_time": 6.791,
+      "end_time": 7.008
+    },
+    {
+      "character": "光",
+      "start_time": 7.008,
+      "end_time": 7.233
+    },
+    {
+      "character": "轰",
+      "start_time": 7.233,
+      "end_time": 7.554
+    },
+    {
+      "character": "然",
+      "start_time": 7.554,
+      "end_time": 7.737
+    },
+    {
+      "character": "落",
+      "start_time": 7.737,
+      "end_time": 7.924
+    },
+    {
+      "character": "下",
+      "start_time": 7.924,
+      "end_time": 8.087
     },
     {
       "character": "！",
-      "start_time": 9.012,
-      "end_time": 9.171
+      "start_time": 8.087,
+      "end_time": 8.246
     }
   ],
-  "generated_at": "2025-09-23T08:24:05.255650"
+  "generated_at": "2025-11-07T23:15:18.061276"
 }

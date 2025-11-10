@@ -1,163 +1,343 @@
 {
-  "text": "北冥雪前领路，不断变换身法试图甩开吴双，暗中观察他，心中不甘。",
-  "audio_file": "data/021/chapter_029/chapter_029_narration_02.mp3",
-  "duration": 6.416,
+  "text": "北冥雪停在吴双身侧不远处，浅蓝色圆领袍衬得她面容清丽，眼神中带着愤怒与不甘，紧握的双拳暴露了她内心的挣扎，她深吸一口气，努力平复心绪。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_029/chapter_029_narration_02.mp3",
+  "duration": 13.008,
   "character_timestamps": [
     {
       "character": "北",
-      "start_time": 0.016,
-      "end_time": 0.162
+      "start_time": 0.02,
+      "end_time": 0.158
     },
     {
       "character": "冥",
-      "start_time": 0.162,
-      "end_time": 0.329
+      "start_time": 0.158,
+      "end_time": 0.316
     },
     {
       "character": "雪",
-      "start_time": 0.329,
-      "end_time": 0.508
+      "start_time": 0.316,
+      "end_time": 0.504
     },
     {
-      "character": "前",
-      "start_time": 0.508,
-      "end_time": 0.699
+      "character": "停",
+      "start_time": 0.504,
+      "end_time": 0.683
     },
     {
-      "character": "领",
-      "start_time": 0.699,
-      "end_time": 0.866
-    },
-    {
-      "character": "路",
-      "start_time": 0.866,
-      "end_time": 1.024
-    },
-    {
-      "character": "，",
-      "start_time": 1.024,
-      "end_time": 1.541
-    },
-    {
-      "character": "不",
-      "start_time": 1.541,
-      "end_time": 1.641
-    },
-    {
-      "character": "断",
-      "start_time": 1.641,
-      "end_time": 1.808
-    },
-    {
-      "character": "变",
-      "start_time": 1.808,
-      "end_time": 1.999
-    },
-    {
-      "character": "换",
-      "start_time": 1.999,
-      "end_time": 2.154
-    },
-    {
-      "character": "身",
-      "start_time": 2.154,
-      "end_time": 2.341
-    },
-    {
-      "character": "法",
-      "start_time": 2.341,
-      "end_time": 2.583
-    },
-    {
-      "character": "试",
-      "start_time": 2.583,
-      "end_time": 2.795
-    },
-    {
-      "character": "图",
-      "start_time": 2.795,
-      "end_time": 2.924
-    },
-    {
-      "character": "甩",
-      "start_time": 2.924,
-      "end_time": 3.199
-    },
-    {
-      "character": "开",
-      "start_time": 3.199,
-      "end_time": 3.395
+      "character": "在",
+      "start_time": 0.683,
+      "end_time": 0.824
     },
     {
       "character": "吴",
-      "start_time": 3.395,
-      "end_time": 3.516
+      "start_time": 0.824,
+      "end_time": 0.966
     },
     {
       "character": "双",
-      "start_time": 3.516,
-      "end_time": 3.716
+      "start_time": 0.966,
+      "end_time": 1.154
     },
     {
-      "character": "，",
-      "start_time": 3.716,
-      "end_time": 4.191
+      "character": "身",
+      "start_time": 1.154,
+      "end_time": 1.383
     },
     {
-      "character": "暗",
-      "start_time": 4.191,
-      "end_time": 4.391
-    },
-    {
-      "character": "中",
-      "start_time": 4.391,
-      "end_time": 4.579
-    },
-    {
-      "character": "观",
-      "start_time": 4.579,
-      "end_time": 4.816
-    },
-    {
-      "character": "察",
-      "start_time": 4.816,
-      "end_time": 4.995
-    },
-    {
-      "character": "他",
-      "start_time": 4.995,
-      "end_time": 5.166
-    },
-    {
-      "character": "，",
-      "start_time": 5.166,
-      "end_time": 5.495
-    },
-    {
-      "character": "心",
-      "start_time": 5.495,
-      "end_time": 5.779
-    },
-    {
-      "character": "中",
-      "start_time": 5.779,
-      "end_time": 5.954
+      "character": "侧",
+      "start_time": 1.383,
+      "end_time": 1.545
     },
     {
       "character": "不",
-      "start_time": 5.954,
-      "end_time": 6.062
+      "start_time": 1.545,
+      "end_time": 1.687
+    },
+    {
+      "character": "远",
+      "start_time": 1.687,
+      "end_time": 1.895
+    },
+    {
+      "character": "处",
+      "start_time": 1.895,
+      "end_time": 2.083
+    },
+    {
+      "character": "，",
+      "start_time": 2.083,
+      "end_time": 2.608
+    },
+    {
+      "character": "浅",
+      "start_time": 2.608,
+      "end_time": 2.804
+    },
+    {
+      "character": "蓝",
+      "start_time": 2.804,
+      "end_time": 2.966
+    },
+    {
+      "character": "色",
+      "start_time": 2.966,
+      "end_time": 3.116
+    },
+    {
+      "character": "圆",
+      "start_time": 3.116,
+      "end_time": 3.27
+    },
+    {
+      "character": "领",
+      "start_time": 3.27,
+      "end_time": 3.412
+    },
+    {
+      "character": "袍",
+      "start_time": 3.412,
+      "end_time": 3.637
+    },
+    {
+      "character": "衬",
+      "start_time": 3.637,
+      "end_time": 3.891
+    },
+    {
+      "character": "得",
+      "start_time": 3.891,
+      "end_time": 3.966
+    },
+    {
+      "character": "她",
+      "start_time": 3.966,
+      "end_time": 4.087
+    },
+    {
+      "character": "面",
+      "start_time": 4.087,
+      "end_time": 4.299
+    },
+    {
+      "character": "容",
+      "start_time": 4.299,
+      "end_time": 4.479
+    },
+    {
+      "character": "清",
+      "start_time": 4.479,
+      "end_time": 4.716
+    },
+    {
+      "character": "丽",
+      "start_time": 4.716,
+      "end_time": 4.824
+    },
+    {
+      "character": "，",
+      "start_time": 4.824,
+      "end_time": 5.295
+    },
+    {
+      "character": "眼",
+      "start_time": 5.295,
+      "end_time": 5.495
+    },
+    {
+      "character": "神",
+      "start_time": 5.495,
+      "end_time": 5.662
+    },
+    {
+      "character": "中",
+      "start_time": 5.662,
+      "end_time": 5.854
+    },
+    {
+      "character": "带",
+      "start_time": 5.854,
+      "end_time": 6.037
+    },
+    {
+      "character": "着",
+      "start_time": 6.037,
+      "end_time": 6.124
+    },
+    {
+      "character": "愤",
+      "start_time": 6.124,
+      "end_time": 6.37
+    },
+    {
+      "character": "怒",
+      "start_time": 6.37,
+      "end_time": 6.595
+    },
+    {
+      "character": "与",
+      "start_time": 6.595,
+      "end_time": 6.704
+    },
+    {
+      "character": "不",
+      "start_time": 6.704,
+      "end_time": 6.82
     },
     {
       "character": "甘",
-      "start_time": 6.062,
-      "end_time": 6.258
+      "start_time": 6.82,
+      "end_time": 7.02
+    },
+    {
+      "character": "，",
+      "start_time": 7.02,
+      "end_time": 7.558
+    },
+    {
+      "character": "紧",
+      "start_time": 7.558,
+      "end_time": 7.795
+    },
+    {
+      "character": "握",
+      "start_time": 7.795,
+      "end_time": 7.891
+    },
+    {
+      "character": "的",
+      "start_time": 7.891,
+      "end_time": 7.966
+    },
+    {
+      "character": "双",
+      "start_time": 7.966,
+      "end_time": 8.174
+    },
+    {
+      "character": "拳",
+      "start_time": 8.174,
+      "end_time": 8.374
+    },
+    {
+      "character": "暴",
+      "start_time": 8.374,
+      "end_time": 8.595
+    },
+    {
+      "character": "露",
+      "start_time": 8.595,
+      "end_time": 8.704
+    },
+    {
+      "character": "了",
+      "start_time": 8.704,
+      "end_time": 8.791
+    },
+    {
+      "character": "她",
+      "start_time": 8.791,
+      "end_time": 8.924
+    },
+    {
+      "character": "内",
+      "start_time": 8.924,
+      "end_time": 9.108
+    },
+    {
+      "character": "心",
+      "start_time": 9.108,
+      "end_time": 9.274
+    },
+    {
+      "character": "的",
+      "start_time": 9.274,
+      "end_time": 9.345
+    },
+    {
+      "character": "挣",
+      "start_time": 9.345,
+      "end_time": 9.554
+    },
+    {
+      "character": "扎",
+      "start_time": 9.554,
+      "end_time": 9.754
+    },
+    {
+      "character": "，",
+      "start_time": 9.754,
+      "end_time": 10.22
+    },
+    {
+      "character": "她",
+      "start_time": 10.22,
+      "end_time": 10.312
+    },
+    {
+      "character": "深",
+      "start_time": 10.312,
+      "end_time": 10.595
+    },
+    {
+      "character": "吸",
+      "start_time": 10.595,
+      "end_time": 10.754
+    },
+    {
+      "character": "一",
+      "start_time": 10.754,
+      "end_time": 10.845
+    },
+    {
+      "character": "口",
+      "start_time": 10.845,
+      "end_time": 11.004
+    },
+    {
+      "character": "气",
+      "start_time": 11.004,
+      "end_time": 11.199
+    },
+    {
+      "character": "，",
+      "start_time": 11.199,
+      "end_time": 11.574
+    },
+    {
+      "character": "努",
+      "start_time": 11.574,
+      "end_time": 11.774
+    },
+    {
+      "character": "力",
+      "start_time": 11.774,
+      "end_time": 11.912
+    },
+    {
+      "character": "平",
+      "start_time": 11.912,
+      "end_time": 12.245
+    },
+    {
+      "character": "复",
+      "start_time": 12.245,
+      "end_time": 12.441
+    },
+    {
+      "character": "心",
+      "start_time": 12.441,
+      "end_time": 12.67
+    },
+    {
+      "character": "绪",
+      "start_time": 12.67,
+      "end_time": 12.849
     },
     {
       "character": "。",
-      "start_time": 6.258,
-      "end_time": 6.417
+      "start_time": 12.849,
+      "end_time": 13.008
     }
   ],
-  "generated_at": "2025-09-23T08:27:04.170403"
+  "generated_at": "2025-11-07T23:18:20.730369"
 }

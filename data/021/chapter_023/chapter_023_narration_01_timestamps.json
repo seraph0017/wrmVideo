@@ -1,163 +1,198 @@
 {
-  "text": "金鳞蛟王身躯轰然坠湖面，溅千层浪，昔日霸气绝，双目圆瞪满不甘。",
-  "audio_file": "data/021/chapter_023/chapter_023_narration_01.mp3",
-  "duration": 6.408,
+  "text": "龙隐湖激战落幕，吴双踏冰立，六海力竭眼神锐，冰神圣果凝百丈冰道，望蛟王坠处。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_023/chapter_023_narration_01.mp3",
+  "duration": 7.516,
   "character_timestamps": [
     {
-      "character": "金",
-      "start_time": 0.02,
-      "end_time": 0.183
+      "character": "龙",
+      "start_time": 0.016,
+      "end_time": 0.229
     },
     {
-      "character": "鳞",
-      "start_time": 0.183,
-      "end_time": 0.345
-    },
-    {
-      "character": "蛟",
-      "start_time": 0.345,
-      "end_time": 0.574
-    },
-    {
-      "character": "王",
-      "start_time": 0.574,
-      "end_time": 0.716
-    },
-    {
-      "character": "身",
-      "start_time": 0.716,
-      "end_time": 0.908
-    },
-    {
-      "character": "躯",
-      "start_time": 0.908,
-      "end_time": 1.083
-    },
-    {
-      "character": "轰",
-      "start_time": 1.083,
-      "end_time": 1.312
-    },
-    {
-      "character": "然",
-      "start_time": 1.312,
-      "end_time": 1.487
-    },
-    {
-      "character": "坠",
-      "start_time": 1.487,
-      "end_time": 1.654
+      "character": "隐",
+      "start_time": 0.229,
+      "end_time": 0.387
     },
     {
       "character": "湖",
-      "start_time": 1.654,
-      "end_time": 1.824
+      "start_time": 0.387,
+      "end_time": 0.562
     },
     {
-      "character": "面",
-      "start_time": 1.824,
-      "end_time": 1.983
+      "character": "激",
+      "start_time": 0.562,
+      "end_time": 0.741
     },
     {
-      "character": "，",
-      "start_time": 1.983,
-      "end_time": 2.458
+      "character": "战",
+      "start_time": 0.741,
+      "end_time": 0.879
     },
     {
-      "character": "溅",
-      "start_time": 2.458,
-      "end_time": 2.629
+      "character": "落",
+      "start_time": 0.879,
+      "end_time": 1.058
     },
     {
-      "character": "千",
-      "start_time": 2.629,
-      "end_time": 2.879
-    },
-    {
-      "character": "层",
-      "start_time": 2.879,
-      "end_time": 3.062
-    },
-    {
-      "character": "浪",
-      "start_time": 3.062,
-      "end_time": 3.208
+      "character": "幕",
+      "start_time": 1.058,
+      "end_time": 1.199
     },
     {
       "character": "，",
-      "start_time": 3.208,
-      "end_time": 3.433
+      "start_time": 1.199,
+      "end_time": 1.674
     },
     {
-      "character": "昔",
-      "start_time": 3.433,
-      "end_time": 3.687
-    },
-    {
-      "character": "日",
-      "start_time": 3.687,
-      "end_time": 3.849
-    },
-    {
-      "character": "霸",
-      "start_time": 3.849,
-      "end_time": 4.062
-    },
-    {
-      "character": "气",
-      "start_time": 4.062,
-      "end_time": 4.233
-    },
-    {
-      "character": "绝",
-      "start_time": 4.233,
-      "end_time": 4.491
-    },
-    {
-      "character": "，",
-      "start_time": 4.491,
-      "end_time": 4.737
+      "character": "吴",
+      "start_time": 1.674,
+      "end_time": 1.849
     },
     {
       "character": "双",
-      "start_time": 4.737,
-      "end_time": 4.995
+      "start_time": 1.849,
+      "end_time": 2.029
     },
     {
-      "character": "目",
-      "start_time": 4.995,
-      "end_time": 5.183
+      "character": "踏",
+      "start_time": 2.029,
+      "end_time": 2.183
     },
     {
-      "character": "圆",
-      "start_time": 5.183,
-      "end_time": 5.408
+      "character": "冰",
+      "start_time": 2.183,
+      "end_time": 2.383
     },
     {
-      "character": "瞪",
-      "start_time": 5.408,
-      "end_time": 5.608
+      "character": "立",
+      "start_time": 2.383,
+      "end_time": 2.495
     },
     {
-      "character": "满",
-      "start_time": 5.608,
-      "end_time": 5.941
+      "character": "，",
+      "start_time": 2.495,
+      "end_time": 2.841
     },
     {
-      "character": "不",
-      "start_time": 5.941,
-      "end_time": 6.054
+      "character": "六",
+      "start_time": 2.841,
+      "end_time": 3.041
     },
     {
-      "character": "甘",
-      "start_time": 6.054,
-      "end_time": 6.245
+      "character": "海",
+      "start_time": 3.041,
+      "end_time": 3.216
+    },
+    {
+      "character": "力",
+      "start_time": 3.216,
+      "end_time": 3.366
+    },
+    {
+      "character": "竭",
+      "start_time": 3.366,
+      "end_time": 3.529
+    },
+    {
+      "character": "眼",
+      "start_time": 3.529,
+      "end_time": 3.762
+    },
+    {
+      "character": "神",
+      "start_time": 3.762,
+      "end_time": 3.941
+    },
+    {
+      "character": "锐",
+      "start_time": 3.941,
+      "end_time": 4.07
+    },
+    {
+      "character": "，",
+      "start_time": 4.07,
+      "end_time": 4.37
+    },
+    {
+      "character": "冰",
+      "start_time": 4.37,
+      "end_time": 4.541
+    },
+    {
+      "character": "神",
+      "start_time": 4.541,
+      "end_time": 4.733
+    },
+    {
+      "character": "圣",
+      "start_time": 4.733,
+      "end_time": 4.912
+    },
+    {
+      "character": "果",
+      "start_time": 4.912,
+      "end_time": 5.108
+    },
+    {
+      "character": "凝",
+      "start_time": 5.108,
+      "end_time": 5.279
+    },
+    {
+      "character": "百",
+      "start_time": 5.279,
+      "end_time": 5.545
+    },
+    {
+      "character": "丈",
+      "start_time": 5.545,
+      "end_time": 5.72
+    },
+    {
+      "character": "冰",
+      "start_time": 5.72,
+      "end_time": 5.916
+    },
+    {
+      "character": "道",
+      "start_time": 5.916,
+      "end_time": 6.037
+    },
+    {
+      "character": "，",
+      "start_time": 6.037,
+      "end_time": 6.391
+    },
+    {
+      "character": "望",
+      "start_time": 6.391,
+      "end_time": 6.599
+    },
+    {
+      "character": "蛟",
+      "start_time": 6.599,
+      "end_time": 6.849
+    },
+    {
+      "character": "王",
+      "start_time": 6.849,
+      "end_time": 7.016
+    },
+    {
+      "character": "坠",
+      "start_time": 7.016,
+      "end_time": 7.183
+    },
+    {
+      "character": "处",
+      "start_time": 7.183,
+      "end_time": 7.354
     },
     {
       "character": "。",
-      "start_time": 6.245,
-      "end_time": 6.404
+      "start_time": 7.354,
+      "end_time": 7.512
     }
   ],
-  "generated_at": "2025-09-23T08:24:27.087034"
+  "generated_at": "2025-11-07T23:15:48.012993"
 }

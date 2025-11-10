@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.01,Default,,0,0,0,,{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}高空
-Dialogue: 0,0:00:01.42,0:00:03.12,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双卧{\c&H00FFFFFF&\b0}魔云闭目养神
-Dialogue: 0,0:00:03.60,0:00:05.63,Default,,0,0,0,,{\c&H0000FFFF&\b1}元灵{\c&H00FFFFFF&\b0}晶石示王族争已起
-Dialogue: 0,0:00:05.95,0:00:07.05,Default,,0,0,0,,心焦面却静
+Dialogue: 0,0:00:00.02,0:00:00.96,Default,,0,0,0,,{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}高空
+Dialogue: 0,0:00:01.33,0:00:02.71,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双卧{\c&H00FFFFFF&\b0}百变魔云上
+Dialogue: 0,0:00:03.14,0:00:04.15,Default,,0,0,0,,持元灵晶石望
+Dialogue: 0,0:00:04.40,0:00:05.10,Default,,0,0,0,,倒计时消
+Dialogue: 0,0:00:05.39,0:00:06.61,Default,,0,0,0,,今日{\c&H0000FFFF&\b1}王族{\c&H00FFFFFF&\b0}争始

@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_044 Narration 17 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.44,Default,,0,0,0,,{\c&H0000FFFF&\b1}龙隐湖{\c&H00FFFFFF&\b0}深海之中吴双击杀毒
+Dialogue: 0,0:00:02.44,0:00:04.70,Default,,0,0,0,,刺意外发现一枚古朴木珠
+Dialogue: 0,0:00:05.16,0:00:07.79,Default,,0,0,0,,木珠内藏{\c&H0000FFFF&\b1}青木{\c&H00FFFFFF&\b0}长生诀残篇他
+Dialogue: 0,0:00:07.79,0:00:10.36,Default,,0,0,0,,周身血脉突然剧烈异动心中
+Dialogue: 0,0:00:10.36,0:00:11.12,Default,,0,0,0,,疑窦丛生
+Dialogue: 0,0:00:11.43,0:00:13.69,Default,,0,0,0,,此木珠莫非与{\c&H0000FFFF&\b1}吴家{\c&H00FFFFFF&\b0}先祖有关

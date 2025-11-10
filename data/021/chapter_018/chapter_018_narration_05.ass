@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.92,Default,,0,0,0,,火牛巨掌与弓青云元{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}术
-Dialogue: 0,0:00:01.92,0:00:02.26,Default,,0,0,0,,碰撞
-Dialogue: 0,0:00:02.67,0:00:03.73,Default,,0,0,0,,火牛虚影炸裂
-Dialogue: 0,0:00:04.11,0:00:05.17,Default,,0,0,0,,{\c&H0000FFFF&\b1}巨掌{\c&H00FFFFFF&\b0}应声而碎
-Dialogue: 0,0:00:05.69,0:00:07.54,Default,,0,0,0,,他落地时双脚深陷地面
-Dialogue: 0,0:00:07.77,0:00:10.00,Default,,0,0,0,,却依旧怒瞪弓{\c&H0000FFFF&\b1}青云{\c&H00FFFFFF&\b0}不肯退让
+Dialogue: 0,0:00:00.02,0:00:01.67,Default,,0,0,0,,弓青云的元{\c&H0000FFFF&\b1}灵宝{\c&H00FFFFFF&\b0}术被破
+Dialogue: 0,0:00:02.16,0:00:04.17,Default,,0,0,0,,气血翻涌忍不住闷哼一声
+Dialogue: 0,0:00:04.70,0:00:06.94,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}趁机驾驭百变魔云全速
+Dialogue: 0,0:00:06.94,0:00:07.32,Default,,0,0,0,,逃脱
+Dialogue: 0,0:00:07.73,0:00:09.63,Default,,0,0,0,,气得弓{\c&H0000FFFF&\b1}青云{\c&H00FFFFFF&\b0}脸色铁青

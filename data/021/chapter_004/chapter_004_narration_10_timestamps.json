@@ -1,263 +1,243 @@
 {
-  "text": "龙隐湖森林内，吴战面色冷峻，黑色圆领劲装，见吴双离队独行，眼中闪过杀意，对身旁吴毅低声道“他终于离队了”。",
-  "audio_file": "data/021/chapter_004/chapter_004_narration_10.mp3",
-  "duration": 10.858,
+  "text": "龙隐湖森林深处，吴战墨色圆领袍下摆沾尘，面色冰冷，手指吴双，身后三十余人呈圆形围堵，杀气腾腾。",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_004/chapter_004_narration_10.mp3",
+  "duration": 10.2,
   "character_timestamps": [
     {
       "character": "龙",
       "start_time": 0.016,
-      "end_time": 0.224
+      "end_time": 0.212
     },
     {
       "character": "隐",
-      "start_time": 0.224,
-      "end_time": 0.374
+      "start_time": 0.212,
+      "end_time": 0.362
     },
     {
       "character": "湖",
-      "start_time": 0.374,
-      "end_time": 0.541
+      "start_time": 0.362,
+      "end_time": 0.537
     },
     {
       "character": "森",
-      "start_time": 0.541,
-      "end_time": 0.741
+      "start_time": 0.537,
+      "end_time": 0.762
     },
     {
       "character": "林",
-      "start_time": 0.741,
+      "start_time": 0.762,
       "end_time": 0.908
     },
     {
-      "character": "内",
+      "character": "深",
       "start_time": 0.908,
-      "end_time": 1.054
+      "end_time": 1.104
+    },
+    {
+      "character": "处",
+      "start_time": 1.104,
+      "end_time": 1.266
     },
     {
       "character": "，",
-      "start_time": 1.054,
-      "end_time": 1.487
+      "start_time": 1.266,
+      "end_time": 1.716
     },
     {
       "character": "吴",
-      "start_time": 1.487,
-      "end_time": 1.641
+      "start_time": 1.716,
+      "end_time": 1.862
     },
     {
       "character": "战",
-      "start_time": 1.641,
-      "end_time": 1.787
+      "start_time": 1.862,
+      "end_time": 1.999
     },
     {
-      "character": "面",
-      "start_time": 1.787,
-      "end_time": 2.058
-    },
-    {
-      "character": "色",
-      "start_time": 2.058,
-      "end_time": 2.237
-    },
-    {
-      "character": "冷",
-      "start_time": 2.237,
-      "end_time": 2.462
-    },
-    {
-      "character": "峻",
-      "start_time": 2.462,
-      "end_time": 2.633
-    },
-    {
-      "character": "，",
-      "start_time": 2.633,
-      "end_time": 3.137
-    },
-    {
-      "character": "黑",
-      "start_time": 3.137,
-      "end_time": 3.345
+      "character": "墨",
+      "start_time": 1.999,
+      "end_time": 2.233
     },
     {
       "character": "色",
-      "start_time": 3.345,
-      "end_time": 3.524
+      "start_time": 2.233,
+      "end_time": 2.404
     },
     {
       "character": "圆",
-      "start_time": 3.524,
-      "end_time": 3.699
+      "start_time": 2.404,
+      "end_time": 2.562
     },
     {
       "character": "领",
-      "start_time": 3.699,
-      "end_time": 3.883
+      "start_time": 2.562,
+      "end_time": 2.716
     },
     {
-      "character": "劲",
-      "start_time": 3.883,
-      "end_time": 4.083
+      "character": "袍",
+      "start_time": 2.716,
+      "end_time": 3.016
     },
     {
-      "character": "装",
-      "start_time": 4.083,
-      "end_time": 4.304
+      "character": "下",
+      "start_time": 3.016,
+      "end_time": 3.333
+    },
+    {
+      "character": "摆",
+      "start_time": 3.333,
+      "end_time": 3.529
+    },
+    {
+      "character": "沾",
+      "start_time": 3.529,
+      "end_time": 3.712
+    },
+    {
+      "character": "尘",
+      "start_time": 3.712,
+      "end_time": 3.954
     },
     {
       "character": "，",
-      "start_time": 4.304,
-      "end_time": 4.745
+      "start_time": 3.954,
+      "end_time": 4.324
     },
     {
-      "character": "见",
-      "start_time": 4.745,
-      "end_time": 4.945
+      "character": "面",
+      "start_time": 4.324,
+      "end_time": 4.57
+    },
+    {
+      "character": "色",
+      "start_time": 4.57,
+      "end_time": 4.758
+    },
+    {
+      "character": "冰",
+      "start_time": 4.758,
+      "end_time": 4.987
+    },
+    {
+      "character": "冷",
+      "start_time": 4.987,
+      "end_time": 5.099
+    },
+    {
+      "character": "，",
+      "start_time": 5.099,
+      "end_time": 5.554
+    },
+    {
+      "character": "手",
+      "start_time": 5.554,
+      "end_time": 5.791
+    },
+    {
+      "character": "指",
+      "start_time": 5.791,
+      "end_time": 5.958
     },
     {
       "character": "吴",
-      "start_time": 4.945,
-      "end_time": 5.074
+      "start_time": 5.958,
+      "end_time": 6.095
     },
     {
       "character": "双",
-      "start_time": 5.074,
-      "end_time": 5.299
-    },
-    {
-      "character": "离",
-      "start_time": 5.299,
-      "end_time": 5.549
-    },
-    {
-      "character": "队",
-      "start_time": 5.549,
-      "end_time": 5.712
-    },
-    {
-      "character": "独",
-      "start_time": 5.712,
-      "end_time": 5.887
-    },
-    {
-      "character": "行",
-      "start_time": 5.887,
-      "end_time": 6.158
+      "start_time": 6.095,
+      "end_time": 6.304
     },
     {
       "character": "，",
-      "start_time": 6.158,
-      "end_time": 6.558
-    },
-    {
-      "character": "眼",
-      "start_time": 6.558,
-      "end_time": 6.774
-    },
-    {
-      "character": "中",
-      "start_time": 6.774,
-      "end_time": 6.933
-    },
-    {
-      "character": "闪",
-      "start_time": 6.933,
-      "end_time": 7.199
-    },
-    {
-      "character": "过",
-      "start_time": 7.199,
-      "end_time": 7.312
-    },
-    {
-      "character": "杀",
-      "start_time": 7.312,
-      "end_time": 7.533
-    },
-    {
-      "character": "意",
-      "start_time": 7.533,
-      "end_time": 7.674
-    },
-    {
-      "character": "，",
-      "start_time": 7.674,
-      "end_time": 8.145
-    },
-    {
-      "character": "对",
-      "start_time": 8.145,
-      "end_time": 8.266
+      "start_time": 6.304,
+      "end_time": 6.62
     },
     {
       "character": "身",
-      "start_time": 8.266,
-      "end_time": 8.487
+      "start_time": 6.62,
+      "end_time": 6.824
     },
     {
-      "character": "旁",
-      "start_time": 8.487,
-      "end_time": 8.699
+      "character": "后",
+      "start_time": 6.824,
+      "end_time": 6.995
     },
     {
-      "character": "吴",
-      "start_time": 8.699,
-      "end_time": 8.858
+      "character": "三",
+      "start_time": 6.995,
+      "end_time": 7.266
     },
     {
-      "character": "毅",
-      "start_time": 8.858,
-      "end_time": 8.999
+      "character": "十",
+      "start_time": 7.266,
+      "end_time": 7.441
     },
     {
-      "character": "低",
-      "start_time": 8.999,
-      "end_time": 9.154
+      "character": "余",
+      "start_time": 7.441,
+      "end_time": 7.558
     },
     {
-      "character": "声",
-      "start_time": 9.154,
-      "end_time": 9.329
+      "character": "人",
+      "start_time": 7.558,
+      "end_time": 7.779
     },
     {
-      "character": "道",
-      "start_time": 9.329,
-      "end_time": 9.499
+      "character": "呈",
+      "start_time": 7.779,
+      "end_time": 8.024
     },
     {
-      "character": "他",
-      "start_time": 9.499,
-      "end_time": 9.683
+      "character": "圆",
+      "start_time": 8.024,
+      "end_time": 8.279
     },
     {
-      "character": "终",
-      "start_time": 9.683,
-      "end_time": 10.004
+      "character": "形",
+      "start_time": 8.279,
+      "end_time": 8.466
     },
     {
-      "character": "于",
-      "start_time": 10.004,
-      "end_time": 10.191
+      "character": "围",
+      "start_time": 8.466,
+      "end_time": 8.612
     },
     {
-      "character": "离",
-      "start_time": 10.191,
-      "end_time": 10.391
+      "character": "堵",
+      "start_time": 8.612,
+      "end_time": 8.774
     },
     {
-      "character": "队",
-      "start_time": 10.391,
-      "end_time": 10.591
+      "character": "，",
+      "start_time": 8.774,
+      "end_time": 9.099
     },
     {
-      "character": "了",
-      "start_time": 10.591,
-      "end_time": 10.695
+      "character": "杀",
+      "start_time": 9.099,
+      "end_time": 9.416
+    },
+    {
+      "character": "气",
+      "start_time": 9.416,
+      "end_time": 9.608
+    },
+    {
+      "character": "腾",
+      "start_time": 9.608,
+      "end_time": 9.816
+    },
+    {
+      "character": "腾",
+      "start_time": 9.816,
+      "end_time": 10.041
     },
     {
       "character": "。",
-      "start_time": 10.695,
-      "end_time": 10.854
+      "start_time": 10.041,
+      "end_time": 10.2
     }
   ],
-  "generated_at": "2025-09-23T08:18:22.648657"
+  "generated_at": "2025-11-07T23:07:23.507228"
 }

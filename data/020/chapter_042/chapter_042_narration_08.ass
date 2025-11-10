@@ -1,0 +1,21 @@
+[Script Info]
+Title: chapter_042 Narration 08 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.36,Default,,0,0,0,,平漠北果断绑来{\c&H0000FFFF&\b1}千夫{\c&H00FFFFFF&\b0}长周一和
+Dialogue: 0,0:00:02.88,0:00:04.72,Default,,0,0,0,,{\c&H0000FFFF&\b1}陆川{\c&H00FFFFFF&\b0}侵入其意识展示过
+Dialogue: 0,0:00:04.72,0:00:05.20,Default,,0,0,0,,往功绩
+Dialogue: 0,0:00:05.72,0:00:07.15,Default,,0,0,0,,周一和瞬间被震惊
+Dialogue: 0,0:00:07.51,0:00:09.09,Default,,0,0,0,,随即化作深深的崇拜

@@ -14,9 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.32,Default,,0,0,0,,天{\c&H0000FFFF&\b1}宝宝{\c&H00FFFFFF&\b0}眼眶泛红
-Dialogue: 0,0:00:01.71,0:00:03.60,Default,,0,0,0,,小手紧紧抓住{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}袖口
-Dialogue: 0,0:00:03.99,0:00:04.68,Default,,0,0,0,,泪珠滴落
-Dialogue: 0,0:00:05.06,0:00:07.02,Default,,0,0,0,,却倔强地咬着嘴唇不让哭声
-Dialogue: 0,0:00:07.02,0:00:07.37,Default,,0,0,0,,发出
-Dialogue: 0,0:00:07.64,0:00:09.65,Default,,0,0,0,,{\c&H0000FFFF&\b1}静修馆{\c&H00FFFFFF&\b0}庭院内草木萧瑟
+Dialogue: 0,0:00:00.02,0:00:02.22,Default,,0,0,0,,天{\c&H0000FFFF&\b1}宝宝{\c&H00FFFFFF&\b0}偷偷潜回看到吴双
+Dialogue: 0,0:00:02.22,0:00:04.97,Default,,0,0,0,,修炼痛苦七窍渗血她急得
+Dialogue: 0,0:00:04.97,0:00:05.66,Default,,0,0,0,,眼泪直流
+Dialogue: 0,0:00:06.00,0:00:08.23,Default,,0,0,0,,她拿出玉精炼神液小心翼翼
+Dialogue: 0,0:00:08.23,0:00:10.48,Default,,0,0,0,,地喂给{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}希望能帮他缓解
+Dialogue: 0,0:00:10.48,0:00:10.87,Default,,0,0,0,,痛苦

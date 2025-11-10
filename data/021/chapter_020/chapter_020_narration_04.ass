@@ -14,7 +14,9 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.76,Default,,0,0,0,,惊人抉择
-Dialogue: 0,0:00:01.15,0:00:03.87,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}拒绝众人拥戴强忍伤痛
-Dialogue: 0,0:00:03.87,0:00:06.39,Default,,0,0,0,,登上高台力挺{\c&H0000FFFF&\b1}吴星凡{\c&H00FFFFFF&\b0}继任
-Dialogue: 0,0:00:06.39,0:00:08.48,Default,,0,0,0,,{\c&H0000FFFF&\b1}六族盟{\c&H00FFFFFF&\b0}盟主震惊全场
+Dialogue: 0,0:00:00.02,0:00:01.11,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}浑身是伤
+Dialogue: 0,0:00:01.49,0:00:03.04,Default,,0,0,0,,每走一步都剧痛难忍
+Dialogue: 0,0:00:03.58,0:00:04.59,Default,,0,0,0,,{\c&H0000FFFF&\b1}豆大{\c&H00FFFFFF&\b0}汗珠滴落
+Dialogue: 0,0:00:04.85,0:00:05.86,Default,,0,0,0,,却咬牙坚持
+Dialogue: 0,0:00:06.30,0:00:07.03,Default,,0,0,0,,拒绝倒下
+Dialogue: 0,0:00:07.30,0:00:08.93,Default,,0,0,0,,眼神坚定望向高台

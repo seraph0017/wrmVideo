@@ -1,233 +1,223 @@
 {
-  "text": "吴江雄从高空落下，看着受伤的儿子，眼中闪过心疼！他坐在魔云旁，开始检查吴双伤势，神情凝重。",
-  "audio_file": "data/021/chapter_022/chapter_022_narration_14.mp3",
-  "duration": 9.333,
+  "text": "龙须道人见子重伤影像，瞬间暴怒，八根金色胡须暴涨，金光刺向九头蛟，宫殿震动，众人惊骇！",
+  "audio_file": "/Users/xunan/Projects/wrmVideo/data/021/chapter_022/chapter_022_narration_14.mp3",
+  "duration": 8.941,
   "character_timestamps": [
     {
-      "character": "吴",
+      "character": "龙",
       "start_time": 0.016,
-      "end_time": 0.162
+      "end_time": 0.216
     },
     {
-      "character": "江",
-      "start_time": 0.162,
-      "end_time": 0.333
+      "character": "须",
+      "start_time": 0.216,
+      "end_time": 0.399
     },
     {
-      "character": "雄",
-      "start_time": 0.333,
-      "end_time": 0.604
+      "character": "道",
+      "start_time": 0.399,
+      "end_time": 0.537
     },
     {
-      "character": "从",
-      "start_time": 0.604,
-      "end_time": 0.858
+      "character": "人",
+      "start_time": 0.537,
+      "end_time": 0.674
     },
     {
-      "character": "高",
-      "start_time": 0.858,
-      "end_time": 1.099
-    },
-    {
-      "character": "空",
-      "start_time": 1.099,
-      "end_time": 1.283
-    },
-    {
-      "character": "落",
-      "start_time": 1.283,
-      "end_time": 1.441
-    },
-    {
-      "character": "下",
-      "start_time": 1.441,
-      "end_time": 1.616
-    },
-    {
-      "character": "，",
-      "start_time": 1.616,
-      "end_time": 2.112
-    },
-    {
-      "character": "看",
-      "start_time": 2.112,
-      "end_time": 2.283
-    },
-    {
-      "character": "着",
-      "start_time": 2.283,
-      "end_time": 2.362
-    },
-    {
-      "character": "受",
-      "start_time": 2.362,
-      "end_time": 2.579
-    },
-    {
-      "character": "伤",
-      "start_time": 2.579,
-      "end_time": 2.754
-    },
-    {
-      "character": "的",
-      "start_time": 2.754,
-      "end_time": 2.824
-    },
-    {
-      "character": "儿",
-      "start_time": 2.824,
-      "end_time": 3.02
+      "character": "见",
+      "start_time": 0.674,
+      "end_time": 0.887
     },
     {
       "character": "子",
-      "start_time": 3.02,
-      "end_time": 3.149
-    },
-    {
-      "character": "，",
-      "start_time": 3.149,
-      "end_time": 3.499
-    },
-    {
-      "character": "眼",
-      "start_time": 3.499,
-      "end_time": 3.712
-    },
-    {
-      "character": "中",
-      "start_time": 3.712,
-      "end_time": 3.87
-    },
-    {
-      "character": "闪",
-      "start_time": 3.87,
-      "end_time": 4.145
-    },
-    {
-      "character": "过",
-      "start_time": 4.145,
-      "end_time": 4.254
-    },
-    {
-      "character": "心",
-      "start_time": 4.254,
-      "end_time": 4.466
-    },
-    {
-      "character": "疼",
-      "start_time": 4.466,
-      "end_time": 4.704
-    },
-    {
-      "character": "，",
-      "start_time": 4.704,
-      "end_time": 5.166
-    },
-    {
-      "character": "他",
-      "start_time": 5.166,
-      "end_time": 5.274
-    },
-    {
-      "character": "坐",
-      "start_time": 5.274,
-      "end_time": 5.416
-    },
-    {
-      "character": "在",
-      "start_time": 5.416,
-      "end_time": 5.541
-    },
-    {
-      "character": "魔",
-      "start_time": 5.541,
-      "end_time": 5.724
-    },
-    {
-      "character": "云",
-      "start_time": 5.724,
-      "end_time": 5.866
-    },
-    {
-      "character": "旁",
-      "start_time": 5.866,
-      "end_time": 6.12
-    },
-    {
-      "character": "，",
-      "start_time": 6.12,
-      "end_time": 6.42
-    },
-    {
-      "character": "开",
-      "start_time": 6.42,
-      "end_time": 6.57
-    },
-    {
-      "character": "始",
-      "start_time": 6.57,
-      "end_time": 6.704
-    },
-    {
-      "character": "检",
-      "start_time": 6.704,
-      "end_time": 6.924
-    },
-    {
-      "character": "查",
-      "start_time": 6.924,
-      "end_time": 7.116
-    },
-    {
-      "character": "吴",
-      "start_time": 7.116,
-      "end_time": 7.324
-    },
-    {
-      "character": "双",
-      "start_time": 7.324,
-      "end_time": 7.508
-    },
-    {
-      "character": "伤",
-      "start_time": 7.508,
-      "end_time": 7.716
-    },
-    {
-      "character": "势",
-      "start_time": 7.716,
-      "end_time": 7.904
-    },
-    {
-      "character": "，",
-      "start_time": 7.904,
-      "end_time": 8.254
-    },
-    {
-      "character": "神",
-      "start_time": 8.254,
-      "end_time": 8.562
-    },
-    {
-      "character": "情",
-      "start_time": 8.562,
-      "end_time": 8.779
-    },
-    {
-      "character": "凝",
-      "start_time": 8.779,
-      "end_time": 9.037
+      "start_time": 0.887,
+      "end_time": 1.066
     },
     {
       "character": "重",
-      "start_time": 9.037,
-      "end_time": 9.174
+      "start_time": 1.066,
+      "end_time": 1.27
     },
     {
-      "character": "。",
-      "start_time": 9.174,
-      "end_time": 9.333
+      "character": "伤",
+      "start_time": 1.27,
+      "end_time": 1.449
+    },
+    {
+      "character": "影",
+      "start_time": 1.449,
+      "end_time": 1.633
+    },
+    {
+      "character": "像",
+      "start_time": 1.633,
+      "end_time": 1.833
+    },
+    {
+      "character": "，",
+      "start_time": 1.833,
+      "end_time": 2.099
+    },
+    {
+      "character": "瞬",
+      "start_time": 2.099,
+      "end_time": 2.366
+    },
+    {
+      "character": "间",
+      "start_time": 2.366,
+      "end_time": 2.566
+    },
+    {
+      "character": "暴",
+      "start_time": 2.566,
+      "end_time": 2.783
+    },
+    {
+      "character": "怒",
+      "start_time": 2.783,
+      "end_time": 2.924
+    },
+    {
+      "character": "，",
+      "start_time": 2.924,
+      "end_time": 3.32
+    },
+    {
+      "character": "八",
+      "start_time": 3.32,
+      "end_time": 3.462
+    },
+    {
+      "character": "根",
+      "start_time": 3.462,
+      "end_time": 3.629
+    },
+    {
+      "character": "金",
+      "start_time": 3.629,
+      "end_time": 3.874
+    },
+    {
+      "character": "色",
+      "start_time": 3.874,
+      "end_time": 4.054
+    },
+    {
+      "character": "胡",
+      "start_time": 4.054,
+      "end_time": 4.274
+    },
+    {
+      "character": "须",
+      "start_time": 4.274,
+      "end_time": 4.433
+    },
+    {
+      "character": "暴",
+      "start_time": 4.433,
+      "end_time": 4.633
+    },
+    {
+      "character": "涨",
+      "start_time": 4.633,
+      "end_time": 4.779
+    },
+    {
+      "character": "，",
+      "start_time": 4.779,
+      "end_time": 5.229
+    },
+    {
+      "character": "金",
+      "start_time": 5.229,
+      "end_time": 5.449
+    },
+    {
+      "character": "光",
+      "start_time": 5.449,
+      "end_time": 5.641
+    },
+    {
+      "character": "刺",
+      "start_time": 5.641,
+      "end_time": 5.791
+    },
+    {
+      "character": "向",
+      "start_time": 5.791,
+      "end_time": 5.954
+    },
+    {
+      "character": "九",
+      "start_time": 5.954,
+      "end_time": 6.154
+    },
+    {
+      "character": "头",
+      "start_time": 6.154,
+      "end_time": 6.329
+    },
+    {
+      "character": "蛟",
+      "start_time": 6.329,
+      "end_time": 6.524
+    },
+    {
+      "character": "，",
+      "start_time": 6.524,
+      "end_time": 6.849
+    },
+    {
+      "character": "宫",
+      "start_time": 6.849,
+      "end_time": 7.07
+    },
+    {
+      "character": "殿",
+      "start_time": 7.07,
+      "end_time": 7.249
+    },
+    {
+      "character": "震",
+      "start_time": 7.249,
+      "end_time": 7.454
+    },
+    {
+      "character": "动",
+      "start_time": 7.454,
+      "end_time": 7.604
+    },
+    {
+      "character": "，",
+      "start_time": 7.604,
+      "end_time": 7.974
+    },
+    {
+      "character": "众",
+      "start_time": 7.974,
+      "end_time": 8.158
+    },
+    {
+      "character": "人",
+      "start_time": 8.158,
+      "end_time": 8.341
+    },
+    {
+      "character": "惊",
+      "start_time": 8.341,
+      "end_time": 8.599
+    },
+    {
+      "character": "骇",
+      "start_time": 8.599,
+      "end_time": 8.783
+    },
+    {
+      "character": "！",
+      "start_time": 8.783,
+      "end_time": 8.942
     }
   ],
-  "generated_at": "2025-09-23T08:24:12.130440"
+  "generated_at": "2025-11-07T23:15:34.107849"
 }

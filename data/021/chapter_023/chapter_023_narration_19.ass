@@ -14,7 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:01.40,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}在木屋中醒来
-Dialogue: 0,0:00:01.79,0:00:03.68,Default,,0,0,0,,身体剧痛却眼神清明
-Dialogue: 0,0:00:04.13,0:00:05.73,Default,,0,0,0,,感受到神魂力量暴涨
-Dialogue: 0,0:00:06.06,0:00:07.75,Default,,0,0,0,,嘴角露出欣慰的笑容
+Dialogue: 0,0:00:00.02,0:00:01.68,Default,,0,0,0,,{\c&H0000FFFF&\b1}吴双{\c&H00FFFFFF&\b0}面对王者不卑不亢
+Dialogue: 0,0:00:02.12,0:00:04.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}六海{\c&H00FFFFFF&\b0}境气息无惧威压拱手请
+Dialogue: 0,0:00:04.89,0:00:07.38,Default,,0,0,0,,{\c&H0000FFFF&\b1}孙正{\c&H00FFFFFF&\b0}一开诚布公深蓝色圆领
+Dialogue: 0,0:00:07.38,0:00:09.84,Default,,0,0,0,,袍随风微动眼神平静却
+Dialogue: 0,0:00:09.84,0:00:12.38,Default,,0,0,0,,暗藏锋芒尽显少年{\c&H0000FFFF&\b1}英雄{\c&H00FFFFFF&\b0}气

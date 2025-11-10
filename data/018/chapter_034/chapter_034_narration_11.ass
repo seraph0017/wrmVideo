@@ -1,0 +1,22 @@
+[Script Info]
+Title: chapter_034 Narration 11 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.43,Default,,0,0,0,,贱鸟稳稳站在货架上
+Dialogue: 0,0:00:01.74,0:00:02.73,Default,,0,0,0,,{\c&H0000FFFF&\b1}黑翅{\c&H00FFFFFF&\b0}猛地一挥
+Dialogue: 0,0:00:03.17,0:00:04.68,Default,,0,0,0,,整排货架轰然倒塌
+Dialogue: 0,0:00:05.12,0:00:06.13,Default,,0,0,0,,发出震耳巨响
+Dialogue: 0,0:00:06.48,0:00:08.00,Default,,0,0,0,,却并未惊醒任何守卫
+Dialogue: 0,0:00:08.24,0:00:09.87,Default,,0,0,0,,它得意地歪着脑袋晃了晃

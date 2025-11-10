@@ -14,9 +14,8 @@ Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.02,0:00:00.68,Default,,0,0,0,,祸不单行
-Dialogue: 0,0:00:01.11,0:00:03.26,Default,,0,0,0,,贱鸟浑身结冰冲回万炼神殿
-Dialogue: 0,0:00:03.67,0:00:05.11,Default,,0,0,0,,黑毛倒竖颤抖着
-Dialogue: 0,0:00:05.11,0:00:07.57,Default,,0,0,0,,大喊快跑原来竟是它引来
-Dialogue: 0,0:00:07.57,0:00:09.93,Default,,0,0,0,,冰族大军连王者之境都已
-Dialogue: 0,0:00:09.93,0:00:10.31,Default,,0,0,0,,逼近
+Dialogue: 0,0:00:00.02,0:00:02.67,Default,,0,0,0,,万炼神殿外贱鸟浑身结冰冲
+Dialogue: 0,0:00:02.67,0:00:04.52,Default,,0,0,0,,进殿内抖着翅膀大喊
+Dialogue: 0,0:00:04.79,0:00:05.14,Default,,0,0,0,,快跑
+Dialogue: 0,0:00:05.40,0:00:07.68,Default,,0,0,0,,冰族大军来了再不走就被包
+Dialogue: 0,0:00:07.68,0:00:08.08,Default,,0,0,0,,饺子了
