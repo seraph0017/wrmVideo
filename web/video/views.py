@@ -217,8 +217,18 @@ class NovelListView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         """
         获取查询集，支持搜索功能
+        审核组可以看到有审核相关章节的小说（审核中、已通过、已拒绝）
         """
+        from video.permissions import is_admin
+        
         queryset = Novel.objects.all()
+        
+        # 审核组权限过滤：显示有审核相关章节的小说（审核中、已通过、已拒绝）
+        if not is_admin(self.request.user):
+            queryset = queryset.filter(
+                chapters__review_status__in=['reviewing', 'approved', 'rejected']
+            ).distinct()
+        
         search_query = self.request.GET.get('search')
         if search_query:
             queryset = queryset.filter(
@@ -230,11 +240,20 @@ class NovelListView(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         """
         添加搜索表单和章节数据到上下文
+        审核组可以看到审核相关的章节
         """
+        from video.permissions import is_admin
+        
         context = super().get_context_data(**kwargs)
         context['search_form'] = SearchForm(self.request.GET)
-        # 添加所有章节数据，用于批量生成功能中的章节选择
-        context['chapters'] = Chapter.objects.all().order_by('id')
+        # 添加章节数据，用于批量生成功能中的章节选择
+        # 审核组可以看到审核中、已通过、已拒绝的章节
+        if is_admin(self.request.user):
+            context['chapters'] = Chapter.objects.all().order_by('id')
+        else:
+            context['chapters'] = Chapter.objects.filter(
+                review_status__in=['reviewing', 'approved', 'rejected']
+            ).order_by('id')
         return context
 
 
@@ -246,10 +265,36 @@ class NovelDetailView(LoginRequiredMixin, DetailView):
     template_name = 'video/novel_detail.html'
     context_object_name = 'novel'
     
+    def get_queryset(self):
+        """
+        审核组可以访问有审核相关章节的小说（审核中、已通过、已拒绝）
+        """
+        from video.permissions import is_admin
+        
+        queryset = Novel.objects.all()
+        
+        # 审核组权限过滤：可以访问有审核相关章节的小说
+        if not is_admin(self.request.user):
+            queryset = queryset.filter(
+                chapters__review_status__in=['reviewing', 'approved', 'rejected']
+            ).distinct()
+        
+        return queryset
+    
     def get_context_data(self, **kwargs):
+        """
+        审核组可以看到审核相关的章节（审核中、已通过、已拒绝）
+        """
+        from video.permissions import is_admin
+        
         context = super().get_context_data(**kwargs)
-        # 获取该小说的所有章节
-        context['chapters'] = self.object.chapters.all()
+        # 获取该小说的章节，审核组可以看到审核相关的章节
+        if is_admin(self.request.user):
+            context['chapters'] = self.object.chapters.all()
+        else:
+            context['chapters'] = self.object.chapters.filter(
+                review_status__in=['reviewing', 'approved', 'rejected']
+            )
         return context
 
 
@@ -516,8 +561,18 @@ class ChapterListView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         """
         获取查询集，支持搜索功能
+        审核组可以看到审核中、已通过、已拒绝的章节
         """
-        queryset = Chapter.objects.select_related('novel').all()
+        from video.permissions import is_admin
+        
+        queryset = Chapter.objects.select_related('novel')
+        
+        # 审核组权限过滤：可以看到审核中、已通过、已拒绝的章节
+        if is_admin(self.request.user):
+            queryset = queryset.all()
+        else:
+            queryset = queryset.filter(review_status__in=['reviewing', 'approved', 'rejected'])
+        
         search_query = self.request.GET.get('search')
         if search_query:
             queryset = queryset.filter(
@@ -545,7 +600,18 @@ class ChapterDetailView(LoginRequiredMixin, DetailView):
     context_object_name = 'chapter'
     
     def get_queryset(self):
-        return Chapter.objects.select_related('novel')
+        """
+        审核组可以访问审核中、已通过、已拒绝的章节（不能看未提交的）
+        """
+        from video.permissions import is_admin
+        
+        queryset = Chapter.objects.select_related('novel')
+        
+        # 审核组权限过滤：可以看到审核中、已通过、已拒绝的章节
+        if not is_admin(self.request.user):
+            queryset = queryset.filter(review_status__in=['reviewing', 'approved', 'rejected'])
+        
+        return queryset
     
     def get_context_data(self, **kwargs):
         from pathlib import Path
@@ -573,22 +639,26 @@ class ChapterDetailView(LoginRequiredMixin, DetailView):
             
             for audio_file in audio_files:
                 audio_name = os.path.basename(audio_file)
-                # 提取编号，如 narration_01.mp3 -> 01
+                # 提取编号，如 chapter_001_narration_01.mp3 -> 01
                 import re
                 match = re.search(r'narration_(\d+)', audio_name)
                 if match:
                     number = int(match.group(1))
                     
-                    # 查找对应的字幕文件
-                    subtitle_file = chapter_dir / f'narration_{number:02d}.ass'
+                    # 查找对应的字幕文件（使用完整的命名模式）
+                    subtitle_pattern = str(chapter_dir / f'chapter_*_narration_{number:02d}.ass')
+                    subtitle_files = glob.glob(subtitle_pattern)
+                    subtitle_file = Path(subtitle_files[0]) if subtitle_files else None
                     
-                    # 查找对应的图片文件
+                    # 查找对应的图片文件（过滤掉.json文件）
                     image_pattern = str(chapter_dir / f'chapter_*_image_{number:02d}.*')
-                    image_files = glob.glob(image_pattern)
+                    all_image_files = glob.glob(image_pattern)
+                    # 只保留图片文件，排除.json等非图片文件
+                    image_files = [f for f in all_image_files if f.lower().endswith(('.jpeg', '.jpg', '.png', '.gif', '.webp'))]
                     
                     # 构建相对于项目根目录的路径（data/xxx/...）
                     audio_rel_path = os.path.relpath(audio_file, project_root)
-                    subtitle_rel_path = os.path.relpath(subtitle_file, project_root) if subtitle_file.exists() else None
+                    subtitle_rel_path = os.path.relpath(subtitle_file, project_root) if subtitle_file and subtitle_file.exists() else None
                     image_rel_path = os.path.relpath(image_files[0], project_root) if image_files else None
                     
                     file_narrations.append({
@@ -596,7 +666,7 @@ class ChapterDetailView(LoginRequiredMixin, DetailView):
                         'audio_path': audio_rel_path,
                         'audio_name': audio_name,
                         'subtitle_path': subtitle_rel_path,
-                        'subtitle_exists': subtitle_file.exists(),
+                        'subtitle_exists': subtitle_file is not None and subtitle_file.exists(),
                         'image_path': image_rel_path,
                         'image_exists': len(image_files) > 0,
                         'image_count': len(image_files)
@@ -3985,6 +4055,161 @@ def novel_gen_image(request, novel_id):
         }, status=500)
 
 
+@csrf_exempt
+@require_http_methods(["POST"])
+def regenerate_single_image(request):
+    """
+    重新生成单张图片的API接口
+    """
+    # 检查用户登录状态
+    if not request.user.is_authenticated:
+        return JsonResponse({
+            'success': False,
+            'message': '未登录，请先登录'
+        }, status=401)
+    
+    try:
+        import json
+        
+        # 记录请求信息
+        logger.info(f"收到重新生成图片请求，用户: {request.user.username}")
+        logger.info(f"Content-Type: {request.content_type}")
+        logger.info(f"Request body length: {len(request.body)}")
+        
+        data = json.loads(request.body)
+        
+        novel_id = data.get('novel_id')
+        chapter_title = data.get('chapter_title')
+        scene_number = data.get('scene_number')
+        custom_prompt = data.get('custom_prompt')  # 可选的自定义prompt
+        
+        if not all([novel_id, chapter_title, scene_number]):
+            return JsonResponse({
+                'success': False,
+                'message': '缺少必要参数'
+            }, status=400)
+        
+        # 调用Celery任务
+        from .tasks import regenerate_single_image_task
+        task = regenerate_single_image_task.delay(novel_id, chapter_title, scene_number, custom_prompt)
+        
+        if custom_prompt:
+            logger.info(f"重新生成图片任务已提交（使用自定义Prompt）: novel_id={novel_id}, chapter={chapter_title}, scene={scene_number}, task_id={task.id}")
+        else:
+            logger.info(f"重新生成图片任务已提交: novel_id={novel_id}, chapter={chapter_title}, scene={scene_number}, task_id={task.id}")
+        
+        return JsonResponse({
+            'success': True,
+            'task_id': task.id,
+            'message': f'场景 {scene_number} 图片重新生成任务已提交'
+        })
+        
+    except Exception as e:
+        logger.error(f"重新生成图片失败: {str(e)}", exc_info=True)
+        return JsonResponse({
+            'success': False,
+            'message': f'提交失败: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def submit_chapter_for_review(request, chapter_id):
+    """
+    提交章节审核的API接口
+    """
+    # 检查用户登录状态
+    if not request.user.is_authenticated:
+        return JsonResponse({
+            'success': False,
+            'message': '未登录，请先登录'
+        }, status=401)
+    
+    try:
+        from .models import Chapter
+        from django.utils import timezone
+        
+        # 获取章节
+        chapter = Chapter.objects.get(pk=chapter_id)
+        
+        # 更新审核状态为审核中
+        chapter.review_status = 'reviewing'
+        chapter.reviewed_by = None
+        chapter.reviewed_at = None
+        chapter.review_reason = None
+        chapter.save()
+        
+        logger.info(f"章节 {chapter.title} (ID:{chapter_id}) 已提交审核，操作人: {request.user.username}")
+        
+        return JsonResponse({
+            'success': True,
+            'message': f'章节 {chapter.title} 已提交审核'
+        })
+        
+    except Chapter.DoesNotExist:
+        return JsonResponse({
+            'success': False,
+            'message': '章节不存在'
+        }, status=404)
+    except Exception as e:
+        logger.error(f"提交章节审核失败: {str(e)}", exc_info=True)
+        return JsonResponse({
+            'success': False,
+            'message': f'提交失败: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def generate_video(request):
+    """
+    生成章节视频的API接口
+    """
+    # 检查用户登录状态
+    if not request.user.is_authenticated:
+        return JsonResponse({
+            'success': False,
+            'message': '未登录，请先登录'
+        }, status=401)
+    
+    try:
+        import json
+        
+        # 记录请求信息
+        logger.info(f"收到生成视频请求，用户: {request.user.username}")
+        
+        data = json.loads(request.body)
+        
+        novel_id = data.get('novel_id')
+        chapter_title = data.get('chapter_title')
+        chapter_id = data.get('chapter_id')
+        
+        if not all([novel_id, chapter_title, chapter_id]):
+            return JsonResponse({
+                'success': False,
+                'message': '缺少必要参数'
+            }, status=400)
+        
+        # 调用Celery任务
+        from .tasks import generate_chapter_video_task
+        task = generate_chapter_video_task.delay(novel_id, chapter_title, chapter_id)
+        
+        logger.info(f"生成视频任务已提交: novel_id={novel_id}, chapter={chapter_title}, chapter_id={chapter_id}, task_id={task.id}")
+        
+        return JsonResponse({
+            'success': True,
+            'task_id': task.id,
+            'message': f'章节 {chapter_title} 视频生成任务已提交'
+        })
+        
+    except Exception as e:
+        logger.error(f"生成视频失败: {str(e)}", exc_info=True)
+        return JsonResponse({
+            'success': False,
+            'message': f'提交失败: {str(e)}'
+        }, status=500)
+
+
 @login_required
 def serve_data_file(request, file_path):
     """
@@ -3996,22 +4221,30 @@ def serve_data_file(request, file_path):
     import os
     import mimetypes
     
+    logger.info(f"serve_data_file 请求路径: {file_path}")
+    
     # 构建完整文件路径
     project_root = settings.BASE_DIR.parent
     full_path = project_root / file_path
     
+    logger.info(f"完整文件路径: {full_path}")
+    
     # 安全检查：确保文件在data目录下
     if not str(full_path).startswith(str(project_root / 'data')):
+        logger.error(f"安全检查失败: 文件不在data目录下")
         raise Http404("File not found")
     
     # 检查文件是否存在
     if not os.path.exists(full_path):
+        logger.error(f"文件不存在: {full_path}")
         raise Http404("File not found")
     
     # 获取文件MIME类型
     content_type, _ = mimetypes.guess_type(str(full_path))
     if content_type is None:
         content_type = 'application/octet-stream'
+    
+    logger.info(f"文件类型: {content_type}")
     
     # 返回文件
     response = FileResponse(open(full_path, 'rb'), content_type=content_type)

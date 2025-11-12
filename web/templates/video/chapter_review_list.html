@@ -1,0 +1,407 @@
+{% extends 'base.html' %}
+{% load permission_tags %}
+
+{% block title %}章节审核列表{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>
+                    <i class="fas fa-check-circle"></i> 章节审核列表
+                    {% permission_badge user %}
+                </h2>
+                <div>
+                    <a href="{% url 'video:chapter_list' %}" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> 返回章节列表
+                    </a>
+                </div>
+            </div>
+
+            <!-- 筛选和搜索 -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <form method="get" class="row g-3">
+                        {% if user|is_admin %}
+                        <!-- 管理员可以筛选所有状态 -->
+                        <div class="col-md-4">
+                            <label class="form-label">审核状态</label>
+                            <select name="status" class="form-select" onchange="this.form.submit()">
+                                <option value="all" {% if current_status == 'all' %}selected{% endif %}>全部</option>
+                                {% for value, label in status_choices %}
+                                <option value="{{ value }}" {% if current_status == value %}selected{% endif %}>
+                                    {{ label }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">搜索</label>
+                            <input type="text" name="search" class="form-control" 
+                                   placeholder="搜索章节名或小说名" value="{{ search }}">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">&nbsp;</label>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-search"></i> 搜索
+                            </button>
+                        </div>
+                        {% else %}
+                        <!-- 审核组只能看到审核中的章节，不显示状态筛选 -->
+                        <div class="col-md-10">
+                            <label class="form-label">搜索</label>
+                            <input type="text" name="search" class="form-control" 
+                                   placeholder="搜索章节名或小说名" value="{{ search }}">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">&nbsp;</label>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-search"></i> 搜索
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <div class="alert alert-info mb-0">
+                                <i class="fas fa-info-circle"></i> 您当前只能查看<strong>审核中</strong>的章节
+                            </div>
+                        </div>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+
+            <!-- 批量操作 -->
+            {% if user|is_reviewer %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <input type="checkbox" id="selectAll" class="form-check-input me-2">
+                            <label for="selectAll" class="form-check-label">全选</label>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-success" id="batchApproveBtn" disabled>
+                                <i class="fas fa-check"></i> 批量通过
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- 章节列表 -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    {% if user|is_reviewer %}
+                                    <th width="50">
+                                        <input type="checkbox" class="form-check-input" id="selectAllHeader">
+                                    </th>
+                                    {% endif %}
+                                    <th>ID</th>
+                                    <th>章节名</th>
+                                    <th>所属小说</th>
+                                    <th>字数</th>
+                                    <th>审核状态</th>
+                                    <th>审核人</th>
+                                    <th>审核时间</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for chapter in chapters %}
+                                <tr>
+                                    {% if user|is_reviewer %}
+                                    <td>
+                                        <input type="checkbox" class="form-check-input chapter-checkbox" 
+                                               value="{{ chapter.id }}" 
+                                               {% if chapter.review_status != 'reviewing' %}disabled{% endif %}>
+                                    </td>
+                                    {% endif %}
+                                    <td>{{ chapter.id }}</td>
+                                    <td>
+                                        <a href="{% url 'video:chapter_detail' chapter.id %}">
+                                            {{ chapter.title }}
+                                        </a>
+                                    </td>
+                                    <td>{{ chapter.novel.name }}</td>
+                                    <td>{{ chapter.word_count }}</td>
+                                    <td>
+                                        {% if chapter.review_status == 'not_submitted' %}
+                                            <span class="badge bg-secondary">{{ chapter.get_review_status_display }}</span>
+                                        {% elif chapter.review_status == 'reviewing' %}
+                                            <span class="badge bg-warning">{{ chapter.get_review_status_display }}</span>
+                                        {% elif chapter.review_status == 'approved' %}
+                                            <span class="badge bg-success">{{ chapter.get_review_status_display }}</span>
+                                        {% elif chapter.review_status == 'rejected' %}
+                                            <span class="badge bg-danger">{{ chapter.get_review_status_display }}</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if chapter.reviewed_by %}
+                                            {{ chapter.reviewed_by.username }}
+                                        {% else %}
+                                            -
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if chapter.reviewed_at %}
+                                            {{ chapter.reviewed_at|date:"Y-m-d H:i" }}
+                                        {% else %}
+                                            -
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'video:chapter_review_detail' chapter.id %}" 
+                                           class="btn btn-sm btn-info">
+                                            <i class="fas fa-eye"></i> 查看
+                                        </a>
+                                        
+                                        {% if user|is_reviewer %}
+                                            {% if chapter.review_status == 'reviewing' %}
+                                                <!-- 审核中状态：显示通过和拒绝按钮 -->
+                                                <button class="btn btn-sm btn-success approve-btn" 
+                                                        data-chapter-id="{{ chapter.id }}"
+                                                        data-chapter-title="{{ chapter.title }}">
+                                                    <i class="fas fa-check"></i> 通过
+                                                </button>
+                                                <button class="btn btn-sm btn-danger reject-btn" 
+                                                        data-chapter-id="{{ chapter.id }}"
+                                                        data-chapter-title="{{ chapter.title }}">
+                                                    <i class="fas fa-times"></i> 拒绝
+                                                </button>
+                                            {% elif user|is_admin %}
+                                                <!-- 管理员可以重置任何状态 -->
+                                                <button class="btn btn-sm btn-secondary reset-btn" 
+                                                        data-chapter-id="{{ chapter.id }}"
+                                                        data-chapter-title="{{ chapter.title }}">
+                                                    <i class="fas fa-undo"></i> 重置
+                                                </button>
+                                            {% endif %}
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="9" class="text-center text-muted">
+                                        暂无章节数据
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 拒绝原因模态框 -->
+<div class="modal fade" id="rejectModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">审核拒绝</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>章节：<strong id="rejectChapterTitle"></strong></p>
+                <div class="mb-3">
+                    <label class="form-label">拒绝原因 <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="rejectReason" rows="4" 
+                              placeholder="请输入审核失败的原因"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-danger" id="confirmRejectBtn">确认拒绝</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const csrftoken = '{{ csrf_token }}';
+    
+    // 全选功能
+    const selectAll = document.getElementById('selectAll');
+    const selectAllHeader = document.getElementById('selectAllHeader');
+    const checkboxes = document.querySelectorAll('.chapter-checkbox:not([disabled])');
+    const batchApproveBtn = document.getElementById('batchApproveBtn');
+    
+    function updateBatchButton() {
+        const checkedCount = document.querySelectorAll('.chapter-checkbox:checked').length;
+        batchApproveBtn.disabled = checkedCount === 0;
+        batchApproveBtn.textContent = checkedCount > 0 ? 
+            `批量通过 (${checkedCount})` : '批量通过';
+    }
+    
+    if (selectAll) {
+        selectAll.addEventListener('change', function() {
+            checkboxes.forEach(cb => cb.checked = this.checked);
+            if (selectAllHeader) selectAllHeader.checked = this.checked;
+            updateBatchButton();
+        });
+    }
+    
+    if (selectAllHeader) {
+        selectAllHeader.addEventListener('change', function() {
+            checkboxes.forEach(cb => cb.checked = this.checked);
+            if (selectAll) selectAll.checked = this.checked;
+            updateBatchButton();
+        });
+    }
+    
+    checkboxes.forEach(cb => {
+        cb.addEventListener('change', updateBatchButton);
+    });
+    
+    // 批量审核通过
+    if (batchApproveBtn) {
+        batchApproveBtn.addEventListener('click', function() {
+            const selectedIds = Array.from(document.querySelectorAll('.chapter-checkbox:checked'))
+                .map(cb => cb.value);
+            
+            if (selectedIds.length === 0) return;
+            
+            if (!confirm(`确定要批量审核通过 ${selectedIds.length} 个章节吗？`)) return;
+            
+            fetch('{% url "video:batch_approve_chapters" %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrftoken
+                },
+                body: JSON.stringify({ chapter_ids: selectedIds })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    location.reload();
+                } else {
+                    alert('批量审核失败：' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('批量审核失败');
+            });
+        });
+    }
+    
+    // 单个审核通过
+    document.querySelectorAll('.approve-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const chapterId = this.dataset.chapterId;
+            const chapterTitle = this.dataset.chapterTitle;
+            
+            if (!confirm(`确定要审核通过章节《${chapterTitle}》吗？`)) return;
+            
+            fetch(`/video/api/chapters/${chapterId}/approve/`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrftoken
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    location.reload();
+                } else {
+                    alert('审核失败：' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('审核失败');
+            });
+        });
+    });
+    
+    // 审核拒绝
+    let currentRejectChapterId = null;
+    const rejectModal = new bootstrap.Modal(document.getElementById('rejectModal'));
+    
+    document.querySelectorAll('.reject-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            currentRejectChapterId = this.dataset.chapterId;
+            document.getElementById('rejectChapterTitle').textContent = this.dataset.chapterTitle;
+            document.getElementById('rejectReason').value = '';
+            rejectModal.show();
+        });
+    });
+    
+    document.getElementById('confirmRejectBtn').addEventListener('click', function() {
+        const reason = document.getElementById('rejectReason').value.trim();
+        
+        if (!reason) {
+            alert('请填写拒绝原因');
+            return;
+        }
+        
+        const formData = new FormData();
+        formData.append('reason', reason);
+        
+        fetch(`/video/api/chapters/${currentRejectChapterId}/reject/`, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': csrftoken
+            },
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert(data.message);
+                rejectModal.hide();
+                location.reload();
+            } else {
+                alert('审核失败：' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('审核失败');
+        });
+    });
+    
+    // 重置审核状态
+    document.querySelectorAll('.reset-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const chapterId = this.dataset.chapterId;
+            const chapterTitle = this.dataset.chapterTitle;
+            
+            if (!confirm(`确定要重置章节《${chapterTitle}》的审核状态吗？`)) return;
+            
+            fetch(`/video/api/chapters/${chapterId}/reset-review/`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrftoken
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    location.reload();
+                } else {
+                    alert('重置失败：' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('重置失败');
+            });
+        });
+    });
+});
+</script>
+{% endblock %}
+

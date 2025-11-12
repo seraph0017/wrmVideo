@@ -45,6 +45,7 @@
                                 <th>字数</th>
                                 <th>风格</th>
                                 <th>解说数</th>
+                                <th>审核状态</th>
                                 <th>视频状态</th>
                                 <th>操作</th>
                             </tr>
@@ -59,10 +60,21 @@
                                 <td>{{ chapter.format }}</td>
                                 <td>{{ chapter.narrations.count }}</td>
                                 <td>
+                                    {% if chapter.review_status == 'not_submitted' %}
+                                        <span class="badge bg-secondary">未提交</span>
+                                    {% elif chapter.review_status == 'reviewing' %}
+                                        <span class="badge bg-warning">审核中</span>
+                                    {% elif chapter.review_status == 'approved' %}
+                                        <span class="badge bg-success">已通过</span>
+                                    {% elif chapter.review_status == 'rejected' %}
+                                        <span class="badge bg-danger">已拒绝</span>
+                                    {% endif %}
+                                </td>
+                                <td>
                                     {% if chapter.video_path %}
                                     <span class="badge bg-success">已生成</span>
                                     {% else %}
-                                    <span class="badge bg-warning">未生成</span>
+                                    <span class="badge bg-secondary">未生成</span>
                                     {% endif %}
                                 </td>
                                 <td>

@@ -573,7 +573,7 @@ def save_prompt_info(prompt: str, output_path: str, workflow_name: str, scene_nu
         logger.warning(f"保存Prompt信息失败: {e}")
 
 
-def process_chapter_with_comfyui(chapter_dir: str, client: ComfyUIClient, workflow_template: Dict, poll_interval: float, max_wait: int, delay_between_requests: float = 1.0) -> int:
+def process_chapter_with_comfyui(chapter_dir: str, client: ComfyUIClient, workflow_template: Dict, poll_interval: float, max_wait: int, delay_between_requests: float = 1.0, scene_number: Optional[int] = None) -> int:
     try:
         narration_file = os.path.join(chapter_dir, 'narration.txt')
         if not os.path.exists(narration_file):
@@ -592,7 +592,18 @@ def process_chapter_with_comfyui(chapter_dir: str, client: ComfyUIClient, workfl
         chapter_name = os.path.basename(chapter_dir)
 
         success_count = 0
-        for i, scene in enumerate(scenes, 1):
+        
+        # 如果指定了scene_number，只处理该场景
+        if scene_number is not None:
+            logger.info(f"单图片模式：只生成场景 {scene_number}")
+            scenes_to_process = [(scene_number, scenes[scene_number - 1])] if scene_number <= len(scenes) else []
+            if not scenes_to_process:
+                logger.error(f"场景编号 {scene_number} 超出范围 (总共 {len(scenes)} 个场景)")
+                return 0
+        else:
+            scenes_to_process = enumerate(scenes, 1)
+        
+        for i, scene in scenes_to_process:
             if 'character' not in scene or 'scene_prompt' not in scene:
                 logger.warning(f"场景 {i} 缺少必要信息，跳过")
                 continue
@@ -606,7 +617,9 @@ def process_chapter_with_comfyui(chapter_dir: str, client: ComfyUIClient, workfl
 
             output_filename = f"{chapter_name}_image_{i:02d}.jpeg"
             output_path = os.path.join(chapter_dir, output_filename)
-            if os.path.exists(output_path):
+            
+            # 单图片模式下，即使文件存在也要重新生成
+            if os.path.exists(output_path) and scene_number is None:
                 logger.info(f"图片已存在，跳过: {output_path}")
                 success_count += 1
                 continue
@@ -668,13 +681,14 @@ def main():
     import argparse
     parser = argparse.ArgumentParser(description="使用ComfyUI生成章节图片（v4）")
     parser.add_argument('input_path', help='数据目录(如 data/001) 或单个章节目录(如 data/001/chapter_001)')
-    parser.add_argument('--api_url', default=DEFAULT_COMFYUI_PROMPT_URL, help='ComfyUI api/prompt 地址')
+    parser.add_argument('--api_url', default=f"http://{COMFYUI_CONFIG['default_host']}/api/prompt", help='ComfyUI api/prompt 地址')
     parser.add_argument('--workflow_json', default=os.path.join('test', 'comfyui', 'image_compact.json'), help='工作流JSON模板路径')
-    parser.add_argument('--timeout', type=int, default=30, help='请求超时(秒)')
+    parser.add_argument('--timeout', type=int, default=COMFYUI_CONFIG.get('timeout', 30), help='请求超时(秒)')
     parser.add_argument('--max_retries', type=int, default=3, help='提交重试次数')
-    parser.add_argument('--poll_interval', type=float, default=1.0, help='轮询history间隔(秒)')
+    parser.add_argument('--poll_interval', type=float, default=COMFYUI_CONFIG.get('poll_interval', 1.0), help='轮询history间隔(秒)')
     parser.add_argument('--max_wait', type=int, default=300, help='轮询最长等待(秒)')
     parser.add_argument('--delay', type=float, default=1.0, help='每次生成之间的延迟(秒)')
+    parser.add_argument('--scene', type=int, help='指定生成单个场景编号（单图片模式）')
 
     args = parser.parse_args()
 
@@ -686,10 +700,14 @@ def main():
     client = ComfyUIClient(api_url=args.api_url, timeout=args.timeout, max_retries=args.max_retries)
     workflow_template = load_workflow_json(args.workflow_json)
     logger.info(f"加载工作流模板: {args.workflow_json}")
+    logger.info(f"ComfyUI API 地址: {args.api_url}")
+    
+    if args.scene is not None:
+        logger.info(f"单图片模式：将生成场景 {args.scene}")
 
     # 单章节或数据目录
     if is_chapter_directory(args.input_path):
-        process_chapter_with_comfyui(args.input_path, client, workflow_template, poll_interval=args.poll_interval, max_wait=args.max_wait, delay_between_requests=args.delay)
+        process_chapter_with_comfyui(args.input_path, client, workflow_template, poll_interval=args.poll_interval, max_wait=args.max_wait, delay_between_requests=args.delay, scene_number=args.scene)
     else:
         # 遍历数据目录下的所有章节
         chapter_dirs = find_chapter_directories(args.input_path)
@@ -697,6 +715,12 @@ def main():
             logger.warning(f"在 {args.input_path} 中没有找到章节目录")
             logger.info("请确保每个章节目录包含 narration.txt 文件")
             sys.exit(0)
+        
+        # 单图片模式不支持多章节
+        if args.scene is not None:
+            logger.error("单图片模式（--scene）只能用于单个章节目录，不支持数据目录")
+            sys.exit(1)
+        
         total_success = 0
         for i, chapter_dir in enumerate(chapter_dirs, 1):
             logger.info(f"处理章节 {i}/{len(chapter_dirs)}: {chapter_dir}")

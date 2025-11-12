@@ -5,24 +5,72 @@
 {% block title %}{{ chapter.title }} - Narration列表 | {{ block.super }}{% endblock %}
 
 {% block content %}
+{% load permission_tags %}
+{% csrf_token %}
 <div class="container-fluid">
     <div class="row mb-3">
         <div class="col-md-12">
             <div class="d-flex justify-content-between align-items-center">
                 <h3>
                     <i class="fas fa-book me-2"></i>{{ chapter.novel.name }} - {{ chapter.title }}
+                    <!-- 审核状态显示 -->
+                    {% if chapter.review_status == 'not_submitted' %}
+                        <span class="badge bg-secondary ms-2">未提交审核</span>
+                    {% elif chapter.review_status == 'reviewing' %}
+                        <span class="badge bg-warning ms-2">审核中</span>
+                    {% elif chapter.review_status == 'approved' %}
+                        <span class="badge bg-success ms-2">审核通过</span>
+                    {% elif chapter.review_status == 'rejected' %}
+                        <span class="badge bg-danger ms-2">审核失败</span>
+                    {% endif %}
                 </h3>
                 <div>
                     <a href="{% url 'video:novel_detail' chapter.novel.id %}" class="btn btn-secondary btn-sm">
                         <i class="fas fa-arrow-left me-1"></i>返回章节列表
                     </a>
-                    <a href="{% url 'admin:video_chapter_change' chapter.id %}" class="btn btn-warning btn-sm">
-                        <i class="fas fa-edit me-1"></i>编辑章节
-                    </a>
+                    
+                    {% if user|is_reviewer %}
+                        <!-- 审核组操作按钮 -->
+                        {% if chapter.review_status == 'reviewing' %}
+                            <button type="button" class="btn btn-success btn-sm" onclick="approveChapter()">
+                                <i class="fas fa-check me-1"></i>审核通过
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm" onclick="rejectChapter()">
+                                <i class="fas fa-times me-1"></i>审核拒绝
+                            </button>
+                        {% endif %}
+                    {% endif %}
+                    
+                    {% if user|is_admin %}
+                        <!-- 管理员可以重置审核状态 -->
+                        {% if chapter.review_status != 'not_submitted' %}
+                            <button type="button" class="btn btn-warning btn-sm" onclick="resetReview()">
+                                <i class="fas fa-undo me-1"></i>重置审核
+                            </button>
+                        {% endif %}
+                        <a href="{% url 'admin:video_chapter_change' chapter.id %}" class="btn btn-info btn-sm">
+                            <i class="fas fa-edit me-1"></i>编辑章节
+                        </a>
+                    {% endif %}
                 </div>
             </div>
         </div>
     </div>
+    
+    <!-- 审核失败原因显示 -->
+    {% if chapter.review_status == 'rejected' and chapter.review_reason %}
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <div class="alert alert-danger">
+                <h6><i class="fas fa-exclamation-triangle me-2"></i>审核失败原因：</h6>
+                <p class="mb-0">{{ chapter.review_reason }}</p>
+                {% if chapter.reviewed_by %}
+                    <small class="text-muted">审核人：{{ chapter.reviewed_by.username }} | 审核时间：{{ chapter.reviewed_at|date:"Y-m-d H:i:s" }}</small>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
 
     <div class="row">
         <div class="col-md-12">
@@ -33,16 +81,17 @@
                         <table class="table table-hover">
                             <thead class="table-light">
                                 <tr>
-                                    <th style="width: 80px;">序号</th>
+                                    <th style="width: 60px;">序号</th>
                                     <th style="width: 200px;">音频</th>
-                                    <th style="width: 120px;">字幕</th>
-                                    <th style="width: 120px;">图片</th>
-                                    <th>文件路径</th>
+                                    <th style="width: 100px;">字幕</th>
+                                    <th style="width: 220px;">图片</th>
+                                    <th>Prompt</th>
+                                    <th style="width: 100px;">操作</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {% for narration in file_narrations %}
-                                <tr>
+                                <tr id="narration-row-{{ narration.number }}">
                                     <td>
                                         <span class="badge bg-primary">{{ narration.number|stringformat:"02d" }}</span>
                                     </td>
@@ -67,17 +116,56 @@
                                     </td>
                                     <td>
                                         {% if narration.image_exists %}
-                                        <button class="btn btn-sm btn-success" onclick="viewImage('{{ narration.image_path }}', '{{ narration.number|stringformat:"02d" }}')">
-                                            <i class="fas fa-image me-1"></i>查看
-                                        </button>
+                                        <img src="{% url 'video:serve_data_file' file_path=narration.image_path %}?t={{ request.GET.t|default:'' }}" 
+                                             alt="场景{{ narration.number }}" 
+                                             class="img-thumbnail" 
+                                             style="max-width: 200px; max-height: 150px; cursor: pointer;"
+                                             onclick="viewImage('{{ narration.image_path }}', '{{ narration.number|stringformat:"02d" }}')">
                                         {% else %}
                                         <span class="badge bg-secondary">无</span>
                                         {% endif %}
                                     </td>
                                     <td>
-                                        <small class="text-muted">
-                                            <i class="fas fa-folder me-1"></i>{{ narration.audio_name }}
-                                        </small>
+                                        <div class="prompt-container" id="prompt-container-{{ narration.number }}">
+                                            <!-- 显示模式 -->
+                                            <div class="prompt-display" id="prompt-display-{{ narration.number }}" style="display: block;">
+                                                <small class="text-muted" id="prompt-text-{{ narration.number }}">
+                                                    <span class="spinner-border spinner-border-sm me-1" role="status"></span>加载中...
+                                                </small>
+                                                <button class="btn btn-sm btn-link p-0 ms-2" 
+                                                        onclick="editPrompt({{ narration.number }})"
+                                                        title="编辑Prompt">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                            </div>
+                                            <!-- 编辑模式 -->
+                                            <div class="prompt-edit" id="prompt-edit-{{ narration.number }}" style="display: none;">
+                                                <textarea class="form-control form-control-sm" 
+                                                          id="prompt-input-{{ narration.number }}"
+                                                          rows="3"
+                                                          style="font-size: 0.875rem;"></textarea>
+                                                <div class="mt-1">
+                                                    <button class="btn btn-sm btn-success" 
+                                                            onclick="savePrompt({{ narration.number }})"
+                                                            title="保存">
+                                                        <i class="fas fa-check me-1"></i>保存
+                                                    </button>
+                                                    <button class="btn btn-sm btn-secondary" 
+                                                            onclick="cancelEditPrompt({{ narration.number }})"
+                                                            title="取消">
+                                                        <i class="fas fa-times me-1"></i>取消
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-warning" 
+                                                id="regen-btn-{{ narration.number }}"
+                                                onclick="regenerateImage({{ chapter.novel.id }}, '{{ chapter.title }}', {{ narration.number }})"
+                                                title="使用当前Prompt重新生成图片">
+                                            <i class="fas fa-redo me-1"></i>重新生成
+                                        </button>
                                     </td>
                                 </tr>
                                 {% endfor %}
@@ -130,7 +218,7 @@
 
 <!-- 图片查看模态框 -->
 <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="imageModalLabel">
@@ -138,8 +226,30 @@
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body text-center">
-                <img id="narrationImage" src="" alt="分镜图片" style="max-width: 100%; height: auto;">
+            <div class="modal-body">
+                <!-- 图片显示区域 -->
+                <div class="text-center mb-3">
+                    <img id="narrationImage" src="" alt="分镜图片" style="max-width: 100%; max-height: 500px; height: auto;">
+                </div>
+                
+                <!-- Prompt显示区域 -->
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <h6 class="mb-0">
+                            <i class="fas fa-magic me-2"></i>图片生成Prompt
+                        </h6>
+                    </div>
+                    <div class="card-body">
+                        <div id="imagePrompt" class="text-muted">
+                            <div class="text-center">
+                                <div class="spinner-border spinner-border-sm me-2" role="status">
+                                    <span class="visually-hidden">加载中...</span>
+                                </div>
+                                加载中...
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
@@ -149,10 +259,162 @@
 </div>
 
 <script>
+// 存储每个narration的完整prompt数据
+const promptDataStore = {};
+
+// 页面加载时加载所有prompt
+document.addEventListener('DOMContentLoaded', function() {
+    loadAllPrompts();
+});
+
+// 加载所有narration的prompt
+function loadAllPrompts() {
+    // 从DOM中获取所有narration行
+    const rows = document.querySelectorAll('[id^="narration-row-"]');
+    console.log(`找到 ${rows.length} 个narration行`);
+    
+    rows.forEach(row => {
+        const numberMatch = row.id.match(/narration-row-(\d+)/);
+        if (numberMatch) {
+            const number = parseInt(numberMatch[1]);
+            const imgElement = row.querySelector('img.img-thumbnail');
+            if (imgElement) {
+                const imageSrc = imgElement.getAttribute('src');
+                console.log(`Narration ${number} 图片URL: ${imageSrc}`);
+                
+                // 从完整URL中提取相对路径，去掉开头的 '/' 和查询参数
+                const imagePath = imageSrc.replace(/^\//, '').split('?')[0];
+                console.log(`Narration ${number} 相对路径: ${imagePath}`);
+                
+                loadPromptForNarration(number, imagePath);
+            } else {
+                console.log(`Narration ${number} 没有图片元素`);
+                const elem = document.getElementById('prompt-text-' + number);
+                if (elem) {
+                    elem.innerHTML = '<span class="text-muted">无图片</span>';
+                }
+            }
+        }
+    });
+}
+
+// 加载单个narration的prompt
+function loadPromptForNarration(number, imagePath) {
+    // imagePath已经是完整的相对路径，如 "data/020/chapter_002/chapter_002_image_01.jpeg"
+    // 需要将.jpeg替换为.prompt.json
+    // 先移除可能存在的查询参数（如?t=timestamp）
+    const cleanImagePath = imagePath.split('?')[0];
+    const promptUrl = '/' + cleanImagePath.replace(/\.(jpeg|jpg|png|gif|webp)$/i, '.prompt.json');
+    
+    console.log(`加载Narration ${number} 的prompt: ${promptUrl}`);
+    
+    fetch(promptUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Prompt文件不存在');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // 存储完整的prompt数据（使用干净的路径，不含查询参数）
+            promptDataStore[number] = {
+                prompt: data.prompt,
+                imagePath: cleanImagePath,
+                promptUrl: promptUrl
+            };
+            
+            const elem = document.getElementById('prompt-text-' + number);
+            if (elem && data.prompt) {
+                console.log(`Narration ${number} prompt已加载`);
+                
+                // 显示完整的prompt内容
+                let displayPrompt = data.prompt;
+                
+                // 如果太长（超过500字符）才截断
+                const shortPrompt = displayPrompt.length > 500 
+                    ? displayPrompt.substring(0, 500) + '...' 
+                    : displayPrompt;
+                    
+                elem.innerHTML = shortPrompt;
+                elem.title = data.prompt;  // 完整prompt作为tooltip
+                elem.style.whiteSpace = 'normal';  // 允许换行
+                elem.style.lineHeight = '1.5';  // 增加行高，更易读
+            }
+        })
+        .catch(error => {
+            console.warn(`加载Narration ${number} prompt失败:`, error);
+            const elem = document.getElementById('prompt-text-' + number);
+            if (elem) {
+                elem.innerHTML = '<span class="text-muted">--</span>';
+            }
+        });
+}
+
+// 编辑Prompt
+function editPrompt(number) {
+    const promptData = promptDataStore[number];
+    if (!promptData) {
+        alert('Prompt数据未加载，请稍后再试');
+        return;
+    }
+    
+    // 切换到编辑模式
+    document.getElementById(`prompt-display-${number}`).style.display = 'none';
+    document.getElementById(`prompt-edit-${number}`).style.display = 'block';
+    
+    // 填充当前prompt到textarea
+    document.getElementById(`prompt-input-${number}`).value = promptData.prompt;
+}
+
+// 取消编辑Prompt
+function cancelEditPrompt(number) {
+    // 切换回显示模式
+    document.getElementById(`prompt-display-${number}`).style.display = 'block';
+    document.getElementById(`prompt-edit-${number}`).style.display = 'none';
+}
+
+// 保存Prompt（更新内存中的数据）
+function savePrompt(number) {
+    const newPrompt = document.getElementById(`prompt-input-${number}`).value.trim();
+    
+    if (!newPrompt) {
+        alert('Prompt不能为空');
+        return;
+    }
+    
+    // 更新存储的prompt
+    if (promptDataStore[number]) {
+        promptDataStore[number].prompt = newPrompt;
+    } else {
+        promptDataStore[number] = { prompt: newPrompt };
+    }
+    
+    // 更新显示
+    const elem = document.getElementById('prompt-text-' + number);
+    if (elem) {
+        const shortPrompt = newPrompt.length > 500 
+            ? newPrompt.substring(0, 500) + '...' 
+            : newPrompt;
+        elem.innerHTML = shortPrompt;
+        elem.title = newPrompt;
+    }
+    
+    // 切换回显示模式
+    cancelEditPrompt(number);
+    
+    console.log(`Prompt ${number} 已更新（仅内存）`);
+}
+
 // 查看字幕文件
 function viewSubtitle(subtitlePath, number) {
-    fetch('/data/' + subtitlePath)
-        .then(response => response.text())
+    console.log('查看字幕:', subtitlePath);
+    fetch('/' + subtitlePath)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('HTTP ' + response.status);
+            }
+            return response.text();
+        })
         .then(data => {
             document.getElementById('subtitleContent').textContent = data;
             document.getElementById('subtitleModalLabel').innerHTML = 
@@ -168,12 +430,323 @@ function viewSubtitle(subtitlePath, number) {
 
 // 查看图片
 function viewImage(imagePath, number) {
-    document.getElementById('narrationImage').src = '/data/' + imagePath;
+    console.log('查看图片:', imagePath);
+    // 添加时间戳参数强制刷新缓存
+    const timestamp = new Date().getTime();
+    const imageUrl = '/' + imagePath + '?t=' + timestamp;
+    console.log('图片URL:', imageUrl);
+    
+    const imgElement = document.getElementById('narrationImage');
+    const promptElement = document.getElementById('imagePrompt');
+    
+    // 重置prompt显示为加载中状态
+    promptElement.innerHTML = `
+        <div class="text-center">
+            <div class="spinner-border spinner-border-sm me-2" role="status">
+                <span class="visually-hidden">加载中...</span>
+            </div>
+            加载中...
+        </div>
+    `;
+    
+    // 添加错误处理
+    imgElement.onerror = function() {
+        console.error('图片加载失败:', imageUrl);
+        alert('图片加载失败，请检查控制台查看详细信息');
+    };
+    
+    imgElement.onload = function() {
+        console.log('图片加载成功');
+    };
+    
+    imgElement.src = imageUrl;
     document.getElementById('imageModalLabel').innerHTML = 
         '<i class="fas fa-image me-2"></i>分镜图片 - Narration ' + number;
+    
+    // 加载prompt.json文件（移除时间戳参数）
+    const promptUrl = imageUrl.replace(/\?t=\d+$/, '').replace(/\.(jpeg|jpg|png|gif|webp)$/i, '.prompt.json') + '?t=' + timestamp;
+    console.log('Prompt URL:', promptUrl);
+    
+    fetch(promptUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Prompt文件不存在');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Prompt数据:', data);
+            
+            // 格式化显示prompt信息
+            let promptHtml = '';
+            
+            if (data.prompt) {
+                promptHtml += `<div class="mb-2"><strong>Prompt:</strong></div>`;
+                promptHtml += `<div class="mb-3" style="white-space: pre-wrap; background-color: #f8f9fa; padding: 10px; border-radius: 4px;">${data.prompt}</div>`;
+            }
+            
+            if (data.negative_prompt) {
+                promptHtml += `<div class="mb-2"><strong>Negative Prompt:</strong></div>`;
+                promptHtml += `<div style="white-space: pre-wrap; background-color: #f8f9fa; padding: 10px; border-radius: 4px;">${data.negative_prompt}</div>`;
+            }
+            
+            if (!promptHtml) {
+                promptHtml = '<div class="text-muted">无prompt信息</div>';
+            }
+            
+            promptElement.innerHTML = promptHtml;
+        })
+        .catch(error => {
+            console.error('加载prompt失败:', error);
+            promptElement.innerHTML = '<div class="text-muted"><i class="fas fa-exclamation-circle me-2"></i>未找到prompt文件</div>';
+        });
+    
     const modal = new bootstrap.Modal(document.getElementById('imageModal'));
     modal.show();
+}
+
+// 获取CSRF token的辅助函数
+function getCSRFToken() {
+    // 尝试从input元素获取
+    const tokenInput = document.querySelector('[name=csrfmiddlewaretoken]');
+    if (tokenInput) {
+        return tokenInput.value;
+    }
+    // 尝试从cookie获取
+    const name = 'csrftoken';
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+// 重新生成单张图片
+function regenerateImage(novelId, chapterTitle, sceneNumber) {
+    const button = event.target.closest('button');
+    const originalHtml = button.innerHTML;
+    button.disabled = true;
+    button.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>生成中...';
+    
+    const csrfToken = getCSRFToken();
+    if (!csrfToken) {
+        console.error('无法获取CSRF token');
+        alert('无法获取CSRF token，请刷新页面后重试');
+        button.disabled = false;
+        button.innerHTML = originalHtml;
+        return;
+    }
+    
+    // 获取当前的prompt（可能是用户编辑过的）
+    const customPrompt = promptDataStore[sceneNumber] ? promptDataStore[sceneNumber].prompt : null;
+    
+    const requestData = {
+        novel_id: novelId,
+        chapter_title: chapterTitle,
+        scene_number: sceneNumber
+    };
+    
+    // 如果有自定义prompt，添加到请求中
+    if (customPrompt) {
+        requestData.custom_prompt = customPrompt;
+        console.log(`使用自定义Prompt生成场景 ${sceneNumber}`);
+    }
+    
+    fetch(`/video/api/chapters/regenerate-single-image/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken
+        },
+        body: JSON.stringify(requestData)
+    })
+    .then(response => {
+        console.log('响应状态:', response.status);
+        console.log('响应头 Content-Type:', response.headers.get('Content-Type'));
+        
+        // 检查响应是否为JSON
+        const contentType = response.headers.get('Content-Type');
+        if (!contentType || !contentType.includes('application/json')) {
+            // 如果不是JSON，读取文本内容用于调试
+            return response.text().then(text => {
+                console.error('服务器返回非JSON响应:', text.substring(0, 500));
+                throw new Error('服务器返回了非JSON响应，可能是CSRF验证失败或权限问题');
+            });
+        }
+        
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            console.log(`场景 ${sceneNumber} 图片生成任务已提交，任务ID: ${data.task_id}`);
+            // 轮询检查任务状态
+            checkRegenerateTask(data.task_id, sceneNumber, button, originalHtml);
+        } else {
+            throw new Error(data.message || '提交失败');
+        }
+    })
+    .catch(error => {
+        console.error('重新生成失败:', error);
+        alert('重新生成失败: ' + error.message);
+        button.disabled = false;
+        button.innerHTML = originalHtml;
+    });
+}
+
+// 轮询检查重新生成任务状态
+function checkRegenerateTask(taskId, sceneNumber, button, originalHtml) {
+    const checkStatus = () => {
+        fetch(`/video/api/task/${taskId}/`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(`任务 ${taskId} 状态:`, data);
+                
+                // 检查任务是否完成（使用status字段，不是state）
+                if (data.status === 'SUCCESS' && data.ready) {
+                    // 任务完成，检查结果
+                    if (data.result && data.result.status === 'success') {
+                        console.log(`场景 ${sceneNumber} 图片生成成功！页面将刷新。`);
+                        button.disabled = false;
+                        button.innerHTML = originalHtml;
+                        // 刷新页面并添加时间戳参数，强制刷新图片缓存
+                        const timestamp = new Date().getTime();
+                        window.location.href = window.location.pathname + '?t=' + timestamp;
+                    } else {
+                        // 任务执行了但结果是错误
+                        const errorMsg = data.result ? data.result.message : '未知错误';
+                        button.disabled = false;
+                        button.innerHTML = originalHtml;
+                        console.error(`场景 ${sceneNumber} 图片生成失败: ${errorMsg}`);
+                        alert(`场景 ${sceneNumber} 图片生成失败: ${errorMsg}`);
+                    }
+                } else if (data.status === 'FAILURE' && data.ready) {
+                    button.disabled = false;
+                    button.innerHTML = originalHtml;
+                    console.error(`场景 ${sceneNumber} 图片生成失败: ${data.error || '未知错误'}`);
+                    alert(`场景 ${sceneNumber} 图片生成失败: ${data.error || '未知错误'}`);
+                } else if (data.status === 'PENDING' || data.status === 'STARTED' || !data.ready) {
+                    // 继续轮询
+                    setTimeout(checkStatus, 3000);
+                } else {
+                    // 未知状态，继续轮询
+                    console.warn(`未知任务状态: ${data.status}`);
+                    setTimeout(checkStatus, 3000);
+                }
+            })
+            .catch(error => {
+                console.error('检查任务状态失败:', error);
+                setTimeout(checkStatus, 5000);
+            });
+    };
+    
+    // 开始轮询
+    setTimeout(checkStatus, 3000);
+}
+
+// 审核通过
+function approveChapter() {
+    if (!confirm('确认审核通过此章节？')) {
+        return;
+    }
+    
+    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    
+    fetch(`/video/api/chapters/{{ chapter.id }}/approve/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('审核通过！');
+            // 刷新页面显示最新状态
+            location.reload();
+        } else {
+            alert('审核失败: ' + (data.message || '未知错误'));
+        }
+    })
+    .catch(error => {
+        console.error('审核失败:', error);
+        alert('审核失败: ' + error.message);
+    });
+}
+
+// 审核拒绝
+function rejectChapter() {
+    const reason = prompt('请输入审核拒绝原因：');
+    if (!reason || reason.trim() === '') {
+        alert('请输入拒绝原因');
+        return;
+    }
+    
+    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    
+    fetch(`/video/api/chapters/{{ chapter.id }}/reject/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken
+        },
+        body: JSON.stringify({
+            reason: reason
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('已标记为审核失败！');
+            // 刷新页面显示最新状态
+            location.reload();
+        } else {
+            alert('操作失败: ' + (data.message || '未知错误'));
+        }
+    })
+    .catch(error => {
+        console.error('操作失败:', error);
+        alert('操作失败: ' + error.message);
+    });
+}
+
+// 重置审核状态
+function resetReview() {
+    if (!confirm('确认重置此章节的审核状态？')) {
+        return;
+    }
+    
+    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    
+    fetch(`/video/api/chapters/{{ chapter.id }}/reset-review/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('已重置审核状态！');
+            location.reload();
+        } else {
+            alert('重置失败: ' + (data.message || '未知错误'));
+        }
+    })
+    .catch(error => {
+        console.error('重置失败:', error);
+        alert('重置失败: ' + error.message);
+    });
 }
 </script>
 
 {% endblock %}
+

@@ -32,19 +32,20 @@
                             <thead class="table-light">
                                 <tr>
                                     <th style="width: 60px;">ID</th>
-                                    <th>章节名</th>
+                                    <th style="width: 150px;">章节名</th>
                                     <th style="width: 80px;">字数</th>
                                     <th style="width: 80px;">脚本</th>
                                     <th style="width: 80px;">旁白</th>
                                     <th style="width: 80px;">字幕</th>
                                     <th style="width: 80px;">图片</th>
                                     <th style="width: 100px;">视频</th>
-                                    <th style="width: 180px;">操作</th>
+                                    <th style="width: 120px;">状态</th>
+                                    <th style="width: 280px;">操作</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {% for chapter in chapters %}
-                                <tr>
+                                <tr id="chapter-row-{{ chapter.id }}">
                                     <td>{{ chapter.id }}</td>
                                     <td>
                                         <a href="{% url 'video:chapter_detail' chapter.id %}" class="text-decoration-none">
@@ -92,12 +93,78 @@
                                         {% endif %}
                                     </td>
                                     <td>
-                                        <a href="{% url 'video:chapter_detail' chapter.id %}" class="btn btn-info btn-sm">
-                                            <i class="fas fa-eye"></i> 查看
-                                        </a>
-                                        <a href="{% url 'admin:video_chapter_change' chapter.id %}" class="btn btn-warning btn-sm">
-                                            <i class="fas fa-edit"></i> 编辑
-                                        </a>
+                                        {% if chapter.review_status == 'approved' %}
+                                            <span class="badge bg-success">
+                                                <i class="fas fa-check-double me-1"></i>审核通过
+                                            </span>
+                                        {% elif chapter.review_status == 'reviewing' %}
+                                            <span class="badge bg-warning">
+                                                <i class="fas fa-hourglass-half me-1"></i>审核中
+                                            </span>
+                                        {% elif chapter.review_status == 'rejected' %}
+                                            <span class="badge bg-danger">
+                                                <i class="fas fa-times-circle me-1"></i>审核失败
+                                            </span>
+                                        {% elif chapter.review_status == 'not_submitted' %}
+                                            <span class="badge bg-secondary">
+                                                <i class="fas fa-file-alt me-1"></i>未审核
+                                            </span>
+                                        {% elif chapter.video_path %}
+                                            <span class="badge bg-success">
+                                                <i class="fas fa-check-circle me-1"></i>已完成
+                                            </span>
+                                        {% elif chapter.script_count > 0 and chapter.audio_count > 0 and chapter.subtitle_count > 0 and chapter.image_count > 0 %}
+                                            <span class="badge bg-info">
+                                                <i class="fas fa-hourglass-half me-1"></i>待生成视频
+                                            </span>
+                                        {% elif chapter.script_count > 0 %}
+                                            <span class="badge bg-warning text-dark">
+                                                <i class="fas fa-tasks me-1"></i>处理中
+                                            </span>
+                                        {% else %}
+                                            <span class="badge bg-secondary">
+                                                <i class="fas fa-pause-circle me-1"></i>未开始
+                                            </span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <div class="d-flex flex-wrap gap-1">
+                                            <a href="{% url 'video:chapter_detail' chapter.id %}" class="btn btn-info btn-sm">
+                                                <i class="fas fa-eye"></i> 查看
+                                            </a>
+                                            {% if chapter.review_status == 'not_submitted' or chapter.review_status == 'rejected' %}
+                                            <button class="btn btn-primary btn-sm" 
+                                                    id="review-btn-{{ chapter.id }}"
+                                                    onclick="submitForReview({{ chapter.id }})"
+                                                    title="提交审核">
+                                                <i class="fas fa-paper-plane me-1"></i>送审
+                                            </button>
+                                            {% elif chapter.review_status == 'reviewing' %}
+                                            <button class="btn btn-warning btn-sm" disabled title="审核中...">
+                                                <i class="fas fa-hourglass-half me-1"></i>审核中
+                                            </button>
+                                            {% elif chapter.review_status == 'approved' %}
+                                            <span class="badge bg-success">
+                                                <i class="fas fa-check-circle me-1"></i>已通过
+                                            </span>
+                                            {% endif %}
+                                            
+                                            <!-- 生成视频按钮：只有审核通过才能生成 -->
+                                            {% if chapter.review_status == 'approved' %}
+                                            <button class="btn btn-success btn-sm" 
+                                                    id="gen-video-btn-{{ chapter.id }}"
+                                                    onclick="generateVideo({{ novel.id }}, '{{ chapter.title }}', {{ chapter.id }})"
+                                                    title="生成视频">
+                                                <i class="fas fa-video me-1"></i>生成视频
+                                            </button>
+                                            {% else %}
+                                            <button class="btn btn-secondary btn-sm" 
+                                                    disabled
+                                                    title="需要审核通过后才能生成视频">
+                                                <i class="fas fa-lock me-1"></i>生成视频
+                                            </button>
+                                            {% endif %}
+                                        </div>
                                     </td>
                                 </tr>
                                 {% endfor %}
@@ -114,5 +181,171 @@
         </div>
     </div>
 </div>
+
+{% csrf_token %}
+
+<script>
+// 获取CSRF token
+function getCSRFToken() {
+    const tokenInput = document.querySelector('[name=csrfmiddlewaretoken]');
+    if (tokenInput) {
+        return tokenInput.value;
+    }
+    const name = 'csrftoken';
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+// 提交审核
+function submitForReview(chapterId) {
+    const button = document.getElementById(`review-btn-${chapterId}`);
+    const originalHtml = button.innerHTML;
+    
+    if (!confirm('确定要提交该章节进行审核吗？')) {
+        return;
+    }
+    
+    button.disabled = true;
+    button.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>提交中...';
+    
+    const csrfToken = getCSRFToken();
+    if (!csrfToken) {
+        console.error('无法获取CSRF token');
+        alert('无法获取CSRF token，请刷新页面后重试');
+        button.disabled = false;
+        button.innerHTML = originalHtml;
+        return;
+    }
+    
+    fetch(`/video/api/chapters/${chapterId}/submit-review/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken
+        },
+        body: JSON.stringify({
+            chapter_id: chapterId
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log(`章节 ${chapterId} 已提交审核`);
+            alert('提交审核成功！');
+            // 刷新页面
+            window.location.reload();
+        } else {
+            throw new Error(data.message || '提交失败');
+        }
+    })
+    .catch(error => {
+        console.error('提交审核失败:', error);
+        alert('提交审核失败: ' + error.message);
+        button.disabled = false;
+        button.innerHTML = originalHtml;
+    });
+}
+
+// 生成视频
+function generateVideo(novelId, chapterTitle, chapterId) {
+    const button = document.getElementById(`gen-video-btn-${chapterId}`);
+    const originalHtml = button.innerHTML;
+    button.disabled = true;
+    button.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>生成中...';
+    
+    const csrfToken = getCSRFToken();
+    if (!csrfToken) {
+        console.error('无法获取CSRF token');
+        alert('无法获取CSRF token，请刷新页面后重试');
+        button.disabled = false;
+        button.innerHTML = originalHtml;
+        return;
+    }
+    
+    fetch(`/video/api/chapters/generate-video/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken
+        },
+        body: JSON.stringify({
+            novel_id: novelId,
+            chapter_title: chapterTitle,
+            chapter_id: chapterId
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log(`章节 ${chapterTitle} 视频生成任务已提交，任务ID: ${data.task_id}`);
+            // 轮询检查任务状态
+            checkVideoGenerationTask(data.task_id, chapterId, button, originalHtml);
+        } else {
+            throw new Error(data.message || '提交失败');
+        }
+    })
+    .catch(error => {
+        console.error('生成视频失败:', error);
+        alert('生成视频失败: ' + error.message);
+        button.disabled = false;
+        button.innerHTML = originalHtml;
+    });
+}
+
+// 轮询检查视频生成任务状态
+function checkVideoGenerationTask(taskId, chapterId, button, originalHtml) {
+    const checkStatus = () => {
+        fetch(`/video/api/task/${taskId}/`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(`任务 ${taskId} 状态:`, data);
+                
+                if (data.status === 'SUCCESS' && data.ready) {
+                    if (data.result && data.result.status === 'success') {
+                        console.log(`章节视频生成成功！页面将刷新。`);
+                        button.disabled = false;
+                        button.innerHTML = originalHtml;
+                        // 刷新页面
+                        window.location.reload();
+                    } else {
+                        const errorMsg = data.result ? data.result.message : '未知错误';
+                        button.disabled = false;
+                        button.innerHTML = originalHtml;
+                        console.error(`视频生成失败: ${errorMsg}`);
+                        alert(`视频生成失败: ${errorMsg}`);
+                    }
+                } else if (data.status === 'FAILURE' && data.ready) {
+                    button.disabled = false;
+                    button.innerHTML = originalHtml;
+                    console.error(`视频生成失败: ${data.error || '未知错误'}`);
+                    alert(`视频生成失败: ${data.error || '未知错误'}`);
+                } else if (data.status === 'PENDING' || data.status === 'STARTED' || !data.ready) {
+                    // 继续轮询
+                    setTimeout(checkStatus, 5000);
+                } else {
+                    console.warn(`未知任务状态: ${data.status}`);
+                    setTimeout(checkStatus, 5000);
+                }
+            })
+            .catch(error => {
+                console.error('检查任务状态失败:', error);
+                setTimeout(checkStatus, 10000);
+            });
+    };
+    
+    // 开始轮询
+    setTimeout(checkStatus, 5000);
+}
+</script>
 
 {% endblock %}

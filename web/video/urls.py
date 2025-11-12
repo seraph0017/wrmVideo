@@ -3,6 +3,7 @@ from django.views.generic.base import RedirectView
 
 from . import views
 from . import log_views
+from . import review_views
 
 app_name = 'video'
 
@@ -115,4 +116,22 @@ urlpatterns = [
     
     # Data文件服务
     path('data/<path:file_path>', views.serve_data_file, name='serve_data_file'),
+    
+    # 单图片重新生成
+    path('api/chapters/regenerate-single-image/', views.regenerate_single_image, name='regenerate_single_image'),
+    
+    # 生成章节视频
+    path('api/chapters/generate-video/', views.generate_video, name='generate_video'),
+    
+    # 提交章节审核
+    path('api/chapters/<int:chapter_id>/submit-review/', views.submit_chapter_for_review, name='submit_chapter_for_review'),
+    
+    # 章节审核相关URL
+    path('chapters/review/', review_views.chapter_review_list, name='chapter_review_list'),
+    path('chapters/<int:chapter_id>/review/', review_views.chapter_review_detail, name='chapter_review_detail'),
+    path('api/chapters/<int:chapter_id>/approve/', review_views.chapter_approve, name='chapter_approve'),
+    path('api/chapters/<int:chapter_id>/reject/', review_views.chapter_reject, name='chapter_reject'),
+    path('api/chapters/<int:chapter_id>/reset-review/', review_views.chapter_reset_review, name='chapter_reset_review'),
+    path('api/chapters/<int:chapter_id>/review-status/', review_views.get_chapter_review_status, name='get_chapter_review_status'),
+    path('api/chapters/batch-approve/', review_views.batch_approve_chapters, name='batch_approve_chapters'),
 ]

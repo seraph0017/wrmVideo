@@ -11,9 +11,29 @@ class NovelAdmin(admin.ModelAdmin):
 
 @admin.register(Chapter)
 class ChapterAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'novel', 'word_count', 'format')
+    list_display = ('id', 'title', 'novel', 'word_count', 'format', 'review_status', 'reviewed_by', 'reviewed_at')
     search_fields = ('title', 'novel__name')
-    list_filter = ('novel', 'format')
+    list_filter = ('novel', 'format', 'review_status')
+    readonly_fields = ('reviewed_by', 'reviewed_at')
+    
+    fieldsets = (
+        ('基本信息', {
+            'fields': ('title', 'novel', 'word_count', 'format', 'video_path')
+        }),
+        ('统计信息', {
+            'fields': ('script_count', 'audio_count', 'subtitle_count', 'image_count')
+        }),
+        ('审核信息', {
+            'fields': ('review_status', 'review_reason', 'reviewed_by', 'reviewed_at'),
+            'classes': ('collapse',)
+        }),
+        ('批量图片生成', {
+            'fields': ('batch_image_status', 'batch_image_task_id', 'batch_image_progress', 
+                      'batch_image_message', 'batch_image_error', 'batch_image_started_at', 
+                      'batch_image_completed_at'),
+            'classes': ('collapse',)
+        }),
+    )
 
 @admin.register(Character)
 class CharacterAdmin(admin.ModelAdmin):

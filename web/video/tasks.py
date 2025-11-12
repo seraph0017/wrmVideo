@@ -3901,3 +3901,353 @@ def gen_image_task(self, novel_id):
             'message': '任务执行异常',
             'error': str(e)
         }
+
+
+@shared_task(bind=True)
+def generate_chapter_video_task(self, novel_id, chapter_title, chapter_id):
+    """
+    生成章节视频的Celery任务
+    
+    Args:
+        novel_id: 小说ID
+        chapter_title: 章节标题（如 chapter_001）
+        chapter_id: 章节数据库ID
+    
+    Returns:
+        dict: 包含任务状态和结果信息的字典
+    """
+    from .models import Novel, Chapter
+    
+    logger = logging.getLogger(__name__)
+    logger.info(f"[generate_chapter_video_task] 开始生成章节视频: 小说ID={novel_id}, 章节={chapter_title}, 章节ID={chapter_id}")
+    
+    try:
+        novel = Novel.objects.get(pk=novel_id)
+        chapter = Chapter.objects.get(pk=chapter_id)
+        
+        # 构建章节目录路径
+        project_root = settings.BASE_DIR.parent
+        chapter_dir = project_root / 'data' / f'{novel_id:03d}' / chapter_title
+        
+        if not chapter_dir.exists():
+            error_msg = f"章节目录不存在: {chapter_dir}"
+            logger.error(f"[generate_chapter_video_task] {error_msg}")
+            return {
+                'status': 'error',
+                'message': error_msg
+            }
+        
+        # 使用concat_narration_video.py生成视频
+        video_script = project_root / 'concat_narration_video.py'
+        if not video_script.exists():
+            error_msg = f"concat_narration_video.py脚本不存在: {video_script}"
+            logger.error(f"[generate_chapter_video_task] {error_msg}")
+            return {
+                'status': 'error',
+                'message': error_msg
+            }
+        
+        # 构建输出视频文件名
+        output_video = f"{chapter_title}_complete.mp4"
+        output_path = chapter_dir / output_video
+        
+        # 调用视频生成脚本
+        cmd = [
+            sys.executable,
+            str(video_script),
+            str(chapter_dir)
+        ]
+        
+        logger.info(f"[generate_chapter_video_task] 执行命令: {' '.join(cmd)}")
+        
+        result = subprocess.run(
+            cmd,
+            cwd=str(project_root),
+            capture_output=True,
+            text=True,
+            timeout=1800  # 30分钟超时
+        )
+        
+        if result.returncode == 0:
+            # 检查视频是否生成成功
+            if output_path.exists():
+                # 更新数据库中的video_path
+                chapter.video_path = str(output_path)
+                chapter.save()
+                
+                logger.info(f"[generate_chapter_video_task] 视频生成成功: {output_path}")
+                return {
+                    'status': 'success',
+                    'novel_id': novel_id,
+                    'chapter_title': chapter_title,
+                    'chapter_id': chapter_id,
+                    'video_path': str(output_path),
+                    'message': f'章节 {chapter_title} 视频生成成功'
+                }
+            else:
+                error_msg = f"脚本执行成功但视频文件未生成: {output_path}"
+                logger.error(f"[generate_chapter_video_task] {error_msg}")
+                logger.error(f"脚本输出: {result.stdout}")
+                return {
+                    'status': 'error',
+                    'message': error_msg,
+                    'script_output': result.stdout
+                }
+        else:
+            error_msg = f"脚本执行失败，返回码: {result.returncode}"
+            logger.error(f"[generate_chapter_video_task] {error_msg}")
+            logger.error(f"标准输出: {result.stdout}")
+            logger.error(f"标准错误: {result.stderr}")
+            return {
+                'status': 'error',
+                'message': error_msg,
+                'stdout': result.stdout,
+                'stderr': result.stderr
+            }
+            
+    except subprocess.TimeoutExpired:
+        error_msg = "视频生成超时（超过30分钟）"
+        logger.error(f"[generate_chapter_video_task] {error_msg}")
+        return {
+            'status': 'error',
+            'message': error_msg
+        }
+    except Chapter.DoesNotExist:
+        error_msg = f"章节ID {chapter_id} 不存在"
+        logger.error(f"[generate_chapter_video_task] {error_msg}")
+        return {
+            'status': 'error',
+            'message': error_msg
+        }
+    except Novel.DoesNotExist:
+        error_msg = f"小说ID {novel_id} 不存在"
+        logger.error(f"[generate_chapter_video_task] {error_msg}")
+        return {
+            'status': 'error',
+            'message': error_msg
+        }
+    except Exception as e:
+        error_msg = f"任务执行异常: {str(e)}"
+        logger.error(f"[generate_chapter_video_task] {error_msg}", exc_info=True)
+        return {
+            'status': 'error',
+            'message': error_msg,
+            'error': str(e)
+        }
+
+
+@shared_task(bind=True)
+def regenerate_single_image_task(self, novel_id, chapter_title, scene_number, custom_prompt=None):
+    """
+    重新生成单张图片的Celery任务
+    
+    Args:
+        novel_id: 小说ID
+        chapter_title: 章节标题（如 chapter_001）
+        scene_number: 场景编号
+        custom_prompt: 可选的自定义prompt，如果提供则直接使用该prompt生成图片
+    
+    Returns:
+        dict: 包含任务状态和结果信息的字典
+    """
+    from .models import Novel
+    
+    logger = logging.getLogger(__name__)
+    if custom_prompt:
+        logger.info(f"[regenerate_single_image_task] 开始重新生成图片（使用自定义Prompt）: 小说ID={novel_id}, 章节={chapter_title}, 场景={scene_number}")
+    else:
+        logger.info(f"[regenerate_single_image_task] 开始重新生成图片: 小说ID={novel_id}, 章节={chapter_title}, 场景={scene_number}")
+    
+    try:
+        novel = Novel.objects.get(pk=novel_id)
+        
+        # 构建章节目录路径
+        project_root = settings.BASE_DIR.parent
+        chapter_dir = project_root / 'data' / f'{novel_id:03d}' / chapter_title
+        
+        if not chapter_dir.exists():
+            error_msg = f"章节目录不存在: {chapter_dir}"
+            logger.error(f"[regenerate_single_image_task] {error_msg}")
+            return {
+                'status': 'error',
+                'message': error_msg
+            }
+        
+        narration_file = chapter_dir / 'narration.txt'
+        if not narration_file.exists():
+            error_msg = f"narration.txt文件不存在: {narration_file}"
+            logger.error(f"[regenerate_single_image_task] {error_msg}")
+            return {
+                'status': 'error',
+                'message': error_msg
+            }
+        
+        # 构建输出文件名
+        output_filename = f"{chapter_title}_image_{scene_number:02d}.jpeg"
+        output_path = chapter_dir / output_filename
+        
+        # 如果文件存在，先删除
+        if output_path.exists():
+            logger.info(f"[regenerate_single_image_task] 检测到旧图片，将被覆盖: {output_path}")
+        
+        # 工作流JSON路径
+        workflow_json = project_root / 'test' / 'comfyui' / 'image_compact.json'
+        
+        # 如果提供了自定义prompt，直接使用ComfyUI API生成
+        if custom_prompt:
+            logger.info(f"[regenerate_single_image_task] 使用自定义Prompt: {custom_prompt[:100]}...")
+            
+            # 导入gen_image_async_v4.py中的类和函数
+            import sys
+            sys.path.insert(0, str(project_root))
+            from gen_image_async_v4 import ComfyUIClient, load_workflow_json, set_positive_prompt, save_prompt_info
+            from config.config import COMFYUI_CONFIG
+            
+            # 初始化ComfyUI客户端
+            api_url = f"http://{COMFYUI_CONFIG['default_host']}/api/prompt"
+            client = ComfyUIClient(api_url=api_url)
+            workflow_template = load_workflow_json(str(workflow_json))
+            
+            # 使用自定义prompt替换工作流中的正向提示
+            wf = set_positive_prompt(workflow_template, custom_prompt)
+            
+            # 提交工作流
+            ok, res, err = client.submit_workflow(wf, filename_param=output_filename)
+            if not ok:
+                error_msg = f"工作流提交失败: {err}"
+                logger.error(f"[regenerate_single_image_task] {error_msg}")
+                return {
+                    'status': 'error',
+                    'message': error_msg
+                }
+            
+            prompt_id = None
+            if isinstance(res, dict):
+                prompt_id = res.get('prompt_id') or (res.get('data') or {}).get('prompt_id')
+            if not prompt_id:
+                error_msg = f"未获取到 prompt_id，响应: {res}"
+                logger.error(f"[regenerate_single_image_task] {error_msg}")
+                return {
+                    'status': 'error',
+                    'message': error_msg
+                }
+            
+            logger.info(f"ComfyUI prompt_id: {prompt_id}")
+            
+            # 轮询输出文件名
+            filename, subfolder, type_ = client.wait_for_output_filename(prompt_id, filename_param=output_filename)
+            if not filename:
+                error_msg = f"场景 {scene_number} 未获取到输出文件"
+                logger.error(f"[regenerate_single_image_task] {error_msg}")
+                return {
+                    'status': 'error',
+                    'message': error_msg
+                }
+            
+            # 下载并重命名到章节目录
+            saved_path = client.download_view_file_as(
+                filename,
+                subfolder or '',
+                type_ or 'output',
+                save_dir=str(chapter_dir),
+                save_as=output_filename,
+                filename_param=output_filename
+            )
+            if not saved_path:
+                error_msg = f"场景 {scene_number} 下载失败"
+                logger.error(f"[regenerate_single_image_task] {error_msg}")
+                return {
+                    'status': 'error',
+                    'message': error_msg
+                }
+            
+            # 保存prompt信息
+            save_prompt_info(custom_prompt, str(output_path), workflow_name='image_compact.json', scene_number=scene_number)
+            
+            logger.info(f"[regenerate_single_image_task] 使用自定义Prompt生成成功: {output_path}")
+            return {
+                'status': 'success',
+                'novel_id': novel_id,
+                'chapter_title': chapter_title,
+                'scene_number': scene_number,
+                'output_path': str(output_path),
+                'message': f'场景 {scene_number} 图片重新生成成功（使用自定义Prompt）'
+            }
+        
+        # 否则使用gen_image_async_v4.py的单图片模式（从narration.txt解析）
+        gen_image_script = project_root / 'gen_image_async_v4.py'
+        if not gen_image_script.exists():
+            error_msg = f"gen_image_async_v4.py脚本不存在: {gen_image_script}"
+            logger.error(f"[regenerate_single_image_task] {error_msg}")
+            return {
+                'status': 'error',
+                'message': error_msg
+            }
+        
+        # 调用gen_image_async_v4.py生成单张图片，使用--scene参数
+        cmd = [
+            sys.executable,
+            str(gen_image_script),
+            str(chapter_dir),
+            '--scene', str(scene_number),
+            '--workflow_json', str(workflow_json),
+        ]
+        
+        logger.info(f"[regenerate_single_image_task] 执行命令: {' '.join(cmd)}")
+        
+        result = subprocess.run(
+            cmd,
+            cwd=str(project_root),
+            capture_output=True,
+            text=True,
+            timeout=600  # 10分钟超时
+        )
+        
+        if result.returncode == 0:
+            # 检查图片是否生成成功
+            if output_path.exists():
+                logger.info(f"[regenerate_single_image_task] 图片生成成功: {output_path}")
+                return {
+                    'status': 'success',
+                    'novel_id': novel_id,
+                    'chapter_title': chapter_title,
+                    'scene_number': scene_number,
+                    'output_path': str(output_path),
+                    'message': f'场景 {scene_number} 图片重新生成成功'
+                }
+            else:
+                error_msg = f"脚本执行成功但图片文件未生成: {output_path}"
+                logger.error(f"[regenerate_single_image_task] {error_msg}")
+                logger.error(f"脚本输出: {result.stdout}")
+                return {
+                    'status': 'error',
+                    'message': error_msg,
+                    'script_output': result.stdout
+                }
+        else:
+            error_msg = f"脚本执行失败，返回码: {result.returncode}"
+            logger.error(f"[regenerate_single_image_task] {error_msg}")
+            logger.error(f"标准输出: {result.stdout}")
+            logger.error(f"标准错误: {result.stderr}")
+            return {
+                'status': 'error',
+                'message': error_msg,
+                'stdout': result.stdout,
+                'stderr': result.stderr
+            }
+            
+    except subprocess.TimeoutExpired:
+        error_msg = "图片生成超时（超过10分钟）"
+        logger.error(f"[regenerate_single_image_task] {error_msg}")
+        return {
+            'status': 'error',
+            'message': error_msg
+        }
+    except Exception as e:
+        error_msg = f"任务执行异常: {str(e)}"
+        logger.error(f"[regenerate_single_image_task] {error_msg}", exc_info=True)
+        return {
+            'status': 'error',
+            'message': error_msg,
+            'error': str(e)
+        }

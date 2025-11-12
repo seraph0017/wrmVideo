@@ -4,6 +4,60 @@
 
 ## ✨ 最新更新
 
+- ✅ **章节送审功能**: 在小说详情页章节列表中新增"送审"功能：
+  - **四种审核状态**: 
+    - `not_submitted` (未审核) - 默认状态，显示灰色标签
+    - `reviewing` (审核中) - 送审后的状态，显示黄色"审核中"按钮（禁用）
+    - `approved` (审核通过) - 显示绿色"已通过"标签
+    - `rejected` (审核失败) - 显示红色"审核失败"标签，可重新送审
+  - **智能按钮切换**: 
+    - 未审核或审核失败状态：显示蓝色"送审"按钮
+    - 审核中状态：显示黄色"审核中"按钮（禁用状态）
+    - 审核通过后：显示绿色"已通过"标签
+  - **一键送审**: 点击"送审"按钮即可将章节状态从"未审核"变为"审核中"
+  - **状态实时更新**: 送审后章节状态立即变为"审核中"，页面自动刷新
+  - **状态优先显示**: 章节状态列优先显示审核状态，其次才显示生成状态
+  - **API接口**: `/video/api/chapters/<chapter_id>/submit-review/` POST接口
+  - **数据库迁移**: 已生成迁移文件 `0014_alter_chapter_review_status.py`
+
+- 📋 **章节审核系统**: 新增完整的章节审核功能，支持三种审核状态：
+  - **审核状态**: 未审核、审核通过、审核失败
+  - **审核原因**: 审核失败时必须填写原因
+  - **审核记录**: 自动记录审核人和审核时间
+  - **批量审核**: 支持批量审核通过多个章节
+  - **状态筛选**: 按审核状态筛选和搜索章节
+  - **权限控制**: 只有审核员和管理员可以审核
+  - **API支持**: 提供完整的RESTful API接口
+  - **详细文档**: [章节审核使用指南](web/CHAPTER_REVIEW_README.md)
+
+- 🔐 **Django权限系统**: 新增完整的权限管理系统，支持管理员组和审核组：
+  - **管理员组**: 拥有所有权限（增删改查）
+  - **审核组**: 只能查看和修改内容，不能删除和添加
+  - **权限装饰器**: 提供`@admin_required`、`@reviewer_required`等装饰器
+  - **权限Mixin**: 提供`AdminRequiredMixin`、`ReviewerRequiredMixin`等类视图Mixin
+  - **模板标签**: 提供`is_admin`、`is_reviewer`、`has_group`等模板过滤器
+  - **一键初始化**: 使用`python manage.py setup_permissions`快速设置
+  - **完整文档**: 详细的使用指南和示例代码
+  - **测试脚本**: 提供权限测试脚本验证配置
+
+- 🎨 **Prompt可编辑与自定义生成**: 为章节详情页增强Prompt编辑和图片重新生成能力：
+  - **Prompt在线编辑**: 每个场景的Prompt都可以直接在Web界面中编辑
+    - 点击Prompt旁边的编辑按钮进入编辑模式
+    - 在textarea中修改Prompt内容
+    - 保存后立即更新显示（仅内存，不修改文件）
+  - **自定义Prompt生成**: 编辑Prompt后点击"重新生成"按钮
+    - 自动使用编辑后的Prompt生成图片
+    - 支持完全自定义的Prompt内容
+    - 生成的图片会保存新的prompt.json文件
+  - **双模式支持**:
+    - **自定义模式**: 如果编辑过Prompt，使用自定义Prompt直接调用ComfyUI API
+    - **标准模式**: 如果未编辑，使用`gen_image_async_v4.py --scene`从narration.txt解析生成
+  - **单图片模式**: `gen_image_async_v4.py`新增`--scene`参数，支持指定场景编号生成单张图片
+  - **智能覆盖**: 单图片模式下自动覆盖已存在的图片文件，无需手动删除
+  - **配置集成**: API地址自动读取`config/config.py`中的ComfyUI配置
+  - **异步处理**: 使用Celery异步任务处理，避免阻塞Web请求
+  - **实时反馈**: 生成完成后自动刷新页面，显示最新图片
+
 - 📤 **Web多文件上传功能**: 为Web管理界面的"添加小说"功能增强为多文件上传模式：
   - **多文件选择**: 支持一次性选择多个小说文件（.txt, .doc, .docx, .pdf）
   - **文件列表管理**: 实时显示已选择的文件列表，支持单个文件移除功能
@@ -56,12 +110,28 @@
 
 - 📄 **章节详情页Narration列表**: 点击章节后显示该章节的所有narration文件：
   - **文件系统读取**: 直接从章节目录读取所有narration音频文件
-  - **关联文件展示**: 每个narration显示对应的音频、字幕、图片文件
-  - **在线播放**: 音频文件支持在线播放
-  - **文件查看**: 字幕和图片支持模态框查看
+  - **智能文件匹配**: 使用glob模式自动匹配对应的字幕和图片文件
+    - 音频: `chapter_*_narration_XX.mp3`
+    - 字幕: `chapter_*_narration_XX.ass`
+    - 图片: `chapter_*_image_XX.{jpeg,jpg,png}`
+  - **直观展示优化**:
+    - 图片列直接显示缩略图（120x80px），点击放大查看
+    - Prompt列显示截断的提示词（前100字符），悬停显示完整内容
+    - 音频内嵌HTML5播放器，字幕可点击查看
+  - **单图重新生成**: 每个narration提供"重新生成"按钮
+    - 调用`gen_image_async_v4.py`脚本
+    - 异步Celery任务处理
+    - 自动删除旧图片和prompt.json
+    - 生成成功后自动刷新页面
+    - 按钮显示实时状态（生成中...）
+  - **图片查看模态框**: 点击缩略图或查看按钮弹出模态框
+    - 显示大图（最大高度500px）
+    - 底部显示完整prompt和negative_prompt
+    - 自动加载对应的prompt.json文件
   - **统计信息**: 显示该章节的文件统计（音频、字幕、图片总数）
   - **安全访问**: 通过专用的文件服务视图访问data目录文件
   - **自动编号**: 按narration编号（01, 02, ...）自动排序显示
+  - **智能过滤**: 自动过滤.json、.prompt.json等非图片文件，只显示真正的图片
 
 - 🎯 **角标位置对齐修复**: 修复视频角标（rmxs.png）在不同视频段中位置不一致的问题：
   - **全屏覆盖**: 角标缩放到视频完整尺寸（720x1280）
@@ -865,8 +935,25 @@ wrmVideo/
 
 #### 图片生成相关
 
+- **`gen_image_async_v4.py`**: ComfyUI版本图片生成脚本（推荐），特色功能：
+  - 使用ComfyUI API进行图片生成，支持本地部署和远程服务
+  - 自动读取`config/config.py`中的ComfyUI配置（主机地址、超时时间等）
+  - **单图片模式**：新增`--scene`参数，支持指定场景编号生成单张图片
+    ```bash
+    # 生成整个章节的所有图片
+    python gen_image_async_v4.py data/020/chapter_002
+    
+    # 只生成第1个场景的图片（单图片模式）
+    python gen_image_async_v4.py data/020/chapter_002 --scene 1
+    ```
+  - **智能覆盖**：单图片模式下自动覆盖已存在的图片，无需手动删除
+  - **Prompt保存功能**：自动保存每张图片对应的完整prompt到`.prompt.json`文件
+  - **端点归一化与回退**：自动规范化API地址，支持404/405错误回退
+  - **路由标识参数**：自动附加`image`查询参数用于HAProxy路由
+  - 支持角色信息解析和完整的prompt构建（风格+角色+场景）
+  - 完善的错误处理和重试机制
 - **`gen_image.py`**: 同步图片生成，适合小批量处理
-- **`gen_image_async_v3.py`**: 方舟SDK版本异步图片生成脚本（推荐），特色功能：
+- **`gen_image_async_v3.py`**: 方舟SDK版本异步图片生成脚本，特色功能：
   - 使用方舟SDK (volcengine-python-sdk[ark]) 替换原有API
   - 专门优化的国风漫画风格prompt构建
   - 使用config.py中的t2i_v3配置作为API密钥
@@ -1067,11 +1154,315 @@ mysql -u root -p -e "CREATE DATABASE wrm_video CHARACTER SET utf8mb4 COLLATE utf
 cd web
 python manage.py migrate
 
+# 创建超级管理员（首次运行）
+python manage.py createsuperuser
+
+# 初始化权限系统（创建管理员组和审核组）
+python manage.py setup_permissions
+
 # 启动Web服务器
 python manage.py runserver
 
 # 访问管理界面
 # 打开浏览器访问 http://127.0.0.1:8000/video/dashboard/
+# 访问Admin后台 http://127.0.0.1:8000/admin/
+```
+
+#### 权限系统配置
+
+```bash
+# 方式一：使用快速设置脚本（推荐）
+cd web
+chmod +x setup_permissions.sh
+./setup_permissions.sh
+
+# 方式二：手动设置
+# 1. 初始化权限组
+python manage.py setup_permissions
+
+# 2. 测试权限配置
+python test_permissions.py
+
+# 3. 在Django Admin中将用户添加到组
+# 访问 http://127.0.0.1:8000/admin/
+# 进入"用户"管理，选择用户，添加到"管理员组"或"审核组"
+```
+
+## 🔐 权限系统和审核系统详细说明
+
+### 用户组说明
+
+系统包含两个用户组：
+
+#### 1. 管理员组
+- **权限**：所有权限（增删改查）- 约24个权限
+- **可以做什么**：
+  - ✅ 查看所有状态的章节
+  - ✅ 创建、编辑、删除任何内容
+  - ✅ 审核章节（通过/拒绝/重置）
+  - ✅ 批量操作
+  - ✅ 管理用户和权限
+- **适合人员**：系统管理员、项目负责人
+
+#### 2. 审核组
+- **权限**：查看和修改权限（不能删除和添加）- 约12个权限
+- **⚠️ 重要限制**：
+  - **可以查看"审核中"、"已通过"、"已拒绝"状态的章节**
+  - **不能查看"未提交审核"状态的章节**
+  - **只能看到包含审核相关章节的小说**
+  - **在小说列表中只显示有审核相关章节的小说**
+  - **在章节列表中只显示审核相关的章节**
+  - **在小说详情页只显示该小说的审核相关章节**
+- **可以做什么**：
+  - ✅ 查看有审核相关章节的小说列表
+  - ✅ 查看小说详情（仅显示审核相关章节）
+  - ✅ 查看"审核中"(reviewing)、"已通过"(approved)、"已拒绝"(rejected)状态的章节
+  - ✅ 审核"审核中"的章节（通过/拒绝）
+  - ✅ 查看审核历史（已通过和已拒绝的章节）
+  - ✅ 批量审核"审核中"的章节
+  - ✅ 在审核相关章节范围内搜索
+  - ❌ 不能查看没有审核相关章节的小说
+  - ❌ 不能查看"未提交审核"状态的章节
+  - ❌ 不能重置审核状态
+  - ❌ 不能创建或删除内容
+- **适合人员**：内容审核员、内容编辑、质量检查人员
+
+#### 权限对比表
+
+| 操作 | 管理员组 | 审核组 | 普通用户 |
+|------|---------|--------|---------|
+| 查看所有小说 | ✅ | ❌ | ❌ |
+| 查看有审核相关章节的小说 | ✅ | ✅ | ❌ |
+| 查看所有状态章节 | ✅ | ❌ | ❌ |
+| 查看未提交审核的章节 | ✅ | ❌ | ❌ |
+| 查看审核中的章节 | ✅ | ✅ | ❌ |
+| 查看已通过的章节 | ✅ | ✅ | ❌ |
+| 查看已拒绝的章节 | ✅ | ✅ | ❌ |
+| 访问章节详情（所有状态） | ✅ | ❌ | ❌ |
+| 访问章节详情（审核相关） | ✅ | ✅ | ❌ |
+| 创建内容 | ✅ | ❌ | ❌ |
+| 编辑内容 | ✅ | ✅ | ❌ |
+| 删除内容 | ✅ | ❌ | ❌ |
+| 审核章节 | ✅ | ✅ (仅reviewing) | ❌ |
+| 批量审核 | ✅ | ✅ (仅reviewing) | ❌ |
+| 重置审核状态 | ✅ | ❌ | ❌ |
+
+### 章节审核系统
+
+#### 审核状态说明
+
+| 状态 | 值 | 说明 | 显示 |
+|------|-----|------|------|
+| 未审核 | not_submitted | 新创建的章节默认状态 | 灰色标签 |
+| 审核中 | reviewing | 送审后等待审核 | 黄色标签 |
+| 审核通过 | approved | 内容审核通过 | 绿色标签 |
+| 审核失败 | rejected | 内容不符合要求 | 红色标签 |
+
+#### 审核流程
+
+```
+1. [创建章节] → 状态: not_submitted (未提交审核)
+   ↓ 用户在小说详情页点击"送审"按钮
+   
+2. [送审] → 状态: reviewing (审核中)
+   ↓ 审核组可见并审核
+   ↓ 审核组在章节详情页可以看到"审核通过"和"审核拒绝"按钮
+   
+3. [审核]
+   ├─ 通过 → 状态: approved (审核通过) → 可以生成视频
+   └─ 拒绝 → 状态: rejected (审核失败，需填写原因) → 不能生成视频
+```
+
+**🎯 关键规则：只有审核通过的章节才能生成视频！**
+
+#### 审核操作位置
+
+**1. 小说详情页（/video/novels/<id>/）**
+- ✅ 显示章节的审核状态标签
+- ✅ 提供"送审"按钮（未提交或已拒绝状态）
+- ✅ 显示"审核中"状态（不可操作）
+- ✅ 显示"已通过"标签
+- ✅ "生成视频"按钮只有审核通过后才能点击
+
+**2. 章节详情页（/video/chapters/<id>/）**
+- ✅ 标题旁显示当前审核状态
+- ✅ 审核组用户可以看到"审核通过"和"审核拒绝"按钮（仅审核中状态）
+- ✅ 管理员可以看到"重置审核"按钮
+- ✅ 如果审核失败，会显示失败原因和审核人信息
+
+**3. 审核专用页面（/video/chapters/review/）**
+- ✅ 列表形式显示所有审核中的章节
+- ✅ 支持批量审核操作
+- ✅ 支持搜索和筛选
+
+#### 审核组视图权限说明
+
+审核组在不同页面看到的内容会被自动过滤：
+
+**小说列表页面（/video/novels/）**
+- ✅ 显示有审核相关章节的小说（审核中、已通过、已拒绝）
+- ❌ 没有审核相关章节的小说不会显示
+- ❌ 只有未提交审核章节的小说不会显示
+- 🔍 搜索功能只在可见的小说范围内搜索
+
+**小说详情页面（/video/novels/<id>/）**
+- ✅ 可以访问有审核相关章节的小说
+- ✅ 在章节列表中显示该小说的审核相关章节（审核中、已通过、已拒绝）
+- ❌ 如果小说没有审核相关章节，会返回404错误
+- ❌ 未提交审核的章节不会显示
+
+**章节列表页面（/video/chapters/）**
+- ✅ 显示"审核中"、"已通过"、"已拒绝"状态的章节
+- ❌ "未提交审核"状态的章节不会显示
+- 🔍 搜索功能只在审核相关章节范围内搜索
+- 📋 可以查看审核历史（已通过和已拒绝的章节）
+
+**章节详情页面（/video/chapters/<id>/）**
+- ✅ 可以访问"审核中"、"已通过"、"已拒绝"状态的章节详情
+- ❌ 尝试访问"未提交审核"状态的章节会返回404错误
+- 📝 可以查看审核结果和审核原因
+- 🔄 审核完成后页面会刷新显示最新状态
+
+**审核专用页面（/video/chapters/review/）**
+- ✅ 只显示"审核中"的章节
+- ✅ 可以执行审核操作（通过/拒绝）
+- ❌ 不能重置审核状态（仅管理员可以）
+
+#### 使用方法
+
+**1. 初始化数据库**
+```bash
+cd /Users/xunan/Projects/wrmVideo/web
+python manage.py makemigrations
+python manage.py migrate
+```
+
+**2. 完整审核工作流程**
+
+**步骤1：送审（任何用户）**
+- 进入小说详情页：`http://127.0.0.1:8000/video/novels/<小说ID>/`
+- 找到需要送审的章节
+- 点击"送审"按钮
+- 章节状态变为"审核中"
+
+**步骤2：审核（审核组/管理员）**
+
+方式一：在章节详情页审核
+- 进入章节详情页：`http://127.0.0.1:8000/video/chapters/<章节ID>/`
+- 查看章节内容（音频、字幕、图片、Prompt等）
+- 点击顶部的"审核通过"或"审核拒绝"按钮
+- 如果拒绝，需要填写拒绝原因
+- ✅ 审核完成后页面会刷新，显示最新的审核状态
+- 📋 审核组可以继续查看已审核的章节（已通过或已拒绝）
+
+方式二：在审核专用页面批量审核
+- 访问审核页面：`http://127.0.0.1:8000/video/chapters/review/`
+- 查看所有审核中的章节列表
+- 单个或批量选择章节
+- 点击"通过"或"拒绝"按钮
+
+**步骤3：生成视频（审核通过后）**
+- 返回小说详情页
+- 找到已审核通过的章节（绿色"已通过"标签）
+- 点击"生成视频"按钮（只有审核通过后才能点击）
+- 等待视频生成完成
+
+**3. 审核操作说明**
+
+| 用户组 | 可见章节 | 可执行操作 |
+|--------|---------|-----------|
+| 审核组 | 仅审核中的章节 | 审核通过、审核拒绝 |
+| 管理员 | 所有状态的章节 | 审核通过、审核拒绝、重置审核 |
+
+**4. API接口**
+
+| 端点 | 方法 | 功能 |
+|------|------|------|
+| `/video/api/chapters/<id>/submit-review/` | POST | 送审 |
+| `/video/api/chapters/<id>/approve/` | POST | 审核通过 |
+| `/video/api/chapters/<id>/reject/` | POST | 审核拒绝 |
+| `/video/api/chapters/<id>/reset-review/` | POST | 重置审核状态 |
+| `/video/api/chapters/batch-approve/` | POST | 批量审核通过 |
+
+### 在代码中使用权限
+
+#### 函数视图
+```python
+from video.permissions import admin_required, reviewer_required
+
+@admin_required
+def delete_novel(request, novel_id):
+    # 只有管理员可以访问
+    pass
+
+@reviewer_required
+def review_chapter(request, chapter_id):
+    # 管理员和审核组都可以访问
+    pass
+```
+
+#### 类视图
+```python
+from video.permissions import AdminRequiredMixin, ReviewerRequiredMixin
+from django.views.generic import DeleteView, UpdateView
+
+class NovelDeleteView(AdminRequiredMixin, DeleteView):
+    model = Novel
+    # 只有管理员可以访问
+
+class ChapterUpdateView(ReviewerRequiredMixin, UpdateView):
+    model = Chapter
+    # 管理员和审核组都可以访问
+```
+
+#### 模板中使用
+```html
+{% load permission_tags %}
+
+{% if user|is_admin %}
+    <a href="#" class="btn btn-danger">删除</a>
+{% endif %}
+
+{% if user|is_reviewer %}
+    <a href="#" class="btn btn-primary">编辑</a>
+{% endif %}
+
+{% if user|has_group:"管理员组" %}
+    <p>您是管理员</p>
+{% endif %}
+```
+
+#### Python代码中检查权限
+```python
+from video.permissions import is_admin, is_reviewer
+
+if is_admin(request.user):
+    # 管理员操作
+    pass
+
+if is_reviewer(request.user):
+    # 审核员操作
+    pass
+```
+
+### 添加用户到组
+
+#### 方法1：Django Admin（推荐）
+1. 访问 `http://127.0.0.1:8000/admin/`
+2. 进入"用户"管理
+3. 选择用户，在"组"字段中选择"管理员组"或"审核组"
+4. 保存
+
+#### 方法2：Django Shell
+```bash
+python manage.py shell
+```
+```python
+from django.contrib.auth.models import User, Group
+
+user = User.objects.get(username='username')
+admin_group = Group.objects.get(name='管理员组')
+user.groups.add(admin_group)
 ```
 
 ### 3. 启动Celery Beat定时任务系统

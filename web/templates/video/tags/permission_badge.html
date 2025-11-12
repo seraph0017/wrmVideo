@@ -1,0 +1,21 @@
+{% comment %}
+权限徽章模板
+显示用户的权限组徽章
+{% endcomment %}
+
+{% if user.is_authenticated %}
+    {% if is_admin %}
+        <span class="badge bg-danger">管理员</span>
+    {% elif is_reviewer %}
+        <span class="badge bg-primary">审核员</span>
+    {% else %}
+        <span class="badge bg-secondary">普通用户</span>
+    {% endif %}
+    
+    {% if groups %}
+        {% for group in groups %}
+            <span class="badge bg-info">{{ group.name }}</span>
+        {% endfor %}
+    {% endif %}
+{% endif %}
+

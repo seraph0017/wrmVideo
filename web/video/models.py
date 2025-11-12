@@ -53,6 +53,13 @@ class Chapter(models.Model):
         ('cancelled', '已取消'),
     )
     
+    REVIEW_STATUS_CHOICES = (
+        ('not_submitted', '未审核'),
+        ('reviewing', '审核中'),
+        ('approved', '审核通过'),
+        ('rejected', '审核失败'),
+    )
+    
     id = models.AutoField(primary_key=True, verbose_name='ID')
     title = models.CharField(max_length=200, verbose_name='章节名')
     word_count = models.IntegerField(default=0, verbose_name='字数')
@@ -74,6 +81,12 @@ class Chapter(models.Model):
     batch_image_error = models.TextField(blank=True, null=True, verbose_name='批量图片生成错误信息')
     batch_image_started_at = models.DateTimeField(blank=True, null=True, verbose_name='批量图片生成开始时间')
     batch_image_completed_at = models.DateTimeField(blank=True, null=True, verbose_name='批量图片生成完成时间')
+    
+    # 审核状态字段
+    review_status = models.CharField(max_length=20, choices=REVIEW_STATUS_CHOICES, default='not_submitted', verbose_name='审核状态')
+    review_reason = models.TextField(blank=True, null=True, verbose_name='审核失败原因')
+    reviewed_by = models.ForeignKey('auth.User', on_delete=models.SET_NULL, null=True, blank=True, related_name='reviewed_chapters', verbose_name='审核人')
+    reviewed_at = models.DateTimeField(blank=True, null=True, verbose_name='审核时间')
     
     def __str__(self):
         return f"{self.novel.name} - {self.title}"
