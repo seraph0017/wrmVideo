@@ -3937,64 +3937,55 @@ def generate_chapter_video_task(self, novel_id, chapter_title, chapter_id):
                 'message': error_msg
             }
         
-        # 使用concat_narration_video.py生成视频
-        video_script = project_root / 'concat_narration_video.py'
-        if not video_script.exists():
-            error_msg = f"concat_narration_video.py脚本不存在: {video_script}"
+        # 构建小说数据目录（章节的父目录）
+        novel_data_dir = project_root / 'data' / f'{novel_id:03d}'
+        
+        # 从章节标题提取章节编号（如 chapter_002 -> 002）
+        import re
+        chapter_match = re.match(r'chapter_(\d+)', chapter_title)
+        if not chapter_match:
+            error_msg = f"章节标题格式不正确，无法提取编号: {chapter_title}"
+            logger.error(f"[generate_chapter_video_task] {error_msg}")
+            return {
+                'status': 'error',
+                'message': error_msg
+            }
+        chapter_number = chapter_match.group(1)
+        
+        # 构建输出视频文件名（concat_finish_video.py生成的文件名）
+        output_video = f"{chapter_title}_complete_video.mp4"
+        output_path = chapter_dir / output_video
+        
+        # 步骤1: 调用 concat_narration_video.py --chapter 生成旁白视频
+        concat_narration_script = project_root / 'concat_narration_video.py'
+        if not concat_narration_script.exists():
+            error_msg = f"concat_narration_video.py脚本不存在: {concat_narration_script}"
             logger.error(f"[generate_chapter_video_task] {error_msg}")
             return {
                 'status': 'error',
                 'message': error_msg
             }
         
-        # 构建输出视频文件名
-        output_video = f"{chapter_title}_complete.mp4"
-        output_path = chapter_dir / output_video
-        
-        # 调用视频生成脚本
-        cmd = [
+        cmd_step1 = [
             sys.executable,
-            str(video_script),
-            str(chapter_dir)
+            str(concat_narration_script),
+            str(novel_data_dir),
+            '--chapter',
+            chapter_title
         ]
         
-        logger.info(f"[generate_chapter_video_task] 执行命令: {' '.join(cmd)}")
+        logger.info(f"[generate_chapter_video_task] 步骤1 - 生成旁白视频: {' '.join(cmd_step1)}")
         
         result = subprocess.run(
-            cmd,
+            cmd_step1,
             cwd=str(project_root),
             capture_output=True,
             text=True,
-            timeout=1800  # 30分钟超时
+            timeout=1200  # 20分钟超时
         )
         
-        if result.returncode == 0:
-            # 检查视频是否生成成功
-            if output_path.exists():
-                # 更新数据库中的video_path
-                chapter.video_path = str(output_path)
-                chapter.save()
-                
-                logger.info(f"[generate_chapter_video_task] 视频生成成功: {output_path}")
-                return {
-                    'status': 'success',
-                    'novel_id': novel_id,
-                    'chapter_title': chapter_title,
-                    'chapter_id': chapter_id,
-                    'video_path': str(output_path),
-                    'message': f'章节 {chapter_title} 视频生成成功'
-                }
-            else:
-                error_msg = f"脚本执行成功但视频文件未生成: {output_path}"
-                logger.error(f"[generate_chapter_video_task] {error_msg}")
-                logger.error(f"脚本输出: {result.stdout}")
-                return {
-                    'status': 'error',
-                    'message': error_msg,
-                    'script_output': result.stdout
-                }
-        else:
-            error_msg = f"脚本执行失败，返回码: {result.returncode}"
+        if result.returncode != 0:
+            error_msg = f"concat_narration_video.py执行失败 (返回码: {result.returncode})"
             logger.error(f"[generate_chapter_video_task] {error_msg}")
             logger.error(f"标准输出: {result.stdout}")
             logger.error(f"标准错误: {result.stderr}")
@@ -4003,6 +3994,73 @@ def generate_chapter_video_task(self, novel_id, chapter_title, chapter_id):
                 'message': error_msg,
                 'stdout': result.stdout,
                 'stderr': result.stderr
+            }
+        
+        logger.info(f"[generate_chapter_video_task] 步骤1完成")
+        
+        # 步骤2: 调用 concat_finish_video.py --chapter 生成完整视频
+        concat_finish_script = project_root / 'concat_finish_video.py'
+        if not concat_finish_script.exists():
+            error_msg = f"concat_finish_video.py脚本不存在: {concat_finish_script}"
+            logger.error(f"[generate_chapter_video_task] {error_msg}")
+            return {
+                'status': 'error',
+                'message': error_msg
+            }
+        
+        cmd_step2 = [
+            sys.executable,
+            str(concat_finish_script),
+            str(novel_data_dir),
+            '--chapter',
+            chapter_number  # 使用章节编号（如 002），而不是完整名称
+        ]
+        
+        logger.info(f"[generate_chapter_video_task] 步骤2 - 生成完整视频: {' '.join(cmd_step2)}")
+        
+        result_step2 = subprocess.run(
+            cmd_step2,
+            cwd=str(project_root),
+            capture_output=True,
+            text=True,
+            timeout=600  # 10分钟超时
+        )
+        
+        if result_step2.returncode != 0:
+            error_msg = f"concat_finish_video.py执行失败 (返回码: {result_step2.returncode})"
+            logger.error(f"[generate_chapter_video_task] {error_msg}")
+            logger.error(f"标准输出: {result_step2.stdout}")
+            logger.error(f"标准错误: {result_step2.stderr}")
+            return {
+                'status': 'error',
+                'message': error_msg,
+                'stdout': result_step2.stdout,
+                'stderr': result_step2.stderr
+            }
+        
+        logger.info(f"[generate_chapter_video_task] 步骤2完成")
+        
+        # 检查视频是否生成成功
+        if output_path.exists():
+            # 更新数据库中的video_path
+            chapter.video_path = str(output_path)
+            chapter.save()
+            
+            logger.info(f"[generate_chapter_video_task] 视频生成成功: {output_path}")
+            return {
+                'status': 'success',
+                'novel_id': novel_id,
+                'chapter_title': chapter_title,
+                'chapter_id': chapter_id,
+                'video_path': str(output_path),
+                'message': f'章节 {chapter_title} 视频生成成功'
+            }
+        else:
+            error_msg = f"两个脚本执行成功但视频文件未生成: {output_path}"
+            logger.error(f"[generate_chapter_video_task] {error_msg}")
+            return {
+                'status': 'error',
+                'message': error_msg
             }
             
     except subprocess.TimeoutExpired:

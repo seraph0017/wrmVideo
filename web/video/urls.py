@@ -123,6 +123,9 @@ urlpatterns = [
     # 生成章节视频
     path('api/chapters/generate-video/', views.generate_video, name='generate_video'),
     
+    # 获取章节视频信息
+    path('api/chapters/<int:chapter_id>/video-info/', views.get_chapter_video_info, name='get_chapter_video_info'),
+    
     # 提交章节审核
     path('api/chapters/<int:chapter_id>/submit-review/', views.submit_chapter_for_review, name='submit_chapter_for_review'),
     

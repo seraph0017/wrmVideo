@@ -4112,6 +4112,61 @@ def regenerate_single_image(request):
         }, status=500)
 
 
+@require_http_methods(["GET"])
+def get_chapter_video_info(request, chapter_id):
+    """
+    获取章节视频信息的API接口
+    """
+    try:
+        from .models import Chapter
+        import os
+        
+        chapter = Chapter.objects.get(pk=chapter_id)
+        
+        if not chapter.video_path:
+            return JsonResponse({
+                'success': False,
+                'message': '该章节还没有生成视频'
+            })
+        
+        # 构建视频URL（相对于data目录）
+        # video_path 格式: /Users/xunan/Projects/wrmVideo/data/020/chapter_002/chapter_002_complete_video.mp4
+        # 需要转换为: /video/data/020/chapter_002/chapter_002_complete_video.mp4
+        
+        # 提取data之后的路径
+        if 'data/' in chapter.video_path:
+            relative_path = chapter.video_path.split('data/', 1)[1]
+            video_url = f'/video/data/{relative_path}'
+        else:
+            video_url = f'/video/data/{chapter.video_path}'
+        
+        # 获取文件信息
+        video_info = ''
+        if os.path.exists(chapter.video_path):
+            file_size = os.path.getsize(chapter.video_path)
+            size_mb = file_size / (1024 * 1024)
+            video_info = f'文件大小: {size_mb:.2f} MB'
+        
+        return JsonResponse({
+            'success': True,
+            'video_url': video_url,
+            'video_info': video_info,
+            'chapter_title': chapter.title
+        })
+        
+    except Chapter.DoesNotExist:
+        return JsonResponse({
+            'success': False,
+            'message': '章节不存在'
+        }, status=404)
+    except Exception as e:
+        logger.error(f"获取章节视频信息失败: {str(e)}", exc_info=True)
+        return JsonResponse({
+            'success': False,
+            'message': f'获取失败: {str(e)}'
+        }, status=500)
+
+
 @csrf_exempt
 @require_http_methods(["POST"])
 def submit_chapter_for_review(request, chapter_id):
@@ -4225,7 +4280,8 @@ def serve_data_file(request, file_path):
     
     # 构建完整文件路径
     project_root = settings.BASE_DIR.parent
-    full_path = project_root / file_path
+    # file_path 应该是相对于data目录的路径，如 020/chapter_002/xxx.mp4
+    full_path = project_root / 'data' / file_path
     
     logger.info(f"完整文件路径: {full_path}")
     

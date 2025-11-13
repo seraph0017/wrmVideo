@@ -83,11 +83,27 @@
                                     </td>
                                     <td>
                                         {% if chapter.video_path %}
-                                        <span class="badge bg-success">
-                                            <i class="fas fa-check-circle me-1"></i>已生成
-                                        </span>
+                                        <div class="d-flex flex-column gap-2 align-items-center">
+                                            <span class="badge bg-success px-3 py-2" style="font-size: 0.85rem;">
+                                                <i class="fas fa-check-circle me-1"></i>已生成
+                                            </span>
+                                            <div class="d-flex gap-1" style="width: 100%;">
+                                                <button class="btn btn-primary btn-sm flex-fill" 
+                                                        onclick="playVideo('{{ chapter.id }}', '{{ chapter.title }}')"
+                                                        style="padding: 0.4rem 0.5rem; font-size: 0.875rem;"
+                                                        title="在线播放视频">
+                                                    <i class="fas fa-play-circle me-1"></i>播放
+                                                </button>
+                                                <button class="btn btn-success btn-sm flex-fill" 
+                                                        onclick="downloadVideo('{{ chapter.id }}', '{{ chapter.title }}')"
+                                                        style="padding: 0.4rem 0.5rem; font-size: 0.875rem;"
+                                                        title="下载视频到本地">
+                                                    <i class="fas fa-download me-1"></i>下载
+                                                </button>
+                                            </div>
+                                        </div>
                                         {% else %}
-                                        <span class="badge bg-secondary">
+                                        <span class="badge bg-secondary px-3 py-2" style="font-size: 0.85rem;">
                                             <i class="fas fa-clock me-1"></i>未生成
                                         </span>
                                         {% endif %}
@@ -182,9 +198,101 @@
     </div>
 </div>
 
+<!-- 视频播放模态框 -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="videoModalLabel">
+                    <i class="fas fa-play-circle me-2"></i>
+                    <span id="videoTitle"></span>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0" style="background-color: #000;">
+                <video id="videoPlayer" class="w-100" controls style="max-height: 80vh;">
+                    <source id="videoSource" src="" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+            </div>
+            <div class="modal-footer">
+                <div class="me-auto">
+                    <small class="text-muted" id="videoInfo"></small>
+                </div>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i>关闭
+                </button>
+                <a id="downloadVideoBtn" href="" download="" class="btn btn-success">
+                    <i class="fas fa-download me-1"></i>下载视频
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% csrf_token %}
 
 <script>
+// 播放视频
+function playVideo(chapterId, chapterTitle) {
+    // 构建视频URL（需要从后端获取完整路径）
+    fetch(`/video/api/chapters/${chapterId}/video-info/`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success && data.video_url) {
+                const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+                document.getElementById('videoTitle').textContent = chapterTitle;
+                document.getElementById('videoSource').src = data.video_url;
+                document.getElementById('videoPlayer').load();
+                document.getElementById('videoInfo').textContent = data.video_info || '';
+                document.getElementById('downloadVideoBtn').href = data.video_url;
+                document.getElementById('downloadVideoBtn').download = `${chapterTitle}_complete_video.mp4`;
+                modal.show();
+            } else {
+                alert('无法加载视频: ' + (data.message || '未知错误'));
+            }
+        })
+        .catch(error => {
+            console.error('加载视频失败:', error);
+            alert('加载视频失败: ' + error.message);
+        });
+}
+
+// 下载视频
+function downloadVideo(chapterId, chapterTitle) {
+    // 获取视频信息
+    fetch(`/video/api/chapters/${chapterId}/video-info/`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success && data.video_url) {
+                // 创建隐藏的下载链接并触发下载
+                const link = document.createElement('a');
+                link.href = data.video_url;
+                link.download = `${chapterTitle}_complete_video.mp4`;
+                link.style.display = 'none';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // 显示下载提示
+                console.log(`开始下载视频: ${chapterTitle}`);
+            } else {
+                alert('无法下载视频: ' + (data.message || '未知错误'));
+            }
+        })
+        .catch(error => {
+            console.error('下载视频失败:', error);
+            alert('下载视频失败: ' + error.message);
+        });
+}
+
+// 关闭模态框时停止视频播放
+document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
+    const videoPlayer = document.getElementById('videoPlayer');
+    videoPlayer.pause();
+    videoPlayer.currentTime = 0;
+});
+
 // 获取CSRF token
 function getCSRFToken() {
     const tokenInput = document.querySelector('[name=csrfmiddlewaretoken]');
