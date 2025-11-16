@@ -476,9 +476,10 @@ def concat_videos_with_bgm(video_files, bgm_audio_path, output_path):
         ])
         
         # 统一视频分辨率并居中内容，避免左右偏移与尺寸不一致
+        # 同时降低红色饱和度，让血色不那么显眼
         cmd.extend([
             "-vf",
-            f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=decrease,pad={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:(ow-iw)/2:(oh-ih)/2:black,setsar=1"
+            f"scale={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:force_original_aspect_ratio=decrease,pad={VIDEO_STANDARDS['width']}:{VIDEO_STANDARDS['height']}:(ow-iw)/2:(oh-ih)/2:black,setsar=1,colorchannelmixer=rr=0.8:rg=0.1:rb=0.1:gr=0:gg=1:gb=0:br=0:bg=0:bb=1"
         ])
         
         # 添加GPU特定的编码参数

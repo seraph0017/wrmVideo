@@ -134,6 +134,23 @@ USE_I18N = True
 USE_TZ = True
 
 
+# Cache Configuration
+# https://docs.djangoproject.com/en/4.2/topics/cache/
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'wrmvideo-cache',
+        'TIMEOUT': 300,  # 默认缓存5分钟
+        'OPTIONS': {
+            'MAX_ENTRIES': 1000,  # 最多缓存1000个条目
+        }
+    }
+}
+
+# 缓存键前缀
+CACHE_MIDDLEWARE_KEY_PREFIX = 'wrmvideo'
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 

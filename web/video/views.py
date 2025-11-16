@@ -7,13 +7,14 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
-from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
 from django.views.decorators.http import require_http_methods
 from django.core.paginator import Paginator
 from .forms import TaskForm, NovelForm, ChapterForm, CharacterForm, NarrationForm, SearchForm, CustomLoginForm
 from .models import Novel, Chapter, Character, Narration, CharacterImageTask
 from .utils import handle_uploaded_file, save_uploaded_file, upload_novel_to_tos, get_chapter_number_from_filesystem, get_chapter_directory_path
 from .tasks import generate_script_async, validate_narration_async, generate_audio_async
+from .permissions import AdminRequiredMixin, admin_required
 from celery import current_app
 from datetime import datetime
 import json
@@ -130,9 +131,11 @@ def find_character_image_in_chapter(chapter_path, character_name):
         return None
 
 
+@ensure_csrf_cookie
 def user_login(request):
     """
     用户登录视图
+    确保 CSRF cookie 被设置
     """
     if request.user.is_authenticated:
         return redirect('video:dashboard')
@@ -179,7 +182,13 @@ def test_modal(request):
 def dashboard(request):
     """
     显示系统控制面板
+    根据用户组显示不同的统计信息
+    使用缓存和聚合查询优化性能
     """
+    from video.permissions import is_admin
+    from django.core.cache import cache
+    from django.db.models import Count, Q
+    
     form = TaskForm()
     
     if request.method == 'POST':
@@ -188,19 +197,106 @@ def dashboard(request):
             # 这里可以处理表单提交
             pass
     
-    # 获取统计数据
-    novel_count = Novel.objects.count()
-    chapter_count = Chapter.objects.count()
-    character_count = Character.objects.count()
-    narration_count = Narration.objects.count()
-    
+    # 基础上下文
     context = {
         'form': form,
-        'novel_count': novel_count,
-        'chapter_count': chapter_count,
-        'character_count': character_count,
-        'narration_count': narration_count,
+        'is_admin': is_admin(request.user),
     }
+    
+    if is_admin(request.user):
+        # 管理员：显示所有统计信息
+        cache_key = 'dashboard_admin_stats'
+        stats = cache.get(cache_key)
+        
+        if stats is None:
+            logger.info("Dashboard cache miss - 管理员统计数据")
+            
+            # 使用聚合查询一次性获取章节统计
+            chapter_stats = Chapter.objects.aggregate(
+                total=Count('id'),
+                not_submitted=Count('id', filter=Q(review_status='not_submitted')),
+                reviewing=Count('id', filter=Q(review_status='reviewing')),
+                approved=Count('id', filter=Q(review_status='approved')),
+                rejected=Count('id', filter=Q(review_status='rejected'))
+            )
+            
+            stats = {
+                # 小说统计
+                'total_novels': Novel.objects.count(),
+                'novels_with_chapters': Novel.objects.filter(chapters__isnull=False).distinct().count(),
+                
+                # 章节统计（从聚合结果获取）
+                'total_chapters': chapter_stats['total'],
+                'chapters_not_submitted': chapter_stats['not_submitted'],
+                'chapters_reviewing': chapter_stats['reviewing'],
+                'chapters_approved': chapter_stats['approved'],
+                'chapters_rejected': chapter_stats['rejected'],
+                
+                # 其他统计
+                'character_count': Character.objects.count(),
+                'narration_count': Narration.objects.count(),
+            }
+            
+            # 缓存5分钟
+            cache.set(cache_key, stats, 300)
+            logger.info("Dashboard cache set - 管理员统计数据缓存5分钟")
+        else:
+            logger.info("Dashboard cache hit - 使用缓存的管理员统计数据")
+        
+        context.update(stats)
+        
+        # 最近待审核的章节（不缓存，保持实时性）
+        context['pending_chapters'] = Chapter.objects.filter(
+            review_status='reviewing'
+        ).select_related('novel').order_by('-id')[:5]
+        
+    else:
+        # 审核组：只显示审核相关的统计
+        cache_key = f'dashboard_reviewer_stats_{request.user.id}'
+        stats = cache.get(cache_key)
+        
+        if stats is None:
+            logger.info(f"Dashboard cache miss - 审核员 {request.user.username} 统计数据")
+            
+            # 使用聚合查询优化
+            chapter_stats = Chapter.objects.aggregate(
+                reviewing=Count('id', filter=Q(review_status='reviewing')),
+                approved=Count('id', filter=Q(review_status='approved')),
+                rejected=Count('id', filter=Q(review_status='rejected'))
+            )
+            
+            stats = {
+                # 待审核统计
+                'chapters_reviewing': chapter_stats['reviewing'],
+                'novels_with_reviewing': Novel.objects.filter(
+                    chapters__review_status='reviewing'
+                ).distinct().count(),
+                
+                # 已审核统计
+                'chapters_approved': chapter_stats['approved'],
+                'chapters_rejected': chapter_stats['rejected'],
+                'novels_with_reviewed': Novel.objects.filter(
+                    chapters__review_status__in=['approved', 'rejected']
+                ).distinct().count(),
+            }
+            
+            # 缓存3分钟
+            cache.set(cache_key, stats, 180)
+            logger.info(f"Dashboard cache set - 审核员 {request.user.username} 统计数据缓存3分钟")
+        else:
+            logger.info(f"Dashboard cache hit - 使用缓存的审核员 {request.user.username} 统计数据")
+        
+        context.update(stats)
+        
+        # 实时数据（不缓存）
+        context['pending_chapters'] = Chapter.objects.filter(
+            review_status='reviewing'
+        ).select_related('novel').order_by('-id')[:5]
+        
+        context['reviewed_chapters'] = Chapter.objects.filter(
+            review_status__in=['approved', 'rejected']
+        ).select_related('novel', 'reviewed_by').order_by('-reviewed_at')[:5]
+    
     return render(request, 'dashboard.html', context)
 
 
@@ -298,9 +394,9 @@ class NovelDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-class NovelCreateView(LoginRequiredMixin, CreateView):
+class NovelCreateView(AdminRequiredMixin, CreateView):
     """
-    小说创建视图
+    小说创建视图（仅管理员）
     """
     model = Novel
     form_class = NovelForm
@@ -418,9 +514,9 @@ class NovelCreateView(LoginRequiredMixin, CreateView):
             return super().form_invalid(form)
 
 
-class NovelUpdateView(LoginRequiredMixin, UpdateView):
+class NovelUpdateView(AdminRequiredMixin, UpdateView):
     """
-    小说更新视图
+    小说更新视图（仅管理员）
     """
     model = Novel
     form_class = NovelForm
@@ -535,9 +631,9 @@ class NovelUpdateView(LoginRequiredMixin, UpdateView):
             return self.form_invalid(form)
 
 
-class NovelDeleteView(LoginRequiredMixin, DeleteView):
+class NovelDeleteView(AdminRequiredMixin, DeleteView):
     """
-    小说删除视图
+    小说删除视图（仅管理员）
     """
     model = Novel
     template_name = 'video/novel_confirm_delete.html'
@@ -656,10 +752,12 @@ class ChapterDetailView(LoginRequiredMixin, DetailView):
                     # 只保留图片文件，排除.json等非图片文件
                     image_files = [f for f in all_image_files if f.lower().endswith(('.jpeg', '.jpg', '.png', '.gif', '.webp'))]
                     
-                    # 构建相对于项目根目录的路径（data/xxx/...）
-                    audio_rel_path = os.path.relpath(audio_file, project_root)
-                    subtitle_rel_path = os.path.relpath(subtitle_file, project_root) if subtitle_file and subtitle_file.exists() else None
-                    image_rel_path = os.path.relpath(image_files[0], project_root) if image_files else None
+                    # 构建相对于data目录的路径（不包含data/前缀）
+                    # 因为URL路由已经包含了 'data/' 前缀
+                    data_dir = project_root / 'data'
+                    audio_rel_path = os.path.relpath(audio_file, data_dir)
+                    subtitle_rel_path = os.path.relpath(subtitle_file, data_dir) if subtitle_file and subtitle_file.exists() else None
+                    image_rel_path = os.path.relpath(image_files[0], data_dir) if image_files else None
                     
                     file_narrations.append({
                         'number': number,
@@ -683,9 +781,9 @@ class ChapterDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-class ChapterCreateView(LoginRequiredMixin, CreateView):
+class ChapterCreateView(AdminRequiredMixin, CreateView):
     """
-    章节创建视图
+    章节创建视图（仅管理员）
     """
     model = Chapter
     form_class = ChapterForm
@@ -697,9 +795,9 @@ class ChapterCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class ChapterUpdateView(LoginRequiredMixin, UpdateView):
+class ChapterUpdateView(AdminRequiredMixin, UpdateView):
     """
-    章节更新视图
+    章节更新视图（仅管理员）
     """
     model = Chapter
     form_class = ChapterForm
@@ -711,9 +809,9 @@ class ChapterUpdateView(LoginRequiredMixin, UpdateView):
         return super().form_valid(form)
 
 
-class ChapterDeleteView(LoginRequiredMixin, DeleteView):
+class ChapterDeleteView(AdminRequiredMixin, DeleteView):
     """
-    章节删除视图
+    章节删除视图（仅管理员）
     """
     model = Chapter
     template_name = 'video/chapter_confirm_delete.html'
@@ -771,9 +869,9 @@ class CharacterDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-class CharacterCreateView(LoginRequiredMixin, CreateView):
+class CharacterCreateView(AdminRequiredMixin, CreateView):
     """
-    角色创建视图
+    角色创建视图（仅管理员）
     """
     model = Character
     form_class = CharacterForm
@@ -785,9 +883,9 @@ class CharacterCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class CharacterUpdateView(LoginRequiredMixin, UpdateView):
+class CharacterUpdateView(AdminRequiredMixin, UpdateView):
     """
-    角色更新视图
+    角色更新视图（仅管理员）
     """
     model = Character
     form_class = CharacterForm
@@ -799,9 +897,9 @@ class CharacterUpdateView(LoginRequiredMixin, UpdateView):
         return super().form_valid(form)
 
 
-class CharacterDeleteView(LoginRequiredMixin, DeleteView):
+class CharacterDeleteView(AdminRequiredMixin, DeleteView):
     """
-    角色删除视图
+    角色删除视图（仅管理员）
     """
     model = Character
     template_name = 'video/character_confirm_delete.html'
@@ -860,9 +958,9 @@ class NarrationDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-class NarrationCreateView(LoginRequiredMixin, CreateView):
+class NarrationCreateView(AdminRequiredMixin, CreateView):
     """
-    解说创建视图
+    解说创建视图（仅管理员）
     """
     model = Narration
     form_class = NarrationForm
@@ -874,9 +972,9 @@ class NarrationCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class NarrationUpdateView(LoginRequiredMixin, UpdateView):
+class NarrationUpdateView(AdminRequiredMixin, UpdateView):
     """
-    解说更新视图
+    解说更新视图（仅管理员）
     """
     model = Narration
     form_class = NarrationForm
@@ -888,9 +986,9 @@ class NarrationUpdateView(LoginRequiredMixin, UpdateView):
         return super().form_valid(form)
 
 
-class NarrationDeleteView(LoginRequiredMixin, DeleteView):
+class NarrationDeleteView(AdminRequiredMixin, DeleteView):
     """
-    解说删除视图
+    解说删除视图（仅管理员）
     """
     model = Narration
     template_name = 'video/narration_confirm_delete.html'
@@ -902,9 +1000,10 @@ class NarrationDeleteView(LoginRequiredMixin, DeleteView):
 
 
 @login_required
+@admin_required
 def novel_ai_process(request, pk):
     """
-    小说AI处理视图
+    小说AI处理视图（仅管理员）
     处理小说的AI分析，包括章节分割、角色提取、解说生成等
     """
     if request.method != 'POST':
@@ -3876,10 +3975,11 @@ def serve_narration_image(request, novel_id, chapter_id, narration_id, filename)
         }, status=500)
 
 @login_required
+@admin_required
 @require_http_methods(["POST"])
 def novel_gen_script(request, novel_id):
     """
-    生成小说脚本（解说文案）
+    生成小说脚本（解说文案）（仅管理员）
     对应脚本：gen_script_v2.py
     """
     try:
@@ -3948,6 +4048,7 @@ def novel_validate_script(request, novel_id):
 
 
 @login_required
+@admin_required
 @require_http_methods(["POST"])
 def novel_gen_audio(request, novel_id):
     """
@@ -3984,6 +4085,7 @@ def novel_gen_audio(request, novel_id):
 
 
 @login_required
+@admin_required
 @require_http_methods(["POST"])
 def novel_gen_ass(request, novel_id):
     """
@@ -4020,6 +4122,7 @@ def novel_gen_ass(request, novel_id):
 
 
 @login_required
+@admin_required
 @require_http_methods(["POST"])
 def novel_gen_image(request, novel_id):
     """
@@ -4214,11 +4317,13 @@ def submit_chapter_for_review(request, chapter_id):
         }, status=500)
 
 
+@login_required
+@admin_required
 @csrf_exempt
 @require_http_methods(["POST"])
 def generate_video(request):
     """
-    生成章节视频的API接口
+    生成章节视频的API接口（仅管理员）
     """
     # 检查用户登录状态
     if not request.user.is_authenticated:

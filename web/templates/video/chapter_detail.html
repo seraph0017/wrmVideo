@@ -300,7 +300,7 @@ function loadAllPrompts() {
 
 // 加载单个narration的prompt
 function loadPromptForNarration(number, imagePath) {
-    // imagePath已经是完整的相对路径，如 "data/020/chapter_002/chapter_002_image_01.jpeg"
+    // imagePath是从img.src中提取的相对路径，如 "data/020/chapter_002/chapter_002_image_01.jpeg"
     // 需要将.jpeg替换为.prompt.json
     // 先移除可能存在的查询参数（如?t=timestamp）
     const cleanImagePath = imagePath.split('?')[0];

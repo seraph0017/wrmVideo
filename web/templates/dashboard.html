@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
-
 {% load django_bootstrap5 %}
+{% load permission_tags %}
 
 {% block title %}控制面板 | {{ block.super }}{% endblock %}
 
@@ -9,386 +9,403 @@
     <div class="col-md-12 mb-4">
         <div class="card">
             <div class="card-header bg-primary text-white">
-                <h5 class="card-title mb-0">系统概览</h5>
+                <h5 class="card-title mb-0">
+                    <i class="fas fa-tachometer-alt me-2"></i>系统概览
+                    {% if is_admin %}
+                    <span class="badge bg-light text-primary ms-2">管理员</span>
+                    {% else %}
+                    <span class="badge bg-light text-warning ms-2">审核员</span>
+                    {% endif %}
+                </h5>
+            </div>
+            <div class="card-body">
+                {% if is_admin %}
+                <!-- 管理员视图 -->
+                <div class="row">
+                    <!-- 小说统计 -->
+                    <div class="col-md-3">
+                        <div class="card bg-primary text-white mb-3">
+                            <div class="card-body text-center">
+                                <i class="fas fa-book fa-2x mb-2"></i>
+                                <h5 class="card-title">总小说数</h5>
+                                <h2 class="display-4">{{ total_novels }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 总章节数 -->
+                    <div class="col-md-3">
+                        <div class="card bg-info text-white mb-3">
+                            <div class="card-body text-center">
+                                <i class="fas fa-file-alt fa-2x mb-2"></i>
+                                <h5 class="card-title">总章节数</h5>
+                                <h2 class="display-4">{{ total_chapters }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 待审核章节 -->
+                    <div class="col-md-3">
+                        <div class="card bg-warning text-dark mb-3">
+                            <div class="card-body text-center">
+                                <i class="fas fa-clock fa-2x mb-2"></i>
+                                <h5 class="card-title">待审核章节</h5>
+                                <h2 class="display-4">{{ chapters_reviewing }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 已审核章节 -->
+                    <div class="col-md-3">
+                        <div class="card bg-success text-white mb-3">
+                            <div class="card-body text-center">
+                                <i class="fas fa-check-circle fa-2x mb-2"></i>
+                                <h5 class="card-title">已审核章节</h5>
+                                <h2 class="display-4">{{ chapters_approved|add:chapters_rejected }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 详细统计 -->
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <h6 class="text-muted mb-3"><i class="fas fa-chart-bar me-2"></i>章节审核状态详情</h6>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card border-secondary mb-3">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-secondary">
+                                            <i class="fas fa-circle me-2"></i>未提交审核
+                                        </h6>
+                                        <h3 class="mb-0">{{ chapters_not_submitted }}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card border-warning mb-3">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-warning">
+                                            <i class="fas fa-circle me-2"></i>审核中
+                                        </h6>
+                                        <h3 class="mb-0">{{ chapters_reviewing }}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card border-success mb-3">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-success">
+                                            <i class="fas fa-circle me-2"></i>审核通过
+                                        </h6>
+                                        <h3 class="mb-0">{{ chapters_approved }}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card border-danger mb-3">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-danger">
+                                            <i class="fas fa-circle me-2"></i>审核拒绝
+                                        </h6>
+                                        <h3 class="mb-0">{{ chapters_rejected }}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 其他统计 -->
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="card border-info mb-3">
+                            <div class="card-body">
+                                <h6 class="card-title text-info">
+                                    <i class="fas fa-users me-2"></i>角色总数
+                                </h6>
+                                <h3 class="mb-0">{{ character_count }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-info mb-3">
+                            <div class="card-body">
+                                <h6 class="card-title text-info">
+                                    <i class="fas fa-comment-dots me-2"></i>解说总数
+                                </h6>
+                                <h3 class="mb-0">{{ narration_count }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% else %}
+                <!-- 审核组视图 -->
+                <div class="row">
+                    <!-- 待审核章节 -->
+                    <div class="col-md-3">
+                        <div class="card bg-warning text-dark mb-3">
+                            <div class="card-body text-center">
+                                <i class="fas fa-clock fa-2x mb-2"></i>
+                                <h5 class="card-title">待审核章节</h5>
+                                <h2 class="display-4">{{ chapters_reviewing }}</h2>
+                                <a href="{% url 'video:chapter_review_list' %}?status=reviewing" class="btn btn-sm btn-dark mt-2">
+                                    <i class="fas fa-eye me-1"></i>查看
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 待审核小说 -->
+                    <div class="col-md-3">
+                        <div class="card bg-info text-white mb-3">
+                            <div class="card-body text-center">
+                                <i class="fas fa-book fa-2x mb-2"></i>
+                                <h5 class="card-title">待审核小说</h5>
+                                <h2 class="display-4">{{ novels_with_reviewing }}</h2>
+                                <a href="{% url 'video:novel_list' %}" class="btn btn-sm btn-light mt-2">
+                                    <i class="fas fa-eye me-1"></i>查看
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 已审核章节 -->
+                    <div class="col-md-3">
+                        <div class="card bg-success text-white mb-3">
+                            <div class="card-body text-center">
+                                <i class="fas fa-check-circle fa-2x mb-2"></i>
+                                <h5 class="card-title">已审核章节</h5>
+                                <h2 class="display-4">{{ chapters_approved|add:chapters_rejected }}</h2>
+                                <small class="d-block mt-2">
+                                    <i class="fas fa-check me-1"></i>通过: {{ chapters_approved }}
+                                    <i class="fas fa-times ms-2 me-1"></i>拒绝: {{ chapters_rejected }}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 已审核小说 -->
+                    <div class="col-md-3">
+                        <div class="card bg-primary text-white mb-3">
+                            <div class="card-body text-center">
+                                <i class="fas fa-book-open fa-2x mb-2"></i>
+                                <h5 class="card-title">已审核小说</h5>
+                                <h2 class="display-4">{{ novels_with_reviewed }}</h2>
+                                <a href="{% url 'video:novel_list' %}" class="btn btn-sm btn-light mt-2">
+                                    <i class="fas fa-eye me-1"></i>查看
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 待审核章节列表 -->
+{% if pending_chapters %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-header {% if is_admin %}bg-warning{% else %}bg-info{% endif %} text-white">
+                <h5 class="card-title mb-0">
+                    <i class="fas fa-list me-2"></i>最近待审核章节
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>小说</th>
+                                <th>章节</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for chapter in pending_chapters %}
+                            <tr>
+                                <td>{{ chapter.id }}</td>
+                                <td>
+                                    <a href="{% url 'video:novel_detail' chapter.novel.id %}" class="text-decoration-none">
+                                        {{ chapter.novel.name }}
+                                    </a>
+                                </td>
+                                <td>{{ chapter.title }}</td>
+                                <td>
+                                    <span class="badge bg-warning text-dark">
+                                        <i class="fas fa-clock me-1"></i>审核中
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="{% url 'video:chapter_detail' chapter.id %}" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-eye me-1"></i>查看详情
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="{% url 'video:chapter_review_list' %}" class="btn btn-primary">
+                        <i class="fas fa-list me-2"></i>查看所有待审核章节
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- 审核组：最近已审核章节 -->
+{% if not is_admin and reviewed_chapters %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h5 class="card-title mb-0">
+                    <i class="fas fa-check-circle me-2"></i>最近已审核章节
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>小说</th>
+                                <th>章节</th>
+                                <th>审核结果</th>
+                                <th>审核人</th>
+                                <th>审核时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for chapter in reviewed_chapters %}
+                            <tr>
+                                <td>{{ chapter.id }}</td>
+                                <td>
+                                    <a href="{% url 'video:novel_detail' chapter.novel.id %}" class="text-decoration-none">
+                                        {{ chapter.novel.name }}
+                                    </a>
+                                </td>
+                                <td>{{ chapter.title }}</td>
+                                <td>
+                                    {% if chapter.review_status == 'approved' %}
+                                    <span class="badge bg-success">
+                                        <i class="fas fa-check me-1"></i>审核通过
+                                    </span>
+                                    {% else %}
+                                    <span class="badge bg-danger">
+                                        <i class="fas fa-times me-1"></i>审核拒绝
+                                    </span>
+                                    {% endif %}
+                                </td>
+                                <td>{{ chapter.reviewed_by.username|default:"未知" }}</td>
+                                <td>{{ chapter.reviewed_at|date:"Y-m-d H:i" }}</td>
+                                <td>
+                                    <a href="{% url 'video:chapter_detail' chapter.id %}" class="btn btn-sm btn-info">
+                                        <i class="fas fa-eye me-1"></i>查看
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="{% url 'video:chapter_list' %}" class="btn btn-success">
+                        <i class="fas fa-list me-2"></i>查看所有章节
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- 快速操作 -->
+{% if is_admin %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">
+                    <i class="fas fa-bolt me-2"></i>快速操作
+                </h5>
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card bg-success text-white mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">已完成任务</h5>
-                                <h2 class="display-4">24</h2>
-                            </div>
-                        </div>
+                    <div class="col-md-3 mb-3">
+                        <a href="{% url 'video:novel_create' %}" class="btn btn-lg btn-primary w-100">
+                            <i class="fas fa-plus-circle fa-2x d-block mb-2"></i>
+                            创建小说
+                        </a>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card bg-warning text-dark mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">进行中任务</h5>
-                                <h2 class="display-4">8</h2>
-                            </div>
-                        </div>
+                    <div class="col-md-3 mb-3">
+                        <a href="{% url 'video:novel_list' %}" class="btn btn-lg btn-info w-100">
+                            <i class="fas fa-book fa-2x d-block mb-2"></i>
+                            小说管理
+                        </a>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card bg-info text-white mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">总项目数</h5>
-                                <h2 class="display-4">12</h2>
-                            </div>
-                        </div>
+                    <div class="col-md-3 mb-3">
+                        <a href="{% url 'video:chapter_review_list' %}" class="btn btn-lg btn-warning w-100">
+                            <i class="fas fa-tasks fa-2x d-block mb-2"></i>
+                            审核管理
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <a href="{% url 'video:chapter_list' %}" class="btn btn-lg btn-success w-100">
+                            <i class="fas fa-file-alt fa-2x d-block mb-2"></i>
+                            章节管理
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<div class="row">
-    <div class="col-md-6">
-        <div class="card mb-4">
-            <div class="card-header">
-                <h5 class="card-title mb-0">最近任务</h5>
-            </div>
-            <div class="card-body">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">生成视频：《西游记》第一章</h5>
-                            <small class="text-muted">3 小时前</small>
-                        </div>
-                        <p class="mb-1">已完成</p>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">生成视频：《红楼梦》第三章</h5>
-                            <small class="text-muted">5 小时前</small>
-                        </div>
-                        <p class="mb-1">处理中</p>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">生成视频：《水浒传》第二章</h5>
-                            <small class="text-muted">1 天前</small>
-                        </div>
-                        <p class="mb-1">已完成</p>
-                    </a>
-                </div>
-            </div>
-            <div class="card-footer">
-                <a href="#" class="btn btn-primary btn-sm">查看全部</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-md-6">
-        <div class="card mb-4">
-            <div class="card-header">
-                <h5 class="card-title mb-0">创建新任务</h5>
-            </div>
-            <div class="card-body">
-                <form method="post">
-                    {% csrf_token %}
-                    {% bootstrap_form_errors form type='all' %}
-                    {% bootstrap_form form %}
-                    {% bootstrap_button "创建任务" button_type="submit" button_class="btn-primary" %}
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 音频生成和播放功能 -->
+{% else %}
 <div class="row">
     <div class="col-md-12">
         <div class="card mb-4">
             <div class="card-header bg-info text-white">
-                <h5 class="card-title mb-0">音频生成与播放</h5>
+                <h5 class="card-title mb-0">
+                    <i class="fas fa-bolt me-2"></i>快速操作
+                </h5>
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-6">
-                        <h6>生成音频</h6>
-                        <form id="audioGenerationForm">
-                            <div class="mb-3">
-                                <label for="bookSelect" class="form-label">选择书籍</label>
-                                <select class="form-select" id="bookSelect" required>
-                                    <option value="">请选择书籍...</option>
-                                    <option value="001">书籍 001</option>
-                                    <option value="002">书籍 002</option>
-                                    <option value="003">书籍 003</option>
-                                    <option value="004">书籍 004</option>
-                                    <option value="005">书籍 005</option>
-                                    <option value="006">书籍 006</option>
-                                    <option value="007">书籍 007</option>
-                                    <option value="008">书籍 008</option>
-                                    <option value="009">书籍 009</option>
-                                    <option value="010">书籍 010</option>
-                                    <option value="013">书籍 013</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="chapterSelect" class="form-label">选择章节</label>
-                                <select class="form-select" id="chapterSelect" required>
-                                    <option value="">请先选择书籍...</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-primary" id="generateAudioBtn">
-                                <span class="spinner-border spinner-border-sm d-none" role="status"></span>
-                                生成音频
-                            </button>
-                        </form>
+                    <div class="col-md-4 mb-3">
+                        <a href="{% url 'video:chapter_review_list' %}" class="btn btn-lg btn-warning w-100">
+                            <i class="fas fa-tasks fa-2x d-block mb-2"></i>
+                            开始审核
+                        </a>
                     </div>
-                    <div class="col-md-6">
-                        <h6>音频播放器</h6>
-                        <div id="audioPlayerContainer" class="d-none">
-                            <audio controls class="w-100 mb-3" id="audioPlayer">
-                                您的浏览器不支持音频播放。
-                            </audio>
-                            <div class="mb-3">
-                                <label for="subtitleDisplay" class="form-label">字幕显示</label>
-                                <div id="subtitleDisplay" class="border p-3 bg-light" style="height: 200px; overflow-y: auto;">
-                                    <p class="text-muted">字幕将在此显示...</p>
-                                </div>
-                            </div>
-                            <button class="btn btn-secondary btn-sm" id="downloadAudioBtn">下载音频</button>
-                            <button class="btn btn-secondary btn-sm" id="downloadSubtitleBtn">下载字幕</button>
-                        </div>
-                        <div id="audioPlaceholder" class="text-muted">
-                            <p>请先生成音频文件</p>
-                        </div>
+                    <div class="col-md-4 mb-3">
+                        <a href="{% url 'video:novel_list' %}" class="btn btn-lg btn-info w-100">
+                            <i class="fas fa-book fa-2x d-block mb-2"></i>
+                            查看小说
+                        </a>
                     </div>
-                </div>
-                
-                <!-- 任务状态显示 -->
-                <div class="row mt-4">
-                    <div class="col-md-12">
-                        <div id="taskStatus" class="alert alert-info d-none" role="alert">
-                            <strong>任务状态：</strong><span id="taskStatusText">等待中...</span>
-                        </div>
+                    <div class="col-md-4 mb-3">
+                        <a href="{% url 'video:chapter_list' %}" class="btn btn-lg btn-success w-100">
+                            <i class="fas fa-file-alt fa-2x d-block mb-2"></i>
+                            查看章节
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-{% endblock %}
-
-{% block extra_js %}
-<script>
-// 音频生成和播放功能的JavaScript代码
-document.addEventListener('DOMContentLoaded', function() {
-    const bookSelect = document.getElementById('bookSelect');
-    const chapterSelect = document.getElementById('chapterSelect');
-    const audioForm = document.getElementById('audioGenerationForm');
-    const generateBtn = document.getElementById('generateAudioBtn');
-    const spinner = generateBtn.querySelector('.spinner-border');
-    const taskStatus = document.getElementById('taskStatus');
-    const taskStatusText = document.getElementById('taskStatusText');
-    const audioPlayerContainer = document.getElementById('audioPlayerContainer');
-    const audioPlaceholder = document.getElementById('audioPlaceholder');
-    const audioPlayer = document.getElementById('audioPlayer');
-    const subtitleDisplay = document.getElementById('subtitleDisplay');
-    const downloadAudioBtn = document.getElementById('downloadAudioBtn');
-    const downloadSubtitleBtn = document.getElementById('downloadSubtitleBtn');
-    
-    let currentTaskId = null;
-    let currentAudioPath = null;
-    let currentSubtitlePath = null;
-    
-    // 章节数据映射
-    const chapterData = {
-        '001': ['chapter_001', 'chapter_002', 'chapter_003'],
-        '002': ['chapter_001', 'chapter_002', 'chapter_003', 'chapter_004', 'chapter_005', 'chapter_006', 'chapter_007', 'chapter_008', 'chapter_009', 'chapter_010', 'chapter_011', 'chapter_012', 'chapter_013', 'chapter_014', 'chapter_015', 'chapter_016', 'chapter_017', 'chapter_018', 'chapter_019', 'chapter_020', 'chapter_021', 'chapter_022', 'chapter_023', 'chapter_024'],
-        '003': ['chapter_001', 'chapter_002', 'chapter_003', 'chapter_004', 'chapter_005', 'chapter_006', 'chapter_007', 'chapter_008', 'chapter_009', 'chapter_010'],
-        '004': ['chapter_001', 'chapter_002', 'chapter_003'],
-        '005': ['chapter_002'],
-        '006': ['chapter_001', 'chapter_003', 'chapter_004', 'chapter_005', 'chapter_006', 'chapter_007', 'chapter_008', 'chapter_009', 'chapter_010', 'chapter_012', 'chapter_013', 'chapter_014', 'chapter_015', 'chapter_016', 'chapter_017', 'chapter_018', 'chapter_019', 'chapter_021', 'chapter_022', 'chapter_023'],
-        '007': ['chapter_001', 'chapter_005'],
-        '008': ['chapter_001'],
-        '009': ['chapter_001', 'chapter_002', 'chapter_004', 'chapter_006', 'chapter_007', 'chapter_010', 'chapter_011', 'chapter_012', 'chapter_014', 'chapter_015', 'chapter_018', 'chapter_019'],
-        '010': ['chapter_001', 'chapter_002', 'chapter_003', 'chapter_004', 'chapter_005', 'chapter_006', 'chapter_007', 'chapter_009', 'chapter_010', 'chapter_012', 'chapter_013', 'chapter_015', 'chapter_016', 'chapter_017'],
-        '013': ['chapter_001', 'chapter_002']
-    };
-    
-    // 书籍选择变化时更新章节列表
-    bookSelect.addEventListener('change', function() {
-        const selectedBook = this.value;
-        chapterSelect.innerHTML = '<option value="">请选择章节...</option>';
-        
-        if (selectedBook && chapterData[selectedBook]) {
-            chapterData[selectedBook].forEach(chapter => {
-                const option = document.createElement('option');
-                option.value = chapter;
-                option.textContent = chapter.replace('_', ' ').toUpperCase();
-                chapterSelect.appendChild(option);
-            });
-        }
-    });
-    
-    // 音频生成表单提交
-    audioForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const book = bookSelect.value;
-        const chapter = chapterSelect.value;
-        
-        if (!book || !chapter) {
-            alert('请选择书籍和章节');
-            return;
-        }
-        
-        generateAudio(book, chapter);
-    });
-    
-    // 生成音频函数
-    function generateAudio(book, chapter) {
-        // 显示加载状态
-        generateBtn.disabled = true;
-        spinner.classList.remove('d-none');
-        taskStatus.classList.remove('d-none');
-        taskStatusText.textContent = '正在生成音频...';
-        
-        // 发送生成音频请求
-        fetch('/api/generate-audio/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
-            },
-            body: JSON.stringify({
-                book: book,
-                chapter: chapter
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                currentTaskId = data.task_id;
-                taskStatusText.textContent = '音频生成任务已启动，任务ID: ' + currentTaskId;
-                
-                // 开始轮询任务状态
-                pollTaskStatus(currentTaskId);
-            } else {
-                throw new Error(data.error || '生成音频失败');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            taskStatusText.textContent = '错误: ' + error.message;
-            taskStatus.className = 'alert alert-danger';
-            resetGenerateButton();
-        });
-    }
-    
-    // 轮询任务状态
-    function pollTaskStatus(taskId) {
-        const pollInterval = setInterval(() => {
-            fetch(`/api/task-status/${taskId}/`)
-            .then(response => response.json())
-            .then(data => {
-                taskStatusText.textContent = `任务状态: ${data.status}`;
-                
-                if (data.status === 'SUCCESS') {
-                    clearInterval(pollInterval);
-                    taskStatus.className = 'alert alert-success';
-                    taskStatusText.textContent = '音频生成完成！';
-                    
-                    // 设置音频和字幕路径
-                    currentAudioPath = data.result.audio_path;
-                    currentSubtitlePath = data.result.subtitle_path;
-                    
-                    // 显示音频播放器
-                    showAudioPlayer(currentAudioPath, currentSubtitlePath);
-                    resetGenerateButton();
-                } else if (data.status === 'FAILURE') {
-                    clearInterval(pollInterval);
-                    taskStatus.className = 'alert alert-danger';
-                    taskStatusText.textContent = '音频生成失败: ' + (data.error || '未知错误');
-                    resetGenerateButton();
-                }
-            })
-            .catch(error => {
-                console.error('轮询错误:', error);
-                clearInterval(pollInterval);
-                taskStatus.className = 'alert alert-danger';
-                taskStatusText.textContent = '检查任务状态时出错';
-                resetGenerateButton();
-            });
-        }, 2000); // 每2秒检查一次
-    }
-    
-    // 显示音频播放器
-    function showAudioPlayer(audioPath, subtitlePath) {
-        audioPlaceholder.classList.add('d-none');
-        audioPlayerContainer.classList.remove('d-none');
-        
-        // 设置音频源
-        audioPlayer.src = audioPath;
-        
-        // 加载字幕
-        if (subtitlePath) {
-            loadSubtitles(subtitlePath);
-        }
-        
-        // 设置下载链接
-        downloadAudioBtn.onclick = () => downloadFile(audioPath, 'audio.mp3');
-        downloadSubtitleBtn.onclick = () => downloadFile(subtitlePath, 'subtitle.ass');
-    }
-    
-    // 加载字幕文件
-    function loadSubtitles(subtitlePath) {
-        fetch(subtitlePath)
-        .then(response => response.text())
-        .then(subtitleText => {
-            displaySubtitles(subtitleText);
-        })
-        .catch(error => {
-            console.error('加载字幕失败:', error);
-            subtitleDisplay.innerHTML = '<p class="text-danger">加载字幕失败</p>';
-        });
-    }
-    
-    // 显示字幕内容
-    function displaySubtitles(subtitleText) {
-        // 解析ASS字幕格式
-        const lines = subtitleText.split('\n');
-        const dialogueLines = lines.filter(line => line.startsWith('Dialogue:'));
-        
-        let subtitleHtml = '';
-        dialogueLines.forEach((line, index) => {
-            const parts = line.split(',');
-            if (parts.length >= 10) {
-                const startTime = parts[1];
-                const endTime = parts[2];
-                const text = parts.slice(9).join(',').replace(/\{[^}]*\}/g, ''); // 移除ASS标签
-                
-                subtitleHtml += `
-                    <div class="subtitle-line mb-2 p-2 border-bottom" data-start="${startTime}" data-end="${endTime}">
-                        <small class="text-muted">${startTime} - ${endTime}</small><br>
-                        <span>${text}</span>
-                    </div>
-                `;
-            }
-        });
-        
-        subtitleDisplay.innerHTML = subtitleHtml || '<p class="text-muted">无字幕内容</p>';
-    }
-    
-    // 下载文件
-    function downloadFile(url, filename) {
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-    }
-    
-    // 重置生成按钮状态
-    function resetGenerateButton() {
-        generateBtn.disabled = false;
-        spinner.classList.add('d-none');
-    }
-});
-</script>
+{% endif %}
 {% endblock %}

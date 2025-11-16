@@ -1522,8 +1522,12 @@ def add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir
         # 构建滤镜链
         filter_complex = []
         
-        # 基础视频流
-        current_video = '[0:v]'
+        # 基础视频流 - 降低红色饱和度
+        # 使用colorchannelmixer降低红色通道的饱和度，让血色不那么显眼
+        filter_complex.append(
+            '[0:v]colorchannelmixer=rr=0.8:rg=0.1:rb=0.1:gr=0:gg=1:gb=0:br=0:bg=0:bb=1[v_desaturated]'
+        )
+        current_video = '[v_desaturated]'
         
         # 添加转场效果（fuceng1.mov）
         if fuceng_path and fuceng_input_idx is not None and segment_durations:

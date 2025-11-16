@@ -136,12 +136,6 @@
                     <li class="nav-item">
                         <a class="nav-link {% if '/chapters/' in request.path %}active{% endif %}" href="{% url 'video:chapter_list' %}" style="transition: all 0.3s ease; border-radius: 8px; margin: 0 4px; padding: 8px 16px;">章节管理</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if '/characters/' in request.path %}active{% endif %}" href="{% url 'video:character_list' %}" style="transition: all 0.3s ease; border-radius: 8px; margin: 0 4px; padding: 8px 16px;">角色管理</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if '/narrations/' in request.path %}active{% endif %}" href="{% url 'video:narration_list' %}" style="transition: all 0.3s ease; border-radius: 8px; margin: 0 4px; padding: 8px 16px;">解说管理</a>
-                    </li>
                 </ul>
                 
                 <!-- 用户信息和登出 -->
