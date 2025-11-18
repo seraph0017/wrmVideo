@@ -486,6 +486,11 @@ def concat_videos_with_bgm(video_files, bgm_audio_path, output_path):
         # 只有非VideoToolbox编码器才添加preset参数
         if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
             cmd.extend(["-preset", gpu_params['preset']])
+        
+        # 添加profile参数（如果有，用于nvenc编码器）
+        if 'profile' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
+            cmd.extend(["-profile:v", gpu_params['profile']])
+        
         if 'tune' in gpu_params:
             cmd.extend(["-tune", gpu_params['tune']])
         

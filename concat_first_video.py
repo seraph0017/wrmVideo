@@ -358,6 +358,11 @@ def generate_overlay_video(video2: Path, temp_dir: Path) -> Path:
     # 只有非VideoToolbox编码器才添加preset参数
     if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
         cmd.extend(["-preset", gpu_params['preset']])
+    
+    # 添加profile参数（如果有，用于nvenc编码器）
+    if 'profile' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
+        cmd.extend(["-profile:v", gpu_params['profile']])
+    
     if 'tune' in gpu_params:
         cmd.extend(["-tune", gpu_params['tune']])
     
@@ -437,6 +442,11 @@ def process_chapter(chapter_dir: Path) -> None:
     # 只有非VideoToolbox编码器才添加preset参数
     if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
         cmd_scale_v1.extend(["-preset", gpu_params['preset']])
+    
+    # 添加profile参数（如果有，用于nvenc编码器）
+    if 'profile' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
+        cmd_scale_v1.extend(["-profile:v", gpu_params['profile']])
+    
     if 'tune' in gpu_params:
         cmd_scale_v1.extend(["-tune", gpu_params['tune']])
     
@@ -476,6 +486,11 @@ def process_chapter(chapter_dir: Path) -> None:
         # 只有非VideoToolbox编码器才添加preset参数
         if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
             cmd_scale_v2.extend(["-preset", gpu_params['preset']])
+        
+        # 添加profile参数（如果有，用于nvenc编码器）
+        if 'profile' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
+            cmd_scale_v2.extend(["-profile:v", gpu_params['profile']])
+        
         if 'tune' in gpu_params:
             cmd_scale_v2.extend(["-tune", gpu_params['tune']])
         

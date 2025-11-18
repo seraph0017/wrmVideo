@@ -780,6 +780,10 @@ def create_image_video_with_effects(image_path, output_path, duration, width=720
         # 只有非VideoToolbox编码器才添加preset参数
         if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
             cmd.extend(['-preset', gpu_params['preset']])
+        
+        # 添加profile参数（如果有，用于nvenc编码器）
+        if 'profile' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
+            cmd.extend(['-profile:v', gpu_params['profile']])
             
         cmd.extend(['-r', str(fps)])
         
@@ -1626,6 +1630,10 @@ def add_effects_and_audio(base_video, output_video, ass_file, mp3_file, work_dir
         # 只有非VideoToolbox编码器才添加preset参数
         if 'preset' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
             cmd.extend(['-preset', gpu_params['preset']])
+        
+        # 添加profile参数（如果有，用于nvenc编码器）
+        if 'profile' in gpu_params and not gpu_params['video_codec'].endswith('_videotoolbox'):
+            cmd.extend(['-profile:v', gpu_params['profile']])
         
         # 添加调优参数（如果有）
         if 'tune' in gpu_params:

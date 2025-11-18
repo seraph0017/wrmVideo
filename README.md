@@ -4,6 +4,23 @@
 
 ## ✨ 最新更新
 
+- 🔧 **GPU Profile参数修复** (2025-11-18):
+  - **问题修复**: 在GPU特化场景下（特别是NVIDIA L4 GPU），profile参数现在会正确添加到ffmpeg命令中
+  - **影响文件**: 
+    - `concat_narration_video.py` - 旁白视频生成（2处修复）
+    - `concat_finish_video.py` - 完整视频生成（1处修复）
+    - `concat_first_video.py` - 首部视频生成（3处修复）
+  - **技术细节**: 
+    - 添加 `-profile:v high` 参数到h264_nvenc编码器命令
+    - 正确排除VideoToolbox编码器（不支持此参数）
+    - 按照最佳实践顺序添加参数（preset → profile → tune）
+  - **预期效果**: 
+    - 编码质量提升，使用H.264 High Profile
+    - 在相同质量下，文件大小可能减小5-10%
+    - 充分发挥L4 GPU的编码性能
+  - **验证工具**: `python test/verify_profile_fix.py`
+  - **详细文档**: 参见 [docs/GPU_PROFILE_FIX.md](docs/GPU_PROFILE_FIX.md)
+
 - 📝 **解说内容字数标准调整** (2025-11-16):
   - **总字数范围**: 从800-900字（850字）调整为1100-1300字（1200字）
   - **单个特写字数**: 从约40字调整为约55字
