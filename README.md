@@ -1216,6 +1216,25 @@ TOS上传功能的配置已集成到 `config/config.py` 文件中：
 
 ## 🚀 快速开始
 
+> **📖 完整部署指南**: 请查看 [部署文档](deploy/DEPLOYMENT.md) 获取详细的部署步骤和配置说明。
+
+### 快速部署
+
+#### 方式一：使用一键部署脚本（推荐）
+
+```bash
+# 克隆项目
+git clone <repository-url>
+cd wrmVideo
+
+# 运行一键部署脚本
+bash deploy/deploy.sh
+
+# 按照提示完成配置
+```
+
+#### 方式二：手动部署
+
 ### 1. 环境配置
 
 ```bash
@@ -2360,6 +2379,46 @@ python cleanup_regenerated_files.py --all --execute         # 删除所有文件
 ### v1.0.0
 - 🎉 初始版本发布
 - 🤖 基础AI功能
+
+## 📚 相关文档
+
+- **[部署文档](deploy/DEPLOYMENT.md)** - 完整的部署指南，包含环境要求、安装步骤、配置说明
+- **[使用指南](main.md)** - 详细的使用说明和命令参考
+- **[L4 GPU 配置](L4_GPU_DEPENDENCIES.md)** - GPU 环境配置和优化指南
+- **[审核系统说明](web/CHAPTER_REVIEW_README.md)** - 章节审核系统使用指南
+
+### 部署脚本
+
+项目提供了完整的部署和管理脚本：
+
+- `deploy/deploy.sh` - 一键部署脚本
+- `deploy/check_environment.py` - 环境检查工具
+- `deploy/service_manager.sh` - 服务管理脚本（启动/停止/重启）
+- `deploy/backup.sh` - 数据备份脚本
+- `deploy/restore.sh` - 数据恢复脚本
+
+使用示例：
+
+```bash
+# 一键部署
+bash deploy/deploy.sh
+
+# 检查环境
+python deploy/check_environment.py
+
+# 管理服务
+bash deploy/service_manager.sh start    # 启动所有服务
+bash deploy/service_manager.sh stop     # 停止所有服务
+bash deploy/service_manager.sh restart  # 重启所有服务
+bash deploy/service_manager.sh status   # 查看服务状态
+
+# 备份数据
+bash deploy/backup.sh                   # 完整备份
+bash deploy/backup.sh --db-only         # 仅备份数据库
+
+# 恢复数据
+bash deploy/restore.sh /path/to/backup  # 完整恢复
+```
 
 ## 🤝 贡献指南
 
