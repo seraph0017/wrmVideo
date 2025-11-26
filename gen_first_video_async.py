@@ -300,6 +300,13 @@ def create_video_from_single_image_async(image_path, duration, output_path, max_
             
             print(f"开始生成视频: {image_path}")
             
+            # 限制 duration 最大为 12 秒
+            limited_duration = min(duration, 12)
+            if duration > 12:
+                print(f"  原始时长 {duration}s 超过限制，调整为 {limited_duration}s")
+            else:
+                print(f"  视频时长: {limited_duration}s")
+            
             # 将图片转换为base64编码的data URL
             image_url = upload_image_to_server(image_path)
             
@@ -317,7 +324,7 @@ def create_video_from_single_image_async(image_path, duration, output_path, max_
                 content=[
                     {
                         "type": "text",
-                        "text": f"画面有明显的动态效果，动作大一些 --ratio 9:16 --dur {duration}"
+                        "text": f"画面有明显的动态效果，动作大一些 --ratio 9:16 --dur {limited_duration}"
                     },
                     {
                         "type": "image_url",

@@ -1,0 +1,25 @@
+[Script Info]
+Title: chapter_002 Narration 15 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.34,Default,,0,0,0,,就在这时{\c&H0000FFFF&\b1}林婉婉{\c&H00FFFFFF&\b0}突然像疯了
+Dialogue: 0,0:00:02.34,0:00:05.08,Default,,0,0,0,,一样冲上前{\c&H0000FFFF&\b1}张开{\c&H00FFFFFF&\b0}双臂挡在陈
+Dialogue: 0,0:00:05.18,0:00:07.58,Default,,0,0,0,,树立面前“砰”的
+Dialogue: 0,0:00:07.68,0:00:08.31,Default,,0,0,0,,一声枪响子弹击中她的
+Dialogue: 0,0:00:08.31,0:00:10.54,Default,,0,0,0,,额头鲜血瞬间喷涌而
+Dialogue: 0,0:00:10.54,0:00:12.51,Default,,0,0,0,,出染红了陈树立的后背
+Dialogue: 0,0:00:12.93,0:00:15.04,Default,,0,0,0,,她身体猛地一震脸上先是
+Dialogue: 0,0:00:15.04,0:00:17.67,Default,,0,0,0,,痛苦扭曲随即又慢慢舒展开
+Dialogue: 0,0:00:18.13,0:00:19.89,Default,,0,0,0,,眼神里竟透出一丝释然

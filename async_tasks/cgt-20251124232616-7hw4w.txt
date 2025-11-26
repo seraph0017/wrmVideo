@@ -1,0 +1,13 @@
+{
+  "task_id": "cgt-20251124232616-7hw4w",
+  "task_type": "video",
+  "output_path": "data/031/chapter_002/chapter_002_video_13.mp4",
+  "filename": "chapter_002_video_13.mp4",
+  "image_path": "data/031/chapter_002/chapter_002_image_13.jpeg",
+  "duration": 10,
+  "submit_time": 1763997976.739464,
+  "status": "failed",
+  "attempt": 1,
+  "error_msg": "ContentGenerationError(message='The request failed because the output video may contain sensitive information. Request id: 02176399800198000000000000000000000ffffac182db827e4bf', code='OutputVideoSensitiveContentDetected')",
+  "failed_time": 1763998050.953883
+}

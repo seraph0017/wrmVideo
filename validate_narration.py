@@ -1313,20 +1313,21 @@ def extract_character_descriptions(content):
             if body_match:
                 description_parts.append(f"身材：{body_match.group(1).strip()}")
         
-        # 服装风格
-        clothing_match = re.search(r'<服装风格>(.*?)</服装风格>', character_block, re.DOTALL)
-        if clothing_match:
-            clothing_text = clothing_match.group(1).strip()
-            
-            # 上衣
-            top_match = re.search(r'<上衣>(.*?)</上衣>', clothing_text)
-            if top_match:
-                description_parts.append(f"上衣：{top_match.group(1).strip()}")
-            
-            # 下装
-            bottom_match = re.search(r'<下装>(.*?)</下装>', clothing_text)
-            if bottom_match:
-                description_parts.append(f"下装：{bottom_match.group(1).strip()}")
+        # 服装风格 - 注释掉，不要在增强prompt中添加服装信息
+        # 因为服装信息应该由原始图片prompt中的场景描述决定
+        # clothing_match = re.search(r'<服装风格>(.*?)</服装风格>', character_block, re.DOTALL)
+        # if clothing_match:
+        #     clothing_text = clothing_match.group(1).strip()
+        #     
+        #     # 上衣
+        #     top_match = re.search(r'<上衣>(.*?)</上衣>', clothing_text)
+        #     if top_match:
+        #         description_parts.append(f"上衣：{top_match.group(1).strip()}")
+        #     
+        #     # 下装
+        #     bottom_match = re.search(r'<下装>(.*?)</下装>', clothing_text)
+        #     if bottom_match:
+        #         description_parts.append(f"下装：{bottom_match.group(1).strip()}")
         
         # 组合完整描述
         if description_parts:

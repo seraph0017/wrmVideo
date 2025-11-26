@@ -1,0 +1,24 @@
+[Script Info]
+Title: chapter_002 Narration 10 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.89,Default,,0,0,0,,{\c&H0000FFFF&\b1}林婉婉{\c&H00FFFFFF&\b0}却突然猛地弹起来
+Dialogue: 0,0:00:02.38,0:00:03.95,Default,,0,0,0,,一把抓住陈树立的袖子
+Dialogue: 0,0:00:04.27,0:00:05.39,Default,,0,0,0,,手上还沾着油污
+Dialogue: 0,0:00:05.77,0:00:07.57,Default,,0,0,0,,瞬间弄脏了他笔挺的西装
+Dialogue: 0,0:00:07.96,0:00:09.00,Default,,0,0,0,,她慌忙想去擦
+Dialogue: 0,0:00:09.56,0:00:11.27,Default,,0,0,0,,指尖刚碰到布料又猛地
+Dialogue: 0,0:00:11.27,0:00:11.79,Default,,0,0,0,,缩回来
+Dialogue: 0,0:00:12.27,0:00:13.82,Default,,0,0,0,,脸上满是无措的慌乱

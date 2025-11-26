@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_002 Narration 19 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.02,Default,,0,0,0,,陈树立缓缓转身离开墓地
+Dialogue: 0,0:00:02.55,0:00:05.14,Default,,0,0,0,,背影挺得笔直步伐坚定仿佛
+Dialogue: 0,0:00:05.14,0:00:06.35,Default,,0,0,0,,卸下了千斤重担
+Dialogue: 0,0:00:06.89,0:00:08.47,Default,,0,0,0,,{\c&H0000FFFF&\b1}阳光{\c&H00FFFFFF&\b0}终于穿透厚厚的
+Dialogue: 0,0:00:08.47,0:00:11.27,Default,,0,0,0,,云层洒下一片温暖过往的
+Dialogue: 0,0:00:11.27,0:00:13.54,Default,,0,0,0,,恩怨情仇像过眼云烟般散去
+Dialogue: 0,0:00:13.94,0:00:16.09,Default,,0,0,0,,他的眼神慢慢归于平静

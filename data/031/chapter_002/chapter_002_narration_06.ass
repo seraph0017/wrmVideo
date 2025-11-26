@@ -1,0 +1,23 @@
+[Script Info]
+Title: chapter_002 Narration 06 Subtitle
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,36,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+Style: Highlight,Microsoft YaHei,36,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,2,2,2,10,10,427,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:01.29,Default,,0,0,0,,陈树立路过停车场
+Dialogue: 0,0:00:01.62,0:00:02.50,Default,,0,0,0,,瞥见地上的她
+Dialogue: 0,0:00:02.97,0:00:04.86,Default,,0,0,0,,随手摸出几张钞票扔在她
+Dialogue: 0,0:00:04.86,0:00:05.27,Default,,0,0,0,,面前
+Dialogue: 0,0:00:05.69,0:00:06.92,Default,,0,0,0,,脸上没什么表情
+Dialogue: 0,0:00:07.23,0:00:08.05,Default,,0,0,0,,转身就要走
+Dialogue: 0,0:00:08.51,0:00:10.39,Default,,0,0,0,,周围却有人忍不住指指点点
