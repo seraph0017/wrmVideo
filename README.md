@@ -4,7 +4,24 @@
 
 ## ✨ 最新更新
 
-- 🔧 **特定任务脚本生成器** (2025-11-24):
+- 🎬 **视频Prompt增强** (2025-11-27):
+  - **功能增强**: 支持在解说脚本中生成专门的视频Prompt，用于生成高质量的视频分镜
+  - **文件更新**:
+    - 新增 `video_scripts/20251124v1/narration_prompt.j2`: 包含`<视频prompt>`标签和40字限制的新模板
+    - 更新 `video_scripts/20251124v1/gen_script.py`: 支持新模板，增加单镜头解说40字限制验证，自动提取`<视频prompt>`
+    - 更新 `video_scripts/20251124v1/gen_narration_video.py`: 支持从narration文件中提取`<视频prompt>`用于视频生成，实现文本到视频的精准控制
+  - **约束调整**: 强制每个特写解说内容不超过40字，确保单镜头时长控制在12秒以内
+
+- � **模板结构升级** (2025-11-27):
+  - **文件变更**: 将 `narration_example.txt` 升级为 `video_scripts/20251124v1/narration_example.j2`
+  - **功能增强**:
+    - 支持Jinja2动态渲染，所有内容参数化（`<姓名>{{ character.name }}</姓名>`）
+    - 支持角色动态循环生成（`{% for character in characters %}`）
+    - 支持分镜自动枚举生成（`{% for i in range(1, 8) %}`）
+    - 包含最新的`<视频prompt>`标签支持
+  - **用途**: 用于生成标准化的XML骨架，辅助`gen_script.py`输出验证
+
+- �🔧 **特定任务脚本生成器** (2025-11-24):
   - **新增脚本**: `video_scripts/20251124v1/gen_script.py`
   - **功能增强**: 基于 `gen_script_v2.py` 的增强版本，适配特定的任务目录结构
   - **路径适配**: 自动识别并配置项目根目录路径，确保模块导入正常

@@ -1,0 +1,41 @@
+<第{{ chapter_num }}章节>
+<章节风格>{{ chapter_style }}</章节风格>
+<绘画风格>{{ art_style }}</绘画风格>
+<出镜人物>
+{% for character in characters %}
+<角色{{ loop.index }}>
+<姓名>{{ character.name }}</姓名>
+<角色类型>{{ character.type }}</角色类型>
+<性别>{{ character.gender }}</性别>
+<年龄段>{{ character.age_range }}</年龄段>
+<外貌特征>
+<发型>{{ character.appearance.hair_style }}</发型>
+<发色>{{ character.appearance.hair_color }}</发色>
+<面部特征>{{ character.appearance.facial_features }}</面部特征>
+<身材特征>{{ character.appearance.body_type }}</身材特征>
+<特殊标记>{{ character.appearance.special_mark }}</特殊标记>
+</外貌特征>
+<古代形象>
+<上衣>{{ character.ancient_outfit.top }}</上衣>
+<下装>{{ character.ancient_outfit.bottom }}</下装>
+<配饰>{{ character.ancient_outfit.accessories }}</配饰>
+</古代形象>
+</角色{{ loop.index }}>
+{% endfor %}
+</出镜人物>
+{% for i in range(1, 8) %}
+<分镜{{ i }}>
+{% for j in range(1, 4) %}
+<图片特写{{ j }}>
+<特写人物>
+<角色姓名>{{ scenes[i-1].closeups[j-1].character_name }}</角色姓名>
+<时代背景>{{ scenes[i-1].closeups[j-1].era }}</时代背景>
+<角色形象>{{ scenes[i-1].closeups[j-1].character_image }}</角色形象>
+</特写人物>
+<解说内容>{{ scenes[i-1].closeups[j-1].narration }}</解说内容>
+<图片prompt>{{ scenes[i-1].closeups[j-1].image_prompt }}</图片prompt>
+<视频prompt>{{ scenes[i-1].closeups[j-1].video_prompt }}</视频prompt>
+</图片特写{{ j }}>
+{% endfor %}
+</分镜{{ i }}>
+{% endfor %}

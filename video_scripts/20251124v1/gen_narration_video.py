@@ -283,7 +283,31 @@ def save_task_info(task_id, task_info, tasks_dir):
     
     print(f"任务信息已保存: {task_file}")
 
-def create_video_from_single_image_async(image_path, duration, output_path, max_retries=3):
+def extract_video_prompts(narration_path):
+    """
+    从narration文件中提取视频prompt
+    
+    Args:
+        narration_path: narration文件路径
+    
+    Returns:
+        list: 视频prompt列表
+    """
+    try:
+        if not os.path.exists(narration_path):
+            return []
+            
+        with open(narration_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+            
+        import re
+        prompts = re.findall(r'<视频prompt>(.*?)</视频prompt>', content, re.DOTALL)
+        return [p.strip() for p in prompts]
+    except Exception as e:
+        print(f"提取视频prompt失败: {e}")
+        return []
+
+def create_video_from_single_image_async(image_path, duration, output_path, max_retries=3, video_prompt=None):
     """
     使用单张图片异步生成视频，带重试机制
     
@@ -292,6 +316,7 @@ def create_video_from_single_image_async(image_path, duration, output_path, max_
         duration: 视频时长
         output_path: 输出视频路径
         max_retries: 最大重试次数
+        video_prompt: 视频生成提示词，如果为None则使用默认提示词
     
     Returns:
         bool: 是否成功提交任务
@@ -328,12 +353,16 @@ def create_video_from_single_image_async(image_path, duration, output_path, max_
             # 创建视频生成任务
             client = Ark(api_key=ARK_CONFIG["api_key"])
             
+            # 构建提示词
+            prompt_text = f"{video_prompt} --ratio 9:16 --dur {limited_duration}" if video_prompt else f"画面有明显的动态效果，动作大一些 --ratio 9:16 --dur {limited_duration}"
+            print(f"  使用提示词: {prompt_text}")
+            
             resp = client.content_generation.tasks.create(
                 model="doubao-seedance-1-0-lite-i2v-250428",
                 content=[
                     {
                         "type": "text",
-                        "text": f"画面有明显的动态效果，动作大一些 --ratio 9:16 --dur {limited_duration}"
+                        "text": prompt_text
                     },
                     {
                         "type": "image_url",
@@ -594,6 +623,23 @@ def generate_videos_for_chapter(chapter_dir):
         print(f"\n=== 匹配音效 ===")
         sound_effects = get_sound_effects_for_first_video(chapter_dir, work_dir)
         
+        # 提取视频prompts
+        print(f"\n=== 提取视频Prompts ===")
+        video_prompts = []
+        # 尝试查找 narration 文件
+        possible_narration_files = ['narration_01.txt', 'narration.txt', f'{chapter_name}_narration.txt']
+        for fname in possible_narration_files:
+            fpath = os.path.join(chapter_dir, fname)
+            if os.path.exists(fpath):
+                print(f"从 {fname} 提取Prompts")
+                video_prompts = extract_video_prompts(fpath)
+                if video_prompts:
+                    print(f"成功提取 {len(video_prompts)} 个视频Prompt")
+                    break
+        
+        if not video_prompts:
+             print("未找到视频Prompt，将使用默认提示词")
+        
         # 保存音效信息到文件
         if sound_effects:
             sound_effects_file = os.path.join(chapter_dir, 'sound_effects.json')
@@ -636,9 +682,20 @@ def generate_videos_for_chapter(chapter_dir):
                 duration = 5
                 print(f"警告: 未找到 {os.path.basename(narration_path)}，使用默认时长 {duration}s")
             
+            # 获取对应的视频Prompt
+            video_prompt = None
+            try:
+                # 尝试根据图片编号匹配Prompt (假设Prompt顺序与图片顺序一致)
+                prompt_idx = int(image_number) - 1
+                if 0 <= prompt_idx < len(video_prompts):
+                    video_prompt = video_prompts[prompt_idx]
+                    print(f"匹配到视频Prompt: {video_prompt[:20]}...")
+            except ValueError:
+                pass
+            
             # 提交视频生成任务
             print(f"提交视频生成任务: {os.path.basename(image_path)} -> {os.path.basename(video_path)}")
-            if create_video_from_single_image_async(image_path, duration, video_path):
+            if create_video_from_single_image_async(image_path, duration, video_path, video_prompt=video_prompt):
                 success_count += 1
                 print(f"✓ 第 {idx} 个视频任务提交成功")
             else:

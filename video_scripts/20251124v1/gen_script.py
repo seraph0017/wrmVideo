@@ -367,14 +367,14 @@ class ScriptGeneratorV2:
         """
         try:
             # 使用Jinja2模板生成提示词
-            template_path = os.path.join(project_root, 'chapter_narration_prompt.j2')
+            template_path = os.path.join(current_dir, 'narration_prompt.j2')
             
             if not os.path.exists(template_path):
                 raise FileNotFoundError(f"模板文件不存在：{template_path}")
             
             # 设置Jinja2环境
-            env = Environment(loader=FileSystemLoader(project_root))
-            template = env.get_template('chapter_narration_prompt.j2')
+            env = Environment(loader=FileSystemLoader(current_dir))
+            template = env.get_template('narration_prompt.j2')
             
             # 渲染模板
             prompt = template.render(
@@ -438,6 +438,19 @@ class ScriptGeneratorV2:
         if not explanation_matches:
             return False, "未找到解说内容标签"
         
+        # 验证每个解说内容的字数（强制要求：每个不超过40字）
+        for i, explanation in enumerate(explanation_matches):
+            length = len(explanation.strip())
+            if length > 40:
+                return False, f"第 {i+1} 个解说内容超过40字限制 ({length}字): {explanation.strip()[:20]}..."
+        
+        # 验证视频prompt是否存在且数量匹配
+        video_prompt_pattern = r'<视频prompt>(.*?)</视频prompt>'
+        video_prompt_matches = re.findall(video_prompt_pattern, cleaned_narration, re.DOTALL)
+        
+        if len(video_prompt_matches) != len(explanation_matches):
+            return False, f"视频prompt数量 ({len(video_prompt_matches)}) 与解说内容数量 ({len(explanation_matches)}) 不匹配"
+        
         # 计算所有解说内容的总字数（新格式：30个特写的解说内容）
         total_explanation_text = ''.join(explanation_matches)
         explanation_length = len(total_explanation_text.strip())
@@ -446,12 +459,6 @@ class ScriptGeneratorV2:
         expected_explanations = 21
         if len(explanation_matches) != expected_explanations:
             print(f"提示：解说内容数量不正确，期望{expected_explanations}个，实际{len(explanation_matches)}个，但继续生成")
-        
-        if explanation_length < min_length:
-            print(f"提示：解说文本长度不足，当前{explanation_length}字，最少建议{min_length}字，但继续生成")
-        
-        if explanation_length > max_length:
-            print(f"提示：解说文本过长，当前{explanation_length}字，最多建议{max_length}字，但继续生成")
         
         # 验证图片特写是否为单人画面（仅提示，不强制重新生成）
         try:
