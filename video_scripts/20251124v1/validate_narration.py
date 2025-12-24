@@ -66,6 +66,19 @@ def count_chinese_characters(text):
     chinese_chars = re.findall(r'[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]', text)
     return len(chinese_chars)
 
+def clean_llm_output(text):
+    """
+    清理LLM输出，移除<think>标签和可能的Markdown代码块
+    """
+    # 移除 <think>...</think>
+    text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL)
+    
+    # 移除 ```xml ... ``` 或 ``` ... ```
+    text = re.sub(r'```\w*\n', '', text)
+    text = re.sub(r'```', '', text)
+    
+    return text.strip()
+
 def rewrite_narration_with_llm(client, original_text, max_retries=5):
     """
     使用LLM改写解说内容，将字数精准控制在30-32字，支持重试直到满足标准
@@ -119,6 +132,7 @@ def rewrite_narration_with_llm(client, original_text, max_retries=5):
             )
             
             rewritten_text = resp.choices[0].message.content.strip()
+            rewritten_text = clean_llm_output(rewritten_text)
             
             # 验证改写后的字数
             char_count = count_chinese_characters(rewritten_text)
@@ -229,6 +243,7 @@ def rewrite_entire_narration_with_llm(client, all_narrations, max_retries=3):
             )
             
             rewritten_text = resp.choices[0].message.content.strip()
+            rewritten_text = clean_llm_output(rewritten_text)
             
             # 解析重写后的内容
             rewritten_narrations = []
@@ -702,6 +717,7 @@ def fix_scene_structure_with_llm(client, scene_content, scene_number, issue_info
             )
             
             fixed_content = resp.choices[0].message.content.strip()
+            fixed_content = clean_llm_output(fixed_content)
             
             # 验证修复后的内容
             test_content = f"<分镜{scene_number}>\n{fixed_content}\n</分镜{scene_number}>"
@@ -809,6 +825,7 @@ def fix_closeup_structure_with_llm(client, closeup_content, scene_number, closeu
             )
             
             fixed_content = resp.choices[0].message.content.strip()
+            fixed_content = clean_llm_output(fixed_content)
             
             # 后处理：清理重复的结束标签
             fixed_content = clean_duplicate_tags(fixed_content)
@@ -1000,6 +1017,15 @@ def validate_narration_file(narration_file_path, client=None, auto_rewrite=False
         # 初始化更新内容变量
         updated_content = content
         content_updated = False
+        
+        # 0. 基于模板的严格结构验证与修复 (优先级最高)
+        if client:
+            validator = StructureValidator(client)
+            fixed_content, is_structure_updated = validator.validate_and_fix(updated_content, narration_file_path)
+            if is_structure_updated:
+                updated_content = fixed_content
+                content_updated = True
+                print(f"  [严格模式] 已根据模板修复文件结构")
         
         # 检验和修复XML标签闭合问题
         fixed_content, has_tag_fixes, tag_errors = validate_and_fix_xml_tags(updated_content)
@@ -1337,8 +1363,11 @@ def extract_character_descriptions(content):
         # 服装风格 - 优先使用 <现代形象> 标签（如果存在）
         # 先尝试查找 <现代形象> 标签
         modern_clothing_match = re.search(r'<现代形象>(.*?)</现代形象>', character_block, re.DOTALL)
+        ancient_clothing_match = re.search(r'<古代形象>(.*?)</古代形象>', character_block, re.DOTALL)
+        
         if modern_clothing_match:
             clothing_text = modern_clothing_match.group(1).strip()
+            style_prefix = "现代着装"
             
             # 上衣
             top_match = re.search(r'<上衣>(.*?)</上衣>', clothing_text)
@@ -1356,8 +1385,30 @@ def extract_character_descriptions(content):
                 accessory_text = accessory_match.group(1).strip()
                 if accessory_text and accessory_text != '无明显配饰' and accessory_text != '无':
                     description_parts.append(f"配饰：{accessory_text}")
+
+        elif ancient_clothing_match:
+            clothing_text = ancient_clothing_match.group(1).strip()
+            style_prefix = "古代着装"
+            
+            # 上衣
+            top_match = re.search(r'<上衣>(.*?)</上衣>', clothing_text)
+            if top_match:
+                description_parts.append(f"上衣：{top_match.group(1).strip()}")
+            
+            # 下装
+            bottom_match = re.search(r'<下装>(.*?)</下装>', clothing_text)
+            if bottom_match:
+                description_parts.append(f"下装：{bottom_match.group(1).strip()}")
+            
+            # 配饰
+            accessory_match = re.search(r'<配饰>(.*?)</配饰>', clothing_text)
+            if accessory_match:
+                accessory_text = accessory_match.group(1).strip()
+                if accessory_text and accessory_text != '无明显配饰' and accessory_text != '无':
+                    description_parts.append(f"配饰：{accessory_text}")
+
         else:
-            # 如果没有 <现代形象>，尝试 <服装风格>
+            # 如果没有 <现代形象> 或 <古代形象>，尝试 <服装风格>
             clothing_match = re.search(r'<服装风格>(.*?)</服装风格>', character_block, re.DOTALL)
             if clothing_match:
                 clothing_text = clothing_match.group(1).strip()
@@ -1386,7 +1437,7 @@ def extract_character_descriptions(content):
     return character_descriptions
 
 
-def merge_character_description_to_prompt(prompt, character_name, character_descriptions):
+def merge_character_description_to_prompt(prompt, character_name, character_descriptions, local_description=""):
     """
     将人物描述融合到图片prompt中
     
@@ -1394,22 +1445,34 @@ def merge_character_description_to_prompt(prompt, character_name, character_desc
         prompt (str): 原始图片prompt
         character_name (str): 人物名称
         character_descriptions (dict): 人物描述字典
+        local_description (str): 特写中的局部人物形象描述
         
     Returns:
         str: 融合了人物描述的新prompt
     """
-    if character_name not in character_descriptions:
-        return prompt
+    # 获取基础描述
+    base_desc = character_descriptions.get(character_name, "")
     
-    character_desc = character_descriptions[character_name]
+    # 组合描述
+    full_desc_parts = []
+    if base_desc:
+        full_desc_parts.append(base_desc)
+    if local_description:
+        full_desc_parts.append(local_description)
+        
+    full_desc = "，".join(full_desc_parts)
+    
+    # 如果没有任何描述，直接返回原prompt
+    if not full_desc:
+        return prompt
     
     # 如果prompt中已经包含了人物名称，则在其后添加描述
     if character_name in prompt:
         # 替换人物名称为"人物名称（描述）"的格式
-        enhanced_prompt = prompt.replace(character_name, f"{character_name}（{character_desc}）")
+        enhanced_prompt = prompt.replace(character_name, f"{character_name}（{full_desc}）")
     else:
         # 如果prompt中没有人物名称，则在开头添加人物描述
-        enhanced_prompt = f"{character_name}（{character_desc}），{prompt}"
+        enhanced_prompt = f"{character_name}（{full_desc}），{prompt}"
     
     return enhanced_prompt
 
@@ -1512,7 +1575,7 @@ def split_narration_by_closeups(narration_file_path, output_dir=None):
             
             # 融合人物描述到prompt中
             enhanced_prompt = merge_character_description_to_prompt(
-                original_prompt, character_name, character_descriptions
+                original_prompt, character_name, character_descriptions, character_image
             )
             
             # 生成输出文件名 - 按照新的命名格式：scene_X_closeup_Y_角色名.txt
@@ -1826,6 +1889,327 @@ def main():
     
     validate_data_directory(data_dir, auto_rewrite, auto_fix_characters, auto_fix_tags, auto_fix_structure)
 
+class StructureValidator:
+    """
+    基于narration_example.j2模板的严格结构验证器
+    """
+    def __init__(self, client=None):
+        self.client = client
+        # 定义必要的标签结构
+        self.required_role_tags = [
+            '姓名', '角色类型', '性别', '年龄段', 
+            '外貌特征', '古代形象'  # 简化检查，只检查一级标签
+        ]
+        self.required_closeup_tags = [
+            '特写人物', '解说内容', '图片prompt', '视频prompt'
+        ]
+        self.required_character_info_tags = [
+            '角色姓名', '时代背景', '角色形象'
+        ]
+
+    def get_original_content(self, narration_path):
+        """尝试获取对应的原始小说内容"""
+        try:
+            original_path = os.path.join(os.path.dirname(narration_path), 'original_content.txt')
+            if os.path.exists(original_path):
+                with open(original_path, 'r', encoding='utf-8') as f:
+                    return f.read()
+        except Exception:
+            pass
+        return ""
+
+    def validate_and_fix(self, content, narration_path):
+        """
+        验证并修复内容结构
+        Returns: (fixed_content, is_updated)
+        """
+        original_content_text = self.get_original_content(narration_path)
+        current_content = content
+        is_updated = False
+        
+        # 1. 验证头部信息
+        current_content, updated = self._validate_fix_header(current_content, original_content_text)
+        if updated: is_updated = True
+
+        # 2. 验证出镜人物
+        current_content, updated = self._validate_fix_characters(current_content, original_content_text)
+        if updated: is_updated = True
+
+        # 3. 验证分镜 (1-7)
+        current_content, updated = self._validate_fix_scenes(current_content, original_content_text)
+        if updated: is_updated = True
+
+        return current_content, is_updated
+
+    def _validate_fix_header(self, content, context):
+        """验证并修复头部信息"""
+        # 检查章节风格和绘画风格
+        has_style = re.search(r'<章节风格>.*?</章节风格>', content, re.DOTALL)
+        has_art = re.search(r'<绘画风格>.*?</绘画风格>', content, re.DOTALL)
+        
+        if has_style and has_art:
+            return content, False
+            
+        if not self.client:
+            print("  警告: 头部信息缺失但无LLM客户端，跳过修复")
+            return content, False
+
+        print("  修复头部信息...")
+        prompt = f"""请为以下小说章节生成头部信息，必须包含<章节风格>和<绘画风格>。
+章节风格枚举：通用/悬疑
+绘画风格枚举：写实
+
+小说内容：
+{context[:1000]}...
+
+返回格式：
+<章节风格>...</章节风格>
+<绘画风格>...</绘画风格>
+"""
+        try:
+            resp = self.client.chat.completions.create(
+                model="doubao-seed-1-6-flash-250715",
+                messages=[{"role": "user", "content": prompt}]
+            )
+            header = resp.choices[0].message.content.strip()
+            header = clean_llm_output(header)
+            
+            # 插入到开头
+            if '<第' in content:
+                chapter_tag = re.search(r'<第.*?章节>', content).group(0)
+                new_content = content.replace(chapter_tag, f"{chapter_tag}\n{header}")
+            else:
+                new_content = header + "\n" + content
+            return new_content, True
+        except Exception as e:
+            print(f"  修复头部信息失败: {e}")
+            return content, False
+
+    def _validate_fix_characters(self, content, context):
+        """验证并修复出镜人物"""
+        char_block_match = re.search(r'<出镜人物>(.*?)</出镜人物>', content, re.DOTALL)
+        if not char_block_match:
+            # 缺失整个出镜人物块
+            return self._regenerate_characters(content, context)
+            
+        char_block = char_block_match.group(1)
+        roles = re.findall(r'<角色\d+>', char_block)
+        
+        if not roles:
+            return self._regenerate_characters(content, context)
+            
+        # 检查每个角色的必要标签
+        needs_fix = False
+        for role_tag in roles:
+            role_num = re.search(r'\d+', role_tag).group(0)
+            role_content_match = re.search(f'<{role_tag}>(.*?)</{role_tag}>', char_block, re.DOTALL)
+            if not role_content_match:
+                needs_fix = True
+                break
+            
+            role_content = role_content_match.group(1)
+            for tag in self.required_role_tags:
+                if f'<{tag}>' not in role_content:
+                    needs_fix = True
+                    break
+            if needs_fix: break
+            
+        if needs_fix:
+            return self._regenerate_characters(content, context)
+            
+        return content, False
+
+    def _regenerate_characters(self, content, context):
+        if not self.client:
+            print("  警告: 出镜人物结构错误但无LLM客户端，跳过修复")
+            return content, False
+            
+        print("  重新生成出镜人物模块...")
+        prompt = f"""请根据小说内容生成<出镜人物>模块。
+要求格式如下：
+<出镜人物>
+<角色1>
+<姓名>...</姓名>
+<角色类型>...</角色类型>
+<性别>...</性别>
+<年龄段>...</年龄段>
+<外貌特征>
+<发型>...</发型>
+<发色>...</发色>
+<面部特征>...</面部特征>
+<身材特征>...</身材特征>
+<特殊标记>...</特殊标记>
+</外貌特征>
+<古代形象>
+<上衣>...</上衣>
+<下装>...</下装>
+<配饰>...</配饰>
+</古代形象>
+</角色1>
+...
+</出镜人物>
+
+小说内容：
+{context[:2000]}...
+"""
+        try:
+            resp = self.client.chat.completions.create(
+                model="doubao-seed-1-6-flash-250715",
+                messages=[{"role": "user", "content": prompt}]
+            )
+            new_chars = resp.choices[0].message.content.strip()
+            new_chars = clean_llm_output(new_chars)
+            
+            # 提取纯净的<出镜人物>块
+            match = re.search(r'<出镜人物>.*?</出镜人物>', new_chars, re.DOTALL)
+            if match:
+                new_chars = match.group(0)
+            
+            # 替换或插入
+            if '<出镜人物>' in content:
+                content = re.sub(r'<出镜人物>.*?</出镜人物>', new_chars, content, flags=re.DOTALL)
+            else:
+                # 插入到风格标签后
+                style_match = re.search(r'<绘画风格>.*?</绘画风格>', content)
+                if style_match:
+                    pos = style_match.end()
+                    content = content[:pos] + "\n" + new_chars + content[pos:]
+                else:
+                    content = new_chars + "\n" + content
+            return content, True
+        except Exception as e:
+            print(f"  重生成出镜人物失败: {e}")
+            return content, False
+
+    def _validate_fix_scenes(self, content, context):
+        """验证并修复分镜 (1-7)"""
+        updated = False
+        for i in range(1, 8):
+            scene_tag = f'分镜{i}'
+            scene_pattern = f'<{scene_tag}>(.*?)</{scene_tag}>'
+            scene_match = re.search(scene_pattern, content, re.DOTALL)
+            
+            needs_regen = False
+            if not scene_match:
+                print(f"  缺失{scene_tag}，准备生成...")
+                needs_regen = True
+            else:
+                scene_content = scene_match.group(1)
+                # 检查是否有3个特写
+                closeups = re.findall(r'<图片特写\d+>', scene_content)
+                if len(closeups) != 3:
+                    print(f"  {scene_tag}特写数量不正确(当前{len(closeups)}个)，准备重生成...")
+                    needs_regen = True
+                else:
+                    # 检查特写内部结构
+                    for j in range(1, 4):
+                        closeup_tag = f'图片特写{j}'
+                        closeup_pattern = f'<{closeup_tag}>(.*?)</{closeup_tag}>'
+                        closeup_match = re.search(closeup_pattern, scene_content, re.DOTALL)
+                        if not closeup_match:
+                            needs_regen = True
+                            break
+                        
+                        c_content = closeup_match.group(1)
+                        # 检查必要标签
+                        for tag in self.required_closeup_tags:
+                            if f'<{tag}>' not in c_content:
+                                print(f"  {scene_tag}{closeup_tag}缺失<{tag}>，准备重生成...")
+                                needs_regen = True
+                                break
+                        
+                        # 检查特写人物内部标签
+                        char_info_match = re.search(r'<特写人物>(.*?)</特写人物>', c_content, re.DOTALL)
+                        if char_info_match:
+                            char_info = char_info_match.group(1)
+                            for tag in self.required_character_info_tags:
+                                if f'<{tag}>' not in char_info:
+                                    print(f"  {scene_tag}{closeup_tag}特写人物缺失<{tag}>，准备重生成...")
+                                    needs_regen = True
+                                    break
+                        else:
+                            needs_regen = True
+                            
+                        if needs_regen: break
+
+            if needs_regen:
+                new_scene = self._regenerate_scene(i, context, content) # content passed for character context
+                if new_scene:
+                    if f'<{scene_tag}>' in content:
+                        content = re.sub(f'<{scene_tag}>.*?</{scene_tag}>', new_scene, content, flags=re.DOTALL)
+                    else:
+                        # Append to end or after previous scene
+                        if i > 1:
+                            prev_scene = f'</分镜{i-1}>'
+                            if prev_scene in content:
+                                content = content.replace(prev_scene, f"{prev_scene}\n{new_scene}")
+                            else:
+                                content += f"\n{new_scene}"
+                        else:
+                            # Scene 1, append after characters
+                            char_end = '</出镜人物>'
+                            if char_end in content:
+                                content = content.replace(char_end, f"{char_end}\n{new_scene}")
+                            else:
+                                content += f"\n{new_scene}"
+                    updated = True
+        
+        return content, updated
+
+    def _regenerate_scene(self, scene_num, context, full_narration):
+        if not self.client:
+            print(f"  警告: {scene_num}结构错误但无LLM客户端，跳过修复")
+            return None
+            
+        # 提取出镜人物作为参考
+        char_block = ""
+        match = re.search(r'<出镜人物>.*?</出镜人物>', full_narration, re.DOTALL)
+        if match:
+            char_block = match.group(0)
+
+        print(f"  正在重新生成分镜{scene_num}...")
+        prompt = f"""请为小说章节生成第{scene_num}个分镜内容。
+严格按照以下格式（包含3个特写）：
+<分镜{scene_num}>
+<图片特写1>
+<特写人物>
+<角色姓名>...</角色姓名>
+<时代背景>...</时代背景>
+<角色形象>...</角色形象>
+</特写人物>
+<解说内容>...</解说内容>
+<图片prompt>...</图片prompt>
+<视频prompt>...</视频prompt>
+</图片特写1>
+<图片特写2>
+...
+<图片特写3>
+...
+</分镜{scene_num}>
+
+参考出镜人物：
+{char_block}
+
+小说内容片段：
+{context[:3000]}...
+"""
+        try:
+            resp = self.client.chat.completions.create(
+                model="doubao-seed-1-6-flash-250715",
+                messages=[{"role": "user", "content": prompt}]
+            )
+            new_scene = resp.choices[0].message.content.strip()
+            new_scene = clean_llm_output(new_scene)
+            # 提取纯净的分镜块
+            tag = f"分镜{scene_num}"
+            match = re.search(f'<{tag}>.*?</{tag}>', new_scene, re.DOTALL)
+            if match:
+                return match.group(0)
+            return new_scene
+        except Exception as e:
+            print(f"  重生成分镜{scene_num}失败: {e}")
+            return None
+
 def fix_incomplete_closeups_by_scene(client, content):
     """
     按分镜修复不完整的图片特写，使用LLM根据模板补全缺失的标签
@@ -1915,6 +2299,7 @@ def fix_incomplete_closeups_by_scene(client, content):
                 )
                 
                 fixed_scene = resp.choices[0].message.content.strip()
+                fixed_scene = clean_llm_output(fixed_scene)
                 
                 # 替换原分镜内容
                 original_scene = scene_match.group(0)
@@ -1926,6 +2311,646 @@ def fix_incomplete_closeups_by_scene(client, content):
                 print(f"  {scene_start_tag}修复失败: {e}")
     
     return fixed_content, has_fixes
+
+
+class StructureValidator:
+    """
+    基于narration_example.j2模板的严格结构验证器
+    """
+    def __init__(self, client=None):
+        self.client = client
+        # 定义必要的标签结构
+        self.required_role_tags = [
+            '姓名', '角色类型', '性别', '年龄段', 
+            '外貌特征', '古代形象'  # 简化检查，只检查一级标签
+        ]
+        self.required_closeup_tags = [
+            '特写人物', '解说内容', '图片prompt', '视频prompt'
+        ]
+        self.required_character_info_tags = [
+            '角色姓名', '时代背景', '角色形象'
+        ]
+
+    def get_original_content(self, narration_path):
+        """尝试获取对应的原始小说内容"""
+        try:
+            original_path = os.path.join(os.path.dirname(narration_path), 'original_content.txt')
+            if os.path.exists(original_path):
+                with open(original_path, 'r', encoding='utf-8') as f:
+                    return f.read()
+        except Exception:
+            pass
+        return ""
+
+    def validate_and_fix(self, content, narration_path):
+        """
+        验证并修复内容结构
+        Returns: (fixed_content, is_updated)
+        """
+        original_content_text = self.get_original_content(narration_path)
+        current_content = content
+        is_updated = False
+        
+        # 1. 验证头部信息
+        current_content, updated = self._validate_fix_header(current_content, original_content_text)
+        if updated: is_updated = True
+
+        # 2. 验证出镜人物
+        current_content, updated = self._validate_fix_characters(current_content, original_content_text)
+        if updated: is_updated = True
+
+        # 3. 验证分镜 (1-7)
+        current_content, updated = self._validate_fix_scenes(current_content, original_content_text)
+        if updated: is_updated = True
+
+        return current_content, is_updated
+
+    def _validate_fix_header(self, content, context):
+        """验证并修复头部信息"""
+        # 检查章节风格和绘画风格
+        has_style = re.search(r'<章节风格>.*?</章节风格>', content, re.DOTALL)
+        has_art = re.search(r'<绘画风格>.*?</绘画风格>', content, re.DOTALL)
+        
+        if has_style and has_art:
+            return content, False
+            
+        if not self.client:
+            print("  警告: 头部信息缺失但无LLM客户端，跳过修复")
+            return content, False
+
+        print("  修复头部信息...")
+        prompt = f"""请为以下小说章节生成头部信息，必须包含<章节风格>和<绘画风格>。
+章节风格枚举：通用/悬疑
+绘画风格枚举：写实
+
+小说内容：
+{context[:1000]}...
+
+返回格式：
+<章节风格>...</章节风格>
+<绘画风格>...</绘画风格>
+"""
+        try:
+            resp = self.client.chat.completions.create(
+                model="doubao-seed-1-6-flash-250715",
+                messages=[{"role": "user", "content": prompt}]
+            )
+            header = resp.choices[0].message.content.strip()
+            header = clean_llm_output(header)
+            
+            # 插入到开头
+            if '<第' in content:
+                chapter_tag = re.search(r'<第.*?章节>', content).group(0)
+                new_content = content.replace(chapter_tag, f"{chapter_tag}\n{header}")
+            else:
+                new_content = header + "\n" + content
+            return new_content, True
+        except Exception as e:
+            print(f"  修复头部信息失败: {e}")
+            return content, False
+
+    def _validate_fix_characters(self, content, context):
+        """验证并修复出镜人物"""
+        char_block_match = re.search(r'<出镜人物>(.*?)</出镜人物>', content, re.DOTALL)
+        if not char_block_match:
+            # 缺失整个出镜人物块
+            return self._regenerate_characters(content, context)
+            
+        char_block = char_block_match.group(1)
+        roles = re.findall(r'<角色\d+>', char_block)
+        
+        if not roles:
+            return self._regenerate_characters(content, context)
+            
+        # 检查每个角色的必要标签
+        needs_fix = False
+        for role_tag in roles:
+            role_num = re.search(r'\d+', role_tag).group(0)
+            role_content_match = re.search(f'<{role_tag}>(.*?)</{role_tag}>', char_block, re.DOTALL)
+            if not role_content_match:
+                needs_fix = True
+                break
+            
+            role_content = role_content_match.group(1)
+            for tag in self.required_role_tags:
+                if f'<{tag}>' not in role_content:
+                    needs_fix = True
+                    break
+            if needs_fix: break
+            
+        if needs_fix:
+            return self._regenerate_characters(content, context)
+            
+        return content, False
+
+    def _regenerate_characters(self, content, context):
+        if not self.client:
+            print("  警告: 出镜人物结构错误但无LLM客户端，跳过修复")
+            return content, False
+            
+        print("  重新生成出镜人物模块...")
+        prompt = f"""请根据小说内容生成<出镜人物>模块。
+要求格式如下：
+<出镜人物>
+<角色1>
+<姓名>...</姓名>
+<角色类型>...</角色类型>
+<性别>...</性别>
+<年龄段>...</年龄段>
+<外貌特征>
+<发型>...</发型>
+<发色>...</发色>
+<面部特征>...</面部特征>
+<身材特征>...</身材特征>
+<特殊标记>...</特殊标记>
+</外貌特征>
+<古代形象>
+<上衣>...</上衣>
+<下装>...</下装>
+<配饰>...</配饰>
+</古代形象>
+</角色1>
+...
+</出镜人物>
+
+小说内容：
+{context[:2000]}...
+"""
+        try:
+            resp = self.client.chat.completions.create(
+                model="doubao-seed-1-6-flash-250715",
+                messages=[{"role": "user", "content": prompt}]
+            )
+            new_chars = resp.choices[0].message.content.strip()
+            new_chars = clean_llm_output(new_chars)
+            
+            # 提取纯净的<出镜人物>块
+            match = re.search(r'<出镜人物>.*?</出镜人物>', new_chars, re.DOTALL)
+            if match:
+                new_chars = match.group(0)
+            
+            # 替换或插入
+            if '<出镜人物>' in content:
+                content = re.sub(r'<出镜人物>.*?</出镜人物>', new_chars, content, flags=re.DOTALL)
+            else:
+                # 插入到风格标签后
+                style_match = re.search(r'<绘画风格>.*?</绘画风格>', content)
+                if style_match:
+                    pos = style_match.end()
+                    content = content[:pos] + "\n" + new_chars + content[pos:]
+                else:
+                    content = new_chars + "\n" + content
+            return content, True
+        except Exception as e:
+            print(f"  重生成出镜人物失败: {e}")
+            return content, False
+
+    def _validate_fix_scenes(self, content, context):
+        """验证并修复分镜 (1-7)"""
+        updated = False
+        for i in range(1, 8):
+            scene_tag = f'分镜{i}'
+            scene_pattern = f'<{scene_tag}>(.*?)</{scene_tag}>'
+            scene_match = re.search(scene_pattern, content, re.DOTALL)
+            
+            needs_regen = False
+            if not scene_match:
+                print(f"  缺失{scene_tag}，准备生成...")
+                needs_regen = True
+            else:
+                scene_content = scene_match.group(1)
+                # 检查是否有3个特写
+                closeups = re.findall(r'<图片特写\d+>', scene_content)
+                if len(closeups) != 3:
+                    print(f"  {scene_tag}特写数量不正确(当前{len(closeups)}个)，准备重生成...")
+                    needs_regen = True
+                else:
+                    # 检查特写内部结构
+                    for j in range(1, 4):
+                        closeup_tag = f'图片特写{j}'
+                        closeup_pattern = f'<{closeup_tag}>(.*?)</{closeup_tag}>'
+                        closeup_match = re.search(closeup_pattern, scene_content, re.DOTALL)
+                        if not closeup_match:
+                            needs_regen = True
+                            break
+                        
+                        c_content = closeup_match.group(1)
+                        # 检查必要标签
+                        for tag in self.required_closeup_tags:
+                            if f'<{tag}>' not in c_content:
+                                print(f"  {scene_tag}{closeup_tag}缺失<{tag}>，准备重生成...")
+                                needs_regen = True
+                                break
+                        
+                        # 检查特写人物内部标签
+                        char_info_match = re.search(r'<特写人物>(.*?)</特写人物>', c_content, re.DOTALL)
+                        if char_info_match:
+                            char_info = char_info_match.group(1)
+                            for tag in self.required_character_info_tags:
+                                if f'<{tag}>' not in char_info:
+                                    print(f"  {scene_tag}{closeup_tag}特写人物缺失<{tag}>，准备重生成...")
+                                    needs_regen = True
+                                    break
+                        else:
+                            needs_regen = True
+                            
+                        if needs_regen: break
+
+            if needs_regen:
+                new_scene = self._regenerate_scene(i, context, content) # content passed for character context
+                if new_scene:
+                    if f'<{scene_tag}>' in content:
+                        content = re.sub(f'<{scene_tag}>.*?</{scene_tag}>', new_scene, content, flags=re.DOTALL)
+                    else:
+                        # Append to end or after previous scene
+                        if i > 1:
+                            prev_scene = f'</分镜{i-1}>'
+                            if prev_scene in content:
+                                content = content.replace(prev_scene, f"{prev_scene}\n{new_scene}")
+                            else:
+                                content += f"\n{new_scene}"
+                        else:
+                            # Scene 1, append after characters
+                            char_end = '</出镜人物>'
+                            if char_end in content:
+                                content = content.replace(char_end, f"{char_end}\n{new_scene}")
+                            else:
+                                content += f"\n{new_scene}"
+                    updated = True
+        
+        return content, updated
+
+    def _regenerate_scene(self, scene_num, context, full_narration):
+        if not self.client:
+            print(f"  警告: {scene_num}结构错误但无LLM客户端，跳过修复")
+            return None
+            
+        # 提取出镜人物作为参考
+        char_block = ""
+        match = re.search(r'<出镜人物>.*?</出镜人物>', full_narration, re.DOTALL)
+        if match:
+            char_block = match.group(0)
+
+        print(f"  正在重新生成分镜{scene_num}...")
+        prompt = f"""请为小说章节生成第{scene_num}个分镜内容。
+严格按照以下格式（包含3个特写）：
+<分镜{scene_num}>
+<图片特写1>
+<特写人物>
+<角色姓名>...</角色姓名>
+<时代背景>...</时代背景>
+<角色形象>...</角色形象>
+</特写人物>
+<解说内容>...</解说内容>
+<图片prompt>...</图片prompt>
+<视频prompt>...</视频prompt>
+</图片特写1>
+<图片特写2>
+...
+<图片特写3>
+...
+</分镜{scene_num}>
+
+参考出镜人物：
+{char_block}
+
+小说内容片段：
+{context[:3000]}...
+"""
+        try:
+            resp = self.client.chat.completions.create(
+                model="doubao-seed-1-6-flash-250715",
+                messages=[{"role": "user", "content": prompt}]
+            )
+            new_scene = resp.choices[0].message.content.strip()
+            new_scene = clean_llm_output(new_scene)
+            # 提取纯净的分镜块
+            tag = f"分镜{scene_num}"
+            match = re.search(f'<{tag}>.*?</{tag}>', new_scene, re.DOTALL)
+            if match:
+                return match.group(0)
+            return new_scene
+        except Exception as e:
+            print(f"  重生成分镜{scene_num}失败: {e}")
+            return None
+
+class StructureValidator:
+    """
+    基于narration_example.j2模板的严格结构验证器
+    """
+    def __init__(self, client=None):
+        self.client = client
+        # 定义必要的标签结构
+        self.required_role_tags = [
+            '姓名', '角色类型', '性别', '年龄段', 
+            '外貌特征', '古代形象'  # 简化检查，只检查一级标签
+        ]
+        self.required_closeup_tags = [
+            '特写人物', '解说内容', '图片prompt', '视频prompt'
+        ]
+        self.required_character_info_tags = [
+            '角色姓名', '时代背景', '角色形象'
+        ]
+
+    def get_original_content(self, narration_path):
+        """尝试获取对应的原始小说内容"""
+        try:
+            original_path = os.path.join(os.path.dirname(narration_path), 'original_content.txt')
+            if os.path.exists(original_path):
+                with open(original_path, 'r', encoding='utf-8') as f:
+                    return f.read()
+        except Exception:
+            pass
+        return ""
+
+    def validate_and_fix(self, content, narration_path):
+        """
+        验证并修复内容结构
+        Returns: (fixed_content, is_updated)
+        """
+        original_content_text = self.get_original_content(narration_path)
+        current_content = content
+        is_updated = False
+        
+        # 1. 验证头部信息
+        current_content, updated = self._validate_fix_header(current_content, original_content_text)
+        if updated: is_updated = True
+
+        # 2. 验证出镜人物
+        current_content, updated = self._validate_fix_characters(current_content, original_content_text)
+        if updated: is_updated = True
+
+        # 3. 验证分镜 (1-7)
+        current_content, updated = self._validate_fix_scenes(current_content, original_content_text)
+        if updated: is_updated = True
+
+        return current_content, is_updated
+
+    def _validate_fix_header(self, content, context):
+        """验证并修复头部信息"""
+        # 检查章节风格和绘画风格
+        has_style = re.search(r'<章节风格>.*?</章节风格>', content, re.DOTALL)
+        has_art = re.search(r'<绘画风格>.*?</绘画风格>', content, re.DOTALL)
+        
+        if has_style and has_art:
+            return content, False
+            
+        if not self.client:
+            print("  警告: 头部信息缺失但无LLM客户端，跳过修复")
+            return content, False
+
+        print("  修复头部信息...")
+        prompt = f"""请为以下小说章节生成头部信息，必须包含<章节风格>和<绘画风格>。
+章节风格枚举：通用/悬疑
+绘画风格枚举：写实
+
+小说内容：
+{context[:1000]}...
+
+返回格式：
+<章节风格>...</章节风格>
+<绘画风格>...</绘画风格>
+"""
+        try:
+            resp = self.client.chat.completions.create(
+                model="doubao-seed-1-6-flash-250715",
+                messages=[{"role": "user", "content": prompt}]
+            )
+            header = resp.choices[0].message.content.strip()
+            
+            # 插入到开头
+            if '<第' in content:
+                chapter_tag = re.search(r'<第.*?章节>', content).group(0)
+                new_content = content.replace(chapter_tag, f"{chapter_tag}\n{header}")
+            else:
+                new_content = header + "\n" + content
+            return new_content, True
+        except Exception as e:
+            print(f"  修复头部信息失败: {e}")
+            return content, False
+
+    def _validate_fix_characters(self, content, context):
+        """验证并修复出镜人物"""
+        char_block_match = re.search(r'<出镜人物>(.*?)</出镜人物>', content, re.DOTALL)
+        if not char_block_match:
+            # 缺失整个出镜人物块
+            return self._regenerate_characters(content, context)
+            
+        char_block = char_block_match.group(1)
+        roles = re.findall(r'<角色\d+>', char_block)
+        
+        if not roles:
+            return self._regenerate_characters(content, context)
+            
+        # 检查每个角色的必要标签
+        needs_fix = False
+        for role_tag in roles:
+            role_num = re.search(r'\d+', role_tag).group(0)
+            role_content_match = re.search(f'<{role_tag}>(.*?)</{role_tag}>', char_block, re.DOTALL)
+            if not role_content_match:
+                needs_fix = True
+                break
+            
+            role_content = role_content_match.group(1)
+            for tag in self.required_role_tags:
+                if f'<{tag}>' not in role_content:
+                    needs_fix = True
+                    break
+            if needs_fix: break
+            
+        if needs_fix:
+            return self._regenerate_characters(content, context)
+            
+        return content, False
+
+    def _regenerate_characters(self, content, context):
+        if not self.client:
+            print("  警告: 出镜人物结构错误但无LLM客户端，跳过修复")
+            return content, False
+            
+        print("  重新生成出镜人物模块...")
+        prompt = f"""请根据小说内容生成<出镜人物>模块。
+要求格式如下：
+<出镜人物>
+<角色1>
+<姓名>...</姓名>
+<角色类型>...</角色类型>
+<性别>...</性别>
+<年龄段>...</年龄段>
+<外貌特征>
+<发型>...</发型>
+<发色>...</发色>
+<面部特征>...</面部特征>
+<身材特征>...</身材特征>
+<特殊标记>...</特殊标记>
+</外貌特征>
+<古代形象>
+<上衣>...</上衣>
+<下装>...</下装>
+<配饰>...</配饰>
+</古代形象>
+</角色1>
+...
+</出镜人物>
+
+小说内容：
+{context[:2000]}...
+"""
+        try:
+            resp = self.client.chat.completions.create(
+                model="doubao-seed-1-6-flash-250715",
+                messages=[{"role": "user", "content": prompt}]
+            )
+            new_chars = resp.choices[0].message.content.strip()
+            
+            # 提取纯净的<出镜人物>块
+            match = re.search(r'<出镜人物>.*?</出镜人物>', new_chars, re.DOTALL)
+            if match:
+                new_chars = match.group(0)
+            
+            # 替换或插入
+            if '<出镜人物>' in content:
+                content = re.sub(r'<出镜人物>.*?</出镜人物>', new_chars, content, flags=re.DOTALL)
+            else:
+                # 插入到风格标签后
+                style_match = re.search(r'<绘画风格>.*?</绘画风格>', content)
+                if style_match:
+                    pos = style_match.end()
+                    content = content[:pos] + "\n" + new_chars + content[pos:]
+                else:
+                    content = new_chars + "\n" + content
+            return content, True
+        except Exception as e:
+            print(f"  重生成出镜人物失败: {e}")
+            return content, False
+
+    def _validate_fix_scenes(self, content, context):
+        """验证并修复分镜 (1-7)"""
+        updated = False
+        for i in range(1, 8):
+            scene_tag = f'分镜{i}'
+            scene_pattern = f'<{scene_tag}>(.*?)</{scene_tag}>'
+            scene_match = re.search(scene_pattern, content, re.DOTALL)
+            
+            needs_regen = False
+            if not scene_match:
+                print(f"  缺失{scene_tag}，准备生成...")
+                needs_regen = True
+            else:
+                scene_content = scene_match.group(1)
+                # 检查是否有3个特写
+                closeups = re.findall(r'<图片特写\d+>', scene_content)
+                if len(closeups) != 3:
+                    print(f"  {scene_tag}特写数量不正确(当前{len(closeups)}个)，准备重生成...")
+                    needs_regen = True
+                else:
+                    # 检查特写内部结构
+                    for j in range(1, 4):
+                        closeup_tag = f'图片特写{j}'
+                        closeup_pattern = f'<{closeup_tag}>(.*?)</{closeup_tag}>'
+                        closeup_match = re.search(closeup_pattern, scene_content, re.DOTALL)
+                        if not closeup_match:
+                            needs_regen = True
+                            break
+                        
+                        c_content = closeup_match.group(1)
+                        # 检查必要标签
+                        for tag in self.required_closeup_tags:
+                            if f'<{tag}>' not in c_content:
+                                print(f"  {scene_tag}{closeup_tag}缺失<{tag}>，准备重生成...")
+                                needs_regen = True
+                                break
+                        
+                        # 检查特写人物内部标签
+                        char_info_match = re.search(r'<特写人物>(.*?)</特写人物>', c_content, re.DOTALL)
+                        if char_info_match:
+                            char_info = char_info_match.group(1)
+                            for tag in self.required_character_info_tags:
+                                if f'<{tag}>' not in char_info:
+                                    print(f"  {scene_tag}{closeup_tag}特写人物缺失<{tag}>，准备重生成...")
+                                    needs_regen = True
+                                    break
+                        else:
+                            needs_regen = True
+                            
+                        if needs_regen: break
+
+            if needs_regen:
+                new_scene = self._regenerate_scene(i, context, content) # content passed for character context
+                if new_scene:
+                    if f'<{scene_tag}>' in content:
+                        content = re.sub(f'<{scene_tag}>.*?</{scene_tag}>', new_scene, content, flags=re.DOTALL)
+                    else:
+                        # Append to end or after previous scene
+                        if i > 1:
+                            prev_scene = f'</分镜{i-1}>'
+                            if prev_scene in content:
+                                content = content.replace(prev_scene, f"{prev_scene}\n{new_scene}")
+                            else:
+                                content += f"\n{new_scene}"
+                        else:
+                            # Scene 1, append after characters
+                            char_end = '</出镜人物>'
+                            if char_end in content:
+                                content = content.replace(char_end, f"{char_end}\n{new_scene}")
+                            else:
+                                content += f"\n{new_scene}"
+                    updated = True
+        
+        return content, updated
+
+    def _regenerate_scene(self, scene_num, context, full_narration):
+        if not self.client:
+            print(f"  警告: {scene_num}结构错误但无LLM客户端，跳过修复")
+            return None
+            
+        # 提取出镜人物作为参考
+        char_block = ""
+        match = re.search(r'<出镜人物>.*?</出镜人物>', full_narration, re.DOTALL)
+        if match:
+            char_block = match.group(0)
+
+        print(f"  正在重新生成分镜{scene_num}...")
+        prompt = f"""请为小说章节生成第{scene_num}个分镜内容。
+严格按照以下格式（包含3个特写）：
+<分镜{scene_num}>
+<图片特写1>
+<特写人物>
+<角色姓名>...</角色姓名>
+<时代背景>...</时代背景>
+<角色形象>...</角色形象>
+</特写人物>
+<解说内容>...</解说内容>
+<图片prompt>...</图片prompt>
+<视频prompt>...</视频prompt>
+</图片特写1>
+<图片特写2>
+...
+<图片特写3>
+...
+</分镜{scene_num}>
+
+参考出镜人物：
+{char_block}
+
+小说内容片段：
+{context[:3000]}...
+"""
+        try:
+            resp = self.client.chat.completions.create(
+                model="doubao-seed-1-6-flash-250715",
+                messages=[{"role": "user", "content": prompt}]
+            )
+            new_scene = resp.choices[0].message.content.strip()
+            # 提取纯净的分镜块
+            tag = f"分镜{scene_num}"
+            match = re.search(f'<{tag}>.*?</{tag}>', new_scene, re.DOTALL)
+            if match:
+                return match.group(0)
+            return new_scene
+        except Exception as e:
+            print(f"  重生成分镜{scene_num}失败: {e}")
+            return None
 
 if __name__ == "__main__":
     main()

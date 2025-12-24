@@ -438,11 +438,13 @@ class ScriptGeneratorV2:
         if not explanation_matches:
             return False, "未找到解说内容标签"
         
-        # 验证每个解说内容的字数（强制要求：每个不超过40字）
+        # 验证每个解说内容的字数（强制要求：每个不超过55字）
         for i, explanation in enumerate(explanation_matches):
             length = len(explanation.strip())
-            if length > 40:
-                return False, f"第 {i+1} 个解说内容超过40字限制 ({length}字): {explanation.strip()[:20]}..."
+            if length > 55:
+                return False, f"第 {i+1} 个解说内容超过55字限制 ({length}字): {explanation.strip()[:20]}..."
+            elif length > 40:
+                print(f"提示：第 {i+1} 个解说内容超过40字 ({length}字)，但未超过55字上限，允许通过")
         
         # 验证视频prompt是否存在且数量匹配
         video_prompt_pattern = r'<视频prompt>(.*?)</视频prompt>'
